@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>Vertex Formats</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href=
+"../../../../../../../files/helpindex.css" type="text/css">
+<link rel="stylesheet" href="../../../../../../../default.css"
+type="text/css">
+
+<script type="text/JavaScript" src="../../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/drawing/primitives/vertex formats/index.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fprimitives%2Fvertex%20formats%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fprimitives%2Fvertex%20formats%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<h2>Vertex Formats</h2>
+
+<p>In general when you start working with 3D, special effects,
+complex drawing processes or shaders you don't need not worry too
+much about the vertex format being used, since <i>GameMaker Studio
+2</i> will automatically set up and pass through the vertex data
+for you. However, sometimes it is necessary to create your own
+vertex data and format it to suit, especially when you need to
+boost speed, or wish to pass in extra information. For example the
+standard vertex format includes an x, y, z 3D position, colour
+(with alpha), and UV texture coordinates, which, if you were
+creating it yourself, would look something like:</p>
+
+<p class="code">vertex_format_begin();<br>
+vertex_format_add_position_3d();<br>
+vertex_format_add_colour();<br>
+vertex_format_add_textcoord();<br>
+my_format = vertex_format_end();<br></p>
+
+<p>However, if you are only using (for example) the shader to
+manipulate the position of the vertex, then there would be no need
+to pass through colour or texture data. In this case you would
+create your own format as so:</p>
+
+<p class="code">vertex_format_begin();<br>
+vertex_format_add_position_3d();<br>
+my_format = vertex_format_end();<br></p>
+
+<p>You should note that once you have created your vertex format,
+the order in which you have defined the vertex properties <i>must
+be honoured</i> when building your primitives. So, if you have
+defined a vertex format as position, colour, texture coordinate,
+then you <i>must</i> add these properties to the primitive in the
+same order otherwise you will get an error. Also note that like any
+other dynamic resource, a vertex format requires memory and
+therefore should be removed when not needed using the function
+<tt>vertex_format_delete()</tt>.</p>
+
+<p>The following functions are available for drawing shaders:</p>
+
+<blockquote>
+<ul>
+<li><a href="vertex_format_begin.html">vertex_format_begin</a><br>
+</li>
+
+<li><a href=
+"vertex_format_add_colour.html">vertex_format_add_colour</a><br>
+</li>
+
+<li><a href=
+"vertex_format_add_position.html">vertex_format_add_position</a><br>
+
+</li>
+
+<li><a href=
+"vertex_format_add_position_3d.html">vertex_format_add_position_3d</a><br>
+
+</li>
+
+<li><a href=
+"vertex_format_add_textcoord.html">vertex_format_add_textcoord</a><br>
+
+</li>
+
+<li><a href=
+"vertex_format_add_normal.html">vertex_format_add_normal</a><br>
+</li>
+
+<li><a href=
+"vertex_format_add_custom.html">vertex_format_add_custom</a><br>
+</li>
+
+<li><a href="vertex_format_end.html">vertex_format_end</a><br>
+</li>
+
+<li><a href=
+"vertex_format_delete.html">vertex_format_delete</a><br>
+</li>
+</ul>
+</blockquote>
+
+<p>One final important point to note when using your own vertex
+buffers in this way is how it affects the vertex batches that are
+sent to the GPU. When you create a vertex buffer you are creating
+the lowest level of graphics data, so when you draw all that
+happens is we send your buffer directly to the graphics card.
+Because of this, if you want better batching, you must work it out
+yourself and store things you want batch inside the same buffer. So
+you can't put in 3 sprites then draw many of them and expect vertex
+buffers to be merged - you're in charge of vertex buffer data at
+this point. If you want auto-batching then you have to give the
+engine higher level primitives - like a sprite - at which point
+GameMaker Studio 2 can work out what your doing, and fill buffers
+properly.</p>
+
+<h2>Building Primitives</h2>
+
+<p>Once you have defined your new vertex format, you can then go
+ahead and build your primitives that will use it. The functions
+available for this can be found in the following section:</p>
+
+<blockquote>
+<ol>
+<li><a href="../primitive%20building/index.html">Building
+Primitives</a><br>
+</li>
+</ol>
+</blockquote>
+
+<p><br>
+</p>
+
+<div class="clear">
+<div style="float:left">Back: <a href="../index.html">Drawing And
+Creating Primitives</a></div>
+
+<div style="float:right">Next: <a href=
+"../primitive%20building/index.html">Building
+Primitives</a><br></div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

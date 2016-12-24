@@ -1,0 +1,672 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>The Object Editor</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/2_interface/1_editors/objects.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fobjects.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fobjects.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<h2>The Object Editor</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p><img class="center" src="images/editor_objects.png" alt=
+"Object Editor"> Objects are the resource that we use to control
+aspects of a game and to do specific things. Most of the time they
+have a sprite associated with them so that you see them in the game
+rooms, but sometimes they are used as a "behind the scenes"
+controller to do things related to the user or for timing, etc...
+They can be given behaviours and they can react to certain events
+as well as to each other, and most of the things you see in a game
+are based on objects and their interactions. Now, we say "based on"
+because you don't actually place objects directly into the game
+rooms, but rather you place <b>instances</b> of these objects which
+are basically copies (or clones if you prefer) of the object
+resource. This is a very important thing to remember as instances
+and objects are <i>not the same thing</i> and each have their own
+set of functions that can affect them.</p>
+
+<p>To clarify this, think of a game made with <i>GameMaker Studio
+2</i>. All the characters, monsters, balls, walls, etc... are all
+objects you create in the resource tree. You then drag the object
+into a room in the <a href="rooms.html">Room Editor</a> to create
+an <b>instance</b> copied from the basic object template. The
+instance in the room can then be changed in the editor itself or
+through code, so that it can be scaled, or coloured, or have other
+details modified from the "base" object. So when we talk about
+something affecting or changing an instance, we mean it affects
+that <i>one particular copy of an object in a room</i>. Only that
+single instance is being affected while all the rest are not. But,
+when we talk about affecting or changing an <b>object</b>, we mean
+that we are modifying the object in the resource tree and anything
+we do to it will be reflected in all the instances created from
+that point on too. So, the object is the template for the instance,
+and the instance is what we place in a room to make our game.</p>
+
+<p>To create an object in your game, you can right click
+<img style="vertical-align:middle" src="../../images/icon_rmb.png">
+on the object resource folder and click the <i>Create</i> option.
+This will open the window pictured at the top of this page with the
+following sections:</p>
+
+<blockquote><a name="object_details" id="object_details"></a>
+<label class="collapse" for="one">Details</label> <input id="one"
+type="checkbox">
+<div class="index_list">
+<p>Here you can give your object a name. This name should never
+contain spaces nor unauthorized characters (only alpha-numeric
+characters and the underbar "_" are allowed) and should be short
+but memorable so that you can easily identify resources later when
+you may have many of them. For example many people use a prefix or
+a suffix to identify the differences between resources, like
+"obj_Ship" or "Ship_obj".</p>
+
+<p>Next you can choose the sprite for the object should you wish it
+to have one. Click with the left mouse button <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> on the
+sprite box and the <b>Asset Explorer</b> will appear with a list of
+all the available sprites from the resource tree: <img class=
+"center" src="images/editor_objects_assetexplorer.png" alt=
+"Asset Explorer"></p>
+
+<p>You can then select the one you want to use for the object. With
+a sprite assigned to the object you can click the Edit Sprite
+button <img style="vertical-align:middle" src=
+"images/icon_editsprite.png"> to change the sprite properties, or
+if you do not have a sprite for the object but wish to create one
+you can click the Add Sprite button <img style=
+"vertical-align:middle" src="images/icon_newsprite.png"> to create
+a new sprite resource and assign that. You can also edit the sprite
+resource image that has been assigned by clicking the Edit Image
+button <img style="vertical-align:middle" src=
+"images/icon_editimage.png"> to open the Image Editor.</p>
+</div>
+<br>
+<a name="object_collision_mask" id="object_collision_mask"></a>
+<label class="collapse" for="nineteen">Collision Mask</label>
+<input id="nineteen" type="checkbox">
+<div class="index_list">
+<p>Beneath the sprite assignment area you have a button for
+choosing a specific <b>Collision Mask</b>. By default an object
+will use the collision properties of the sprite assigned to it, but
+there are cases whereby you may want collisions to be based off of
+a different mask shape. For example, you may have a top down game
+where the main sprite has a rectangular collision mask, but to make
+collisions smoother a circular mask may be better. In these cases
+you can click the Collision Mask button and select another sprite
+resource, so now instances of the object will <i>draw</i> the
+assigned sprite, but base collisions off of the <i>mask</i>
+sprite.</p>
+</div>
+<br>
+<a name="object_properties" id="object_properties"></a>
+<label class="collapse" for="two">Properties</label> <input id=
+"two" type="checkbox">
+<div class="index_list">
+<p>Here you are presented with the following options for your
+object:</p>
+
+<blockquote><a name="object_visible" id="object_visible"></a>
+<label class="collapse" for="four">Visible</label> <input id="four"
+type="checkbox">
+<div class="index_list">
+<p><b>Visible</b> indicates whether instances of this object are
+visible when the room starts. Normally most instances are visible
+but sometimes it is useful to have invisible ones - for example,
+you can use them for way-points to control a moving monster, or to
+keep track values and perform certain timed actions. Invisible
+objects will still react to events and if they have a sprite or a
+mask assigned to them, they will also react should other instances
+collide with them... they just cannot be seen and do not perform
+their <b>draw</b> event. By default, the visible flag is
+checked.</p>
+</div>
+<br>
+<a name="object_solid" id="object_solid"></a> <label class=
+"collapse" for="a">Solid</label> <input id="a" type="checkbox">
+<div class="index_list">
+<p>When you flag an instance as being solid, you are telling
+<i>GameMaker Studio 2</i> that it should try to resolve any
+collisions before triggering a <b>collision event</b>. This is a
+<i>very</i> basic functionality, and in reality all it does is move
+the instance back to the position it was in the moment before a
+collision was detected before performing any code or DnD™ that is
+in the event itself, and as such is of limited use.</p>
+</div>
+<br>
+<a name="object_persistence" id="object_persistence"></a>
+<label class="collapse" for="five">Persistent</label> <input id=
+"five" type="checkbox">
+<div class="index_list">
+<p><b>Persistent</b> - A persistent object is one that does not go
+away when the room is changed, but rather it "persists" and is
+carried over into the new room. It will only disappear when you
+explicitly destroy it, either with a destroy action or in code.
+This means that if you place a persistent object in one room, it
+will still be available in all subsequent rooms and will continue
+to perform any actions assigned to the events in its object
+properties, <i>except</i> the create event, which is only fired
+once when it is created initially and not when you change to a new
+room.</p>
+
+<p>This is handy for when you have, for example, a main character
+that moves from room to room and you want to maintain the variables
+within that object the same, but you should take great care to
+create and destroy persistent objects correctly as you can easily
+get errors creeping into your project by mistake.</p>
+
+<p>Note too that a persistent object will still have its Game
+Start, Game End, Room Start and Room End events triggered, however
+if you restart the game (with, for example, the game_restart()
+function) all persistent objects will be removed and only exist
+when created again by the game. Also note that if you deactivate a
+persistent object, it will no longer pass from one room to another
+unless re-activated before the Room End event is triggered.</p>
+</div>
+<br>
+<a name="object_uses_physics" id="object_uses_physics"></a>
+<label class="collapse" for="six">Uses Physics</label> <input id=
+"six" type="checkbox">
+<div class="index_list">
+<p>When you check the <b>Uses Physics</b> box you are telling
+<i>GameMaker Studio 2</i> that this object should be part of a
+<a href="rooms.html#room_physics">physics world</a>. Checking this
+will also open a further chained window where you can define the
+physical properties of all instances of this object. More
+information on this can be found further down this page in the
+section on <a href="#object_physics">Physics</a>.</p>
+</div>
+<br></blockquote>
+</div></blockquote>
+
+<p><br>
+</p>
+
+<p><a name="object_options" id="object_options"></a>
+</p>
+
+<h2>Options</h2>
+
+<p>The options section defines the different property options for
+your object and how the instances will behave when placed in a
+room. Here you add events, which are the "building blocks" of your
+game code, set whether the object is to have a parent and also set
+the physics properties if you want to enable the physics
+functions.</p>
+
+<blockquote><a name="object_events" id="object_events"></a>
+<label class="collapse" for="seven">Events</label> <input id=
+"seven" type="checkbox">
+<div class="index_list">
+<p>So, what are events? Basically, these are discreet moments in
+the game loop where things are made to happen based on what you
+have programmed for them. <i>GameMaker Studio 2</i> works with
+cycles of these events - from the moment a room is started to the
+moment it is finished there is a game loop running where every
+<b>step</b> (a step is a moment in game time, governed by the room
+speed setting) a series of events are run or checked, and you can
+choose to place code or DnD actions in your objects that respond to
+these events.</p>
+
+<p>Let's look at a typical object setup with events and code:
+<img class="center" src="images/editor_objects_events.png" alt=
+"Object Editor Events View"></p>
+
+<p>As you can see in our example object there are a number of
+events listed that it should respond to, but initially when you
+create an object this list is empty and you must decide which
+events you need and what instances of that object should do when
+those events are triggered. To add events into the object, you
+press the <b>Add Event</b> button found at the bottom of the events
+list which will bring up the following window: <img class="center"
+src="images/editor_objects_eventlist.png" alt=
+"Object Editor Events List"></p>
+
+<p>That is the list of all the basic events which an object can
+respond to, although some of those events also have <b>sub
+events</b> to further refine behaviours. For example, if you add a
+Key Press <img style="vertical-align:middle" src=
+"events/images/icon_keyboardpress.png"> event you will then get a
+further window popping up with the sub events that allow you to
+select which key the object should respond to. Once you have
+selected your event, the <a href="scripts.html">code window</a>
+will be chained to it and open up on the right. You can now edit
+the code to give your object a specific behaviour or reaction to
+that event.</p>
+
+<p>You can click the right mouse button <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> on any
+event to get the following menu options: <img class="center" src=
+"images/editor_objects_rmbmenu.png" alt=
+"Object Editor Events Menu"></p>
+
+<p>These options are:</p>
+
+<ul>
+<li><b>Add Event</b> - Add a new event from the event list.<br>
+<br></li>
+
+<li><b>Cut / Copy / Paste Events</b> - Cut, copy or paste the
+selected event. You can use the standard keyboard shortcuts too:
+<img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> + <tt>X</tt>, <img style=
+"vertical-align:middle" src="../../images/icon_ctrl.png"> +
+<tt>C</tt>, and <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> + <tt>V</tt>.<br>
+<br></li>
+
+<li><b>Duplicate Event</b> - Duplicate the chosen event. This will
+take the contents of the chosen event and duplicate them in another
+event that you specify.<br>
+<br></li>
+
+<li><b>Change Event</b> - Change the event. This will prompt you to
+choose another event category and once selected the contents of the
+current event will be changed to the new event (removing the
+original event in the process).<br>
+<br></li>
+
+<li><b>Convert To Drag and Drop / Code</b> - Object events will be
+created using the method chosen when you created the project,
+either using code or using Drag and Drop actions. With this option
+you can convert from one to the other, regardless of the project
+type.<br>
+<br></li>
+
+<li><b>Delete Event</b> - Delete the event (or events).</li>
+</ul>
+
+<p>When removing events, you can use <img style=
+"vertical-align:middle" src="../../images/icon_shift.png"> +
+<img style="vertical-align:middle" src="../../images/icon_lmb.png">
+to select multiple events and then delete them all together.</p>
+
+<p>You should also note that you can <b>name events</b>, or at
+least give them a short descriptive text that will be shown beside
+them in the Event Editor. To do this, simply add the following into
+the very first line of the code editor for the event:</p>
+
+<p class="code">/// @description Your text here</p>
+
+<p>So, you could have something like this in - for example - an
+Alarm event</p>
+
+<p class="code">/// @description This is the AI Fight alarm</p>
+
+<p>And now in your Event Editor you'll see this: <img class=
+"center" src="images/editor_objects_namedevents.png" alt=
+"Object Editor Named Events"></p>
+</div>
+<br></blockquote>
+
+<p>Note that the section on events above simply gives an overview
+of how they work, but for full details on all the avaialble events,
+please see the following section:</p>
+
+<blockquote>
+<ol>
+<li><a href="events/index.html"><span class="list_link">Object
+Events List</span></a>
+</li>
+</ol>
+</blockquote>
+
+<p>The other options for an object are:</p>
+
+<blockquote><a name="object_parent" id="object_parent"></a>
+<label class="collapse" for="eight">Parent</label> <input id=
+"eight" type="checkbox">
+<div class="index_list">
+<p>When working with objects in the <i>GameMaker Studio 2</i> IDE,
+you can set up <b>Parent / Child hierarchies</b>. This is done by
+clicking the "Parent" button in the object editor and then choosing
+another object from the resource tree to be the "parent" of the one
+being edited: <img class="center" src=
+"images/editor_objects_parent.png" alt="Parents"></p>
+
+<p>So, every object in your game project can have a parent object,
+but what does this mean? Well, when an object has a parent assigned
+it can share code, actions and events with that parent. This
+sharing is called "inheritance" and an object that has a parent is
+called a "child" object. Not only can a child share code with its
+parent, but you can do checks and run code on parent objects and it
+will automatically include the child objects too, which saves a lot
+of time and energy.</p>
+
+<p>If that sounds complicated, then another way to look at a parent
+object is as a way to "group" objects together under the same
+umbrella and have them share certain things without losing their
+own unique identity. Maybe that still doesn't clarify things too
+much, so let's give some examples...</p>
+
+<p>Say you have a "player" object and four different "enemy"
+objects. Now, you want the player to die if he touches any of these
+four objects and this would normally entail four different
+collision events with four different sets of actions or code, one
+for each of the enemy objects. BUT if we make a <i>parent</i>
+object for all the enemies, then we can create one collision event
+with the parent object only and it will trigger no matter which one
+of the four "child" enemy objects touch the player. Handy stuff! In
+the actual <i>GameMaker Studio 2</i> object you would see something
+like this: <img class="center" src=
+"images/editor_object_parentcollision.png" alt="Parents"></p>
+
+<p>On the left we have four separate collision events and on the
+right we have a single collision event, as we have created a
+"parent" object and assigned all the enemy objects to it. Note that
+a parent object doesn't have to have any events or code in
+it...</p>
+
+<p>Another example of parenting would be if you have a game where
+you want to create 10 different looking objects and have them all
+behave in the same way. For that you would create one parent object
+and in that have all your behaviour actions or code in the required
+events, and then you would create your ten objects with <i>no</i>
+actions or code, but different sprites, and assign them your parent
+object. Now, when you place these instances in a room they will all
+behave the same, but look different, since they will "inherit" the
+events of the parent.</p>
+
+<p>Finally you can use parenting to "mix and match" events and
+behaviours. We'll illustrate this with one final example... Say you
+want two monsters: one that moves up and down, while another that
+moves left and right, but you also want the two of them to have the
+same health, shoot at the player and hurt the player if they
+collide with them. In this case you can see that almost all events
+should have the same actions except for one or two that govern
+movement. So, again, we can make one object the parent of the
+other, but in this case we also define certain events for the child
+object. These events "override" the parent events, meaning that
+whenever an event for the child object contains actions, these are
+executed instead of the actions contained in the event of the
+parent. If you also want to execute the parent event you can call
+the so-called "inherited" event using the appropriate action or
+code. <img class="center" src=
+"images/editor_object_inheritevents.png" alt=
+"Inheriting Events"></p>
+
+<p>On the left above is the parent object with 5 events in it, and
+on the right you can see the "child" object. This child only has 2
+events defined, but it will inherit the events of the parent and so
+have 5, exactly the same. The difference now is that the events
+that the child has added (<b>step</b> and <b>draw</b>) will
+override the ones in the parent event.</p>
+
+<p>As indicated, wherever you use a parent object, this also
+applies to the descendants (or "children"). This happens when, in
+an action, you indicate that the action must be applied to
+instances of a certain object. It also happens when you use the
+<tt>with()</tt> statement in code (see the manual for further
+details), and it works when you call code functions like <a href=
+"../../3_scripting/4_gml_reference/instances/instance_functions/instance_position.html">
+<tt>instance_position</tt></a>, <a href=
+"../../3_scripting/4_gml_reference/instances/instance_functions/instance_number.html">
+<tt>instance_number</tt></a>, etc... where if you supply a parent
+object then it and all child instances will be included in the
+checks. Finally, parenting works when you refer to variables in
+other objects too, like in the above monster example if I set the
+enemy 1 speed to 10, then the enemy 2 speed will also go to ten as
+it is a child object of enemy 1.</p>
+
+<p>It is generally considered good practice in most cases to create
+one base parent object and have this base object contain all the
+default behaviour but never use an instance of it in the game.
+Rather use all the children objects and only use the parent in
+situations like those I have outlined above, for collision, for
+referencing variables, etc... You should also realise that parents
+can have parents too! Obviously you can't create a cycle of "parent
+1 is child of parent 2 is child of parent 1" but you can create
+what is called "object hierarchy" where "parent1 is child of
+parent2 is child of parent3". This is extremely useful to keep your
+game structured and you are strongly advised to learn to use this
+mechanism.</p>
+</div>
+<br>
+<a name="object_physics" id="object_physics"></a> <label class=
+"collapse" for="nine">Physics</label> <input id="nine" type=
+"checkbox">
+<div class="index_list">When you first create a new object
+resource, there is a check-box marked <b>Uses Physics</b>, which is
+not checked by default. Selecting this option will radically change
+the behaviour of your object when an instance of it is placed in a
+room, as this switches on the object's physical properties and
+means that its "traditional" movement and collision functions are
+no longer valid (but only when the room it is placed on is also
+marked as being a physics room. See - <a href="rooms.html">The Room
+Editor</a>). When you check this, the object resource window opens
+a new chained window for the physics editor: <img class="center"
+src="images/editor_objects_physics.png" alt=
+"Object Editor Physics"> Before you start to edit the values for
+the physics behaviours it's a good idea to first set the
+<b>collision shape</b>. With the "normal" collision system your
+collisions are based off of the mask of the sprite assigned to the
+object, but with physics enabled this is no longer the case. We
+need to assign a <b>collision shape</b> the object ourselves (this
+is properly called a <b>fixture</b>, see <a href=
+"../../3_scripting/4_gml_reference/physics/index.html">The Physics
+Functions</a> for more information), which can either be a circle,
+a rectangle or a polygon shape that you yourself define. Clicking
+on the <b>Modify Collision Shape</b> button will open the following
+chained window to edit the shape: <img class="center" src=
+"images/editor_objects_physicsshape.png" alt=
+"Object Editor Physics Shape Editor"> This looks similar to the
+<a href="paths.html">Path Editor</a>, and functions in much the
+same way. However, depending on the mask you have chosen, it can be
+rather more restrictive:<br>
+<br>
+
+<ul>
+<li>If you have a <b>circular</b> mask, then you can only pull any
+of the path points to make the circle diameter larger or
+smaller</li>
+
+<li>If you have <b>rectangular</b> mask, then you can move any of
+the four corners, but the corresponding ones will adjust position
+automatically to always maintain a rectangle</li>
+
+<li>If you have a <b>custom</b> (polygon) mask, it must have a
+minimum of 3 and a maximum of 8 points to it, and it must be convex
+(see image below).</li>
+</ul>
+<img class="center" src="images/editor_object_physicsshape.png"
+alt="Object Editor Physics Shape Type">
+<p>Once you have set up your shape, you then need to define the
+basic physical properties that your object is to have. These are
+configured by changing the following parameters:</p>
+
+<blockquote><a name="object_physics_density" id=
+"object_physics_density"></a> <label class="collapse" for=
+"ten">Density</label> <input id="ten" type="checkbox">
+<div class="index_list">The density of something is defined as its
+<i>mass per unit volume</i>, which basically means how much mass is
+crammed into the space it takes up in the world. So, a balloon
+would have a low density as it has little mass that occupies a
+large space, while a lead bar would have a high density as it has a
+great mass, yet occupies little space. In the <i>GameMaker Studio
+2</i> 2D physics world, mass is calculated automatically for you
+from the values you input for the density and by the surface area
+of the shape you define for the fixture. This will have a direct
+impact on how much inertia a fixture has as well as how it reacts
+to collisions and forces, so if you make a small shape with a high
+density it will have a very large mass (like a bar of lead), but if
+you define a large shape with a low density it will have a much
+smaller mass (like a balloon).</div>
+<br>
+<a name="object_physics_restitution" id=
+"object_physics_restitution"></a> <label class="collapse" for=
+"eleven">Restitution</label> <input id="eleven" type="checkbox">
+<div class="index_list">In physics, restitution is defined as
+"<i>the return of an object or system to its original state after
+elastic deformation</i>", but as the fixtures in the <i>GameMaker
+Studio 2</i> are really <b>rigid bodies</b> and cannot be deformed,
+restitution is really a way of saying how "bouncy" the fixture is.
+This setting will affect how much an object "bounces" when it
+collides with other objects and is co-dependant on other forces
+that act on the instance like gravity and friction.</div>
+<br>
+<a name="object_physics_collisiongroup" id=
+"object_physics_collisiongroup"></a> <label class="collapse" for=
+"twelve">Collision Group</label> <input id="twelve" type=
+"checkbox">
+<div class="index_list">By default, the collision group for all
+physics objects is <b>0</b>, and this means that they will interact
+as normal, which in turn means they <b>must have a collision event
+to interact</b> (a simple comment will do to trigger the collision)
+otherwise no collision will be registered. However, you can also
+specify that an object should belong to a specific <b>collision
+group</b>. By assigning objects to a positive collision group (ie:
+three objects are all in group "<b>2</b>") you are telling
+<i>GameMaker Studio 2</i> that instances of these objects should
+<i>always collide</i>, even if they have nothing in their collision
+event, obeying the physical properties that you have assigned them
+and the room they are in. Conversely, if you have objects with a
+negative collision group (ie: four objects assigned "<b>-1</b>"),
+you are telling <i>GameMaker Studio 2</i> that these should
+<i>never collide</i>, and any collision events between them will be
+ignored.<br>
+<br>
+
+<div class="note"><b>NOTE</b>: Using collision groups dramatically
+increases the processing required by the physics system and should
+be used only when absolutely necessary, and you should have as few
+groups as possible.</div></div>
+<br>
+<a name="object_physics_linear" id="object_physics_linear"></a>
+<label class="collapse" for="thirteen">Linear Damping</label>
+<input id="thirteen" type="checkbox">
+<div class="index_list">Damping is used to reduce the physics world
+velocity of an instance, and differs from friction in that friction
+only occurs when two instances with collision shapes (fixtures) are
+in contact. Damping is also much cheaper to simulate than friction,
+but please note that damping is not a replacement for friction; the
+two effects can, and should, be used together.</div>
+<br>
+<a name="object_physics_angular" id="object_physics_angular"></a>
+<label class="collapse" for="fourteen">Angular Damping</label>
+<input id="fourteen" type="checkbox">
+<div class="index_list">If you think about any rotating object in
+the "real world", unless it has a motor or is in space, it slows
+down over time due to the influence of external forces (like
+friction with the air around it). We can use set this option to
+simulate this effect and reduce the velocity of rotation of
+instances in the physics world, as, without it, any rotating
+instance would continue to rotate infinitely.</div>
+<br>
+<a name="object_physics_friction" id="object_physics_friction"></a>
+<label class="collapse" for="fifteen">Friction</label> <input id=
+"fifteen" type="checkbox">
+<div class="index_list">Friction is the force that resists the
+relative motion of material elements sliding against each other,
+which in the GameMaker Studio 2 physics world, translates as the
+loss of momentum caused by the collision of two instances with
+fixtures bound to them. So, when two instances collide, their
+motion is affected by this value, with a high friction causing a
+larger loss of momentum than a lower value.</div></blockquote>
+
+<p>Finally there are three extra options that can flagged as on or
+off for your fixture, Sensor, Start Awake and Kinematic. Each of
+these flags will change the behaviour of your fixture in the
+following ways:</p>
+
+<blockquote><a name="object_physics_sensor" id=
+"object_physics_sensor"></a> <label class="collapse" for=
+"sixteen">Sensor</label> <input id="sixteen" type="checkbox">
+<div class="index_list">By checking this box, you are telling
+GameMaker Studio 2 to basically "ignore" the physical properties of
+the object, but still return a collision event with the objects
+around it. in this way you can have an instance with no physical
+presence in the room, but which can react to the collision of
+another instance, like the player, and do something in turn, like
+open a door, or trigger some sort of action in another place in the
+room.<br>
+<br>
+
+<div class="note"><b>NOTE</b>: A sensor fixture will fire off the
+collision event when the collision <b>first occurs only</b>,
+meaning you don't get a stream of collision events as the two
+bodies continue to overlap (which is what would traditionally
+occur). If they stop overlapping and overlap subsequently there
+will be another collision event triggered.</div></div>
+<br>
+<a name="object_physics_awake" id="object_physics_awake"></a>
+<label class="collapse" for="seventeen">Start Awake</label>
+<input id="seventeen" type="checkbox">
+<div class="index_list">This is checked by default and represents
+the initial "state" of the fixture at the start of the room it has
+been placed in. Normally you want it to be awake (ie: participating
+in the physics world) right from the start, but sometimes this can
+lead to certain instabilities and unwanted effects due to the
+abrupt start of the physics simulation. To avoid these effects, you
+can un-check this flag and the instance will be created with the
+fixture asleep, and it will not participate in the physics
+simulation unless something acts upon it.</div>
+<br>
+<a name="object_physics_kinematic" id=
+"object_physics_kinematic"></a> <label class="collapse" for=
+"eitghteen">Kinematic</label> <input id="eitghteen" type=
+"checkbox">
+<div class="index_list">There will be certain instances in a
+physics based game which you want to move around but do not wish to
+be acted on by forces such as gravity, nor forces incurred by
+collisions with dynamic objects (think of moving platforms in a
+platform game, for example). For such objects simply setting the
+density of the fixture to 0 will mean that the physics will assume
+that the object is intended to be static and it will not react at
+all to anything. However, checking this box will make a static
+object kinematic and although it will be unaffected by collisions
+and gravity, it can still be moved around or rotated using the
+appropriate variables.</div></blockquote></div></blockquote>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">Back: <a href="index.html">Editors
+Index</a></div>
+
+<div style="float:right">Next: <a href="rooms.html">The Room
+Editor</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

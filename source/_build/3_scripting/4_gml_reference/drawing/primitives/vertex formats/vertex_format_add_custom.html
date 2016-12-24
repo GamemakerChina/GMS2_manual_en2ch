@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>vertex_format_add_custom</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href=
+"../../../../../../../files/helpindex.css" type="text/css">
+<link rel="stylesheet" href="../../../../../../../default.css"
+type="text/css">
+
+<script type="text/JavaScript" src="../../../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/drawing/primitives/vertex formats/vertex_format_add_custom.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fprimitives%2Fvertex%20formats%2Fvertex_format_add_custom.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fprimitives%2Fvertex%20formats%2Fvertex_format_add_custom.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<h1 class="studio">vertex_format_add_custom</h1>
+
+<h2 class="studio">Add custom values to the vertex format.</h2>
+
+<h3 class="studio">Syntax:</h3>
+
+<p class="code">vertex_format_add_custom(type, usage);</p>
+
+<p><br>
+</p>
+
+<div>
+<table>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>type</td>
+<td>The data type that this custom vertex data will hold (see the
+<b><i>type constants</i></b> listed below).</td>
+</tr>
+
+<tr class="alt">
+<td>usage</td>
+<td>The use that the data will get(see the <b><i>usage
+constants</i></b> listed below).</td>
+</tr>
+</table>
+</div>
+
+<p><br>
+</p>
+
+<p><b>Returns:</b> N/A</p>
+
+<p><br>
+</p>
+
+<h3 class="studio">Description</h3>
+
+<p>Tell <i>GameMaker Studio 2</i> to accept a custom value (or
+values) as part of the new vertex format being created. The
+available values to use are defined by the data type constant that
+you choose, listed below:<br>
+<br></p>
+
+<div class="compat">
+<table>
+<tr>
+<th>Constant</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>vertex_type_float1</td>
+<td>A single floating point value</td>
+</tr>
+
+<tr class="alt">
+<td>vertex_type_float2</td>
+<td>Two floating point values</td>
+</tr>
+
+<tr>
+<td>vertex_type_float3</td>
+<td>Three floating point values</td>
+</tr>
+
+<tr class="alt">
+<td>vertex_type_float4</td>
+<td>Four floating point values</td>
+</tr>
+
+<tr>
+<td>vertex_type_colour</td>
+<td>Four component values (r, g, b, a)</td>
+</tr>
+
+<tr class="alt">
+<td>vertex_type_ubyte4</td>
+<td>Four component unsigned byte values (from 0 to 255)</td>
+</tr>
+</table>
+</div>
+
+<p>The use that these constants will be put too also needs to be
+defined so that the values can be "bound" properly within the
+shader being created. This is necessary due to the fact that DX and
+OpenGL have different requirements so if you don't bind them
+properly, they won't come through right in the shader. The
+available usage constants that you can choose are listed below and
+those you use will depend on the specifics of the shader being
+created:<br>
+<br></p>
+
+<div class="compat">
+<table>
+<tr>
+<th>Constant</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>vertex_usage_position</td>
+<td>position values (x, y, z)</td>
+</tr>
+
+<tr class="alt">
+<td>vertex_usage_colour</td>
+<td>colour values (r, g, b, a)</td>
+</tr>
+
+<tr>
+<td>vertex_usage_normal</td>
+<td>vertex normal values (nx, ny, nz)</td>
+</tr>
+
+<tr class="alt">
+<td>vertex_usage_textcoord</td>
+<td>UV coordinates (u, v)</td>
+</tr>
+
+<tr>
+<td>vertex_usage_blendweight</td>
+<td>the blendweight of the input matrix (for skeletal animation,
+for example)</td>
+</tr>
+
+<tr class="alt">
+<td>vertex_usage_blendindices</td>
+<td>the indices of the matrices to use (for skeletal animation, for
+example)</td>
+</tr>
+
+<tr>
+<td>vertex_usage_depth</td>
+<td>vertex depth buffer value</td>
+</tr>
+
+<tr class="alt">
+<td>vertex_usage_tangent</td>
+<td>tangent values</td>
+</tr>
+
+<tr>
+<td>vertex_usage_binormal</td>
+<td>binormal values</td>
+</tr>
+
+<tr class="alt">
+<td>vertex_usage_fog</td>
+<td>fog values</td>
+</tr>
+
+<tr>
+<td>vertex_usage_sample</td>
+<td>sampler index</td>
+</tr>
+</table>
+</div>
+
+<p><br>
+</p>
+
+<h3 class="studio">Example:</h3>
+
+<p class="code">vertex_format_begin();<br>
+vertex_format_add_textcoord();<br>
+vertex_format_add_custom(vertex_type_float3,
+vertex_usage_position);<br>
+my_format = vertex_format_end();<br></p>
+
+<p>The above code will create a new vertex format with just texture
+and 3 custom floating point values for position. It is then stores
+the format id in the variable "my_format".</p>
+
+<p><br>
+</p>
+
+<div class="clear">
+<div style="float:left">Back: <a href="index.html">Vertex
+Formats</a></div>
+
+<div style="float:right">Next: <a href=
+"vertex_format_end.html">vertex_format_end</a></div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

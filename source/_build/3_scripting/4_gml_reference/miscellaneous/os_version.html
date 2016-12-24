@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>os_version</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/miscellaneous/os_version.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fmiscellaneous%2Fos_version.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fmiscellaneous%2Fos_version.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<h2>os_version</h2>
+
+<div class="body-scroll">
+<h2 class="studio">This variable holds the version number of the OS
+that is running the game.</h2>
+
+<h3><b>Syntax:</b>
+</h3>
+
+<p class="code">os_version</p>
+
+<p><br>
+</p>
+
+<p><b>Returns:</b> Real</p>
+
+<p><br>
+</p>
+
+<h3 class="studio">Description</h3>
+
+<p>This variable will tell you the version number for the OS that
+is running your game. For example, if you are running it on an iPad
+with iOS 4 installed, <tt>os_version</tt> will be equal to
+83890177.<br>
+<br>
+The following table outlines the values that are returned:<br>
+<br></p>
+
+<div class="compat">
+<table class="compat">
+<tr>
+<th>Operating System</th>
+<th>Version Name (version Number)</th>
+<th>Return Value</th>
+</tr>
+
+<tr>
+<td>Android</td>
+<td>Cupcake (1.5)<br>
+Donut (1.6)<br>
+Eclair (2.0)<br>
+Eclair (2.0.1)<br>
+Eclair (2.1)<br>
+Froyo (2.2.x)<br>
+Gingerbread (2.3 - 2.3.2)<br>
+Gingerbread (2.3.3 - 2.3.7)<br>
+Honeycomb (3.0)<br>
+Honeycomb (3.1)<br>
+Honeycomb (3.2.x)<br>
+Ice Cream Sandwich (4.0.1 - 4.0.2)<br>
+Ice Cream Sandwich (4.0.3 - 4.0.4)<br>
+Jelly Bean (4.1.x)<br>
+Jelly Bean (4.2.x)<br>
+Jelly Bean (4.3.x)<br>
+KitKat (4.4.x)</td>
+<td>3<br>
+4<br>
+5<br>
+6<br>
+7<br>
+8<br>
+9<br>
+10<br>
+11<br>
+12<br>
+13<br>
+14<br>
+15<br>
+16<br>
+17<br>
+18<br>
+19</td>
+</tr>
+
+<tr class="alt">
+<td>iOS<br>
+The return value is calculated as:<br>
+(major_version * 16777216) + (minor_version * 4096) +
+build_number</td>
+<td>iOS 3 (3.1.3)<br>
+iOS 4 (4.2.1)<br>
+iOS 5 (5.1.1)<br>
+iOS 6 (6.0.1)<br>
+iOS 6 (6.0.2)<br>
+iOS 6 (6.1)<br>
+iOS 7 (7.0.4)<br>
+iOS 7 (7.1)</td>
+<td>50335747<br>
+67117057<br>
+83890177<br>
+100663297<br>
+100663298<br>
+100667392<br>
+117440516<br>
+117444608</td>
+</tr>
+
+<tr>
+<td>Mac OS X<br>
+The return value is calculated as:<br>
+(major_version * 16777216) + (minor_version * 4096) +
+build_number</td>
+<td>Cheetah (10.0.4)<br>
+Puma (10.1.5)<br>
+Jaguar (10.2.8)<br>
+Panther (10.3.9)<br>
+Tiger (10.4.11)<br>
+Leopard (10.5.8)<br>
+Snow Leopard (10.6.8)<br>
+Lion (10.7.5)<br>
+Mountain Lion (10.8.2)<br>
+Mavericks (10.9.1)</td>
+<td>167772164<br>
+167776261<br>
+167780360<br>
+167784457<br>
+167788555<br>
+167792648<br>
+167796744<br>
+167800837<br>
+167804930<br>
+167809025</td>
+</tr>
+
+<tr class="alt">
+<td>Windows<br>
+(the return value is calculated as:<br>
+majorVersion * 65536 + minorVersion)</td>
+<td>Windows 8 (6.2)<br>
+Windows Server 2012 (6.2)<br>
+Windows 7 (6.1)<br>
+Windows Server 2008 R2 (6.1)<br>
+Windows Server 2008 (6.0)<br>
+Windows Vista (6.0)<br>
+Windows Server 2003 R2 (5.2)<br>
+Windows Server 2003 (5.2)<br>
+Windows XP 64-Bit Edition (5.2)<br>
+Windows XP (5.1)<br>
+Windows 2000 (5.0)</td>
+<td>393218<br>
+393218<br>
+393217<br>
+393217<br>
+393216<br>
+393216<br>
+327682<br>
+327682<br>
+327682<br>
+327681<br>
+327680</td>
+</tr>
+
+<tr>
+<td>Windows Phone<br>
+The return value is calculated as:<br>
+majorVersion * 65536 + minorVersion</td>
+<td>Windows Phone 8 (8.0)<br>
+Windows Phone 7.5 (7.1)<br>
+Windows Phone 7 (7.0)</td>
+<td>524288<br>
+458753<br>
+458752</td>
+</tr>
+</table>
+</div>
+
+<p><br>
+<br>
+<i><b>NOTE:</b> Should you require further information about the
+Windows OS you can use the <a href=
+"../miscellaneous/environment_get_variable.html"><tt>environment_get_variable</tt></a>.</i><br>
+
+<br>
+</p>
+
+<p><br>
+</p>
+
+<h3 class="studio">Example:</h3>
+
+<p class="code">if os_type = os_android &amp;&amp; os_version
+&gt;10 global.GFX = 1;</p>
+
+<p>The above code checks the os type and version number and they
+are both correct then the global variable is set to 1.</p>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">Back: <a href="index.html">Miscellaneous
+Functions</a></div>
+
+<div style="float:right">Next: <a href=
+"os_is_paused.html">os_is_paused</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>
