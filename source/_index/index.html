@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script type="text/JavaScript" src="files/treearr.js"></script>
+<script type="text/JavaScript" src="files/supply.js"></script>
+<script type="text/javascript">
+ chmtop.c2wtopf = window; 
+ var pageid=""; var searchquery=""; var indexquery=""; var syncmode=false; var pagenum=0;
+ var qs = location.search.substr(1); var A  = qs.split("&");
+ var B  = null; var F  = "source/_build/index.html"; var FT = "c";
+ for(var i=0;i<A.length;i++){ B=A[i].split("="); A[i]=[B[0],B[1]]; }
+ for (var j=0;j<A.length;j++){ 
+   if(A[j][0]=="page") F=A[j][1]; 
+   if(A[j][0]=="tab") FT=A[j][1];
+  }
+ F = unescape(F); 
+</script>
+
+<script type="text/JavaScript">
+var tabs = new Array(1);
+switch (FT) {
+ case "i": tabs[0]="helpleftind.html"; break; 
+ case "s": tabs[0]="helpleftsch.html"; break; 
+ default: tabs[0]="helpleftcon.html"; break; 
+} </script>
+
+  <title>GameMaker Studio 2</title>
+
+<style>
+#left_col {
+	border: 0px;
+	width: 200px;
+	height: 99%;
+	float: left;
+	position:absolute; top: 0px; left: 0px;
+	border: 1px solid #CCCCCC;
+}
+#header {
+	border: 0px;
+	background-color: #CCCCCC;
+	height: 30px;
+	width: calc(99% - 200px);
+	position:absolute; top: 0px; left: 200px;
+}
+#right_col {
+	border: 0px;
+	margin-left: 200px;
+	height: calc(99% - 30px);
+	width: calc(99% - 200px);
+	border: 1px solid #CCCCCC;
+	position:absolute; top: 30px; left: 0px;
+}
+
+</style>
+
+
+<script type="text/JavaScript">
+document.write('<iframe id="left_col" allowfullscreen name="hleftframe" src="'+tabs[0]+'" >left column</iframe>');
+document.write('<iframe id="header"  allowfullscreen freenname="pheader" src="pageheader.html">LOGO / header</iframe>');
+document.write('<iframe id="right_col" webkitallowfullscreen mozallowfullscreen allowfullscreen name="content" src="' + F + '" >right column</iframe>');
+</script>
+
+
+<noscript><p>To display this page you need a browser with JavaScript support.</p><a href="helpcontents.html">Help contents</a></noscript> 
+
+</html>
