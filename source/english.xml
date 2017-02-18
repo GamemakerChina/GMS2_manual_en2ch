@@ -14,8 +14,8 @@
   <AllowPNG/>
  </OfficeDocumentSettings>
  <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
-  <WindowHeight>7920</WindowHeight>
-  <WindowWidth>19200</WindowWidth>
+  <WindowHeight>8025</WindowHeight>
+  <WindowWidth>19470</WindowWidth>
   <WindowTopX>0</WindowTopX>
   <WindowTopY>0</WindowTopY>
   <ProtectStructure>False</ProtectStructure>
@@ -35,9 +35,8 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="english">
-  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="3879" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="3929" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
-   <Column ss:AutoFitWidth="0" ss:Width="87.75"/>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Translation</Data></Cell>
    </Row>
@@ -366,10 +365,16 @@
     <Cell><Data ss:Type="String">Delete the selected frames?</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">The event is still being copied. Please try pasting again in a few seconds.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Don't show this message again</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Error</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Not Ready</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Success</Data></Cell>
@@ -1142,7 +1147,7 @@
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Importing resources...</Data></Cell>
    </Row>
-   <Row ss:Index="370" ss:AutoFitHeight="0">
+   <Row ss:Index="372" ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Resources to add:</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -2052,7 +2057,7 @@
     <Cell><Data ss:Type="String">Image Editor: {0}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Show Grid</Data></Cell>
+    <Cell><Data ss:Type="String">Toggle Grid</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Tolerance:</Data></Cell>
@@ -3603,10 +3608,10 @@
     <Cell><Data ss:Type="String">Keep Changed</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">{0}: {1}</Data></Cell>
+    <Cell><Data ss:Type="String">{1} Properties - {0}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">{0} Layers</Data></Cell>
+    <Cell><Data ss:Type="String">Layers - {0}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Create New Asset Layer</Data></Cell>
@@ -3633,10 +3638,10 @@
     <Cell><Data ss:Type="String">{0} ({1}, {2}) parent - {3}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">{0} Properties</Data></Cell>
+    <Cell><Data ss:Type="String">Properties - {0}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">{0}: Instance Creation Order</Data></Cell>
+    <Cell><Data ss:Type="String">Instance Creation Order - {0}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Instance Creation Order</Data></Cell>
@@ -3651,7 +3656,7 @@
     <Cell><Data ss:Type="String"> Editing Mode:</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">{0} Tiles</Data></Cell>
+    <Cell><Data ss:Type="String">Tiles - {0}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Zoom: {0}%</Data></Cell>
@@ -4080,13 +4085,31 @@
     <Cell><Data ss:Type="String">Merge in Progress</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Files Modified in Selected Commit</Data></Cell>
+    <Cell><Data ss:Type="String">Files Modified in Commit - {0}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Message for Selected Commit</Data></Cell>
+    <Cell><Data ss:Type="String">Message for Commit - {0}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Commit History</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Previous Page</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Next Page</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Select a Commit</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Auto pop-up Source Control Output Window</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">You have not specified a commit message, are you sure you want to continue?</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">There are conflicts within this project. If the project is closed or reloaded, it may be broken until manually resolved. Are you sure you want to continue?</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Done.</Data></Cell>
@@ -4243,6 +4266,12 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">pixels</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Sprite is a tile set resource!</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">This sprite is a tile set and resizing will cause tile data to change. Do you want to continue anyway?</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">%</Data></Cell>
@@ -4896,7 +4925,7 @@
     <Cell><Data ss:Type="String">DockTab{0}</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">The selected layer does not accept the dragged resources, please select an appropriate layer type, ie. object -&gt; instance layer, sprite -&gt; asset layer, path -&gt; path layer</Data></Cell>
+    <Cell><Data ss:Type="String">The selected layer does not accept the dragged resources, please select an appropriate layer type, ie. object -&gt; instance layer, sprite -&gt; asset or background layer, path -&gt; path layer</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Unable to drag resources into room, ensure one layer is selected</Data></Cell>
@@ -5179,9 +5208,6 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">This action has no layout.</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">None</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Error &#45;- Cannot show preview.</Data></Cell>
@@ -5925,6 +5951,9 @@
     <Cell><Data ss:Type="String">Use synchronization to avoid tearing</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Just for information; this will always be locked for this platform</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Allow player to resize window</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -5934,13 +5963,16 @@
     <Cell><Data ss:Type="String">App Output</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Team ID - 10 digit alpha-numeric identifier from your developer.apple.com/#/overview</Data></Cell>
+    <Cell><Data ss:Type="String">Team Identifier</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">10 digit alpha-numeric identifier taken from your developer.apple.com/#/overview URL</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Signing Identifier</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">To distribute your game outside of the Mac App Store El Capitan requires that your game package is codesigned. Please provide the signing identity that you wish to use here, this should be a Developer ID Application identity and should be present in your Mac's login keychain certificates. Signing identities can be easily created in Xcode-&gt;Preferences-&gt;Accounts-&gt;Team-&gt;View Details-&gt;Developer ID Application-&gt;Create. Signing identities will be matched so the default value should be sufficient if you are only the member of one development team. Leave this field blank to skip codesigning.</Data></Cell>
+    <Cell><Data ss:Type="String">To distribute your game outside of the Mac App Store El Capitan requires that\nyour game package is codesigned. Please provide the signing identity that you\nwish to use here, this should be a Developer ID Application identity and should\nbe present in your Mac's login keychain certificates. Signing identities can be\neasily created in Xcode-&gt;Preferences-&gt;Accounts-&gt;Team-&gt;View Details-&gt;Developer ID\nApplication-&gt;Create. Signing identities will be matched so the default value\nshould be sufficient if you are only the member of one development team. Leave\nthis field blank to skip codesigning.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Copyright</Data></Cell>
@@ -6360,6 +6392,9 @@
     <Cell><Data ss:Type="String">Open linked scripts as tabs in same window</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Pan text editor into view on focus</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">The port number to use for the help web server</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -6708,6 +6743,9 @@
     <Cell><Data ss:Type="String">Obsolete functions etc</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Braces</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Text colours and style</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -6745,6 +6783,9 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">% when application is not in focus</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Scrolling speed</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Enable Steam</Data></Cell>
@@ -7119,7 +7160,7 @@
     <Cell><Data ss:Type="String">Show Key Hash</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Generate Key Hash</Data></Cell>
+    <Cell><Data ss:Type="String">Generate Keystore</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Check Android SDK</Data></Cell>
@@ -7173,7 +7214,10 @@
     <Cell><Data ss:Type="String">Install on Package</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">JDK Max Heap Size</Data></Cell>
+    <Cell><Data ss:Type="String">JDK Max Heap Size (in GB)</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Gigabytes of RAM the Android build is allowed to use</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Use Mac for ADB connection</Data></Cell>
@@ -7371,6 +7415,18 @@
     <Cell><Data ss:Type="String">Key 4</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Package an ARM build</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Package an x86 build</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Package an x64 build</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Default Package Architecture</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Remember Packaging Option?</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -7435,6 +7491,9 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Host Name:</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">PIN:</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">User Name:</Data></Cell>
@@ -8319,7 +8378,7 @@
     <Cell><Data ss:Type="String">{0}: ({1}, {2})</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Selection area: ({0}, {1}) -&gt; ({2}, {3})</Data></Cell>
+    <Cell><Data ss:Type="String">{4} selected items - area: ({0}, {1}) -&gt; ({2}, {3})</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Tile map coordinate: ({0}, {1})</Data></Cell>
@@ -8361,7 +8420,13 @@
     <Cell><Data ss:Type="String">Clear Favourites</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">One or more files are locked. Please check that none of the files are open in external programs. Do you want to try again?</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Source Control (Git) Error</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Be aware that this may have broken your project, as the command was not successful and you have chosen not to retry it.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Server has not been found</Data></Cell>
@@ -8431,6 +8496,15 @@
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Default</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Function</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Function Call</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Call any function with optional arguments and get the return value of the function.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Common</Data></Cell>
@@ -9603,16 +9677,7 @@
     <Cell><Data ss:Type="String">Script</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Argument 0</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Argument 1</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Argument 2</Data></Cell>
-   </Row>
-   <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">Argument 3</Data></Cell>
+    <Cell><Data ss:Type="String">Argument</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Target</Data></Cell>
@@ -10944,6 +11009,12 @@
     <Cell><Data ss:Type="String">Default animation mode for new sprites</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">The default width for new sprites</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">The default height for new sprites</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Delete</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -11589,6 +11660,18 @@
     <Cell><Data ss:Type="String"> '{0}' contains resources not supported by the Trial version  of GameMaker Studio 2.</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Recalculate tile set after resize</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">This sprite is used by multiple tile sets of varying tile sizes. Select a reference tile set for this operation.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Select Reference Tile Set</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">No tile set was selected. Cannot complete operation.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">{0} Fragment Shader</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
@@ -11646,7 +11729,7 @@
     <Cell><Data ss:Type="String">Control key must be held down for mouse wheel zoom</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
-    <Cell><Data ss:Type="String">DPI override changes requires a restart of the IDE. Restart Now?</Data></Cell>
+    <Cell><Data ss:Type="String">DPI override changes requires a restart of the IDE. Do you want to restart now?</Data></Cell>
    </Row>
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">DPI Override</Data></Cell>
@@ -11675,6 +11758,72 @@
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Unable to save the following files (please see the output panel for more details).</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Cannot regenerate this action.</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Import image and convert to Tilemap</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Left Edge</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Top Edge</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Right Edge</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Bottom Edge</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Destination Width</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Import options</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Generate Map!</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Sprite Name</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Tilemap Name</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Layer Name</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Remove Colour</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">The selected image is too large to display</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Detect Browsers</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Convert Image to Tilemap</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Are you sure you want to set '{0}' as the room inheritance parent of '{1}'?</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Default for setting a room parent by dragging underneath</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Lock Instance</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Lock Graphic</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Using symbols not found in font (?)</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">This font is missing one or more symbols and will get replacements from other fonts.</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -11693,8 +11842,7 @@
    <Panes>
     <Pane>
      <Number>3</Number>
-     <ActiveCol>1</ActiveCol>
-     <RangeSelection>C2:C3</RangeSelection>
+     <RangeSelection>C1</RangeSelection>
     </Pane>
    </Panes>
    <ProtectObjects>False</ProtectObjects>
