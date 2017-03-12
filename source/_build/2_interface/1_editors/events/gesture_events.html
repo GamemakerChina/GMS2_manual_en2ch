@@ -1,0 +1,492 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>The Gesture Events</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/2_interface/1_editors/events/gesture_events.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fevents%2Fgesture_events.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fevents%2Fgesture_events.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script>
+<!-- !chm2web! -->
+
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>The Gesture Events</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+<img class="center" src="images/editor_objects_gesture.png" alt=
+"Object Editor Gesture Events">
+<p>The <b>Gesture Event</b> will be triggered whenever <i>GameMaker
+Studio 2</i> detects a "gesture" of the mouse or a touch screen
+event (while these gesture events are designed specifically for
+mobile use, they can also be used on other targets to detect the
+mouse, although they will not detect multiple touches in this
+case). The goal of the gesture system is to try and recognise
+inputs at a higher level than the direct mouse\touch reading
+functions, and is designed to simplify the implementation of
+commonly used inputs on touch-based devices.</p>
+
+<div class="note"><b>NOTE:</b> This event will <b>not be triggered
+on the HTML5</b> platform. If you are looking for gestures on that
+target then you should be using the <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/index.html">
+device functions</a>.</div>
+
+<p><br>
+You can choose to detect either <b>instance</b> gestures or
+<b>global</b> gestures, where instance gesture events will only be
+triggered when the initial touch/click is on an instance within the
+room. Note that the instance <i>must</i> have a valid collision
+mask (see <a href="../../1_editors/sprites.html">The Sprite Editor
+- Collision Mask</a> and <a href="../../1_editors/objects.html">The
+Object Editor - Collision Mask</a> sections for more details) for
+this event to be triggered. Global events, however, will be
+triggered touching/clicking anywhere within the game room, and for
+all instances that have the event.</p>
+
+<p>When a gesture event is recognised, it will trigger one or more
+of the available sub-events, and the sub-event triggered will
+depend on the type of gesture that has been detected. In every
+case, however, a <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
+DS Map</a> will be generated for you and stored in the built-in
+variable <tt><b>event_data</b></tt> which will contain the keys and
+values shown in the following table:</p>
+
+<div class="note"><b>NOTE:</b> The variable <tt>event_data</tt> is
+<b>only valid in these events</b>, as the <tt>ds_map</tt> that it
+points to is automatically created at the start of the event, then
+destroyed again at the end, with this variable being reset to a
+value of -1 at all other times.</div>
+
+<div class="compat">
+<table>
+<tr>
+<th>Key</th>
+<th>Value Description</th>
+</tr>
+
+<tr>
+<td>"gesture"</td>
+<td><br>
+This is an ID value that is <i>unique</i> to the gesture that is in
+play. This allows you to link the different parts of multi-part
+gestures (such as drag start, dragging and drag end) together.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"touch"</td>
+<td><br>
+This is the index of the touch that is being used for the gesture.
+In general this will start at 0 and increase for each finger that
+is held down, then reset back to 0 when all fingers are removed,
+but if the user is touching the screen anywhere else when this
+event is triggered by another touch, then the value will be greater
+than 0.<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"posX"</td>
+<td><br>
+This is the room-space X position of the touch.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"posY"</td>
+<td><br>
+This is the room-space Y position of the touch.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"rawposX"</td>
+<td><br>
+This is the <i>raw</i> window-space X position of the touch
+(equivalent to getting the mouse position using <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html">
+<tt>device_mouse_raw_x()</tt></a>).<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"rawposY"</td>
+<td><br>
+This is the <i>raw</i> window-space Y position of the touch
+(equivalent to getting the mouse position using <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html">
+<tt>device_mouse_raw_y()</tt></a>).<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"guiposX"</td>
+<td><br>
+This is the gui-space X position of the touch (equivalent to
+getting the mouse position using <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html">
+<tt>device_mouse_x_to_gui()</tt></a>).<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"guiposY"</td>
+<td><br>
+This is the gui-space Y position of the touch (equivalent to
+getting the mouse position using <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html">
+<tt>device_mouse_y_to_gui()</tt></a>).<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"diffX"</td>
+<td><br>
+This is the room-space X difference between the position of the
+current touch and the position of the last touch in this
+gesture.<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"diffY"</td>
+<td><br>
+This is the room-space Y difference between the position of the
+current touch and the position of the last touch in this
+gesture.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"rawdiffX"</td>
+<td><br>
+This is the raw X difference between the position of the current
+touch and the position of the last touch in this gesture.<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"rawdiffY"</td>
+<td><br>
+This is the raw Y difference between the position of the current
+touch and the position of the last touch in this gesture.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"guidiffX"</td>
+<td><br>
+This is the gui-space X difference between the position of the
+current touch and the position of the last touch in this
+gesture.<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"guidiffY"</td>
+<td><br>
+This is the gui-space Y difference between the position of the
+current touch and the position of the last touch in this
+gesture.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"isflick"</td>
+<td><br>
+<b>Only available in the Drag End event</b>. This is set to 1 if
+the end of the drag is detected as a flick, meaning that you don’t
+need a separate <b>Flick Event</b> if you’re handling dragging
+anyway.<br>
+<br></td>
+</tr>
+</table>
+</div>
+
+<p><br>
+It is worth noting that if you have multiple instances under the
+position being touched and they all have a gesture event, then all
+of them will trigger, not just the "topmost" instance. Also note
+that when using multiple views and dragging an instance, the values
+returned will be based on the view you were in when the initial
+touch/click was received - this is true for all subsequent events
+in that gesture for that instance. So touching and dragging an
+instance in one view then releasing the touch in another view, will
+return values relative to the initial view where the gesture was
+first detected.</p>
+
+<p><br>
+</p>
+
+<blockquote><a name="gesture_tap" id="gesture_tap"></a>
+<label class="collapse" for="a">Tap</label> <input id="a" type=
+"checkbox">
+<div class="index_list">
+<p>The <b>Tap</b> event will be triggered when an instance has been
+touched or clicked or - if it is a global event - when the game
+registers a touch or click anywhere in the room. A tap is
+considered a quick touch and release, and if the touch lasts too
+long then it will be considered a Drag (and trigger the Drag
+gesture events instead of the Tap event). This event will generate
+an <tt>event_data</tt> DS map which you can then use to get
+information about the event. For example:</p>
+
+<p class="code">// CREATE EVENT<br>
+x_goto = x;<br>
+y_goto = y;<br>
+<br>
+// GLOBAL TAP EVENT<br>
+x_goto = event_data[? "posX"];<br>
+y_goto = event_data[? "posY"];<br>
+<br>
+// STEP EVENT<br>
+var _pd = point_distance(x, y, x_goto, y_goto);<br>
+move_towards_point(x_goto, y_goto, clamp(_pd, 0, 5);<br></p>
+
+<p>The above code will detect a tap on the screen and then get the
+position of the tap to move the instance to that position. Note
+that if you want to have a longer or shorter tap detection time
+then you can set it with the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_time.html">
+<tt>gesture_drag_time</tt></a>. This sets the time between the
+initial detection and the tap becoming a drag, so set it to a
+higher value to make tap detection longer or a lower value to make
+it shorter (value is in seconds and defaults to 0.16).</p>
+</div>
+<br>
+<a name="gesture_double_tap" id="gesture_double_tap"></a>
+<label class="collapse" for="b">Double Tap</label> <input id="b"
+type="checkbox">
+<div class="index_list">
+<p>The <b>Double Tap</b> event will be triggered when an instance
+has been touched or clicked twice in quick succession (or - if it
+is a global event - when the game registers two quick touches or
+clicks anywhere in the room). A double tap is considered two quick
+touches and releases, but if any of the touches lasts too long then
+it will be considered a Drag (and trigger the Drag gesture events
+instead of the Double Tap event). This event will generate an
+<tt>event_data</tt> DS map which you can then use to get
+information about the event. For example:</p>
+
+<p class="code">// CREATE EVENT<br>
+x_goto = x;<br>
+y_goto = y;<br>
+<br>
+// INSTANCE DOUBLE TAP EVENT<br>
+instance_destroy();<br></p>
+
+<p>The above code simply detects a double tap and then destroys the
+instance. Note that you can set the time between taps to trigger a
+double tap using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_double_tap_time.html">
+<tt>gesture_double_tap_time</tt></a> (which has a default value -
+in seconds - of 0.16) and you can also set the distance for
+detection between taps with the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_double_tap_distance.html">
+<tt>gesture_double_tap_distance</tt></a> (if a second tap is
+detected outside of this distance it will be considered a regular
+tap event).</p>
+</div>
+<br>
+<a name="gesture_drag_start" id="gesture_drag_start"></a>
+<label class="collapse" for="c">Drag Start</label> <input id="c"
+type="checkbox">
+<div class="index_list">
+<p>The <b>Drag Start</b> event will be triggered when the user
+maintains a touch or click without releasing it. It will be
+triggered once when a set time has passed after the initial touch,
+which is 0.16 seconds by default (although you can set this to any
+other value in seconds using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_time.html">
+<tt>gesture_drag_time</tt></a>). After this event has been
+triggered, and as long as the user has a touch/click held down,
+then the <b>Dragging</b> event will be triggered every step until
+the touch/click has been released. This event will generate an
+<tt>event_data</tt> DS map which you can then use to get
+information about the event. For example:</p>
+
+<p class="code">// CREATE EVENT<br>
+drag_offsetX = 0;<br>
+drag_offsetY = 0;<br>
+<br>
+// INSTANCE DRAG START EVENT<br>
+drag_offsetX = x - event_data[?"posX"];<br>
+drag_offsetY = y - event_data[?"posY"];<br></p>
+
+<p>The above code uses the Drag Start event to get the position of
+the touch/click and use it to set an offset value for the x and y
+axis. This can then be used when dragging the instance to ensure
+that it doesn't "jump" to the position that the touch/click was
+detected at (see the <b>Dragging</b> event below for a continuation
+of this example).</p>
+</div>
+<br>
+<a name="gesture_dragging" id="gesture_dragging"></a> <label class=
+"collapse" for="d">Dragging</label> <input id="d" type="checkbox">
+<div class="index_list">
+<p>The <b>Dragging</b> event is triggered after the <b>Drag
+Start</b> event, and will be triggered for every step that the user
+maintains the touch/click on the instance (or the screen, if it's a
+global event) and moves more than the defined dragging threshold.
+This distance is 0.1 inches by default but can be set using the
+function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_distance.html">
+<tt>gesture_drag_distance</tt></a>. If there is no movement or the
+movement is under the defined threshold, the event will not be
+triggered. This event will generate an <tt>event_data</tt> DS map
+which you can then use to get information about the event. For
+example:</p>
+
+<p class="code">// CREATE EVENT<br>
+drag_offsetX = 0;<br>
+drag_offsetY = 0;<br>
+<br>
+// INSTANCE DRAG START EVENT<br>
+drag_offsetX = x - event_data[?"posX"];<br>
+drag_offsetY = y - event_data[?"posY"];<br>
+<br>
+// INSTANCE DRAGGING EVENT<br>
+x = event_data[?"posX"] + drag_offsetX;<br>
+y = event_data[?"posY"] + drag_offsetY;<br></p>
+
+<p>The example code above uses the offset variables set in the
+<b>Drag Start</b> event to move the instance when the
+<b>Dragging</b> event is triggered.</p>
+</div>
+<br>
+<a name="gesture_drag_end" id="gesture_drag_end"></a> <label class=
+"collapse" for="e">Drag End</label> <input id="e" type="checkbox">
+<div class="index_list">
+<p>The <b>Drag End</b> event is triggered when the user releases
+the touch/click on the instance (or the screen if the event is
+global). This event will generate an <tt>event_data</tt> DS map
+which you can then use to get information about the event, but in
+this event the map will have an extra key: "<tt>isflick</tt>".
+Flick is calculated as the <i>distance per second</i> that the drag
+has occurred over, and the value for the "<tt>isflick</tt>" key
+will be <tt>true</tt> if it is greater than the defined distance
+per second value, or <tt>false</tt> otherwise. Note that the
+default is 2 inches per second, but you can set it to another value
+using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_flick_speed.html">
+<tt>gesture_flick_speed</tt></a>. Also note that there is a
+dedicated <b>Flick</b> event which will also be triggered if the
+"<tt>isflick</tt>" variable is <tt>true</tt>. An example of use
+would be:</p>
+
+<p class="code">// CREATE EVENT<br>
+flickVelX = 0.0;<br>
+flickVelY = 0.0;<br>
+<br>
+// DRAG END EVENT isFlick = event_data[?"isflick"];<br>
+if (isFlick)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;flickVelX = event_data[?"diffX"];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;flickVelY = event_data[?"diffY"];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;flickVelX = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;flickVelY = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+// STEP EVENT<br>
+x += flickVelX;<br>
+y += flickVelY;<br>
+flickVelX *= 0.7;<br>
+flickVelY *= 0.7;<br></p>
+
+<p>The above code simply gets the difference in x and y position of
+the last <b>Dragging</b> event and the current <b>Drag End</b>
+event, and if the movement has been greater than the flick
+threshold, it sets some variables that are use to the move the
+instance in the step event.</p>
+</div>
+<br>
+<a name="gesture_flick" id="gesture_flick"></a> <label class=
+"collapse" for="f">Flick</label> <input id="f" type="checkbox">
+<div class="index_list">
+<p>The <b>Flick</b> event is only triggered when a touch/click has
+been held, dragged and then released and the distance between the
+last drag position and the release position is greater than 2
+inches per second (this is the default setting, although this can
+be changed using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_flick_speed.html">
+<tt>gesture_flick_speed</tt></a>). This event will generate an
+<tt>event_data</tt> DS map which you can then use to get
+information about the event. For example:</p>
+
+<p class="code">// CREATE EVENT<br>
+flickVelX = 0.0;<br>
+flickVelY = 0.0;<br>
+<br>
+// FLICK EVENT<br>
+flickVelX = event_data[?"diffX"];<br>
+flickVelY = event_data[?"diffY"];<br>
+<br>
+// STEP EVENT<br>
+x += flickVelX;<br>
+y += flickVelY;<br>
+flickVelX *= 0.7;<br>
+flickVelY *= 0.7;<br></p>
+
+<p>The above code simply gets the difference in x and y position of
+the last <b>Dragging</b> event and the current <b>Flick</b> event,
+and if the movement has been greater than the flick threshold, it
+sets some variables that are use to the move the instance in the
+step event.</p>
+</div></blockquote>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">Back: <a href="../objects.html">The Object
+Editor</a></div>
+
+<div style="float:right">Next: <a href="async_events.html">Async
+Events</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

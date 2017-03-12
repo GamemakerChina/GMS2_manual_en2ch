@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">date_valid_datetime</h1>
 
 <h2 class="studio">Returns whether a given datetime is valid.</h2>
@@ -88,9 +91,14 @@ second);</p>
 <h3 class="studio">Description</h3>
 
 <p>With this function you can check a datetime value to see if it
-is valid (returns <tt>true</tt>) or not (returns
-<tt>false</tt>).<br>
-<br></p>
+is valid (returns <tt>true</tt>) or not (returns <tt>false</tt>).
+Note that this function will only consider a valid datetime as
+being <i>after</i> 1/1/1970 and anything before that will return
+<tt>false</tt>, so the earliest you can check would be:</p>
+
+<p class="code">date_valid_datetime(1970, 01, 01, 0, 0, 0);</p>
+<br>
+<br>
 
 <p><br>
 </p>

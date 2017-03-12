@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>The Marketplace</h2>
 
 <div class="body-scroll"><img class="center" src=
@@ -86,28 +89,41 @@ in a project.</p>
 
 <p>To add an asset package to your current project you must first
 download it by clicking on the <b>Download</b> button and when the
-download ahas completed, you can click on the <b>Import</b> button
+download has completed, you can click on the <b>Import</b> button
 to add it to your project. Adding a package in this way will create
-an <i>extension</i> within your project, where you can then select
-from the different resources in the asset package and choose which
-ones to add (or you can import all of them). <img class="center"
-src="images/tools_marketplaceimport.png" alt=
+an <i>extension</i> within your current project, and ask you to
+select from the different resources in the asset package to choose
+which ones you want to add (or you can import all of them). You can
+also select the option <b>Import all resources to a new
+project</b>, and instead of adding the assets to your current
+project, <i>GameMaker Studio 2</i> will prompt you to give a new
+project name and save the asset within that project instead. Note
+that if you go directly to the <b>Library</b> from the <b>Start
+Page</b>, you will find most assets cannot be added individually,
+and instead you will be forced to use the <b>Add All</b> button.
+This is because you do not have a project to add the assets to and
+so <i>GameMaker Studio 2</i> must create a new project for you to
+add all the assets in the package to (when you click the
+<i>Import</i> button, you will be prompted to save the new project
+with the name of your choice). <img class="center" src=
+"images/tools_marketplaceimport.png" alt=
 "Marketplace Import Resources"></p>
 
 <p>With the assets added to your resource tree, you can now go
 ahead and use them in your game as you would those assets that you
-have created yourself. You should note, that assets downloaded form
+have created yourself. Please note, that <i>assets downloaded from
 Marketplace are for individual use and cannot be shared to 3rd
-parties, although you can back them up and copy them to other
-locations for safety.</p>
+parties</i> - although you can back them up and copy them to other
+locations for safety - unless the asset has a custom EULA that
+states the contrary.</p>
 
 <div class="note"><b>NOTE:</b> The people that create asset
 packages for the Marketplace work very hard to create a great
 resource for you to use, so please consider rating the assets you
 buy when you have tested them or if you use them. This encourages
 the developer and is also a useful guide for other users as to the
-quality of the assets available, and you can rate your downloaded
-assets from the Library window.</div>
+quality of the assets available. You can easily rate your
+downloaded assets from the Library window.</div>
 </div>
 <br>
 <a name="marketplace_create" id="marketplace_create"></a>

@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">window_has_focus</h1>
 
 <h2 class="studio">Returns if the game window is in focus or
@@ -55,8 +58,8 @@ function to test this, but in some very specific cases (for example
 games on Chrome Apps) that function will not trigger, in which case
 you should use this function instead.<br>
 <br>
-<i><b>NOTE:</b> This function is only valid for the HTML5, Windows
-8 (JS), and Tizen (JS) modules.</i><br>
+<i><b>NOTE:</b> This function is only valid for the HTML5, Windows,
+MacOS, Windows 8 (JS), and Tizen (JS) modules.</i><br>
 <br></p>
 
 <p><br>

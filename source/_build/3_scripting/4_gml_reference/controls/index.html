@@ -26,7 +26,14 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Controls</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
 
 <p>The fundamental thing that makes a game a <i>game</i> is the
 interaction with the player. This is achieved by a variety of
@@ -36,9 +43,10 @@ and tilting on mobile devices. The standard way of doing this in
 sometimes you need more control, especially when creating something
 for mobile devices or HTML5. For that you can use the mouse and
 keyboard functions to get which buttons have been pressed or
-released as well as simulating the touches on a screen, and there
-are a couple of specific functions relating to the <i>tilt</i>
-controls that most mobile devices have too.<br>
+released as well as retrieve the touches on a screen using the
+gesture functions, and there are a couple of specific functions
+relating to the <i>tilt</i> controls that most mobile devices have
+too.<br>
 <br></p>
 
 <p>The following sections deal with the main user input devices for
@@ -58,6 +66,10 @@ developing games with <i>GameMaker Studio 2</i>:</p>
 "list_link">Device Input</span></a><br>
 </li>
 
+<li><a href="gesture%20input/index.html"><span class=
+"list_link">Gesture Input</span></a><br>
+</li>
+
 <li><a href="gamepad%20input/index.html"><span class=
 "list_link">GamePad Input</span></a><br>
 </li>
@@ -70,7 +82,10 @@ developing games with <i>GameMaker Studio 2</i>:</p>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href=
 "../index.html">Reference</a></div>
@@ -78,11 +93,13 @@ developing games with <i>GameMaker Studio 2</i>:</p>
 <div style="float:right">Next: <a href=
 "../data_structures/index.html">Data Structures</a></div>
 </div>
+</div>
 
 <h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">texture_set_stage</h1>
 
 <h2 class="studio">Indicates which texture "slot" to add a texture
@@ -105,7 +108,7 @@ constant to the given sprite texture.</p>
 "index.html">Textures</a></div>
 
 <div style="float:right">Next: <a href=
-"draw_texture_flush.html">draw_texture_flush</a></div>
+"texture_global_scale.html">texture_global_scale</a></div>
 </div>
 
 <h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>

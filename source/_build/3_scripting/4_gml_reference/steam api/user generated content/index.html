@@ -25,6 +25,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>User Generated Content (UGC)</h2>
 
 <div class="body-scroll">
@@ -66,7 +69,16 @@ you should have code in the <a href=
 Asynchronous Event</a> to catch this and store the ID of the UGC
 that has been downloaded for use in the other UGC functions.</p>
 
-<p>The normal workflow for getting UGC into your game would be as
+<div class="note"><b>IMPORTANT!</b> Steam UGC IDs can be huge
+numbers over 600,000,000. This means that sometimes you may need to
+store these as a string rather than try and store them as a real
+value, especially if working with buffers or trying to write the
+value to a text file (since this will convert it to a simplified
+standard format like "6.6624e+003" which will cause issues being
+read back).</div>
+
+<p><br>
+The normal workflow for getting UGC into your game would be as
 follows:</p>
 
 <ul>

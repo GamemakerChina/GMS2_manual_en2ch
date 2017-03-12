@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Compiling</h2>
 
 <div class="body-scroll">
@@ -144,6 +147,12 @@ for exact details for any given platform). Once a device has been
 found or added, it will then be shown in this window, like in this
 example image for Android: <img class="center" src=
 "images/qs_adddevice.png" alt="Add Device"></p>
+
+<p>The exact procedure and requirements for setting up devices and
+troubleshooting issues can be found in the appropriate section of
+the <a href=
+"http://help.yoyogames.com/hc/en-us/categories/204246668-GameMaker-Studio-2"
+target="_blank">GameMaker Studio 2 Knowledge Base</a>.</p>
 </div>
 <br>
 <a name="compile_config" id="compile_config"></a> <label class=
@@ -159,7 +168,7 @@ configuration for a specific target platform.</div></blockquote>
 <p><br>
 </p>
 
-<h2>Creating A Final Executable Asset Package</h2>
+<h2>Creating A Final Executable Package</h2>
 
 <p><br>
 </p>
@@ -203,13 +212,15 @@ alt="Windows Compile Options"> If you check the box marked
 will remember the choice for all future compiles (this can be reset
 or changed from the <a href=
 "../../2_interface/3_settings/preferences.html">Windows
-Preferences</a>).<br>
+Preferences</a>). You can find out more from the <a href=
+"http://help.yoyogames.com/hc/en-us/sections/207157668" target=
+"_blank">YoYo Games Help Center</a><br>
 <br></li>
 
 <li><b>Ubuntu (Linux)</b> - Ubuntu (Linux) apps can be compiled as
 <tt>*.zip</tt> files. You can find out more from the <a href=
-"http://help.yoyogames.com/hc/en-us/sections/203873398-Ubuntu"
-target="_blank">YoYo Games Help Center</a>.<br>
+"http://help.yoyogames.com/hc/en-us/articles/235186168" target=
+"_blank">YoYo Games Help Center</a>.<br>
 <br></li>
 
 <li><b>HTML5</b> - If you have chosen to build HTML5, then an
@@ -224,8 +235,8 @@ is necessary for this, and you can also specify your own custom
 index file when you build the package (see the <a href=
 "../../2_interface/3_settings/game_options/options_html5.html">HTML5
 Game Options</a>). You can find out more from the <a href=
-"http://help.yoyogames.com/hc/en-us/sections/203873358-HTML5"
-target="_blank">YoYo Games Help Center</a>.<br>
+"http://help.yoyogames.com/hc/en-us/sections/115000309008" target=
+"_blank">YoYo Games Help Center</a>.<br>
 <br></li>
 
 <li><b>Android</b> - For Android devices, a single <tt>*.apk</tt>
@@ -233,8 +244,8 @@ file will be generated which can be used directly on any Android
 devices or uploaded to the <i>Google Play</i> or <i>Amazon</i>
 stores (or any other site that accepts Android apps). You can find
 out more from the <a href=
-"http://help.yoyogames.com/hc/en-us/sections/203873318-Android"
-target="_blank">YoYo Games Help Center</a>.<br>
+"http://help.yoyogames.com/hc/en-us/articles/115001368727" target=
+"_blank">YoYo Games Help Center</a>.<br>
 <br></li>
 
 <li><b>iOS</b> - Compiling to iOS will create an <tt>xarchive</tt>
@@ -242,7 +253,7 @@ file which is then used in Xtools to create the final iOS package.
 Note that to compile for iOS <b>you will require an Apple Mac
 computer running OSX or higher</b> as well as the relevant
 certificates and permissions. You can find out more from the
-<a href="http://help.yoyogames.com/hc/en-us/sections/203873348-iOS"
+<a href="http://help.yoyogames.com/hc/en-us/articles/115001368747"
 target="_blank">YoYo Games Help Center</a>.<br>
 <br></li>
 
@@ -252,15 +263,25 @@ you want to later upload it to the Mac App Store or not. As with
 iOS <b>you will require an Apple Mac computer running OSX or
 higher</b> as well as the relevant certificates and permissions.
 You can find out more from the <a href=
-"http://help.yoyogames.com/hc/en-us/sections/203873328-Mac" target=
+"http://help.yoyogames.com/hc/en-us/articles/235186128" target=
 "_blank">YoYo Games Help Center</a>.<br>
 <br></li>
 
 <li><b>Windows UWP</b> - For Windows UWP, <i>GameMaker Studio 2</i>
 will create an <tt>*.appx</tt> package which can then be uploaded
-to the Windows Store. You can find out more from the <a href=
-"http://help.yoyogames.com/hc/en-us/sections/203873468-UWP-Universal-Windows-Platform-"
-target="_blank">YoYo Games Help Center</a>.</li>
+to the Windows Store. When you click the Create Executable button
+you will be prompted to tell <i>GameMaker Studio 2</i> which type
+of package you would like to create (can be either for ARM, x64 or
+x86 architectures), and you should choose that which targets the
+devices your game will be supported on: <img class="center" src=
+"images/qs_uwp_compile_options.png" alt="UWP Compile Options"> If
+you check the box marked Remember Packaging Option then GameMaker
+Studio 2 will remember the choice for all future compiles (this can
+be reset or changed from the <a href=
+"../../2_interface/3_settings/preferences.html">UWP
+Preferences</a>). You can find out more from the <a href=
+"http://help.yoyogames.com/hc/en-us/sections/115000309028" target=
+"_blank">YoYo Games Help Center</a>.</li>
 </ul>
 
 <p>Once you have created your executable asset package you can then

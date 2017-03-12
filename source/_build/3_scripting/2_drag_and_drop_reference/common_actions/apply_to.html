@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2><img style="vertical-align:middle" src=
 "images/i_common_apply_to.png"> Apply To...</h2>
 
@@ -48,6 +51,17 @@ right of the action, and in this way you can tell a different set
 of objects, or even a single instance if you have the instance ID,
 to run multiple actions before continuing with the code of the
 current object.</p>
+
+<p>Note that to add actions into the "Applies To" block, they
+should be dropped to the <i>side</i> of the action, as shown in the
+image below:<br>
+<img class="center" src="images/drop_applies_to.png" alt=
+"Applies To Add Actions"></p>
+
+<p>These actions will now be run from the object or instance that
+is being targeted by the "Applies To" block, while any actions
+dropped elsewhere will be performed after the "Applies To"
+block.</p>
 </blockquote>
 
 <p><br>

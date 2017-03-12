@@ -26,19 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
-<h1 class="studio">skeleton_skin_list</h1>
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>skeleton_skin_list</h2>
 
-<h2 class="studio">Populate a DS list with the names for all skins
-included in the sprite.</h2>
-
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">skeleton_skin_list(sprite, list);</p>
-
+<div class="body-scroll">
 <p><br>
 </p>
 
-<div>
+<h3>Syntax:</h3>
+
+<p class="code">skeleton_skin_list(sprite, list);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -57,18 +58,21 @@ list from.</td>
 names.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function you can populate a (pre-created) <a href=
 "../../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>
 with all the names of the skins included as part of the skeletal
@@ -78,11 +82,12 @@ sprite.</p>
 
 <div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
 available with the Trial Licence of the product.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var list = ds_list_create();<br>
 skeleton_skin_list(sprite_index, list);<br>
@@ -90,13 +95,18 @@ var num = ds_list_size(list);<br>
 skeleton_skin_set(list[| irandom(num - 1));<br>
 ds_list_destroy(list);<br></p>
 
+<blockquote>
 <p>The above code creates a DS list then populates it with the skin
 names. A random one is then chosen and applied to the instance
 before the list is destroyed.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Skeletal
 Animations</a></div>
@@ -104,11 +114,13 @@ Animations</a></div>
 <div style="float:right">Next: <a href=
 "skeleton_attachment_get.html">skeleton_attachment_get</a></div>
 </div>
+</div>
 
 <h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

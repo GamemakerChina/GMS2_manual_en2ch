@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>os_version</h2>
 
 <div class="body-scroll">
@@ -81,7 +84,10 @@ Ice Cream Sandwich (4.0.3 - 4.0.4)<br>
 Jelly Bean (4.1.x)<br>
 Jelly Bean (4.2.x)<br>
 Jelly Bean (4.3.x)<br>
-KitKat (4.4.x)</td>
+KitKat (4.4.x)<br>
+Lollipop (5.0 - 5.1.1)<br>
+Marshmallow (6.0 - 6.0.1)<br>
+Nougat (7.0 - 7.11)</td>
 <td>3<br>
 4<br>
 5<br>
@@ -98,7 +104,10 @@ KitKat (4.4.x)</td>
 16<br>
 17<br>
 18<br>
-19</td>
+19<br>
+21 - 22<br>
+23<br>
+24 - 25</td>
 </tr>
 
 <tr class="alt">
@@ -113,7 +122,23 @@ iOS 6 (6.0.1)<br>
 iOS 6 (6.0.2)<br>
 iOS 6 (6.1)<br>
 iOS 7 (7.0.4)<br>
-iOS 7 (7.1)</td>
+iOS 7 (7.1)<br>
+iOS 8 (8.0)<br>
+iOS 8 (8.1)<br>
+iOS 8 (8.2)<br>
+iOS 8 (8.3)<br>
+iOS 8 (8.4)<br>
+iOS 8 (8.4.1)<br>
+iOS 9 (9.0)<br>
+iOS 9 (9.0.1)<br>
+iOS 9 (9.0.2)<br>
+iOS 9 (9.1)<br>
+iOS 9 (9.2)<br>
+iOS 9 (9.2.1)<br>
+iOS 9 (9.3)<br>
+iOS 10 (10.0)<br>
+iOS 10 (10.1)<br>
+iOS 10 (10.2)</td>
 <td>50335747<br>
 67117057<br>
 83890177<br>
@@ -121,7 +146,23 @@ iOS 7 (7.1)</td>
 100663298<br>
 100667392<br>
 117440516<br>
-117444608</td>
+117444608<br>
+134217728<br>
+134221824<br>
+134225920<br>
+134230016<br>
+134234112<br>
+134234113<br>
+150994944<br>
+150994945<br>
+150994946<br>
+150999040<br>
+151003136<br>
+151003137<br>
+151007232<br>
+167772160<br>
+167776256<br>
+167780352<br></td>
 </tr>
 
 <tr>
@@ -138,7 +179,10 @@ Leopard (10.5.8)<br>
 Snow Leopard (10.6.8)<br>
 Lion (10.7.5)<br>
 Mountain Lion (10.8.2)<br>
-Mavericks (10.9.1)</td>
+Mavericks (10.9.1)<br>
+Yosemite (10.10)<br>
+El Capitan (10.11)<br>
+Sierra (10.12)<br></td>
 <td>167772164<br>
 167776261<br>
 167780360<br>
@@ -148,47 +192,54 @@ Mavericks (10.9.1)</td>
 167796744<br>
 167800837<br>
 167804930<br>
-167809025</td>
+167809025<br>
+167813120<br>
+167817216<br>
+167821312<br></td>
 </tr>
 
 <tr class="alt">
 <td>Windows<br>
 (the return value is calculated as:<br>
 majorVersion * 65536 + minorVersion)</td>
-<td>Windows 8 (6.2)<br>
-Windows Server 2012 (6.2)<br>
-Windows 7 (6.1)<br>
-Windows Server 2008 R2 (6.1)<br>
-Windows Server 2008 (6.0)<br>
-Windows Vista (6.0)<br>
-Windows Server 2003 R2 (5.2)<br>
-Windows Server 2003 (5.2)<br>
-Windows XP 64-Bit Edition (5.2)<br>
+<td>Windows 2000 (5.0)<br>
 Windows XP (5.1)<br>
-Windows 2000 (5.0)</td>
-<td>393218<br>
-393218<br>
-393217<br>
-393217<br>
-393216<br>
-393216<br>
-327682<br>
-327682<br>
-327682<br>
+Windows XP 64-Bit Edition (5.2)<br>
+Windows Server 2003 (5.2)<br>
+Windows Server 2003 R2 (5.2)<br>
+Windows Vista (6.0)<br>
+Windows Server 2008 (6.0)<br>
+Windows Server 2008 R2 (6.1)<br>
+Windows 7 (6.1)<br>
+Windows Server 2012 (6.2)<br>
+Windows 8 (6.2)<br>
+Windows 8.1 (6.3)<br>
+Windows 10 (10.0)<br></td>
+<td>327680<br>
 327681<br>
-327680</td>
+327682<br>
+327682<br>
+327682<br>
+393216<br>
+393216<br>
+393217<br>
+393217<br>
+393218<br>
+393218<br>
+393219<br>
+655360<br></td>
 </tr>
 
 <tr>
 <td>Windows Phone<br>
 The return value is calculated as:<br>
 majorVersion * 65536 + minorVersion</td>
-<td>Windows Phone 8 (8.0)<br>
+<td>Windows Phone 7 (7.0)<br>
 Windows Phone 7.5 (7.1)<br>
-Windows Phone 7 (7.0)</td>
-<td>524288<br>
+Windows Phone 8 (8.0)<br></td>
+<td>458752<br>
 458753<br>
-458752</td>
+524288<br></td>
 </tr>
 </table>
 </div>

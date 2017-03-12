@@ -26,9 +26,15 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_init</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
@@ -37,13 +43,16 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>Before using any of the Facebook functions you <i>must</i> call
 this function to initialize the Facebook API and tell <i>GameMaker
 Studio 2</i> that you are going to be using the Facebook specific
@@ -53,13 +62,13 @@ function right at the start before anything else. Note too, that
 even if you use <a href=
 "facebook_logout.html"><tt>facebook_logout</tt></a> at some point
 in your game you will not need to use this function again to log
-in.<br>
-<br></p>
+in.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio"><b>Example:</b>
+<h3><b>Example:</b>
 </h3>
 
 <p class="code">facebook_init();<br>
@@ -68,9 +77,11 @@ ds_list_add(permissions,"public_profile", "user_friends");<br>
 facebook_login(permissions);<br>
 ds_list_destroy(permissions);<br></p>
 
+<blockquote>
 <p>The above code initialises Facebook, then creates a
 <tt>ds_list</tt> to hold the specific permissions that you wish to
 request, and finally logs in using these permissions.</p>
+</blockquote>
 
 <p><br>
 </p>

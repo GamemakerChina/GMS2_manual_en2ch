@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>get_login_async</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">get_login_async(name, password);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">get_login_async(name, password);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -53,18 +56,21 @@ if (window.name != "content")
 <td>The default password</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function opens a window that asks the user to input a
 username and password. These arguments can be set as an empty
 string or you can store previously entered values to use if you
@@ -91,17 +97,19 @@ number for the ds_map created which can then be checked in the
 corresponding event so that you can "target" a specific ds_map
 should you be expecting more than one async map to be returned
 (perhaps from some other function). Outside of the asynchronous
-events, the async_load ds_map will return an "id" value of -1.<br>
-<br></p>
+events, the async_load ds_map will return an "id" value of -1.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The <b>create event</b> (for example) of the object that is
 controlling the login of our user would have the following
 code:</p>
+</blockquote>
 
 <p class="code">ini_open("Profile.ini");<br>
 u = ini_read_string("User","0","");<br>
@@ -109,6 +117,7 @@ p = ini_read_string("User","1","");<br>
 ini_close();<br>
 login = get_login_async(u,p);<br></p>
 
+<blockquote>
 <p>The above code opens an ini file (or creates one if it doesn't
 exist) and gets the name and password stored in that file. If they
 do not exist, then the default of an empty string ("") is returned.
@@ -116,12 +125,13 @@ These values are then used in <tt>get_login_async()</tt> to ask the
 user for their username and password details, with the request
 index being stored in the variable "login". Note that while waiting
 for the user to give the necessary information the game and its
-events will continue to run as normal.<br>
-<br>
-Now that the asynchronous code has been fired off, we need to check
-for the return value in the <a href=
+events will continue to run as normal.</p>
+
+<p>Now that the asynchronous code has been fired off, we need to
+check for the return value in the <a href=
 "../../../2_interface/1_editors/events/async_events.html">asynchronous
 event for Dialogs</a> in the following way:</p>
+</blockquote>
 
 <p class="code">if ds_map_find_value(async_load, "id") == login<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -131,11 +141,13 @@ event for Dialogs</a> in the following way:</p>
 "password");<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the "id" key of the async_load ds_map and
 if it holds the same value as that stored in the "login" variable,
 the map details are then read into the corresponding variables
 which you can then store or use to check against database values
 etc...</p>
+</blockquote>
 
 <p><br>
 </p>

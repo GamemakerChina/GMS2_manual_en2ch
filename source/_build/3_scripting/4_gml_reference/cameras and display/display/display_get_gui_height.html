@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">display_get_gui_height</h1>
 
 <h2 class="studio">Returns the height of the GUI.</h2>
@@ -70,7 +73,7 @@ left-hand corner of the display.</p>
 Views</a></div>
 
 <div style="float:right">Next: <a href=
-"display_mouse_get_x.html">display_mouse_get_x</a></div>
+"display_set_ui_visibility.html">display_set_ui_visibility</a></div>
 </div>
 
 <h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>

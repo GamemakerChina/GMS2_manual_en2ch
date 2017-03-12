@@ -26,14 +26,19 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Achievements and Leaderboards</h2>
 
 <div class="body-scroll">
-<p>Games that are made to target devices that run iOS or Android
-can also connect to one of two leaderboard and achievement API's.
-For iOS you have the <b>iTunes Game Center</b>, and for Android you
-can use the <b>Amazon Game Circle</b> or <b>Google Play</b>, with
-all of them using the using the functions found on this page. These
+<p><br>
+</p>
+Games that are made to target devices that run iOS or Android can
+also connect to one of two leaderboard and achievement API's. For
+iOS you have the <b>iTunes Game Center</b>, and for Android you can
+use the <b>Amazon Game Circle</b> or <b>Google Play</b>, with all
+of them using the using the functions found on this page. These
 functions permit your game to send information on scores and
 achievements to the leaderboards that you have set up in the
 Developers Account for the game you are making and is an excellent
@@ -62,7 +67,7 @@ about challenges etc... The exact details of the <tt>ds_map</tt>
 returned for these events are explained in the <a href=
 "../../../../2_interface/1_editors/events/async_events.html">Social
 Asynchronous Event</a> section.<br>
-<br></p>
+<br>
 
 <blockquote><i><b>NOTE:</b> For these functions to work with iOS
 you must have a valid Game Center account and an iOS <b>app id</b>
@@ -155,8 +160,7 @@ platform:</p>
 </blockquote>
 
 <p><br>
-</p>
-</div>
+</p></div>
 
 <div class="footer">
 <div class="buttons">

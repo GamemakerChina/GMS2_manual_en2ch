@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>variable_global_get</h2>
 
 <div class="body-scroll">
@@ -94,12 +97,13 @@ named variable does not exist)</p>
 
 <p class="code">if variable_global_exists("enemy_num")<br>
 &nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.enemy_num -= 1<br>
+&nbsp;&nbsp;&nbsp;show_debug_message("enemy_num = " +
+string(variable_global_get("enemy_num"));)<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code will check to see if a global variable exists and
-if it does then it is set to a different value.</p>
+if it does then it is output to the console.</p>
 </blockquote>
 
 <p><br>

@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Platform Specific Preferences</h2>
 
 <div class="body-scroll">
@@ -82,8 +85,8 @@ issues you can click the button to the right to open the file
 explorer and manually select the locations for each element. You
 can find details of what versions are required for each of the SDK
 elements <a href=
-"http://help.yoyogames.com/hc/en-us/articles/216753748-SDK-Version-Support"
-target="_blank">here</a>.</p>
+"http://help.yoyogames.com/hc/en-us/articles/227860547" target=
+"_blank">here</a>.</p>
 
 <p>You should click the buttons marked <i>Check Android SDK</i> and
 <i>Check Android NDK</i> after setting the paths, as this will then
@@ -258,7 +261,32 @@ Option" will set this preference to the option you select.<br>
 <br></li>
 </ul>
 </div>
-<br></blockquote>
+<br>
+<label class="collapse" for="f">Windows UWP</label> <input id="f"
+type="checkbox">
+<div class="index_list">
+<p>The <b>Windows UWP</b> preferences have the following options:
+<img class="center" src="images/windows_uwp_prefs.png" alt=
+"Windows UWP Preferences"></p>
+
+<ul>
+<li><b>Visual Studio Path</b>: This option is for pointing
+<i>GameMaker Studio 2</i> to the MS Visual Studio installation on
+the build PC.<br>
+<br></li>
+
+<li><b>Default Package Architecture</b>: When building a final
+Windows UWP executable package, you can choose between creating
+either an <i>x86</i>, <i>x64</i> or <i>ARM</i> package that will
+have the game and any additional files within. Here you can set a
+default value for the package to use or select <i>Show Dialogue</i>
+to have a window pop up when you hit the compile button asking
+which to choose. In general you want to target <i>x86</i> for
+Windows 10 computers, <i>x64</i> for Xbox One and <i>ARM</i> for
+Windows 10 devices.<br>
+<br></li>
+</ul>
+</div></blockquote>
 
 <p>Note that apart from setting up these preferences, you will also
 need to set up the devices that some of these platforms target,

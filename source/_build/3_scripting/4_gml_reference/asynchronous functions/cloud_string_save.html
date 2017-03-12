@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>cloud_string_save</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">cloud_string_save(string, description);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">cloud_string_save(string, description);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -53,18 +56,21 @@ if (window.name != "content")
 <td>A brief description of the data being stored.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function will commit a string to the chosen cloud service
 for storage. The function will return a unique <b>id</b> value that
 should then be used in the appropriate asynchronous event to
@@ -75,17 +81,17 @@ single "data blob" to the cloud, and running this function again
 will overwrite any previously stored values (as will using the
 <a href="cloud_file_save.html"><tt>cloud_file_save</tt></a>
 function). The description should be a short string of information
-that describes the save, eg: "Level2, Stage2".<br>
-<br>
-For further information on the returned asynchronous data, please
-see the function <a href=
-"cloud_synchronise.html"><tt>cloud_synchronise</tt></a>.<br>
-<br></p>
+that describes the save, eg: "Level2, Stage2".</p>
+
+<p>For further information on the returned asynchronous data,
+please see the function <a href=
+"cloud_synchronise.html"><tt>cloud_synchronise</tt></a>.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var t_str = "";<br>
 for (var i = 0; i &lt; 10; i++;)<br>
@@ -97,10 +103,12 @@ var file = file_text_open_write("Highscores.txt");<br>
 file_text_write_string(file, t_str);<br>
 file_text_close(file);<br></p>
 
+<blockquote>
 <p>The above code creates a string from the values stored in the
 global array "Highscores" and then writes this string to the cloud
 service for storage, as well as writing it to a file for local
 storage.</p>
+</blockquote>
 
 <p><br>
 </p>

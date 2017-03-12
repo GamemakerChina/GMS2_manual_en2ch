@@ -26,9 +26,15 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>achievement_login</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
@@ -37,13 +43,16 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function logs the user into appropriate leaderboard and
 achievement service. If the service is <i>not</i> available, the
 user is logged into a "pretend" game centre and all achievements
@@ -75,22 +84,27 @@ currently logged in.<br>
 <br></li>
 </ol>
 </blockquote>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The following code would probably be called right at the startof
 your game, or from a special button object that you have placed in
 a room, and will request that the player logs into their Google
 Game Services or Apple Game center account:</p>
+</blockquote>
 
 <p class="code">achievement_login();<br></p>
 
+<blockquote>
 <p>This will send off a request for the current player information
 and generate an asynchronous callback with the special
 <tt>async_load</tt> ds_map containing the following data:</p>
+</blockquote>
 
 <p class="code">var ident = ds_map_find_value(async_load,
 "id");<br>
@@ -117,12 +131,14 @@ if ident == achievement_our_info<br>
 &nbsp;&nbsp;&nbsp;achievement_load_progress();<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the
 <b>Social Asynchronous Event</b> and if its "id" matches the
 constant being checked, it then loops through the map storing all
 the different values in variables before calling the rest of the
 functions to prepare the leaderboards, challenges and friends
 lists.</p>
+</blockquote>
 
 <p><br>
 </p>

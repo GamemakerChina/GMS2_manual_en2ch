@@ -26,23 +26,32 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>cloud_synchronise</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">cloud_synchronise();</p>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function would normally be called at the start of a new
 game and is used to retrieve the current status of the cloud
 service at game start up. The function returns a unique <b>id</b>
@@ -148,28 +157,29 @@ successfully uploaded to the cloud</td>
 </tr>
 </table>
 </div>
-
-<p><br>
-<br>
-</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>This function would be called in an event like the <a href=
 "../../../2_interface/1_editors/events/index.html">Game Start
 Event</a> or in an object that is placed in the first room of your
 game, with the idea being that you check the current data blob from
 the cloud server to see if it is up to date or not.</p>
+</blockquote>
 
 <p class="code">cloud_check = cloud_synchronise();</p>
 
+<blockquote>
 <p>You would then want to check the returned <tt>ds_map</tt> in the
 asynchronous <b>Cloud Event</b> to get the status and the returned
 string, if there is one, with something like the following
 code:</p>
+</blockquote>
 
 <p class="code">if ds_map_find_value(async_load, "id") ==
 cloud_check<br>
@@ -195,12 +205,14 @@ ds_map_find_value(async_load, "resultString"));<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks to make sure that the correct asynchronous
 function call is being revised, then goes on to get the status of
 the returned cloud ds_map. if the status is a negative number,
 something has gone wrong and the user is informed, otherwise the
 code will continue and retrieve the synchronised data and write it
 to a text file for later use.</p>
+</blockquote>
 
 <p><br>
 </p>

@@ -26,19 +26,22 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>achievement_load_leaderboard</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">achievement_load_leaderboard(ident, minindex,
 maxindex, filter)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -67,18 +70,21 @@ dashboard.</td>
 list or to all players (see the <b>Description</b> below)</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function will send a request to the server for information
 on the given leaderboard. The leaderboard must have been created
 previously on the developer dashboard for your game and the ID
@@ -95,7 +101,7 @@ key/value pairs for each player. The exact contents of the map are
 shown below:</p>
 
 <blockquote>
-<ol>
+<ul>
 <li>"<b>id</b>" - For this function it should be
 <tt>achievement_leaderboard_info</tt><br>
 <br></li>
@@ -121,7 +127,7 @@ leaderboard.<br>
 <br></li>
 
 <li>"<b>ScoreN</b>" - The score of the player "N".</li>
-</ol>
+</ul>
 </blockquote>
 
 <p>You can specify the exact portion of the leaderboard to show by
@@ -142,17 +148,23 @@ for all players.<br>
 </ul>
 </blockquote>
 
+<div class="note"><b>NOTE</b>: this function does not work on the
+<b>Android</b> platform.</div>
+</blockquote>
+
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The following code would probably be called after the player has
 logged into their game account using <a href=
 "achievement_login.html"><tt>achievement_login</tt></a> to get a
 list of all friends leaderboard positions for the game, on either
 Android or iOS:</p>
 
+<blockquote>
 <p class="code">if os_type == os_android<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;achievement_load_leaderboard("CgkIs9_51u0PEAIQBw",
@@ -164,9 +176,11 @@ else<br>
 100, achievement_filter_friends_only);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>This will send off a request for the information on the given
 leaderboard and generate an asynchronous callback with the special
 <tt>async_load</tt> ds_map containing the following data:</p>
+</blockquote>
 
 <p class="code">var ident = ds_map_find_value(async_load,
 "id");<br>
@@ -196,6 +210,7 @@ numentries; i++;)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the
 <b>Social Asynchronous Event</b> and if its "id" matches the
 constant being checked, it then checks to make sure that the
@@ -204,9 +219,12 @@ looping through the map and storing all the different values in a
 number of arrays. It also requests an image for each of the entries
 in the map (see <a href=
 "achievement_get_pic.html"><tt>achievement_get_pic</tt></a>).</p>
+</blockquote>
 
 <p><br>
 </p>
+</blockquote>
+</blockquote>
 </div>
 
 <div class="footer">

@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>get_integer_async</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">get_integer_async(string, default);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">get_integer_async(string, default);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -53,18 +56,21 @@ if (window.name != "content")
 <td>The default value.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function opens a window and displays message as well as a
 space for the user to input a value (which will contain the
 supplied default value to start with). This is an asynchronous
@@ -82,25 +88,29 @@ called, the "status" will be either <tt>true</tt> for the "Okay"
 button being pressed, or <tt>false</tt> if the message was
 cancelled (where applicable as not all target platforms permit
 messages to be cancelled). Finally "value" will return the integer
-that the user input (or 0 if none was supplied).<br>
-<br></p>
+that the user input (or 0 if none was supplied).</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The <b>left mouse press event</b> (for example) of the object
 that is showing the message would have the following code:</p>
+</blockquote>
 
 <p class="code">msg = get_integer_async("How old are you?",
 0);<br></p>
 
+<blockquote>
 <p>The above will show a message requesting that the user input a
 string and press "Okay". The function id is stored in the variable
 "msg" and will be used in the <a href=
 "../../../2_interface/1_editors/events/async_events.html">asynchronous
 Dialogs event</a> as shown below:</p>
+</blockquote>
 
 <p class="code">var i_d = ds_map_find_value(async_load, "id");<br>
 if i_d == msg<br>
@@ -112,12 +122,14 @@ ds_map_find_value(async_load, "value");<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the "id" key of the returned
 <tt>ds_map</tt> against the value stored in the variable "msg". If
 they are the same, it then checks to see if "Okay" was pressed
 (rather than the window being closed/cancelled) and if it returns
 <tt>true</tt> it then sets a global variable from the integer
 returned.</p>
+</blockquote>
 
 <p><br>
 </p>

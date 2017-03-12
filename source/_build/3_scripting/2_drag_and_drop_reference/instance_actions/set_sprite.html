@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2><img style="vertical-align:middle" src=
 "images/i_instance_set_sprite.png"> Set Sprite</h2>
 
@@ -43,8 +46,12 @@ change to, and then give the image (animation frame) to show. Note
 that if you don't want the sprite to animate after setting the
 frame, you'll need to use the <a href=
 "set_animation_speed.html">Set Animation Speed</a> action and set
-it to 0. Changing the sprite will also change the collision mask of
-the instance, unless you have also specified a separate
+it to 0, or if you want the sprite to continue animating then set
+the value to use the <tt>image_index</tt> built-in variable
+variable instead.</p>
+
+<p>Changing the sprite will also change the collision mask of the
+instance, unless you have also specified a separate
 <tt>mask_index</tt> in the <a href=
 "../../../2_interface/1_editors/objects.html">Object Editor</a>.
 Please note that for changes in this action to be visible, the

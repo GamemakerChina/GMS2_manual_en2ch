@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Extensions</h2>
 
 <div class="body-scroll">
@@ -575,8 +578,8 @@ is useful should you need to "over-ride" any symbol from the
 included library with your own value, but it should be noted that
 doing so will slow linking down.</p>
 
-<p>For more information on creating Android extensions, please see
-the <a href=
+<p>For more information on creating iOS extensions, please see the
+<a href=
 "http://help.yoyogames.com/hc/en-us/articles/216755238-Creating-A-Native-Extension-For-iOS-GMS-v1-3-"
 target="_BLANK">YoYo Games Knowledge Base</a>.</p>
 </div></blockquote>

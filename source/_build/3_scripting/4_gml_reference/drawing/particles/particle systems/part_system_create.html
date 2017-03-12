@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">part_system_create</h1>
 
 <h2 class="studio">Creates a new particle system and returns its
@@ -48,10 +51,10 @@ index.</h2>
 <p>This function is used to create a new particle system and will
 return a unique index number that should be stored and used in all
 further functions relating to that system. The system will be
-assigned a managed layer and and a depth of 0. Managed layers are
-not accessible to the user and used only for internal management
-when depth is used instead of layers. Normally you would use the
-function <a href=
+assigned a managed layer and will be set to have a depth of 0.
+Managed layers are not accessible to the user and used only for
+internal management when depth is used instead of layers. Normally
+you would use the function <a href=
 "part_system_create_layer.html"><tt>part_system_create_layer</tt></a>
 instead of this one.<br>
 <br></p>

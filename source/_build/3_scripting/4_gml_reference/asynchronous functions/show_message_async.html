@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>show_message_async</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">show_message_async(string);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">show_message_async(string);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -48,18 +51,21 @@ if (window.name != "content")
 <td>The message to show to the user.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function opens a window and displays the message you define
 in the function to the user. This is an asynchronous function, and
 as such <i>GameMaker Studio 2</i> does <i>not</i> block the device
@@ -75,23 +81,28 @@ the "status" being either <tt>true</tt> for the "Okay" button being
 pressed, or <tt>false</tt> if the message was cancelled (where
 available as not all target platforms permit the cancelation of
 dialogues).</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The <b>left mouse press event</b> (for example) of the object
 that is showing the message would have the following code:</p>
 
+<blockquote>
 <p class="code">msg = show_message_async("You will now be taken to
 the store");<br></p>
 
+<blockquote>
 <p>The above will show a message with the given string. The message
 id is stored in the variable "msg" and will be used in the <a href=
 "../../../2_interface/1_editors/events/async_events.html">asynchronous
 Dialogs event</a> as shown below:</p>
 
+<blockquote>
 <p class="code">var i_d, stat;<br>
 i_d = ds_map_find_value(async_load, "id");<br>
 if i_d == msg<br>
@@ -103,14 +114,20 @@ if i_d == msg<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the "id" key of the returned
 <tt>ds_map</tt> against the value stored in the variable "msg". If
 they are the same, it then checks to see if the "Okay" button was
 pressed (rather than the window being closed/cancelled) and if it
 returns <tt>true</tt> it opens a url.</p>
+</blockquote>
 
 <p><br>
 </p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 </div>
 
 <div class="footer">

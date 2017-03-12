@@ -26,19 +26,22 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_request_publish_permissions</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">
 facebook_request_publish_permissions(permissions)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -50,18 +53,21 @@ facebook_request_publish_permissions(permissions)</p>
 <td>The permissions you want to have from the user.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function you can request additional publishing
 permissions for Facebook. These permissions are added (as strings)
 to a previously created <tt>ds_list</tt> which is then used in the
@@ -71,19 +77,19 @@ in (ie. they have called <a href=
 "facebook_status.html"><tt>facebook_status</tt></a> should be
 "AUTHORISED" before you call this function. the functon returns a
 unique ID value for the request call or -1 if the request was not
-sent (for example, the user is not logged in).<br>
-<br>
-This function will trigger an <a href=
+sent (for example, the user is not logged in).</p>
+
+<p>This function will trigger an <a href=
 "../../../../2_interface/1_editors/events/async_events.html">Asynchronous
 Social Event</a>, which contains the ds_map <tt>async_load</tt>.
 This ds_map will be populated with various key/value pairs to
-report the success or failure of the request.<br>
-<br></p>
+report the success or failure of the request.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var request = "publish_actions";<br>
 if !facebook_check_permission(request)<br>
@@ -95,9 +101,11 @@ facebook_request_publish_permissions(permissions);<br>
 &nbsp;&nbsp;&nbsp;ds_list_destroy(permissions);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the current Facebook permissions, and if
 the game has not requested the "publish_actions" permission, then a
 request is sent.</p>
+</blockquote>
 
 <p><br>
 </p>

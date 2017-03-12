@@ -26,19 +26,22 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_send_invite</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">facebook_send_invite(titlestring, msg, picture_url,
 redirect_url, ds_map_response);</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -72,18 +75,21 @@ settings page.</td>
 details.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function you can get your game to display a facebook
 “apprequests” dialog, which will allow your player to select
 friends from a list and send them a game invite message. The
@@ -96,23 +102,28 @@ will should have a key "<b>to</b>" which will return a ds_list
 containing all the Facebook user IDs of those people invited (se
 extended example below for further details).</p>
 
-<blockquote><i><b>NOTE:</b> The "SiteURL" is ignored on the iOS and
-Android modules and is only required on the HTML5 module if you are
-not hosting the application on the "SiteURL" (ie: you are testing
-locally).</i>
-</blockquote>
+<div class="note">
+<p><b>NOTE:</b> The "SiteURL" is ignored on the iOS and Android
+modules and is only required on the HTML5 module if you are not
+hosting the application on the "SiteURL" (ie: you are testing
+locally).</p>
+</div>
 
-<blockquote><i><b>NOTE:</b> The user does not need to be logged in
-to use this function as the log in dialogue will be shown as part
-of the invite request.</i>
+<div class="note">
+<p><b>NOTE:</b> The user does not need to be logged in to use this
+function as the log in dialogue will be shown as part of the invite
+request.</p>
+</div>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>You can send a friends invite in the following way:</p>
+</blockquote>
 
 <p class="code">if mouse_check_button_pressed(mb_left)<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -122,11 +133,13 @@ and play Catch The Haggis with me...",
 "http://MacSweeneygames.com/Clown.jpg", "", map);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will display an "apprequest" dialogue where you
 can select friends to invite to play the game, and it also creates
 a <tt>ds_map</tt> to hold the Facebook IDs of the users that are
 invited. This then needs to be polled in the <b>Step</b> event of
 an instance to receive the results, like this:</p>
+</blockquote>
 
 <p class="code">if ds_map_exists(map, "to")<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -140,11 +153,12 @@ ds_list_find_value(list, i);<br>
 &nbsp;&nbsp;&nbsp;ds_map_clear(map);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>This code checks the ds_map for the key "to" and when it's
 added, it then accesses the ds-list that "to" contains and loops
 through it, setting the "fb_uid" array to hold the user IDs that
-have been returned.<br>
-<br></p>
+have been returned.</p>
+</blockquote>
 
 <p><br>
 </p>

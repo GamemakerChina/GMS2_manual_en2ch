@@ -26,9 +26,15 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>achievement_show_achievements</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
@@ -37,26 +43,29 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function will open the achievements page for the chosen
 platform. Please note that this is an <i>asynchronous function</i>,
 ie: your game will continue to run in the background while the
 achievements page is being shown. As such, you should be careful
 where you use this and make sure to pause the game or only permit
 it to be shown in areas of your game where it will not interfere
-with the game-play.<br>
-<br></p>
+with the game-play.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if achievement_available()<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -65,10 +74,12 @@ with the game-play.<br>
 &nbsp;&nbsp;&nbsp;achievement_show_achievements();<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks to see if the chosen leaderboard and
 achievement service is available and if so it sets a global
 variable and creates a controller "pause" instance before calling
 the function to show the achievements on screen.</p>
+</blockquote>
 
 <p><br>
 </p>

@@ -26,18 +26,21 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_login</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">facebook_login(permissions, ios_login_type)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -55,18 +58,21 @@ if (window.name != "content")
 below).</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function <i>GameMaker Studio 2</i> will connect to
 Facebook and ask the user to log into their account. You may also
 supply additional permission requests in the form of a ds_list that
@@ -77,9 +83,9 @@ developers pages found <a href=
 "https://developers.facebook.com/docs/reference/login/" target=
 "_blank">here</a>. If you do not wish to ask for any special or
 extended permissions then you will still need to send a ds_list,
-but this time it will be empty.<br>
-<br>
-This function is also considered as being <i>asynchronous</i> as
+but this time it will be empty.</p>
+
+<p>This function is also considered as being <i>asynchronous</i> as
 while the Facebook login window is open on the screen, the game
 will continue to run in the background and even once the user has
 completed the login process, none of the other Facebook functions
@@ -90,19 +96,21 @@ different rates of data transfer, this means that it could be
 several seconds before this authorisation is received, and all the
 while the game will still be running.</p>
 
-<blockquote><i><b>NOTE:</b> You can now only in <b>read</b>
-permissions to this function. If you require write permissions, you
-need to call <a href=
+<div class="note">
+<p><b>NOTE:</b> You can now only in <b>read</b> permissions to this
+function. If you require write permissions, you need to call
+<a href=
 "facebook_request_publish_permissions.html"><tt>facebook_request_publish_permissions()</tt></a>
 after logging in. Also note that if your game requests for more
 than than the <b>public_profile</b>, <b>email</b> and
 <b>user_friends</b> it will require review by Facebook before it
-can be used by people other than the game's developers.</i>
-</blockquote>
+can be used by people other than the game's developers.</p>
+</div>
 
-<p>There is an extra parameter required for iOS login (other
-platforms can simply use <tt>fb_login_default</tt> for the
-argument). This should be one of the constants listed below:</p>
+<p><br>
+There is an extra parameter required for iOS login (other platforms
+can simply use <tt>fb_login_default</tt> for the argument). This
+should be one of the constants listed below:</p>
 
 <div class="compat">
 <table>
@@ -148,24 +156,18 @@ falling back to a fast app switch if necessary.</td>
 </table>
 </div>
 
-<p><br>
-<br>
-The above listed constants change the login behaviour on iOS,
+<p>The above listed constants change the login behaviour on iOS,
 permitting you to select which fallback methods to use (if any)
 should login fail from through the normal process. For further
-information please see this <a href=
+information pleasesee this <a href=
 "https://developers.facebook.com/docs/reference/ios/3.0/class/FBSession">
-Facebook Developer page</a>.<br>
-<br></p>
-
-<p><br>
-<br>
-</p>
+Facebook Developer page</a>.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">facebook_init();<br>
 var permissions = ds_list_create();<br>
@@ -173,8 +175,10 @@ ds_list_add(permissions,"public_profile", "user_friends");<br>
 facebook_login(permissions, fb_login_default);<br>
 ds_list_destroy(permissions);<br></p>
 
+<blockquote>
 <p>The above code will initialize Facebook and then log the current
 user in, asking for the extended read permissions given.</p>
+</blockquote>
 
 <p><br>
 </p>

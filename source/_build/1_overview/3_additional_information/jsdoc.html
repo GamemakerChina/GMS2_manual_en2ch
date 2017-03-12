@@ -27,7 +27,10 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
-<h2>JavaDoc Script Comments</h2>
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>JSDoc Script Comments</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -141,7 +144,7 @@ Preferences</a>.</p>
 Information Index</a></div>
 
 <div style="float:right">Next: <a href=
-"obsolete_functions.html">Obsolete Functions</a></div>
+"micro_web_server.html">Micro Web Server</a></div>
 </div>
 </div>
 

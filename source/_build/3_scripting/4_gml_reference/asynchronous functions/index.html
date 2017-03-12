@@ -25,9 +25,15 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Asynchronous Functions</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <p>Before dealing with the asynchronous functions (referred to from
 now on as <i>async</i> functions) in <i>GameMaker Studio 2</i> it
 may be that you are wondering what the word "asynchronous" actually
@@ -282,7 +288,13 @@ notifications:</p>
 </ul>
 
 <div class="note"><b>NOTE</b>: This functionality is limited to the
-<b>iOS</b> and <b>Android</b> target modules.</div>
+<b>iOS</b> and <b>Android</b> target modules. For <b>Android</b>
+you will need to have installed the <a href=
+"https://marketplace.yoyogames.com/assets/2008/google-play-services"
+target="_blank">Google Play Services Extension</a> and have enabled
+push notifications in the <a href=
+"../../../2_interface/3_settings/game_options/options_android.html">
+Android Social Game Options</a>.</div>
 </div>
 <br>
 <a name="async_push_remote" id="async_push_remote"></a>

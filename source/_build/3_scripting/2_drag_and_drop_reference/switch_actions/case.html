@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2><img style="vertical-align:middle" src=
 "images/i_switches_case.png"> Case</h2>
 
@@ -102,7 +105,7 @@ evaluated. After the switch has run, an alarm is set to
 Actions</a></div>
 
 <div style="float:right">next: <a href=
-"switch.html">Switch</a></div>
+"default.html">Default</a></div>
 </div>
 </div>
 

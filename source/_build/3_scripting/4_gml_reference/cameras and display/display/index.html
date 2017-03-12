@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>The Display</h2>
 
 <p>The "window" is where <i>GameMaker Studio 2</i> displays your
@@ -89,6 +92,10 @@ about the GUI layer, and information on the mouse:</p>
 
 <li><a href="display_get_gui_height.html"><span class=
 "list_link">display_get_gui_height</span></a>
+</li>
+
+<li><a href=
+"display_set_ui_visibility.html">display_set_ui_visibility</a>
 </li>
 
 <li><a href="display_mouse_get_x.html"><span class=

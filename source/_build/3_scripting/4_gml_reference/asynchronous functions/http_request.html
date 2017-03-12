@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>http_request</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">http_request(url, method, header_map, body);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">http_request(url, method, header_map, body);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -66,18 +69,21 @@ are supported)</td>
 binary buffer handle)</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function, you can create an HTTP header request to
 define the operating parameters of an HTTP transaction, which can
 be used for many things like (for example) authentication via HTTP
@@ -126,23 +132,22 @@ returned with the response to the HTTP request.</li>
 </ul>
 </blockquote>
 
-<p><i><b>NOTE:</b> HTTP headers normally follow the format
-"key:value", but since GMS creates these pairs for you from the
-ds_map, there is no need to include the colon ":" in your map key
-or value strings.</i><br>
-<br>
-<i><b>NOTE:</b> You should be aware that due to XSS protection in
-browsers, requests to and attempts to load resources from across
-domains are blocked and may appear to return blank results. Please
-see the section on <a href="index.html">Cross Domain Issues</a> for
-further details.</i><br>
-<br>
-</p>
+<div class="note"><b>NOTE:</b> HTTP headers normally follow the
+format "key:value", but since GMS creates these pairs for you from
+the ds_map, there is no need to include the colon ":" in your map
+key or value strings.</div>
+
+<div class="note"><b>NOTE:</b> You should be aware that due to XSS
+protection in browsers, requests to and attempts to load resources
+from across domains are blocked and may appear to return blank
+results. Please see the section on <a href="index.html">Cross
+Domain Issues</a> for further details.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var map = ds_map_create();<br>
 ds_map_add(map, "Host", "225.0.0.97:3000");<br>
@@ -170,11 +175,13 @@ data="utf8=%E2%9C%93&amp;authenticity_token=kPmS14DcYcuKgMFZUsN3XFfj3mhs%3D&amp;
 request = http_request("http:225.0.0.97:3000/products", "POST",
 map, data);<br></p>
 
+<blockquote>
 <p>The above code creates a ds_map with the relevant HTTP headers
 for the function, then creates a data string for use as this is a
 POST request. Finally the function is called, with it's ID value
 being stored in the variable "request" for checking in the HTTP
 asynchronous event.</p>
+</blockquote>
 
 <p><br>
 </p>

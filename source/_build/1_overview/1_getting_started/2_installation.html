@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Installing</h2>
 
 <div class="body-scroll">
@@ -71,8 +74,8 @@ basic setup:</p>
 <br>
 <label class="collapse" for="two">Mac OS</label> <input id="two"
 type="checkbox">
-<div class="index_list">For the Mac OS you will need to have at
-least the following minimum specs:<br>
+<div class="index_list">For the Mac OS platform you will need to
+have at least the following minimum specs:<br>
 <br>
 
 <ul>

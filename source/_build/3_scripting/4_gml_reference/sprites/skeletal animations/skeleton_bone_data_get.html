@@ -26,19 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
-<h1 class="studio">skeleton_bone_data_get</h1>
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>skeleton_bone_data_get</h2>
 
-<h2 class="studio">Provides access to the bone data used for the
-default pose of the skeletal animation.</h2>
-
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">skeleton_bone_data_get(bone, map);</p>
-
+<div class="body-scroll">
 <p><br>
 </p>
 
-<div>
+<h3>Syntax:</h3>
+
+<p class="code">skeleton_bone_data_get(bone, map);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -55,18 +56,21 @@ default pose of the skeletal animation.</h2>
 <td>The (previously created) ds_map that stores the bone data.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>Your skeletal animation is made up of a number of "bones", which
 you will have defined and given names to in your animation program.
 This function can be used to get information on the named bone at
@@ -76,10 +80,9 @@ which you must have created previously. Note that this data refers
 to the <b>default</b> pose for the skeleton, and not the current
 pose that is being drawn. If you need the data from the
 <b>current</b> pose, use <a href=
-"skeleton_bone_state_get.html"><tt>skeleton_bone_state_get</tt></a>.<br>
+"skeleton_bone_state_get.html"><tt>skeleton_bone_state_get</tt></a>.</p>
 
-<br>
-When you call this function the map will be populated with the
+<p>When you call this function the map will be populated with the
 following keys:</p>
 
 <blockquote>
@@ -111,21 +114,27 @@ reference to the parent bone.<br>
 
 <div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
 available with the Trial Licence of the product.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">bone_map = ds_map_create();<br>
 skeleton_bone_data_get("leftarm", bone_map);<br></p>
 
+<blockquote>
 <p>The above code creates a ds_map and then populates it with the
 data from the bone named "leftarm".</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Skeletal
 Animations</a></div>
@@ -133,11 +142,13 @@ Animations</a></div>
 <div style="float:right">Next: <a href=
 "skeleton_bone_data_set.html">skeleton_bone_data_set</a></div>
 </div>
+</div>
 
 <h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

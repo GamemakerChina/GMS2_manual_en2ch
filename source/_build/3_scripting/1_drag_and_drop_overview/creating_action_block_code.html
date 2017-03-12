@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Constructing Action Block Code</h2>
 
 <div class="body-scroll">
@@ -195,6 +198,38 @@ with all the resources beginning with "rm_". Note that all the
 built in variables that are shown in the auto complete window can
 be used anywhere where a variable or expression is expected in an
 action, as can most GML functions.</p>
+</div>
+<br>
+<label class="collapse" for="d">Action Expansion</label> <input id=
+"d" type="checkbox">
+<div class="index_list">
+<p>Sometimes when using an action you will see a small <b>plus
+icon</b> <img style="vertical-align:middle" src=
+"../2_drag_and_drop_reference/icon_expand_arguments.png"> to the
+side. This means that you can <i>expand</i> the action to perform
+extra tasks or take further arguments. For example, if you look at
+the <a href=
+"../2_drag_and_drop_reference/common_actions/temp_var.html">Declare
+Temporary Variables</a> action, you can see that it has this
+<img style="vertical-align:middle" src=
+"../2_drag_and_drop_reference/icon_expand_arguments.png"> icon:
+<img class="center" src=
+"../2_drag_and_drop_reference/common_actions/images/a_common_declare_temp_var.png"
+alt="Temp Variable Expansion"></p>
+
+<p>When you click the icon, the action will expand and permit you
+to declare more variables, making it easier and faster to define
+multiple variables at the same time. <img class="center" src=
+"images/acrtion_expansion_example.png" alt=
+"Temp Variable Expansion Example"></p>
+
+<p>The icon can also be used for those actions that require
+optional arguments, like the <a href=
+"../2_drag_and_drop_reference/mathematics_actions/choose.html">Choose</a>
+action, which permits you to add various different values to be
+returned: <img class="center" src=
+"../2_drag_and_drop_reference/mathematics_actions/images/e_mathematics_choose.png"
+alt="Choose Expansion Example"></p>
 </div></blockquote>
 
 <p><br>

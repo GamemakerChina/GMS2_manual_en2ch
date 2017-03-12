@@ -26,19 +26,22 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_post_message</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">facebook_post_message(title, caption, message,
 picture_url, redirect_url, actionname, action_url)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -80,18 +83,21 @@ picture_url, redirect_url, actionname, action_url)</p>
 <td>The link to use for the above action.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function will posts a message direct to the user feed (ie,
 a “/me/feed” post to the facebook graph API ) . You give the name
 and the caption as well as a message and image to include, then the
@@ -103,20 +109,23 @@ appropriate URL (for more information see <a href=
 "https://developers.facebook.com/docs/reference/api/post/" target=
 "_blank">Facebook Developers Api Post</a>).</p>
 
-<blockquote><i><b>NOTE:</b> There is no Facebook dialogue displayed
-for this function as the post is sent “silently” without user
-interaction. For this reason, you <b>must</b> have requested the
-correct permissions on login ("publish_actions").</i>
-</blockquote>
+<div class="note">
+<p><b>NOTE:</b> There is no Facebook dialogue displayed for this
+function as the post is sent “silently” without user interaction.
+For this reason, you <b>must</b> have requested the correct
+permissions on login ("publish_actions").</p>
+</div>
 
-<blockquote><i><b>NOTE:</b> The user <b>must</b> be logged in for
-the message post to function.</i>
+<div class="note">
+<p><b>NOTE:</b> The user <b>must</b> be logged in for the message
+post to function.</p>
+</div>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if mouse_check_button_pressed(mb_left)<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -126,8 +135,10 @@ Haggis!", "http://MacSweeneygames.com/Clown.jpg",
 "http://MacSweeneygames.com/CatchTheHaggis.html", "", "");<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will silently post a message to the users wall
 feed.</p>
+</blockquote>
 
 <p><br>
 </p>

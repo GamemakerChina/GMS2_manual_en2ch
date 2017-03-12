@@ -26,19 +26,22 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>achievement_send_challenge</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">achievement_send_challenge(playerid, challengeid,
 score, type, message)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -72,18 +75,21 @@ dashboard).</td>
 <td>The message to attach to the challenge.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function will send a challenge across the network to the
 chosen player. You can get the <i>playerid</i> using the <a href=
 "achievement_load_friends.html"><tt>achievement_load_friends</tt></a>
@@ -115,14 +121,12 @@ be more than one trigger function for any given asynchronous
 event), and will be paired with the <b>constant</b>
 <tt>achievement_challenge_received</tt> as well as a number of
 other key/value pairs for each player. The exact contents of the
-map are shown below:<br>
-<br>
-<i><b>NOTE:</b> that the user can also receive toast notifications
-for challenges received, but this will depend on the values you
-have chosen using the function <a href=
-"achievement_show_challenge_notifications.html"><tt>achievement_show_challenge_notifications</tt></a>.</i><br>
+map are shown below:</p>
 
-<br></p>
+<div class="note"><b>NOTE:</b> that the user can also receive toast
+notifications for challenges received, but this will depend on the
+values you have chosen using the function <a href=
+"achievement_show_challenge_notifications.html"><tt>achievement_show_challenge_notifications</tt></a>.</div>
 
 <blockquote>
 <ol>
@@ -169,22 +173,27 @@ as set on the provider dashboard<br>
 applicable).</li>
 </ol>
 </blockquote>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>To send a challenge over the network you would have this
 code:</p>
+</blockquote>
 
 <p class="code">achievement_send_challenge(global.playerid[0],
 global.challengeid[0], score, achievement_type_score_challenge,
 "Beat that sucker!");</p>
 
+<blockquote>
 <p>This request will then trigger the <b>Social Event</b> in your
 game for the player that the challenge was directed at, and this
 can be dealt with in the following way:</p>
+</blockquote>
 
 <p class="code">var ident = ds_map_find_value(async_load,
 "id");<br>
@@ -210,11 +219,13 @@ if ident == achievement_challenge_received<br>
 "score");<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the
 <b>Social Asynchronous Event</b> and if its "id" matches the
 constant being checked, it then extracts the relevant values for
 each of the keys in the map and stores them in variables for future
 use.</p>
+</blockquote>
 
 <p><br>
 </p>

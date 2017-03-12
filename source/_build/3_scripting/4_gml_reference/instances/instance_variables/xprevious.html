@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>xprevious</h2>
 
 <div class="body-scroll">
@@ -35,13 +38,13 @@ if (window.name != "content")
 
 <h3>Description</h3>
 
-<blockquote>It can often be useful to know where an instance
-<i>was</i> the previous step, when resolving collisions for
-example, and so you can use this function to get that value for
-use. It is normally stored just before the start of the <b>begin
-step event</b> but can be set through code at any time, meaning you
-can give it your own custom value should that be
-necessary.</blockquote>
+<blockquote>
+<p>This built-in variable returns the <i>previous</i> x position
+for the instance. This variable will be set just before the start
+of the <b>begin step event</b> but it can also be set through code
+at any time, meaning you can give it your own custom value should
+that be necessary.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -67,9 +70,11 @@ necessary.</blockquote>
 &nbsp;&nbsp;&nbsp;moved = true;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
-<blockquote>The above code will use the arrow keys to add or
-subtract to the y position and so create the illusion of
-movement.</blockquote>
+<blockquote>
+<p>The above code checks to see if there is any difference between
+the <tt>yprevious</tt> and <tt>yprevious</tt> values and the
+current x and y values. If there is it sets a variable to true.</p>
+</blockquote>
 
 <p><br>
 </p>

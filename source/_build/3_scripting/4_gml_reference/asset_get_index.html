@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>asset_get_index</h2>
 
 <div class="body-scroll">
@@ -92,8 +95,8 @@ when using the function.</div>
 string(global.Level));<br>
 if obj &gt; -1<br>
 &nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;instance_create(random(room_width),
-random(room_height), obj);<br>
+&nbsp;&nbsp;&nbsp;instance_create_layer(random(room_width),
+random(room_height), obj, "Enemy_Layer");<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>

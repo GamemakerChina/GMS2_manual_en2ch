@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>file_text_write_real</h2>
 
 <div class="body-scroll">
@@ -78,8 +81,16 @@ You can also avoid this by using the <a href=
 along with the <a href=
 "file_text_eof.html"><tt>file_text_eof</tt></a> function to loop
 through the contents of the file until you get to the end and then
-start writing.<br>
-<br></p>
+start writing.</p>
+
+<p>It is important to note that when writing very large numbers to
+a text file using this function, it may be translated into a
+standard simplified format, like "6.6624e+003", which cannot be
+read back in to <i>GameMaker Studio 2</i> correctly. To prevent
+issues like this, you should instead convert the value to a string
+and use the function <a href=
+"file_text_write_string.html"><tt>file_text_write_string()</tt></a>
+instead.</p>
 
 <p><br>
 </p>

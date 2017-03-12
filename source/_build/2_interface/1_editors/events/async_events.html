@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>The Asynchronous Events</h2>
 
 <div class="body-scroll">
@@ -1539,7 +1542,7 @@ required.</div></blockquote></div></blockquote>
 <div style="float:left">Back: <a href="../objects.html">The Object
 Editor</a></div>
 
-<div style="float:right">Next: <a href="index.html">Object
+<div style="float:right">Next: <a href="draw_events.html">Draw
 Events</a></div>
 </div>
 </div>

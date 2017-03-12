@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Arrays</h2>
 
 <div class="body-scroll">
@@ -239,8 +242,8 @@ event):</p>
 
 <p class="code">var i;<br>
 i = irandom(3); //get a random number from 0 to 4<br>
-instance_create(enemy[i, 1], enemy[i, 2], enemy[i, 0]); //Use the
-array to create the object<br></p>
+instance_create_layer(enemy[i, 1], enemy[i, 2], enemy[i, 0],
+"Enemy_Layer"); //Use the array to create the object<br></p>
 
 <p>That short code will now spawn a random enemy in the game room,
 and it uses far less code than an "if / then / else" structure or
@@ -388,7 +391,7 @@ your games. These functions are:</p>
 <li><a href="arrays/array_length_1d.html">array_length_1D</a><br>
 </li>
 
-<li><a href="arrays/array_length_1d.html">array_length_2D</a><br>
+<li><a href="arrays/array_length_2d.html">array_length_2D</a><br>
 </li>
 
 <li><a href="arrays/array_height_2d.html">array_height_2D</a><br>

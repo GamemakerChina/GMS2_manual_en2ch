@@ -26,18 +26,21 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>push_local_notification</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">push_local_notification(fire_time, title, message,
 data);</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -64,18 +67,21 @@ data);</p>
 <td>The data package to send to your game (a string)</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function can be used to set a local notification to be
 shown on a given date at a given time. The "fire_time" is the
 date/time that the notification should be pushed to the user device
@@ -85,35 +91,44 @@ to get this), and you can give the notification a title and a
 message text as well as a payload string which will be passed to
 your game when the users taps the notification.</p>
 
-<blockquote><i><b>NOTE</b>: The "title" argument is ignored on iOS
-and the game name is shown instead.</i>
-</blockquote>
+<div class="note"><b>NOTE</b>: The "title" argument is ignored on
+iOS and the game name is shown instead.</div>
 
-<p>Tapping the notification will start the game on the device and
+<p><br>
+Tapping the notification will start the game on the device and
 trigger an <a href=
 "../../../2_interface/1_editors/events/async_events.html">Asynchronous
 Push Notification</a> event with a <tt>ds_map</tt> which can then
 be parsed to check the payload string and perform whatever action
 is required.</p>
 
-<blockquote><i><b>NOTE</b>: This function is limited to the
-<b>iOS</b> and <b>Android</b> target modules.</i>
+<div class="note"><b>NOTE</b>: This function is limited to the
+<b>iOS</b> and <b>Android</b> target modules. For <b>Android</b>
+you will need to have installed the <a href=
+"https://marketplace.yoyogames.com/assets/2008/google-play-services"
+target="_blank">Google Play Services Extension</a> and have enabled
+push notifications in the <a href=
+"../../../2_interface/3_settings/game_options/options_android.html">
+Android Social Game Options</a>.</div>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example</h3>
+<h3>Extended Example</h3>
 
+<blockquote>
 <p>In this example we will send a local push notification using the
 following code:</p>
 
+<blockquote>
 <p class="code">var fireTime =
 date_inc_day(date_current_datetime(), 1);<br>
 var data = "daily_reward";<br>
 push_local_notification(fireTime, "Ahoy!", "Catch The Haggis Has A
 Present", data);<br></p>
 
+<blockquote>
 <p>This will set a timer to "push" a notification to the device
 when one day has passed. When the day is up, if your game is either
 in the background or not running, a notification will be shown to
@@ -123,8 +138,9 @@ Notification Event will be called. Note that if the game is in the
 foreground when the time for the notification comes, it will
 <i>not</i> be shown, but the asynchronous event <b>will still
 trigger</b>. In the event itself you would handle the callback
-something like this: Async Event in the following way:</p>
+something like this:Async Event in the following way:</p>
 
+<blockquote>
 <p class="code">var type = ds_map_find_value(async_load,
 "type");<br>
 var status = ds_map_find_value(async_load, "status");<br>
@@ -157,6 +173,10 @@ ds_map_find_value(async_load, "data");<br>
 
 <p><br>
 </p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 </div>
 
 <div class="footer">

@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Included Files</h2>
 
 <div class="body-scroll">
@@ -85,9 +88,16 @@ manual dedicated to the <a href=
 "../../1_overview/3_additional_information/file_system.html">File
 System</a>.</p>
 
-<p>It is worth noting that you can include DLL (on WIndows) or
-DyLib (on Mac OS) files as included files and then create your own
-custom functions to deal with them using <a href=
+<div class="note"><b>IMPORTANT!</b> When including sound files, you
+should ensure that the files avoid names that clash with
+<b>streaming</b> sound resources. For example, a sound resource
+called "music" and an included file called "music.ogg" is going to
+be <tt>undefined</tt> when the project runs.</div>
+
+<p><br>
+It is worth noting that you can include DLL (on WIndows) or DyLib
+(on Mac OS) files as included files and then create your own custom
+functions to deal with them using <a href=
 "../../3_scripting/4_gml_reference/miscellaneous/external_define.html">
 <tt>external_define</tt></a>. These can then be used calling the
 <a href=

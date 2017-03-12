@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>sprite_get_tpe</h2>
 
 <div class="body-scroll">
@@ -89,7 +92,7 @@ only.</div>
 
 <h3>Example:</h3>
 
-<p class="code">home_but = button_add(32, 32,
+<p class="code">home_but = clickable_add(32, 32,
 sprite_get_tpe(spr_MS_Home, 0), "http://macsweeney_games.com",
 "_blank", "width=700, height=500, menubar=0, toolbar=0,
 scrollbars=0");</p>

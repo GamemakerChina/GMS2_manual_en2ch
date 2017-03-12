@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>The Sprite Editor</h2>
 
 <div class="body-scroll">
@@ -177,9 +180,31 @@ for="two">Collision Mask</label> <input id="two" type="checkbox">
 <div class="index_list">
 <p>All sprites have a <i>collision mask</i> which corresponds to
 the area of the sprite that will be used to detect collisions when
-the sprite is assigned to an instance. There are various types of
-collision mask which you can choose from the drop down menu:<br>
+the sprite is assigned to an instance. You can first set the
+<b>Mode</b> for the collision mask, which can be one of the
+following:<br>
 <br></p>
+
+<ul>
+<li><b>Automatic</b>: <i>GameMaker Studio 2</i> will calculate the
+collision mask automatically based on the sprite alpha values (this
+will depend on the <i>Tolerance</i> setting explained below).<br>
+<br></li>
+
+<li><b>Full Image</b>: The mask will be calculated with it's bounds
+being the same as the left, right, top and bottom bounds of the
+sprite.<br>
+<br></li>
+
+<li><b>Manual</b>: Selcting this means that you wish to set the
+bounds of the collision mask using the input values for left,
+right, top and bottom.<br>
+<br></li>
+</ul>
+Apart from the collision mask Mode, there are also various
+<b>types</b> of collision mask which you can choose from the drop
+down menu:<br>
+<br>
 
 <ul>
 <li><b>Rectangle</b>: A simple rectangular collision mask. This is

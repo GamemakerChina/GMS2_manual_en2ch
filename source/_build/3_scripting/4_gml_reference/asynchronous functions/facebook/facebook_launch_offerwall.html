@@ -26,18 +26,21 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_launch_offerwall</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">facebook_launch_offerwall(url)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -49,32 +52,37 @@ if (window.name != "content")
 <td>The URL of your facebook currency definition.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<h3>Returns:</h3>
+
+<p class="code">String</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This implementation enables your app to open a Facebook dialog
 containing an interactive list of advertiser offers. For further
 information see <a href=
 "https://developers.facebook.com/docs/payments/local-currency-payments"
-target="_blank">FaceBook Developers - Offers With Payments</a>.<br>
-<br>
-<i><b>NOTE</b>: this function will only work with the HTML5 target
-module.</i><br>
-<br></p>
+target="_blank">FaceBook Developers - Offers With Payments</a>.</p>
+
+<div class="note">
+<p><b>NOTE</b>: this function will only work with the HTML5 target
+module.</p>
+</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if mouse_check_button_pressed(mb_left)<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -82,8 +90,10 @@ module.</i><br>
 
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks for a mouse press and if one is detected
 it takes the user to the FaceBook offerwall page.</p>
+</blockquote>
 
 <p><br>
 </p>

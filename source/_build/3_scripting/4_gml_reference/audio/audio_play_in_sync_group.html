@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">audio_play_in_sync_group</h1>
 
 <h2 class="studio">Assign a sound resource to a sync group.</h2>
@@ -89,9 +92,9 @@ snd[0] = audio_play_in_sync_group(sg, sound1);<br>
 snd[1] = audio_play_in_sync_group(sg, sound2);<br>
 snd[2] = audio_play_in_sync_group(sg, sound3);<br>
 snd[3] = audio_play_in_sync_group(sg, sound4);<br>
+audio_sound_gain(snd[1], 0, 0);<br>
 audio_sound_gain(snd[2], 0, 0);<br>
 audio_sound_gain(snd[3], 0, 0);<br>
-audio_sound_gain(snd[4], 0, 0);<br>
 audio_start_sync_group(sg);<br></p>
 
 <p>The above creates a new sync group and assigns the index of the

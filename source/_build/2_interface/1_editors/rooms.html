@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>The Room Editor</h2>
 
 <div class="body-scroll">
@@ -119,7 +122,7 @@ will hold all instances for your game</li>
 drawing sprites to as tile sets</li>
 
 <li><img style="vertical-align:middle" src="images/icon_paths.png">
-<b>Path</b> - this layer contains path data (you can only have on
+<b>Path</b> - this layer contains path data (you can only have one
 path per layer)</li>
 
 <li><img style="vertical-align:middle" src=
@@ -207,6 +210,15 @@ the room, <i>after</i> the create event of all instances but
 <i>before</i> their room start event. This code will only be run
 the first time you enter a room if the room is flagged as
 persistent and subsequent visits will not run.</p>
+
+<p>The final button in the Room Settings permits you to open the
+<b>Instance Creation Order</b> window: <img class="center" src=
+"images/editor_room_creationorder.png" alt="Room Tile Menu"> This
+window lists all the instances in the room in the order that they
+will be created (from top to bottom). Should you require a specific
+instance to be created before any other, you can simply click
+<img style="vertical-align:middle" src="../../images/icon_lmb.png">
+and drag it to the position your require.</p>
 </div>
 <br>
 <a name="room_views" id="room_views"></a> <label class="collapse"
@@ -646,7 +658,7 @@ mouse <img style="vertical-align:middle" src=
 create groups of layers in a <b>layer folder</b> by clicking the
 folder icon <img style="vertical-align:middle" src=
 "images/icon_folder.png">. You can also delete one or more selected
-layers by clicking the deleted button <img style=
+layers by clicking the delete button <img style=
 "vertical-align:middle" src="images/icon_delete.png">. All layers
 will also have a <b>depth</b> value, which defines where in the
 draw order that layer will be placed when rendering its contents to
@@ -749,12 +761,23 @@ resource tree and then press and hold <img style=
 the resource "in-situ", and if you additionally click the left
 mouse button <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> you can add the instance and even
-"paint" it into the room layer. You can then double-click
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-on the instance, either in the room editor itself or in the
-properties list and it will open a new window to let you modify
-aspects of that single unique instance: <img class="center" src=
-"images/editor_room_instanceproperties.png" alt=
+"paint" it into the room layer.</p>
+
+<p>The layer list can be ordered by clicking <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> and
+dragging an instance in the list to the position required, but it
+is worth noting that this is purely for organisational purposes
+within the room editor and if you want to set a specific creation
+order, please use the <b>Creation Order Window</b>, which can be
+opened from the <b>Room Settings</b> window, or from the
+<b>Room</b> context menu (see further down this page for more
+information).</p>
+
+<p>Double-clicking <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> on any instance - either in the room
+editor itself or in the properties list - will open a new window to
+let you modify aspects of that single unique instance: <img class=
+"center" src="images/editor_room_instanceproperties.png" alt=
 "Room Instance properties"></p>
 
 <p>From here you can give the instance a unique name, set whether
@@ -784,9 +807,9 @@ want specific instances to be added to the room in the final game
 exclude it from the final game). If that is the case, then simply
 un-checking the "Export" checkbox to the left of the instance in
 the list will prevent it from being exported as part of the
-executable. It is important to note, however, that if you have
+executable. <b>It is important to note, however, that if you have
 <i>any</i> code that references that object, then the game will not
-run correctly, so use this feature with care.</p>
+run correctly, so use this feature with care</b>.</p>
 </div>
 <br>
 <a name="room_tile_layer" id="room_tile_layer"></a> <label class=
@@ -1200,14 +1223,15 @@ closed it at any time.</p>
 <label class="collapse" for="Seventeen">Instance Creation
 Order</label> <input id="Seventeen" type="checkbox">
 <div class="index_list">
-<p>This will open the Instance Creation Order Window: <img class=
-"center" src="images/editor_room_creationorder.png" alt=
-"Room Tile Menu"> This window lists all the instances in the room
-in the order that they will be created (from top to bottom). Should
-you require a specific instance to be created before any other, you
-can simply click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> and drag it to the position your
-require.</p>
+<p>This will open the Instance Creation Order Window (which can
+also be opened by using the button in the <b>Room Settings</b>
+window): <img class="center" src=
+"images/editor_room_creationorder.png" alt="Room Tile Menu"> This
+window lists all the instances in the room in the order that they
+will be created (from top to bottom). Should you require a specific
+instance to be created before any other, you can simply click
+<img style="vertical-align:middle" src="../../images/icon_lmb.png">
+and drag it to the position your require.</p>
 </div>
 <br>
 <a name="room_menulayout" id="room_menulayout"></a> <label class=
@@ -1242,6 +1266,56 @@ selection to another layer (or even the same layer but in another
 position). The final option will re-open the <a href=
 "tilesets.html">tile set editor</a> window should you have closed
 it.</p>
+</div>
+<br>
+<a name="room_menuconvert" id="room_menuconvert"></a> <label class=
+"collapse" for="fish">Convert Image To Tilemap</label> <input id=
+"fish" type="checkbox">
+<div class="index_list">
+<p>The <b>Convert Image To Tilemap</b> option is a powerful tool
+that can be used to import a single image and then extract the
+tiles used from the image and recreate it as a tilemap layer in the
+room editor, creating the required tileset and sprite as part of
+process. When you select this tool, you will be asked to supply an
+uncompressed image file (<tt>PNG</tt>, <tt>GIF</tt> or
+<tt>BMP</tt>) which will then be loaded. On load you will be
+presented with the <b>Image Import</b> tool: <img class="center"
+src="images/editor_room_convertimage.png" alt=
+"Convert Image To Tilemap"></p>
+
+<p>Here you are given options on how to split up the tile when
+creating the tileset, and you can set the cell width and height as
+well as any offsets required around the edges. You can also set the
+approximate width (in pixels) for the final sprite that is created.
+For example, if the tileset is made up of 64x64 tile cells and you
+set a width here of 200, the final sprite that is created for use
+in the tileset will be 192 pixels wide (ie: 3 tile cells). If you
+leave it at the default value of 0, then <i>GameMaker Studio 2</i>
+will attempt to make as "square" a sprite as possible with
+approximately the same number of horizontal and vertical tile
+cells.</p>
+
+<p>After setting the way the image is to be split, clicking the
+swatch beside the <b>Remove Colour</b> option will open the colour
+picker and permit you to select a colour that is to be removed from
+the final sprite. This is usually a background colour that you want
+to remove and setting this swatch to anything other than 100%
+transparent will (alpha 0) will remove the selected colour on
+import.</p>
+
+<p>Finally, you have the option to name the sprite, tileset and
+tilemap layer that will be created for you by this tool. When you
+finalise the import, a sprite with all the images laid out in a
+grid will be created, as well as a tileset from this sprite. In the
+room, a new tilemap layer will be created and the image reproduced
+using the generated tileset. Note that the tool will <i>not</i>
+duplicate tiles and will instead recognise when a cell has image
+data that coincides with another cell (this includes rotated
+tiles). You can see this in the following image where only one
+flower tile has been created and one crate tile too, yet there are
+multiple instances of both, with some instances rotated in the base
+image: <img class="center" src="images/editor_room_tileexample.png"
+alt="Convert Image To Tilemap Example Tileset"></p>
 </div></blockquote>
 
 <p><br>

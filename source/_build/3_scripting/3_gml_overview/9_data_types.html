@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Data Types</h2>
 
 <div class="body-scroll">
@@ -131,6 +134,31 @@ value into a pointer:</p>
 <li><a href="ptr.html">ptr</a><br>
 </li>
 </ul>
+
+<p>You may also use (and get returned) the following built in
+constants when using pointers:</p>
+
+<div class="compat">
+<table>
+<tr>
+<th>Constant</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>pointer_null</td>
+<td>This constant indicates that the pointer is not pointing to
+anything meaningful (the same as <tt>NULL</tt> in C++ or null in
+C#)</td>
+</tr>
+
+<tr class="alt">
+<td>pointer_invalid</td>
+<td>This constant simply means that the value is not a valid
+pointer</td>
+</tr>
+</table>
+</div>
 </div>
 <br>
 <label class="collapse" for="six">Enum</label> <input id="six"
@@ -222,6 +250,9 @@ a given variable using the following functions:</p>
 </li>
 
 <li><a href="checking_data_types/is_real.html">is_real</a><br>
+</li>
+
+<li><a href="checking_data_types/is_bool.html">is_bool</a><br>
 </li>
 
 <li><a href="checking_data_types/is_array.html">is_array</a><br>

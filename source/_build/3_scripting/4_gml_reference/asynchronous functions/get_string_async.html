@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>get_string_async</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">get_string_async(string, default);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">get_string_async(string, default);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -53,18 +56,21 @@ if (window.name != "content")
 <td>The default string.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function opens a window and displays message as well as a
 space for the user to input a string (which will contain the
 supplied default string to start with). This is an asynchronous
@@ -84,25 +90,29 @@ button being pressed, or <tt>false</tt> if the message was
 cancelled (where applicable as not all target platforms permit the
 message to be cancelled). Finally "result" will return the string
 that the user input (or an empty string "" if none was
-supplied).<br>
-<br></p>
+supplied).</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The <b>left mouse press event</b> (for example) of the object
 that is showing the message would have the following code:</p>
+</blockquote>
 
 <p class="code">msg = get_string_async("What's your
 name?","Anon");<br></p>
 
+<blockquote>
 <p>The above will show a message requesting that the user input a
 string and press "Okay". The function id is stored in the variable
 "msg" and will be used in the <a href=
 "../../../2_interface/1_editors/events/async_events.html">asynchronous
 Dialogs event</a> as shown below:</p>
+</blockquote>
 
 <p class="code">var i_d = ds_map_find_value(async_load, "id");<br>
 if i_d == msg<br>
@@ -118,6 +128,7 @@ ds_map_find_value(async_load, "result");<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the "id" key of the returned
 <tt>ds_map</tt> against the value stored in the variable "msg". If
 they are the same, it then checks to see if "Okay" was pressed
@@ -125,6 +136,7 @@ they are the same, it then checks to see if "Okay" was pressed
 <tt>true</tt> it then checks the "result" of a string to make sure
 that no empty strings were returned before setting a global
 variable.</p>
+</blockquote>
 
 <p><br>
 </p>

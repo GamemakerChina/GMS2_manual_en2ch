@@ -26,19 +26,22 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_dialog</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">facebook_dialog(graph_path, ds_map_parameters,
 ds_map_return)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -60,18 +63,21 @@ ds_map_return)</p>
 <td>The ds_map to <i>receive</i> (-1 for none).</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>A Facebook dialog is the way in which Facebook asks the user to
 give comments and information and they not need any additional
 permissions because they require user interaction. For example, it
@@ -80,9 +86,9 @@ The "graph_path" argument is where you define the part of the graph
 you wish to access, and the exact path can be defined using the
 terms outlined in the Facebook <a href=
 "https://developers.facebook.com/docs/reference/dialogs/" target=
-"_blank"><b>Dialogues Overview</b></a>.<br>
-<br>
-The next argument is slightly more complex as it requires you to
+"_blank"><b>Dialogues Overview</b></a>.</p>
+
+<p>The next argument is slightly more complex as it requires you to
 have created and filled a <a href=
 "../../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>
 with the correct information which <i>GameMaker Studio 2</i> will
@@ -92,9 +98,9 @@ very much on which path you choose to use and a complete list of
 all possible values can be found <a href=
 "https://developers.facebook.com/docs/reference/api/" target=
 "_blank">here</a>. An example of how this map is structured can be
-seen in the code example supplied below.<br>
-<br>
-Finally, we have an argument for storing any information that
+seen in the code example supplied below.</p>
+
+<p>Finally, we have an argument for storing any information that
 Facebook has sent back from the graph request. This information
 comes in the form of <tt>json</tt> which <i>GameMaker Studio 2</i>
 converts into a ds_map. For this to work correctly, you <i>must</i>
@@ -109,15 +115,17 @@ target="_blank">Graph Api Test Page</a> where you can check
 different graph paths and see exactly what information they will
 return.</p>
 
-<blockquote><i><b>NOTE:</b> The user does not need to be logged in
-to use this function as the log in dialogue will be shown as part
-of the dialogue request.</i>
+<div class="note">
+<p><b>NOTE:</b> The user does not need to be logged in to use this
+function as the log in dialogue will be shown as part of the
+dialogue request.</p>
+</div>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var interactiveMap;<br>
 interactiveMap = ds_map_create();<br>
@@ -132,6 +140,7 @@ on MacSweeney Games!");<br>
 facebook_dialog("feed", interactiveMap, -1);<br>
 ds_map_destroy(interactiveMap);<br></p>
 
+<blockquote>
 <p>The above code will create a ds_map and store its index in the
 local variable "interactiveMap". This map is then filled with the
 necessary key/value pairs to generate an interactive wall post.
@@ -139,6 +148,7 @@ Next the <tt>facebook_dialog</tt> will open a window asking the
 user to add a message to be sent along with the rest of the
 information and this will all be published to the users wall.
 Finally the ds_map is deleted to free memory.</p>
+</blockquote>
 
 <p><br>
 </p>

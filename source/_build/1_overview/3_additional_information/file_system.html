@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>The File System</h2>
 
 <div class="body-scroll">
@@ -174,6 +177,9 @@ Saving/Loading</label> <input id="four" type="checkbox">
 that each target platform has its own save area where files and
 directories can be written to and read from. Below is a list of
 those areas for each target:</p>
+
+<p><br>
+</p>
 
 <ul>
 <li><b>Windows</b> and <b>Windows UWP</b>- Windows has all files in

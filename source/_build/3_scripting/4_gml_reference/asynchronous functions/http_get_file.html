@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>http_get_file</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">http_get_file(url, local_target);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">http_get_file(url, local_target);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -55,18 +58,21 @@ from</td>
 in</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function, you can connect to the specified URL in
 order to retrieve information in the form of a file. As this is an
 asynchronous function, <i>GameMaker Studio 2</i> will not block
@@ -143,28 +149,30 @@ been downloaded.</li>
 </ol>
 </blockquote>
 
-<p><i><b>NOTE:</b> You should be aware that due to XSS protection
-in browsers, requests to and attempts to load resources from across
-domains are blocked and may appear to return blank results. Please
-see the section on <a href="index.html">Cross Domain Issues</a> for
-further details.</i><br>
-<br>
-</p>
+<div class="note"><b>NOTE:</b> You should be aware that due to XSS
+protection in browsers, requests to and attempts to load resources
+from across domains are blocked and may appear to return blank
+results. Please see the section on <a href="index.html">Cross
+Domain Issues</a> for further details.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The <tt>http_get_file</tt> function can be called from any
 event, and since it is asynchronous the callback can be almost
 instantaneous or could take several seconds. Calling the function
 is simple and would look something like this:</p>
+</blockquote>
 
 <p class="code">file =
 http_get_file("http://www.macsweeneygames.com/downloads/upgrade.zip",
 "\Downloads\Upgrade.zip");</p>
 
+<blockquote>
 <p>The above code will request a file from the given URL and set it
 to be downloaded to the local storage area, in the directory
 "Downloads" with the given file name (this does not have to be the
@@ -174,6 +182,7 @@ correct callback in the Asynchronous Event, and if the save
 directory does not exist, it will be created. The Asynchronous
 Event triggered would be the <b>HTTP</b> sub-event, and in that
 event you would have something like the following:</p>
+</blockquote>
 
 <p class="code">if ds_map_find_value(async_load, "id") == file<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -193,6 +202,7 @@ ds_map_find_value(async_load, "result");<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will first check the id of the ds_map that has
 been created, then check the status of the callback. If the value
 is equal to 0 (signalling success) the result from the callback
@@ -200,6 +210,7 @@ will then be used along with the <a href=
 "../file%20handling/zip_unzip.html"><tt>zip_unzip()</tt></a>
 function to unzip the downloaded file to the given directory. If
 the unzip succeeds a global variable is set to true.</p>
+</blockquote>
 
 <p><br>
 </p>

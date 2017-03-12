@@ -26,18 +26,21 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_check_permission</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">facebook_check_permission(permission)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -49,29 +52,32 @@ if (window.name != "content")
 <td>The permission you want to check (a string).</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function you can check the Facebook API to see if the
 user has granted a specific permission, either read or publish. The
 function will return <tt>true</tt> if they have the permission or
 <tt>false</tt> if they do not or there is an error. Note that the
-user <i>must</i> be logged in for the check to function.<br>
-<br></p>
+user <i>must</i> be logged in for the check to function.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var permissions = ds_list_create();<br>
 if !facebook_check_permission("user_likes")<br>
@@ -89,8 +95,10 @@ facebook_request_read_permissions(permissions);<br>
 &nbsp;&nbsp;&nbsp;}<br>
 ds_list_destroy(permissions);<br></p>
 
+<blockquote>
 <p>The above code checks some of the Facebook read permissions, and
 if the game has not requested them, a request is sent.</p>
+</blockquote>
 
 <p><br>
 </p>

@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Additional Information</h2>
 
 <div class="body-scroll">
@@ -73,8 +76,12 @@ Line Parameters</span></a><br>
 Errors</span></a><br>
 </li>
 
-<li><a href="jsdoc.html"><span class="list_link">JavaDoc Script
+<li><a href="jsdoc.html"><span class="list_link">JSDoc Script
 Comments</span></a><br>
+</li>
+
+<li><a href="micro_web_server.html"><span class="list_link">Micro
+Web Server</span></a><br>
 </li>
 
 <li><a href="obsolete_functions.html"><span class=

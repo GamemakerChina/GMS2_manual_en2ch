@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>point_in_triangle</h2>
 
 <div class="body-scroll">
@@ -56,37 +59,37 @@ y3);</p>
 
 <tr>
 <td>x1</td>
-<td>The x coordinate of the first side of the triangle to
+<td>The x coordinate of the first corner of the triangle to
 check.</td>
 </tr>
 
 <tr>
 <td>y1</td>
-<td>The y coordinate of the first side of the triangle to
+<td>The y coordinate of the first corner of the triangle to
 check.</td>
 </tr>
 
 <tr>
 <td>x2</td>
-<td>The x coordinate of the second side of the triangle to
+<td>The x coordinate of the second corner of the triangle to
 check.</td>
 </tr>
 
 <tr class="alt">
 <td>y2</td>
-<td>The y coordinate of the second side of the triangle to
+<td>The y coordinate of the second corner of the triangle to
 check.</td>
 </tr>
 
 <tr>
 <td>x3</td>
-<td>The x coordinate of the third side of the triangle to
+<td>The x coordinate of the third corner of the triangle to
 check.</td>
 </tr>
 
 <tr class="alt">
 <td>y3</td>
-<td>The y coordinate of the third side of the triangle to
+<td>The y coordinate of the third corner of the triangle to
 check.</td>
 </tr>
 </table>

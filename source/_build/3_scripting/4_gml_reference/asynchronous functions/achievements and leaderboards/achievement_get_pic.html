@@ -26,18 +26,21 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>achievement_get_pic</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">achievement_get_pic(char)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -50,18 +53,21 @@ if (window.name != "content")
 list or a leaderboard)</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function will send a request to the server for the image of
 a player or a friend and will trigger a callback <a href=
 "../../../../2_interface/1_editors/events/async_events.html">Social
@@ -91,24 +97,23 @@ functions</a><br>
 </ol>
 </blockquote>
 
-<p><i><b>NOTE:</b> This function is for <b>iOS</b> only.</i><br>
-<br>
-</p>
+<div class="note"><b>NOTE:</b> This function is for <b>iOS</b>
+only.</div>
 
-<p><i><b>WARNING:</b> This function creates sprites and as such,
-their ids should be stored in variables and then removed from
-memory using the <a href=
+<div class="note"><b>WARNING:</b> This function creates sprites and
+as such, their ids should be stored in variables and then removed
+from memory using the <a href=
 "../../sprites/sprite_delete.html"><tt>sprite_delete</tt></a>
 function otherwise repeated use will give you a memory leak that
-will eventually slow down or crash your game.</i><br>
-<br>
-</p>
+will eventually slow down or crash your game.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The following code would be called after you have gotten a
 friends list or a leaderboards list using <a href=
 "achievement_load_friends.html"><tt>achievement_load_friends</tt></a>
@@ -117,13 +122,16 @@ or <a href=
 Those functions will return unique "id" values for each person,
 which are then used in the function to retrieve the profile picture
 for them:</p>
+</blockquote>
 
 <p class="code">achievement_get_pic(global.player_id[0]);</p>
 
+<blockquote>
 <p>This will send off a request for the image associated with the
 player id stored in the global array and generate an asynchronous
 callback with the special <tt>async_load</tt> ds_map containing the
 following data:</p>
+</blockquote>
 
 <p class="code">var ident = ds_map_find_value(async_load,
 "id");<br>
@@ -140,12 +148,14 @@ spriteid;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}</p>
 
+<blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the
 <b>Social Asynchronous Event</b> and if its "id" matches the
 constant being checked, it then checks that the id associated with
 the image is the same as that being requested and if it is, it sets
 another global array to hold the unique id for the image (which can
 be used to draw the image as a sprite).</p>
+</blockquote>
 
 <p><br>
 </p>

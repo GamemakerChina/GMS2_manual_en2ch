@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">instance_deactivate_layer</h1>
 
 <div class="body-scroll">
@@ -94,12 +97,12 @@ activate/deactivate the instances.</i><br>
 <h3><b>Example:</b>
 </h3>
 
-<p class="code">instance_deactivate_layer(obj_Enemy);<br>
+<p class="code">instance_deactivate_layer("Enemy Layer");<br>
 instance_activate_region(view_xview[0] - 64, view_yview - 64,
 view_wview[0] + 128, view_hview + 128, false);<br></p>
 
-<p>The above code deactivates all instances of the object
-"obj_Enemy" and then activates a region within the room.</p>
+<p>The above code deactivates all instances assigned to the layer
+"Enemy_Layer" and then activates a region within the room.</p>
 
 <p><br>
 </p>

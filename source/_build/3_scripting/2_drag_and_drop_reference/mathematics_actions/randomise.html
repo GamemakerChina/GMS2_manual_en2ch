@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2><img style="vertical-align:middle" src=
 "images/i_mathematics_randomise.png"> Randomise</h2>
 
@@ -71,8 +74,8 @@ global scope variable.</blockquote>
 <div style="float:left">Back: <a href="index.html">Types
 Actions</a></div>
 
-<div style="float:right">next: <a href="get_random_number.html">Get
-Random Number</a></div>
+<div style="float:right">next: <a href=
+"choose.html">Choose</a></div>
 </div>
 </div>
 

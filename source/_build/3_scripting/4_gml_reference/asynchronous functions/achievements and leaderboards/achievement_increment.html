@@ -26,18 +26,21 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>achievement_increment</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">achievement_increment(ach_name, value)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -54,29 +57,37 @@ if (window.name != "content")
 <td>The value to be sent.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>Google Play permit Android games to have achievements with no
 completion value and you can use this function to increment those
-achievement by a given amount.<br>
-<br></p>
+achievement by a given amount.</p>
+</blockquote>
 
-<h3 class="studio">Example:</h3>
+<p><br>
+</p>
+
+<h3>Example:</h3>
 
 <p class="code">achievement_increment("ach_TotalScore", score);</p>
 
+<blockquote>
 <p>The above code adds the current player score to the achievement
 "ach_TotalScore".</p>
+</blockquote>
 
 <p><br>
 </p>

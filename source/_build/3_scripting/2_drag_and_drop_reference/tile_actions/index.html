@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Tile Actions Library</h2>
 
 <div class="body-scroll">
@@ -38,7 +41,8 @@ if (window.name != "content")
 </p>
 
 <p>The <b>Tile</b> action library is where you can find the actions
-required to get or set tile indices within a room:</p>
+required to get or set tile indices within a room, as well as
+change how they are shown:</p>
 
 <table class="icons">
 <tr>
@@ -78,6 +82,86 @@ Cell</a>
 </td>
 <td class="text"><a href="get_tile_in_cell.html">Get Tile In
 Cell</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="set_tile_set.html"><img align="middle"
+src="images/i_tiles_set_tile_set.png" alt="Set Tile Set"></a>
+</td>
+<td class="text"><a href="set_tile_set.html">Set Tile Set</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="get_tilemap_variable.html"><img align=
+"middle" src="images/i_tiles_get_tilemap_variable.png" alt=
+"Get Tilemap Variable"></a>
+</td>
+<td class="text"><a href="get_tilemap_variable.html">Get Tilemap
+Variable</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="set_tile_data_at_pixel.html"><img align=
+"middle" src="images/i_tiles_set_tile_data_at_pixel.png" alt=
+"Set Tile Data At Pixel"></a>
+</td>
+<td class="text"><a href="set_tile_data_at_pixel.html">Set Tile
+Data At Pixel</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="get_tile_data_at_pixel.html"><img align=
+"middle" src="images/i_tiles_get_tile_data_at_pixel.png" alt=
+"Get Tile Data At Pixel"></a>
+</td>
+<td class="text"><a href="get_tile_data_at_pixel.html">Get Tile
+Data At Pixel</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="set_tile_data_in_cell.html"><img align=
+"middle" src="images/i_tiles_set_tile_data_in_cell.png" alt=
+"Set Tile Data In Cell"></a>
+</td>
+<td class="text"><a href="set_tile_data_in_cell.html">Set Tile Data
+In Cell</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="get_tile_data_in_cell.html"><img align=
+"middle" src="images/i_tiles_get_tile_data_in_cell.png" alt=
+"Get Tile Data In Cell"></a>
+</td>
+<td class="text"><a href="get_tile_data_in_cell.html">Get Tile Data
+In Cell</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href=
+"set_tile_data_transform.html"><img align="middle" src=
+"images/i_tiles_set_tile_data_transform.png" alt=
+"Set Tile Data Transform"></a>
+</td>
+<td class="text"><a href="set_tile_data_transform.html">Set Tile
+Data Transform</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href=
+"get_tile_data_transform.html"><img align="middle" src=
+"images/i_tiles_get_tile_data_transform.png" alt=
+"Get Tile Data Transform"></a>
+</td>
+<td class="text"><a href="get_tile_data_transform.html">Get Tile
+Data Transform</a>
 </td>
 </tr>
 </table>

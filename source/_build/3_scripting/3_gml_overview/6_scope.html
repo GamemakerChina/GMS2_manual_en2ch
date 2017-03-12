@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Variables And Variable Scope</h2>
 
 <div class="body-scroll">
@@ -40,7 +43,7 @@ instant) use, and they are given a name so that you can refer to
 them in functions and scripts. A variable in <b>GML</b> can store
 many different data types, like a real number (like 100, 2.456575,
 -56 etc...), a string (like "Hello world!"), an integer (like 1,
-556, -7), or a boolean (<tt>true</tt> or <tt>false</tt>.</p>
+556, -7), or a boolean (<tt>true</tt> or <tt>false</tt>).</p>
 
 <p>A variable is something that we use to store a value for use in
 one or more operations or functions. Think of "pi", for example...
@@ -133,6 +136,10 @@ Drag and Drop actions, but they can be used elsewhere too):</p>
 
 <li><a href=
 "variable_functions/variable_instance_set.html"><tt>variable_instance_set</tt></a>
+</li>
+
+<li><a href=
+"variable_functions/variable_instance_get_names.html"><tt>variable_instance_get_names</tt></a>
 </li>
 </ul>
 </div>

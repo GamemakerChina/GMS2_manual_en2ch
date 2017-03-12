@@ -26,9 +26,15 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_logout</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
@@ -37,30 +43,35 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function you can log the user out of Facebook. Note,
 this does not mean that Facebook is disconnected from the game and
 there is no need to call <a href=
 "facebook_init.html"><tt>facebook_init</tt></a> again if you wish
 the user to log back in again. It is also worth noting that certain
 graph and dialogue functions may work, only that they will prompt
-the user to log in again beforehand.<br>
-<br></p>
+the user to log in again beforehand.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">facebook_logout();</p>
 
+<blockquote>
 <p>The above code simply logs the current user out of Facebook.</p>
+</blockquote>
 
 <p><br>
 </p>

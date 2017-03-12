@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>zip_unzip</h2>
 
 <div class="body-scroll">
@@ -66,14 +69,18 @@ if (window.name != "content")
 <h3 class="studio">Description</h3>
 
 <p>This function will open a stored zip file and extract its
-contents to the given directory, within the sandboxed working
-directory for the game. The zip must be either part of the game
-bundle (ie: an <a href=
+contents to the given directory. Note that if you do not supply a
+full path to the ZIP directory then the current drive <i>root</i>
+will be used, and if you want to place it in a relative path to the
+game bundle working directory then you should use the <a href=
+"working_directory.html"><tt>working_directory</tt></a> variable as
+part of the path (relative paths using "." or ".." will not work as
+expected so should be avoided). Note too that the zip must be
+either part of the game bundle (ie: an <a href=
 "../../../2_interface/1_editors/included_files.html">Included
 File</a>) or have been downloaded to the storage area using
-<a href="../asynchronous%20functions/http_get_file.html">http_get_file</a>,
-and you need to give the full path within the working directory to
-save the file to.<br>
+<a href="../asynchronous%20functions/http_get_file.html">http_get_file</a>.<br>
+
 <br>
 The function will return a value indicating the number of files
 extracted, or it will return 0 or less if the extraction has
@@ -86,7 +93,7 @@ failed.<br>
 <h3 class="studio">Example:</h3>
 
 <p class="code">var num = zip_unzip("/downloads/level_data.zip",
-"/extracted/");<br>
+working_directory + "extracted/");<br>
 if num &lt;= 0<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;show_debug_message("Extraction Failed!");<br>

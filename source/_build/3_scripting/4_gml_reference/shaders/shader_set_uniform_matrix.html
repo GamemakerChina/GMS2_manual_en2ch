@@ -26,19 +26,23 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
-<h1 class="studio">shader_set_uniform_matrix</h1>
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>shader_set_uniform_matrix</h2>
 
-<h2 class="studio">Set a shader constant to the current transform
-matrix.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Syntax:</h3>
 
 <p class="code">shader_set_uniform_matrix(handle);</p>
 
 <p><br>
 </p>
 
-<div>
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -50,18 +54,21 @@ matrix.</h2>
 <td>The handle of the shader constant to set.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function you can set the value (or values) of a shader
 constant to the current transform matrix (as set using the <a href=
 "../matrices/index.html">Matrix Functions</a>). You must previously
@@ -75,13 +82,12 @@ have gotten the "handle" of the constant using the function
 
 <div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
 available with the Trial Licence of the product.</div>
-<br>
-<br>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">shader_set(shader_Glass);<br>
 shader_matrix = shader_get_uniform(shader_glass, "u_vMatrix");<br>
@@ -89,13 +95,18 @@ shader_set_uniform_matrix(shader_matrix);<br>
 draw_self();<br>
 shader_reset();<br></p>
 
+<blockquote>
 <p>The above code will get the handle of the shader constant
 "u_vMatrix" then set that constant to the current transform
 matrix.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href=
 "index.html">Shaders</a></div>
@@ -103,11 +114,13 @@ matrix.</p>
 <div style="float:right">Next: <a href=
 "shader_set_uniform_matrix_array.html">shader_set_uniform_matrix_array</a></div>
 </div>
+</div>
 
 <h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

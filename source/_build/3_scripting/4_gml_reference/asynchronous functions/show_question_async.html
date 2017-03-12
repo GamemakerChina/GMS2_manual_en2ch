@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>show_question_async</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">show_question_async(string);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">show_question_async(string);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -48,18 +51,21 @@ if (window.name != "content")
 <td>The question to ask to the user.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function opens a window and displays the question you
 define in the function to the user. This is an asynchronous
 function, and as such <i>GameMaker Studio 2</i> does <i>not</i>
@@ -73,25 +79,29 @@ in the variable <tt>async_load</tt>.</p>
 <p>This map will contain the two keys, "id", and "status". "id" is
 the value that was returned by the function when called, while the
 "status" will be either <tt>true</tt> or <tt>false</tt> for "Yes"
-and "No" respectively.<br>
-<br></p>
+and "No" respectively.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The <b>left mouse press event</b> (for example) of the object
 that is showing the message would have the following code:</p>
+</blockquote>
 
 <p class="code">msg = show_question_async("Do you want to buy some
 armour for " + string(armour[0, 5]) + "coins?");<br></p>
 
+<blockquote>
 <p>The above will show a question with the given string, requesting
 that the user press either "yes" or "No". The function id is stored
 in the variable "msg" and will be used in the <a href=
 "../../../2_interface/1_editors/events/async_events.html">asynchronous
 Dialogs event</a> as shown below:</p>
+</blockquote>
 
 <p class="code">var i_d, stat;<br>
 i_d = ds_map_find_value(async_load, "id");<br>
@@ -105,11 +115,13 @@ armour[0,0];<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the "id" key of the returned
 <tt>ds_map</tt> against the value stored in the variable "msg". If
 they are the same, it then checks to see if one of the two buttons
 were pressed and if it returns <tt>true</tt> it will then deduct a
 value from a variable and add a value to a global variable too.</p>
+</blockquote>
 
 <p><br>
 </p>

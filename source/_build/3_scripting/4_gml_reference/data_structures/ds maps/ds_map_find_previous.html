@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">ds_map_find_previous</h1>
 
 <h2 class="studio">Finds and returns the previous key in the ds_map
@@ -68,8 +71,8 @@ above the one specified in the function.</h2>
 
 <h3 class="studio">Description</h3>
 
-<p>This function returns the next key stored in the ds_map
-<i>after</i> the one specified in the function. This can be useful
+<p>This function returns the previous key stored in the ds_map
+<i>before</i> the one specified in the function. This can be useful
 if your have to iterate through the ds_map looking for something,
 but should be avoided if possible as it can be slow. If no such key
 exists then the function will return <tt>&lt;undefined&gt;</tt>.
@@ -84,11 +87,11 @@ is_undefined()</tt></a> function.<br></p>
 
 <p class="code">var size, key, i;<br>
 size = ds_map_size(inventory) - 1;<br>
-key = ds_map_find_first(inventory);<br>
-for (i = size; i &gt; -1; i --;)<br>
+key = ds_map_find_last(inventory);<br>
+for (i = size; i &gt; 0; i --;)<br>
 &nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if first != "gold" first =
-ds_map_find_previous(inventory, first) else break;<br>
+&nbsp;&nbsp;&nbsp;if key != "gold" key =
+ds_map_find_previous(inventory, key) else break;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code creates some temporary variables and then gets

@@ -26,34 +26,41 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
-<h1 class="studio">application_surface_is_enabled</h1>
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>application_surface_is_enabled</h2>
 
-<h2 class="studio">Returns whether the application surface is
-enabled or not.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Syntax:</h3>
 
 <p class="code">application_surface_is_enabled();</p>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function will return <tt>true</tt> if the application
 surface is being used for drawing, or <tt>false</tt> if the screen
-buffer is being used.<br>
-<br></p>
+buffer is being used.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if keyboard_check_pressed(vk_space)<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -69,13 +76,18 @@ buffer is being used.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code check for a key press and the toggle the
 application surface on or off depending on its state (like in an
 options menu).</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href=
 "index.html">Surfaces</a></div>
@@ -83,11 +95,13 @@ options menu).</p>
 <div style="float:right">Next: <a href=
 "application_get_position.html">application_get_position</a></div>
 </div>
+</div>
 
 <h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">ds_map_find_first</h1>
 
 <h2 class="studio">Finds and returns the first key, as stored by
@@ -77,13 +80,13 @@ slow.<br></p>
 <h3 class="studio">Example:</h3>
 
 <p class="code">var size = ds_map_size(inventory) ;<br>
-var first = ds_map_find_first(inventory);<br>
+var key = ds_map_find_first(inventory);<br>
 for (var i = 0; i &lt; size; i++;)<br>
 &nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if first != "gold"<br>
+&nbsp;&nbsp;&nbsp;if key != "gold"<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first =
-ds_map_find_next(inventory, first);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key =
+ds_map_find_next(inventory, key);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;else break;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>

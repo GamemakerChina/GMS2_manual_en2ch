@@ -26,19 +26,22 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>shop_leave_rating</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">shop_leave_rating(text, yes_string, no_string,
 url)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -65,32 +68,35 @@ url)</p>
 <td>The full URL where the comment has to be sent.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function opens up an OS dependant dialogue where you can
 ask the user to post a rating or comment to a particular page. You
 can define the text that is to appear in the dialogue, as well as
 the text you wish to appear on the two buttons and the URL where
-the comment has to be posted.<br>
-<br>
-<i><b>NOTE:</b> This function is only for Android and iOS
-targets.</i><br>
-<br></p>
+the comment has to be posted.</p>
+
+<div class="note"><b>NOTE:</b> This function is only for Android
+and iOS targets.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if timer &lt;= 0<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -104,8 +110,10 @@ else<br>
 &nbsp;&nbsp;&nbsp;timer -= 1;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will ask the user to leave a comment if the
 variable "timer" has counted down to 0.</p>
+</blockquote>
 
 <p><br>
 </p>

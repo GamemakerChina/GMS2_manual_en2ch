@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Common Actions Library</h2>
 
 <div class="body-scroll">
@@ -124,6 +127,16 @@ src="images/i_common_execute_code.png" alt="Execute Code"></a>
 src="images/i_common_execute_script.png" alt="Execute Script"></a>
 </td>
 <td class="text"><a href="execute_script.html">Execute Script</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="execute_function.html"><img align=
+"middle" src="images/i_common_execute_function.png" alt=
+"Execute Function"></a>
+</td>
+<td class="text"><a href="execute_function.html">Execute
+Function</a>
 </td>
 </tr>
 

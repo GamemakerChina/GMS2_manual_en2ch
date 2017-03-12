@@ -26,18 +26,21 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>achievement_post</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">achievement_post(achievement, percent)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -54,34 +57,39 @@ if (window.name != "content")
 <td>The percentage of the achievement completed.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>You can use this function to send your achievements to the
 chosen leaderboard and achievement service. You send the name of
 the achievement (this is the name you assigned to it when you set
 up the account for your app) and the percentage that you have
 completed towards getting the achievement (0 - None, 100 -
-Completed).<br>
-<br></p>
+Completed).</p>
+</blockquote>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if achievement_available()
 achievement_post("ach_Level1", 100);</p>
 
+<blockquote>
 <p>The above code checks to see if the chosen leaderboard and
 achievement service is available and if so it posts an
 achievement.</p>
+</blockquote>
 
 <p><br>
 </p>

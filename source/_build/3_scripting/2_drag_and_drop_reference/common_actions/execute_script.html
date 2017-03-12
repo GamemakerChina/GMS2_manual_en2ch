@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2><img style="vertical-align:middle" src=
 "images/i_common_execute_script.png"> Execute Script</h2>
 
@@ -108,8 +111,8 @@ the room. It does not return anything.</blockquote>
 <div style="float:left">Back: <a href="index.html">Common
 Actions</a></div>
 
-<div style="float:right">next: <a href="apply_to.html">Apply
-To...</a></div>
+<div style="float:right">next: <a href=
+"execute_function.html">Execute Function</a></div>
 </div>
 </div>
 

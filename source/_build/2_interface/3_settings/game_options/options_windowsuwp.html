@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Windows UWP Options</h2>
 
 <div class="body-scroll">
@@ -122,6 +125,22 @@ interpolation, which basically "smooths" pixels. For crisp pixel
 graphics, it should be off, but if you have nice alpha blends and
 smoothed edged graphics it is better left on.This is off by
 default.<br>
+<br></li>
+
+<li><b>Start fullscreen</b>: When this is enabled, the game will
+start in fullscreen mode. Note that this may have no visible effect
+on anything other than a Windows 10 Desktop device.<br>
+<br></li>
+
+<li><b>Allow fullscreen switching</b>: When this is enabled, you
+can switch the game between fullscreen and windowed modes using the
+appropriate shortcuts. Note that this may have no visible effect on
+anything other than a Windows 10 Desktop device.<br>
+<br></li>
+
+<li><b>Use synchronisation to avoid tearing</b>: This option exists
+but has been rendered inactive due to the fact that the UWP
+platform requires v-sync to be always on currently.<br>
 <br></li>
 
 <li><b>Scaling</b>: Here you can choose to maintain aspect ratio
@@ -246,19 +265,10 @@ Store in Visual Studio which causes Visual Studio to generate a new
 that you can associate any app with the Windows Store in Visual
 Studio, meaning you can associate a blank project with the Windows
 Store app and simply copy the generated <tt>pfx</tt> to a safe
-location which can then be used within UWP Game Options.</div>
-
-<p>After supplying the certificate fire you can select which Native
-CPU target the app is to be built for, with the following chipsets
-available:</p>
-
-<ul>
-<li>x86</li>
-
-<li>x64</li>
-
-<li>ARM</li>
-</ul>
+location which can then be used within UWP Game Options. You can
+find instructions on how this is done from the <a href=
+"http://help.yoyogames.com/hc/en-us/articles/115001349488" target=
+"_blank">YoYo Games Knowledge Base</a>.</div>
 </div></blockquote>
 
 <p><br>

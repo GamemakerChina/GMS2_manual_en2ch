@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Audio Groups</h2>
 
 <p>Your audio files can be grouped together from the IDE - you can
 create audio groups from the <a href=
-"../../../2_interface/3_settings/audio.html">Audio Groups Tab</a>
-in the <b>Game Options</b>, and assign your files to a specific
-group from the <a href=
-"../../../2_interface/1_editors/sounds.html">Sound Properties
-Window</a>. These groups can then be loaded or unloaded from memory
-as well as have certain properties set for them using the following
-functions:</p>
+"../../../2_interface/3_settings/audio.html">Audio Groups</a>
+window, which can be opened from the <b>Tools</b> menu at the top
+of the IDE, and assign your files to a specific group from the
+<a href="../../../2_interface/1_editors/sounds.html">Sound
+Properties Window</a>. These groups can then be loaded or unloaded
+from memory as well as have certain properties set for them using
+the following functions:</p>
 
 <blockquote>
 <ol>

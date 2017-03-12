@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>game_restart</h2>
 
 <div class="body-scroll">
@@ -52,7 +55,9 @@ Event</a>. However it should be noted that global variables will
 <i>not</i> be re-initialised unless explicitly coded as such - for
 example, the built-in global variable <tt>score</tt> will not start
 at zero after a game restart if it has been modified in the game
-already.<br>
+already. This is also the case for GPU state (so if you have set
+the draw colour or alpha, for example, it will remain at the
+changed value) and for the game speed.<br>
 <br></p>
 
 <p><br>

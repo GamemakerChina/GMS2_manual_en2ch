@@ -26,19 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
-<h1 class="studio">surface_set_target</h1>
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>surface_set_target</h2>
 
-<h2 class="studio">Sets the drawing target to a specific
-surface.</h2>
-
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">surface_set_target(surface_id);</p>
-
+<div class="body-scroll">
 <p><br>
 </p>
 
-<div>
+<h3>Syntax:</h3>
+
+<p class="code">surface_set_target(surface_id);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -50,18 +51,21 @@ surface.</h2>
 <td>The ID of the surface to set as the drawing target.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function you set all further drawing to the target
 surface rather than the screen and in this way you can tell
 <i>GameMaker Studio 2</i> to only draw specific things to the
@@ -74,13 +78,14 @@ surface itself is not drawn on the screen in the draw event of an
 instance. You can check the return value of this function too as a
 debug tool to check whether the surface target was set or not, with
 a return value of 0 being a failure to set the target and any other
-positive value being a success.<br>
-<br>
-One thing that should be noted is that surfaces are <i>stacked</i>
-so you cannot jump from target to target and then reset to the
-normal draw target at the end, but rather you must open and close
-rendering targets. For example, this will <b>not</b> work
-correctly:</p>
+positive value being a success.</p>
+
+<p>One thing that should be noted is that surfaces are
+<i>stacked</i> so you cannot jump from target to target and then
+reset to the normal draw target at the end, but rather you must
+open and close rendering targets. For example, this will <b>not</b>
+work correctly:</p>
+</blockquote>
 
 <p class="code">surface_set_target(surf1);<br>
 draw_text(32, 32, "surface1");<br>
@@ -88,9 +93,11 @@ surface_set_target(surf2);<br>
 draw_text(32, 64, "surface2");<br>
 surface_reset_target();<br></p>
 
+<blockquote>
 <p>Instead, you must reset the target for each of the surfaces that
 you set, much like you must use opening and closing brackets {} for
 code blocks. So the above should be written as either this:</p>
+</blockquote>
 
 <p class="code">surface_set_target(surf1);<br>
 draw_text(32, 32, "surface1");<br>
@@ -99,7 +106,9 @@ surface_set_target(surf2);<br>
 draw_text(32, 64, "surface2");<br>
 surface_reset_target();<br></p>
 
+<blockquote>
 <p>or as this:</p>
+</blockquote>
 
 <p class="code">surface_set_target(surf1);<br>
 draw_text(32, 32, "surface1");<br>
@@ -108,20 +117,18 @@ draw_text(32, 64, "surface2");<br>
 surface_reset_target();<br>
 surface_reset_target();<br></p>
 
-<p><i><b>NOTE:</b> When working with surfaces there is the
-possibility that they can cease to exist at any time due to them
-being stored in texture memory. You should <b>ALWAYS</b> check that
-a surface exists using <a href=
+<div class="note"><b>NOTE:</b> When working with surfaces there is
+the possibility that they can cease to exist at any time due to
+them being stored in texture memory. You should <b>ALWAYS</b> check
+that a surface exists using <a href=
 "surface_exists.html"><tt>surface_exists</tt></a> before
 referencing them directly. For further information see <a href=
-"index.html">Surfaces</a>.</i><br>
-<br>
-</p>
+"index.html">Surfaces</a>.</div>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if view_current = 0<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -137,15 +144,20 @@ else<br>
 &nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will check to see which view is currently being
 drawn, and if it is view[0] it sets the draw target to a surface
 and draws all instances of the object "obj_Effect" before resetting
 the draw target again. If the view is not view[0] the surface is
 drawn to the screen.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href=
 "index.html">Surfaces</a></div>
@@ -153,11 +165,13 @@ drawn to the screen.</p>
 <div style="float:right">Next: <a href=
 "surface_set_target_ext.html">surface_set_target_ext</a></div>
 </div>
+</div>
 
 <h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

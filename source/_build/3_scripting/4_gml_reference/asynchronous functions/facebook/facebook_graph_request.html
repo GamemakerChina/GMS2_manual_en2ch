@@ -26,19 +26,22 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_graph_request</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
 <p class="code">facebook_graph_request(graph_path, httpMethod,
 ds_map_parameters, ds_map_return)</p>
 
-<p><br>
-</p>
-
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -65,18 +68,21 @@ ds_map_parameters, ds_map_return)</p>
 <td>The ds_map to <i>receive</i> (-1 for none).</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function you can get the user to interact with the
 Facebook Social Graph. The "graph_path" argument is where you
 define the part of the graph you wish to access, like the current
@@ -86,9 +92,9 @@ exact path can be defined using the terms outlined in the
 "https://developers.facebook.com/docs/reference/api/" target=
 "_blank">Facebook Graph Api</a> pages. You then define the http
 method to use which is usually POST or GET but Facebook also
-accepts the DELETE method.<br>
-<br>
-The next argument is slightly more complex as it requires you to
+accepts the DELETE method.</p>
+
+<p>The next argument is slightly more complex as it requires you to
 have created and filled a <a href=
 "../../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>
 with the correct information which <i>GameMaker Studio 2</i> will
@@ -98,9 +104,9 @@ very much on which path you choose to use and a complete list of
 all possible values can be found <a href=
 "https://developers.facebook.com/docs/graph-api/" target=
 "_blank">here</a>. An example of how this map is structured can be
-seen in the code example supplied below.<br>
-<br>
-Finally, we have an argument for storing any information that
+seen in the code example supplied below.</p>
+
+<p>Finally, we have an argument for storing any information that
 Facebook has sent back from the graph request. This information
 comes in the form of <tt>json</tt> which <i>GameMaker Studio 2</i>
 converts into a ds_map. For this to work correctly, you <i>must</i>
@@ -115,14 +121,16 @@ target="_blank">Graph Api Test Page</a> where you can check
 different graph paths and see exactly what information they will
 return.</p>
 
-<blockquote><i><b>NOTE:</b> The user <b>must</b> be logged in for
-the graph request to function.</i>
+<div class="note">
+<p><b>NOTE:</b> The user <b>must</b> be logged in for the graph
+request to function.</p>
+</div>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var wallPostMap;<br>
 wallPostMap = ds_map_create();<br>
@@ -138,11 +146,13 @@ MacSweeney Games!");<br>
 facebook_graph_request("me/feed", "POST", wallPostMap, -1);<br>
 ds_map_destroy(wallPostMap);<br></p>
 
+<blockquote>
 <p>The above code will create a ds_map and store its index in the
 local variable "wallPostMap". It then fills the ds_map with the
 relevant key/value pairs that are needed to post an image and text
 to the currently logged in users wall. Finally it sends the graph
 request and deletes the ds_map from memory.</p>
+</blockquote>
 
 <p><br>
 </p>

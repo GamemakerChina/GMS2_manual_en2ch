@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>File Handling</h2>
 
 <div class="body-scroll">
@@ -60,7 +63,13 @@ new set of file functions available to you. These are explained in
 the <a href="../steam%20api/index.html">Steam API</a> section of
 this manual.</p>
 
-<p>The following sections all deal with different types of file
+<div class="note"><b>IMPORTANT!</b> All <i>GameMaker Studio 2</i>
+projects have a file called "<tt>opions.ini</tt>", so you
+<b>cannot</b> name any file with that name (you will get a uild
+failure when you try to compile your game project).</div>
+
+<p><br>
+The following sections all deal with different types of file
 handling:</p>
 
 <blockquote><label class="collapse" for="one">File Systems</label>

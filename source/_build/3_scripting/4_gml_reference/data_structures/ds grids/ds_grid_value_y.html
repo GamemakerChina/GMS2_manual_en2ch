@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">ds_grid_value_y</h1>
 
 <h2 class="studio">Returns the y position of a value within a
@@ -87,7 +90,7 @@ region of a grid.</h2>
 
 <h3 class="studio">Description</h3>
 
-<p>With this function you can get the x coordinate (within the
+<p>With this function you can get the y coordinate (within the
 given rectangular grid region) of the value being searched for. Be
 aware that if the value being searched for does not exists, the
 function will return 0, so it is a good idea to check if the values

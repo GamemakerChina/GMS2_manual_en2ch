@@ -26,11 +26,13 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Strings</h2>
 
 <div class="body-scroll">
 <p><br>
-</p>
 At some time when making your game you will need to use text. Text
 in games is dealt with by using the <b>string</b> functions (a
 string is just another way of saying a line of text) and
@@ -38,7 +40,12 @@ string is just another way of saying a line of text) and
 permit you to manipulate strings in many ways, including the
 insertion of one string in another, the copying of strings and the
 ability to parse strings for the digits or the letters that they
-contain.
+contain. In general a string can <i>only</i> be created by adding
+text within double quotes " " and single quote strings are not
+accepted, nor can you split the string over multiple lines and
+expect <i>GameMaker Studio 2</i> to render it as if the line breaks
+were newlines (unless a string literal @ identifier is used, as
+explained below).</p>
 
 <p>It is worth noting that there are certain conventions that you
 can use when creating strings, mostly concerned with using
@@ -52,9 +59,8 @@ within a string you would have something like this:</p>
 hex following a "u", for example "\u0000", where the 4 digits are
 the number of the Unicode character - or any hexadecimal literal -
 2 digits of hex following a "0x", for example "\xff", where the 2
-digits are the number of the character to use. There are also a
-number of predefined escape characters, listed in the table
-below:</p>
+digits are the number of the character to use. These and other
+predefined escape characters are listed in the table below:</p>
 
 <div class="compat">
 <table>
@@ -102,6 +108,21 @@ below:</p>
 <td>\a</td>
 <td>Alert (0x07)</td>
 </tr>
+
+<tr>
+<td>\u[Hex Digits]</td>
+<td>Insert hex unicode character (note max 4 digits)</td>
+</tr>
+
+<tr class="alt">
+<td>\x[Hex Digits]</td>
+<td>Insert hex unicode character (note max 4 digits)</td>
+</tr>
+
+<tr>
+<td>\[Octal Digits]</td>
+<td>Insert octal unicode character (note max 4 digits)</td>
+</tr>
 </table>
 </div>
 
@@ -110,8 +131,8 @@ tab etc... but this does not mean to say that <b>rendering</b>
 does, and when drawing strings these characters may be
 ignored.</div>
 
-<p>You can also create <i>string literals</i> by preceding the
-whole string with the @ character:</p>
+<p>You can also create verbatim <i>string literals</i> by preceding
+the whole string with the @ character:</p>
 
 <p class="code">var test = @"<br>
 Line breaks<br>
@@ -120,10 +141,15 @@ lines<br>
 ";<br></p>
 
 <p>The above code will render the string over multiple lines as if
-there was a line break escape character included. Note though that
-when using string literals like this, you will need to break the
-string if you wish to include quotation marks as part of the
-string, ie:</p>
+there was a line break escape character included. A verbatim string
+literal is similar to previous GameMaker version string literals
+but they also use double or single quotes and must be prefixed by
+an @ symbol, they can be broken over multiple lines in the code
+file and they DO NOT support escaped characters i.e. @"Hello\World"
+will NOT try to escape the W on World and will be stored verbatim.
+Note though that when using string literals like this, you will
+need to break the string if you wish to include quotation marks as
+part of the string, ie:</p>
 
 <p class="code">var test = @"Hello " + "\"" + @"World" + "\""</p>
 
@@ -251,7 +277,8 @@ clipboard to get and set text information:</p>
 </ul>
 
 <p><br>
-</p></div>
+</p>
+</div>
 
 <div class="footer">
 <div class="buttons">

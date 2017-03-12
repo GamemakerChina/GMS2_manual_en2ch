@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>game_get_speed</h2>
 
 <div class="body-scroll">
@@ -55,12 +58,12 @@ will determine the type of the return value:</p>
 
 <tr>
 <td>gamespeed_fps</td>
-<td>Sets the games peed using frames per second.</td>
+<td>Gets the games speed using frames per second.</td>
 </tr>
 
 <tr class="alt">
 <td>gamespeed_microseconds</td>
-<td>Sets the game speed using microseconds per frame.</td>
+<td>Gets the game speed using microseconds per frame.</td>
 </tr>
 </table>
 </div>

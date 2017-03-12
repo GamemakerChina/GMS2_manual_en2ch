@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Draw Actions Library</h2>
 
 <div class="body-scroll">
@@ -206,10 +209,27 @@ Lives</a>
 </tr>
 
 <tr>
+<td class="icons"><a href="get_draw_colour.html"><img align=
+"middle" src="images/i_drawing_get_draw_colour.png" alt=
+"Get Draw Colour"></a>
+</td>
+<td class="text"><a href="get_draw_colour.html">Get Draw Colour</a>
+</td>
+</tr>
+
+<tr>
 <td class="icons"><a href="set_draw_alpha.html"><img align="middle"
 src="images/i_drawing_set_draw_alpha.png" alt="Set Draw Alpha"></a>
 </td>
 <td class="text"><a href="set_draw_alpha.html">Set Draw Alpha</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="get_draw_alpha.html"><img align="middle"
+src="images/i_drawing_get_draw_alpha.png" alt="Get Draw Alpha"></a>
+</td>
+<td class="text"><a href="get_draw_alpha.html">Get Draw Alpha</a>
 </td>
 </tr>
 

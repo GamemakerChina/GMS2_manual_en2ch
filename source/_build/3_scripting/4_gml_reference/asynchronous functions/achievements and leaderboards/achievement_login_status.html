@@ -26,9 +26,15 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>achievement_login_status</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
@@ -37,31 +43,39 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function is currently only useful for <b>Google Play</b> on
 the Android platform. It will check to see if the user is already
 logged into Google services, in which case it will return
 <tt>true</tt>, or not, returning <tt>false</tt>. If it returns
 <tt>true</tt> there is no need to call the <a href=
 "achievement_login.html"><tt>achievement_login</tt></a>
-function.<br>
-<br></p>
+function.</p>
+</blockquote>
 
-<h3 class="studio">Example:</h3>
+<p><br>
+</p>
+
+<h3>Example:</h3>
 
 <p class="code">if !achievement_login_status()<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;achievement_login();<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will log you into the chosen leaderboard and
 achievement service.</p>
+</blockquote>
 
 <p><br>
 </p>

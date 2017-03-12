@@ -26,9 +26,12 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>GPU Control</h2>
 
-<p>When drawing things in a room, you'll opften require a more
+<p>When drawing things in a room, you'll often require a more
 granular control over exactly how drawing will be done. You may
 wish for there to be no alpha blending, or you may require culling,
 or you may need to switch texture interpolation on or off. All this

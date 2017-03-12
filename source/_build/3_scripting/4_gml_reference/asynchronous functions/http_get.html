@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>http_get</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">http_get(url);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">http_get(url);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -49,18 +52,21 @@ if (window.name != "content")
 from</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>With this function, you connect to the specified URL in order to
 retrieve information. As this is an asynchronous function,
 <i>GameMaker Studio 2</i> will not block while waiting for a reply,
@@ -149,28 +155,30 @@ been downloaded.</li>
 </ol>
 </blockquote>
 
-<p><i><b>NOTE:</b> You should be aware that due to XSS protection
-in browsers, requests to and attempts to load resources from across
-domains are blocked and may appear to return blank results. Please
-see the section on <a href="index.html">Cross Domain Issues</a> for
-further details.</i><br>
-<br>
-</p>
+<div class="note"><b>NOTE:</b> You should be aware that due to XSS
+protection in browsers, requests to and attempts to load resources
+from across domains are blocked and may appear to return blank
+results. Please see the section on <a href="index.html">Cross
+Domain Issues</a> for further details.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The <tt>http_get</tt> function can be called from any event, and
 since it is asynchronous the callback can be almost instantaneous
 or could take several seconds. Calling the function is simple and
 would look something like this:</p>
+</blockquote>
 
 <p class="code">get =
 http_get("http://www.MacSweeneyGames.com/logon?username=" +
 name);</p>
 
+<blockquote>
 <p>The above code will pass the string held in the variable "name"
 to the given server as well as retrieve the data from that URL,
 triggering an Async Event which will contain the async_load ds_map
@@ -178,6 +186,7 @@ triggering an Async Event which will contain the async_load ds_map
 you can check for the correct callback). The Async Event triggered
 would be the <b>HTTP</b> sub-event, and in that event you would
 have the following:</p>
+</blockquote>
 
 <p class="code">if ds_map_find_value(async_load, "id") == get<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -193,11 +202,13 @@ ds_map_find_value(async_load, "result");<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will first check the id of the ds_map that has
 been created, then check the status of the callback. If the value
 is equal to 0 (signalling success) the result from the callback
 will then be stored in a variable for future use, otherwise the
 variable will be set to a default value (in this case "null").</p>
+</blockquote>
 
 <p><br>
 </p>

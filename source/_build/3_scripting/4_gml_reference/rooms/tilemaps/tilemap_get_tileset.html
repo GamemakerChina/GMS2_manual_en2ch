@@ -27,19 +27,27 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>tilemap_get_tileset</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3>Description</h3>
 
-<blockquote>Using this function you can retrieve the index value of
-the tile set resource assigned to a given tilemap element on a
-layer. You give the tilemap element ID (which you get when you
-create a tilemap element using <a href=
+<blockquote>
+<p>Using this function you can retrieve the index value of the tile
+set resource assigned to a given tilemap element on a layer. You
+give the tilemap element ID (which you get when you create a
+tilemap element using <a href=
 "layer_tilemap_create.html"><tt>layer_tilemap_create()</tt></a> or
 when you use the function <a href=
 "layer_tilemap_get_id.html"><tt>layer_tilemap_get_id()</tt></a>),
-and the function will return the tile set index value.</blockquote>
+and the function will return the tile set index value.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -87,9 +95,11 @@ if tilemap_get_tileset(map_id) != ts_Nighttime<br>
 &nbsp;&nbsp;&nbsp;tilemap_tileset(map_id, ts_Nighttime);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
-<blockquote>The above code checks the current tile set assigned to
-the layer "Tiles_trees" and if it is not "ts_Nighttime" then that
-tile set is assigned to the tilemap.</blockquote>
+<blockquote>
+<p>The above code checks the current tile set assigned to the layer
+"Tiles_trees" and if it is not "ts_Nighttime" then that tile set is
+assigned to the tilemap.</p>
+</blockquote>
 
 <p><br>
 </p>

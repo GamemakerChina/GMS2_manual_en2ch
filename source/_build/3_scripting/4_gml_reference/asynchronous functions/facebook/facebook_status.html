@@ -26,9 +26,15 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>facebook_status</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
@@ -37,16 +43,16 @@ if (window.name != "content")
 <p><br>
 </p>
 
+<h3>Returns:</h3>
+
+<p class="code">String</p>
+
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<h3>Description</h3>
 
-<p><br>
-</p>
-
-<h3 class="studio">Description</h3>
-
+<blockquote>
 <p>With this function you can poll Facebook for the current status
 of the connection. One of the following strings is returned (note
 that they are always returned in capital letters):</p>
@@ -66,11 +72,12 @@ initialised but no further action has been taken.</li>
 correctly, usually due to a connection error.</li>
 </ul>
 </blockquote>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">switch (facebook_status())<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -81,12 +88,14 @@ alarm[0] = 30; break;<br>
 &nbsp;&nbsp;&nbsp;default: alarm[0] = 30;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code would be run in an alarm and checks the status of
 Facebook to see if the user has logged in correctly. If the return
 string is "AUTHORISED", a global variable is set to true and the
 game continues, if the return string is "FAILED" the game will
 request that the user logs in again and then repeat the alarm to
 check the status once more.</p>
+</blockquote>
 
 <p><br>
 </p>

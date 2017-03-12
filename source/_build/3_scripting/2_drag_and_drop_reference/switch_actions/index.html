@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Switch Library</h2>
 
 <div class="body-scroll">
@@ -60,6 +63,10 @@ etc...</li>
 <li>Once a case has been performed <i>or</i> all cases have been
 evaluated and failed, the code will continue from the end of the
 switch</li>
+
+<li>If all cases failed and you have a default case, then that will
+be performed before the code continues from the end of the
+switch</li>
 </ul>
 
 <p>The <b>Switches</b> library has the following actions:</p>
@@ -78,6 +85,14 @@ switch</li>
 "images/i_switches_case.png" alt="case"></a>
 </td>
 <td class="text"><a href="case.html">Case</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="default.html"><img align="middle" src=
+"images/i_switches_default.png" alt="default"></a>
+</td>
+<td class="text"><a href="default.html">Default</a>
 </td>
 </tr>
 </table>

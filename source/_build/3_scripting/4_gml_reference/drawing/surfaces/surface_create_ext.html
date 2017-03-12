@@ -26,19 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
-<h1 class="studio">surface_create_ext</h1>
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>surface_create_ext</h2>
 
-<h2 class="studio">Creates a surface and links it to an HTML5
-canvas element.</h2>
-
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">surface_create_ext(name, w, h);</p>
-
+<div class="body-scroll">
 <p><br>
 </p>
 
-<div>
+<h3>Syntax:</h3>
+
+<p class="code">surface_create_ext(name, w, h);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -60,22 +61,22 @@ canvas element.</h2>
 <td>The height of the surface to be created.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
-<p><i><b>NOTE:</b> This function is only available for use with the
-HTML5 module!</i><br>
-<br>
-This function allows you to attach a surface to a canvas element
+<blockquote>
+<p>This function allows you to attach a surface to a canvas element
 that already exists in your web page, meaning that you can
 effectively split up portions of your game to be drawn at various
 different places within the page. To that end, you <i>must</i> have
@@ -86,11 +87,12 @@ canvas, and then your secondary surface canvas elements, which will
 be assigned using this function to the correct surfaces. The
 following image is an example of how a page with three canvas
 elements would be set up: <img class="center" src=
-"surface_ext_1.png"> The page layout can be tricky, especially if
-you wish all the elements to line up correctly, but once the hard
-task of creating the layout has been completed, you can then add
-this <tt>html</tt> file as the default page file for the game using
-the <a href=
+"surface_ext_1.png"></p>
+
+<p>The page layout can be tricky, especially if you wish all the
+elements to line up correctly, but once the hard task of creating
+the layout has been completed, you can then add this <tt>html</tt>
+file as the default page file for the game using the <a href=
 "../../../../2_interface/3_settings/game_options/options_html5.html">
 HTML5 Tab</a> of the <a href=
 "../../../../2_interface/3_settings/game_options/index.html">Game
@@ -100,37 +102,46 @@ view to "capture" the game images (see the view variable <a href=
 "../../cameras%20and%20display/cameras/view_surface_id.html"><tt>view_surface_id[0...7]</tt></a>).
 The image below shows how the game room for the above canvas
 example would be set out: <img class="center" src=
-"surface_ext_2.png"> Finally you would then use this function to
-create the surfaces, with the name being the same as that used for
-the canvas elements and the size corresponding to the size of that
-same canvas. The function will return the index of the surface
-which should be stored in a variable for future function calls.
-When the surface is first created, it may contain "noise" as
-basically it is just an area of memory that is put aside for the
-purpose (and that memory may still contain information), so you may
-want to clear the surface before use with a function like <a href=
-"../colour/draw_clear_alpha.html"><tt>draw_clear_alpha</tt></a>.<br>
+"surface_ext_2.png"></p>
 
-<br></p>
+<p>Finally you would then use this function to create the surfaces,
+with the name being the same as that used for the canvas elements
+and the size corresponding to the size of that same canvas. The
+function will return the index of the surface which should be
+stored in a variable for future function calls. When the surface is
+first created, it may contain "noise" as basically it is just an
+area of memory that is put aside for the purpose (and that memory
+may still contain information), so you may want to clear the
+surface before use with a function like <a href=
+"../colour/draw_clear_alpha.html"><tt>draw_clear_alpha</tt></a>.</p>
+
+<div class="note"><b>NOTE:</b> This function is only available for
+use with the HTML5 module.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">s1 = surface_create_ext("surface1", 192, 550);<br>
 s2 = surface_create_ext("surface2", 608, 186);<br>
 view_surface_id[1] = s1;<br>
 view_surface_id[2] = s2;<br></p>
 
+<blockquote>
 <p>The above code creates two surfaces of different sizes,
 assigning each one to a different canvas element, and then those
 surfaces are assigned to two views so that the correct part of the
 room is captured.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href=
 "index.html">Surfaces</a></div>
@@ -138,11 +149,13 @@ room is captured.</p>
 <div style="float:right">Next: <a href=
 "surface_resize.html">surface_resize</a></div>
 </div>
+</div>
 
 <h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

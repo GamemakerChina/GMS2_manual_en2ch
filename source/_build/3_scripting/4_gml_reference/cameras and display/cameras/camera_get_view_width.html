@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>camera_get_view_width</h2>
 
 <p><br>
@@ -80,7 +83,7 @@ camera</td>
 <p class="code">var vw = camera_get_view_width(view_camera[0]) /
 2;<br>
 var vh = camera_get_view_height(view_camera[0]) / 2;<br>
-camera_set_position(view_camera[0], x - vw, y - vh);<br></p>
+camera_set_view_pos(view_camera[0], x - vw, y - vh);<br></p>
 
 <p>The above code retrieves the width and height of the camera
 assigned to view port[0] and then sets its position relative to the

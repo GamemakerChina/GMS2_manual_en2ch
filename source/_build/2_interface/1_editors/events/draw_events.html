@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Draw Events</h2>
 
 <div class="body-scroll">
@@ -47,7 +50,7 @@ to true</i>. Even if you have defined nothing for this sub-event in
 the object properties (ie: no code nor actions), if the object has
 a sprite assigned it will <i>still</i> have a draw sub-event which
 will be triggered. This is because <i>GameMaker Studio 2</i> has
-two ways to draw things in the Draw sub-event:<br>
+two ways to draw things in the Draw sub-event: application<br>
 <br></p>
 
 <ul>
@@ -93,7 +96,7 @@ draw over what the first instance has drawn. Basically its a sure
 fire way to guarantee that certain things are drawn at certain
 times, much like the Begin Step and End Step events do.<br>
 <br>
-There are a few things to note when drawing thing in <i>GameMaker
+There are a few things to note when drawing things in <i>GameMaker
 Studio 2</i>, whether it's a sprite you are drawing or a shader, or
 3D:<br>
 <br>
@@ -264,7 +267,7 @@ the other draw events.</div></div></blockquote>
 Editor</a></div>
 
 <div style="float:right">Next: <a href=
-"async_events.html">Asynchronous Events</a></div>
+"gesture_events.html">Gesture Events</a></div>
 </div>
 </div>
 

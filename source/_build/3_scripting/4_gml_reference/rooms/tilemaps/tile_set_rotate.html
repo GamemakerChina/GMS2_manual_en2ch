@@ -27,6 +27,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>tile_set_rotate</h2>
 
 <div class="body-scroll">
@@ -47,7 +50,7 @@ tiledata set which can then be applied using the <a href=
 
 <h3>Syntax:</h3>
 
-<p class="code">tile_set_rotate(tiledata)</p>
+<p class="code">tile_set_rotate(tiledata, rotate)</p>
 
 <p><br>
 </p>

@@ -26,9 +26,15 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>achievement_get_challenges</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <h3><b>Syntax:</b>
 </h3>
 
@@ -37,13 +43,16 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function will send a request to the server for information
 on all current challenges and will trigger a callback <a href=
 "../../../../2_interface/1_editors/events/async_events.html">Social
@@ -113,25 +122,29 @@ challenge.</li>
 </ol>
 </blockquote>
 
-<p><i><b>NOTE:</b> This function is for <b>iOS</b> only.</i><br>
-<br>
-</p>
+<div class="note"><b>NOTE:</b> This function is for <b>iOS</b>
+only.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The following code would probably be called after the player has
 logged into their game account using <a href=
 "achievement_login.html"><tt>achievement_login</tt></a>:</p>
 
+<blockquote>
 <p class="code">achievement_get_challenges();</p>
 
+<blockquote>
 <p>This will send off a request for the current challenge
 information and generate an asynchronous callback with the special
 <tt>async_load</tt> ds_map containing the following data:</p>
 
+<blockquote>
 <p class="code">var ident = ds_map_find_value(async_load,
 "id");<br>
 if ident == achievement_challenge_list_received<br>
@@ -166,15 +179,21 @@ string(i)+"identifier");<br>
 ds_map_find_value(async_load, "Challenge" + string(i)+"score");<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the
 <b>Social Asynchronous Event</b> and if its "id" matches the
 constant being checked, it then loops through the map storing all
 the different values in a number of arrays. This information can
 then be used, for example, to create your own, personalised,
 challenge pages in game.</p>
+</blockquote>
 
 <p><br>
 </p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 </div>
 
 <div class="footer">

@@ -26,12 +26,15 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>gml_pragma</h2>
 
 <div class="body-scroll">
 <h3 class="studio">Syntax:</h3>
 
-<p class="code">gml_pragma(command);</p>
+<p class="code">gml_pragma(command, [optional...]);</p>
 
 <p><br>
 </p>
@@ -46,6 +49,12 @@ if (window.name != "content")
 <tr>
 <td>command</td>
 <td>A string with one of the commands listed below.</td>
+</tr>
+
+<tr class="alt">
+<td>[optional]</td>
+<td>Some of the available commands require an optional argument or
+arguments. These are explained below for each command.</td>
 </tr>
 </table>
 </div>
@@ -62,18 +71,53 @@ if (window.name != "content")
 
 <p>The <tt>gml_pragma</tt> function affects how the YYC target
 compiles your code and should be called with the different commands
-to further optimise the final compilation of your project. The
-available commands are as follows:</p>
+to further optimise the final compilation of your project. These
+commands are effectively <i>pre-processed</i> before the game is
+compiled and so the function can be placed anywhere in your project
+and it will still be processed before the game is fully compiled.
+The available commands are as follows:</p>
 
 <blockquote>
 <ul>
-<li>"<b>forceinline</b>" - When the function is called in a
-<b>script resource</b> using this command, the YYC will compile the
-project with the script inline, rather than referenced. This will
-give a further processing boost, but care must be taken when using
-it as it will also inflate the final executable file size,
-especially if the inlined code is large and/or used in multiple
-different places.<br>
+<li>"<b>forceinline</b>" - When the function is called with the
+"forceinline" pragma in a <b>script resource</b>, the YYC will
+compile the project with the script inline, rather than referenced.
+This will give a further processing boost, but care must be taken
+when using it as it will also inflate the final executable file
+size, especially if the in-lined code is large and/or used in
+multiple different places, as well as greatly increase the compile
+time.<br>
+<br></li>
+
+<li>"<b>global</b>", "<b>[gml code]</b>" - The "global" pragma
+permits you to call some GML code before anything else and will
+execute the second GML string at a <b>global</b> scope, before the
+first room of the game executes. For example:
+
+<p class="code">gml_pragma("global", "scr_Init()");</p>
+<br>
+This will call the script "scr_Init" before the first room of the
+game is run.<br>
+<br></li>
+
+<li>"<b>PNGCrush</b>" - The "PNGCrush" pragma will use the <a href=
+"https://pmt.sourceforge.io/pngcrush/" target="_blank">PNGCrush</a>
+program on each texture created. Note that this can add
+significantly to the time that it takes to compile the game, so you
+don't want it on all the time, although it can make significant
+savings on final file size.<br>
+<br></li>
+
+<li>"<b>Texgroup.Scale</b>", "<b>[TextureGroupName]</b>",
+"<b>[Scale Divisor]</b>" - The "Texgroup.Scale" will scale the
+given texture group on compile. You need to give an additional two
+arguments here: the "[TexGroupName]", which is the name (a string)
+of the texture group to scale, and the "[Scale Divisor]" (also a
+string), which is the divisor you wish to use for the scaling, i.e:
+
+<p class="code">gml_pragma("Texgroup.Scale", "level1", "2");</p>
+<br>
+This will half all the textures in the "level1" texture group.<br>
 <br></li>
 </ul>
 </blockquote>
@@ -86,7 +130,7 @@ different places.<br>
 <p class="code">gml_pragma("forceinline");<br></p>
 
 <p>The above example code will force the script where it is used to
-be inlined on compile.</p>
+be in-lined on compile.</p>
 
 <p><br>
 </p>

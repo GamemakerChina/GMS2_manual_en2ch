@@ -26,17 +26,20 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>http_post_string</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">http_post_string(url, string);</p>
-
 <p><br>
 </p>
 
-<div class="param">
+<h3>Syntax:</h3>
+
+<p class="code">http_post_string(url, string);</p>
+
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -54,18 +57,21 @@ from</td>
 <td>The string you wish to send to the specified URL</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>In computing, a <b>post</b> request is used when the client
 needs to send data to the server as part of the retrieval request,
 such as when uploading a file or submitting a completed form, and
@@ -146,29 +152,31 @@ been downloaded.</li>
 </ol>
 </blockquote>
 
-<p><i><b>NOTE:</b> You should be aware that due to XSS protection
-in browsers, requests to and attempts to load resources from across
-domains are blocked and may appear to return blank results. Please
-see the section on <a href="index.html">Cross Domain Issues</a> for
-further details.</i><br>
-<br>
-</p>
+<div class="note"><b>NOTE:</b> You should be aware that due to XSS
+protection in browsers, requests to and attempts to load resources
+from across domains are blocked and may appear to return blank
+results. Please see the section on <a href="index.html">Cross
+Domain Issues</a> for further details.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Extended Example:</h3>
+<h3>Extended Example:</h3>
 
+<blockquote>
 <p>The <tt>http_post_string</tt> function can be called from any
 event, and since it is asynchronous the callback can be almost
 instantaneous or could take several seconds. Calling the function
 is simple and would look something like this:</p>
+</blockquote>
 
 <p class="code">var str = "name=" + global.player_name +
 "&amp;score=" + string(global.player_score);<br>
 post = http_post_string("http://www.angusgames.com/game?game_id=" +
 string(global.game_id), str);<br></p>
 
+<blockquote>
 <p>The above code sends a retrieval request to the specified URL
 with the given parameters as well as sending the additional data
 (player name and score in URL-encoded form) stored in the variable
@@ -179,6 +187,7 @@ you run the correct code should you have used various
 <tt>http_post_string()</tt> functions. The following example code
 shows how this would be done:</p>
 
+<blockquote>
 <p class="code">var r_str = "null";<br>
 if ds_map_find_value(async_load, "id") == post<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -190,15 +199,19 @@ ds_map_find_value(async_load, "result");<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will first check the id of the ds_map that has
 been created, then check the status of the callback. If the value
 is equal to 0 (signalling success) the result from the callback
 will then be stored in a variable for future use, otherwise the
 variable will simply hold a default value (in this case
 "null").</p>
+</blockquote>
 
 <p><br>
 </p>
+</blockquote>
+</blockquote>
 </div>
 
 <div class="footer">

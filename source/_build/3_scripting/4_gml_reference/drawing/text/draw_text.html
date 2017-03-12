@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h1 class="studio">draw_text</h1>
 
 <h2 class="studio">Draw a string at a given position.</h2>
@@ -75,14 +78,15 @@ if (window.name != "content")
 within the room (for drawing real numbers you should use the
 <a href="../../strings/string.html"><tt>string</tt></a> function to
 convert them into text). To combine strings you can use <b>+</b>
-(see example below), you can also use <b>#</b> to add a line break
-to the string (should you need to display the # symbol, then you
-should precede it with a backslash like this "this will draw a \#")
-and you can also draw quotations by using inverted commas (for
-example 'I said "Hello"...'). The colour of the text and the alpha
-are governed by the current base alpha and colour values as set by
-<a href="../colour/draw_set_alpha.html"><tt>draw_set_alpha</tt></a>
-and <a href=
+(see example below) and you can also use <b>/n</b> within a string
+to add a line break so it is drawn over multiple lines (for
+information on how to properly format a string and what escape
+characters you can use, please see <a href=
+"../../strings/index.html">here</a>). The colour of the text and
+the alpha are governed by the current base alpha and colour values
+as set by <a href=
+"../colour/draw_set_alpha.html"><tt>draw_set_alpha</tt></a> and
+<a href=
 "../colour/draw_set_colour.html"><tt>draw_set_colour</tt></a><br>
 <br>
 <i><b>NOTE:</b> The actual position of the text will be influenced
@@ -96,8 +100,8 @@ by the alignment values set by <a href=
 
 <h3 class="studio">Example:</h3>
 
-<p class="code">draw_text(x, y, "Hello, " + global.Name + "!#I hope
-you are well!");</p>
+<p class="code">draw_text(x, y, "Hello, " + global.Name + "!/nI
+hope you are well!");</p>
 
 <p>The above code will draw a string at the instance x/y position,
 which will use the string stored in the global variable "Name" and

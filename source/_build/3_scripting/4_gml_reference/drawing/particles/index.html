@@ -26,6 +26,9 @@ if (window.name != "content")
 </script>
 <!-- !chm2web! -->
 
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
 <h2>Particles</h2>
 
 <p>For complex things in <i>GameMaker Studio 2</i> you would
@@ -288,6 +291,20 @@ below:</p>
 
 <li><a href=
 "particle%20systems/part_system_create.html">part_system_create<br></a>
+</li>
+
+<li><a href=
+"particle%20systems/part_system_create_layer.html">part_system_create_layer<br>
+</a>
+</li>
+
+<li><a href=
+"particle%20systems/part_system_get_layer.html">part_system_get_layer<br>
+</a>
+</li>
+
+<li><a href=
+"particle%20systems/part_system_layer.html">part_system_layer<br></a>
 </li>
 
 <li><a href=
