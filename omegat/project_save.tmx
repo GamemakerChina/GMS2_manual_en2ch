@@ -896,8 +896,8 @@
       <tuv lang="EN-US">
         <seg>&lt;b0&gt;Default for committing changes on tool change&lt;/b0&gt; - When you change draw tools after editing a frame, by default a message shows to ask if you want to commit the changes made.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170318T134205Z" creationid="36011" creationdate="20170318T133757Z">
-        <seg>&lt;b0&gt;默认工具更改时提交修改（Default for committing changes on tool change）&lt;/b0&gt; - 当你When you change draw tools after editing a frame, by default a message shows to ask if you want to commit the changes made.</seg>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170319T003226Z" creationid="36011" creationdate="20170318T133757Z">
+        <seg>&lt;b0&gt;工具更改时提交修改的默认处理（Default for committing changes on tool change）&lt;/b0&gt; - 当你在（使用样条工具等）编辑一帧之后更改绘制工具，默认地会显示一个消息去询问你是否要提交当前的变动。</seg>
       </tuv>
     </tu>
     <tu>
@@ -962,6 +962,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170316T142044Z" creationid="36011" creationdate="20170316T142044Z">
         <seg>&lt;b0&gt;禁用IDE切换效果（Disable IDE Transitions）&lt;/b0&gt;：&lt;i1&gt;GameMaker Studio 2&lt;/i1&gt;的IDE有一些动画切换效果。例如打开窗口等……然而这些效果并不是所有人的菜并且如果在老式或者低功耗机器上禁用这些效果你也可能得到性能的提升。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Dismiss layer is locked warning&lt;/b0&gt; - If you try to edit a locked layer you'll get a message by default informing you that you can't do this.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170319T003450Z" creationid="36011" creationdate="20170319T003450Z">
+        <seg>&lt;b0&gt;忽略图层锁定警告（Dismiss layer is locked warning）&lt;/b0&gt; - 如果你在尝试去编辑一个锁定的图层，那么你会默认地得到一个消息告诉你你无法这样做。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5896,8 +5904,16 @@
       <tuv lang="EN-US">
         <seg>By setting this option to "OK" you can remove this message and permit frame deletion without further messages being shown.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170318T133257Z" creationid="36011" creationdate="20170318T133257Z">
-        <seg>设置此项为“是”（OK），你就可以消灭这些消息并且在接下来没有任何消息显示的情况下就可以删除帧。</seg>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170319T003248Z" creationid="36011" creationdate="20170318T133257Z">
+        <seg>设置此项为“是”（OK），你就可以去掉这些消息并且在接下来没有任何消息显示的情况下就可以删除帧。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By setting this option to "OK" you can remove this message and permit frame edition to be committed without further messages being shown when you change tools.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170319T003312Z" creationid="36011" creationdate="20170319T003240Z">
+        <seg>设置此项为“是”（OK），你就可以去掉这些消息并且在接下来当你改变工具的时候没有任何消息显示的情况下就提交修改。</seg>
       </tuv>
     </tu>
     <tu>
@@ -16694,6 +16710,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you choose "No", then frame edition will be silently cancelled when you change tools.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170319T003352Z" creationid="36011" creationdate="20170319T003352Z">
+        <seg>如果你选“否”（No），则帧编辑器会在你改变工具时静默地取消修改。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you don't have a certificate, you can create one:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20161223T070905Z" creationid="deciia" creationdate="20161223T070905Z">
@@ -16714,6 +16738,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170313T005753Z" creationid="deciia" creationdate="20170313T005753Z">
         <seg>鼠标放在上面，你可以看到完整的项目名称和路径，点击 &lt;i0&gt; 将打开这个项目。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you set this option to "OK" then no message will be shown and the edition will silently fail.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170319T003524Z" creationid="36011" creationdate="20170319T003524Z">
+        <seg>如果设置此项为“是”（OK），则不会显示该消息，并且所做的编辑将会静默地失效。</seg>
       </tuv>
     </tu>
     <tu>
