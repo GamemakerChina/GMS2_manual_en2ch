@@ -17326,6 +17326,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If we were doing this in assembler, we actually get BOTH values in one divide, but you don't get this in high level languages (well… not very often), and so you have to do all the work twice.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050925Z" creationid="36011" creationdate="20170322T050925Z">
+        <seg>假如我们是在汇编语言（Assembler）上完成这件事，我们实际上会在一次除法当中同时得到这两个值，但是在高级语言中你不会得到这种结果（应该说，不是很常见），并且因此你必须做两次所有的工作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you are a more experienced programmer, then you can use the propriety scripting language &lt;b2&gt;GML&lt;/b2&gt; to create your games, or you can even combine both and call GML functions with (and from) DnD™ actions, giving you a great deal of flexibility when it comes to how you write things.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170312T150439Z" creationid="deciia" creationdate="20170312T150439Z">
@@ -36679,6 +36687,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170322T000050Z" creationid="36011" creationdate="20170321T235603Z">
         <seg>因为5号位是32，其下所有的位就是31，这也是可能的最大余数，因此这就是我们使用位与运算的对象（我们也可以这样用((1&lt;&lt;5)-1），会使得32-1 = 31</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Well, in order to divide by 32, we have to execute a floating point divide – which obviously takes time, but in order to do the mod 32, you actually have to do another one!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050648Z" creationid="36011" creationdate="20170322T050648Z">
+        <seg>为了除以32，我们必须执行一次浮点数触发——显然，这很花费时间，但是为了和对32取余数，你实际上还需要再做一次！</seg>
       </tuv>
     </tu>
     <tu>
