@@ -35093,8 +35093,8 @@
       <tuv lang="EN-US">
         <seg>There is also a function to check if a value is a pointer (see "&lt;b0&gt;Checking Data Types&lt;/b0&gt;", below) and a function to convert a value into a pointer:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T065556Z" creationid="36011" creationdate="20170327T065556Z">
-        <seg>还有一个函数用于检测一个值是否为指针（参见下文的“&lt;b0&gt;数据类型检测&lt;/b0&gt;”）</seg>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T065635Z" creationid="36011" creationdate="20170327T065556Z">
+        <seg>还有一个用于检测一个值是否为指针的函数（参见下文的“&lt;b0&gt;数据类型检测&lt;/b0&gt;”），以及一个能够将值转换为指针的函数</seg>
       </tuv>
     </tu>
     <tu>
@@ -35279,6 +35279,22 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050344Z" creationid="36011" creationdate="20170322T050344Z">
         <seg>值域为-128到127的正值和负值（0被归类为正值）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This constant indicates that the pointer is not pointing to anything meaningful (the same as &lt;t0&gt;NULL&lt;/t0&gt; in C++ or null in C#)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T065824Z" creationid="36011" creationdate="20170327T065824Z">
+        <seg>该常量表示指针没有指向一个地址（空地址）（和C++中的&lt;t0&gt;NULL&lt;/t0&gt;或C#中的null一样）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This constant simply means that the value is not a valid pointer</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T065843Z" creationid="36011" creationdate="20170327T065843Z">
+        <seg>该常量表示该值不是一个有效的指针。</seg>
       </tuv>
     </tu>
     <tu>
@@ -39338,6 +39354,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170311T151818Z" creationid="deciia" creationdate="20170311T151818Z">
         <seg>你有未保存的更改并且将提示保存。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You may also use (and get returned) the following built in constants when using pointers:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T065717Z" creationid="36011" creationdate="20170327T065717Z">
+        <seg>在使用指针的时候，你可能会使用（或通过返回得到）如下的内置常量：</seg>
       </tuv>
     </tu>
     <tu>
@@ -44023,6 +44047,17 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170327T064717Z" creationid="36011" creationdate="20170327T064710Z">
         <seg>布尔值（Boolean）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">_build/3_scripting/3_gml_overview/9_data_types.html</prop>
+      <prop type="prev">This constant simply means that the value is not a valid pointer</prop>
+      <prop type="next">6_scope.html</prop>
+      <tuv lang="EN-US">
+        <seg>Enum</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T065852Z" creationid="36011" creationdate="20170327T065852Z">
+        <seg>枚举（Enum）</seg>
       </tuv>
     </tu>
     <tu>
