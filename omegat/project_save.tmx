@@ -23376,8 +23376,8 @@
       <tuv lang="EN-US">
         <seg>Note that currently &lt;i2&gt;GameMaker Studio 2&lt;/i2&gt; does not support "true" boolean values, and actually accepts any real number below 0.5 as a false value, and any real number equal to (or greater than) 0.5 as being true.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T064901Z" creationid="36011" creationdate="20170327T064901Z">
-        <seg>请注意，当前的&lt;i2&gt;GameMaker Studio 2&lt;/i2&gt;还不支持“真正的”布尔值，并且实际上是视所有低于0.5的实数为false值，所有大于等于0.5的值为true。</seg>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T065009Z" creationid="36011" creationdate="20170327T064901Z">
+        <seg>请注意，当前的&lt;i2&gt;GameMaker Studio 2&lt;/i2&gt;还不支持“真正的”布尔值，并且实际上是视所有低于0.5的实数为假（false），所有大于等于0.5的值为真（true）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -35263,6 +35263,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170314T010045Z" creationid="deciia" creationdate="20170314T010045Z">
         <seg>本文档分为三个部分，目的是让你熟悉&lt;i1&gt;GameMaker Studio 2&lt;/i1&gt;界面和基本的工作方式，然后是高级的用法和适合我们的脚本语言&lt;a2&gt;GML&lt;/a2&gt;的函数用法，或者虚拟的脚本工具&lt;a3&gt;拖拽（Drag and Drop，简称DnD）。&lt;/a3&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This does &lt;i3&gt;not&lt;/i3&gt; mean however that you should be checking 1 and 0 (or any other real number) for true and false, as you are also provided with the &lt;b4&gt;constants&lt;/b4&gt; &lt;t5&gt;true&lt;/t5&gt; and &lt;t6&gt;false&lt;/t6&gt; which should always be used in your code to prevent any issues should real boolean data types be added in a future update.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T064951Z" creationid="36011" creationdate="20170327T064951Z">
+        <seg>然而，这也不意味着你应该使用1或0（或者别的实数）来进行检测真假This does &lt;i3&gt;not&lt;/i3&gt; mean however that you should be checking 1 and 0 (or any other real number) for true and false, as you are also provided with the &lt;b4&gt;constants&lt;/b4&gt; &lt;t5&gt;true&lt;/t5&gt; and &lt;t6&gt;false&lt;/t6&gt; which should always be used in your code to prevent any issues should real boolean data types be added in a future update.</seg>
       </tuv>
     </tu>
     <tu>
