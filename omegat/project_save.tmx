@@ -23142,6 +23142,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Next: &lt;a0&gt;array_length_1d&lt;/a0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T234321Z" creationid="36011" creationdate="20170327T234321Z">
+        <seg>下一页：&lt;a0&gt;array_length_1d&lt;/a0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Next: &lt;a0&gt;physics_joint_enable_motor&lt;/a0&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T140645Z" creationid="36011" creationdate="20170318T140645Z">
@@ -23610,6 +23618,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170313T114037Z" creationid="deciia" creationdate="20170313T114037Z">
         <seg>请注意，这个命令和按下IDE的 &lt;b2&gt;运行&lt;/b2&gt;按钮 &lt;i3&gt;效果是一样的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note that this is &lt;i2&gt;not&lt;/i2&gt; the same as checking if two arrays are the same using ==, which will not check to see if the two arrays hold equivalent values, but only to see if the arrays are referencing the same initial array.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T234236Z" creationid="36011" creationdate="20170327T234236Z">
+        <seg>请注意，这并&lt;i2&gt;不&lt;/i2&gt;与使用==来判断数组是否相同的方法完全一致，使用==判断的方法不会检测两个数组是否具有相同的值，而只会查看两个数组是否引用了同一个初始数组。</seg>
       </tuv>
     </tu>
     <tu>
@@ -34619,10 +34635,26 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The index of the first array.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T234304Z" creationid="36011" creationdate="20170327T234252Z">
+        <seg>第一个数组的句柄</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The index of the joint that you wish to delete</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T140515Z" creationid="36011" creationdate="20170318T140515Z">
         <seg>你要删除的关节索引</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The index of the second array.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T234257Z" creationid="36011" creationdate="20170327T234257Z">
+        <seg>第二个数组的句柄</seg>
       </tuv>
     </tu>
     <tu>
@@ -39568,8 +39600,8 @@
       <tuv lang="EN-US">
         <seg>You give the two arrays to check, and the function will return &lt;t0&gt;true&lt;/t0&gt; if they are equal (either equivalent or the same) or &lt;t1&gt;false&lt;/t1&gt; if they are not.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T234005Z" creationid="36011" creationdate="20170327T234005Z">
-        <seg>你需要</seg>
+      <tuv lang="ZH-CN" changeid="36011" changedate="20170327T234119Z" creationid="36011" creationdate="20170327T234005Z">
+        <seg>你需要两个待检测的数组，并且如果它们相等（可以是等价或者一致），函数将会返回&lt;t0&gt;true&lt;/t0&gt;，否则返回&lt;t1&gt;false&lt;/t1&gt;。</seg>
       </tuv>
     </tu>
     <tu>
