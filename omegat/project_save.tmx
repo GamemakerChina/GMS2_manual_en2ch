@@ -678,6 +678,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Add default layers when creating a new room&lt;/b0&gt; - When you create any new room resource, &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; will generate a couple of "base" layers for you - a background layer and an instance layer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T021013Z" creationid="deciia" creationdate="20170330T021013Z">
+        <seg>&lt;b0&gt;创建新房间时添加默认的层（Add default layers when creating a new room）&lt;/b0&gt; - 当你创建任意一个房间资源，&lt;i1&gt;GameMaker Studio 2&lt;/i1&gt;将为你生成两个“基础”的层， - 一个背景层和一个实例层。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;Allow Empty Tabs To Close Via Shortcut&lt;/b0&gt;: You can close any open Tabs using the keyboard shortcut &lt;i1&gt; + &lt;b2&gt;&lt;t3&gt;W&lt;/t3&gt;&lt;/b2&gt;, but if you disable this option that shortcut will no longer work.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170317T235914Z" creationid="36011" creationdate="20170316T141752Z">
@@ -1006,6 +1014,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Default height of a new room&lt;/b0&gt;: Sets the initial height that will be selected as the default for a new room.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T020615Z" creationid="deciia" creationdate="20170330T020615Z">
+        <seg>&lt;b0&gt;新房间的默认高度（Default height of a new room）&lt;/b0&gt;：设置初始高度也将作为新创建房间的默认高度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;Default message for converting Drag and Drop to GML&lt;/b0&gt;: When you convert a Drag and Drop event or script into GML code, you will by default get a message warning you about what you are about to do and asking if you want to continue.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170114T031530Z" creationid="36011" creationdate="20170112T055417Z">
@@ -1018,6 +1034,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170114T032157Z" creationid="36011" creationdate="20170114T032157Z">
         <seg>&lt;b0&gt;工具箱中动作按钮缩略图的默认尺寸（Default size of toolbox Action thumbnails）&lt;/b0&gt;：这个设置用于定义工具箱中所有动作图标的默认大小。（默认为32像素）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Default width of a new room&lt;/b0&gt;: Sets the initial width that will be selected as the default for a new room.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T020256Z" creationid="deciia" creationdate="20170330T020256Z">
+        <seg>&lt;b0&gt;新房间的默认宽度（Default width of a new room）&lt;/b0&gt;：设置初始的宽度作为新房间默认宽度。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2415,6 +2439,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;The amount of spacing for depth between layers&lt;/b0&gt;: When you create multiple layers in the room editor they are automatically assigned a depth based on their position within the layer list.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T015336Z" creationid="deciia" creationdate="20170330T015336Z">
+        <seg>&lt;b0&gt;层之间深度的间距（The amount of spacing for depth between layers）&lt;/b0&gt;：房间编辑器创建多个层时，将会基于层列表的位置自动绑定一个深度。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;The chain alpha at the falloff stop distance&lt;/b0&gt;: Sets the final alpha value after the fade out falloff point for the chain alpha.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T015122Z" creationid="deciia" creationdate="20170330T015122Z">
+        <seg>&lt;b0&gt;衰减停止距离的链条透明度（The chain alpha at the falloff stop distance）&lt;/b0&gt;：设置链条透明度淡出衰减点的最终透明度的值。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;The degree range allowed when looking for a window using shortcuts&lt;/b0&gt;: Within a workspace you can have multiple windows open for different objects and resources, and so to move around quickly between them you can use the &lt;a1&gt;keyboard shortcut&lt;/a1&gt; &lt;i2&gt; + &lt;i3&gt; + &lt;t4&gt;&lt;Arrow Keys&gt;&lt;/t4&gt; to move between them.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T034527Z" creationid="36011" creationdate="20170317T084444Z">
@@ -2422,11 +2462,28 @@
       </tuv>
     </tu>
     <tu>
+      <note>此处翻译需斟酌。</note>
       <tuv lang="EN-US">
         <seg>&lt;b0&gt;The distance in pixels that the chain alpha begins to fade out&lt;/b0&gt;: Sets the distance from the parent window for the chain link to fade out from.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170329T123829Z" creationid="deciia" creationdate="20170329T123829Z">
-        <seg>&lt;b0&gt;链条透明度开始淡出的像素距离（The distance in pixels that the chain alpha begins to fade out）&lt;/b0&gt;： Sets the distance from the parent window for the chain link to fade out from.</seg>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T014452Z" creationid="deciia" creationdate="20170329T123829Z">
+        <seg>&lt;b0&gt;链条透明度开始淡出的像素距离（The distance in pixels that the chain alpha begins to fade out）&lt;/b0&gt;：设置链条开始淡出的与父窗口的距离。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;The distance in pixels that the chain alpha stops fading out&lt;/b0&gt;: Sets the distance from the parent window for the chain link to end fading out to.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T014631Z" creationid="deciia" creationdate="20170330T014631Z">
+        <seg>&lt;b0&gt;链条透明度停止淡出的像素距离（The distance in pixels that the chain alpha stops fading out）&lt;/b0&gt;：设置链条连接结束淡出的与父窗口的距离。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;The initial setting for the Show Views button on opening a room&lt;/b0&gt;: If you have views active within a room, this is shown by an outline where the view boundaries would be within the room, and the visibility of this area can be toggled using the dedicated button in the editor itself.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T021247Z" creationid="deciia" creationdate="20170330T021247Z">
+        <seg>&lt;b0&gt;打开的房间显示视野按钮的初始化设置（The initial setting for the Show Views button on opening a room）&lt;/b0&gt;：If you have views active within a room, this is shown by an outline where the view boundaries would be within the room, and the visibility of this area can be toggled using the dedicated button in the editor itself.</seg>
       </tuv>
     </tu>
     <tu>
@@ -10919,10 +10976,34 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Default is 0.3.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T015134Z" creationid="deciia" creationdate="20170330T015134Z">
+        <seg>默认是0.3。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Default is 100%.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170317T082932Z" creationid="36011" creationdate="20170317T082932Z">
         <seg>默认值为100%</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Default is 100px.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T014646Z" creationid="deciia" creationdate="20170330T014646Z">
+        <seg>默认100像素。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Default is 1024px.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T020631Z" creationid="deciia" creationdate="20170330T020631Z">
+        <seg>默认是1024像素。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10963,6 +11044,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170316T124540Z" creationid="36011" creationdate="20170316T124540Z">
         <seg>默认值为350。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Default is 768px.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T020644Z" creationid="deciia" creationdate="20170330T020644Z">
+        <seg>默认是768像素。</seg>
       </tuv>
     </tu>
     <tu>
@@ -34883,6 +34972,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The default value is 100, so each layer will be previous layer + 100 in depth.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T015505Z" creationid="deciia" creationdate="20170330T015505Z">
+        <seg>默认值是100，所以每一层的深度将是前一层的深度加100。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The default value is 1px.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170319T004625Z" creationid="36011" creationdate="20170319T004625Z">
@@ -36121,6 +36218,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170327T065843Z" creationid="36011" creationdate="20170327T065843Z">
         <seg>该常量表示该值不是一个有效的指针。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This depth is incremented by the amount given here.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T015424Z" creationid="deciia" creationdate="20170330T015424Z">
+        <seg>深度的增加量根据上面给定的的值来确定。</seg>
       </tuv>
     </tu>
     <tu>
@@ -40124,6 +40229,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170329T120108Z" creationid="deciia" creationdate="20170329T120108Z">
         <seg>你仍然可以通过右键点击&lt;i2&gt;并选择&lt;i3&gt;打开属性&lt;/i3&gt;打开精灵编辑器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You can switch that behaviour off here so that new rooms will have no pre-made layers.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20170330T021107Z" creationid="deciia" creationdate="20170330T021107Z">
+        <seg>你可以切换这个行为，让新房间不会产生预制的层。</seg>
       </tuv>
     </tu>
     <tu>
