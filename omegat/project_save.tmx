@@ -20480,6 +20480,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It will only disappear when you explicitly destroy it, either with a destroy action or in code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162320Z" creationid="KangKang" creationdate="20170424T162320Z">
+        <seg>当您明确地销毁它时，它将只会消失，或者使用destroy操作或代码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It will open the "Save" dialogue and prompt you to choose a location to save the new project to.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170408T132155Z" creationid="36011" creationdate="20170408T132155Z">
@@ -24684,6 +24692,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170320T145420Z" creationid="Administrator" creationdate="20170314T090146Z">
         <seg>请注意，使用一个教程进行创作时，你可以随时保存工程并关闭IDE甚至改变工程，而无需担心失去你的当前位置，因为教程会保存该页面和你每次保存时正在创作的部分。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Note too that a persistent object will still have its Game Start, Game End, Room Start and Room End events triggered, however if you restart the game (with, for example, the game_restart() function) all persistent objects will be removed and only exist when created again by the game.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162401Z" creationid="KangKang" creationdate="20170424T162401Z">
+        <seg>还要注意，持久化对象仍然会触发游戏开始，游戏结束，房间开始和房间结束事件，但是如果您重新启动游戏（例如，使用game_restart（）函数），则所有持久对象将被删除在游戏再次创建时存在。</seg>
       </tuv>
     </tu>
     <tu>
@@ -37150,6 +37166,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is handy for when you have, for example, a main character that moves from room to room and you want to maintain the variables within that object the same, but you should take great care to create and destroy persistent objects correctly as you can easily get errors creeping into your project by mistake.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162350Z" creationid="KangKang" creationdate="20170424T162350Z">
+        <seg>当你有一个主角从一个房间移动到另一个房间，并且你想保持该对象中的变量是一样的时候，这是方便的，但你应该非常小心地创建和销毁持久性对象正确，因为你可以轻松错误地让您的项目出现错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is off by default, and enabling it will mean that everytime you load and run any project the cache will need to be rebuilt (which can take time depending on the size of the game).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170317T081702Z" creationid="36011" creationdate="20170317T081702Z">
@@ -37242,6 +37266,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170105T091742Z" creationid="deciia" creationdate="20170105T091742Z">
         <seg>在已经使用深度值的地方，这可能需要更新脚本。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This means that if you place a persistent object in one room, it will still be available in all subsequent rooms and will continue to perform any actions assigned to the events in its object properties, &lt;i1&gt;except&lt;/i1&gt; the create event, which is only fired once when it is created initially and not when you change to a new room.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162334Z" creationid="KangKang" creationdate="20170424T162334Z">
+        <seg>这意味着如果将永久对象放在一个房间中，它仍然可以在所有后续房间中使用，并将继续执行分配给其对象属性&lt;i1&gt;中的事件的任何操作，&lt;/i1&gt;创建事件，这只是在最初创建时才被触发一次，而不是当您更改为新房间时才被触发。</seg>
       </tuv>
     </tu>
     <tu>
