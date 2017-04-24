@@ -2327,6 +2327,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;Persistent&lt;/b0&gt; - A persistent object is one that does not go away when the room is changed, but rather it "persists" and is carried over into the new room.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162311Z" creationid="KangKang" creationdate="20170424T162311Z">
+        <seg>&lt;b0&gt;持久化&lt;/b0&gt;  - 持久化对象是房间改变时不会消失的对象，而是“持续存在”并被转移到新房间中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;Port for Debugger to use&lt;/b0&gt;: This sets the port number for the Debug Module to use.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T000110Z" creationid="36011" creationdate="20170318T000110Z">
@@ -6392,6 +6400,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Beneath the sprite assignment area you have a button for choosing a specific &lt;b0&gt;Collision Mask&lt;/b0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162055Z" creationid="KangKang" creationdate="20170424T162055Z">
+        <seg>在精灵分配区域下方，您可以选择一个特定&lt;b0&gt;碰撞掩模&lt;/b0&gt;的按钮。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Best Fit</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170103T075449Z" creationid="deciia" creationdate="20170103T075449Z">
@@ -7036,6 +7052,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T044828Z" creationid="36011" creationdate="20170318T044828Z">
         <seg>默认地&lt;i1&gt;GameMaker Studio 2&lt;/i1&gt;本身自带两种皮肤，一个是浅色皮肤，一个是深色皮肤，初始安装时会使用深色皮肤。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By default an object will use the collision properties of the sprite assigned to it, but there are cases whereby you may want collisions to be based off of a different mask shape.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162104Z" creationid="KangKang" creationdate="20170424T162104Z">
+        <seg>默认情况下，一个对象将使用分配给它的sprite的碰撞属性，但是有时您可能希望碰撞基于不同的掩码形状。</seg>
       </tuv>
     </tu>
     <tu>
@@ -15784,6 +15808,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example, you may have a top down game where the main sprite has a rectangular collision mask, but to make collisions smoother a circular mask may be better.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162114Z" creationid="KangKang" creationdate="20170424T162114Z">
+        <seg>例如，你可能有一个自上而下的游戏，主要的精灵有一个矩形的碰撞掩模，但是使碰撞更平滑的圆形面具可能会更好。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170322T052740Z" creationid="36011" creationdate="20170322T052740Z">
@@ -19364,6 +19396,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170324T080201Z" creationid="36011" creationdate="20170324T080039Z">
         <seg>在上面的脚本中，&lt;t0&gt;argument0&lt;/t0&gt;的值会被用于决定&lt;t1&gt;重复型&lt;/t1&gt;循环（repeat）的运行次数，并且你可以像这样调用（Call）脚本：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In these cases you can click the Collision Mask button and select another sprite resource, so now instances of the object will &lt;i1&gt;draw&lt;/i1&gt; the assigned sprite, but base collisions off of the &lt;i2&gt;mask&lt;/i2&gt; sprite.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162215Z" creationid="KangKang" creationdate="20170424T162215Z">
+        <seg>在这些情况下，您可以单击“碰撞掩码”按钮并选择另一个精灵资源，因此现在对象的实例将&lt;i1&gt;绘制&lt;/ i1&gt;指定的精灵，但是从&lt;i2&gt;掩码&lt;/ i2&gt;精灵之间的基础碰撞。</seg>
       </tuv>
     </tu>
     <tu>
@@ -36986,6 +37026,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170312T153606Z" creationid="deciia" creationdate="20170312T153606Z">
         <seg>这个帮助文件将告诉你关于 &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt;所有你需要知道的东西，以及你怎样在创建你的游戏时使用它们。.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is a &lt;i2&gt;very&lt;/i2&gt; basic functionality, and in reality all it does is move the instance back to the position it was in the moment before a collision was detected before performing any code or DnD™ that is in the event itself, and as such is of limited use.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162247Z" creationid="KangKang" creationdate="20170424T162247Z">
+        <seg>这是一个&lt;i2&gt;非常&lt;/i2&gt;基本功能，实际上所有这些都是将实例移回到在执行任何代码或DnD™之前检测到冲突之前的位置本身，因此使用有限。</seg>
       </tuv>
     </tu>
     <tu>
