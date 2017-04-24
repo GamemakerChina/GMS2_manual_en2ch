@@ -7176,6 +7176,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>By assigning objects to a positive collision group (ie: three objects are all in group "&lt;b3&gt;2&lt;/b3&gt;") you are telling &lt;i4&gt;GameMaker Studio 2&lt;/i4&gt; that instances of these objects should &lt;i5&gt;always collide&lt;/i5&gt;, even if they have nothing in their collision event, obeying the physical properties that you have assigned them and the room they are in.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165615Z" creationid="KangKang" creationdate="20170424T165615Z">
+        <seg>通过将对象分配给一个正面的碰撞组（即：三个对象全部在组“&lt;b3&gt; 2 &lt;/b3&gt;”中）你正在告诉&lt;i4&gt; GameMaker Studio 2 &lt;/i4&gt;这些对象的实例应该是&lt;i5&gt;总是碰撞&lt;/i5&gt;，即使他们在碰撞事件中没有任何东西，服从你分配的物理属性和他们所在的空间。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>By default &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; comes with two skins, one light and one dark, and the initial setup uses the dark skin.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T044828Z" creationid="36011" creationdate="20170318T044828Z">
@@ -7268,6 +7276,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170316T140812Z" creationid="36011" creationdate="20170316T140715Z">
         <seg>该选项默认为开（On），但你可以将其设置为允许放行该消息，就好像你已经点过确认按钮那样。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>By default, the collision group for all physics objects is &lt;b0&gt;0&lt;/b0&gt;, and this means that they will interact as normal, which in turn means they &lt;b1&gt;must have a collision event to interact&lt;/b1&gt; (a simple comment will do to trigger the collision) otherwise no collision will be registered.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165542Z" creationid="KangKang" creationdate="20170424T165542Z">
+        <seg>默认情况下，所有物理对象的碰撞组是&lt;b0&gt; 0 &lt;/b0&gt;，这意味着它们将正常相互作用，这又意味着它们必须有一个碰撞事件进行交互&lt;/b1&gt;一个简单的评论将会触发碰撞）否则不会发生冲突。</seg>
       </tuv>
     </tu>
     <tu>
@@ -18480,6 +18496,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>However, you can also specify that an object should belong to a specific &lt;b2&gt;collision group&lt;/b2&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165552Z" creationid="KangKang" creationdate="20170424T165552Z">
+        <seg>但是，您也可以指定对象应属于特定的&lt;b2&gt;碰撞组&lt;/b2&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Hue</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170105T105830Z" creationid="deciia" creationdate="20170105T105830Z">
@@ -19616,10 +19640,26 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In physics, restitution is defined as "&lt;i0&gt;the return of an object or system to its original state after elastic deformation&lt;/i0&gt;", but as the fixtures in the &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; are really &lt;b2&gt;rigid bodies&lt;/b2&gt; and cannot be deformed, restitution is really a way of saying how "bouncy" the fixture is.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165511Z" creationid="KangKang" creationdate="20170424T165511Z">
+        <seg>在物理学中，恢复原则被定义为“&lt;i0&gt;弹性变形&lt;/i0&gt;后物体或系统返回到原始状态”，但是由于&lt;i1&gt; GameMaker Studio 2 &lt;/i1&gt;中的灯具真的是&lt;b2&gt;刚体&lt;/b2&gt;，不能变形，恢复系数真的是一种说“弹性”的“弹性”的方式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In previous sections we have covered &lt;a0&gt;variables and their scoping rules&lt;/a0&gt; but little has been said about the different &lt;b1&gt;data types&lt;/b1&gt; that a variable can store.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170327T063043Z" creationid="36011" creationdate="20170327T062934Z">
         <seg>在上一部分中，我们讲到了&lt;a0&gt;变量以及它们的作用域规则&lt;/a0&gt;，但是对于变量所能存储的各种&lt;b1&gt;数据类型（Data types）&lt;/b1&gt;所谈甚少。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In the &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; 2D physics world, mass is calculated automatically for you from the values you input for the density and by the surface area of the shape you define for the fixture.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165318Z" creationid="KangKang" creationdate="20170424T165318Z">
+        <seg>在&lt;i1&gt; GameMaker Studio 2 &lt;/i1&gt; 2D物理世界中，质量是根据您为密度输入的值和您为夹具定义的形状的表面积自动计算的。</seg>
       </tuv>
     </tu>
     <tu>
@@ -38063,6 +38103,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This setting will affect how much an object "bounces" when it collides with other objects and is co-dependant on other forces that act on the instance like gravity and friction.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165521Z" creationid="KangKang" creationdate="20170424T165521Z">
+        <seg>此设置将影响对象在与其他对象碰撞时“弹跳”多少，并且与重力和摩擦力作用于实例上的其他力相配合。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This setting will be used to define the maximum permitted size (default 64px).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170114T032416Z" creationid="36011" creationdate="20170114T031857Z">
@@ -38139,6 +38187,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170324T075000Z" creationid="36011" creationdate="20170324T075000Z">
         <seg>就会创建一个新的DnD™脚本并打开编辑器窗口：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This will have a direct impact on how much inertia a fixture has as well as how it reacts to collisions and forces, so if you make a small shape with a high density it will have a very large mass (like a bar of lead), but if you define a large shape with a low density it will have a much smaller mass (like a balloon).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165327Z" creationid="KangKang" creationdate="20170424T165327Z">
+        <seg>这将直接影响夹具具有多少惯性以及如何对碰撞和力产生反应，因此，如果您制造出高密度的小形状，则会产生非常大的质量（如铅棒）但是如果您定义了一个较小密度的大形状，那么它的质量会更小（像一个气球）。</seg>
       </tuv>
     </tu>
     <tu>
