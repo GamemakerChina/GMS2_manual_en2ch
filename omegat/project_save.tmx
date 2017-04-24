@@ -15552,6 +15552,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Finally, parenting works when you refer to variables in other objects too, like in the above monster example if I set the enemy 1 speed to 10, then the enemy 2 speed will also go to ten as it is a child object of enemy 1.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T164658Z" creationid="KangKang" creationdate="20170424T164658Z">
+        <seg>最后，如果将敌人的1速度设置为10，敌人的2速度也将变为10，因为它是敌人1的小孩对象，所以在您参考其他对象中的变量时，父母也可以工作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Find All</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170103T133614Z" creationid="deciia" creationdate="20170103T133614Z">
@@ -20656,6 +20664,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is generally considered good practice in most cases to create one base parent object and have this base object contain all the default behaviour but never use an instance of it in the game.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T164709Z" creationid="KangKang" creationdate="20170424T164709Z">
+        <seg>在大多数情况下，通常认为创建一个基本父对象的良好做法，并且该基础对象包含所有默认行为，但不要在游戏中使用它的一个实例。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It is intended primarily as a tool for making 2D games - although 3D games are perfectly doable - and comes with a number of tools and editors to help you realise your dreams and ideas, with your final project being ported across multiple platforms from the same initial base resources.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Administrator" changedate="20170312T133253Z" creationid="Administrator" creationdate="20170312T133212Z">
@@ -25225,6 +25241,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Object Editor Physics</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T164924Z" creationid="KangKang" creationdate="20170424T164902Z">
+        <seg>对象编辑器物理学</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Object Editor Physics Shape Editor</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T164918Z" creationid="KangKang" creationdate="20170424T164918Z">
+        <seg>对象编辑器物理形状编辑器</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Object Editor Preferences</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170328T000344Z" creationid="deciia" creationdate="20170328T000344Z">
@@ -25325,6 +25357,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170316T094035Z" creationid="deciia" creationdate="20170105T064032Z">
         <seg>弃用函数等</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Obviously you can't create a cycle of "parent 1 is child of parent 2 is child of parent 1" but you can create what is called "object hierarchy" where "parent1 is child of parent2 is child of parent3".</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T164833Z" creationid="KangKang" creationdate="20170424T164833Z">
+        <seg>显然，你不能创建一个循环“父1是父2的孩子是父1的子”，但是您可以创建一个所谓的“对象层次结构”，其中“parent1是parent2的子代是parent3的子代”。</seg>
       </tuv>
     </tu>
     <tu>
@@ -28286,6 +28326,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170311T173643Z" creationid="deciia" creationdate="20170311T173643Z">
         <seg>所提供的参数中随机选择一个。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Rather use all the children objects and only use the parent in situations like those I have outlined above, for collision, for referencing variables, etc...</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T164727Z" creationid="KangKang" creationdate="20170424T164727Z">
+        <seg>相反使用所有的孩子对象，只能在上面列出的情况下使用父类，用于碰撞，引用变量等。</seg>
       </tuv>
     </tu>
     <tu>
@@ -37630,6 +37678,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is extremely useful to keep your game structured and you are strongly advised to learn to use this mechanism.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T164843Z" creationid="KangKang" creationdate="20170424T164843Z">
+        <seg>这对于保持游戏结构非常有用，并且强烈建议您学习使用此机制。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is great news of course, since it means that you no longer have to optimise every line of code you write, but if this is the case - should you really care about binary at all?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170316T005651Z" creationid="deciia" creationdate="20170316T005651Z">
@@ -41957,6 +42013,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T163311Z" creationid="KangKang" creationdate="20170424T163311Z">
         <seg>您还应该注意，您可以&lt;b0&gt;名称事件&lt;/b0&gt;，或至少给他们一个简短的描述性文本，将在事件编辑器旁边显示。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>You should also realise that parents can have parents too!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T164733Z" creationid="KangKang" creationdate="20170424T164733Z">
+        <seg>你也应该意识到，父母也可以有父母！</seg>
       </tuv>
     </tu>
     <tu>
