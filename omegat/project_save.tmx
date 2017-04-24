@@ -7184,6 +7184,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>By checking this box, you are telling GameMaker Studio 2 to basically "ignore" the physical properties of the object, but still return a collision event with the objects around it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165927Z" creationid="KangKang" creationdate="20170424T165927Z">
+        <seg>通过选中此框，您正在告诉GameMaker Studio 2基本上“忽略”对象的物理属性，但仍会返回与其周围的对象的碰撞事件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>By default &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; comes with two skins, one light and one dark, and the initial setup uses the dark skin.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T044828Z" creationid="36011" creationdate="20170318T044828Z">
@@ -9712,6 +9720,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Conversely, if you have objects with a negative collision group (ie: four objects assigned "&lt;b6&gt;-1&lt;/b6&gt;"), you are telling &lt;i7&gt;GameMaker Studio 2&lt;/i7&gt; that these should &lt;i8&gt;never collide&lt;/i8&gt;, and any collision events between them will be ignored.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165635Z" creationid="KangKang" creationdate="20170424T165635Z">
+        <seg>相反，如果您的对象具有负面的碰撞组（即：分配了“&lt;b6&gt; -1 &lt;/b6&gt;”的四个对象），则说明&lt;i7&gt; GameMaker Studio 2 &lt;/i7&gt;碰撞&lt;/ i&gt;，并且它们之间的任何碰撞事件将被忽略。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Convert</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170105T035612Z" creationid="deciia" creationdate="20170105T035612Z">
@@ -11060,6 +11076,22 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170316T123918Z" creationid="36011" creationdate="20170316T123918Z">
         <seg>兼容DX11的显卡</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Damping is also much cheaper to simulate than friction, but please note that damping is not a replacement for friction; the two effects can, and should, be used together.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165708Z" creationid="KangKang" creationdate="20170424T165708Z">
+        <seg>模拟阻尼比摩擦要便宜得多，但请注意，阻尼不是摩擦的替代品;这两个效果可以而且应该一起使用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Damping is used to reduce the physics world velocity of an instance, and differs from friction in that friction only occurs when two instances with collision shapes (fixtures) are in contact.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165655Z" creationid="KangKang" creationdate="20170424T165655Z">
+        <seg>阻尼用于降低实例的物理世界速度，并且与摩擦不同，因为摩擦力仅在碰撞形状（弹性）的两个实例接触时才发生。</seg>
       </tuv>
     </tu>
     <tu>
@@ -13648,6 +13680,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Each of these flags will change the behaviour of your fixture in the following ways:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165755Z" creationid="KangKang" creationdate="20170424T165755Z">
+        <seg>这些标志中的每一个将通过以下方式改变您的灯具的行为：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Each release of &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; comes with it's own set of release notes.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170111T140814Z" creationid="36011" creationdate="20170111T140814Z">
@@ -15560,6 +15600,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Finally there are three extra options that can flagged as on or off for your fixture, Sensor, Start Awake and Kinematic.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165748Z" creationid="KangKang" creationdate="20170424T165748Z">
+        <seg>最后，有三个额外的选项可以标记为打开或关闭您的夹具，传感器，启动唤醒和运动。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Finally you can use parenting to "mix and match" events and behaviours.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T164356Z" creationid="KangKang" creationdate="20170424T164356Z">
@@ -16324,6 +16372,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T140302Z" creationid="36011" creationdate="20170318T140302Z">
         <seg>阻力关节</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Friction is the force that resists the relative motion of material elements sliding against each other, which in the GameMaker Studio 2 physics world, translates as the loss of momentum caused by the collision of two instances with fixtures bound to them.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165735Z" creationid="KangKang" creationdate="20170424T165735Z">
+        <seg>摩擦是抵抗物质元素彼此滑动的相对运动的力量，在GameMaker Studio 2物理世界中，由于两个实例与固定装置之间的撞击而造成的动量损失，这种力量将会转化为物理因素。</seg>
       </tuv>
     </tu>
     <tu>
@@ -19172,6 +19228,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170319T003934Z" creationid="36011" creationdate="20170319T003524Z">
         <seg>如果设置此项为“是”（OK），则不会显示该消息，并且无法做这样的编辑。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If you think about any rotating object in the "real world", unless it has a motor or is in space, it slows down over time due to the influence of external forces (like friction with the air around it).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165715Z" creationid="KangKang" creationdate="20170424T165715Z">
+        <seg>如果您考虑“现实世界”中的任何旋转物体，除非有电机或空间，否则由于外力（如与其周围的空气的摩擦）的影响，它会随着时间的推移而减慢。</seg>
       </tuv>
     </tu>
     <tu>
@@ -33715,6 +33779,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So, when two instances collide, their motion is affected by this value, with a high friction causing a larger loss of momentum than a lower value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165741Z" creationid="KangKang" creationdate="20170424T165741Z">
+        <seg>所以当两个实例碰撞时，它们的运动受到这个值的影响，摩擦力会比较低的值导致更大的动量损失。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So, you could have something like this in - for example - an Alarm event</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T163341Z" creationid="KangKang" creationdate="20170424T163341Z">
@@ -40547,6 +40619,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170327T232051Z" creationid="deciia" creationdate="20170327T232051Z">
         <seg>很明显地，在开发游戏时我们可以使用这些运算做些其它的事情，像是掩蔽精灵、整数MOD运算（使用与）或者一个不错的循环计数器。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We can use set this option to simulate this effect and reduce the velocity of rotation of instances in the physics world, as, without it, any rotating instance would continue to rotate infinitely.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165726Z" creationid="KangKang" creationdate="20170424T165726Z">
+        <seg>我们可以使用set这个选项来模拟这个效果，并减少物理世界中的实例的旋转速度，因为没有它，任何旋转的实例将继续无限旋转。</seg>
       </tuv>
     </tu>
     <tu>
