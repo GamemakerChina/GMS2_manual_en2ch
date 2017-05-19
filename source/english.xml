@@ -35,7 +35,7 @@
   </Style>
  </Styles>
  <Worksheet ss:Name="english">
-  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="4137" x:FullColumns="1"
+  <Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="4139" x:FullColumns="1"
    x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">Translation</Data></Cell>
@@ -12448,6 +12448,12 @@
    <Row ss:AutoFitHeight="0">
     <Cell><Data ss:Type="String">You must specifiy the full path to the VCVARS32.BAT file</Data></Cell>
    </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">Unsafe Path</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell><Data ss:Type="String">This project is located in an unsafe location: {0}\nPlease save it in a new location to avoid loss of work.</Data></Cell>
+   </Row>
   </Table>
   <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
    <PageSetup>
@@ -12463,7 +12469,7 @@
     <VerticalResolution>600</VerticalResolution>
    </Print>
    <Selected/>
-   <TopRowVisible>4118</TopRowVisible>
+   <TopRowVisible>4117</TopRowVisible>
    <Panes>
     <Pane>
      <Number>3</Number>
