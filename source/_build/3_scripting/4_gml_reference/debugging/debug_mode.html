@@ -32,32 +32,35 @@ if (window.name != "content")
 <h2>debug_mode</h2>
 
 <div class="body-scroll">
-<h2 class="studio">Tells you if the game is running in debug mode
-or not.</h2>
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>This <b>read only</b> variable returns <tt>true</tt> when the
+game is being played in debug mode and <tt>false</tt> when being
+played as normal.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">debug_mode</p>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This <b>read only</b> variable returns <tt>true</tt> when the
-game is being played in debug mode and <tt>false</tt> when being
-played as normal.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if debug_mode<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -68,8 +71,10 @@ else<br>
 &nbsp;&nbsp;&nbsp;ini_open("Game.ini");<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code opens a different ini file depending on the value
 of the read-only variable <tt>debug_mode</tt>.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -82,11 +87,11 @@ of the read-only variable <tt>debug_mode</tt>.</p>
 "index.html">Debugging</a></div>
 
 <div style="float:right">Next: <a href=
-"get_integer.html">get_integer</a></div>
+"debug_event.html">debug_event</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

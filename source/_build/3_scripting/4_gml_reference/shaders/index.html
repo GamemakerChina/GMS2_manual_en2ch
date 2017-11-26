@@ -58,12 +58,18 @@ change the value of any variables that you pass into them, and so
 these will be called <b>shader constants</b> in all the
 documentation that refers to them.</div>
 
-<p>For a complete overview of the available GLSL ES functions and
+<p><br>
+For a complete overview of the available GLSL ES functions and
 variables that you can use to program the shaders themselves,
 please refer to the <a href=
-"http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf"
+"https://www.khronos.org/registry/OpenGL/specs/es/2.0/es_cm_spec_2.0.pdf"
 target="_blank">OpenGL ES Shading Language (GLSL ES) Reference
-Pages</a>.</p>
+Pages</a>. The following link is also useful as it contains some
+quick reference cards for the OpenGL ES Api (note that only the
+last two cards shown are applicable to <i>GameMaker Studio 2</i>):
+<a href=
+"https://www.khronos.org/opengles/sdk/docs/reference_cards/OpenGL-ES-2_0-Reference-card.pdf">
+OpenGL ES Reference Cards</a>.</p>
 
 <h2>Using Shaders</h2>
 
@@ -84,8 +90,15 @@ catch the current view, and then pass that through to the shader
 (see <a href="../drawing/surfaces/index.html">Surfaces</a> for more
 information).</p>
 
-<p>If the shader you are using has input values, these are set
-using the <i>uniform</i> functions. You would first get the uniform
+<div class="note"><b>NOTES:</b> Shaders, like anything related to
+drawing, can <b>only be used in the draw event</b>. It is also
+worth noting that if you are trying to use a colour value in a
+shader and the object has no texture, the results will turn out
+black.</div>
+
+<p><br>
+If the shader you are using has input values, these are set using
+the <i>uniform</i> functions. You would first get the uniform
 <i>handle</i> (which is essentially an ID value for the uniform to
 be set) using the function <a href=
 "shader_get_uniform.html"><tt>shader_get_uniform()</tt></a> in the
@@ -127,11 +140,57 @@ see if the hardware even supports shaders. In general you'd do
 these checks on game start and store the results as a global
 variable to then check later.</p>
 
-<div class="note"><b>NOTE:</b> Shaders, like anything related to
-drawing, can <b>only be used in the draw event</b>. It is also
-worth noting that if you are trying to use a colour value in a
-shader and the object has no texture, the results will turn out
-black.</div>
+<p>It is important to note that <i>GameMaker Studio 2</i> also
+supports some conditional compile <b>Macros</b> which can be used
+within GLSL ES shaders so they can perform alternative code on
+specific supported platforms. The macros and the platforms they
+will be generated on are shown in the table below:</p>
+
+<div class="compat">
+<table>
+<tr>
+<th>Shader Macro</th>
+<th>Value</th>
+<th>Target Platform</th>
+</tr>
+
+<tr>
+<td>_YY_GLSLES_</td>
+<td>1</td>
+<td>All target platforms</td>
+</tr>
+
+<tr class="alt">
+<td>_YY_GLSL_</td>
+<td>1</td>
+<td>Mac and Ubuntu (Linux)</td>
+</tr>
+
+<tr>
+<td>_YY_HLSL11_</td>
+<td>1</td>
+<td>Windows, UWP, XboxOne</td>
+</tr>
+
+<tr class="alt">
+<td>_YY_PSSL_</td>
+<td>1</td>
+<td>PS4</td>
+</tr>
+</table>
+</div>
+
+<p><br>
+When you compile your <i>GameMaker Studio 2</i> project on any one
+of the listed platforms using a GLSL ES format shader, <i>one</i>
+of the above macros will be generated which can then be used
+checked in the shader code like this:</p>
+
+<p class="code">#ifdef _YY_HLSL11_<br>
+// HLSL shader code here<br>
+#else<br>
+// GLSL shader code here<br>
+#endif<br></p>
 
 <blockquote><label class="collapse" for="one">Shader
 Functions</label> <input id="one" type="checkbox">
@@ -312,7 +371,7 @@ Studio 2</i> Language Reference</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

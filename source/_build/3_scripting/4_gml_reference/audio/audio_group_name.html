@@ -29,12 +29,27 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">audio_group_name</h1>
+<h2>audio_group_name</h2>
 
-<h2 class="studio">Returns the name of the audio group as a
-string.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will return a string containing the name of the
+given audio group for displaying or checking. When you define an
+audio group in the Game Options, you give it a unique "name" which
+is really a constant to use as an ID <i>value for the group. All
+this function does is take the ID and return a string of the ID
+name you gave.</i></p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">audio_group_name(groupID);</p>
 
@@ -61,35 +76,29 @@ Window</a>)</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<h3>Returns:</h3>
+
+<p class="code">String</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function will return a string containing the name of the
-given audio group for displaying or checking. When you define an
-audio group in the Game Options, you give it a unique "name" which
-is really a constant to use as an ID <i>value for the group. All
-this function does is take the ID and return a string of the ID
-name you gave.<br>
-<br></i></p>
-
-<p><i><br></i>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var name= audio_group_name(audiogroup_level1);<br>
 draw_text(32, 32, "Now Playing Group: " + name);<br></p>
 
+<blockquote>
 <p>The above code retrieves the name of the given audio group
 constant and displays it on the screen.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="audio%20groups.html">Audio
 Groups</a></div>
@@ -97,11 +106,13 @@ Groups</a></div>
 <div style="float:right">Next: <a href=
 "audio_group_stop_all.html">audio_group_stop_all</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

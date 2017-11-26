@@ -51,7 +51,7 @@ the GUI layer when pressed.</h2>
 
 <tr>
 <td>device</td>
-<td>The device (from 0 - 4) that is being checked.</td>
+<td>The device (from 0 - <i>n</i>) that is being checked.</td>
 </tr>
 </table>
 </div>
@@ -66,17 +66,19 @@ the GUI layer when pressed.</h2>
 
 <h3 class="studio">Description</h3>
 
-<p>This function returns y position of the device in relation to
-the GUI layer. Since the GUI layer can be set to be a different
-size independently of the screen resolution <i>and</i> the room
-size, it can sometimes be complicated to get the exact point on the
-GUI layer that a user has touched the screen. With this function
-you can get that position based on the actual GUI size, making GUI
-buttons and HUD elements easier to create. If you are running this
-on a the HTML5 or PC and Mac modules then this value is updated
-constantly, as long as the device (usually a mouse) is plugged in,
-however for mobile devices, this will only be updated while the
-screen is being touched.<br>
+<p>This function returns the y position of the touch on the device
+in relation to the GUI layer. Since the GUI layer can be set to be
+a different size independently of the screen resolution <i>and</i>
+the room size, it can sometimes be complicated to get the exact
+point on the GUI layer that a user has touched the screen. With
+this function you can get that position based on the actual GUI
+size, making GUI buttons and HUD elements easier to create and
+interact with. If you are running this on a the HTML5 or PC and Mac
+modules then this value is updated constantly, as long as the
+device (usually a mouse) is plugged in, however for mobile devices,
+this will only be updated while the screen is being touched, and
+note that the maximum number of touches that can be detected will
+depend very much on the device being used and the OS it runs.<br>
 <br></p>
 
 <h3 class="studio">Example:</h3>
@@ -111,7 +113,7 @@ Input</a></div>
 "device_is_keypad_open.html">device_is_keypad_open</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

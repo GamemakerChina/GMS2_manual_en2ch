@@ -35,6 +35,42 @@ if (window.name != "content")
 <p><br>
 </p>
 
+<h3>Description</h3>
+
+<blockquote>
+<p>This function can be used to set a local notification to be
+shown on a given date at a given time. The "fire_time" is the
+date/time that the notification should be pushed to the user device
+(you can use the <i>GameMaker Studio 2</i> <a href=
+"../maths/date%20and%20time/index.html">Date and Time Functions</a>
+to get this), and you can give the notification a title and a
+message text as well as a payload string which will be passed to
+your game when the users taps the notification.</p>
+
+<div class="note"><b>NOTE</b>: The "title" argument is ignored on
+iOS and the game name is shown instead.</div>
+
+<p><br>
+Tapping the notification will start the game on the device and
+trigger an <a href=
+"../../../2_interface/1_editors/events/async_events.html">Asynchronous
+Push Notification</a> event with a <tt>ds_map</tt> which can then
+be parsed to check the payload string and perform whatever action
+is required.</p>
+
+<div class="note"><b>NOTE</b>: This function is limited to the
+<b>iOS</b> and <b>Android</b> target modules. For <b>Android</b>
+you will need to have installed the <a href=
+"https://marketplace.yoyogames.com/assets/2008/google-play-services"
+target="_blank">Google Play Services Extension</a> and have enabled
+push notifications in the <a href=
+"../../../2_interface/3_settings/game_options/options_android.html">
+Android Social Game Options</a>.</div>
+</blockquote>
+
+<p><br>
+</p>
+
 <h3>Syntax:</h3>
 
 <p class="code">push_local_notification(fire_time, title, message,
@@ -75,42 +111,6 @@ data);</p>
 <h3>Returns:</h3>
 
 <p class="code">N/A</p>
-
-<p><br>
-</p>
-
-<h3>Description</h3>
-
-<blockquote>
-<p>This function can be used to set a local notification to be
-shown on a given date at a given time. The "fire_time" is the
-date/time that the notification should be pushed to the user device
-(you can use the <i>GameMaker Studio 2</i> <a href=
-"../maths/date%20and%20time/index.html">Date and Time Functions</a>
-to get this), and you can give the notification a title and a
-message text as well as a payload string which will be passed to
-your game when the users taps the notification.</p>
-
-<div class="note"><b>NOTE</b>: The "title" argument is ignored on
-iOS and the game name is shown instead.</div>
-
-<p><br>
-Tapping the notification will start the game on the device and
-trigger an <a href=
-"../../../2_interface/1_editors/events/async_events.html">Asynchronous
-Push Notification</a> event with a <tt>ds_map</tt> which can then
-be parsed to check the payload string and perform whatever action
-is required.</p>
-
-<div class="note"><b>NOTE</b>: This function is limited to the
-<b>iOS</b> and <b>Android</b> target modules. For <b>Android</b>
-you will need to have installed the <a href=
-"https://marketplace.yoyogames.com/assets/2008/google-play-services"
-target="_blank">Google Play Services Extension</a> and have enabled
-push notifications in the <a href=
-"../../../2_interface/3_settings/game_options/options_android.html">
-Android Social Game Options</a>.</div>
-</blockquote>
 
 <p><br>
 </p>
@@ -190,7 +190,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

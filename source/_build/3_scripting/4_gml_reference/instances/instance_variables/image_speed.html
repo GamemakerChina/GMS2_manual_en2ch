@@ -40,12 +40,11 @@ if (window.name != "content")
 
 <blockquote>This variable determines the speed in which
 <i>GameMaker Studio 2</i> will cycle through the sub-images for the
-current instance sprite. A value of 0 will cause no cycling, while
-a value of 1 will cycle one image per step, but you are not limited
-to this range as you can use values greater than 1 to animate
-faster (frames will be skipped), decimal values to animate slower
-(frames will be shown over various steps) or even negative values
-to reverse the speed of the animation.</blockquote>
+current instance sprite. The speed value given is a
+<i>multiplier</i>, with 1 being the default value, and setting it
+to 0.5 will half the animation speed, while setting it to 1.5 will
+double it. If the sprite used has no sub-images, this variable will
+have no effect.</blockquote>
 
 <p><br>
 </p>
@@ -66,7 +65,8 @@ to reverse the speed of the animation.</blockquote>
 
 <h3>Example:</h3>
 
-<p class="code">with (instance_create(x, y, obj_Explosion))<br>
+<p class="code">with (instance_create_layer(x, y, "Effects",
+obj_Explosion))<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;image_speed = 0.5;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
@@ -90,7 +90,7 @@ Variables</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

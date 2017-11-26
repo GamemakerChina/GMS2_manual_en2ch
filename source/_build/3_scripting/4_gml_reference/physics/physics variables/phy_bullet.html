@@ -61,7 +61,8 @@ it doesn't pass through other instances undetected.<br>
 
 <h3 class="studio">Example:</h3>
 
-<p class="code">with (instance_create(x, y, obj_Shoot))<br>
+<p class="code">with (instance_create_layer(x, y, "Bullets",
+obj_Shoot))<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;phy_bullet = true;<br>
 &nbsp;&nbsp;&nbsp;physics_apply_local_impulse(0, 10, 0, 200);<br>
@@ -82,7 +83,7 @@ Variables</a></div>
 "phy_speed.html">phy_speed</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

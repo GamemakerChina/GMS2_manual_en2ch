@@ -52,31 +52,41 @@ options:</p>
 <ul>
 <li><b>Syntax checking delay (ms)</b> - The delay time (in
 milliseconds) before the syntax checker runs. This default value is
-2000ms.<br>
-<br></li>
+2000ms.</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>Code Completion Delay (ms)</b> - The delay time (in
-milliseconds)<br>
-<br></li>
+milliseconds)</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>Open scripts in full screen editor</b> - Checking this
 option will make script resources open automatically in a new
 workspace. If this is un-checked, they will open in a window within
-the current workspace. This option is unchecked by default.<br>
-<br></li>
+the current workspace. This option is unchecked by default.</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>Open shaders in full screen editor</b> - Checking this
 option will make shader resources open automatically in a new
 workspace. If this is un-checked, they will open in a window within
-the current workspace. This option is unchecked by default.<br>
-<br></li>
+the current workspace. This option is unchecked by default.</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>Open object events in full screen editor</b> - Checking this
 option will make object event code editors open automatically in a
 new workspace. If this is un-checked, they will open in a window
 chained to the object event editor. This option is unchecked by
-default.<br>
-<br></li>
+default.</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>Open event scripts as tabs in same window</b> - When adding
 code or Drag and Drop to an event, the code window is chained to
@@ -84,15 +94,53 @@ the event window, and when this option is checked any further
 events that are opened for editing will be added to the same window
 as tabs along the top. Un-checking this option will make each event
 open as its own unique chained window. This option is checked by
-default.<br>
-<br></li>
+default.</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>Open linked scripts as tabs in same window</b> - When you
 have multiple linked scripts and open them, by default they will be
 grouped n the same window as tabs. Un-checking this option will
 force them to open each in their own window/workspace. This option
-is checked by default.<br>
-<br></li>
+is checked by default.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Pan text editor into view on focus</b> - When you open a
+text editor from an object event, selecting this option will
+automatically pan the workspace to bring the editor to within the
+bounds. This option is off by default.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Default code window width</b> - Set the default width (in
+pixels) for the code window to be when opened. Default value is
+900.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Default code window height</b> - Set the default height (in
+pixels) for the code window to be when opened. Default value is
+600.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Minimum code window width</b> - Set the minimum width (in
+pixels) permitted by the code window. Default value is 300.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Minimum code window height</b> - Set the minimum height (in
+pixels) permitted by the code window. Default value is 200.</li>
+
+<li style="list-style: none"><br>
+</li>
 </ul>
 
 <p>Apart from the options above there are also two sub-categories
@@ -158,20 +206,26 @@ auto-indentation for your code. Default is on, which will maintain
 any tabs set on a line when a new line is added.<br>
 <br></li>
 
+<li><b>Auto indent after brace</b>: Enable or disable
+auto-indentation for your code when adding braces {}. Default is
+on, which will tab the next line of code when a new brace { and a
+new line are added.<br>
+<br></li>
+
 <li><b>Enable code completion</b>: Enable or disable the code
 completion window. When writing code and this is enabled, you will
 get a popup window showing possible functions that you can use
 based on the current input text. Default is on.<br>
 <br></li>
 
-<li><b>Enable adding brackets () to functions</b>: Enable or
-disable the automatic addition of brackets () when you use the
-autocomplete. When writing code and this is enabled, the IDE will
-automatically add the two brackets () that a function requires,
-placing the cursor within them if the function takes arguments, or
-placing the cursor after them if it does not. This feature only
-works when the function has been selected from the autocomplete.
-Default is on.<br>
+<li><b>Auto add function brackets</b>: Enable or disable the
+automatic addition of brackets () when you use the autocomplete.
+When writing code and this is enabled, the IDE will automatically
+add the two brackets () that a function requires, placing the
+cursor within them if the function takes arguments, or placing the
+cursor after them if it does not. This feature only works when the
+function has been selected from the autocomplete. Default is
+on.<br>
 <br></li>
 
 <li><b>Undo / Redo Stack Limit</b>: Here you can set the Undo/Redo
@@ -181,18 +235,10 @@ that number, removing any action at the tail of the stack if the
 limit is reached. Default is -1.<br>
 <br></li>
 
-<li><b>Highlight words which match selection</b>: This will lightly
-highlight any section of code that is duplicated elsewhere. So, if
-you select a function, for example, all instances of this function
-in the current code window will be highlighted too. Default is
-on.<br>
-<br></li>
-
-<li><b>Highlight symbol pairs</b>: This will highlight any pair of
-symbols in a section of code when one symbol is selected, for
-example, if you select the first bracket on a code block "{" the
-corresponding bracket "}" will be highlighted too. Default is
-on.<br>
+<li><b>Highlight selection matches</b>: This will lightly highlight
+any section of code that is duplicated elsewhere. So, if you select
+a function, for example, all instances of this function in the
+current code window will be highlighted too. Default is on.<br>
 <br></li>
 
 <li><b>Colour coding/code completion for obsolete functions</b>:
@@ -213,11 +259,11 @@ is on.<br>
 "../7_preferences.html">Preferences Index</a></div>
 
 <div style="float:right">Next: <a href=
-"prefs_extensioneditor.html">Extension Editor</a></div>
+"prefs_languages.html">Languages</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

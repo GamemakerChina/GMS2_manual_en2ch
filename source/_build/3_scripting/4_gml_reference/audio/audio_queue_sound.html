@@ -29,11 +29,35 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">audio_queue_sound</h1>
+<h2>audio_queue_sound</h2>
 
-<h2 class="studio">Add audio to the audio queue from a buffer.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will add the data from a buffer into the audio
+queue that you previously created using the function <a href=
+"audio_create_play_queue.html"><tt>audio_create_play_queue</tt></a>.
+You specify the queue index to add to, and the buffer ID to get the
+data from as well as the position (offset) within the buffer and
+the number of bytes to add. Once you have added audio from a buffer
+to a queue, the buffer cannot be deleted until you have first freed
+the queue using the function <a href=
+"audio_free_play_queue.html"><tt>audio_free_play_queue</tt></a>,
+and the buffer properties should match those of the the queue that
+you are adding the sound to.</p>
+
+<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
+available with the Trial Licence of the product.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">audio_queue_sound(queueIndex, bufferId,
 bufferOffset, bufferLength);</p>
@@ -74,34 +98,14 @@ buffer).</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function will add the data from a buffer into the audio
-queue that you previously created using the function <a href=
-"audio_create_play_queue.html"><tt>audio_create_play_queue</tt></a>.
-You specify the queue index to add to, and the buffer ID to get the
-data from as well as the position (offset) within the buffer and
-the number of bytes to add. Once you have added audio from a buffer
-to a queue, the buffer cannot be deleted until you have first freed
-the queue using the function <a href=
-"audio_free_play_queue.html"><tt>audio_free_play_queue</tt></a>,
-and the buffer properties should match those of the the queue that
-you are adding the sound to.</p>
-
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
-<br>
-<br>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">len = async_load[? "data_len"];<br>
 audio_buff = buffer_create(len, buffer_fast, 1);<br>
@@ -109,14 +113,19 @@ buffer_copy(async_load[? "buffer_id"], 0, len, buff, 0);<br>
 audio_queue_sound(audio_queue, audio_buff, 0, len);<br>
 audio_play_sound(audio_queue, 10, 0);<br></p>
 
+<blockquote>
 <p>The above code would be called in the asynchronous <a href=
 "../../../2_interface/1_editors/events/async_events.html">Audio
 Recording</a> event and assigns some recorded data to a buffer,
 which is then added to an audio queue. This is then played.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="audio%20buffers.html">Audio
 Buffers</a></div>
@@ -124,11 +133,13 @@ Buffers</a></div>
 <div style="float:right">Next: <a href=
 "audio_start_recording.html">audio_start_recording</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

@@ -37,20 +37,23 @@ if (window.name != "content")
 </p>
 
 <p><img class="center" src="images/editor_objects.png" alt=
-"Object Editor"> Objects are the resource that we use to control
-aspects of a game and to do specific things. Most of the time they
-have a sprite associated with them so that you see them in the game
-rooms, but sometimes they are used as a "behind the scenes"
-controller to do things related to the user or for timing, etc...
-They can be given behaviours and they can react to certain events
-as well as to each other, and most of the things you see in a game
-are based on objects and their interactions. Now, we say "based on"
-because you don't actually place objects directly into the game
-rooms, but rather you place <b>instances</b> of these objects which
-are basically copies (or clones if you prefer) of the object
-resource. This is a very important thing to remember as instances
-and objects are <i>not the same thing</i> and each have their own
-set of functions that can affect them.</p>
+"Object Editor">
+</p>
+
+<p>Objects are the resource that we use to control aspects of a
+game and to do specific things. Most of the time they have a sprite
+associated with them so that you see them in the game rooms, but
+sometimes they are used as a "behind the scenes" controller to do
+things related to the user or for timing, etc... They can be given
+behaviours and they can react to certain events as well as to each
+other, and most of the things you see in a game are based on
+objects and their interactions. Now, we say "based on" because you
+don't actually place objects directly into the game rooms, but
+rather you place <b>instances</b> of these objects which are
+basically copies (or clones if you prefer) of the object resource.
+This is a very important thing to remember as instances and objects
+are <i>not the same thing</i> and each have their own set of
+functions that can affect them.</p>
 
 <p>To clarify this, think of a game made with <i>GameMaker Studio
 2</i>. All the characters, monsters, balls, walls, etc... are all
@@ -275,10 +278,14 @@ event to get the following menu options: <img class="center" src=
 <li><b>Cut / Copy / Paste Events</b> - Cut, copy or paste the
 selected event. You can use the standard keyboard shortcuts too:
 <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <tt>X</tt>, <img style=
-"vertical-align:middle" src="../../images/icon_ctrl.png"> +
-<tt>C</tt>, and <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <tt>V</tt>.<br>
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>X</tt>, <img style=
+"vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>C</tt>, and <img style=
+"vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>V</tt>.<br>
 <br></li>
 
 <li><b>Duplicate Event</b> - Duplicate the chosen event. This will
@@ -406,8 +413,11 @@ object. These events "override" the parent events, meaning that
 whenever an event for the child object contains actions, these are
 executed instead of the actions contained in the event of the
 parent. If you also want to execute the parent event you can call
-the so-called "inherited" event using the appropriate action or
-code. <img class="center" src=
+the so-called "inherited" event using the function <a href=
+"../../3_scripting/4_gml_reference/objects/generating%20events/event_inherited.html">
+<tt>event_inherited()</tt></a>, or the DnD™ action <a href=
+"../../3_scripting/2_drag_and_drop_reference/instance_actions/call_parent_event.html">
+Call Parent Event</a>. <img class="center" src=
 "images/editor_object_inheritevents.png" alt=
 "Inheriting Events"></p>
 
@@ -451,35 +461,37 @@ mechanism.</p>
 <a name="object_physics" id="object_physics"></a> <label class=
 "collapse" for="nine">Physics</label> <input id="nine" type=
 "checkbox">
-<div class="index_list">When you first create a new object
-resource, there is a check-box marked <b>Uses Physics</b>, which is
-not checked by default. Selecting this option will radically change
-the behaviour of your object when an instance of it is placed in a
-room, as this switches on the object's physical properties and
-means that its "traditional" movement and collision functions are
-no longer valid (but only when the room it is placed on is also
-marked as being a physics room. See - <a href="rooms.html">The Room
-Editor</a>). When you check this, the object resource window opens
-a new chained window for the physics editor: <img class="center"
-src="images/editor_objects_physics.png" alt=
-"Object Editor Physics"> Before you start to edit the values for
-the physics behaviours it's a good idea to first set the
-<b>collision shape</b>. With the "normal" collision system your
-collisions are based off of the mask of the sprite assigned to the
-object, but with physics enabled this is no longer the case. We
-need to assign a <b>collision shape</b> the object ourselves (this
-is properly called a <b>fixture</b>, see <a href=
-"../../3_scripting/4_gml_reference/physics/index.html">The Physics
-Functions</a> for more information), which can either be a circle,
-a rectangle or a polygon shape that you yourself define. Clicking
-on the <b>Modify Collision Shape</b> button will open the following
-chained window to edit the shape: <img class="center" src=
-"images/editor_objects_physicsshape.png" alt=
-"Object Editor Physics Shape Editor"> This looks similar to the
-<a href="paths.html">Path Editor</a>, and functions in much the
-same way. However, depending on the mask you have chosen, it can be
-rather more restrictive:<br>
-<br>
+<div class="index_list">
+<p>When you first create a new object resource, there is a
+check-box marked <b>Uses Physics</b>, which is not checked by
+default. Selecting this option will radically change the behaviour
+of your object when an instance of it is placed in a room, as this
+switches on the object's physical properties and means that its
+"traditional" movement and collision functions are no longer valid
+(but only when the room it is placed on is also marked as being a
+physics room. See - <a href="rooms.html">The Room Editor</a>). When
+you check this, the object resource window opens a new chained
+window for the physics editor: <img class="center" src=
+"images/editor_objects_physics.png" alt=
+"Object Editor Physics"></p>
+
+<p>Before you start to edit the values for the physics behaviours
+it's a good idea to first set the <b>collision shape</b>. With the
+"normal" collision system your collisions are based off of the mask
+of the sprite assigned to the object, but with physics enabled this
+is no longer the case. We need to assign a <b>collision shape</b>
+the object ourselves (this is properly called a <b>fixture</b>, see
+<a href="../../3_scripting/4_gml_reference/physics/index.html">The
+Physics Functions</a> for more information), which can either be a
+circle, a rectangle or a polygon shape that you yourself define.
+Clicking on the <b>Modify Collision Shape</b> button will open the
+following chained window to edit the shape: <img class="center"
+src="images/editor_objects_physicsshape.png" alt=
+"Object Editor Physics Shape Editor"></p>
+
+<p>This looks similar to the <a href="paths.html">Path Editor</a>,
+and functions in much the same way. However, depending on the mask
+you have chosen, it can be rather more restrictive:</p>
 
 <ul>
 <li>If you have a <b>circular</b> mask, then you can only pull any
@@ -503,91 +515,101 @@ configured by changing the following parameters:</p>
 <blockquote><a name="object_physics_density" id=
 "object_physics_density"></a> <label class="collapse" for=
 "ten">Density</label> <input id="ten" type="checkbox">
-<div class="index_list">The density of something is defined as its
-<i>mass per unit volume</i>, which basically means how much mass is
-crammed into the space it takes up in the world. So, a balloon
-would have a low density as it has little mass that occupies a
-large space, while a lead bar would have a high density as it has a
-great mass, yet occupies little space. In the <i>GameMaker Studio
-2</i> 2D physics world, mass is calculated automatically for you
-from the values you input for the density and by the surface area
-of the shape you define for the fixture. This will have a direct
-impact on how much inertia a fixture has as well as how it reacts
-to collisions and forces, so if you make a small shape with a high
-density it will have a very large mass (like a bar of lead), but if
-you define a large shape with a low density it will have a much
-smaller mass (like a balloon).</div>
+<div class="index_list">
+<p>The density of something is defined as its <i>mass per unit
+volume</i>, which basically means how much mass is crammed into the
+space it takes up in the world. So, a balloon would have a low
+density as it has little mass that occupies a large space, while a
+lead bar would have a high density as it has a great mass, yet
+occupies little space. In the <i>GameMaker Studio 2</i> 2D physics
+world, mass is calculated automatically for you from the values you
+input for the density and by the surface area of the shape you
+define for the fixture. This will have a direct impact on how much
+inertia a fixture has as well as how it reacts to collisions and
+forces, so if you make a small shape with a high density it will
+have a very large mass (like a bar of lead), but if you define a
+large shape with a low density it will have a much smaller mass
+(like a balloon).</p>
+</div>
 <br>
 <a name="object_physics_restitution" id=
 "object_physics_restitution"></a> <label class="collapse" for=
 "eleven">Restitution</label> <input id="eleven" type="checkbox">
-<div class="index_list">In physics, restitution is defined as
-"<i>the return of an object or system to its original state after
-elastic deformation</i>", but as the fixtures in the <i>GameMaker
-Studio 2</i> are really <b>rigid bodies</b> and cannot be deformed,
+<div class="index_list">
+<p>In physics, restitution is defined as "<i>the return of an
+object or system to its original state after elastic
+deformation</i>", but as the fixtures in the <i>GameMaker Studio
+2</i> are really <b>rigid bodies</b> and cannot be deformed,
 restitution is really a way of saying how "bouncy" the fixture is.
 This setting will affect how much an object "bounces" when it
 collides with other objects and is co-dependant on other forces
-that act on the instance like gravity and friction.</div>
+that act on the instance like gravity and friction.</p>
+</div>
 <br>
 <a name="object_physics_collisiongroup" id=
 "object_physics_collisiongroup"></a> <label class="collapse" for=
 "twelve">Collision Group</label> <input id="twelve" type=
 "checkbox">
-<div class="index_list">By default, the collision group for all
-physics objects is <b>0</b>, and this means that they will interact
-as normal, which in turn means they <b>must have a collision event
-to interact</b> (a simple comment will do to trigger the collision)
-otherwise no collision will be registered. However, you can also
-specify that an object should belong to a specific <b>collision
-group</b>. By assigning objects to a positive collision group (ie:
-three objects are all in group "<b>2</b>") you are telling
-<i>GameMaker Studio 2</i> that instances of these objects should
-<i>always collide</i>, even if they have nothing in their collision
-event, obeying the physical properties that you have assigned them
-and the room they are in. Conversely, if you have objects with a
-negative collision group (ie: four objects assigned "<b>-1</b>"),
-you are telling <i>GameMaker Studio 2</i> that these should
-<i>never collide</i>, and any collision events between them will be
-ignored.<br>
-<br>
+<div class="index_list">
+<p>By default, the collision group for all physics objects is
+<b>0</b>, and this means that they will interact as normal, which
+in turn means they <b>must have a collision event to interact</b>
+(a simple comment will do to trigger the collision) otherwise no
+collision will be registered. However, you can also specify that an
+object should belong to a specific <b>collision group</b>. By
+assigning objects to a positive collision group (ie: three objects
+are all in group "<b>2</b>") you are telling <i>GameMaker Studio
+2</i> that instances of these objects should <i>always collide</i>,
+even if they have nothing in their collision event, obeying the
+physical properties that you have assigned them and the room they
+are in. Conversely, if you have objects with a negative collision
+group (ie: four objects assigned "<b>-1</b>"), you are telling
+<i>GameMaker Studio 2</i> that these should <i>never collide</i>,
+and any collision events between them will be ignored.</p>
 
 <div class="note"><b>NOTE</b>: Using collision groups dramatically
 increases the processing required by the physics system and should
 be used only when absolutely necessary, and you should have as few
-groups as possible.</div></div>
+groups as possible.</div>
+</div>
 <br>
 <a name="object_physics_linear" id="object_physics_linear"></a>
 <label class="collapse" for="thirteen">Linear Damping</label>
 <input id="thirteen" type="checkbox">
-<div class="index_list">Damping is used to reduce the physics world
-velocity of an instance, and differs from friction in that friction
-only occurs when two instances with collision shapes (fixtures) are
-in contact. Damping is also much cheaper to simulate than friction,
-but please note that damping is not a replacement for friction; the
-two effects can, and should, be used together.</div>
+<div class="index_list">
+<p>Damping is used to reduce the physics world velocity of an
+instance, and differs from friction in that friction only occurs
+when two instances with collision shapes (fixtures) are in contact.
+Damping is also much cheaper to simulate than friction, but please
+note that damping is not a replacement for friction; the two
+effects can, and should, be used together.</p>
+</div>
 <br>
 <a name="object_physics_angular" id="object_physics_angular"></a>
 <label class="collapse" for="fourteen">Angular Damping</label>
 <input id="fourteen" type="checkbox">
-<div class="index_list">If you think about any rotating object in
-the "real world", unless it has a motor or is in space, it slows
-down over time due to the influence of external forces (like
-friction with the air around it). We can use set this option to
-simulate this effect and reduce the velocity of rotation of
-instances in the physics world, as, without it, any rotating
-instance would continue to rotate infinitely.</div>
+<div class="index_list">
+<p>If you think about any rotating object in the "real world",
+unless it has a motor or is in space, it slows down over time due
+to the influence of external forces (like friction with the air
+around it). We can use set this option to simulate this effect and
+reduce the velocity of rotation of instances in the physics world,
+as, without it, any rotating instance would continue to rotate
+infinitely.</p>
+</div>
 <br>
 <a name="object_physics_friction" id="object_physics_friction"></a>
 <label class="collapse" for="fifteen">Friction</label> <input id=
 "fifteen" type="checkbox">
-<div class="index_list">Friction is the force that resists the
-relative motion of material elements sliding against each other,
-which in the GameMaker Studio 2 physics world, translates as the
-loss of momentum caused by the collision of two instances with
-fixtures bound to them. So, when two instances collide, their
-motion is affected by this value, with a high friction causing a
-larger loss of momentum than a lower value.</div></blockquote>
+<div class="index_list">
+<p>Friction is the force that resists the relative motion of
+material elements sliding against each other, which in the
+GameMaker Studio 2 physics world, translates as the loss of
+momentum caused by the collision of two instances with fixtures
+bound to them. So, when two instances collide, their motion is
+affected by this value, with a high friction causing a larger loss
+of momentum than a lower value.</p>
+</div></blockquote>
 
 <p>Finally there are three extra options that can flagged as on or
 off for your fixture, Sensor, Start Awake and Kinematic. Each of
@@ -597,55 +619,60 @@ following ways:</p>
 <blockquote><a name="object_physics_sensor" id=
 "object_physics_sensor"></a> <label class="collapse" for=
 "sixteen">Sensor</label> <input id="sixteen" type="checkbox">
-<div class="index_list">By checking this box, you are telling
-GameMaker Studio 2 to basically "ignore" the physical properties of
-the object, but still return a collision event with the objects
-around it. in this way you can have an instance with no physical
-presence in the room, but which can react to the collision of
-another instance, like the player, and do something in turn, like
-open a door, or trigger some sort of action in another place in the
-room.<br>
-<br>
+<div class="index_list">
+<p>By checking this box, you are telling GameMaker Studio 2 to
+basically "ignore" the physical properties of the object, but still
+return a collision event with the objects around it. in this way
+you can have an instance with no physical presence in the room, but
+which can react to the collision of another instance, like the
+player, and do something in turn, like open a door, or trigger some
+sort of action in another place in the room.</p>
 
 <div class="note"><b>NOTE</b>: A sensor fixture will fire off the
 collision event when the collision <b>first occurs only</b>,
 meaning you don't get a stream of collision events as the two
 bodies continue to overlap (which is what would traditionally
 occur). If they stop overlapping and overlap subsequently there
-will be another collision event triggered.</div></div>
+will be another collision event triggered.</div>
+</div>
 <br>
 <a name="object_physics_awake" id="object_physics_awake"></a>
 <label class="collapse" for="seventeen">Start Awake</label>
 <input id="seventeen" type="checkbox">
-<div class="index_list">This is checked by default and represents
-the initial "state" of the fixture at the start of the room it has
-been placed in. Normally you want it to be awake (ie: participating
-in the physics world) right from the start, but sometimes this can
-lead to certain instabilities and unwanted effects due to the
-abrupt start of the physics simulation. To avoid these effects, you
-can un-check this flag and the instance will be created with the
-fixture asleep, and it will not participate in the physics
-simulation unless something acts upon it.</div>
+<div class="index_list">
+<p>This is checked by default and represents the initial "state" of
+the fixture at the start of the room it has been placed in.
+Normally you want it to be awake (ie: participating in the physics
+world) right from the start, but sometimes this can lead to certain
+instabilities and unwanted effects due to the abrupt start of the
+physics simulation. To avoid these effects, you can un-check this
+flag and the instance will be created with the fixture asleep, and
+it will not participate in the physics simulation unless something
+acts upon it.</p>
+</div>
 <br>
 <a name="object_physics_kinematic" id=
 "object_physics_kinematic"></a> <label class="collapse" for=
-"eitghteen">Kinematic</label> <input id="eitghteen" type=
-"checkbox">
-<div class="index_list">There will be certain instances in a
-physics based game which you want to move around but do not wish to
-be acted on by forces such as gravity, nor forces incurred by
-collisions with dynamic objects (think of moving platforms in a
-platform game, for example). For such objects simply setting the
-density of the fixture to 0 will mean that the physics will assume
-that the object is intended to be static and it will not react at
-all to anything. However, checking this box will make a static
-object kinematic and although it will be unaffected by collisions
-and gravity, it can still be moved around or rotated using the
-appropriate variables.</div></blockquote></div></blockquote>
+"eighteen">Kinematic</label> <input id="eighteen" type="checkbox">
+<div class="index_list">
+<p>There will be certain instances in a physics based game which
+you want to move around but do not wish to be acted on by forces
+such as gravity, nor forces incurred by collisions with dynamic
+objects (think of moving platforms in a platform game, for
+example). For such objects simply setting the density of the
+fixture to 0 will mean that the physics will assume that the object
+is intended to be static and it will not react at all to anything.
+However, checking this box will make a static object kinematic and
+although it will be unaffected by collisions and gravity, it can
+still be moved around or rotated using the appropriate
+variables.</p>
+</div></blockquote>
+</div>
+<br></blockquote>
+</div>
 
 <p><br>
 </p>
-</div>
 
 <div class="footer">
 <div class="buttons">
@@ -658,7 +685,7 @@ Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -51,16 +51,35 @@ that you have and not all of them may be available.</p>
 <p>Below is a list of all the available target platforms and their
 preferences:</p>
 
-<blockquote><label class="collapse" for="a">Android</label>
-<input id="a" type="checkbox">
+<blockquote><label class="collapse" for="g">Amazon Fire</label>
+<input id="g" type="checkbox">
 <div class="index_list">
-<p>The <b>Android</b> preferences are split into various sections
-listed below. <img class="center" src="images/android_prefs_1.png"
-alt="Android Preferences Packaging And Debug"></p>
+<p>The <b>Amazon Fire</b> preferences are split into various
+sections listed below. A number of these refer to Android tools,
+since the AMazon Fire target is based off of Android and share the
+same SDK requirements. <img class="center" src=
+"images/amazonfire_prefs_1.png" alt=
+"Amazon Fire Preferences Packaging And Debug"></p>
 
 <p>At the top of the preferences you can set the size of the Memory
-Heap for the Android JDK. Below that you have the different
-<b>Packaging</b> options which are:</p>
+Heap for the Android JDK. Next you have to set up the various
+different <b>Paths</b> so that <i>GameMaker Studio 2</i> knows
+where to look for the various tools required to build the final
+executable package and test your game. This is split into three
+sections for the <b>Android SDK</b>, <b>Android NDK</b> and <b>Java
+JDK</b>. These paths should have been filled in automatically for
+you, but should you have any issues you can click the button to the
+right to open the file explorer and manually select the locations
+for each element. You can find details of what versions are
+required for each of the SDK elements <a href=
+"http://help.yoyogames.com/hc/en-us/articles/227860547" target=
+"_blank">here</a>. Paths should be validated as you apply them and
+a message will show "Found" or tell you of any errors (in which
+case you should revise all the information to make sure it is
+correct).</p>
+
+<p>Below that you have the different <b>Packaging</b> options which
+are:</p>
 
 <ul>
 <li><b>Always do full install of APK</b>: Flagging this will make
@@ -74,40 +93,145 @@ of the game.<br>
 compiling a final executable <tt>*.apk</tt> package will also
 install it automatically on any devices that are connected.</li>
 </ul>
+<img class="center" src="images/amazonfire_prefs_2.png" alt=
+"Amazon Fire Preferences Keystore">
+<p>Finally we come to the <b>KeyStore</b>. This is a file that will
+be used to "sign" all your Amazon Fire apps so please fill in all
+the details correctly and keep in mind that this file will be
+required to create and update all your Amazon Fire apps in the
+future, meaning that after setting it up <i><b>it is advised to
+take a screenshot of the settings used and make a backup of the
+final file</b></i>. If you lose this file you will <i>not</i> be
+able to update any existing games that have been uploaded to the
+Google Play store.</p>
 
-<p>Next you have to set up the various different <b>Paths</b> so
-that <i>GameMaker Studio 2</i> knows where to look for the various
-tools required to build the final executable package and test your
-game. This is split into three sections for the <b>Android SDK</b>,
-<b>Android NDK</b> and <b>Java JDK</b>. These paths should have
-been filled in automatically for you, but should you have any
-issues you can click the button to the right to open the file
-explorer and manually select the locations for each element. You
-can find details of what versions are required for each of the SDK
-elements <a href=
+<div class="note"><b>NOTE</b>: The same keystore can be used for
+both the Android and Amazon Fire targets.</div>
+
+<p><br>
+To create a new keystore file the following details are required:
+<img class="center" src="images/amazonfire_prefs_3.png" alt=
+"Amazon Fire Preferences Keystore"></p>
+
+<ul>
+<li><b>Filename</b>: This is the name of the KeyStore file.
+<b>NOTE</b>: <i>This is not your name or the company name, but the
+name of the file to be generated!</i> If you already have a
+keystore file from previous projects then you can click the file
+browser button here and direct <i>GameMaker Studio 2</i> to the old
+keystore file (or click the <i>Import</i> button). In this case,
+you must still fill out the rest of the required information (as it
+was when you <i>first</i> generated the file) but you <b>must not
+click the <i>Generate Key Hash</i> button!</b>. That will generate
+a <i>new</i> keystore file, overwriting the previous one.<br>
+<br></li>
+
+<li><b>Common Name</b>: This would normally be your name.<br>
+<br></li>
+
+<li><b>Password</b>: Your security password for the KeyStore file
+which must be at least six characters long.<br>
+<br></li>
+
+<li><b>Alias</b>: This is another name that can be used for the
+KeyStore file and should be different to the name entered
+above.<br>
+<br></li>
+
+<li><b>Organisational Unit</b>: The department within the company
+that you are a part of.<br>
+<br></li>
+
+<li><b>Organisation</b>: The name of your company.<br>
+<br></li>
+
+<li><b>Location</b>: The name of the town or city where you are
+based.<br>
+<br></li>
+
+<li><b>Country</b>: The standard two letter code for the country
+where you are based.</li>
+</ul>
+
+<p>Once this information is filled in and you are happy with it,
+press the button marked <i>Generate Key Hash</i> for <i>GameMaker
+Studio 2</i> to create the necessary KeyStore file. This may take a
+moment but once it is finished, it normally will not need to be
+changed again. Note that you can click the <i>Import</i> button to
+import a previously created keystore file (see the <b>Filename</b>
+section, above) and you can also retrieve the keystore SHA1 hash by
+clicking the <i>Show Key Hash</i> button. Pressing this will
+generate two special security hash keys directly linked to your
+keystore file that some web sites require for correct functionality
+(for example, Facebook, or Google Play for the Sha1 hash). Should
+you need this, simply press the button, then copy and paste the
+hash keys that are generated.</p>
+
+<p>For further details on how to set up the required Amazon Fire
+SDKs, please see <a href=
+"https://help.yoyogames.com/hc/en-us/articles/115001411031-Setting-Up-for-Amazon-Fire"
+target="_blank">this article on the YoYo Games Knowledge
+Base</a>.</p>
+</div>
+<br>
+<label class="collapse" for="a">Android</label> <input id="a" type=
+"checkbox">
+<div class="index_list">
+<p>The <b>Android</b> preferences are split into various sections
+listed below. <img class="center" src="images/android_prefs_1.png"
+alt="Android Preferences Packaging And Debug"></p>
+
+<p>At the top of the preferences you can set the size of the Memory
+Heap for the Android JDK. Next you have to set up the various
+different <b>Paths</b> so that <i>GameMaker Studio 2</i> knows
+where to look for the various tools required to build the final
+executable package and test your game. This is split into three
+sections for the <b>Android SDK</b>, <b>Android NDK</b> and <b>Java
+JDK</b>. These paths should have been filled in automatically for
+you, but should you have any issues you can click the button to the
+right to open the file explorer and manually select the locations
+for each element. You can find details of what versions are
+required for each of the SDK elements <a href=
 "http://help.yoyogames.com/hc/en-us/articles/227860547" target=
-"_blank">here</a>.</p>
-
-<p>You should click the buttons marked <i>Check Android SDK</i> and
-<i>Check Android NDK</i> after setting the paths, as this will then
-validate all the information and tell you of any errors (in which
+"_blank">here</a>. Paths should be validated as you apply them and
+a message will show "Found" or tell you of any errors (in which
 case you should revise all the information to make sure it is
-correct). When everything checks out you should receive the message
-"<i>Android SDK/NDK Valid</i>". <img class="center" src=
-"images/android_prefs_3.png" alt=
+correct).</p>
+
+<p>Below that you have the different <b>Packaging</b> options which
+are:</p>
+
+<ul>
+<li><b>Always do full install of APK</b>: Flagging this will make
+<i>GameMaker Studio 2</i> remove any previous runners of your game
+from your device, as well as all associated files (for example,
+*.ini files) from your test device before installing a new version
+of the game.<br>
+<br></li>
+
+<li><b>Install on package</b>: When this option is flagged,
+compiling a final executable <tt>*.apk</tt> package will also
+install it automatically on any devices that are connected.</li>
+</ul>
+<img class="center" src="images/android_prefs_2.png" alt=
+"Android Preferences Keystore">
+<p>Finally we come to the <b>KeyStore</b>. This is a file that will
+be used to "sign" all your Android apps so please fill in all the
+details correctly and keep in mind that this file will be required
+to create and update all your Android apps in the future, meaning
+that after setting it up <i><b>it is advised to take a screenshot
+of the settings used and make a backup of the final file</b></i>.
+If you lose this file you will <i>not</i> be able to update any
+existing games that have been uploaded to the Google Play
+store.</p>
+
+<div class="note"><b>NOTE</b>: The same keystore can be used for
+both the Android and Amazon Fire targets.</div>
+
+<p><br>
+To create a new keystore file the following details are required:
+<img class="center" src="images/android_prefs_3.png" alt=
 "Android Preferences Keystore"></p>
-
-<p>The <b>KeyStore</b> is a file that will be used to "sign" all
-your Android apps so please fill in all the details correctly and
-keep in mind that this file will be required to create and update
-all your Android apps in the future, meaning that after setting it
-up <i><b>it is advised to take a screenshot of the settings used
-and make a backup of the final file</b></i>. If you lose this file
-you will <i>not</i> be able to update any existing games that have
-been uploaded to the Google Play store.</p>
-
-<p>To create a new keystore file the following details are
-required:</p>
 
 <ul>
 <li><b>Filename</b>: This is the name of the KeyStore file.
@@ -178,6 +302,18 @@ Base</a>.</p>
 "iOS Preferences"></p>
 
 <ul>
+<li><b>Default Team Identifier</b>: Here you can add your default
+Team Identifier, as <a href=
+"https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Glossary/Glossary.html#//apple_ref/doc/uid/TP40012582-CH18-SW17"
+target="_balnk">assigned to you by Apple</a>. This Team Id will be
+used when your game files are sent to Xcode to build the app, and
+will permit Xcode to generate the required signing certificates.
+Note that this setting will be applied by default to all games
+built for iOS, but it can be over-ridden on a per-project basis
+from the <a href="game_options/options_ios.html">General iOS Game
+Options</a>.<br>
+<br></li>
+
 <li><b>Suppress build and run</b>: By default when you create an
 iOS project and then build a final executable package, <i>GameMaker
 Studio 2</i> will build the package and then attempt to run it on
@@ -200,16 +336,16 @@ files on the build Mac.<br>
 "macOS Preferences"></p>
 
 <ul>
-<li><b>Suppress build and run</b>: By default when you create an
-iOS project and then build a final executable package, <i>GameMaker
-Studio 2</i> will build the package and then attempt to run it on
-any connected devices. Checking this option will suppress building
-the app and running it on the device and simply create an XCode
-project on the host Mac<br>
-<br></li>
-
-<li><b>macOS Install Path</b>: The install path for the project
-files on the build Mac.<br>
+<li><b>Default Team Identifier</b>: Here you can add your default
+Team Identifier, as <a href=
+"https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Glossary/Glossary.html#//apple_ref/doc/uid/TP40012582-CH18-SW17"
+target="_balnk">assigned to you by Apple</a>. This Team Id will be
+used when your game files are sent to Xcode to build the app, and
+will permit Xcode to generate the required signing certificates.
+Note that this setting will be applied by default to all games
+built for macOS, but it can be over-ridden on a per-project basis
+from the <a href="game_options/options_mac.html">General macOS Game
+Options</a>.<br>
 <br></li>
 </ul>
 </div>
@@ -293,7 +429,7 @@ need to set up the devices that some of these platforms target,
 otherwise you may not be able to compile nor test your projects.
 See the section on <a href=
 "../../1_overview/2_quick_start/6_compiling.html">Compiling</a> and
-the section on the <a href="../2_tools/device_manager.html">Device
+the section on the <a href="../2_extras/device_manager.html">Device
 Manager</a> for more information.</p>
 
 <p><br>
@@ -311,7 +447,7 @@ Index</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

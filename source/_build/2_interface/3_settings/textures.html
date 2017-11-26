@@ -33,13 +33,15 @@ if (window.name != "content")
 <h2>Texture Groups</h2>
 
 <div class="body-scroll">
-<p><img class="center" src="images/texture_groups.png" alt=
-"Texture Group Editor">
+<p><br>
 </p>
-
-<p>Here you can add, delete and rename <b>Texture Groups</b>.
-<i>GameMaker Studio 2</i> permits you to assign each of the
-graphics resources (sprites, tilesets, and fonts) to different
+<img class="center" src="images/texture_groups.png" alt=
+"Texture Group Editor">
+<p>The <b>Texture Group Manager</b> is available from the <a href=
+"../../1_overview/2_quick_start/menus/tools_menu.html">Tools</a>
+Menu in the IDE. Here you can add, delete and rename <b>Texture
+Groups</b>. <i>GameMaker Studio 2</i> permits you to assign each of
+the graphics resources (sprites, tilesets, and fonts) to different
 texture groups to try and optimise the number of texture swaps that
 the hardware does at any given time in your game. For that to work,
 you need to define the necessary texture groups from this window,
@@ -64,8 +66,9 @@ for the image, tile set, or font. Texture groups other than the
 "Default" one can also be deleted at any time, which will move
 their contents into the "Default" group (note that if you delete a
 group by mistake you can use <img style="vertical-align:middle"
-src="../../images/icon_ctrl.png"> + <tt>Z</tt> to undo the
-action).</p>
+src="../../images/icon_ctrl.png">/<img style=
+"vertical-align:middle" src="../../images/icon_cmd.png"> +
+<tt>Z</tt> to undo the action).</p>
 
 <p>Once you have defined texture groups and assigned sprites to
 them you will see them listed on the left of the main Texture Group
@@ -81,7 +84,7 @@ on a resource to open a small menu giving you the option to move it
 to another texture group or open the editor for that asset.</p>
 
 <p>It is worth noting that even though the assets are shown in the
-list as being seperate, all sprites, tilesets and fonts will be
+list as being separate, all sprites, tilesets and fonts will be
 added to the same texture page (or pages), and not get an
 individual page for each resource type.</p>
 
@@ -105,23 +108,49 @@ display, but when they are scaled down to draw on a normal display
 they can look terrible so you can assign them to a special
 non-scaling group - if developing for the iPhone 6, you may wish to
 have this checked, as apps have been rejected due to the images
-being blurred by texture scaling.<br>
+being blurred by texture scaling. This is flagged as on by
+default.<br>
 <br></li>
 
-<li><b>No cropping</b> - When you add images into <i>GameMaker
-Studio 2</i> , if they have any "space" around them (ie 100%
-transparency) this is automatically cropped when it is added into
-the texture page. However, if, for example, you are using the image
-as a non-repeating texture for primitives or anything similar, this
+<li><b>Automatically Crop</b> - When you add images into
+<i>GameMaker Studio 2</i> , if they have any "space" around them
+(ie 100% transparency) this is automatically cropped when it is
+added into the texture page and "Automatically Crop" is flagged.
+However, if, for example, you are using the image as a
+non-repeating texture for primitives or anything similar, this
 means that the UV coordinates for texture mapping are not going to
-be correctly represented. In these cases you can flag this option
-and the sprite will be added to the texture page "as is",
-maintaining any transparencies that it may have around the
-edges.<br>
+be correctly represented. In these cases you can un-flag this
+option and the sprite will be added to the texture page "as is",
+maintaining any transparencies that it may have around the edges.
+This is flagged as on by default.<br>
 <br></li>
 
-<li><b>Border Size</b> - The border size will change the overlap
-(or "pixel doubling") amount around the edges of all assets on the
+<li><b>Generate Mipmaps</b> - Flagging this option (it is off by
+default) will tell <i>GameMaker Studio 2</i> that the original
+texture page is to be scaled and filtered into multiple resolutions
+within the texture file. This is normally off, but if you are using
+views to zoom in or out on large areas of the game room, or you are
+working with a 3D game, then you may want to enable this and then
+use the <a href=
+"../../3_scripting/4_gml_reference/drawing/mipmapping/index.html">Mipmapping
+Functions</a> to adjust how the game deals with the different
+mipmap levels. When you flag this check box the "Border Size" value
+will be set to 8 (if it was set to less than 8 originally). This is
+because, when using mipmaps, you need larger borders between images
+on the texture pages otherwise they start bleeding together at
+higher mip levels. The default value of 8 will allow the image to
+be reduced to about an eighth of its original size before the
+sub-images start bleeding together, but you can change this to any
+value that is required to suit your needs. Note that if you are
+using the "<b>Separate Texture Page</b>" option for sprites, then
+you do not need to go through each texture here and flag it to
+generate mipmaps, but instead you can go to the <a href=
+"game_options/index.html">General Game Options</a> and flag the
+option "<b>Generate mipmaps for separate texture pages".<br>
+<br></b></li>
+
+<li><b>Border Size - The border size will change the overlap (or
+"pixel doubling") amount around the edges of all assets on the
 pages generated for the texture group so that when the images are
 scaled, there are no gaps (or seams) visible between them. The
 default is 2 pixels, but in extreme cases where you are zooming the
@@ -131,8 +160,12 @@ Editor</a> has an option to set the output border for tiles, and
 this is separate to the border setting here - basically, tiles are
 generated with an output border for each tile on a temporary
 texture, and this is then added to the texture page with the border
-given here around the outside edge.<br>
-<br></li>
+given here around the outside edge. Also note that enabling MipMaps
+will automatically set the default border size for the texture page
+to 8 to help prevent "bleeding" between textures at higher mip
+levels, but this can be changed.<br>
+<br></b>
+</li>
 
 <li><b>Parent Texture Group</b> - Here you can choose any of the
 existing groups to be the "parent" group for the currently selected
@@ -199,7 +232,7 @@ Groups</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

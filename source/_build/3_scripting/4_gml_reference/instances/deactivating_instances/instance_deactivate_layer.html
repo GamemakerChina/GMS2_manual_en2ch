@@ -73,7 +73,12 @@ either be the name of the layer as written in the code editor (as a
 string) or the actual layer ID value as returned by the <a href=
 "../../rooms/layers/layer_create.html"><tt>layer_create</tt></a>,
 and note that you can only deactivate <i>instance</i> layers with
-this function.<br>
+this function. Note that if you have deactivated a layer that has
+instances of objects flagged as <b>Persistent</b>, then you will
+need to reactivate the layer again with the function <a href=
+"instance_actiavte_layer.html"><tt>instance_activate_layer</tt></a>
+before changing room, otherwise any persistent instances on the
+layer will <i>not</i> be carried over and will be discarded.<br>
 <br></p>
 
 <blockquote><i><b>NOTE:</b> If you deactivate an instance on room
@@ -98,8 +103,12 @@ activate/deactivate the instances.</i><br>
 </h3>
 
 <p class="code">instance_deactivate_layer("Enemy Layer");<br>
-instance_activate_region(view_xview[0] - 64, view_yview - 64,
-view_wview[0] + 128, view_hview + 128, false);<br></p>
+var _vx = camera_get_view_x(view_camera[0]);<br>
+var _vy = camera_get_view_y(view_camera[0]);<br>
+var _vw = camera_get_view_width(view_camera[0]);<br>
+var _vh = camera_get_view_height(view_camera[0]);<br>
+instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128,
+false);<br></p>
 
 <p>The above code deactivates all instances assigned to the layer
 "Enemy_Layer" and then activates a region within the room.</p>
@@ -119,7 +128,7 @@ Instances</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -71,12 +71,12 @@ determined by the indicated length and direction.</h2>
 
 <h3 class="studio">Description</h3>
 
-<p>This function seems confusing at first, but it's not really. It
-is used to get the x component of a position "len" pixels from the
-starting point and in direction "dir". Imagine a circle around your
-instance, then imagine a point anywhere on that circle. To move to
-that point we need to move the object so many pixels in that
-direction... so this function (when used with <a href=
+<p>This function is used to get the <b>x</b> component of a
+position "len" pixels from the starting point and in direction
+"dir". If you imagine a circle around your instance, and then
+imagine a point anywhere on that circle, to move to that point we
+need to move the object so many pixels in that direction... so this
+function (when used with <a href=
 "lengthdir_y.html"><tt>lengthdir_y</tt></a>) gets the position of
 that point on the circle to be used in code by the instance. See
 the image below for details:<br>
@@ -89,12 +89,13 @@ the image below for details:<br>
 <h3><b>Example:</b>
 </h3>
 
-<p class="code">instance_create(x + lengthdir_x(64, image_angle), y
-+ lengthdir_y(64, image_angle), obj_bullet);</p>
+<p class="code">var _xx = x + lengthdir_x(64, image_angle);<br>
+var _yy = y + lengthdir_y(64, image_angle);<br>
+instance_create_layer(_xx, _yy, "Bullets", obj_bullet);<br></p>
 
-<p>This will create a bullet instance at (x,y), but with 64 pixels
-added in the direction of image_angle. This is typically used for
-syncing a bullets start position with the end of a gun in game.</p>
+<p>This will create a bullet instance at (<tt>_xx</tt>,
+<tt>_yy</tt>), which will be 64 pixels from the parent instance in
+the direction of the image angle.</p>
 
 <p><br>
 </p>
@@ -107,7 +108,7 @@ Functions</a></div>
 "lengthdir_y.html">lengthdir_y</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

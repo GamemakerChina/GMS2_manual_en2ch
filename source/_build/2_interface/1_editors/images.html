@@ -124,10 +124,11 @@ selected frame will have a Delete icon <img style=
 "vertical-align:middle" src="images/icon_removeframe.png"> at the
 top corner which you can click to remove the frame from the sprite.
 You can also click <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> on multiple frames to select them
-together, in which case clicking the Delete icon will delete
-<i>all</i> the selected frames.</p>
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> on
+multiple frames to select them together, in which case clicking the
+Delete icon will delete <i>all</i> the selected frames.</p>
 </div>
 <br>
 <a name="image_controls" id="image_controls"></a> <label class=
@@ -141,7 +142,15 @@ second", or "Frames per game frame". The total number of frames
 available are shown to the right along with the current frame that
 has been selected, and you can collapse this bar (hide it) by
 clicking on the <img style="vertical-align:middle" src=
-"images/icon_collapse.png"> icon to the left.</p>
+"images/icon_collapse.png"> icon to the left. Note that the value
+used here for the animation speed <i>will also set the way the
+sprite is animated when used in a game</i>, either as a sprite
+asset on a layer or as a sprite assigned to an instance, although
+you can modify this at runtime using the appropriate <a href=
+"../../3_scripting/4_gml_reference/rooms/sprites/layer_sprite_speed.html">
+functions</a> and <a href=
+"../../3_scripting/4_gml_reference/instances/instance_variables/image_speed.html">
+variables</a>.</p>
 </div>
 <br>
 <a name="image_canvas_control" id="image_canvas_control"></a>
@@ -173,7 +182,8 @@ current canvas zoom level. You can zoom in or out and clicking the
 "images/icon_zoomequals.png"> button will reset the canvas to be
 1:1 with the image being edited. Note that you can also zoom in and
 out using the <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> and the Mouse Wheel <img style=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> and the Mouse Wheel <img style=
 "vertical-align:middle" src="../../images/icon_mmb.png">, and
 pressing <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png"> + <b><tt>Enter</tt></b> will set the
@@ -210,11 +220,13 @@ assign a colour to each from the <a href="#image_colour">colour
 picker</a>) and use any of the <a href="#image_brushes">brushes</a>
 defined from the top right of the editor. You can also use
 <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> and the Mouse Wheel <img style=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> and the Mouse Wheel <img style=
 "vertical-align:middle" src="../../images/icon_mmb.png"> to zoom in
 or out, and pressing <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <b><tt>Enter</tt></b> will set the
-canvas to be 1:1 with the image (or you can use the <b>Canvas
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <b><tt>Enter</tt></b> will set
+the canvas to be 1:1 with the image (or you can use the <b>Canvas
 Controls</b> as explained above). Note too that you can pan around
 the canvas using the middle mouse button <img style=
 "vertical-align:middle" src="../../images/icon_mmb.png"> or
@@ -241,17 +253,19 @@ a selection of different sized square and round brushes to use, but
 you can easily create your own brush by painting on the image
 <a href="#image_layers">layer</a>, and then selecting the part you
 wish to use for the new brush and using <img style=
-"vertical-align:middle" src="../../images/icon_ctrl.png"> +
-'<b>C</b>' to copy it. The copied section will then be added to
-your brushes and you can paint with it as you would any other
-brush, and this includes using the different paint <a href=
-"#image_tools">tools</a> available like drawing a line. Note that
-the default blending colour for the new brush will be white, but if
-you change the colour with the <a href="#image_colour">colour
-picker</a> and paint using the brush, it will be blended with this
-new colour. If you want to remove a brush from the list, simply
-click on it and press the <img style="vertical-align:middle" src=
-"../../images/icon_delete.png"> key and it will be removed.</p>
+"vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + '<b>C</b>' to copy it. The
+copied section will then be added to your brushes and you can paint
+with it as you would any other brush, and this includes using the
+different paint <a href="#image_tools">tools</a> available like
+drawing a line. Note that the default blending colour for the new
+brush will be white, but if you change the colour with the <a href=
+"#image_colour">colour picker</a> and paint using the brush, it
+will be blended with this new colour. If you want to remove a brush
+from the list, simply click on it and press the <img style=
+"vertical-align:middle" src="../../images/icon_delete.png"> key and
+it will be removed.</p>
 </div>
 <br>
 <a name="image_colour" id="image_colour"></a> <label class=
@@ -263,21 +277,26 @@ swatches that you can choose from, and they can be assigned to the
 left <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> <i>and</i> right <img style=
 "vertical-align:middle" src="../../images/icon_rmb.png"> mouse
-buttons respectively by clicking on them with either button. The
-colours selected will be shown below as swatches beside the image
-of the mouse, and you can then click these to open the <b>Colour
-Picker</b> window: <img class="center" src=
-"images/editor_colourpicker.png" alt=
+buttons respectively by clicking on them with either button (you
+can also swap the colours between each button by clicking the arrow
+icon in beside the swatches). The colours selected will be shown
+below as swatches beside the image of the mouse, and you can then
+click these to open the <b>Colour Picker</b> window: <img class=
+"center" src="images/editor_colourpicker.png" alt=
 "Image Editor Colour Picker"></p>
 
 <p>From this window you can define the colour using any of the
 available sliders and gadgets, or you can input values directly for
-the RGBA values or HVS values.</p>
-
-<p>The colour picker also has an options menu that can be used to
-swap colour palettes between sprites in the project: <img class=
-"center" src="images/editor_colourpicker_options.png" alt=
-"Image Editor Colour Picker Options"></p>
+the RGBA values or HVS values. Note that if you double click
+<img style="vertical-align:middle" src="../../images/icon_lmb.png">
+on any of the default colour swatches, you can also bring up the
+colour picker tool and edit the default palette for the sprite.
+Clicking "Okay" in the colour picker in this case will set the
+palette to the new colour and save it along with the sprite
+resources. These colour palettes can then be swapped and applied to
+different sprites using the colour palette Options menu:
+<img class="center" src="images/editor_colourpicker_options.png"
+alt="Image Editor Colour Picker Options"></p>
 
 <p>So, you can create a custom colour palette in a sprite image and
 then use that to set the palette for any other sprite in the
@@ -350,6 +369,31 @@ alt="Paint Tool">
 an area of the image based on the chosen alpha tolerance setting,
 which you can change using the slider shown in the top bar of the
 editor.</td>
+</tr>
+
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><img align="middle" src=
+"images/icon_colourremove.png" alt="Colour Remove Tool">
+</td>
+<td class="text">This is the colour remove tool. When you select
+it, you can then click <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> or <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> on any pixel in the image and all
+pixels that are of the same colour will be removed (they are
+technically replaced with the colour black at an alpha of 0). The
+top bar has a tolerance slider where you can set the pixel colour
+tolerance - the lower this value the more exact a colour has to
+match the one that was clicked, while a higher value will expand
+this to include those colours that are similar to the one clicked.
+If you have previously made a selection using any of the selection
+tools, then only clicking on pixels within the selection will have
+an effect, and only the pixels within the selection will be
+removed.</td>
 </tr>
 
 <tr>
@@ -781,25 +825,37 @@ window will open, exactly the same as for the Convert To Frames
 option shown above.<br>
 <br></li>
 
+<li><b>Export to PNG</b> - Selecting this option will export the
+sprite as a single PNG image. If the sprite has more than a single
+image, then a "strip" sprite will be created with all the images,
+one after another, and the save file name will automatically be
+appended with "<tt>_stripX</tt>", where "<tt>X</tt>" is the number
+of frames exported. For example, a five frame sprite will be
+exported as "<tt>sprite_name_strip5.png</tt>".<br>
+<br></li>
+
 <li><b>Resize All Frames</b> - When you select this option it will
 open the following window where you can set the way that you want
 to resize all the animation frames that comprise the sprite:
 <img class="center" src="images/editor_image_resizeframes.png" alt=
-"Image Editor Resize Frames"> Here you can set where the "anchor"
-for the resize should be using the arrow icons, set the new size
-(in pixels or as a percentage), as well as set whether to maintain
-the aspect ratio of the original frames. You can see a small
-preview of a frame being cropped as well to help you.<br>
-<br></li>
-
-<li><b>Scale All Frames</b> - This option permits you to scale all
-the animation frames that comprise the sprite being edited. When
-you select this option the following window will open: <img class=
-"center" src="images/editor_image_scaleframes.png" alt=
-"Image Editor Scale Frames"> Here you can set the new size (in
-pixels or as a percentage), as well as set whether to maintain the
-aspect ratio of the original frames. You can also choose to enable
-interpolation (pixel smoothing) for the images.<br>
+"Image Editor Resize Frames"> You can choose to either <b>Scale</b>
+the image, or to <b>Resize</b> canvas. If you choose to scale
+theimage then you simply select the new width and/or height for
+each frame, whether to scale using the same aspect ratio, and also
+whether to scale in pixels or percent. Note that when scaling you
+can enable interpolation on or off, where having it on will case
+the pixels to blur or "smear" as the image is scaled (in general,
+for hi resolution art you want this on, but for pixel art you want
+this off).<br>
+<br>
+The option to resize the canvas will not alter the pixels within
+the image but instead increase or decrease the size of the canvas
+that the images are being drawn on. You can set where the "anchor"
+for the resize should be using the arrow icons, then set the new
+size (in pixels or as a percentage) as well as set whether to
+maintain the aspect ratio of the original frames. Note that making
+the frame smaller than the original sprite images will crop the
+pixels.<br>
 <br></li>
 
 <li><b>Crop All Frames To Selection</b> - This option will only be
@@ -807,6 +863,17 @@ available when you have an area of the image selected in the main
 draw canvas. When you then choose this option, the image being
 edited (and all other frames in the animation) will be cropped to
 the boundaries of the selection.<br>
+<br></li>
+
+<li><b>Auto Trim All Frames</b> - This option permits you to trim
+all the zero-alpha pixels from around the edges of a sprite. This
+will take into consideration <i>all</i> image frames within the
+sprite, so each side will crop to the edge of whichever frame has
+the furthest non-zero alpha pixel. <img class="center" src=
+"images/editor_image_trim.png" alt="Image Editor Trim Frames"></li>
+
+<li><b>Reverse Frames</b> - Selecting this will simply reverse the
+frame order for the sprite.<br>
 <br></li>
 
 <li><b>Mirror</b> - This option permits you to mirror either the
@@ -869,6 +936,13 @@ your own custom effects plugins, and has the following effects by
 default:</p>
 
 <ul>
+<li><b>Blur</b> - Apply a blur effect to the image. You can set the
+intensity as well as the type of blur to use (box or gaussian) and
+set whether to only blur along the horizontal or vertical axis, or
+along both. You can then choose to apply this to only the current
+layer, visible layers or all layers. <img class="center" src=
+"images/editor_effectblur.png" alt="Image Editor Blur Effect"></li>
+
 <li><b>Greyscale</b> - Desaturate the image by a determined amount.
 You can choose to apply this to only the current layer, visible
 layers or all layers. <img class="center" src=
@@ -892,7 +966,7 @@ Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

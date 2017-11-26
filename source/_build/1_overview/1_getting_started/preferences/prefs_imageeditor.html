@@ -47,13 +47,6 @@ windows look and feel. The following are the general options:</p>
 
 <blockquote>
 <ul>
-<li><b>Background colour in editor</b>: While editing a sprite
-frame the image may be scaled in or out or may not fit the whole
-drawing in window, in which case a background colour will be shown
-which you can set here. The default value is
-<tt>#282828FF</tt>.<br>
-<br></li>
-
 <li><b>Default Loop Mode</b>: The loop button in the Image Editor
 can be set to function in two different modes: either play once,
 where the animation will stop when it gets to the last frame, loop
@@ -70,16 +63,22 @@ selection outline a relative 1px in width and scale with the image.
 The default is to have this option checked.<br>
 <br></li>
 
-<li><b>Selection outline colour 1</b>: The section outline is a
-dashed line that alternates between two colours. This option
+<li><b>Selection outline primary colour</b>: The section outline is
+a dashed line that alternates between two colours. This option
 permits you to set the first of those colours to use (inlcuding
 alpha), and has a default value of <tt>#FFFFFD0</tt>.<br>
 <br></li>
 
-<li><b>Selection outline colour 2</b>: The section outline is a
-dashed line that alternates between two colours. This option
+<li><b>Selection outline secondary colour</b>: The section outline
+is a dashed line that alternates between two colours. This option
 permits you to set the second of those colours to use (inlcuding
 alpha), and has a default value of <tt>#0000D0</tt>.</li>
+
+<li><b>Editor background colour</b>: While editing a sprite frame
+the image may be scaled in or out or may not fit the whole drawing
+in window, in which case a background colour will be shown which
+you can set here. The default value is <tt>#282828FF</tt>.<br>
+<br></li>
 </ul>
 </blockquote>
 The Image Editor Preferences also has the following sub-categories:
@@ -96,8 +95,8 @@ but you can use the following settings to change it:<br>
 <br></p>
 
 <ul>
-<li><b>Transparent background style</b> - Here you set the "style"
-for the background, which can either be "<i>Block Pattern</i>" or
+<li><b>Canvas style</b> - Here you set the "style" for the
+background, which can either be "<i>Block Pattern</i>" or
 "<i>Single Colour</i>". Single colour simply sets the background to
 the colour of your choice (using the <b>Colour 1</b> setting, as
 explained below) while block pattern is the default setting (which
@@ -105,23 +104,22 @@ can also be edited using the rest of the dialogue options shown
 below). Default is "Block Pattern".<br>
 <br></li>
 
-<li><b>Transparent background block size</b> - When you have
-selected Block Pattern for the background, you can set the size of
-the individual block here. Default is 16px, with a minimum value of
-2px and a maximum of 256px permitted.<br>
+<li><b>Canvas block size</b> - When you have selected Block Pattern
+for the background, you can set the size of the individual block
+here. Default is 16px, with a minimum value of 2px and a maximum of
+256px permitted.<br>
 <br></li>
 
-<li><b>Transparent background colour 1</b> - If you have Single
-Colour chosen for the background, then the colour used is this one.
-You can click the colour swatch to open the colour editor and
-change it. When using the Block Pattern option, this sets the first
-colour for alternate blocks. Default colour is (rgba)
-#c3c3c3ff.<br>
+<li><b>Canvas primary colour</b> - If you have Single Colour chosen
+for the background, then the colour used is this one. You can click
+the colour swatch to open the colour editor and change it. When
+using the Block Pattern option, this sets the first colour for
+alternate blocks. Default colour is (rgba) #c3c3c3ff.<br>
 <br></li>
 
-<li><b>Transparent background colour 2</b> - If you have Block
-Pattern chosen for the background, then the colour used to
-alternate with colour 1 (above) is this one. You can click the
+<li><b>Canvas secondary colour (block pattern style)</b> - If you
+have Block Pattern chosen for the background, then the colour used
+to alternate with colour 1 (above) is this one. You can click the
 colour swatch to open the colour editor and change it. Default
 colour is (rgba) #808080ff.</li>
 </ul>
@@ -139,44 +137,45 @@ are:<br>
 <br></p>
 
 <ul>
-<li><b>Default for deleting frames</b> - When you delete a frame by
-default a message shows to ask if you are sure you want to do this.
-By setting this option to "OK" you can remove this message and
-permit frame deletion without further messages being shown. Default
-is "Show message".<br>
+<li><b>Automatic response to deleting frames</b> - When you delete
+a frame by default a message shows to ask if you are sure you want
+to do this. By setting this option to "OK" you can remove this
+message and permit frame deletion without further messages being
+shown. Default is "Show message".<br>
 <br></li>
 
-<li><b>Default for committing changes on tool change</b> - When you
-change draw tools after editing a frame, by default a message shows
-to ask if you want to commit the changes made. By setting this
-option to "OK" you can remove this message and permit frame edition
-to be committed without further messages being shown when you
-change tools. If you choose "No", then frame edition will be
-silently cancelled when you change tools. Default is "Show
+<li><b>Automatic response to replacing images during strip
+import</b> - When you select <i>Import Strip</i> from the
+<i>Image</i> drop down menu, you will get a message warning you
+that you will be overwriting any images already in the sprite
+resource, with the option to continue or not. You can set here
+whether to show this message, or have the IDE simply choose the
+"Yes" or "No" option. The default value is "Show Message".<br>
+<br></li>
+
+<li><b>Automatic response to committing changes on tool change</b>
+- When you change draw tools after editing a frame, by default a
+message shows to ask if you want to commit the changes made. By
+setting this option to "OK" you can remove this message and permit
+frame edition to be committed without further messages being shown
+when you change tools. If you choose "No", then frame edition will
+be silently cancelled when you change tools. Default is "Show
 message".<br>
 <br></li>
 
-<li><b>Dismiss layer is locked warning</b> - If you try to edit a
-locked layer you'll get a message by default informing you that you
-can't do this. If you set this option to "OK" then no message will
-be shown and the edition will silently fail.<br>
+<li><b>Automatic response to locked layer warning</b> - If you try
+to edit a locked layer you'll get a message by default informing
+you that you can't do this. If you set this option to "OK" then no
+message will be shown and the edition will silently fail.<br>
 <br></li>
 
-<li><b>Dismiss group selected warning</b> - If you select multiple
-layers in the layer editor and then try to draw or edit then you
-will be shown a message by default to inform you that it is not
-possible. You can select "OK" here to remove this message and
-silently fail to edit the images together until only a single layer
-is selected. Default is "Show message".<br>
+<li><b>Automatic response to group selected warning</b> - If you
+select multiple layers in the layer editor and then try to draw or
+edit then you will be shown a message by default to inform you that
+it is not possible. You can select "OK" here to remove this message
+and silently fail to edit the images together until only a single
+layer is selected. Default is "Show message".<br>
 <br></li>
-
-<li><b>Default for replacing images on strip import</b> - When you
-select <i>Import Strip</i> from the <i>Image</i> drop down menu,
-you will get a message warning you that you will be overwriting any
-images already in the sprite resource, with the option to continue
-or not. You can set here whether to show this message, or have the
-IDE simply choose the "Yes" or "No" option. The default value is
-"Show Message".</li>
 </ul>
 </div>
 <br>
@@ -191,13 +190,14 @@ will be presented, with the following options available:<br>
 <br></p>
 
 <ul>
-<li><b>Horizontal pixel spacing</b> - This value sets the spacing
-for the horizontal lines of the image grid. The default value is
-1px.<br>
+<li><b>Grid horizontal spacing (px)</b> - This value sets the
+spacing for the horizontal lines of the image grid. The default
+value is 1px.<br>
 <br></li>
 
-<li><b>Vertical pixel spacing</b> - This value sets the spacing for
-the vertical lines of the image grid. The default value is 1px.<br>
+<li><b>Grid vertical spacing (px)</b> - This value sets the spacing
+for the vertical lines of the image grid. The default value is
+1px.<br>
 <br></li>
 
 <li><b>Display Grid</b> - If this is checked then the Image Editor
@@ -209,8 +209,8 @@ will automatically snap certain tools to the image grid. Default is
 off.<br>
 <br></li>
 
-<li><b>Line Colour</b> - Here you can set the colour (including
-alpha value) for the image grid. Default is
+<li><b>Grid line Colour</b> - Here you can set the colour
+(including alpha value) for the image grid. Default is
 <tt>#000000FF</tt>.</li>
 </ul>
 </div>
@@ -230,27 +230,28 @@ different colours used to draw the node properties:<br>
 <br></p>
 
 <ul>
-<li><b>Colour of nodes</b> - Set the colour for the different nodes
-on the spline/arc. Default is (rgba) <tt>#FF0000FF</tt>.<br>
-<br></li>
-
-<li><b>Colour of control points</b> - Set the colour for each of
-the control point "handles" on a node. Default is (rgba)
+<li><b>Anchor point colour</b> - Set the colour for the different
+anchor points on the spline/arc. Default is (rgba)
 <tt>#FF0000FF</tt>.<br>
 <br></li>
 
-<li><b>Colour of control lines</b> - Set the colour for the lines
-linking the control points to the nodes. Default is (rgba)
+<li><b>Control point colour</b> - Set the colour for each of the
+control point "handles" on an anchor point. Default is (rgba)
+<tt>#FF0000FF</tt>.<br>
+<br></li>
+
+<li><b>Tangent line colour</b> - Set the colour for the lines
+linking the control points to the anchors. Default is (rgba)
 <tt>#00FFFFFF</tt>.<br>
 <br></li>
 
-<li><b>Colour of selected nodes</b> - Set the colour to be used for
-any selecetd nodes on the spline/arc. Default is (rgba)
+<li><b>Selected point colour</b> - Set the colour to be used for
+any selected anchor points on the spline/arc. Default is (rgba)
 <tt>#00FF00FF</tt>.<br>
 <br></li>
 
-<li><b>Size of points</b> - Set the size of the different nodes and
-control points to be used. Default is 10px.</li>
+<li><b>Point size</b> - Set the size of the different anchor points
+and control points to be used. Default is 10px.</li>
 </ul>
 </div>
 <br></blockquote>
@@ -269,7 +270,7 @@ control points to be used. Default is 10px.</li>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

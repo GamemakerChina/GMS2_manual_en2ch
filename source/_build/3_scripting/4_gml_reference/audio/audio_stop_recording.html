@@ -29,11 +29,39 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">audio_stop_recording</h1>
+<h2>audio_stop_recording</h2>
 
-<h2 class="studio">Add audio to the audio queue from a buffer.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will stop recording on the given recorder channel
+(the channel index is returned when you call the function <a href=
+"audio_start_recording.html"><tt>audio_start_recording</tt></a>).
+When you stop recording, no further <a href=
+"../../../2_interface/1_editors/events/async_events.html">Audio
+Recording Asynchronous Events</a> will be triggered for the given
+recorder channel, so you would normally use this function in the
+actual asynchronous event to ensure that you have captured all the
+data.</p>
+
+<div class="note"><b>NOTE:</b> Most platforms support recording
+audio in some form, but that does not mean that all devices will
+permit it, even if the platform does, so you should always check
+that the <a href=
+"audio_get_recorder_count.html"><tt>audio_get_recorder_count()</tt></a>
+function returns a value greater than 0 to verify that recording
+devices are available before using the rest of the recording
+functions.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">audio_stop_recording(channel_index);</p>
 
@@ -57,41 +85,28 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Example:</h3>
 
-<p>This function will stop recording on the given recorder channel
-(the channel index is returned when you call the function <a href=
-"audio_start_recording.html"><tt>audio_start_recording</tt></a>).
-When you stop recording, no further <a href=
-"../../../2_interface/1_editors/events/async_events.html">Audio
-Recording Asynchronous Events</a> will be triggered for the given
-recorder channel, so you would normally use this function in the
-actual asynchronous event to ensure that you have captured all the
-data.</p>
+<p class="code">audio_stop_recording(audio_channel);</p>
 
-<blockquote><i><b>NOTE:</b> Recording audio is currently only
-available currently for the <b>Windows</b>, <b>Xbox One</b>,
-<b>PlayStation 4</b> and <b>HTML5</b> target modules.</i>
+<blockquote>
+<p>The above code tells <i>GameMaker Studio 2</i> to stop recording
+on the given audio channel index.</p>
 </blockquote>
 
 <p><br>
 </p>
+</div>
 
-<h3 class="studio">Example:</h3>
-
-<p class="code">audio_stop_recording(audio_channel);</p>
-
-<p>The above code tells <i>GameMaker Studio 2</i> to stop recording
-on the given audio channel index.</p>
-
-<p><br>
-</p>
-
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="audio%20buffers.html">Audio
 Buffers</a></div>
@@ -99,11 +114,13 @@ Buffers</a></div>
 <div style="float:right">Next: <a href=
 "audio_get_recorder_count.html">audio_get_recorder_count</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

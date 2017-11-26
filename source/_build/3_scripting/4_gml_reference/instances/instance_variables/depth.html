@@ -38,7 +38,8 @@ if (window.name != "content")
 
 <h3>Description</h3>
 
-<blockquote>When you create an object you can assign it an initial
+<blockquote>
+<p>When you create an object you can assign it an initial
 <i>depth</i> which defines how the instances of that object will be
 drawn in the room when the game is being played and this variable
 can be used to get and to change that depth value while the game is
@@ -50,25 +51,33 @@ using this value, in which case a "temporary layer" will be created
 specifically for the instance at the given depth. Note that when no
 instances are on the same depth then this temporary layer will be
 removed from memory (unlike regular layers which will remain even
-if they have nothing on them).<br>
-<br>
-In <i>GameMaker Studio 2</i> a low depth (of negative numbers like
--1000) means that the instance will be drawn "closer" to the player
-and on top of all instances with a lower depth, while a high depth
-(of positive numbers like 1000) means that the instance will be
-drawn "further away" from the player and beneath those instances
-that have a lower depth. <img class="center" src=
-"../images/depth_image.png"> Note that instances of an object that
-have the <b>same</b> depth can be drawn <b>above <i>or</i> below
-each other</b> even when they appear to be placed one on top of the
-other in the room editor. If you want to guarantee that something
-is drawn over or under everything else, you should always set the
-depth (or layer) explicitly.<br>
-<br>
+if they have nothing on them).</p>
+
+<div class="note"><b>IMPORTANT!</b> When you modify the
+<tt>depth</tt> variable and GameMaker STudio 2 manages the layers,
+the built in <a href="layer.html"><tt>layer</tt></a> variable will
+return -1 and not the layer ID, since managed layers cannot be
+manipulated through code.</div>
+
+<p><br>
+In <i>GameMaker Studio 2</i> the lower the depth value for an
+instance, the "closer to the camera" that instance will be drawn,
+while a higher depth value means that the instance will be drawn
+"further away from the camera", i.e: -1000 is drawn on top of -100,
+which is drawn on top of 0, which is drawn on top of 100, which is
+drawn on top of 1000. <img class="center" src=
+"../images/depth_image.png"></p>
+
+<p>Note that instances of an object that have the <b>same</b> depth
+can be drawn <b>above <i>or</i> below each other</b> even when they
+appear to be placed one on top of the other in the room editor. If
+you want to guarantee that something is drawn over or under
+everything else, you should always set the depth (or layer)
+explicitly.</p>
 
 <div class="note"><b>NOTE:</b> You <b>cannot</b> set the depth of
-an instance in its draw event (all other events are
-fine).</div></blockquote>
+an instance in its draw event (all other events are fine).</div>
+</blockquote>
 
 <p><br>
 </p>
@@ -112,7 +121,7 @@ Variables</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

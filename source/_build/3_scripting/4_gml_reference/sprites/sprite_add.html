@@ -55,9 +55,8 @@ xorig, yorig);</p>
 
 <tr class="alt">
 <td>imgnum</td>
-<td>Use to indicate the number of sub-images (1 for a single
-image). For gif images, this argument is not used and can be set to
-0.</td>
+<td>Use to indicate the number of sub-images (1 for a single image
+or for a <tt>*.gif</tt>).</td>
 </tr>
 
 <tr>
@@ -137,8 +136,9 @@ sprite that is 32 x 32 pixels with these values set to (16,16) will
 have its origin in the center.</p>
 
 <p>If you are adding a <tt>*.gif</tt> format image, then you only
-need to specify the filename and can leave all the other arguments
-as 0, but note that <b>only the first image of the GIF will be
+need to specify the filename and image number (which should be 1
+for the first frame) and can leave all the other arguments as 0,
+noting that <b>only the first image of the GIF will be
 loaded</b>.</p>
 
 <p>By default all new sprites have their bounding boxes calculated
@@ -185,7 +185,7 @@ in the variable "spr".</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

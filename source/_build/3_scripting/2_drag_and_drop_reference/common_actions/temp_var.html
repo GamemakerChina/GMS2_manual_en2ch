@@ -71,8 +71,13 @@ script or event as you would any other variable thereafter. Also
 note that temporary local variables are scoped to the script or
 event in which they are created, and so they can be used by other
 instances in the same block when using <a href=
-"apply_to.html">Apply To</a>. For more advanced information on
-variables please see the section on <a href=
+"apply_to.html">Apply To</a>.</p>
+
+<p>You can also add additional variables in the same action by
+clicking the plus icon <img style="vertical-align:middle" src=
+"../icon_expand_arguments.png"> beside the action, and giving
+another temporary local variable name and value. For more advanced
+information on variables please see the section on <a href=
 "../../3_gml_overview/6_scope.html">Variables And Variable
 Scope</a>.</p>
 </blockquote>
@@ -114,11 +119,12 @@ existing variable to change.</td>
 <h3>Example:</h3>
 <img class="center" src="images/e_common_declare_temp.png" alt=
 "Declare Temporary Variable Action Example">
-<blockquote>The above action block code creates the temporary
-variable "_dir" and sets it to 0. Then it generates a random value
-from 1 to 10 and assigns it to that variable before checking it and
-creating an instance if the condition returns
-<tt>true</tt>.</blockquote>
+<blockquote>
+<p>The above action block code creates two temporary variables,
+"<tt>_dir</tt>" and "<tt>_spd</tt>" and sets them to random values.
+It then uses these values to set the instance moving in a random
+direction at a random speed.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -135,7 +141,7 @@ Global Variable</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

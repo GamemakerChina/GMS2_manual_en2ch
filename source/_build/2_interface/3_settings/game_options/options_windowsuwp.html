@@ -90,8 +90,9 @@ experience. The available options are:</p>
 <p>By default all of these will be selected and you should
 de-select those that you do not require.</p>
 
-<p>Finally, you can signal the different <i>Permissions</i> that
-your UWP app will need from the following options:</p>
+<p>After setting the orientation options, you can then signal the
+different <i>Permissions</i> that your UWP app will need from the
+following options:</p>
 
 <ul>
 <li><b>Enable Internet Permission</b>: Flags the game as having
@@ -105,6 +106,16 @@ access to the microphone of the device. This is off by default.<br>
 <li><b>Enable IAP Sandbox</b>: Flags the game as using sandboxed In
 App Purchases. This is off by default.</li>
 </ul>
+
+<p>Finally you have two options for setting the <b>Target</b> and
+<b>Minimum</b> Windows platform versions. In general you won't want
+to touch these and should leave them at their default values, but
+if you are having build issues (specifically, if you can't install
+the Windows SDK set by default, then you'll need to change these to
+what you have installed), then you may want to set these to other
+values. If you are unsure what values to set, then create a new UWP
+project in <i>Visual Studio</i> and have a look at what it sets the
+values to.</p>
 </div>
 <br>
 <label class="collapse" for="b">Graphics</label> <input id="b"
@@ -125,6 +136,13 @@ interpolation, which basically "smooths" pixels. For crisp pixel
 graphics, it should be off, but if you have nice alpha blends and
 smoothed edged graphics it is better left on.This is off by
 default.<br>
+<br></li>
+
+<li><b>Display Cursor</b>: When this option is enabled, the default
+OS cursor will be shown in your game. If this is disabled, then
+while the mouse is over the game window, there will be no visible
+cursor unless you have created one as part of the game project
+(this is on by default).<br>
 <br></li>
 
 <li><b>Start fullscreen</b>: When this is enabled, the game will
@@ -226,7 +244,7 @@ OS.</li>
 </ul>
 
 <p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../2_tools/project_image_generator.html">Project Image
+"../../2_extras/project_image_generator.html">Project Image
 Generator</a> tool which can be used to automatically create all
 the images required for all the different target platforms your
 game is being compiled to. If you use this tool, you should revise
@@ -269,11 +287,59 @@ location which can then be used within UWP Game Options. You can
 find instructions on how this is done from the <a href=
 "http://help.yoyogames.com/hc/en-us/articles/115001349488" target=
 "_blank">YoYo Games Knowledge Base</a>.</div>
+</div>
+<br>
+<label class="collapse" for="e">Xbox Live</label> <input id="e"
+type="checkbox">
+<div class="index_list">
+<p><img class="center" src="images/uwp_xboxlive_options.png" alt=
+"UWP XBox Live Options">
+</p>
+
+<p>The <b>Xbox Live</b> section of the UWP Game Options is where
+you can activate your UWP project for use on the Xbox One console.
+Activating the project for the Xbox here permits you to do the
+following when the project is run on an Xbox One:</p>
+
+<ul>
+<li>Sign-in to Xbox Live from within the app</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>Use the Xbox Live user identity in some way in the project (for
+example, showing the gamertag or gamer pic)</li>
+</ul>
+
+<p>Before you can do these things however, you will need to make
+sure that you have clicked on the <b>Enable Xbox Live</b> checkbox,
+and if you are part of the <a href=
+"https://developer.microsoft.com/en-us/games/xbox/xboxlive/creator"
+target="_blank">Microsoft Creators Program</a> you should also
+check the <b>Creators Program App</b> option. If you are part of
+the Creators Program, you will then need to add in the <b>Title
+ID</b> and the <b>Service Configuration ID</b> (more info on these
+can be found from <a href=
+"https://docs.microsoft.com/en-us/windows/uwp/xbox-live/xbox-live-service-configuration"
+target="_blank">Microsoft</a>).</p>
+
+<p>Note that currently to test Xbox Live functionality in your
+project, you will need to use <b>Create Executable</b> rather than
+<b>Run</b> as the UWP Xbox output needs to use the Windows Store
+signing certificate that you give as part of the <b>Packaging</b>
+info (see above) rather than the temporary one supplied with
+<i>GameMaker Studio 2</i>, which is what will be used when you hit
+<b>Run</b>.</p>
+
+<p>Once you have enabled XBox Live, you can then go ahead and use
+the <a href=
+"../../../3_scripting/4_gml_reference/xbox_live/index.html">XBox
+Live Functions</a> in your project.</p>
 </div></blockquote>
+</div>
 
 <p><br>
 </p>
-</div>
 
 <div class="footer">
 <div class="buttons">
@@ -286,7 +352,7 @@ Options</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

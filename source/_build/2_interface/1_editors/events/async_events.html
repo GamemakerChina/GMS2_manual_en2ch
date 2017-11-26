@@ -851,7 +851,7 @@ and the "status" value. For "status", if an error has been returned
 <ul>
 <li><b>"error":</b> Contains details of the error received.</li>
 </ul>
-If the "status" value is 0 (ie: no errors) then the <tt>ds_map</tt>
+If the "status" value is 1 (ie: no errors) then the <tt>ds_map</tt>
 will contain the following additional values, depending on the
 value of the "type" key:<br>
 <br>
@@ -973,8 +973,9 @@ with the following key/value pairs:<br>
 will be "<tt>audiogroup_load</tt>" for loading audio.</li>
 
 <li><b>"group_id":</b> will return the ID of the audio group that
-has been loaded (as defined in the <b>Game Options</b> <a href=
-"../../3_settings/audio.html">Audio Groups Tab</a>)</li>
+has been loaded (as defined in the <a href=
+"c:/source/yoyostudio/documentation/english/2_interface/3_settings/audio.html">
+Audio Group Editor</a>).</li>
 </ul>
 When all audio has been loaded for a group, this event will trigger
 and it can then be used to change rooms, or play a music track
@@ -1493,23 +1494,24 @@ of the un-subscribed item</li>
 <a name="async_system" id="async_system"></a> <label class=
 "collapse" for="fourteen">System</label> <input id="fourteen" type=
 "checkbox">
-<div class="index_list">This event can only be triggered by a
-system level event (currently the only event detected is the
-addition and removal of gamepads, but more shall be added) and it
-will return a <a href=
+<div class="index_list">
+<p>This event can only be triggered by a system level event (such
+as the detection of a gamepad or the automatic signing in to XBox
+Live) and it will return a <a href=
 "../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
 <tt>ds_map</tt></a> stored in the variable <tt>async_load</tt>,
 containing different key/value pairs depending on the system level
-event that triggered the call-back.
+event that triggered the call-back.</p>
 
 <blockquote><a name="async_system_gamepads" id=
 "async_system_gamepads"></a> <label class="collapse" for=
 "thirtyone">Game Pads</label> <input id="thirtyone" type=
 "checkbox">
-<div class="index_list">When this event is triggered for a gamepad
-being connected or disconnected it will return one of the following
-key/value pairs in the <tt>async_load</tt> map:<br>
-<br>
+<div class="index_list">
+<p>When this event is triggered for a gamepad being connected or
+disconnected it will return one of the following key/value pairs in
+the <tt>async_load</tt> map:<br>
+<br></p>
 
 <ul>
 <li>"<b>event_type</b>" - the type of system event received, which
@@ -1527,10 +1529,50 @@ connection to a gamepad</li>
 <li>"<b>pad_index</b>" - the index of the pad that has been added
 or removed</li>
 </ul>
-This event now permits you to move all your gamepad checking logic
-from the Step Event or an Alarm event into the System Event and
-only run it when it's actually
-required.</div></blockquote></div></blockquote>
+
+<p>This event now permits you to move all your gamepad checking
+logic from the Step Event or an Alarm event into the System Event
+and only run it when it's actually required.</p>
+</div>
+<br>
+<a name="async_system_xboxlive" id="async_system_xboxlive"></a>
+<label class="collapse" for="thirtytwo">XBox Live</label>
+<input id="thirtytwo" type="checkbox">
+<div class="index_list">
+<p>The asynchronous system event can be triggered when targeting
+the <b>XBox One</b> using the <b>UWP</b> export and checking the
+<b>Enable XBox Live</b> option in the <a href=
+"../../../2_interface/3_settings/game_options/options_windowsuwp.html">
+UWP Game Options</a>. When you start <i>GameMaker Studio 2</i> UWP
+project that has Xbox Live enabled the project will automatically
+try silently sign-in to Xbox Live. The results of this sign-in
+attempt will be returned as one of the following key/value pairs in
+the <tt>async_load</tt> map:</p>
+
+<ul>
+<li>"<b>event_type</b>" - the type of system event received, which
+will be one of the following strings:<br>
+<br>
+
+<ul>
+<li>"<b>user signed in</b>" - the silent user sign-in has been
+completed successfully</li>
+
+<li>"<b>user sign in failed</b>" - the silent user sign-in has
+failed (when this happens you can use the function <a href=
+"../../../3_scripting/4_gml_reference/xbox_live/xboxlive_show_account_picker.html">
+<tt>xboxlive_show_account_picker()</tt></a> to get the user to
+choose an account to sign in with)</li>
+
+<li>"<b>user signed out</b>" - the user has signed out</li>
+</ul></li>
+</ul>
+
+<p>For more information on the specific functions available for
+XBox Live, please see <a href=
+"../../../3_scripting/4_gml_reference/xbox_live/index.html">here</a>.</p>
+</div></blockquote>
+</div></blockquote>
 
 <p><br>
 </p>
@@ -1547,7 +1589,7 @@ Events</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

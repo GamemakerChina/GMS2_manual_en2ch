@@ -32,23 +32,12 @@ if (window.name != "content")
 <h2>os_get_info</h2>
 
 <div class="body-scroll">
-<h2 class="studio">Returns a ds_map with information about the
-OS.</h2>
-
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">os_get_info()</p>
-
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real (ds_map index)</p>
+<h3>Description</h3>
 
-<p><br>
-</p>
-
-<h3 class="studio">Description</h3>
-
+<blockquote>
 <p>This function returns a <a href=
 "../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> with
 detailed information about the OS that the game is running on. The
@@ -58,8 +47,9 @@ memory and you should use the <a href=
 "../data_structures/ds%20maps/ds_map_destroy.html"><tt>ds_map_destroy()</tt></a>
 function when you no longer need the data it contains.</p>
 
-<p>Note that on <b>Windows</b>, you will get some extra information
-from DX11 with the following (useful for extensions):</p>
+<p>Note that on <b>Windows Desktop</b> and <b>Windows UWP</b>, you
+will get some extra information from DX11 with the following
+(useful for extensions):</p>
 
 <ul>
 <li><tt>video_d3d11_device</tt> - pointer to the DX11 device</li>
@@ -85,17 +75,29 @@ size of the video memory</li>
 size of the system memory (used by DX11 adapter)</li>
 </ul>
 
-<p><br>
-<i><b>NOTE:</b> This function only works on Android, iOS, Mac,
-Ubuntu and Windows, on all other target platforms it will return -1
-rather than a <tt>ds_map</tt>.</i><br>
-<br>
-</p>
+<div class="note"><b>NOTE:</b> This function only works on Android,
+iOS, Mac, Ubuntu and Windows (Desktop + UWP), on all other target
+platforms it will return -1 rather than a <tt>ds_map</tt>.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Syntax:</h3>
+
+<p class="code">os_get_info()</p>
+
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">Real (ds_map index)</p>
+
+<p><br>
+</p>
+
+<h3>Example:</h3>
 
 <p class="code">os_map = os_get_info();<br>
 if os_map != -1<br>
@@ -113,9 +115,11 @@ key);<br>
 &nbsp;&nbsp;&nbsp;ds_map_destroy(os_map);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will check the OS information to see if a
 <tt>ds_map</tt> is returned. If it is, then the code will loop
 through the map and assign all the values to an array.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -132,7 +136,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -43,11 +43,11 @@ drag or "flick" an instance across a room. These things <i>can</i>
 be done with the Device functions, but to make things easier
 <i>GameMaker Studio 2</i> has a complete range of <a href=
 "../../../../2_interface/1_editors/events/gesture_events.html">Gesture
-Events</a> to detect double taps, dragging and flicks at both an
-instance and global level, as well as return information about the
-event. the functions listed here are all designed to give you
-greater control over how and when these events will be
-triggered.</p>
+Events</a> to detect double taps, dragging, flicks, pinches and
+rotations, at both an instance and a global level, as well as
+return information about the event. The functions listed here are
+all designed to give you greater control over how and when these
+events will be triggered.</p>
 
 <div class="note"><b>IMPORTANT!</b> These functions will not work
 on the HTML5 target platform. They will not give an error if used,
@@ -61,7 +61,7 @@ functions:</p>
 Functions</label> <input id="one" type="checkbox">
 <div class="index_list">
 <p>The following functions can be used to get the different values
-being used to calculate flicking, dragging and tapping:</p>
+being used to calculate flicking, dragging, pinching, etc...:</p>
 
 <blockquote>
 <ol>
@@ -83,6 +83,26 @@ being used to calculate flicking, dragging and tapping:</p>
 <li><a href=
 "gesture_get_double_tap_distance.html">gesture_get_double_tap_distance</a>
 </li>
+
+<li><a href=
+"gesture_get_pinch_distance.html">gesture_get_pinch_distance</a>
+</li>
+
+<li><a href=
+"gesture_get_pinch_angle_towards.html">gesture_get_pinch_angle_towards</a>
+</li>
+
+<li><a href=
+"gesture_get_pinch_angle_away.html">gesture_get_pinch_angle_away</a>
+</li>
+
+<li><a href=
+"gesture_get_rotate_time.html">gesture_get_rotate_time</a>
+</li>
+
+<li><a href=
+"gesture_get_rotate_angle.html">gesture_get_rotate_angle</a>
+</li>
 </ol>
 </blockquote>
 </div>
@@ -91,26 +111,43 @@ being used to calculate flicking, dragging and tapping:</p>
 <input id="two" type="checkbox">
 <div class="index_list">
 <p>The following functions can be used to set the different values
-being used to calculate flicking, dragging and tapping:</p>
+being used to calculate flicking, dragging, pinching, etc...:</p>
 
 <blockquote>
 <ol>
-<li><a href="gesture_drag_time.html">gesture_get_drag_time</a>
+<li><a href="gesture_drag_time.html">gesture_drag_time</a>
+</li>
+
+<li><a href="gesture_drag_distance.html">gesture_drag_distance</a>
+</li>
+
+<li><a href="gesture_flick_speed.html">gesture_flick_speed</a>
 </li>
 
 <li><a href=
-"gesture_drag_distance.html">gesture_get_drag_distance</a>
-</li>
-
-<li><a href="gesture_flick_speed.html">gesture_get_flick_speed</a>
+"gesture_double_tap_time.html">gesture_double_tap_time</a>
 </li>
 
 <li><a href=
-"gesture_double_tap_time.html">gesture_get_double_tap_time</a>
+"gesture_double_tap_distance.html">gesture_double_tap_distance</a>
 </li>
 
 <li><a href=
-"gesture_double_tap_distance.html">gesture_get_double_tap_distance</a>
+"gesture_pinch_distance.html">gesture_pinch_distance</a>
+</li>
+
+<li><a href=
+"gesture_pinch_angle_towards.html">gesture_pinch_angle_towards</a>
+</li>
+
+<li><a href=
+"gesture_pinch_angle_away.html">gesture_pinch_angle_away</a>
+</li>
+
+<li><a href="gesture_rotate_time.html">gesture_rotate_time</a>
+</li>
+
+<li><a href="gesture_rotate_angle.html">gesture_rotate_angle</a>
 </li>
 </ol>
 </blockquote>
@@ -132,7 +169,7 @@ being used to calculate flicking, dragging and tapping:</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -154,6 +154,11 @@ instance sprite (default is white).<br>
 <br></li>
 
 <li><a href=
+"../../4_gml_reference/instances/instance_variables/image_speed.html">
+Image Speed</a> - The current animation speed for the sprite.<br>
+<br></li>
+
+<li><a href=
 "../../4_gml_reference/instances/instance_variables/image_xscale.html">
 Horizontal Scale</a> - The horizontal scale at which the instance
 sprite is being drawn (this also affects the instance bounding box
@@ -225,7 +230,11 @@ value is 270.<br>
 target variable to hold the returned value. If you flag this
 variable as a temporary variable then it will be created for you in
 the action and will be available only until the end of the event or
-action script.</p>
+action script. You can also retrieve the values of additional
+variables in the same action by clicking the plus icon <img style=
+"vertical-align:middle" src="../icon_expand_arguments.png"> beside
+the action, and selecting another instance variable and giving an
+accompanying variable to store the returned value.</p>
 
 <p><br>
 </p>
@@ -265,10 +274,12 @@ action script.</p>
 <img class="center" src=
 "images/e_instance_set_instance_variable.png" alt=
 "Set Instance Variable Example">
-<blockquote>The above action block code gets the value for the
-instance variable <tt>speed</tt> and then checks to see if it is
-not equal to 0. If it is not, then the instance variable is set to
-0.</blockquote>
+<blockquote>
+<p>The above action block code gets the values for the previous x/y
+position and then comapres them to the current x/y position. If
+they are not the same, then the sprite index for the instance is
+changed and it's image index is set to 0.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -285,7 +296,7 @@ Sprite</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

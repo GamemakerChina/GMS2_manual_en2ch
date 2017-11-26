@@ -89,7 +89,7 @@ you specifically start them with the appropriate function.</i><br>
 <p class="code">if os_is_paused()<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;if !instance_exists(obj_PauseMenu)
-instance_create(0,0,obj_PauseMenu);<br>
+instance_create_layer(0, 0, "Controllers", obj_PauseMenu);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks to see if the game has been paused, and if
@@ -111,7 +111,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -198,6 +198,37 @@ there is one exception to this - if you marked certain objects as
 being persistent, instances of this object will not stay in the
 room but move to the next room.</p>
 
+<p>After that you have the option to <b>Clear Display Buffer</b>.
+This option is similar to the previous one, only it fills the
+back-buffer with a colour. If you know that the views are going to
+be covering the whole screen at all times or that you have a
+fullscreen background being drawn, then you can un-check this
+(which saves a redraw and so helps optimise your game), but if you
+have overlapping views that, when on the screen leave open spaces,
+or your background has any transparency, you should check this so
+that those area where there is no view are filled in with the draw
+colour of your choice. Currently this colour can only be set
+through code using <a href=
+"../../3_scripting/4_gml_reference/cameras%20and%20display/display/the%20game%20window/window_set_colour.html">
+<tt>window_set_colour()</tt></a>.</p>
+
+<div class="note"><b>NOTE:</b> If you are using automatic aspect
+ratio correction (as set in the <a href=
+"../../2_interface/3_settings/game_options/index.html">Game
+Options</a>), then you should always have this checked otherwise
+you can get odd effects over the "letterbox" that your game is
+drawn in. If you do not use this option then you can un-check this
+and get a small boost to your games performance (especially
+noticeable on Android and other mobile platforms). Below this you
+see the list of available views (you can define a maximum of eight)
+with the information about where these views are to be drawn
+contained in the boxes below. First of all you must indicate
+whether the view should be Visible when the room starts by checking
+the appropriate box, and if you wish to use views, make sure at
+least one view is visible at the start of every room. Visible views
+are shown in bold in the view list above this.</div>
+<br>
+
 <p>A room has to have a size and this is defined by the values that
 you input for its width and height in pixels, and once that has
 been set you can then go on to add <b>Creation Code</b>, should you
@@ -253,39 +284,8 @@ for the three main view port settings, and then you toggle
 inheritance on or off for each individual camera view.</div>
 <br>
 
-<p>After that you have the option to <b>Clear Display Buffer</b>.
-This option is similar to the previous one, only it fills the
-back-buffer with a colour. If you know that the views are going to
-be covering the whole screen at all times or that you have a
-fullscreen background being drawn, then you can un-check this
-(which saves a redraw and so helps optimise your game), but if you
-have overlapping views that, when on the screen leave open spaces,
-or your background has any transparency, you should check this so
-that those area where there is no view are filled in with the draw
-colour of your choice. Currently this colour can only be set
-through code using <a href=
-"../../3_scripting/4_gml_reference/cameras%20and%20display/display/the%20game%20window/window_set_colour.html">
-<tt>window_set_colour()</tt></a>.</p>
-
-<div class="note"><b>NOTE:</b> If you are using automatic aspect
-ratio correction (as set in the <a href=
-"../../2_interface/3_settings/game_options/index.html">Game
-Options</a>), then you should always have this checked otherwise
-you can get odd effects over the "letterbox" that your game is
-drawn in. If you do not use this option then you can un-check this
-and get a small boost to your games performance (especially
-noticeable on Android and other mobile platforms). Below this you
-see the list of available views (you can define a maximum of eight)
-with the information about where these views are to be drawn
-contained in the boxes below. First of all you must indicate
-whether the view should be Visible when the room starts by checking
-the appropriate box, and if you wish to use views, make sure at
-least one view is visible at the start of every room. Visible views
-are shown in bold in the view list above this.</div>
-<br>
-
 <p>A camera view is defined by two different sets of values, the
-camera view itself and the <b>port</b> on the screen where tyhis
+camera view itself and the <b>port</b> on the screen where this
 view is to be drawn. This can sometimes cause confusion so let's
 explain this a bit before explaining how we define each of
 them:</p>
@@ -293,7 +293,7 @@ them:</p>
 <ul>
 <li><b>The Camera</b>: A point within the room that will be used to
 set how the room is displayed on screen (this is an abstract piont
-in the room editor and it's position is set automatically based on
+in the room editor and its position is set automatically based on
 the view and view port settings)<br></li>
 
 <li><b>The View</b>: What the camera sees, based on the position,
@@ -446,11 +446,13 @@ button <img style="vertical-align:middle" src=
 within the current editor workspace (this will zoom in/out as
 appropriate to make it fit). Note that you can also zoom in and out
 using the <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> and the Mouse Wheel <img style=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> and the Mouse Wheel <img style=
 "vertical-align:middle" src="../../images/icon_mmb.png">, and
 pressing <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <b><tt>Enter</tt></b> will set the
-room canvas to be 1:1 with the room settings.<br>
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <b><tt>Enter</tt></b> will set
+the room canvas to be 1:1 with the room settings.<br>
 <br></li>
 
 <li><b>Show Views</b> <img style="vertical-align:middle" src=
@@ -504,7 +506,16 @@ press and hold <img style="vertical-align:middle" src=
 "../../images/icon_alt.png"> to preview the resource "in-situ", and
 if you additionally click the left mouse button <img style=
 "vertical-align:middle" src="../../images/icon_lmb.png"> you can
-add the instance and even "paint" it into the room layer.</p>
+add the instance and even "paint" it into the room layer. Note that
+by default instances and sprites that are added to a room in this
+way will be snapped to the defined room grid settings, but you can
+hold down <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> to have the instance follow the
+mouse precisely and not snap (releasing <img style=
+"vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> will permit snapping again).</p>
 
 <p>For paths you can create a new path layer and path resource
 right from within the Room Editor- or create a new path resource
@@ -515,11 +526,12 @@ set editor.</p>
 
 <p>Note that you can select and move or delete multiple assets from
 the same layer by holding down <img style="vertical-align:middle"
-src="../../images/icon_ctrl.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on the
-ones you want, and most resources in the room editor will permit
-you to rotate and scale them (singly or as a group) by clicking and
-holding <img style="vertical-align:middle" src=
+src="../../images/icon_ctrl.png">/<img style=
+"vertical-align:middle" src="../../images/icon_cmd.png"> +
+<img style="vertical-align:middle" src="../../images/icon_lmb.png">
+on the ones you want, and most resources in the room editor will
+permit you to rotate and scale them (singly or as a group) by
+clicking and holding <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> along the outside edges or corners and
 dragging the mouse. You can also double click <img style=
 "vertical-align:middle" src="../../images/icon_lmb.png"> on any
@@ -647,12 +659,13 @@ parent room, you can toggle the inheritance from the button at the
 bottom, but note that this will affect <i>all</i> layers. You can
 also use <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> or <img style=
-"vertical-align:middle" src="../../images/icon_ctrl.png"> and left
-click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> on multiple layers to select them for
-duplication or deletion (these options are available from the right
-mouse <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> Menu).</p>
+"vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> and left click <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> on
+multiple layers to select them for duplication or deletion (these
+options are available from the right mouse <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> Menu).</p>
 
 <p>To help with ordering your layers and keeping them tidy, you can
 create groups of layers in a <b>layer folder</b> by clicking the
@@ -692,12 +705,14 @@ using either <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
 src="../../images/icon_lmb.png"> to select from one layer to
 another (including all those in between) or <img style=
-"vertical-align:middle" src="../../images/icon_ctrl.png"> +
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-to select layers one at a time. If you place the layers on top of a
-layer folder, they will be moved and set as sub-layers of the
-folder you dropped them on to. You can also lock layers so that
-they cannot be edited by mistake.</p>
+"vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> to select
+layers one at a time. If you place the layers on top of a layer
+folder, they will be moved and set as sub-layers of the folder you
+dropped them on to. You can also lock layers so that they cannot be
+edited by mistake.</p>
 
 <div class="note"><b>NOTE</b>: In the actual editor window where
 you place the different assets on their layers, you can hold down
@@ -782,12 +797,11 @@ let you modify aspects of that single unique instance: <img class=
 
 <p>From here you can give the instance a unique name, set whether
 it is to inherit from the parent room, or change the object that
-you want it to be an instance of. You can also open up in a new
-window the object editor for the instance should you wish to change
-anything there. You can change the characteristics of this instance
-too, setting a colour to blend it with (white by default), or
-rotating and flipping it. You can also scale the instance along
-either or both the axis, and set it's position within the room.</p>
+you want it to be an instance of. You can also change the
+characteristics of this instance too, setting a colour to blend it
+with (white by default), or rotating and flipping it, as well as
+scale the instance along either or both the axis, and set its
+position within the room.</p>
 
 <p>Finally you can give the instance some <b>creation code</b>
 which will run directly after the object creation event code, and
@@ -843,7 +857,8 @@ together you can select them as a group by clicking the left mouse
 and dragging to select them from the tileset before drawing. If the
 range of tiles that you want to draw together is not in a block,
 then you can hold down <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> and then select individual tiles
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> and then select individual tiles
 using the left mouse button <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> and create a custom brush that way
 (you can also remove tiles from a custom brush using <img style=
@@ -952,22 +967,27 @@ define an area of the tile layer for working on. You can click the
 left mouse button <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> and then drag the mouse to create a
 rectangular area, or you can press <img style=
-"vertical-align:middle" src="../../images/icon_ctrl.png"> +
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-to add multiple selections and <img style="vertical-align:middle"
-src="../../images/icon_alt.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> to clear a
-part of the selection. To clear the whole selection you can press
-<img style="vertical-align:middle" src=
-"../../images/icon_escape.png">. When you have an area of a tile
-layer selected, the rest of the tools (Pencil, Flip, Rotate,
-etc...) will only work within the selected area. Note that you can
-also copy (<img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + "<b>C</b>") and cut (<img style=
-"vertical-align:middle" src="../../images/icon_ctrl.png"> +
-"<b>X</b>") selected tiles within the room editor which will then
-switch the tool to the Pencil and permit you to paint the room
-layer with the selected tiles.</td>
+"vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> to add
+multiple selections and <img style="vertical-align:middle" src=
+"../../images/icon_alt.png"> + <img style="vertical-align:middle"
+src="../../images/icon_lmb.png"> to clear a part of the selection.
+To clear the whole selection you can press <img style=
+"vertical-align:middle" src="../../images/icon_escape.png">. When
+you have an area of a tile layer selected, the rest of the tools
+(Pencil, Flip, Rotate, etc...) will only work within the selected
+area. Note that you can also copy (<img style=
+"vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + "<b>C</b>") and cut (<img style=
+"vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + "<b>X</b>") selected tiles
+within the room editor which will then switch the tool to the
+Pencil and permit you to paint the room layer with the selected
+tiles.</td>
 </tr>
 
 <tr>
@@ -1107,10 +1127,12 @@ points using the right mouse button <img style=
 a point by clicking on it and dragging it around, all within the
 actual room editor, making using paths very easy. If you hold down
 <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> on different path points, then
-they will all be selected and you can move them together or delete
-them all from the menu option (explained below).</p>
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> on
+different path points, then they will all be selected and you can
+move them together or delete them all from the menu option
+(explained below).</p>
 
 <p>If you right click <img style="vertical-align:middle" src=
 "../../images/icon_rmb.png"> in the editor window while
@@ -1256,16 +1278,17 @@ clicking, holding down and dragging the left mouse button
 <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png">, or you can select and group
 individual tiles using <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png">, or remove individual tiles from
-the selection using <img style="vertical-align:middle" src=
-"../../images/icon_alt.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png">. From this menu you can then clear
-the selection or invert it as well as cut, copy or paste the
-selection to another layer (or even the same layer but in another
-position). The final option will re-open the <a href=
-"tilesets.html">tile set editor</a> window should you have closed
-it.</p>
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png">, or remove
+individual tiles from the selection using <img style=
+"vertical-align:middle" src="../../images/icon_alt.png"> +
+<img style="vertical-align:middle" src=
+"../../images/icon_lmb.png">. From this menu you can then clear the
+selection or invert it as well as cut, copy or paste the selection
+to another layer (or even the same layer but in another position).
+The final option will re-open the <a href="tilesets.html">tile set
+editor</a> window should you have closed it.</p>
 </div>
 <br>
 <a name="room_menuconvert" id="room_menuconvert"></a> <label class=
@@ -1328,11 +1351,12 @@ alt="Convert Image To Tilemap Example Tileset"></p>
 <div style="float:left">Back: <a href="index.html">Editors
 Index</a></div>
 
-<div style="float:right">Next: <a href="notes.html">Notes</a></div>
+<div style="float:right">Next: <a href="notes.html">The Note
+Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

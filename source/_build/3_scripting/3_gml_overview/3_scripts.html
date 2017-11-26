@@ -58,20 +58,19 @@ These arguments are stored in the <i>built in</i> variables:</p>
 up to <tt>argument15</tt></p>
 
 <p>So there can be at most 16 arguments passed through to a script
-when called from code using the argument variables, and if you are
-using the script DnD™ action then only the first 5 arguments can be
-specified. When using the <tt>argument0...15</tt> variables for a
-script, you <b>must ensure that the script uses all the supplied
-arguments</b>. For example if you have a script that takes two
-arguments and you only supply one then you will get an error for
-that script. The same goes if you supply more arguments than you
-require.</p>
+when called from code using the argument variables, and when using
+the <tt>argument0...15</tt> variables for a script, you <b>must
+ensure that the script uses all the supplied arguments</b>. For
+example if you have a script that takes two arguments and you only
+supply one then you will get an error for that script. The same
+goes if you supply more arguments than you require.</p>
 
 <p>However you can supply a variable number of arguments to a
 script using the <i>built in</i> argument array, and you are
-<i>not</i> limited to a maximum of 16 arguments either, but instead
-can have as many as you require (although, again, you must ensure
-that all arguments are referenced within the script):</p>
+<i>not</i> limited to a maximum of 16 arguments either when using
+this array, but instead can have as many as you require (although,
+again, you must ensure that all arguments are referenced within the
+script):</p>
 
 <p class="code"><tt>argument[0 ... max_num]</tt>
 </p>
@@ -91,8 +90,7 @@ and adapt the script to use only those arguments supplied.</p>
 
 <div class="note"><b>NOTE:</b> You cannot mix the two types of
 argument variables when calling a script. You must use
-<b>either</b> <tt>argument0...15</tt> <b>or</b>
-argument[0...15].</div>
+<b>either</b> <tt>argument0...15</tt> <b>or</b> argument[n].</div>
 
 <p><a name="return" id="return"></a> Scripts can also return a
 value, so that they can be used in expressions. For this you would
@@ -156,7 +154,7 @@ in Code</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -43,7 +43,7 @@ mouse press. The full list of events is given below:</p>
 <blockquote><a name="object_event_create" id=
 "object_event_create"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_create.png">
 </div>
 <label class="collapse" for="one">Create</label> <input id="one"
@@ -57,7 +57,11 @@ initialize variables, start <a href=
 "../timelines.html">Timelines</a>, set <a href=
 "../paths.html">Paths</a> etc... and do anything else that
 generally only needs to be done once or only when an instance is
-first created in the room.</p>
+first created in the room. If your object has any <b>Object
+Variables</b> or <b>Instance Variables</b> added in either the
+<a href="../objects.html">Object Editor</a> or the <a href=
+"../rooms.html">Room Editor</a>, then these variables will be
+initialised <i>first</i> and then the Create Event will be run.</p>
 
 <p>Remember that you can modify anything you set up in the create
 event from the <a href="../rooms.html">Instance Creation Code</a>
@@ -67,7 +71,7 @@ for the instance.</p>
 <br>
 <a name="object_event_destroy" id="object_event_destroy"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_destroy.png">
 </div>
 <label class="collapse" for="two">Destroy</label> <input id="two"
@@ -83,7 +87,7 @@ room, or even for adding points onto a score.</p>
 <br>
 <a name="object_event_clean_up" id="object_event_clean_up"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_destroy.png">
 </div>
 <label class="collapse" for="f">Clean Up</label> <input id="f"
@@ -103,7 +107,7 @@ the room/game is ended.</p>
 <br>
 <a name="object_event_alarm" id="object_event_alarm"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_alarm.png">
 </div>
 <label class="collapse" for="three">Alarm</label> <input id="three"
@@ -153,7 +157,7 @@ count down and can be set and checked as you would normally.</p>
 <br>
 <a name="object_event_step" id="object_event_step"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_step.png">
 </div>
 <label class="collapse" for="four">Step</label> <input id="four"
@@ -195,7 +199,7 @@ the <b>Other</b> events, rather than happening all the time.</p>
 <br>
 <a name="object_event_collision" id="object_event_collision"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_collision.png">
 </div>
 <label class="collapse" for="five">Collision</label> <input id=
@@ -225,7 +229,7 @@ the collisions to be detected</i>.</p>
 <br>
 <a name="object_event_keyboard" id="object_event_keyboard"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_keyboard.png">
 </div>
 <label class="collapse" for="six">Keyboard <img style=
@@ -280,7 +284,7 @@ a single <b>Keyboard Release</b> event.</p>
 <br>
 <a name="object_event_mouse" id="object_event_mouse"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_mouse.png">
 </div>
 <label class="collapse" for="seven">Mouse</label> <input id="seven"
@@ -340,21 +344,54 @@ screen (this behaviour can be changed using code).</p>
 <br>
 <a name="object_event_gesture" id="object_event_gesture"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_gesture.png">
 </div>
 <label class="collapse" for="thirteen">Gesture</label> <input id=
 "thirteen" type="checkbox">
 <div class="index_list">
-<p>This event is the one that governs what you see on the screen
-when you run your game, and is split into various separate
-"sub-events": <img class="center" src=
-"images/editor_objects_gesture.png" alt=
-"Object Editor Gesture Events"></p>
+<p>This event is the one that will be triggered by the user
+touching the screen (on mobile) or clicking and moving the mouse
+(on all other platforms). It detects the following:</p>
 
-<p>Note that the above is simply an overview of how the Gesture
-Events work, but for full details on all the available sub-events,
-please see the following section:</p>
+<ul>
+<li><img style=
+"vertical-align:middle;padding-left:2px;padding-right:4px;" src=
+"images/icon_tap.png"><b>taps</b> - when a user clicks/touches and
+releases quickly<br>
+<br></li>
+
+<li><img style=
+"vertical-align:middle;padding-left:2px;padding-right:4px;" src=
+"images/icon_drag.png"><b>drags</b> - when a user touches/clicks
+and maintains it then moves their finger/cursor<br>
+<br></li>
+
+<li><img style=
+"vertical-align:middle;padding-left:2px;padding-right:4px;" src=
+"images/icon_flick.png"><b>flicks</b> - when the user moves and
+releases a touch/click in one movement<br>
+<br></li>
+
+<li><img style=
+"vertical-align:middle;padding-left:2px;padding-right:4px;" src=
+"images/icon_pinch.png"><b>pinches</b> - when the user has two
+fingers on the screen and then moves them together/apart<br>
+<br></li>
+
+<li><img style=
+"vertical-align:middle;padding-left:2px;padding-right:4px;" src=
+"images/icon_rotate.png"><b>rotates</b> - when the user has two
+fingers on the screen and then rotates them around a point</li>
+</ul>
+<img class="center" src="images/editor_objects_gesture.png" alt=
+"Object Editor Gesture Events">
+<p>The different events will always contain a <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
+DS Map</a> called the "<tt>event_data</tt>" map, which will contain
+a number of key/value pairs with data on the touch/click position
+and movement. For full details on all the available sub-events and
+how they work, please see the following section:</p>
 
 <blockquote>
 <ol>
@@ -366,7 +403,7 @@ please see the following section:</p>
 <br>
 <a name="object_event_other" id="object_event_other"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_other.png">
 </div>
 <label class="collapse" for="eight">Other</label> <input id="eight"
@@ -571,7 +608,7 @@ decide.</p>
 <br>
 <a name="object_event_draw" id="object_event_draw"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_draw.png">
 </div>
 <label class="collapse" for="nine">Draw</label> <input id="nine"
@@ -619,7 +656,7 @@ see the following section:</p>
 <br>
 <a name="object_event_async" id="object_event_async"></a>
 <div style="float:left"><img style=
-"vertical-align:middle;padding-top:5px;padding-left:10px;" src=
+"vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_async.png">
 </div>
 <label class="collapse" for="twelve">Asynchronous</label>
@@ -684,6 +721,15 @@ those that occur when a room is first entered. The order that the
 different events will fire is:</p>
 
 <ul>
+<li><b>Object Variables / Instance Variables</b> are initialised
+(these are the variables that you can define in the IDE of the
+<a href="../objects.html">Object Editor</a> or the <a href=
+"../rooms.html">Room Editor</a>). If you have an object with
+variables attached then they will be created before anything else
+and then any instances that have variables attached will be defined
+after so you can overwrite object variables with instance specific
+ones in the room editor.</li>
+
 <li><b>Create Event</b> followed by the <b>Instance Creation
 Code</b> of each instance - so <i>as each instance is created</i>,
 it will run first its Create event and then its Instance Creation
@@ -787,7 +833,7 @@ Events</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

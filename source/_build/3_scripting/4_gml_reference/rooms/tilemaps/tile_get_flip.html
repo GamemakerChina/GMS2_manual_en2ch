@@ -82,8 +82,8 @@ not.</blockquote>
 
 <p class="code">var lay_id = layer_get_id("Tiles_sky");<br>
 var map_id = layer_tilemap_get_id(lay_id);<br>
-var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x);<br>
-var my = tilemap_get_cell_y_at_pixel(map_id, mouse_y);<br>
+var mx = tilemap_get_cell_x_at_pixel(map_id, mouse_x, mouse_y);<br>
+var my = tilemap_get_cell_y_at_pixel(map_id, mouse_x, mouse_y);<br>
 var data = tilemap_get(map_id, mx, my);<br>
 var bool = !tile_get_flip(data);<br>
 data = tile_set_flip(data, bool);<br>
@@ -109,7 +109,7 @@ Tile Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

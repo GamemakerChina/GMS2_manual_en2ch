@@ -50,25 +50,20 @@ projects with <a href="https://git-scm.com/" target=
 "images/plugins_git_prefs.png" alt="Plugins Git SCM Preferences">
 <p>This section deals with the preferences that you are required to
 set to get the <b>Git SCM</b> plugin to work with <i>GameMaker
-Studio 2</i>. First you have the <i>Merge Tool</i> section with the
-following fields:</p>
+Studio 2</i>. First you have the set of general options:</p>
 
 <ul>
+<li><b>Automatically open source control output window</b>: When
+this is checked, the source control output window will be shown
+automatically when something changes. This is on by default.<br>
+<br></li>
+
 <li><b>Verbose Logging</b>: Enable verbose logging for the Git
 output log. This is off by default.<br>
 <br></li>
-
-<li><b>Path to Merge Tool</b>: Here you specify the full file path
-to the Git merge tool.<br>
-<br></li>
-
-<li><b>Options for Merge Tool</b>: In this field you can add any
-extra commands to be run whenever you use the Merge Tool.<br>
-<br></li>
 </ul>
-
-<p>After setting up the Merge Tool, you can then set up the <i>User
-Identity</i> with these options:</p>
+Next is the <i>User Identity</i> section with the following fields
+which are required to be filled in:
 
 <ul>
 <li><b>Username to commit as</b>: Here you must enter the username
@@ -77,15 +72,53 @@ the same as the username specified when you set up your Git
 repository).<br>
 <br></li>
 
-<li><b>Password for username</b>: Here you must enter the password
-associated with the username that you give above.<br>
-<br></li>
-
 <li><b>Email to commit as</b>: The email that is associated with
 this Git identity.<br>
 <br></li>
 </ul>
-</div></blockquote>
+
+<p>After setting up the User Identity, you can then add a new
+username/password combination for authentication by clicking the
+button labelled <b>Add new User/Pass authentication</b>, which will
+open the following window with different fields for you to fill in:
+<img class="center" src="images/plugins_git_userpass.png" alt=
+"Plugins Git SCM Preferences - Add new User"></p>
+
+<p>You can also <b>Add a new SSH keypair authentication</b> by
+clicking the button with that label. This will open the following
+window for you to fill in: <img class="center" src=
+"images/plugins_git_sshkey.png" alt=
+"Plugins Git SCM Preferences - Add new SSH keypair"></p>
+
+<p>Below these buttons you can then set up the <i>Merge Tool</i>
+and the <i>Diff Tool</i> for SCM with these options:</p>
+
+<ul>
+<li><b>Path to Merge Tool</b>: Here you specify the full file path
+to the Git merge tool.<br>
+<br></li>
+
+<li><b>Options for Merge Tool</b>: In this field you can add any
+extra commands to be run whenever you use the Merge Tool.<br>
+<br></li>
+
+<li><b>Path to Diff Tool</b>: Here you specify the full file path
+to the Git diff tool.<br>
+<br></li>
+
+<li><b>Options for Diff Tool</b>: In this field you can add any
+extra commands to be run whenever you use the Diff Tool.<br>
+<br></li>
+</ul>
+
+<p>Finally, after setting those up you have one last option:</p>
+
+<ul>
+<li><b>Automatically enable source control</b>: When this is
+checked, source control will be enabled for all new projects
+automatically. This is off by default.<br>
+<br></li>
+</ul></div></blockquote>
 
 <p><br>
 </p>
@@ -102,7 +135,7 @@ this Git identity.<br>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

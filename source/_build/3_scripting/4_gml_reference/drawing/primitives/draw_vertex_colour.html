@@ -29,19 +29,20 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">draw_vertex_colour</h1>
+<h2>draw_vertex_colour</h2>
 
-<h2 class="studio">Defines a primitive vertex with colour and alpha
-blending.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Syntax:</h3>
 
 <p class="code">draw_vertex_colour(x, y, col, alpha)</p>
 
 <p><br>
 </p>
 
-<div>
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -68,18 +69,21 @@ blending.</h2>
 <td>The alpha to draw this vertex with (0-1).</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>This function defines the position of a vertex for a primitive,
 with its own colour and alpha setting. The final look of the
 primitive will depend on the primitive type chosen to draw and the
@@ -88,13 +92,13 @@ order with which you add the vertexes to it (see <a href=
 more information) and the vertexes with different colours and
 alphas will blend smoothly from one to the other. To end and draw
 the primitive you must call <a href=
-"draw_primitive_end.html"><tt>draw_primitive_end</tt></a>.<br>
-<br></p>
+"draw_primitive_end.html"><tt>draw_primitive_end</tt></a>.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">draw_primitive_begin(pr_trianglelist);<br>
 draw_vertex_colour(100, 100, c_blue, 0.1);<br>
@@ -102,12 +106,17 @@ draw_vertex_colour(100, 200, c_red, 0.1);<br>
 draw_vertex_colour(150, 150, c_green, 1);<br>
 draw_primitive_end();<br></p>
 
+<blockquote>
 <p>The above code will draw a semi-transparent triangle with each
 vertex coloured a different colour.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Drawing And
 Creating Primitives</a></div>
@@ -115,11 +124,13 @@ Creating Primitives</a></div>
 <div style="float:right">Next: <a href=
 "draw_vertex_texture.html">draw_vertex_texture</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

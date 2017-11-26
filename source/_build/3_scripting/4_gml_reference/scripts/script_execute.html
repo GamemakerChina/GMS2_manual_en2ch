@@ -37,8 +37,8 @@ if (window.name != "content")
 
 <h3>Syntax:</h3>
 
-<p class="code">script_execute(scr, arg0, arg1, arg2,
-...arg15);</p>
+<p class="code">script_execute(scr, arg0, arg1, arg2...,
+etc...);</p>
 
 <blockquote>
 <table>
@@ -53,7 +53,7 @@ if (window.name != "content")
 </tr>
 
 <tr class="alt">
-<td>arg0 ... arg14</td>
+<td>arg0, arg1, arg2..., etc...</td>
 <td>The different arguments that you want to pass through to the
 script</td>
 </tr>
@@ -77,8 +77,8 @@ being called</p>
 <p>There are times that you may want to pass a script to an
 instance in a dynamic way, and for these cases we provide the
 <tt>script_execute</tt> function. It will run a user created script
-resource and pass up to 15 arguments to that script. For more
-information about scripts, see <a href=
+resource and pass the given arguments into it. For more information
+about scripts, see <a href=
 "../../../2_interface/1_editors/scripts.html">The Script
 Editor</a>. If the script has a return value, then this function
 will also return that value when called.</p>
@@ -114,7 +114,7 @@ argument0.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

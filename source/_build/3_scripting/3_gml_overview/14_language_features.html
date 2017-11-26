@@ -128,7 +128,17 @@ examples of use:<br>
 "$2.00" : "$10.00"));<br>
 path_start((global.level &gt; 10 ? path_hard : path_easy;), 2,
 path_action_reverse, true);<br>
---hp &lt;= 0 ? instance_destroy() : score += 10;<br></p></div>
+--hp &lt;= 0 ? instance_destroy() : score += 10;</p>
+<br>
+It is worth noting that you can nest conditional operations but
+that if you do then each operation will need to be enclosed in
+brackets, for example:<br>
+<br>
+
+<p class="code">var c = a ? "foo" : (b ? "bar" : "wii"); //
+Correct<br>
+var c = a ? "foo" : b ? "bar" : "wii";&nbsp;&nbsp; // Will cause an
+error</p></div>
 <br>
 <label class="collapse" for="two">repeat</label> <input id="two"
 type="checkbox">
@@ -143,7 +153,8 @@ creates five balls at random positions.<br>
 <br>
 
 <p class="code">{<br>
-repeat (5) instance_create(random(400), random(400), obj_ball);<br>
+repeat (5) instance_create_layer(random(400), random(400),
+"Instances", obj_ball);<br>
 }<br></p>
 
 <p><br>
@@ -472,7 +483,7 @@ of the code.
 
 <div class="note"><b>Note:</b> It does not end the execution of the
 game. For that you need to use the function <a href=
-"../4_gml_reference/miscellaneous/game_end.html"><tt>game_end</tt></a>.</div></div>
+"../4_gml_reference/game/game_end.html"><tt>game_end</tt></a>.</div></div>
 <br>
 <label class="collapse" for="nine">with</label> <input id="nine"
 type="checkbox">
@@ -544,7 +555,8 @@ fully how it can be used. To help there are a few more examples of
 use below:<br>
 <br>
 
-<p class="code">with (instance_create(x, y, obj_Ball))<br>
+<p class="code">with (instance_create_layer(x, y, "Instances",
+obj_Ball))<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;speed = other.speed;<br>
 &nbsp;&nbsp;&nbsp;direction = other.direction;<br>
@@ -645,7 +657,7 @@ Structure</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

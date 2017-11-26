@@ -32,12 +32,25 @@ if (window.name != "content")
 <h2>show_error</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">show_error(str, abort);</p>
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will show a custom string as an error message and
+give the option to abort the game afterwards if necessary.</p>
+
+<div class="note"><b>NOTE:</b> THIS FUNCTION IS FOR DEBUG USE
+ONLY.</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">show_error(str, abort);</p>
 
 <div class="param">
 <table>
@@ -61,32 +74,25 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function will show a custom string as an error message and
-give the option to abort the game afterwards if necessary.<br>
-<br>
-<i><b>NOTE:</b> THIS FUNCTION IS FOR DEBUG USE ONLY.</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if room != rm_Dungeon<br>
 {<br>
 show_error("Error: Went to wrong area. Aborting game.", true);<br>
 }<br></p>
 
+<blockquote>
 <p>The above code will check to see if the room that the player is
 in is "rm_Dungeon" and if not it will show an error message and
 force the user to abort the game.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -103,7 +109,7 @@ force the user to abort the game.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

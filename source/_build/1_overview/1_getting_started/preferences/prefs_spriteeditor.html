@@ -45,16 +45,26 @@ if (window.name != "content")
 editor</a> looks and functions. The following option exists:</p>
 
 <ul>
-<li><b>Default Animation Mode For New Sprites</b>: This option
-permits you to set the default animation mode for sprites in the
-sprite editor. You can choose either "Frames per second" or "Frames
-per game frame", with the default setting being "Frames per
-second".<br>
+<li><b>Default sprite origin</b>: This option permits you to set
+the default origin position for any new sprite resources that you
+create. The default value is the Top Left.<br>
 <br></li>
 
-<li><b>Default Origin For New Sprites</b>: This option permits you
-to set the default origin position for any new sprite resources
-that you create. The default value is the Top Left.</li>
+<li><b>Default sprite animation mode</b>: This option permits you
+to set the default animation mode for sprites in the sprite editor.
+You can choose either "Frames per second" or "Frames per game
+frame", with the default setting being "Frames per second".<br>
+<br></li>
+
+<li><b>Default sprite width</b>: This option permits you to set the
+default width for all new sprites created in the sprite editor.
+Default value is 64.<br>
+<br></li>
+
+<li><b>Default sprite height</b>: This option permits you to set
+the default height for all new sprites created in the sprite
+editor. Default value is 64.<br>
+<br></li>
 </ul>
 
 <p>The following sub-category also exists for the Sprite
@@ -66,12 +76,28 @@ Editor:</p>
 <div class="index_list"><img class="center" src=
 "images/sprite_editor_confirm_prefs.png" alt=
 "The Sprite Editor Confirm Dialog Preferences">
-<p>The option available here controls the message that pops up when
-you import a new image and one already exists. By default you will
-be prompted to continue importing and overwrite the existing image
-or cancel the operation, and this option lets you suppress this
-message and either cancel the import, "No", or overwrite the
-current sprite, "Yes". Default value is "Show Message".</p>
+<p>The options available here control the messages that pop up when
+are required to confirm an action. You can change these setting to
+show the message always or dismiss it with a specific action
+(either Yes or No) :</p>
+
+<ul>
+<li><b>Automatic response to file import</b>: When you import a new
+image and one already exists, by default you will be prompted to
+continue importing and overwrite the existing image or cancel the
+operation. This option lets you suppress this message and always
+either cancel the import by selecting "No", or overwrite the
+current sprite by selecting "Yes". Default value is "Show
+Message".<br>
+<br></li>
+
+<li><b>Automatic response to image load failure</b>: When you
+import a new image and and the import fails, by default you will be
+shown a warning message informing you that there has been a
+failure. This option lets you suppress this message by selecting
+"Okay". Default value is "Show Message".<br>
+<br></li>
+</ul>
 </div></blockquote>
 
 <p><br>
@@ -89,7 +115,7 @@ current sprite, "Yes". Default value is "Show Message".</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

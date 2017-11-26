@@ -86,8 +86,11 @@ This will give a further processing boost, but care must be taken
 when using it as it will also inflate the final executable file
 size, especially if the in-lined code is large and/or used in
 multiple different places, as well as greatly increase the compile
-time.<br>
-<br></li>
+time.</li>
+
+<li style="list-style: none"><br>
+<br>
+</li>
 
 <li>"<b>global</b>", "<b>[gml code]</b>" - The "global" pragma
 permits you to call some GML code before anything else and will
@@ -97,16 +100,22 @@ first room of the game executes. For example:
 <p class="code">gml_pragma("global", "scr_Init()");</p>
 <br>
 This will call the script "scr_Init" before the first room of the
-game is run.<br>
-<br></li>
+game is run.</li>
+
+<li style="list-style: none"><br>
+<br>
+</li>
 
 <li>"<b>PNGCrush</b>" - The "PNGCrush" pragma will use the <a href=
 "https://pmt.sourceforge.io/pngcrush/" target="_blank">PNGCrush</a>
 program on each texture created. Note that this can add
 significantly to the time that it takes to compile the game, so you
 don't want it on all the time, although it can make significant
-savings on final file size.<br>
-<br></li>
+savings on final file size.</li>
+
+<li style="list-style: none"><br>
+<br>
+</li>
 
 <li>"<b>Texgroup.Scale</b>", "<b>[TextureGroupName]</b>",
 "<b>[Scale Divisor]</b>" - The "Texgroup.Scale" will scale the
@@ -117,8 +126,29 @@ string), which is the divisor you wish to use for the scaling, i.e:
 
 <p class="code">gml_pragma("Texgroup.Scale", "level1", "2");</p>
 <br>
-This will half all the textures in the "level1" texture group.<br>
-<br></li>
+This will half all the textures in the "level1" texture group.</li>
+
+<li style="list-style: none"><br>
+<br>
+</li>
+
+<li>"<b>UnityBuild</b>", "<b>[enable/disable]</b>" - If you call
+the function with this pragma and set the enable/disable argument
+to <tt>true</tt> then on compile it will collapse all the .cpp
+files in the project into a single file which it then uses to build
+everything, for example:
+
+<p class="code">gml_pragma("UnityBuild", "true");</p>
+<br>
+The benefit of doing a unity build is that builds are faster but
+the down side is that it does a <i>full</i> build each time so even
+if you change a single part of the code it will build everything
+again without using any cached files. This has been added
+specifically for the Xbox One export using the YYC although it can
+be called for other builds. For more information on unity builds,
+please see <a href=
+"http://buffered.io/posts/the-magic-of-unity-builds/" target=
+"_blank">here</a>.</li>
 </ul>
 </blockquote>
 
@@ -147,7 +177,7 @@ be in-lined on compile.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

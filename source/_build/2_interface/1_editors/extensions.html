@@ -48,7 +48,7 @@ well as native GML. <img class="center" src=
 <p>Normally 3rd party extensions will be from the <a href=
 "https://marketplace.yoyogames.com/" target="_blank">GameMaker
 Marketplace</a> and those you have subscribed to will then be
-listed in the <a href="../2_tools/marketplace.html">Marketplace
+listed in the <a href="../2_extras/marketplace.html">Marketplace
 Library</a> window and can be installed from there, or by right
 clicking <img style="vertical-align:middle" src=
 "../../images/icon_rmb.png"> on the <b>Extensions</b> resource
@@ -87,34 +87,49 @@ target platforms.<br>
 <br></li>
 
 <li><b>Windows (Standard, UWP, XBoxOne)</b>: You can use windows
-DLL files (Dynamic Link Libraries).<br>
-<br></li>
+DLL files (Dynamic Link Libraries).</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>Mac OS</b>: The Mac OS target can use the standard DyLib
-files for extensions.<br>
-<br></li>
+files for extensions.</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>Ubuntu (Linux)</b>: For the Ubuntu target you need to make
 sure that your extension uses SO files.</li>
 
-<li><b>Html5</b>: These platforms can use JavaScript
-extensions.<br>
-<br></li>
+<li style="list-style: none"><br>
+</li>
 
-<li><b>Android</b>: This platform requires extension written in
-Java or an Android Framework SDK.<br>
-<br></li>
+<li><b>Html5</b>: These platforms can use JavaScript
+extensions.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Android</b>: This platform requires an extension to be
+written in Java or an Android Framework SDK.</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>iOS</b>: Extensions for this platform are written in
 Objective C and require a *.mm and a *.h file, or if using any
-Frameworks, a pre-compiled *.a native file.<br>
-<br></li>
+Frameworks, a pre-compiled *.a native file.</li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>PlayStation</b>: For PlayStation 3 or 4 your extensions
 should be PRX files, with each target requiring a different PRX to
 conform to specification of the target (either PS3 or PS4). If
-working on a PSVita, the extension should be SUPRX instead.<br>
-<br></li>
+working on a PSVita, the extension should be SUPRX instead.</li>
+
+<li style="list-style: none"><br>
+</li>
 </ul>
 
 <p>To change the target platform for a specific extension file or
@@ -192,7 +207,7 @@ add any one of the following files depending on the target platform
 they are for:</p>
 
 <ul>
-<li><b><tt>.gml</tt></b>: This is an file made only with the
+<li><b><tt>.gml</tt></b>: This is a file made only with the
 GameMaker Language and is compatible with all platforms.<br>
 <br></li>
 
@@ -215,12 +230,8 @@ is only compatible with the Ubuntu (Linux) target.<br>
 <br></li>
 
 <li><b><tt>.prx</tt></b>: This is a file format for adding
-functionality to the PS3 and PS4 targets (each target will need a
-different *.prx file compatible with its specifications).<br>
-<br></li>
-
-<li><b><tt>.suprx</tt></b>: This format of file is for adding
-functionality to the PSVita target.<br>
+functionality PS4 target (each target will need a different *.prx
+file compatible with its specifications).<br>
 <br></li>
 </ul>
 
@@ -300,12 +311,34 @@ editor.</p>
 does not matter - and under that you define the arguments that the
 function will take.</p>
 
+<p>Finally, you add the arguments (if any) that the function can
+take. Arguments can be either <b>doubles</b> or <b>strings</b>, and
+you can add them by clicking the add button <img style=
+"vertical-align:middle" src="images/icon_addargument.png"> and
+remove them by clicking the remove button <img style=
+"vertical-align:middle" src="images/icon_removeargument.png">. Note
+that if you are creating a Windows <tt>dll</tt> file and it has
+more than four arguments, <i>all arguments must be of the same
+type</i>.</p>
+
 <p>Once you have done all that then function is ready to be used in
 a project and it will show up in auto complete and be colour coded
-too.</p>
+too. Defined functions can also be set as <b>Init Functions</b> or
+<b>Final Functions</b>, meaning that they will be called
+automatically when the game starts (Init) and when the game ends
+(Final).</p>
 
-<p>The other option you have is to create a <b>Macro</b>. A macro
-can be a <b>constant</b> value or a single code snippet (for more
+<div class="note"><b>IMPORTANT!</b> All platforms support the Init
+function call, but <b>not all platforms will perform the Final
+function call</b>. This is because certain platforms will simply
+close the app without giving any notice or time for this function
+to be called. The platforms that are affected by this are:
+<b>iOS</b>, <b>Android</b>, <b>HTML5</b>, <b>PlayStation</b> and
+<b>XboxOne</b>.</div>
+
+<p><br>
+The other option you have is to create a <b>Macro</b>. A macro can
+be a <b>constant</b> value or a single code snippet (for more
 information on macros, please see <a href=
 "../../3_scripting/3_gml_overview/6_scope.html">here</a>). For
 example, we could remove the defined function from our example GML
@@ -390,24 +423,10 @@ below:</p>
 <td><i>&lt;Name&gt;</i>.js</td>
 </tr>
 
-<tr>
-<td>PS3</td>
-<td><i>&lt;Name&gt;</i>.prx, lib<i>&lt;Name&gt;</i>.prx,
-<i>&lt;Name&gt;</i>_ps3.prx, lib<i>&lt;Name&gt;</i>_ps3.prx</td>
-</tr>
-
 <tr class="alt">
 <td>PS4</td>
 <td><i>&lt;Name&gt;</i>.prx, lib<i>&lt;Name&gt;</i>.prx,
 <i>&lt;Name&gt;</i>_ps4.prx, lib<i>&lt;Name&gt;</i>_ps4.prx</td>
-</tr>
-
-<tr>
-<td>PS Vita</td>
-<td><i>&lt;Name&gt;</i>.suprx, lib<i>&lt;Name&gt;</i>.suprx,
-<i>&lt;Name&gt;</i>_vita.suprx, lib<i>&lt;Name&gt;</i>_vita.suprx,
-<i>&lt;Name&gt;</i>_psvita.suprx,
-lib<i>&lt;Name&gt;</i>_psvita.suprx</td>
 </tr>
 
 <tr class="alt">
@@ -647,7 +666,7 @@ Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

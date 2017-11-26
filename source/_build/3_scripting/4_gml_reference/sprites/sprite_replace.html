@@ -60,7 +60,7 @@ smooth, xorig, yorig);</p>
 <tr>
 <td>imgnumb</td>
 <td>The number of frames the sprite will be cut up into
-horizontally. 1=one single image.</td>
+horizontally. 1 = one single image / <tt>*.gif</tt>.</td>
 </tr>
 
 <tr class="alt">
@@ -104,12 +104,22 @@ left corner.</td>
 <p>This function works in almost the exact same manner as <a href=
 "sprite_add.html"><tt>sprite_add</tt></a>, only instead of
 returning the index of the sprite you are importing, it overwrites
-a previously created sprite index. You must use a sprite index that
-has been created and stored in a variable using other functions
-like <a href="sprite_add.html"><tt>sprite_add</tt></a> or <a href=
+a previously created sprite index. When using this function you
+should use a sprite index that has been created and stored in a
+variable using other functions like <a href=
+"sprite_add.html"><tt>sprite_add</tt></a> or <a href=
 "sprite_create_from_surface.html"><tt>sprite_create_from_surface</tt></a>,
-and <i>not</i> one from the resource tree as you cannot replace
-built-in assets.</p>
+or even <a href=
+"sprite_duplicate.html"><tt>sprite_duplicate</tt></a>, rather than
+a resource tree sprite asset. You <i>can</i> replace a sprite from
+the game assets using this function, but doing so means that you
+will lose the reference ID for the sprite that you are replacing,
+regardless of whether you call <tt>game_restart()</tt> or not, and
+so is not recommended. Regardless of the sprite being replaced,
+this function will <b>create a new texture page for the sprite</b>
+and so care should be taken when using it as it may adversely
+affect performance by increasing the number of required texture
+swaps for rendering.</p>
 
 <p>The image file to be loaded should <b>always</b> be in
 <tt>*.png</tt> format and all images that are to be turned into
@@ -151,11 +161,17 @@ that is chosen you are limited as to where you can save and load
 files from. See <a href="../file%20handling/index.html">File
 Handling</a> for more information.</div>
 
+<p><br>
+</p>
+
 <div class="note"><b>NOTE:</b> You should be aware that if you are
 using this function in your HTML5 target game to load resources
 from an external server, then, due to XSS protection in browsers,
 attempts to load resources from across domains can be blocked and
 may appear to return blank results.</div>
+
+<p><br>
+</p>
 
 <div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
 available with the Trial Licence of the product.</div>
@@ -189,7 +205,7 @@ false, false, 0, 0);</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -32,38 +32,12 @@ if (window.name != "content")
 <h2>show_debug_overlay</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">show_debug_overlay(enable);</p>
-
 <p><br>
 </p>
 
-<div class="param">
-<table>
-<tr>
-<th>Argument</th>
-<th>Description</th>
-</tr>
+<h3>Description</h3>
 
-<tr>
-<td>enable</td>
-<td>switch on (<tt>true</tt>) or off (<tt>false</tt>) the debug
-overlay.</td>
-</tr>
-</table>
-</div>
-
-<p><br>
-</p>
-
-<p><b>Returns:</b> N/A</p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Description</h3>
-
+<blockquote>
 <p>This function can be used to switch on and off the standard
 debug overlay when testing your game and is disabled by default.
 The debug overlay shows a graphic CPU/GPU usage bar in the actual
@@ -71,16 +45,14 @@ game window itself along with the current real fps value, number of
 texture swaps and the number of vertex batches (note that texture
 swaps and vertex batches will never be zero and will normally show
 values of 2 or 3, since even with an empty room an no objects
-<i>GameMaker Studio 2</i> still has to draw and batch things).<br>
-<br>
+<i>GameMaker Studio 2</i> still has to draw and batch things).
 <img class="center" src=
-"../../../1_overview/2_quick_start/images/qs_debug_bar.png"><br>
-<br>
-This bar is split into sections, with each section being 1/60th of
-a second. As you can see from the image above, the bar is made up
-of various colours:</p>
+"../../../1_overview/2_quick_start/images/qs_debug_bar.png"></p>
 
-<blockquote>
+<p>This bar is split into sections, with each section being 1/60th
+of a second. As you can see from the image above, the bar is made
+up of various colours:</p>
+
 <ul>
 <li><b>Green</b> - Input / Output processing (ie: keyboard, mouse,
 gamepad, networking etc...)</li>
@@ -104,19 +76,47 @@ step</li>
 <li><b>Dark Red</b> - The GPU flush, which is how long the GPU
 takes to clear images from memory</li>
 </ul>
-</blockquote>
 
 <p>Using this function you can add the overlay whether in debug
 mode or not, and in this way, you can see how efficiently your game
 runs and get a visual cue as to how it is using the available
 resources, without the over-head of having the debugger running
-alongside.<br>
-<br></p>
+alongside.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio"><b>Example:</b>
+<h3>Syntax:</h3>
+
+<p class="code">show_debug_overlay(enable);</p>
+
+<div class="param">
+<table>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>enable</td>
+<td>switch on (<tt>true</tt>) or off (<tt>false</tt>) the debug
+overlay.</td>
+</tr>
+</table>
+</div>
+
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
+
+<p><br>
+</p>
+
+<h3><b>Example:</b>
 </h3>
 
 <p class="code">if global.debug<br>
@@ -128,8 +128,10 @@ else<br>
 &nbsp;&nbsp;&nbsp;show_debug_overlay(false);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will toggle the debug on or off depending on the
 value of a global variable.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -146,7 +148,7 @@ value of a global variable.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

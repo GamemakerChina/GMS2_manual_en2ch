@@ -148,8 +148,8 @@ fix = physics_fixture_create();<br>
 physics_fixture_set_box_shape(fix, 64, 32);<br>
 for (i = 0; i &lt; 5; i++;)<br>
 &nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;o_id = instance_create(x + (128 * i), y,
-obj_BridgePart);<br>
+&nbsp;&nbsp;&nbsp;o_id = instance_create_layer(x + (128 * i), y,
+"Instances", obj_BridgePart);<br>
 &nbsp;&nbsp;&nbsp;physics_fixture_bind(fix, o_id);<br>
 &nbsp;&nbsp;&nbsp;if i &gt; 0 &amp;&amp; i &lt; 4<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -175,7 +175,7 @@ fixture is deleted from memory.</p>
 "physics_joint_friction_create.html">physics_joint_friction_create</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

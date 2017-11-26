@@ -73,35 +73,19 @@ used when you have a single instance of the object in the room, or
 
 <p>You can also access a single instance of an object when there
 are multiple instances within the room using the unique <b>instance
-id</b> to tell <i>GameMaker Studio 2</i> exactly which instance we
-wish to address. The <b>instance id</b> is the unique identifying
-value that is given to each and every instance created in your
-game. When you put instances in a room in the room editor, this
-instance id is shown in the instance properties window (shown when
-you double-click on an instance in the editor), but even if you
-create an instance through code it still has its unique id number,
-which is returned by the function used to create the instance.
-These numbers are always larger than or equal to 100000, and such a
-number can also be used as the left-hand side of the point.</p>
+name</b> to tell <i>GameMaker Studio 2</i> exactly which instance
+we wish to address. The <b>instance name constant</b> is the unique
+identifying constant that is given to each and every instance added
+to a room in your game. When you put instances in a room in the
+room editor, this instance name is shown in the instance properties
+window (shown when you double-click on an instance in the editor),
+and can be used as the left-hand side of the point:</p>
 
-<blockquote><i><b>Note:</b> The dot will get interpreted as the
-decimal point in a real number normally, so, to avoid this, put
-brackets around it!</i>
-</blockquote>
+<p class="code">inst_4DB70D2.speed = 0;<br></p>
 
-<p>The following code is an example of how this should be
-written:</p>
-
-<p class="code">(100012).speed = 0;<br></p>
-
-<p>Note that you cannot use the special <a href=
-"5_keywords.html">keyword</a> "<tt>all</tt>" with this method to
-target all instances, but you can use the keywords "<tt>other</tt>"
-and "<tt>self</tt>" without issues. You can also use variables, as
-long as the variable in question has stored a valid <b>instance
-id</b>. The following examples illustrate this...</p>
-
-<p>Using a variable to set an instance value:</p>
+<p>You can also use <i>variables</i> on the left of the point,
+<i>as long as the variable in question has stored a valid
+<b>instance id</b></i>. The following examples illustrate this.</p>
 
 <p class="code">// Example 1 var inst = instance_position(mouse_x,
 mouse_y, all);<br>
@@ -111,13 +95,17 @@ if instance_exists(inst)<br>
 &nbsp;&nbsp;&nbsp;}<br>
 <br>
 // Example 2<br>
-var new_inst = instance_create(random(room_width),
-random(room_height), obj_E_Parent);<br>
+var new_inst = instance_create_layer(random(room_width),
+random(room_height), "Enemies", obj_E_Parent);<br>
 new_inst.direction = point_direction(new_inst.x, new_inst.y, x,
 y);<br>
 new_inst.target = id;<br></p>
 
-<p>Using <tt>other</tt> in a collision event:</p>
+<p>Note that you cannot use the special <a href=
+"5_keywords.html">keyword</a> "<tt>all</tt>" with this method to
+target all instances, but you <i>can</i> use the keywords
+"<tt>other</tt>" and "<tt>self</tt>" without issues. For example,
+using <tt>other</tt> in a collision event:</p>
 
 <p class="code">// Example 3 other.hp -= 10;<br>
 if other.hp &lt;= 0<br>
@@ -164,7 +152,7 @@ Overview</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

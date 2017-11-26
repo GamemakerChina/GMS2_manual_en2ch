@@ -42,15 +42,18 @@ System</h2>
 
 <blockquote>
 <p>This action will initialise the particle system ready for you to
-create and use particle types and emitters with it. You can set the
-<i>render depth</i> of the system, much the same as you can set the
-depth of different layers within a room, where a low draw depth
-means that it will appear on top of all things drawn with a higher
-depth (so a depth for the system of, for example, -1000 would draw
-<i>over</i> all layers with a depth <i>greater</i> than that), and
-a high draw depth placing it below everything with a lower draw
-depth (a depth for the system of 1000 would draw <i>under</i> all
-layers with a depth <i>less</i> than than that).</p>
+create and use particle types and emitters with it. You give the
+layer name as a string - for example "Particle Layer" (which must
+exist in the room editor) - and then flag the system as being
+<b>Persistent</b> or not. If the system is flagged as Persistent
+then it will be persisted across all rooms after it has been
+created, and it will be assigned a managed layer if the initial
+layer does not exist in subsequent rooms. If persistence is
+<i>not</i> flagged, then the system will be automatically destroyed
+at the end of the room it was created in as will any emitters
+associated with the system. If you wish to manually remove the
+system from memory, you need to use the action <a href=
+"destroy_particle_system.html">Destroy Particle System</a>.</p>
 
 <p>You also need to supply a target variable that will hold the
 unique particle system ID value. This ID value is what will be used
@@ -65,17 +68,18 @@ need to be stored in a temporary local variable, but for certain
 things, like drawing particles to a surface, it may be
 required).</p>
 
-<div class="note"><b>NOTE</b>: A particle system, once created,
-remains resident in the system memory for the duration of the game,
-and so if you need to recreate it at any point (for example, if you
-call the <a href="../game_actions/restart_game.html">Restart
-Game</a> action), then you <b>must destroy the current system</b>
-otherwise you get a memory leak. A memory leak happens when a
-resource is added to memory and then "de-referenced", meaning that
-<i>GameMaker Studio 2</i> has no way to interact with that resource
-any more. This leads to the memory being clogged by inaccessible
-resources which in turn can cause issues with your game. To destroy
-a particle system when no longer required use the action <a href=
+<div class="note"><b>NOTE</b>: A persistent particle system, once
+created, remains resident in the system memory for the duration of
+the game, and so if you need to recreate it at any point (for
+example, if you call the <a href=
+"../game_actions/restart_game.html">Restart Game</a> action), then
+you <b>must destroy the current system first</b> otherwise you get
+a memory leak. A memory leak happens when a resource is added to
+memory and then "de-referenced", meaning that <i>GameMaker Studio
+2</i> has no way to interact with that resource any more. This
+leads to the memory being clogged by inaccessible resources which
+in turn can cause issues with your game. To destroy a persistent
+particle system when no longer required use the action <a href=
 "destroy_particle_system.html">Destroy Particle System</a>.</div>
 </blockquote>
 
@@ -137,7 +141,7 @@ Actions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

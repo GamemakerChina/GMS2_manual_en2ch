@@ -38,19 +38,37 @@ if (window.name != "content")
 
 <h3>Description</h3>
 
-<blockquote>Using this function you can retrieve the tile data from
-a cell of the tilemap element. You give the tilemap element ID
-(which you get when you create a tilemap element using <a href=
+<blockquote>
+<p>Using this function you can retrieve the tile data from a cell
+of the tilemap element. You give the tilemap element ID (which you
+get when you create a tilemap element using <a href=
 "layer_tilemap_create.html"><tt>layer_tilemap_create()</tt></a> or
 when you use the function <a href=
 "layer_tilemap_get_id.html"><tt>layer_tilemap_get_id()</tt></a>),
-and the function will return the tile data "blob". This data is
-essentially a bit mask that contains the tile index, the
-flip/rotate/mirror booleans and any mask data that has been applied
-(see <a href="tilemap_set_mask.html"><tt>tilemap_set_mask</tt></a>
-for details), and the resulting data value can then be used in the
-<a href="index.html#tiles">Tile Functions</a> to change a tiles
-properties.</blockquote>
+as well as the <i>cell</i> x and y position and the function will
+return the tile data "blob". This data is essentially a bit mask
+that contains the tile index, the flip/rotate/mirror booleans and
+any mask data that has been applied (see <a href=
+"tilemap_set_mask.html"><tt>tilemap_set_mask</tt></a> for details),
+and the resulting data value can then be used in the <a href=
+"index.html#tiles">Tile Functions</a> to change a tiles properties.
+Note that we are using x/y cell positions based on the size of the
+tilemap grid and <i>not</i> as a position in the room, so "cell_x"
+is a value from 0 to <a href="tilemap_get_width.html">tilemap
+width</a>, and "cell_y" is a value from 0 to <a href=
+"tilemap_get_height.html">tilemap height</a>. If you need to get
+the data for a tile at a specific room position then you need to
+use the function <a href=
+"tilemap_get_at_pixel.html"><tt>tilemap_get_at_pixel()</tt></a>.</p>
+
+<div class="note"><b>IMPORTANT!</b> If the tiles in the tilemap
+have been unchanged (ie: they are not rotated or flipped etc...),
+then the return value of the tileset data will be exactly equal to
+the index of the tile on the tileset. So you can create "collision
+maps" of tiles using one tile at index 1 in the tileset - for
+example - then use this function to check for 1 or 0 (an empty
+tile) to calculate collisions.</div>
+</blockquote>
 
 <p><br>
 </p>
@@ -128,7 +146,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

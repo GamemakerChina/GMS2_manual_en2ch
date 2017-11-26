@@ -70,9 +70,32 @@ with the details and options for all the available targets which
 you can select to use instead. Each section of this window is
 explained below:</p>
 
-<blockquote><a name="compile_platform" id="compile_platform"></a>
-<label class="collapse" for="one">Platform</label> <input id="one"
+<blockquote><a name="compile_remote" id="compile_remote"></a>
+<label class="collapse" for="five">Worker</label> <input id="five"
 type="checkbox">
+<div class="index_list">
+<p>The first column of the Target Manager is dedicated to the
+<b>Remote Workers</b> that you have available. To begin with, you
+will only have a single "Local" machine listed here, which is the
+machine that <i>GameMaker Studio 2</i> is installed on, but you can
+also configure a Remote Worker to use. When a Remote Worker has
+been configured, you will then be able to select it from the list
+here, and have <i>it</i> build your projects rather than use the
+host machine where <i>GameMaker Studio 2</i> is installed.</p>
+
+<p>For more information on how to set up and use Remote Workers,
+please see the section below:</p>
+
+<ul>
+<li><a href="../../2_interface/2_extras/remote_worker.html">Remote
+Workers</a>
+</li>
+</ul>
+</div>
+<br>
+<a name="compile_platform" id="compile_platform"></a> <label class=
+"collapse" for="one">Platform</label> <input id="one" type=
+"checkbox">
 <div class="index_list">
 <p>This section lists all the available target platforms. The
 contents of this list will vary depending on the licence that you
@@ -142,7 +165,7 @@ the <b>Device Editor</b>: <img class="center" src=
 2</i> test for a connection to any device(s) that may be connected.
 The exact contents of this window will depend on the platform
 specifics (see the section on the <a href=
-"../../2_interface/2_tools/device_manager.html">Device Manager</a>
+"../../2_interface/2_extras/device_manager.html">Device Manager</a>
 for exact details for any given platform). Once a device has been
 found or added, it will then be shown in this window, like in this
 example image for Android: <img class="center" src=
@@ -158,12 +181,14 @@ target="_blank">GameMaker Studio 2 Knowledge Base</a>.</p>
 <a name="compile_config" id="compile_config"></a> <label class=
 "collapse" for="four">Config</label> <input id="four" type=
 "checkbox">
-<div class="index_list">As explained in the section on <a href=
+<div class="index_list">
+<p>As explained in the section on <a href=
 "../../2_interface/3_settings/configurations.html">Configurations</a>,
 you can store certain details for compiling your game as
 <b>Configs</b>. This section of the Targets window permits you to
 have <i>GameMaker Studio 2</i> automatically select a specific
-configuration for a specific target platform.</div></blockquote>
+configuration for a specific target platform.</p>
+</div></blockquote>
 
 <p><br>
 </p>
@@ -196,7 +221,8 @@ Cache</b> (using the "broom" icon <img style=
 of the IDE) to ensure that all cached files are recreated and no
 stale files corrupt your final game.</div>
 
-<p>Each target option saves to a platform specific format, listed
+<p><br>
+Each target option saves to a platform specific format, listed
 below:</p>
 
 <ul>
@@ -275,11 +301,18 @@ of package you would like to create (can be either for ARM, x64 or
 x86 architectures), and you should choose that which targets the
 devices your game will be supported on: <img class="center" src=
 "images/qs_uwp_compile_options.png" alt="UWP Compile Options"> If
-you check the box marked Remember Packaging Option then GameMaker
-Studio 2 will remember the choice for all future compiles (this can
-be reset or changed from the <a href=
+you check the box marked <b>Package For Store Upload</b>, then the
+final package created will be an <tt>.appxupload</tt> file, which
+is what Microsoft specifies should be used for submitting apps to
+their store, as explained in this article <a href=
+"https://docs.microsoft.com/en-us/windows/uwp/publish/upload-app-packages"
+target="_blank">here</a>. Also note that you can set the default
+Packaging Option from the <a href=
 "../../2_interface/3_settings/preferences.html">UWP
-Preferences</a>). You can find out more from the <a href=
+Preferences</a>) so that <i>GameMaker Studio 2</i> remembers the
+choice for all future compiles (meaning this options window will
+not be shown). You can find out more about setting up and compiling
+to UWP platform from the <a href=
 "http://help.yoyogames.com/hc/en-us/sections/115000309028" target=
 "_blank">YoYo Games Help Center</a>.</li>
 </ul>
@@ -316,7 +349,7 @@ Index</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

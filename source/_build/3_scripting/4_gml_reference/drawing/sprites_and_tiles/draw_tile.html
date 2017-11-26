@@ -34,18 +34,19 @@ if (window.name != "content")
 
 <h3>Description</h3>
 
-<blockquote>With this function you can draw any given tile from a
-tile set - compete with rotations, flips and mirrors - setting the
-frame (if animated) and the position within the room. The tile set
-ID value is the tile set index as set in the IDE and the tile data
-is the data "blob" that contains all the information about the tile
-index and the transformations that have been applied. You can use
-the function <a href=
+<blockquote>
+<p>With this function you can draw any given tile from a tile set -
+compete with rotations, flips and mirrors - setting the frame (if
+animated) and the position within the room. The tile set ID value
+is the tile set index as set in the IDE and the tile data is the
+data "blob" that contains all the information about the tile index
+and the transformations that have been applied. You can use the
+function <a href=
 "../../rooms/tilemaps/tilemap_get.html"><tt>tilemap_get</tt></a> to
 get the tile data which can then be manipulated using the <a href=
 "../../rooms/tilemaps/index.html#tiles">Tile Functions</a>, or you
 can construct it yourself using the following tile constants along
-with the index value of the tile to create:
+with the index value of the tile to create:</p>
 
 <div class="compat">
 <table>
@@ -76,14 +77,14 @@ blob to extract the tile index.</td>
 </tr>
 </table>
 </div>
-<br>
-<br>
+
+<p><br>
 You would bitwise "or" these constants with the tile index value to
-get the final tiledata:<br>
-<br>
+get the final tiledata:</p>
 
 <p class="code">var tiledata = 8 | tile_rotate | tile_flip;</p>
-<br>
+
+<p><br>
 The above code simply creates a local variable to store the
 tiledata for the tile with the index of 8 on the tile set, and it
 is rotated and flipped. This can then be used to draw the tile at
@@ -96,7 +97,8 @@ set the frame number here (from 0 to the number of frames - 1) and
 the indexed tile will simply be the indicator for which animated
 tile set you are using while it will be the given frame that is
 drawn. If the tile is not part of an animated set then frame should
-be set to 0.</blockquote>
+be set to 0.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -129,8 +131,8 @@ be set to 0.</blockquote>
 
 <tr>
 <td>frame</td>
-<td>
-</td>
+<td>The frame number for the animated tile to use (default 0 for
+non-animated tiles)</td>
 </tr>
 
 <tr class="alt">
@@ -158,14 +160,16 @@ be set to 0.</blockquote>
 <h3>Example:</h3>
 
 <p class="code">var lay_id = layer_get_id("Tiles_sky");<br>
-var map_id = layer_tilemap_get_id(lay_id, "Clouds");<br>
+var map_id = layer_tilemap_get_id(lay_id);<br>
 var data = tilemap_get(map_id, 0, 0);<br>
 tile_set_flip(data, true);<br>
-draw_tile(set_Wall, data, x, y);<br></p>
+draw_tile(set_Wall, data, 0, x, y);<br></p>
 
-<blockquote>The above code will get the data on a tile from the
-given tilemap, then set the "flip" flag and use this data to draw
-the tile flipped at the instance position.</blockquote>
+<blockquote>
+<p>The above code will get the data on a tile from the given
+tilemap, then set the "flip" flag and use this data to draw the
+tile flipped at the instance position.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -175,10 +179,10 @@ the tile flipped at the instance position.</blockquote>
 And Tiles</a></div>
 
 <div style="float:right">next: <a href=
-"draw_tilemap.html">draw_tilemap</a></div>
+"draw_tile_ext.html">draw_tile_ext</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

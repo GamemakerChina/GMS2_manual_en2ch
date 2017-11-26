@@ -69,11 +69,22 @@ functions.</h2>
 This value can be set from 0 to 1 with 0 being fully transparent
 and 1 being fully opaque (the default value), and will affect all
 further drawing, including backgrounds, sprites, fonts, primitives
-and 3D. If any of those assets are drawn with their own alpha value
-changed, this will be added to the base alpha value set by this
-function, so a base alpha of 0.5 and a sprite being drawn with an
-alpha of 0.5 will actually draw the sprite with an alpha of
-0.25.<br>
+and 3D.</p>
+
+<p>Note that if you are drawing any of the assets and supplying an
+alpha argument as part of the function (for example, when using
+<tt>draw_sprite_ext()</tt>), then the alpha value set here will be
+overridden, so drawing a sprite using <tt>draw_sprite_ext</tt> with
+an alpha argument of 1 will draw the sprite fully opaque regardless
+of the alpha set with <tt>draw_set_alpha</tt> (this will work the
+same when using <tt>draw_self()</tt> and setting the
+<tt>image_alpha</tt> of the instance). Also note that when an
+instance is <i>default</i> drawing (ie: it has a sprite but no Draw
+Event), then the <tt>image_alpha</tt> variable will be clamped to
+the alpha set with <tt>draw_set_alpha()</tt>, such that an
+<tt>image_alpha</tt> of 1 and a draw alpha of 0.5 will draw the
+sprite at alpha 0.5, while an <tt>image_alpha</tt> of 0.25 and a
+draw alpha of 0.5 will draw the sprite at 0.25 alpha.<br>
 <br></p>
 
 <p><br>
@@ -102,7 +113,7 @@ blending</a></div>
 "draw_set_colour.html">draw_set_colour</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

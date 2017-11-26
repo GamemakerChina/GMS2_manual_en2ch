@@ -50,7 +50,11 @@ and then the actual emitter ID (as returned by the action <a href=
 action should be called whenever you no longer need a particle
 emitter in your game, or whenever you wish to re-create the
 particle emitter (for example, just before calling a <a href=
-"../game_actions/restart_game.html">Game Restart</a>).</p>
+"../game_actions/restart_game.html">Game Restart</a>). Note that if
+the particle system the emitter has been assigned to has <i>not</i>
+been flagged as <b>Persistent</b> then you do <i>not need to call
+this action</i>, as the emitter will be automatically cleaned up on
+room end along with the particle system.</p>
 </blockquote>
 
 <p><br>
@@ -110,7 +114,7 @@ Particles</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

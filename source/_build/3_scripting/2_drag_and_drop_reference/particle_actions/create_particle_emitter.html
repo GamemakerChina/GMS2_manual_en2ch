@@ -58,18 +58,25 @@ need to be stored in a temporary local variable, but for certain
 things, like drawing particles to a surface, it may be
 required).</p>
 
-<div class="note"><b>NOTE</b>: A particle emitter, once created,
-remains resident in the system memory for the duration of the game,
-and so if you need to recreate it at any point (for example, if you
-call the <a href="../game_actions/restart_game.html">Restart
-Game</a> action), then you <b>must destroy the current particle
-emitter</b> otherwise you get a memory leak. This happens when a
-resource is added to memory and then "de-referenced", meaning that
-<i>GameMaker Studio 2</i> has no way to interact with that resource
-any more. This leads to the memory being clogged by inaccessible
-resources which in turn can cause issues with your game. To destroy
-a particle emitter when no longer required use the action <a href=
-"destroy_particle_emitter.html">Destroy Particle Emitter</a>.</div>
+<div class="note"><b>IMPORTANT!</b> If your particle system is
+<b>persistent</b> then you must either destroy all emitters at the
+end of each room using <a href=
+"destroy_particle_emitter.html">Destroy Particle Emitter</a> and
+re-create them again in the next room as required, or store their
+ID values in <b>global</b> variables so that they can be accessed
+anytime in any room, or have them created by a persistent object,
+so that the object will persist and be able to access them through
+instance variables. Also note that if you call the <a href=
+"../game_actions/restart_game.html">Restart Game</a> action you
+should destroy the particle system beforehand so that the system
+and the emitters assigned are removed from memory before starting
+again. Failure to properly remove emitters from system memory as
+outlined above will lead to a <b>memory leak</b>. This happens when
+a resource is added to memory and then "de-referenced", meaning
+that <i>GameMaker Studio 2</i> has no way to interact with that
+resource any more. This leads to the memory being clogged by
+inaccessible resources which in turn can cause issues with your
+game.</div>
 </blockquote>
 
 <p><br>
@@ -129,7 +136,7 @@ Actions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

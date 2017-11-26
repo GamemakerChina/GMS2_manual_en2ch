@@ -29,72 +29,15 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">audio_create_buffer_sound</h1>
+<h2>audio_create_buffer_sound</h2>
 
-<h2 class="studio">Create a new sound from the contents of a
-buffer.</h2>
-
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">audio_create_buffer_sound(bufferId, bufferFormat,
-bufferRate, bufferOffset, bufferLength, bufferChannels);</p>
-
+<div class="body-scroll">
 <p><br>
 </p>
 
-<div>
-<table>
-<tr>
-<th>Argument</th>
-<th>Description</th>
-</tr>
+<h3>Description</h3>
 
-<tr>
-<td>bufferId</td>
-<td>The ID of the buffer to use.</td>
-</tr>
-
-<tr class="alt">
-<td>bufferFormat</td>
-<td>The format of the data in the buffer (<tt>buffer_u8</tt> or
-<tt>buffer_s16</tt>).</td>
-</tr>
-
-<tr>
-<td>bufferRate</td>
-<td>The sample rate of the data in the buffer.</td>
-</tr>
-
-<tr class="alt">
-<td>bufferOffset</td>
-<td>The offset into the buffer to read the sample data from (in
-bytes).</td>
-</tr>
-
-<tr>
-<td>bufferLength</td>
-<td>The length of the buffer (the number of the samples in the
-buffer).</td>
-</tr>
-
-<tr class="alt">
-<td>bufferChannels</td>
-<td>The channels to use from one of the constants listed
-below.</td>
-</tr>
-</table>
-</div>
-
-<p><br>
-</p>
-
-<p><b>Returns:</b> Index</p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Description</h3>
-
+<blockquote>
 <p>With this function you can create a new sound from the contents
 of a buffer. The buffer will have been created previously (see the
 <a href="../buffers/index.html">buffer functions</a> for details on
@@ -149,13 +92,73 @@ manipulate it in any other way afterwards.</p>
 
 <div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
 available with the Trial Licence of the product.</div>
-<br>
-<br>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Syntax:</h3>
+
+<p class="code">audio_create_buffer_sound(bufferId, bufferFormat,
+bufferRate, bufferOffset, bufferLength, bufferChannels);</p>
+
+<p><br>
+</p>
+
+<div>
+<table>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>bufferId</td>
+<td>The ID of the buffer to use.</td>
+</tr>
+
+<tr class="alt">
+<td>bufferFormat</td>
+<td>The format of the data in the buffer (<tt>buffer_u8</tt> or
+<tt>buffer_s16</tt>).</td>
+</tr>
+
+<tr>
+<td>bufferRate</td>
+<td>The sample rate of the data in the buffer.</td>
+</tr>
+
+<tr class="alt">
+<td>bufferOffset</td>
+<td>The offset into the buffer to read the sample data from (in
+bytes).</td>
+</tr>
+
+<tr>
+<td>bufferLength</td>
+<td>The length of the buffer (the number of the samples in the
+buffer).</td>
+</tr>
+
+<tr class="alt">
+<td>bufferChannels</td>
+<td>The channels to use from one of the constants listed
+below.</td>
+</tr>
+</table>
+</div>
+
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">Index</p>
+
+<p><br>
+</p>
+
+<h3>Example:</h3>
 
 <p class="code">rate = 44100;<br>
 hertz = irandom_range(220, 880);<br>
@@ -182,7 +185,10 @@ in the variable "soundID".</p>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="audio%20buffers.html">Audio
 Buffers</a></div>
@@ -190,11 +196,13 @@ Buffers</a></div>
 <div style="float:right">Next: <a href=
 "audio_free_buffer_sound.html">audio_free_buffer_sound</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

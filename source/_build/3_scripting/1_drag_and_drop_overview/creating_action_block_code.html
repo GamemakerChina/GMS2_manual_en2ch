@@ -220,16 +220,72 @@ alt="Temp Variable Expansion"></p>
 <p>When you click the icon, the action will expand and permit you
 to declare more variables, making it easier and faster to define
 multiple variables at the same time. <img class="center" src=
-"images/acrtion_expansion_example.png" alt=
+"images/action_expansion_example.png" alt=
 "Temp Variable Expansion Example"></p>
 
 <p>The icon can also be used for those actions that require
 optional arguments, like the <a href=
-"../2_drag_and_drop_reference/mathematics_actions/choose.html">Choose</a>
+"../2_drag_and_drop_reference/random_actions/choose.html">Choose</a>
 action, which permits you to add various different values to be
 returned: <img class="center" src=
-"../2_drag_and_drop_reference/mathematics_actions/images/e_mathematics_choose.png"
+"../2_drag_and_drop_reference/random_actions/images/e_mathematics_choose.png"
 alt="Choose Expansion Example"></p>
+</div>
+<br>
+<label class="collapse" for="e">RMB Menu</label> <input id="e"
+type="checkbox">
+<div class="index_list">
+<p>When working on your DnD™ code, you can click the right mouse
+button <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> on the action (or on the text in the
+shortlist on the left) to open up the following menu: <img class=
+"center" src="images/dnd_rmb_menu.png" alt="DnD™ RMB Menu"></p>
+
+<p>This menu has the following options:</p>
+
+<ul>
+<li><b>Cut / Copy / Paste</b>: This will permit you cut, copy or
+paste any action that is selected. Note that you can use
+<img style="vertical-align:middle" src=
+"../../images/icon_shift.png"> + <img style="vertical-align:middle"
+src="../../images/icon_lmb.png"> outside of the actions and drag,
+or use <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> on
+individual actions, to select more than one and apply the command
+to all of them.<br>
+<br></li>
+
+<li><b>Disable</b>: This command will disable the action (or
+actions) selected. When an action is disabled, it is still visible
+in the workspace but it <i>will not run</i> when you compile the
+game. In this way you can add/remove actions for testing and
+debugging. The image below shows some DnD™ code with actions
+disabled: <img class="center" src="images/dnd_disable_actions.png"
+alt="DnD™ Disable Actions"> You can see that the actions "<tt>If
+Score</tt>" and "<tt>Go To Next Room</tt>" have been disabled and
+so they will be skipped when the game is tested or compiled.<br>
+<br></li>
+
+<li><b>Toggle Breakpoint</b>: This command will toggle a
+<b>breakpoint</b> on or off for the selected action. A breakpoint
+is simply a point in the DnD™ code where the debugger should stop
+when the game is being run in <a href=
+"../../2_interface/2_extras/debugging.html">Debug Mode</a>. An
+action with a breakpoint assigned to it will be highlighted, as
+shown in the image below (the "<tt>If Health</tt>" action has been
+set as a breakpoint): <img class="center" src=
+"images/dnd_togglebreakpoint.png" alt="DnD™ Breakpoint"></li>
+
+<li><b>Pan</b>: Selecting this will pan and zoom the workspace to
+focus on the selected action.<br>
+<br></li>
+
+<li><b>Show Help...</b>: This option will open the manual on the
+page associated with the DnD™ action that is currently selected so
+you can check how it works.</li>
+</ul>
 </div></blockquote>
 
 <p><br>
@@ -248,7 +304,7 @@ Instances</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -128,6 +128,19 @@ prompted to download and install the MOGA extension from the
 Marketplace. This option is off by default.<br>
 <br></li>
 
+<li><b>Run Lint Code Analysis</b>: When this option is flagged, the
+build tools will run a lint code analysis on the project as it
+builds, giving a more in-depth error check and showing more
+information in the output window as the project compiles (a LOG
+file will be created too, with the path to the file shown at the
+end of compiling in the Output Window). Note that not everything
+flagged by lint analysis as an error is necessarily problematic for
+your game, and having this enabled may mean that your game no
+longer compiles, even though when it is off, it will compile and
+run fine. Essentially this is only for debugging, and the option is
+off by default.<br>
+<br></li>
+
 <li><b>Install Location</b>: Here you can set the default Install
 Location for your game. This can either be set to <i>Automatic</i>,
 in which case the game will be installed to the location chosen by
@@ -146,10 +159,10 @@ to take longer which causes stuttering. To get around this we can
 sleep for less time, then sit in a tight loop for the remainder of
 the time to make it more accurate - although the problem with
 sitting in a loop is that it causes CPU usage to increase, which in
-turn can cause your CPU temperatures to rise and your fan to run
-faster. By default, this value is set to 4, and in 99.99% of the
-cases you'll be fine with this, but for low end machines or for
-machines with a lot of background processes running this may not be
+turn can cause your CPU temperatures to rise and your device to use
+more battery. By default, this value is set to 4, and in 99.99% of
+the cases you'll be fine with this, but for low end devices or for
+devices with a lot of background processes running this may not be
 an ideal solution and a value of 5 up to 10 may be required. Note
 though that this is very much a device specific configuration and
 what works on your build device may not be appropriate for another
@@ -181,7 +194,7 @@ shared memory on Android devices).<br>
 <br></li>
 
 <li><b>Device Support</b> This option will set whether to support
-only devices that have a dedicate GPU, or all devices. Basically,
+only devices that have a dedicated GPU, or all devices. Basically,
 if your game has any advanced drawing functions like alpha
 blending, additive blending, surfaces, etc... you should limit it
 to those devices that have a GPU otherwise you run the risk of
@@ -223,7 +236,7 @@ All icon images should be created as 24bit PNG files of the
 appropriate sizes given.</p>
 
 <p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../2_tools/project_image_generator.html">Project Image
+"../../2_extras/project_image_generator.html">Project Image
 Generator</a> tool which can be used to automatically create all
 the icons required for all the different target platforms your game
 is being compiled to. If you use this tool, you should revise the
@@ -247,7 +260,7 @@ specific time then you can also set it here from 0 to 10 seconds
 duration of the asset loading).</p>
 
 <p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../2_tools/project_image_generator.html">Project Image
+"../../2_extras/project_image_generator.html">Project Image
 Generator</a> tool which can be used to automatically create all
 the images required for all the different target platforms your
 game is being compiled to. If you use this tool, you should revise
@@ -410,7 +423,7 @@ Options</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

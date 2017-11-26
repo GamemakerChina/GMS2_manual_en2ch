@@ -137,7 +137,7 @@ for the sprite. The origin is simply the point that will be used to
 "anchor" our sprite within the room, and in this case we want to
 set it to the centre. So we click <img style=
 "vertical-align:middle" src="../../../images/icon_lmb.png"> on the
-frop down menu for setting the origin and select "middle centre":
+from down menu for setting the origin and select "middle centre":
 <img class="center" src="../images/qs_sprites_spriteorigin.png">
 You'll see the origin cross-hair in the preview image move to the
 centre of the sprite. Note that you can place the origin anywhere
@@ -150,10 +150,11 @@ x/y fields at the top.</p>
 <b>collision mask</b> for the sprite. The collision mask is the
 area that <i>GameMaker Studio 2</i> will check to see if there has
 been a collision, and by default this is set to <i>rectangle</i>
-(which is also the fastest to resolve). However you can change this
-to whatever iit is you require, like in the example image below we
-have set it to an <i>ellipse</i>: <img class="center" src=
-"../images/qs_sprites_spritemask.png"></p>
+(which is also the fastest to resolve). Note that you can set the
+detection mode for the bounding box to be either automatic (the
+default value) or manual. If you choose manual you will be able to
+set the bounding box values left, right, top and bottom.
+<img class="center" src="../images/qs_sprites_spritemask.png"></p>
 
 <p>Any type of collision mask other than rectangle will be slower
 to resolve, but when making a small, simple game it's not usually
@@ -175,7 +176,7 @@ Tile sets</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

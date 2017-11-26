@@ -36,10 +36,16 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>Expressions can be real numbers (e.g. 3.4), hexadecimal numbers
-starting with a $ sign (e.g. $00FFAA), strings between double
-quotes (e.g. "hello") or more complicated expressions. For
-expressions, the following operators exist (in order of
+<p>An expression is a mathematical phrase that can contain ordinary
+numbers, variables, strings, or GML functions as well as one or
+more <i>operators</i> (like add, subtract, multiply, etc...). The
+values used in an expression can be real numbers (e.g. 3.4 * 6),
+hexadecimal numbers starting with a $ sign (e.g. $00FFAA |
+$88FFAA), strings between double quotes (e.g. "hello" + "world") or
+more complicated expressions using multiple operators and
+values.</p>
+
+<p>For expressions, the following operators exist (in order of
 priority):</p>
 
 <blockquote><label class="collapse" for="one">Assigning (=)</label>
@@ -163,12 +169,12 @@ time_str = string(time div 60);<br></p></div>
 
 <blockquote>
 <ul>
-<li><b>! (not)</b>: not, turns true into false and false into
-true</li>
+<li><b>!</b> : boolean "not", so <tt>!true == false</tt></li>
 
-<li><b>-</b>: negates the next value</li>
+<li><b>-</b> : negates the next real or integer value (not valid
+for strings or booleans)</li>
 
-<li><b>~</b>: negates the next value bitwise</li>
+<li><b>~</b> : negates the next value bitwise</li>
 </ul>
 </blockquote></div></blockquote>
 
@@ -219,8 +225,10 @@ b = (x &lt; 5) &amp;&amp; !(x==2 || x==4);<br>
 <h2>Accessors</h2>
 
 <p>There are also expression "short-cuts" called <b>accessors</b>
-for use with certain /Data_Structures/, which enable you to add, or
-replace data within these formats quickly and easily and without
+for use with certain <a href=
+"../4_gml_reference/data_structures/index.html">Data Structures</a>
+and <a href="10_arrays.html">Arrays</a>, which enable you to add,
+or replace data within these formats quickly and easily and without
 the use of any function calls. For full details, please see the
 following page:</p>
 
@@ -247,7 +255,7 @@ Overview</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

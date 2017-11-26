@@ -29,42 +29,15 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">audio_falloff_set_model</h1>
+<h2>audio_falloff_set_model</h2>
 
-<h2 class="studio">Sets the model on which all falloff values will
-be calculated.</h2>
-
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">audio_falloff_set_model(model);</p>
-
+<div class="body-scroll">
 <p><br>
 </p>
 
-<div>
-<table>
-<tr>
-<th>Argument</th>
-<th>Description</th>
-</tr>
+<h3>Description</h3>
 
-<tr>
-<td>model</td>
-<td>The <b>constant</b> used to set the falloff model.</td>
-</tr>
-</table>
-</div>
-
-<p><br>
-</p>
-
-<p><b>Returns:</b> N/A</p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Description</h3>
-
+<blockquote>
 <p>To add more versatility to the audio engine, <i>GameMaker Studio
 2</i> permits you to select the falloff model that suits your game.
 This model will be used for <b>all</b> the audio functions in the
@@ -72,15 +45,14 @@ game or app, and so you should make sure that the model you choose
 is the correct one, as each one will affect how the listener
 perceives the sounds you play through emitters or with the function
 <a href=
-"audio_play_sound_at.html"></a><tt>audio_play_sound_at</tt>.<br>
-<br>
-When setting falloff in your game with the appropriate functions
+"audio_play_sound_at.html"></a><tt>audio_play_sound_at</tt>.</p>
+
+<p>When setting falloff in your game with the appropriate functions
 there are three arguments that you will need to set, and each one
 is appropriate to a specific, model and will affect the way the
 final sound is "heard" by the player depending on the distance that
 the listener is from the source. The three arguments are:</p>
 
-<blockquote>
 <ul>
 <li><b>reference distance</b> - this is the distance from the
 listener the distance under which the volume for the sound playing
@@ -103,9 +75,9 @@ threshold defined by the model chosen.</li>
 attenuation based on the inverse distance model and sets the final
 minimum threshold for a sound with falloff.</li>
 </ul>
-</blockquote>
 
-<p>The falloff models that are affected by these arguments are
+<p><br>
+The falloff models that are affected by these arguments are
 represented in <i>GameMaker Studio 2</i> by the following constants
 (the table shows the exact calculations used too):</p>
 
@@ -180,17 +152,46 @@ gain = 1<br>
 </div>
 
 <p><br>
-<br>
 The following graphs are visual representations of how the above
-constants work and affect the sound being played:<br>
-<br>
-<img class="center" src="distance_models.png"><br>
-<br></p>
+constants work and affect the sound being played: <img class=
+"center" src="distance_models.png"></p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Syntax:</h3>
+
+<p class="code">audio_falloff_set_model(model);</p>
+
+<p><br>
+</p>
+
+<div>
+<table>
+<tr>
+<th>Argument</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>model</td>
+<td>The <b>constant</b> used to set the falloff model.</td>
+</tr>
+</table>
+</div>
+
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
+
+<p><br>
+</p>
+
+<h3>Example:</h3>
 
 <p class="code">
 audio_falloff_set_model(audio_falloff_exponent_distance_clamped);<br>
@@ -198,25 +199,32 @@ audio_falloff_set_model(audio_falloff_exponent_distance_clamped);<br>
 audio_play_sound_at(snd_Waterfall, x, y, 0, 100, 300, 1, true,
 1);<br></p>
 
+<blockquote>
 <p>The above code sets the falloff model and then plays the sound
 indexed in the variable "snd_Waterfall", which will be looped at
 its room position, with a fall-off reference of 100, a falloff
 distance of 300, a falloff factor of 1 and a low priority.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Audio</a></div>
 
 <div style="float:right">Next: <a href=
 "audio_sound_gain.html">audio_sound_gain</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

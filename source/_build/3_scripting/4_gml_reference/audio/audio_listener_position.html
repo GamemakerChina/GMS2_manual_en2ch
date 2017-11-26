@@ -29,12 +29,38 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">audio_listener_position</h1>
+<h2>audio_listener_position</h2>
 
-<h2 class="studio">Changes the position of the listener within the
-audio space.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>With this function you can change the position of the
+<i>listener</i> within the 3D audio space. The example image below
+shows the default position for the listener in the audio space:
+<img class="center" src="audio_listener.png"></p>
+
+<div class="note"><b>NOTE:</b> if you have multiple listeners you
+should use the function <a href=
+"audio_listener_set_position.html"><tt>audio_listener_set_position</tt></a>.</div>
+
+<p>As you can see, the default position is (0, 0, 0) but you would
+normally use this function to move the listener around with the
+player object within your game and so change the way audio created
+by emitters is heard by the player, for example, in the image below
+of a top down game, the player instance sets the listener which
+will cause the audio from the various emitters to "change" as the
+player moves around the level: <img class="center" src=
+"audio_game.png"></p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">audio_listener_position(x, y, z);</p>
 
@@ -68,50 +94,32 @@ audio space.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>With this function you can change the position of the
-<i>listener</i> within the 3D audio space. The example image below
-shows the default position for the listener in the audio space:
-<img class="center" src="audio_listener.png"></p>
-
-<blockquote><i><b>NOTE:</b> if you have multiple listeners you
-should use the function <a href=
-"audio_listener_set_position.html"><tt>audio_listener_set_position</tt></a>.</i>
-</blockquote>
-
-<p>As you can see, the default position is (0, 0, 0) but you would
-normally use this function to move the listener around with the
-player object within your game and so change the way audio created
-by emitters is heard by the player, for example, in the image below
-of a top down game, the player instance sets the listener which
-will cause the audio from the various emitters to "change" as the
-player moves around the level: <img class="center" src=
-"audio_game.png"><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if speed &gt; 0<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;audio_listener_position(x, y, 0);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks to see if the player instance speed is
 over 0 and if it is it updates the audio listener to the current
 x/y position.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href=
 "audio%20listeners.html">Audio Listeners</a></div>
@@ -119,11 +127,13 @@ x/y position.</p>
 <div style="float:right">Next: <a href=
 "audio_listener_velocity.html">audio_listener_velocity</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

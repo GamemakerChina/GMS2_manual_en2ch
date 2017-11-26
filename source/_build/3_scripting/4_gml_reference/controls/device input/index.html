@@ -39,7 +39,8 @@ if (window.name != "content")
 multi-touch, you should be using these functions. They work the
 same way a PC would work if it had multiple mice attached and the
 constants that are being checked for are the same as those used for
-the standard mouse functions:<br>
+the <a href="../mouse%20input/index.html">standard mouse
+functions</a>:<br>
 <br></p>
 
 <div class="compat">
@@ -78,16 +79,18 @@ platforms)</td>
 </div>
 
 <p><br>
-<br>
-<i><b>NOTE:</b> On touch screen devices, a double tap is returned
-as the equivalent of a <b>right mouse button</b> event. So, if you
-need to detect multiple taps in quick succession, for example, you
-will need to check for <b>both</b> the mb_left and mb_right. This
+The functions can all take a "touch" value that corresponds to a
+touch on the device display, however the maximum number of touches
+that can be detected will depend very much on the device and the OS
+being run. For example, some low end Android devices may only be
+able to detect 2 or 3 touches at the same time, while a UWP device
+may be able to detect up to 10. Note too that on touch screen
+devices, a double tap is returned as the equivalent of a <b>right
+mouse button</b> event. So, if you need to detect multiple taps in
+quick succession, for example, you will need to check for
+<b>both</b> the <tt>mb_left</tt> and <tt>mb_right</tt>. This
 functionality can be toggled on or off using <a href=
-"device_mouse_dbclick_enable.html"><tt>device_mouse_dbclick_enable</tt></a>.</i><br>
-
-<br>
-</p>
+"device_mouse_dbclick_enable.html"><tt>device_mouse_dbclick_enable</tt></a>.</p>
 
 <p>Below you can find a list of all the device specific control
 functions:</p>
@@ -150,11 +153,11 @@ functions:</p>
 
 <p>Please note that on mobile devices (Android, iOS and Windows
 Phone), you can use the back button at any time, as it is mapped to
-the keyboard <i>backspace</i> which is the <i>GameMaker Studio
+the keyboard <b>backspace</b> which is the <i>GameMaker Studio
 2</i> <a href="../keyboard%20input/index.html">keyboard
-constant</a> <b>vk_backspace</b>, so you can do checks for that key
-and perform actions on those devices as if the back button had been
-used.</p>
+constant</a> <tt>vk_backspace</tt>, so you can do checks for that
+key and perform actions on those devices as if the back button had
+been used.</p>
 
 <p><br>
 </p>
@@ -171,7 +174,7 @@ used.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

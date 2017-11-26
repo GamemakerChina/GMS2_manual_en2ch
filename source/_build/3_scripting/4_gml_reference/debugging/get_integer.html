@@ -32,15 +32,29 @@ if (window.name != "content")
 <h2>get_integer</h2>
 
 <div class="body-scroll">
-<h2 class="studio">Displays a pop-up message for the user to input
-an integer.</h2>
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
 
-<p class="code">get_integer(str, def);</p>
+<blockquote>
+<p>This creates a pop-up window showing a custom message, with a
+button labeled "Ok", and prompts the user to input an integer
+value. The function will return the typed in integer, or the
+default value if nothing has been entered.</p>
+
+<div class="note"><b>NOTE:</b> THIS FUNCTION IS FOR DEBUG USE ONLY.
+Should you require this functionality in your final game, please
+use <a href=
+"../asynchronous%20functions/get_integer_async.html"><tt>get_integer_async</tt></a>.</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">get_integer(str, def);</p>
 
 <div class="param">
 <table>
@@ -64,37 +78,23 @@ an integer.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This creates a pop-up window showing a custom message, with a
-button labeled "Ok", and prompts the user to input an integer
-value. The function will return the typed in integer, or the
-default value if nothing has been entered.<br>
-<br>
-<br>
-<br>
-<i><b>NOTE:</b> THIS FUNCTION IS FOR DEBUG USE ONLY. Should you
-require this functionality in your final game, please use <a href=
-"../asynchronous%20functions/get_integer_async.html"><tt>get_integer_async</tt></a>.</i><br>
-
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">global.level = get_integer("Level to test?",
 1);</p>
 
+<blockquote>
 <p>The above code will display a message prompting the user to
 select a level for testing. The return value will be stored in the
 global variable "global.level".</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -111,7 +111,7 @@ global variable "global.level".</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

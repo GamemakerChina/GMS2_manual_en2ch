@@ -29,19 +29,46 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">font_get_first</h1>
+<h2>font_get_first</h2>
 
-<h2 class="studio">Returns the index of the first character in a
-given font.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>When defining a font in <i>GameMaker Studio 2</i>, you can
+define a range of characters to include. This is because the font
+itself is not actually included with your game (for legal reasons)
+but an <i>image</i> of the font is included on a texture page and
+that is what your game will use (just like any other graphics
+asset). This means that you will want to keep the number of
+characters that you use to a minimum and specify only the range of
+characters that your game will need so as to keep texture memory as
+optimised as possible. This function can be used to find the
+starting character (as an ASCII value) that was used when your font
+asset was added to your game.</p>
+
+<div class="note"><b>NOTE:</b> Due to changes in the way fonts are
+handled, this function will <b>always</b> return 32, as
+<i>GameMaker Studio 2</i> enforces the space character (32) into
+the font and doesn't allow characters with codes lower than 32
+either. New functions to do similar tasks will be added in a future
+update.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">font_get_first(ind);</p>
 
 <p><br>
 </p>
 
-<div>
+<blockquote>
 <table>
 <tr>
 <th>Argument</th>
@@ -53,63 +80,46 @@ given font.</h2>
 <td>Index of the font to check.</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>When defining a font in <i>GameMaker Studio 2</i>, you can
-define a range of characters to include. This is because the font
-itself is not actually included with your game (for legal reasons)
-but an <i>image</i> of the font is included on a texture page and
-that is what your game will use (just like any other graphics
-asset). This means that you will want to keep the number of
-characters that you use to a minimum and specify only the range of
-characters that your game will need so as to keep texture memory as
-optimised as possible. This function can be used to find the
-starting character (as an ASCII value) that was used when your font
-asset was added to your game.<br>
-<br>
-<br>
-<br>
-<i><b>NOTE:</b> Due to changes in the way fonts are handled, this
-function will <b>always</b> return 32, as</i> GameMaker Studio 2
-enforces the space character (32) into the font and doesn't allow
-characters with codes lower than 32 either. New functions to do
-similar tasks will be added in a future update.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">num = font_get_first(fnt_Main);</p>
 
+<blockquote>
 <p>The above code will store the ASCII value of the first letter of
 the font range for the font indexed in "fnt_Main".</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Fonts</a></div>
 
 <div style="float:right">Next: <a href=
 "font_get_last.html">font_get_last</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

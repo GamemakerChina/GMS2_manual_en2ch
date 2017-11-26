@@ -116,7 +116,8 @@ eventually crash your game.</i><br>
 fix = physics_fixture_create();<br>
 physics_fixture_set_circle_shape(fix, 16);<br>
 physics_fixture_set_density(fix, 1.0);<br>
-inst = instance_create(x, y, genericBodyObject);<br>
+inst = instance_create_layer(x, y, "Instances",
+genericBodyObject);<br>
 my_fix = physics_fixture_bind(fix, inst);<br>
 physics_fixture_delete(fix);<br></p>
 
@@ -138,7 +139,7 @@ longer needed.</p>
 "physics_fixture_bind_ext.html">physics_fixture_bind_ext</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

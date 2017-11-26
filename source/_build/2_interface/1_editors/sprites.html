@@ -153,9 +153,9 @@ general if your sprite is using this option for 3D, then the
 textures should be a power of 2 (ie&gt; 128x128, 256x256, 512x512
 etc...).</p>
 
-<p>Finally, you can chose the texture group that you wish the
-sprite resource to belong to. Basically, a texture group
-(previously defined in the <a href=
+<p>Next, you can chose the texture group that you wish the sprite
+resource to belong to. Basically, a texture group (previously
+defined in the <a href=
 "../../2_interface/3_settings/textures.html">Texture Group
 Manager</a>) is something that you can set up so that all the image
 resources that you need for specific rooms or levels of your game
@@ -173,6 +173,23 @@ the target device is CPU bound or GPU bound.</div>
 <p><br>
 You can find out more about texture pages <a href=
 "../../1_overview/3_additional_information/texture_pages.html">here</a>.</p>
+
+<p>The next option is to enable <b>pre-multiplied alpha</b> for the
+sprite images. When enabled, this will pre-multiply the alpha of
+all sub-images of the sprite, and this is normally only necessary
+drawing sprites to surfaces, or for some specific special effects.
+For normal sprite use you should not see any noticeable difference
+between the normal sprite and the pre-multiplied one.</p>
+
+<p>Finally we have <b>Edge Filtering</b>. This option is
+specifically for when you have linear interpolation enabled for
+your game and you are seeing "halos" of colour around your sprites.
+This is caused by the hardware interpolating from multiple source
+texels on the texture page all at once, and can be particularly
+obvious when you scale games up in resolution. Enabling this will
+filter the edge pixels to take on the colour of the nearest full
+alpha sprite pixel and so blend the interpolated pixels without the
+halo that was present previously.</p>
 </div>
 <br>
 <a name="sprite_mask" id="sprite_mask"></a> <label class="collapse"
@@ -196,7 +213,7 @@ being the same as the left, right, top and bottom bounds of the
 sprite.<br>
 <br></li>
 
-<li><b>Manual</b>: Selcting this means that you wish to set the
+<li><b>Manual</b>: Selecting this means that you wish to set the
 bounds of the collision mask using the input values for left,
 right, top and bottom.<br>
 <br></li>
@@ -339,10 +356,11 @@ them. A selected frame will have a Delete icon <img style=
 "vertical-align:middle" src="images/icon_removeframe.png"> at the
 top corner, and you can click that to remove the frame from the
 sprite. You can also click <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> on multiple frames to select them
-together, in which case clicking the Delete icon will delete
-<i>all</i> the selected frames.</p>
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> on
+multiple frames to select them together, in which case clicking the
+Delete icon will delete <i>all</i> the selected frames.</p>
 </div>
 <br>
 <a name="sprite_controls" id="sprite_controls"></a> <label class=
@@ -364,8 +382,9 @@ game frame". The total number of frames available are shown to the
 right along with the current frame that has been selected, and you
 can select multiple frames with you can select frames by using
 <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png">.</p>
+"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png">.</p>
 </div></blockquote>
 
 <p><br>
@@ -383,7 +402,7 @@ Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

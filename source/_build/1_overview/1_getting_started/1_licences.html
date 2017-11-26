@@ -301,7 +301,7 @@ the limitations listed above:</p>
 <tr>
 <td>
 </td>
-<td>skeleton_get_imageindex</td>
+<td>skeleton_slot_data</td>
 <td>skeleton_animation_list</td>
 <td>skeleton_skin_list</td>
 </tr>
@@ -309,15 +309,14 @@ the limitations listed above:</p>
 <tr>
 <td>
 </td>
-<td>skeleton_slot_data</td>
 <td>draw_skeleton</td>
 <td>draw_skeleton_time</td>
+<td>draw_skeleton_instance</td>
 </tr>
 
 <tr>
 <td>
 </td>
-<td>draw_skeleton_instance</td>
 <td>draw_skeleton_collision</td>
 <td>
 </td>
@@ -384,14 +383,23 @@ the limitations listed above:</p>
 </tr>
 </table>
 </div></blockquote>
+
+<div class="note"><b>IMPORTANT!</b> If you have been using a Trial
+Licence for <i>GameMaker Studio 2</i> and then buy one of the other
+licences (Desktop, Mobile, UWP, Web or Console) then you <b>may</b>
+need to log out of the IDE and then restart <i>GameMaker Studio
+2</i> and log back in again to make sure that the new licence is
+applied correctly (although this should happen automatically). You
+can log out from the <a href=
+"../2_quick_start/menus/file_menu.html">File Menu</a>.</div>
 </div>
 <br>
 <a name="desktop" id="desktop"></a> <label class="collapse" for=
 "b">Desktop</label> <input id="b" type="checkbox">
 <div class="index_list">
-<p>With the Desktop version of <i>GameMaker Studio 2</i> all the
-limitations of the Trial Licence (see above) are removed and you
-can compile projects to the following Desktop targets:</p>
+<p>With the <b>Desktop</b> version of <i>GameMaker Studio 2</i> all
+the limitations of the Trial Licence (see above) are removed and
+you can compile projects to the following Desktop targets:</p>
 
 <blockquote>
 <ul>
@@ -399,7 +407,7 @@ can compile projects to the following Desktop targets:</p>
 
 <li>Mac OS</li>
 
-<li>Linux (Ubuntu)</li>
+<li>Ubuntu</li>
 </ul>
 </blockquote>
 
@@ -409,10 +417,111 @@ that uses a runner and interpreted code and the other which is the
 executable. Note that the YYC option will require extra setup. For
 more information see the section on <a href=
 "5_required_sdks.html">Required SDKs</a> or the helpdesk section on
-<a href=
-"http://help.yoyogames.com/hc/en-us/sections/207157668">Desktop
-Targets</a>.</p>
-</div></blockquote>
+<a href="http://help.yoyogames.com/hc/en-us/sections/207157668"
+target="_blank">Desktop Targets</a>.</p>
+</div>
+<br>
+<a name="web" id="web"></a> <label class="collapse" for=
+"c">Web</label> <input id="c" type="checkbox">
+<div class="index_list">
+<p>With the <b>Web</b> version of <i>GameMaker Studio 2</i> all the
+limitations of the Trial Licence (see above) are removed and you
+can compile projects to the <b>HTML5</b> target. Games are compiled
+using JavaScript. You can find out more information from the YoYo
+Games helpdesk here: <a href=
+"https://help.yoyogames.com/hc/en-us/articles/115000992307" target=
+"_blank">Setting Up For Web (HTML5)</a>.</p>
+</div>
+<br>
+<a name="mobile" id="mobile"></a> <label class="collapse" for=
+"d">Mobile</label> <input id="d" type="checkbox">
+<div class="index_list">
+<p>With the <b>Mobile</b> version of <i>GameMaker Studio 2</i> all
+the limitations of the Trial Licence (see above) are removed and
+you can compile projects to the following targets:</p>
+
+<blockquote>
+<ul>
+<li>Android</li>
+
+<li>iOS</li>
+</ul>
+</blockquote>
+
+<p>All targets come with two compile options, one is the <b>VM</b>
+that uses a runner and interpreted code and the other which is the
+<b>YYC</b> (YoYo Compiler) which creates native code and a compiled
+executable. Note that the YYC option will require extra setup. For
+more information on setting up see the section on <a href=
+"5_required_sdks.html">Required SDKs</a> or the helpdesk section on
+<a href="https://help.yoyogames.com/hc/en-us/sections/115000300567"
+target="_blank">Mobile Targets</a>.</p>
+</div>
+<br>
+<a name="uwp" id="uwp"></a> <label class="collapse" for=
+"e">UWP</label> <input id="e" type="checkbox">
+<div class="index_list">
+<p>With the <b>UWP</b> version of <i>GameMaker Studio 2</i> all the
+limitations of the Trial Licence (see above) are removed and you
+can compile projects as UWP compliant executables. These
+executables can be configured to run on one of three UWP
+platforms:</p>
+
+<blockquote>
+<ul>
+<li>Windows 10 Desktop</li>
+
+<li>Windows 10 Mobile</li>
+
+<li>Xbox One</li>
+</ul>
+</blockquote>
+
+<p>The UWP target comes with two compile options, one is the
+<b>VM</b> that uses a runner and interpreted code and the other
+which is the <b>YYC</b> (YoYo Compiler) which creates native code
+and a compiled executable. Note that the YYC option will require
+extra setup. For more information on setting up see the section on
+<a href="5_required_sdks.html">Required SDKs</a> or the helpdesk
+section on <a href=
+"https://help.yoyogames.com/hc/en-us/sections/115000309028" target=
+"_blank">UWP Targets</a>.</p>
+</div>
+<br>
+<a name="console" id="console"></a> <label class="collapse" for=
+"f">Consoles</label> <input id="f" type="checkbox">
+<div class="index_list">
+<p>With the <b>Consoles</b> version of <i>GameMaker Studio 2</i>
+all the limitations of the Trial Licence (see above) are removed
+and you can compile projects for the following target platforms</p>
+
+<blockquote>
+<ul>
+<li>Xbox One</li>
+
+<li>PlayStation 4</li>
+</ul>
+</blockquote>
+
+<p>Each of the console targets comes with two compile options, one
+is the <b>VM</b> that uses a runner and interpreted code and the
+other which is the <b>YYC</b> (YoYo Compiler) which creates native
+code and a compiled executable. Note that the YYC option will
+require extra setup. For more information on setting up see the
+section on <a href="5_required_sdks.html">Required SDKs</a> or the
+helpdesk section on <a href=
+"https://help.yoyogames.com/hc/en-us/sections/115000309048" target=
+"_blank">Console Targets</a>.</p>
+</div>
+<a name="education" id="education"></a> <label class="collapse"
+for="h">Education</label> <input id="h" type="checkbox">
+<div class="index_list">
+<p><i>GameMaker Studio 2</i> can also be used in a college
+environment. For more information on this, please contact YoYo
+Games through the <a href="https://www.yoyogames.com/education"
+target="_blank">YoYo Games Education Portal</a>.</p>
+</div>
+<br></blockquote>
 
 <p><br>
 </p>
@@ -429,7 +538,7 @@ Menu</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

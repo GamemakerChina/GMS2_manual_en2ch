@@ -51,7 +51,7 @@ currently down.</h2>
 
 <tr>
 <td>device</td>
-<td>The device (from 0 - 4) that is being checked.</td>
+<td>The device (from 0 - <i>n</i>) that is being checked.</td>
 </tr>
 
 <tr class="alt">
@@ -75,19 +75,23 @@ currently down.</h2>
 depending on whether the device that you specify is being used or
 not. Now, the <i>device</i> refers to the mouse number, which can
 be from 0 to 4 and this event is triggered when the touch screen of
-a mobile device is touched, so in this way you can test for up to 5
-different screen touches (or mouse devices). This function
-constantly updates every step, and the standard constants of
-<tt>mb_left</tt> and <tt>mb_right</tt> can be used to check for
-either button.<br>
+a mobile device is touched, so in this way you can test for up to
+<i>n</i> different screen touches (the maximum number of touches
+that can be detected will depend very much on the device being used
+and the OS it runs). This function constantly updates every step,
+and the standard constants of <tt>mb_left</tt> and
+<tt>mb_right</tt> can be used to check for either button.<br>
 <br></p>
 
 <h3 class="studio">Example:</h3>
 
 <p class="code">if device_mouse_check_button(0, mb_left) &amp;&amp;
-device_mouse_check_button(1, mb_left) room_goto(rm_Menu);</p>
+device_mouse_check_button(1, mb_left)<br>
+{<br>
+room_goto(rm_Menu);<br>
+}<br></p>
 
-<p>The above code checks to see if the two devices are being held
+<p>The above code checks to see if the two touches are being held
 down at the same time and if they then it goes to another room.</p>
 
 <p><br>
@@ -101,7 +105,7 @@ Input</a></div>
 "device_mouse_check_button_pressed.html">device_mouse_check_button_pressed</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

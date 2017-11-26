@@ -29,12 +29,37 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">audio_sound_gain</h1>
+<h2>audio_sound_gain</h2>
 
-<h2 class="studio">Set the volume for a specific sound to play at,
-either instantly or over a given time.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>With this function you can fade a sound in or out over a given
+length of time, or it can be used to set the sound gain instantly.
+The time is measured in milliseconds, and the function requires
+that you input a final level of gain for the sound to have reached
+by the end of that time. This gain can be between 0 (silent) and 1
+(full volume) and the scale is linear, such that a value of 0.5
+would be half volume. To instantly change the gain, simply set the
+time argument to 0.</p>
+
+<p>This function will affect all instances of the sound that are
+playing currently in the room if the index is a sound resource, and
+the final volume will be the volume at which all further instances
+of the sound will be played. However if you have used the index
+returned from a function like <a href=
+"audio_play_sound.html"><tt>audio_play_sound</tt></a> it will only
+affect that one instance of the sound.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">audio_sound_gain(index, volume, time);</p>
 
@@ -68,35 +93,14 @@ either instantly or over a given time.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>With this function you can fade a sound in or out over a given
-length of time, or it can be used to set the sound gain instantly.
-The time is measured in milliseconds, and the function requires
-that you input a final level of gain for the sound to have reached
-by the end of that time. This gain can be between 0 (silent) and 1
-(full volume) and the scale is linear, such that a value of 0.5
-would be half volume. To instantly change the gain, simply set the
-time argument to 0.<br>
-<br>
-This function will affect all instances of the sound that are
-playing currently in the room if the index is a sound resource, and
-the final volume will be the volume at which all further instances
-of the sound will be played. However if you have used the index
-returned from a function like <a href=
-"audio_play_sound.html"><tt>audio_play_sound</tt></a> it will only
-affect that one instance of the sound.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if val<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -105,26 +109,33 @@ affect that one instance of the sound.<br>
 &nbsp;&nbsp;&nbsp;audio_sound_gain(snd, 1, 5000);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks a variable and if it returns <tt>true</tt>
 it will then assign the index of a sound to be played to the local
 variable "snd". This variable is then used to reduce the volume of
 that specific sound to 0 and fade up to full volume over 5
 seconds.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Audio</a></div>
 
 <div style="float:right">Next: <a href=
 "audio_sound_get_gain.html">audio_sound_get_gain</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

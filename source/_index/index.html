@@ -10,6 +10,8 @@
 <script type="text/JavaScript" src="files/treearr.js"></script>
 <script type="text/JavaScript" src="files/supply.js"></script>
 <script type="text/javascript">
+ var ACTIVE_SKIN = "Dark";
+ document.write("<link rel='stylesheet prefetch' href='main.css'>");
  chmtop.c2wtopf = window;
  var pageid=""; var searchquery=""; var indexquery=""; var syncmode=false; var pagenum=0;
  var qs = location.search.substr(1); var A  = qs.split("&");
@@ -18,8 +20,11 @@
  for (var j=0;j<A.length;j++){
    if(A[j][0]=="page") F=A[j][1];
    if(A[j][0]=="tab") FT=A[j][1];
-   if(A[j][0]=="style") 
-	chmtop.helpStyle = A[j][1]+".css";
+   if(A[j][0]=="style") {
+    	chmtop.helpStyle = A[j][1]+".css";
+        ACTIVE_SKIN = A[j][1];
+        document.write("<link rel='stylesheet prefetch' href='main-" + top.ACTIVE_SKIN + ".css'>");
+    }
   }
  F = unescape(F);
 </script>
