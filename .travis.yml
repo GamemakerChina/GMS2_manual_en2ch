@@ -1,5 +1,19 @@
-language: html
+language: node_js
+node_js: stable
 branches:
   only:
-  - master
   - coding-pages
+
+script:
+  - git config user.name "deciia"
+  - git config user.email "deciia@qq.com"
+  - git clone --branch=coding-pages https://github.com/GamemakerChina/GMS2_help.git GamemakerChina/GMS2_help
+  - cd GamemakerChina/GMS2_help
+  - node liaronceinfo.js
+  - git commit -m "Sync By Travis CI with build $TRAVIS_BUILD_NUMBER"
+  # Coding Pages
+  - git push --force --quiet "https://deciia:${CODING_TOKEN}@${CODING_URL}" coding-pages:coding-pages
+  
+env:
+   # Coding Pages
+   - CODING_URL: git.coding.net/deciia/GMS2_help.git
