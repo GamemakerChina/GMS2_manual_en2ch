@@ -7,15 +7,16 @@ environment:
     secure: MnYloU4sOET9OWZg4MjYyJCFbEY5C6tN/ltAAcJEKU6krCNDACheYm4QThCKKBWo
 build_script:
 - sh: >-
-    git config user.name "deciia"
-
-    git config user.email "deciia@qq.com"
     
     git clone --branch=coding-pages https://github.com/GamemakerChina/GMS2_help.git GamemakerChina/GMS2_help
 
     cd GamemakerChina/GMS2_help
 
     node liaronceinfo.js
+    
+    git config --global user.name "deciia"
+
+    git config --global user.email "deciia@qq.com"
 
     git commit -m "Sync By AppVeyor"
 
