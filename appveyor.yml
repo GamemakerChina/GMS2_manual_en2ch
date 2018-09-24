@@ -1,5 +1,8 @@
 version: 1.0.{build}
 skip_tags: true
+branches:
+  only:
+  - coding-pages
 image: Ubuntu1804
 environment:
   CODING_REPO: git.coding.net/deciia/GMS2_help.git
@@ -7,16 +10,14 @@ environment:
     secure: MnYloU4sOET9OWZg4MjYyJCFbEY5C6tN/ltAAcJEKU6krCNDACheYm4QThCKKBWo
 build_script:
 - sh: >-
-    
-    git clone --branch=coding-pages https://github.com/GamemakerChina/GMS2_help.git GamemakerChina/GMS2_help
 
-    cd GamemakerChina/GMS2_help
+    git init
 
-    node liaronceinfo.js
-    
     git config --global user.name "deciia"
 
     git config --global user.email "deciia@qq.com"
+    
+    git add .
 
     git commit -m "Sync By AppVeyor"
 
