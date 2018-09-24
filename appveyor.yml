@@ -11,6 +11,8 @@ environment:
 build_script:
 - sh: >-
 
+    cd /home/appveyor/projects/gms2-help
+
     git init
 
     git config --global user.name "deciia"
