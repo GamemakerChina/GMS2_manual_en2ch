@@ -1,17 +1,16 @@
 version: 1.0.{build}
 skip_tags: true
 image: Ubuntu1804
-init:
-- sh: >-
-    git config user.name "deciia"
-
-    git config user.email "deciia@qq.com"
 environment:
   CODING_REPO: git.coding.net/deciia/GMS2_help.git
   CODING_TOKEN:
     secure: MnYloU4sOET9OWZg4MjYyJCFbEY5C6tN/ltAAcJEKU6krCNDACheYm4QThCKKBWo
 build_script:
 - sh: >-
+    git config user.name "deciia"
+
+    git config user.email "deciia@qq.com"
+    
     git clone --branch=coding-pages https://github.com/GamemakerChina/GMS2_help.git GamemakerChina/GMS2_help
 
     cd GamemakerChina/GMS2_help
