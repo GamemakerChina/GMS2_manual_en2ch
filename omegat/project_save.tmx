@@ -15479,12 +15479,11 @@
       </tuv>
     </tu>
     <tu>
-      <note>预编译宏？</note>
       <tuv lang="EN-US">
         <seg>Define a global compile-time macro.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20180926T042128Z" creationid="deciia" creationdate="20170107T060112Z">
-        <seg>定义一个全局的预编译宏。</seg>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T220004Z" creationid="deciia" creationdate="20170107T060112Z">
+        <seg>定义一个全局的预编译宏常量。</seg>
       </tuv>
     </tu>
     <tu>
@@ -22467,12 +22466,11 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
     </tu>
     <tu>
-      <note>有问题，再考虑一下</note>
       <tuv lang="EN-US">
         <seg>Get the colour used to blend all drawing with.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20180926T063311Z" creationid="deciia" creationdate="20180922T045002Z">
-        <seg>获取当前用于混合绘制的颜色。</seg>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T220330Z" creationid="deciia" creationdate="20180922T045002Z">
+        <seg>获取用于混合所有绘图的颜色。</seg>
       </tuv>
     </tu>
     <tu>
@@ -29960,7 +29958,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
     </tu>
     <tu>
-      <note>生命数是lives</note>
+      <note>此处指的是粒子的生命周期，生命数是lives。
+此笔记可删除。</note>
       <tuv lang="EN-US">
         <seg>Min Life</seg>
       </tuv>
@@ -33834,7 +33833,6 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
     </tu>
     <tu>
-      <note>什么是键盘状态的系统事件</note>
       <tuv lang="EN-US">
         <seg>Once the keyboard is shown, a System event of type "keyboard status" is raised.</seg>
       </tuv>
@@ -42460,7 +42458,7 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
     </tu>
     <tu>
-      <note>Transform，形变？变换？</note>
+      <note>Transform，形变？变换？数据是变换，图形是变形。</note>
       <tuv lang="EN-US">
         <seg>Set Tile Data Transform</seg>
       </tuv>
@@ -46203,8 +46201,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>Switch Package</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20180922T200728Z" creationid="deciia" creationdate="20180922T200728Z">
-        <seg>切换程序包文件</seg>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T215113Z" creationid="deciia" creationdate="20180922T200728Z">
+        <seg>Switch(NS) 程序包文件</seg>
       </tuv>
     </tu>
     <tu>
@@ -46235,8 +46233,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>Switch nmeta file</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20180922T200718Z" creationid="deciia" creationdate="20180922T200718Z">
-        <seg>切换nmeta文件</seg>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T215128Z" creationid="deciia" creationdate="20180922T200718Z">
+        <seg>Switch(NS) nmeta文件</seg>
       </tuv>
     </tu>
     <tu>
@@ -62852,6 +62850,18 @@ Top Shelf images group subheading for tvOS
     </tu>
     <tu>
       <prop type="file">english.xml</prop>
+      <prop type="prev">Frame</prop>
+      <prop type="next">Number</prop>
+      <note>这里应该是精灵的堆叠，堆叠顺序，堆叠方向？看了界面，应该是方向。此笔记可删除。</note>
+      <tuv lang="EN-US">
+        <seg>Stack Order</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T222121Z" creationid="deciia" creationdate="20180927T222121Z">
+        <seg>堆叠方向</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
       <prop type="prev">Current Runtime Release Notes</prop>
       <prop type="next">Welcome Page</prop>
       <tuv lang="EN-US">
@@ -62863,13 +62873,57 @@ Top Shelf images group subheading for tvOS
     </tu>
     <tu>
       <prop type="file">english.xml</prop>
+      <prop type="prev">Break out of a loop.</prop>
+      <prop type="next">Switch which branch to execute based on input.</prop>
+      <tuv lang="EN-US">
+        <seg>Switch</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T214534Z" creationid="deciia" creationdate="20180927T214534Z">
+        <seg>多路分支（Switch）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
+      <prop type="prev">Loops</prop>
+      <prop type="next">Types</prop>
+      <tuv lang="EN-US">
+        <seg>Switch</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T215711Z" creationid="deciia" creationdate="20180927T214151Z">
+        <seg>多路分支（Switch）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
       <prop type="prev">Open Authoring Editor</prop>
       <prop type="next">Switch nmeta file</prop>
       <tuv lang="EN-US">
         <seg>Switch</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20180922T200701Z" creationid="deciia" creationdate="20180922T200701Z">
-        <seg>切换（Switch）</seg>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T215145Z" creationid="deciia" creationdate="20180922T200701Z">
+        <seg>Switch(NS) </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
+      <prop type="prev">Switch</prop>
+      <prop type="next">NintendoSDK Directory</prop>
+      <tuv lang="EN-US">
+        <seg>Switch</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T215154Z" creationid="deciia" creationdate="20180927T214959Z">
+        <seg>Switch(NS) </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
+      <prop type="prev">Unable to find matching pronunciation.sig file \nVoice recognition files will not be imported</prop>
+      <prop type="next">Switch</prop>
+      <tuv lang="EN-US">
+        <seg>Switch</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T215210Z" creationid="deciia" creationdate="20180927T214913Z">
+        <seg>Switch(NS) </seg>
       </tuv>
     </tu>
     <tu>
@@ -62890,11 +62944,14 @@ Top Shelf images group subheading for tvOS
       <prop type="file">english.xml</prop>
       <prop type="prev">Variable</prop>
       <prop type="next">Is</prop>
+      <note>备注：GMStdTransformation：DnD™ argument label
+位于：DnD工具 - 图块 - 设置图块数据变换
+因为是数据的变化，所以使用变幻。</note>
       <tuv lang="EN-US">
         <seg>Transform</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20180926T083610Z" creationid="deciia" creationdate="20170311T175041Z">
-        <seg>变形</seg>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T221722Z" creationid="deciia" creationdate="20170311T175041Z">
+        <seg>变换</seg>
       </tuv>
     </tu>
     <tu>
@@ -62917,6 +62974,17 @@ Top Shelf images group subheading for tvOS
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20180922T222809Z" creationid="deciia" creationdate="20180922T222809Z">
         <seg>上方向键</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
+      <prop type="prev">Increment</prop>
+      <prop type="next">Write To Ini File</prop>
+      <tuv lang="EN-US">
+        <seg>View</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T213635Z" creationid="deciia" creationdate="20180927T213635Z">
+        <seg>视野</seg>
       </tuv>
     </tu>
     <tu>
