@@ -7509,7 +7509,6 @@
       </tuv>
     </tu>
     <tu>
-      <note>功能和宏删除时自动选择按钮</note>
       <tuv lang="EN-US">
         <seg>Automatic button choice on function &amp; macro deletion</seg>
       </tuv>
@@ -41858,7 +41857,8 @@ Provisioning 就是维护和预置,或者称之为设置的过程。(野小喵 �
     </tu>
     <tu>
       <note>发送并进行更多评价？之前为什么会这样翻译？
-dll情境后面，调知中心前面，根据参考信息“Choose to submit all questions and provide more feedback”选择适合的翻译。</note>
+dll情境后面，调知中心前面，根据参考信息“Choose to submit all questions and provide more feedback”选择适合的翻译。
+笔记可以删除。</note>
       <tuv lang="EN-US">
         <seg>Send and Take More</seg>
       </tuv>
@@ -43432,7 +43432,6 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
     </tu>
     <tu>
-      <note>指南叠加？引导层？</note>
       <tuv lang="EN-US">
         <seg>Show Guide Overlay</seg>
       </tuv>
@@ -43577,7 +43576,6 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
     </tu>
     <tu>
-      <note>视野？视图？场景应该是图块编辑器里。</note>
       <tuv lang="EN-US">
         <seg>Show Views</seg>
       </tuv>
@@ -50695,12 +50693,13 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
     </tu>
     <tu>
-      <note>应该有更好的翻译。</note>
+      <note>备注：SourceControlGit_CloneNonBareOrigin：Message for when a clone is done on a non-bare repository but an origin has been found.
+应该有更好的翻译。</note>
       <tuv lang="EN-US">
         <seg>This is a non-bare repository which we do not support direct cloning from.\nHowever we have found its origin so we will push to that and clone from the origin instead.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20180926T033848Z" creationid="deciia" creationdate="20170107T053248Z">
-        <seg>这是一个非公开存储库，我们不支持从中直接克隆。\n但是，我们已经找到它的源点（origin），所以我们将推送到那并从源原点克隆。</seg>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T211622Z" creationid="deciia" creationdate="20170107T053248Z">
+        <seg>这是一个非公开存储库，我们不支持从中直接克隆。\n但是，我们已经找到它的源点（origin），所以我们将推送到那并从源点克隆。</seg>
       </tuv>
     </tu>
     <tu>
@@ -55303,8 +55302,8 @@ Top Shelf images group subheading for tvOS
       <tuv lang="EN-US">
         <seg>Window</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T061717Z" creationid="deciia" creationdate="20170102T075304Z">
-        <seg>Window</seg>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T210807Z" creationid="deciia" creationdate="20170102T075304Z">
+        <seg>窗口</seg>
       </tuv>
     </tu>
     <tu>
@@ -55332,8 +55331,6 @@ Top Shelf images group subheading for tvOS
       </tuv>
     </tu>
     <tu>
-      <note>备注：win_IDEMenuViews：Windows version of the views menu entry
-这是哪个位置，应该译为窗口？</note>
       <tuv lang="EN-US">
         <seg>Windows</seg>
       </tuv>
@@ -62514,6 +62511,17 @@ Top Shelf images group subheading for tvOS
     </tu>
     <tu>
       <prop type="file">english.xml</prop>
+      <prop type="prev">Add 16 Tile Set</prop>
+      <prop type="next">Show Guide Overlay</prop>
+      <tuv lang="EN-US">
+        <seg>Delete Selected Set</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T211754Z" creationid="deciia" creationdate="20180927T211754Z">
+        <seg>删除所选图块集</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
       <prop type="prev">{0}</prop>
       <prop type="next">Down</prop>
       <tuv lang="EN-US">
@@ -62913,9 +62921,43 @@ Top Shelf images group subheading for tvOS
     </tu>
     <tu>
       <prop type="file">english.xml</prop>
+      <prop type="prev">User Event {0}</prop>
+      <prop type="next">Intersect View {0} Boundary</prop>
+      <tuv lang="EN-US">
+        <seg>Views</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T212428Z" creationid="deciia" creationdate="20180927T212428Z">
+        <seg>视野</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
+      <prop type="prev">Windows</prop>
+      <prop type="next">Right Control and Right Alt</prop>
+      <tuv lang="EN-US">
+        <seg>Window</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T210734Z" creationid="deciia" creationdate="20180927T204918Z">
+        <seg>窗口</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
+      <prop type="prev">About GameMaker Studio 2</prop>
+      <prop type="next">Window</prop>
+      <note>备注：win_IDEMenuViews：Windows version of the views menu entry
+这是哪个位置，应该译为窗口？</note>
+      <tuv lang="EN-US">
+        <seg>Windows</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T204900Z" creationid="deciia" creationdate="20180927T204900Z">
+        <seg>窗口(?)</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
       <prop type="prev">Active Tabs</prop>
       <prop type="next">Resources</prop>
-      <note>这是哪个位置，应该译为窗口？</note>
       <tuv lang="EN-US">
         <seg>Windows</seg>
       </tuv>
@@ -62931,6 +62973,28 @@ Top Shelf images group subheading for tvOS
         <seg>Windows</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170311T175651Z" creationid="deciia" creationdate="20170311T175651Z">
+        <seg>窗口</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
+      <prop type="prev">Room Properties</prop>
+      <prop type="next">Clear Selection</prop>
+      <tuv lang="EN-US">
+        <seg>Windows</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T205421Z" creationid="deciia" creationdate="20180927T205421Z">
+        <seg>窗口</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">english.xml</prop>
+      <prop type="prev">Texture</prop>
+      <prop type="next">Reset Window Layout</prop>
+      <tuv lang="EN-US">
+        <seg>Windows</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T205954Z" creationid="deciia" creationdate="20180927T205954Z">
         <seg>窗口</seg>
       </tuv>
     </tu>
