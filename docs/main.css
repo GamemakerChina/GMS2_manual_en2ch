@@ -1,0 +1,62 @@
+/* This stylesheet is applied to the entire manual, not just the content pages */
+
+body {
+    margin: 2 2 0 3;
+    padding: 0;
+}
+.gmtab {
+    height: 22px;
+    color: #cfcfcf;
+    font-weight: normal;
+    font-size: 8pt;
+    font-family: Tahoma, Verdana;
+    float: left;
+    white-space: nowrap;
+    bottom: 0;
+    position: relative;
+    cursor: pointer;
+}
+.gmtab:not(:first-child) {
+    margin-left: -4px;
+}
+.gmtab .left {
+    background: url("Images/Dark_Skin/workspace_tab_in_left.png");
+    background-size: 100% 100%;
+    width: 9px;
+    height: 100%;
+    float: left;
+}
+.gmtab .middle {
+   background: url("Images/Dark_Skin/workspace_tab_in.png");
+   background-size: 100% 100%;
+   width: calc(100% - 22px);
+   height: calc(100% - 4px);
+   padding-top: 4px;
+   padding-left: 2px;
+   padding-right: 2px;
+   float: left;
+   text-align: center;
+}
+.gmtab .right {
+   background: url("Images/Dark_Skin/workspace_tab_in_right.png");
+   background-size: 100% 100%;
+   width: 9px;
+   height: 100%;
+   float: left;
+}
+.gmtab.active {
+   cursor: default;
+   color: #ffffff;
+}
+.gmtab.active .left {
+   background: url("Images/Dark_Skin/workspace_tab_left.png");
+   background-size: 100% 100%;
+}
+.gmtab.active .middle {
+   background: url("Images/Dark_Skin/workspace_tab.png");
+   background-size: 100% 100%;
+}
+.gmtab.active .right { 
+   background: url("Images/Dark_Skin/workspace_tab_right.png");
+   background-size: 100% 100%;
+}
