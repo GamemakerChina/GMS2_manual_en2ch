@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>偏好设置 - 插件</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/1_overview/1_getting_started/preferences/prefs_plugins.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F1_overview%2F1_getting_started%2Fpreferences%2Fprefs_plugins.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F1_overview%2F1_getting_started%2Fpreferences%2Fprefs_plugins.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script><!-- !chm2web! -->
+
+
+<script type="text/JavaScript">
+ if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
+</script>
+<h2>偏好设置 - 插件</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p><b>插件偏好设置</b>用于控制已经添加到<i>GameMaker Studio 2</i> IDE的任何额外的插件。默认有一个专门的子项<b>源码控制</b>插件整合<i>GameMaker Studio 2</i>项目与<a href="https://git-scm.com/" target=
+"_blank">Git</a>工具。</p>
+
+<blockquote><a name="prefs_plugins_git" id="prefs_plugins_git"></a>
+<label class="collapse" for="one">源代码控制(Git)</label>
+<input id="one" type="checkbox">
+<div class="index_list"><img class="center" src=
+"images/plugins_git_prefs.png" alt="插件 Git SCM 偏好设置">
+<p>本节讨论要求让 <b>Git SCM</b>在<i>GameMaker Studio 2</i>上能够使用的偏好设置。First you have the set of general options:</p>
+
+<ul>
+<li><b>Automatically open source control output window</b>: When this is checked, the source control output window will be shown automatically when something changes. 该选项默认为“开”。<br>
+<br></li>
+
+<li><b>启用详细日志记录（Verbose Logging）</b>：Git 启用详细日志记录输出日志。该选项默认为关<br>
+<br></li>
+</ul>
+
+Next is the <i>User Identity</i> section with the following fields
+which are required to be filled in:
+
+
+
+<ul>
+<li><b>用于提交的用户名（Username to commit as）</b>：在这里你必须输入你将做任何提交到Gi时所使用的用户名（它必须同Git仓库所指定的用户名一致）。<br>
+<br></li>
+
+<li><b>用于提交的邮箱（Email to commit as）</b>：与此Git身份关联的邮箱。<br>
+<br></li>
+</ul>
+
+<p>After setting up the User Identity, you can then add a new
+username/password combination for authentication by clicking the
+button labelled <b>Add new User/Pass authentication</b>, which will
+open the following window with different fields for you to fill in:
+
+<img class="center" src="images/plugins_git_userpass.png" alt=
+"Plugins Git SCM Preferences - Add new User"></p>
+
+<p>You can also <b>Add a new SSH keypair authentication</b> by
+clicking the button with that label. This will open the following
+window for you to fill in:  <img class="center" src=
+"images/plugins_git_sshkey.png" alt=
+"Plugins Git SCM Preferences - Add new SSH keypair"></p>
+
+<p>Below these buttons you can then set up the <i>Merge Tool</i>
+and the <i>Diff Tool</i> for SCM with these options:</p>
+
+<ul>
+<li><b>合并工具路径（Path to Merge Tool）</b>：在此处指定 Git 合并工具的完整文件路径。<br>
+<br></li>
+
+<li><b>合并工具选项（Options for Merge Tool）</b>：在此字段你可以添加任何额外的命令，在使用合并工具时都将运行。<br>
+<br></li>
+
+<li><b>Path to Diff Tool</b>: Here you specify the full file path
+to the Git diff tool.<br>
+<br></li>
+
+<li><b>Options for Diff Tool</b>: In this field you can add any
+extra commands to be run whenever you use the Diff Tool.<br>
+<br></li>
+</ul>
+
+<p>Finally, after setting those up you have one last option:</p>
+
+<ul>
+<li><b>Automatically enable source control</b>: When this is checked, source control will be enabled for all new projects automatically. 该选项默认为关<br>
+<br></li>
+</ul></div></blockquote>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">上一页：<a href=
+"../7_preferences.html">偏好设置索引</a></div>
+
+<div style="float:right">下一页 <a href=
+"prefs_runtime.html">运行库</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>
