@@ -12,4 +12,4 @@ GMS2 中文文档翻译
 ~~- helpcontents.html 可以批量替换。~~
 ~~- files/treearr.js  helpindexdat.js chmnav.js searchdat.js 可以批量替换~~
 
-其实只要在 docs 目录下添加 `.nojekyll` 就解决了。。。。。。。（@LiarOnce)
+其实只要在 docs 目录下添加 `.nojekyll` 就解决了。。。。。。。（@LiarOnce )
