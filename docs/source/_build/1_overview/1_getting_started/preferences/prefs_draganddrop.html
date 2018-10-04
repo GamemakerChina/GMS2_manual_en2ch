@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,53 +40,39 @@ if (window.name != "content")
 "拖拽按钮的偏好设置">
 </p>
 
-<p><b>拖拽按钮</b>设置用于定义拖拽按钮脚本编辑器看起来是什么样子。下面列举了各种可用选项及每一个的描述。</p>
+<p><b>拖拽按钮</b>设置用于定义拖拽按钮脚本编辑器的外观。下面列举了各种可用选项及每一个的描述。</p>
 
 <ul>
-<li><b>DnD™ toolbox default location</b>: By default the DnD™
-toolbox (where all the different action libraries are held) is
-placed on the right of the Editor, but you can use this option to
-have it default to the left.<br>
+<li><b>DnD™ 工具栏默认位置</b>: 默认情况下 DnD™ 工具栏 (其中保存了所有不同的动作库) 位于编辑器的右侧，但是你可以使用此选项将其默认设置为左侧。<br>
 <br></li>
 
-<li><b>DnD™ node overview visibility mode</b>: A node "overview" is
-the short descriptive text that appears beside certain actions in
-the Action Workspace, for example this <b>Destroy Instance</b>
-action: <img class="center" src=
+<li><b>DnD™ 节点概述可见模式</b>: 节点“概述”是出现在动作工作区中的某些操作旁边的简短描述性文本，例如 <b>Destroy Instance</b> 这个动作： <img class="center" src=
 "images/draganddrop_destroyaction.png" alt=
-"拖拽按钮概览节点"> You can choose to enable these
-always, enable them only if the action is collapsed (the default
-setting), or disable them altogether.<br>
+"拖拽按钮概览节点"> 你可以选择总是启用、仅在动作折叠时显示（默认设置）或完全禁用。<br>
 <br></li>
 
-<li><b>Automatic response to DnD™ conversion to GameMaker Language</b>: When you convert a Drag and Drop event or script into GML code, you will by default get a message warning you about what you are about to do and asking if you want to continue. 将该选项置为"是"（OK）就会不显示这条警告信息而直接进行变动。<br>
+<li><b>自动响应 DnD™ 转换为 GameMaker Language</b>: 当你将拖拽事件或脚本转换为GML代码时，默认情况下会收到一条警告消息询问是否继续。将该选项设置为"确定"就会不显示这条警告信息而直接进行变动。<br>
 <br></li>
 
-<li><b>Automatic response to DnD™ node deletion</b>: When you
-delete a Drag and Drop event node, you will by default get a
-message warning you about what you are about to do and asking if
-you want to continue. Setting this option to "OK" will simply okay
-the deletion without showing the message.<br>
+<li><b>自动响应 DnD™ 节点删除</b>: 当你删除拖拽事件节点时，默认收到警告消息询问是否继续。将该选项设置为“确定”就会不显示这条警告信息而直接删除。<br>
 <br></li>
 
-<li><b>Maximum size for DnD™ toolbox action thumbnails</b>: At the bottom of the Action Toolbox you have a slider for changing the size of the Drag and Drop icons. 这项设定将被用于定义允许的最大尺寸（默认为64像素）。<br>
+<li><b>DnD™ 工具栏动作缩略图的最大尺寸</b>: 在动作工具栏的底部有一个滑块来改变拖拽图标的大小。这项设定将被用于定义允许的最大尺寸（默认为64像素）。<br>
 <br></li>
 
-<li><b>Minimum size for DnD™ toolbox action thumbnails</b>: At the bottom of the Action Toolbox you have a slider for changing the size of the Drag and Drop icons. 这项设定将被用于定义允许的最小尺寸（默认为16像素。）<br>
+<li><b>DnD™ 工具栏动作缩略图的最小尺寸</b>: 在动作工具栏的底部有一个滑块来改变拖拽图标的大小。这项设定将被用于定义允许的最小尺寸（默认为16像素。）<br>
 <br></li>
 
-<li><b>Default size for DnD™ toolbox action thumbnails</b>: This
-setting will be used to define the default size for all action
-icons in the toolbox (default 32px).<br>
+<li><b>DnD™ 工具栏动作缩略图的默认尺寸</b>: 这项设定将被用于定义工具栏中所有动作图标的默认大小（默认为32像素）。<br>
 <br></li>
 
-<li><b>Maximum number of recently used actions to display</b>: In the action toolbox there is a library at the top which holds the actions you have most recently used. 你可以使用这个选项来改变最近使用的动作的最大显示数量（默认为5）。<br>
+<li><b>最近使用动作的最大显示数目</b>: 在动作工具栏的顶部有一个最近使用动作的收藏夹。你可以使用这个选项来改变最近使用的动作的最大显示数量（默认为5）。<br>
 <br></li>
 
-<li><b>Mouse down time to start dragging nodes (ms)</b>: When you click on a node and drag it, you will be repositioning the node within the action code. 然而如果按住鼠标一段时间后再移动，你会移动工作区中节点的位置而不是代码的顺序。这个设定设置了在节点能够被移动之前需要等待鼠标按下的毫秒数（不重置）。默认值为350。<br>
+<li><b>鼠标按下到开始拖动节点所需的时间（毫秒）</b>: 当你点击一个节点并拖拽它时，你将重新定位动作代码中的节点。然而如果按住鼠标一段时间后再移动，你会移动工作区中节点的位置而不是代码的顺序。这个设定设置了在节点能够被移动之前需要等待鼠标按下的毫秒数（不重置）。默认值为350。<br>
 <br></li>
 
-<li><b>Hide DnD™ node overview panel</b>: Here you can choose to hide the overview panel of the Action Code Editor. 默认该选项是禁用的，启用它将会移除编辑器左侧的纯文本动作链</li>
+<li><b>隐藏 DnD™ 节点概述面板</b>: 使用该选项你可以隐藏动作代码编辑器的概述面板。默认该选项是禁用的，启用它将会移除编辑器左侧的纯文本动作链</li>
 </ul>
 
 <p><br>
@@ -104,7 +90,7 @@ icons in the toolbox (default 32px).<br>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
