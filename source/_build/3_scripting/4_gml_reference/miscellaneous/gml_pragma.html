@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>gml_pragma</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/miscellaneous/gml_pr
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fmiscellaneous%2Fgml_pragma.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fmiscellaneous%2Fgml_pragma.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>gml_pragma</h2>
 
 <div class="body-scroll">
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">gml_pragma(command, [optional...]);</p>
 
@@ -42,8 +42,8 @@ if (window.name != "content")
 <div class="param">
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -62,12 +62,12 @@ arguments. These are explained below for each command.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>Returns:</b> N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
 <p>The <tt>gml_pragma</tt> function affects how the YYC target
 compiles your code and should be called with the different commands
@@ -92,11 +92,13 @@ time.</li>
 <br>
 </li>
 
-<li>"<b>global</b>", "<b>[gml code]</b>" - The "global" pragma permits you to call some GML code before anything else and will execute the second GML string at a <b>global</b> scope, before the first room of the game executes. 比如：
+<li>"<b>global</b>", "<b>[gml code]</b>" - The "global" pragma
+permits you to call some GML code before anything else and will
+execute the second GML string at a <b>global</b> scope, before the
+first room of the game executes. For example:
 
 <p class="code">gml_pragma("global", "scr_Init()");</p>
 <br>
-
 This will call the script "scr_Init" before the first room of the
 game is run.</li>
 
@@ -122,11 +124,8 @@ arguments here: the "[TexGroupName]", which is the name (a string)
 of the texture group to scale, and the "[Scale Divisor]" (also a
 string), which is the divisor you wish to use for the scaling, i.e:
 
-
-
 <p class="code">gml_pragma("Texgroup.Scale", "level1", "2");</p>
 <br>
-
 This will half all the textures in the "level1" texture group.</li>
 
 <li style="list-style: none"><br>
@@ -139,11 +138,8 @@ to <tt>true</tt> then on compile it will collapse all the .cpp
 files in the project into a single file which it then uses to build
 everything, for example:
 
-
-
 <p class="code">gml_pragma("UnityBuild", "true");</p>
 <br>
-
 The benefit of doing a unity build is that builds are faster but
 the down side is that it does a <i>full</i> build each time so even
 if you change a single part of the code it will build everything
@@ -159,7 +155,7 @@ please see <a href=
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">gml_pragma("forceinline");<br></p>
 

@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>绘制变形精灵</title>
+<title>Draw Sprite Transformed</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -24,20 +24,21 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/2_drag_and_drop_reference/drawing_ac
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fdrawing_actions%2Fdraw_sprite_transformed.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fdrawing_actions%2Fdraw_sprite_transformed.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_drawing_draw_sprite_transformed.png"> 绘制变形精灵</h2>
+"images/i_drawing_draw_sprite_transformed.png"> Draw Sprite
+Transformed</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
 <blockquote>
 <p>This function will draw the given sprite similar to the action
@@ -49,7 +50,7 @@ and you can use any of the available <a href=
 "../../4_gml_reference/instances/instance_variables/index.html">sprite
 property variables</a> instead of direct values for all the
 arguments in the function. The image below illustrates how
-different values affect the drawing of the sprite:  <img class=
+different values affect the drawing of the sprite: <img class=
 "center" src="images/spr_ext.png"></p>
 
 <div class="note"><b>NOTE:</b> Colour blending is only recommended
@@ -64,36 +65,38 @@ the font cache size to try and limit this should it be necessary
 using the function <a href=
 "../../4_gml_reference/sprites/sprite_set_cache_size.html"><tt>sprite_set_cache_size</tt></a>.</div>
 
-<div class="note"><b>注意</b>： This action is only for use in the various <a href=
-"../../../2_interface/1_editors/events/draw_events.html">Draw Events</a>, and will not draw anything if used elsewhere.</div>
+<div class="note"><b>NOTE</b>: This action is only for use in the
+various <a href=
+"../../../2_interface/1_editors/events/draw_events.html">Draw
+Events</a>, and will not draw anything if used elsewhere.</div>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>动作语法：</h3>
+<h3>Action Syntax:</h3>
 <img class="center" src=
 "images/a_drawing_draw_sprite_transformed.png" alt=
 "Draw Sprite Transformed Syntax">
 <p><br>
 </p>
 
-<h3>参数：</h3>
+<h3>Arguments:</h3>
 
 <blockquote>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
-<td>精灵</td>
+<td>Sprite</td>
 <td>The sprite to draw</td>
 </tr>
 
 <tr class="alt">
-<td>帧</td>
+<td>Frame</td>
 <td>The sprite frame to draw (use the built in variable
 <tt>image_index</tt> for the current frame)</td>
 </tr>
@@ -109,26 +112,26 @@ using the function <a href=
 </tr>
 
 <tr>
-<td>X 缩放</td>
+<td>Scale X</td>
 <td>The scale factor for the X axis (use the built in variable
 <tt>image_xscale</tt> for the current X scale)</td>
 </tr>
 
 <tr class="alt">
-<td>Y 缩放</td>
+<td>Scale Y</td>
 <td>The scale factor for the Y axis (use the built in variable
 <tt>image_yscale</tt> for the current Y scale)</td>
 </tr>
 
 <tr>
-<td>旋转</td>
+<td>Rotation</td>
 <td>The draw angle for the sprite (from 0 to 360, rotating
 anticlockwise where 0 is to the right - use the built in variable
 <tt>image_angle</tt> for the current rotation)</td>
 </tr>
 
 <tr class="alt">
-<td>颜色</td>
+<td>Colour</td>
 <td>The colour to blend with the sprite (default is white, and you
 can use the built in variable <tt>image_blend</tt> for the current
 colour)</td>
@@ -139,7 +142,7 @@ colour)</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 <img class="center" src=
 "images/e_drawing_draw_sprite_transformed.png" alt=
 "Draw Sprite Transformed Example">

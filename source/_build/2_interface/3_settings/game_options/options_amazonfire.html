@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>Amazon Fire Options</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/2_interface/3_settings/game_options/options_amaz
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_amazonfire.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_amazonfire.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -40,7 +40,7 @@ if (window.name != "content")
 that control how your Amazon Fire game projects will be compiled.
 The different sections are:</p>
 
-<blockquote><label class="collapse" for="a">全局</label>
+<blockquote><label class="collapse" for="a">General</label>
 <input id="a" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/amazonfire_general1_options.png"
@@ -63,7 +63,6 @@ button at the top to transfer the relevant information from the
 Android target to the Amazon Fire.</div>
 
 <p><br>
-
 You then need to set the <b>Build Tools</b> and <b>Support
 Library</b> versions, as well as the <b>Target</b>, <b>Minimum</b>
 and <b>Compile</b> SDK versions. The <b>Build Tools</b> and
@@ -107,12 +106,14 @@ Studio for your projects to compile correctly.</div>
 <br>
 <img class="center" src="images/amazonfire_general2_options.png"
 alt="Amazon Fire General Options Part 2">
-<p>The second part of the <b>General</b> section covers the different <i>Orientations</i> that your game can be run on for the best user experience. 可用的选项有：</p>
+<p>The second part of the <b>General</b> section covers the
+different <i>Orientations</i> that your game can be run on for the
+best user experience. The available options are:</p>
 
 <ul>
-<li>横向</li>
+<li>Landscape</li>
 
-<li>纵向</li>
+<li>Portrait</li>
 
 <li>Landscape-flipped</li>
 
@@ -122,10 +123,16 @@ alt="Amazon Fire General Options Part 2">
 <p>Finally you have the following miscellaneous options:</p>
 
 <ul>
-<li><b>Enable Bluetooth/iCade support</b>: This will add support for bluetooth or iCade gamepads to your game project. 该选项默认为“开”。<br>
+<li><b>Enable Bluetooth/iCade support</b>: This will add support
+for bluetooth or iCade gamepads to your game project. This is on by
+default.<br>
 <br></li>
 
-<li><b>Enable MOGA gamepad support</b>: This will enable support for MOGA controllers. Note that all MOGA functionality is accessed via an extension, and when you first check this option you will be prompted to download and install the MOGA extension from the Marketplace. 该选项默认为关。<br>
+<li><b>Enable MOGA gamepad support</b>: This will enable support
+for MOGA controllers. Note that all MOGA functionality is accessed
+via an extension, and when you first check this option you will be
+prompted to download and install the MOGA extension from the
+Marketplace. This option is off by default.<br>
 <br></li>
 
 <li><b>Run Lint Code Analysis</b>: When this option is flagged, the
@@ -169,7 +176,7 @@ what works on your build device may not be appropriate for another
 user, and as such if in doubt leave it set to 4.</p>
 </div>
 <br>
-<label class="collapse" for="b">图像</label> <input id="b"
+<label class="collapse" for="b">Graphics</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/amazonfire_graphics_options.png"
@@ -181,7 +188,10 @@ game will be displayed, with the following options are
 available:</p>
 
 <ul>
-<li><b>Interpolate colours between pixels</b>: Turns on interpolation, which basically "smooths" pixels. for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edge graphics it is better left on. 默认为关。<br>
+<li><b>Interpolate colours between pixels</b>: Turns on
+interpolation, which basically "smooths" pixels. for crisp pixel
+graphics, it should be off, but if you have nice alpha blends and
+smoothed edge graphics it is better left on. Default is off.<br>
 <br></li>
 
 <li><b>Screen Colour Depth</b>: This can be used to set the colour
@@ -206,10 +216,11 @@ can see how they look. This can be very useful if you wish to see
 how the texture pages are structured and to prevent having texture
 pages larger (or smaller) than necessary.</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be.</div>
+<div class="note"><b>NOTE</b>: Be aware that the larger the size of
+the texture page, the less compatible your game will be.</div>
 </div>
 <br>
-<label class="collapse" for="g">图标</label> <input id="g" type=
+<label class="collapse" for="g">Icons</label> <input id="g" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/amazonfire_icons_options.png"
@@ -229,7 +240,7 @@ is being compiled to. If you use this tool, you should revise the
 images created to ensure that they are what you require.</p>
 </div>
 <br>
-<label class="collapse" for="c">图片</label> <input id="c" type=
+<label class="collapse" for="c">Images</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/amazonfire_images_options.png"
@@ -253,7 +264,7 @@ game is being compiled to. If you use this tool, you should revise
 the images created to ensure that they are what you require.</p>
 </div>
 <br>
-<label class="collapse" for="e">权限</label> <input id="e"
+<label class="collapse" for="e">Permissions</label> <input id="e"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src=

@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>绘制健康条</title>
+<title>Draw Healthbar</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -24,20 +24,20 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/2_drag_and_drop_reference/drawing_ac
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fdrawing_actions%2Fdraw_healthbar.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fdrawing_actions%2Fdraw_healthbar.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_drawing_draw_healthbar.png"> 绘制健康条</h2>
+"images/i_drawing_draw_healthbar.png"> Draw Healthbar</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
 <blockquote>
 <p>With this action you can draw a coloured bar to show a graphic
@@ -55,79 +55,80 @@ position you can also set the colour to be blended from each of the
 four corners of the healthbar, creating gradients from red to green
 (for example, but you can use any colours). Below you can see an
 image of how a simple healthbar looks with the different options:
-
 <img class="center" src="images/healthbars_example.png" alt=
 "Different Healthbar Types"></p>
 
-<div class="note"><b>注意</b>： This action is only for use in the various <a href=
-"../../../2_interface/1_editors/events/draw_events.html">Draw Events</a>, and will not draw anything if used elsewhere.</div>
+<div class="note"><b>NOTE</b>: This action is only for use in the
+various <a href=
+"../../../2_interface/1_editors/events/draw_events.html">Draw
+Events</a>, and will not draw anything if used elsewhere.</div>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>动作语法：</h3>
+<h3>Action Syntax:</h3>
 <img class="center" src="images/a_drawing_draw_healthbar.png" alt=
 "Draw Healthbar Syntax">
 <p><br>
 </p>
 
-<h3>参数：</h3>
+<h3>Arguments:</h3>
 
 <blockquote>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
-<td>方向</td>
+<td>Direction</td>
 <td>The direction to draw the healthbar contents</td>
 </tr>
 
 <tr class="alt">
-<td>值</td>
+<td>Value</td>
 <td>The value (between 0 and 100) to use for the healthbar</td>
 </tr>
 
 <tr>
-<td>左</td>
+<td>Left</td>
 <td>The position of the left side of the healthbar</td>
 </tr>
 
 <tr class="alt">
-<td>顶</td>
+<td>Top</td>
 <td>The position of the top of the healthbar</td>
 </tr>
 
 <tr>
-<td>右</td>
+<td>Right</td>
 <td>The position of the right side of the healthbar</td>
 </tr>
 
 <tr class="alt">
-<td>底</td>
+<td>Bottom</td>
 <td>The position of the bottom of the healthbar</td>
 </tr>
 
 <tr>
-<td>背景</td>
+<td>Background</td>
 <td>The colour to draw as the background on the healthbar</td>
 </tr>
 
 <tr class="alt">
-<td>轮廓</td>
+<td>Outline</td>
 <td>The colour to use to outline the healthbar</td>
 </tr>
 
 <tr>
-<td>最小颜色值</td>
+<td>Min Colour</td>
 <td>The colour to blend from the minimum value</td>
 </tr>
 
 <tr class="alt">
-<td>最大颜色值</td>
+<td>Max Colour</td>
 <td>The colour to blend from the maximum value</td>
 </tr>
 </table>
@@ -136,7 +137,7 @@ image of how a simple healthbar looks with the different options:
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 <img class="center" src="images/e_drawing_draw_healthbar.png" alt=
 "Draw Healthbar Example">
 <blockquote>The above action block code draws a blue and yellow
@@ -152,8 +153,8 @@ image of how a simple healthbar looks with the different options:
 <div style="float:left">Back: <a href="index.html">Drawing
 Actions</a></div>
 
-<div style="float:right">上一页 <a href=
-"draw_instance_score.html">绘制实例分数</a></div>
+<div style="float:right">next: <a href=
+"draw_instance_score.html">Draw Instance Score</a></div>
 </div>
 </div>
 

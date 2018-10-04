@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>表达式</title>
+<title>Expressions</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/3_gml_overview/12_expressions.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F12_expressions.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F12_expressions.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>表达式</h2>
+<h2>Expressions</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -48,7 +48,7 @@ values.</p>
 <p>For expressions, the following operators exist (in order of
 priority):</p>
 
-<blockquote><label class="collapse" for="one">赋值(=)</label>
+<blockquote><label class="collapse" for="one">Assigning (=)</label>
 <input id="one" type="checkbox">
 <div class="index_list"><b>=</b> - Used to assign a value to a
 variable. Note that this can <i>also</i> be used for comparing
@@ -63,7 +63,8 @@ these examples:<br>
 speed = 5;<br>
 val = (old_val + 5);<br></p></div>
 <br>
-<label class="collapse" for="two">组合逻辑(&amp;&amp;, ||, ^^)</label> <input id="two" type="checkbox">
+<label class="collapse" for="two">Combining (&amp;&amp;, ||,
+^^)</label> <input id="two" type="checkbox">
 <div class="index_list"><b>&amp;&amp;, ||, ^^ (and, or and xor)</b>
 - Combine Boolean values to give either true or false. If any of
 the following examples resolves to <tt>true</tt> then the code
@@ -75,7 +76,8 @@ and<br>
 if (a == b || c ==d) {do something...}// or<br>
 if (a == b ^^ c == d) {do something...} // xor<br></p></div>
 <br>
-<label class="collapse" for="three">比较(&lt;, &lt;=, ==, !=, &gt;, &gt;=)</label> <input id="three" type="checkbox">
+<label class="collapse" for="three">Comparing (&lt;, &lt;=, ==, !=,
+&gt;, &gt;=)</label> <input id="three" type="checkbox">
 <div class="index_list"><b>&lt;, &lt;=, ==, !=, &gt;, &gt;=</b> -
 These are comparisons and can only give a <tt>true</tt> or
 <tt>false</tt> result (where true can also be interpreted as 1, and
@@ -85,7 +87,8 @@ false as 0). Examples of use:<br>
 <p class="code">if (a &lt; b) {do something...}<br>
 if (a != b) {do something...}<br></p></div>
 <br>
-<label class="collapse" for="four">位运算(|, &amp;, ^, &lt;&lt;, &gt;&gt;)</label> <input id="four" type="checkbox">
+<label class="collapse" for="four">Bitwise (|, &amp;, ^, &lt;&lt;,
+&gt;&gt;)</label> <input id="four" type="checkbox">
 <div class="index_list"><b>|, &amp;, ^, &lt;&lt;, &gt;&gt;</b>: You
 can perform bitwise operations with these, where | = bitwise or,
 &amp; = bitwise and, ^ = bitwise xor, &lt;&lt; = shift left,
@@ -95,13 +98,13 @@ can perform bitwise operations with these, where | = bitwise or,
 <p class="code">x = (x &amp; $ffffffe0) + 32;<br>
 if (y ^ $1f) &gt; 0 {do something...};<br></p>
 <br>
-
 You can find additional information on how to use the bitwise
 operators and what they do from the section: <a href=
 "../../1_overview/3_additional_information/bitwise_operators.html">Bitwise
 Operators</a>.</div>
 <br>
-<label class="collapse" for="five">算术运算(+, -, *, /)</label> <input id="five" type="checkbox">
+<label class="collapse" for="five">Arithmetical (+, -, *,
+/)</label> <input id="five" type="checkbox">
 <div class="index_list"><b>+, -, *, /</b> - Add, subtract, multiply
 and divide. Examples of use:<br>
 <br>
@@ -109,8 +112,12 @@ and divide. Examples of use:<br>
 <p class="code">c = a * b;<br>
 str = a + "world";<br></p></div>
 <br>
-<label class="collapse" for="six">递增/递减 (++, --)</label> <input id="six" type="checkbox">
-<div class="index_list"><b>++, --</b> - Add or subtract <i>one</i> from a value. It is worth noting that placing this before or after the value to be added to or subtracted from will have slightly different results. 比如：<br>
+<label class="collapse" for="six">Increment/Decrement (++,
+--)</label> <input id="six" type="checkbox">
+<div class="index_list"><b>++, --</b> - Add or subtract <i>one</i>
+from a value. It is worth noting that placing this before or after
+the value to be added to or subtracted from will have slightly
+different results. For example:<br>
 <br>
 
 <ul>
@@ -120,7 +127,6 @@ incremented value.</li>
 <li><b>a++</b> will increment the variable but return the value
 before it was incremented.</li>
 </ul>
-
 Therefore, if you have something like this:<br>
 <br>
 
@@ -128,7 +134,6 @@ Therefore, if you have something like this:<br>
 show_debug_message(string(a++));<br>
 show_debug_message(string(++a));<br></p>
 <br>
-
 The debug output would be 1 and 3. Here are some examples of
 use:<br>
 <br>
@@ -145,10 +150,10 @@ left, meaning that this:<br>
 <p class="code"><i>val = max(num, ++num, num++);<br></i>
 </p>
 <br>
-
 will give different results depending on the platform.</div>
 <br>
-<label class="collapse" for="seven">整除和取模(div, %, mod)</label> <input id="seven" type="checkbox">
+<label class="collapse" for="seven">Division and Modulo (div, %,
+mod)</label> <input id="seven" type="checkbox">
 <div class="index_list"><b>div, mod (%)</b> - Division and modulo,
 where <tt>div</tt> gives you the amount a value can be divided into
 producing only an integer quotient, while <tt>mod</tt> gives you
@@ -160,11 +165,9 @@ of use:<br>
 <p class="code">secs = time mod 60;<br>
 time_str = string(time div 60);<br></p></div>
 <br>
-<label class="collapse" for="eight">一元运算符(!, -, ~)</label>
+<label class="collapse" for="eight">Unary (!, -, ~)</label>
 <input id="eight" type="checkbox">
 <div class="index_list">Also, the following unary operators exist:
-
-
 
 <blockquote>
 <ul>
@@ -185,9 +188,13 @@ comparisons also work for strings and "+" concatenates strings.</p>
 <p><br>
 </p>
 
-<h2>运算符顺序</h2>
+<h2>Order Of Operations</h2>
 
-<p>When doing multiple operations in a single expression, it is <b>very important</b> that you use brackets () to separate out the order of operation, as different platforms may perform them differently if not explicitly stated in this way. 比如说，考虑如下代码：</p>
+<p>When doing multiple operations in a single expression, it is
+<b>very important</b> that you use brackets () to separate out the
+order of operation, as different platforms may perform them
+differently if not explicitly stated in this way. For example,
+consider the following code:</p>
 
 <p class="code">a = b == c || d;<br></p>
 
@@ -196,7 +203,8 @@ different orders since they are not explicitly shown, giving rise
 to "odd" results that you may not expect when you play your game.
 to avoid this, use the () to separate out the parts, like this:</p>
 
-<p class="code">a = (b == c || d); //better<br>a = ((b == c) || d); //最好<br></p>
+<p class="code">a = (b == c || d); //better<br>
+a = ((b == c) || d); //best<br></p>
 
 <p>Here are some final examples of the various different
 expressions:</p>
@@ -216,7 +224,7 @@ b = (x &lt; 5) &amp;&amp; !(x==2 || x==4);<br>
 <p><br>
 </p>
 
-<h2>访问器</h2>
+<h2>Accessors</h2>
 
 <p>There are also expression "short-cuts" called <b>accessors</b>
 for use with certain <a href=
@@ -229,7 +237,7 @@ following page:</p>
 <blockquote>
 <ol>
 <li><a href="13_accessors.html"><span class=
-"list_link">访问器</span></a><br>
+"list_link">Accessors</span></a><br>
 </li>
 </ol>
 </blockquote>
@@ -241,10 +249,11 @@ following page:</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">GML概述</a></div>
+<div style="float:left">Back: <a href="index.html">GML
+Overview</a></div>
 
-<div style="float:right">下一页：<a href=
-"13_accessors.html">访问器</a></div>
+<div style="float:right">Next: <a href=
+"13_accessors.html">Accessors</a></div>
 </div>
 </div>
 

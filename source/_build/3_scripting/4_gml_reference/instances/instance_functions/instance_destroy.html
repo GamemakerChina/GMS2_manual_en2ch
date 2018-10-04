@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>instance_destroy</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/instances/instance_f
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Finstances%2Finstance_functions%2Finstance_destroy.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Finstances%2Finstance_functions%2Finstance_destroy.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -35,10 +35,18 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
 <blockquote>
-<p>You call this function whenever you wish to "destroy" an instance, normally triggering a Destroy Event and also a Clean Up event. This will remove it from the room until the room is restarted (unless the room is persistent). Calling the function with no arguments will simply destroy the instance that is currently in scope and running the code, but you can provide an optional "id" argument and target a specific instance by using the instance ID value, or you can target all instances of a particular object by using an <tt>object_index</tt>. 比如：</p>
+<p>You call this function whenever you wish to "destroy" an
+instance, normally triggering a Destroy Event and also a Clean Up
+event. This will remove it from the room until the room is
+restarted (unless the room is persistent). Calling the function
+with no arguments will simply destroy the instance that is
+currently in scope and running the code, but you can provide an
+optional "id" argument and target a specific instance by using the
+instance ID value, or you can target all instances of a particular
+object by using an <tt>object_index</tt>. For example:</p>
 
 <p class="code">instance_destroy(other); // destroy the other
 instance in a Collision Event<br>
@@ -55,7 +63,6 @@ itself and skip performing that event.</p>
 Event, but the Clean Up event will still be called.</div>
 
 <p><br>
-
 It is worth noting that when you destroy an instance, its destroy
 event is called <i>immediately</i> after the code or action that
 calls the destroy. Second, although the destroy event is performed,
@@ -83,20 +90,20 @@ destroy event removed it from the game.</p>
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">instance_destroy([id, execute_event_flag]);</p>
 
 <p><br>
 </p>
 
-<h3>参数：</h3>
+<h3>Arguments:</h3>
 
 <blockquote>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -116,14 +123,14 @@ event or not (optional, default is <tt>true</tt>)</td>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 
 <p class="code">if bbox_right &lt; 0 || bbox_left &gt; room_width
 || bbox_bottom &lt; 0 || bbox_top &gt; room_height<br>

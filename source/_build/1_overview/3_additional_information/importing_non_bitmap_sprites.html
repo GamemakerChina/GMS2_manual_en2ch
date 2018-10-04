@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>导入非位图精灵</title>
+<title>Importing Non-Bitmap Sprites</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/1_overview/3_additional_information/importing_no
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additional_information%2Fimporting_non_bitmap_sprites.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additional_information%2Fimporting_non_bitmap_sprites.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>导入非位图精灵</h2>
+<h2>Importing Non-Bitmap Sprites</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -50,7 +50,8 @@ product.</div>
 <p><br>
 </p>
 
-<blockquote><label class="collapse" for="a">矢量精灵（SWF）</label> <input id="a" type="checkbox">
+<blockquote><label class="collapse" for="a">Vector Sprites
+(SWF)</label> <input id="a" type="checkbox">
 <div class="index_list">
 <p><i>GameMaker Studio 2</i> has limited support for vector
 sprites. Generally all sprites in GameMaker use bitmaps which,
@@ -60,13 +61,12 @@ can become prohibitive. Vector sprites work around these
 limitations by storing and drawing their contents differently -
 instead of a grid of pixels, which can become blocky or fuzzy when
 scaled, they are drawn as triangles which can be scaled up without
-losing definition, as illustrated in the image below:  <img class=
+losing definition, as illustrated in the image below: <img class=
 "center" src="images/vector_compare.png"></p>
 
 <p>To help you visualise how this is done, the image below is of
 the same vector Fireman sprite only now we can see the polygons
 that are used to make the image within GameMaker Studio 2:
-
 <img class="center" src="images/vector_polys.png"></p>
 
 <p>However, nothing is ever for free when it comes to programming
@@ -111,7 +111,6 @@ into the program is almost identical to that for adding a normal
 bitmap image. To add a vector sprite, create a new sprite, which
 will bring up the standard Load Sprite dialogue, but make sure that
 you have selected *.swf from the file filter at the bottom.
-
 <img class="center" src="images/import_vector.png"></p>
 
 <p>Hitting the "load" button will add the vector image or animation
@@ -119,7 +118,7 @@ to the resource tree, with a progress bar being shown as the file
 is processed. Note that, depending on the complexity of the file,
 this can take a while (up to a minute for more complex animations).
 When processing has finished you'll be returned to the sprite
-properties dialogue, which will now look like this:  <img class=
+properties dialogue, which will now look like this: <img class=
 "center" src="images/vector_sprite_properties.png"></p>
 
 <p>As you can see it looks like the normal sprite dialogue, with
@@ -144,7 +143,12 @@ default viewer.</p>
 <p><br>
 </p>
 
-<div class="note"><b>注意</b>： How the image looks in your chosen preview editor will <b>not</b> be the same as how it looks in your game, nor how it looks in the preview window of the sprite editor. The vector image will be imported at the size it was created at, which is not necessarily the size that the preview is shown at (browsers will normally scale the image to fit, for example).</div>
+<div class="note"><b>NOTE</b>: How the image looks in your chosen
+preview editor will <b>not</b> be the same as how it looks in your
+game, nor how it looks in the preview window of the sprite editor.
+The vector image will be imported at the size it was created at,
+which is not necessarily the size that the preview is shown at
+(browsers will normally scale the image to fit, for example).</div>
 <br>
 
 <p>You can also set the <i>quality</i> of the vector sprite when
@@ -251,7 +255,8 @@ directory.</p>
 <div class="note"><b>IMPORTANT</b>: <i>GameMaker Studio 2</i> only
 supports a single texture atlas per sprite.</div>
 
-<div class="note"><b>注意</b>： This feature currently only supports files created using the program <a href=
+<div class="note"><b>NOTE</b>: This feature currently only supports
+files created using the program <a href=
 "http://esotericsoftware.com/" target="_blank">Spine</a>.</div>
 <img class="center" src="images/spine_example.png">
 <p>Currently <i>GameMaker Studio 2</i> can only import vector
@@ -261,7 +266,6 @@ almost identical to that for adding a normal bitmap image. To add a
 skeletal animation, you need to create a new sprite, which will
 bring up the standard Load Sprite dialogue, but make sure that you
 have selected <tt>*.json</tt> from the file filter at the bottom.
-
 <img class="center" src="images/spine_import.png"></p>
 
 <p>Hitting the "load" button will add the skeletal animation to the
@@ -269,7 +273,7 @@ resource tree as a sprite, with a progress bar being shown as the
 file is processed. Note that, depending on the complexity of the
 file, this may take a moment or two. When processing has finished
 you'll be returned to the sprite properties dialogue, which will
-now look like this:  <img class="center" src=
+now look like this: <img class="center" src=
 "images/spine_preview.png"></p>
 
 <p>Once you have imported the animation, you can set the collision
@@ -282,7 +286,11 @@ you simply won't get working collisions if the masks are not set
 correctly in the program used to create the image being
 imported.</p>
 
-<div class="note"><b>注意</b>： Due to the complexity of skeletal animations, the preview image shown in the sprite editor is not intended to accurately represent your animation, but rather give you a simple image that represents the animation for visualising in the room editor.</div>
+<div class="note"><b>NOTE</b>: Due to the complexity of skeletal
+animations, the preview image shown in the sprite editor is not
+intended to accurately represent your animation, but rather give
+you a simple image that represents the animation for visualising in
+the room editor.</div>
 <br>
 
 <p>Unlike bitmap sprites, the imported skeletal animation sprite
@@ -316,9 +324,11 @@ Skeletal Animations</a>.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">附加信息索引</a></div>
+<div style="float:left">Back: <a href="index.html">Additional
+Information Index</a></div>
 
-<div style="float:right">下一页：<a href="command_line.html">命令行参数</a></div>
+<div style="float:right">Next: <a href="command_line.html">Command
+Line Parameters</a></div>
 </div>
 </div>
 

@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>Windows Options</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/2_interface/3_settings/game_options/options_wind
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_windows.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_windows.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -40,7 +40,7 @@ if (window.name != "content")
 that control how your Windows game projects will be compiled. The
 different sections are:</p>
 
-<blockquote><label class="collapse" for="a">全局</label>
+<blockquote><label class="collapse" for="a">General</label>
 <input id="a" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/windows_general_options.png"
@@ -90,7 +90,7 @@ added the <i>Steam App ID</i> into the <a href="index.html">General
 Options</a> for the game.</p>
 </div>
 <br>
-<label class="collapse" for="b">图像</label> <input id="b"
+<label class="collapse" for="b">Graphics</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/windows_graphics_options.png"
@@ -103,13 +103,20 @@ Windows PC. The following options are included for you to
 modify:</p>
 
 <ul>
-<li><b>Display Cursor</b>: When this is checked the regular windows cursor will be show, and un-checking it will mean that no cursor is shown unless you have created one in your game code. 该选项默认为“开”。<br>
+<li><b>Display Cursor</b>: When this is checked the regular windows
+cursor will be show, and un-checking it will mean that no cursor is
+shown unless you have created one in your game code. This is on by
+default.<br>
 <br></li>
 
-<li><b>Start Fullscreen</b>: If this is checked, the game will start in fullscreen mode otherwise it will start windowed. 该选项默认为关<br>
+<li><b>Start Fullscreen</b>: If this is checked, the game will
+start in fullscreen mode otherwise it will start windowed. This is
+off by default.<br>
 <br></li>
 
-<li><b>Allow Fullscreen Switching</b>: With this ticked the user can switch from fullscreen to windowed and back again using the standard Windows shortcuts. 该选项默认为关<br>
+<li><b>Allow Fullscreen Switching</b>: With this ticked the user
+can switch from fullscreen to windowed and back again using the
+standard Windows shortcuts. This is off by default.<br>
 <br></li>
 
 <li><b>Interpolate colours between pixels</b>: Turns on
@@ -119,20 +126,29 @@ smoothed edged graphics it is better left on.This is on by
 default.<br>
 <br></li>
 
-<li><b>Use synchronization to avoid tearing</b>: This toggles v-sync on or off (v-sync is used to synchronise your game update speed to the refresh rate of the monitor). Note, that if you have a game with a room speed of 120 and the player has a monitor with a refresh rate of 60, turning this option on will lock your game speed to 60 too. 该选项默认为关<br>
+<li><b>Use synchronization to avoid tearing</b>: This toggles
+v-sync on or off (v-sync is used to synchronise your game update
+speed to the refresh rate of the monitor). Note, that if you have a
+game with a room speed of 120 and the player has a monitor with a
+refresh rate of 60, turning this option on will lock your game
+speed to 60 too. This is off by default.<br>
 <br></li>
 
-<li><b>Allow window resize</b>: Checking this permits the user to change the size of the game window (the <b>Borderless Window</b> option needs to be <i>off</i> for this to work). 该选项默认为关。<br>
+<li><b>Allow window resize</b>: Checking this permits the user to
+change the size of the game window (the <b>Borderless Window</b>
+option needs to be <i>off</i> for this to work). This option is off
+by default.<br>
 <br></li>
 
-<li><b>Borderless Window</b>: Checking this will make your game run with a borderless window, removing the normal minimise, maximise and close buttons as well as the game title. 该选项默认为关<br>
+<li><b>Borderless Window</b>: Checking this will make your game run
+with a borderless window, removing the normal minimise, maximise
+and close buttons as well as the game title. This is off by
+default.<br>
 <br></li>
 
 <li><b>Scaling</b>: Here you can choose to maintain aspect ratio
 (so a 4:3 room will be "letter boxed" on a 16:9) or to scale fully
 (stretching the image to fit the full screen).
-
-
 
 <div class="note"><b>WARNING!</b> Switching off the application
 surface will disable all the scaling options set in the Windows
@@ -150,10 +166,12 @@ how they look. This can be very useful if you wish to see how the
 texture pages are structured and to prevent having texture pages
 larger (or smaller) than necessary.</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be on PC's with lower specifications.</div>
+<div class="note"><b>NOTE</b>: Be aware that the larger the size of
+the texture page, the less compatible your game will be on PC's
+with lower specifications.</div>
 </div>
 <br>
-<label class="collapse" for="c">图片</label> <input id="c" type=
+<label class="collapse" for="c">Images</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/windows_images_options.png" alt=
@@ -176,7 +194,7 @@ game is being compiled to. If you use this tool, you should revise
 the images created to ensure that they are what you require.</p>
 </div>
 <br>
-<label class="collapse" for="d">安装程序</label> <input id="d"
+<label class="collapse" for="d">Installer</label> <input id="d"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/windows_installer_options.png"

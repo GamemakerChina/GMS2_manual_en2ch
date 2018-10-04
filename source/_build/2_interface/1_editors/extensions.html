@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>扩展</title>
+<title>Extensions</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/2_interface/1_editors/extensions.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fextensions.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fextensions.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>扩展</h2>
+<h2>Extensions</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -42,7 +42,7 @@ way to transfer game assets or even whole projects easily between
 people. If the extension is to add extra functionality, then the
 functions used can link your game to external SDKs or source code
 written in other languages (like Java for Android, for example), as
-well as native GML.  <img class="center" src=
+well as native GML. <img class="center" src=
 "images/editor_extensions.png" alt="Extensions Properties"></p>
 
 <p>Normally 3rd party extensions will be from the <a href=
@@ -64,7 +64,9 @@ selecting <i>Add Existing</i>.</p>
 mouse button <img style="vertical-align:middle" src=
 "../../images/icon_rmb.png"> menu option <i>Import File</i>.</p>
 
-<div class="note"><b>注意</b>： Legacy format <tt>*.GEX</tt> extensions are no longer supported and cannot be imported in to <i>GameMaker Studio 2</i> projects.</div>
+<div class="note"><b>NOTE</b>: Legacy format <tt>*.GEX</tt>
+extensions are no longer supported and cannot be imported in to
+<i>GameMaker Studio 2</i> projects.</div>
 <br>
 
 <p>For more information on using and creating <b>Extension
@@ -156,7 +158,6 @@ Ubuntu target, then you can set the "Uncompress as zip file" option
 to preserve file permissions for the extension.</div>
 
 <p><br>
-
 Once you have installed your extension, you can use the functions
 and constants for it just as you would the built in functions and
 constants used in the GameMaker Language. If your game is
@@ -283,7 +284,7 @@ correct language for the extension file format.</p>
 
 <p>Once you have done that you need to add the file to the
 extension (explained above) which will chain a new window to the
-Extensions Properties for the <b>File Properties</b>:  <img class=
+Extensions Properties for the <b>File Properties</b>: <img class=
 "center" src="images/editor_extensions_fileproperties.png" alt=
 "File Property Window"></p>
 
@@ -302,7 +303,6 @@ select what you require: <img class="center" src=
 function to the extension which can then be called in <i>GameMaker
 Studio 2</i> as you would any of the built in functions. The
 following window opens for you to define the function in:
-
 <img class="center" src=
 "images/editor_extensions_functioneditor.png" alt=
 "Function Editor"></p>
@@ -357,7 +357,6 @@ to be called. The platforms that are affected by this are:
 <b>XboxOne</b>.</div>
 
 <p><br>
-
 The other option you have is to create a <b>Macro</b>. A macro can
 be a <b>constant</b> value or a single code snippet (for more
 information on macros, please see <a href=
@@ -365,7 +364,7 @@ information on macros, please see <a href=
 example, we could remove the defined function from our example GML
 extension above for the colour <tt>c_alice_blue</tt> and make it a
 macro instead. To make a macro, simply click the <b>Macros</b>
-button in the Extension Properties window:  <img class="center" src=
+button in the Extension Properties window: <img class="center" src=
 "images/editor_extensions_macroeditor.png" alt="Macro Editor"></p>
 
 <p>The editor here is pretty much self explanatory - you give the
@@ -420,7 +419,7 @@ below:</p>
 <div class="compat">
 <table>
 <tr>
-<th>平台</th>
+<th>Platform</th>
 <th>Names</th>
 </tr>
 
@@ -474,7 +473,6 @@ group them together, so you'd add a placeholder and then define the
 functions and macros as explained in the section above. To add the
 rest of the files though you need to first tick the <i>Android</i>
 check-box in the <b>Additional Features</b> section of the editor:
-
 <img class="center" src="images/editor_extensions_android.png" alt=
 "Android Editor"></p>
 
@@ -561,7 +559,7 @@ constants are added using <b>placeholder</b> files to group them
 together, so you'd add a placeholder and then define the functions
 and macros as explained in the section above. To add the rest of
 the files though you need to first tick the <i>iOS</i> check-box in
-the <b>Additional Features</b> section of the editor:  <img class=
+the <b>Additional Features</b> section of the editor: <img class=
 "center" src="images/editor_extensions_ios.png" alt=
 "iOS Editor"></p>
 
@@ -681,9 +679,11 @@ covered in the manual.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">编辑器索引</a></div>
+<div style="float:left">Back: <a href="index.html">Editors
+Index</a></div>
 
-<div style="float:right">下一页：<a href="sprites.html">精灵编辑器</a></div>
+<div style="float:right">Next: <a href="sprites.html">The Sprite
+Editor</a></div>
 </div>
 </div>
 

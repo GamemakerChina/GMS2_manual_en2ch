@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>object_exists</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/objects/object_exist
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fobjects%2Fobject_exists.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fobjects%2Fobject_exists.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">Returns whether an object with the given index
 exists or not.</h2>
 
-<h3><b>语法：</b>
+<h3><b>Syntax:</b>
 </h3>
 
 <p class="code">object_exists(obj);</p>
@@ -45,13 +45,13 @@ exists or not.</h2>
 <div>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
 <td>obj</td>
-<td>待检测的物体索引。</td>
+<td>The index of the object to check.</td>
 </tr>
 </table>
 </div>
@@ -59,22 +59,25 @@ exists or not.</h2>
 <p><br>
 </p>
 
-<p><b>返回:</b> 布尔值</p>
+<p><b>Returns:</b> Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
-<p>该函数返回指定索引的物体是否存在。请注意这个函数检查的是该物体是否出现在资源树中而非实际的游戏房间中。如欲那么做请使用函数<a href=
-"../instances/instance_functions/instance_exists.html"><tt>instance_exists</tt></a>。<br>
+<p>This function returns whether an object with the specified index
+exists or not. Note that this checks to see if an object is present
+in the resource tree, and not actually in the game room. For that
+you should use the function <a href=
+"../instances/instance_functions/instance_exists.html"><tt>instance_exists</tt></a>.<br>
 
 <br></p>
 
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">if object_exists(obj_temp)<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -89,10 +92,10 @@ object run a script.</p>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页：<a href=
-"index.html">物体</a></div>
+<div style="float:left">Back: <a href=
+"index.html">Objects</a></div>
 
-<div style="float:right">下一页：<a href=
+<div style="float:right">Next: <a href=
 "object_get_mask.html">object_get_mask</a></div>
 </div>
 

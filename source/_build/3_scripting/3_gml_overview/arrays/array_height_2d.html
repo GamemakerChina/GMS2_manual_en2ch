@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>array_height_2d</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/3_gml_overview/arrays/array_height_2
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2Farrays%2Farray_height_2d.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2Farrays%2Farray_height_2d.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -36,45 +36,49 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
-<blockquote>使用该函数你可以得到一个二维数组的高度（以数组元素的个数形式）。你需要提供待检测的数组，然后函数的输出将会告诉你它包含多少初始元素。你可以使用函数<a href=
-"array_length_2d.html"><tt>array_length_2d</tt></a>来得到数组的第二个维度元素个数。</blockquote>
+<blockquote>With this function you can get the height (number of
+entries) of a the first dimension of a 2D array. You supply the
+array to check and the output from the function tells you how many
+initial entries it contains. You can get the number of entries for
+the second dimension of the array using the function <a href=
+"array_length_2d.html"><tt>array_length_2d</tt></a>.</blockquote>
 
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">array_height_2d(array_index);</p>
 
 <p><br>
 </p>
 
-<h3>参数：</h3>
+<h3>Arguments:</h3>
 
 <blockquote>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
 <td>array_index</td>
-<td>待检测的数组索引。</td>
+<td>The index of the array to check.</td>
 </tr>
 </table>
 </blockquote>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
-<p class="code">实数</p>
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 
 <p class="code">for (var i = array_height_2d(a); i &gt; -1;
 i--;)<br>
@@ -86,7 +90,8 @@ i--;)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
-<blockquote>上述代码将会遍历该二维数组并将每一元素设为-1。</blockquote>
+<blockquote>The above code will loop through a 2D array and set
+each entry to -1.</blockquote>
 
 <p><br>
 </p>
@@ -95,10 +100,10 @@ i--;)<br>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href=
-"../10_arrays.html">数组</a></div>
+<div style="float:left">Back: <a href=
+"../10_arrays.html">Arrays</a></div>
 
-<div style="float:right">下一页：<a href=
+<div style="float:right">Next: <a href=
 "array_create.html">array_create</a></div>
 </div>
 </div>

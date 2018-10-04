@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>layer_background_exists</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/rooms/backgrounds/la
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Frooms%2Fbackgrounds%2Flayer_background_exists.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Frooms%2Fbackgrounds%2Flayer_background_exists.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
 <blockquote>
 <p>You can use this function to check and see if a background
@@ -51,14 +51,16 @@ or when you use the function <a href=
 and the function will return either <tt>true</tt> if the element
 exists, or <tt>false</tt> if it does not.</p>
 
-<div class="note"><b>注意</b>： This function works within the scope of the current target room - by default the room in which the function is called - which can be set using the function <a href=
+<div class="note"><b>NOTE</b>: This function works within the scope
+of the current target room - by default the room in which the
+function is called - which can be set using the function <a href=
 "../layers/layer_set_target_room.html"><tt>layer_set_target_room()</tt></a>.</div>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">layer_background_exists(layer_id,
 background_element_id)</p>
@@ -66,13 +68,13 @@ background_element_id)</p>
 <p><br>
 </p>
 
-<h3>参数：</h3>
+<h3>Arguments:</h3>
 
 <blockquote>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -91,14 +93,14 @@ as a string)</td>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
-<p class="code">布尔值</p>
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 
 <p class="code">var lay_id = layer_get_id("Background_trees");<br>
 if layer_background_exists(lay_id, global.TreesBackground)<br>

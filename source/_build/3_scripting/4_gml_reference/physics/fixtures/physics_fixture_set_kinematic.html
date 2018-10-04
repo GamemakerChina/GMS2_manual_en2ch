@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>physics_fixture_set_kinematic</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/fixtures/phy
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Ffixtures%2Fphysics_fixture_set_kinematic.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Ffixtures%2Fphysics_fixture_set_kinematic.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">This function indicates that the fixture is
 indicated to behave kinematically.</h2>
 
-<h3 class="studio"><b>语法：</b>
+<h3 class="studio"><b>Syntax:</b>
 </h3>
 
 <p class="code">physics_fixture_set_kinematic(fixture)</p>
@@ -45,8 +45,8 @@ indicated to behave kinematically.</h2>
 <div class="param">
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -59,20 +59,37 @@ indicated to behave kinematically.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>Returns:</b> N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
-<p>基于物理的游戏将会有一些你想要移动的实例，但不希望被诸如重力等力量所影响，也不希望与动态对象碰撞所产生的力量（例如，在平台游戏中考虑移动平台）。For such objects simply setting the density of a fixture to 0 will mean that the physics will assume that the object is intended to be static. However, should you set the <tt>phy_speed_x</tt>, <tt>phy_speed_y</tt> or <tt>phy_angular_velocity</tt> variables for an instance that has had such a fixture bound to it, it will be converted into a kinematic object and begin movement. Change the instance from static to kinematic mid-simulation can be expensive in terms of processing (depending on the state of the instances in the physics world) and therefore it is recommended to set the fixture to be kinematic using this function prior to binding it to an instance, so that it will be unaffected by collisions and forces (such as gravity) but may move with constant linear and/or angular velocity.<br>
+<p>There will be certain instances in a physics based game which
+you want to move around but do not wish to be acted on by forces
+such as gravity, nor forces incurred by collisions with dynamic
+objects (think of moving platforms in a platform game, for
+example). For such objects simply setting the density of a fixture
+to 0 will mean that the physics will assume that the object is
+intended to be static. However, should you set the
+<tt>phy_speed_x</tt>, <tt>phy_speed_y</tt> or
+<tt>phy_angular_velocity</tt> variables for an instance that has
+had such a fixture bound to it, it will be converted into a
+kinematic object and begin movement. Change the instance from
+static to kinematic mid-simulation can be expensive in terms of
+processing (depending on the state of the instances in the physics
+world) and therefore it is recommended to set the fixture to be
+kinematic using this function prior to binding it to an instance,
+so that it will be unaffected by collisions and forces (such as
+gravity) but may move with constant linear and/or angular
+velocity.<br>
 <br></p>
 
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">physics_fixture_set_kinematic(fix_Cloud);</p>
 

@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>数组</title>
+<title>Arrays</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,28 +24,35 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/3_gml_overview/10_arrays.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F10_arrays.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F10_arrays.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>数组</h2>
+<h2>Arrays</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>数组在一开始看来可能不容易理解，但是它们在游戏制作的过程中是非常有用的也是不可或缺的一部分。为什么？有些东西不用数组实现不了——</p>
+<p>Arrays may seem confusing at first, but they can be extremely
+useful and are an essential part of making games. Why? Well, here
+are just a few things that would be impossible without arrays -</p>
 
 <ul>
-<li>菜单。如果有一两个数组的话，创造一个良好的菜单系统就不是什么难事了。</li>
+<li>Menus. An array or two can make it much easier to create a good
+menu system.</li>
 
-<li>RPGs. 制作RPG游戏的时候数组是必要的，因为与其使用一大堆乱七八糟的变量，Arrays are essential for making RPGs, because instead of having a jumble of variables, you just have a few lines, which you can refer back to at any time.</li>
+<li>RPGs. Arrays are essential for making RPGs, because instead of
+having a jumble of variables, you just have a few lines, which you
+can refer back to at any time.</li>
 
-<li>卡牌游戏Good for keeping track of cards and hands and can even be shuffled!</li>
+<li>Card Games. Good for keeping track of cards and hands and can
+even be shuffled!</li>
 
-<li>高分和其他统计信息Much easier to keep track of one array than multiple variables.</li>
+<li>High scores and other statistics. Much easier to keep track of
+one array than multiple variables.</li>
 </ul>
 
 <p>That's just the tip of the iceberg as arrays are one of the most
@@ -54,9 +61,12 @@ surprised at the applications they can have! There are different
 types of array available to you to use in GML and they are outlined
 in the sections below:</p>
 
-<blockquote><label class="collapse" for="one">一位数组</label> <input id="one" type="checkbox">
+<blockquote><label class="collapse" for="one">1 Dimension
+Arrays</label> <input id="one" type="checkbox">
 <div class="index_list">
-<p>好了，我们可以用数组做到上面提到的那些事情，那么数组究竟是啥呢？它长啥样呢？emmm……就像这样…… <img class="center" src="images/1darrayexample.png" alt=
+<p>Okay, we can use an array for those things mentioned above, but
+what is an array? What does it look like? Well, something like
+this... <img class="center" src="images/1darrayexample.png" alt=
 "1D array"></p>
 
 <p class="code">array[0] = 1.25;</p>
@@ -66,11 +76,18 @@ break down the parts of to see what it means:</p>
 
 <p class="code">array</p>
 
-<p>这是数组名和其他所有变量都一样，它可以是你所想的任何东西从"a"到"mymumscow".</p>
+<p>This is the array's name. Just like any other variable, it can
+be anything you want from simply "a" to "mymumscow".</p>
 
 <p class="code">[0]</p>
 
-<p>这是数组内我们所检查或修改的位置。You see, an array is basically a container with a number of spaces to store values, and each position in the container has a specific number to identify it, which is what we put in the []. It's worth noting that an array <b>always starts at 0</b> and can <i>never be negative</i>!Now let's expand our array to include different positions...</p>
+<p>This is the position within the array that we are checking or
+changing. You see, an array is basically a container with a number
+of spaces to store values, and each position in the container has a
+specific number to identify it, which is what we put in the [].
+It's worth noting that an array <b>always starts at 0</b> and can
+<i>never be negative</i>! Now let's expand our array to include
+different positions...</p>
 
 <p class="code">array[2] = 0;<br>
 array[1] = 0;<br>
@@ -170,7 +187,7 @@ each of them and draw the total value at the end.</p>
 <input id="two" type="checkbox">
 <div class="index_list">
 <p>Now that we know what a normal array looks like, let's look at a
-2D (two dimensional) array.  <img class="center" src=
+2D (two dimensional) array. <img class="center" src=
 "images/2darrayexample.png" alt="2D arrays"></p>
 
 <p class="code">array[0, 0] = 5;</p>
@@ -321,7 +338,10 @@ referencing them. Referencing an array will not copy it and be
 faster to parse.</div>
 </blockquote>
 
-<p>You can also delete an array simply by "re-assigning" the variable that defines it to a single value. This will free up the memory associated with all the entries and values for that array. 比如：</p>
+<p>You can also delete an array simply by "re-assigning" the
+variable that defines it to a single value. This will free up the
+memory associated with all the entries and values for that array.
+For example:</p>
 
 <p class="code">//Create the array for (var i = 9; i &gt; -1;
 i--;)<br>
@@ -339,7 +359,7 @@ along with an example for arrays, from the following page:</p>
 <blockquote>
 <ol>
 <li><a href="13_accessors.html"><span class=
-"list_link">访问器</span></a>
+"list_link">Accessors</span></a>
 </li>
 </ol>
 </blockquote>
@@ -348,7 +368,7 @@ along with an example for arrays, from the following page:</p>
 <p><br>
 </p>
 
-<h2>数组函数</h2>
+<h2>Array Functions</h2>
 
 <p>There are a few functions associated with the use of arrays too.
 These are designed to give you flexibility in your code, and will
@@ -385,10 +405,11 @@ your games. These functions are:</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">GML概述</a></div>
+<div style="float:left">Back: <a href="index.html">GML
+Overview</a></div>
 
-<div style="float:right">下一页：<a href=
-"11_assignments.html">赋值</a></div>
+<div style="float:right">Next: <a href=
+"11_assignments.html">Assignments</a></div>
 </div>
 </div>
 

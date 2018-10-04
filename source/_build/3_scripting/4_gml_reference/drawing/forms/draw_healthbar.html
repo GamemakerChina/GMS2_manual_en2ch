@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>draw_healthbar</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/drawing/forms/draw_h
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fforms%2Fdraw_healthbar.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fforms%2Fdraw_healthbar.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -33,7 +33,7 @@ if (window.name != "content")
 
 <h2 class="studio">Draws a custom healthbar.</h2>
 
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">draw_healthbar(x1, y1, x2, y2, amount, backcol,
 mincol, maxcol, direction, showback, showborder);</p>
@@ -44,8 +44,8 @@ mincol, maxcol, direction, showback, showborder);</p>
 <div>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -113,12 +113,12 @@ disregarded.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>Returns:</b> N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
 <p>With this function you can draw a coloured bar to show a
 constant value. Although the function uses the word "healthbar" you
@@ -133,7 +133,7 @@ You can set various different things that change the visual aspect
 of the bar and these are illustrated in the image below (note that
 the colours used here are <tt>c_green</tt> for the maximum value
 and <tt>c_red</tt> for the minimum value, but you can use the
-colours that you wish):  <img class="center" src=
+colours that you wish): <img class="center" src=
 "images/draw_healthbar.png"></p>
 
 <div class="note"><b>NOTE</b>: If you are wanting to draw a shape
@@ -149,7 +149,7 @@ should be customised with this in mind.</div>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">var pc;<br>
 pc = (hp / max_hp) * 100;<br>

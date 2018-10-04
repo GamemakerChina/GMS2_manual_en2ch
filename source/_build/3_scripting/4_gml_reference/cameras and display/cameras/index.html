@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>相机</title>
+<title>Cameras</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/cameras and display/
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcameras%20and%20display%2Fcameras%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcameras%20and%20display%2Fcameras%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>相机</h2>
+<h2>Cameras</h2>
 
 <p>When creating rooms in <i>GameMaker Studio 2</i> you need to set
 up different <i>view ports</i> and/or <i>cameras</i> to control
@@ -92,11 +92,14 @@ room of the game</i> is what defines the <b>background canvas
 size</b> (or window size for MacOS, Ubuntu (Linux) and Windows),
 and any areas that are not covered by a view port will default to
 drawing using the window colour as illustrated by the image below:
-
 <img class="center" src="images/viewport_canvas.png" alt=
 "View Port Canvas"></p>
 
-<div class="note"><b>注意</b>： By default you need to select "Clear Display Buffer" in the room editor for the colour to be shown, and you can only set the colour using the function <tt>window_set_colour()</tt>. If you don't use this function it will default to black.</div>
+<div class="note"><b>NOTE</b>: By default you need to select "Clear
+Display Buffer" in the room editor for the colour to be shown, and
+you can only set the colour using the function
+<tt>window_set_colour()</tt>. If you don't use this function it
+will default to black.</div>
 
 <p>You should take care when using multiple cameras as the draw
 event for all instances is called once for each visible view, so if
@@ -259,7 +262,6 @@ type="checkbox">
 <h2>View Ports And Camera View Variables</h2>
 
 <p><br>
-
 When working with cameras, you have to assign them to a view port
 for them to be "active" and display anything. These view ports are
 numbered from 0 to 7 and can be changed and positioned using

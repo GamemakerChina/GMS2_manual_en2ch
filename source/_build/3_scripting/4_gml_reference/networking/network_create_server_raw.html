@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>network_create_server_raw</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/networking/network_c
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fnetworking%2Fnetwork_create_server_raw.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fnetworking%2Fnetwork_create_server_raw.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>network_create_server_raw</h2>
 
 <div class="body-scroll">
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">network_create_server_raw(type, port,
 max_client);</p>
@@ -43,23 +43,24 @@ max_client);</p>
 <div class="param">
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
 <td>type</td>
-<td>要创建的服务器类型（详见以下常量表）。</td>
+<td>The type of server to create (see the constants listed
+below).</td>
 </tr>
 
 <tr class="alt">
 <td>port</td>
-<td>服务端所使用的端口。</td>
+<td>The port that the server will use.</td>
 </tr>
 
 <tr>
 <td>max_client</td>
-<td>一次性能连接客户端的最大数量。</td>
+<td>The maximum number of clients that can connect at once.</td>
 </tr>
 </table>
 </div>
@@ -67,12 +68,12 @@ max_client);</p>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>Returns:</b> Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
 <p>This function is used to create a new network server for your
 game, using one of the permitted connection protocols (see the
@@ -89,23 +90,23 @@ functions, or a value of less than 0 if the connection fails.</p>
 <div class="compat">
 <table>
 <tr>
-<th>常量</th>
-<th>描述</th>
+<th>Constant</th>
+<th>Description</th>
 </tr>
 
 <tr>
 <td>network_socket_tcp</td>
-<td>使用TCP协议创建一个网络套接字。</td>
+<td>Create a web socket using TCP.</td>
 </tr>
 
 <tr class="alt">
 <td>network_socket_udp</td>
-<td>使用UDP协议创建一个网络套接字。</td>
+<td>Create a web socket using UDP.</td>
 </tr>
 
 <tr>
 <td>network_socket_bluetooth</td>
-<td>创建一个蓝牙套接字（<i>尚不可用！</i>）</td>
+<td>Create a Bluetooth socket (<i>currently unavailable!</i>).</td>
 </tr>
 </table>
 </div>
@@ -121,7 +122,7 @@ send unformatted data to the server created.<br>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">var port = 6510;<br>
 server = network_create_server_raw(network_socket_tcp, port,
@@ -133,7 +134,9 @@ while (server &lt; 0 &amp;&amp; port &lt; 65535)<br>
 network_create_server(network_socket_tcp, port, 32);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>上述代码将会尝试使用TCP协议通过端口32创建一个服务端。若端口不可用，则会遍历所有端口并找到合适的进行连接。</p>
+<p>The above code will try and create a server using TCP through
+port 32. If that port is unavailable, it will then loop through the
+ports to find one that is.</p>
 
 <p><br>
 </p>
@@ -142,10 +145,10 @@ network_create_server(network_socket_tcp, port, 32);<br>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href=
-"index.html">联网</a></div>
+<div style="float:left">Back: <a href=
+"index.html">Networking</a></div>
 
-<div style="float:right">下一页：<a href=
+<div style="float:right">Next: <a href=
 "network_create_socket.html">network_create_socket</a></div>
 </div>
 </div>

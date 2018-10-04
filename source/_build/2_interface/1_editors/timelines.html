@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>The Timeline Editor</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/2_interface/1_editors/timelines.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Ftimelines.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Ftimelines.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -37,7 +37,7 @@ if (window.name != "content")
 </p>
 
 <p><img class="center" src="images/editor_timelines.png" alt=
-"时间轴编辑器">  In most games you will want certain things to
+"Timeline Editor"> In most games you will want certain things to
 happen at precise moments in time. Now, you can try to achieve this
 by using the alarm events but when things get too complicated this
 won't work any more, especially as you are limited to only twelve
@@ -68,10 +68,13 @@ object and placing an instance into the room. This is an easy way
 to get timed spawns of the enemies.</p>
 
 <p>To create a time line, right click <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> on the timeline resource in the resource tree and select "Create". 这将打开此页面顶部的窗口，具有以下部分：</p>
+"vertical-align:middle" src="../../images/icon_rmb.png"> on the
+timeline resource in the resource tree and select "Create". This
+will open the window pictured at the top of this page with the
+following sections:</p>
 
 <blockquote><a name="timeline_name" id="timeline_name"></a>
-<label class="collapse" for="one">名称</label> <input id="one"
+<label class="collapse" for="one">Name</label> <input id="one"
 type="checkbox">
 <div class="index_list">
 <p>Here you give your timeline resource a name. This must only
@@ -82,7 +85,7 @@ DnD™ actions or code functions to identify the timeline.</p>
 </div>
 <br>
 <a name="timeline_moment" id="timeline_moment"></a> <label class=
-"collapse" for="two">时刻</label> <input id="two" type=
+"collapse" for="two">Moment</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
 <p>You can set the moment value here. The moment value is
@@ -137,7 +140,7 @@ one of the selected elements: <img class="center" src=
 "Timeline Editor Menu"></p>
 
 <blockquote><a name="timeline_add" id="timeline_add"></a>
-<label class="collapse" for="four">添加</label> <input id="four"
+<label class="collapse" for="four">Add</label> <input id="four"
 type="checkbox">
 <div class="index_list">
 <p>This option permits you to add a new moment to the timeline. It
@@ -151,14 +154,14 @@ choosing "Change".</p>
 </div>
 <br>
 <a name="timeline_edit" id="timeline_edit"></a> <label class=
-"collapse" for="five">编辑</label> <input id="five" type=
+"collapse" for="five">Edit</label> <input id="five" type=
 "checkbox">
 <div class="index_list">
 <p>This opens the current timeline moment for editing.</p>
 </div>
 <br>
 <a name="timeline_change" id="timeline_change"></a> <label class=
-"collapse" for="six">更改时刻</label> <input id="six" type=
+"collapse" for="six">Change Moment</label> <input id="six" type=
 "checkbox">
 <div class="index_list">
 <p>Change the value for the selected timeline moment. This is the
@@ -168,7 +171,7 @@ editor window.</p>
 </div>
 <br>
 <a name="timeline_change_name" id="timeline_change_name"></a>
-<label class="collapse" for="ten">更改描述</label>
+<label class="collapse" for="ten">Change Description</label>
 <input id="ten" type="checkbox">
 <div class="index_list">
 <p>Change the descriptive name for the selected timeline moment.
@@ -178,7 +181,7 @@ timeline description in the editor window.</p>
 </div>
 <br>
 <a name="timeline_duplicate" id="timeline_duplicate"></a>
-<label class="collapse" for="seven">复制</label> <input id=
+<label class="collapse" for="seven">Duplicate</label> <input id=
 "seven" type="checkbox">
 <div class="index_list">
 <p>This will duplicate all the selected timeline moments and add
@@ -186,7 +189,7 @@ them consecutively to the end of the current timeline.</p>
 </div>
 <br>
 <a name="timeline_merge" id="timeline_merge"></a> <label class=
-"collapse" for="eight">合并</label> <input id="eight" type=
+"collapse" for="eight">Merge</label> <input id="eight" type=
 "checkbox">
 <div class="index_list">
 <p>If you select two or more moments from a timeline you can choose
@@ -196,7 +199,7 @@ together concurrently.</p>
 </div>
 <br>
 <a name="timeline_remove" id="timeline_remove"></a> <label class=
-"collapse" for="nine">移除</label> <input id="nine" type=
+"collapse" for="nine">Remove</label> <input id="nine" type=
 "checkbox">
 <div class="index_list">
 <p>This will remove the selected moment (or moments) from the
@@ -221,7 +224,7 @@ src="../../images/icon_cmd.png"> + <tt>V</tt>.</p>
 </div>
 <br>
 <a name="timeline_select" id="timeline_select"></a> <label class=
-"collapse" for="eleven">全选</label> <input id="eleven" type=
+"collapse" for="eleven">Select All</label> <input id="eleven" type=
 "checkbox">
 <div class="index_list">
 <p>With this option you can select all the moments in a timeline.
@@ -233,7 +236,10 @@ copied.</p>
 "collapse" for="twelve">Convert to Drag and Drop / Code</label>
 <input id="twelve" type="checkbox">
 <div class="index_list">
-<p>Timeline moments will be created using the method chosen when you created the project, either using code or using Drag and Drop actions. 使用此选项，无论项目类型如何，都可以将其从一个转换为另一个。</p>
+<p>Timeline moments will be created using the method chosen when
+you created the project, either using code or using Drag and Drop
+actions. With this option you can convert from one to the other,
+regardless of the project type.</p>
 </div>
 <br></blockquote>
 
@@ -244,7 +250,8 @@ copied.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">编辑器索引</a></div>
+<div style="float:left">Back: <a href="index.html">Editors
+Index</a></div>
 
 <div style="float:right">Next: <a href="objects.html">The Object
 Editor</a></div>

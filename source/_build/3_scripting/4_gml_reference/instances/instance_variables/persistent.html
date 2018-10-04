@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>persistent</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/instances/instance_v
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Finstances%2Finstance_variables%2Fpersistent.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Finstances%2Finstance_variables%2Fpersistent.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -36,28 +36,46 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
-<blockquote>This variable can be read to find out if the instance is flagged as <tt>persistent</tt> or not, or it can used to set persistence to <tt>true</tt> (persistent) or <tt>false</tt> (not persistent) for the instance. A persistent instance is one that will be "carried over" from room to room, meaning (for example) that it only has to be created once at the start of the game and it will be present in all further rooms. Care should be taken with persistence as it is easy to lose track of persistent instances which can lead to problems later in the development of the game.<br><br>A persistent object will still have its <b>Game Start</b>, <b>Game End</b>, <b>Room Start</b> and <b>Room End</b> events triggered, however if you restart the game (with, for example, the <tt>game_restart()</tt> function) all persistent objects will be removed and only exist when created again by the game. 另请注意，如果您停用持久性对象，它将不会再从一个房间传递到另一个房间，除非在客户端事件触发之前重新启动。</blockquote>
+<blockquote>This variable can be read to find out if the instance
+is flagged as <tt>persistent</tt> or not, or it can used to set
+persistence to <tt>true</tt> (persistent) or <tt>false</tt> (not
+persistent) for the instance. A persistent instance is one that
+will be "carried over" from room to room, meaning (for example)
+that it only has to be created once at the start of the game and it
+will be present in all further rooms. Care should be taken with
+persistence as it is easy to lose track of persistent instances
+which can lead to problems later in the development of the
+game.<br>
+<br>
+A persistent object will still have its <b>Game Start</b>, <b>Game
+End</b>, <b>Room Start</b> and <b>Room End</b> events triggered,
+however if you restart the game (with, for example, the
+<tt>game_restart()</tt> function) all persistent objects will be
+removed and only exist when created again by the game. Also note
+that if you deactivate a persistent object, it will no longer pass
+from one room to another unless re-activated before the Room End
+event is triggered.</blockquote>
 
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">persistent;</p>
 
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
-<p class="code">布尔值</p>
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 
 <p class="code">if !persistent<br>
 &nbsp;&nbsp;&nbsp;{<br>

@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>network_set_config</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/networking/network_s
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fnetworking%2Fnetwork_set_config.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fnetworking%2Fnetwork_set_config.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>network_set_config</h2>
 
 <div class="body-scroll">
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">network_set_config(config_value, setting);</p>
 
@@ -42,8 +42,8 @@ if (window.name != "content")
 <div class="param">
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -61,12 +61,12 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> 字符串</p>
+<p><b>Returns:</b> String</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
 <p>With this function you can set different network configurations.
 These configurations are given as <b>constants</b> and the setting
@@ -77,42 +77,41 @@ lists the available constants and their settings:<br>
 <div class="compat">
 <table>
 <tr>
-<th>常量</th>
-<th>描述</th>
-<th>设定</th>
+<th>Constant</th>
+<th>Description</th>
+<th>Setting</th>
 </tr>
 
 <tr>
 <td>network_config_connect_timeout</td>
-<td>设置单次连接的超时数</td>
-<td>以毫秒为单位</td>
+<td>Set a connection timeout value</td>
+<td>A value in milliseconds</td>
 </tr>
 
 <tr class="alt">
 <td>network_config_use_non_blocking_socket</td>
-<td>告知GameMaker Studio 2不要阻止连接</td>
-<td>0 = 阻止, 1 = 不阻止</td>
+<td>Tell GameMaker Studio 2 not to block on connect.</td>
+<td>0 = block, 1 = don't block</td>
 </tr>
 
 <tr>
 <td>network_config_enable_reliable_udp</td>
 <td>Enables the "reliable UDP" protocol for an existing UDP
 socket</td>
-<td>以毫秒为单位</td>
+<td>A value in milliseconds</td>
 </tr>
 
 <tr class="alt">
 <td>network_config_disable_reliable_udp</td>
 <td>Disables the "reliable UDP" protocol for an existing UDP
 socked.</td>
-<td>0 = 阻止, 1 = 不阻止</td>
+<td>0 = block, 1 = don't block</td>
 </tr>
 </table>
 </div>
 
 <p><br>
 <br>
-
 The first option (<tt>network_config_connect_timeout</tt>) simply
 sets the timeout for connecting to a server but doesn't change
 connection behaviour apart from the time you have to wait. It is
@@ -153,14 +152,15 @@ re-send missing packets.</i>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">network_set_config(network_config_connect_timeout,
 1000);<br>
 network_set_config(network_config_use_non_blocking_socket,
 1);<br></p>
 
-<p>上述代码会设置网络连接超时限制为1000毫秒并告知GameMaker Studio 2不阻止连接。</p>
+<p>The above code will set the timeout for the network connection
+to 1000ms and tell GameMaker Studio 2 not to block on connect.</p>
 
 <p><br>
 </p>
@@ -169,10 +169,10 @@ network_set_config(network_config_use_non_blocking_socket,
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href=
-"index.html">联网</a></div>
+<div style="float:left">Back: <a href=
+"index.html">Networking</a></div>
 
-<div style="float:right">下一页：<a href=
+<div style="float:right">Next: <a href=
 "network_set_timeout.html">network_set_timeout</a></div>
 </div>
 </div>

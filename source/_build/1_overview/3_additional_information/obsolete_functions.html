@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>弃用函数</title>
+<title>Obsolete Functions</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/1_overview/3_additional_information/obsolete_fun
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additional_information%2Fobsolete_functions.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additional_information%2Fobsolete_functions.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>弃用函数</h2>
+<h2>Obsolete Functions</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -48,10 +48,16 @@ here will be turned into <b>compatibility scripts</b></p>
 
 <blockquote><a name="obsolete_backgrounds" id=
 "obsolete_backgrounds"></a> <label class="collapse" for=
-"one">背景</label> <input id="one" type="checkbox">
+"one">Backgrounds</label> <input id="one" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>在<i>GameMaker: Studio 1.4</i>中，你有独立的背景资源，其中你可以添加图片用作背景。在<i>GameMaker Studio 2</i>中所有图像都被视为精灵，并且其用途也取决于它们在房间中所被分配的<i>层（Layers）</i>。这也就意味着不再有“背景”资源了，并且这也意味着下述函数被弃用了：</p>
+<p>In <i>GameMaker: Studio 1.4</i> you had a separate background
+resource, where you could add images to be used as backgrounds. In
+<i>GameMaker Studio 2</i> all images are considered sprites, and
+the use you put them too will depend on the <i>layer</i> they are
+assigned to in the room. This means that there is no longer a
+"background" resource, and it also means that the following
+functions are obsolete:</p>
 
 <table>
 <tr>
@@ -181,7 +187,6 @@ These are no longer required in <i>GameMaker Studio 2</i>:</p>
 </table>
 
 <p><br>
-
 You can find out more about <b>Background Layers</b> from the
 section on the <a href=
 "../../2_interface/1_editors/rooms.html#room_layers">Room
@@ -193,7 +198,7 @@ Layers</a>.</p>
 </div>
 <br>
 <a name="obsolete_tiles" id="obsolete_tiles"></a> <label class=
-"collapse" for="two">图块</label> <input id="two" type="checkbox">
+"collapse" for="two">Tiles</label> <input id="two" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
 <p>As with backgrounds (explained above) the tile resource from
@@ -285,7 +290,6 @@ obsolete:</p>
 </table>
 
 <p><br>
-
 You can find out more about <b>Tile Sets</b> from the manual
 section on the <a href=
 "../../2_interface/1_editors/tilesets.html">Tile Set Editor</a> and
@@ -299,7 +303,7 @@ Layers</a>.</p>
 </div>
 <br>
 <a name="obsolete_objects" id="obsolete_objects"></a> <label class=
-"collapse" for="eight">物体</label> <input id="eight" type=
+"collapse" for="eight">Objects</label> <input id="eight" type=
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
@@ -321,7 +325,6 @@ functions obsolete:</p>
 </table>
 
 <p><br>
-
 You can find out more about object resources from the manual
 section on the <a href=
 "../../2_interface/1_editors/objects.html">Object Editor</a> and on
@@ -332,7 +335,7 @@ the functions that control objects using code from the section
 </div>
 <br>
 <a name="obsolete_sound" id="obsolete_sound"></a> <label class=
-"collapse" for="three">声音</label> <input id="three" type=
+"collapse" for="three">Sounds</label> <input id="three" type=
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
@@ -392,7 +395,6 @@ legacy functions listed below obsolete:</p>
 </table>
 
 <p><br>
-
 You can find out more about audio resources from the manual section
 on the <a href="../../2_interface/1_editors/sounds.html">Sound
 Editor</a> and on the functions that control audio using code from
@@ -405,7 +407,12 @@ the section <a href=
 "collapse" for="four">D3D</label> <input id="four" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>When using 3D models or primitives in <i>GameMaker: Studio 1.4</i>, you had to use the <tt>d3d_</tt> functions. These used an obsolete API for drawing and in many cases were not related strictly to Direct 3D API, or even to using 3D itself. 随着<i>GameMaker Studio 2</i>中顶点缓冲区、矩阵以及摄像机系统的引进，下述函数已经作废：</p>
+<p>When using 3D models or primitives in <i>GameMaker: Studio
+1.4</i>, you had to use the <tt>d3d_</tt> functions. These used an
+obsolete API for drawing and in many cases were not related
+strictly to Direct 3D API, or even to using 3D itself. With the
+advent of vertex buffers, matrices and cameras in <i>GameMaker
+Studio 2</i>, the following functions have been made obsolete:</p>
 
 <table>
 <tr>
@@ -567,7 +574,6 @@ the section <a href=
 </table>
 
 <p><br>
-
 You can find out more about vertex buffers <a href=
 "../../3_scripting/4_gml_reference/drawing/primitives/index.html">here</a>,
 more about matrices <a href=
@@ -580,7 +586,7 @@ here</a> and more about the GPU functions <a href=
 </div>
 <br>
 <a name="obsolete_view" id="obsolete_view"></a> <label class=
-"collapse" for="five">视野变量及窗口函数</label>
+"collapse" for="five">View Variables And Windows Functions</label>
 <input id="five" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
@@ -625,7 +631,6 @@ variables and functions are listed below:</p>
 </table>
 
 <p><br>
-
 You can find out more about cameras from the manual section on
 <a href=
 "../../3_scripting/4_gml_reference/cameras%20and%20display/index.html">
@@ -634,7 +639,7 @@ Cameras And The Display</a>.</p>
 </div>
 <br>
 <a name="obsolete_3rdparty" id="obsolete_3rdparty"></a>
-<label class="collapse" for="six">第三方支持</label>
+<label class="collapse" for="six">3rd Party Support</label>
 <input id="six" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
@@ -703,7 +708,6 @@ from previous versions into extensions, meaning that the following
 </table>
 
 <p><br>
-
 You can get the official YoYo Games extensions for advertising and
 analytics from their <a href=
 "https://marketplace.yoyogames.com/publishers/23/yoyo-games"
@@ -712,11 +716,22 @@ target="_blank">Marketplace Page</a>.</p>
 </div>
 <br>
 <a name="obsolete_actions" id="obsolete_actions"></a> <label class=
-"collapse" for="seven">动作</label> <input id="seven" type=
+"collapse" for="seven">Actions</label> <input id="seven" type=
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>无论是<i>GameMaker: Studio 1.4</i>还是<i>GameMaker Studio 2</i>都有一个可视化撰写<b>拖拽按钮</b> (DnD™)界面来供您创作，然而however the way it is handled in <i>GameMaker Studio 2</i> is quite different to the previous methods used. Previously, all DnD™ actions had their own corresponding function which worked "behind the scenes" to get the desired results, however this was not very transparent and added in extra overheads to the function calls, resulting in poorer performance. In <i>GameMaker Studio 2</i> this has been changed, and now all actions compile to pure code (and can be shown as such if required), meaning that the following action functions are obsolete:</p>
+<p>Both <i>GameMaker: Studio 1.4</i> and <i>GameMaker Studio 2</i>
+have a visual scripting <b>Drag and Drop</b> (DnD™) interface for
+creating your games, however the way it is handled in <i>GameMaker
+Studio 2</i> is quite different to the previous methods used.
+Previously, all DnD™ actions had their own corresponding function
+which worked "behind the scenes" to get the desired results,
+however this was not very transparent and added in extra overheads
+to the function calls, resulting in poorer performance. In
+<i>GameMaker Studio 2</i> this has been changed, and now all
+actions compile to pure code (and can be shown as such if
+required), meaning that the following action functions are
+obsolete:</p>
 
 <table>
 <tr>
@@ -969,7 +984,6 @@ target="_blank">Marketplace Page</a>.</p>
 </table>
 
 <p><br>
-
 You can find out more about the new DnD™ from the manual section
 <a href=
 "../../3_scripting/1_drag_and_drop_overview/index.html">Drag And
@@ -981,7 +995,7 @@ Drop Overview</a>.</p>
 <p><br>
 </p>
 
-<h2>兼容性脚本</h2>
+<h2>Compatibility Scripts</h2>
 
 <p><br>
 </p>
@@ -997,13 +1011,25 @@ scripts will contain either the new equivalent function or a short
 script of code that performs the same action as the obsolete
 function.</p>
 
-<p>每当你第一次导入一个<i>GameMaker Studio 2</i>项目，就会有一个大致像这样的<b>兼容性报告</b>出现在您的面前：
+<p>When you first import a <i>GameMaker Studio 2</i> project you
+will be shown a <b>compatibility report</b> much like this one:
 <img class="center" src="images/compatibility_overview.png" alt=
-"兼容性报告"></p>
+"Compatibility Report"></p>
 
-<p>报告的主体展现了哪些物体和脚本及其哪个位置受到了影响，而在报告的记为您会看到一系列被创建到您项目中的脚本。您可点击鼠标中键You can click the middle mouse button <img style="vertical-align:middle" src=
+<p>The main body of the report shows which objects and scripts have
+been affected and where, while at the end you can find a list of
+the scripts that have been created for your project. You can click
+the middle mouse button <img style="vertical-align:middle" src=
 "../../images/icon_mmb.png"> or press <img style=
-"vertical-align:middle" src="../../images/icon_f1.png"> on any of the scripts listed in the report to open it and see what has been done. Note that if you see any scripts created with a double under-bar before their name (for example: <tt>__global_object_depths</tt>), then these are scripts that <i>have been created by the IDE to help with compatibility</i> and are not scripts that have been converted from obsolete functions, so these should <i>not</i> be tampered with as they are required for the other compatibility scripts to work.</p>
+"vertical-align:middle" src="../../images/icon_f1.png"> on any of
+the scripts listed in the report to open it and see what has been
+done. Note that if you see any scripts created with a double
+under-bar before their name (for example:
+<tt>__global_object_depths</tt>), then these are scripts that
+<i>have been created by the IDE to help with compatibility</i> and
+are not scripts that have been converted from obsolete functions,
+so these should <i>not</i> be tampered with as they are required
+for the other compatibility scripts to work.</p>
 
 <p>When you have finished revising the compatibility report you can
 close the workspace, but should you need to revise anything within
@@ -1011,12 +1037,18 @@ the report you can find it again by going to the <a href=
 "../../2_interface/1_editors/notes.html">Notes</a> section of the
 resource tree.</p>
 
-<p>Please note that there are some functions that have been introduced to the GameMaker Language to ensure compatibility with older projects and that will appear in these compatibility scripts. 然而这些函数<b>不应该被用于你自己的项目中</b>。你可以在如下章节中找到这些函数的列表：</p>
+<p>Please note that there are some functions that have been
+introduced to the GameMaker Language to ensure compatibility with
+older projects and that will appear in these compatibility scripts.
+However these functions <b>should never be used in your own
+projects</b>. You can find a list of these functions from the
+following section of the manual:</p>
 
 <blockquote>
 <ul>
 <li><a href=
-"../../3_scripting/4_gml_reference/compatibility_functions.html">兼容性函数</a>
+"../../3_scripting/4_gml_reference/compatibility_functions.html">Compatibility
+Functions</a>
 </li>
 </ul>
 </blockquote>
@@ -1028,9 +1060,11 @@ resource tree.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">附加信息索引</a></div>
+<div style="float:left">Back: <a href="index.html">Additional
+Information Index</a></div>
 
-<div style="float:right">下一页：<a href="file_system.html">文件系统</a></div>
+<div style="float:right">Next: <a href="file_system.html">The File
+System</a></div>
 </div>
 </div>
 

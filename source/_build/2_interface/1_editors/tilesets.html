@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>The Tile Set Editor</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/2_interface/1_editors/tilesets.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Ftilesets.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Ftilesets.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -37,12 +37,12 @@ if (window.name != "content")
 </p>
 
 <p><img class="center" src="images/editor_tilesets.png" alt=
-"图块集编辑器（Tile Set Editor）">  A tile set is a graphic resource for drawing
+"Tile Set Editor"> A tile set is a graphic resource for drawing
 levels and other static components of your game. A tile set is
 comprised of a single image that is then split into different
 "cells" (tiles), and each tile can be place into the room editor to
 create a complete image. Below you can see two example sprites that
-can be used as tile sets:  <img class="center" src=
+can be used as tile sets: <img class="center" src=
 "images/editor_tilesets_example.png" alt="Tile Set Example"></p>
 
 <div class="note" style="text-align:center;">Images by <a href=
@@ -69,7 +69,7 @@ part of the image they will be ignored).</p>
 window will open with the following options:</p>
 
 <blockquote><a name="tileset_name" id="tileset_name"></a>
-<label class="collapse" for="one">名称</label> <input id="one"
+<label class="collapse" for="one">Name</label> <input id="one"
 type="checkbox">
 <div class="index_list">
 <p>Here you can give a name to your tile set. Names can only be
@@ -78,13 +78,13 @@ cannot start with a number.</p>
 </div>
 <br>
 <a name="tileset_sprite" id="tileset_sprite"></a> <label class=
-"collapse" for="two">精灵</label> <input id="two" type=
+"collapse" for="two">Sprite</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
 <p>Here you can select the sprite resource from which to create our
 tile set. Clicking on the main button will open the <b>Asset
 Explorer</b> where you can choose the sprite you wish to use for
-the tile set:  <img class="center" src=
+the tile set: <img class="center" src=
 "../../1_overview/2_quick_start/images/qs_assetexplorer.png" alt=
 "The Asset Explorer Window"></p>
 
@@ -105,7 +105,7 @@ can click the button here to reopen it again.</p>
 </div>
 <br>
 <a name="tileset_properties" id="tileset_properties"></a>
-<label class="collapse" for="three">属性</label> <input id=
+<label class="collapse" for="three">Properties</label> <input id=
 "three" type="checkbox">
 <div class="index_list">
 <p>The Tile Set Properties window is for designating the base tile
@@ -124,7 +124,6 @@ device graphic drivers, with the red line around the tile showing
 where the U,V coordinates are mapped to (The letters "U" and "V"
 are used to describe the 2D texture mesh because "X", "Y" and "Z"
 are already used to describe room and object spatial coordinates):
-
 <img class="center" src="images/editor_tilesets_single.png" alt=
 "Single Tile"></p>
 
@@ -139,7 +138,6 @@ the available pixel centers. So, if we are "just" moving into a new
 screen pixel then, because the graphics drivers use the center of
 the pixel to decide what to draw with, it'll pick a texel
 <i>surrounding</i> the tile, not a texel <i>on</i> the tile itself.
-
 <img class="center" src="images/editor_tilesets_texel.png" alt=
 "Texel Tile"></p>
 
@@ -164,7 +162,7 @@ texture mode called clamp and what this does is repeats the last
 row of texels infinitely off into the distance, allowing you to
 scale without problems as it forces the hardware to get the last
 row of pixels no matter what. This is what the <b>Output Border</b>
-settings here do for you:  <img class="center" src=
+settings here do for you: <img class="center" src=
 "images/editor_tilesets_smear.png" alt="Smear Tile"></p>
 
 <p>Shown above is a "fixed" tile sprite and you can see it now has
@@ -189,7 +187,7 @@ page on compile.</p>
 </div>
 <br>
 <a name="tileset_editors" id="tileset_editors"></a> <label class=
-"collapse" for="six">编辑器</label> <input id="six" type=
+"collapse" for="six">Editors</label> <input id="six" type=
 "checkbox">
 <div class="index_list">
 <p>Each of the buttons in the <b>Editors</b> section will open a
@@ -230,7 +228,7 @@ clicking the arrow beside the Grid icon.</p>
 </div>
 <br>
 <a name="tileset_preview" id="tileset_preview"></a> <label class=
-"collapse" for="twelve">预览</label> <input id="twelve" type=
+"collapse" for="twelve">Preview</label> <input id="twelve" type=
 "checkbox">
 <div class="index_list">
 <p>This section is the tile set <b>Preview</b> window. You can use
@@ -261,7 +259,7 @@ and in it incorporate your auto-tiles and animated tiles, etc...
 The sections below explain each of the editors in detail:</p>
 
 <blockquote><a name="tilemap_brushes" id="tilemap_brushes"></a>
-<label class="collapse" for="nine">笔刷生成器</label> <input id=
+<label class="collapse" for="nine">Brush Builder</label> <input id=
 "nine" type="checkbox">
 <div class="index_list">
 <p>By default when you "paint" tiles onto a tilemap layer in the
@@ -277,7 +275,7 @@ added tile <b>Brushes</b> to the tile set editor, available when
 you click <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> on the <i>Brush Builder</i> button:
 <img class="center" src="images/03_01_brushes.png" alt=
-"笔刷"></p>
+"Brushes"></p>
 
 <p>In the <b>Brush Builder</b> you have the original tile set on
 the left and a blank "canvas" on the right. You can now select any
@@ -328,7 +326,7 @@ you can also set the <i>size</i> of the brush that you want to
 paint with. The default size is 1, which is a single tile, but if
 you set it to higher values then you can paint (and erase) with a
 larger brush composed of the selected tile repeated, as shown in
-the image below:  <img class="center" src="images/tile_size.gif"
+the image below: <img class="center" src="images/tile_size.gif"
 alt="Tile Size Animation"></p>
 
 <p>The <b>toolbox</b> is where you can select the tool to use for
@@ -438,7 +436,7 @@ mirror the selected tiles.</td>
 
 <tr>
 <td class="icons"><img align="middle" src=
-"images/icon_tile_rotate.png" alt="旋转工具（Rotate Tool）">
+"images/icon_tile_rotate.png" alt="Rotate Tool">
 </td>
 <td class="text">Clicking the Rotate tool with the left mouse
 button <img style="vertical-align:middle" src=
@@ -469,7 +467,7 @@ editor.</p>
 </div>
 <br>
 <a name="tileset_animated" id="tileset_animated"></a> <label class=
-"collapse" for="ten">动画</label> <input id="ten" type=
+"collapse" for="ten">Animation</label> <input id="ten" type=
 "checkbox">
 <div class="index_list">
 <p>Tiles are generally considered to be static cells within the
@@ -492,8 +490,8 @@ has the required tiles all within the one sprite image (but
 <i>not</i> as sprite frames, so a single large sprite frame with
 all the animation images within it), and then in the tile set
 editor you click on the <b>Tile Animation</b> button to bring up
-the <b>Animation Editor</b>:  <img class="center" src=
-"images/04_01_animations.png" alt="动画"></p>
+the <b>Animation Editor</b>: <img class="center" src=
+"images/04_01_animations.png" alt="Animation"></p>
 
 <p>The example image above is a single image with all animation
 frames contained within it, but it should be noted that the image
@@ -509,10 +507,10 @@ the animation library by clicking the <b>Add Animation</b> button
 <img style="vertical-align:middle" src="images/icon_addproxy.png">,
 which will add an empty animation strip to the library and request
 that you select a number of frames to be used: <img class="center"
-src="images/04_02_animationadd.png" alt="添加动画"></p>
+src="images/04_02_animationadd.png" alt="Add Animation"></p>
 
 <p>You will then be presented with a view of each empty animation
-frame, with the initial frame highlighted for you:  <img class=
+frame, with the initial frame highlighted for you: <img class=
 "center" src="images/04_03_emptyanim.png" alt=
 "Empty Animation"></p>
 
@@ -520,7 +518,7 @@ frame, with the initial frame highlighted for you:  <img class=
 editor you can click on any tile to add it into the animation and
 the frame will advance to the next one. Clicking successive tiles
 will fill up the animation, which you can then preview by clicking
-on the "play" button beside the frames:  <img class="center" src=
+on the "play" button beside the frames: <img class="center" src=
 "images/04_04_addframes.gif" alt="Add Animation Frames"></p>
 
 <p>Once you have done that your animation will become part of the
@@ -573,13 +571,12 @@ but that is by no means a hard and fast rule and will depend on how
 you want your final project to look.</p>
 
 <p>The image below shows a typical 47 tile and 16 tile tile set for
-autotiling:  <img class="center" src="images/05_01_autotiles.png"
+autotiling: <img class="center" src="images/05_01_autotiles.png"
 alt="Two Autotile Examples"></p>
 
 <p>Now, just looking at the images doesn't really tell you how they
 will fit together so we'll open the Autotile Editor from the Tile
 Set Editor and add them. The Autotile Editor looks like this:
-
 <img class="center" src="images/05_02_autotileeditor.png" alt=
 "Autotile Editor"></p>
 
@@ -648,7 +645,8 @@ that blend and have no "edge".</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">编辑器索引</a></div>
+<div style="float:left">Back: <a href="index.html">Editors
+Index</a></div>
 
 <div style="float:right">Next: <a href="sounds.html">The Sound
 Editor</a></div>

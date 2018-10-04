@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>physics_fixture_set_friction</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/fixtures/phy
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Ffixtures%2Fphysics_fixture_set_friction.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Ffixtures%2Fphysics_fixture_set_friction.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">This function sets the friction of a
 fixture.</h2>
 
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">physics_fixture_set_friction(fixture, friction)</p>
 
@@ -44,8 +44,8 @@ fixture.</h2>
 <div class="param">
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -63,20 +63,28 @@ fixture.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>Returns:</b> N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
-<p>Friction is the force that resists the relative motion of material elements sliding against each other, which in the <i>GameMaker Studio 2</i> physics world, translates as the loss of momentum caused by the collision of two instances with fixtures bound to them. 所以当两个实例碰撞时，它们的运动受到这个值的影响，摩擦力会比较低的值导致更大的动量损失。Note that the friction is usually set to a value between 0 and 1, but you can use any non-negative value if required.<br>
+<p>Friction is the force that resists the relative motion of
+material elements sliding against each other, which in the
+<i>GameMaker Studio 2</i> physics world, translates as the loss of
+momentum caused by the collision of two instances with fixtures
+bound to them. So, when two instances collide, their motion is
+affected by this value, with a high friction causing a larger loss
+of momentum than a lower value. Note that the friction is usually
+set to a value between 0 and 1, but you can use any non-negative
+value if required.<br>
 <br></p>
 
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">physics_fixture_set_friction(fix_Brick, 0.1);</p>
 

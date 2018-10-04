@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>event_perform</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/objects/generating e
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fobjects%2Fgenerating%20events%2Fevent_perform.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fobjects%2Fgenerating%20events%2Fevent_perform.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">Performs a given event of the calling
 instance.</h2>
 
-<h3 class="studio"><b>语法：</b>
+<h3 class="studio"><b>Syntax:</b>
 </h3>
 
 <p class="code">event_perform(type, numb);</p>
@@ -45,18 +45,19 @@ instance.</h2>
 <div>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
 <td>type</td>
-<td>要执行的事件类型。如下所示：</td>
+<td>The type of event to perform. See below.</td>
 </tr>
 
 <tr class="alt">
 <td>numb</td>
-<td>在必要时指定具体事件的常量或值（否则用0即可）。</td>
+<td>The specific event constant or value, if one is necessary
+(otherwise, just use 0).</td>
 </tr>
 </table>
 </div>
@@ -64,12 +65,12 @@ instance.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>Returns:</b> N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
 <p>This function will perform the specified event, with the
 designated argument, for the instance running the code. There are
@@ -83,7 +84,7 @@ event, the alarm counter will not be set to -1 but rather continue
 to count down.<br>
 <br></p>
 
-<h3 class="studio">常量</h3>
+<h3 class="studio">Constants</h3>
 
 <p>The table below outlines all the constants that are included in
 <i>GameMaker Studio 2</i> for referencing event types, as well as
@@ -97,20 +98,20 @@ same as the return values for the <a href=
 <div class="compat">
 <table>
 <tr>
-<th width="40%">名称</th>
-<th>描述</th>
+<th width="40%">Name</th>
+<th>Description</th>
 </tr>
 
 <tr>
 <td><b>ev_create</b>
 </td>
-<td>创建事件</td>
+<td>Create event.</td>
 </tr>
 
 <tr>
 <td><b>ev_destroy</b>
 </td>
-<td>销毁事件</td>
+<td>Destroy event</td>
 </tr>
 
 <tr>
@@ -122,31 +123,31 @@ same as the return values for the <a href=
 <tr>
 <td><b>ev_step</b>
 </td>
-<td>步事件</td>
+<td>Step event</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_step_normal</i>
 </td>
-<td>步</td>
+<td>Step</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_step_begin</i>
 </td>
-<td>步开始</td>
+<td>Begin Step</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_step_end</i>
 </td>
-<td>步结束</td>
+<td>End Step</td>
 </tr>
 
 <tr>
 <td><b>ev_alarm</b>
 </td>
-<td>计时器事件</td>
+<td>Alarm event</td>
 </tr>
 
 <tr>
@@ -159,19 +160,19 @@ trigger the event of</td>
 <tr>
 <td><b>ev_keyboard, ev_keypress, ev_keyrelease</b>
 </td>
-<td>键盘/键盘按下/键盘放开事件</td>
+<td>Keyboard/Keyboard Pressed/Keyboard Released</td>
 </tr>
 
 <tr>
-<td><i>&nbsp;&nbsp;&nbsp;---- 任意一个键码</i>
+<td><i>&nbsp;&nbsp;&nbsp;---- any key code</i>
 </td>
-<td>vk_space 或形如 ord("W")。</td>
+<td>vk_space or ord("W") for example.</td>
 </tr>
 
 <tr>
 <td><b>ev_mouse</b>
 </td>
-<td>鼠标事件</td>
+<td>Mouse event</td>
 </tr>
 
 <tr>
@@ -315,7 +316,7 @@ trigger the event of</td>
 <tr>
 <td><b>ev_gesture</b>
 </td>
-<td>手势事件（轻敲、拖动、划动、捏合或旋转）</td>
+<td>A gesture event (Tap, Drag, Flick, Pinch or Rotate)</td>
 </tr>
 
 <tr>
@@ -627,19 +628,19 @@ identifying the event when performed in these cases.</i></td>
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gui</i>
 </td>
-<td>绘制GUI事件</td>
+<td>The draw gui event.</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gui_begin</i>
 </td>
-<td>绘制GUI开始事件</td>
+<td>The draw gui begin event.</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gui_end</i>
 </td>
-<td>绘制GUI结束事件</td>
+<td>The draw gui end event.</td>
 </tr>
 </table>
 </div>
@@ -647,10 +648,11 @@ identifying the event when performed in these cases.</i></td>
 <p><br>
 </p>
 
-<h3><b>扩展示例</b>
+<h3><b>Extended Example</b>
 </h3>
 
-<p>为了便于理解该函数的用法，请看下面几个样例：</p>
+<p>To help understand how this function can be use, please look at
+the following few examples:</p>
 
 <p class="code">event_perform(ev_keypress, ord("W"));</p>
 
@@ -671,9 +673,10 @@ be run twice).</p>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">事件发生</a></div>
+<div style="float:left">Back: <a href="index.html">Generating
+Events</a></div>
 
-<div style="float:right">下一页：<a href=
+<div style="float:right">Next: <a href=
 "event_perform_object.html">event_perform_object</a></div>
 </div>
 

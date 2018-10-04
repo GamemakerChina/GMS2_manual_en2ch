@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>Windows UWP Options</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/2_interface/3_settings/game_options/options_wind
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_windowsuwp.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_windowsuwp.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -40,7 +40,7 @@ if (window.name != "content")
 that control how your UWP (Universal Windows Platform) game
 projects will be compiled. The different sections are:</p>
 
-<blockquote><label class="collapse" for="a">全局</label>
+<blockquote><label class="collapse" for="a">General</label>
 <input id="a" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/uwp_general_options.png" alt=
@@ -73,12 +73,14 @@ publisher.<br>
 <li><b>Version</b>: The version number of your game.</li>
 </ul>
 
-<p>After setting that up you can select the different <i>Orientations</i> that your game can be run on for the best user experience. 可用的选项有：</p>
+<p>After setting that up you can select the different
+<i>Orientations</i> that your game can be run on for the best user
+experience. The available options are:</p>
 
 <ul>
-<li>横向</li>
+<li>Landscape</li>
 
-<li>纵向</li>
+<li>Portrait</li>
 
 <li>Landscape-flipped</li>
 
@@ -93,13 +95,16 @@ different <i>Permissions</i> that your UWP app will need from the
 following options:</p>
 
 <ul>
-<li><b>Enable Internet Permission</b>: Flags the game as having access to internet. 该选项默认为关<br>
+<li><b>Enable Internet Permission</b>: Flags the game as having
+access to internet. This is off by default.<br>
 <br></li>
 
-<li><b>Enable Microphone Permission</b>: Flags the game as having access to the microphone of the device. 该选项默认为关<br>
+<li><b>Enable Microphone Permission</b>: Flags the game as having
+access to the microphone of the device. This is off by default.<br>
 <br></li>
 
-<li><b>Enable IAP Sandbox</b>: Flags the game as using sandboxed In App Purchases. 该选项默认为关</li>
+<li><b>Enable IAP Sandbox</b>: Flags the game as using sandboxed In
+App Purchases. This is off by default.</li>
 </ul>
 
 <p>Finally you have two options for setting the <b>Target</b> and
@@ -113,7 +118,7 @@ project in <i>Visual Studio</i> and have a look at what it sets the
 values to.</p>
 </div>
 <br>
-<label class="collapse" for="b">图像</label> <input id="b"
+<label class="collapse" for="b">Graphics</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/uwp_graphics_options.png" alt=
@@ -160,8 +165,6 @@ platform requires v-sync to be always on currently.<br>
 (so a 4:3 room will be "letter boxed" on a 16:9) or to scale fully
 (stretching the image to fit the full screen).
 
-
-
 <div class="note"><b>WARNING!</b> Switching off the application
 surface will disable all the scaling options set in the UWP Game
 Options until it has been switched back on again. See <a href=
@@ -178,10 +181,12 @@ how they look. This can be very useful if you wish to see how the
 texture pages are structured and to prevent having texture pages
 larger (or smaller) than necessary.</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be on UWP devices with lower specifications.</div>
+<div class="note"><b>NOTE</b>: Be aware that the larger the size of
+the texture page, the less compatible your game will be on UWP
+devices with lower specifications.</div>
 </div>
 <br>
-<label class="collapse" for="c">图片</label> <input id="c" type=
+<label class="collapse" for="c">Images</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/uwp_images2_options.png" alt=
@@ -195,7 +200,7 @@ images can be transparent <tt>.png</tt> files, in which case they
 will be drawn over the <i>Background Colour specified</i> in this
 section. This background colour is also applied to the button
 colour in any app-owned dialog boxes and to the App Description
-page in the Store on devices.  <img class="center" src=
+page in the Store on devices. <img class="center" src=
 "images/uwp_images1_options.png" alt=
 "UWP Images Splash Screen Options"></p>
 
@@ -204,7 +209,6 @@ for the game. This is the screen that will be shown when you start
 your game, and it cannot be larger than 620 x 300 pixels and like
 the logo it can be a transparent <tt>.png</tt> file, in which case
 the <i>Background Colour</i> you shoose will be used for it.
-
 <img class="center" src="images/uwp_images3_options.png" alt=
 "UWP Images Icon Options"></p>
 
@@ -247,7 +251,7 @@ game is being compiled to. If you use this tool, you should revise
 the images created to ensure that they are what you require.</p>
 </div>
 <br>
-<label class="collapse" for="d">打包</label> <input id="d"
+<label class="collapse" for="d">Packaging</label> <input id="d"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/uwp_packaging_options.png" alt=
@@ -271,7 +275,16 @@ Executable</i> the certification installation process will
 automatically be launched if the <tt>*.pfx</tt> has yet to be
 registered).</p>
 
-<div class="note"><b>注意</b>： When it comes to uploading your app to the store you will need to get the correct <tt>*.pfx</tt> for your title. This is done via associating your app with the Windows Store in Visual Studio which causes Visual Studio to generate a new <tt>*.pfx</tt> specifically for the app. It is also worth noting that you can associate any app with the Windows Store in Visual Studio, meaning you can associate a blank project with the Windows Store app and simply copy the generated <tt>pfx</tt> to a safe location which can then be used within UWP Game Options. You can find instructions on how this is done from the <a href=
+<div class="note"><b>NOTE</b>: When it comes to uploading your app
+to the store you will need to get the correct <tt>*.pfx</tt> for
+your title. This is done via associating your app with the Windows
+Store in Visual Studio which causes Visual Studio to generate a new
+<tt>*.pfx</tt> specifically for the app. It is also worth noting
+that you can associate any app with the Windows Store in Visual
+Studio, meaning you can associate a blank project with the Windows
+Store app and simply copy the generated <tt>pfx</tt> to a safe
+location which can then be used within UWP Game Options. You can
+find instructions on how this is done from the <a href=
 "http://help.yoyogames.com/hc/en-us/articles/115001349488" target=
 "_blank">YoYo Games Knowledge Base</a>.</div>
 

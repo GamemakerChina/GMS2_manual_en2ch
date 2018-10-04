@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>buffer_read</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/buffers/buffer_read.
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fbuffers%2Fbuffer_read.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fbuffers%2Fbuffer_read.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>buffer_read</h2>
 
 <div class="body-scroll">
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">buffer_read(buffer, type)</p>
 
@@ -42,8 +42,8 @@ if (window.name != "content")
 <div class="param">
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -67,7 +67,7 @@ list of constants below).</td>
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
 <p>This function can be used to read data from a previously created
 buffer. The return value will depend on the type of data that you
@@ -78,8 +78,8 @@ constants:<br>
 <div class="compat">
 <table>
 <tr>
-<th>常量</th>
-<th>描述</th>
+<th>Constant</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -90,12 +90,14 @@ constants:<br>
 
 <tr class="alt">
 <td>buffer_s8</td>
-<td>一个有符号的8位整数。值域为-128到127的正值和负值（0被归类为正值）。</td>
+<td>A signed, 8bit integer. This can be a positive or negative
+value from -128 to 127 (0 is classed as positive).</td>
 </tr>
 
 <tr>
 <td>buffer_u16</td>
-<td>一个无符号的16位整数值域为0到65535的正值。</td>
+<td>An unsigned, 16bit integer. This is a positive value from 0 -
+65,535.</td>
 </tr>
 
 <tr class="alt">
@@ -166,7 +168,7 @@ read will result in erroneous values!</i><br>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">var cmd = buffer_read(buff, buffer_s16);</p>
 

@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>获取视野变量</title>
+<title>Get View Variable</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -24,20 +24,20 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/2_drag_and_drop_reference/camera_act
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fcamera_actions%2Fget_view_variable.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fcamera_actions%2Fget_view_variable.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_cameras_get_view_variable.png"> 获取视野变量</h2>
+"images/i_cameras_get_view_variable.png"> Get View Variable</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
 <blockquote>
 <p>This action permits you to get the value of certain built in
@@ -53,12 +53,12 @@ table below:</p>
 <div class="compat">
 <table>
 <tr>
-<th>变量</th>
-<th>描述</th>
+<th>Variable</th>
+<th>Description</th>
 </tr>
 
 <tr>
-<td>摄像机</td>
+<td>Camera</td>
 <td>The value returned will be the unique ID value of the camera to
 assigned to the port (see <a href=
 "../../4_gml_reference/cameras%20and%20display/cameras/index.html">here</a>
@@ -66,7 +66,7 @@ for more information).</td>
 </tr>
 
 <tr class="alt">
-<td>可见性</td>
+<td>Visibility</td>
 <td>This will return a value of <tt>true</tt> or <tt>false</tt>
 where <tt>true</tt> is that the view port is visible (ie: it being
 drawn to the screen), and <tt>false</tt> meaning that nothing is
@@ -107,33 +107,33 @@ to the view port or -1 if no surface has been assigned.</td>
 <p><br>
 </p>
 
-<h3>动作语法：</h3>
+<h3>Action Syntax:</h3>
 <img class="center" src="images/a_cameras_get_view_variable.png"
 alt="Get View Variable Syntax">
 <p><br>
 </p>
 
-<h3>参数：</h3>
+<h3>Arguments:</h3>
 
 <blockquote>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
-<td>变量</td>
+<td>Variable</td>
 <td>The built in view variable to get</td>
 </tr>
 
 <tr class="alt">
-<td>视图</td>
+<td>View</td>
 <td>The view port to target (from 0 - 7)</td>
 </tr>
 
 <tr>
-<td>目标</td>
+<td>Target</td>
 <td>The target variable to hold the returned value (can be flagged
 as a temporary local variable)</td>
 </tr>
@@ -143,7 +143,7 @@ as a temporary local variable)</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 <img class="center" src="images/e_cameras_get_view_variable.png"
 alt="Get View Variable Example">
 <blockquote>The above action block code gets the current camera ID

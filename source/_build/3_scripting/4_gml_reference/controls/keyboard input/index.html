@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>Keyboard Input</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/controls/keyboard in
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcontrols%2Fkeyboard%20input%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcontrols%2Fkeyboard%20input%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -48,7 +48,6 @@ built-in variables and constants aren't valid on other platforms
 and many of the functions won't work on mobiles.</div>
 
 <p><br>
-
 Each input character from a key (or multiple keys) is defined by
 its <a href="https://en.wikipedia.org/wiki/UTF-8" target=
 "_blank">UTF8</a> code, which is a numerical value. This value can
@@ -65,7 +64,6 @@ functions, something like this:</p>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p><br>
-
 So, the above will check the "A" key and if it's being pressed then
 it'll set the horizontal speed of the object to -5. Note, that
 using <tt>ord()</tt> in this way will only function correctly if
@@ -82,8 +80,8 @@ in place of <tt>ord()</tt>:</p>
 <div class="compat">
 <table>
 <tr>
-<th>常量</th>
-<th>描述</th>
+<th>Constant</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -239,8 +237,8 @@ in place of <tt>ord()</tt>:</p>
 <div class="compat">
 <table>
 <tr>
-<th>常量</th>
-<th>描述</th>
+<th>Constant</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -274,11 +272,8 @@ in place of <tt>ord()</tt>:</p>
 </tr>
 </table>
 </div>
-
 The following is a small example of how to use the <tt>vk_</tt>
 constants:
-
-
 
 <p class="code">if keyboard_check_pressed(vk_tab)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -287,7 +282,6 @@ obj_Menu);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p><br>
-
 The above code will detect if the "Tab" key is <i>pressed</i> and
 create an instance of object "obj_Menu" if it is.</p>
 
@@ -303,11 +297,10 @@ if ord(_key) == ord("Ã§")<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p><br>
-
 For information on the available <i>GameMaker Studio 2</i> keyboard
 functions, please see the following sections of the manual:</p>
 
-<blockquote><label class="collapse" for="one">函数</label>
+<blockquote><label class="collapse" for="one">Functions</label>
 <input id="one" type="checkbox">
 <div class="index_list">
 <p>The following functions are available for use when working with
@@ -358,7 +351,7 @@ when using an on-screen <a href=
 </ol>
 </div>
 <br>
-<label class="collapse" for="two">变量</label> <input id="two"
+<label class="collapse" for="two">Variables</label> <input id="two"
 type="checkbox">
 <div class="index_list">
 <p>The following variables are built-in to <i>GameMaker Studio

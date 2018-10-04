@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>求值顺序</title>
+<title>Evaluation Order</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,19 +24,29 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/3_gml_overview/8_evaluation_order.ht
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F8_evaluation_order.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F8_evaluation_order.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>求值顺序</h2>
+<h2>Evaluation Order</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>在使用<i>GML</i>编写游戏的时候，你会注意到函数调用参数的顺序并非固定的。这也就意味着在你的代码中函数的顺序会依照平台的不同而发生变化，因此你需要以一种显式的方式来进行编写。这是不同目标平台之间的优化差异导致的，比如说在Windows目标平台上函数是从右到左求值的，而在HTML5平台上则是从左到右的。因此为了避免可能发生的任何问题，你最好不要在参数里调用大量的函数。So to avoid any issues you are best not to call multiple functions in the arguments of a function call as you may well be building in a reliance on the order of evaluation.</p>
+<p>When programming your game using <i>GML</i> you should be aware
+that function call arguments are not guaranteed an evaluation
+order. What this means is that the order in which you place
+functions in your code will change from platform to platform, so
+you should code them in an explicit manner. This is due to
+optimisation differences between the different target platforms,
+for example on the Windows target functions may be evaluated from
+right to left, but on the HTML5 target, they may be evaluated from
+left to right. So to avoid any issues you are best not to call
+multiple functions in the arguments of a function call as you may
+well be building in a reliance on the order of evaluation.</p>
 
 <p>To see an example of what this means, consider the following
 code which is calling several functions and using them as arguments
@@ -66,13 +76,24 @@ scr_buffer_get_info(val[0], val[1], val[2]);<br></p>
 <p>While it may seem a more verbose method, it keeps everything
 clear and avoids any possible problems with evaluation order.</p>
 
-<p>You should also take care when using expressions too, as the order in which they are evaluated in will change depending on which target you are compiling to. 因此在代码中使用表达式的时候，请确保合理使用圆括号来控制运算符顺序。这在确保各平台行为正确性<i>特别是</i>JavaScript平台的时候是非常重要的。比如说，考虑如下代码：</p>
+<p>You should also take care when using expressions too, as the
+order in which they are evaluated in will change depending on which
+target you are compiling to. So, when using expressions in your
+code, ensure you use brackets () to properly control the order of
+operations. This is very important to ensure the correct behaviour
+of your games across all the target platforms games and is
+<i>essential</i> for JavaScript platforms. For example, consider
+the following code:</p>
 
 <p class="code">a = b == c || d;<br></p>
 
-<p>The different target compilers will perform the operations in different orders since they are not explicitly shown, giving rise to "odd" results that you may not expect when you play your game. 为了避免这个问题，可以用圆括号()将各部分分开，如下所示：</p>
+<p>The different target compilers will perform the operations in
+different orders since they are not explicitly shown, giving rise
+to "odd" results that you may not expect when you play your game.
+To avoid this, use the () to separate out the parts, like this:</p>
 
-<p class="code">a = (b == c || d);&nbsp;&nbsp;&nbsp;//较好<br>a = ((b == c) || d); //最好<br></p>
+<p class="code">a = (b == c || d);&nbsp;&nbsp;&nbsp;//better<br>
+a = ((b == c) || d); //best<br></p>
 
 <p><br>
 </p>
@@ -81,9 +102,11 @@ clear and avoids any possible problems with evaluation order.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">GML概述</a></div>
+<div style="float:left">Back: <a href="index.html">GML
+Overview</a></div>
 
-<div style="float:right">下一页：<a href="9_data_types.html">数据类型</a></div>
+<div style="float:right">Next: <a href="9_data_types.html">Data
+Types</a></div>
 </div>
 </div>
 

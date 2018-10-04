@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>创建物体</title>
+<title>Creating Objects</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -24,19 +24,30 @@ chmtop.c2wtopf.pageid = "_build/1_overview/2_quick_start/workflow/4_objects.html
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F1_overview%2F2_quick_start%2Fworkflow%2F4_objects.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F1_overview%2F2_quick_start%2Fworkflow%2F4_objects.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>创建物体</h2>
+<h2>Creating Objects</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>With the resources you have seen so far you can add some nice images and sounds to the game resource tree, but they don't do anything in the game itself yet!For that we need the most important resource of <i>GameMaker Studio 2</i>, the <b>Object</b> resource. Objects are a special resource that we use to control aspects of a game and to do specific things. Most of the time they have a sprite associated with them so that you can see them in the game rooms, but sometimes they are used as a "behind the scenes" <i>controller</i> to do things related to the user or for timing, etc... 他们可以给予行为和对某些事件做出反应以及彼此,和你在游戏看到的大多数事情都是基于对象和他们的相互作用。</p>
+<p>With the resources you have seen so far you can add some nice
+images and sounds to the game resource tree, but they don't do
+anything in the game itself yet! For that we need the most
+important resource of <i>GameMaker Studio 2</i>, the <b>Object</b>
+resource. Objects are a special resource that we use to control
+aspects of a game and to do specific things. Most of the time they
+have a sprite associated with them so that you can see them in the
+game rooms, but sometimes they are used as a "behind the scenes"
+<i>controller</i> to do things related to the user or for timing,
+etc... They can be given behaviours and they can react to certain
+events as well as to each other, and most of the things you see in
+a game are based on objects and their interactions.</p>
 
 <div class="note"><b>IMPORTANT!</b> In a game made with
 <i>GameMaker Studio 2</i>, the characters, monsters, balls, walls,
@@ -111,9 +122,9 @@ briefly:</p>
 <table class="icons">
 <tr>
 <td class="icons"><img align="middle" src=
-"../images/qs_event_create.png" alt="创建事件">
+"../images/qs_event_create.png" alt="Create Event">
 </td>
-<td class="icons">创建事件</td>
+<td class="icons">Create Event</td>
 <td class="text">This event happens when an instance of the object
 is first created, and is the very first thing that happens within
 an instance that has been placed in the room through the room
@@ -130,9 +141,9 @@ once or only when an instance first appears in the room.</td>
 
 <tr>
 <td class="icons"><img align="middle" src=
-"../images/qs_event_step.png" alt="步事件">
+"../images/qs_event_step.png" alt="Step Event">
 </td>
-<td class="icons">步事件</td>
+<td class="icons">Step Event</td>
 <td class="text"><i>GameMaker Studio 2</i> splits game time into
 <i>steps</i> with the game speed defining how many of these steps
 there are supposed to be per second. A step, is basically the loop
@@ -151,9 +162,9 @@ but in general you will use the main Step Event most.</td>
 
 <tr>
 <td class="icons"><img align="middle" src=
-"../images/qs_event_collision.png" alt="碰撞事件">
+"../images/qs_event_collision.png" alt="Collision Event">
 </td>
-<td class="icons">碰撞事件</td>
+<td class="icons">Collision Event</td>
 <td class="text">Obviously when making a game, it is very important
 that you know when two (or more) instances of an object have
 collided, and for that we have the collision event. This is an
@@ -170,9 +181,9 @@ or DnD™ to resolve the collision.</td>
 
 <tr>
 <td class="icons"><img align="middle" src=
-"../images/qs_event_draw.png" alt="绘制事件">
+"../images/qs_event_draw.png" alt="Draw Event">
 </td>
-<td class="icons">绘制事件</td>
+<td class="icons">Draw Event</td>
 <td class="text">There are multiple different Draw Events within
 the draw event category, but the one you use most is the one at the
 top simply called "Draw". This general draw event will be caled,
@@ -197,9 +208,9 @@ Studio 2</i> to draw it, although the text will be.</td>
 
 <tr>
 <td class="icons"><img align="middle" src=
-"../images/qs_event_destroy.png" alt="销毁事件">
+"../images/qs_event_destroy.png" alt="Destroy Event">
 </td>
-<td class="icons">销毁事件</td>
+<td class="icons">Destroy Event</td>
 <td class="text">This event is the very last event to be executed
 when an instance is destroyed. It is often overlooked when adding
 behaviours to objects, but it can be very useful - for example, for
@@ -218,7 +229,6 @@ Drop editor, depending what type of project you are creating. In
 this window you can now add the code or actions that you wish to be
 performed each time that event is triggered within the game loop. A
 typical object with events and code will look like this:
-
 <img class="center" src="../images/qs_objecteditor_chain.png"></p>
 
 <p>Using DnD™ or code to program the game is outside of the scope
@@ -229,13 +239,12 @@ from the two pages given below:</p>
 <ol>
 <li><a href=
 "../../../3_scripting/1_drag_and_drop_overview/index.html"><span class="list_link">
-
 Drag and Drop™ Overview</span></a>
 </li>
 
 <li><a href=
 "../../../3_scripting/3_gml_overview/index.html"><span class=
-"list_link">GameMaker Language（GML）概览</span></a>
+"list_link">GameMaker Language Overview</span></a>
 </li>
 </ol>
 </blockquote>
@@ -263,10 +272,11 @@ projects into games...</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href=
-"../5_workflow.html">工作流程</a></div>
+<div style="float:left">Back: <a href=
+"../5_workflow.html">Workflow</a></div>
 
-<div style="float:right">下一页：<a href="5_rooms.html">创建房间</a></div>
+<div style="float:right">Next: <a href="5_rooms.html">Creating
+Rooms</a></div>
 </div>
 </div>
 

@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>HTML5 Options</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/2_interface/3_settings/game_options/options_html
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_html5.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_html5.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -40,7 +40,7 @@ if (window.name != "content")
 that control how your HTML5 game projects will be compiled. The
 different sections are:</p>
 
-<blockquote><label class="collapse" for="c">全局</label>
+<blockquote><label class="collapse" for="c">General</label>
 <input id="c" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/html5_general_options.png" alt=
@@ -70,10 +70,12 @@ be changed to something other than the default "index.html".</li>
 too:</p>
 
 <ul>
-<li><b>Output Debug To Console</b>: This will send all debug output to the JS console of your browser. 该选项默认为关<br>
+<li><b>Output Debug To Console</b>: This will send all debug output
+to the JS console of your browser. This is off by default.<br>
 <br></li>
 
-<li><b>Display Cursor</b>: This will disable the mouse cursor when it is over the game canvas. 该选项默认为“开”。<br>
+<li><b>Display Cursor</b>: This will disable the mouse cursor when
+it is over the game canvas. This is on by default.<br>
 <br></li>
 
 <li><b>Display "Running Outside Server" Alert</b>: If you are
@@ -113,7 +115,7 @@ which you would use this option.<br>
 </ul>
 </div>
 <br>
-<label class="collapse" for="b">分析</label> <input id="b"
+<label class="collapse" for="b">Analytics</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/html5_analytics_options.png"
@@ -140,7 +142,7 @@ functions that you can use to send analytics data, please see
 "../../../3_scripting/4_gml_reference/web/index.html">here</a>.</p>
 </div>
 <br>
-<label class="collapse" for="d">图像</label> <input id="d"
+<label class="collapse" for="d">Graphics</label> <input id="d"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/html5_graphics_options.png" alt=
@@ -154,10 +156,16 @@ browsers as possible to make sure that they have the desired
 effect):</p>
 
 <ul>
-<li><b>Allow switching to fullscreen</b>: Checking this will allow the user to toggle the game from windowed to fullscreen mode using <i>&lt;CTRL&gt; + &lt;CMD&gt; + &lt;F&gt;</i> on Mac and <i>F10</i> on Windows. 该选项默认为“开”。<br>
+<li><b>Allow switching to fullscreen</b>: Checking this will allow
+the user to toggle the game from windowed to fullscreen mode using
+<i>&lt;CTRL&gt; + &lt;CMD&gt; + &lt;F&gt;</i> on Mac and <i>F10</i>
+on Windows. This is on by default.<br>
 <br></li>
 
-<li><b>Interpolate colours between pixels</b>: Turns on interpolation, which basically "smooths" pixels. for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edge graphics it is better left on. 默认为关。<br>
+<li><b>Interpolate colours between pixels</b>: Turns on
+interpolation, which basically "smooths" pixels. for crisp pixel
+graphics, it should be off, but if you have nice alpha blends and
+smoothed edge graphics it is better left on. Default is off.<br>
 <br></li>
 
 <li><b>Center the game in the browser</b>: Checking this will
@@ -200,10 +208,11 @@ can see how they look. This can be very useful if you wish to see
 how the texture pages are structured and to prevent having texture
 pages larger (or smaller) than necessary.</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be.</div>
+<div class="note"><b>NOTE</b>: Be aware that the larger the size of
+the texture page, the less compatible your game will be.</div>
 </div>
 <br>
-<label class="collapse" for="e">图片</label> <input id="e" type=
+<label class="collapse" for="e">Images</label> <input id="e" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/html5_images_options.png" alt=
@@ -228,7 +237,7 @@ game is being compiled to. If you use this tool, you should revise
 the images created to ensure that they are what you require.</p>
 </div>
 <br>
-<label class="collapse" for="f">社交（Social）</label> <input id="f" type=
+<label class="collapse" for="f">Social</label> <input id="f" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/html5_social_options.png" alt=

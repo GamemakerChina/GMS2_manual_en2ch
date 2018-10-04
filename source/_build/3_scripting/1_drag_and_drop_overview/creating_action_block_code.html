@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>构造动作代码块</title>
+<title>Constructing Action Block Code</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/1_drag_and_drop_overview/creating_ac
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Fcreating_action_block_code.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Fcreating_action_block_code.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>构造动作代码块</h2>
+<h2>Constructing Action Block Code</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -48,8 +48,8 @@ object</a> (you can assign a <a href=
 to the object too if required). In your new object you can start to
 add <a href=
 "../../2_interface/1_editors/events/index.html">events</a>, and in
-the events add your DnD™ code actions.  <img class="center" src=
-"images/dnd_create_event.png" alt="DnD™ 创建事件（Create Event）"></p>
+the events add your DnD™ code actions. <img class="center" src=
+"images/dnd_create_event.png" alt="DnD™ Create Event"></p>
 
 <p>Note that when you add a new event, a "code" window is opened
 with a tab for the given event (see the image above), and you can
@@ -71,8 +71,8 @@ parameters (arguments) that you can fill in and change to set the
 behaviour. In the image below, we have dragged an <b>Assign
 Variable</b> action from the Toolbox <a href=
 "../2_drag_and_drop_reference/common_actions/index.html">Common</a>
-library into the action block workspace:  <img class="center" src=
-"images/dnd_add_var.png" alt="DnD™ 变量赋值（Assign Variable）"></p>
+library into the action block workspace: <img class="center" src=
+"images/dnd_add_var.png" alt="DnD™ Assign Variable"></p>
 
 <p>You can see that the new action is also shown on the left of the
 code window in a shorthand form. This list of actions, called the
@@ -83,34 +83,33 @@ the previous one to show the flow of the DnD™ code you are
 constructing. Note that the area where you can drop further actions
 is highlighted for you underneath the initial action, and,
 depending on the action you are using, different areas will
-highlight to show where in the chain you can add it:  <img class=
+highlight to show where in the chain you can add it: <img class=
 "center" src="images/dnd_set_dir.png" alt=
-"DnD™ 设置方向变量（Set Direction Variable）"></p>
+"DnD™ Set Direction Variable"></p>
 
 <p>As you add actions to the workspace, they will be "chained" to
 the actions above so you can see how the DnD™ code flows, with one
 action leading to another, and the overview pane shows them in
-shorthand form and in order of execution:  <img class="center" src=
-"images/dnd_scope_other.png" alt="DnD™ 动作链"></p>
+shorthand form and in order of execution: <img class="center" src=
+"images/dnd_scope_other.png" alt="DnD™ chain of actions"></p>
 
 <p>Some actions will place code in a separate chain away from the
 main flow - things like <a href=
 "../2_drag_and_drop_reference/common_actions/if_variable.html">if</a>
 will create a sub-chain of actions that should occur if the correct
 conditions are met before continuing on with the main chain:
-
 <img class="center" src=
 "../2_drag_and_drop_reference/common_actions/images/e_common_if_variable.png"
-alt="DnD™ 动作支链"></p>
+alt="DnD™ side chain of actions"></p>
 
 <p>Note that when using actions that can have a side chain block
 like this, the action will have <i>two</i> areas highlighted for
 dropping further actions: One below the action as normal, and one
 to the right of the action to show that you want to create a
 separate block of actions to run when the condition of the first
-action returns <tt>true</tt>:  <img class="center" src=
+action returns <tt>true</tt>: <img class="center" src=
 "../2_drag_and_drop_reference/common_actions/images/a_common_if_drop.png"
-alt="DnD™ 动作支链"></p>
+alt="DnD™ Side Chain Of Actions"></p>
 
 <p>You can change the position of actions within the chain by
 simply clicking <img style="vertical-align:middle" src=
@@ -124,14 +123,14 @@ chain.</p>
 there are further important details explained in the sections
 below:</p>
 
-<blockquote><label class="collapse" for="a">目标变量</label> <input id="a" type="checkbox">
+<blockquote><label class="collapse" for="a">Target
+Variables</label> <input id="a" type="checkbox">
 <div class="index_list">
 <p>It is important to note that many actions offer a "target"
 variable, which can be flagged as "Temporary", for example:
-
 <img class="center" src=
 "../2_drag_and_drop_reference/audio_actions/images/a_audio_get_audio_volume.png"
-alt="目标变量样例"></p>
+alt="Example Of Target"></p>
 
 <p>What this means is that you can supply a "target" variable which
 will hold the value returned by the action. In the example action
@@ -154,15 +153,15 @@ variables and variable scope, please see <a href=
 "../3_gml_overview/6_scope.html">here</a>.</p>
 </div>
 <br>
-<label class="collapse" for="b">动作作用域</label> <input id="b"
+<label class="collapse" for="b">Action Scope</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p>Not only variables have scopes (see <b>Target Variables</b>,
 above), actions can have different <i>scopes</i> too. In fact,
 almost all actions can be given a different scope to work in, set
 from the drop down window opened in the action itself as shown
-here:  <img class="center" src="images/dnd_applies_to.png" alt=
-"DnD™ 应用于"></p>
+here: <img class="center" src="images/dnd_applies_to.png" alt=
+"DnD™ Applies To"></p>
 
 <p>You can also set the scope for all further actions using the
 special action <a href=
@@ -173,20 +172,20 @@ please see here:</p>
 <blockquote>
 <ol>
 <li><a href="applying_actions.html"><span class=
-"list_link">将动作应用于其他实例</span></a><br>
+"list_link">Applying Actions To Other Instances</span></a><br>
 </li>
 </ol>
 </blockquote>
 </div>
 <br>
-<label class="collapse" for="c">自动完成</label> <input id="c"
+<label class="collapse" for="c">Auto Complete</label> <input id="c"
 type="checkbox">
 <div class="index_list">
 <p>When working with Drag and Drop you will have to add variables
 and expressions into the different input fields of the actions.
 However, as you do this you will often get the Auto Complete window
-popping up to help you:  <img class="center" src=
-"images/action_autocomplete.png" alt="自动完成"></p>
+popping up to help you: <img class="center" src=
+"images/action_autocomplete.png" alt="Auto Complete"></p>
 
 <p>This pop up window will list all the built in GML (GameMaker
 Language) variables, constants and functions, as well as any
@@ -201,7 +200,7 @@ be used anywhere where a variable or expression is expected in an
 action, as can most GML functions.</p>
 </div>
 <br>
-<label class="collapse" for="d">扩增动作</label> <input id=
+<label class="collapse" for="d">Action Expansion</label> <input id=
 "d" type="checkbox">
 <div class="index_list">
 <p>Sometimes when using an action you will see a small <b>plus
@@ -216,11 +215,11 @@ Temporary Variables</a> action, you can see that it has this
 "../2_drag_and_drop_reference/icon_expand_arguments.png"> icon:
 <img class="center" src=
 "../2_drag_and_drop_reference/common_actions/images/a_common_declare_temp_var.png"
-alt="扩增临时变量"></p>
+alt="Temp Variable Expansion"></p>
 
 <p>When you click the icon, the action will expand and permit you
 to declare more variables, making it easier and faster to define
-multiple variables at the same time.  <img class="center" src=
+multiple variables at the same time. <img class="center" src=
 "images/action_expansion_example.png" alt=
 "Temp Variable Expansion Example"></p>
 
@@ -228,7 +227,7 @@ multiple variables at the same time.  <img class="center" src=
 optional arguments, like the <a href=
 "../2_drag_and_drop_reference/random_actions/choose.html">Choose</a>
 action, which permits you to add various different values to be
-returned:  <img class="center" src=
+returned: <img class="center" src=
 "../2_drag_and_drop_reference/random_actions/images/e_mathematics_choose.png"
 alt="Choose Expansion Example"></p>
 </div>
@@ -276,7 +275,7 @@ when the game is being run in <a href=
 "../../2_interface/2_extras/debugging.html">Debug Mode</a>. An
 action with a breakpoint assigned to it will be highlighted, as
 shown in the image below (the "<tt>If Health</tt>" action has been
-set as a breakpoint):  <img class="center" src=
+set as a breakpoint): <img class="center" src=
 "images/dnd_togglebreakpoint.png" alt="DnD™ Breakpoint"></li>
 
 <li><b>Pan</b>: Selecting this will pan and zoom the workspace to
@@ -296,10 +295,12 @@ you can check how it works.</li>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">拖拽按钮概览</a></div>
+<div style="float:left">Back: <a href="index.html">Drag And Drop
+Overview</a></div>
 
-<div style="float:right">下一页：<a href=
-"applying_actions.html">将动作应用于其他实例</a></div>
+<div style="float:right">Next: <a href=
+"applying_actions.html">Applying Actions To Other
+Instances</a></div>
 </div>
 </div>
 

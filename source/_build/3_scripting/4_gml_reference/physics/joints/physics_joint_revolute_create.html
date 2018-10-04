@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>physics_joint_revolute_create</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/joints/physi
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_revolute_create.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_revolute_create.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">Create a revolute joint connecting two instances
 at one common point.</h2>
 
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">physics_joint_revolute_create(inst1, inst2,
 w_anchor_x, w_anchor_y, ang_min_limt, ang_max_limit, ang_limit,
@@ -46,8 +46,8 @@ max_motor_torque, motor_speed, motor, col)</p>
 <div class="param">
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -118,7 +118,7 @@ speed (in Newtons per meter)</td>
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
 <p>A revolute joint forces two bodies to share a common anchor
 point (often called a hinge point) and the joint has a single
@@ -129,7 +129,12 @@ provided:<br>
 <br>
 <img class="center" src="images/revolute_joint_image_1.png"></p>
 
-<p>If you look at the image, you can see that the two instances have been created to over-lap and at the point where they are touching, we have defined a revolute joint. Now, this joint can be limited in its freedom of rotation thanks to the "ang_min_limit" and "ang_max_limit" values. 它是如何运作的？Well, let's look at another image:<br>
+<p>If you look at the image, you can see that the two instances
+have been created to over-lap and at the point where they are
+touching, we have defined a revolute joint. Now, this joint can be
+limited in its freedom of rotation thanks to the "ang_min_limit"
+and "ang_max_limit" values. How does this work? Well, let's look at
+another image:<br>
 <br>
 <img class="center" src="images/revolute_joint_image_2.png"></p>
 
@@ -163,7 +168,7 @@ then the two instances can interact and collide with each other but
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">var mainFixture, o_id;<br>
 mainFixture = physics_fixture_create();<br>
@@ -186,7 +191,7 @@ the fixture is deleted as it is no longer needed.</p>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">关节</a></div>
+<div style="float:left">Back: <a href="index.html">Joints</a></div>
 
 <div style="float:right">Next: <a href=
 "physics_joint_prismatic_create.html">physics_joint_prismatic_create</a></div>

@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>DnD™ Data Structure Actions Library</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/2_drag_and_drop_reference/data_struc
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fdata_structure_actions%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fdata_structure_actions%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -64,7 +64,7 @@ to manipulate it later - the four types are:</p>
 <td class="icons"><img align="middle" src=
 "images/i_ds_create_list.png" alt="DS List">
 </td>
-<td class="text"><b>列表</b>
+<td class="text"><b>Lists</b>
 </td>
 <td class="text">A list is a data-structure that stores information
 sequentially as it is added. List indexes start at 0 and will go up
@@ -145,179 +145,189 @@ from memory. You can use as many of the structures at the same time
 as you need, and all structures can store both strings and real
 values.</p>
 
-<div class="note"><b>注意</b>： As with all dynamic resources, data structures take up memory and so should <b>always be destroyed when no longer needed</b> to prevent memory leaks which will slow down and eventually crash your game.</div>
+<div class="note"><b>NOTE</b>: As with all dynamic resources, data
+structures take up memory and so should <b>always be destroyed when
+no longer needed</b> to prevent memory leaks which will slow down
+and eventually crash your game.</div>
 
 <p><br>
-
 The <b>Data Structure</b> library has the following actions:</p>
 
 <table class="icons">
 <tr>
 <td class="icons"><a href="create_list.html"><img align="middle"
-src="images/i_ds_create_list.png" alt="创建列表"></a>
+src="images/i_ds_create_list.png" alt="Create List"></a>
 </td>
-<td class="text"><a href="create_list.html">创建列表</a>
+<td class="text"><a href="create_list.html">Create List</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="create_map.html"><img align="middle"
-src="images/i_ds_create_map.png" alt="创建映射(map)"></a>
+src="images/i_ds_create_map.png" alt="Create Map"></a>
 </td>
-<td class="text"><a href="create_map.html">创建映射(map)</a>
+<td class="text"><a href="create_map.html">Create Map</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="create_grid.html"><img align="middle"
-src="images/i_ds_create_grid.png" alt="创建栅格"></a>
+src="images/i_ds_create_grid.png" alt="Create Grid"></a>
 </td>
-<td class="text"><a href="create_grid.html">创建栅格</a>
+<td class="text"><a href="create_grid.html">Create Grid</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="create_stack.html"><img align="middle"
-src="images/i_ds_create_stack.png" alt="创建堆栈"></a>
+src="images/i_ds_create_stack.png" alt="Create Stack"></a>
 </td>
-<td class="text"><a href="create_stack.html">创建堆栈</a>
+<td class="text"><a href="create_stack.html">Create Stack</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="clear_data_structure.html"><img align=
 "middle" src="images/i_ds_clear_data_structure.png" alt=
-"清空数据结构"></a>
+"Clear Data Structure"></a>
 </td>
-<td class="text"><a href="clear_data_structure.html">清空数据结构</a>
+<td class="text"><a href="clear_data_structure.html">Clear Data
+Structure</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="free_data_structure.html"><img align=
 "middle" src="images/i_ds_free_data_structure.png" alt=
-"释放数据结构"></a>
+"Free Data Structure"></a>
 </td>
-<td class="text"><a href="free_data_structure.html">释放数据结构</a>
+<td class="text"><a href="free_data_structure.html">Free Data
+Structure</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="add_to_list.html"><img align="middle"
-src="images/i_ds_add_to_list.png" alt="添加到列表"></a>
+src="images/i_ds_add_to_list.png" alt="Add To List"></a>
 </td>
-<td class="text"><a href="add_to_list.html">添加到列表</a>
+<td class="text"><a href="add_to_list.html">Add To List</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="remove_from_list.html"><img align=
 "middle" src="images/i_ds_remove_from_list.png" alt=
-"从列表中删除"></a>
+"Remove From List"></a>
 </td>
-<td class="text"><a href="remove_from_list.html">从列表中删除</a>
+<td class="text"><a href="remove_from_list.html">Remove From
+List</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="get_list_item_at.html"><img align=
 "middle" src="images/i_ds_get_list_item_at.png" alt=
-"获取所在处的列表项"></a>
+"Get List Item At"></a>
 </td>
-<td class="text"><a href="get_list_item_at.html">获取所在处的列表项</a>
+<td class="text"><a href="get_list_item_at.html">Get List Item
+At</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="get_index_of_list_item.html"><img align=
 "middle" src="images/i_ds_get_index_of_list_item.png" alt=
-"获取列表项的索引"></a>
+"Get Index Of List Item"></a>
 </td>
-<td class="text"><a href="get_index_of_list_item.html">获取列表项的索引</a>
+<td class="text"><a href="get_index_of_list_item.html">Get Index Of
+List Item</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="insert_into_list.html"><img align=
 "middle" src="images/i_ds_insert_into_list.png" alt=
-"插入到列表"></a>
+"Insert Into List"></a>
 </td>
-<td class="text"><a href="insert_into_list.html">插入到列表</a>
+<td class="text"><a href="insert_into_list.html">Insert Into
+List</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="get_list_item_count.html"><img align=
 "middle" src="images/i_ds_get_list_item_count.png" alt=
-"获取列表项总数"></a>
+"Get List Item Count"></a>
 </td>
-<td class="text"><a href="get_list_item_count.html">获取列表项总数</a>
+<td class="text"><a href="get_list_item_count.html">Get List Item
+Count</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="set_map_value.html"><img align="middle"
-src="images/i_ds_set_map_value.png" alt="设置映射值"></a>
+src="images/i_ds_set_map_value.png" alt="Set Map Value"></a>
 </td>
-<td class="text"><a href="set_map_value.html">设置映射值</a>
+<td class="text"><a href="set_map_value.html">Set Map Value</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="get_map_value.html"><img align="middle"
-src="images/i_ds_get_map_value.png" alt="获取映射值"></a>
+src="images/i_ds_get_map_value.png" alt="Get Map Value"></a>
 </td>
-<td class="text"><a href="get_map_value.html">获取映射值</a>
+<td class="text"><a href="get_map_value.html">Get Map Value</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="remove_map_entry.html"><img align=
 "middle" src="images/i_ds_remove_map_entry.png" alt=
-"移除映射项"></a>
+"Remove Map Entry"></a>
 </td>
-<td class="text"><a href="remove_map_entry.html">移除映射项</a>
+<td class="text"><a href="remove_map_entry.html">Remove Map
+Entry</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="set_grid_value.html"><img align="middle"
-src="images/i_ds_set_grid_value.png" alt="设置栅格值"></a>
+src="images/i_ds_set_grid_value.png" alt="Set Grid Value"></a>
 </td>
-<td class="text"><a href="set_grid_value.html">设置栅格值</a>
+<td class="text"><a href="set_grid_value.html">Set Grid Value</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="get_grid_value.html"><img align="middle"
-src="images/i_ds_get_grid_value.png" alt="获取栅格值"></a>
+src="images/i_ds_get_grid_value.png" alt="Get Grid Value"></a>
 </td>
-<td class="text"><a href="get_grid_value.html">获取栅格值</a>
+<td class="text"><a href="get_grid_value.html">Get Grid Value</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="clear_grid.html"><img align="middle"
-src="images/i_ds_clear_grid.png" alt="清空栅格"></a>
+src="images/i_ds_clear_grid.png" alt="Clear Grid"></a>
 </td>
-<td class="text"><a href="clear_grid.html">清空栅格</a>
+<td class="text"><a href="clear_grid.html">Clear Grid</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="push_onto_stack.html"><img align=
 "middle" src="images/i_ds_push_onto_stack.png" alt=
-"压栈"></a>
+"Push Onto Stack"></a>
 </td>
-<td class="text"><a href="push_onto_stack.html">压栈</a>
+<td class="text"><a href="push_onto_stack.html">Push Onto Stack</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="pop_stack.html"><img align="middle" src=
-"images/i_ds_pop_stack.png" alt="出栈"></a>
+"images/i_ds_pop_stack.png" alt="Pop Stack"></a>
 </td>
-<td class="text"><a href="pop_stack.html">出栈</a>
+<td class="text"><a href="pop_stack.html">Pop Stack</a>
 </td>
 </tr>
 
@@ -325,9 +335,10 @@ src="images/i_ds_clear_grid.png" alt="清空栅格"></a>
 <td class="icons"><a href=
 "if_data_structure_exists.html"><img align="middle" src=
 "images/i_ds_if_data_structure_exists.png" alt=
-"如果数据结构存在"></a>
+"If Data Structure Exists"></a>
 </td>
-<td class="text"><a href="if_data_structure_exists.html">如果数据结构存在</a>
+<td class="text"><a href="if_data_structure_exists.html">If Data
+Structure Exists</a>
 </td>
 </tr>
 
@@ -335,9 +346,10 @@ src="images/i_ds_clear_grid.png" alt="清空栅格"></a>
 <td class="icons"><a href=
 "if_data_structure_empty.html"><img align="middle" src=
 "images/i_ds_if_data_structure_empty.png" alt=
-"如果数据结构为空"></a>
+"If Data Structure Empty"></a>
 </td>
-<td class="text"><a href="if_data_structure_empty.html">如果数据结构为空</a>
+<td class="text"><a href="if_data_structure_empty.html">If Data
+Structure Empty</a>
 </td>
 </tr>
 </table>

@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>sprite_set_offset</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/sprites/sprite_set_o
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fsprites%2Fsprite_set_offset.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fsprites%2Fsprite_set_offset.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -35,15 +35,15 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">sprite_set_offset(ind, xoff, yoff);</p>
 
 <blockquote>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -66,17 +66,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>返回</h3>
+<h3>Returns</h3>
 
 <p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
 <blockquote>
-<p>This function can be used to set the x and y origin of a sprite, and takes relative values based on the (0,0) position being the upper left corner of the sprite. 下面的图像说明这一点: <img class="center" src="spr_xyoffset.png"></p>
+<p>This function can be used to set the x and y origin of a sprite,
+and takes relative values based on the (0,0) position being the
+upper left corner of the sprite. The following image illustrates
+this: <img class="center" src="spr_xyoffset.png"></p>
 
 <div class="note"><b>NOTE:</b> This function affects the sprite
 <b>resource</b> so that all further instances with this sprite will
@@ -86,7 +89,7 @@ have the same offset.</div>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 
 <p class="code">sprite_assign(spr_Custom, spr_Base);<br>
 sprite_set_offset(spr_Custom, sprite_get_xoffset(spr_Base),

@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>Mac OS Options</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/2_interface/3_settings/game_options/options_mac.
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_mac.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_mac.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -40,7 +40,7 @@ if (window.name != "content")
 that control how your Mac OS game projects will be compiled. The
 different sections are:</p>
 
-<blockquote><label class="collapse" for="a">全局</label>
+<blockquote><label class="collapse" for="a">General</label>
 <input id="a" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/mac_general_options.png" alt=
@@ -75,7 +75,7 @@ added the Steam app ID into the <a href="index.html">General
 Options</a> for the game.</p>
 </div>
 <br>
-<label class="collapse" for="b">图像</label> <input id="b"
+<label class="collapse" for="b">Graphics</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/mac_graphics_options.png" alt=
@@ -87,16 +87,25 @@ determine how your game will use the graphics card of your target
 Mac. The following options are included for you to modify:</p>
 
 <ul>
-<li><b>Allow Menu And Dock In Fullscreen</b>: When checked, this option will show the OS menu and dock if the game is in fullscreen mode. 该选项默认为关<br>
+<li><b>Allow Menu And Dock In Fullscreen</b>: When checked, this
+option will show the OS menu and dock if the game is in fullscreen
+mode. This is off by default.<br>
 <br></li>
 
-<li><b>Display Cursor</b>: When this is checked the regular Mac OS cursor will be show, and un-checking it will mean that no cursor is shown unless you have created one in your game code. 该选项默认为关<br>
+<li><b>Display Cursor</b>: When this is checked the regular Mac OS
+cursor will be show, and un-checking it will mean that no cursor is
+shown unless you have created one in your game code. This is off by
+default.<br>
 <br></li>
 
-<li><b>Start Fullscreen</b>: If this is checked, the game will start in fullscreen mode otherwise it will start windowed. 该选项默认为关<br>
+<li><b>Start Fullscreen</b>: If this is checked, the game will
+start in fullscreen mode otherwise it will start windowed. This is
+off by default.<br>
 <br></li>
 
-<li><b>Allow Fullscreen Switching</b>: With this ticked the user can switch from fullscreen to windowed and back again using the standard Mac OS shortcuts. 该选项默认为关<br>
+<li><b>Allow Fullscreen Switching</b>: With this ticked the user
+can switch from fullscreen to windowed and back again using the
+standard Mac OS shortcuts. This is off by default.<br>
 <br></li>
 
 <li><b>Interpolate colours between pixels</b>: Turns on
@@ -106,20 +115,38 @@ smoothed edged graphics it is better left on.This is off by
 default.<br>
 <br></li>
 
-<li><b>Use synchronization to avoid tearing</b>: This toggles v-sync on or off (v-sync is used to synchronise your game update speed to the refresh rate of the monitor). Note, that if you have a game with a room speed of 120 and the player has a monitor with a refresh rate of 60, turning this option on will lock your game speed to 60 too. 该选项默认为关<br>
+<li><b>Use synchronization to avoid tearing</b>: This toggles
+v-sync on or off (v-sync is used to synchronise your game update
+speed to the refresh rate of the monitor). Note, that if you have a
+game with a room speed of 120 and the player has a monitor with a
+refresh rate of 60, turning this option on will lock your game
+speed to 60 too. This is off by default.<br>
 <br></li>
 
-<li><b>Allow window resize</b>: Checking this permits the user to change the size of the game window (the <b>Borderless Window</b> option needs to be <i>off</i> for this to work). 该选项默认为关。<br>
+<li><b>Allow window resize</b>: Checking this permits the user to
+change the size of the game window (the <b>Borderless Window</b>
+option needs to be <i>off</i> for this to work). This option is off
+by default.<br>
 <br></li>
 
-<li><b>Enable Retina</b>: Checking this will set the back buffer to be at the higher (actual) resolution when the game is run on a retina enabled monitor, while un-checking it will set the back buffer to be at the apparent (lower) resolution. What this means is that the initial game window will be set to twice the width and height that the room/view port that the first room is set to. However, this does NOT scale the application surface to suit, and so if you want your game to make the most of the retina display you should also set the application surface to be the same as the window size (note that this will double the pixels along the width and height, so only enable this and scale the application surface if your game will benefit from the increased resolution). 该选项默认为关。<br>
+<li><b>Enable Retina</b>: Checking this will set the back buffer to
+be at the higher (actual) resolution when the game is run on a
+retina enabled monitor, while un-checking it will set the back
+buffer to be at the apparent (lower) resolution. What this means is
+that the initial game window will be set to twice the width and
+height that the room/view port that the first room is set to.
+However, this does NOT scale the application surface to suit, and
+so if you want your game to make the most of the retina display you
+should also set the application surface to be the same as the
+window size (note that this will double the pixels along the width
+and height, so only enable this and scale the application surface
+if your game will benefit from the increased resolution). This
+option is off by default.<br>
 <br></li>
 
 <li><b>Scaling</b>: Here you can choose to maintain aspect ratio
 (so a 4:3 room will be "letter boxed" on a 16:9) or to scale fully
 (stretching the image to fit the full screen).
-
-
 
 <div class="note"><b>WARNING!</b> Switching off the application
 surface will disable all the scaling options set in the Mac Game
@@ -137,10 +164,12 @@ how they look. This can be very useful if you wish to see how the
 texture pages are structured and to prevent having texture pages
 larger (or smaller) than necessary.</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be on Macs with lower specifications.</div>
+<div class="note"><b>NOTE</b>: Be aware that the larger the size of
+the texture page, the less compatible your game will be on Macs
+with lower specifications.</div>
 </div>
 <br>
-<label class="collapse" for="c">图片</label> <input id="c" type=
+<label class="collapse" for="c">Images</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/mac_images_options.png" alt=
@@ -155,7 +184,7 @@ requires. For Mac, you need to supply an icon file (that must be in
 game loads.</p>
 </div>
 <br>
-<label class="collapse" for="d">打包</label> <input id="d"
+<label class="collapse" for="d">Packaging</label> <input id="d"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/mac_packaging_options.png" alt=

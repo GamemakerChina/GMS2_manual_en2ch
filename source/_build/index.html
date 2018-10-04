@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>GameMaker Studio 2 手册</title>
+<title>GameMaker Studio 2 Manual</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../files/helpindex.css" type=
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/index.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../index.html?page=source%2F_build%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../index.html?page=source%2F_build%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -41,13 +41,30 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>欢迎使用 <i>GameMaker Studio 2</i> 用户手册！本文档分为三个部分，目的是让你熟悉<i>GameMaker Studio 2</i>界面和基本的工作方式，然后是高级的用法和适合我们的脚本语言<a href="#gml">GML</a>的函数用法，或者虚拟的脚本工具<a href=
-"#dnd">拖拽（Drag and Drop，简称DnD）。</a>为减轻进入的难度，我们创建了一个方便的 <a href="1_overview/2_quick_start/1_introduction.html">快速入门指南</a>，即使你熟悉其它创作工具，我们仍然建议你从这里开始了解一下 <i>GameMaker Studio 2</i> 工作方式的概述。你会发现，<i>GameMaker Studio 2</i>简单直观并于易于使用，不论你的技能等级，你将很快可以制作你梦寐以求的那些游戏。<br>
+<p>Welcome to the <i>GameMaker Studio 2</i> user manual! This
+document is divided into three parts with the aim of getting you
+introduced to the interface and basic workings of <i>GameMaker
+Studio 2</i> before going on to more advanced usage and the
+functions available through our propriety scripting language
+<a href="#gml">GML</a> or our visual scripting tool <a href=
+"#dnd">Drag and Drop</a>. To ease you into things we have created a
+handy <a href="1_overview/2_quick_start/1_introduction.html">Quick
+Start Guide</a>, and even if you are familiar with other game
+creation tools we recommend that you start there to get an overview
+of the way that <i>GameMaker Studio 2</i> works. You'll find
+<i>GameMaker Studio 2</i> to be easy and intuitive to use and that,
+whatever your skill level, you will soon be making those games
+you've always dreamed of.<br>
 <br></p>
 
-<div class="note"><b>注意：</b> 由于 <i>GameMaker Studio 2</i>的模块性质，也有一些不包括在手册之内，特别是那些可支持的不同设备的设置和连接。关于不同目标平台的最新信息和疑难解答提示，请参阅 <a href=
+<div class="note"><b>NOTE:</b> Due to the modular nature of
+<i>GameMaker Studio 2</i> there are certain things that are not
+included in this user manual, particularly those aspects of setting
+up and connecting the different devices that can be supported. For
+up-to-date information and troubleshooting hints and tips related
+to the different target platforms, please see the <a href=
 "http://help.yoyogames.com/categories/20153017" target=
-"_blank">YoYo 游戏帮助中心</a>。</div>
+"_blank">YoYo Games Help Center</a>.</div>
 
 <p><br>
 </p>
@@ -55,147 +72,155 @@ if (window.name != "content")
 <p><a name="getting_started" id="getting_started"></a>
 </p>
 
-<h2>入门</h2>
+<h2>Getting Started</h2>
 
-<p>这一章节是<i>GameMaker Studio 2</i>使用的必然的第一站， 需要掌握它工作的方式。你会发现，<i>GameMaker Studio 2</i>是直观且易用的，即使你以前没有使用过类似的工具。读过这一章节之后，入门以及开始制作游戏应该不会有任何困难。一旦你掌握了基本的知识，你便可以再深入看看 <i>GameMaker Studio 2</i>的各个元件，它们 在下面的 <a href="#interface">界面</a>部分。</p>
+<p>This section is the obligatory first stop for using <i>GameMaker
+Studio 2</i> and getting to grips with how things work. You'll find
+that <i>GameMaker Studio 2</i> is intuitive and simple to use, and
+even if you've never used any tools like this before you shouldn't
+have any problems getting started and making games after reading
+through this section. Once you've got to grips with the basics you
+can then move on to the more in-depth look at the components of
+<i>GameMaker Studio 2</i> in the <a href="#interface">Interface</a>
+section below.</p>
 
-<blockquote><label class="collapse" for="one">部署</label>
+<blockquote><label class="collapse" for="one">Setting Up</label>
 <input id="one" type="checkbox">
 <div class="index_list">
 <ol>
 <li><a href=
 "1_overview/1_getting_started/1_licences.html"><span class=
-"list_link"><i>GameMaker Studio 2</i> 版本</span></a><br>
+"list_link"><i>GameMaker Studio 2</i> Versions</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/1_getting_started/2_installation.html"><span class=
-"list_link">安装</span></a><br>
+"list_link">Installing</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/1_getting_started/3_updating.html"><span class=
-"list_link">更新</span></a><br>
+"list_link">Updating</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/1_getting_started/4_release_notes.html"><span class=
-"list_link">版本说明</span></a><br>
+"list_link">Release Notes</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/1_getting_started/5_required_sdks.html"><span class=
-"list_link">必需的SDK</span></a><br>
+"list_link">Required SDKs</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/1_getting_started/6_licensing.html"><span class=
-"list_link">授权</span></a><br>
+"list_link">Licensing</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/1_getting_started/7_preferences.html"><span class=
-"list_link">常规偏好设置</span></a><br>
+"list_link">General Preferences</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/1_getting_started/8_input.html"><span class="list_link">
-IDE输入</span></a><br>
+IDE Input</span></a><br>
 </li>
 </ol>
 </div>
 <br>
-<label class="collapse" for="two">快速入门指南</label>
+<label class="collapse" for="two">Quick Start Guide</label>
 <input id="two" type="checkbox">
 <div class="index_list">
 <ol>
 <li><a href=
 "1_overview/2_quick_start/1_introduction.html"><span class=
-"list_link">介绍</span></a><br>
+"list_link">Introduction</span></a><br>
 </li>
 
 <li><a href="1_overview/2_quick_start/2_start.html"><span class=
-"list_link">起始页</span></a><br>
+"list_link">The Start Page</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/2_quick_start/3_workspaces.html"><span class=
-"list_link">工作区</span></a><br>
+"list_link">Workspaces</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/2_quick_start/4_resources.html"><span class="list_link">
-资源</span></a><br>
+Resources</span></a><br>
 </li>
 
 <li><a href="1_overview/2_quick_start/5_workflow.html"><span class=
-"list_link">工作流程</span></a><br>
+"list_link">Workflow</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/2_quick_start/6_compiling.html"><span class="list_link">
-编译</span></a><br>
+Compiling</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/2_quick_start/7_debugging.html"><span class="list_link">
-调试</span></a><br>
+Debugging</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/2_quick_start/8_shortcuts.html"><span class="list_link">
-键盘快捷键</span></a><br>
+Keyboard Shortcuts</span></a><br>
 </li>
 </ol>
 </div>
 <br>
-<label class="collapse" for="twenty">附加信息</label>
+<label class="collapse" for="twenty">Additional Information</label>
 <input id="twenty" type="checkbox">
 <div class="index_list">
 <ol>
 <li><a href=
 "1_overview/3_additional_information/file_system.html"><span class=
-"list_link">文件系统</span></a><br>
+"list_link">The File System</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/3_additional_information/using_buffers.html"><span class="list_link">
-使用缓冲区</span></a><br>
+Using Buffers</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/3_additional_information/texture_pages.html"><span class="list_link">
-纹理页</span></a><br>
+Texture Pages</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/3_additional_information/importing_non_bitmap_sprites.html">
-<span class="list_link">导入非位图精灵</span></a>
+<span class="list_link">Importing Non-Bitmap Sprites</span></a>
 </li>
 
 <li><a href=
 "1_overview/3_additional_information/command_line.html"><span class="list_link">
-命令行参数</span></a><br>
+Command Line Parameters</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/3_additional_information/bitwise_operators.html"><span class="list_link">
-位运算</span></a><br>
+Bitwise Operators</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/3_additional_information/errors.html"><span class=
-"list_link">编译错误</span></a><br>
+"list_link">Compiler Errors</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/3_additional_information/jsdoc.html"><span class=
-"list_link">JSDoc 脚本注释</span></a><br>
+"list_link">JSDoc Script Comments</span></a><br>
 </li>
 
 <li><a href=
 "1_overview/3_additional_information/obsolete_functions.html"><span class="list_link">
-弃用函数</span></a><br>
+Obsolete Functions</span></a><br>
 </li>
 </ol>
 </div>
@@ -207,141 +232,148 @@ IDE输入</span></a><br>
 <p><a name="interface" id="interface"></a>
 </p>
 
-<h2>界面</h2>
+<h2>Interface</h2>
 
-<p><i>GameMaker Studio 2</i> 的IDE （集成开发环境）拥有大量的高级选项，对于想要获得最大化的产品，它们都具有重要的意义。这些选项包括源代码控制集成，项目配置，先进的调试，以及更改和操作资源的额外工具（请注意这些高级工具的可用于取决于当前使用 <a href=
-"1_overview/1_getting_started/1_licences.html">版本 <i>的GameMaker Studio 2</i></a>）。</p>
+<p>The <i>GameMaker Studio 2</i> IDE (integrated development
+environment) has a number of advanced options that are of great
+importance if you wish to get the most out of the product. These
+options include source control integration, project configurations,
+advanced debugging and a number of extra tools for changing and
+manipulating the game assets (please note that the availability of
+some of these advanced tools will depend on the <a href=
+"1_overview/1_getting_started/1_licences.html">version of
+<i>GameMaker Studio 2</i></a> that you currently use).</p>
 
-<blockquote><label class="collapse" for="three">编辑器</label>
+<blockquote><label class="collapse" for="three">Editors</label>
 <input id="three" type="checkbox">
 <div class="index_list">
 <ol>
 <li><a href="2_interface/1_editors/sprites.html"><span class=
-"list_link">精灵</span></a><br>
+"list_link">Sprites</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/images.html"><span class=
-"list_link">图片</span></a><br>
+"list_link">Images</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/tilesets.html"><span class=
-"list_link">图块集</span></a><br>
+"list_link">Tile Sets</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/sounds.html"><span class=
-"list_link">声音</span></a><br>
+"list_link">Sounds</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/paths.html"><span class=
-"list_link">路径</span></a><br>
+"list_link">Paths</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/scripts.html"><span class=
-"list_link">脚本</span></a><br>
+"list_link">Scripts</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/shaders.html"><span class=
-"list_link">着色器</span></a><br>
+"list_link">Shaders</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/fonts.html"><span class=
-"list_link">字体</span></a><br>
+"list_link">Fonts</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/timelines.html"><span class=
-"list_link">时间轴</span></a><br>
+"list_link">Timelines</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/objects.html"><span class=
-"list_link">物体</span></a><br>
+"list_link">Objects</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/rooms.html"><span class=
-"list_link">房间</span></a><br>
+"list_link">Rooms</span></a><br>
 </li>
 
 <li><a href=
 "2_interface/1_editors/included_files.html"><span class="list_link">
-内含文件</span></a><br>
+Included Files</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/extensions.html"><span class=
-"list_link">扩展</span></a><br>
+"list_link">Extensions</span></a><br>
 </li>
 
 <li><a href="2_interface/1_editors/notes.html"><span class=
-"list_link">便签</span></a><br>
+"list_link">Notes</span></a><br>
 </li>
 </ol>
 </div>
 <br>
-<label class="collapse" for="four">其它</label> <input id="four"
+<label class="collapse" for="four">Extras</label> <input id="four"
 type="checkbox">
 <div class="index_list">
 <ol>
 <li><a href="2_interface/2_extras/sound_mixer.html"><span class=
-"list_link">混音器</span></a><br>
+"list_link">Sound Mixer</span></a><br>
 </li>
 
 <li><a href="2_interface/2_extras/output.html"><span class=
-"list_link">输出窗口</span></a><br>
+"list_link">Output Windows</span></a><br>
 </li>
 
 <li><a href="2_interface/2_extras/device_manager.html"><span class=
-"list_link">设备管理器</span></a><br>
+"list_link">The Device Manager</span></a><br>
 </li>
 
 <li><a href="2_interface/2_extras/remote_worker.html"><span class=
-"list_link">远程工作者?</span></a><br>
+"list_link">Remote Worker</span></a><br>
 </li>
 
 <li><a href=
 "2_interface/2_extras/project_image_generator.html"><span class=
-"list_link">项目图像生成器</span></a><br>
+"list_link">Project Image Generator</span></a><br>
 </li>
 
 <li><a href="2_interface/2_extras/debugging.html"><span class=
-"list_link">调试模块</span></a><br>
+"list_link">The Debug Module</span></a><br>
 </li>
 
 <li><a href="2_interface/2_extras/source_control.html"><span class=
-"list_link">源码控制</span></a><br>
+"list_link">Source Control</span></a><br>
 </li>
 
 <li><a href="2_interface/2_extras/marketplace.html"><span class=
-"list_link">市场</span></a><br>
+"list_link">Marketplace</span></a><br>
 </li>
 
 <li><a href="2_interface/2_extras/recent_windows.html"><span class=
-"list_link">最近窗口</span></a><br>
+"list_link">Recent Windows</span></a><br>
 </li>
 </ol>
 </div>
 <br>
-<label class="collapse" for="five">设置</label> <input id=
+<label class="collapse" for="five">Settings</label> <input id=
 "five" type="checkbox">
 <div class="index_list">
 <ol>
 <li><a href="2_interface/3_settings/preferences.html"><span class=
-"list_link">平台首选项</span></a><br>
+"list_link">Platform Preferences</span></a><br>
 </li>
 
 <li><a href=
 "2_interface/3_settings/game_options/index.html"><span class=
-"list_link">游戏选项</span></a><br>
+"list_link">Game Options</span></a><br>
 </li>
 
 <li><a href="2_interface/3_settings/textures.html"><span class=
-"list_link">纹理组</span></a><br>
+"list_link">Texture Groups</span></a><br>
 </li>
 
 <li><a href="2_interface/3_settings/audio.html"><span class=
-"list_link">音频组</span></a><br>
+"list_link">Audio Groups</span></a><br>
 </li>
 
 <li><a href=
 "2_interface/3_settings/configurations.html"><span class=
-"list_link">配置</span></a><br>
+"list_link">Configurations</span></a><br>
 </li>
 </ol>
 </div>
@@ -353,51 +385,71 @@ type="checkbox">
 <p><a name="scripting" id="scripting"></a>
 </p>
 
-<h2>脚本</h2>
+<h2>Scripting</h2>
 
-<p>这一章节讨论<i>GameMaker Studio 2</i>向你提供的用于编程的不同的脚本语言。创建你的项目使用的语言或者方法取决于你的技能和你以前的技术背景，既然每个人都是不同的， <i>GameMaker Studio 2</i>致力于满足你的不同需求，为你打造游戏提供了两种不同的选项：</p>
+<p>This section deals with the different scripting languages
+available to you for programming in <i>GameMaker Studio 2</i>. The
+language or method that you use to create your projects will depend
+on your skill and your previous background history, and since
+everyone is different <i>GameMaker Studio 2</i> aims to be as
+adaptable as possible to your different needs, offering two
+different options for you to create games:</p>
 
 <blockquote><a name="dnd" id="dnd"></a> <label class="collapse"
-for="six">拖拽式操作 (DnD™)</label> <input id="six" type=
+for="six">Drag and Drop (DnD™)</label> <input id="six" type=
 "checkbox">
 <div class="index_list">
-<div style="margin-left: 2em">拖拽式操作（DnD™）适合初学者或者那些视觉或艺术定位的开发者（这有时也可以称为“视觉脚本语方言”）。由拖拽<b>动作</b>组成拖放到物体编辑器中，创建一系列的物体实例将遵循的函数列表。在手册的以下章节，你可以找到 DnD™ 的使用方法：
+<div style="margin-left: 2em">Drag and Drop (DnD™) is ideal for
+beginners or those that are more visually or artistically
+orientated (this is sometimes called a "visual scripting
+language"). It consists of dragging and dropping <b>actions</b>
+into the Object Editor to create a list of functions that instances
+of the object will follow. You can find out how to use DnD™ from
+the following sections of the manual:
 
 <blockquote>
 <ol>
 <li><a href=
 "3_scripting/1_drag_and_drop_overview/index.html"><span class=
-"list_link">拖拽按钮概述</span></a><br>
+"list_link">Drag And Drop Overview</span></a><br>
 </li>
 
 <li><a href=
 "3_scripting/2_drag_and_drop_reference/index.html"><span class=
-"list_link">拖拽式操作参考</span></a><br>
+"list_link">Drag And Drop Reference</span></a><br>
 </li>
 </ol>
 </blockquote></div>
 </div>
 <br>
 <a name="gml" id="gml"></a> <label class="collapse" for=
-"seven">GameMaker 语言（GML）</label> <input id="seven" type=
+"seven">GameMaker Language (GML)</label> <input id="seven" type=
 "checkbox">
 <div class="index_list">
-<div style="margin-left: 2em">在这里你可以看到GameMaker语言语法的概述，以及使用方法和程序结构的例子，你还可以找到所有内置GML函数的完整的参考指南。如果你是脚本使用的新手，建议从GML概述开始，不然只需要使用参考指南去查找所需要的函数名就可以了：
+<div style="margin-left: 2em">Here you can get an overview of the
+GameMaker Language syntax along with examples of use and program
+structure, and you can also find a complete reference guide for all
+the built-in GML functions. If you are new to using a scripting
+language then it is recommended that you start with the GML
+Overview, otherwise just use the reference guide to check up on
+function names when required:
 
 <blockquote>
 <ol>
 <li><a href="3_scripting/3_gml_overview/index.html"><span class=
-"list_link">GML 概述</span></a><br>
+"list_link">GML Overview</span></a><br>
 </li>
 
 <li><a href="3_scripting/4_gml_reference/index.html"><span class=
-"list_link">GML 参考</span></a><br>
+"list_link">GML Reference</span></a><br>
 </li>
 </ol>
 </blockquote></div>
 </div></blockquote>
 
-<p>值得注意的是，制作游戏时它们相互之间并不排斥，你可以混合使用GML和DnD™，根据你的技能和要求，随心所愿。</p>
+<p>Note that these are not mutually exclusive ways to make your
+games, and you can mix using GML with DnD™ as you wish, depending
+on your skill and requirements with either.</p>
 
 <p><br>
 </p>

@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>将动作应用于其他实例</title>
+<title>Applying Actions To Other Instances</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/1_drag_and_drop_overview/applying_ac
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Fapplying_actions.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F1_drag_and_drop_overview%2Fapplying_actions.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>将动作应用于其他实例</h2>
+<h2>Applying Actions To Other Instances</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -39,7 +39,7 @@ if (window.name != "content")
 <p>Most actions in the DnD™ libraries have an option to apply the
 action in different ways. This is called setting the action
 <i>scope</i> and it can be one of several things: <img class=
-"center" src="images/dnd_applies_to.png" alt="DnD™ 应用于">
+"center" src="images/dnd_applies_to.png" alt="DnD™ Applies To">
 Essentially what you are telling <i>GameMaker Studio 2</i> from
 which instance to run the action. The default action scope is
 <tt>self</tt>, which means that once the object is created as an
@@ -59,7 +59,7 @@ to...</a> action first.</p>
 
 <blockquote><a name="dnd_scope_self" id="dnd_scope_self"></a>
 <label class="collapse" for="one"><img style=
-"vertical-align:middle" src="images/i_scope_self.png"> 自身</label>
+"vertical-align:middle" src="images/i_scope_self.png"> Self</label>
 <input id="one" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
@@ -71,7 +71,7 @@ the code.</p>
 <br>
 <a name="dnd_scope_other" id="dnd_scope_other"></a> <label class=
 "collapse" for="two"><img style="vertical-align:middle" src=
-"images/i_scope_other.png"> 其它</label> <input id="two" type=
+"images/i_scope_other.png"> Other</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
@@ -101,7 +101,7 @@ scope to <tt>other</tt> to perform an action on the instance
 running the whole event block, and not the instance that is being
 scoped in the apply yo code blocks. The image below gives an
 example: <img class="center" src="images/dnd_scope_other.png" alt=
-"DnD™ 作用域"> In the image, we are checking for a mouse press in
+"DnD™ Scope"> In the image, we are checking for a mouse press in
 the instance, and if one is detected we change scope using the
 <b>Apply To...</b> action. The next two action blocks are now being
 called from the "obj_Player" instance (if there is more than one
@@ -114,7 +114,7 @@ and detected the mouse press.</p>
 <br>
 <a name="dnd_scope_all" id="dnd_scope_all"></a> <label class=
 "collapse" for="three"><img style="vertical-align:middle" src=
-"images/i_scope_all.png"> 所有</label> <input id="three" type=
+"images/i_scope_all.png"> All</label> <input id="three" type=
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
@@ -130,7 +130,7 @@ matter what object they have been created from.</p>
 <br>
 <a name="dnd_scope_object" id="dnd_scope_object"></a> <label class=
 "collapse" for="four"><img style="vertical-align:middle" src=
-"images/i_scope_object.png"> 物体</label> <input id="four" type=
+"images/i_scope_object.png"> Object</label> <input id="four" type=
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
@@ -147,15 +147,25 @@ will change direction.</p>
 </div>
 <br>
 <a name="dnd_scope_expression" id="dnd_scope_expression"></a>
-<label class="collapse" for="five">表达式</label> <input id=
+<label class="collapse" for="five">Expression</label> <input id=
 "five" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p><b>表达式（Expression）</b>输入字段供你输入一个你希望执行动作的实例id。It can be the unique ID value assigned to an instance from the <a href=
-"../../2_interface/1_editors/rooms.html#room_instance_layer">Room Editor</a> or it can be the ID of an instance that you've stored in a variable (where the variable would be the input value) or it can even be an expression using code, as shown in the image below: <img class="center" src="images/dnd_scope_target.png" alt=
-"DnD™ 目标变量"> In this case, an instance calls the <a href=
-"../2_drag_and_drop_reference/instance_actions/set_sprite.html">Set Sprite</a> from the instance created by the code given for the Expression. Note that in this case, the instance being created will run its <a href=
-"../../2_interface/1_editors/events/index.html">Create Event</a> <i>first</i> before the action is applied to it.</p>
+<p>The <b>Expression</b> input field is for you to input the ID of
+a specific instance that you want the action to work on. It can be
+the unique ID value assigned to an instance from the <a href=
+"../../2_interface/1_editors/rooms.html#room_instance_layer">Room
+Editor</a> or it can be the ID of an instance that you've stored in
+a variable (where the variable would be the input value) or it can
+even be an expression using code, as shown in the image below:
+<img class="center" src="images/dnd_scope_target.png" alt=
+"DnD™ Target"> In this case, an instance calls the <a href=
+"../2_drag_and_drop_reference/instance_actions/set_sprite.html">Set
+Sprite</a> from the instance created by the code given for the
+Expression. Note that in this case, the instance being created will
+run its <a href=
+"../../2_interface/1_editors/events/index.html">Create Event</a>
+<i>first</i> before the action is applied to it.</p>
 </div>
 </div></blockquote>
 
@@ -166,9 +176,11 @@ will change direction.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">拖拽按钮概览</a></div>
+<div style="float:left">Back: <a href="index.html">Drag And Drop
+Overview</a></div>
 
-<div style="float:right">下一页：<a href="action_scripts.html">动作脚本</a></div>
+<div style="float:right">Next: <a href="action_scripts.html">Action
+Scripts</a></div>
 </div>
 </div>
 

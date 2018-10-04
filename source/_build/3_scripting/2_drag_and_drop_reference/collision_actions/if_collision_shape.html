@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>如果形状发生碰撞</title>
+<title>If Collision Shape</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -24,20 +24,20 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/2_drag_and_drop_reference/collision_
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fcollision_actions%2Fif_collision_shape.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F2_drag_and_drop_reference%2Fcollision_actions%2Fif_collision_shape.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_collision_shape.png"> 如果形状发生碰撞</h2>
+"images/i_collision_shape.png"> If Collision Shape</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
 <blockquote>
 <p>This action is used to check and see if there is a collision
@@ -48,7 +48,7 @@ upper-left and lower-right corners of the shape being used, or in
 the case of a line, the start and end positions. These can be
 absolute positions within the game room, or positions relative to
 the instance performing the action. You can see how this works in
-the image below:  <img class="center" src=
+the image below: <img class="center" src=
 "images/collision_shape_example.png" alt=
 "Collision Shape Example Image"></p>
 
@@ -122,10 +122,8 @@ collision will not be detected, regardless of what the instance is
 drawing at the time.</div>
 
 <p><br>
-
 Note that to add actions into an "if" block, they should be dropped
 to the <i>side</i> of the action, as shown in the image below:
-
 <img class="center" src="images/if_collision_shape.png" alt=
 "If Collision Shape Example"></p>
 </blockquote>
@@ -133,28 +131,28 @@ to the <i>side</i> of the action, as shown in the image below:
 <p><br>
 </p>
 
-<h3>动作语法：</h3>
+<h3>Action Syntax:</h3>
 <img class="center" src="images/a_collision_shape.png" alt=
 "If Collision Shape At Syntax">
 <p><br>
 </p>
 
-<h3>参数：</h3>
+<h3>Arguments:</h3>
 
 <blockquote>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
-<td>形状</td>
+<td>Shape</td>
 <td>The shape to use</td>
 </tr>
 
 <tr class="alt">
-<td>物体</td>
+<td>Object</td>
 <td>The object to check for instances of</td>
 </tr>
 
@@ -179,14 +177,14 @@ to the <i>side</i> of the action, as shown in the image below:
 </tr>
 
 <tr>
-<td>释放目标列表</td>
+<td>Free Target</td>
 <td>Can be set to a variable or expression, or set to
 <tt>true</tt>/<tt>false</tt> to control freeing of the list memory
 when re-using a list variable</td>
 </tr>
 
 <tr class="alt">
-<td>目标</td>
+<td>Target</td>
 <td>The variable to target for the return value of the action</td>
 </tr>
 </table>
@@ -195,7 +193,7 @@ when re-using a list variable</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 <img class="center" src="images/e_collision_shape.png" alt=
 "If Collision Shape Example">
 <blockquote>The above action block code checks for a collision with

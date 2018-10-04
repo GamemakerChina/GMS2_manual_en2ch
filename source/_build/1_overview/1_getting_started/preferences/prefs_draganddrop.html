@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>偏好设置 - 对话框编辑器（Dialogue Editor）</title>
+<title>Preferences - Dialogue Editor</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -24,23 +24,26 @@ chmtop.c2wtopf.pageid = "_build/1_overview/1_getting_started/preferences/prefs_d
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F1_overview%2F1_getting_started%2Fpreferences%2Fprefs_draganddrop.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F1_overview%2F1_getting_started%2Fpreferences%2Fprefs_draganddrop.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>偏好设置 - 拖拽按钮（Drag and Drop）</h2>
+<h2>Preferences - Drag and Drop</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
 <p><img class="center" src="images/draganddrop_prefs.png" alt=
-"拖拽按钮的偏好设置">
+"Drag and Drop Preferences">
 </p>
 
-<p><b>拖拽按钮</b>设置用于定义拖拽按钮脚本编辑器看起来是什么样子。下面列举了各种可用选项及每一个的描述。</p>
+<p>The <b>Drag and Drop</b> Preferences are used to define how the
+Drag and Drop script editor looks and feels. The different options
+available are listed below along with a description of what each
+one does.</p>
 
 <ul>
 <li><b>DnD™ toolbox default location</b>: By default the DnD™
@@ -54,12 +57,17 @@ the short descriptive text that appears beside certain actions in
 the Action Workspace, for example this <b>Destroy Instance</b>
 action: <img class="center" src=
 "images/draganddrop_destroyaction.png" alt=
-"拖拽按钮概览节点"> You can choose to enable these
+"Drag and Drop Overview Node"> You can choose to enable these
 always, enable them only if the action is collapsed (the default
 setting), or disable them altogether.<br>
 <br></li>
 
-<li><b>Automatic response to DnD™ conversion to GameMaker Language</b>: When you convert a Drag and Drop event or script into GML code, you will by default get a message warning you about what you are about to do and asking if you want to continue. 将该选项置为"是"（OK）就会不显示这条警告信息而直接进行变动。<br>
+<li><b>Automatic response to DnD™ conversion to GameMaker
+Language</b>: When you convert a Drag and Drop event or script into
+GML code, you will by default get a message warning you about what
+you are about to do and asking if you want to continue. Setting
+this option to "OK" will simply okay the change without showing the
+message.<br>
 <br></li>
 
 <li><b>Automatic response to DnD™ node deletion</b>: When you
@@ -69,10 +77,16 @@ you want to continue. Setting this option to "OK" will simply okay
 the deletion without showing the message.<br>
 <br></li>
 
-<li><b>Maximum size for DnD™ toolbox action thumbnails</b>: At the bottom of the Action Toolbox you have a slider for changing the size of the Drag and Drop icons. 这项设定将被用于定义允许的最大尺寸（默认为64像素）。<br>
+<li><b>Maximum size for DnD™ toolbox action thumbnails</b>: At the
+bottom of the Action Toolbox you have a slider for changing the
+size of the Drag and Drop icons. This setting will be used to
+define the maximum permitted size (default 64px).<br>
 <br></li>
 
-<li><b>Minimum size for DnD™ toolbox action thumbnails</b>: At the bottom of the Action Toolbox you have a slider for changing the size of the Drag and Drop icons. 这项设定将被用于定义允许的最小尺寸（默认为16像素。）<br>
+<li><b>Minimum size for DnD™ toolbox action thumbnails</b>: At the
+bottom of the Action Toolbox you have a slider for changing the
+size of the Drag and Drop icons. This setting will be used to
+define the minimum permitted size (default 16px).<br>
 <br></li>
 
 <li><b>Default size for DnD™ toolbox action thumbnails</b>: This
@@ -80,13 +94,27 @@ setting will be used to define the default size for all action
 icons in the toolbox (default 32px).<br>
 <br></li>
 
-<li><b>Maximum number of recently used actions to display</b>: In the action toolbox there is a library at the top which holds the actions you have most recently used. 你可以使用这个选项来改变最近使用的动作的最大显示数量（默认为5）。<br>
+<li><b>Maximum number of recently used actions to display</b>: In
+the action toolbox there is a library at the top which holds the
+actions you have most recently used. You can use this option to
+change the maximum number of recent actions that will be shown
+(default 5).<br>
 <br></li>
 
-<li><b>Mouse down time to start dragging nodes (ms)</b>: When you click on a node and drag it, you will be repositioning the node within the action code. 然而如果按住鼠标一段时间后再移动，你会移动工作区中节点的位置而不是代码的顺序。这个设定设置了在节点能够被移动之前需要等待鼠标按下的毫秒数（不重置）。默认值为350。<br>
+<li><b>Mouse down time to start dragging nodes (ms)</b>: When you
+click on a node and drag it, you will be repositioning the node
+within the action code. However if you hold the mouse down for a
+moment and then move, you will be moving the node position within
+the workspace but <i>not</i> within the order of the code. This
+setting sets the number of milliseconds to have to wait with the
+mouse button pressed before the node can be moved (not
+repositioned). Default is 350.<br>
 <br></li>
 
-<li><b>Hide DnD™ node overview panel</b>: Here you can choose to hide the overview panel of the Action Code Editor. 默认该选项是禁用的，启用它将会移除编辑器左侧的纯文本动作链</li>
+<li><b>Hide DnD™ node overview panel</b>: Here you can choose to
+hide the overview panel of the Action Code Editor. By default this
+is disabled and enabling it will remove the plain text list of
+action chains from the editor.</li>
 </ul>
 
 <p><br>
@@ -96,11 +124,11 @@ icons in the toolbox (default 32px).<br>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href=
-"../7_preferences.html">偏好设置索引</a></div>
+<div style="float:left">Back: <a href=
+"../7_preferences.html">Preferences Index</a></div>
 
-<div style="float:right">下一页：<a href=
-"prefs_imageeditor.html">图像编辑器</a></div>
+<div style="float:right">Next: <a href=
+"prefs_imageeditor.html">Image Editor</a></div>
 </div>
 </div>
 

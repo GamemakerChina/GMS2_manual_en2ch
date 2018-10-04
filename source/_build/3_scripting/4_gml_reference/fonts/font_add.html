@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>font_add</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/fonts/font_add.html"
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Ffonts%2Ffont_add.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Ffonts%2Ffont_add.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
 <blockquote>
 <p>This function can be used to add a font to your game from those
@@ -48,10 +48,10 @@ available characters and their UTF8 value see <a href=
 <i>index</i> value that should be stored in a variable as this will
 be needed in all further codes that refer to this font.</p>
 
-<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
+<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
+available with the Trial Licence of the product.</div>
 
 <p><br>
-
 For the HTML5 target module, this function <b>can only be used to
 add <i>Web Fonts</i></b>, and will only work if WebGL is <b>not</b>
 enabled - if WebGL is enabled then you must use a general font
@@ -66,7 +66,6 @@ itself has these characters included. They will not be synthesised
 from the base font.</div>
 
 <p><br>
-
 The following table shows the fonts that are standard across all
 browsers and that should be be available for use without problems.
 Any other font may or may not exist on the computer or device that
@@ -199,7 +198,6 @@ to these standard fonts:</p>
 
 <p><br>
 <br>
-
 On all other (non Web) targets, you can use this function to add a
 font from a file. The file <b>must be included in the game
 bundle</b> using the <a href=
@@ -213,7 +211,6 @@ fonts like Asian or Arabic.</p>
 distribution with the game.</div>
 
 <p><br>
-
 When loading a font from a file in this way the <i>size</i> of the
 font is in <b>pixels</b> and the <i>first</i> and <i>last</i>
 values are ignored, meaning all glyphs in the font will be added.
@@ -236,7 +233,7 @@ which will slow down and eventually crash your game.</div>
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">font_add(name, size, bold, italic, first,
 last);</p>
@@ -247,8 +244,8 @@ last);</p>
 <blockquote>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -290,14 +287,14 @@ if the font is an included <tt>*.ttf</tt> file.</td>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
-<p class="code">实数</p>
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 
 <p class="code">newfont = font_add( 'Arial', 24, true, true, 32,
 128);<br></p>
@@ -316,9 +313,9 @@ lower case letters, numbers and all common punctuation.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">字体</a></div>
+<div style="float:left">Back: <a href="index.html">Fonts</a></div>
 
-<div style="float:right">下一页：<a href=
+<div style="float:right">Next: <a href=
 "font_add_sprite.html">font_add_sprite</a></div>
 </div>
 </div>

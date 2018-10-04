@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>physics_joint_get_value</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/joints/physi
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_get_value.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Fjoints%2Fphysics_joint_get_value.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -35,7 +35,7 @@ if (window.name != "content")
 depending on the type of joint being tested and the constant being
 used.</h2>
 
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">physics_joint_get_value(joint, value)</p>
 
@@ -45,8 +45,8 @@ used.</h2>
 <div class="param">
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -55,7 +55,7 @@ used.</h2>
 </tr>
 
 <tr class="alt">
-<td>值</td>
+<td>value</td>
 <td>The constant for the joint property that you wish to test</td>
 </tr>
 </table>
@@ -64,12 +64,12 @@ used.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>Returns:</b> Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3 class="studio">Description</h3>
 
 <p>By using a series of predefined constants, you can ask
 <i>GameMaker Studio 2</i> to tell you a number of things about the
@@ -91,7 +91,7 @@ value.<br>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">Example:</h3>
 
 <p class="code">var reactionForceX, reactionForceY,
 reactionForce;<br>
@@ -111,13 +111,16 @@ reactionForceX, reactionForceY);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks to see if the variable "shipJoint" holds a joint index and if it does, it then calculates the force being applied to that joint using the two constants. 最后，如果关节合力大于2，则该关节会删除失效。</p>
+<p>The above code checks to see if the variable "shipJoint" holds a
+joint index and if it does, it then calculates the force being
+applied to that joint using the two constants. Finally, if the
+total force is greater than 2, the joint is deleted.</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页：<a href="index.html">关节</a></div>
+<div style="float:left">Back: <a href="index.html">Joints</a></div>
 
 <div style="float:right">Next: <a href=
 "physics_joint_set_value.html">physics_joint_set_value</a></div>

@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>正在调试</title>
+<title>Debugging</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/2_interface/2_extras/debugging.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F2_extras%2Fdebugging.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F2_extras%2Fdebugging.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>正在调试</h2>
+<h2>Debugging</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -55,15 +55,15 @@ Debugger works and is essential for debugging mobile
 platforms.</div>
 
 <p>When you run a game in debug mode, the IDE will display the
-different tools available for the Debugger:  <img class="center"
-src="images/debug_module.png" alt="调试器"></p>
+different tools available for the Debugger: <img class="center"
+src="images/debug_module.png" alt="Debugger"></p>
 
 <p>The image shown above shows the default layout for the debugger,
 but as with other aspects of the IDE you can customise this to suit
 your needs, closing windows you don't need or changing the sizes of
 the docs and windows that you do need. You can reset the debugger
 layout at any time - or reopen closed windows - from the
-<b>Debugger</b> context menu at the top of the IDE:  <img class=
+<b>Debugger</b> context menu at the top of the IDE: <img class=
 "center" src="images/debug_module_context_menu.png" alt=
 "Debugger Context Menu"></p>
 
@@ -74,7 +74,7 @@ layout at any time - or reopen closed windows - from the
 "checkbox">
 <div class="index_list">
 <p>The <b>Graph</b> view shows you a graphic display of how your
-project is using memory and its framerate over time. :  <img class=
+project is using memory and its framerate over time. : <img class=
 "center" src="images/debug_graph.png" alt="Debug Graph"></p>
 
 <p>The graph shows the current and average memory use as well as
@@ -107,7 +107,7 @@ new window</i>" text: <img class="center" src=
 </div>
 <br>
 <a name="resource_view" id="resource_view"></a> <label class=
-"collapse" for="b">资源视l图</label> <input id="b" type=
+"collapse" for="b">Resource View</label> <input id="b" type=
 "checkbox">
 <div class="index_list">
 <p>The <b>Resource View</b> shows you a list of all the resources
@@ -122,7 +122,7 @@ breakpoints.</p>
 </div>
 <br>
 <a name="call_stack" id="call_stack"></a> <label class="collapse"
-for="c">调用堆栈</label> <input id="c" type="checkbox">
+for="c">Call Stack</label> <input id="c" type="checkbox">
 <div class="index_list">
 <p>This window will display the current call stack of events, as
 well as the line number for the code being stepped through. The
@@ -300,7 +300,7 @@ watches) will require the debugger to have paused the game. We've
 listed each of the watch windows here separately along with an
 explanation of what they do:</p>
 
-<blockquote><label class="collapse" for="two">局部</label>
+<blockquote><label class="collapse" for="two">Locals</label>
 <input id="two" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_local_window.png" alt=
@@ -327,7 +327,7 @@ you can set its type (see <b>Data Types</b>, below) to see details
 of data structures.</p>
 </div>
 <br>
-<label class="collapse" for="three">全局</label> <input id=
+<label class="collapse" for="three">Globals</label> <input id=
 "three" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_global_window.png" alt=
@@ -366,7 +366,7 @@ some of their contents (you cannot change the "key" values in maps,
 nor the priority value for priority queues).</p>
 </div>
 <br>
-<label class="collapse" for="five">实例</label> <input id=
+<label class="collapse" for="five">Instance</label> <input id=
 "five" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_instance_watches.png" alt=
@@ -381,7 +381,7 @@ the <tt>with</tt> statement, then this window will show that
 instances properties instead).</p>
 </div>
 <br>
-<label class="collapse" for="seven">所有实例</label>
+<label class="collapse" for="seven">All Instances</label>
 <input id="seven" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_allinstance_watches.png"
@@ -396,7 +396,7 @@ src="../../images/icon_rmb.png"> on a value to set its type (see
 <b>Data Types</b>, below)</p>
 </div>
 <br>
-<label class="collapse" for="eight">选中的实例</label>
+<label class="collapse" for="eight">Selected Instance</label>
 <input id="eight" type="checkbox">
 <div class="index_list">
 <p><img class="center" src=
@@ -412,7 +412,7 @@ Selected Instance window, where you can see it's built in and
 instance variables, the same as for the Instances window.</p>
 </div>
 <br>
-<label class="collapse" for="thirteen">渲染状态</label>
+<label class="collapse" for="thirteen">Render States</label>
 <input id="thirteen" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_renderstate_window.png"
@@ -437,14 +437,14 @@ surfaces you have in your game (including the <tt>application
 surface</tt>) as well as see the texture pages that are in memory.
 You can select from textures or surfaces from the bottom of the
 watch, and then mouse over the texture or surface ID to have it
-displayed in a pop-up window.  <img class="center" src=
+displayed in a pop-up window. <img class="center" src=
 "images/debug_textures.png" alt="Debug Texture View"></p>
 
 <p>Note that the debugger must be paused before these will
 update.</p>
 </div>
 <br>
-<label class="collapse" for="eleven">剖析</label> <input id=
+<label class="collapse" for="eleven">Profile</label> <input id=
 "eleven" type="checkbox">
 <div class="index_list">
 <p>This window is where you can see the current system profile for
@@ -455,14 +455,14 @@ information on profiling see the section further down on this
 page.</p>
 </div>
 <br>
-<label class="collapse" for="ten">缓冲区</label> <input id="ten"
+<label class="collapse" for="ten">Buffer</label> <input id="ten"
 type="checkbox">
 <div class="index_list">
 <p>If you have initialised any buffers in your game, then this
 window will show you the buffer data. You can select any buffer
 created by setting the <i>Buffer ID</i> value, which will start at
 0 for the first buffer created in your game, and increment by 1 for
-each consecutive buffer.  <img class="center" src=
+each consecutive buffer. <img class="center" src=
 "images/debug_buffer.png" alt="Debug Buffer Window"></p>
 
 <p>If you right click <img style="vertical-align:middle" src=
@@ -491,10 +491,9 @@ has its own on/off button.</p>
 <p><br>
 </p>
 
-<h2>数据类型</h2>
+<h2>Data Types</h2>
 
 <p><br>
-
 When you are watching a variable in any of the windows, it can be
 one of multiple <b>data-types</b>. However, due to the way that
 <i>GameMaker Studio 2</i> stores certain things, the Debugger does
@@ -525,10 +524,9 @@ too.</p>
 <p><br>
 </p>
 
-<h2>断点</h2>
+<h2>Breakpoints</h2>
 
 <p><br>
-
 A <b>breakpoint</b> is a place in your project code that you wish
 it to stop at so you can see what's going on. With the Debugger
 running, you can add or remove breakpoints at any time and in any
@@ -564,14 +562,12 @@ or disabled or even removed.</p>
 <h2>Profiling</h2>
 
 <p><br>
-
 The Debugger permits you to step through your code and find any
 issues with the code base, but sometimes you need to check for
 subtler details in order to properly optimise your games. The
 <b>Profile</b> option helps to do just that by giving you a
 performance overview, showing the time takes to call functions,
 scripts, and even how long it took a specific event to complete.
-
 <img class="center" src="images/debug_profile.png" alt=
 "Debug Profile Window"></p>
 
@@ -648,7 +644,6 @@ these out to see them.</p>
 </div></blockquote>
 
 <p><br>
-
 The profile data is shown in four columns, and clicking on any of
 them will sort the data according to the column criteria.</p>
 

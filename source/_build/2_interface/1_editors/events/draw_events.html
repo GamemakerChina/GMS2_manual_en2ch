@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>绘制事件</title>
+<title>Draw Events</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/2_interface/1_editors/events/draw_events.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fevents%2Fdraw_events.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fevents%2Fdraw_events.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>绘制事件</h2>
+<h2>Draw Events</h2>
 
 <div class="body-scroll">
 <p>The <b>Draw Event</b> is the one that governs what you see on
@@ -76,7 +76,7 @@ text.<br></li>
 below:</p>
 
 <blockquote><a name="draw_begin_end" id="draw_begin_end"></a>
-<label class="collapse" for="one">开始绘制与结束绘制</label>
+<label class="collapse" for="one">Draw Begin And Draw End</label>
 <input id="one" type="checkbox">
 <div class="index_list">Apart from the main <b>Draw</b> sub-event,
 you also have a <b>Draw Begin</b> and a <b>Draw End</b> sub-event
@@ -125,7 +125,7 @@ given.<br></li>
 </ul></div>
 <br>
 <a name="draw_GUI" id="draw_GUI"></a> <label class="collapse" for=
-"two">绘制GUI</label> <input id="two" type="checkbox">
+"two">Draw GUI</label> <input id="two" type="checkbox">
 <div class="index_list">The <b>Draw GUI</b> sub-event type falls
 under the <b>Draw Event</b> category and is specifically designed
 for drawing GUI (Graphical User Interface) elements that are not
@@ -170,13 +170,23 @@ layer with a regular draw event. If both instances have a <b>Draw
 GUI</b> sub-event, then the layer order will be respected.<br>
 <br>
 
-<div class="note"><b>注意</b>： This event will, by default, draw 1:1 with the application surface size, which is normally the size of the room or the view port. This means that when you have <b>Aspect Ratio Correction</b> on in the <a href=
-"../../3_settings/game_options/index.html">Game Options</a> the GUI is not going to be drawn over the black bars that "letterbox" the game. This behavior can be switched off using the <a href=
-"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_maximise.html"> <tt>display_set_gui_maximise</tt></a> function, and you can also lock the GUI event to a specific size which will then be scaled to fit the display or application surface dimensions automatically by using the function <a href=
-"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_size.html"> <tt>display_set_gui_size</tt></a>.</div></div>
+<div class="note"><b>NOTE</b>: This event will, by default, draw
+1:1 with the application surface size, which is normally the size
+of the room or the view port. This means that when you have
+<b>Aspect Ratio Correction</b> on in the <a href=
+"../../3_settings/game_options/index.html">Game Options</a> the GUI
+is not going to be drawn over the black bars that "letterbox" the
+game. This behavior can be switched off using the <a href=
+"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_maximise.html">
+<tt>display_set_gui_maximise</tt></a> function, and you can also
+lock the GUI event to a specific size which will then be scaled to
+fit the display or application surface dimensions automatically by
+using the function <a href=
+"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_size.html">
+<tt>display_set_gui_size</tt></a>.</div></div>
 <br>
 <a name="draw_pre_post" id="draw_pre_post"></a> <label class=
-"collapse" for="three">预绘制与后绘制</label> <input id="three"
+"collapse" for="three">Pre And Post Draw</label> <input id="three"
 type="checkbox">
 <div class="index_list">The <b>Pre Draw</b> and <b>Post Draw</b>
 sub-events are part of the <b>Draw Event</b> category. However,
@@ -215,7 +225,6 @@ without it being cleared. However you can use <a href=
 "../../../3_scripting/4_gml_reference/drawing/colour/draw_clear_alpha.html">
 <tt>draw_clear_alpha</tt></a> to do this yourself.</div>
 <br>
-
 The <b>Post Draw</b> sub-event is triggered after the standard draw
 events, but before the Draw GUI events. Like the Pre Draw event, it
 is based on the size of the screen buffer size, and is placed
@@ -225,7 +234,7 @@ without interfering with any HUD/GUI elements that you may have in
 your game.</div>
 <br>
 <a name="draw_resize" id="draw_resize"></a> <label class="collapse"
-for="four">窗口大小调整</label> <input id="four" type="checkbox">
+for="four">Window Resize</label> <input id="four" type="checkbox">
 <div class="index_list">This event type falls under the <b>Draw
 Event</b> category, and although it doesn't actually draw anything,
 it does react to changes in the draw canvas - specifically, it is
@@ -242,7 +251,10 @@ function is provided as a convenient way to avoid having step event
 code that checks for these things all the time.<br>
 <br>
 
-<div class="note"><b>注意</b>： You cannot draw in this event!It is triggered by resizing the canvas and is only for catching this change... any drawing that should be done still must be in one of the other draw events.</div></div></blockquote>
+<div class="note"><b>NOTE</b>: You cannot draw in this event! It is
+triggered by resizing the canvas and is only for catching this
+change... any drawing that should be done still must be in one of
+the other draw events.</div></div></blockquote>
 
 <p><br>
 </p>
@@ -251,10 +263,11 @@ code that checks for these things all the time.<br>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="../objects.html">物体编辑器</a></div>
+<div style="float:left">Back: <a href="../objects.html">The Object
+Editor</a></div>
 
-<div style="float:right">下一页：<a href=
-"gesture_events.html">手势事件</a></div>
+<div style="float:right">Next: <a href=
+"gesture_events.html">Gesture Events</a></div>
 </div>
 </div>
 

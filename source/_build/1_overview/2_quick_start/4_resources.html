@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>资源</title>
+<title>Resources</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,31 +24,43 @@ chmtop.c2wtopf.pageid = "_build/1_overview/2_quick_start/4_resources.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F2_quick_start%2F4_resources.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F2_quick_start%2F4_resources.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>资源</h2>
+<h2>Resources</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>游戏的核心将通过资源创建并被添加到<b>资源树</b>中。This is where you can add everything that your game requires to run, including a game room, sprites, objects, paths and a number of other things. A basic game in <i>GameMaker Studio 2</i> will require a room to run in, and usually at least one object and a sprite, although you'll likely use a lot more!<img class="center" src="images/qs_resources.png" alt=
-"资源树"> You can add a resource to the resource tree by right clicking <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on it and selecting the <b>Create</b> option from the pop-up menu (for full details on this pop-up menu, see below). This is the same for all available resources, but each one has its own unique editor which will open when you do this. Note that tat the top left of the Resource Tree you have the <b>Collapse All</b> button <img style="vertical-align:middle" src=
-"images/icon_collapseresources.png"> which can be used to close all open resource folders.</p>
+<p>The core of your game will be created from assets added to the
+<b>resource tree</b>. This is where you can add everything that
+your game requires to run, including a game room, sprites, objects,
+paths and a number of other things. A basic game in <i>GameMaker
+Studio 2</i> will require a room to run in, and usually at least
+one object and a sprite, although you'll likely use a lot more!
+<img class="center" src="images/qs_resources.png" alt=
+"Resource Tree"> You can add a resource to the resource tree by
+right clicking <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> on it and selecting the <b>Create</b>
+option from the pop-up menu (for full details on this pop-up menu,
+see below). This is the same for all available resources, but each
+one has its own unique editor which will open when you do this.
+Note that tat the top left of the Resource Tree you have the
+<b>Collapse All</b> button <img style="vertical-align:middle" src=
+"images/icon_collapseresources.png"> which can be used to close all
+open resource folders.</p>
 
 <p>You can see a brief overview of each of the available resources
 from the resource tree by clicking any of the buttons below:
-
 <a name="sprites" id="sprites"></a></p>
 
 <blockquote><label class="collapse" for="zero"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_sprite.png">精灵</label>
+"../../2_interface/1_editors/images/icon_sprite.png">Sprites</label>
 <input id="zero" type="checkbox">
 <div class="index_list">Sprites are generally the visual
 representations of objects within the games you create. As such, a
@@ -61,12 +73,12 @@ single animated sprite. For example, the following 10 images form a
 sprite for a character who is waving his arms while skydiving.<br>
 <br>
 <img class="center" src="images/qs_spritestrip.png" alt=
-"精灵长带图"><br>
+"Sprite Strip"><br>
 And the actual finished animation would look like this when placed
 in a game:<br>
 <br>
 <img class="center" src="images/qs_spriteanim.gif" alt=
-"精灵动画"><br>
+"Sprite Animation"><br>
 A sprite like this is usually a <tt>PNG</tt> format file, but
 <i>GameMaker Studio 2</i> will also accept vector sprites in
 <tt>SWF</tt> format, and <b>Spine</b> sprites in <tt>JSON</tt>
@@ -79,7 +91,8 @@ Editor</a>.</div>
 <a name="tilesets" id="tilesets"></a> <label class="collapse" for=
 "one"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_tileset.png">图块集</label> <input id="one" type="checkbox">
+"../../2_interface/1_editors/images/icon_tileset.png">Tile
+sets</label> <input id="one" type="checkbox">
 <div class="index_list">Tile sets are taken from the sprite
 resources, but are classified as a separate resource since
 <i>GameMaker Studio 2</i> will handle them differently when
@@ -91,16 +104,17 @@ a tile map in your room. They are great for designing any static
 items in your room, like terrain, walls, backdrops, etc... as they
 don't have the same overhead that objects have.<br>
 <br>
-<img class="center" src="images/qs_tileset.png" alt="图块集"><br>
+<img class="center" src="images/qs_tileset.png" alt="Tile set"><br>
 Above is an example sprite that would be used as a tile set to
 create walls. As you can see, it can be "split" into 64x64pixel
 chunks, which would then placed into the room editor.<br>
 <br>
 
-<div class="note"><b>注意</b>： Tiles are <b>always square</b>, so if you need anything other than that, you should be using an instance with a sprite or an asset layer in the room editor.</div>
+<div class="note"><b>NOTE</b>: Tiles are <b>always square</b>, so
+if you need anything other than that, you should be using an
+instance with a sprite or an asset layer in the room editor.</div>
 <br>
 <br>
-
 You can find out more about adding tile sets from the section on
 the <a href="../../2_interface/1_editors/tilesets.html">Tile Set
 Editor</a>.</div>
@@ -108,7 +122,7 @@ Editor</a>.</div>
 <a name="sounds" id="sounds"></a> <label class="collapse" for=
 "two"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_sound.png">声音</label>
+"../../2_interface/1_editors/images/icon_sound.png">Sounds</label>
 <input id="two" type="checkbox">
 <div class="index_list">Sound is an important part of any game,
 both for adding depoth to the gameplay and giving feedback in the
@@ -133,7 +147,7 @@ Editor</a>.</div>
 <a name="paths" id="paths"></a> <label class="collapse" for=
 "three"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_path.png">路径</label>
+"../../2_interface/1_editors/images/icon_path.png">Paths</label>
 <input id="three" type="checkbox">
 <div class="index_list">At some point while creating your games you
 may need an instance of one of your objects to follow a path
@@ -157,7 +171,7 @@ Editor</a>.</div>
 <a name="scripts" id="scripts"></a> <label class="collapse" for=
 "four"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_script.png">脚本（Scripts）</label>
+"../../2_interface/1_editors/images/icon_script.png">Scripts</label>
 <input id="four" type="checkbox">
 <div class="index_list">A script resource is a collection of codes
 you have written to create your own function. For example, say you
@@ -180,7 +194,7 @@ Editor</a>.</div>
 <a name="shaders" id="shaders"></a> <label class="collapse" for=
 "five"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_shader.png">着色器（Shaders）</label>
+"../../2_interface/1_editors/images/icon_shader.png">Shaders</label>
 <input id="five" type="checkbox">
 <div class="index_list">Shaders are a very powerful tool that can
 be used to manipulate the graphics that your game renders to the
@@ -199,13 +213,11 @@ buffer.<br>
 <br>
 <i>GameMaker Studio 2</i> supports the following shader languages:
 
-
-
 <div class="compat">
 <table>
 <tr>
-<th>着色器语言</th>
-<th>目标平台</th>
+<th>Shader Language</th>
+<th>Target Platform</th>
 </tr>
 
 <tr>
@@ -215,7 +227,7 @@ buffer.<br>
 
 <tr>
 <td>GLSL</td>
-<td>Mac和Ubuntu (Linux)</td>
+<td>Mac and Ubuntu (Linux)</td>
 </tr>
 
 <tr>
@@ -231,7 +243,6 @@ buffer.<br>
 </div>
 <br>
 <br>
-
 You can find out more about adding shaders from the section on the
 <a href="../../2_interface/1_editors/shaders.html">Shader
 Editor</a>.</div>
@@ -239,7 +250,7 @@ Editor</a>.</div>
 <a name="fonts" id="fonts"></a> <label class="collapse" for=
 "six"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_font.png">字体（Fonts）</label>
+"../../2_interface/1_editors/images/icon_font.png">Fonts</label>
 <input id="six" type="checkbox">
 <div class="index_list">When you want to draw text in your game
 this text will be drawn in a standard Arial 12 points font by
@@ -252,10 +263,11 @@ style. Once imported and added as a resource, you can then set it
 for drawing using the appropriate code or actions.<br>
 <br>
 
-<div class="note"><b>注意</b>： If you are adding fonts to your game, make sure you have the licence necessary to re-distribute it, unless it is public domain or copyright free.</div>
+<div class="note"><b>NOTE</b>: If you are adding fonts to your
+game, make sure you have the licence necessary to re-distribute it,
+unless it is public domain or copyright free.</div>
 <br>
 <br>
-
 You can find out more about adding fonts from the section on the
 <a href="../../2_interface/1_editors/fonts.html">Font
 Editor</a>.</div>
@@ -263,7 +275,7 @@ Editor</a>.</div>
 <a name="timelines" id="timelines"></a> <label class="collapse"
 for="seven"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_timeline.png">时间轴（Timelines）</label>
+"../../2_interface/1_editors/images/icon_timeline.png">Timelines</label>
 <input id="seven" type="checkbox">
 <div class="index_list">In most games you will want certain things
 to happen at certain moments in time. Now, you can try to achieve
@@ -285,14 +297,48 @@ Editor</a>.</div>
 <a name="objects" id="objects"></a> <label class="collapse" for=
 "eight"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_object.png">物体（Objects）</label>
+"../../2_interface/1_editors/images/icon_object.png">Objects</label>
 <input id="eight" type="checkbox">
-<div class="index_list">Objects are a special resource that we use to control aspects of a game and to do specific things. Most of the time they have a sprite associated with them so that you see them in the game room, but sometimes they are used as a "behind the scenes" controller to do things related to the user or for timing, etc... 他们可以给予行为和对某些事件做出反应以及彼此,和你在游戏看到的大多数事情都是基于对象和他们的相互作用。Note that we say "based on" because you don't actually place objects directly into the game room, but rather you place <b>instances</b> of these objects, which are basically copies (or clones if you prefer) of the object resource. This is a very important thing to remember as instances and objects are not the same thing and each have their own set of functions that can affect them.<br><br>All objects have a set of properties which you can specify in the object editor, like the sprite, whether it uses physics or not, or whether it is a "child" object of another one. They also have a series of built-in variables that can then be used in actions, scripts and code. These built-in variables are used to define the position of the instance when placed in the game room, the animation speed, the direction of movement and a whole host of other things. To control how the object behaves over time, each game frame is split into a series of <b>events</b>, so you can add code or actions into a specific event and it will only run when the event is triggered, and events can be triggered by things like mouse button presses or collisions with other instances.<br><br>Objects are in a very real sense the building blocks of your game, and together with rooms will form the core of any project that you create.<br><br>You can find out more about adding objects from the section on the <a href="../../2_interface/1_editors/objects.html">Object Editor</a>.</div>
+<div class="index_list">Objects are a special resource that we use
+to control aspects of a game and to do specific things. Most of the
+time they have a sprite associated with them so that you see them
+in the game room, but sometimes they are used as a "behind the
+scenes" controller to do things related to the user or for timing,
+etc... They can be given behaviours and they can react to certain
+events as well as to each other, and most of the things you see in
+a game are based on objects and their interactions. Note that we
+say "based on" because you don't actually place objects directly
+into the game room, but rather you place <b>instances</b> of these
+objects, which are basically copies (or clones if you prefer) of
+the object resource. This is a very important thing to remember as
+instances and objects are not the same thing and each have their
+own set of functions that can affect them.<br>
+<br>
+All objects have a set of properties which you can specify in the
+object editor, like the sprite, whether it uses physics or not, or
+whether it is a "child" object of another one. They also have a
+series of built-in variables that can then be used in actions,
+scripts and code. These built-in variables are used to define the
+position of the instance when placed in the game room, the
+animation speed, the direction of movement and a whole host of
+other things. To control how the object behaves over time, each
+game frame is split into a series of <b>events</b>, so you can add
+code or actions into a specific event and it will only run when the
+event is triggered, and events can be triggered by things like
+mouse button presses or collisions with other instances.<br>
+<br>
+Objects are in a very real sense the building blocks of your game,
+and together with rooms will form the core of any project that you
+create.<br>
+<br>
+You can find out more about adding objects from the section on the
+<a href="../../2_interface/1_editors/objects.html">Object
+Editor</a>.</div>
 <br>
 <a name="rooms" id="rooms"></a> <label class="collapse" for=
 "nine"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_room.png">房间</label>
+"../../2_interface/1_editors/images/icon_room.png">Rooms</label>
 <input id="nine" type="checkbox">
 <div class="index_list">All games that you make in <i>GameMaker
 Studio 2</i> need at least one room to run (but can have many, many
@@ -317,7 +363,7 @@ Editor</a>.</div>
 <a name="Notes" id="Notes"></a> <label class="collapse" for=
 "thirteen"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_notes.png">便签</label>
+"../../2_interface/1_editors/images/icon_notes.png">Notes</label>
 <input id="thirteen" type="checkbox">
 <div class="index_list">Notes are simply code editor windows which
 permit you to write anything. They are designed as a place to keep
@@ -331,7 +377,8 @@ Editor</a>.</div>
 <a name="included_files" id="included_files"></a> <label class=
 "collapse" for="ten"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_included.png">内含文件</label> <input id="ten" type="checkbox">
+"../../2_interface/1_editors/images/icon_included.png">Included
+Files</label> <input id="ten" type="checkbox">
 <div class="index_list">Included files are, as the name suggests,
 any file that you wish to be included with the game bundle when you
 export the game to the target platform. These files can be anything
@@ -349,7 +396,7 @@ Files</a>.</div>
 <a name="extensions" id="extensions"></a> <label class="collapse"
 for="eleven"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_sprite.png">扩展</label>
+"../../2_interface/1_editors/images/icon_sprite.png">Extensions</label>
 <input id="eleven" type="checkbox">
 <div class="index_list">Extensions are additional files and code
 that you can add to extend the <i>GameMaker Studio 2</i>
@@ -368,7 +415,7 @@ Editor</a>.</div>
 <a name="options" id="options"></a> <label class="collapse" for=
 "twelve"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_options.png">选项</label>
+"../../2_interface/1_editors/images/icon_options.png">Options</label>
 <input id="twelve" type="checkbox">
 <div class="index_list">The <b>Game Options</b> resource are
 comprised of a series of different options for the project as a
@@ -383,7 +430,7 @@ Options</a>.</div>
 <a name="configurations" id="configurations"></a> <label class=
 "collapse" for="fourteen"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_configs.png">配置</label>
+"../../2_interface/1_editors/images/icon_configs.png">Configurations</label>
 <input id="fourteen" type="checkbox">
 <div class="index_list">Here you can choose or create a
 configuration that you wish to use for the resource tree, and
@@ -570,10 +617,11 @@ and starting out on a new project.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页： <a href="index.html">快速入门指南</a></div>
+<div style="float:left">Back: <a href="index.html">Quick Start
+Index</a></div>
 
-<div style="float:right">下一页：<a href=
-"5_workflow.html">工作流程</a></div>
+<div style="float:right">Next: <a href=
+"5_workflow.html">Workflow</a></div>
 </div>
 </div>
 

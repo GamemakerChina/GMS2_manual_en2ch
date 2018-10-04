@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>vertex_format_add_custom</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/drawing/primitives/v
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fprimitives%2Fvertex%20formats%2Fvertex_format_add_custom.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fprimitives%2Fvertex%20formats%2Fvertex_format_add_custom.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script><!-- !chm2web! -->
-
+</script>
+<!-- !chm2web! -->
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">vertex_format_add_custom(type, usage);</p>
 
@@ -45,8 +45,8 @@ if (window.name != "content")
 <div>
 <table>
 <tr>
-<th>参数</th>
-<th>描述</th>
+<th>Argument</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -66,14 +66,14 @@ constants</i></b> listed below).</td>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3>描述</h3>
+<h3>Description</h3>
 
 <blockquote>
 <p>This function permits you to use a custom data type for specific
@@ -87,8 +87,8 @@ constant that you choose, listed below:</p>
 <div class="compat">
 <table>
 <tr>
-<th>常量</th>
-<th>描述</th>
+<th>Constant</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -124,7 +124,6 @@ constant that you choose, listed below:</p>
 </div>
 
 <p><br>
-
 The use that these constants will be put too also needs to be
 defined so that the values can be "bound" properly within the
 shader being created. This is necessary due to the fact that DX and
@@ -140,8 +139,8 @@ created:</p>
 <div class="compat">
 <table>
 <tr>
-<th>常量</th>
-<th>描述</th>
+<th>Constant</th>
+<th>Description</th>
 </tr>
 
 <tr>
@@ -204,7 +203,6 @@ example)</td>
 </div>
 
 <p><br>
-
 Note that the <tt>vertex_format_add_custom()</tt> function only
 supports <tt>vertex_usage_position</tt>,
 <tt>vertex_usage_colour</tt>, <tt>vertex_usage_normal</tt> and
@@ -218,7 +216,7 @@ mapped to any attribute you define).</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>Example:</h3>
 
 <p class="code">vertex_format_begin();<br>
 vertex_format_add_textcoord();<br>
