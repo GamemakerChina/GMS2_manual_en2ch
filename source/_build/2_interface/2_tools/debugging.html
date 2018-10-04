@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Debugging</title>
+<title>正在调试</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/2_interface/2_tools/debugging.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F2_tools%2Fdebugging.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F2_tools%2Fdebugging.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Debugging</h2>
+<h2>正在调试</h2>
 
 <div class="body-scroll">
 <p>The <b>Debugger</b> is a powerful tool for checking your game,
@@ -52,8 +52,9 @@ Debugger works and is essential for debugging mobile
 platforms.</div>
 
 <p>The actual Debugger window will look something like this:
+
 <img class="center" src="images/debug_module.png" alt=
-"Debugger"></p>
+"调试器"></p>
 
 <p>At the top you have four drop down menus:</p>
 
@@ -242,7 +243,7 @@ event in any instance from the resource tree and its code will be
 shown in a new tab.</p>
 </div>
 <br>
-<label class="collapse" for="two">Locals</label> <input id="two"
+<label class="collapse" for="two">局部</label> <input id="two"
 type="checkbox">
 <div class="index_list">
 <p>The <b>Locals</b> window shows the current step properties,
@@ -265,7 +266,7 @@ you can set its type (see <b>Data Types</b>, below) to see details
 of data structures.</p>
 </div>
 <br>
-<label class="collapse" for="three">Globals</label> <input id=
+<label class="collapse" for="three">全局</label> <input id=
 "three" type="checkbox">
 <div class="index_list">
 <p>The <b>Globals</b> window will show a list of all the currently
@@ -296,7 +297,7 @@ some of their contents (you cannot change the "key" values in maps,
 nor the priority value for priority queues).</p>
 </div>
 <br>
-<label class="collapse" for="five">Instance</label> <input id=
+<label class="collapse" for="five">实例</label> <input id=
 "five" type="checkbox">
 <div class="index_list">
 <p>As the name implies, this window will show all instance
@@ -307,7 +308,7 @@ the <tt>with</tt> statement, then this window will show that
 instances properties instead).</p>
 </div>
 <br>
-<label class="collapse" for="six">Output</label> <input id="six"
+<label class="collapse" for="six">输出</label> <input id="six"
 type="checkbox">
 <div class="index_list">
 <p>This window simply shows the output of the compiler (as shown in
@@ -316,7 +317,7 @@ the main IDE compiler window). If you right click <img style=
 window you can clear it or copy its contents to the clipboard.</p>
 </div>
 <br>
-<label class="collapse" for="seven">All Instances</label>
+<label class="collapse" for="seven">所有实例</label>
 <input id="seven" type="checkbox">
 <div class="index_list">
 <p>Should you need to see all instances that are currently in the
@@ -327,7 +328,7 @@ src="../../images/icon_rmb.png"> on a value to set its type (see
 <b>Data Types</b>, below)</p>
 </div>
 <br>
-<label class="collapse" for="eight">Selected Instance</label>
+<label class="collapse" for="eight">选中的实例</label>
 <input id="eight" type="checkbox">
 <div class="index_list">
 <p>This window is for when you select an instance from your game.
@@ -338,21 +339,21 @@ Selected Instance window, where you can see it's built in and
 instance variables, the same as for the Instances window.</p>
 </div>
 <br>
-<label class="collapse" for="nine">Call Stack</label> <input id=
+<label class="collapse" for="nine">调用堆栈</label> <input id=
 "nine" type="checkbox">
 <div class="index_list">
 <p>This window will display the current call stack of events, as
 well as the line number for the code being stepped through.</p>
 </div>
 <br>
-<label class="collapse" for="ten">Buffer</label> <input id="ten"
+<label class="collapse" for="ten">缓冲区</label> <input id="ten"
 type="checkbox">
 <div class="index_list">
 <p>If you have initialised any buffers in your game, then this
 window will show you the buffer data. You can select any buffer
 created by setting the <i>Buffer ID</i> value, which will start at
 0 for the first buffer created in your game, and increment by 1 for
-each consecutive buffer. <img class="center" src=
+each consecutive buffer.  <img class="center" src=
 "images/debug_buffer.png" alt="Debug Buffer"></p>
 
 <p>If you right click <img style="vertical-align:middle" src=
@@ -366,7 +367,7 @@ data will require that you scroll, <i>then</i> release the mouse
 button for the Debugger to fetch and display the required data.</p>
 </div>
 <br>
-<label class="collapse" for="eleven">Profile</label> <input id=
+<label class="collapse" for="eleven">剖析</label> <input id=
 "eleven" type="checkbox">
 <div class="index_list">
 <p>This window is where you can see the current system profile for
@@ -376,7 +377,7 @@ performing and spot any trouble areas or bottlenecks. For further
 information on profiling see the section below on this page.</p>
 </div>
 <br>
-<label class="collapse" for="twelve">Graph</label> <input id=
+<label class="collapse" for="twelve">图表</label> <input id=
 "twelve" type="checkbox">
 <div class="index_list">
 <p>The <b>Graph</b> window shows you a graphic display of how your
@@ -388,7 +389,7 @@ selecting the option you require: <img class="center" src=
 "images/debug_graph.png" alt="Debug Graph"></p>
 </div>
 <br>
-<label class="collapse" for="thirteen">Render States</label>
+<label class="collapse" for="thirteen">渲染状态</label>
 <input id="thirteen" type="checkbox">
 <div class="index_list">
 <p>This watch shows you all the information available for the state
@@ -405,7 +406,7 @@ surfaces you have in your game (including the <tt>application
 surface</tt>) as well as see the texture pages that are in memory.
 You can select from textures or surfaces from the top of the watch,
 and then select the texture or surface ID to have it displayed in
-the window. <img class="center" src="images/debug_textures.png"
+the window.  <img class="center" src="images/debug_textures.png"
 alt="Debug Textures"></p>
 </div></blockquote>
 
@@ -424,7 +425,7 @@ button.</p>
 <p><br>
 </p>
 
-<h2>Data Types</h2>
+<h2>数据类型</h2>
 
 <p>When you are watching a variable in any of the windows, it can
 be one of multiple <b>data-types</b>. However, due to the way that
@@ -452,7 +453,7 @@ too.</p>
 <p><br>
 </p>
 
-<h2>Breakpoints</h2>
+<h2>断点</h2>
 
 <p>A breakpoint is a place in your game code that you wish it to
 stop at so you can see what's going on. With the Debugger, you can
@@ -483,6 +484,7 @@ subtler details in order to properly optimise your games. The
 <b>Profile</b> option helps to do just that by giving you a
 performance overview, showing the time takes to call functions,
 scripts, and even how long it took a specific event to complete.
+
 <img class="center" src="images/debug_profile.png" alt=
 "Debug Profile Window"></p>
 
@@ -490,7 +492,7 @@ scripts, and even how long it took a specific event to complete.
 window in the Debugger, and it has a button for enabling/disabling
 profiling, the number of steps that have been profiled, as well as
 two sections which you can use to display the information in
-different ways. <img class="center" src=
+different ways.  <img class="center" src=
 "images/debug_profile_options.png" alt="Debug Profile Options"></p>
 
 <p>Clicking <img style="vertical-align:middle" src=
@@ -550,6 +552,7 @@ differentiate it from the functions.</p>
 
 <p>The profile data is shown in four columns, and clicking on any
 of them will sort the data according to the column criteria.
+
 <img class="center" src="images/debug_profile_data.png"></p>
 
 <ul>

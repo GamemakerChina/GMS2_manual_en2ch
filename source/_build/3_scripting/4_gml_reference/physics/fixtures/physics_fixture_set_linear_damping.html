@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>physics_fixture_set_linear_damping</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/physics/fixtures/phy
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Ffixtures%2Fphysics_fixture_set_linear_damping.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fphysics%2Ffixtures%2Fphysics_fixture_set_linear_damping.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">This function sets the linear damping value of a
 fixture.</h2>
 
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">physics_fixture_set_linear_damping(fixture,
 damping)</p>
@@ -45,8 +45,8 @@ damping)</p>
 <div class="param">
 <table>
 <tr>
-<th>Argument</th>
-<th>Description</th>
+<th>参数</th>
+<th>描述</th>
 </tr>
 
 <tr>
@@ -64,33 +64,28 @@ damping)</p>
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<p><b>返回：</b> N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3 class="studio">描述</h3>
 
-<p>Damping is used to reduce the physics world velocity of
-instances, and differs from friction in that friction only occurs
-when two instances with fixtures are in contact. Damping is also
-much cheaper to simulate than friction, but please note that
-damping is not a replacement for friction; the two effects can, and
-should, be used together. Here is an image to illustrate
-damping:<br>
+<p>Damping is used to reduce the physics world velocity of instances, and differs from friction in that friction only occurs when two instances with fixtures are in contact. 模拟阻尼比摩擦要便宜得多，但请注意，阻尼不是摩擦的替代品;这两个效果可以而且应该一起使用。Here is an image to illustrate damping:<br>
 <br>
 <img class="center" src=
 "images/physics_fixture_set_linear_damping_image.png"></p>
 
 <p>Damping parameters should be between 0 and infinity, with 0
 meaning no damping, and infinity meaning full damping. Normally you
-will use a damping value between 0 and 1.<br>
+will use a damping value between 0 and 1, but you can use any
+non-negative value if required.<br>
 <br></p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3 class="studio">举例：</h3>
 
 <p class="code">physics_fixture_set_linear_damping(fix_Ball,
 0.1);</p>
@@ -109,7 +104,7 @@ indexed in "fix_ball" to 0.1.</p>
 "physics_fixture_set_angular_damping.html">physics_fixture_set_angular_damping</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

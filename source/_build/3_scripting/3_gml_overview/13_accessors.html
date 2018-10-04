@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Accessors</title>
+<title>访问器</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/3_gml_overview/13_accessors.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F13_accessors.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F3_scripting%2F3_gml_overview%2F13_accessors.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Accessors</h2>
+<h2>访问器</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -47,7 +47,7 @@ the first argument to tell <i>GameMaker Studio 2</i> that you are
 working on a (previously created) data structure.<br>
 <br></p>
 
-<h2>Data_Structures</h2>
+<h2>数据结构</h2>
 
 <p>You can add, replace and get values and keys for the following
 data structure types: <a href=
@@ -66,6 +66,7 @@ changing or setting values, as shown below.</p>
 
 <p class="code">list_index[| index]</p>
 <br>
+
 So when you have used <tt>ds_list_create()</tt> to create your
 list, you would use the list index (that you have stored in a
 variable) to reference it, with the "index" value being the
@@ -81,12 +82,14 @@ repeat(10)<br>
 &nbsp;&nbsp;&nbsp;ds[| index++] = irandom(9);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 <br>
+
 Once you have created your list structure and filled it with data,
 to get values from the list you would have something like:<br>
 <br>
 
 <p class="code">value = ds[| 5];</p>
 <br>
+
 The above will get the value from position 5 (the sixth index,
 since lists start at 0) and store it in a variable. Note that if
 you are using an expression to add a reference to an index that
@@ -106,6 +109,7 @@ as 0.</div>
 
 <p class="code">map_index[? key]</p>
 <br>
+
 After creating your map with <tt>ds_map_create()</tt>, you would
 use the map index that you have stored in a variable to reference
 it, with the "key" value being the map key to set or get. For
@@ -118,6 +122,7 @@ ds[? "Name"] = "Hamish";<br>
 ds[? "Company"] = "MacSeweeny Games";<br>
 ds[? "Game"] = "Catch The Haggis";<br></p>
 <br>
+
 Once you have created your map structure and filled it with data,
 to get values from a specific map key you would have something
 like:<br>
@@ -125,6 +130,7 @@ like:<br>
 
 <p class="code">value = ds[? "Name"];</p>
 <br>
+
 The above will get the value from the key "Name" and store it in a
 variable. Note that if the map already contains the same key value
 as you are trying to add, it will not create a duplicate key with
@@ -138,6 +144,7 @@ replaced.</div>
 
 <p class="code">grid_index[# xpos, ypos]</p>
 <br>
+
 After creating your grid with the <tt>ds_grid_create()</tt>
 function, you would use the grid index that you have stored in a
 variable to reference it, with the "xpos" and "ypos" being the
@@ -157,6 +164,7 @@ repeat(10)<br>
 &nbsp;&nbsp;&nbsp;if ds[# xx, yy] == 0 ds[# xx, yy] = 1;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 <br>
+
 Once you have created your grid structure and filled it with data,
 to get values from a specific grid position you would have
 something like:<br>
@@ -164,6 +172,7 @@ something like:<br>
 
 <p class="code">value = ds[# mouse_x div 16, mouse_y div 16];</p>
 <br>
+
 The above will get the value from the given ds_grid based on the
 mouse position (divided by the "cell" width in the room to get the
 correct location).</div></blockquote>
@@ -171,7 +180,7 @@ correct location).</div></blockquote>
 <p><br>
 </p>
 
-<h2>Arrays</h2>
+<h2>数组</h2>
 
 <p>Arrays also have their own accessors which works in a similar
 way as those listed above for data structures. however array
@@ -223,15 +232,14 @@ array and setting the value of the chosen array position to
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">GML
-Overview</a></div>
+<div style="float:left">上一页：<a href="index.html">GML概述</a></div>
 
-<div style="float:right">Next: <a href=
-"14_language_features.html">Language Features</a></div>
+<div style="float:right">下一页：<a href=
+"14_language_features.html">语言特性</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

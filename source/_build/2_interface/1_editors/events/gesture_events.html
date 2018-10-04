@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>The Gesture Events</title>
+<title>手势事件</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -24,19 +24,19 @@ chmtop.c2wtopf.pageid = "_build/2_interface/1_editors/events/gesture_events.html
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fevents%2Fgesture_events.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fevents%2Fgesture_events.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>The Gesture Events</h2>
+<h2>手势事件</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 <img class="center" src="images/editor_objects_gesture.png" alt=
-"Object Editor Gesture Events">
+"物体编辑器的手势事件">
 <p>Events in the <b>Gesture Event</b> category will be triggered
 whenever <i>GameMaker Studio 2</i> detects a "gesture" of the mouse
 or a touch screen event (while these gesture events are designed
@@ -54,6 +54,7 @@ gestures on that target then you should be using the <a href=
 device functions</a>.</div>
 
 <p><br>
+
 You can choose to detect either <b>instance</b> gestures or
 <b>global</b> gestures, where instance gesture events will only be
 triggered when the initial touch/click is on an instance within the
@@ -82,6 +83,7 @@ destroyed again at the end, with this variable being reset to a
 value of -1 at all other times.</div>
 
 <p><br>
+
 It is worth noting that if you have multiple instances under the
 position being touched and they all have a gesture event, then all
 of them will trigger, not just the "topmost" instance. Also note
@@ -116,13 +118,14 @@ Map will contain the following keys:</p>
 <div class="compat">
 <table>
 <tr>
-<th>Key</th>
-<th>Value Description</th>
+<th>键</th>
+<th>值描述</th>
 </tr>
 
 <tr>
 <td>"gesture"</td>
 <td><br>
+
 This is an ID value that is <i>unique</i> to the gesture that is in
 play. This allows you to link the different parts of multi-part
 gestures (such as drag start, dragging and drag end) together.<br>
@@ -132,6 +135,7 @@ gestures (such as drag start, dragging and drag end) together.<br>
 <tr class="alt">
 <td>"touch"</td>
 <td><br>
+
 This is the index of the touch that is being used for the gesture.
 In general this will start at 0 and increase for each finger that
 is held down, then reset back to 0 when all fingers are removed,
@@ -144,6 +148,7 @@ than 0.<br>
 <tr>
 <td>"posX"</td>
 <td><br>
+
 This is the room-space X position of the touch.<br>
 <br></td>
 </tr>
@@ -151,6 +156,7 @@ This is the room-space X position of the touch.<br>
 <tr class="alt">
 <td>"posY"</td>
 <td><br>
+
 This is the room-space Y position of the touch.<br>
 <br></td>
 </tr>
@@ -158,6 +164,7 @@ This is the room-space Y position of the touch.<br>
 <tr class="alt">
 <td>"rawposX"</td>
 <td><br>
+
 This is the <i>raw</i> window-space X position of the touch
 (equivalent to getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html">
@@ -168,6 +175,7 @@ This is the <i>raw</i> window-space X position of the touch
 <tr>
 <td>"rawposY"</td>
 <td><br>
+
 This is the <i>raw</i> window-space Y position of the touch
 (equivalent to getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html">
@@ -178,6 +186,7 @@ This is the <i>raw</i> window-space Y position of the touch
 <tr class="alt">
 <td>"guiposX"</td>
 <td><br>
+
 This is the gui-space X position of the touch (equivalent to
 getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html">
@@ -188,6 +197,7 @@ getting the mouse position using <a href=
 <tr>
 <td>"guiposY"</td>
 <td><br>
+
 This is the gui-space Y position of the touch (equivalent to
 getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html">
@@ -198,6 +208,7 @@ getting the mouse position using <a href=
 <tr class="alt">
 <td>"diffX"</td>
 <td><br>
+
 This is the room-space X difference between the position of the
 current touch and the position of the last touch in this
 gesture.<br>
@@ -207,6 +218,7 @@ gesture.<br>
 <tr>
 <td>"diffY"</td>
 <td><br>
+
 This is the room-space Y difference between the position of the
 current touch and the position of the last touch in this
 gesture.<br>
@@ -216,6 +228,7 @@ gesture.<br>
 <tr class="alt">
 <td>"rawdiffX"</td>
 <td><br>
+
 This is the raw X difference between the position of the current
 touch and the position of the last touch in this gesture.<br>
 <br></td>
@@ -224,6 +237,7 @@ touch and the position of the last touch in this gesture.<br>
 <tr>
 <td>"rawdiffY"</td>
 <td><br>
+
 This is the raw Y difference between the position of the current
 touch and the position of the last touch in this gesture.<br>
 <br></td>
@@ -232,6 +246,7 @@ touch and the position of the last touch in this gesture.<br>
 <tr class="alt">
 <td>"guidiffX"</td>
 <td><br>
+
 This is the gui-space X difference between the position of the
 current touch and the position of the last touch in this
 gesture.<br>
@@ -241,9 +256,58 @@ gesture.<br>
 <tr>
 <td>"guidiffY"</td>
 <td><br>
+
 This is the gui-space Y difference between the position of the
 current touch and the position of the last touch in this
 gesture.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"viewstartposX"</td>
+<td><br>
+
+This is the room X start position of the current gesture.<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"viewstartposY"</td>
+<td><br>
+
+This is the room Y start position of the current gesture.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"rawstartposX"</td>
+<td><br>
+
+This is the raw X start position of the current gesture.<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"rawstartposY"</td>
+<td><br>
+
+This is the raw Y start position of the current gesture.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"guistartposX"</td>
+<td><br>
+
+This is the gui-space X start position of the current gesture.<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"guistartposY"</td>
+<td><br>
+
+This is the gui-space Y start position of the current gesture.<br>
 <br></td>
 </tr>
 
@@ -260,19 +324,12 @@ anyway.<br>
 </div>
 
 <blockquote><a name="gesture_tap" id="gesture_tap"></a>
-<label class="collapse" for="a">Tap</label> <input id="a" type=
+<label class="collapse" for="a">点按</label> <input id="a" type=
 "checkbox">
 <div class="index_list">
-<p>The <b>Tap</b> event will be triggered when an instance has been
-touched or clicked or - if it is a global event - when the game
-registers a touch or click anywhere in the room. A tap is
-considered a quick touch and release, and if the touch lasts too
-long then it will be considered a Drag (and trigger the Drag
-gesture events instead of the Tap event). This event will generate
-an <tt>event_data</tt> DS map which you can then use to get
-information about the event. For example:</p>
+<p>The <b>Tap</b> event will be triggered when an instance has been touched or clicked or - if it is a global event - when the game registers a touch or click anywhere in the room. A tap is considered a quick touch and release, and if the touch lasts too long then it will be considered a Drag (and trigger the Drag gesture events instead of the Tap event). This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
 
-<h3>Create Event</h3>
+<h3>创建事件</h3>
 
 <p class="code">x_goto = x;<br>
 y_goto = y;<br></p>
@@ -282,12 +339,13 @@ y_goto = y;<br></p>
 <p class="code">x_goto = event_data[? "posX"];<br>
 y_goto = event_data[? "posY"];<br></p>
 
-<h3>Step Event</h3>
+<h3>步事件</h3>
 
 <p class="code">var _pd = point_distance(x, y, x_goto, y_goto);<br>
 move_towards_point(x_goto, y_goto, clamp(_pd, 0, 5);<br></p>
 
 <p><br>
+
 The above code will detect a tap on the screen and then get the
 position of the tap to move the instance to that position. Note
 that if you want to have a longer or shorter tap detection time
@@ -300,20 +358,12 @@ it shorter (value is in seconds and defaults to 0.16).</p>
 </div>
 <br>
 <a name="gesture_double_tap" id="gesture_double_tap"></a>
-<label class="collapse" for="b">Double Tap</label> <input id="b"
+<label class="collapse" for="b">双击</label> <input id="b"
 type="checkbox">
 <div class="index_list">
-<p>The <b>Double Tap</b> event will be triggered when an instance
-has been touched or clicked twice in quick succession (or - if it
-is a global event - when the game registers two quick touches or
-clicks anywhere in the room). A double tap is considered two quick
-touches and releases, but if any of the touches lasts too long then
-it will be considered a Drag (and trigger the Drag gesture events
-instead of the Double Tap event). This event will generate an
-<tt>event_data</tt> DS map which you can then use to get
-information about the event. For example:</p>
+<p>The <b>Double Tap</b> event will be triggered when an instance has been touched or clicked twice in quick succession (or - if it is a global event - when the game registers two quick touches or clicks anywhere in the room). A double tap is considered two quick touches and releases, but if any of the touches lasts too long then it will be considered a Drag (and trigger the Drag gesture events instead of the Double Tap event). This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
 
-<h3>Create Event</h3>
+<h3>创建事件</h3>
 
 <p class="code">x_goto = x;<br>
 y_goto = y;<br></p>
@@ -323,6 +373,7 @@ y_goto = y;<br></p>
 <p class="code">instance_destroy();<br></p>
 
 <p><br>
+
 The above code simply detects a double tap and then destroys the
 instance. Note that you can set the time between taps to trigger a
 double tap using the function <a href=
@@ -337,23 +388,13 @@ tap event).</p>
 </div>
 <br>
 <a name="gesture_drag_start" id="gesture_drag_start"></a>
-<label class="collapse" for="c">Drag Start</label> <input id="c"
+<label class="collapse" for="c">拖动开始</label> <input id="c"
 type="checkbox">
 <div class="index_list">
-<p>The <b>Drag Start</b> event will be triggered when the user
-maintains a touch or click without releasing it. It will be
-triggered once when a set time has passed after the initial touch,
-which is 0.16 seconds by default (although you can set this to any
-other value in seconds using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_time.html">
-<tt>gesture_drag_time</tt></a>). After this event has been
-triggered, and as long as the user has a touch/click held down,
-then the <b>Dragging</b> event will be triggered every step until
-the touch/click has been released. This event will generate an
-<tt>event_data</tt> DS map which you can then use to get
-information about the event. For example:</p>
+<p>The <b>Drag Start</b> event will be triggered when the user maintains a touch or click without releasing it. It will be triggered once when a set time has passed after the initial touch, which is 0.16 seconds by default (although you can set this to any other value in seconds using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_time.html"> <tt>gesture_drag_time</tt></a>). After this event has been triggered, and as long as the user has a touch/click held down, then the <b>Dragging</b> event will be triggered every step until the touch/click has been released. This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
 
-<h3>Create Event</h3>
+<h3>创建事件</h3>
 
 <p class="code">drag_offsetX = 0;<br>
 drag_offsetY = 0;<br></p>
@@ -364,6 +405,7 @@ drag_offsetY = 0;<br></p>
 drag_offsetY = y - event_data[?"posY"];<br></p>
 
 <p><br>
+
 The above code uses the Drag Start event to get the position of the
 touch/click and use it to set an offset value for the x and y axis.
 This can then be used when dragging the instance to ensure that it
@@ -373,22 +415,12 @@ example).</p>
 </div>
 <br>
 <a name="gesture_dragging" id="gesture_dragging"></a> <label class=
-"collapse" for="d">Dragging</label> <input id="d" type="checkbox">
+"collapse" for="d">拖动</label> <input id="d" type="checkbox">
 <div class="index_list">
-<p>The <b>Dragging</b> event is triggered after the <b>Drag
-Start</b> event, and will be triggered for every step that the user
-maintains the touch/click on the instance (or the screen, if it's a
-global event) and moves more than the defined dragging threshold.
-This distance is 0.1 inches by default but can be set using the
-function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_distance.html">
-<tt>gesture_drag_distance</tt></a>. If there is no movement or the
-movement is under the defined threshold, the event will not be
-triggered. This event will generate an <tt>event_data</tt> DS map
-which you can then use to get information about the event. For
-example:</p>
+<p>The <b>Dragging</b> event is triggered after the <b>Drag Start</b> event, and will be triggered for every step that the user maintains the touch/click on the instance (or the screen, if it's a global event) and moves more than the defined dragging threshold. This distance is 0.1 inches by default but can be set using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_distance.html"> <tt>gesture_drag_distance</tt></a>. If there is no movement or the movement is under the defined threshold, the event will not be triggered. This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
 
-<h3>Create Event</h3>
+<h3>创建事件</h3>
 
 <p class="code">drag_offsetX = 0;<br>
 drag_offsetY = 0;<br></p>
@@ -404,13 +436,14 @@ drag_offsetY = y - event_data[?"posY"];<br></p>
 y = event_data[?"posY"] + drag_offsetY;<br></p>
 
 <p><br>
+
 The example code above uses the offset variables set in the <b>Drag
 Start</b> event to move the instance when the <b>Dragging</b> event
 is triggered.</p>
 </div>
 <br>
 <a name="gesture_drag_end" id="gesture_drag_end"></a> <label class=
-"collapse" for="e">Drag End</label> <input id="e" type="checkbox">
+"collapse" for="e">拖动结束</label> <input id="e" type="checkbox">
 <div class="index_list">
 <p>The <b>Drag End</b> event is triggered when the user releases
 the touch/click on the instance (or the screen if the event is
@@ -429,7 +462,7 @@ dedicated <b>Flick</b> event which will also be triggered if the
 "<tt>isflick</tt>" variable is <tt>true</tt>. An example of use
 would be:</p>
 
-<h3>Create Event</h3>
+<h3>创建事件</h3>
 
 <p class="code">flickVelX = 0.0;<br>
 flickVelY = 0.0;<br></p>
@@ -448,7 +481,7 @@ else<br>
 &nbsp;&nbsp;&nbsp;&nbsp;flickVelY = 0;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
-<h3>Step Event</h3>
+<h3>步事件</h3>
 
 <p class="code">x += flickVelX;<br>
 y += flickVelY;<br>
@@ -456,6 +489,7 @@ flickVelX *= 0.7;<br>
 flickVelY *= 0.7;<br></p>
 
 <p><br>
+
 The above code simply gets the difference in x and y position of
 the last <b>Dragging</b> event and the current <b>Drag End</b>
 event, and if the movement has been greater than the flick
@@ -464,19 +498,12 @@ instance in the step event.</p>
 </div>
 <br>
 <a name="gesture_flick" id="gesture_flick"></a> <label class=
-"collapse" for="f">Flick</label> <input id="f" type="checkbox">
+"collapse" for="f">划过</label> <input id="f" type="checkbox">
 <div class="index_list">
-<p>The <b>Flick</b> event is only triggered when a touch/click has
-been held, dragged and then released and the distance between the
-last drag position and the release position is greater than 2
-inches per second (this is the default setting, although this can
-be changed using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_flick_speed.html">
-<tt>gesture_flick_speed</tt></a>). This event will generate an
-<tt>event_data</tt> DS map which you can then use to get
-information about the event. For example:</p>
+<p>The <b>Flick</b> event is only triggered when a touch/click has been held, dragged and then released and the distance between the last drag position and the release position is greater than 2 inches per second (this is the default setting, although this can be changed using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_flick_speed.html"> <tt>gesture_flick_speed</tt></a>). This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
 
-<h3>Create Event</h3>
+<h3>创建事件</h3>
 
 <p class="code">flickVelX = 0.0;<br>
 flickVelY = 0.0;<br></p>
@@ -486,7 +513,7 @@ flickVelY = 0.0;<br></p>
 <p class="code">flickVelX = event_data[?"diffX"];<br>
 flickVelY = event_data[?"diffY"];<br></p>
 
-<h3>Step Event</h3>
+<h3>步事件</h3>
 
 <p class="code">x += flickVelX;<br>
 y += flickVelY;<br>
@@ -494,6 +521,7 @@ flickVelX *= 0.7;<br>
 flickVelY *= 0.7;<br></p>
 
 <p><br>
+
 The above code simply gets the difference in x and y position of
 the last <b>Dragging</b> event and the current <b>Flick</b> event,
 and if the movement has been greater than the flick threshold, it
@@ -540,13 +568,14 @@ following keys:</p>
 <div class="compat">
 <table>
 <tr>
-<th>Key</th>
-<th>Value Description</th>
+<th>键</th>
+<th>值描述</th>
 </tr>
 
 <tr>
 <td>"gesture"</td>
 <td><br>
+
 This is an ID value that is <i>unique</i> to the gesture that is in
 play. This allows you to link the different parts of multi-part
 gestures (such as drag start, dragging and drag end) together.<br>
@@ -556,6 +585,7 @@ gestures (such as drag start, dragging and drag end) together.<br>
 <tr class="alt">
 <td>"touch1"</td>
 <td><br>
+
 This is the index of the first touch that is being used as part of
 the pinch gesture. In general this will be 0, but if the user is
 touching the screen anywhere else when this event is triggered by
@@ -566,6 +596,7 @@ another touch, then the value will be greater than 0.<br>
 <tr>
 <td>"touch2"</td>
 <td><br>
+
 This is the index of the second touch that is being used as part of
 the pinch gesture. In general this will be 1 more than the value
 for touch1, but may be some other value depending on the number of
@@ -576,6 +607,7 @@ touches being detected elsewhere.<br>
 <tr class="alt">
 <td>"posX1"</td>
 <td><br>
+
 This is the room-space X position of the first touch.<br>
 <br></td>
 </tr>
@@ -583,6 +615,7 @@ This is the room-space X position of the first touch.<br>
 <tr>
 <td>"posY1"</td>
 <td><br>
+
 This is the room-space Y position of the first touch.<br>
 <br></td>
 </tr>
@@ -590,6 +623,7 @@ This is the room-space Y position of the first touch.<br>
 <tr class="alt">
 <td>"rawposX1"</td>
 <td><br>
+
 This is the <i>raw</i> window-space X position of the first touch
 (equivalent to getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html">
@@ -600,6 +634,7 @@ This is the <i>raw</i> window-space X position of the first touch
 <tr>
 <td>"rawposY1"</td>
 <td><br>
+
 This is the <i>raw</i> window-space Y position of the first touch
 (equivalent to getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html">
@@ -610,6 +645,7 @@ This is the <i>raw</i> window-space Y position of the first touch
 <tr class="alt">
 <td>"guiposX1"</td>
 <td><br>
+
 This is the gui-space X position of the first touch (equivalent to
 getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html">
@@ -620,6 +656,7 @@ getting the mouse position using <a href=
 <tr>
 <td>"guiposY1"</td>
 <td><br>
+
 This is the gui-space Y position of the second touch (equivalent to
 getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html">
@@ -630,6 +667,7 @@ getting the mouse position using <a href=
 <tr class="alt">
 <td>"posX2"</td>
 <td><br>
+
 This is the room-space X position of the second touch.<br>
 <br></td>
 </tr>
@@ -637,6 +675,7 @@ This is the room-space X position of the second touch.<br>
 <tr>
 <td>"posY2"</td>
 <td><br>
+
 This is the room-space Y position of the second touch.<br>
 <br></td>
 </tr>
@@ -644,6 +683,7 @@ This is the room-space Y position of the second touch.<br>
 <tr class="alt">
 <td>"rawposX2"</td>
 <td><br>
+
 This is the <i>raw</i> window-space X position of the first
 touch.<br>
 <br></td>
@@ -652,6 +692,7 @@ touch.<br>
 <tr>
 <td>"rawposY2"</td>
 <td><br>
+
 This is the <i>raw</i> window-space Y position of the second
 touch.<br>
 <br></td>
@@ -660,6 +701,7 @@ touch.<br>
 <tr class="alt">
 <td>"guiposX2"</td>
 <td><br>
+
 This is the gui-space X position of the second touch.<br>
 <br></td>
 </tr>
@@ -667,6 +709,7 @@ This is the gui-space X position of the second touch.<br>
 <tr>
 <td>"guiposY2"</td>
 <td><br>
+
 This is the gui-space Y position of the second touch.<br>
 <br></td>
 </tr>
@@ -674,6 +717,7 @@ This is the gui-space Y position of the second touch.<br>
 <tr class="alt">
 <td>"midpointX"</td>
 <td><br>
+
 The X position of the mid point between the two touches in room
 space.<br>
 <br></td>
@@ -682,6 +726,7 @@ space.<br>
 <tr>
 <td>"midpointY"</td>
 <td><br>
+
 The Y position of the mid point between the two touches in room
 space.<br>
 <br></td>
@@ -690,6 +735,7 @@ space.<br>
 <tr class="alt">
 <td>"rawmidpointX"</td>
 <td><br>
+
 This is the raw window-space X position of the mid point.<br>
 <br></td>
 </tr>
@@ -697,6 +743,7 @@ This is the raw window-space X position of the mid point.<br>
 <tr>
 <td>"rawmidpointY"</td>
 <td><br>
+
 This is the raw window-space Y position of the mid point.<br>
 <br></td>
 </tr>
@@ -704,6 +751,7 @@ This is the raw window-space Y position of the mid point.<br>
 <tr class="alt">
 <td>"guimidpointX"</td>
 <td><br>
+
 This the gui-space X position of the mid point.<br>
 <br></td>
 </tr>
@@ -711,6 +759,7 @@ This the gui-space X position of the mid point.<br>
 <tr>
 <td>"guimidpointY"</td>
 <td><br>
+
 This the gui-space Y position of the mid point.<br>
 <br></td>
 </tr>
@@ -718,6 +767,7 @@ This the gui-space Y position of the mid point.<br>
 <tr class="alt">
 <td>"relativescale"</td>
 <td><br>
+
 This is difference in scale compared to the last event in this
 gesture (so for <b>Pinch In</b> events this will always be smaller
 than 1.0, whereas for <b>Pinch Out</b> events it will always be
@@ -728,6 +778,7 @@ larger than 1.0)<br>
 <tr>
 <td>"absolutescale"</td>
 <td><br>
+
 This is the scale compared to where the fingers were when the
 gesture started (so if the distance between the fingers has halved
 then this will be 0.5 whereas if the distance has doubled it will
@@ -738,25 +789,11 @@ be 2.0).<br>
 </div>
 
 <blockquote><a name="gesture_pinch_start" id=
-"gesture_pinch_start"></a> <label class="collapse" for="g">Pinch
-Start</label> <input id="g" type="checkbox">
+"gesture_pinch_start"></a> <label class="collapse" for="g">捏合开始</label> <input id="g" type="checkbox">
 <div class="index_list">
-<p>The <b>Pinch Start</b> event will be triggered when an instance
-(or the screen if the event is global) has been touched by two
-"fingers" (and the touch is maintained) and then one or both of the
-"fingers" is moved. If the touches move away from each other or
-towards each other more than the minimum check distance (which is
-0.1 inches by default, but it can be set using the function
-<a href="../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html">
-<tt>gesture_pinch_distance</tt></a>), and the angle between them is
-within the defined value (this defaults to 45° but can be set using
-<a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_towards.html">
-<tt>gesture_pinch_angle_towards()</tt></a> and <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_away.html">
-<tt>- gesture_pinch_angle_away()</tt></a>), then a <b>Pinch
-Start</b> event will be triggered. In this event you can set
-variables or store position date for future use. For example:</p>
+<p>The <b>Pinch Start</b> event will be triggered when an instance (or the screen if the event is global) has been touched by two "fingers" (and the touch is maintained) and then one or both of the "fingers" is moved. If the touches move away from each other or towards each other more than the minimum check distance (which is 0.1 inches by default, but it can be set using the function <a href="../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html"> <tt>gesture_pinch_distance</tt></a>), and the angle between them is within the defined value (this defaults to 45° but can be set using <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_towards.html"> <tt>gesture_pinch_angle_towards()</tt></a> and <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_away.html"> <tt>- gesture_pinch_angle_away()</tt></a>), then a <b>Pinch Start</b> event will be triggered. In this event you can set variables or store position date for future use. 比如：</p>
 
 <h3>Pinch Start Event</h3>
 
@@ -765,6 +802,7 @@ pinch_x = event_data[? "midpointX"]; pinch_y = event_data[?
 "midpointY"];</p>
 
 <p><br>
+
 The above code will detect a pinch and store the midpoint position
 for that pinch.</p>
 </div>
@@ -773,16 +811,8 @@ for that pinch.</p>
 <label class="collapse" for="h">Pinch In / Pinch Out</label>
 <input id="h" type="checkbox">
 <div class="index_list">
-<p>The <b>Pinch In</b> and <b>Pinch Out</b> events will be
-triggered every step that the distance between the two touches that
-make up the pinch changes over the minimum threshold (set to +/-
-0.1 inches by default, but you can change it using the function
-<a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html">
-<tt>gesture_pinch_distance</tt></a>). If there is no movement of
-the pinch touches then these events will not trigger. These events
-will generate an <tt>event_data</tt> DS map which you can then use
-to get information about the event. For example:</p>
+<p>The <b>Pinch In</b> and <b>Pinch Out</b> events will be triggered every step that the distance between the two touches that make up the pinch changes over the minimum threshold (set to +/- 0.1 inches by default, but you can change it using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html"> <tt>gesture_pinch_distance</tt></a>). If there is no movement of the pinch touches then these events will not trigger. These events will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
 
 <h3>Global Pinch In /Pinch Out Event</h3>
 
@@ -801,18 +831,16 @@ camera_set_view_pos(view_camera[0], _x, _y);<br>
 camera_set_view_size(view_camera[0], _w, _h);<br></p>
 
 <p><br>
+
 The above code will scale the view based on the relative scale of
 the pinch touches.</p>
 </div>
 <br>
 <a name="gesture_pinch_end" id="gesture_pinch_end"></a>
-<label class="collapse" for="i">Pinch End</label> <input id="i"
+<label class="collapse" for="i">捏合结束</label> <input id="i"
 type="checkbox">
 <div class="index_list">
-<p>The <b>Pinch End</b> event will be triggered when the user
-releases one (or both) of the touches from the device. This events
-will generate an <tt>event_data</tt> DS map which you can then use
-to get information about the event. For example:</p>
+<p>The <b>Pinch End</b> event will be triggered when the user releases one (or both) of the touches from the device. This events will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
 
 <h3>Pinch End Event</h3>
 
@@ -826,6 +854,7 @@ var _y = _pinchy - (_h / 2);<br>
 camera_set_view_pos(view_camera[0], _x, _y);<br></p>
 
 <p><br>
+
 The above code will set the view position to be centered on the
 midpoint of the two touches that made up the pinch when the touches
 are released.</p>
@@ -875,13 +904,14 @@ following keys:</p>
 <div class="compat">
 <table>
 <tr>
-<th>Key</th>
-<th>Value Description</th>
+<th>键</th>
+<th>值描述</th>
 </tr>
 
 <tr>
 <td>"gesture"</td>
 <td><br>
+
 This is an ID value that is <i>unique</i> to the gesture that is in
 play. This allows you to link the different parts of multi-part
 gestures (such as drag start, dragging and drag end) together.<br>
@@ -891,6 +921,7 @@ gestures (such as drag start, dragging and drag end) together.<br>
 <tr class="alt">
 <td>"touch1"</td>
 <td><br>
+
 This is the index of the first touch that is being used as part of
 the pinch gesture. In general this will be 0, but if the user is
 touching the screen anywhere else when this event is triggered by
@@ -901,6 +932,7 @@ another touch, then the value will be greater than 0.<br>
 <tr>
 <td>"touch2"</td>
 <td><br>
+
 This is the index of the second touch that is being used as part of
 the pinch gesture. In general this will be 1 more than the value
 for touch1, but may be some other value depending on the number of
@@ -911,6 +943,7 @@ touches being detected elsewhere.<br>
 <tr class="alt">
 <td>"posX1"</td>
 <td><br>
+
 This is the room-space X position of the first touch.<br>
 <br></td>
 </tr>
@@ -918,6 +951,7 @@ This is the room-space X position of the first touch.<br>
 <tr>
 <td>"posY1"</td>
 <td><br>
+
 This is the room-space Y position of the first touch.<br>
 <br></td>
 </tr>
@@ -925,6 +959,7 @@ This is the room-space Y position of the first touch.<br>
 <tr class="alt">
 <td>"rawposX1"</td>
 <td><br>
+
 This is the <i>raw</i> window-space X position of the first touch
 (equivalent to getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html">
@@ -935,6 +970,7 @@ This is the <i>raw</i> window-space X position of the first touch
 <tr>
 <td>"rawposY1"</td>
 <td><br>
+
 This is the <i>raw</i> window-space Y position of the first touch
 (equivalent to getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html">
@@ -945,6 +981,7 @@ This is the <i>raw</i> window-space Y position of the first touch
 <tr class="alt">
 <td>"guiposX1"</td>
 <td><br>
+
 This is the gui-space X position of the first touch (equivalent to
 getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html">
@@ -955,6 +992,7 @@ getting the mouse position using <a href=
 <tr>
 <td>"guiposY1"</td>
 <td><br>
+
 This is the gui-space Y position of the second touch (equivalent to
 getting the mouse position using <a href=
 "../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html">
@@ -965,6 +1003,7 @@ getting the mouse position using <a href=
 <tr class="alt">
 <td>"posX2"</td>
 <td><br>
+
 This is the room-space X position of the second touch.<br>
 <br></td>
 </tr>
@@ -972,6 +1011,7 @@ This is the room-space X position of the second touch.<br>
 <tr>
 <td>"posY2"</td>
 <td><br>
+
 This is the room-space Y position of the second touch.<br>
 <br></td>
 </tr>
@@ -979,6 +1019,7 @@ This is the room-space Y position of the second touch.<br>
 <tr class="alt">
 <td>"rawposX2"</td>
 <td><br>
+
 This is the <i>raw</i> window-space X position of the first
 touch.<br>
 <br></td>
@@ -987,6 +1028,7 @@ touch.<br>
 <tr>
 <td>"rawposY2"</td>
 <td><br>
+
 This is the <i>raw</i> window-space Y position of the second
 touch.<br>
 <br></td>
@@ -995,6 +1037,7 @@ touch.<br>
 <tr class="alt">
 <td>"guiposX2"</td>
 <td><br>
+
 This is the gui-space X position of the second touch.<br>
 <br></td>
 </tr>
@@ -1002,6 +1045,7 @@ This is the gui-space X position of the second touch.<br>
 <tr>
 <td>"guiposY2"</td>
 <td><br>
+
 This is the gui-space Y position of the second touch.<br>
 <br></td>
 </tr>
@@ -1009,6 +1053,7 @@ This is the gui-space Y position of the second touch.<br>
 <tr class="alt">
 <td>"pivotX"</td>
 <td><br>
+
 The X position of the rotation pivot point in room space.<br>
 <br></td>
 </tr>
@@ -1016,6 +1061,7 @@ The X position of the rotation pivot point in room space.<br>
 <tr>
 <td>"pivotY"</td>
 <td><br>
+
 The Y position of the rotation pivot point in room space.<br>
 <br></td>
 </tr>
@@ -1023,6 +1069,7 @@ The Y position of the rotation pivot point in room space.<br>
 <tr class="alt">
 <td>"rawpivotX"</td>
 <td><br>
+
 This is the raw window-space X position of the rotational pivot
 point.<br>
 <br></td>
@@ -1031,6 +1078,7 @@ point.<br>
 <tr>
 <td>"rawpivotY"</td>
 <td><br>
+
 This is the raw window-space Y position of the rotational pivot
 point.<br>
 <br></td>
@@ -1039,6 +1087,7 @@ point.<br>
 <tr class="alt">
 <td>"guipivotX"</td>
 <td><br>
+
 This the gui-space X position of the rotational pivot point.<br>
 <br></td>
 </tr>
@@ -1046,6 +1095,7 @@ This the gui-space X position of the rotational pivot point.<br>
 <tr>
 <td>"guipivotY"</td>
 <td><br>
+
 This the gui-space Y position of the rotational pivot point.<br>
 <br></td>
 </tr>
@@ -1062,6 +1112,7 @@ this gesture, measured in degrees<br>
 <tr>
 <td>"absoluteangle"</td>
 <td><br>
+
 This is the difference in angle compared to where the fingers were
 when the gesture started, measured in degrees. So, for example, if
 the fingers have rotated a quarter-circle since the start of the
@@ -1073,26 +1124,13 @@ direction of rotation.<br>
 </div>
 
 <blockquote><a name="gesture_rotate_start" id=
-"gesture_rotate_start"></a> <label class="collapse" for="j">Rotate
-Start</label> <input id="j" type="checkbox">
+"gesture_rotate_start"></a> <label class="collapse" for="j">旋转开始</label> <input id="j" type="checkbox">
 <div class="index_list">
-<p>The <b>Rotate Start</b> event will be triggered when an instance
-(or the screen if the event is global) has been touched by two
-"fingers" (and the touch is maintained) and then one or both of the
-"fingers" is rotated from its start position. The rotation of the
-touches needs to have started within a short period of time (0.16
-seconds by default, but it can be set using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_time.html">
-<tt>gesture_rotate_time()</tt></a>) and be greater than the minimum
-angular threshold (by default 5°, but, this can be changed using
-the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_angle.html">
-<tt>gesture_rotate_angle()</tt></a>). If these checks are true,
-then a <b>Rotate Start</b> event will be triggered and you can use
-it to store values or set variables for use with the rest of the
-rotate events. For example:</p>
+<p>The <b>Rotate Start</b> event will be triggered when an instance (or the screen if the event is global) has been touched by two "fingers" (and the touch is maintained) and then one or both of the "fingers" is rotated from its start position. The rotation of the touches needs to have started within a short period of time (0.16 seconds by default, but it can be set using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_time.html"> <tt>gesture_rotate_time()</tt></a>) and be greater than the minimum angular threshold (by default 5°, but, this can be changed using the function <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_angle.html"> <tt>gesture_rotate_angle()</tt></a>). If these checks are true, then a <b>Rotate Start</b> event will be triggered and you can use it to store values or set variables for use with the rest of the rotate events. 比如：</p>
 
-<h3>Create Event</h3>
+<h3>创建事件</h3>
 
 <p class="code">rotating = false;<br>
 view_a = camera_get_view_angle(view_camera[0]);<br></p>
@@ -1102,13 +1140,14 @@ view_a = camera_get_view_angle(view_camera[0]);<br></p>
 <p class="code">rotating = true;<br></p>
 
 <p><br>
+
 The above code simply sets up some variables for rotating the view
 camera, and then in the Rotate Start event, it sets one of them to
 <tt>true</tt>.</p>
 </div>
 <br>
 <a name="gesture_rotating" id="gesture_rotating"></a> <label class=
-"collapse" for="k">Rotating</label> <input id="k" type="checkbox">
+"collapse" for="k">旋转</label> <input id="k" type="checkbox">
 <div class="index_list">
 <p>The <b>Rotating</b> event will be triggered every step that the
 touches on the screen rotate around each other, as long as the
@@ -1126,12 +1165,13 @@ _a += _relangle;<br>
 camera_set_view_angle(view_camera[0], _a);<br></p>
 
 <p><br>
+
 The above code rotates the camera view depending on the rotational
 movement of the touches in the event.</p>
 </div>
 <br>
 <a name="gesture_rotate_end" id="gesture_rotate_end"></a>
-<label class="collapse" for="l">Rotate End</label> <input id="l"
+<label class="collapse" for="l">旋转结束</label> <input id="l"
 type="checkbox">
 <div class="index_list">
 <p>The <b>Rotate End</b> event will be triggered when one (or both)
@@ -1143,7 +1183,7 @@ instances, for example:</p>
 
 <p class="code">rotating = false;<br></p>
 
-<h3>Step Event</h3>
+<h3>步事件</h3>
 
 <p class="code">if !rotating<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -1157,6 +1197,7 @@ _a);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p><br>
+
 The above code uses the Rotate End event to detect when the user
 stops the gesture and then sets a variable. This variable is then
 used in the step event to rotate the view camera back to its
@@ -1173,15 +1214,13 @@ original position.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="../objects.html">The Object
-Editor</a></div>
+<div style="float:left">上一页：<a href="../objects.html">物体编辑器</a></div>
 
-<div style="float:right">Next: <a href="async_events.html">Async
-Events</a></div>
+<div style="float:right">下一页：<a href="async_events.html">异步事件</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

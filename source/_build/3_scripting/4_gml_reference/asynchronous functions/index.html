@@ -3,7 +3,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>Asynchronous Functions</title>
@@ -22,8 +22,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/asynchronous functio
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fasynchronous%20functions%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fasynchronous%20functions%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -165,7 +165,7 @@ functions:</p>
 </div>
 <br>
 <a name="async_http" id="async_http"></a> <label class="collapse"
-for="three">Cloud</label> <input id="three" type="checkbox">
+for="three">Cloud Saving</label> <input id="three" type="checkbox">
 <div class="index_list">
 <p>When making games, it is often necessary to store information
 about the game state in a file of some type, but storing this
@@ -196,11 +196,24 @@ pages:</p>
 </li>
 </ul>
 
-<div class="note"><b>NOTE:</b> Currently only the <a href=
+<div class="note"><b>NOTE:</b> Currently only the <b>Android</b>
+target uses these functions, and you need to tick the <b>Enable
+Google Cloud Saving</b> checkbox in the <b>Social</b> section of
+the Android <a href=
+"../../../2_interface/3_settings/game_options/options_android.html">
+Game Options</a>. This will prompt you to download the <a href=
 "https://marketplace.yoyogames.com/assets/2008/google-play-services"
-target="_blank">Google Services</a> extension on <b>Android</b>
-uses these functions, and this extension must be present before you
-can call them.</div>
+target="_blank">Google Services</a> extension, which is required
+for cloud saving on Android to function. For more information on
+Cloud Saving please see the following helpdesk article:<br>
+<br>
+
+<ul>
+<li><a href=
+"https://help.yoyogames.com/hc/en-us/articles/360003087452">Android
+and iOS: Google Cloud Saving</a>
+</li>
+</ul></div>
 </div>
 <br>
 <a name="async_push" id="async_push"></a> <label class="collapse"
@@ -284,14 +297,10 @@ notifications:</p>
 </li>
 </ul>
 
-<div class="note"><b>NOTE</b>: This functionality is limited to the
-<b>iOS</b> and <b>Android</b> target modules. For <b>Android</b>
-you will need to have installed the <a href=
+<div class="note"><b>注意</b>： This functionality is limited to the <b>iOS</b> and <b>Android</b> target modules. For <b>Android</b> you will need to have installed the <a href=
 "https://marketplace.yoyogames.com/assets/2008/google-play-services"
-target="_blank">Google Play Services Extension</a> and have enabled
-push notifications in the <a href=
-"../../../2_interface/3_settings/game_options/options_android.html">
-Android Social Game Options</a>.</div>
+target="_blank">Google Play Services Extension</a> and have enabled push notifications in the <a href=
+"../../../2_interface/3_settings/game_options/options_android.html"> Android Social Game Options</a>.</div>
 </div>
 <br>
 <a name="async_push_remote" id="async_push_remote"></a>
@@ -337,34 +346,17 @@ notifications have a maximum payload size of 256bytes. Typically a
 remote push notification would just indicate that new data is
 available from your server for example.</p>
 
-<div class="note"><b>NOTE</b>: Android requires that you add the
-<b>GCM Sender ID</b> into the <a href=
-"../../../2_interface/3_settings/game_options/options_android.html">
-Android Game Options</a>. This is the <b>Project Number</b> that is
-assigned when you create your Google Play API Project.</div>
+<div class="note"><b>注意</b>： Android requires that you add the <b>GCM Sender ID</b> into the <a href=
+"../../../2_interface/3_settings/game_options/options_android.html"> Android Game Options</a>. This is the <b>Project Number</b> that is assigned when you create your Google Play API Project.</div>
 
-<p>For further details on how to go about setting up a server, as
-well as information specific to the available platforms, please see
-the following pages on the <a href=
-"http://help.yoyogames.com/forums" target="_blank">YoYo Games
-Knowledge Base</a>:</p>
+<p><br>
 
-<ul>
-<li><a href="http://help.yoyogames.com/entries/28184776" target=
-"_blank"><span class="list_link">Push Notifications -
-Android</span></a>
-</li>
+For further details on how to go about setting up a server, as well
+as information specific to the available platforms, please see
+<a href="https://help.yoyogames.com/hc/en-us/articles/360006732572"
+target="_blank">this article</a> on the YoYo Games Helpdesk.</p>
 
-<li><a href="http://help.yoyogames.com/entries/27695268" target=
-"_blank"><span class="list_link">Push Notifications -
-iOS</span></a>
-</li>
-</ul>
-
-<div class="note"><b>NOTE</b>: Implementing the server-side is
-entirely up to the end user, and YoYo Games do not provide any
-support for that side of things, other than basic set-up
-information available from their Knowledge Base.</div>
+<div class="note"><b>注意</b>： Implementing the server-side is entirely up to the end user, and YoYo Games do not provide any support for that side of things, other than basic set-up information available from their Knowledge Base.</div>
 </div></blockquote>
 </div>
 <br>
@@ -421,7 +413,7 @@ or rating on a specific web page:</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

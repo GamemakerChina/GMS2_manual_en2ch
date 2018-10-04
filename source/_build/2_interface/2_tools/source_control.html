@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Source Control</title>
+<title>源码控制</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/2_interface/2_tools/source_control.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F2_tools%2Fsource_control.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F2_tools%2Fsource_control.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Source Control</h2>
+<h2>源码控制</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -75,31 +75,28 @@ which means we need to go to the <a href=
 "../../1_overview/1_getting_started/preferences/prefs_plugins.html">
 Source Control - Git</a> section of the Preferences. This identity
 will be used for all projects, so enter a username and password, as
-well as an email address. <img class="center" src=
+well as an email address.  <img class="center" src=
 "images/scm_usernamepassword.png" alt="Username And Password"></p>
 
 <p>The username and password will be sent to the repository (IE:
 Git Hub, Bit Bucket, etc.. ) when handling clone, push and pull
 requests.</p>
 
-<div class="note"><b>NOTE</b>: If you are using an external
-repository, then you should be using the username and password
-associated with the account set up for that repository, but if you
-are wanting to use a local repository then you can use any username
-and password.</div>
+<div class="note"><b>注意</b>： If you are using an external repository, then you should be using the username and password associated with the account set up for that repository, but if you are wanting to use a local repository then you can use any username and password.</div>
 
 <p><br>
+
 Now, in your project, open up <a href=
 "../3_settings/game_options/index.html">Main Options</a> and click
 the <i>Enable Source Control</i> option to activate SCM for the
-current project. <img class="center" src=
+current project.  <img class="center" src=
 "images/scm_enablesourcecontrol.png" alt=
-"Enable Source Control"></p>
+"启用源码控制"></p>
 
 <p>Once you have enabled source control (and applied it or closed
 the Game Options) a new context menu will appear at the top of the
 IDE with the following option (which we'll explore in the rest of
-the sections of this page): <img class="center" src=
+the sections of this page):  <img class="center" src=
 "images/scm_contextmenu.png" alt="Source Control Context Menu"></p>
 </div>
 <br>
@@ -124,7 +121,7 @@ parlance this is a "non-bare repository", so Push/Pull make no
 sense in this case, but you can still commit and keep track of
 project changes, as well as revert changes and revisions if need
 be. To set this up, you just need to click <i>Source Control</i>
-&gt; <i>Create Project Repository</i> on the main menu. <img class=
+&gt; <i>Create Project Repository</i> on the main menu.  <img class=
 "center" src="images/scm_createprojectrepository.png" alt=
 "Source Control Create Project Repository"></p>
 
@@ -134,7 +131,7 @@ amongst your team. This requires an external repository to have
 been already set up, as well as the correct username and password
 set in your identity preferences to access it. If you have this
 ready then click <i>Source Control</i> &gt; <i>Push Project into
-Repository</i>, and fill out the URL. <img class="center" src=
+Repository</i>, and fill out the URL.  <img class="center" src=
 "images/scm_importproject.png" alt=
 "Source Control Import Project To Repository"></p>
 
@@ -144,7 +141,7 @@ username and password for the repository you are going to connect
 to setup in your identity preferences, and then it’s just a case of
 clicking <i>Source Control</i> &gt; <i>Clone Repository</i>. Fill
 out the URL (using the HTTPS variant rather than SSH) and say where
-you want it to go. <img class="center" src=
+you want it to go.  <img class="center" src=
 "images/scm_clonerepository.png" alt=
 "Source Control Clone Repository"></p>
 
@@ -180,6 +177,7 @@ below: <img class="center" src="images/scm_modifiedstate.png" alt=
 it is, or getting it to a base state. For now, we'll do our first
 commit so click <i>Source Control</i> &gt; <i>Commit Changes</i>.
 This will We'll now get a window split into three areas:
+
 <img class="center" src="images/scm_commitwindow.png" alt=
 "Source Control Commit Window"></p>
 
@@ -213,7 +211,7 @@ paragraphs above.</p>
 you've committed at any given time, and so for that you'll want to
 open the <b>Commit History</b>. To open the history window you
 simply go to <i>Source Control</i> &gt; <i>View History</i> which
-opens another window with three panes: <img class="center" src=
+opens another window with three panes:  <img class="center" src=
 "images/scm_historywindow.png" alt=
 "Source Control History Window"></p>
 
@@ -297,6 +295,7 @@ file checker detecting changes on disk: <img class="center" src=
 what is memory rather than reloading the reverted files.</div>
 
 <p><br>
+
 That's all great for when you edit something and want to change
 back without having already performed a commit, but what about when
 you have committed one or more changes and want to roll back to a
@@ -310,7 +309,7 @@ with we need to open the <i>Source Control</i> &gt; <i>View
 History</i> window again. We will see a list of all previous
 commits now in this window, starting with the initial commit, the
 commit for the script, and then the commit for the script that we
-have edited as a "bad idea": <img class="center" src=
+have edited as a "bad idea":  <img class="center" src=
 "images/scm_badidea.png" alt="Source Control Bad Idea History"></p>
 
 <p>We now have two choices. We can revert an entire revision -
@@ -393,12 +392,10 @@ You need to know how to handle these conflicts so we're going to
 deliberately create one now and then show you how to deal with
 it.</p>
 
-<div class="note"><b>NOTE</b>: Sharing a local project repository
-(even through a file synchronization service like Dropbox) isn't
-recommended, as commits are generally written directly to it, and
-thus you have very little conflict protection.</div>
+<div class="note"><b>注意</b>： Sharing a local project repository (even through a file synchronization service like Dropbox) isn't recommended, as commits are generally written directly to it, and thus you have very little conflict protection.</div>
 
 <p><br>
+
 To generate our conflict we first need to have two local
 repositories, one for the Master repository and one for our copy.
 To create this we need to <b>Clone</b> the repository, which is
@@ -411,6 +408,7 @@ done with the following steps:</p>
 <li>In the URL field, type the path to the project that we setup in
 the Reverting Files guide above (by default this will be
 <tt>D:\Users\&lt;Username&gt;\Documents\GameMakerStudio2\&lt;ProjectName&gt;</tt>).
+
 <img class="center" src="images/scm_repositorytoclone.png" alt=
 "Source Control Clone Repository From"></li>
 
@@ -431,12 +429,13 @@ use.</li>
 </ul>
 
 <p><br>
+
 Once you've done that, <i>GameMaker Studio 2</i> will push your
 original project to the proxy, and pull a new one to the path you
 set in the Clone Repository window and then automatically open a
 file browser so you can open the stored project. If you now go to
 <i>Source Control</i> &gt; <i>View History</i> we'll see our
-original commits plus a new "Push For Clone": <img class="center"
+original commits plus a new "Push For Clone":  <img class="center"
 src="images/scm_pushforclone.png" alt=
 "Source Control Push For Clone"></p>
 
@@ -464,7 +463,7 @@ repository. Now, since we are linked to a remote master repository
 <b>Push</b> to get the changes on to master. For that, go to
 <i>Source Control</i> &gt; <i>Push Changes</i>, which will give us
 a status update in the Source Control <a href="output.html">Output
-Tab</a>: <img class="center" src="images/scm_outputpanel.png" alt=
+Tab</a>:  <img class="center" src="images/scm_outputpanel.png" alt=
 "Source Control Output Panel"></p>
 
 <p>We now need to open up our <i>original</i> project (not the
@@ -484,6 +483,7 @@ conflict.");</p>
 
 <p>This can be saved to disk, and the changes committed, but if you
 try to push these changes you'll get the following message:
+
 <img class="center" src="images/scm_pushconflict.png" alt=
 "Source Control Push Conflict Message"></p>
 
@@ -493,7 +493,7 @@ what exactly the issue is, so go to <i>Source Control</i> &gt;
 <i>Pull Changes</i>. This will show two windows, the first is a
 warning about changed files (as with previous actions, you want to
 choose <b>Reload</b> here and <i>not</i> Save), and the other is
-the Conflicts window: <img class="center" src=
+the Conflicts window:  <img class="center" src=
 "images/scm_conflictswindow.png" alt=
 "Source Control Conflict Window"></p>
 
@@ -531,7 +531,7 @@ for more details).</li>
 <p>Now, you can use the buttons to sort out the conflict, but
 before you do, let's just open the conflicted file to see exactly
 what the issue is. If you open the script that is conflicted it
-will now look like this: <img class="center" src=
+will now look like this:  <img class="center" src=
 "images/scm_conflictedcode.png" alt=
 "Source Control Conflicted Code"></p>
 
@@ -568,12 +568,12 @@ you decide.</p>
 <p>As each merge tool is different, there are four macros that can
 be used to help specify files to it which can be set up from the
 <i>Conflicts</i> window by clicking the button labelled<i>Choose
-Merge Tool</i>: <img class="center" src=
+Merge Tool</i>:  <img class="center" src=
 "images/scm_conflictswindow.png" alt=
 "Source Control Conflict Window"></p>
 
 <p>When you click that button the <b>Preferences</b> window will
-open on the Git plugin: <img class="center" src=
+open on the Git plugin:  <img class="center" src=
 "images/scm_choosemergetool.png" alt=
 "Source Control Choose Merge Tool"></p>
 
@@ -597,6 +597,7 @@ save to<br></li>
 </ul>
 
 <p><br>
+
 As a help to setting up, when you give a path to certain merge
 tools, <i>GameMaker Studio 2</i> will fill in some defaults to get
 started with, depending on the tool chosen:</p>
@@ -628,6 +629,7 @@ will now open the tool where you can deal with the conflict and
 then use the macro(s) supplied to make the required changes. Once
 you have finished and closed the merge tool, the <i>GameMaker
 Studio 2</i> IDE will show the following confirmation window:
+
 <img class="center" src="images/scm_mergeconfirm.png" alt=
 "Source Control Merge Confirm"></p>
 
@@ -636,7 +638,7 @@ yourself using the merge tool, and then you need to commit this
 change to signify the end of the merge operation (<i>Source
 Control</i> &gt; <i>Commit Changes</i>. The Commit window will now
 show that a merge is in progress as well as show some unstaged
-files: <img class="center" src="images/scm_mergeinprogress.png"
+files:  <img class="center" src="images/scm_mergeinprogress.png"
 alt="Source Control Merge In Progress"></p>
 
 <p>These unstaged files are our script file with the addition of
@@ -673,7 +675,7 @@ Merge &gt; Push<br></p>
 <p>When you have activated Source Control for any project (see the
 section <i>Setting Up The Source Control Git Plugin</i> above for
 details), the <i>GameMaker Studio 2</i> will show the following
-context menu at the top: <img class="center" src=
+context menu at the top:  <img class="center" src=
 "images/scm_contextmenu.png" alt="Source Control Context Menu"></p>
 
 <p>Here we outline each of the available options (most of them are
@@ -726,8 +728,8 @@ IDE or using a specific <b>Merge Tool</b>.</li>
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Tools</a></div>
 
-<div style="float:right">Next: <a href=
-"marketplace.html">Marketplace</a></div>
+<div style="float:right">下一页：<a href=
+"marketplace.html">市场</a></div>
 </div>
 </div>
 

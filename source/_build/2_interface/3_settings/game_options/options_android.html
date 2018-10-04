@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>Android Options</title>
@@ -24,8 +24,8 @@ chmtop.c2wtopf.pageid = "_build/2_interface/3_settings/game_options/options_andr
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_android.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Foptions_android.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -40,7 +40,7 @@ if (window.name != "content")
 that control how your Android game projects will be compiled. The
 different sections are:</p>
 
-<blockquote><label class="collapse" for="a">General</label>
+<blockquote><label class="collapse" for="a">全局</label>
 <input id="a" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/android_general1_options.png"
@@ -57,32 +57,56 @@ other special characters at all, nor should it have uppercase
 characters. These details will then be used to generate a Package
 ID with the format "<tt>com.company.myappname</tt>".</p>
 
-<p>You then need to set the <b>Target</b>, <b>Minimum</b> and
-<b>Compile</b> SDK versions. The Compile SDK version is the version
-of the API that the project is compiled against. This means you can
-use Android API features included in that version of the API. If
-you try and use API 16 features - for example - but set Compile SDK
-15, then you will get a compilation error. If you set the Compile
-SDK to 16 then you can still run the app on an API 15 device (as
-well as all other previous versions too).</p>
+<div class="note"><b>NOTE</b>: If you have already set up the
+<b>Amazon Fire</b> Game Options, you can click the "Sync from
+Amazon Fire" button at the top to transfer the relevant information
+from the Fire options to the Android options.</div>
 
-<p>The Target SDK, however, has nothing to do with how your app is
-compiled or what APIs you can utilize. The Target SDK indicates
-that you have tested your app on (up to and including) the version
-you specify. This is simply to give the Android OS an idea of how
-it should handle your app in terms of OS features. For all
-practical purposes, most apps are going to want to set Target SDK
-to the latest released version of the API (as used by the Compile
-SDK setting). This will ensure your app looks as good as possible
-on the most recent Android devices.</p>
+<p><br>
 
-<p>The Minimum SDK version is the minimum API level that will run
-your project. This is set to 9 by default, and in general this will
-be fine, but if you add extensions then they may require a higher
-minimum API level. <img class="center" src=
-"images/android_general2_options.png" alt=
-"Android General Options Part 2"></p>
+You then need to set the <b>Build Tools</b> and <b>Support
+Library</b> versions, as well as the <b>Target</b>, <b>Minimum</b>
+and <b>Compile</b> SDK versions. The <b>Build Tools</b> and
+<b>Support Library</b> are used when <i>GameMaker Studio 2</i>
+builds your game for the Android target and should be set to
+appropriate values based on the tools you have installed using the
+Android SDK Manager or Android Studio.</p>
 
+<p>The <b>Compile SDK</b> version is the version of the API that
+the project is compiled against. This means you can use Android API
+features included in that version of the API. If you try and use
+API 16 features - for example - but set Compile SDK 15, then you
+will get a compilation error. If you set the Compile SDK to 16 then
+you can still run the app on an API 15 device (as well as all other
+previous versions too).</p>
+
+<p>The <b>Target SDK</b>, however, has nothing to do with how your
+app is compiled or what APIs you can utilize. The Target SDK
+indicates that you have tested your app on (up to and including)
+the version you specify. This is simply to give the Android OS an
+idea of how it should handle your app in terms of OS features. For
+all practical purposes, most apps are going to want to set Target
+SDK to the latest released version of the API (as used by the
+Compile SDK setting). This will ensure your app looks as good as
+possible on the most recent Android devices.</p>
+
+<p>The <b>Minimum SDK</b> version is the minimum API level that
+will run your project. This is set to 9 by default, and in general
+this will be fine, but if you add extensions then they may require
+a higher minimum API level.</p>
+
+<p>You can select from one of the predefined target settings by
+clicking on the <b>Pre-populate SDK values to chosen API level</b>
+button, which will open a list of different APIs to choose from.
+Selecting any one of them will populate all the SDK files with
+appropriate values which you can then use or edit as required.</p>
+
+<div class="note"><b>NOTE</b>: You must have installed the
+appropriate APIs in the Android SDK Manager or through Android
+Studio for your projects to compile correctly.</div>
+<br>
+<img class="center" src="images/android_general2_options.png" alt=
+"Android General Options Part 2">
 <p>The second part of the <b>General</b> section covers the CPU
 <i>Architectures</i> to build for, with the following options
 available (you can select all of them or only those that you
@@ -94,19 +118,21 @@ compiled <tt>apk</tt>):</p>
 
 <li>Build for ARMV7 (Checked by default)</li>
 
-<li>Build for x86</li>
+<li>Build for x86 (checked by default)</li>
 
-<li>Build for Mips</li>
+<li>Build for Mips (checked by default)</li>
+
+<li>Build for ARM64</li>
+
+<li>为 x86_64 构建</li>
 </ul>
 
-<p>After setting that up you can select the different
-<i>Orientations</i> that your game can be run on for the best user
-experience. The available options are:</p>
+<p>After setting that up you can select the different <i>Orientations</i> that your game can be run on for the best user experience. 可用的选项有：</p>
 
 <ul>
-<li>Landscape</li>
+<li>横向</li>
 
-<li>Portrait</li>
+<li>纵向</li>
 
 <li>Landscape-flipped</li>
 
@@ -116,16 +142,10 @@ experience. The available options are:</p>
 <p>Finally you have the following miscellaneous options:</p>
 
 <ul>
-<li><b>Enable Bluetooth/iCade support</b>: This will add support
-for bluetooth or iCade gamepads to your game project. This is on by
-default.<br>
+<li><b>Enable Bluetooth/iCade support</b>: This will add support for bluetooth or iCade gamepads to your game project. 该选项默认为“开”。<br>
 <br></li>
 
-<li><b>Enable MOGA gamepad support</b>: This will enable support
-for MOGA controllers. Note that all MOGA functionality is accessed
-via an extension, and when you first check this option you will be
-prompted to download and install the MOGA extension from the
-Marketplace. This option is off by default.<br>
+<li><b>Enable MOGA gamepad support</b>: This will enable support for MOGA controllers. Note that all MOGA functionality is accessed via an extension, and when you first check this option you will be prompted to download and install the MOGA extension from the Marketplace. 该选项默认为关。<br>
 <br></li>
 
 <li><b>Run Lint Code Analysis</b>: When this option is flagged, the
@@ -169,7 +189,7 @@ what works on your build device may not be appropriate for another
 user, and as such if in doubt leave it set to 4.</p>
 </div>
 <br>
-<label class="collapse" for="b">Graphics</label> <input id="b"
+<label class="collapse" for="b">图像</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/android_graphics_options.png"
@@ -180,10 +200,7 @@ alt="Android Graphics Options">
 game will be displayed, with the following options available:</p>
 
 <ul>
-<li><b>Interpolate colours between pixels</b>: Turns on
-interpolation, which basically "smooths" pixels. for crisp pixel
-graphics, it should be off, but if you have nice alpha blends and
-smoothed edge graphics it is better left on. Default is off.<br>
+<li><b>Interpolate colours between pixels</b>: Turns on interpolation, which basically "smooths" pixels. for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edge graphics it is better left on. 默认为关。<br>
 <br></li>
 
 <li><b>Screen Colour Depth</b>: This can be used to set the colour
@@ -202,12 +219,10 @@ getting negative comments and poor rating for your game due to
 graphical errors or crashes on older devices.<br>
 <br></li>
 
-<li><b>Scaling</b>: Your game can be configured to scale the draw
-canvas automatically to maintain the aspect ratio within the
-browser, or you can select to have it stretch to fit. The stretch
-to fit option will not full screen the game in the browser, but
-rather stretch what is drawn to fit the canvas size, as defined by
-the first room of the game.</li>
+<li><b>Scaling</b>: Here you can select to scale the draw canvas
+maintaining the aspect ratio within the device screen - adding
+"padding" around the edges to fit the screen - or you can select to
+have the draw canvas stretched stretch to fit.</li>
 </ul>
 
 <p>Finally there is the option to set the size of the <b>Texture
@@ -219,11 +234,10 @@ can see how they look. This can be very useful if you wish to see
 how the texture pages are structured and to prevent having texture
 pages larger (or smaller) than necessary.</p>
 
-<div class="note"><b>NOTE</b>: Be aware that the larger the size of
-the texture page, the less compatible your game will be.</div>
+<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be.</div>
 </div>
 <br>
-<label class="collapse" for="g">Icons</label> <input id="g" type=
+<label class="collapse" for="g">图标</label> <input id="g" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/android_icons_options.png" alt=
@@ -243,7 +257,7 @@ is being compiled to. If you use this tool, you should revise the
 images created to ensure that they are what you require.</p>
 </div>
 <br>
-<label class="collapse" for="c">Images</label> <input id="c" type=
+<label class="collapse" for="c">图片</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/android_images_options.png" alt=
@@ -259,7 +273,13 @@ specific time then you can also set it here from 0 to 10 seconds
 (the default time of 0 means that it will only show for the
 duration of the asset loading).</p>
 
-<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
+<div class="note"><b>IMPORTANT!</b> On very old and very low end
+devices, a splash screen greater than 1024x768 may cause an out of
+memory error.</div>
+
+<p><br>
+
+It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
 "../../2_extras/project_image_generator.html">Project Image
 Generator</a> tool which can be used to automatically create all
 the images required for all the different target platforms your
@@ -267,7 +287,7 @@ game is being compiled to. If you use this tool, you should revise
 the images created to ensure that they are what you require.</p>
 </div>
 <br>
-<label class="collapse" for="d">Packaging</label> <input id="d"
+<label class="collapse" for="d">打包</label> <input id="d"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/android_packaging_options.png"
@@ -309,7 +329,7 @@ further details of this option <a href=
 "_blank">here</a>.</p>
 </div>
 <br>
-<label class="collapse" for="e">Permissions</label> <input id="e"
+<label class="collapse" for="e">权限</label> <input id="e"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/android_permissions_options.png"
@@ -351,11 +371,11 @@ input from the microphone.<br>
 
 <div class="note"><b>NOTE</b>: If you are not sure that you need
 these, you should probably just leave them un-checked by default
-and let GameMaker: Studio deal with the permissions for your
-game.</div>
+and let <i>GameMaker Studio 2</i> deal with the permissions for
+your game.</div>
 </div>
 <br>
-<label class="collapse" for="f">Social</label> <input id="f" type=
+<label class="collapse" for="f">社交（Social）</label> <input id="f" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/android_social_options.png" alt=
@@ -396,15 +416,11 @@ Google Play Developers dashboard).<br>
 
 <li><b>Google - Enable Cloud Saving</b>: Checking this will enable
 Google Cloud Saving, and (as above) will prompt you to download and
-install the relevant extension from the Marketplace.<br>
+install the relevant extension from the Marketplace. See the
+section on Cloud Saving from the <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html">
+Asynchronous Functions</a> page.<br>
 <br></li>
-
-<li><b>Amazon - Enable Amazon IAPs</b>: If you are using any
-<b>Amazon Services</b>, you need to select this checkbox. Once you
-have selected this, you will be prompted to download and install
-the corresponding extension from the Marketplace, and all the
-required functions are included as part of the extension
-package.</li>
 </ul>
 </div></blockquote>
 
@@ -423,7 +439,7 @@ Options</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

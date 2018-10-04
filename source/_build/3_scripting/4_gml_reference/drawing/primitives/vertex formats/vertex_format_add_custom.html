@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>vertex_format_add_custom</title>
@@ -23,17 +23,19 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/drawing/primitives/v
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fprimitives%2Fvertex%20formats%2Fvertex_format_add_custom.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fdrawing%2Fprimitives%2Fvertex%20formats%2Fvertex_format_add_custom.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">vertex_format_add_custom</h1>
+<h2>vertex_format_add_custom</h2>
 
-<h2 class="studio">Add custom values to the vertex format.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">vertex_format_add_custom(type, usage);</p>
 
@@ -43,8 +45,8 @@ if (window.name != "content")
 <div>
 <table>
 <tr>
-<th>Argument</th>
-<th>Description</th>
+<th>参数</th>
+<th>描述</th>
 </tr>
 
 <tr>
@@ -64,24 +66,29 @@ constants</i></b> listed below).</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>返回：</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>描述</h3>
 
-<p>Tell <i>GameMaker Studio 2</i> to accept a custom value (or
-values) as part of the new vertex format being created. The
-available values to use are defined by the data type constant that
-you choose, listed below:<br>
-<br></p>
+<blockquote>
+<p>This function permits you to use a custom data type for specific
+vertex format attributes as part of the new vertex format being
+created. The available values to use are defined by the data type
+constant that you choose, listed below:</p>
+
+<p><br>
+</p>
 
 <div class="compat">
 <table>
 <tr>
-<th>Constant</th>
-<th>Description</th>
+<th>常量</th>
+<th>描述</th>
 </tr>
 
 <tr>
@@ -116,21 +123,25 @@ you choose, listed below:<br>
 </table>
 </div>
 
-<p>The use that these constants will be put too also needs to be
+<p><br>
+
+The use that these constants will be put too also needs to be
 defined so that the values can be "bound" properly within the
 shader being created. This is necessary due to the fact that DX and
 OpenGL have different requirements so if you don't bind them
 properly, they won't come through right in the shader. The
 available usage constants that you can choose are listed below and
 those you use will depend on the specifics of the shader being
-created:<br>
-<br></p>
+created:</p>
+
+<p><br>
+</p>
 
 <div class="compat">
 <table>
 <tr>
-<th>Constant</th>
-<th>Description</th>
+<th>常量</th>
+<th>描述</th>
 </tr>
 
 <tr>
@@ -193,9 +204,21 @@ example)</td>
 </div>
 
 <p><br>
+
+Note that the <tt>vertex_format_add_custom()</tt> function only
+supports <tt>vertex_usage_position</tt>,
+<tt>vertex_usage_colour</tt>, <tt>vertex_usage_normal</tt> and
+<tt>vertex_usage_textcoord</tt> when using GLSL shaders. These will
+map to the shader attributes <tt>in_Position</tt>, <tt>in_Colour[0
+- ...]</tt>, <tt>in_Normal</tt> respectively (anything that is not
+one of these three attributes - eg: texture coordinates - can be
+mapped to any attribute you define).</p>
+</blockquote>
+
+<p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>举例：</h3>
 
 <p class="code">vertex_format_begin();<br>
 vertex_format_add_textcoord();<br>
@@ -203,13 +226,18 @@ vertex_format_add_custom(vertex_type_float3,
 vertex_usage_position);<br>
 my_format = vertex_format_end();<br></p>
 
+<blockquote>
 <p>The above code will create a new vertex format with just texture
 and 3 custom floating point values for position. It is then stores
 the format id in the variable "my_format".</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Vertex
 Formats</a></div>
@@ -217,11 +245,13 @@ Formats</a></div>
 <div style="float:right">Next: <a href=
 "vertex_format_end.html">vertex_format_end</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

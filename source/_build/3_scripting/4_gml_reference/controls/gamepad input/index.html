@@ -4,7 +4,7 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>GamePad Input</title>
@@ -23,8 +23,8 @@ chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/controls/gamepad inp
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcontrols%2Fgamepad%20input%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../../index.html?page=source%2F_build%2F3_scripting%2F4_gml_reference%2Fcontrols%2Fgamepad%20input%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
@@ -60,7 +60,12 @@ non-standardised way thet the API is implemented by controller
 manufacturers. It is recommend that you have some kind of game-pad
 setup screen in your games where people can redefine the gamepad
 buttons based on input from any connected to device to mitigate any
-issues.</p>
+issues. Also note that the Direct Input interface is run in
+<i>cooperative mode</i> which means that your game only has access
+when it is the foreground application, which in turn will cause
+Direct Input controllers to be "lost" if the game uses focus and
+then "found" again when it comes back into focus (this can be
+detected in the System Event and dealt with).</p>
 
 <p>When working with the gamepad functions, there are a number of
 built-in constants that should be used for getting/defining buttons
@@ -69,8 +74,8 @@ and stick axis etc...:</p>
 <div class="compat">
 <table>
 <tr>
-<th>Constant</th>
-<th>Description</th>
+<th>常量</th>
+<th>描述</th>
 </tr>
 
 <tr>
@@ -119,7 +124,7 @@ controller and the <i>triangle</i> on a PS controller)</td>
 
 <tr>
 <td>gp_select</td>
-<td>The select button (this is a touch-pad press on a PS4
+<td>The select button (this is the <i>PS</i> button on a DS4
 controller)</td>
 </tr>
 
@@ -182,9 +187,10 @@ controller)</td>
 </div>
 
 <p><br>
+
 To better understand exactly what part of the controller each
 constant represents, you can refer to the following image of a
-standard gamepad: <img class="center" src="gamepad.png"></p>
+standard gamepad:  <img class="center" src="gamepad.png"></p>
 
 <p>Below you can find a list of all the gamepad functions:</p>
 
@@ -280,6 +286,8 @@ install additional libraries from the Ubuntu repository. You can do
 this easily by opening a command line terminal and typing the
 following:
 
+
+
 <p class="code">sudo apt-get install jstest-gtk<br>
 sudo apt-get install joystick.<br></p>
 
@@ -307,7 +315,7 @@ General</a> section of the <b>Android Game Options</b>. They
 require API level 12 for them to work fully and it should be noted
 that <i>GameMaker Studio 2</i> will register as connected any
 Bluetooth devices that your device is paired with, whether or not
-it’s actually connected. Therefore this should be taken into
+itï¿½s actually connected. Therefore this should be taken into
 account when assigning and checking "slots".<br>
 <br></li>
 
@@ -347,7 +355,7 @@ pad "i"<br>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

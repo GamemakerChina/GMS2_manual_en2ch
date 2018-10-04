@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Extensions</title>
+<title>扩展</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/2_interface/1_editors/extensions.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fextensions.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F2_interface%2F1_editors%2Fextensions.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Extensions</h2>
+<h2>扩展</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -42,7 +42,7 @@ way to transfer game assets or even whole projects easily between
 people. If the extension is to add extra functionality, then the
 functions used can link your game to external SDKs or source code
 written in other languages (like Java for Android, for example), as
-well as native GML. <img class="center" src=
+well as native GML.  <img class="center" src=
 "images/editor_extensions.png" alt="Extensions Properties"></p>
 
 <p>Normally 3rd party extensions will be from the <a href=
@@ -64,9 +64,7 @@ selecting <i>Add Existing</i>.</p>
 mouse button <img style="vertical-align:middle" src=
 "../../images/icon_rmb.png"> menu option <i>Import File</i>.</p>
 
-<div class="note"><b>NOTE</b>: Legacy format <tt>*.GEX</tt>
-extensions are no longer supported and cannot be imported in to
-<i>GameMaker Studio 2</i> projects.</div>
+<div class="note"><b>注意</b>： Legacy format <tt>*.GEX</tt> extensions are no longer supported and cannot be imported in to <i>GameMaker Studio 2</i> projects.</div>
 <br>
 
 <p>For more information on using and creating <b>Extension
@@ -75,10 +73,14 @@ Packages</b> please see the following sections:</p>
 <blockquote><label class="collapse" for="a">Using
 Extensions</label> <input id="a" type="checkbox">
 <div class="index_list">
-<p>Once you have added an extension you can start to use it in your
-projects, however you should ensure that the extension properties
-match up with the target platform, and edit the export targets for
-the extension files based on the following:</p>
+<p>Once you have added an extension to the resource tree, you
+should give it a name and a version number and also set which
+platforms you want to export it to. By un-ticking selected
+platforms, you can tell <i>GameMaker Studio 2</i> not to export the
+extension as part of the executable for those platforms. You should
+also ensure that the extension properties match up with the target
+platform(s), and edit the export targets for the extension files
+based on the following:</p>
 
 <ul>
 <li><b>All targets</b>: GML extensions. These are extensions made
@@ -132,7 +134,13 @@ working on a PSVita, the extension should be SUPRX instead.</li>
 </li>
 </ul>
 
-<p>To change the target platform for a specific extension file or
+<p>Since a single extension can have various associated files, it's
+possible to create a single extension for multiple platforms, in
+which case you want to specify <i>all</i> the compatible platforms
+in the main extension editor (ie: tick the checkbox beside them)
+and then in the individual file properties for each part of the
+extension, set the platform that those files should be exported to.
+To change the target platform for a specific extension file or
 placeholder you must first open the extension properties (double
 click <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> the extension i the Resource tree or
@@ -143,13 +151,20 @@ from the right that you want to edit: <img class="center" src=
 "images/editor_extensions_targets.png" alt=
 "Extension Target Platforms"></p>
 
-<p>Once you have installed your extension, you can use the
-functions and constants for it just as you would the built in
-functions and constants used in the GameMaker Language. If your
-game is cross-platform (for example, it is designed to run on both
-Windows and Android targets), then you should do an OS check before
-calling extension specific functions to prevent issues, for
-example:</p>
+<div class="note"><b>NOTE</b>: If you are exporting to the macOS or
+Ubuntu target, then you can set the "Uncompress as zip file" option
+to preserve file permissions for the extension.</div>
+
+<p><br>
+
+Once you have installed your extension, you can use the functions
+and constants for it just as you would the built in functions and
+constants used in the GameMaker Language. If your game is
+cross-platform (for example, it is designed to run on both Windows
+and Android targets), then you should use the <a href=
+"../3_scripting/4_gml_reference/miscellaneous/index.html">OS
+constants and functions</a> to check the platform before calling
+extension specific functions to prevent issues, for example:</p>
 
 <p class="code">switch(os_type)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -268,7 +283,7 @@ correct language for the extension file format.</p>
 
 <p>Once you have done that you need to add the file to the
 extension (explained above) which will chain a new window to the
-Extensions Properties for the <b>File Properties</b>: <img class=
+Extensions Properties for the <b>File Properties</b>:  <img class=
 "center" src="images/editor_extensions_fileproperties.png" alt=
 "File Property Window"></p>
 
@@ -277,7 +292,7 @@ GM you would select them all), as well as rename the extension file
 and set a few other details, which we'll cover in a moment. First
 of all though we want to add in our constants and functions so that
 the user can call the extension from within their project code. For
-that you need to click the extensions menu button <img style=
+that you need to click the functions menu button <img style=
 "vertical-align:middle" src="images/icon_extensionmenu.png"> and
 select what you require: <img class="center" src=
 "images/editor_extensions_addfunctions.png" alt=
@@ -287,6 +302,7 @@ select what you require: <img class="center" src=
 function to the extension which can then be called in <i>GameMaker
 Studio 2</i> as you would any of the built in functions. The
 following window opens for you to define the function in:
+
 <img class="center" src=
 "images/editor_extensions_functioneditor.png" alt=
 "Function Editor"></p>
@@ -316,10 +332,14 @@ take. Arguments can be either <b>doubles</b> or <b>strings</b>, and
 you can add them by clicking the add button <img style=
 "vertical-align:middle" src="images/icon_addargument.png"> and
 remove them by clicking the remove button <img style=
-"vertical-align:middle" src="images/icon_removeargument.png">. Note
-that if you are creating a Windows <tt>dll</tt> file and it has
-more than four arguments, <i>all arguments must be of the same
-type</i>.</p>
+"vertical-align:middle" src="images/icon_removeargument.png">. If
+your function can take variable arguments, you should also make
+sure to check the <b>Variable Length Arguments</b> checkbox at the
+bottom.</p>
+
+<div class="note"><b>NOTE</b>: If you are creating a Windows
+<tt>dll</tt> file and it has more than four arguments, <i>all
+arguments must be of the same type</i>.</div>
 
 <p>Once you have done all that then function is ready to be used in
 a project and it will show up in auto complete and be colour coded
@@ -337,13 +357,15 @@ to be called. The platforms that are affected by this are:
 <b>XboxOne</b>.</div>
 
 <p><br>
+
 The other option you have is to create a <b>Macro</b>. A macro can
 be a <b>constant</b> value or a single code snippet (for more
 information on macros, please see <a href=
 "../../3_scripting/3_gml_overview/6_scope.html">here</a>). For
 example, we could remove the defined function from our example GML
 extension above for the colour <tt>c_alice_blue</tt> and make it a
-macro instead: <img class="center" src=
+macro instead. To make a macro, simply click the <b>Macros</b>
+button in the Extension Properties window:  <img class="center" src=
 "images/editor_extensions_macroeditor.png" alt="Macro Editor"></p>
 
 <p>The editor here is pretty much self explanatory - you give the
@@ -398,7 +420,7 @@ below:</p>
 <div class="compat">
 <table>
 <tr>
-<th>Platform</th>
+<th>平台</th>
 <th>Names</th>
 </tr>
 
@@ -452,6 +474,7 @@ group them together, so you'd add a placeholder and then define the
 functions and macros as explained in the section above. To add the
 rest of the files though you need to first tick the <i>Android</i>
 check-box in the <b>Additional Features</b> section of the editor:
+
 <img class="center" src="images/editor_extensions_android.png" alt=
 "Android Editor"></p>
 
@@ -538,7 +561,7 @@ constants are added using <b>placeholder</b> files to group them
 together, so you'd add a placeholder and then define the functions
 and macros as explained in the section above. To add the rest of
 the files though you need to first tick the <i>iOS</i> check-box in
-the <b>Additional Features</b> section of the editor: <img class=
+the <b>Additional Features</b> section of the editor:  <img class=
 "center" src="images/editor_extensions_ios.png" alt=
 "iOS Editor"></p>
 
@@ -658,15 +681,13 @@ covered in the manual.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Editors
-Index</a></div>
+<div style="float:left">上一页：<a href="index.html">编辑器索引</a></div>
 
-<div style="float:right">Next: <a href="sprites.html">The Sprite
-Editor</a></div>
+<div style="float:right">下一页：<a href="sprites.html">精灵编辑器</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

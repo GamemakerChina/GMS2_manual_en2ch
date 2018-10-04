@@ -5,7 +5,7 @@
   ["安装", "source/_build/1_overview/1_getting_started/2_installation.html", "11"],
   ["更新", "source/_build/1_overview/1_getting_started/3_updating.html", "11"],
   ["发布说明", "source/_build/1_overview/1_getting_started/4_release_notes.html", "11"],
-  ["必须的SDK", "source/_build/1_overview/1_getting_started/5_required_sdks.html", "11"],
+  ["必需的SDK", "source/_build/1_overview/1_getting_started/5_required_sdks.html", "11"],
   ["许可", "source/_build/1_overview/1_getting_started/6_licensing.html", "11"],
   ["偏好设置", "source/_build/1_overview/1_getting_started/7_preferences.html", "11"],
   ["输入操作", "source/_build/1_overview/1_getting_started/8_input.html", "11"],

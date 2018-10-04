@@ -4,10 +4,10 @@
 <head>
 <meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Game Options</title>
+<title>游戏选项</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -24,13 +24,13 @@ chmtop.c2wtopf.pageid = "_build/2_interface/3_settings/game_options/index.html";
 <body><script type="text/JavaScript"> 
 if (window.name != "content") 
   document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Findex.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../../index.html?page=source%2F_build%2F2_interface%2F3_settings%2Fgame_options%2Findex.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
-</script>
-<!-- !chm2web! -->
+</script><!-- !chm2web! -->
+
 
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Game Options</h2>
+<h2>游戏选项</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,7 +40,7 @@ if (window.name != "content")
 Options</b> and the <b>Platform Settings</b>. Details of the Main
 Options are given in the sections below:</p>
 
-<blockquote><label class="collapse" for="a">General</label>
+<blockquote><label class="collapse" for="a">全局</label>
 <input id="a" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/general_options.png" alt=
@@ -114,23 +114,9 @@ to generate a new one.</li>
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Generate mipmaps for separate texture pages</b>: This option
-will have <i>GameMaker Studio 2</i> create mipmaps for those
-sprites that have flagged the <b>Seperate Texture Page</b> option
-in the <a href="../../1_editors/sprites.html">Texture settings</a>
-of the Sprite Editor. Enabling mipmapping means that the original
-texture page for the sprite is to be scaled and filtered into
-multiple resolutions within the texture file. This is normally off,
-but if you are using views to zoom in or out on large areas of the
-game room, or you are working with a 3D game, then you may want to
-enable this and then use the <a href=
-"../../../3_scripting/4_gml_reference/drawing/mipmapping/index.html">
-Mipmapping Functions</a> to adjust how the game deals with the
-different mipmap levels. Note that if you are not flagging sprites
-as using individual texture pages, you can still enable mipmapping
-on a per-texture group basis from the <a href=
-"../textures.html">Texture Group Manager</a>. This option is off by
-default.</li>
+<li><b>Generate mipmaps for separate texture pages</b>: This option will have <i>GameMaker Studio 2</i> create mipmaps for those sprites that have flagged the <b>Seperate Texture Page</b> option in the <a href="../../1_editors/sprites.html">Texture settings</a> of the Sprite Editor. Enabling mipmapping means that the original texture page for the sprite is to be scaled and filtered into multiple resolutions within the texture file. This is normally off, but if you are using views to zoom in or out on large areas of the game room, or you are working with a 3D game, then you may want to enable this and then use the <a href=
+"../../../3_scripting/4_gml_reference/drawing/mipmapping/index.html"> Mipmapping Functions</a> to adjust how the game deals with the different mipmap levels. Note that if you are not flagging sprites as using individual texture pages, you can still enable mipmapping on a per-texture group basis from the <a href=
+"../textures.html">Texture Group Manager</a>. 该选项默认为关。</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -235,6 +221,10 @@ OS</span></a>
 "list_link">HTML5</span></a>
 </li>
 
+<li><a href="options_amazonfire.html"><span class=
+"list_link">Amazon Fire</span></a>
+</li>
+
 <li><a href="options_android.html"><span class=
 "list_link">Android</span></a>
 </li>
@@ -244,11 +234,19 @@ OS</span></a>
 </li>
 </ol>
 </div>
-<br>
+</blockquote>
+
+<div class="note"><b>NOTE</b>: The various <b>Console</b> Game
+Options are not listed here due to the different legal restrictions
+maintained by the different companies. If you have a <b>Console
+Licence</b>, then you can get this information form the <a href=
+"https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support"
+target="_blank">YoYo Games Helpdesk</a>, but you must first contact
+YoYo Games with your console ID email and request permission to
+view the different sections.</div>
 
 <p><br>
 </p>
-</blockquote>
 </div>
 
 <div class="footer">
@@ -262,7 +260,7 @@ Groups</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
