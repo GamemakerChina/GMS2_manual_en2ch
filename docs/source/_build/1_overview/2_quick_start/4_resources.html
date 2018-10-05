@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,170 +36,61 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>游戏的核心将通过资源创建并被添加到<b>资源树</b>中。This is where you can add everything that your game requires to run, including a game room, sprites, objects, paths and a number of other things. A basic game in <i>GameMaker Studio 2</i> will require a room to run in, and usually at least one object and a sprite, although you'll likely use a lot more!<img class="center" src="images/qs_resources.png" alt=
-"资源树（Resource Tree）"> You can add a resource to the resource tree by right clicking <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on it and selecting the <b>Create</b> option from the pop-up menu (for full details on this pop-up menu, see below). This is the same for all available resources, but each one has its own unique editor which will open when you do this. Note that tat the top left of the Resource Tree you have the <b>Collapse All</b> button <img style="vertical-align:middle" src=
-"images/icon_collapseresources.png"> which can be used to close all open resource folders.</p>
+<p>游戏的核心将通过资源创建并被添加到<b>资源树</b>中。 这是所有你可以添加的游戏运行所需内容，包括房间，精灵，对象，路径和其他一些内容。 <i>GameMaker Studio 2</i> 中的游戏至少需要一个房间来运行，至少存在一个对象和一个精灵，当然你不止会使用一个！<img class="center" src="images/qs_resources.png" alt=
+"资源树"> 您可以通过右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 资源树来添加资源，然后从弹出菜单中选择 <b>创建</b> 选项（有关此弹出菜单的详细信息，请参阅下文）。所有可用资源操作都是如此，但每种资源都有自己的专用的编辑器，当你完成上述操作时会打开它。 请注意，资源树左上角有 <b>全部折叠</b> 按钮 <img style="vertical-align:middle" src=
+"images/icon_collapseresources.png"> ，可用于关闭所有已打开的资源文件夹。</p>
 
-<p>You can see a brief overview of each of the available resources
-from the resource tree by clicking any of the buttons below:
-
+<p>您可以通过单击以下任一按钮，从资源树中查看每种可用资源的简要概述：
 <a name="sprites" id="sprites"></a></p>
 
 <blockquote><label class="collapse" for="zero"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_sprite.png">精灵</label>
 <input id="zero" type="checkbox">
-<div class="index_list">Sprites are generally the visual
-representations of objects within the games you create. As such, a
-sprite is an image drawn using the <i>GameMaker Studio 2</i> Image
-Editor, or made with any external drawing program and imported into
-<i>GameMaker Studio 2</i>. The image used doesn't have to be of a
-single static thing either... it can be a "strip" image too, ie:
-multiple images in a a single file which can then be used to make a
-single animated sprite. For example, the following 10 images form a
-sprite for a character who is waving his arms while skydiving.<br>
-<br>
-<img class="center" src="images/qs_spritestrip.png" alt=
-"精灵长带图"><br>
-And the actual finished animation would look like this when placed
-in a game:<br>
-<br>
-<img class="center" src="images/qs_spriteanim.gif" alt=
-"精灵动画"><br>
-A sprite like this is usually a <tt>PNG</tt> format file, but
-<i>GameMaker Studio 2</i> will also accept vector sprites in
-<tt>SWF</tt> format, and <b>Spine</b> sprites in <tt>JSON</tt>
-(with their accompanying texture atlas file).<br>
-<br>
-You can find out more about adding sprites from the section on the
-<a href="../../2_interface/1_editors/sprites.html">Sprite
-Editor</a>.</div>
+<div class="index_list">精灵通常是您创建的游戏中的对象的视觉表现。 因此，精灵使用  <i>GameMaker Studio 2</i> 图像编辑器来绘制图像，或使用外部绘图程序制作并导入到 <i>GameMaker Studio 2</i> 中。使用的图像不一定是单个静态图像，也可以是“条装”图像，即单个文件中含有多个图像，可用于制作一个动画精灵。 例如，以下10张图像就形成一个精灵，是一个跳伞时挥舞着双臂的角色。<br><br><img class="center" src="images/qs_spritestrip.png" alt=
+"精灵长带图"><br>实际完成的动画放置在游戏中看起来是这样的：<br><br><img class="center" src="images/qs_spriteanim.gif" alt=
+"精灵动画"><br>像上图这样的精灵通常是一个 <tt>PNG</tt> 格式的文件，但是 <i> GameMaker Studio 2</i> 也兼容 <tt>SWF</tt> 格式的矢量精灵和 <tt>JSON</tt> 格式的 <b>Spine</b> 精灵（及其伴随的atlas条状图像）。<br><br>您可以从 <a href="../../2_interface/1_editors/sprites.html">精灵编辑器</a> 部分中了解更多关于添加和编辑精灵的信息。</div>
 <br>
 <a name="tilesets" id="tilesets"></a> <label class="collapse" for=
 "one"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_tileset.png">图块集</label> <input id="one" type="checkbox">
-<div class="index_list">Tile sets are taken from the sprite
-resources, but are classified as a separate resource since
-<i>GameMaker Studio 2</i> will handle them differently when
-creating your game. Basically a tile set is a single image that
-<i>GameMaker Studio 2</i> will break into separate sections based
-on the values you give for the various settings. You can then use
-these in the room editor (or procedurally through code) to generate
-a tile map in your room. They are great for designing any static
-items in your room, like terrain, walls, backdrops, etc... as they
-don't have the same overhead that objects have.<br>
-<br>
-<img class="center" src="images/qs_tileset.png" alt="图块集"><br>
-Above is an example sprite that would be used as a tile set to
-create walls. As you can see, it can be "split" into 64x64pixel
-chunks, which would then placed into the room editor.<br>
+<div class="index_list">图块集从精灵资源中获取，但是由于 <i>GameMaker Studio 2</i> 在创建游戏时会以不同于精灵的方式编辑图块集，所以它们被单独分类出来。基本上，一个基础图块就是一个单一图像，<i>GameMaker Studio 2</i> 将根据您所设置的各种值将图像拆分成不同的基础图块。 然后，您可以在房间编辑器（或在程序中通过代码）使用这些图块在房间中生成图块地图。它们可以在房间中很方便地组合出各种静态物品，如地形，墙壁，背景等，并且它们不需要对象那么多的系统资源。<br><br><img class="center" src="images/qs_tileset.png" alt="图块集"><br>上图是一个示例精灵，被用作绘制墙壁的图块集。正如你所看到的，它被“分割”成 64x64 个像素块，然后将其放入房间编辑器组合。
 <br>
 
-<div class="note"><b>注意</b>： Tiles are <b>always square</b>, so if you need anything other than that, you should be using an instance with a sprite or an asset layer in the room editor.</div>
+<div class="note"> <b>注意</b>：图块 <b>一般是正方形的</b>，所以如果你需要制作其他形状，那么应该在房间编辑器中使用其他形状实例组成的精灵或在资源图层中制作。 </div>
 <br>
 <br>
-
-You can find out more about adding tile sets from the section on
-the <a href="../../2_interface/1_editors/tilesets.html">Tile Set
-Editor</a>.</div>
+您可以从 <a href="../../2_interface/1_editors/tilesets.html">图块集编辑器</a> 部分中找到有关添加图块集的更多信息。</div>
 <br>
 <a name="sounds" id="sounds"></a> <label class="collapse" for=
 "two"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_sound.png">声音</label>
 <input id="two" type="checkbox">
-<div class="index_list">Sound is an important part of any game,
-both for adding depoth to the gameplay and giving feedback in the
-form of sound effects, and for adding atmosphere in the form of
-music. <i>GameMaker Studio 2</i> accepts <tt>WAV</tt>, <tt>MP3</tt>
-and <tt>OGG</tt> format files.<br>
-<br>
-In general, <tt>WAV</tt> files are used for any short sound effects
-as even though they are generally larger files they will play
-instantaneously due to the fact that they do not need any type of
-decoding for playing. <tt>MP3</tt> and <tt>OGG</tt> files should be
-used for background music or any effect that plays over a longer
-period of time or that has a rather large file size. These files
-are much smaller than a <tt>WAV</tt> file and but do have a CPU
-overhead associated with them as they have to be decoded before
-being played.<br>
-<br>
-You can find out more about adding sounds from the section on the
-<a href="../../2_interface/1_editors/sounds.html">Sound
-Editor</a>.</div>
+<div class="index_list">不论是用声音来增加游戏性，还是用声效来提供游戏反馈，以及用音乐来烘托气氛，都说明声音是游戏的重要组成部分。<i>GameMaker Studio 2</i> 兼容 <tt>WAV</tt>、 <tt>MP3</tt> 和 <tt>OGG</tt> 格式的声音文件。<br><br>通常来说，<tt>WAV</tt> 格式的文件适合存放短音效，因为WAV格式文件较大，但是WAV格式不需要解码就可以直接播放。<tt>MP3</tt> 和 <tt>OGG</tt> 格式的文件则适合存储背景音乐以及一些需要长时间播放的声音。这两种格式的文件储存同样的内容时远小于 <tt>WAV</tt> 格式文件，但是他们需要一定的计算资源来在播放前进行解码。<br><br>你可以在 <a href="../../2_interface/1_editors/sounds.html">声音编辑器</a> 部分找到更多有关信息。</div>
 <br>
 <a name="paths" id="paths"></a> <label class="collapse" for=
 "three"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_path.png">路径</label>
 <input id="three" type="checkbox">
-<div class="index_list">At some point while creating your games you
-may need an instance of one of your objects to follow a path
-through a level. Now, this can be done by simply creating an array
-of positions within the room and then having the instance move
-between them, but that can be a chore to set up and is difficult to
-change, test and adapt for different things. That is when you'd
-want to create a path resource.<br>
-<br>
-The basic idea of the path resource is rather simple - you define a
-path by drawing it in the path editor, then you can place an action
-(or code) in an event of an object to tell the object to follow
-that particular path in the game room. You can set the speed to
-follow the path and a number of other actions relating to the
-position and orientation of the path within the room too.<br>
-<br>
-You can find out more about adding paths from the section on the
-<a href="../../2_interface/1_editors/paths.html">Path
-Editor</a>.</div>
+<div class="index_list">在您创建游戏过程中的某些时候，您可能需要对象中的实例沿着一定的路径来通过这一关。你可以先简单地在房间中创建一些简单的位置排列，接着让实例在他们之间移动。但这个工作很繁重而且不好修改，测试和适配。这时你需要创建一个路径资源。<br>&gt; <br>路径资源的基本思路很简单-你可以通过在路径编辑器中绘制路径来对路径资源进行定义，然后你可以通过在对象的事件中放置动作模块或者添加代码来使对象在房间中沿着特定路径（来行动）。你可以设置对象跟随路径的速度以及房间中其他一些关于路径的位置和方向的值。 <br><br>您可以在<a href="../../2_interface/1_editors/paths.html">路径编辑器</a>部分中找到其他相关信息。</div>
 <br>
 <a name="scripts" id="scripts"></a> <label class="collapse" for=
 "four"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_script.png">脚本（Scripts）</label>
 <input id="four" type="checkbox">
-<div class="index_list">A script resource is a collection of codes
-you have written to create your own function. For example, say you
-want to have an enemy create a number of instances when it dies,
-like some gold, an explosion and some blood as well as play a
-sound. Now you <i>could</i> add all the required code into each
-object that requires it, but in general you'd be better of creating
-a single script resource with the code in it and then calling that.
-This means that you only have to add one line of code into the
-objects to call this new scripted function, and if you wish to
-change something you only need to change it once in the script and
-all the objects will automatically run the new code, rather than
-have to go through every object and change the same thing in
-multiple places.<br>
-<br>
-You can find out more about adding paths from the section on the
-<a href="../../2_interface/1_editors/scripts.html">Script
-Editor</a>.</div>
+<div class="index_list">脚本资源是一个你自己创建的功能函数的代码集合。例如，假设你想让一个敌人在死的时候创造一些实例，比如掉一些金子，产生爆炸或者流血效果，以及发出一些声音。为此你 <i>可以</i> 将实现这些效果的代码添加到每个对象的中，但是更好的方法是创建一个脚本资源，在其中输入实现上述功能的代码，然后在每个对象中调用它。这样的话，您只需在对象中添加一行调用代码即可调用此脚本实现预期的功能，如果您希望修改一些代码，您只需要在脚本中更改，所有调用的对象会自动运行新的代码，而不需要在所有对象中逐一修改，并且在多个地方改变修改同样的代码。 <br><br>您可以在 <a href="../../2_interface/1_editors/scripts.html">脚本编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="shaders" id="shaders"></a> <label class="collapse" for=
 "five"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_shader.png">着色器（Shaders）</label>
 <input id="five" type="checkbox">
-<div class="index_list">Shaders are a very powerful tool that can
-be used to manipulate the graphics that your game renders to the
-screen, permitting incredibly fast effects that can range from, for
-example, adding a subtle colour hue to a sprite, right up to full
-screen distortion effects. Basically it's a two-part program that
-runs directly on the graphics card itself, making it very fast
-since the GPU is doing all the work and freeing up CPU cycles for
-your game code. The full shader is comprised of a vertex shader
-program, and a fragment shader program (also known as a pixel
-shader). Both of these tiny programs work together in order to
-manipulate what the graphics card renders to the screen. This then
-permits you to manipulate in real time the position, colour, and
-alpha values that are actually rendered into the display
-buffer.<br>
-<br>
-<i>GameMaker Studio 2</i> supports the following shader languages:
-
-
+<div class="index_list">着色器是一个非常强大的工具，可用于操纵渲染到屏幕上的图像，其速度之快和范围之大都令人难以置信，例如，它可以添加细微的色调给精灵，直到产生全屏失真的效果。基本上它是由两个程序组成，直接运行在显卡上，所以在GPU运行所有工作以及为游戏代码释放CPU周期时速度非常快。完整的着色器由顶点着色器程序和片段着色器程序（也称为像素着色器）组成。这两个微程序一起工作，来操纵显卡在屏幕上显示图形。 这样就允许你实时操作渲染到显示缓冲区的位置，颜色和 alpha 信息。<br><br><i>GameMaker Studio 2</i> 支持以下着色器语言：
 
 <div class="compat">
 <table>
@@ -210,7 +101,7 @@ buffer.<br>
 
 <tr>
 <td>GLSL ES</td>
-<td>All target platforms</td>
+<td>全平台</td>
 </tr>
 
 <tr>
@@ -231,181 +122,91 @@ buffer.<br>
 </div>
 <br>
 <br>
-
-You can find out more about adding shaders from the section on the
-<a href="../../2_interface/1_editors/shaders.html">Shader
-Editor</a>.</div>
+你可以在<a href="../../2_interface/1_editors/shaders.html">Shader Editor着色器编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="fonts" id="fonts"></a> <label class="collapse" for=
 "six"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_font.png">字体（Fonts）</label>
 <input id="six" type="checkbox">
-<div class="index_list">When you want to draw text in your game
-this text will be drawn in a standard Arial 12 points font by
-default, but to make more interesting or unique looking texts you
-will probably want to use different fonts. This is where the font
-editor is used. Here you can select a font that you have on your
-computer and import it into <i>GameMaker Studio 2</i> for use in
-your game, setting various attributes like size and weight or
-style. Once imported and added as a resource, you can then set it
-for drawing using the appropriate code or actions.<br>
+<div class="index_list">当你在游戏中绘制文本时，默认情况下该文本以标准 Arial 12 号字体绘制。但是为了使字体更独特有趣，您可能希望使用其他不同的字体，这里就要用到字体编辑器了。在字体编辑器中，您可以选择您的计算机中的一种字体，将其导入 <i>GameMaker Studio 2</i> 中，以便在创作游戏的过程中使用，并设置大小，轻重，或者风格等属性。导入并添加为字体资源后，您就可以使用代码或其他操作将其变为绘图了。<br>
 <br>
 
-<div class="note"><b>注意</b>： If you are adding fonts to your game, make sure you have the licence necessary to re-distribute it, unless it is public domain or copyright free.</div>
+<div class="note"><b>注意</b>：如果您在游戏中使用某字体，请确保您拥有该字体的使用许可证，公用或者免版税字体除外。 </div>
 <br>
 <br>
-
-You can find out more about adding fonts from the section on the
-<a href="../../2_interface/1_editors/fonts.html">Font
-Editor</a>.</div>
+您可以在 <a href="../../2_interface/1_editors/fonts.html">字体编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="timelines" id="timelines"></a> <label class="collapse"
 for="seven"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_timeline.png">时间轴（Timelines）</label>
 <input id="seven" type="checkbox">
-<div class="index_list">In most games you will want certain things
-to happen at certain moments in time. Now, you can try to achieve
-this by using the <i>Alarm Events</i> in an instance, but when
-things get too complicated this won't work any more, especially as
-you are limited to only twelve alarms. That's why we have the
-timeline resource. In a timeline you specify which actions must
-happen at any specific moment in game time, and you can use all the
-actions that are available for an object in its different events as
-well as code. Once you create a time line you can then assign it to
-an object, and the instance of that object will then execute the
-actions and code at the indicated moments of time when placed or
-created within a room.<br>
-<br>
-You can find out more about adding timelines from the section on
-the <a href="../../2_interface/1_editors/timelines.html">Timeline
-Editor</a>.</div>
+<div class="index_list">在大部分游戏中，你可能希望一些事情在特定的时间里发生。您可以通过在实例中使用 <i>闹钟事件</i> 来实现该目的，但是当事情很复杂的时候，闹钟事件就不太适用了，特别是闹钟事件的设置上限为12个。这就是为什么会存在时间轴资源的原因。在时间轴中，您可以设置在游戏内事件的任何特定时刻要执行那些操作，并且可以在不同的事件以及代码中使用可用于对象的所有操作。创建时间线后，您可以将其分配给某个对象，然后该对象的实例将在所放置或者创建的房间在指定时刻执行操作以及代码。<br><br> 您可以在 <a href="../../2_interface/1_editors/timelines.html">时间轴编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="objects" id="objects"></a> <label class="collapse" for=
 "eight"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_object.png">物体（Objects）</label>
 <input id="eight" type="checkbox">
-<div class="index_list">Objects are a special resource that we use to control aspects of a game and to do specific things. Most of the time they have a sprite associated with them so that you see them in the game room, but sometimes they are used as a "behind the scenes" controller to do things related to the user or for timing, etc... 他们可以给予行为和对某些事件做出反应以及彼此,和你在游戏看到的大多数事情都是基于对象和他们的相互作用。Note that we say "based on" because you don't actually place objects directly into the game room, but rather you place <b>instances</b> of these objects, which are basically copies (or clones if you prefer) of the object resource. This is a very important thing to remember as instances and objects are not the same thing and each have their own set of functions that can affect them.<br><br>All objects have a set of properties which you can specify in the object editor, like the sprite, whether it uses physics or not, or whether it is a "child" object of another one. They also have a series of built-in variables that can then be used in actions, scripts and code. These built-in variables are used to define the position of the instance when placed in the game room, the animation speed, the direction of movement and a whole host of other things. To control how the object behaves over time, each game frame is split into a series of <b>events</b>, so you can add code or actions into a specific event and it will only run when the event is triggered, and events can be triggered by things like mouse button presses or collisions with other instances.<br><br>Objects are in a very real sense the building blocks of your game, and together with rooms will form the core of any project that you create.<br><br>You can find out more about adding objects from the section on the <a href="../../2_interface/1_editors/objects.html">Object Editor</a>.</div>
+<div class="index_list">物体是一个用来控制游戏各方面的具体事件的特殊资源。大多数时候这些对象都会关联一个精灵以便可以在房间中看见。但有时候它们也被用作“幕后”控制器来做与用户或时间相关的事情。他们可以给予行为和对某些事件做出反应以及彼此,和你在游戏看到的大多数事情都是基于对象和他们的相互作用。请注意，我们说‘基于’是因为您并不能直接把对象放置在房间中，而是将这些对象的 <b>实例</b> （相当于对象资源的副本或拷贝）放置入其中。这是非常重要的事情，因为对象和实例不一样，各自有一组可设置的属性。<br><br>
+所有对象都有一组可在对象编辑器中被设置的属性，例如链接精灵，是否使用物理规则，或者设置为其他对象的子对象。他们还具有一系列内置变量，可以在动作模块，脚本以及代码中使用。这些内置变量用于定义实例放置在游戏室中的位置，动画速度，移动方向以及其他一些内容。为了更好地控制随时间推移中的对象，每帧游戏内容都会被分割成一系列 <b>事件</b>，所以你可以将代码或动作模块添加到某一个实践中，事件只有在被触发时才会运行，事件可以通过操作鼠标或者与其他实例碰撞来触发。<br><br>
+对象实际上是游戏的构建模块，它与房间一起构成了所有游戏项目的核心。<br><br>您可以在 <a href="../../2_interface/1_editors/objects.html">物体编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="rooms" id="rooms"></a> <label class="collapse" for=
 "nine"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_room.png">房间</label>
 <input id="nine" type="checkbox">
-<div class="index_list">All games that you make in <i>GameMaker
-Studio 2</i> need at least one room to run (but can have many, many
-more) , and a room is basically a space where you place instances
-of the objects that make up your game and where the action of the
-game will take place. However the Room Editor is one of the most
-powerful of resources available to you, since it permits you to not
-only add instances of objects, but to set up the "view" into the
-game room, add the backgrounds and tiles that are drawn to create
-the game world, create extra special effects that are independent
-of the object/instance system, and as well as run code
-independently of an object. Rooms can also be set to <b>inherit</b>
-properties from other rooms, meaning that you can create a single
-room with a load of tiles, for example, and then make another room
-that inherits these tiles, so that you don't have to re-create them
-again.<br>
-<br>
-You can find out more about adding rooms from the section on the
-<a href="../../2_interface/1_editors/rooms.html">Room
-Editor</a>.</div>
+<div class="index_list">您在 <i>GameMaker Studio 2</i> 中所做的游戏至少需要一个空间来运行（当然可以不止一个），一个房间是一个基础空间，您可以在其中放置组成游戏的对象的实例，这里也是实例的事件触发和实现的场所。当然房间编辑器也是您可用的最强大的资源编辑器之一，因为它不仅允许您添加对象的实例，还可以添加图像，添加背景以及图块来绘制创建游戏世界，创建独立于对象/实例系统的额外特殊效果，以及独立于对象来运行代码。房间也可以设置从其他房间 <b>继承</b> 资源，这意味着您可以创建一个房间，然后在其中加载瓷砖，然后再创建一个房间来继承这些瓷砖，以便使您不必重复两次操作来加载瓷砖。<br><br>您可以从 <a href="../../2_interface/1_editors/rooms.html">房间编辑器</a> 中找到更多相关的信息。</div>
 <br>
 <a name="Notes" id="Notes"></a> <label class="collapse" for=
 "thirteen"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
-"../../2_interface/1_editors/images/icon_notes.png">便签</label>
+"../../2_interface/1_editors/images/icon_notes.png">注释</label>
 <input id="thirteen" type="checkbox">
-<div class="index_list">Notes are simply code editor windows which
-permit you to write anything. They are designed as a place to keep
-code snippets, game information, to-do lists, team communications,
-etc...<br>
-<br>
-You can find out more about adding notes from the section on the
-<a href="../../2_interface/1_editors/notes.html">Notes
-Editor</a>.</div>
+<div class="index_list">注释是一个允许你写任何东西的代码编辑器窗口。 它被设计为保留代码片段，游戏信息，待办事项列表，团队沟通等的地方...<br><br>您可以从 <a href="../../2_interface/1_editors/notes.html">注释编辑器</a> 的部分中找到有关添加注释的更多信息。</div>
 <br>
 <a name="included_files" id="included_files"></a> <label class=
 "collapse" for="ten"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_included.png">内含文件</label> <input id="ten" type="checkbox">
-<div class="index_list">Included files are, as the name suggests,
-any file that you wish to be included with the game bundle when you
-export the game to the target platform. These files can be anything
-from text documents to images, to zipped files and can be accessed
-using the various <a href=
-"../../3_scripting/4_gml_reference/file%20handling/index.html">File
-Functions</a>, following the rules defined by the <a href=
-"../../1_overview/3_additional_information/file_system.html">File
-System</a>.<br>
-<br>
-You can find out more about adding files from the section on
-<a href="../../2_interface/1_editors/included_files.html">Included
-Files</a>.</div>
+<div class="index_list">顾名思义，包含文件是在您将游戏导出到目标平台时，希望包含在游戏包中的所有文件。 这些文件可以是从文本文档，图像，到压缩文件，以及可以使用各种 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/index.html">文件函数</a> 进行访问，遵循 <a href=
+"../../1_overview/3_additional_information/file_system.html">文件系统 </a> 定义规则的文件。<br><br>您可以从<a href="../../2_interface/1_editors/included_files.html">包含文件</a>部分找到有关包含文件的更多信息。</div>
 <br>
 <a name="extensions" id="extensions"></a> <label class="collapse"
 for="eleven"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_sprite.png">扩展</label>
 <input id="eleven" type="checkbox">
-<div class="index_list">Extensions are additional files and code
-that you can add to extend the <i>GameMaker Studio 2</i>
-functionality as well as add assets to your game from the <a href=
-"../../2_interface/2_extras/marketplace.html">Marketplace</a>. The
-format for an extension will vary depending on the final target
-platform, although in general they are written in C++, C# or
-JavaScript, which is then parsed using <a href=
-"../../3_scripting/4_gml_reference/miscellaneous/index.html">specific
-functions</a> in GML.<br>
-<br>
-You can find out more about adding extensions from the section on
-the <a href="../../2_interface/1_editors/extensions.html">Extension
-Editor</a>.</div>
+<div class="index_list">扩展是您可以添加的附加文件和代码，以扩展 <i>GameMaker Studio 2</i> 的功能，以及从 <a href=
+"../../2_interface/2_extras/marketplace.html">Marketplace</a> 向游戏添加资源。 扩展的格式将根据最终的目标平台而有所不同，一般它们采用C ++，C＃或 JavaScript 编写，然后使用 GML 中的 <a href=
+"../../3_scripting/4_gml_reference/miscellaneous/index.html">特定函数</a> 来进行解析。<br><br>您可以从 <a href="../../2_interface/1_editors/extensions.html">扩展编辑器</a> 的部分中找到有关添加扩展的更多信息。</div>
 <br>
 <a name="options" id="options"></a> <label class="collapse" for=
 "twelve"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_options.png">选项</label>
 <input id="twelve" type="checkbox">
-<div class="index_list">The <b>Game Options</b> resource are
-comprised of a series of different options for the project as a
-whole and for each target platform that you wish to export to.
-Regardless of the platforms you have available, you will always
-have a <i>Main</i> game option resource for setting up project
-specific things like the game speed. For more information, see the
-section on the <a href=
-"../../2_interface/3_settings/game_options/index.html">Game
-Options</a>.</div>
+<div class="index_list"><b>游戏选项</b> 资源由整个项目和您希望导出的每个目标平台的一系列不同选项组成。无论您提供的平台是什么，您将始终拥有一个 <i>主要</i> 的游戏选项资源来设置特定项目，如游戏速度等。有关更多信息，请参阅 <a href=
+"../../2_interface/3_settings/game_options/index.html">游戏选项</a> 部分。</div>
 <br>
 <a name="configurations" id="configurations"></a> <label class=
 "collapse" for="fourteen"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_configs.png">配置</label>
 <input id="fourteen" type="checkbox">
-<div class="index_list">Here you can choose or create a
-configuration that you wish to use for the resource tree, and
-subsequently your whole project. When getting started
-configurations may not be that important, but as the complexity and
-number of projected target platforms grows you'll find that they
-are an invaluable tool in organising and exporting your games
-correctly. Essentially they save the current configuration of the
-different game options and export options for the resource tree,
-meaning you can have a specific configuration for Android, another
-for Windows, etc.... For more information see the page on <a href=
-"../../2_interface/3_settings/configurations.html">Configurations</a>.</div></blockquote>
+<div class="index_list">在这里，您可以选择或创建要用于资源树的配置，以及随后的整个项目。 刚入门时配置可能不是那么重要，但是随着预计目标平台的复杂性和数量的增加，您会发现它们是组织和导出您游戏的宝贵工具。 本质上，它们保存了资源树的不同游戏选项和导出选项的配置，这意味着您可以对 Android 平台进行特定配置，而另一种用于 Windows 平台等。有关详细信息，请参阅 <a href=
+"../../2_interface/3_settings/configurations.html">配置</a> 页面。</div></blockquote>
 <br>
 
-<p>If you want a more in-depth guide as to how to use the different
-editors listed here, then you should check out the section of the
-manual that explains them in more detail here:</p>
+<p>如果您想要更深入地了解如何使用这里列出的不同编辑器，那么您应该在这里查看说明手册里说明更详细的部分：</p>
 
 <blockquote>
 <ol>
 <li><a href="../../2_interface/1_editors/index.html"><span class=
-"list_link">The Editors</span></a>
+"list_link">编辑器</span></a>
 </li>
 </ol>
 </blockquote>
@@ -416,65 +217,48 @@ manual that explains them in more detail here:</p>
 <p><a name="rmb_menu" id="rmb_menu"></a>
 </p>
 
-<h2>RMB Menu</h2>
+<h2>右键菜单</h2>
 
 <p><br>
 </p>
 
-<p>When working with the resource tree, you can use the right mouse
-button <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on any resource or folder to open a
-menu of options: <img class="center" src="images/qs_rmbmenu.png"
-alt="Resource Tree RMB Menu"> The options available to you are:<br>
+<p>使用资源树时，可以在资源或文件夹上点击鼠标右键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 打开选项菜单 <img class="center" src="images/qs_rmbmenu.png"
+alt="Resource Tree RMB Menu">：您可以使用的选项有：<br>
 <br></p>
 
 <ul>
-<li><b>Create</b> - Create a new resource of the type you have
-clicked on to open the menu.<br>
+<li><b>创建</b> - 创建您打开菜单所点击类型的新资源。<br>
 <br></li>
 
-<li><b>Open Properties</b> - Open the resource properties editor
-for the clicked resource (note that you can double click
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-too).<br>
+<li><b>打开属性</b> - 打开所点击资源类型的资源属性编辑器（请注意，您也可以双击 <img style="vertical-align:middle" src="../../images/icon_lmb.png">）。<br>
 <br></li>
 
-<li><b>Add Existing</b> - Add an existing resource from a different
-<i>GameMaker Studio 2</i> project folder.<br>
+<li><b>添加现有资源</b> - 从不同的 <i>GameMaker Studio 2</i> 项目文件夹中添加现有资源。<br>
 <br></li>
 
-<li><b>Add Existing From My Library</b> - Add resources to the tree
-from an asset in your Marketplace library.<br>
+<li><b>从我的库添加现有资源 </b> - 从 Marketplace 库向资源树添加资源。<br>
 <br></li>
 
-<li><b>Import Extension</b> - Import an extension to your project
-(only available on the <b>Extensions</b> resource).<br>
+<li><b>导入扩展</b> - 导入扩展资源到您的项目（仅适用 <b>扩展</b> 资源）<br>
 <br></li>
 
-<li><b>Add Group</b> - Add a new Resource Group folder to the tree
-at the clicked position.<br>
+<li><b>添加组</b> - 在点击的位置向资源树添加新的资源组文件夹。 <br>
 <br></li>
 
-<li><b>Rename</b> - Rename the resource or the group folder.<br>
+<li><b>重命名</b> - 重命名资源或资源组文件夹。<br>
 <br></li>
 
-<li><b>Delete</b> - Delete the resource from the project (this will
-completely remove it, <i>unless</i> you are in a project view other
-than the default - see below).<br>
+<li><b>删除</b> - 从项目中删除资源（将会完全删除，<i>除非</i> 您在设置中修改了默认值- 请参见下文）。<br>
 <br></li>
 
-<li><b>Duplicate</b> - Create a duplicate of the resource that has
-been clicked.<br>
+<li><b>复制</b> - 创建所点击资源的副本。<br>
 <br></li>
 
-<li><b>Open in Explorer</b> - This will open the file explorer on
-the location of the file that has been stored for the resource in
-your project folder.</li>
+<li><b>在资源管理器中打开</b> - 打开文件资源管理器，该文件位于项目文件夹中资源文件的位置。</li>
 </ul>
 
-<p>Note that not all options will be available for all resources
-and it will depend on the resource type or the folder as to which
-ones you can use.</p>
+<p>请注意，并非所有选项都可用于所有资源类型，你可以使用哪些选项取决于资源类型或是否为文件夹。</p>
 
 <p><br>
 </p>
@@ -482,28 +266,19 @@ ones you can use.</p>
 <p><a name="project_view" id="project_view"></a>
 </p>
 
-<h2>Project Views</h2>
+<h2>项目视图</h2>
 
 <p><br>
 </p>
 
-<p>There is a section at the top of the resource tree titled
-<b>Views</b> which enables you to set up one or more custom
-resource trees to show only the parts of the project that you wish
-to work on at a time, or to organise your project in a different
-way, for example per-level. The default view is the standard
-resource tree layout outlined above, but you have two options for
-creating new views depending on what you require:</p>
+<p>资源树顶部有一个名为 <b>Views</b> 的区域，它使您能够设置一个或多个自定义资源树，以便每次只显示您要处理的项目部分，或者以不同的方式显示，例如分级。默认视图是上面列出的标准资源树布局，但是有两个选项可以让您根据需要来创建新视图。</p>
 
 <table class="icons">
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_cloneview.png" alt="Clone View">
 </td>
-<td class="text">This will create a new view of the resource tree
-cloned from the previously selected view. So if you click this on
-the default view, for example, then an exact copy will be made for
-you to then edit.</td>
+<td class="text">这将创建从先前选择的视图克隆来的资源树新视图。 因此，如果您在默认视图中单击此选项，那么它将会为您准备一个精确复制的副本，然后基于此进行编辑。</td>
 </tr>
 
 <tr>
@@ -515,53 +290,18 @@ you to then edit.</td>
 <td class="icons"><img align="middle" src="images/icon_addview.png"
 alt="Add View">
 </td>
-<td class="text">This will create a new view of the resource tree
-with no resources added to it (ie: a blank view). You can then use
-the right mouse button menu (see below) to add resources and
-organise them as you wish.</td>
+<td class="text">这将创建资源树的新视图，且不添加任何资源（即空白视图）。 然后，您可以使用鼠标右键菜单（见下文）来添加资源并根据需要进行组织。</td>
 </tr>
 </table>
 
-<p>When using any project view other than the default one, you can
-drag and drop resources wherever you wish and rename folders to be
-anything you wish too. In this way you can set up a view of the
-resource tree that suits your needs. For example, say you have a
-platform game with multiple worlds - you could create a "World
-View" of the resource tree with folders called "World 1", "World
-2", etc... and then drag the sprites, tilesets, instances and rooms
-associated with each world into the required folders. Or say you
-work in a team and you want to have an "Artists View", so you
-create a cut down resource tree that only shows the sprites,
-instances and rooms.</p>
+<p>当使用除默认项目视图之外的任何项目视图时，您可以随意拖放资源，并将文件夹重命名为任何您希望的内容。 以这种方式，您可以设置适合您需要的资源树视图。 例如，假设您有一个具有多世界的平台游戏 - 您可以使用名为 “World 1”，“World 2” 等的文件夹创建资源树的 “World View”，然后拖动精灵，图块集， 与每个世界相关联的实例和房间到所需的文件夹。 或者你在一个团队工作，你想要创建一个“艺术家视图”，那么你可以创建一个资源树，只显示精灵，实例和房间。</p>
 
-<p>You can also delete views using the button <img style=
-"vertical-align:middle" src="images/icon_deleteview.png"> (this is
-not available for the default view) and views can be renamed by
-simply clicking on the name and entering the new name you require.
-Note that the right mouse button <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> menu on the resources that are not
-in the default view is slightly different and has the following
-options: <img class="center" src="images/qs_rmb_projectmenu.png"
-alt="Project View RMB Menu"> Most of the options are obvious but it
-should be clarified that <b>Create</b> will permit you to create a
-new resource anywhere within the custom view of the project (it
-will be added into the correct resource folder in the default view
-of the resource tree), and <b>Add from default view</b> will permit
-you to carry over a resource from the default resource tree into
-the custom view. This won't be necessary if you clone the default
-view, since all current resources will be in it to start with, but
-if you use a blank view or use the <b>Delete</b> right mouse button
-option to remove the item from the new view, you will need to
-re-add it again later if required. Note that using <b>Delete</b>
-<i>does not delete the resource from the project</i> and it will
-still be visible in the default resource tree, which is the view
-you should be using if you wish to remove the resource completely
-and not just from the view.</p>
+<p>您也可以使用按钮 <img style=
+"vertical-align:middle" src="images/icon_deleteview.png"> 删除视图（不可用于默认视图），只需点击名称并输入所需的新名称即可重命名视图。 注意，不在默认视图中的资源其鼠标右键菜单 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> 略有不同，具有以下选项：<img class="center" src="images/qs_rmb_projectmenu.png"
+alt="Project View RMB Menu"> 大多数选项都是显而易见的，但应该说明，  <b>创建</b> 将允许您在项目的自定义视图中的任意位置创建新的资源（它将被添加到资源树的默认视图中的对应资源文件夹中），并 且<b>从默认视图添加</b> 选项将允许您将资源从默认资源树传输到自定义视图中。如果您选择克隆默认视图，则所有这些操作都不是必需的，因为所有当前资源都将被复制在其中，但是如果您使用空白视图或使用鼠标右键的删除选项从新视图中 <b>删除</b> 该项目，那么当需要该资源时，你需要重新添加。请注意，使用 <b>删除</b>  <i>不会从项目中删除资源</i>，并且仍将在默认资源树中显示该资源，如果您希望完全删除资源，而不仅仅是从视图中删除资源，则该视图应该是您所使用的视图。</p>
 
-<p>You should now have an idea of what the basic resources that are
-available to you to make your games are, so we'll move on and have
-a look at the general workflow when using <i>GameMaker Studio 2</i>
-and starting out on a new project.</p>
+<p>您现在应该了解了可用于制作游戏的基本资源，因此我们可以继续阅读并了解使用 <i>GameMaker Studio 2</i> 创建新项目的一般工作流程。</p>
 
 <p><br>
 </p>
@@ -577,7 +317,7 @@ and starting out on a new project.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
