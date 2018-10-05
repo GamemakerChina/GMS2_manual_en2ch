@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="将反映在对象所衍生的所有online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,47 +36,23 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>All games that you make in <i>GameMaker Studio 2</i> need at
-least one room to run (but can have many, many more) , and a room
-is just a space where you place instances of the objects that make
-up your game as well as tiles and any other graphical resources.
-When you first create a room in your resource tree you will be
-presented with a new window with which to edit its properties,
-something like this:  <img class="center" src=
+<p>所有在 <i>GameMaker Studio 2</i> 中制作的游戏至少拥有一个房间（但可以有更多），而房间只是一个空间，您可以在其中放置构成游戏的物体的实例以及图块和任何其他图形资源。 当你第一次在你的资源树中创建一个房间时，你将会看到一个新的窗口，用来编辑它的属性，如下所示： <img class="center" src=
 "../images/qs_roomeditor.png"></p>
 
-<p>By default the room tools will be placed on the left, with three
-main sections:</p>
+<p>默认情况下，房间工具将被放置在左侧，主要有三个部分：</p>
 
 <ul>
-<li><b>Layer Editor</b>: Everything in a room is placed on
-<i>layers</i>, and there are different layer types that you can
-choose from (more on this later). Layers are ordered by
-<i>depth</i> and this depth is what defines the order in which the
-layer contents will be rendered to the screen when the game runs.
-Depth ordering is from highest to lowest, so that the lower the
-depth the nearer the "camera" and the higher the depth the further
-away. For example, a layer with a depth of -300 will render over a
-layer with a depth of -100, and a layer with a depth of 1000 will
-render under everything with a depth less than this.<br>
+<li><b>层编辑器</b>: 房间中的所有东西都放在 <i>层</i>上，而且有不同的层类型可以选择（稍后会详细介绍）。层按 <i>深度</i> 排序，这个深度定义了游戏运行时层内容被渲染到屏幕上的顺序。深度排序是从最高到最低，所以深度越接近“相机”，深度越远。例如，深度为 -300 的层将在深度为 -100 的层上呈现，深度为 1000 的层将呈现在深度小于此的所有层下。<br>
 <br></li>
 
-<li><b>Layer Properties</b>: Each layer that you add to the room
-will have its own properties, and those properties will change
-depending on the layer type. This window permits you to change
-those properties and edit how the layer will be rendered.<br>
+<li><b>层属性</b>: 您添加到房间的每个层都具有自己的属性，并且这些属性将根据层类型而改变。此窗口允许您更改这些属性并编辑层的渲染方式。<br>
 <br></li>
 
-<li><b>Room Properties</b>: Rooms have a number of properties too,
-and these can be set here. Things like the room size, the camera
-view ports that are active and a few other things can be set
-here.<br>
+<li><b>房间属性</b>: 房间也有一些属性，可以在这里设置。房间也有一些属性，可以在这里设置，像房间大小，活动的摄像头视图端口和其他等等。<br>
 <br></li>
 </ul>
 
-<p>We've mentioned that there are different layer types, so let's
-just go over what they are and how they can be used when building
-your games:</p>
+<p>我们之前提到了不同的层类型，现在让我们来看看它们是什么以及在构建游戏时如何使用它们：</p>
 
 <table class="icons">
 <tr>
@@ -84,13 +60,7 @@ your games:</p>
 "../images/qs_layer_background.png" alt="背景层">
 </td>
 <td class="icons">背景层</td>
-<td class="text">The background layer is a layer that can be filled
-with a <i>single</i> colour or a <i>single</i> image. It can be
-moved and positioned within the room, and you can have multiple
-background layers. Generally this is used, as the name suggests, to
-generate a constant background fo rall the other layers in the
-room. By Default a new room will always contain a background layer,
-but you can remove it if you don't need it.</td>
+<td class="text">背景层是可以用 <i>单一</i> 颜色或 <i>单个</i> 图像填充的层。它可以在房间内移动和定位，并且一个房间可以有多个背景层。一般来说，如名字所示，此层被用来为房间里的其他层产生一个不变的背景。默认情况下，新的房间将始终包含背景层，但是如果您不需要，可以将其删除。</td>
 </tr>
 
 <tr>
@@ -103,15 +73,8 @@ but you can remove it if you don't need it.</td>
 "../images/qs_layer_instances.png" alt="实例层">
 </td>
 <td class="icons">实例层</td>
-<td class="text">The instance layer is where you place all the
-instances of the objects that you require for the game. To add an
-instance to a layer, simply click <img style=
-"vertical-align:middle" src="../../../images/icon_lmb.png"> on the
-object in the resource tree and then drag it into the room editor
-workspace. When you release the mouse button, an instance of that
-object will have been added to the room. By Default a new room will
-always contain an instance layer, but you can remove it if you
-don't need it.</td>
+<td class="text">实例层是用来放置游戏所需物体的所有实例的层。要将实例添加到层，只需单击 <img style=
+"vertical-align:middle" src="../../../images/icon_lmb.png"> 资源树中的物体，然后将其拖入房间编辑器工作区。 当您释放鼠标按钮时，该物体的一个实例将被添加到房间。默认情况下，一个新的房间将会包含一个实例层，如果你不需要它，你可以删除它。</td>
 </tr>
 
 <tr>
@@ -124,14 +87,7 @@ don't need it.</td>
 "../images/qs_layer_tilemap.png" alt="图块映射层">
 </td>
 <td class="icons">图块映射层</td>
-<td class="text">After having created a tile set, you need to add
-the tiles to your room, which is done by creating a tilemap layer.
-A tilemap layer is a layer that permits you to add tiles from any
-of the tile set resources that you have created and will be set up
-automatically to use a grid the size of the tile set cells. You can
-only add a single tile to each grid cell, so if you require
-multiple tiles to occupy the same space, then you should be using
-multiple tilemap layers.</td>
+<td class="text">在创建了一个图块集之后，您需要将图块添加到您的房间，此行为是通过创建一个图块映射层来完成的。 图块映射层是一个允许您从任何已创建的图块集资源添加图块的层，并将自动设置为使用图块集单元格大小的网格。 您只能为每个网格单元添加一个图块，因此如果您需要使多个图块占据相同的空间，则应该使用多个图块映射层。</td>
 </tr>
 
 <tr>
@@ -144,11 +100,7 @@ multiple tilemap layers.</td>
 "../images/qs_layer_path.png" alt="路径层">
 </td>
 <td class="icons">路径层</td>
-<td class="text">The path layer is the only one that does not
-actually get rendered when you run your game. This layer is more of
-a "convenience" layer for helping you to create or edit Path
-resources, since it permits you to add or edit paths within the
-actual room space.</td>
+<td class="text">路径层是唯一一个在运行游戏时不会实际渲染的层。该层更像是一个“便利”层，可以帮助您创建或编辑路径资源，因为它允许您在实际房间空间内添加或编辑路径。</td>
 </tr>
 
 <tr>
@@ -161,18 +113,8 @@ actual room space.</td>
 "../images/qs_layer_asset.png" alt="资源层">
 </td>
 <td class="icons">资源层</td>
-<td class="text">Sometimes you want a nice graphical effect but
-don't want the overhead of using an instance or don't need it to do
-anything other than draw itself. You <i>could</i> use a tilemap,
-but given that tilemaps are restricted to using a grid and only a
-single image per grid cell, they can be a bit restrictive. This is
-when you would use the asset layer. The asset layer simply takes a
-sprite resource and draws it using the paramters that you set when
-you add it into the room. Sprites can be added to this layer the
-same way that instances of objects are added to the instance layer,
-ie: you click <img style="vertical-align:middle" src=
-"../../../images/icon_lmb.png"> on the sprite in the resource tree
-and then drag it into the room editor workspace.</td>
+<td class="text">有时你需要绘制一个特别好的图形效果，但不希望使用实例以便节省性能资源或者不需要它做出了绘制自己之外的其他任何事情。  虽然 <i>可以</i> 使用图块，但是由于图块限制必须使用网格而每个网格单元只能有一个图像，所以图块映射层会产生限制。这时您需要使用资源层。资源层只需要精灵资源，并使用您在将其添加到房间时设置的参数来进行绘制。您可以将精灵资源添加到该层，就像将物体实例添加到实例层一样，即：单击 <img style="vertical-align:middle" src=
+"../../../images/icon_lmb.png"> 资源树中的精灵，然后将其拖入房间编辑器工作区。</td>
 </tr>
 </table>
 
@@ -191,7 +133,7 @@ and then drag it into the room editor workspace.</td>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

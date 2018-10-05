@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,52 +36,18 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Tile Sets</b> are created from sprites, but they are also
-classified as a separate resources since the way that <i>GameMaker
-Studio 2</i> handles them is a bit different to both sprites and
-objects. Essentially, a <i>tile</i> is simply a graphical resource
-that gets drawn to the screen with very little CPU/GPU overhead,
-making them ideal for designing any static items in levels, and a
-<i>tile set</i> is a collection of tiles created together in one
-sprite. Tiles can <b>only be rectangular</b> or <b>square</b> (if
-you want anything other than a this, then you'll need to create a
-regular sprite and use the <b>Asset Layer</b> in the room editor,
-which we'll discuss later). In this quick start guide, we'll look
-at a tile set for making walls in a top down game.</p>
+<p><b>图块集</b> 是以精灵为基础创建的，但是它们被分类为独立的资源，因为 <i>GameMaker Studio 2</i> 处理图块集的方式与精灵以及物体有点不同。从本质上讲，<i>图块</i>只是一个简单的图形资源，只需要很少的 CPU / GPU 运算就可以绘制到屏幕上，这使得它们成为设计制作所有静态项目的理想选择，<i>图块集</i> 是在一个精灵中统一创建的图块的集合。图块 <b>只能是矩形</b> 或 <b>正方形</b> （如果你想要其他形状，那么你需要创建一个普通的精灵，并使用房间编辑器中的 <b>资源层</b> ，相关内容我们将在后面讨论）。在这个快速入门指南中，我们将看到一个用于在上帝视角游戏中制作墙面的图块。</p>
 
-<p>To start with, we need to have a tile set image, which would be
-done in the sprite editor/image editor, and the final sprite would
-look something like this:  <img class="center" src=
+<p>首先，我们需要一个图块集的图像，可以在精灵编辑器/图像编辑器中完成，最终的精灵看起来像是这样： <img class="center" src=
 "../images/qs_tileset_sprite.png" alt="图块集精灵"></p>
 
-<p>Notice that the very first tile is blank in that image. The way
-that the tilemap for the room is stored in <i>GameMaker Studio
-2</i> means that tile (0) will <i>always</i> need to be blank as
-it's essentially the "delete" tile or the "empty space" tile. So,
-when creating your maps the top left corner tile will always need
-to be empty in this way. Also note that while the image above shows
-a full wall tile set with 47 tiles, you may not need so many as you
-can rotate and flip tiles when placing them in the room editor
-later.</p>
+<p>请注意，该图像中的第一个图块是空白的。<i>GameMaker Studio 2</i> 中存储房间的地图的方式意味着（0）<i>总是</i> 需要空白的，因为它本质代表了“删除”或“空白”。所以，在创建地图的时候，左上角的图块总是需要以这种方式变空。 还要注意的是，虽然上面的图片显示了一个镶满 47 块图块的完整墙面砖，但您可能不需要这么多，因为稍后将它们放置在房间编辑器中时，您可以旋转和翻转图块。</p>
 
-<p>With a sprite created, we can go ahead and define the tile set,
-which means you have to first create a new tile set resource by
-right clicking <img style="vertical-align:middle" src=
-"../../../images/icon_rmb.png"> the Tile Set resource folder and
-selecting <i>Create</i>. This will open the <b>Tile Set Editor</b>
-where you can then add the sprite and set its properties:
-<img class="center" src="../images/qs_tileset_editor.png" alt=
-"图块集编辑器"></p>
+<p>创建一个精灵后，我们可以继续来定义图块集，您需要先通过右键单击 <img style="vertical-align:middle" src=
+"../../../images/icon_rmb.png"> 图块集资源文件夹并选择 <i>创建</i> 来创建新的图块集资源。之后会打开 <b>图块集编辑器</b>，然后添加精灵并设置其属性：</p>
 
-<p>We have set tile set size to 32px, and we have left the rest of
-the values at their default, since we have no need of offsets or
-anything like that. You can now close the tile set editor, as you
-can use the tile set "as is" to create tilemap layers in the room
-editor. If you want to know more about the advanced functions of
-the Tile Set Editor, then see the <a href=
-"../../../2_interface/1_editors/tilesets.html">relevant section of
-the manual</a>. Now to move on to creating sound effects for your
-project...</p>
+<p>我们已经将图块集的大小设置为32px，并且将其余的值保持为默认值，因为我们不需要偏移或其他类似的操作。 您现在可以关闭图块集编辑器，并且您可以使用图块集“按原样”在房间编辑器中创建图块图层。 如果您想了解更多关于图块集编辑器的高级功能的信息，请 <a href=
+"../../../2_interface/1_editors/tilesets.html">参阅手册的相关章节</a>。 现在我们来继续为您的项目创建声音效果...</p>
 
 <p><br>
 </p>
@@ -97,7 +63,7 @@ project...</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

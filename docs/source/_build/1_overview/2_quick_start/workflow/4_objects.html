@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="将反映在对象所衍生的所有online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,77 +36,31 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>With the resources you have seen so far you can add some nice images and sounds to the game resource tree, but they don't do anything in the game itself yet!For that we need the most important resource of <i>GameMaker Studio 2</i>, the <b>Object</b> resource. Objects are a special resource that we use to control aspects of a game and to do specific things. Most of the time they have a sprite associated with them so that you can see them in the game rooms, but sometimes they are used as a "behind the scenes" <i>controller</i> to do things related to the user or for timing, etc... 他们可以给予行为和对某些事件做出反应以及彼此,和你在游戏看到的大多数事情都是基于对象和他们的相互作用。</p>
+<p>到目前为止你可以添加漂亮的图像和优美的声音资源，但是它们还没有在游戏内做任何事！为此，我们需要创建 <i>GameMaker Studio 2</i> 最重要的资源，即 <b>物体</b> 资源。物体是一个用来控制游戏各方面的具体事件的特殊资源。大多数时候，他们会有一个与其相关联的精灵，以便可以在游戏房间中看到他们，但有时他们被用作“幕后” <i>控制器</i> 来做与用户有关的事情或计时等。他们可以给予行为和对某些事件做出反应以及彼此,和你在游戏看到的大多数事情都是基于物体和他们的相互作用。</p>
 
-<div class="note"><b>IMPORTANT!</b> In a game made with
-<i>GameMaker Studio 2</i>, the characters, monsters, balls, walls,
-etc... are all <b>instances</b> copied from a basic object template
-that is found in the resource tree and then placed in a room. So
-when we talk about something affecting or changing an
-<b>instance</b>, we mean that one particular copy of an object in a
-room is being affected while all the rest are not, but when we talk
-about affecting or changing an <b>object</b> we mean that anything
-we do to it will be reflected in all the instances created from
-that point on too. So, <b>the object is the template for the
-instance, and the instance is what we place in a room to make our
-game</b>.</div>
+<div class="note"><b>重要！</b> 在用 <i>GameMaker Studio 2</i> 制作的游戏中，角色，怪物，球，墙等等都是从资源树中找到的基本物体模板中复制的 <b>实例</b>，然后放置在一个房间中。所以当我们谈论影响或改变一个 <b>实例</b> 时，我们的意思是某个房间中某个物体的一个特定副本受到影响，而其余的则不受影响，但是当我们谈论影响或改变一个 <b>物体</b> 时，我们的意思是我们所做的所有事情也将反映在物体所衍生的所有实例中。所以，<b>物体是实例的模板，实例是我们用来放置在房间里制作游戏的</b>。</div>
 
-<p>To create a new object resource, it's the same as for every
-other resource and you simply right click <img style=
-"vertical-align:middle" src="../../../images/icon_rmb.png"> on the
-Objects resource folder and selecting <i>Create</i>. <img class=
+<p>要创建一个新的物体资源，与其他资源相同，只需右键单击 <img style=
+"vertical-align:middle" src="../../../images/icon_rmb.png"> 对象资源文件夹并选择 <i>创建</i>。<img class=
 "center" src="../images/qs_objecteditor.png"></p>
 
-<p>This is the object editor window and shows the current
-properties, and the first thing you should do is name the object,
-again using a prefix like "obj_" or some other identifier. In
-general, or an object to draw anything and register collisions with
-instances of other objects it needs to have a sprite which is added
-using the <img style="vertical-align:middle" src=
-"../images/icon_addsound.png"> button. This will open the <b>Asset
-Explorer</b> where you can select the sprite to use: <img class=
+<p>这是物体编辑器窗口，显示当前属性，你首先应该做的事情是使用 “obj_” 或其他标识符等前缀命名物体。一般来说，除非这个物体用来绘制一些事物，或者与其他物体的实例产生碰撞，否则它需要有一个精灵，可以使用按钮 <img style="vertical-align:middle" src=
+"../images/icon_addsound.png"> 添加。这将会打开 <b>资源管理器</b>，您可以在其中选择要使用的精灵：<img class=
 "center" src="../images/qs_assetexplorer.png"></p>
 
-<p>If you do not have an appropriate sprite yet, you can click
-<img style="vertical-align:middle" src=
-"../../../images/icon_lmb.png"> on the New Sprite button
-<img style="vertical-align:middle" src=
-"../images/icon_newsprite.png"> to create a new sprite resource and
-edit it as you wish, just as if you had created the resource
-through the standard resource create options, only now it will
-automatically be assigned to the object that you had open when you
-started to create it. Once you select a resource you can also click
-<img style="vertical-align:middle" src=
-"../../../images/icon_lmb.png"> on the Edit Sprite <img style=
-"vertical-align:middle" src="../images/icon_editsprite.png"> or
-Edit Image <img style="vertical-align:middle" src=
-"../images/icon_editimage.png"> buttons to edit either the image
-itself or the sprite resource. This can be faster than first
-finding the resource in the list of resources and then indicating
-you want to edit it.</p>
+<p>如果你还没有合适的精灵，你可以点击 <img style="vertical-align:middle" src=
+"../../../images/icon_lmb.png"> 创建精灵按钮 <img style="vertical-align:middle" src=
+"../images/icon_newsprite.png"> 来创建一个新的精灵资源并按照你的意愿来进行编辑，就像你通过标准资源创建选项来创建资源一样，只是现在它会自动分配给您开始创建前所打开的物体。一旦你选择一个资源，你也可以点击 <img style="vertical-align:middle" src=
+"../../../images/icon_lmb.png"> 编辑精灵 <img style=
+"vertical-align:middle" src="../images/icon_editsprite.png"> 或编辑图像 <img style="vertical-align:middle" src=
+"../images/icon_editimage.png"> 按钮来编辑图像本身或精灵资源。这比首先在资源列表中查找资源然后再进行编辑资源可能要快。</p>
 
-<p>Once selected the sprite you can change a few other properties
-like whether it should be visible or not - for example - or what
-kind of collision mask it should have. For simple games you
-probably don't need to change anything here and can now go on to
-add <b>Events</b> to the object. Basically, events are discreet
-moments in the game loop where things are made to happen based on
-what you have programmed for them. <i>GameMaker Studio 2</i> works
-with cycles of these events - from the moment a room is started to
-the moment it is finished there is a game loop running where every
-step (a step is a moment in game time, governed by the game speed
-setting) a series of events are run, and you can choose to place
-code or DnD™ actions in your instances that respond to these
-events.</p>
+<p>一旦选择了精灵，你可以改变一些其他属性，比如它是否可见 ， 或者它应该具有什么形状的碰撞盒。对于简单的游戏来说，你可能不需要在这里改变一些属性。现在继续，添加一些 <b>事件</b> 到物体。基本上，事件是游戏循环中根据你为它们所做的设计发生事情的重要时刻。<i>GameMaker Studio 2</i> 根据这些事件组成的循环来进行工作 - 一个房间从开始到完成，即为一个游戏循环运行，每一步（游戏时间的一个步骤，由游戏速度控制） 一系列事件将会运行，您可以选择将代码或拖放模块放入响应这些事件的实例中。</p>
 
-<p>To add an event you click <img style="vertical-align:middle"
-src="../../../images/icon_lmb.png"> on the <i>Add Event</i> button:
-<img class="center" src="../images/qs_objecteditor_events.png"></p>
+<p>要添加事件，请单击 <img style="vertical-align:middle"
+src="../../../images/icon_lmb.png">  <i>添加事件</i> 按钮：<img class="center" src="../images/qs_objecteditor_events.png"></p>
 
-<p>Above you can see all the different <b>Event Categories</b>,
-some of which contain other sub-categories. We won't go through all
-the events here, but we will cover the five most important ones
-briefly:</p>
+<p>在下面的图片中，您可以看到所有的 <b>事件类别</b>，其中一些还包含子类别。我们不会在这里介绍所有种类的事件，但我们会简要地介绍五个最重要的事件：</p>
 
 <table class="icons">
 <tr>
@@ -114,13 +68,7 @@ briefly:</p>
 "../images/qs_event_create.png" alt="创建事件">
 </td>
 <td class="icons">创建事件</td>
-<td class="text">This event happens when an instance of the object
-is first created, and is the very first thing that happens within
-an instance that has been placed in the room through the room
-editor when a room is entered. This means that this event is the
-ideal place to initialize variables, start Timelines, set paths
-etc... and do anything else that generally only needs to be done
-once or only when an instance first appears in the room.</td>
+<td class="text">当一个物体的实例第一次被创建时，这个事件就会发生，并且是在进入房间时通过房间编辑器放置在房间中的实例发生的第一件事情。这意味着这个事件是进行初始化变量，启动时间轴，设置路径以及只需要执行一次或者只有当一个实例第一次出现在房间里时才做的事情的最理想方式。</td>
 </tr>
 
 <tr>
@@ -133,15 +81,7 @@ once or only when an instance first appears in the room.</td>
 "../images/qs_event_step.png" alt="步事件">
 </td>
 <td class="icons">步事件</td>
-<td class="text"><i>GameMaker Studio 2</i> splits game time into
-<i>steps</i> with the game speed defining how many of these steps
-there are supposed to be per second. A step, is basically the loop
-that runs constantly with all the events being checked and
-triggered as necessary while the game runs, so as you can imagine,
-the Step Event is an event that is checked every single step of the
-game while the instance exists. Note that the Step Event category
-has three sub-categories to "fine tune" timing within the instance,
-but in general you will use the main Step Event most.</td>
+<td class="text"><i>GameMaker Studio 2</i> 将游戏时间分成若干个 <i>步</i>，游戏速度定义了每秒应该执行的步数量。一个步，是一个所有事件在游戏运行时被检查和触发的基础循环运行，所以你可以想到，步事件是一个每一步都会被检查和触发一遍的事件。 请注意，“步事件”类别下有三个子类别可以在实例中“微调”时间，但是一般情况下，您最常使用的是主要步事件。</td>
 </tr>
 
 <tr>
@@ -154,13 +94,7 @@ but in general you will use the main Step Event most.</td>
 "../images/qs_event_collision.png" alt="碰撞事件">
 </td>
 <td class="icons">碰撞事件</td>
-<td class="text">Obviously when making a game, it is very important
-that you know when two (or more) instances of an object have
-collided, and for that we have the collision event. This is an
-event that you place in an object and then specify against which
-other object you should be checking for collisions. Once you have
-added the event and chosen the object to check for you can add code
-or DnD™ to resolve the collision.</td>
+<td class="text">显然，在制作游戏时，知道物体的两个（或多个）实例是否发生碰撞以及触发碰撞事件是非常重要的。 这是一个放置于一个物体，然后指定对其他物体进行碰撞检查的事件。 一旦添加该事件并选择物体来进行碰撞检查就可以添加代码或 DnD™ 来定义碰撞发生后触发的行为。</td>
 </tr>
 
 <tr>
@@ -173,21 +107,7 @@ or DnD™ to resolve the collision.</td>
 "../images/qs_event_draw.png" alt="绘制事件">
 </td>
 <td class="icons">绘制事件</td>
-<td class="text">There are multiple different Draw Events within
-the draw event category, but the one you use most is the one at the
-top simply called "Draw". This general draw event will be caled,
-like the step event, every game frame, but it works in two
-different ways. The first is when you <i>don't</i> add any code or
-DnD™ to the event, in which case it will "default draw" the sprite
-assigned, using any transforms that have been applied elsewhere in
-the object (like to change its size or alpha blending). The second
-way it works is when you add code or DnD™ to it. Adding something
-to the event tells <i>GameMaker Studio 2</i> "I want to control
-what you draw for instances of this object" and it completely
-over-rides the default draw. This means that you can have an object
-with a sprite assigned, then set the draw event to draw text and
-the sprite will not be drawn as you have not told <i>GameMaker
-Studio 2</i> to draw it, although the text will be.</td>
+<td class="text">绘图事件类别中有多个不同的绘图事件，但最常用的绘图事件是顶部的绘图事件，简称为“绘制”。 这个普通绘图事件和步骤事件一样，每一个游戏帧都会被检测和触发，但是它有两种不同的工作方式。 首先是当你 <i>不</i> 添加任何代码或拖拽模块时，在这种情况下，它将“默认绘制”被分配的精灵，使用所有已应用在物体上的其他变换（如改变其大小或阿尔法混合）。 第二种方式是当你添加代码或 DnD™ 时。 向事件添加一些内容告诉 <i>GameMaker Studio 2</i> “我想控制你为这个物体的实例绘制的内容”，它会完全覆盖默认的绘制。 这意味着你可以有一个关联了精灵的物体，然后设置绘制事件来绘制文本，但精灵将不会被绘制，因为你还没有告诉 <i>GameMaker Studio 2</i> 绘制它，尽管文本（也没有告诉 GameMaker Studio 2 但却）会被绘制。</td>
 </tr>
 
 <tr>
@@ -200,37 +120,23 @@ Studio 2</i> to draw it, although the text will be.</td>
 "../images/qs_event_destroy.png" alt="销毁事件">
 </td>
 <td class="icons">销毁事件</td>
-<td class="text">This event is the very last event to be executed
-when an instance is destroyed. It is often overlooked when adding
-behaviours to objects, but it can be very useful - for example, for
-creating explosion or particle effects when an enemy is killed, or
-for re-spawning a new instance of the object in another part of the
-room, or even for adding points onto a score.</td>
+<td class="text">此事件是一个实例被销毁时所执行的最后一个事件。 在向物体添加行为时往往会被忽略，但它可能非常有用 - 例如，在敌人死亡时创建爆炸或粒子效果，或者在房间的另一部分重新产生物体的新实例， 以及用于添加分数。</td>
 </tr>
 </table>
 
-<p>For further information on all the different events, please see
-<a href=
-"../../../2_interface/1_editors/events/index.html">here</a>.</p>
+<p>有关所有类型事件的更多信息，请参阅 <a href=
+"../../../2_interface/1_editors/events/index.html">此处</a>。</p>
 
-<p>Adding an event will open either the code editor or the Drag and
-Drop editor, depending what type of project you are creating. In
-this window you can now add the code or actions that you wish to be
-performed each time that event is triggered within the game loop. A
-typical object with events and code will look like this:
-
+<p>添加事件将打开代码编辑器或拖拽编辑器，具体取决于您创建的项目类型。 在这个窗口中，您可以添加您希望在游戏循环内每次触发事件时执行的代码或操作。 一个具有事件和代码的典型物体如下图所示：
 <img class="center" src="../images/qs_objecteditor_chain.png"></p>
 
-<p>Using DnD™ or code to program the game is outside of the scope
-of this basic Quick Start guide, but you can find more information
-from the two pages given below:</p>
+<p>使用 DnD™ 或代码编写游戏不属于本基本快速入门指南的范围，但您可以从以下两页中找到更多信息：</p>
 
 <blockquote>
 <ol>
 <li><a href=
 "../../../3_scripting/1_drag_and_drop_overview/index.html"><span class="list_link">
-
-Drag and Drop™ Overview</span></a>
+Drag and Drop™ 概览</span></a>
 </li>
 
 <li><a href=
@@ -240,21 +146,18 @@ Drag and Drop™ Overview</span></a>
 </ol>
 </blockquote>
 
-<p>And you can find a full explanation of all the different parts
-of the <b>Object Editor</b> here:</p>
+<p>你可以在这里找到 <b>物体编辑器</b> 所有部分的完整解释：</p>
 
 <blockquote>
 <ol>
 <li><a href=
 "../../../2_interface/1_editors/objects.html"><span class=
-"list_link">Editors: The Object Editor</span></a>
+"list_link">编辑器：物体编辑器</span></a>
 </li>
 </ol>
 </blockquote>
 
-<p>The next part of this guide will look at the <b>Room Editor</b>,
-where everything you've learned so far comes together to make your
-projects into games...</p>
+<p>本指南的下一部分将着眼于 <b>房间编辑器</b>，在这里您学到的所有东西都将汇聚在一起，使您的项目真正成为游戏。</p>
 
 <p><br>
 </p>
@@ -270,7 +173,7 @@ projects into games...</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

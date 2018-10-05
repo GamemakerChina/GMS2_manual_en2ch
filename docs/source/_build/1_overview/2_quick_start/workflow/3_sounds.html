@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,48 +36,18 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>All games have to have sound effects, and most also have music,
-which means that you need to be able to add them to your game in
-<i>GameMaker Studio 2</i>. This is done through the <b>Sound
-Editor</b>, which is opened whenever you create a new Sound
-Resource.  <img class="center" src=
+<p>所有游戏都必须有音效，大多数游戏还有音乐，这意味着你需要在 <i>GameMaker Studio 2</i> 中为游戏添加音效以及音乐。这些操作是通过 <b>声音编辑器</b> 来完成的，需要你创建一个新的声音资源。 <img class="center" src=
 "../images/qs_soundeditor.png"></p>
 
-<p>Sounds in <i>GameMaker Studio 2</i> can be uncompressed or
-compressed, with compressed sounds having additional options on how
-to deal with them at run time. Uncompressed sounds are those that
-have been saved as <tt>WAV</tt> format files, while compressed
-sounds can be either <tt>MP3</tt> or <tt>OGG</tt> format. In
-general you'll want small sound effects to be <tt>WAV</tt> and
-larger effects or music to be <tt>MP3</tt> or <tt>OGG</tt>. As with
-the other different resources, it is recommended that you name your
-sounds using an appropriate prefix like "snd_" so you can easily
-identify it later.</p>
+<p><i>GameMaker Studio 2</i> 中的声音可以是压缩或未压缩的，压缩的声音在运行库中有更多的选项来进行处理。未压缩的声音是保存为 <tt>WAV</tt> 格式文件的声音，而压缩后的声音一般是 <tt>MP3</tt> 或 <tt>OGG</tt> 格式。一般来说，小规格的声音效果一般是 <tt>WAV</tt> 格式，而大规格的声音效果以及音乐则使用 <tt>MP3</tt> 或 <tt>OGG</tt> 格式。与其他的资源一样，建议您使用合适的前缀（如“snd_”）来命名您的声音，以便以后可以轻松识别。</p>
 
-<p>Adding a sound is as simple as clicking the add sound button
-<img style="vertical-align:middle" src=
-"../images/icon_addsound.png"> and then browsing in the file
-explorer that opens to the file you want t use. Once you have
-selected one and loaded it in, you can then preview it using the
-playback controls shown as well as change certain attributes for
-how the file should be exported. if you aren't sure about this,
-then simply leave everything "as-is", although if you are adding
-music or <tt>MP3</tt> format sounds you should probably change to
-the <i>Compressed - Not Streamed</i> format. You can find further
-information on the sound editor <a href=
-"../../../2_interface/1_editors/sounds.html">here</a>.</p>
+<p>添加声音非常简单，只需单击 <img style="vertical-align:middle" src=
+"../images/icon_addsound.png"> 添加声音按钮，然后在打开的文件浏览器中浏览您要使用的文件。一旦你选择了文件并加载，你就可以使用显示中的播放控件预览它，并改变文件的某些属性例如应该如何导出等。如果您不确定这一点，那么只需选择为“按原样”即可，但如果您要添加音乐或 <tt>MP3</tt> 格式的声音，则应该更改为 <i>压缩 - 非流式</i> 格式。你可以在 <a href=
+"../../../2_interface/1_editors/sounds.html">这里</a> 找到更多关于声音编辑器的信息。</p>
 
-<p>Note that sounds take up a lot of space on disk, so you should
-be careful when creating them for your game projects. Do you really
-need a 48KHz sound effect that only plays for a fraction of a
-second? Probably not so, think about reducing the sample rate here
-to 11025 or 22050 for effects, and for longer things like music or
-for looping effects think also about using a compressed format.
-Note too that if you plan on using 3D positional audio effects,
-then the initial sound file <i>must</i> be mono.</p>
+<p>请注意，声音在磁盘中会占用大量空间，所以在创建游戏项目时应该注意。你真的需要一个只有几分之一秒的 48KHz 音效吗？可能并不是这样，考虑将采样率降至 11025 或 22050 以获得相近的效果，对于音乐或循环效果等持续时间较长的音效，也可考虑使用压缩格式。还要注意的是，如果您打算使用3D音效，则初始声音文件 <i>必须</i> 是单声道的。</p>
 
-<p>You can close the sound editor now and we can move on to
-creating Objects...</p>
+<p>你现在可以关闭声音编辑器了，我们来继续创建物体...</p>
 
 <p><br>
 </p>
@@ -93,7 +63,7 @@ creating Objects...</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
