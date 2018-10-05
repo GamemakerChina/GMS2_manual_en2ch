@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,70 +40,57 @@ if (window.name != "content")
 "_blank">Git</a>工具。</p>
 
 <blockquote><a name="prefs_plugins_git" id="prefs_plugins_git"></a>
-<label class="collapse" for="one">源代码控制(Git)</label>
+<label class="collapse" for="one">源码控制(Git)</label>
 <input id="one" type="checkbox">
 <div class="index_list"><img class="center" src=
 "images/plugins_git_prefs.png" alt="插件 Git SCM 偏好设置">
-<p>本节讨论要求让 <b>Git SCM</b>在<i>GameMaker Studio 2</i>上能够使用的偏好设置。First you have the set of general options:</p>
+<p>本节讨论要求让 <b>Git SCM</b>在<i>GameMaker Studio 2</i>上能够使用的偏好设置。有如下常规选项：</p>
 
 <ul>
-<li><b>Automatically open source control output window</b>: When this is checked, the source control output window will be shown automatically when something changes. 该选项默认为“开”。<br>
+<li><b>自动打开源码控制输出窗口</b>: 勾选此选项，在某些修改时源码控制输出窗口会自动打开。该选项默认为“开”。<br>
 <br></li>
 
 <li><b>启用详细日志记录（Verbose Logging）</b>：Git 启用详细日志记录输出日志。该选项默认为关<br>
 <br></li>
 </ul>
-
-Next is the <i>User Identity</i> section with the following fields
-which are required to be filled in:
-
-
+接下来是 <i>用户标识</i> 部分，其中需要填写以下字段：
 
 <ul>
-<li><b>用于提交的用户名（Username to commit as）</b>：在这里你必须输入你将做任何提交到Gi时所使用的用户名（它必须同Git仓库所指定的用户名一致）。<br>
+<li><b>提交的用户名</b>：在这里你必须输入你将做任何提交到Gi时所使用的用户名（它必须同Git仓库所指定的用户名一致）。<br>
 <br></li>
 
-<li><b>用于提交的邮箱（Email to commit as）</b>：与此Git身份关联的邮箱。<br>
+<li><b>提交的邮箱地址</b>：与此Git身份关联的邮箱。<br>
 <br></li>
 </ul>
 
-<p>After setting up the User Identity, you can then add a new
-username/password combination for authentication by clicking the
-button labelled <b>Add new User/Pass authentication</b>, which will
-open the following window with different fields for you to fill in:
-
+<p>设置好用户身份后，您可以通过点击<b>添加新用户/通过认证</b>的按钮添加新的用户名/密码组合进行身份验证，这将打开以下窗口，您可以在此填写字段。
 <img class="center" src="images/plugins_git_userpass.png" alt=
 "Plugins Git SCM Preferences - Add new User"></p>
 
-<p>You can also <b>Add a new SSH keypair authentication</b> by
-clicking the button with that label. This will open the following
-window for you to fill in:  <img class="center" src=
+<p>你还可以通过单击具有 SSH 标签的按钮 <b>添加以 SSH 密钥验证身份的账户</b> 。 这将打开以下窗口，供你填写： <img class="center" src=
 "images/plugins_git_sshkey.png" alt=
 "Plugins Git SCM Preferences - Add new SSH keypair"></p>
 
-<p>Below these buttons you can then set up the <i>Merge Tool</i>
-and the <i>Diff Tool</i> for SCM with these options:</p>
+<p>使用以下这些按钮，您可以设置 <i>合并工具</i> 选项 和 SCM 的  <i>差异工具</i> 选项：</p>
 
 <ul>
-<li><b>合并工具路径（Path to Merge Tool）</b>：在此处指定 Git 合并工具的完整文件路径。<br>
+<li><b>合并工具位置</b>：在此处指定 Git 合并工具的完整文件路径。<br>
 <br></li>
 
-<li><b>合并工具选项（Options for Merge Tool）</b>：在此字段你可以添加任何额外的命令，在使用合并工具时都将运行。<br>
+<li><b>合并工具选项</b>：在此字段你可以添加任何额外的命令，在使用合并工具时都将运行。<br>
 <br></li>
 
-<li><b>Path to Diff Tool</b>: Here you specify the full file path
-to the Git diff tool.<br>
+<li><b>差异工具位置</b>: 在此处指定 Git 差异工具的完整文件路径。<br>
 <br></li>
 
-<li><b>Options for Diff Tool</b>: In this field you can add any
-extra commands to be run whenever you use the Diff Tool.<br>
+<li><b>差异工具选项</b>: 在此字段你可以添加任何额外的命令，在使用差异工具时都将运行。<br>
 <br></li>
 </ul>
 
-<p>Finally, after setting those up you have one last option:</p>
+<p>最后一个选项：</p>
 
 <ul>
-<li><b>Automatically enable source control</b>: When this is checked, source control will be enabled for all new projects automatically. 该选项默认为关<br>
+<li><b>自动启用源码控制</b>: 选中此项，将自动为所有新项目启用源代码管理。该选项默认为关<br>
 <br></li>
 </ul></div></blockquote>
 
@@ -117,12 +104,12 @@ extra commands to be run whenever you use the Diff Tool.<br>
 <div style="float:left">上一页：<a href=
 "../7_preferences.html">偏好设置索引</a></div>
 
-<div style="float:right">下一页 <a href=
+<div style="float:right">下一页：<a href=
 "prefs_runtime.html">运行库</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
