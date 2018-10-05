@@ -216,8 +216,8 @@
       <tuv lang="EN-US">
         <seg>(67108864 by the way!), well we can use the syntax above to easily set flags like this:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T145155Z" creationid="36011" creationdate="20170321T145155Z">
-        <seg>（顺便一提，是67108864！），而我们可以通过上述用法很容易地将标记设置成这样：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150301Z" creationid="36011" creationdate="20170321T145155Z">
+        <seg>（顺便一提，是 67108864！），而我们可以通过上述用法很容易地将标记设置成这样：</seg>
       </tuv>
     </tu>
     <tu>
@@ -690,6 +690,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170322T045611Z" creationid="36011" creationdate="20170322T045611Z">
         <seg>第三方支持</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>4 * 2 = 8.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T144246Z" creationid="tpxxn" creationdate="20181005T144231Z">
+        <seg> 4 * 2 = 8。</seg>
       </tuv>
     </tu>
     <tu>
@@ -7611,6 +7619,14 @@ Add-ons应该怎么翻译？</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Again, all the bits move on one, and that multiples by 2.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145613Z" creationid="tpxxn" creationdate="20181005T145452Z">
+        <seg>所有的位都左移 1 位，这是乘以 2 的情况。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Age Rating:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170103T075730Z" creationid="deciia" creationdate="20170103T075724Z">
@@ -7912,6 +7928,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170111T133450Z" creationid="36011" creationdate="20170111T133450Z">
         <seg>所有目标平台都有两个编译选项：一个是&lt;b0&gt;VM&lt;/b0&gt;，它使用一个运行器来解释代码；另一个是&lt;b1&gt;YYC&lt;/b1&gt;，是创建本机代码并编译可执行程序。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>All the bits in this case have moved to the left by one, making it move from the 3rd bit, to the 4th, and changing the value from 4 to 8.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145408Z" creationid="tpxxn" creationdate="20181005T145408Z">
+        <seg>这里所有的位都向左移动了 1 位，使它从 3 位变成 4 位，值从 4 变成 8。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9579,8 +9603,8 @@ Add-ons应该怎么翻译？</note>
       <tuv lang="EN-US">
         <seg>As a very simple example, in the past multiplying by 32 might have taken several CPU cycles to execute, while a simple binary operation to do the same thing would have taken only 1.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170316T004951Z" creationid="deciia" creationdate="20170316T004951Z">
-        <seg>一个非常简单的例子，过去乘以32可能需要几个CPU周期来执行，而简单的二进制运算同样的事情只需要一次。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135415Z" creationid="deciia" creationdate="20170316T004951Z">
+        <seg>一个非常简单的例子，过去乘以 32 可能需要几个 CPU 周期来执行，而简单的二进制运算同样的事情只需要一次。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9659,8 +9683,8 @@ Add-ons应该怎么翻译？</note>
       <tuv lang="EN-US">
         <seg>As machines have gotten more complex, they have also reduced the time many complex instructions take to run so that now, a 32x32 bit multiply might well only take 1 cycle - same as the binary operator.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170316T005237Z" creationid="deciia" creationdate="20170316T005237Z">
-        <seg>因为机器已经变足够复杂了，这也减少了很多复杂指令的运行时间，一个32x32位乘法可能也只需要一个周期 - 同二进制运算一样的效率。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135516Z" creationid="deciia" creationdate="20170316T005237Z">
+        <seg>因为机器已经变足够复杂了，这也减少了很多复杂指令的运行时间，一个 32 x 32 位乘法可能也只需要一个周期 - 同二进制运算一样的效率。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9779,8 +9803,8 @@ Add-ons应该怎么翻译？</note>
       <tuv lang="EN-US">
         <seg>As you can see, where there is a bit in each value, the bit is kept, and where there is a mix or 0's and 1's these are reset to 0.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T011539Z" creationid="deciia" creationdate="20170322T011539Z">
-        <seg>如你所见，相同位的值一样时，值将保留（都为1，则为1），而值是混合的，一个是0，一个是1，则为0（一个不为1，则为0）。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135900Z" creationid="deciia" creationdate="20170322T011539Z">
+        <seg>如你所见，相同位的值一样时，值将保留（都为 1，则为 1），而值是混合的，一个是 0，一个是 1，则为0（一个不为 1，则为 0）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -9995,8 +10019,8 @@ Add-ons应该怎么翻译？</note>
       <tuv lang="EN-US">
         <seg>At the beginning of the computer era, binary and hex (hexadecimal) were a way of life, probably because high level languages (such as BASIC) were simply too slow.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170316T002609Z" creationid="deciia" creationdate="20170316T002609Z">
-        <seg>计算机的早期时代，二进制和十六进制是一种生活方式，可能是因由高级语言（如BASIC）简直太慢了（计算机速度也慢）。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135402Z" creationid="deciia" creationdate="20170316T002609Z">
+        <seg>计算机的早期时代，二进制和十六进制是一种生活方式，可能是因由高级语言（如 BASIC）简直太慢了（计算机速度也慢）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11504,6 +11528,14 @@ Add-ons应该怎么翻译？</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Being human, we can add all the 9's together, carry the 2 and then on we go!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145858Z" creationid="tpxxn" creationdate="20181005T142811Z">
+        <seg>作为人类，我们可以将所有的 9 加在一起，得到进位数 2！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Below Objects</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170219T010241Z" creationid="deciia" creationdate="20170219T010241Z">
@@ -12400,6 +12432,14 @@ Add-ons应该怎么翻译？</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>But computers can't do that - what they &lt;i0&gt;can&lt;/i0&gt; do is this: (19 + 19) + 19.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T143421Z" creationid="tpxxn" creationdate="20181005T142816Z">
+        <seg>但计算机无法做到这一点 - 他们 &lt;i0&gt;能&lt;/i0&gt; 做的是：（19 + 19）+ 19。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>But first, let's take a practical example.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170321T234653Z" creationid="36011" creationdate="20170321T234648Z">
@@ -12426,8 +12466,8 @@ Add-ons应该怎么翻译？</note>
       <tuv lang="EN-US">
         <seg>But why the 31?</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T235542Z" creationid="36011" creationdate="20170321T235542Z">
-        <seg>但为什么会有31？</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T151033Z" creationid="36011" creationdate="20170321T235542Z">
+        <seg>但为什么会是 31？</seg>
       </tuv>
     </tu>
     <tu>
@@ -14498,8 +14538,8 @@ Add-ons应该怎么翻译？</note>
       <tuv lang="EN-US">
         <seg>Clearing these bits (as we saw above) is simply a matter of using the NOT modifier, like this:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T145938Z" creationid="36011" creationdate="20170321T145938Z">
-        <seg>而清空这些位（如上文所见）只是使用位非修饰符的问题，像这样：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150555Z" creationid="36011" creationdate="20170321T145938Z">
+        <seg>而清空这些位（如上文所见）只是使用位非修饰符（~）的问题，像这样：</seg>
       </tuv>
     </tu>
     <tu>
@@ -15673,6 +15713,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170321T233658Z" creationid="36011" creationdate="20170321T150245Z">
         <seg>压缩数据结构是一件非常好的事情，因为如果你使用的内存越少，缓存丢失的也就越少，而你的代码就可以运行地更快。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Computers only multiply in 2s, and to do more it'll break a number apart, and then add all the results together.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150011Z" creationid="tpxxn" creationdate="20181005T144227Z">
+        <seg>计算机只能在 2 以内相乘，为了乘以更大的数，它会先将数字分开，然后将所有结果加在一起。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21439,16 +21487,16 @@ Add-ons应该怎么翻译？</note>
       <tuv lang="EN-US">
         <seg>Each 1 or 0 represents a single &lt;i0&gt;bit&lt;/i0&gt; of data, and as you can see this means that in binary, 10 equals 2!</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T235657Z" creationid="deciia" creationdate="20170317T160816Z">
-        <seg>每个 1 或 0 代表一个单个 &lt;i0&gt;位&lt;/i0&gt; 数据，“10”等于2！</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135520Z" creationid="deciia" creationdate="20170317T160816Z">
+        <seg>每个 1 或 0 代表一个单个 &lt;i0&gt;位&lt;/i0&gt; 数据，“10” 等于 2！</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>Each bit is &lt;i1&gt;2 times the previous value&lt;/i1&gt; with the first bit being equal to 1.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T161255Z" creationid="deciia" creationdate="20170317T161255Z">
-        <seg>首位等于1，每一位 &lt;i1&gt;是之前值的2倍&lt;/i1&gt;。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135526Z" creationid="deciia" creationdate="20170317T161255Z">
+        <seg>首位等于1，每一位 &lt;i1&gt;是之前值的 2 倍&lt;/i1&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -21513,6 +21561,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T083815Z" creationid="tpxxn" creationdate="20181005T083815Z">
         <seg>每个目标平台可以有一个或多个输出格式，主要格式有：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Easy, we shift everything left by 2, rather than one.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145642Z" creationid="tpxxn" creationdate="20181005T145458Z">
+        <seg>很简单，我们把每一位都左移 2 位，而不是 1位。</seg>
       </tuv>
     </tu>
     <tu>
@@ -24832,8 +24888,8 @@ addon，这个和上面的提到的plugins有什么不同。</note>
       <tuv lang="EN-US">
         <seg>For example, 217,361 is 110101000100010001 in binary.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T163950Z" creationid="deciia" creationdate="20170317T163950Z">
-        <seg>比如217,361，二进制上是 110101000100010001。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135625Z" creationid="deciia" creationdate="20170317T163950Z">
+        <seg>比如 217,361，二进制上是 110101000100010001。</seg>
       </tuv>
     </tu>
     <tu>
@@ -24888,16 +24944,16 @@ addon，这个和上面的提到的plugins有什么不同。</note>
       <tuv lang="EN-US">
         <seg>For example, let's say bit 1 is an "active" flag, and bit 3 is a "visible" flag.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T235717Z" creationid="deciia" creationdate="20170319T153354Z">
-        <seg>例如，我们假设1号位标记”活跃“，3号位标记”可见“。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135756Z" creationid="deciia" creationdate="20170319T153354Z">
+        <seg>例如，我们假设 1 号位标记“活跃”，3 号位标记“可见”。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>For example, let's say we want a counter that simply counts from 0 to 1 and back to 0 (toggling between 0 and 1), we could add one and do an IF to see if it's gotten to 2, and then reset it back to 1.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T164555Z" creationid="deciia" creationdate="20170322T164555Z">
-        <seg>例如，我们要一个计数器，简单的从0数到1然后回到0（0和1之间切换），我们可以递增1，使用“IF”检查是否获得2，然后重新设置为1。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140052Z" creationid="deciia" creationdate="20170322T164555Z">
+        <seg>例如，我们要一个计数器，简单的从 0 数到 1 然后回到 0（0 和 1之间切换），我们可以递增 1，使用“IF”检查是否获得 2，然后重新设置为 1。</seg>
       </tuv>
     </tu>
     <tu>
@@ -25370,8 +25426,16 @@ addon，这个和上面的提到的plugins有什么不同。</note>
       <tuv lang="EN-US">
         <seg>Fortunately there is an easy way of doing this by using the NOT operator.&lt;br0&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T161422Z" creationid="deciia" creationdate="20170322T161422Z">
-        <seg>幸运的是的确还有简单的方法，那就是使用“非（NOT）”运算符。&lt;br0&gt;</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140013Z" creationid="deciia" creationdate="20170322T161422Z">
+        <seg>幸运的是的确还有简单的方法，那就是使用 “非（NOT）” 运算符。&lt;br0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Fortunately, you don't ever have to worry about this unless you want to add very large numbers together (like 2x128bit numbers).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T143931Z" creationid="tpxxn" creationdate="20181005T142748Z">
+        <seg>幸运的是，除非你想要将非常大的数字加在一起（比如2 x 128位数字），否则你不必担心这个问题。 </seg>
       </tuv>
     </tu>
     <tu>
@@ -27947,8 +28011,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>Here's a truth table for NOT.&lt;br2&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T161736Z" creationid="deciia" creationdate="20170322T161736Z">
-        <seg>下面是“非”运算的真值表。&lt;br2&gt;</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140020Z" creationid="deciia" creationdate="20170322T161736Z">
+        <seg>下面是 “非” 运算的真值表。&lt;br2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -27963,16 +28027,16 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>Here's the truth table for ANDing:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T011608Z" creationid="deciia" creationdate="20170322T011608Z">
-        <seg>这里是“与”运算的真值表：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135904Z" creationid="deciia" creationdate="20170322T011608Z">
+        <seg>这里是 “与” 运算的真值表：</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>Here's what's known as a &lt;i0&gt;truth table&lt;/i0&gt; for the OR operator:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170319T152555Z" creationid="deciia" creationdate="20170319T152555Z">
-        <seg>下面是所谓的“或运算符的&lt;i0&gt;真值表&lt;/i0&gt;：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135740Z" creationid="deciia" creationdate="20170319T152555Z">
+        <seg>下面是所谓的“或”运算符的 &lt;i0&gt;真值表&lt;/i0&gt;：</seg>
       </tuv>
     </tu>
     <tu>
@@ -28273,18 +28337,26 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>How about a larger number?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145447Z" creationid="tpxxn" creationdate="20181005T145447Z">
+        <seg>数字大点的话会怎么样？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>How about a much more complex example: 196?</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T163202Z" creationid="deciia" creationdate="20170317T163202Z">
-        <seg>那么更复杂的例子196呢？</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135608Z" creationid="deciia" creationdate="20170317T163202Z">
+        <seg>那么更复杂的例子 196 呢？</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>How can we set both?&lt;br2&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T145743Z" creationid="36011" creationdate="20170321T145743Z">
-        <seg>我们该如何设置两者How can we set both?&lt;br2&gt;</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150700Z" creationid="36011" creationdate="20170321T145743Z">
+        <seg>我们该如何设置它们？&lt;br2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -28531,8 +28603,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>However, having only 2 states, a &lt;t2&gt;true&lt;/t2&gt; / &lt;t3&gt;false&lt;/t3&gt; value is ideal to store in a bit, and if we did this we could store 32 &lt;t4&gt;true&lt;/t4&gt; / &lt;t5&gt;false&lt;/t5&gt; bits for each INT rather than just one.&lt;br6&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170319T150146Z" creationid="deciia" creationdate="20170319T150146Z">
-        <seg>然而，它只有二个状态，一个&lt;t2&gt;真&lt;/t2&gt; / &lt;t3&gt;假&lt;/t3&gt;值理想的情况是储存在一个位上，如果我们这样做，每个INT我们可以储存32个&lt;t4&gt;真&lt;/t4&gt; / &lt;t5&gt;假&lt;/t5&gt;位，而不是只是一个。&lt;br6&gt;</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135706Z" creationid="deciia" creationdate="20170319T150146Z">
+        <seg>然而，它只有二个状态，一个&lt;t2&gt;真&lt;/t2&gt; / &lt;t3&gt;假&lt;/t3&gt;值理想的情况是储存在一个位上，如果我们这样做，每个 INT 我们可以储存 32个&lt;t4&gt;真&lt;/t4&gt; / &lt;t5&gt;假&lt;/t5&gt;位，而不是只是一个。&lt;br6&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -28643,8 +28715,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>I have an X and Y position, and I want to get the grid cell this falls in, where the grid is 32x32 in size.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T234743Z" creationid="36011" creationdate="20170321T234743Z">
-        <seg>我有一个X和Y坐标位置，然后我想获取它落入的单元格，其中单元格大小为32×32。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150859Z" creationid="36011" creationdate="20170321T234743Z">
+        <seg>我有一个 X 和 Y 坐标位置，然后我想获取它落入的单元格，其中单元格大小为 32 × 32。</seg>
       </tuv>
     </tu>
     <tu>
@@ -29247,8 +29319,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>If for example we wanted to make 6, we would add 4 and 2 together like so.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T162716Z" creationid="deciia" creationdate="20170317T162716Z">
-        <seg>例子的话，比如我们需要是6，我们需要将4和2添加到一起，像这样：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135556Z" creationid="deciia" creationdate="20170317T162716Z">
+        <seg>例子的话，比如我们需要是 6，我们需要将 4 和 2 添加到一起，像这样：</seg>
       </tuv>
     </tu>
     <tu>
@@ -29423,8 +29495,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>If we start doing values outside of the range of a byte (which can store numbers from 0 to 255), it does start to get a little harder to track.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T163924Z" creationid="deciia" creationdate="20170317T163924Z">
-        <seg>如果我们开始造一个字节（存储0至255之间的数字）以外的值，难度会开始变大。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135621Z" creationid="deciia" creationdate="20170317T163924Z">
+        <seg>如果我们开始造一个字节（存储 0 至 255 之间的数字）以外的值，难度会开始变大。</seg>
       </tuv>
     </tu>
     <tu>
@@ -29671,8 +29743,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>If you remember from earlier, using a 1 will set the first bit.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170319T151420Z" creationid="deciia" creationdate="20170319T151409Z">
-        <seg>如果你还记得之前的情况，使用一个1将设置第一个位。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135721Z" creationid="deciia" creationdate="20170319T151409Z">
+        <seg>如果你还记得之前的情况，使用一个 1 将设置第一个位。</seg>
       </tuv>
     </tu>
     <tu>
@@ -32298,6 +32370,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It's obviously harder to see here, but the overflows ripple along until there are no ones in a column - or 2 at which point an overflow bit makes 3 and it stays there.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T144200Z" creationid="tpxxn" creationdate="20181005T142742Z">
+        <seg>这里看起来显然比较困难，但是会一直溢出，直到列中没有一个数 - 或者哪一位为 2，溢出导致 3，它就会停留在那里。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It's worth noting that all docked windows can be hidden/unhidden individually by clicking the button to the side of the docked items (highlighted in the image at the top of this page), or you can hide/unhide all docked items using the quickbutton &lt;i0&gt; at the top of the IDE, and note too that the IDE will remember docked windows between sessions.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T072715Z" creationid="tpxxn" creationdate="20181005T072702Z">
@@ -32366,6 +32446,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170316T112233Z" creationid="deciia" creationdate="20170102T085732Z">
         <seg>迭代数：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It’s also worth noting, that computers can only add (or subtract, multiply or divide) 2 numbers at once, even SIMD is based on 2 calculations at once, but doing multiple calculations in parallel.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145846Z" creationid="tpxxn" creationdate="20181005T142753Z">
+        <seg>值得注意的是，计算机一次只能加（或减、乘、除）2 个数字，即使单指令多数据流同时基于 2 个计算，但并行执行多个计算。</seg>
       </tuv>
     </tu>
     <tu>
@@ -32524,8 +32612,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>Just like normal additions, we add numbers together and then we overflow into the next column, but unlike a normal decimal addition, we can only go to 1, not 9.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170327T232550Z" creationid="deciia" creationdate="20170327T232550Z">
-        <seg>就像正常的加法，数字加起来然后溢出到下一列中，但是不同于普通的十进制加法，只会进到1，没有9。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140131Z" creationid="deciia" creationdate="20170327T232550Z">
+        <seg>就像正常的加法，数字加起来然后溢出到下一列中，但是不同于普通的十进制加法，只会进到 1，没有 9。</seg>
       </tuv>
     </tu>
     <tu>
@@ -33317,24 +33405,24 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>Let's say we wanted to set bit 27, what number is that?</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T145018Z" creationid="36011" creationdate="20170321T145018Z">
-        <seg>假设我们希望设置27号位，那么数字将会是多少呢？</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150249Z" creationid="36011" creationdate="20170321T145018Z">
+        <seg>假设我们希望设置第 27 号位，那么数字将会是多少呢？</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>Let's take a quick look at how you do division, and why it's going to be so useful.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T234025Z" creationid="36011" creationdate="20170321T234025Z">
-        <seg>我们快速的看一下你是如何做触发的，以及为什么这很有用。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150718Z" creationid="36011" creationdate="20170321T234025Z">
+        <seg>我们快速的看一下你是如何做除法的，以及为什么这很有用。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>Let's take a simple number - 64 - and divide by 32:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T234049Z" creationid="36011" creationdate="20170321T234049Z">
-        <seg>我们取一组简单的数——64，然后除以32</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150733Z" creationid="36011" creationdate="20170321T234049Z">
+        <seg>我们取一组简单的数——64，然后除以 32</seg>
       </tuv>
     </tu>
     <tu>
@@ -33343,6 +33431,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T163036Z" creationid="deciia" creationdate="20170317T163036Z">
         <seg>我们再看一个稍微更复杂的数字作为进一步的例子： 23。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Let's take some very simple examples first.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T144517Z" creationid="tpxxn" creationdate="20181005T144229Z">
+        <seg>我们先来看一个非常简单的例子。</seg>
       </tuv>
     </tu>
     <tu>
@@ -33487,6 +33583,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20180925T033247Z" creationid="deciia" creationdate="20170104T064922Z">
         <seg>明</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Like this:&lt;br3&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T144241Z" creationid="tpxxn" creationdate="20181005T144241Z">
+        <seg>如下：&lt;br3&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -39477,6 +39581,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Now to multiply by 2 in binary, we shift all the bits to the LEFT by one.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T144603Z" creationid="tpxxn" creationdate="20181005T144234Z">
+        <seg>现在将以二进制形式乘以 2，我们将所有位向左移一位。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Now what does this mean in binary?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170319T145019Z" creationid="deciia" creationdate="20170319T145019Z">
@@ -39501,6 +39613,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Now, aside from being very useful for fast/simple multiplications, it's also very useful for setting specific BITs, without having to figure out the bit value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150234Z" creationid="tpxxn" creationdate="20181005T150234Z">
+        <seg>现在，除了对于快速/简单的乘法非常有用之外，它还不需要计算位值就可以设置特定的位。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Now, if I were to do this without understanding binary, it would look like this:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170322T000123Z" creationid="36011" creationdate="20170322T000123Z">
@@ -39511,8 +39631,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>Now, the sharp-sighted amongst you might have noticed we've used both here (as is so often the case), but this is still only a couple of instructions.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T235533Z" creationid="36011" creationdate="20170321T235533Z">
-        <seg>现在，一些思维敏锐的人就会察觉到，我们在此处两种方法都使用了（这也是常有的情况），但是，它仍然只是一组指令。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T151107Z" creationid="36011" creationdate="20170321T235533Z">
+        <seg>现在，思维敏锐的你可能已经察觉到，我们在此处两种方法都使用了（这也是常有的情况），但是，它仍然只是一组指令。</seg>
       </tuv>
     </tu>
     <tu>
@@ -40033,8 +40153,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>Okay... so actually this would be bit 26 the way I've been describing things so far (as bits have been starting at one), but actually... bits start at bit 0, and go upwards, not at bit 1.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T145424Z" creationid="36011" creationdate="20170321T145424Z">
-        <seg>好吧……因此实际上以我目前所描述的方法（我是假装位是从1开始的）会设置26号位，但实际上是从0号位开始的并向上递增的，而非1号位。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150311Z" creationid="36011" creationdate="20170321T145424Z">
+        <seg>好吧……因此实际上以我目前所描述的方法（我是假装位是从 1 开始的）会设置 26 号位，但实际上是从 0 号位开始的并向上递增的，而非 1 号位。</seg>
       </tuv>
     </tu>
     <tu>
@@ -41169,16 +41289,16 @@ The Tile Set Editor 有相关说明，选中了就会假定房间外面布满了
       <tuv lang="EN-US">
         <seg>Or, 1+16+256+etc...</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T164006Z" creationid="deciia" creationdate="20170317T164006Z">
-        <seg>或者， 1+16+256+等...</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135639Z" creationid="deciia" creationdate="20170317T164006Z">
+        <seg>或者，1 + 16 + 256 + 等...</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>Or...we could add 1 and then AND it with 1 (since 01+01 = 10, and 10 &amp; 01 = 0) or we can do this:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T164840Z" creationid="deciia" creationdate="20170322T164840Z">
-        <seg>或者……我们加1然后“与”1（ 因为01+01 = 10，以及10 &amp; 01 = 0）或者我们这样做：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140102Z" creationid="deciia" creationdate="20170322T164840Z">
+        <seg>或者……我们加 1 然后 “与” 1（ 因为 01 + 01 = 10，以及10 &amp; 01 = 0）或者我们这样做：</seg>
       </tuv>
     </tu>
     <tu>
@@ -51061,6 +51181,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Since this can be quite a complex concept to grasp and then apply to real-world programming situations, you can find below a series of short examples that could be applied to any game made with &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T151337Z" creationid="tpxxn" creationdate="20181005T151337Z">
+        <seg>由于这是一个相当复杂且需要掌握的概念，你应该学会应用到实际的编程环境中，您可以在下面找到一些简短的例子，这些例子可以应用到任何使用 &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 制作的游戏中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Since this is essentially a mini-tutorial to get you started, we've split it into sections which you can get to from the following links:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181004T155513Z" creationid="tpxxn" creationdate="20181004T155513Z">
@@ -51471,24 +51599,24 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>So adding a 1+1 means we overflow into 10.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170327T232907Z" creationid="deciia" creationdate="20170327T232907Z">
-        <seg>所以 1+1 means we overflow into 10.</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140254Z" creationid="deciia" creationdate="20170327T232907Z">
+        <seg>所以 1 + 1 意味着溢出到 10。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>So bit 2 = 2, bit 3 = 4, bit 4 = 8 and so on (as shown below in this &lt;i2&gt;byte&lt;/i2&gt; table - a byte being a collection of 8 bits):</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T235623Z" creationid="deciia" creationdate="20170317T161437Z">
-        <seg>所以2号位 = 2，3号位 = 4，4号位 = 8等等（如下所示，在这个 &lt;i2&gt;字节&lt;/i2&gt;表中 - 一个字节是8位的集合）：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135540Z" creationid="deciia" creationdate="20170317T161437Z">
+        <seg>所以 2 号位 = 2，3 号位 = 4，4 号位 = 8 等等（如下所示，在这个 &lt;i2&gt;字节&lt;/i2&gt;表中 - 一个字节是 8 位的集合）：</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>So even if bit 1 was already set, the operation still works and bit 3 will now also be set.&lt;br0&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T235814Z" creationid="36011" creationdate="20170321T144714Z">
-        <seg>所以，当1号位已经被设置的时候，该操作对3号位依然有效并且也会同样被设置.&lt;br0&gt;</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135813Z" creationid="36011" creationdate="20170321T144714Z">
+        <seg>所以，当 1 号位已经被设置的时候，该操作对 3 号位依然有效并且也会同样被设置.&lt;br0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -51508,12 +51636,20 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>So how about 16, or 128?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145653Z" creationid="tpxxn" creationdate="20181005T145501Z">
+        <seg>那么 16 倍或 128 倍呢？</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>待校正</note>
       <tuv lang="EN-US">
         <seg>So if had a value of 1000111011 and I wanted to clear bits 1 and 3 using the mask above, I would end up with this...</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T013721Z" creationid="deciia" creationdate="20170322T013721Z">
-        <seg>再比如我们有一个值“1000111011”，我们想要清理位1和位3，使用上面的掩码，我将用这个结束这个操作：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140005Z" creationid="deciia" creationdate="20170322T013721Z">
+        <seg>再比如我们有一个值 “1000111011”，我们想要清理位 1 和位 3，使用上面的掩码，我将用这个结束这个操作：</seg>
       </tuv>
     </tu>
     <tu>
@@ -51534,6 +51670,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So let's look at a more complex example.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140726Z" creationid="tpxxn" creationdate="20181005T140726Z">
+        <seg>让我们来看一个更复杂的例子。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So let's look at the most basic binary theory first - how numbers are created.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T160411Z" creationid="deciia" creationdate="20170317T160411Z">
@@ -51544,8 +51688,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>So let's say Bit 27 is an active flag, and bit 0 is an exploding flag.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T145722Z" creationid="36011" creationdate="20170321T145722Z">
-        <seg>那么假设27号位是一个活动标记，0号位是一个爆炸标记。So let's say Bit 27 is an active flag, and bit 0 is an exploding flag.</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150430Z" creationid="36011" creationdate="20170321T145722Z">
+        <seg>那么假设 27 号位是一个激活标志，0 号位是一个爆炸标志。</seg>
       </tuv>
     </tu>
     <tu>
@@ -51568,8 +51712,16 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>So there you shift the single bit &lt;i0&gt;down&lt;/i0&gt; by 5 (which is the number of shifts required for 32 – look above), which gives us 2.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T234303Z" creationid="36011" creationdate="20170321T234218Z">
-        <seg>所以，这里你是向&lt;i0&gt;低阶&lt;/i0&gt;移动单个位5个位数（这也是要得到32时需要移动的位数——见上文），就会给我们一个2.</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150840Z" creationid="36011" creationdate="20170321T234218Z">
+        <seg>所以，这里你应该向 &lt;i0&gt;低阶&lt;/i0&gt; 移动 5 位（这也是要得到 32 时需要移动的位数——见上文），最终我们会得到 2。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So they'll do each calculation in blocks of 2.&lt;br1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T143452Z" creationid="tpxxn" creationdate="20181005T142929Z">
+        <seg>所以它们将分两次进行分别计算。&lt;br1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -51640,8 +51792,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>So while there are 32 bits in an INTEGER, the bits range from 0 to 31, not 1 to 32.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T145512Z" creationid="36011" creationdate="20170321T145512Z">
-        <seg>所以，当一个整型数中有32位的时候，它的位域是从0到31号位，而非1到32号位。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150341Z" creationid="36011" creationdate="20170321T145512Z">
+        <seg>所以，当一个整型数中有 32 位的时候，它的位域是从 0 到 31 号位，而非 1 到 32 号位。</seg>
       </tuv>
     </tu>
     <tu>
@@ -51694,6 +51846,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So, how about a multiple by 4?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145623Z" creationid="tpxxn" creationdate="20181005T145455Z">
+        <seg>那么如果乘以 4 呢？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So, if you have two different view ports at two different positions, the total area that they cover defines the size of the game window.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160215T104255Z" creationid="deciia" creationdate="20160215T104255Z">
@@ -51712,8 +51872,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>So, only when there is a bit in each place will it be kept.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T011722Z" creationid="deciia" creationdate="20170322T011722Z">
-        <seg>所以，每个位置都有1的地方将保留。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135907Z" creationid="deciia" creationdate="20170322T011722Z">
+        <seg>所以，每个位置都有 1 的地方将保留。</seg>
       </tuv>
     </tu>
     <tu>
@@ -53684,6 +53844,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Take 19 + 19 + 19.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T150103Z" creationid="tpxxn" creationdate="20181005T142805Z">
+        <seg>拿 19 + 19 + 19 举例。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Take a look at this table:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T160518Z" creationid="deciia" creationdate="20170317T160518Z">
@@ -53702,8 +53870,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>Take this statement where we want to clear bits 1 and 3 again:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T162701Z" creationid="deciia" creationdate="20170322T162701Z">
-        <seg>我们想要再次清除位1和位3的地方使用这个语句：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140027Z" creationid="deciia" creationdate="20170322T162701Z">
+        <seg>我们想要再次清除位 1 和位 3 的地方使用这个语句：</seg>
       </tuv>
     </tu>
     <tu>
@@ -54163,8 +54331,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>That's fine if you want numbers that are a power of 2, but how do we create more complex numbers?</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T162137Z" creationid="deciia" creationdate="20170317T162137Z">
-        <seg>数字是2的幂的情况都还行，但怎样创建更复杂的数字？</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135544Z" creationid="deciia" creationdate="20170317T162137Z">
+        <seg>数字是 2 的幂的情况都还行，但怎样创建更复杂的数字？</seg>
       </tuv>
     </tu>
     <tu>
@@ -54195,8 +54363,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>The "|" operator is a &lt;b0&gt;bitwise OR&lt;/b0&gt;, and this means the above instruction ORs 1 into flags.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170319T151559Z" creationid="deciia" creationdate="20170319T150943Z">
-        <seg>"|" 运算符是 &lt;b0&gt;位运算的“或”&lt;/b0&gt;，意思是上述说明的“或”1并赋值回flags。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135717Z" creationid="deciia" creationdate="20170319T150943Z">
+        <seg>"|" 运算符是 &lt;b0&gt;位运算的 “或”&lt;/b0&gt;，意思是上述说明的 “或” 1 并赋值回 flags。</seg>
       </tuv>
     </tu>
     <tu>
@@ -54910,8 +55078,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>The NOT operator is just what it says - NOT those bits.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T161701Z" creationid="deciia" creationdate="20170322T161701Z">
-        <seg>“非”运算就像它说的一样 - “非”那些位。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140016Z" creationid="deciia" creationdate="20170322T161701Z">
+        <seg>“非” 运算就像它说的一样 - “非” 那些位。</seg>
       </tuv>
     </tu>
     <tu>
@@ -56060,6 +56228,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The answer is definitely "yes, you should".</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135351Z" creationid="tpxxn" creationdate="20181005T135351Z">
+        <seg>答案明显是“是的，你应该”。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The answer is defnitely "yes, you should".</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170316T005733Z" creationid="deciia" creationdate="20170316T005725Z">
@@ -56176,6 +56352,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T092610Z" creationid="tpxxn" creationdate="20181005T092610Z">
         <seg>当您更改字体，颜色，混合模式或影响全局绘制效果的任何其他绘图状态时，该批次将被“破坏”，因此您应该尝试将这些行为尽可能限制，否则批次数太大将对您的游戏性能产生不利影响。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The binary calculations that are of interest to us, and of great use, are multiplication and division.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145913Z" creationid="tpxxn" creationdate="20181005T144223Z">
+        <seg>我们对于二进制计算的乘法和除法显然更感兴趣，并且用处更大。</seg>
       </tuv>
     </tu>
     <tu>
@@ -57816,8 +58000,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>The last operator we want to look at is EOR (Exclusive OR, sometimes called XOR), this operator flips the bits set in &lt;i2&gt;both&lt;/i2&gt; values.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T163827Z" creationid="deciia" creationdate="20170322T163827Z">
-        <seg>最后我们要看的运算符是“异或（EOR，有时叫 XOR）” ，这个运算翻转位设置，当&lt;i2&gt;两个位&lt;/i2&gt;相同时为0，不同时为1。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140037Z" creationid="deciia" creationdate="20170322T163827Z">
+        <seg>最后我们要看的运算符是 “异或（EOR，有时叫 XOR）” ，这个运算翻转位设置，当 &lt;i2&gt;两个位&lt;/i2&gt; 相同时为 0，不同时为 1。</seg>
       </tuv>
     </tu>
     <tu>
@@ -58176,8 +58360,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>The number 23 is actually made up of 1+2+4+16 or 00010111.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T163121Z" creationid="deciia" creationdate="20170317T163121Z">
-        <seg>数字23实际上由 1+2+4+16 或者 00010111组成。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135604Z" creationid="deciia" creationdate="20170317T163121Z">
+        <seg>数字 23 实际上由 1 + 2 + 4 + 16 或者 00010111 组成。</seg>
       </tuv>
     </tu>
     <tu>
@@ -59924,8 +60108,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>These days however, with the power of even the most average PC, you no longer have to know any of this and you can do things the long way, since the speed of the machine and its more complex CPU construction will make up for any short comings this approach has.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170316T004749Z" creationid="deciia" creationdate="20170316T004749Z">
-        <seg>然而今 天，甚至是使用最普通的PC，你也不再需要了解这些东西，或者走一个很长的路，机器的速度和结构复杂的CPU将弥补这种方法的任何缺点。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135409Z" creationid="deciia" creationdate="20170316T004749Z">
+        <seg>然而今天，甚至是使用最普通的 PC，你也不再需要了解这些东西，或者走一个很长的路，机器的速度和结构复杂的 CPU 将弥补这种方法的任何缺点。</seg>
       </tuv>
     </tu>
     <tu>
@@ -60228,8 +60412,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>This adds up, especially if you're doing a tight loop with lots of calculations like this.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T051019Z" creationid="36011" creationdate="20170322T051012Z">
-        <seg>当这些累加起来，特别是你在对一个像这样很紧张的，带有很多运算的循环当中的时候。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T151233Z" creationid="36011" creationdate="20170322T051012Z">
+        <seg>当这些情况加起来，特别是你在对一个像这样很紧张的，带有很多运算的循环当中的时候。</seg>
       </tuv>
     </tu>
     <tu>
@@ -60252,8 +60436,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>This avoids the need to do a floating point divide, and then a floor( ) calculation – which all adds up.&lt;br0&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T235050Z" creationid="36011" creationdate="20170321T235050Z">
-        <seg>这很好地避免了使用浮点数除法然后在用floor()向下取整计算一起进行的必要。&lt;br0&gt;</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T151028Z" creationid="36011" creationdate="20170321T235050Z">
+        <seg>这很好地避免了使用浮点数除法然后再用 floor() 向下取整计算一起进行的必要。&lt;br0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -61166,8 +61350,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>This is because 5 is 00000101 in binary, and following the rule above, the variable "flags" will get both these 2 bits merged with its own.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170321T144624Z" creationid="36011" creationdate="20170321T144624Z">
-        <seg>因为5在二进制中表示为00000101，而根据上述的规则，变量"flags"就会将这两个位合并进来。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135807Z" creationid="36011" creationdate="20170321T144624Z">
+        <seg>因为 5 在二进制中表示为 00000101，而根据上述的规则，变量 "flags" 就会将这两个位合并进来。</seg>
       </tuv>
     </tu>
     <tu>
@@ -61336,6 +61520,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160514T041919Z" creationid="deciia" creationdate="20160514T041919Z">
         <seg>换句话说就是需要我们在使用数组之前就做好规划，可以像这样简单的使用“repeat”循环初始一个数组。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is incredibly useful; it means we can do simple multiplications by simply moving bits around.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145517Z" creationid="tpxxn" creationdate="20181005T145517Z">
+        <seg>这非常有用；这意味着我们可以通过移动位来做简单的乘法。</seg>
       </tuv>
     </tu>
     <tu>
@@ -62615,8 +62807,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>This would be a binary "mask" of 11111111111111111111111111111010 (32bits).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T013144Z" creationid="deciia" creationdate="20170322T013144Z">
-        <seg>这里需要一个二进制掩码“11111111111111111111111111111010（32位）”。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135956Z" creationid="deciia" creationdate="20170322T013144Z">
+        <seg>这里需要一个二进制掩码 “11111111111111111111111111111010（32位）”。</seg>
       </tuv>
     </tu>
     <tu>
@@ -62625,6 +62817,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20180217T133241Z" creationid="36011" creationdate="20180217T133241Z">
         <seg>这段代码会调用用户定义事件4。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This would require a left shift of 4 bits, or 7 bits respectively.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T145709Z" creationid="tpxxn" creationdate="20181005T145505Z">
+        <seg>这分别需要向左移动 4 位或 7 位。</seg>
       </tuv>
     </tu>
     <tu>
@@ -65337,8 +65537,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>Usually compilers will use an INT (an INT is usually defined as a signed 32bit number) and then simply assign it to 0 or 1.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170319T145547Z" creationid="deciia" creationdate="20170319T145418Z">
-        <seg>通常编译器会使用一个INT（INIT通常定义一个有符号的32位数字），然后简单的赋值为0或1。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135652Z" creationid="deciia" creationdate="20170319T145418Z">
+        <seg>通常编译器会使用一个 INT（INT 通常定义一个有符号的 32 位数字），然后简单的赋值为 0 或 1。</seg>
       </tuv>
     </tu>
     <tu>
@@ -66038,16 +66238,16 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>We OR in 2, because the bit pattern 00000010 is equal to 2.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170319T152022Z" creationid="deciia" creationdate="20170319T151533Z">
-        <seg>我们“或”2，因为这个位模式00000010等于2。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135731Z" creationid="deciia" creationdate="20170319T151533Z">
+        <seg>我们 “或” 2，因为这个位模式 00000010 等于 2。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>We can obviously use these operations for other things when developing our games, like masking sprites, doing integer MOD operations (using AND) or doing nice looping counters.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170327T232051Z" creationid="deciia" creationdate="20170327T232051Z">
-        <seg>很明显地，在开发游戏时我们可以使用这些运算做些其它的事情，像是掩蔽精灵、整数MOD运算（使用与）或者一个不错的循环计数器。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140121Z" creationid="deciia" creationdate="20170327T232051Z">
+        <seg>很明显地，在开发游戏时我们可以使用这些运算做些其它的事情，像是掩蔽精灵、整数 MOD 运算（使用与）或者一个不错的循环计数器。</seg>
       </tuv>
     </tu>
     <tu>
@@ -66062,8 +66262,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>We could set &lt;i0&gt;both&lt;/i0&gt; by doing this:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170319T153440Z" creationid="deciia" creationdate="20170319T153440Z">
-        <seg>我们可以像这样&lt;i0&gt;同时&lt;/i0&gt;设置它们：</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135800Z" creationid="deciia" creationdate="20170319T153440Z">
+        <seg>我们可以像这样 &lt;i0&gt;同时&lt;/i0&gt; 设置它们：</seg>
       </tuv>
     </tu>
     <tu>
@@ -66126,8 +66326,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>We want to clear bits 1 and 3 (giving us the value 5), but in remembering the truth table above, what we want to do is keep all the other bits, and clear bits 1 and 3.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T012749Z" creationid="deciia" creationdate="20170322T012749Z">
-        <seg>我们要清除位1和位3（值等于5），但是记一下上面的真值表，我们要的是保留其它的位，清除位1和位3。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135939Z" creationid="deciia" creationdate="20170322T012749Z">
+        <seg>我们要清除位 1 和位 3（值等于 5），但是记一下上面的真值表，我们要的是保留其它的位，清除位 1 和位 3。</seg>
       </tuv>
     </tu>
     <tu>
@@ -66238,8 +66438,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>Well let's look at a very simple example 1+1.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170327T232259Z" creationid="deciia" creationdate="20170327T232259Z">
-        <seg>那么让我们来看看一个非常简单的示例 1+1。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140125Z" creationid="deciia" creationdate="20170327T232259Z">
+        <seg>那么让我们来看看一个非常简单的示例 1 + 1。</seg>
       </tuv>
     </tu>
     <tu>
@@ -66270,8 +66470,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>Well, as bit 5 is 32, then all the bits below would be 31, and that's the maximum remainder so that's what we AND with (we could also use ((1&lt;&lt;5)-1) which would make 32-1 = 31.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T130620Z" creationid="36011" creationdate="20170321T235603Z">
-        <seg>因为5号位是32，其下所有的位就是31，这也是可能的最大余数，因此这就是我们使用位与运算的物体（我们也可以这样用((1&lt;&lt;5)-1），会使得32-1 = 31</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T151136Z" creationid="36011" creationdate="20170321T235603Z">
+        <seg>因为 5 号位是 32，其下所有的位就是 31，这也是可能的最大余数，因此这就是我们使用位与运算的物体（我们也可以这样用 ((1&lt;&lt;5)-1），会使得 32 - 1 = 31</seg>
       </tuv>
     </tu>
     <tu>
@@ -66286,8 +66486,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>Well, in order to divide by 32, we have to execute a floating point divide – which obviously takes time, but in order to do the mod 32, you actually have to do another one!</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050648Z" creationid="36011" creationdate="20170322T050648Z">
-        <seg>为了除以32，我们必须执行一次浮点数触发——显然，这很花费时间，但是为了和对32取余数，你实际上还需要再做一次！</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T151158Z" creationid="36011" creationdate="20170322T050648Z">
+        <seg>为了除以32，我们必须执行一次浮点除法——显然，这很花费时间，但是为了和对 32 取余数，你实际上还需要再做一次！</seg>
       </tuv>
     </tu>
     <tu>
@@ -66326,8 +66526,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>Well, that's made from 128+64+4 or 11000100.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T163240Z" creationid="deciia" creationdate="20170317T163240Z">
-        <seg>好的， 由128+64+4 或者说 11000100构成。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135617Z" creationid="deciia" creationdate="20170317T163240Z">
+        <seg>好的， 由 128 + 64 + 4 或者说 11000100 构成。</seg>
       </tuv>
     </tu>
     <tu>
@@ -66406,8 +66606,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>What this does, is first time through is 0 ^ 1 = 1, then the second time 1 ^ 1 = 0, thereby toggling things back and forth from 0 to 1.&lt;br0&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T165314Z" creationid="deciia" creationdate="20170322T165314Z">
-        <seg>这样做，第一次的时候（a=0）是 0 ^ 1 = 1，然后第二次（a=1）是1 ^ 1 = 0，从而触发从0到1再到0的来回。&lt;br0&gt;</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140118Z" creationid="deciia" creationdate="20170322T165314Z">
+        <seg>这样做，第一次的时候（a = 0）是 0 ^ 1 = 1，然后第二次（a = 1）是1 ^ 1 = 0，从而触发从 0 到 1 再到 0 的来回。&lt;br0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -66430,16 +66630,16 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>What this means, is that just as you are able to &lt;i0&gt;set&lt;/i0&gt; multiple flags at once, you can also &lt;i1&gt;clear&lt;/i1&gt; multiple flags at once.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T011915Z" creationid="deciia" creationdate="20170322T011901Z">
-        <seg>这意味着什么呢，那就是你能够一次性&lt;i0&gt;设置&lt;/i0&gt;多个标志（flag），也可以一次性&lt;i1&gt;清除clear&lt;/i1&gt;多个标志。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135917Z" creationid="deciia" creationdate="20170322T011901Z">
+        <seg>这意味着什么呢，那就是你能够一次性 &lt;i0&gt;设置&lt;/i0&gt; 多个标志（flag），也可以一次性 &lt;i1&gt;清除&lt;/i1&gt; 多个标志。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="EN-US">
         <seg>What we need is a way to flip bits easily (and preferably without CPU cost).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T161222Z" creationid="deciia" creationdate="20170322T161222Z">
-        <seg>我们需要的是一种比较容易翻转“位”的方法（最好没有CPU开销）。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T140008Z" creationid="deciia" creationdate="20170322T161222Z">
+        <seg>我们需要的是一种比较容易翻转“位”的方法（最好没有 CPU 开销）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -66655,8 +66855,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>When you AND something you the bits that are set in the mask are kept, while the bits that are clear in the mask, are removed - like this:&lt;br2&gt;</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170322T011021Z" creationid="deciia" creationdate="20170322T011021Z">
-        <seg>当你“与”一些东西，掩码中设置的位将保留，掩码中清除的位将删除 - 如下：&lt;br2&gt;</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135835Z" creationid="deciia" creationdate="20170322T011021Z">
+        <seg>当你 “与” 一些东西，掩码中设置的位将保留，掩码中清除的位将删除 - 如下：&lt;br2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -66911,8 +67111,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>While it's true you can still get some speed ups - and sometimes these can be significant - using binary and hex leads to you knowing the CPU better and can also lead to writing better code, being able to pack data better, and making some tasks a lot simpler.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T155208Z" creationid="deciia" creationdate="20170317T155208Z">
-        <seg>虽然这是事实，你仍然可以得到一些速度上的提升 - 而有时这些提升可以更加显著 - 使用二进制和十六进制可以让CPU运行得更快，也能写出更好的代码，以及更好的打包数据，让一些任务变得简单得多，这些你应该都是知道的。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135355Z" creationid="deciia" creationdate="20170317T155208Z">
+        <seg>虽然这是事实，你仍然可以得到一些速度上的提升 - 而有时这些提升可以更加显著 - 使用二进制和十六进制可以让 CPU 运行得更快，也能写出更好的代码，以及更好的打包数据，让一些任务变得简单得多，这些你应该都是知道的。</seg>
       </tuv>
     </tu>
     <tu>
