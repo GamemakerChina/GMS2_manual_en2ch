@@ -6,10 +6,19 @@ GMS2 中文文档翻译
 
 汉化文档：https://gamemakerchina.github.io/GMS2_manual_en2ch/
 
+#翻译进度：
 
-~~github pages 首字母下划线的文件夹不会读取，因此，files里的所有/_build/ 要改为 /build/, "build/ 要改为  "build/  。注意不要替换了matrix_build的情况。~~
-~~- index.html  包含一个~~
-~~- helpcontents.html 可以批量替换。~~
-~~- files/treearr.js  helpindexdat.js chmnav.js searchdat.js 可以批量替换~~
+更新日期：18/10/07
 
-其实只要在 docs 目录下添加 `.nojekyll` 就解决了。。。。。。。（@LiarOnce )
+章节 | 更新进度  | 备注
+------|:------:|------:
+入门  | x/x,100% | tpxxn 已完成
+快速入门  | x/x,100% | tpxxn 已完成
+
+
+>注：使用omegat翻译的项目，需要定期更新，此进度以主页更新为准。
+目前篇数的计算是通过文件总数减图片总数计算，不排除会有误差。
+此进度会以 在译、待译、部分译、已译完的形式在主页上体现，以方便阅读的人。
+
+贡献者名单：
+待定
