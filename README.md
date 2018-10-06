@@ -6,7 +6,7 @@ GMS2 中文文档翻译
 
 汉化文档：https://gamemakerchina.github.io/GMS2_manual_en2ch/
 
-#翻译进度：
+# 翻译进度：
 
 更新日期：18/10/07
 
