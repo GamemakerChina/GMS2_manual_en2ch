@@ -36,215 +36,121 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>When using the <a href=
-"../../3_scripting/4_gml_reference/file%20handling/index.html">file
-system functions</a> or <a href=
-"../../2_interface/1_editors/included_files.html">included
-files</a> with <i>GameMaker Studio 2</i> it is vitally important to
-know exactly how everything works and what things are going on
-behind the scenes. To that end, this section is designed to explain
-and clarify exactly how things are stored, where they are stored
-and what possible limits or workarounds there may be to this
-system.</p>
+<p>在使用 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/index.html">文件系统函数</a> 或在 <i>GameMaker Studio 2</i> 中 <a href=
+"../../2_interface/1_editors/included_files.html">内含文件</a> 时，非常重要的一点是要确切了解所有的工作原理以及幕后发生的事情。为此目的，本节旨在解释和阐明东西是如何存储的，它们存储在哪里，以及这个系统可能存在的限制或变通方法。</p>
 
 <blockquote><a name="file_sandbox" id="file_sandbox"></a>
-<label class="collapse" for="one">文件沙盒</label> <input id=
+<label class="collapse" for="one">文件沙箱</label> <input id=
 "one" type="checkbox">
 <div class="index_list">
-<p>The first and most important thing to note about the file
-functions is that they are limited - in general - to the
-<i>sandbox</i>. What this means is that <i>GameMaker Studio 2</i>
-cannot save or load files from anywhere that is not part of the
-game bundle or the local storage for the device without
-<i>explicit</i> input from the user, and even then this input is
-limited to <b>only</b> <i>Windows</i> and <i>Mac</i> target
-platforms.</p>
+<p>关于文件函数，需要注意的第一点也是最重要的一点是，它们通常仅限于 <i>沙箱</i>。这意味着，如果没有用户 <i>明确</i> 的输入，<i>GameMaker Studio 2</i> 无法在游戏包或设备本地存储之外的任何地方保存或加载文件，即使这样，这种输入也 <b>仅</b> 限于 <i>Windows</i> 和 <i>Mac</i> 目标平台。</p>
 
-<p>To understand the sandbox first of all you need to understand
-that there are two distinct areas for files:</p>
+<p>要理解沙箱，首先你需要理解文件有两个不同的区域：</p>
 
 <ul>
-<li><b>The File Bundle</b> - this is where all the files that are
-packaged with the executable game are stored, including the files
-that you have added to the <a href=
-"../../2_interface/1_editors/included_files.html">Included
-Files</a> resource list from the <i>GameMaker Studio 2</i> IDE
-(which are the external files that you want packaged with the
-game).<br>
+<li><b>文件包区</b> - 在这里存储所有与可执行游戏打包的文件，包括您从 <i>GameMaker Studio 2</i> IDE 中添加到 <a href=
+"../../2_interface/1_editors/included_files.html">内含文件</a> 资源列表中的文件（这些文件是您希望与游戏打包的外部文件）。<br>
 <br></li>
 
-<li><b>The Save Area</b> - this is an area of device storage that
-can be safely written to by the game and the game is guaranteed
-that this is a writeable area.</li>
+<li><b>保存区</b> - 这是一个可以被游戏安全写入的设备存储区域，并且游戏保证这是一个可写的区域。</li>
 </ul>
 
-<p>The following diagram may help you to visualise this better:
-
+<p>下面的图表可以帮助您更好地理解这一点：
 <img class="center" src="images/files_saveareas.png" alt=
 "文件系统存储区域"></p>
 
-<div class="note"><b>NOTE:</b> You can <b>never</b> write to the
-File Bundle directory.</div>
+<div class="note"><b>注意：</b> <b>永远不</b> 能写入文件包目录。</div>
 </div>
 <br>
 <a name="file_functions" id="file_functions"></a> <label class=
 "collapse" for="two">使用文件函数</label> <input id=
 "two" type="checkbox">
 <div class="index_list">
-<p>The two target areas - the bundle directory and the local
-storage area - are available on each target platform, but on each
-one they will work slightly differently. However <i>GameMaker
-Studio 2</i> has abstracted out the main essence of what can and
-can't be done, making it easier to re-target games to multiple
-environments.</p>
+<p>这两个目标区域——文件包目录和本地存储区域——在每个目标平台上都可用，但在每个平台上它们的工作方式略有不同。然而，<i>GameMaker Studio 2</i> 抽象出了能做什么和不能做什么的主要本质，使其更容易将游戏重新定位到多个环境中。</p>
 
-<p>To start with, you should understand what is meant when we talk
-of the <a href=
-"../../3_scripting/4_gml_reference/file%20handling/working_directory.html">
-<tt>working_directory</tt></a>. This is a synonym for the two
-possible save locations (as illustrated by the diagram above) and
-when you use that directory it will do one of two things depending
-on whether you are reading or writing, and whether the file you are
-reading from has been changed or not:</p>
+<p>首先，你该理解我们讨论 <tt>working_directory（工作目录）</tt></a> 时的含义。这是两个可能的保存位置的同义词（如上图所示），当你使用该目录时，它将根据你是否正在读取或写入，以及您正在读取的文件是否已更改，执行以下两种操作之一：</p>
 
 <ul>
-<li><b>Reading Operations</b> - <tt>working_directory</tt> will
-first check the save area to see if the file being accessed is
-there, and if it is uses that. However if the file does not exists
-in the save area, it then checks the file bundle area and uses that
-(if the file being looked for is an included file with your
-game).<br>
+<li><b>读取操作</b> - <tt>working_directory</tt> 将首先检查保存区，以查看正在访问的文件是否存在，是否使用该区域。如果文件不存在于保存区域，它会检查文件包区并使用它（如果正在查找的文件是游戏的内含文件）。<br>
 <br></li>
 
-<li><b>Writing Operations</b> - This can only happen in the save
-area.</li>
+<li><b>写入操作</b> - 这只能在保存区发生。</li>
 </ul>
 
-<div class="note"><b>NOTE:</b> in general <i>GameMaker Studio 2</i>
-will handle all this for you and you rarely need to use the
-<tt>working_directory</tt> built in variable.</div>
+<div class="note"><b>注意：</b> 一般情况下，<i>GameMaker Studio 2</i> 会为您处理所有这些问题，您很少需要使用内置在变量中的 <tt>working_directory</tt>。</div>
 
-<p>Using these two simple rules we can now see how the following
-functions work (these are examples to help you to visualise the
-process for the different functions available):</p>
+<p>使用这两个简单的规则，我们现在可以看到下面的函数是如何工作的（这些示例帮助您看到可用的不同函数的过程）：</p>
 
 <ul>
 <li><a href=
-"../../3_scripting/4_gml_reference/file%20handling/directory_create.html">
-<tt>directory_create</tt></a> (and the other directory functions)
-will only work in the save area.<br>
+"../../3_scripting/4_gml_reference/file%20handling/directory_create.html"> <tt>directory_create</tt></a> (和其他目录函数)只在保存区工作。<br>
 <br></li>
 
-<li>the <a href=
-"../../3_scripting/4_gml_reference/file%20handling/index.html">file
-system</a> functions will return information on files from
-<i>both</i> the bundle and the save area, but will only write to
-the save area.<br>
+<li><a href=
+"../../3_scripting/4_gml_reference/file%20handling/index.html">文件系统</a> 函数将从文件包区和保存区 <i>均</i> 返回关于文件的信息，但只写入保存区。<br>
 <br></li>
 
-<li>the functions for writing text, binary or INI files will create
-a new file in the save area if one does not already exist, copying
-over any information from the <i>original</i> files included with
-the game bundle should they exist. Note that the original files
-will <i>still remain in the read-only part of the save
-directory</i>, but they won't be referenced as long as a version
-exists in the read/write section of the save area.</li>
+<li>写文本、二进制文件或 INI 文件函数将在保存区中创建一个新文件，如果不存在该文件，则从包含在游戏 文件包区中的 <i>原始</i> 文件中复制任何信息。注意，原始文件 <i>仍然保留在文件包区的只读部分</i>，但是只要保存区的读 / 写部分存在一个版本，它们就不会被引用。</li>
 </ul>
 </div>
 <br>
 <a name="file_outside" id="file_outside"></a> <label class=
-"collapse" for="three">在文件沙盒外保存和加载</label> <input id="three" type="checkbox">
+"collapse" for="three">在文件沙箱外保存和加载</label> <input id="three" type="checkbox">
 <div class="index_list">
-<p>On the <b>Windows</b> and <b>Mac OS</b> platforms there is one
-way to save and load files from outside of the sandbox and that is
-using the functions <a href=
-"../../3_scripting/4_gml_reference/file%20handling/file%20system/get_open_filename.html">
-<tt>get_open_filename</tt></a> and <a href=
-"../../3_scripting/4_gml_reference/file%20handling/file%20system/get_save_filename.html">
-<tt>get_save_filename</tt></a>. Both of these functions will
-require that the user select an area for loading and saving and the
-return string can then be used in the rest of the file functions to
-bypass the sandbox. See the function descriptions in the <a href=
-"../../3_scripting/index.html">scripting section</a> of the manual
-for more details.</p>
+<p>在 <b>Windows</b> 和 <b>Mac OS</b> 平台上，有一种方法可以从沙箱外部保存和加载文件，即使用 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/file%20system/get_open_filename.html"><tt>get_open_filename</tt></a> 和 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/file%20system/get_save_filename.html"><tt>get_save_filename</tt></a>函数。这两个函数都要求用户选择要加载和保存的区域，然后可以在其他文件函数中使用返回字符串来绕过沙箱。有关详细信息，请参阅手册 <a href=
+"../../3_scripting/index.html">脚本章节</a> 中的函数描述。</p>
 
-<p>On <b>HTML5</b> it is also possible to load files from outside
-the sandbox from a server, however this should only be done using
-the function <a href=
-"../../3_scripting/4_gml_reference/buffers/buffer_load_async.html"><tt>
-buffer_load_async()</tt></a> as loading synchronously has been
-deprecated on most browsers and will eventually be obsoleted. This
-means that files being loaded in this way should be saved as binary
-files - for example, you can save an <tt>*.ini</tt> as a string
-(see <a href=
-"../../3_scripting/4_gml_reference/file%20handling/ini%20files/ini_close.html">
-<tt>ini_close</tt></a> for details) and then write that into a
-buffer which can then be saved and loaded using the async
-functions. Note that if you are loading images using <a href=
-"../../3_scripting/4_gml_reference/sprites/sprite_add.html"><tt>sprite_add</tt></a>
-then these are already dealt with asynchronously.</p>
+<p>在 <b>HTML5</b> 上，也可以从服务器的沙箱外部加载文件，但是这只能使用 <a href=
+"../../3_scripting/4_gml_reference/buffers/buffer_load_async.html"><tt> buffer_load_async()</tt></a> 函数来完成，因为在大多数浏览器上同步加载已经被弃用，最终会被废弃。这意味着以这种方式加载的文件应该保存为二进制文件 —— 例如，您可以保存一个 <tt>*.ini</tt> 作为一个字符串（有关详细信息，请参阅 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/ini%20files/ini_close.html"> <tt>ini_close</tt></a>），然后将其写入一个缓冲区，然后可以使用异步函数保存和加载该缓冲区。注意，如果您使用 <a href=
+"../../3_scripting/4_gml_reference/sprites/sprite_add.html"><tt>sprite_add</tt></a> 加载图像，那么这些已经异步处理了。</p>
 </div>
 <br>
 <a name="file_platform_specific" id="file_platform_specific"></a>
 <label class="collapse" for="four">特定平台的存取</label>
 <input id="four" type="checkbox">
 <div class="index_list">
-<p>When working with <i>GameMaker Studio 2</i>, you should know
-that each target platform has its own save area where files and
-directories can be written to and read from. Below is a list of
-those areas for each target:</p>
+<p>在使用 <i>GameMaker Studio 2</i> 时，您应该知道每个目标平台都有自己的保存区域，可以在其中写入和读取文件和目录。以下是每个目标涉及的领域：</p>
 
 <p><br>
 </p>
 
 <ul>
-<li><b>Windows</b> and <b>Windows UWP</b>- Windows has all files in
-the <tt>%localappdata%\&lt;Game Name&gt;</tt> directory (on Windows
-7 this is the <tt>/Users/&lt;User Name&gt;/AppData/Local/&lt;Game
-Name&gt;</tt> directory).</li>
+<li><b>Windows</b> 和 <b>Windows UWP</b>- Windows 所有文件在 <tt>%localappdata%\&lt;游戏名&gt;</tt> 目录（Windows 7 系统在 <tt>/Users/&lt;User Name&gt;/AppData/Local/&lt;游戏名&gt;</tt> 目录）。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>HTML5</b> - Everything is done through the local
-storage.</li>
+<li><b>HTML5</b> - 一切都是通过本地存储。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Mac OS</b> - Storage will depend on whether the application
-is sandboxed or not (following Apples rules, with the path usually
-being <tt>~/Library/Application Support/&lt;Game
-Name&gt;</tt>).</li>
+<li><b>Mac OS</b> - 存储将取决于应用程序是否被沙箱化（遵循苹果规则，路径通常为<tt>~/Library/Application Support/&lt;游戏名&gt;</tt>。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Ubuntu (Linux)</b> - Files are stored in the
-<tt>Home/.config/gamename</tt> where "Home" is the users home
-directory - <tt>/home/&lt;username&gt;</tt></li>
+<li><b>Ubuntu (Linux)</b> - 文件储存在 <tt>Home/.config/gamename</tt>，“Home” 是用户的 home 目录 - <tt>/home/&lt;username&gt;</tt></li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>iOS</b> - Storage is the standard location (as viewed
-through iTunes).</li>
+<li><b>iOS</b> - 存储在标准位置（通过iTunes查看）。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Android</b> - Files are in the standard location (which is
-invisible unless the device is rooted) <tt>/data/&lt;package
-name&gt;</tt>.</li>
+<li><b>Android</b> - 文件在标准位置（不可见，除非设备 root 过）<tt>/data/&lt;package name&gt;</tt>。</li>
 
 <li style="list-style: none"><br>
 </li>
 </ul>
 
-<p>It is worth noting that the <b>HTML5</b> target module has a
-limit on local storage (which can be between 1MB and 5MB depending
-on the browser) meaning that you will not be permitted to save
-large sprites, screenshots etc...</p>
+<p>值得注意的是，<b>HTML5</b> 目标模块对本地存储有限制（根据浏览器的不同，可以在 1 MB 到 5 MB 之间），这意味着你将不允许保存大精灵、截图等……</p>
 </div></blockquote>
 
 
