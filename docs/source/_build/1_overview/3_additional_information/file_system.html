@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ and what possible limits or workarounds there may be to this
 system.</p>
 
 <blockquote><a name="file_sandbox" id="file_sandbox"></a>
-<label class="collapse" for="one">文件沙箱</label> <input id=
+<label class="collapse" for="one">文件沙盒</label> <input id=
 "one" type="checkbox">
 <div class="index_list">
 <p>The first and most important thing to note about the file
@@ -153,8 +153,7 @@ exists in the read/write section of the save area.</li>
 </div>
 <br>
 <a name="file_outside" id="file_outside"></a> <label class=
-"collapse" for="three">Saving And Loading Outside The
-Sandbox</label> <input id="three" type="checkbox">
+"collapse" for="three">在文件沙盒外保存和加载</label> <input id="three" type="checkbox">
 <div class="index_list">
 <p>On the <b>Windows</b> and <b>Mac OS</b> platforms there is one
 way to save and load files from outside of the sandbox and that is
@@ -168,10 +167,27 @@ return string can then be used in the rest of the file functions to
 bypass the sandbox. See the function descriptions in the <a href=
 "../../3_scripting/index.html">scripting section</a> of the manual
 for more details.</p>
+
+<p>On <b>HTML5</b> it is also possible to load files from outside
+the sandbox from a server, however this should only be done using
+the function <a href=
+"../../3_scripting/4_gml_reference/buffers/buffer_load_async.html"><tt>
+buffer_load_async()</tt></a> as loading synchronously has been
+deprecated on most browsers and will eventually be obsoleted. This
+means that files being loaded in this way should be saved as binary
+files - for example, you can save an <tt>*.ini</tt> as a string
+(see <a href=
+"../../3_scripting/4_gml_reference/file%20handling/ini%20files/ini_close.html">
+<tt>ini_close</tt></a> for details) and then write that into a
+buffer which can then be saved and loaded using the async
+functions. Note that if you are loading images using <a href=
+"../../3_scripting/4_gml_reference/sprites/sprite_add.html"><tt>sprite_add</tt></a>
+then these are already dealt with asynchronously.</p>
 </div>
 <br>
 <a name="file_platform_specific" id="file_platform_specific"></a>
-<label class="collapse" for="four">特定平台的存取</label> <input id="four" type="checkbox">
+<label class="collapse" for="four">特定平台的存取</label>
+<input id="four" type="checkbox">
 <div class="index_list">
 <p>When working with <i>GameMaker Studio 2</i>, you should know
 that each target platform has its own save area where files and
@@ -225,11 +241,12 @@ name&gt;</tt>.</li>
 </li>
 </ul>
 
-<p>It is worth noting that the <b>HTML5</b> target modules have a
+<p>It is worth noting that the <b>HTML5</b> target module has a
 limit on local storage (which can be between 1MB and 5MB depending
 on the browser) meaning that you will not be permitted to save
 large sprites, screenshots etc...</p>
 </div></blockquote>
+
 
 <p><br>
 </p>
@@ -244,7 +261,7 @@ large sprites, screenshots etc...</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
