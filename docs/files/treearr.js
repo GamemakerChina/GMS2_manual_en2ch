@@ -48,11 +48,11 @@ var TITEMS = [
    ["窗口菜单", "source/_build/1_overview/2_quick_start/menus/windows_menu.html", "11"]
   ],
   ["工作流", "source/_build/1_overview/2_quick_start/workflow/index.html", "1",
-   ["精灵", "source/_build/1_overview/2_quick_start/workflow/1_sprites.html", "11"],
-   ["图块", "source/_build/1_overview/2_quick_start/workflow/2_tilesets.html", "11"],
-   ["声音", "source/_build/1_overview/2_quick_start/workflow/3_sounds.html", "11"],
-   ["物体", "source/_build/1_overview/2_quick_start/workflow/4_objects.html", "11"],
-   ["房间", "source/_build/1_overview/2_quick_start/workflow/5_rooms.html", "11"]
+   ["精灵编辑器", "source/_build/1_overview/2_quick_start/workflow/1_sprites.html", "11"],
+   ["图块集编辑器", "source/_build/1_overview/2_quick_start/workflow/2_tilesets.html", "11"],
+   ["声音编辑器", "source/_build/1_overview/2_quick_start/workflow/3_sounds.html", "11"],
+   ["物体编辑器", "source/_build/1_overview/2_quick_start/workflow/4_objects.html", "11"],
+   ["房间编辑器", "source/_build/1_overview/2_quick_start/workflow/5_rooms.html", "11"]
   ]
  ],
  ["附加信息", "source/_build/1_overview/3_additional_information/index.html", "1",
@@ -69,20 +69,20 @@ var TITEMS = [
  ],
  ["编辑器", "source/_build/2_interface/1_editors/index.html", "1",
   ["扩展", "source/_build/2_interface/1_editors/extensions.html", "11"],
-  ["字体", "source/_build/2_interface/1_editors/fonts.html", "11"],
-  ["图片", "source/_build/2_interface/1_editors/images.html", "11"],
-  ["包含文件", "source/_build/2_interface/1_editors/included_files.html", "11"],
-  ["笔记", "source/_build/2_interface/1_editors/notes.html", "11"],
-  ["物体", "source/_build/2_interface/1_editors/objects.html", "11"],
-  ["路径", "source/_build/2_interface/1_editors/paths.html", "11"],
-  ["房间", "source/_build/2_interface/1_editors/rooms.html", "11"],
-  ["脚本", "source/_build/2_interface/1_editors/scripts.html", "11"],
-  ["着色器", "source/_build/2_interface/1_editors/shaders.html", "11"],
-  ["声音", "source/_build/2_interface/1_editors/sounds.html", "11"],
-  ["精灵", "source/_build/2_interface/1_editors/sprites.html", "11"],
-  ["图块", "source/_build/2_interface/1_editors/tilesets.html", "11"],
-  ["时间线", "source/_build/2_interface/1_editors/timelines.html", "11"],
-  ["事件", "source/_build/2_interface/1_editors/events/index.html", "1",
+  ["字体编辑器", "source/_build/2_interface/1_editors/fonts.html", "11"],
+  ["图像编辑器", "source/_build/2_interface/1_editors/images.html", "11"],
+  ["内含文件", "source/_build/2_interface/1_editors/included_files.html", "11"],
+  ["便签", "source/_build/2_interface/1_editors/notes.html", "11"],
+  ["物体编辑器", "source/_build/2_interface/1_editors/objects.html", "11"],
+  ["路径编辑器", "source/_build/2_interface/1_editors/paths.html", "11"],
+  ["房间编辑器", "source/_build/2_interface/1_editors/rooms.html", "11"],
+  ["脚本编辑器", "source/_build/2_interface/1_editors/scripts.html", "11"],
+  ["着色器编辑器", "source/_build/2_interface/1_editors/shaders.html", "11"],
+  ["声音编辑器", "source/_build/2_interface/1_editors/sounds.html", "11"],
+  ["精灵编辑器", "source/_build/2_interface/1_editors/sprites.html", "11"],
+  ["图块集编辑器", "source/_build/2_interface/1_editors/tilesets.html", "11"],
+  ["时间线编辑器", "source/_build/2_interface/1_editors/timelines.html", "11"],
+  ["物体事件", "source/_build/2_interface/1_editors/events/index.html", "1",
    ["异步事件", "source/_build/2_interface/1_editors/events/async_events.html", "11"],
    ["绘制事件", "source/_build/2_interface/1_editors/events/draw_events.html", "11"],
    ["手势事件", "source/_build/2_interface/1_editors/events/gesture_events.html", "11"]
@@ -413,7 +413,7 @@ var TITEMS = [
    ["访问器", "source/_build/3_scripting/3_gml_overview/13_accessors.html", "11"],
    ["语言特性", "source/_build/3_scripting/3_gml_overview/14_language_features.html", "11"],
    ["函数", "source/_build/3_scripting/3_gml_overview/2_functions.html", "11"],
-   ["脚本", "source/_build/3_scripting/3_gml_overview/3_scripts.html", "11"],
+   ["脚本编辑器", "source/_build/3_scripting/3_gml_overview/3_scripts.html", "11"],
    ["注释", "source/_build/3_scripting/3_gml_overview/4_comments.html", "11"],
    ["关键词", "source/_build/3_scripting/3_gml_overview/5_keywords.html", "11"],
    ["范围", "source/_build/3_scripting/3_gml_overview/6_scope.html", "11"],
@@ -1427,7 +1427,7 @@ var TITEMS = [
      ["ini_write_string", "source/_build/3_scripting/4_gml_reference/file handling/ini files/ini_write_string.html", "11"]
     ]
    ],
-   ["字体", "source/_build/3_scripting/4_gml_reference/fonts/index.html", "1",
+   ["字体编辑器", "source/_build/3_scripting/4_gml_reference/fonts/index.html", "1",
     ["font_add", "source/_build/3_scripting/4_gml_reference/fonts/font_add.html", "11"],
     ["font_add_sprite", "source/_build/3_scripting/4_gml_reference/fonts/font_add_sprite.html", "11"],
     ["font_add_sprite_ext", "source/_build/3_scripting/4_gml_reference/fonts/font_add_sprite_ext.html", "11"],
@@ -1817,7 +1817,7 @@ var TITEMS = [
     ["network_set_config", "source/_build/3_scripting/4_gml_reference/networking/network_set_config.html", "11"],
     ["network_set_timeout", "source/_build/3_scripting/4_gml_reference/networking/network_set_timeout.html", "11"]
    ],
-   ["物体", "source/_build/3_scripting/4_gml_reference/objects/index.html", "1",
+   ["物体编辑器", "source/_build/3_scripting/4_gml_reference/objects/index.html", "1",
     ["object_exists", "source/_build/3_scripting/4_gml_reference/objects/object_exists.html", "11"],
     ["object_get_mask", "source/_build/3_scripting/4_gml_reference/objects/object_get_mask.html", "11"],
     ["object_get_name", "source/_build/3_scripting/4_gml_reference/objects/object_get_name.html", "11"],
@@ -1844,7 +1844,7 @@ var TITEMS = [
      ["event_user", "source/_build/3_scripting/4_gml_reference/objects/generating events/event_user.html", "11"]
     ]
    ],
-   ["路径", "source/_build/3_scripting/4_gml_reference/paths/index.html", "1",
+   ["路径编辑器", "source/_build/3_scripting/4_gml_reference/paths/index.html", "1",
     ["path_index", "source/_build/3_scripting/4_gml_reference/paths/path_index.html", "11"],
     ["path_end", "source/_build/3_scripting/4_gml_reference/paths/path_end.html", "11"],
     ["path_endaction", "source/_build/3_scripting/4_gml_reference/paths/path_endaction.html", "11"],
@@ -2031,7 +2031,7 @@ var TITEMS = [
      ["physics_world_update_speed", "source/_build/3_scripting/4_gml_reference/physics/the physics world/physics_world_update_speed.html", "11"]
     ]
    ],
-   ["房间", "source/_build/3_scripting/4_gml_reference/rooms/index.html", "1",
+   ["房间编辑器", "source/_build/3_scripting/4_gml_reference/rooms/index.html", "1",
     ["背景", "source/_build/3_scripting/4_gml_reference/rooms/backgrounds/index.html", "1",
      ["layer_background_index", "source/_build/3_scripting/4_gml_reference/rooms/backgrounds/layer_background_index.html", "11"],
      ["layer_background_alpha", "source/_build/3_scripting/4_gml_reference/rooms/backgrounds/layer_background_alpha.html", "11"],
@@ -2131,7 +2131,7 @@ var TITEMS = [
      ["layer_x", "source/_build/3_scripting/4_gml_reference/rooms/layers/layer_x.html", "11"],
      ["layer_y", "source/_build/3_scripting/4_gml_reference/rooms/layers/layer_y.html", "11"]
     ],
-    ["精灵", "source/_build/3_scripting/4_gml_reference/rooms/sprites/index.html", "1",
+    ["精灵编辑器", "source/_build/3_scripting/4_gml_reference/rooms/sprites/index.html", "1",
      ["layer_sprite_index", "source/_build/3_scripting/4_gml_reference/rooms/sprites/layer_sprite_index.html", "11"],
      ["layer_sprite_alpha", "source/_build/3_scripting/4_gml_reference/rooms/sprites/layer_sprite_alpha.html", "11"],
      ["layer_sprite_angle", "source/_build/3_scripting/4_gml_reference/rooms/sprites/layer_sprite_angle.html", "11"],
@@ -2198,12 +2198,12 @@ var TITEMS = [
      ["tilemap_y", "source/_build/3_scripting/4_gml_reference/rooms/tilemaps/tilemap_y.html", "11"]
     ]
    ],
-   ["脚本", "source/_build/3_scripting/4_gml_reference/scripts/index.html", "1",
+   ["脚本编辑器", "source/_build/3_scripting/4_gml_reference/scripts/index.html", "1",
     ["script_execute", "source/_build/3_scripting/4_gml_reference/scripts/script_execute.html", "11"],
     ["script_exists", "source/_build/3_scripting/4_gml_reference/scripts/script_exists.html", "11"],
     ["script_get_name", "source/_build/3_scripting/4_gml_reference/scripts/script_get_name.html", "11"]
    ],
-   ["着色器", "source/_build/3_scripting/4_gml_reference/shaders/index.html", "1",
+   ["着色器编辑器", "source/_build/3_scripting/4_gml_reference/shaders/index.html", "1",
     ["shader_current", "source/_build/3_scripting/4_gml_reference/shaders/shader_current.html", "11"],
     ["shader_enable_corner_id", "source/_build/3_scripting/4_gml_reference/shaders/shader_enable_corner_id.html", "11"],
     ["shader_get_name", "source/_build/3_scripting/4_gml_reference/shaders/shader_get_name.html", "11"],
@@ -2221,7 +2221,7 @@ var TITEMS = [
     ["shaders_are_supported", "source/_build/3_scripting/4_gml_reference/shaders/shaders_are_supported.html", "11"],
     ["着色器常量", "source/_build/3_scripting/4_gml_reference/shaders/shader constants/index.html", "11"]
    ],
-   ["精灵", "source/_build/3_scripting/4_gml_reference/sprites/index.html", "1",
+   ["精灵编辑器", "source/_build/3_scripting/4_gml_reference/sprites/index.html", "1",
     ["sprite_add", "source/_build/3_scripting/4_gml_reference/sprites/sprite_add.html", "11"],
     ["sprite_add_from_surface", "source/_build/3_scripting/4_gml_reference/sprites/sprite_add_from_surface.html", "11"],
     ["sprite_assign", "source/_build/3_scripting/4_gml_reference/sprites/sprite_assign.html", "11"],
@@ -2407,7 +2407,7 @@ var TITEMS = [
     ["string_width", "source/_build/3_scripting/4_gml_reference/strings/string_width.html", "11"],
     ["string_width_ext", "source/_build/3_scripting/4_gml_reference/strings/string_width_ext.html", "11"]
    ],
-   ["时间线", "source/_build/3_scripting/4_gml_reference/timelines/index.html", "1",
+   ["时间线编辑器", "source/_build/3_scripting/4_gml_reference/timelines/index.html", "1",
     ["timeline_add", "source/_build/3_scripting/4_gml_reference/timelines/timeline_add.html", "11"],
     ["timeline_clear", "source/_build/3_scripting/4_gml_reference/timelines/timeline_clear.html", "11"],
     ["timeline_delete", "source/_build/3_scripting/4_gml_reference/timelines/timeline_delete.html", "11"],
