@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,22 +36,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>For those users coming from <i>GameMaker: Studio 1.4</i> it may
-be a bit confusing using <i>GameMaker Studio 2</i> at first since
-there have been a number of changes made to the way that project
-resources, editing and coding are handled. These changes mean that
-the neither the IDE nor the <b>GameMaker Language</b> (GML)
-supports the items listed below. However, that does <i>not</i> mean
-that you cannot import games made with <i>GameMaker: Studio 1.4</i>
-into <i>GameMaker Studio 2</i>, as you can! The functions listed
-here will be turned into <b>compatibility scripts</b></p>
+<p>对于那些来自 <i>GameMaker: Studio 1.4</i> 的用户来说，一开始使用 <i>GameMaker Studio 2</i> 可能会有些混乱，因为对项目资源、编辑和编码的处理方式进行了许多更改。这些变化意味着 IDE 和<b>GameMaker Language</b>（GML）都不支持下面列出的项。然而，这并 <i>不</i> 意味着你不能像你所能做到的那样，将使用 <i>GameMaker: Studio 1.4</i> 制作的游戏导入到 <i>GameMaker Studio 2</i> 中！这里列出的函数将转换为 <b>兼容脚本</b></p>
 
 <blockquote><a name="obsolete_backgrounds" id=
 "obsolete_backgrounds"></a> <label class="collapse" for=
 "one">背景</label> <input id="one" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>在<i>GameMaker: Studio 1.4</i>中，你有独立的背景资源，其中你可以添加图片用作背景。在<i>GameMaker Studio 2</i>中所有图像都被视为精灵，并且其用途也取决于它们在房间中所被分配的<i>层（Layers）</i>。这也就意味着不再有“背景”资源了，并且这也意味着下述函数被弃用了：</p>
+<p>在 <i>GameMaker: Studio 1.4</i> 中，你有独立的背景资源，其中你可以添加图片用作背景。在 <i>GameMaker Studio 2</i> 中所有图像都被视为精灵，并且其用途也取决于它们在房间中所被分配的 <i>层（Layers）</i>。这也就意味着不再有“背景”资源了，并且这也意味着下述函数被弃用了：</p>
 
 <table>
 <tr>
@@ -135,13 +127,53 @@ here will be turned into <b>compatibility scripts</b></p>
 </tr>
 </table>
 
-<p>You can find out more about <b>Background Layers</b> from the
-section on the <a href=
-"../../2_interface/1_editors/rooms.html#room_layers">Room
-Editor</a>, and for more information on the functions that control
-background layers using code see <a href=
-"../../3_scripting/4_gml_reference/rooms/backgrounds/index.html">Background
-Layers</a>.</p>
+<p><br>
+<i>GameMaker: Studio 1.4</i> 也有一些不同的背景变量访问全局背景数组。在 <i>GameMaker Studio 2</i> 中不再需要这些：</p>
+
+<table>
+<tr>
+<td>background_index[0..7]</td>
+<td>background_visible[0..7]</td>
+<td>background_alpha[0..7]</td>
+<td>background_blend[0..7]</td>
+</tr>
+
+<tr>
+<td>background_x[0..7]</td>
+<td>background_y[0..7]</td>
+<td>background_colour</td>
+<td>background_showcolour</td>
+</tr>
+
+<tr>
+<td>background_foreground[0..7]</td>
+<td>background_hspeed[0..7]</td>
+<td>background_vspeed[0..7]</td>
+<td>background_htiled[0..7]</td>
+</tr>
+
+<tr>
+<td>background_vtiled[0..7]</td>
+<td>background_width[0..7]</td>
+<td>background_height[0..7]</td>
+<td>background_xscale[0..7]</td>
+</tr>
+
+<tr>
+<td>background_yscale[0..7]</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+</table>
+
+<p><br>
+您可以在 <a href=
+"../../2_interface/1_editors/rooms.html#room_layers">房间编辑器</a> 的部分中找到关于 <b>背景层</b> 的更多信息，有关使用代码控制背景层的函数的更多信息，请参阅 <a href=
+"../../3_scripting/4_gml_reference/rooms/backgrounds/index.html">背景层</a>。</p>
 </div>
 </div>
 <br>
@@ -149,18 +181,7 @@ Layers</a>.</p>
 "collapse" for="two">图块</label> <input id="two" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>As with backgrounds (explained above) the tile resource from
-<i>GameMaker: Studio 1.4</i> no longer exists, and instead we have
-<b>Tile Sets</b> in <i>GameMaker Studio 2</i>. In <i>GameMaker:
-Studio 1.4</i>, tiles used a background resource and were placed at
-different depths in the room editor or through code, however the
-method used was not terribly flexible and was also not that
-efficient. To address these issues, in <i>GameMaker Studio 2</i>
-tilesets are now created from a sprite resource, and can have
-various different properties (like animation or auto-tiling). They
-are then placed on a <i>tilemap layer</i> within the room editor or
-through code. Due to these changes the following functions are now
-obsolete:</p>
+<p>和背景一样(如上所述)，来自 <i>GameMaker: Studio 1.4</i> 的图块资源已经不存在了，取而代之的是 <i>GameMaker Studio 2</i> 中有 <b>图块集</b>。在 <i>GameMaker: Studio 1.4</i> 中，图块使用了后台资源，它们被放置在不同深度的房间编辑器中或通过代码放置，但是使用的方法并不灵活，效率也不高。为了解决这些问题，在 <i>GameMaker Studio 2</i> 中，瓷砖现在是由精灵资源创建的，可以有各种不同的属性（比如动画或自动图块）。然后将它们放置在房间编辑器内的 <i>图块层</i> 或通过代码放置。由于这些变化，下列函数现已弃用：</p>
 
 <table>
 <tr>
@@ -237,15 +258,10 @@ obsolete:</p>
 </tr>
 </table>
 
-<p>You can find out more about <b>Tile Sets</b> from the manual
-section on the <a href=
-"../../2_interface/1_editors/tilesets.html">Tile Set Editor</a> and
-about how to use them in the room editor from the section on
-<a href="../../2_interface/1_editors/rooms.html#room_layers">Tile
-Layers</a>. For more information on the functions that control
-background layers using code see <a href=
-"../../3_scripting/4_gml_reference/rooms/tilemaps/index.html">Tilemap
-Layers</a>.</p>
+<p><br>
+您可以从文档的 <a href=
+"../../2_interface/1_editors/tilesets.html">图块集编辑器</a> 的部分找到关于<b>图块集</b> 的更多信息，以及如何在房间编辑器中使用 <a href="../../2_interface/1_editors/rooms.html#room_layers">图块层</a> 部分。有关使用代码控制后台层的函数的更多信息，请参阅 <a href=
+"../../3_scripting/4_gml_reference/rooms/tilemaps/index.html">图块层</a>。</p>
 </div>
 </div>
 <br>
@@ -254,12 +270,7 @@ Layers</a>.</p>
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>The way objects are treated in <i>GameMaker Studio 2</i> has
-changed slightly due to the introduction of layers in the room
-editor. There still exists the "depth" variable, but it is now only
-really used for compatibility and you can no longer get or set the
-depth for objects, only instances. This makes the following
-functions obsolete:</p>
+<p>在 <i>GameMaker Studio 2</i> 中，物体的处理方式由于房间编辑器中引入了层而略有改变。“depth” 变量仍然存在，但它现在仅用于兼容性，您不能再为对象（仅为实例）获取或设置深度。这使得下列函数弃用：</p>
 
 <table>
 <tr>
@@ -271,12 +282,10 @@ functions obsolete:</p>
 </tr>
 </table>
 
-<p>You can find out more about object resources from the manual
-section on the <a href=
-"../../2_interface/1_editors/objects.html">Object Editor</a> and on
-the functions that control objects using code from the section
-<a href=
-"../../3_scripting/4_gml_reference/objects/index.html">Objects</a>.</p>
+<p><br>
+在手册的 <a href=
+"../../2_interface/1_editors/objects.html">物体编辑器</a> 部分，你可以找到关物体资源的更多信息，在 <a href=
+"../../3_scripting/4_gml_reference/objects/index.html">物体</a> 部分，你可以找到用代码控制物体的函数。</p>
 </div>
 </div>
 <br>
@@ -285,12 +294,7 @@ the functions that control objects using code from the section
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p><i>GameMaker: Studio 1.4</i> had two different sound API's, one
-which used the legacy <tt>sound_</tt> functions (that was only
-really valid for the <i>HTML5</i> target platform), and the other
-which used the <tt>audio_</tt> functions. The audio API has been
-improved and expanded in <i>GameMaker Studio 2</i>, making the
-legacy functions listed below obsolete:</p>
+<p><i>GameMaker: Studio 1.4</i> 有两种不同的声音 API，一种使用了遗留的 <tt>sound_</tt> 函数（只在 <i>HTML5</i> 目标平台上有效），另一种使用了 <tt>audio_</tt> 函数音频 API 在 <i>GameMaker Studio 2</i> 中得到了改进和扩展，使得下面列出的遗留函数弃用了：</p>
 
 <table>
 <tr>
@@ -340,12 +344,9 @@ legacy functions listed below obsolete:</p>
 </tr>
 </table>
 
-<p>You can find out more about audio resources from the manual
-section on the <a href=
-"../../2_interface/1_editors/sounds.html">Sound Editor</a> and on
-the functions that control audio using code from the section
-<a href=
-"../../3_scripting/4_gml_reference/audio/index.html">Audio</a>.</p>
+<p><br>
+你可以在手册的 <a href="../../2_interface/1_editors/sounds.html">声音编辑器</a> 一节中找到关于音频资源的更多信息，并从 <a href=
+"../../3_scripting/4_gml_reference/audio/index.html">音频</a> 一节中找到使用代码控制音频的函数。</p>
 </div>
 </div>
 <br>
@@ -353,7 +354,7 @@ the functions that control audio using code from the section
 "collapse" for="four">D3D</label> <input id="four" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>When using 3D models or primitives in <i>GameMaker: Studio 1.4</i>, you had to use the <tt>d3d_</tt> functions. These used an obsolete API for drawing and in many cases were not related strictly to Direct 3D API, or even to using 3D itself. 随着<i>GameMaker Studio 2</i>中顶点缓冲区、矩阵以及摄像机系统的引进，下述函数已经作废：</p>
+<p>在 <i>GameMaker: Studio 1.4</i> 中使用 3D 模型或基元时，必须使用 <tt>d3d_</tt> 函数。它们使用了一个过时的绘制 API，并且在许多情况下与直接使用 3D API 或甚至与使用 3D 本身无关。随着 <i>GameMaker Studio 2</i> 中顶点缓冲区、矩阵以及摄像机系统的引进，下述函数已经弃用：</p>
 
 <table>
 <tr>
@@ -514,14 +515,12 @@ the functions that control audio using code from the section
 </tr>
 </table>
 
-<p>You can find out more about vertex buffers <a href=
-"../../3_scripting/4_gml_reference/drawing/primitives/index.html">here</a>,
-more about matrices <a href=
-"../../3_scripting/4_gml_reference/matrices/index.html">here</a>
-more about cameras <a href=
-"../../3_scripting/4_gml_reference/cameras%20and%20display/index.html">
-here</a> and more about the GPU functions <a href=
-"../../3_scripting/4_gml_reference/drawing/gpu/index.html">here</a>.</p>
+<p><br>
+你可以找到更多关于 <a href=
+"../../3_scripting/4_gml_reference/drawing/primitives/index.html">顶点缓冲</a>、<a href=
+"../../3_scripting/4_gml_reference/matrices/index.html">矩阵</a>、 <a href=
+"../../3_scripting/4_gml_reference/cameras%20and%20display/index.html">摄像机</a> 和 <a href=
+"../../3_scripting/4_gml_reference/drawing/gpu/index.html">GPU函数</a> 的内容。</p>
 </div>
 </div>
 <br>
@@ -530,14 +529,7 @@ here</a> and more about the GPU functions <a href=
 <input id="five" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>With the advent of the <b>camera</b> functions in <i>GameMaker
-Studio 2</i>, it means that a number of <tt>view</tt> variables are
-no longer required, specifically those referring to the view into
-the room rather than the <tt>view_port</tt> (which is still used).
-There are also a few functions for controlling how things are
-displayed that were available in legacy versions of <i>GameMaker:
-Studio 1.4</i> which are also no longer appropriate. These
-variables and functions are listed below:</p>
+<p>随着 <i>GameMaker Studio 2</i> 中的 <b>camera</b> 函数的出现，这意味着不再需要很多 <tt>视图</tt> 变量，特别是那些引用到房间中的视图而不是 <tt>view_port</tt>（仍在使用）的变量。在 <i>GameMaker: Studio 1.4</i> 的遗留版本中，也有一些用于控制显示方式的函数，但这些函数也不再适用。这些变量和函数如下：</p>
 
 <table>
 <tr>
@@ -570,10 +562,9 @@ variables and functions are listed below:</p>
 </tr>
 </table>
 
-<p>You can find out more about cameras from the manual section on
-<a href=
-"../../3_scripting/4_gml_reference/cameras%20and%20display/index.html">
-Cameras And The Display</a>.</p>
+<p><br>
+你可以从文档的 <a href=
+"../../3_scripting/4_gml_reference/cameras%20and%20display/index.html">相机和显示</a> 部分找到更多关于相机的信息。</p>
 </div>
 </div>
 <br>
@@ -582,9 +573,7 @@ Cameras And The Display</a>.</p>
 <input id="six" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p><i>GameMaker Studio 2</i> moves a lot of built in functionality
-from previous versions into extensions, meaning that the following
-3rd party support functions are considered obsolete:</p>
+<p><i>GameMaker Studio 2</i> 将许多内置功能从以前的版本转移到扩展中，这意味着以下第三方支持功能被认为已经弃用了：</p>
 
 <table>
 <tr>
@@ -646,10 +635,10 @@ from previous versions into extensions, meaning that the following
 </tr>
 </table>
 
-<p>You can get the official YoYo Games extensions for advertising
-and analytics from their <a href=
+<p><br>
+你可以从 <a href=
 "https://marketplace.yoyogames.com/publishers/23/yoyo-games"
-target="_blank">Marketplace Page</a>.</p>
+target="_blank">市场页面</a> 上获得关于广告和分析的官方 YoYo Games 扩展。</p>
 </div>
 </div>
 <br>
@@ -658,7 +647,7 @@ target="_blank">Marketplace Page</a>.</p>
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>无论是<i>GameMaker: Studio 1.4</i>还是<i>GameMaker Studio 2</i>都有一个可视化撰写<b>拖拽按钮</b> (DnD™)界面来供您创作，然而however the way it is handled in <i>GameMaker Studio 2</i> is quite different to the previous methods used. Previously, all DnD™ actions had their own corresponding function which worked "behind the scenes" to get the desired results, however this was not very transparent and added in extra overheads to the function calls, resulting in poorer performance. In <i>GameMaker Studio 2</i> this has been changed, and now all actions compile to pure code (and can be shown as such if required), meaning that the following action functions are obsolete:</p>
+<p>无论是 <i>GameMaker: Studio 1.4</i> 还是 <i>GameMaker Studio 2</i> 都有一个可视化撰写 <b>拖拽按钮</b>（DnD™）界面来供您创作，然而，在 <i>GameMaker Studio 2</i> 中处理它的方式与以前的使用方法有很大不同。以前，所有 DnD™ 操作有自己的相应的函数“幕后”工作得到预期的结果，但这不是很透明，函数调用中增加的额外开销会导致性能降低。在 <i>GameMaker Studio 2</i> 中，这一点已经被改变了，现在所有的动作都被编译成纯代码（如果需要的话可以这样显示），这意味着下面的动作函数已经弃用了</p>
 
 <table>
 <tr>
@@ -910,10 +899,9 @@ target="_blank">Marketplace Page</a>.</p>
 </tr>
 </table>
 
-<p>You can find out more about the new DnD™ from the manual section
-<a href=
-"../../3_scripting/1_drag_and_drop_overview/index.html">Drag And
-Drop Overview</a>.</p>
+<p><br>
+你可以找到更多关于新 DnD™ 的 <a href=
+"../../3_scripting/1_drag_and_drop_overview/index.html">拖拽概述</a> 部分。</p>
 </div>
 </div>
 <br></blockquote>
@@ -926,32 +914,20 @@ Drop Overview</a>.</p>
 <p><br>
 </p>
 
-<p>When you import a project made with a previous version of
-<i>GameMaker Studio</i>, any obsolete functions that have been used
-will <i>still</i> work as they will have been transformed by the
-IDE automatically into <b>compatibility scripts</b>. What happens
-is that <i>GameMaker Studio 2</i> will parse your project for all
-the obsolete functions and variables that you have used, and then
-create a series of scripts using those function names. These
-scripts will contain either the new equivalent function or a short
-script of code that performs the same action as the obsolete
-function.</p>
+<p>当您导入一个用以前版本的 <i>GameMaker Studio</i> 制作的项目时，任何已经使用的弃用函数 <i>仍然可以</i>工作，因为 IDE 会自动将它们转换为 <b>兼容性脚本</b>。接下来，<i>GameMaker Studio 2</i> 将解析你的项目中所有使用过的弃用函数和变量，然后使用这些函数名创建一系列脚本。这些脚本将包含新的等效函数或执行与废弃函数相同操作的简短代码脚本。</p>
 
-<p>每当你第一次导入一个<i>GameMaker Studio 2</i>项目，就会有一个大致像这样的<b>兼容性报告</b>出现在您的面前：
+<p>每当你第一次导入一个 <i>GameMaker Studio 2</i> 项目，就会有一个大致像这样的 <b>兼容性报告</b> 出现在您的面前：
 <img class="center" src="images/compatibility_overview.png" alt=
 "兼容性报告"></p>
 
-<p>报告的主体展现了哪些物体和脚本及其哪个位置受到了影响，而在报告的记为您会看到一系列被创建到您项目中的脚本。您可点击鼠标中键You can click the middle mouse button <img style="vertical-align:middle" src=
-"../../images/icon_mmb.png"> or press <img style=
-"vertical-align:middle" src="../../images/icon_f1.png"> on any of the scripts listed in the report to open it and see what has been done. Note that if you see any scripts created with a double under-bar before their name (for example: <tt>__global_object_depths</tt>), then these are scripts that <i>have been created by the IDE to help with compatibility</i> and are not scripts that have been converted from obsolete functions, so these should <i>not</i> be tampered with as they are required for the other compatibility scripts to work.</p>
+<p>报告的主体展现了哪些物体和脚本及其哪个位置受到了影响，而在报告的记为您会看到一系列被创建到您项目中的脚本。您可以单击鼠标中键 <img style="vertical-align:middle" src=
+"../../images/icon_mmb.png"> 或按下 <img style=
+"vertical-align:middle" src="../../images/icon_f1.png"> 在报告中列出的任何脚本打开它，看看已经完成什么。请注意，如果你看到任何脚本名字以双下划线开头（例如：<tt>__global_object_depths</tt>），那是 <i>IDE 创建的为了兼容性</i> 的脚本而不是从弃用函数转换而来的脚本，因此，它们 <i>不</i> 应该被篡改，因为它们需要其他兼容脚本来工作。</p>
 
-<p>When you have finished revising the compatibility report you can
-close the workspace, but should you need to revise anything within
-the report you can find it again by going to the <a href=
-"../../2_interface/1_editors/notes.html">Notes</a> section of the
-resource tree.</p>
+<p>当您完成了兼容性报告的修改后，您可以关闭工作区，但是如果您需要修改报告中的任何内容，您可以通过访问资源树的 <a href=
+"../../2_interface/1_editors/notes.html">便签</a> 部分再次找到它。</p>
 
-<p>Please note that there are some functions that have been introduced to the GameMaker Language to ensure compatibility with older projects and that will appear in these compatibility scripts. 然而这些函数<b>不应该被用于你自己的项目中</b>。你可以在如下章节中找到这些函数的列表：</p>
+<p>请注意，有些函数已经引入到 GameMaker 语言中，以确保与旧项目的兼容性，这些函数将出现在这些兼容脚本中。然而这些函数 <b>不应该被用于你自己的项目中</b>。你可以在如下章节中找到这些函数的列表：</p>
 
 <blockquote>
 <ul>
@@ -974,7 +950,7 @@ resource tree.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
