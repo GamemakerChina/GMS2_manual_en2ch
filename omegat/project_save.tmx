@@ -31173,6 +31173,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>In general, you will only need to use the standard &lt;b6&gt;Draw&lt;/b6&gt; sub-event and you should be aware that all instances in a room will have this event triggered each step of the game, so this sub-event will &lt;i7&gt;always be called as long as the instance has the &lt;b8&gt;visible&lt;/b8&gt; flag set to true&lt;/i7&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="guxuan" changedate="20181009T033314Z" creationid="guxuan" creationdate="20181009T033314Z">
+        <seg>通常, 你只需要使用基础 &lt;b6&gt;绘制&lt;/b6&gt;事件，需要注意的是，所有房间中的实例，在游戏中每个步骤都会触发这个事件。所以， &lt;i7&gt;只要这个实例 &lt;b8&gt;可见&lt;/b8&gt;标签设置为真，这个事件就会一直被调用。 &lt;/i7&gt;.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>In most cases you can simply use the &lt;a2&gt;&lt;t3&gt;os_is_paused&lt;/t3&gt;&lt;/a2&gt; function to test this, but in some very specific cases (for example games on Chrome Apps) that function will not trigger, in which case you should use this function instead.&lt;br4&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160208T040550Z" creationid="deciia" creationdate="20160208T040550Z">
