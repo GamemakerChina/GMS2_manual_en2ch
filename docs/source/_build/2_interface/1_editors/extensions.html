@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,118 +36,77 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>An extension package can be used to add a number of additional
-functions and constants to the GameMaker Language (GML), or as a
-way to transfer game assets or even whole projects easily between
-people. If the extension is to add extra functionality, then the
-functions used can link your game to external SDKs or source code
-written in other languages (like Java for Android, for example), as
-well as native GML.  <img class="center" src=
+<p>扩展包可以用来向 GameMaker Language（GML）中添加许多额外的函数和常量，或者作为一种在人们之间轻松转移游戏资产甚至整个项目的方式。如果扩展是为了增加额外的功能，那么所使用的函数可以将你的游戏链接到外部的 SDK 或用其他语言编写的源代码（例如，用于 Android 的 Java），以及本机 GML。 <img class="center" src=
 "images/editor_extensions.png" alt="Extensions Properties"></p>
 
-<p>Normally 3rd party extensions will be from the <a href=
-"https://marketplace.yoyogames.com/" target="_blank">GameMaker
-Marketplace</a> and those you have subscribed to will then be
-listed in the <a href="../2_extras/marketplace.html">Marketplace
-Library</a> window and can be installed from there, or by right
-clicking <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on the <b>Extensions</b> resource
-folder and selecting <i>Add Existing From My Library</i>. If you
-did not get your extension package from the Marketplace, you can
-still add it to a project by again right-clicking <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> the
-<b>Extensions</b> folder in the resource tree and this time
-selecting <i>Add Existing</i>.</p>
+<p>通常情况下，第三方扩展会来自 <a href=
+"https://marketplace.yoyogames.com/" target="_blank">GameMaker 市场</a>，你订阅的扩展会在 <a href="../2_extras/marketplace.html">市场库</a> 窗口中列出，可以从那里安装，或者右键点击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> <b>扩展</b> 资源文件夹，选择<i>从我的库中添加已存在扩展</i>。如果你没有从市场上获得扩展包，你仍然可以通过再次右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 资源树中的 <b>扩展</b> 文件夹并选择 <i>添加现有资源</i> 来将其添加到项目中。</p>
 
-<p>If you have a <tt>*.GMEZ</tt> created with a previous version of
-<i>GameMaker Studio</i> you can add these by selecting the right
-mouse button <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> menu option <i>Import File</i>.</p>
+<p>如果你有用之前版本的 <i>GameMaker Studio</i> 创建的 <tt>*.GMEZ</tt> 格式扩展，你可以通过点击鼠标右键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 菜单选项 <i>导入文件</i> 来添加这些内容。</p>
 
-<div class="note"><b>注意</b>： Legacy format <tt>*.GEX</tt> extensions are no longer supported and cannot be imported in to <i>GameMaker Studio 2</i> projects.</div>
+<div class="note"><b>注意</b>： 遗留格式 <tt>*.GEX</tt> 扩展不再受支持，也不能导入到 <i>GameMaker Studio 2</i> 项目中。</div>
 <br>
 
-<p>For more information on using and creating <b>Extension
-Packages</b> please see the following sections:</p>
+<p>有关使用和创建 <b>扩展包</b> 的更多信息，请参阅以下部分：</p>
 
-<blockquote><label class="collapse" for="a">Using
-Extensions</label> <input id="a" type="checkbox">
+<blockquote><label class="collapse" for="a">使用扩展</label> <input id="a" type="checkbox">
 <div class="index_list">
-<p>Once you have added an extension you can start to use it in your
-projects, however you should ensure that the extension properties
-match up with the target platform, and edit the export targets for
-the extension files based on the following:</p>
+<p>一旦向资源树添加了一个扩展，就应该给它一个名称和版本号，并设置要将其导出到哪个平台。通过取消选定平台的勾选，您可以告诉 <i>GameMaker Studio 2</i> 不要将扩展导出为这些平台的可执行文件的一部分。您还应确保扩展属性与目标平台匹配，并根据以下内容编辑扩展文件的导出目标：</p>
 
 <ul>
-<li><b>All targets</b>: GML extensions. These are extensions made
-using the GameMaker Language (GML) and are compatible with all
-target platforms.<br>
+<li><b>所有平台</b>： GML 扩展。这些是使用 GameMaker 语言（GML）编写的扩展，与所有目标平台兼容。<br>
 <br></li>
 
-<li><b>Windows (Standard, UWP, XBoxOne)</b>: You can use windows
-DLL files (Dynamic Link Libraries).</li>
+<li><b>Windows（标准、UWP 和 XBoxOne）</b>: 你可以使用 Windows DLL文件（动态数据链接库）。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Mac OS</b>: The Mac OS target can use the standard DyLib
-files for extensions.</li>
+<li><b>Mac OS</b>： Mac OS 平台可以使用标准的 DyLib 文件进行扩展。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Ubuntu (Linux)</b>: For the Ubuntu target you need to make
-sure that your extension uses SO files.</li>
+<li><b>Ubuntu (Linux)</b>： 对于 Ubuntu 平台，你需要确保你的扩展使用 SO 文件。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Html5</b>: These platforms can use JavaScript
-extensions.</li>
+<li><b>Html5</b>： 这个平台可以使用 JavaScript 扩展。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Android</b>: This platform requires an extension to be
-written in Java or an Android Framework SDK.</li>
+<li><b>Android</b>： 这个平台需要用 Java 或 Android 框架 SDK 编写扩展。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>iOS</b>: Extensions for this platform are written in
-Objective C and require a *.mm and a *.h file, or if using any
-Frameworks, a pre-compiled *.a native file.</li>
+<li><b>iOS</b>： 这个平台的扩展是用 Objective C 编写的，需要 *.mm 和 *.h文件，或如果使用任何框架，预编译 *.a 本地文件。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>PlayStation</b>: For PlayStation 3 or 4 your extensions
-should be PRX files, with each target requiring a different PRX to
-conform to specification of the target (either PS3 or PS4). If
-working on a PSVita, the extension should be SUPRX instead.</li>
+<li><b>PlayStation</b>： 对于 PlayStation 3 或 4，你的扩展应该是 PRX 文件，每个平台需要一个不同的 PRX 以符合平台的规范（PS3 或 PS4）。如果在 PSVita 上工作，扩展应该是 SUPRX。</li>
 
 <li style="list-style: none"><br>
 </li>
 </ul>
 
-<p>To change the target platform for a specific extension file or
-placeholder you must first open the extension properties (double
-click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> the extension i the Resource tree or
-use <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> and select <i>Open Properties</i>),
-and then once in the extension properties select the resource file
-from the right that you want to edit: <img class="center" src=
+<p>由于单个扩展可以具有各种相关文件，因此可以为多个平台创建单个扩展，在这种情况下，您希望在主扩展编辑器中指定 <i>所有</i> 兼容平台（即：勾选它们旁边的复选框），然后在扩展的每个部分的单个文件属性，设置应该导出这些文件的平台。 要更改特定扩展文件或占位符的目标平台，你必须首先打开扩展属性（双击 <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> 资源树中的扩展名或使用 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并选择 <i>打开属性</i>），然后在扩展属性中选择右侧的资源文件中你要编辑的内容：<img class="center" src=
 "images/editor_extensions_targets.png" alt=
 "Extension Target Platforms"></p>
 
-<p>Once you have installed your extension, you can use the
-functions and constants for it just as you would the built in
-functions and constants used in the GameMaker Language. If your
-game is cross-platform (for example, it is designed to run on both
-Windows and Android targets), then you should do an OS check before
-calling extension specific functions to prevent issues, for
-example:</p>
+<div class="note"><b>注意</b>：如果要导出到 macOS 或 Ubuntu 平台，则可以将“解压缩为 zip 文件”选项设置为保留扩展的文件权限。</div>
+
+<p><br>
+一旦安装了扩展，就可以像使用 GameMaker 语言中使用的内置函数和常量一样使用函数和常量。如果您的游戏是跨平台的（例如，它设计为在 Windows 和 Android 平台上运行），那么您应该在调用扩展特定功能之前使用 <a href=
+"../3_scripting/4_gml_reference/miscellaneous/index.html">OS 常量和函数</a> 来检查平台以防止出现问题，例如：</p>
 
 <p class="code">switch(os_type)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -161,89 +120,47 @@ y, z);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>Note that for different platforms your extensions can share
-function names, so if you have an extension with distinct files to
-(for example) pop up a message for Windows <i>and</i> for Android,
-both extension files can share the same function name as long as
-they are both set to export <i>only</i> to their respective
-platforms.</p>
+<p>请注意，对于不同的平台，您的扩展可以共享功能名称，因此如果您有一个包含不同文件的扩展名（例如）弹出 Windows <i>和</i> Android 的消息，则两个扩展文件可以共享相同的功能名称，只要它们两者都设置为 <i>仅</i> 导出到各自的平台。</p>
 </div>
 <br>
-<label class="collapse" for="b">Creating Extensions</label>
+<label class="collapse" for="b">创建扩展</label>
 <input id="b" type="checkbox">
 <div class="index_list">
-<p>To create an extension you first need to right click <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> on the
-<b>Extensions</b> resource folder and select <i>Create</i>. That
-will open the main extension properties window (as shown at the top
-of this page) ready for you to add the required files and
-functions, and you can also give the extension a name here
-(following the usual convention of only letters/numbers and no
-special symbols except the underbar "_"). You can also set the
-version number for the extension should you wish to.</p>
+<p>要创建扩展，首先需要右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> <b>Extensions</b> 资源文件夹并选择 <i>创建</i>。这将打开主扩展属性窗口（如本页顶部所示），随时可以添加所需的文件和功能，你也可以在此处为扩展名命名（通常遵循只有字母、数字和下划线 “_” 的惯例，没有特殊符号）。你也可以根据需要设置扩展的版本号。</p>
 
-<p>To add a file to the new extension you need to click the menu
-icon <img style="vertical-align:middle" src=
-"images/icon_extensionmenu.png"> and select either a
-<i>placeholder</i> file or the actual file that is required for the
-target platform: <img class="center" src=
+<p>要将文件添加到新扩展，你需要单击菜单图标 <img style="vertical-align:middle" src=
+"images/icon_extensionmenu.png"> 并选择 <i>占位符</i> 文件或目标平台实际所需的文件：<img class="center" src=
 "images/editor_extensions_files.png" alt=
 "Add Files To An Extension"></p>
 
-<p>A "Generic" placeholder is a file that can be of any type,
-except those required by the specific platforms (so no DLL or SO
-files, for example), and it will not be used except as a "linker"
-file to connect a set of functions or constants with the given
-extension (generally it is only for use with iOS and Android
-extensions, which is explained in the sections below for those
-targets). You can also add "GML" and "JS" placeholder files for
-more specific use.</p>
+<p>“Generic” 占位符可以是任何类型的文件，除了特定平台所需的文件（例如，没有 DLL 或 SO 文件），除了作为 “链接器” 文件连接之外，它不会被使用。具有给定扩展名的函数或常量集（通常仅用于 iOS 和 Android 扩展，在下面的部分中针对这些平台进行了解释）。你还可以添加 “GML” 和 “JS” 占位符文件以供更具体的使用。</p>
 
-<p>Normally you won't need to use placeholders unless building for
-iOS and Android, so you would choose the <i>Add Files</i> option to
-add any one of the following files depending on the target platform
-they are for:</p>
+<p>通常，除非为 iOS 和 Android 构建，否则你不需要使用占位符，因此你可以选择 <i>添加文件</i> 选项以根据它们的目标平台添加以下任何一个文件：您会注意到</p>
 
 <ul>
-<li><b><tt>.gml</tt></b>: This is a file made only with the
-GameMaker Language and is compatible with all platforms.<br>
+<li><b><tt>.gml</tt></b>： 这是一个仅使用 GameMaker 语言制作的文件，并且与所有平台兼容。<br>
 <br></li>
 
-<li><b><tt>.js</tt></b>: This is a JavaScript extension format and
-is only compatible with the JS target modules (HTML5).<br>
+<li><b><tt>.js</tt></b>：这是一种 JavaScript 扩展格式，仅与 JS 平台模块（HTML5）兼容。<br>
 <br></li>
 
-<li><b><tt>.dll</tt></b>: This a dynamic-link library extension
-format and is only compatible with the Windows, UWP and Xbox One
-targets (each target will need a different *.dll file compatible
-with its specifications).<br>
+<li><b><tt>.dll</tt></b>： 这是一种动态链接库扩展格式，仅与 Windows、UWP 和 Xbox One 平台兼容（每个平台都需要与其规范兼容的不同 *.dll 文件）。<br>
 <br></li>
 
-<li><b><tt>.dylib</tt></b>: This is the Mac equivalent of a DLL and
-is only compatible with Mac target (not iOS).<br>
+<li><b><tt>.dylib</tt></b>： 这是 Mac 的等效 DLL，只与 Mac 平台（而不是iOS）兼容。<br>
 <br></li>
 
-<li><b><tt>.so</tt></b>: This is the Linux equivalent of a DLL and
-is only compatible with the Ubuntu (Linux) target.<br>
+<li><b><tt>.so</tt></b>： 这是 Linux 的 DLL 等价物，只与 Ubuntu（Linux）平台兼容。<br>
 <br></li>
 
-<li><b><tt>.prx</tt></b>: This is a file format for adding
-functionality PS4 target (each target will need a different *.prx
-file compatible with its specifications).<br>
+<li><b><tt>.prx</tt></b>： 这是用于添加 PS4 平台功能的文件格式（每个平台将需要与其规范兼容的不同 *.prx 文件）。<br>
 <br></li>
 </ul>
 
-<p>You'll notice that there is no file type for <b>Android</b> nor
-<b>iOS</b>, which is because their setup is slightly different.
-Further down you can find explanations on how to set them up but
-first let's look at creating a general GML extension for any of the
-target platforms, since the process is the same for all of
-them.</p>
+<p>你会注意到 <b>Android</b> 和 <b>iOS</b> 都没有文件类型，这是因为它们的设置略有不同。 再向下，你可以找到有关如何设置它们的解释，但首先让我们看看如何为任何目标平台创建一般 GML 扩展，因为过程都是相同的。</p>
 
-<p>To start with you need to create the file that is going to be
-used. For a GML extension, this would be a text file (saved with
-the <tt>.gml</tt> extension) and would be formatted something like
-this:</p>
+<p>首先，你需要创建将要使用的文件。对于 GML 扩展，这将是一个文本文件（以 <tt>.gml</tt> 扩展名保存），并且格式如下：</p>
 
 <p class="code">#define c_alice_blue<br>
 return make_color_rgb(240,248,255);<br>
@@ -256,149 +173,57 @@ with (i)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br>
 return i;<br></p>
 
-<p>As you can see we start each section with a <tt>#define</tt>
-call, which in the example above is used to define two functions.
-You don't need to supply argument fields for the functions as this
-will be added later, simply use the define then the name of the
-function and go ahead and add the GML to match. If you were writing
-a DLL or JS extension, then the process would be similar but in the
-correct language for the extension file format.</p>
+<p>如你所见，我们使用 <tt>#define</tt> 调用启动每个部分，在上面的示例中，它用于定义两个函数。你不需要为函数提供参数字段，因为稍后将添加它，只需使用 define 然后使用函数的名称并继续添加 GML 以匹配。如果你正在编写 DLL 或 JS 扩展，那么该过程将类似于扩展文件格式的正确语言。</p>
 
-<p>Once you have done that you need to add the file to the
-extension (explained above) which will chain a new window to the
-Extensions Properties for the <b>File Properties</b>:  <img class=
+<p>完成后，你需要将文件添加到扩展（如上所述），该文件将新窗口链接到 <b>文件属性</b> 的扩展属性： <img class=
 "center" src="images/editor_extensions_fileproperties.png" alt=
 "File Property Window"></p>
 
-<p>Here you would select the target platform for the extension (for
-GM you would select them all), as well as rename the extension file
-and set a few other details, which we'll cover in a moment. First
-of all though we want to add in our constants and functions so that
-the user can call the extension from within their project code. For
-that you need to click the extensions menu button <img style=
-"vertical-align:middle" src="images/icon_extensionmenu.png"> and
-select what you require: <img class="center" src=
-"images/editor_extensions_addfunctions.png" alt=
-"Add functions/Constants To An Extension"></p>
+<p>在这里，你将选择扩展的目标平台（对于 GM，你将全部选择它们），以及重命名扩展文件并设置其他一些细节，我们将在稍后介绍。首先，我们想要添加常量和函数，以便用户可以从他们的项目代码中调用扩展。如上，只有菜单按钮在左边。</p>
 
-<p>Selecting <i>Add Function</i> will then permit you to add a
-function to the extension which can then be called in <i>GameMaker
-Studio 2</i> as you would any of the built in functions. The
-following window opens for you to define the function in:
-
+<p>选择 <i>添加函数</i> 将允许你向扩展添加函数，然后可以像在任何内置函数中一样在 <i>GameMaker Studio 2</i> 中调用该函数。将打开以下窗口，供你在以下位置定义函数：
 <img class="center" src=
 "images/editor_extensions_functioneditor.png" alt=
 "Function Editor"></p>
 
-<p>In the image above we have populated the function editor with
-the details for the function <tt>instance_create_colour</tt> that
-we defined in our GML extension script (the function editor isn't
-just for defining GML functions and will be the same for any other
-extension type). You can see we have given the function a name,
-which is what you would call when using the function in your
-project, and this name doesn't have to match the one used in the
-extension - you can set it to anything you want and then use the
-<i>External Name</i> option to link it to the actual name defined
-in the extension. Below that you have a section for defining the
-<i>Help</i> text, which is the text that will be used in the code
-complete pop up and the helper text at the bottom of the code
-editor.</p>
+<p>在上图中，我们在函数编辑器中填充了我们在 GML 扩展脚本中定义的函数 <tt>instance_create_colour </tt> 的详细信息（函数编辑器不仅用于定义 GML 函数，对于任何其他扩展类型也是如此）。你可以看到我们已经为该函数指定了一个名称，这是你在项目中使用该函数时要调用的名称，并且此名称不必与扩展中使用的名称相匹配 —— 你可以将其设置为你想要的任何名称。 然后使用 <i>外部名称</i> 选项将其链接到扩展中定义的实际名称。 在下面你有一个用于定义 <i>帮助</i> 文本的部分，它是将在代码完成弹出窗口中使用的文本以及代码编辑器底部的帮助文本。</p>
 
-<p>Next you can define the return type, which can be a
-<b>double</b> (real number floating point value) or a <b>string</b>
-- if there is nothing returned by the external function then this
-does not matter - and under that you define the arguments that the
-function will take.</p>
+<p>接下来，你可以定义返回类型，它可以是 <b>double</b>（实数浮点型）或 <b>string</b>（字符串） —— 如果外部函数没有返回任何内容，那么这无关紧要 —— 并且在此之下定义函数的参数。</p>
 
-<p>Finally, you add the arguments (if any) that the function can
-take. Arguments can be either <b>doubles</b> or <b>strings</b>, and
-you can add them by clicking the add button <img style=
-"vertical-align:middle" src="images/icon_addargument.png"> and
-remove them by clicking the remove button <img style=
-"vertical-align:middle" src="images/icon_removeargument.png">. Note
-that if you are creating a Windows <tt>dll</tt> file and it has
-more than four arguments, <i>all arguments must be of the same
-type</i>.</p>
+<p>最后，添加函数可以使用的参数（如果有）。参数可以是 <b>doubles（双精度型）</b> 或 <b>strings（字符串）</b>，你可以通过单击添加按钮 <img style=
+"vertical-align:middle" src="images/icon_addargument.png"> 添加它们，然后单击删除按钮 <img style=
+"vertical-align:middle" src="images/icon_removeargument.png"> 将其删除。如果你的函数可以接受变量参数，你还应该确保检查底部的 <b>可变长度参数</b> 复选框。</p>
 
-<p>Once you have done all that then function is ready to be used in
-a project and it will show up in auto complete and be colour coded
-too. Defined functions can also be set as <b>Init Functions</b> or
-<b>Final Functions</b>, meaning that they will be called
-automatically when the game starts (Init) and when the game ends
-(Final).</p>
+<div class="note"><b>注意</b>：如果要创建 Windows <tt>dll</tt> 文件并且它具有四个以上的参数，则 <i>所有参数必须属于同一类型</i>。</div>
 
-<div class="note"><b>IMPORTANT!</b> All platforms support the Init
-function call, but <b>not all platforms will perform the Final
-function call</b>. This is because certain platforms will simply
-close the app without giving any notice or time for this function
-to be called. The platforms that are affected by this are:
-<b>iOS</b>, <b>Android</b>, <b>HTML5</b>, <b>PlayStation</b> and
-<b>XboxOne</b>.</div>
+<p>完成所有操作后，就可以在项目中使用该函数，它将自动完成并进行颜色编码。定义的函数也可以设置为 <b>初始函数[Init Functions]</b> 或 <b>最终函数[Final Functions]</b>，这意味着它们将在游戏开始时（Init）和游戏结束时（Final）自动调用。</p>
+
+<div class="note"><b>重要！</b> 所有平台都支持 Init 函数调用，但 <b>并非</b> 所有平台都会执行 Final 函数调用。这是因为某些平台只是关闭应用程序而不给出任何通知或时间来调用此函数。受此影响的平台有：<b>iOS</b>、<b>Android</b>、<b>HTML5</b>、<b>PlayStation</b> 和 <b>XboxOne</b>。</div>
 
 <p><br>
-
-The other option you have is to create a <b>Macro</b>. A macro can
-be a <b>constant</b> value or a single code snippet (for more
-information on macros, please see <a href=
-"../../3_scripting/3_gml_overview/6_scope.html">here</a>). For
-example, we could remove the defined function from our example GML
-extension above for the colour <tt>c_alice_blue</tt> and make it a
-macro instead:  <img class="center" src=
+你拥有的另一个选项是创建一个 <b>宏</b>。宏可以是 <b>常量</b> 值或单个代码段（有关宏的更多信息，请参见 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">此处</a>）。例如，我们可以从上面的示例 GML 扩展中删除用于颜色的已定义的函数 <tt>c_alice_blue</tt>，并使其成为宏。要创建宏，只需单击“扩展属性属性”窗口中的 <b>宏</b> 按钮： <img class="center" src=
 "images/editor_extensions_macroeditor.png" alt="Macro Editor"></p>
 
-<p>The editor here is pretty much self explanatory - you give the
-name of the macro/constant and the value, or a short line of code.
-Note that if the macro is a line of code it will be evaluated
-<i>every time the macro is called</i>.</p>
+<p>这里的编辑器几乎是不言自明的 —— 你可以给出宏/常量的名称和值，或者一行简短的代码。请注意，如果宏是一行代码，则 <i>每次调用宏时都会对其进行求值</i>。</p>
 
-<p>When working with multiple target platforms, it is worth noting
-that you can create a <i>single</i> extension with only one set of
-functions/macros which will work on <i>all</i> platforms. This is
-achieved by adding only one of the link libraries to your game as
-an extension and placing the other(s) into the list of <b>Proxy
-Files</b> from the Extension Properties window. For example, say
-you have a Windows extension with the dll "Haggis.dll". You would
-simply replicate this dll as a Mac DyLib, naming it
-"libHaggis.dylib" and making sure that the internal function names
-match those of the original Windows dll. This DyLib would then be
-added into the Proxy Files and set to export when the game is run
-on the Mac target, and <i>GameMaker Studio 2</i> will automatically
-use it when the extension functions are called.</p>
+<p>使用多个目标平台时，值得注意的是，你可以创建一个只包含 <i>一组</i> 功能/宏的扩展，这些功能/宏可以在 <i>所有</i> 平台上运行。这是通过将一个链接库作为扩展添加到游戏中并将其他链接库放入扩展属性窗口的 <b>代理文件</b>列表中来实现的。例如，假设你有一个名为 “Haggis.dll” 的 Windows dll 扩展。你只需将此 dll 复制为 Mac DyLib，将其命名为 “libHaggis.dylib” 并确保内部函数名称与原始 Windows dll的名称相匹配。然后将此 DyLib 添加到代理文件中并设置为在 Mac 平台上运行游戏时导出，并且 <i>GameMaker Studio 2</i> 将在调用扩展功能时自动使用它。</p>
 
-<p>To add a proxy file, simply click the <img style=
-"vertical-align:middle" src="images/icon_addproxy.png"> button in
-the Extension Properties window for the extension and browse to the
-file location. Once it is added you may need to change the
-extension target to the appropriate module, and when you next run
-your game it will be included as a proxy for that platform. You can
-remove proxy files too by clicking the <img style=
-"vertical-align:middle" src="images/icon_removeproxy.png"> button,
-which will remove the last one in the list each press.</p>
+<p>要添加代理文件，只需单击 <img style=
+"vertical-align:middle" src="images/icon_addproxy.png"> 扩展的扩展属性窗口中的按钮，然后浏览文件位置。添加后，你可能需要将扩展目标更改为相应的模块，当你下次运行游戏时，它将作为该平台的代理文件包含在内。您也可以通过单击 <img style=
+"vertical-align:middle" src="images/icon_removeproxy.png"> 按钮删除代理文件，这将删除列表中的最后一个。</p>
 
-<p>Once you have added your proxy files they will be stored in the
-<tt>YYP</tt> of your game, in the Extensions folder (you can find
-them easily by right-clicking <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> on the extension and selecting
-<i>Open in Explorer</i>), so if you need to edit them, you should
-edit the <i>copied</i> files that are bundled with the game and not
-the originals, as <i>GameMaker Studio 2</i> will be using the ones
-in the project for compiling your game.</p>
+<p>添加代理文件后，它们将存储在游戏的 <tt>YYP</tt> 中的 Extensions 文件夹中（你可以通过右键单击 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png">扩展名并选择<i> 在资源管理器中打开 </i> 来轻松找到它们），因此如果你需要编辑它们， 你应该编辑与游戏捆绑在一起的 <i>复制</i> 文件而不是原件，因为 <i>GameMaker Studio 2</i> 将使用项目中的文件来编译你的游戏。</p>
 
-<p>It is very important that your proxy files follow the naming
-conventions listed below, as <i>GameMaker Studio 2</i> will parse
-these names and assign the target module for the file according to
-its extension and name and will automatically link the files for
-you. If you do not follow these conventions your game may not work
-at runtime, as <i>GameMaker Studio 2</i> will not be able to work
-out which file to use or it will not load the file properly.</p>
+<p>你的代理文件遵循下面列出的命名约定，这很重要，因为 <i>GameMaker Studio 2</i> 将解析这些名称并根据文件的扩展名和名称为文件分配目标模块，并自动为你链接文件。如果你不遵循这些约定，你的游戏可能无法在运行时正常工作，因为 <i>GameMaker Studio 2</i> 将无法确定要使用哪个文件，或者它无法正确加载文件。</p>
 
-<p>The naming conventions for each target platform are given
-below:</p>
+<p>每个目标平台的命名约定如下：</p>
 
 <div class="compat">
 <table>
 <tr>
-<th>Platform</th>
+<th>平台</th>
 <th>Names</th>
 </tr>
 
@@ -436,221 +261,120 @@ below:</p>
 </table>
 </div>
 
-<p>Using the conventions above, you would swap out the &lt;Name&gt;
-part for the name of the base file that you are adding the proxy
-files for.</p>
+<p>使用上述约定，你可以将 &lt;Name&gt; 部分替换为要为其添加代理文件的基本文件的名称。</p>
 
 <blockquote><label class="collapse" for="f">Android</label>
 <input id="f" type="checkbox">
 <div class="index_list">
-<p>To create an extension for Android you have to do it in two
-parts. The first part would be to add the extension itself, along
-with the required files etc... and the second is to create the
-functions and macros/constants that the extension requires. The
-functions and constants are added using <b>placeholder</b> files to
-group them together, so you'd add a placeholder and then define the
-functions and macros as explained in the section above. To add the
-rest of the files though you need to first tick the <i>Android</i>
-check-box in the <b>Additional Features</b> section of the editor:
-
+<p>要为 Android 创建扩展程序，你必须分两部分来完成。 第一部分是添加扩展本身，以及所需的文件等......第二部分是创建扩展所需的函数和宏/常量。使用 <b>占位符</b> 文件添加函数和常量以将它们组合在一起，因此你将添加占位符，然后按照上一节中的说明定义函数和宏。要添加其余文件，你需要先在编辑器的 <b>附加功能</b> 部分中勾选 <i>Android</i> 复选框：
 <img class="center" src="images/editor_extensions_android.png" alt=
 "Android Editor"></p>
 
-<p>Here you give the following details:</p>
+<p>在这里，提供给你以下详细信息：</p>
 
 <ul>
-<li><b>ClassName</b>: Your extension can have multiple classes,
-with each class having its own functions and constants, so you
-should give it a name that reflects its purpose.<br>
+<li><b>类名（ClassName）</b>： 你的扩展可以有多个类，每个类都有自己的函数和常量，因此你应该为其指定一个反映其用途的名称。<br>
 <br></li>
 
-<li><b>Android Permissions</b>: Here you can add in any extra
-permissions that your extension requires. What these permissions
-are will depend entirely on the use that the extension has, and so
-you should check the <a href=
+<li><b>Android 权限（Android Permissions）</b>： 你可以在此处添加扩展程序所需的额外权限。这些权限的内容完全取决于扩展程序的用途，因此你应该查看 <a href=
 "http://developer.android.com/reference/android/Manifest.permission.html"
-target="_blank">documentation supplied by Google</a> for the
-Android platform, or, if you are using a third party SDK, the
-documentation that comes with the SDK. To add a new permission you
-need to click the <img style="vertical-align:middle" src=
-"images/icon_addproxy.png"> button to add a placeholder permission,
-and then do a slow <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> click on that to edit it to what is
-required. You can remove permissions using the <img style=
-"vertical-align:middle" src="images/icon_removeproxy.png">
-button.<br>
+target="_blank">Google 为 Android 平台提供的文档</a>，或者，如果你使用的是第三方 SDK，则应查看 SDK 附带的文档。要添加新权限，你需要单击按钮 <img style="vertical-align:middle" src=
+"images/icon_addproxy.png"> 添加占位符权限，然后慢慢 <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> 单击该权限以将其编辑为所需内容。你可以使用 <img style=
+"vertical-align:middle" src="images/icon_removeproxy.png"> 按钮删除权限。<br>
 <br></li>
 
-<li><b>Inject To Gradle Dependencies</b>: Here you can add any
-extra code that needs to be injected (added) into the Gradle build
-dependencies.<br>
+<li><b>注入到 Gradle 依赖项（Inject To Gradle Dependencies）</b>： 在这里你可以添加需要注入（添加）到 Gradle 构建依赖项中的额外代码。<br>
 <br></li>
 
-<li><b>Inject to AndroidManifest.xml Manifest</b>: Here you set any
-extra code to be injected (added) to the Android Manifest XML file
-when your game is built for testing or final release. Make sure to
-revise this (and your permissions) carefully before submitting any
-games to the store, as incorrect settings will cause your game to
-be failed for submission.<br>
+<li><b>注入到 AndroidManifest.xml 表单（Inject to AndroidManifest.xml Manifest）</b>： 在这里，你可以设置额外的代码，以便在你的游戏构建用于测试或最终发布时注入（添加）到 Android Manifest XML 文件中。 在将游戏提交到商店之前，请务必仔细修改此（以及你的权限），因为不正确的设置会导致你的游戏无法提交。<br>
 <br></li>
 
-<li><b>Inject to AndroidManifest.xml Application</b>: Here you set
-any extra code to be injected (added) to the Android Manifest XML
-file under the Application heading when your game is built for
-testing or final release. Make sure to revise this (and your
-permissions) carefully before submitting any games to the store, as
-incorrect settings will cause your game to be failed for
-submission.<br>
+<li><b>注入到 AndroidManifest.xml 应用（Inject to AndroidManifest.xml Application）</b>： 在这里，你可以设置额外的代码，以便在你的游戏构建用于测试或最终发布时，在应用程序标题下注入（添加）到 Android Manifest XML 文件。 在将游戏提交到商店之前，请务必仔细修改此（以及你的权限），因为不正确的设置会导致你的游戏无法提交。<br>
 <br></li>
 
-<li><b>Inject to AndroidManifest.xml RunnerActivity</b>: Here you
-set any extra code to be injected (added) to the Android Manifest
-XML file under the RunnerActivity heading when your game is built
-for testing or final release. Make sure to revise this (and your
-permissions) carefully before submitting any games to the store, as
-incorrect settings will cause your game to be failed for
-submission.</li>
+<li><b>注入到 AndroidManifest.xml RunnerActivity（Inject to AndroidManifest.xml RunnerActivity）</b>: 在这里，你可以设置额外的代码，以便在你的游戏构建用于测试或最终发布时，在 RunnerActivity 标题下注入（添加）到 Android Manifest XML 文件。在将游戏提交到商店之前，请务必仔细修改此（以及你的权限），因为不正确的设置会导致你的游戏无法提交。</li>
 </ul>
 
-<p>Once you have set this up correctly, you will need to add the
-required files for your extension package to work. To do this you
-need to click on the buttons at the bottom, either <i>Add SDK</i>
-or <i>Add Source</i> and then browse to the files you wish to add.
-Added files will be stored in the <i>AndroidSource</i> directory
-along with your extension. You can open this location at any time
-by right clicking <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on the extension and selecting <i>Open
-Extension Directory</i>.</p>
+<p>正确设置后，你需要添加扩展包所需的文件才能正常工作。要执行此操作，你需要单击底部的按钮，<i>添加 SDK</i> 或 <i>添加源（Source）</i>，然后浏览要添加的文件。添加的文件将与你的扩展一起存储在 <i>AndroidSource</i> 目录中。你可以随时通过右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 扩展名并选择 <i>打开扩展目录</i> 来打开此位置。</p>
 
-<p>For more information on creating Android extensions, please see
-the <a href=
+<p>有关创建 Android 扩展程序的详细信息，请参阅 <a href=
 "http://help.yoyogames.com/hc/en-us/articles/216755248-Creating-A-Native-Extension-For-Android-GMS-v1-3-"
-target="_BLANK">YoYo Games Knowledge Base</a>.</p>
+target="_BLANK">YoYo 游戏知识库</a>。</p>
 </div>
 <br>
 <label class="collapse" for="g">iOS</label> <input id="g" type=
 "checkbox">
 <div class="index_list">
-<p>To create an extension for iOS you have to do it in two parts.
-The first part would be to add the extension itself, along with the
-required files etc... and the second is to create the functions and
-macros/constants that the extension requires. The functions and
-constants are added using <b>placeholder</b> files to group them
-together, so you'd add a placeholder and then define the functions
-and macros as explained in the section above. To add the rest of
-the files though you need to first tick the <i>iOS</i> check-box in
-the <b>Additional Features</b> section of the editor:  <img class=
+<p>要为iOS创建扩展，你必须分两部分来完成。第一部分是添加扩展本身，以及所需的文件等......第二部分是创建扩展所需的函数和宏/常量。使用 <b>占位符</b> 文件添加函数和常量以将它们组合在一起，因此你将添加占位符，然后按照上一节中的说明定义函数和宏。要添加其余文件，你需要首先勾选编辑器的 <b>附加功能</b> 部分中的 <i>iOS</i> 复选框： <img class=
 "center" src="images/editor_extensions_ios.png" alt=
 "iOS Editor"></p>
 
-<p>Here you give the following details:</p>
+<p>在这里，提供给你以下详细信息：</p>
 
 <ul>
-<li><b>Linker Flags</b> / <b>Compiler Flags</b>: Some frameworks
-and third party SDKs require the addition of extra linker flags and
-compiler flags to work which can be specified here (see the
-documentation that accompanies the SDK or framework in question for
-details).<br>
+<li><b>连接器标志（Linker Flags）</b> / <b>编译器标志（Compiler Flags）</b>： 某些框架和第三方 SDK 需要添加额外的链接器标志和编译器标志才能在此处指定（有关详细信息，请参阅 SDK 或框架随附的文档）。<br>
 <br></li>
 
-<li><b>ClassName</b>: Your extension can have multiple classes,
-with each class having its own functions and constants, so you
-should give it a name that reflects its purpose<br>
+<li><b>类名（ClassName）</b>： 你的扩展可以有多个类，每个类都有自己的函数和常量，因此你应该为其指定一个反映其用途的名称<br>
 <br></li>
 
-<li><b>System Frameworks</b>: Here you can add in any iOS system
-frameworks to your extension. These are added by clicking the
-<img style="vertical-align:middle" src="images/icon_addproxy.png">
-button which will add a placeholder framework, which you can then
-edit by slow clicking <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> on it. You can find out more about
-available system frameworks <a href=
+<li><b>系统框架（System Frameworks）</b>： 在这里，你可以将任何 iOS 系统框架添加到你的扩展程序中。通过单击 <img style="vertical-align:middle" src="images/icon_addproxy.png"> 将添加占位符框架的按钮添加这些，然后你可以通过慢速单击 <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> 来编辑它。你可以在 <a href=
 "https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/iPhoneOSFrameworks/iPhoneOSFrameworks.html"
-target="_blank">here</a>. To remove a system framework, simply
-select it and then click the <img style="vertical-align:middle"
-src="images/icon_removeproxy.png"> button.<br>
+target="_blank">此处</a> 找到有关可用系统框架的更多信息。要删除系统框架，只需选择它，然后单击 <img style="vertical-align:middle"
+src="images/icon_removeproxy.png"> 按钮。<br>
 <br></li>
 
-<li><b>Inject to Info.plist</b>: Here you can add any code to be a
-injected into the <tt>info.plist</tt> file.<br>
+<li><b>注入到 Info.plist（Inject to Info.plist）</b>： 在这里，你可以添加任何代码以注入 <tt>info.plist</tt> 文件。<br>
 <br></li>
 
-<li><b>3rd Party Frameworks and Bundles</b>: This section is for
-adding third party frameworks and SDK bundles. As with system frame
-works you click the <img style="vertical-align:middle" src=
-"images/icon_addproxy.png"> button to add them and then slow click
-to edit, and selecting them then clicking <img style=
-"vertical-align:middle" src="images/icon_removeproxy.png"> will
-remove them (see the documentation that came with your chosen SDK
-for info on the framework name) . If the framework/SDK bundle is on
-your development Mac then you need to add the path into "<i>Enter
-framework path on Mac</i>" and click the <img style=
-"vertical-align:middle" src="images/icon_addproxy.png"> button, or
-if the SDK or source code is on your PC use the <i>Add Source</i>
-button.</li>
+<li><b>第三方框架 + 捆绑包（3rd Party Frameworks and Bundles）</b>： 本节用于添加第三方框架和 SDK 包。 与系统框架一样，你可以单击按钮 <img style="vertical-align:middle" src=
+"images/icon_addproxy.png"> 添加它们，然后慢速单击以进行编辑，然后选择它们并单击 <img style=
+"vertical-align:middle" src="images/icon_removeproxy.png"> 将删除它们（有关框架名称的信息，请参阅所选 SDK 附带的文档）。 如果 framework / SDK 包在你的开发 Mac 上，那么你需要将路径添加到 <i>在Mac上输入框架路径</i> 并单击 <img style=
+"vertical-align:middle" src="images/icon_addproxy.png"> 按钮，或者如果你的 PC 上有 SDK 或源代码，请使用 <i>添加源</i> 按钮。</li>
 </ul>
 
-<p>If your extension has had any System Frameworks or 3rd Party
-Frameworks added, these will now be listed in the Extension
-Properties window, with each one having a check-box beside it. If
-you mark the check-box, you are enabling <i>weak</i> linking, which
-is useful should you need to "over-ride" any symbol from the
-included library with your own value, but it should be noted that
-doing so will slow linking down.</p>
+<p>如果你的扩展已添加任何系统框架或第三方框架，现在这些框架将在“扩展属性”窗口中列出，每个框架旁边都有一个复选框。如果你选中复选框，则表示你正在启用 <i>弱</i> 链接，如果你需要使用自己的值“覆盖”所包含库中的任何符号，这将非常有用，但应注意这样做会降低链接速度。</p>
 
-<p>For more information on creating iOS extensions, please see the
-<a href=
+<p>有关创建 iOS 扩展的更多信息，请参阅 <a href=
 "http://help.yoyogames.com/hc/en-us/articles/216755238-Creating-A-Native-Extension-For-iOS-GMS-v1-3-"
-target="_BLANK">YoYo Games Knowledge Base</a>.</p>
+target="_BLANK">YoYo游戏知识库</a>。</p>
 </div></blockquote>
 </div></blockquote>
 
 <p><br>
 </p>
 
-<h2>YoYo Games 3rd Party Extensions</h2>
+<h2>YoYo Games 第三方扩展</h2>
 
-<p>Legacy versions of <i>GameMaker</i> had a lot of 3rd party
-functionality built in, but this was inefficient and difficult to
-maintain, since if any specific functionality was changed by the
-third party, then the whole <i>GameMaker</i> IDE and runtime would
-have to be updated. So, current versions have adopted the use of
-extensions packages to add third party support to your games. This
-means that you can add only those extra functions that you require
-and that you can even adapt and edit them to suit your specific
-needs.</p>
+<p>传统版本的 <i>GameMaker</i> 内置了许多第三方功能，但效率低且难以维护，因为如果第三方更改了任何特定功能，则必须更新整个 <i>GameMaker</i> IDE 和运行时。因此，当前版本已采用扩展程序包来为你的游戏添加第三方支持。这意味着你可以选择添加所需的额外功能，甚至可以调整和编辑它们以满足你的特定需求。</p>
 
-<p>Most of these extensions will be downloaded and installed for
-you when you select a specific <a href=
-"../3_settings/game_options/index.html">Game Option</a> (like
-<i>Facebook</i> or <i>Google Ads</i> for example), but you can find
-further information about them from the following YoYo Games
-<b>Knowledge Base</b> articles:</p>
+<p>当你选择特定的<a href=
+"../3_settings/game_options/index.html">游戏选项</a>（例如 <i>Facebook</i> 或 <i>Google Ads</i>）时，大多数扩展程序都会为你下载和安装，但你可以从以下 YoYo 游戏 <b>知识库</b> 文章中找到有关它们的更多信息：</p>
 
 <blockquote>
 <ol>
 <li><a href=
 "http://help.yoyogames.com/hc/en-us/articles/216753758-New-Extension-System-For-3rd-Party-Support-Ads-Facebook-Moga-etc-"
-target="_blank">3rd Party Extension Support</a>
+target="_blank">第三方扩展支持</a>
 </li>
 </ol>
 </blockquote>
 
-<p>You can find the extensions themselves from the following
-Marketplace page:</p>
+<p>你可以从以下市场页面中找到扩展程序：</p>
 
 <blockquote>
 <ol>
 <li><a href=
 "https://marketplace.yoyogames.com/publishers/23/yoyo-games"
-target="_blank">YoYo Games Marketplace Assets</a>
+target="_blank">YoYo Games 资源市场</a>
 </li>
 </ol>
 </blockquote>
 
-<p>Note that these extensions come with a demo and a help file that
-explains how to use them, and as such their functions are not
-covered in the manual.</p>
+<p>请注意，这些扩展附带了演示和帮助文件，解释了如何使用它们，因此它们的功能未在手册中介绍。</p>
 
 <p><br>
 </p>
@@ -665,7 +389,7 @@ covered in the manual.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
