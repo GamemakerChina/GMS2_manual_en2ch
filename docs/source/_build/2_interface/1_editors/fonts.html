@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,140 +37,66 @@ if (window.name != "content")
 </p>
 
 <p><img class="center" src="images/editor_fonts.png" alt=
-"Font Editor">  When you want to draw text in your game this text is
-drawn in a standard Arial 12 points font, but to make more
-interesting or unique looking texts you will probably want to use
-different fonts. So, to use different fonts that you have on your
-computer you must create a <b>font resource</b> in <i>GameMaker
-Studio 2</i>. This is done by right clicking <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> on the
-"Fonts" folder in the resource tree and clicking on "Create". For
-each font resource you create you specify a particular type of font
-from your computer which can then be used in your game using the
-action or code to set a font for drawing.</p>
+"Font Editor"> 当你想在游戏中绘制文本时，此文本以标准 Arial 12 磅字体绘制，但为了制作更有趣或独特的文本，你可能需要使用不同的字体。因此，要使用计算机上的不同字体，必须在 <i>GameMaker Studio 2</i> 中创建 <b>字体资源</b>。这可以通过右键单击资源树中的“字体”文件夹并单击“创建”来完成。 This is done by right clicking <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> on the "Fonts" folder in the resource tree and clicking on "Create". 对于你创建的每个字体资源，你可以从计算机中指定特定类型的字体，然后可以使用动作或代码在游戏中设置使用该字体来绘图字体。</p>
 
-<p>When you first create a font resource the font editor window
-will open with the following options:</p>
+<p>首次创建字体资源时，将打开字体编辑器窗口，其中包含以下选项：</p>
 
 <blockquote><a name="font_details" id="font_details"></a>
 <label class="collapse" for="one">细节</label> <input id="one"
 type="checkbox">
 <div class="index_list">
-<p>Here you can give your font a unique name (alpha numeric
-characters and the "_" under-bar symbol only), as well as choose
-the font to use. The font must be installed on your machine and due
-to licensing issues, GameMaker Studio 2 does <i>not</i> store the
-actual font files with the project file by default, but rather the
-font is rendered to a <b>texture page</b> as pre-rendered glyphs.
-If you want to distribute the actual font file (<tt>*.ttf</tt>
-only) along with the project when making a Marketplace asset, then
-you can check the option <b>Include Font In Marketplace Asset</b>.
-This will open the file explorer where you can select the font file
-and it will then be added to the files bundled with the
-project.</p>
+<p>在这里，你可以为你的字体指定唯一名称（字母数字字符和 “_” 下划线符号），以及选择要使用的字体。该字体必须安装在你的计算机上，并且由于许可问题，GameMaker Studio 2 默认情况下 <i>不</i> 会将实际字体文件与项目文件一起存储，而是将字体作为预渲染字形呈现给 <b>纹理页</b>。如果要在制作市场资产时将实际字体文件（仅限 <tt>*.ttf</tt>）与项目一起分发，则可以选中 <b>在市场资产中包含字体</b> 选项。这将打开文件资源管理器，你可以在其中选择字体文件，然后将其添加到与项目捆绑在一起的文件中。</p>
 
-<div class="note"><b>IMPORTANT NOTE</b>: <b>You should only use
-fonts that you are legally permitted and licensed to redistribute
-or use in your project</b>.</div>
+<div class="note"><b>重要说明</b>：<b>你应该在项目中只使用法律允许和许可的字体</b>。</div>
 </div>
 <br>
 <a name="font_presets" id="font_presets"></a> <label class=
 "collapse" for="two">预设</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
-<p>In this section you can set the size (in points - default is
-12pt) and whether the font should be drawn as bold or italic or
-have anti-aliasing (edge smoothing) applied. The preview window on
-the right will show you the preview text as it will look with the
-size and transforms you have specified.</p>
+<p>在这一部分中，你可以设置大小（以点为单位 - 默认为 12 pt）以及是应该将字体绘制为粗体还是斜体，或是应用了抗锯齿（边缘平滑）。右侧的预览窗口将显示预览文本，因为它将显示你指定的大小和变换。</p>
 </div>
 <br>
 <a name="font_texture_page" id="font_texture_page"></a>
-<label class="collapse" for="six">Texture Group</label> <input id=
+<label class="collapse" for="six">纹理组</label> <input id=
 "six" type="checkbox">
 <div class="index_list">
-<p>As mentioned above (in the section on <b>Font Details</b>) by
-default all font glyphs will be rendered to a texture page as part
-of a <i>texture group</i> to convert them into graphical resources.
-This section of the Font Editor permits you to select which group
-you wish to add them to, and when the game is compiled the font
-will be added to a temporary texture to create a single image with
-all the required font glyphs and then <i>this</i> will be added to
-the main texture group for exporting. Note that if you have chosen
-to include the font file as part of the game build, this option
-will do nothing. For more information on Texture Groups, please see
-<a href="../3_settings/textures.html">here</a>.</p>
+<p>如上所述（在 <b>字体详细信息</b> 一节中），默认情况下，所有字体字形都将呈现为纹理页面，作为 <i>纹理组</i> 的一部分，以将其转换为图形资源。字体编辑器的这一部分允许你选择要添加它们的组，并且在编译游戏时，将字体添加到临时纹理以创建具有所有需要字体字形的单个图像，然后 <i>这个图像</i> 将添加到主要纹理组以进行导出。请注意，如果你选择将字体文件作为游戏构建的一部分包含在内，则此选项将不执行任何操作。有关纹理组的更多信息，请参见 <a href="../3_settings/textures.html">此处</a>。</p>
 </div>
 <br>
 <a name="font_range" id="font_range"></a> <label class="collapse"
-for="three">Ranges</label> <input id="three" type="checkbox">
+for="three">范围</label> <input id="three" type="checkbox">
 <div class="index_list">
-<p>When creating a font resource it's rare that you'll want to
-include every single glyph for the font. This is why <i>GameMaker
-Studio 2</i> defaults to using only the characters from 32 till 127
-of the chosen font as this gives us the numbers and the small and
-capital letters along with certain punctuation marks. You can,
-however, change the character range used to help optimise your
-games ie: if you only need the numbers from a specific font, then
-<i>only</i> select the numbers. To do this, you should first click
-the <b>Delete</b> button to clear the current range (you may need
-to select the range for this to work by clicking <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on it in
-the preview window) and then click on the <b>Add</b> button to add
-a new range. This will open the following chained window:
-<img class="center" src="images/editor_fonts_range.png" alt=
-"Font Range Editor"></p>
+<p>创建字体资源时，你很少需要包含字体的每个字形。这就是为什么 <i>GameMaker Studio 2</i> 默认只使用所选字体的 32 到 127 之间的字符，因为为我们提供了数字、小写和大写字母以及某些标点符号。但是，你可以更改用于帮助优化游戏的字符范围，即：如果你只需要特定字体的数字，则 <i>只</i> 需选择数字。要执行此操作，你应首先单击 <b>删除</b> 按钮以清除当前范围（你可能需要通过在预览窗口中单击 <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> 它来选择此工作范围），然后单击 <b>添加</b> 按钮以添加新范围。这将打开以下链接窗口：</p>
 
-<p>This window has some buttons to help you establish a standard
-range for your font:</p>
+<p>此窗口有一些按钮可帮助你为字体建立标准范围：</p>
 
-<p>&nbsp;&nbsp;&nbsp;- The <i>Normal</i> range from 32 till 127<br>
-&nbsp;&nbsp;&nbsp;- The <i>ASCII</i> range from 0 till 255<br>
-&nbsp;&nbsp;&nbsp;- The <i>Digits</i> range that only contains the
-10 digits<br>
-&nbsp;&nbsp;&nbsp;- The <i>Letters</i> range that contains all
-upper-case and lower-case letters only<br></p>
+<p>&nbsp;&nbsp;&nbsp;- <i>正常</i>： 范围为 32 到 127<br>&nbsp;&nbsp;&nbsp;- <i>ASCII</i>： 范围为 0 到 255<br>&nbsp;&nbsp;&nbsp;- <i>数字</i>： 范围仅为 10 个数字<br>&nbsp;&nbsp;&nbsp;- <i>字母</i>： 范围仅为大小写字母<br></p>
 
-<p>Other ranges can be used by typing in the first and last
-character index of the range you wish to set in the character range
-input boxes (if a character does not lie in the range it is
-replaced by a space). Apart from these buttons and input boxes, you
-also have two further options which are especially useful:</p>
+<p>通过键入要在字符范围输入框中设置的范围的第一个和最后一个字符索引，可以使用其他范围（如果字符不在范围内则由空格替换）。除了这些按钮和输入框之外，你还有两个特别有用的选项：</p>
 
-<p>&nbsp;&nbsp;&nbsp;- <i>From Code</i>: if you click on this
-button and then click OK, <i>GameMaker Studio 2</i> will
-automatically parse your game code for strings and then create
-different character ranges to cover all the text in your game. Note
-that it looks for all strings (either within "" or '') and so may
-also include file names in the character ranges.<br>
+<p>&nbsp;&nbsp;&nbsp;- <i>从代码中获取</i>： 如果你单击此按钮然后单击确定，GameMaker Studio 2将自动解析你的游戏代码以获取字符串，然后创建不同的字符范围以覆盖游戏中的所有文本。 请注意，它会查找所有字符串（在双引号“”或单引号‘’内），因此也可能包含字符范围中的文件名。<br>
 <br></p>
 
-<p>&nbsp;&nbsp;&nbsp;- <i>From File</i>: this works similarly to
-the "from code" option explained above. If you click on it, you
-will be asked to supply a file, and then once that is done you
-should click on OK. <i>GameMaker Studio 2</i> will then parse the
-file and create character ranges for the text found within it.</p>
+<p>&nbsp;&nbsp;&nbsp;- <i>从文件中获取</i>： 这与上面解释的 “从代码中获取” 选项类似。如果你点击它，会要求你提供一个文件。 然后，<i>GameMaker Studio 2</i> 将解析文件并为其中的文本创建字符范围。</p>
 
-<p>Note that you can manually edit the text range by adding or
-deleting text glyphs into the preview window directly.</p>
+<p>请注意，你可以通过直接在预览窗口中添加或删除文本字形来手动编辑文本范围。</p>
 </div>
 <br>
 <a name="font_preview" id="font_preview"></a> <label class=
 "collapse" for="four">预览</label> <input id="four" type=
 "checkbox">
 <div class="index_list">
-<p>The preview window is where you can type any text that you want
-to test. It will be rendered using the presets that you have
-selected.</p>
+<p>你可以在预览窗口中键入要测试的任何文本。它将使用你选择的预设进行渲染。</p>
 </div>
 <br>
 <a name="font_range_preview" id="font_range_preview"></a>
-<label class="collapse" for="five">Range Preview</label> <input id=
+<label class="collapse" for="five">范围预览</label> <input id=
 "five" type="checkbox">
 <div class="index_list">
-<p>Here the different ranges that you have added will be listed.
-The range values are shown on the left and the range glyphs are
-shown on the right.</p>
+<p>此处列出了你添加的不同范围。范围值显示在左边，范围符号显示在右边。</p>
 </div></blockquote>
 
 <p><br>
@@ -186,7 +112,7 @@ shown on the right.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

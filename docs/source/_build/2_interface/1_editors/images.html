@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,286 +37,143 @@ if (window.name != "content")
 </p>
 
 <p><img class="center" src="images/editor_images.png" alt=
-"图像编辑器（Image Editor）">
+"图像编辑器">
 </p>
 
-<p>The image editor is where you can create your own sprites or
-edit those you have imported or created previously. If you have
-used any image tools previously then this should be familiar to you
-but there are a few things to note when using the <i>GameMaker
-Studio 2</i> image editor which may not be immediately
-apparent:</p>
+<p>你可以在图像编辑器中创建自己的精灵或编辑先前导入或创建的精灵。 如果你以前使用过任何图像工具，那么你应该对此很熟悉，但在使用 <i>GameMaker Studio 2</i> 图像编辑器时有一些注意事项可能不会立即显现：</p>
 
 <blockquote>
 <ul>
-<li>When you create multiple frames, you can draw to them as they
-animate! So, if you press the play button on the <b>Frame
-Control</b> bar, and then select a brush and start to draw in the
-editor window, you'll see that the frames will animate in the
-editor and what you draw will be added to the corresponding frame
-in that moment. You can experiment with different frame rates until
-you get something you like, but once you've got the hang of how
-this works you'll be creating dynamic sprites and effects in no
-time.<br>
+<li>当你创建多个帧时，你可以在它们动画时绘制它们！因此，如果你按下 <b>帧控制栏</b> 上的播放按钮，然后选择画笔并开始在编辑器窗口中绘制，你将看到编辑器中播放每一帧的动画，并且你绘制的内容将添加到相应的那一帧。你可以尝试不同的帧速率，直到得到你喜欢的东西，但是一旦掌握了它的工作方式，你就可以立即创建动态精灵和效果。<br>
 <br></li>
 
-<li>You can pull the Image Editor tab off of the main workspace
-window into it's own window. This can be handy when using multiple
-monitors, for example.<br>
+<li>你可以将“图像编辑器”选项卡从主工作区窗口拉到其自己的窗口中。 例如，当使用多个监视器时，这可能很方便。<br>
 <br></li>
 
-<li>When you use the copy functions to, for example, copy a
-selection of an image, then the selection copied gets added to your
-brush list. This means that you can select a part of an image and
-then use it in the rest of the paint tools to draw lines, polygons
-or just paint freely. The brush can be scaled and blended with a
-colour too. Note that the <i>Paste</i> functionality is not
-intended for use internally within the editor as anything you copy
-is added to the brush list and so can be selected for "pasting"
-that way. Instead paste is simply for you to capture something from
-an external program and paste it into the Image Editor.<br>
+<li>例如，当你使用复制功能复制图像选择时，复制的选择将添加到画笔列表中。 这意味着你可以选择图像的一部分，然后在其余的绘画工具中使用它来绘制线条、多边形或只是自由绘制。刷子可以缩放并混合颜色。 请注意，<i>粘贴</i> 功能不适合在编辑器内部使用，因为你复制的任何内容都会添加到画笔列表中，以便你可以用复制的内容作为笔刷涂抹。 而粘贴只是为了从外部程序捕获某些内容并将其粘贴到图像编辑器中。<br>
 <br></li>
 
-<li>You can have multiple layers for each sprite thanks to the
-handy layer editor. These layers can ordered and even placed in
-folders to make creating more complex images easier.</li>
+<li>借助方便的图层编辑器，每个精灵可以有多个图层。这些图层可以排序甚至放置在文件夹中，以便更轻松地创建更复杂的图像。</li>
 </ul>
 </blockquote>
 
-<p>Those are just some of the more advanced features that the image
-editor offers. To find out the full feature range, please read the
-items below detailing the functions of every part of the
-editor:</p>
+<p>这些只是图像编辑器提供的一些更高级的功能。要了解完整的功能，请阅读以下详细介绍编辑器各部分功能的小节：</p>
 
 <blockquote><a name="image_view" id="image_view"></a> <label class=
 "collapse" for="one">帧视图</label> <input id="one" type=
 "checkbox">
 <div class="index_list">
-<p>This part of the window shows the frames in the order that they
-will be animated in. You can click the (+) button to the left to
-add further frames - or use the <a href="#image_menu">Image
-Menu</a> - and you can also click and drag any of the frames to
-change its position along the time-line. In the top left of the
-Frame View you can switch on Onion Skinning <img style=
-"vertical-align:middle" src="images/icon_onionskin.png">, which
-means that in a single frame of any sprite animation, you can
-choose to see any of the preceding or succeeding frames as a
-semi-transparent layer under the image frame you are currently
-editing. The great thing about this is that each frame is drawn
-slightly lighter than the last so you can see how the animation has
-been progressing from frame to frame while drawing the next one.
-Enabling this will show some extra controls over the frames which
-you can click and drag to set the number of preceding frames to
-show as well as the number of following frames. <img class="center"
+<p>窗口的这一部分按照它们将被动画化的顺序显示帧。你可以单击左侧的（+）按钮以添加更多帧 - 或使用 <a href="#image_menu">图像</a> 菜单 - 你还可以单击并拖动任何一帧改变其沿时间线的位置。在“帧视图”的左上角，你可以选择“切换洋葱皮模式” <img style=
+"vertical-align:middle" src="images/icon_onionskin.png">，这意味着在精灵动画的单个帧中，您可以选择将前面或后面的帧看作目前正在编辑图像框下的半透明图层。关于这一点的好处是每一帧的绘制比最后一帧略亮，因此你可以看到动画在绘制下一个帧时帧与帧的进展情况。启用此选项将显示对帧的一些额外控制，你可以单击并拖动以设置要显示的前一帧的数量以及后一帧的数量。<img class="center"
 src="images/editor_onionskin.png" alt=
 "Image Editor Onion Skin"></p>
 
-<p>Beneath the Onion Skin button, you have the Loop Control button
-<img style="vertical-align:middle" src="images/icon_imageloop.png">
-used to set whether the sprite loops (goes back to frame 1 when the
-last frame is reached) or ping-pongs (goes backwards through the
-frames when the last frame is reached). The Play button <img style=
-"vertical-align:middle" src="images/icon_imageplay.png"> at the
-bottom is for starting/stopping the preview of the animation.</p>
+<p>在切换洋葱皮模式按钮下方，你有一个循环控制按钮 <img style="vertical-align:middle" src="images/icon_imageloop.png">，用于设置精灵是否循环（到达最后一帧时返回到第1帧）或类似乒乓球（在到达最后一帧时掉头向后移动）。底部的播放按钮 <img style=
+"vertical-align:middle" src="images/icon_imageplay.png"> 用于启动/停止动画的预览。</p>
 
-<p>You can click on any frame to select it for editing, and a
-selected frame will have a Delete icon <img style=
-"vertical-align:middle" src="images/icon_removeframe.png"> at the
-top corner which you can click to remove the frame from the sprite.
-You can also click <img style="vertical-align:middle" src=
+<p>你可以单击帧以选择它进行编辑，并且所选帧的顶角将有一个删除图标 <img style=
+"vertical-align:middle" src="images/icon_removeframe.png">，你可以单击该图标从精灵中删除帧。你还可以单击多个帧上的 <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png">/<img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on
-multiple frames to select them together, in which case clicking the
-Delete icon will delete <i>all</i> the selected frames.</p>
+"vertical-align:middle" src="../../images/icon_rmb.png"> 全选它们，在这种情况下，单击删除图标将删除 <i>所有</i> 选定帧。</p>
 </div>
 <br>
 <a name="image_controls" id="image_controls"></a> <label class=
-"collapse" for="two">Frame Information</label> <input id="two"
+"collapse" for="two">帧信息栏</label> <input id="two"
 type="checkbox">
 <div class="index_list">
-<p>This bar contains the Frame Controls. Here you can set the speed
-at which the animation frames should be played back using the input
-box on the left. The frame speed can either be based on "Frames per
-second", or "Frames per game frame". The total number of frames
-available are shown to the right along with the current frame that
-has been selected, and you can collapse this bar (hide it) by
-clicking on the <img style="vertical-align:middle" src=
-"images/icon_collapse.png"> icon to the left. Note that the value
-used here for the animation speed <i>will also set the way the
-sprite is animated when used in a game</i>, either as a sprite
-asset on a layer or as a sprite assigned to an instance, although
-you can modify this at runtime using the appropriate <a href=
-"../../3_scripting/4_gml_reference/rooms/sprites/layer_sprite_speed.html">
-functions</a> and <a href=
-"../../3_scripting/4_gml_reference/instances/instance_variables/image_speed.html">
-variables</a>.</p>
+<p>此工具栏包含帧控制栏。在这里，你可以使用左侧的输入框设置应播放动画帧的速度。帧速度可以设置为 “FPS（cpu steps）” 或 “游戏 FPS（game steps）”。 可用的帧总数以及已选择的当前帧显示在右侧，你可以通过单击左侧的 <img style="vertical-align:middle" src=
+"images/icon_collapse.png"> 图标折叠此栏（隐藏它）。请注意，此处用于动画速度的值还将 <i>设置精灵在游戏中使用时的动画方式</i>，无论是作为图层上的精灵资源还是作为分配给实例的精灵，尽管你可以在运行时使用适当的 <a href=
+"../../3_scripting/4_gml_reference/rooms/sprites/layer_sprite_speed.html">函数</a> 和 <a href=
+"../../3_scripting/4_gml_reference/instances/instance_variables/image_speed.html">变量</a> 来修改它 。</p>
 </div>
 <br>
 <a name="image_canvas_control" id="image_canvas_control"></a>
-<label class="collapse" for="thirteen">Canvas Controls</label>
+<label class="collapse" for="thirteen">画布控制栏</label>
 <input id="thirteen" type="checkbox">
 <div class="index_list">
-<p>The canvas controls deal with various aspects of how the main draw canvas and its contents are displayed. 选项有：</p>
+<p>画布控件处理主绘制画布及其内容如何显示的各个方面。选项有：</p>
 
 <ul>
-<li><b>Toggle Canvas Grid</b> <img style="vertical-align:middle"
-src="images/icon_canvasgrid.png">: This will toggle on/off the
-canvas grid. This is a grid that <i>GameMaker Studio 2</i> draws
-over the main canvas to divide it into sections, and by default is
-set to 1px in size. However if you click the Grid Menu icon
-<img style="vertical-align:middle" src=
-"images/icon_canvasoptions.png"> you will open the grid options:
-<img class="center" src="images/editor_images_gridoptions.png" alt=
-"Image Editor Grid Options"> These options permit you to set the
-grid colour and alpha, as well as the cell values for the grid
-along the X and Y axis. You also have an option to enable or
-disable grid snapping here (disabled by default).<br>
+<li><b>切换网格显示 </b> <img style="vertical-align:middle"
+src="images/icon_canvasgrid.png">: 这将打开/关闭画布网格。这是 <i>GameMaker Studio 2</i> 在主画布上绘制的网格，将其划分为多个部分，默认情况下设置为 1 像素。但是，如果单击网格菜单图标 <img style="vertical-align:middle" src=
+"images/icon_canvasoptions.png">，则将打开网格选项：<img class="center" src="images/editor_images_gridoptions.png" alt=
+"Image Editor Grid Options"> 这些选项允许你设置网格颜色和透明度，以及沿 X 和 Y 轴的网格单元格大小。 你还可以选择在此处启用或禁用网格对齐（默认情况下禁用）。<br>
 <br></li>
 
-<li><b>Canvas Zoom Controls</b> <img style="vertical-align:middle"
-src="images/icon_canvaszoom.png">: These buttons control the
-current canvas zoom level. You can zoom in or out and clicking the
-<img style="vertical-align:middle" src=
-"images/icon_zoomequals.png"> button will reset the canvas to be
-1:1 with the image being edited. Note that you can also zoom in and
-out using the <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> and the Mouse Wheel <img style=
-"vertical-align:middle" src="../../images/icon_mmb.png">, and
-pressing <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png"> + <b><tt>Enter</tt></b> will set the
-canvas to be 1:1 with the image. You can also click the Window Fit
-button <img style="vertical-align:middle" src=
-"images/icon_canvasfit.png"> to make the entire room canvas fit
-within the current editor workspace (this will zoom in/out as
-appropriate to make it fit).<br>
+<li><b>画布缩放工具 </b> <img style="vertical-align:middle"
+src="images/icon_canvaszoom.png">: 这些按钮控制当前画布缩放级别。你可以放大或缩小，然后单击 <img style="vertical-align:middle" src=
+"images/icon_zoomequals.png"> 按钮会将画布重置为1：1，并且开始编辑图像。 请注意，你也可以使用 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> 和鼠标滚轮 <img style=
+"vertical-align:middle" src="../../images/icon_mmb.png"> 进行放大和缩小，按 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> +  <b><tt>Enter</tt></b> 键将画布与图像设置为1：1。你还可以单击居中适配按钮 <img style="vertical-align:middle" src=
+"images/icon_canvasfit.png">，使整个房间画布填充当前编辑器工作区（这将根据需要放大/缩小以使其适合）。<br>
 <br></li>
 
-<li><b>Split Canvas</b> <img style="vertical-align:middle" src=
-"images/icon_canvassplit.png">: Clicking this will cycle between
-splitting the canvas horizontally, vertically keeping it a single a
-single canvas. When in split canvas view, each canvas will have its
-own set of Canvas controls so you can zoom one in and the other
-out, for example, and you can edit either canvas with the changes
-being reflected in the other canvas. To change the canvas view
-toggle, you can click the Split Options <img style=
-"vertical-align:middle" src="images/icon_canvasoptions.png"> button
-and select the one you wish to use or simply click the SPlit View
-button until it cycles to the one you want.</li>
+<li><b>拆分画布 </b> <img style="vertical-align:middle" src=
+"images/icon_canvassplit.png">: 单击此按钮将在不拆分、水平拆分和垂直拆分之间循环。 在分割画布视图中，每个画布都有自己的一组画布控制栏，因此你可以放大一个和另一个，例如，你可以编辑任一个画布，其中的更改将反映在另一个画布中。要更改画布视图切换，可以单击拆分选项 <img style=
+"vertical-align:middle" src="images/icon_canvasoptions.png"> 按钮并选择要使用的按钮，或者只需单击拆分视图按钮，直到它循环到所需的视图。</li>
 </ul>
 </div>
 <br>
 <a name="image_edition" id="image_edition"></a> <label class=
-"collapse" for="three">Draw Canvas</label> <input id="three" type=
+"collapse" for="three">绘制画布</label> <input id="three" type=
 "checkbox">
 <div class="index_list">
-<p>This is the main editing window for your images. Here you can
-apply any of the <a href="#image_tools">tools</a> on the right to
-paint on the currently selected <a href="#image_layers">layer</a>.
-You can paint with either the left or the right mouse button (and
-assign a colour to each from the <a href="#image_colour">colour
-picker</a>) and use any of the <a href="#image_brushes">brushes</a>
-defined from the top right of the editor. You can also use
-<img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> and the Mouse Wheel <img style=
-"vertical-align:middle" src="../../images/icon_mmb.png"> to zoom in
-or out, and pressing <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <b><tt>Enter</tt></b> will set
-the canvas to be 1:1 with the image (or you can use the <b>Canvas
-Controls</b> as explained above). Note too that you can pan around
-the canvas using the middle mouse button <img style=
-"vertical-align:middle" src="../../images/icon_mmb.png"> or
-<img style="vertical-align:middle" src=
+<p>这是图像的主要编辑窗口。在这里，你可以在当前选定的 <a href="#image_layers">层</a> 上使用右侧的 <a href="#image_tools">工具</a> 进行绘制。你可以使用鼠标左键或右键进行绘制（并为 <a href="#image_colour">颜色选择器</a> 中的每个颜色指定一种颜色），并使用编辑器右上角定义的 <a href="#image_brushes">笔刷</a>。你也可以使用 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> 和鼠标滚轮 <img style=
+"vertical-align:middle" src="../../images/icon_mmb.png"> 进行放大或缩小，按 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <b><tt>Enter</tt></b> 将画布与图像设置为1：1（或者你可以使用如上所述的 <b>画布工具栏</b>）。另请注意，你可以使用鼠标中键 <img style=
+"vertical-align:middle" src="../../images/icon_mmb.png"> 或 <img style="vertical-align:middle" src=
 "../../images/icon_space.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png">.</p>
+src="../../images/icon_rmb.png"> 来平移画布。</p>
 </div>
 <br>
 <a name="image_values" id="image_values"></a> <label class=
-"collapse" for="four">Canvas Values</label> <input id="four" type=
+"collapse" for="four">画布状态栏</label> <input id="four" type=
 "checkbox">
 <div class="index_list">
-<p>This small bar at the bottom shows the different values for the
-mouse position and width and height of the selection tools in the
-editor.</p>
+<p>底部的这个小状态栏显示编辑器中选择工具的鼠标位置和宽度及高度的不同值。</p>
 </div>
 <br>
 <a name="image_brushes" id="image_brushes"></a> <label class=
 "collapse" for="five">笔刷</label> <input id="five" type=
 "checkbox">
 <div class="index_list">
-<p>Here you can select the brush to paint with. By default you have
-a selection of different sized square and round brushes to use, but
-you can easily create your own brush by painting on the image
-<a href="#image_layers">layer</a>, and then selecting the part you
-wish to use for the new brush and using <img style=
+<p>在这里，你可以选择要绘制的笔刷默认情况下，你可以选择使用不同大小的方形和圆形笔刷，但你可以通过在图像 <a href="#image_layers">层</a> 上绘画轻松创建自己的笔刷，然后选择要用于新画笔的部分并使用 <img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + '<b>C</b>' to copy it. The
-copied section will then be added to your brushes and you can paint
-with it as you would any other brush, and this includes using the
-different paint <a href="#image_tools">tools</a> available like
-drawing a line. Note that the default blending colour for the new
-brush will be white, but if you change the colour with the <a href=
-"#image_colour">colour picker</a> and paint using the brush, it
-will be blended with this new colour. If you want to remove a brush
-from the list, simply click on it and press the <img style=
-"vertical-align:middle" src="../../images/icon_delete.png"> key and
-it will be removed.</p>
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + ‘<b>C</b>’ 复制它。复制的部分将被添加到你的笔刷中，你可以像使用任何其他笔刷一样使用它进行绘画，这包括使用不同的绘画 <a href="#image_tools">工具</a>，如线条。请注意，新笔刷的默认混合颜色将为白色，但如果使用 <a href=
+"#image_colour">颜色选择器</a> 更改颜色并使用笔刷进行绘画，则会将其与此新颜色混合。如果要从列表中删除笔刷，只需单击它并 <img style=
+"vertical-align:middle" src="../../images/icon_delete.png"> 按键即可将其删除。</p>
 </div>
 <br>
 <a name="image_colour" id="image_colour"></a> <label class=
 "collapse" for="six">取色器</label> <input id="six" type=
 "checkbox">
 <div class="index_list">
-<p>The top of this section has a number or predefined colour
-swatches that you can choose from, and they can be assigned to the
-left <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> <i>and</i> right <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> mouse
-buttons respectively by clicking on them with either button (you
-can also swap the colours between each button by clicking the arrow
-icon in beside the swatches). The colours selected will be shown
-below as swatches beside the image of the mouse, and you can then
-click these to open the <b>Colour Picker</b> window: <img class=
+<p>此部分的顶部有一些数字或预定义的颜色色块，你可以选择它们，并且可以通过用按钮单击它们分别分配给鼠标左键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> <i>和</i> 右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png">（你也可以通过单击色块旁的左右颜色互换按钮交换颜色）。所选颜色将在下方显示为鼠标图像旁边的色块，然后你可以单击这些颜色以打开 <b>颜色选择器</b> 窗口：<img class=
 "center" src="images/editor_colourpicker.png" alt=
 "Image Editor Colour Picker"></p>
 
-<p>From this window you can define the colour using any of the
-available sliders and gadgets, or you can input values directly for
-the RGBA values or HVS values. Note that if you double click
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-on any of the default colour swatches, you can also bring up the
-colour picker tool and edit the default palette for the sprite.
-Clicking "Okay" in the colour picker in this case will set the
-palette to the new colour and save it along with the sprite
-resources. These colour palettes can then be swapped and applied to
-different sprites using the colour palette Options menu:
-<img class="center" src="images/editor_colourpicker_options.png"
+<p>在此窗口中，你可以使用可用的滑块和小工具定义颜色，也可以直接设定 RGBA 值或 HVS 值。请注意，如果双击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 默认颜色样本，还可以调出颜色选择器工具并编辑精灵的默认调色板。在这种情况下，单击颜色选择器中的 “确认” 会将调色板设置为新颜色，并将其与精灵资源一起保存。然后可以使用调色板选项菜单交换这些调色板并将其应用于不同的精灵：<img class="center" src="images/editor_colourpicker_options.png"
 alt="Image Editor Colour Picker Options"></p>
 
-<p>So, you can create a custom colour palette in a sprite image and
-then use that to set the palette for any other sprite in the
-resource tree, or you can open a sprite image and import the colour
-palette from any other sprite in the resource tree.</p>
+<p>因此，你可以在精灵图像中创建自定义调色板，然后使用它为资源树中的其他精灵设置调色板，或者你可以打开精灵图像并从资源树中的其他精灵导入调色板。</p>
 </div>
 <br>
 <a name="image_tools" id="image_tools"></a> <label class="collapse"
 for="seven">工具</label> <input id="seven" type="checkbox">
 <div class="index_list">
-<p>Below we list the tools that are available by default with
-<i>GameMaker Studio 2</i> - note that all tools can be used with
-the left <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> and right <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> mouse
-button, and most of them have keyboard shortcuts associated with
-them (the important ones are listed here along with the tool, but
-for a full list please see the page on <a href=
-"../../1_overview/2_quick_start/8_shortcuts.html">Shortcuts</a>).
-Most tools will also have extra options that will be visible at the
-top of the image editor as shown below:</p>
+<p>下面我们列出了默认情况下 <i>GameMaker Studio 2</i> 可用的工具 - 请注意，所有工具都可以与鼠标左键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 和右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 一起使用，并且大多数工具都有与之关联的键盘快捷键（此处列出了重要的快捷键），有关完整列表，请参阅 <a href=
+"../../1_overview/2_quick_start/8_shortcuts.html">快捷方式</a> 页面。大多数工具还有额外的选项，可以在图像编辑器的顶部看到，如下所示：</p>
 
 <p><img class="center" src="images/editor_image_topbar.gif" alt=
 "Image Editor Top Bar">
@@ -327,16 +184,9 @@ top of the image editor as shown below:</p>
 <td class="icons"><img align="middle" src="images/icon_pencil.png"
 alt="Pencil Tool">
 </td>
-<td class="text">This is the pencil tool. It uses the selected
-brush to paint in the selected colour for the mouse button, and you
-can set the size from the top bar of the image editor as well as
-enable/disable smoothing (interpolation). Note that you can also
-resize and scale any brush by holding down <img style=
-"vertical-align:middle" src="../../images/icon_shift.png"> +
-<tt>Z</tt> then clicking <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> and dragging the mouse to change the
-proportions of the brush, or alternatively select one of the
-predefined brushes from the top right.</td>
+<td class="text">这是画笔工具。它使用选定的笔刷以鼠标按钮的选定颜色进行绘制，你可以从图像编辑器的顶部栏设置大小以及启用/禁用平滑（插值）。请注意，你还可以通过按住 <img style=
+"vertical-align:middle" src="../../images/icon_shift.png"> + <tt>Z</tt> 然后单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并拖动鼠标以更改画笔的比例来调整画笔的大小和缩放，或者从右上角选择一个预定义笔刷。</td>
 </tr>
 
 <tr>
@@ -348,11 +198,7 @@ predefined brushes from the top right.</td>
 <td class="icons"><img align="middle" src="images/icon_eraser.png"
 alt="Eraser Tool">
 </td>
-<td class="text">This is the eraser tool. It uses the selected
-brush to erase an area on click from either mouse button. Selecting
-this will also add extra tools to the top bar of the editor to
-permit you to scale the brush or enable/disable smoothing
-(interpolation).</td>
+<td class="text">这是橡皮擦工具。它使用选定的笔刷用鼠标点击擦除区域。选择此工具还会在编辑器的顶部栏中添加额外的工具，以允许你缩放画笔或启用/禁用平滑（插值）。</td>
 </tr>
 
 <tr>
@@ -364,10 +210,7 @@ permit you to scale the brush or enable/disable smoothing
 <td class="icons"><img align="middle" src="images/icon_paint.png"
 alt="Paint Tool">
 </td>
-<td class="text">This is the paint bucket tool. This will fill in
-an area of the image based on the chosen alpha tolerance setting,
-which you can change using the slider shown in the top bar of the
-editor.</td>
+<td class="text">这是填充工具。这将根据所选的透明度容差设置填充图像区域，你可以使用编辑器顶部栏中的容差滑块更改该设置。</td>
 </tr>
 
 <tr>
@@ -379,20 +222,9 @@ editor.</td>
 <td class="icons"><img align="middle" src=
 "images/icon_colourremove.png" alt="Colour Remove Tool">
 </td>
-<td class="text">This is the colour remove tool. When you select
-it, you can then click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> or <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> on any pixel in the image and all
-pixels that are of the same colour will be removed (they are
-technically replaced with the colour black at an alpha of 0). The
-top bar has a tolerance slider where you can set the pixel colour
-tolerance - the lower this value the more exact a colour has to
-match the one that was clicked, while a higher value will expand
-this to include those colours that are similar to the one clicked.
-If you have previously made a selection using any of the selection
-tools, then only clicking on pixels within the selection will have
-an effect, and only the pixels within the selection will be
-removed.</td>
+<td class="text">这是颜色删除工具。当你选择它时，你可以使用 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 或 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> 点击图像中的像素删除所有相同颜色的像素（它们在技术上被替换为透明度为 0 的黑色）。顶部栏有一个容差滑块，你可以在其中设置像素颜色容差 - 此值越低，颜色与单击的颜色相匹配的越精确，而较高的值将扩展此值使得点击能包括更多的颜色。如果你之前使用选择工具进行了选择，则只有单击选区内的像素才会生效，并且只会删除选区内的像素。</td>
 </tr>
 
 <tr>
@@ -404,20 +236,9 @@ removed.</td>
 <td class="icons"><img align="middle" src=
 "images/icon_colourreplace.png" alt="Colour Replace Tool">
 </td>
-<td class="text">This is the colour replace tool. When you select
-it, you can then click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> or <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> on any pixel in the image and all
-pixels that are of the same colour will be replaced by the colour
-assigned to the mouse button used. The top bar has a tolerance
-slider where you can set the pixel colour tolerance - the lower
-this value the more exact a colour has to match the one that was
-clicked, while a higher value will expand this to include those
-colours that are similar to the one clicked. If you have previously
-made a selection using any of the selection tools, then only
-clicking on pixels within the selection will have an effect, and
-only the pixels within the selection will be affected by the colour
-change.</td>
+<td class="text">这是颜色替换工具。当你选择它时，你可以使用 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 或 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> 点击图像中的像素，所有相同颜色的像素将被所用鼠标按钮的颜色替换。 顶部栏有一个容差滑块，你可以在其中设置像素颜色容差 - 此值越低，颜色与单击的颜色相匹配的越精确，而较高的值将扩展此值使得点击能包括更多的颜色。如果你之前使用选择工具进行了选择，则仅选择选区内的像素将产生效果，并且只有选区内的像素才会受到颜色更改的影响。</td>
 </tr>
 
 <tr>
@@ -429,12 +250,7 @@ change.</td>
 <td class="icons"><img align="middle" src="images/icon_line.png"
 alt="Line Tool">
 </td>
-<td class="text">This tool will draw a line between two points.
-Click once with either button to create the first point and then
-click again elsewhere create another point and join them. The line
-will be drawn using the selected brush to create the outline, and
-you can edit some of the brush properties using the top bar of the
-editor (size, smoothing (interpolation), etc...).</td>
+<td class="text">该工具将在两点之间画一条线。使用任一按钮单击一次以创建第一个点，然后再次单击其他位置创建另一个点并加入它们。将使用所选画笔绘制线条以创建轮廓，你可以使用编辑器的顶部栏（尺寸，平滑（插值）等）编辑某些画笔属性。</td>
 </tr>
 
 <tr>
@@ -446,19 +262,10 @@ editor (size, smoothing (interpolation), etc...).</td>
 <td class="icons"><img align="middle" src=
 "images/icon_rectangle.png" alt="Rectangle Tool">
 </td>
-<td class="text">This tool will draw either a filled or an outlined
-rectangle. If you click in the top left of the icon, it will be
-outlined, while clicking the bottom right will be filled and if you
-require both then you can select that option from the top bar of
-the image editor (or use <img style="vertical-align:middle" src=
+<td class="text">此工具将绘制填充或轮廓矩形。如果单击图标的左上角，它将绘制轮廓，而点击右下角则填充，如果你需要两个，则可以从图像编辑器的顶部栏中选择该选项（或使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> to select one then the other on
-the toolbox icon), as well as set the size and smoothing
-(interpolation) of the brush being used. The rectangle will then be
-drawn using the selected brush. Note that while drawing you can
-hold down <img style="vertical-align:middle" src=
-"../../images/icon_alt.png"> and click to draw from the
-<i>centre</i> of the mouse position.</td>
+src="../../images/icon_rmb.png"> 选择一个，然后另一个在工具箱图标上），以及设置正在使用的画笔的尺寸和平滑（插值）。 然后使用选定的画笔绘制矩形。 请注意，在绘制时，你可以按住 <img style="vertical-align:middle" src=
+"../../images/icon_alt.png"> 并单击从鼠标位置的 <i>中心</i> 绘制。</td>
 </tr>
 
 <tr>
@@ -470,19 +277,10 @@ hold down <img style="vertical-align:middle" src=
 <td class="icons"><img align="middle" src="images/icon_ellipse.png"
 alt="椭圆工具（Ellipse Tool）">
 </td>
-<td class="text">This tool will draw either a filled or an outlined
-ellipse. If you click in the top left of the icon, it will be
-outlined, while clicking the bottom right will be filled and if you
-require both then you can select that option from the top bar of
-the image editor (or use <img style="vertical-align:middle" src=
+<td class="text">此工具将绘制填充或轮廓椭圆。如果单击图标的左上角，它将绘制轮廓，而点击右下角则填充，如果你需要两个，则可以从图像编辑器的顶部栏中选择该选项（或使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> to select one then the other on
-the toolbox icon), as well as set the size and smoothing
-(interpolation) of the brush being used. The ellipse will be drawn
-using the selected brush to create the outline. Note that while
-drawing you can hold down <img style="vertical-align:middle" src=
-"../../images/icon_alt.png"> and click to draw from the
-<i>centre</i> of the mouse position.</td>
+src="../../images/icon_rmb.png"> 选择一个，然后另一个在工具箱图标上），以及设置正在使用的画笔的尺寸和平滑（插值）。 椭圆将使用选定的笔刷绘制轮廓。请注意，在绘制时，你可以按住 <img style="vertical-align:middle" src=
+"../../images/icon_alt.png"> 并单击从鼠标位置的 <i>中心</i> 绘制。</td>
 </tr>
 
 <tr>
@@ -494,18 +292,9 @@ drawing you can hold down <img style="vertical-align:middle" src=
 <td class="icons"><img align="middle" src="images/icon_polygon.png"
 alt="Polygon Tool">
 </td>
-<td class="text">This tool will draw either a filled or an outlined
-polygon. If you click in the top left of the icon, it will be
-outlined, while clicking the bottom right will be filled and if you
-require both then you can select that option from the top bar of
-the image editor (or use <img style="vertical-align:middle" src=
+<td class="text">此工具将绘制填充或轮廓多边形。如果单击图标的左上角，它将绘制轮廓，而点击右下角则填充，如果你需要两个，则可以从图像编辑器的顶部栏中选择该选项（或使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> to select one then the other on
-the toolbox icon), as well as set the size and smoothing
-(interpolation) of the brush being used. You click to add points to
-the polygon and when you are happy with the results you should
-select a different tool to commit the changes and generate the
-image. The polygon will be drawn using the selected brush.</td>
+src="../../images/icon_rmb.png"> 选择一个，然后另一个在工具箱图标上），以及设置正在使用的画笔的尺寸和平滑（插值）。 单击以向多边形添加点，当你对结果感到满意时，应选择其他工具来提交更改并生成图像。将使用所选画笔绘制多边形。</td>
 </tr>
 
 <tr>
@@ -517,16 +306,7 @@ image. The polygon will be drawn using the selected brush.</td>
 <td class="icons"><img align="middle" src="images/icon_spline.png"
 alt="样条曲线工具（Spline Tool）">
 </td>
-<td class="text">This is the spline tool. It uses the selected
-brush to create a spline. You click and hold the mouse button to
-set a point and then drag the mouse to generate the spline,
-releasing the mouse and repeating to add further points and curves.
-The spline will be drawn using the selected brush, which can be
-edited using the top bar of the editor to set size and smoothing
-(interpolation). The top bar also has a setting for
-<i>Iterations</i> which will define how smooth the resulting spline
-is (lover values will be rougher, higher smoother, and the default
-value is 10).</td>
+<td class="text">这是弧线工具。它使用选定的画笔创建弧线。单击并按住鼠标按钮设置点，然后拖动鼠标以生成曲线，释放鼠标并重复添加其他点和曲线。将使用所选笔刷绘制曲线，可以使用编辑器的顶栏编辑曲线的尺寸和平滑（插值）。 顶部栏还有一个 <i>迭代</i> 设置，它将定义生成曲线的平滑程度（更低的值将更粗糙，更高的值更平滑，默认值为 10）。</td>
 </tr>
 
 <tr>
@@ -538,10 +318,7 @@ value is 10).</td>
 <td class="icons"><img align="middle" src="images/icon_text.png"
 alt="文本编辑器（Text Tool）">
 </td>
-<td class="text">This is the text input tool. It creates a new text
-<a href="#image_layers">layer</a> where you can type anything you
-need. You can set the font to use as well as the formatting from
-the top bar of the image editor.</td>
+<td class="text">这是文本输入工具。它会创建一个新的文本 <a href="#image_layers">层</a>，你可以在其中键入所需内容。 你可以设置在图像编辑器顶部栏中设置要使用的字体以及格式。</td>
 </tr>
 
 <tr>
@@ -553,8 +330,7 @@ the top bar of the image editor.</td>
 <td class="icons"><img align="middle" src="images/icon_dropper.png"
 alt="Eyedropper Tool">
 </td>
-<td class="text">The eye-dropper tool permits you to sample a
-colour from the image currently being edited.</td>
+<td class="text">取色器允许你从当前正在编辑的图像中采样颜色。</td>
 </tr>
 
 <tr>
@@ -566,10 +342,9 @@ colour from the image currently being edited.</td>
 <td class="icons"><img align="middle" src=
 "images/icon_selectrectangle.png" alt="Select Rectangle Tool">
 </td>
-<td class="text">With this tool you can generate a rectangular
-selection. You can cancel a selection from the <a href=
-"#image_menu">Image</a> menu or pressing <img style=
-"vertical-align:middle" src="../../images/icon_escape.png">.</td>
+<td class="text">使用此工具，你可以生成矩形选区。你可以从 <a href=
+"#image_menu">图像</a> 菜单中或按 <img style=
+"vertical-align:middle" src="../../images/icon_escape.png"> 取消选择。</td>
 </tr>
 
 <tr>
@@ -581,9 +356,7 @@ selection. You can cancel a selection from the <a href=
 <td class="icons"><img align="middle" src=
 "images/icon_paintselection.png" alt="Paint Selection Tool">
 </td>
-<td class="text">With this tool you can "paint" a selected area
-using any of the brushes, including custom brushes. All the same
-keyboard shortcuts apply as for the Pencil tool.</td>
+<td class="text">使用此工具，你可以使用笔刷（包括自定义笔刷）“绘制” 选定区域。 所有相同的键盘快捷键都适用于选区笔工具。</td>
 </tr>
 
 <tr>
@@ -595,12 +368,9 @@ keyboard shortcuts apply as for the Pencil tool.</td>
 <td class="icons"><img align="middle" src=
 "images/icon_magicwand.png" alt="MagicWand Tool">
 </td>
-<td class="text">The magic wand selection tool will select areas of
-the same colour based on the tolerance value set. If you tick
-"<i>Colour only</i>" then alpha value will not be taken into
-consideration. You can cancel a selection from the <a href=
-"#image_menu">Image</a> menu or pressing <img style=
-"vertical-align:middle" src="../../images/icon_escape.png">.</td>
+<td class="text">魔棒工具将根据容差值设置选择相同颜色的区域。如果勾选 “<i>仅颜色</i>”，则不会考虑透明度。你可以从 <a href=
+"#image_menu">图像</a> 菜单中或按 <img style=
+"vertical-align:middle" src="../../images/icon_escape.png"> 取消选择。</td>
 </tr>
 
 <tr>
@@ -612,23 +382,9 @@ consideration. You can cancel a selection from the <a href=
 <td class="icons"><img align="middle" src="images/icon_rotate.png"
 alt="旋转工具（Rotate Tool）">
 </td>
-<td class="text">This is the rotate tool. If you have an area
-selected using the Selection tool, then clicking this will permit
-you to rotate the selected area by an arbitrary amount from 0° to
-360°. If you do not have an area of the image selected then this
-will permit you tyo rotate the current brush. To rotate, simply
-hold down the left mouse button <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> and drag left or right or set the
-value directly in the top bar. To accept the changes you can press
-either <img style="vertical-align:middle" src=
-"../../images/icon_escape.png"> or <tt>Enter</tt> or select another
-tool. Note that accepting the change will <i>not</i> change the
-source material, but rather create a new Brush resource for you to
-use with the selected image or brush rotated by the amount you set.
-Also note that the keyboard shortcut <tt>Z</tt> can be used to
-rotate any selection or brush by 90° and that this option does
-<i>not</i> create a new brush and will only affect how the current
-brush is drawn.</td>
+<td class="text">这是旋转笔刷工具。如果使用 “选择” 工具选择了某个区域，则单击此选项将允许你将所选区域从 0° 到 360° 旋转。 如果没有选择图像区域，则允许你旋转当前笔刷。 要旋转，只需按住鼠标左键 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> 并向左或向右拖动或直接在顶部栏中设置角度。 要接受更改，你可以按 <img style="vertical-align:middle" src=
+"../../images/icon_escape.png"> 或 <tt>Enter</tt> 或选择其他工具。 请注意，接受更改 <i>不</i> 会更改源材质，而是创建一个新的笔刷资源，并按你设置的角度旋转所选图像或画笔。另请注意，键盘快捷键 <tt>Z</tt> 可用于将已选部分或笔刷旋转 90°，并且此选项 <i>不</i> 会创建新笔刷，只会影响当前笔刷的绘制方式。</td>
 </tr>
 
 <tr>
@@ -640,10 +396,7 @@ brush is drawn.</td>
 <td class="icons"><img align="middle" src="images/icon_mirror.png"
 alt="Mirror Tool">
 </td>
-<td class="text">This is the mirror tool. Selecting this will
-mirror the current brush along the vertical axis. This option does
-<i>not</i> create a new brush and will only affect how the current
-brush is drawn.</td>
+<td class="text">这是镜像笔刷工具。选择此选项将沿垂直方向翻转当前笔刷。此选项 <i>不</i> 会创建新笔刷，只会影响当前笔刷的绘制方式。</td>
 </tr>
 
 <tr>
@@ -655,10 +408,7 @@ brush is drawn.</td>
 <td class="icons"><img align="middle" src="images/icon_flip.png"
 alt="Flip Tool">
 </td>
-<td class="text">This is the flip tool. Selecting this will mirror
-the current brush along the horizontal axis. This option does
-<i>not</i> create a new brush and will only affect how the current
-brush is drawn.</td>
+<td class="text">这是翻转笔刷工具。选择此选项将沿水平方向翻转当前笔刷。 此选项 <i>不</i> 会创建新笔刷，只会影响当前笔刷的绘制方式。</td>
 </tr>
 
 <tr>
@@ -670,50 +420,26 @@ brush is drawn.</td>
 <td class="icons"><img align="middle" src="images/icon_pan.png"
 alt="游动工具">
 </td>
-<td class="text">This is the pan tool. When you select this, you
-can then click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> and drag the mouse to pan the layer
-contents around <i>within the layer</i>. Note that any pixels
-outside of the draw canvas will not be visible and the image will
-be cropped to the draw canvas size when you change tool again. Note
-that if you have made a selection then the selected pixels will be
-moved rather than the contents of the layer.</td>
+<td class="text">这是平移图像工具。 选择此选项后，可以单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并拖动鼠标以平移层中的 <i>层内容</i>。请注意，当你再次更改工具时，绘制画布外部的像素都将不可见，并且图像将被裁剪为绘制画布大小。请注意，如果你使用选择工具进行了选择，则将移动所选像素而不是层的内容。</td>
 </tr>
 </table>
 </div>
 <br>
 <a name="image_layers" id="image_layers"></a> <label class=
-"collapse" for="eight">Layer Editor</label> <input id="eight" type=
+"collapse" for="eight">层编辑器</label> <input id="eight" type=
 "checkbox">
 <div class="index_list">
-<p>You can create <b>layers</b> in the image editor for different
-parts of your image, and these layers can be manipulated and drawn
-to using the various brushes and tools. To create a new layer,
-simply click the <img style="vertical-align:middle" src=
-"images/icon_add.png"> icon, and to remove it again the <img style=
-"vertical-align:middle" src="images/icon_remove.png"> icon. Layers
-can also be ordered by clicking <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> on a layer and then dragging the
-layer up or down to the position you require, and you can further
-organise the layers by creating folders using the <img style=
-"vertical-align:middle" src="images/icon_folder.png"> button and
-then dragging layers into them. If you double click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on a layer
-(or use <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> and select <i>Edit Layer
-Properties</i>) you'll get access to the <b>Layer Properties</b>
-window: <img class="center" src="images/editor_layerproperties.png"
+<p>你可以在图像编辑器中为图像的不同部分创建 <b>层</b>，并且可以使用各种笔刷和工具操作和绘制这些层。要创建新层，只需单击 <img style="vertical-align:middle" src=
+"images/icon_add.png"> 图标，然后再次单击将其删除 <img style=
+"vertical-align:middle" src="images/icon_remove.png"> 图标。也可以通过单击 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> 层然后将层向上或向下拖动到所需位置来定位层，还可以通过使用 <img style=
+"vertical-align:middle" src="images/icon_folder.png"> 按钮创建文件夹然后拖入层来进一步组织层。 如果双击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 某个层（或使用 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并选择 <i>编辑层属性</i>），你将可以访问 <b>图层属性</b> 窗口：<img class="center" src="images/editor_layerproperties.png"
 alt="Image Editor Layer Properties"></p>
 
-<p>Here you can name the layer as well as set the blend mode (the
-way that it should be "mixed" with the layers beneath), choosing
-from <b>normal</b>, <b>additive</b>, <b>subtractive</b> or
-<b>multiply</b> blends. Finally you can set the opacity
-(transparency) of the layer with a slider, but note that this is
-<i>cumulative</i> with the actual alpha value of individual pixels
-- for example, if you have pixels that are 50% opaque and set the
-layer opacity to 50%, the final pixels will be drawn at 25%
-opacity.</p>
+<p>在这里，你可以命名层以及设置混合模式（它应该与下面的层“混合”的方式），从 <b>正常</b>、<b>相加</b>、<b>相减</b> 或 <b>相乘</b> 混合中进行选择。最后，你可以使用滑块设置图层的不透明度（透明度），但请注意，这与单个像素的实际透明度值 <i>叠加</i> - 例如，如果你有 50％ 不透明的像素并将图层不透明度设置为 50 ％，最终像素将以 25％ 的不透明度绘制。</p>
 </div></blockquote>
 
 <p><br>
@@ -724,174 +450,88 @@ opacity.</p>
 
 <h2>右键菜单</h2>
 
-<p>Apart from those tools within the image editor itself, there are
-also a number of extra tools available to you from the Menu Bar at
-the top of the IDE:  <img class="center" src=
+<p>除了图像编辑器本身的这些工具之外，还可以从 IDE 顶部的菜单栏中获得许多额外的工具： <img class="center" src=
 "images/editor_menus.png" alt="Image Editor Menus"></p>
 
-<p>These menus are explained below:</p>
+<p>这些菜单说明如下：</p>
 
 <blockquote><a name="image_menu" id="image_menu"></a> <label class=
 "collapse" for="nine">图像</label> <input id="nine" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/editor_menuimages.png" alt=
-"Image Editor Image Menu">  The Image menu has the following
-options:</p>
+"Image Editor Image Menu"> 图像菜单有以下选项：</p>
 
 <ul>
-<li><b>Cut Frame / Selection</b> - Cut the frame or selection from
-the image (depending on Editor focus). If cutting a selection, this
-will add it to the <a href="#image_brushes">brushes</a>.<br>
+<li><b>剪切帧 / 所选</b> - 从图像中剪切帧或选区（取决于编辑器焦点）。如果剪切所选，则会将其添加到 <a href="#image_brushes">笔刷</a> 中。<br>
 <br></li>
 
-<li><b>Copy Frame / Selection</b> - Copy the frame or the selection
-from the image (depending on Editor focus). If copying a selection,
-this will add it to the <a href="#image_brushes">brushes</a>.<br>
+<li><b>复制帧 / 所选</b> - 复制图像中的帧或选区（取决于编辑器焦点）。如果复制所选，则会将其添加到 <a href="#image_brushes">笔刷</a>。<br>
 <br></li>
 
-<li><b>Paste Frame / Selection</b> - Paste the frame from the
-clipboard, or paste the selection from the clipboard to the image
-(depending on the current focus of the IDE). When pasting into an
-image, you should note that this option is designed <i>only for use
-with clipboard data from external programs</i>. When you cut or
-copy to the clipboard from an image in the Image Editor, this is
-added to the brushes in the top right of the editor, and you should
-select a brush to draw with the cut/copied selection rather than
-try to paste it into the image. Also note that a number of programs
-will have issues pasting transparencies from the clipboard into
-<i>GameMaker Studio 2</i> image editor due to the format used by
-the clipboard.<br>
+<li><b>粘贴帧 / 所选</b> - 从剪贴板粘贴帧，或从剪贴板粘贴图像到选区（取决于 IDE 的当前焦点）。 粘贴到图像时，应注意此选项 <i>仅适用于来自外部程序的剪贴板数据</i>。当你从图像编辑器中的图像剪切或复制到剪贴板时，会将其添加到编辑器右上角的笔刷中， 你应该选择要使用剪切/复制选区绘制的笔刷而不是尝试将它粘贴入图像。 另请注意，由于剪贴板使用的格式，许多程序在将剪贴板粘贴到 <i>GameMaker Studio 2</i> 图像编辑器时会出现问题。<br>
 <br></li>
 
-<li><b>Select All</b> - Select the full image.<br>
+<li><b>全选</b> - 选择整个图像。<br>
 <br></li>
 
-<li><b>Cancel Selection</b> - Clear any selection from the
-image.<br>
+<li><b>取消选择</b> - 清除已选区域。<br>
 <br></li>
 
-<li><b>Invert Selection</b> - Invert the current selection.<br>
+<li><b>反选</b> - 反向选择当前区域。<br>
 <br></li>
 
-<li><b>Add Frame</b> - Add a new frame to the sprite.<br>
+<li><b>添加帧</b> - 向精灵添加新的一帧。<br>
 <br></li>
 
-<li><b>Insert Frame</b> - Insert a new frame after the one
-currently showing.<br>
+<li><b>插入帧</b> - 向当前帧后插入新的一帧。<br>
 <br></li>
 
-<li><b>Delete Selected Fames</b> - Remove the selected frame from
-the sprite (you can use <img style="vertical-align:middle" src=
+<li><b>删除选定帧</b> - 从精灵移除选定帧（你可以使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> and/or <img style=
-"vertical-align:middle" src="../../images/icon_shift.png"> +
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-to select multiple frames).<br>
+src="../../images/icon_rmb.png"> 或 <img style=
+"vertical-align:middle" src="../../images/icon_shift.png"> + <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 选取多个帧）。<br>
 <br></li>
 
-<li><b>Import Image(s)</b> - Load an image to be used as a frame
-from disk. Note that you can load multiple frames at once by
-selecting multiple individual files to import in the explorer
-window. Once you have selected your file or files you will be shown
-the following Import window: <img class="center" src=
-"images/editor_image_import.png" alt="Image Editor Import Window">
-Here you can choose how the imported image should be added to the
-current sprite, permitting you to resize the entire draw canvas,
-crop or pad it, and also set the "anchor" position for placing the
-new image(s).<br>
+<li><b>导入图像</b> - 从磁盘加载要用作帧的图像。请注意，你可以通过在资源管理器窗口中选择要导入的多个文件来一次加载多个帧。选择文件后，你将看到以下导入窗口：<img class="center" src=
+"images/editor_image_import.png" alt="Image Editor Import Window"> 在这里，你可以选择如何将导入的图像添加到当前精灵中，允许你调整整个绘制画布的大小，裁剪或填充它，还可以设置放置新图像的“锚点”位置。<br>
 <br></li>
 
-<li><b>Convert to Frames</b> - This option will convert a single
-image into a number of separate frames. You must first have created
-a single frame with all the parts of the animation in it (or
-imported a single strip image) like the one shown below:
-<img class="center" src="images/editor_image_strip.png" alt=
-"Image Editor Animation Strip"> Since this is a single image and we
-want to convert it into individual frames, we can use this option
-which will then open the following window: <img class="center" src=
+<li><b>转换为帧</b> - 此选项将单个图像转换为多个单独的帧。您必须首先创建一个包含动画的所有部分的单个帧（或导入单个条带图像），如下所示：<img class="center" src="images/editor_image_strip.png" alt=
+"Image Editor Animation Strip"> 由于这是单个图像，我们想将其转换为单独的帧，我们可以使用此选项，然后打开以下窗口：<img class="center" src=
 "images/editor_image_convertstrip.png" alt=
-"Image Editor Convert to Animation Frames"> Here you can set how
-the single image should be split to create the frames, setting the
-number of frames, the width and height of the frames and any
-including any offset values.<br>
+"Image Editor Convert to Animation Frames"> 在这里，你可以设置如何分割单个图像以创建帧，设置帧数，帧的宽度和高度以及偏移值。<br>
 <br></li>
 
-<li><b>Import Strip Image</b> - This option will open a file
-explorer and prompt you to look for a single strip image file to be
-used to create frames from. Once selected an image the Import strip
-window will open, exactly the same as for the Convert To Frames
-option shown above.<br>
+<li><b>导入长带图</b> - 此选项将打开文件资源管理器，并提示你查找要用于创建帧的单个条带图像文件。选择图像后，导入条带图窗口将打开，与上面显示的 转换为帧 选项完全相同。<br>
 <br></li>
 
-<li><b>Export to PNG</b> - Selecting this option will export the
-sprite as a single PNG image. If the sprite has more than a single
-image, then a "strip" sprite will be created with all the images,
-one after another, and the save file name will automatically be
-appended with "<tt>_stripX</tt>", where "<tt>X</tt>" is the number
-of frames exported. For example, a five frame sprite will be
-exported as "<tt>sprite_name_strip5.png</tt>".<br>
+<li><b>导出 PNG</b> - 选择此选项会将精灵导出为单个 PNG 图像。如果精灵有多个图像，那么将一个接一个地创建所有图像的“条带”精灵，并且保存文件名将自动添加 “<tt>_stripX</tt>”，其中 “<tt>X</tt>” 是导出帧数。例如，五帧精灵将导出为 “<tt>sprite_name_strip5.png</tt>”。<br>
 <br></li>
 
-<li><b>Resize All Frames</b> - When you select this option it will
-open the following window where you can set the way that you want
-to resize all the animation frames that comprise the sprite:
-<img class="center" src="images/editor_image_resizeframes.png" alt=
-"Image Editor Resize Frames"> You can choose to either <b>Scale</b>
-the image, or to <b>Resize</b> canvas. If you choose to scale
-theimage then you simply select the new width and/or height for
-each frame, whether to scale using the same aspect ratio, and also
-whether to scale in pixels or percent. Note that when scaling you
-can enable interpolation on or off, where having it on will case
-the pixels to blur or "smear" as the image is scaled (in general,
-for hi resolution art you want this on, but for pixel art you want
-this off).<br>
-<br>
-The option to resize the canvas will not alter the pixels within
-the image but instead increase or decrease the size of the canvas
-that the images are being drawn on. You can set where the "anchor"
-for the resize should be using the arrow icons, then set the new
-size (in pixels or as a percentage) as well as set whether to
-maintain the aspect ratio of the original frames. Note that making
-the frame smaller than the original sprite images will crop the
-pixels.<br>
+<li><b>调整所有帧的尺寸</b> - 当你选择此选项时，它将打开以下窗口，你可以在其中设置要调整构成精灵的所有动画帧的尺寸的方式：<img class="center" src="images/editor_image_resizeframes.png" alt=
+"Image Editor Resize Frames"> 你可以选择 <b>缩放</b> 图像，也可以选择 <b>调整</b> 画布大小。 如果你选择缩放图像，则只需为每个帧选择新的宽度和高度，是否使用相同的纵横比进行缩放，以及是否按像素或百分比进行缩放。 请注意，缩放时可以启用或禁用插值，打开或关闭图像会使像素模糊或“涂抹”图像缩放（通常，对于高分辨率艺术，你希望打开，但如果你想要像素艺术则关闭该选项）。<br><br>调整画布大小的选项不会改变图像中的像素，而是增加或减少绘制图像的画布大小。你可以使用箭头图标设置调整大小的“锚点”的位置，然后设置新大小（以像素为单位或以百分比表示）以及设置是否保持原始帧的宽高比。请注意，使帧小于原始精灵图像将裁剪像素。<br>
 <br></li>
 
-<li><b>Crop All Frames To Selection</b> - This option will only be
-available when you have an area of the image selected in the main
-draw canvas. When you then choose this option, the image being
-edited (and all other frames in the animation) will be cropped to
-the boundaries of the selection.<br>
+<li><b>裁剪所有帧保留选区内容</b> - 只有在主绘制画布中选择了图像区域时，才能使用此选项。然后，当你选择此选项时，正在编辑的图像（以及动画中的所有其他帧）将被裁剪到选区的边界。<br>
 <br></li>
 
-<li><b>Auto Trim All Frames</b> - This option permits you to trim
-all the zero-alpha pixels from around the edges of a sprite. This
-will take into consideration <i>all</i> image frames within the
-sprite, so each side will crop to the edge of whichever frame has
-the furthest non-zero alpha pixel.  <img class="center" src=
+<li><b>自动裁切所有帧</b> - 此选项允许你修剪精灵边缘周围的所有零透明度像素。这将考虑精灵中的 <i>所有</i> 图像帧，因此每一边将裁剪到具有最远的非零透明度像素的帧的边缘。 <img class="center" src=
 "images/editor_image_trim.png" alt="Image Editor Trim Frames"></li>
 
-<li><b>Reverse Frames</b> - Selecting this will simply reverse the
-frame order for the sprite.<br>
+<li><b>帧逆序</b> - 会颠倒精灵中帧的顺序。<br>
 <br></li>
 
-<li><b>Mirror</b> - This option permits you to mirror either the
-current frame all all the frames that comprise the sprite along the
-vertical axis.<br>
+<li><b>镜像</b> - 此选项允许你沿垂直轴翻转构成精灵的所有帧的当前帧。<br>
 <br></li>
 
-<li><b>Flip</b> - This option permits you to flip either the
-current frame all all the frames that comprise the sprite along the
-horizontal axis.<br>
+<li><b>翻转</b> - 此选项允许你沿垂水平翻转构成精灵的所有帧的当前帧。<br>
 <br></li>
 
-<li><b>Rotate all Frames (clockwise 90°)</b> - This option will
-rotate all the frames of the animation 90° clockwise.<br>
+<li><b>旋转所有帧（顺时针 90°）</b> - 将所有帧顺时针旋转 90°。<br>
 <br></li>
 
-<li><b>Rotate all Frames (anti-clockwise 90°)</b> - This option
-will rotate all the frames of the animation 90°
-anti-clockwise.</li>
+<li><b>旋转所有帧（逆时针 90°）</b> - 将所有帧逆时针旋转 90°。</li>
 </ul>
 </div>
 <br>
@@ -899,27 +539,19 @@ anti-clockwise.</li>
 for="ten">视图</label> <input id="ten" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/editor_menuview.png" alt=
-"Image Editor Views Menu">  The View menu has the following
-options:</p>
+"Image Editor Views Menu"> “视图”菜单具有以下选项：</p>
 
 <ul>
-<li><b>1:1</b> - Scale the image to be 1:1 with the resolution (ie:
-actual size) and center it in the image edit window.<br>
+<li><b>1:1</b> - 使用分辨率（即：实际尺寸）将图像缩放为1：1，并将其居中放置在图像编辑窗口中。<br>
 <br></li>
 
-<li><b>Fit Screen</b> - Scale the image to fill the image edit
-window.<br>
+<li><b>适应屏幕</b> - 缩放图像以填充图像编辑窗口。<br>
 <br></li>
 
-<li><b>Toggle grid</b> - Toggle the pixel grid. This is the same as
-the grid button found in the Canvas COntrols (explained further up
-this page).<br>
+<li><b>切换网格</b> - 切换像素网格。这与画布工具栏中的切换网格按钮相同（本页进一步说明）。<br>
 <br></li>
 
-<li><b>Onion Skin Settings</b> - Change the onion skin settings.
-This will open the following window where you can set the frames
-shown by the onion skin button, as well as the opacity and colour
-of the skinned frames.  <img class="center" src=
+<li><b>洋葱皮设置</b> - 修改洋葱皮设置。这将打开以下窗口，你可以在其中设置洋葱皮按钮显示的帧，以及蒙版帧的不透明度和颜色。 <img class="center" src=
 "images/editor_image_onionskinproperties.png" alt=
 "Image Editor Onion Skin Properties"></li>
 </ul>
@@ -930,19 +562,13 @@ of the skinned frames.  <img class="center" src=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/editor_menueffects.png" alt=
-"Image Editor Effects Menu">  The Effects menu is where you can add
-your own custom effects plugins, and has the following effects by
-default:</p>
+"Image Editor Effects Menu"> 你可以在 “效果” 菜单中添加自定义效果插件，默认情况下具有以下效果：</p>
 
 <ul>
-<li><b>Blur</b> - Apply a blur effect to the image. You can set the
-intensity as well as the type of blur to use (box or gaussian) and
-set whether to only blur along the horizontal or vertical axis, or
-along both. You can then choose to apply this to only the current
-layer, visible layers or all layers.  <img class="center" src=
+<li><b>模糊</b> - 对图像应用模糊效果。你可以设置强度以及要使用的模糊类型（方形或高斯），并设置是仅沿水平轴还是垂直轴模糊，还是沿两者模糊。然后，你可以选择仅将其应用于当前层，可见层或所有层。 <img class="center" src=
 "images/editor_effectblur.png" alt="Image Editor Blur Effect"></li>
 
-<li><b>灰阶（Greyscale）</b> - Desaturate the image by a determined amount. You can choose to apply this to only the current layer, visible layers or all layers. <img class="center" src=
+<li><b>灰阶</b> - 以确定的量去除图像的饱和度。你可以选择仅将其应用于当前层，可见层或所有层。 <img class="center" src=
 "images/editor_effectgrayscale.png" alt=
 "Image Editor Greyscale Effect"></li>
 </ul>
@@ -961,7 +587,7 @@ layer, visible layers or all layers.  <img class="center" src=
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
