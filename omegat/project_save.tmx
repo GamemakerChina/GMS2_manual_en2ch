@@ -3939,8 +3939,8 @@
       <tuv lang="EN-US">
         <seg>&lt;b0&gt;NOTE&lt;/b0&gt;: Before you go off splitting up your graphics over various texture pages, you should be aware that this is not always necessary, nor is it always the most efficient way to work.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170317T140544Z" creationid="36011" creationdate="20170317T140544Z">
-        <seg>&lt;b0&gt;注意&lt;/b0&gt;： Before you go off splitting up your graphics over various texture pages, you should be aware that this is not always necessary, nor is it always the most efficient way to work.</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T042712Z" creationid="36011" creationdate="20170317T140544Z">
+        <seg>&lt;b0&gt;注意&lt;/b0&gt;：在您将图形分割到各种纹理页面之前，您应该意识到这并不总是必要的，也不总是最有效的工作方式。 </seg>
       </tuv>
     </tu>
     <tu>
@@ -4139,8 +4139,8 @@
       <tuv lang="EN-US">
         <seg>&lt;b0&gt;NOTE&lt;/b0&gt;: Take care when using this option as you can quickly use up all the available texture memory, especially on mobile devices, if you have too many texture pages.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170317T140544Z" creationid="36011" creationdate="20170317T140544Z">
-        <seg>&lt;b0&gt;注意&lt;/b0&gt;： Take care when using this option as you can quickly use up all the available texture memory, especially on mobile devices, if you have too many texture pages.</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T041832Z" creationid="36011" creationdate="20170317T140544Z">
+        <seg>&lt;b0&gt;注意&lt;/b0&gt;： 使用此选项时要小心，因为如果有很多的纹理页，您会快速消耗所有可用的纹理内存，尤其是在移动设备上。</seg>
       </tuv>
     </tu>
     <tu>
@@ -8867,6 +8867,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
     </tu>
     <tu>
+      <tuv lang="EN-US">
+        <seg>An image that is to be tiled will have the edges (horizontal or vertical) added to by the edges from the opposite side, while if no tiling is selected the sprite will be clamped and the edges pixels will be repeated (note that tilesets also have a setting for the output border width, found in the &lt;a2&gt;Tile Set Properties&lt;/a2&gt; which does the same thing, only for each tile in the set).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T041336Z" creationid="tpxxn" creationdate="20181009T040706Z">
+        <seg>图像是图块将从相对边的边缘（水平或垂直）添加边缘，而如果未选择平铺，则将锁定子画面并重复边缘像素（注意，图块集也具有输出边框宽度的设置，&lt;a2&gt;图块集属性&lt;/a2&gt; 中发现同样的事情,仅适用于图块集中的每个图块）。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>备注：SpriteEditor_Tile_Tooltip：Tiling tooltip
 平铺？图块？工具提示？精灵编辑器与图块相关的是什么呢？精灵有平铺这功能吗？</note>
       <tuv lang="EN-US">
@@ -10229,6 +10237,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T074924Z" creationid="tpxxn" creationdate="20181005T074740Z">
         <seg>正如你所看到的，它被“分割”成 64x64 个像素块，然后将其放入房间编辑器组合。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As you can see, the game graphics are all jumbled up together in such a way that they all fit on a power of 2 sized page, eg 512x512, 1024x512 etc... up to a maximum size of 4096x4096 pixels page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T040234Z" creationid="tpxxn" creationdate="20181009T040038Z">
+        <seg>正如你所看到的，游戏的图形都是以这样的方式混合在一起的，他们都填充在一个 2 的倍数大小的页面上，如 512 x 512、1024 x 512 等…最大大小为 4096 x 4096 像素的页面。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12020,6 +12036,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170111T112336Z" creationid="36011" creationdate="20170111T112336Z">
         <seg>下表列举出所有因限制而封禁使用的函数：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Below is an example of a completed texture page:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T035916Z" creationid="tpxxn" creationdate="20181009T035916Z">
+        <seg>下面是一个完整的纹理页面示例：</seg>
       </tuv>
     </tu>
     <tu>
@@ -28609,6 +28633,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Here you can define how the image is to be stored on the texture page as well as whether it is an image specifically for use with a 3D object or has to be stored separately and which texture page (if any) it has to be assigned to.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T040741Z" creationid="tpxxn" creationdate="20181009T040700Z">
+        <seg>在这里，您可以定义图像如何存储在纹理页、它是专门用于 3D 物体的图像还是必须单独存储以及它必须被分配到哪个纹理页（如果有的话）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Here you can find a complete list of all the keyboard shortcuts for an easy reference guide.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170317T151851Z" creationid="36011" creationdate="20170317T151851Z">
@@ -30257,6 +30289,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165945Z" creationid="KangKang" creationdate="20170424T165945Z">
         <seg>如果它们随后停止重叠和重叠，则会触发另一个碰撞事件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>If this is not what you wish to happen, then you need to disable it from the &lt;a0&gt;Texture Groups&lt;/a0&gt; window.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T040115Z" creationid="tpxxn" creationdate="20181009T040115Z">
+        <seg>如果这不是您希望发生的，那么您需要从 &lt;a0&gt;纹理组&lt;/a0&gt; 窗口禁用它。</seg>
       </tuv>
     </tu>
     <tu>
@@ -33082,6 +33122,22 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>It is also worth noting that if your sprites have a lot of empty space (ie: transparent pixels) around them, they will be cropped by default to remove any of these "invisible" pixels and pack as many images as possible onto a single texture page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T040546Z" creationid="tpxxn" creationdate="20181009T040102Z">
+        <seg>同样值得注意的是，如果你的精灵周围有很多空白的空间（例如：透明像素），它们将被默认裁剪，以删除任何“不可见”的像素，并将尽可能多的图像打包到一个纹理页上。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is also worth noting that in the individual platform tabs that can be found in the &lt;a3&gt;Game Options&lt;/a3&gt; there is a button that permits you to view the texture pages that you have defined, just as they would be created for each target.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T042354Z" creationid="tpxxn" creationdate="20181009T041853Z">
+        <seg>值得注意的是，在 &lt;a3&gt;游戏选项&lt;/a3&gt; 中可以找到各个平台的选项卡中，有一个按钮允许您查看已定义的纹理页面，就像为每个平台创建的那样。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>It is also worth noting that the length of each 2D array can be different, so you can have an array with a height of 2, but entry 0 could be 2 in length, entry 1 could be 4 in length and entry 2 could be 3 in length:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160514T054836Z" creationid="deciia" creationdate="20160514T054836Z">
@@ -33102,6 +33158,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160515T042406Z" creationid="deciia" creationdate="20160515T042406Z">
         <seg>值得注意的是，你可以使用访问器 &lt;t0&gt;@&lt;/t0&gt; 在脚本中引用并直接更改数组的值，这样可以节省将数组复制到脚本中的CPU开销。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It is essential that you make sure your images are all able to fit on the smallest of the texture page sizes that your game will use, and if not then you should split them into smaller images and then draw them together in your game to give the illusion of one large, complete, image.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T042700Z" creationid="tpxxn" creationdate="20181009T042414Z">
+        <seg>您必须确保您的图像能够适合您游戏将使用的最小纹理页大小，如果不能，那么您应该将它们分成较小的图像，然后在游戏中将它们绘制在一起，以便形成一个较大而完整的图像的错觉。</seg>
       </tuv>
     </tu>
     <tu>
@@ -33278,6 +33342,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160219T031923Z" creationid="deciia" creationdate="20160219T031020Z">
         <seg>如果你激活了垂直同步的替代方法（断水注：并非返回垂直同步是否激活，而是指替代方法），它将返回&lt;t0&gt;true&lt;/t0&gt; ，或者如果你使用常规的垂直同步方式，它则返回&lt;t1&gt;false&lt;/t1&gt; 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>It's also worth noting that even if you have a resource that is larger than 4096px in size - or the maximum size for the chosen platform - this will be scaled &lt;i0&gt;down&lt;/i0&gt; by &lt;b1&gt;half&lt;/b1&gt; (and half again if necessary) until it fits on the maximum page size, it will &lt;i2&gt;not&lt;/i2&gt; be split into sections over various texture pages.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T040526Z" creationid="tpxxn" creationdate="20181009T040058Z">
+        <seg>值得注意的,即使你有一个资源规模大于 4096 像素或选择平台的最大尺寸——这将被 &lt;i0&gt;减小&lt;/i0&gt; &lt;b1&gt;一半&lt;/b1&gt; （如果必要再次减半）直到它适合最大页面大小，它 &lt;i2&gt;不&lt;/i2&gt; 会在各纹理被分成几部分。</seg>
       </tuv>
     </tu>
     <tu>
@@ -40060,6 +40132,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that the maximum size of a texture page will depend on the chosen export platform, as some targets will not permit pages larger than 2048x2048px.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T040255Z" creationid="tpxxn" creationdate="20181009T040041Z">
+        <seg>注意，一个纹理页面的最大大小取决于所选择的导出平台，因为一些平台不允许超过 2048 x 2048 像素的页面。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that the original files will &lt;i1&gt;still remain in the read-only part of the save directory&lt;/i1&gt;, but they won't be referenced as long as a version exists in the read/write section of the save area.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181008T152401Z" creationid="tpxxn" creationdate="20181008T152401Z">
@@ -40625,6 +40705,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="SSZZ" changedate="20150809T123308Z" creationid="SSZZ" creationdate="20150809T123308Z">
         <seg>现在，当你在调试模块中运行游戏的时候，它就会暂停在你定下的断点（们）上了。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now, when your game is large with a lot of artistic resources, it may be that the way &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; automatically creates these pages is not the optimum for getting the most out of the target device, due to the fact that if a room in your game needs resources from 4 different texture pages, the device will have to swap these pages into (and out of) memory constantly, which may cause a loss in performance.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T042135Z" creationid="tpxxn" creationdate="20181009T041838Z">
+        <seg>现在，当你的游戏很大、有很多艺术资源时，可能 &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 自动创建这些页面的方式并不能最大限度地利用平台设备，因为如果你的游戏的一个房间需要来自 4 个不同纹理页面的资源，设备必须不断地将这些页面替换到（或从）内存（取出），这可能会导致性能下降。</seg>
       </tuv>
     </tu>
     <tu>
@@ -51573,6 +51661,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Should you have a texture in your game that is &lt;i0&gt;larger&lt;/i0&gt; than the texture page size, this image will be automatically scaled down by &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; to make it fit within the texture page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T042508Z" creationid="tpxxn" creationdate="20181009T042357Z">
+        <seg>如果您的游戏中的纹理 &lt;i0&gt;大于&lt;/i0&gt; 纹理页大小，则此图像将由 &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; 自动缩小以使其适合纹理页。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Should you need to roll back an update, you can get previous version installers by clicking the version number link on this page.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170425T075713Z" creationid="36011" creationdate="20170425T075713Z">
@@ -53170,6 +53266,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170311T131813Z" creationid="deciia" creationdate="20170311T131813Z">
         <seg>某些字符将不可见。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Some games may be more CPU bound than GPU bound (see the section on &lt;a1&gt;Debugging&lt;/a1&gt; for more information) and those games will not benefit greatly from this optimisation, and you should also consider whether it would not be better to have all your images on two texture pages and swap between them rather than spread out over several, with each one having a lot of empty space that is just wasting memory.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T042907Z" creationid="tpxxn" creationdate="20181009T042435Z">
+        <seg>有些游戏可能比 GPU 限制更多的 CPU 限制（有关更多信息，请参阅 &lt;a1&gt;调试&lt;/a1&gt; 部分），这些游戏不会从此优化中受益匪浅，您还应该考虑是否将所有图像放在两个纹理上在页面和它们之间交换更好，而不是分散在几个，每个都有很多空的空间，只是浪费内存。</seg>
       </tuv>
     </tu>
     <tu>
@@ -55551,6 +55655,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20180927T030717Z" creationid="deciia" creationdate="20180922T102654Z">
         <seg>2013年系统已被Microsoft弃用，只应用于已在开发的标题\n 2017系统不再需要服务清单\n请参阅Microsoft文档了解更多详细信息</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The &lt;a0&gt;sprite resource editor&lt;/a0&gt; has a section titled &lt;b1&gt;Texture Settings&lt;/b1&gt;, shown below:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T040657Z" creationid="tpxxn" creationdate="20181009T040657Z">
+        <seg>&lt;a0&gt;精灵资源编辑器&lt;/a0&gt; 有一个标题为 &lt;b1&gt;纹理设置&lt;/b1&gt; 的部分，如下所示：</seg>
       </tuv>
     </tu>
     <tu>
@@ -58694,6 +58806,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The first two options, &lt;b0&gt;Tile Horizontal&lt;/b0&gt; and &lt;b1&gt;Tile Vertical&lt;/b1&gt; relate to how the edges of the image will be created when placed on the texture page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T040847Z" creationid="tpxxn" creationdate="20181009T040702Z">
+        <seg>前两个选项，&lt;b0&gt;水平平铺图块&lt;/b0&gt; 和 &lt;b1&gt;垂直平铺图块&lt;/b1&gt; 与图像的边缘在纹理页上的创建方式有关。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The flag will be either &lt;t0&gt;true&lt;/t0&gt; (enabled, the default value) or &lt;t1&gt;false&lt;/t1&gt; (disabled).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="danping" changedate="20150717T230611Z" creationid="danping" creationdate="20150717T230611Z">
@@ -61674,6 +61794,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>These graphics are stored on &lt;b1&gt;Texture Pages&lt;/b1&gt; which &lt;i2&gt;GameMaker Studio 2&lt;/i2&gt; builds for you from all the image resources that your game contains.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T040032Z" creationid="tpxxn" creationdate="20181009T035904Z">
+        <seg>这些图形存储在 &lt;i2&gt;GameMaker Studio 2&lt;/i2&gt; 根据游戏中包含的所有图像资源为您构建的 &lt;b1&gt;纹理页&lt;/b1&gt; 上。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>These options are:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T163026Z" creationid="KangKang" creationdate="20170424T163026Z">
@@ -63148,6 +63276,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is most commonly used for texturing 3D models (in which case the texture should be a power of 2, eg: 128x128 or 512x512), but you can use it to force any image to be drawn to its own unique page.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T041451Z" creationid="tpxxn" creationdate="20181009T041451Z">
+        <seg>这常用于纹理化的 3D 模型（在这种情况下纹理应该是 2 的次方数，例如：128 x 128 或 512 x 512），但是您可以使用它来强制将任何图像绘制到其自己的唯一页面。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is not a bug, but due to the startup times and the way that the game is processed when initialised).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T092424Z" creationid="tpxxn" creationdate="20181005T092424Z">
@@ -63524,6 +63660,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This means that when you test your game on Windows, Ubuntu (Linux) or MacOS the game may look fine as you are using larger texture pages, but on iOS (or any of the other targets that require a smaller texture page size for optimal performance) the texture may look blurred or have artefacts.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T042615Z" creationid="tpxxn" creationdate="20181009T042402Z">
+        <seg>这意味着当您在 Windows、Ubuntu（Linux）或 MacOS 上测试游戏时，游戏可能看起来很好，因为您使用较大的纹理页面，但在iOS（或任何需要较小纹理页大小以获得最佳性能的其他目标上）纹理可能看起来很模糊或有人工制品。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This means that you &lt;b2&gt;must always return the array&lt;/b2&gt; from the script if you wish to change any array values.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160515T033901Z" creationid="deciia" creationdate="20160515T033901Z">
@@ -63761,6 +63905,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T132934Z" creationid="36011" creationdate="20170318T132934Z">
         <seg>该选项允许你选择这两种所用颜色的第二种颜色（包括透明度），默认值为&lt;t1&gt;#0000D0&lt;/t1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This option will force &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; to place this image on its own unique texture page and there are no options associated with this as the tiling or clamping is controlled directly through code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T041736Z" creationid="tpxxn" creationdate="20181009T041419Z">
+        <seg>此选项将强制 &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; 将此图像放在其自己唯一的纹理页面上，并且没有与此相关的选项，因为通过代码直接控制平铺或夹紧。 </seg>
       </tuv>
     </tu>
     <tu>
@@ -65549,6 +65701,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>To that end, you have the option to tell &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; what images are to be placed on any specific texture page, with the final aim being to minimise the number of swaps being done in a game at any one time (texture pages can added from the &lt;a2&gt;Texture Groups&lt;/a2&gt; window).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T042251Z" creationid="tpxxn" creationdate="20181009T041841Z">
+        <seg>为此，您可以选择告诉 &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; 在特定纹理页面上放置哪些图像，最终目的是最大限度地减少在游戏中完成的交换次数（可以从 &lt;a2&gt;纹理组&lt;/a2&gt; 窗口添加纹理页）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>To the right of that you have the &lt;i1&gt;Switch To&lt;/i1&gt; section where you can select a new runtime to switch to from the drop down list:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170427T095407Z" creationid="deciia" creationdate="20170427T095407Z">
@@ -66675,6 +66835,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170801T093917Z" creationid="deciia" creationdate="20170801T093917Z">
         <seg>在颜色偏好设置下，您有不同风格的 &lt;b0&gt;选项&lt;/b0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Underneath those settings is the &lt;b0&gt;Separate Texture Page&lt;/b0&gt; setting.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T041622Z" creationid="tpxxn" creationdate="20181009T041416Z">
+        <seg>这些设置下面是 &lt;b0&gt;独立的纹理页&lt;/b0&gt; 设置。</seg>
       </tuv>
     </tu>
     <tu>
@@ -68905,6 +69073,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T090351Z" creationid="tpxxn" creationdate="20181005T085908Z">
         <seg>当您单击“创建可执行文件”按钮时，系统将提示您告知 &lt;i3&gt;GameMaker Studio 2&lt;/i3&gt; 要创建哪个类型的软件包（可用于 ARM，x64 或 x86 架构），您应该选择设备类型以使您的游戏支持相应的设备： &lt;i4&gt;在 UWP 编译选项种如果您选中标记为&lt;b5&gt;商店上传包 &lt;/b5&gt; 的框，那么创建的最终包将是一个 &lt;t6&gt;.appxupload&lt;/t6&gt; 文件，如本文中所述，这是微软指定应用于将应用程序提交到其商店的文件格式，你可以点击 &lt;a7&gt;这里&lt;/a7&gt; 提交。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When you create a game with &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt;, you will surely have created graphics - sprites, tilesets and fonts - to go along with it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T035940Z" creationid="tpxxn" creationdate="20181009T035900Z">
+        <seg>当你用 &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 创建游戏时，你肯定会创建图形——精灵、图块和字体——来配合它。</seg>
       </tuv>
     </tu>
     <tu>
