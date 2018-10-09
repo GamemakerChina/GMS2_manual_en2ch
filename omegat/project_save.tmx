@@ -238,6 +238,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>(Information on &lt;b1&gt;data types&lt;/b1&gt; and &lt;b2&gt;byte alignment&lt;/b2&gt; can be found further down this page).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045552Z" creationid="tpxxn" creationdate="20181009T045552Z">
+        <seg>（关于 &lt;b1&gt;数据类型&lt;/b1&gt; 和 &lt;b2&gt;字节对齐&lt;/b2&gt; 的信息可以在本页下面找到）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>(This is the equivalent of dividing by 32, then multiplying by 32, thereby removing the lower bits.)&lt;br0&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T152947Z" creationid="tpxxn" creationdate="20181005T152947Z">
@@ -1123,6 +1131,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160426T121847Z" creationid="deciia" creationdate="20160426T121327Z">
         <seg>&lt;b0&gt;&amp;&amp;, ||, ^^（与、或和异或）&lt;/b0&gt; - 将两个布尔值结合在一起判断是真还是否。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;(Not currently supported!)&lt;/b0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051513Z" creationid="tpxxn" creationdate="20181009T051513Z">
+        <seg>&lt;b0&gt;（目前不支持！）&lt;/b0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -3739,8 +3755,8 @@
       <tuv lang="EN-US">
         <seg>&lt;b0&gt;NOTE:&lt;/b0&gt; Restarting the game will not clear or delete the buffer!</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T045923Z" creationid="36011" creationdate="20170322T045923Z">
-        <seg>&lt;b0&gt;注意：&lt;/b0&gt; Restarting the game will not clear or delete the buffer!</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044928Z" creationid="36011" creationdate="20170322T045923Z">
+        <seg>&lt;b0&gt;注意：&lt;/b0&gt; 重新启动游戏将不会清除或删除缓冲区！</seg>
       </tuv>
     </tu>
     <tu>
@@ -3749,6 +3765,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160515T040132Z" creationid="deciia" creationdate="20160515T040132Z">
         <seg>&lt;b0&gt;注意：&lt;/b0&gt; 如果不更改数组的值， &lt;b1&gt;没有&lt;/b1&gt; 必要那写，仅需要引用即可。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;b0&gt;NOTE:&lt;/b0&gt; The buffer that is created from the ds_map is automatically removed at the end of the Network Asynchronous Event so there is no need to use &lt;a1&gt;&lt;t2&gt;buffer_delete&lt;/t2&gt;&lt;/a1&gt; here.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060554Z" creationid="tpxxn" creationdate="20181009T060554Z">
+        <seg>&lt;b0&gt;注意：&lt;/b0&gt;从 ds_map 创建的缓冲区在网络异步事件结束时自动删除，因此这里不需要使用 &lt;a1&gt;&lt;t2&gt;buffer_delete&lt;/t2&gt;&lt;/a1&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3769,10 +3793,18 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;b0&gt;NOTE:&lt;/b0&gt; This function is very limited and it is designed for the beginner to get a checkpoint system up and running quickly, but more advanced users may prefer to code their own system using the &lt;a1&gt;File functions&lt;/a1&gt;, due to the fact that the game will not save any of the dynamic resources that you can create at run-time like data structures, surfaces, added backgrounds and sprites etc...</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T061054Z" creationid="tpxxn" creationdate="20181009T053851Z">
+        <seg>&lt;b0&gt;注意：&lt;/b0&gt;这个函数是非常有限的，这是为初学者设计的一个快速启动并运行的检查点系统，但是更高级的用户可能更愿意使用 &lt;a1&gt;文件函数&lt;/a1&gt; 代码创建自己的系统，因为这个游戏不会保存任何的动态资源，您可以创建在运行时的数据结构、表面、添加背景和精灵等等……</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;b0&gt;NOTE:&lt;/b0&gt; This is only for use in the same room, and not for generating complete saved games for after your game has been closed or restarted!</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050527Z" creationid="36011" creationdate="20170322T050527Z">
-        <seg>&lt;b0&gt;注意：&lt;/b0&gt; This is only for use in the same room, and not for generating complete saved games for after your game has been closed or restarted!</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T054450Z" creationid="36011" creationdate="20170322T050527Z">
+        <seg>&lt;b0&gt;注意：&lt;/b0&gt; 这只能在同一个房间使用，而不是用于在你的游戏关闭或重新启动后获取完整保存的游戏状态。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6195,6 +6227,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; has a series of functions in GML to deal with &lt;b1&gt;buffers&lt;/b1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044452Z" creationid="tpxxn" creationdate="20181009T044430Z">
+        <seg>&lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 在 GML 中有一系列功能来处理 &lt;b1&gt;缓冲区&lt;/b1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; has limited support for vector sprites.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181008T154702Z" creationid="tpxxn" creationdate="20181008T154646Z">
@@ -6247,6 +6287,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T034252Z" creationid="tpxxn" creationdate="20181009T034252Z">
         <seg>&lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 将许多内置功能从以前的版本转移到扩展中，这意味着以下第三方支持功能被认为已经弃用了：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; permits the creation of four different buffer types.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045047Z" creationid="tpxxn" creationdate="20181009T045007Z">
+        <seg>&lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 允许创建四种不同的缓冲区类型</seg>
       </tuv>
     </tu>
     <tu>
@@ -6311,6 +6359,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T033324Z" creationid="tpxxn" creationdate="20181009T033159Z">
         <seg>&lt;i0&gt;GameMaker: Studio 1.4&lt;/i0&gt; 有两种不同的声音 API，一种使用了遗留的 &lt;t1&gt;sound_&lt;/t1&gt; 函数（只在 &lt;i2&gt;HTML5&lt;/i2&gt; 目标平台上有效），另一种使用了 &lt;t3&gt;audio_&lt;/t3&gt; 函数</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;i1&gt; Buffers are created by allocating a space in the system memory, calculated in &lt;b2&gt;bytes&lt;/b2&gt;, which is then reserved for your game as long as your game is running or until you delete the buffer using the appropriate function.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044905Z" creationid="tpxxn" creationdate="20181009T044820Z">
+        <seg>&lt;i1&gt; 缓冲区是通过在系统内存中分配空间来创建的，以 &lt;b2&gt;字节&lt;/b2&gt; 为单位计算，然后在游戏运行或使用适当的函数删除缓冲区之前为游戏保留空间。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6387,6 +6443,22 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>&lt;i3&gt; So, if your byte alignment is set to, say, 4 bytes and you write a single piece of data which is 1 byte in size then do a &lt;i4&gt;buffer tell&lt;/i4&gt; (a &lt;b5&gt;tell&lt;/b5&gt; gets the current position for reading/writing for the buffer), you'll get an &lt;i6&gt;offset&lt;/i6&gt; of 1 (the offset in this case is the number of bytes from the start of the buffer to the current read/write position).&lt;br7&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T053232Z" creationid="tpxxn" creationdate="20181009T052751Z">
+        <seg>&lt;i3&gt; 所以,如果你的字节对齐方式设置为，比如说，4个字节,你写一段 1 个字节大小的数据然后做一个 &lt;i4&gt;缓冲告知&lt;/i4&gt;（&lt;b5&gt;告知&lt;/b5&gt; 使得当前位置为读/写缓冲区），你会得到 1 字节的 &lt;i6&gt;偏移量&lt;/i6&gt;（抵消在这种情况下从开始的缓冲区到当前读写位置的字节数）。&lt;br7&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>&lt;i3&gt; When creating a buffer, you should always try to create it to a size that is appropriate to the type, with the general rule being that it should be created to accommodate the maximum size of data that it is to store, and if in doubt, use a &lt;b4&gt;grow&lt;/b4&gt; buffer to prevent overwrite errors.&lt;br5&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T050113Z" creationid="tpxxn" creationdate="20181009T045656Z">
+        <seg>&lt;i3&gt; 当创建一个缓冲区时，你应该总是试图创建一个大小合适的类型，一般规则是，它应该适应最大大小创建数据存储，如果不确定，请使用 &lt;b4&gt;增长&lt;/b4&gt; 缓冲以防止错误覆盖数据。&lt;br5&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>&lt;i6&gt;&lt;b7&gt;NOTE:&lt;/b7&gt; This function is only valid for the HTML5, Windows, MacOS, Windows 8 (JS), and Tizen (JS) modules.&lt;/i6&gt;&lt;br8&gt;</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20180214T101425Z" creationid="36011" creationdate="20180214T101425Z">
@@ -6443,10 +6515,42 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A 16bit floating point number.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051419Z" creationid="tpxxn" creationdate="20181009T051419Z">
+        <seg>16 位浮点型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A 2D array needs to be initialised before use, the same as a 1D array, and can hold real numbers, strings and constants, just like any other variable, making them ideal candidates for any game that needs to store large amounts of data in an easily accessible way (remember, you can loop through an array easily).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160514T051755Z" creationid="deciia" creationdate="20160514T051755Z">
         <seg>二维数组在使用前同样也需要初始化，和其它的变量一样，也可以存储实数、字符串和常量。在需要便捷地储存大量数据时，二维数组是一个理想的选择（记住，数组中循环非常方便）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A 32bit floating point number.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051727Z" creationid="tpxxn" creationdate="20181009T051727Z">
+        <seg>32 位浮点型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A 64bit floating point number.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051846Z" creationid="tpxxn" creationdate="20181009T051846Z">
+        <seg>64 位浮点型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A 64bit unsigned integer value.&lt;b0&gt;(Not currently supported by all buffer functions!)&lt;/b0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051826Z" creationid="tpxxn" creationdate="20181009T051826Z">
+        <seg>无符号 64 位整型。&lt;b0&gt;（当前不支持所有缓冲函数！）&lt;/b0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -6483,6 +6587,14 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A boolean value.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051856Z" creationid="tpxxn" creationdate="20181009T051856Z">
+        <seg>布尔类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A branch to execute in a switch if the case is true.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20180926T070236Z" creationid="deciia" creationdate="20170212T042459Z">
@@ -6511,6 +6623,38 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="Wonderm" changedate="20150802T143327Z" creationid="Wonderm" creationdate="20150802T143327Z">
         <seg>所存储数据的简要说明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A buffer (in programming) is basically a space within the system memory that is used to store small &lt;i0&gt;packets&lt;/i0&gt; of data for just about anything (for example data transfer, collisions, colour data etc...).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044752Z" creationid="tpxxn" creationdate="20181009T044700Z">
+        <seg>缓冲区（在编程中）基本上是系统内存中的一个空间，用于存储几乎任何东西（例如数据传输、碰撞、颜色数据等等）的小数据 &lt;i0&gt;包&lt;/i0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A buffer of a fixed size in bytes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045244Z" creationid="tpxxn" creationdate="20181009T045233Z">
+        <seg>以字节为单位的固定大小的缓冲区。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A buffer that will &lt;i0&gt;grow&lt;/i0&gt; dynamically as data is added.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045334Z" creationid="tpxxn" creationdate="20181009T045246Z">
+        <seg>在添加数据时将动态 &lt;i0&gt;增长&lt;/i0&gt; 的缓冲区。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A buffer where the data will &lt;i0&gt;wrap&lt;/i0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045518Z" creationid="tpxxn" creationdate="20181009T045336Z">
+        <seg>数据会被 &lt;i0&gt;覆盖&lt;/i0&gt; 的缓冲区。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6691,10 +6835,34 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>A signed, 16bit integer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051628Z" creationid="tpxxn" creationdate="20181009T051327Z">
+        <seg>有符号 16 位整型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A signed, 32bit integer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051654Z" creationid="tpxxn" creationdate="20181009T051654Z">
+        <seg>有符号 32 位整形。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>A signed, 8bit integer.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050303Z" creationid="36011" creationdate="20170322T050303Z">
-        <seg>一个有符号的8位整数。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051617Z" creationid="36011" creationdate="20170322T050303Z">
+        <seg>有符号 8 位整型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A simple example of how a buffer can be used in any &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; game for any platform, is the function &lt;a1&gt;&lt;t2&gt;game_save_buffer&lt;/t2&gt;&lt;/a1&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T053715Z" creationid="tpxxn" creationdate="20181009T053627Z">
+        <seg>一个关于如何在任何平台的 &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 游戏中使用缓冲区的简单例子是 &lt;a1&gt;&lt;t2&gt;game_save_buffer&lt;/t2&gt;&lt;/a1&gt; 函数。</seg>
       </tuv>
     </tu>
     <tu>
@@ -6767,6 +6935,14 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="Wonderm" changedate="20150802T135335Z" creationid="Wonderm" creationdate="20150802T135335Z">
         <seg>0 （或者大于0的值） 代表成功(见下文)的返回, “resultString” 中包含返回的消息数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A variable is then created to check against and see if the game has been saved or not (this will be used for loading).&lt;br1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T054040Z" creationid="tpxxn" creationdate="20181009T054040Z">
+        <seg>然后创建一个变量来检查是否保存了游戏（这将用于加载）。&lt;br1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -8904,8 +9080,24 @@ Add-ons应该怎么翻译？</note>
       <tuv lang="EN-US">
         <seg>An unsigned, 16bit integer.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050223Z" creationid="36011" creationdate="20170322T050223Z">
-        <seg>一个无符号的16位整数</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051620Z" creationid="36011" creationdate="20170322T050223Z">
+        <seg>无符号 16 位整型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An unsigned, 32bit integer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051537Z" creationid="tpxxn" creationdate="20181009T051537Z">
+        <seg>无符号 32 位整型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>An unsigned, 8bit integer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051613Z" creationid="tpxxn" creationdate="20181009T051140Z">
+        <seg>无符号 8 位整型。</seg>
       </tuv>
     </tu>
     <tu>
@@ -10269,6 +10461,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135900Z" creationid="deciia" creationdate="20170322T011539Z">
         <seg>如你所见，相同位的值一样时，值将保留（都为 1，则为 1），而值是混合的，一个是 0，一个是 1，则为0（一个不为 1，则为 0）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>As you can see, you read out information in the same order that you read it into the buffer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052156Z" creationid="tpxxn" creationdate="20181009T052147Z">
+        <seg>如您所见，您读取信息的顺序与读取缓冲区的顺序相同。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11912,6 +12112,14 @@ Add-ons应该怎么翻译？</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Basically a GameMaker string is dumped in the buffer, and a 0 is put at the end.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052012Z" creationid="tpxxn" creationdate="20181009T052004Z">
+        <seg>最基本的，一个 GameMaker 字符串被转储在缓冲区中时是以 0 结尾的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Basically a tile set is a single image that &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; will break into separate sections based on the values you give for the various settings.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T075028Z" creationid="tpxxn" creationdate="20181005T074615Z">
@@ -11940,6 +12148,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162657Z" creationid="KangKang" creationdate="20170424T162657Z">
         <seg>基本上，这些是在游戏循环中谨慎的时刻，根据您为他们编程的内容，事情发生。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Basically, what this means is that alignment will only affect &lt;i13&gt;where things are written to&lt;/i13&gt;, so if you do a buffer tell after you write something, it'll return the current write position which immediately follows the data you've previously written.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T053525Z" creationid="tpxxn" creationdate="20181009T052802Z">
+        <seg>基本上，这意味着对齐只会影响到&lt;i13&gt;写入对象的位置&lt;/i13&gt;，所以如果在写入内容后执行缓冲区告知，它将返回当前写入位置，该位置紧跟在先前写入的数据之后。</seg>
       </tuv>
     </tu>
     <tu>
@@ -11988,6 +12204,22 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170327T063045Z" creationid="36011" creationdate="20170327T063037Z">
         <seg>在继续之前，我们先简单地解释一下“数据类型”是什么意思。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Before explaining this further, let's look at the four available buffer types (defined as &lt;b2&gt;constants&lt;/b2&gt; in GML):</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045039Z" creationid="tpxxn" creationdate="20181009T045039Z">
+        <seg>在进一步解释这一点之前，让我们看看四种可用的缓冲区类型（在 GML 中定义为 &lt;b2&gt;常量&lt;/b2&gt;）：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Before writing to the buffer we have set the "tell" to the start of the buffer as networking &lt;i0&gt;always&lt;/i0&gt; takes the data from the &lt;b1&gt;start&lt;/b1&gt; of a buffer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055842Z" creationid="tpxxn" creationdate="20181009T055744Z">
+        <seg>在写入缓冲区之前，我们将“告知”设置为缓冲区的开始，因为网络 &lt;i0&gt;总是&lt;/i0&gt; 从缓冲区的 &lt;b1&gt;开始&lt;/b1&gt; 获取数据。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12084,6 +12316,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170112T042352Z" creationid="deciia" creationdate="20161224T060501Z">
         <seg>下面是每一种许可信息的详细说明。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Below you can find some examples of common uses for buffers.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T053548Z" creationid="tpxxn" creationdate="20181009T053548Z">
+        <seg>下面是一些缓冲区的常用用法示例。</seg>
       </tuv>
     </tu>
     <tu>
@@ -12776,6 +13016,22 @@ Add-ons应该怎么翻译？</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Buffers are stored in memory and as such if you do not clean up when you are finished with them, you can get memory leaks that will eventually lag and crash your game.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055106Z" creationid="tpxxn" creationdate="20181009T054503Z">
+        <seg>缓冲区存储在内存中，因此，如果在使用缓冲区时没有进行清理，就会出现内存泄漏，最终导致游戏延迟并崩溃。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Buffers are written to (and read from) &lt;i2&gt;sequentially&lt;/i2&gt;, in that one piece of data is written after another, with each piece of data being of a set type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T050950Z" creationid="tpxxn" creationdate="20181009T050526Z">
+        <seg>缓冲区是 &lt;i2&gt;按顺序&lt;/i2&gt; 写入（和读取）的，在这种情况下，数据块是一个接一个写入的，每个数据块都是一种类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Build</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T093747Z" creationid="deciia" creationdate="20170102T083659Z">
@@ -12988,6 +13244,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170321T234653Z" creationid="36011" creationdate="20170321T234648Z">
         <seg>但是首先，我们先看一下这个使用的例子</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>But it will prevent any further access to the previously created buffer as the id &lt;b1&gt;handle&lt;/b1&gt; will have been lost, causing a memory leak which will crash your game eventually.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044941Z" creationid="tpxxn" creationdate="20181009T044835Z">
+        <seg>但它将防止对先前创建的缓冲区的任何进一步访问，因为 ID 句柄已经丢失，导致内存泄漏，最终导致游戏崩溃。</seg>
       </tuv>
     </tu>
     <tu>
@@ -13676,6 +13940,14 @@ Add-ons应该怎么翻译？</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170102T043220Z" creationid="deciia" creationdate="20170102T043220Z">
         <seg>无法设置请求的样式，未找到。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Can only be either 1 or 0 (&lt;t0&gt;true&lt;/t0&gt; or &lt;t1&gt;false&lt;/t1&gt;)</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051927Z" creationid="tpxxn" creationdate="20181009T051927Z">
+        <seg>只能为 1 或 0 (&lt;t0&gt;true&lt;/t0&gt; 或 &lt;t1&gt;false&lt;/t1&gt;)</seg>
       </tuv>
     </tu>
     <tu>
@@ -25526,6 +25798,14 @@ addon，这个和上面的提到的plugins有什么不同。</note>
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>For example, a &lt;b1&gt;grow&lt;/b1&gt; buffer would be used for storing a "snapshot" of data to create a save game since you do not know the actual amount of data that is going to be placed in it, or a &lt;b2&gt;fast&lt;/b2&gt; buffer would be used when you know that the values you are working with are all between 0 and 255 or -128 and 127, for example when processing RGB data from an image.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045959Z" creationid="tpxxn" creationdate="20181009T045646Z">
+        <seg>例如，&lt;b1&gt;增长&lt;/b1&gt; 缓冲将用于存储数据的“快照”来创建一个保存游戏，因为你不知道实际所需的数据量；&lt;b2&gt;快速&lt;/b2&gt; 缓冲在当你知道你正在使用的值都是 0 到 255 或 -128 到 127 之间时使用，例如在处理 RGB 图像数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>For example, a layer with a depth of -300 will render over a layer with a depth of -100, and a layer with a depth of 1000 will render under everything with a depth less than this.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T132920Z" creationid="tpxxn" creationdate="20181005T132051Z">
@@ -25706,6 +25986,14 @@ addon，这个和上面的提到的plugins有什么不同。</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T130003Z" creationid="tpxxn" creationdate="20181005T130003Z">
         <seg>有关所有类型事件的更多信息，请参阅 &lt;a0&gt;此处&lt;/a0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For further information on how to add and remove data from the buffer please see the &lt;b0&gt;Examples&lt;/b0&gt; section below.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052215Z" creationid="tpxxn" creationdate="20181009T052149Z">
+        <seg>有关如何从缓冲区中添加和删除数据的详细信息，请参阅下面的 &lt;b0&gt;示例&lt;/b0&gt; 部分。</seg>
       </tuv>
     </tu>
     <tu>
@@ -25946,6 +26234,22 @@ addon，这个和上面的提到的plugins有什么不同。</note>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T130224Z" creationid="tpxxn" creationdate="20181005T124453Z">
         <seg>为此，我们需要创建 &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 最重要的资源，即 &lt;b1&gt;物体&lt;/b1&gt; 资源。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For that we need to create a buffer "packet", and in this example we are going to send a &lt;b3&gt;Key Press Event&lt;/b3&gt;, like when the player presses &lt;b4&gt;Left Arrow&lt;/b4&gt; to move around the game.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055740Z" creationid="tpxxn" creationdate="20181009T055632Z">
+        <seg>为此，我们需要创建一个缓冲区“包”，在本例中，我们将发送一个 &lt;b3&gt;按键按下事件&lt;/b3&gt;，比如当玩家按下 &lt;b4&gt;左箭头&lt;/b4&gt; 在游戏中移动时。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For that we would use the &lt;a9&gt;Networking Asynchronous Event&lt;/a9&gt; in the network controller object of the server, as this simplified code below shows:&lt;br10&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060500Z" creationid="tpxxn" creationdate="20181009T060500Z">
+        <seg>为此，我们将在服务器的网络控制器对象中使用 &lt;a9&gt;网络异步事件&lt;/a9&gt;，如下面的简化代码所示：&lt;br10&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -29145,6 +29449,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>However a 2 byte aligned buffer will write each piece of data to intervals of 2 bytes, so that even if your initial write is 1 byte of data, the &lt;i2&gt;next&lt;/i2&gt; write will be moved to align to two bytes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052738Z" creationid="tpxxn" creationdate="20181009T052650Z">
+        <seg>然而，一个 2 字节对齐的缓冲区会将每段数据以 2 字节为间隔写入，因此即使您的初始写入是 1 字节的数据，&lt;i2&gt;下一个&lt;/i2&gt; 写入也会被移动，以对齐到两个字节。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>However creating an executable means that since you have no access to the debug console - nor to the compiler window - it can be difficult to pin down and debug any problems that you may find.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181008T110728Z" creationid="tpxxn" creationdate="20181008T110653Z">
@@ -29197,6 +29509,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170112T031637Z" creationid="36011" creationdate="20170112T031637Z">
         <seg>而如果你希望重置你所修改的偏好设置，那么你需要点击窗口顶端的&lt;b0&gt;恢复为默认状态（Restore Defaults）&lt;/b0&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However it can only be used with &lt;t0&gt;buffer_u8&lt;/t0&gt; data types, and must be 1 byte aligned.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045622Z" creationid="tpxxn" creationdate="20181009T045524Z">
+        <seg>然而，它只能与 &lt;t0&gt;buffer_u8&lt;/t0&gt; 数据类型一起使用，并且必须是 1 字节对齐的。</seg>
       </tuv>
     </tu>
     <tu>
@@ -29389,6 +29709,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160213T022256Z" creationid="deciia" creationdate="20160213T022209Z">
         <seg>尽管如此，如果你使用这个函数设置窗口大小，即使图像自适应至新的窗口大小，图像与窗口的缩放比例仍然保持1:1。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>However, if you write another piece of data, also 1 byte in size, &lt;i9&gt;then&lt;/i9&gt; do a buffer tell, you'll get an offset of 5 bytes (even though you have only written 2 bytes of data) as the alignment has &lt;i10&gt;padded&lt;/i10&gt; the data to align it with the 4 byte buffer alignment.&lt;br11&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T053435Z" creationid="tpxxn" creationdate="20181009T052759Z">
+        <seg>然而，如果你写入另一块数据，仍然是 1 个字节大小， &lt;i9&gt;然后&lt;/i9&gt; 做一个缓冲告知，你会得到一个 5 字节的偏移量（即使你只写入 2 个字节的数据），因为对齐已经 &lt;i10&gt;填充&lt;/i10&gt; 了数据，将它与 4 字节缓冲区对齐。&lt;br11&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -30557,6 +30885,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>If you have been reading through this page you will have seen references to the &lt;b0&gt;byte alignment&lt;/b0&gt; of a buffer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052625Z" creationid="tpxxn" creationdate="20181009T052555Z">
+        <seg>如果您一直阅读此页，您将看到对缓冲区 &lt;b0&gt;字节对齐&lt;/b0&gt;的引用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>If you have imported a project created with a previous version of &lt;i1&gt;GameMaker Studio&lt;/i1&gt;, then you may have seen comments like this at the top of the &lt;a2&gt;compatibility script&lt;/a2&gt; for the function:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T025831Z" creationid="tpxxn" creationdate="20181009T025534Z">
@@ -31529,6 +31865,22 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181008T162149Z" creationid="tpxxn" creationdate="20181008T161932Z">
         <seg>在这种情况下，您有两种选择——您可以放大矢量文件的内容，这将给导入器提供更多的空间，或者您可以尝试降低正在崩溃的对象的细节级别。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this case, we are assuming that the map has been checked and found to be a buffer data packet sent from a client.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060805Z" creationid="tpxxn" creationdate="20181009T060602Z">
+        <seg>在本例中，我们假设已经检查了映射，发现它是一个从客户机发送的缓冲区数据包。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In this event, you could place the following code:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T053911Z" creationid="tpxxn" creationdate="20181009T053911Z">
+        <seg>在这种情况下，你可以编写以下代码：</seg>
       </tuv>
     </tu>
     <tu>
@@ -35334,8 +35686,8 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       <tuv lang="EN-US">
         <seg>Making A Checkpoint</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050443Z" creationid="36011" creationdate="20170322T050443Z">
-        <seg>制作一个检查点</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055209Z" creationid="36011" creationdate="20170322T050443Z">
+        <seg>制作一个存档点</seg>
       </tuv>
     </tu>
     <tu>
@@ -36446,6 +36798,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Most people should be familiar with this term as it is used all the time when dealing with computers and programming, but knowing the word doesn't mean you actually know what it means.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044511Z" creationid="tpxxn" creationdate="20181009T044434Z">
+        <seg>大多数人应该熟悉这个术语，因为它在处理计算机和编程时一直被使用，但是知道这个词并不意味着你实际上知道它代表什么。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Motors</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170318T140022Z" creationid="36011" creationdate="20170318T140022Z">
@@ -37358,6 +37718,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160515T064349Z" creationid="deciia" creationdate="20160515T064349Z">
         <seg>下一步与case后面的表达式的结果进行比较。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Next we would add a &lt;b3&gt;Keypress Event&lt;/b3&gt; (for example) in which we will save the current game state to the created buffer:&lt;br4&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T054157Z" creationid="tpxxn" creationdate="20181009T054157Z">
+        <seg>接下来，我们将添加一个 &lt;b3&gt;按键事件&lt;/b3&gt;（例如），其中我们将保存当前游戏状态到创建的缓冲区：&lt;br4&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -40332,6 +40700,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note that we do &lt;i4&gt;not&lt;/i4&gt; send the whole buffer!</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060040Z" creationid="tpxxn" creationdate="20181009T055755Z">
+        <seg>注意，我们 &lt;i4&gt;没有&lt;/i4&gt; 发送整个缓冲区！</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Note that we say "based on" because you don't actually place objects directly into the game room, but rather you place &lt;b0&gt;instances&lt;/b0&gt; of these objects, which are basically copies (or clones if you prefer) of the object resource.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T130428Z" creationid="tpxxn" creationdate="20181005T080149Z">
@@ -40477,6 +40853,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Note, however, that if you then write another piece of data, internally the buffer will move the write position along to the next multiple of the alignment size before actually writing the piece of data.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T053546Z" creationid="tpxxn" creationdate="20181009T052806Z">
+        <seg>但是，请注意，如果您随后编写另一个数据片段，那么在实际编写该数据片段之前，缓冲区会在内部将写入位置移动到对齐大小的下一个倍数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Notes</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T080701Z" creationid="deciia" creationdate="20170103T114045Z">
@@ -40605,6 +40989,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Now we have the basic concept of a buffer explained you should learn about &lt;b2&gt;data types&lt;/b2&gt; and the previously mentioned &lt;b3&gt;byte alignment&lt;/b3&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045742Z" creationid="tpxxn" creationdate="20181009T045742Z">
+        <seg>现在我们已经了解了缓冲区的基本概念，您应该了解 &lt;b2&gt;数据类型&lt;/b2&gt; 和前面提到的 &lt;b3&gt;字节对齐&lt;/b3&gt; 方式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Now what does this mean in binary?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170319T145019Z" creationid="deciia" creationdate="20170319T145019Z">
@@ -40649,6 +41041,14 @@ Genre，类型，种类; 体裁，样式; 风俗画。它是指艺术创作中�
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170322T000123Z" creationid="36011" creationdate="20170322T000123Z">
         <seg>现在，如果我不理解二进制方法的话，代码会变成这样：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Now, let's say that we want our client to send data to the server.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055643Z" creationid="tpxxn" creationdate="20181009T055618Z">
+        <seg>现在，假设我们希望客户机向服务器发送数据。</seg>
       </tuv>
     </tu>
     <tu>
@@ -52381,6 +52781,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Since it is held in system memory it is very fast to access, and a buffer would generally be used for very short-term storage, like receiving network information before processing it, or for storing a checkpoint in your game (this is explained in the example given further down the page).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044815Z" creationid="tpxxn" creationdate="20181009T044707Z">
+        <seg>由于它保存在系统内存中，访问速度非常快，而且缓冲区通常用于非常短期的存储，比如在处理之前接收网络信息，或者存储游戏中的检查点（在页面后面给出的示例中对此进行了解释）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Since this can be quite a complex concept to grasp and then apply to real-world programming situations, you can find below a series of short examples that could be applied to any game made with &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T151404Z" creationid="tpxxn" creationdate="20181005T151337Z">
@@ -52958,6 +53366,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So this page aims to explain what a buffer is and how to use them within the context of &lt;i2&gt;GameMaker Studio 2&lt;/i2&gt; programming, although the general way they work is the same no matter the language or the technology, which is one of the reasons why they are so important.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044614Z" creationid="tpxxn" creationdate="20181009T044436Z">
+        <seg>所以这个页面的目的是解释缓冲区是什么以及如何在 &lt;i2&gt;GameMaker Studio 2&lt;/i2&gt; 编程环境中使用它们，尽管它们的工作方式无论语言还是技术都是一样的，这也是它们如此重要的原因之一。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So to avoid any issues you are best not to call multiple functions in the arguments of a function call as you may well be building in a reliance on the order of evaluation.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20180214T095713Z" creationid="36011" creationdate="20180214T095713Z">
@@ -53034,6 +53450,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170322T000133Z" creationid="36011" creationdate="20170322T000133Z">
         <seg>为什么这样更糟呢？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So you would probably add a &lt;b0&gt;Room End Event&lt;/b0&gt; (from the &lt;b1&gt;Other&lt;/b1&gt; event category) with:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055137Z" creationid="tpxxn" creationdate="20181009T054511Z">
+        <seg>因此，您可能需要添加一个&lt;b0&gt;房间结束事件&lt;/b0&gt;（来自 &lt;b1&gt;其他&lt;/b1&gt; 事件类别）：</seg>
       </tuv>
     </tu>
     <tu>
@@ -53126,6 +53550,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>So, say you have created a buffer and you want to write information to it, then you would use something like the following code:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052111Z" creationid="tpxxn" creationdate="20181009T052111Z">
+        <seg>因此，假设你创建了一个缓冲区，你可以使用以下代码向它写入信息：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>So, the above script would be called like this:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160604T050027Z" creationid="deciia" creationdate="20160604T050027Z">
@@ -53178,6 +53610,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T123652Z" creationid="tpxxn" creationdate="20181005T123340Z">
         <seg>所以，在创建地图的时候，左上角的图块总是需要以这种方式变空。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>So, when re-starting a game, remember to delete the buffer first.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044846Z" creationid="tpxxn" creationdate="20181009T044846Z">
+        <seg>所以，当重新启动游戏时，记得先删除缓冲区。</seg>
       </tuv>
     </tu>
     <tu>
@@ -55601,6 +56041,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>That would create a fixed buffer of 16384 bytes and &lt;b0&gt;byte aligned&lt;/b0&gt; to 2, with the function returning a unique &lt;b1&gt;id&lt;/b1&gt; value that is stored in a variable for later referencing of this buffer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T050153Z" creationid="tpxxn" creationdate="20181009T045711Z">
+        <seg>这将创建一个 16384 字节和 2 &lt;b0&gt;字节对齐&lt;/b0&gt; 的固定缓冲区，函数返回一个惟一的 &lt;b1&gt;id&lt;/b1&gt; 值，该值存储在一个变量中，以便以后引用该缓冲区。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>That's fine if you want numbers that are a power of 2, but how do we create more complex numbers?</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135544Z" creationid="deciia" creationdate="20170317T162137Z">
@@ -55645,6 +56093,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T135717Z" creationid="deciia" creationdate="20170319T150943Z">
         <seg>"|" 运算符是 &lt;b0&gt;位运算的 “或”&lt;/b0&gt;，意思是上述说明的 “或” 1 并赋值回 flags。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The '''data type''' sets the number of bytes allocated within the buffer for the value being written, and it is essential that you get this correct otherwise you will get some very strange results (or even errors) for your code.&lt;br0&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051126Z" creationid="tpxxn" creationdate="20181009T050440Z">
+        <seg>“数据类型”设置了在缓冲区中为正在写入的值分配的字节数，并且必须正确，否则您的代码会得到一些非常奇怪的结果（甚至错误）。&lt;br0&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -57444,10 +57900,26 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The above will first set the control variable to true (so that this is saved when we save the game to the buffer) and then &lt;i0&gt;seek&lt;/i0&gt; to the start of the buffer before writing the current save state into it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T054709Z" creationid="tpxxn" creationdate="20181009T054207Z">
+        <seg>以上代码首先将控制变量设置为 true（以便在将游戏保存到缓冲区时保存），然后在将当前保存状态写入缓冲区之前 &lt;i0&gt;查找&lt;/i0&gt; 缓冲区的开始位置。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The action &lt;t0&gt;Execute Script&lt;/t0&gt; has too many or too few arguments for the given script being called</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181008T131211Z" creationid="tpxxn" creationdate="20181008T131211Z">
         <seg>动作 &lt;t0&gt;执行脚本&lt;/t0&gt; 有过多或过少的参数用于调用给定的脚本</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The actual code to create a buffer would look something like this:&lt;br7&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045707Z" creationid="tpxxn" creationdate="20181009T045707Z">
+        <seg>创建缓冲区的实际代码是这样的：</seg>
       </tuv>
     </tu>
     <tu>
@@ -57608,6 +58080,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T133022Z" creationid="tpxxn" creationdate="20181005T132713Z">
         <seg>资源层只需要精灵资源，并使用您在将其添加到房间时设置的参数来进行绘制。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The asynchronous event will contain a special temporary &lt;t0&gt;ds_map&lt;/t0&gt; (it is removed at the end of the event automatically) which contains different information depending on the type of incoming data from the network.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060715Z" creationid="tpxxn" creationdate="20181009T060559Z">
+        <seg>异步事件将包含一个特殊的临时 &lt;t0&gt;ds_map&lt;/t0&gt;（它将在事件结束时自动删除），根据来自网络的传入数据的类型，它将包含不同的信息。</seg>
       </tuv>
     </tu>
     <tu>
@@ -58750,6 +59230,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The final thing to add to the controller object is a "clean up" code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055055Z" creationid="tpxxn" creationdate="20181009T054452Z">
+        <seg>最后一件事是向控制器物体添加“清理”代码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The first and most important thing to note about the file functions is that they are limited - in general - to the &lt;i0&gt;sandbox&lt;/i0&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181008T150506Z" creationid="tpxxn" creationdate="20181008T150437Z">
@@ -58782,6 +59270,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The first line creates a &lt;b0&gt;grow&lt;/b0&gt; buffer (since we don't know the final size of the saved data) of 1024 bytes and aligned to 1 byte.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055203Z" creationid="tpxxn" creationdate="20181009T054021Z">
+        <seg>第一行创建 1024 字节的 &lt;b0&gt;增长缓冲区&lt;/b0&gt;（因为我们不知道保存数据的最终大小），并对齐到 1 字节。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The first matrix index to use.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20180216T153224Z" creationid="36011" creationdate="20180216T153224Z">
@@ -58794,6 +59290,22 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160515T060507Z" creationid="deciia" creationdate="20160515T060507Z">
         <seg>语句1初始化，用于循环。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The first thing we need to do is create a new object to control the saving and loading, so you would make one and give it a &lt;b0&gt;Create Event&lt;/b0&gt;.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T054018Z" creationid="tpxxn" creationdate="20181009T053855Z">
+        <seg>我们需要做的第一件事是创建一个新物体来控制保存和加载，你可以创建这样一个物体并给它添加 &lt;b0&gt;创建事件&lt;/b0&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The first thing we will show is the creation and use of a buffer for the client side of the network connection.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055516Z" creationid="tpxxn" creationdate="20181009T055430Z">
+        <seg>我们将展示的第一件事是为网络连接的客户端创建和使用缓冲区。</seg>
       </tuv>
     </tu>
     <tu>
@@ -59070,6 +59582,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The game will then be loaded at the end of the event in which you place the above code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T054315Z" creationid="tpxxn" creationdate="20181009T054315Z">
+        <seg>然后，游戏将在您放置上述代码的事件结束时加载。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The general settings are as follows:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170329T122850Z" creationid="deciia" creationdate="20170329T122850Z">
@@ -59080,8 +59600,8 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>The given number - shown in the error - is not the correct format for the function or operation being performed, for example you supply an integer when a pointer is required (see the section on &lt;a0&gt;Data Types&lt;/a0&gt; for more info)</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181008T125848Z" creationid="tpxxn" creationdate="20181008T125746Z">
-        <seg>（在错误中）给定的数字不是正在执行的函数或操作的正确格式，例如，当需要指针时，提供一个整形变量（更多相关信息请参阅 &lt;a0&gt;数据类型&lt;/a0&gt; ）</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051601Z" creationid="tpxxn" creationdate="20181008T125746Z">
+        <seg>（在错误中）给定的数字不是正在执行的函数或操作的正确格式，例如，当需要指针时，提供一个整型变量（更多相关信息请参阅 &lt;a0&gt;数据类型&lt;/a0&gt; ）</seg>
       </tuv>
     </tu>
     <tu>
@@ -59846,6 +60366,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The next step would be to code how to load it, probably in another &lt;b9&gt;Keypress Event&lt;/b9&gt;:&lt;br10&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055248Z" creationid="tpxxn" creationdate="20181009T054255Z">
+        <seg>下一步是编写代码如何加载它，可能在另一个 &lt;b9&gt;按键事件&lt;/b9&gt;：&lt;br10&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The notification message text (a string)</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="Wonderm" changedate="20150817T152813Z" creationid="Wonderm" creationdate="20150817T152813Z">
@@ -60286,6 +60814,22 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>The reason for this is that buffers are designed to be a highly optimised temporary storage medium, and as such you should create a buffer that is appropriate to the type of data that you wish it to store, otherwise you could get errors or cause a &lt;i1&gt;bottleneck&lt;/i1&gt; in your code.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045231Z" creationid="tpxxn" creationdate="20181009T045010Z">
+        <seg>原因是缓冲区被设计成一个高度优化临时存储介质，因此您应该创建一个适用于你所期望的数据类型的缓冲区，否则你可能会在代码中造成错误或遇到 &lt;i1&gt;瓶颈&lt;/i1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The received data packet that must be written into the buffer on the server and then used to update the game.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060352Z" creationid="tpxxn" creationdate="20181009T060352Z">
+        <seg>接收到的数据包必须写入服务器上的缓冲区，然后用来更新游戏。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>The release notes are split into two different sets due to the fact that both the IDE and the actual Runtimes can be updated independently.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170111T141126Z" creationid="36011" creationdate="20170111T141025Z">
@@ -60522,6 +61066,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20180217T131309Z" creationid="36011" creationdate="20180217T131309Z">
         <seg>数据大小（字节形式）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The size is set when the buffer is created and cannot be changed again.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045236Z" creationid="tpxxn" creationdate="20181009T045236Z">
+        <seg>缓冲区的大小是在创建时设置的，不能再次更改。</seg>
       </tuv>
     </tu>
     <tu>
@@ -61634,6 +62186,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>These &lt;b3&gt;data types&lt;/b3&gt; are defined in GML by the following &lt;i4&gt;constants&lt;/i4&gt;:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T050636Z" creationid="tpxxn" creationdate="20181009T050636Z">
+        <seg>这些 &lt;b3&gt;数据类型&lt;/b3&gt; 在 GML 中由以下 &lt;i4&gt;常量&lt;/i4&gt; 定义：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>These are configured by changing the following parameters:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T165244Z" creationid="KangKang" creationdate="20170424T165244Z">
@@ -62114,6 +62674,30 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This basically refers to the &lt;i1&gt;position&lt;/i1&gt; that new data will stored at within a given buffer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052643Z" creationid="tpxxn" creationdate="20181009T052607Z">
+        <seg>这基本上是指新数据将存储在给定缓冲区中的 &lt;i1&gt;位置&lt;/i1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This buffer is then sent as a data packet by the network function.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060023Z" creationid="tpxxn" creationdate="20181009T055752Z">
+        <seg>然后，网络函数将该缓冲区作为数据包发送。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This buffer will be used to create small data packets that can then be sent to the server, so in the &lt;b4&gt;Create Event&lt;/b4&gt; of an instance we would assign a buffer like this:&lt;br5&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055504Z" creationid="tpxxn" creationdate="20181009T055504Z">
+        <seg>这个缓冲区将用于创建小的数据包，然后这些数据包可以被发送到服务器，所以在实例的 &lt;b4&gt;创建事件&lt;/b4&gt; 中，我们将分配一个这样的缓冲区：&lt;br5&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This button can be used to cancel the compilation of your games to the target module, or (on certain targets only) to stop the game while it is running after it has been compiled.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T073153Z" creationid="tpxxn" creationdate="20181005T073153Z">
@@ -62148,8 +62732,40 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>This can be a positive or negative value from -128 to 127 (0 is classed as positive).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050344Z" creationid="36011" creationdate="20170322T050344Z">
-        <seg>值域为-128到127的正值和负值（0被归类为正值）。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051301Z" creationid="36011" creationdate="20170322T050344Z">
+        <seg>值域为 -128 到 127（0为正数）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This can be a positive or negative value from -2,147,483,648 to 2,147,483,647 (0 is classed as positive).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051719Z" creationid="tpxxn" creationdate="20181009T051719Z">
+        <seg>值域为 -2,147,483,648 到 2,147,483,647（0为正数）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This can be a positive or negative value from -32,768 to 32,767 (0 is classed as positive).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051405Z" creationid="tpxxn" creationdate="20181009T051405Z">
+        <seg>值域为 -32768 到 32767（0为正数）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This can be a positive or negative value within the range of +/- 65504.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051505Z" creationid="tpxxn" creationdate="20181009T051505Z">
+        <seg>值域为 -65504 到 +65504。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This can be a positive or negative value within the range of +/-16777216.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051741Z" creationid="tpxxn" creationdate="20181009T051741Z">
+        <seg>值域为 -16777216 到 +16777216。</seg>
       </tuv>
     </tu>
     <tu>
@@ -62326,6 +62942,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T125941Z" creationid="tpxxn" creationdate="20181005T125941Z">
         <seg>此事件是一个实例被销毁时所执行的最后一个事件。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This example intends to show how this is done, but due to the scope of the networking possibilities, it is only designed to show how to use the buffers themselves, and not the full networking system.&lt;br2&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055427Z" creationid="tpxxn" creationdate="20181009T055254Z">
+        <seg>本示例旨在展示如何完成此任务，但由于联网的领域非常大，因此仅设计此示例来展示如何使用缓冲区本身，而不是完整的联网系统。&lt;br2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -62818,6 +63442,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This function will take a "snapshot" of the current game state and save it to a pre-defined buffer, which can then be read from to load the game at that point again.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T053638Z" creationid="tpxxn" creationdate="20181009T053638Z">
+        <seg>此函数将获取当前游戏状态的“快照”，并将其保存到预定义的缓冲区中，然后可以从缓冲区中读取该缓冲区，以便在此时再次加载游戏。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This function will tell you whether the object you are checking has been flagged as "physics enabled", returning &lt;t0&gt;true&lt;/t0&gt;, or not, returning &lt;t1&gt;false&lt;/t1&gt;.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20180217T133952Z" creationid="36011" creationdate="20180217T133952Z">
@@ -62938,6 +63570,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This information would then be used to update all the clients with the new status of the sending client player.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060649Z" creationid="tpxxn" creationdate="20181009T060649Z">
+        <seg>然后，此信息将用于使用玩家发送客户端的新状态更新所有客户端。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is a 1D (one dimensional) array which we are now going to break down the parts of to see what it means:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160514T040138Z" creationid="deciia" creationdate="20160514T034801Z">
@@ -62950,6 +63590,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T162247Z" creationid="KangKang" creationdate="20170424T162247Z">
         <seg>这是一个&lt;i2&gt;非常&lt;/i2&gt;基本功能，实际上所有这些都是将实例移回到在执行任何代码或DnD™之前检测到冲突之前的位置本身，因此使用有限。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is a UTF-8 null terminated (0x00) string.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052031Z" creationid="tpxxn" creationdate="20181009T051929Z">
+        <seg>这是一个以 UTF-8 null 结尾的字符串（0x00）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -62982,8 +63630,32 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       <tuv lang="EN-US">
         <seg>This is a positive value from 0 - 65,535.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="36011" changedate="20170322T050248Z" creationid="36011" creationdate="20170322T050248Z">
-        <seg>值域为0到65535的正值。</seg>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051253Z" creationid="36011" creationdate="20170322T050248Z">
+        <seg>值域为 0 到 65535 。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is a positive value from 0 to 255.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051315Z" creationid="tpxxn" creationdate="20181009T051150Z">
+        <seg>值域为 0 到 255。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is a positive value from 0 to 4,294,967,295.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T051647Z" creationid="tpxxn" creationdate="20181009T051647Z">
+        <seg>值域为 0 到 4,294,967,295。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This is a special "stripped down" buffer that is extremely fast to read/write to.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045608Z" creationid="tpxxn" creationdate="20181009T045520Z">
+        <seg>这是一个特殊的“剥离”缓冲区，读写速度非常快。</seg>
       </tuv>
     </tu>
     <tu>
@@ -63476,6 +64148,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This is the same for reading information from the buffer too, and in the case of the example given above, you would read from the buffer in the same order that you wrote the data, checking for the same data type, eg:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052136Z" creationid="tpxxn" creationdate="20181009T052136Z">
+        <seg>从缓冲区读取信息的顺序也是一样的，在上面给出的例子中，您将按照编写数据的顺序从缓冲区读取信息，检查相同的数据类型，例如：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This is true of &lt;i0&gt;all&lt;/i0&gt; binary numbers, and how the computer makes up any number internally.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20170317T162937Z" creationid="deciia" creationdate="20170317T162937Z">
@@ -63612,6 +64292,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This means that even when your game is not in focus (for example, on a mobile device when you take a call the game will be put into the background) the buffer will still exist, however if the game is closed or re-started the buffer will be lost.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T044924Z" creationid="tpxxn" creationdate="20181009T044828Z">
+        <seg>这意味着，即使你的游戏没有获得焦点（例如，在移动设备上，当你打电话时，游戏会被放到后台），缓冲区仍然存在，但是如果游戏关闭或重新启动，缓冲区就会丢失。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This means that everything that is shown in the chosen view will now be drawn to the assigned surface.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160214T144544Z" creationid="deciia" creationdate="20160214T144544Z">
@@ -63632,6 +64320,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="danping" changedate="20150723T233801Z" creationid="danping" creationdate="20150723T233732Z">
         <seg>这意味着，如果设备或窗口失去焦点或最小化（很好的例子是，当Windows弹出屏幕保护程序或Android 设备来电话时应用程序失去焦点的情况），表面可能会被破坏。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This means that if you don't set the buffer &lt;i4&gt;tell&lt;/i4&gt; back to the start then when you save you will be adding the data into the buffer at the current buffer read/write position, so we use the function &lt;t5&gt;buffer_seek&lt;/t5&gt; to move the &lt;i6&gt;tell&lt;/i6&gt; to the buffer start.&lt;br7&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055023Z" creationid="tpxxn" creationdate="20181009T054223Z">
+        <seg>这意味着，如果不将缓冲区 &lt;i4&gt;告知&lt;/i4&gt; 回到开始，那么在保存时，将在当前缓冲区的读/写位置向缓冲区添加数据，因此我们使用 &lt;t5&gt;buffer_seek&lt;/t5&gt; 函数将 &lt;i6&gt;告知&lt;/i6&gt; 移动到缓冲区起点。&lt;br7&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -63724,6 +64420,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>This means that you should ideally be aware of what data you are writing to the buffer at all times.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T050612Z" creationid="tpxxn" creationdate="20181009T050529Z">
+        <seg>这意味着，理想情况下，您应该知道您一直在向缓冲区写入什么数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>This means the above code is incredibly useful for wrapping counters - as long as you use POW2 frame numbers.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T155117Z" creationid="tpxxn" creationdate="20181005T154754Z">
@@ -63792,6 +64496,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T161811Z" creationid="KangKang" creationdate="20170424T161811Z">
         <seg>该名称不应包含空格或未授权的字符（只允许使用字母数字字符和下划线“_”），并且应该简短但难忘，以便稍后在可能有许多文件时可以轻松识别资源。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>This object can now be placed into a room and on a key press save and load the room state from a buffer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T054556Z" creationid="tpxxn" creationdate="20181009T054556Z">
+        <seg>这个物体现在可以被放置到一个房间中，并且从缓冲区一键保存或加载房间状态。</seg>
       </tuv>
     </tu>
     <tu>
@@ -64773,6 +65485,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Those are the buffer types available to you when using &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt;, and which one you choose will greatly depend on the use you wish to put it to.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045756Z" creationid="tpxxn" creationdate="20181009T045635Z">
+        <seg>这些是在使用 &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 时可用的缓冲区类型，您选择哪种类型将在很大程度上取决于您希望使用哪种类型。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Threshold</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20180922T050721Z" creationid="deciia" creationdate="20180922T050721Z">
@@ -65497,6 +66217,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20180922T022145Z" creationid="deciia" creationdate="20180922T022145Z">
         <seg>要在Mac App Store之外分发您的标题，macOS要求您的\n程序包已经过编码。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To do this we write the necessary data to the buffer first then send it off:&lt;br5&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055640Z" creationid="tpxxn" creationdate="20181009T055640Z">
+        <seg>为此，我们先将必要的数据写入缓冲区，然后发送出去：&lt;br5&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -68316,10 +69044,26 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>We have now saved the current game state to a buffer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055027Z" creationid="tpxxn" creationdate="20181009T054225Z">
+        <seg>我们现在已经将当前游戏状态保存到一个缓冲区中。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>We have set tile set size to 32px, and we have left the rest of the values at their default, since we have no need of offsets or anything like that.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181005T123707Z" creationid="tpxxn" creationdate="20181005T123525Z">
         <seg>我们已经将图块集的大小设置为32px，并且将其余的值保持为默认值，因为我们不需要偏移或其他类似的操作。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We make the buffer small (256bytes) as it is not intended for holding large amounts of data, we make it a &lt;i0&gt;grow&lt;/i0&gt; buffer to ensure no errors should we need to add more data to be sent at any time, and the alignment is set to one for convenience.&lt;br1&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055621Z" creationid="tpxxn" creationdate="20181009T055613Z">
+        <seg>我们将缓冲区设置为较小（256 字节），因为它不是用来保存大量数据的，我们将它设置为一个 &lt;i0&gt;增长&lt;/i0&gt; 缓冲区，以确保在任何时候需要添加更多发送数据时不会出现错误，并且为了方便起见，将对齐设置为 1 字节。&lt;br1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -68340,6 +69084,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>We now check the first piece of data that is in the buffer to see what kind of event has been sent - in this case the value "1" represents a &lt;i1&gt;key&lt;/i1&gt; event, however when coding these things you should define &lt;b2&gt;constants&lt;/b2&gt; to hold these values to simplify things - and then store the key being pressed and its state (&lt;t3&gt;true&lt;/t3&gt; = pressed, &lt;t4&gt;false&lt;/t4&gt; = released).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T061001Z" creationid="tpxxn" creationdate="20181009T060607Z">
+        <seg>我们现在检查的第一条数据缓冲区，看看会发送什么样的事件——在这种情况下,值 “1” 代表了一个 &lt;i1&gt;按键&lt;/i1&gt; 事件，然而当编码这些事情你应该定义 &lt;b2&gt;常量&lt;/b2&gt; 保存这些值来简化，然后存储键被按下的状态（&lt;t3&gt;true&lt;/t3&gt; = 按下，&lt;t4&gt;false&lt;/t4&gt; = 松开）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>We now have the objects to spawn instances of and their corresponding x and y spawn coordinates within the room all stored in our array.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160514T053101Z" creationid="deciia" creationdate="20160514T053101Z">
@@ -68348,10 +69100,26 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>We only send the data written, using the &lt;a5&gt;&lt;t6&gt;buffer_tell&lt;/t6&gt;&lt;/a5&gt; function to return the current read/write position of the buffer (remember that writing to the buffer moves the "tell" to the end of what has been written).&lt;br7&gt;</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060341Z" creationid="tpxxn" creationdate="20181009T055759Z">
+        <seg>我们只发送了写入的数据，使用 &lt;a5&gt;&lt;t6&gt;buffer_tell&lt;/t6&gt;&lt;/a5&gt; 函数返回缓冲区的当前读/写位置（记住写入缓冲区会将“告知”移动到已写入的内容的末尾。）。&lt;br7&gt;</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>We set the surface variable to -1, as all surface functions should really be used in the &lt;b0&gt;Draw&lt;/b0&gt; events to prevent odd errors or undefined behaviours.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160215T050723Z" creationid="deciia" creationdate="20160215T050723Z">
         <seg>由于所有的表面函数真正在 &lt;b0&gt;Draw&lt;/b0&gt; 事件中使 用，为了防止奇怪的错误或者未定义的行为，我们设置表面变量为-1。 </seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>We then write the &lt;i2&gt;check&lt;/i2&gt; value (this will be used by the server to determine the type of event to be processed), then the key being used, and then the state of the key (in this case &lt;t3&gt;true&lt;/t3&gt; for pressed).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060019Z" creationid="tpxxn" creationdate="20181009T055748Z">
+        <seg>然后写入 &lt;i2&gt;检查&lt;/i2&gt; 值（服务器将使用该值来确定要处理的事件的类型）、使用的键以及键的状态（在本例中为 &lt;t3&gt;true&lt;/t3&gt;）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -68524,6 +69292,22 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>Well, as mentioned in the &lt;b3&gt;Buffer Data Types&lt;/b3&gt; section above, you read and write to a buffer from the last position that data was added to it.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T054915Z" creationid="tpxxn" creationdate="20181009T054213Z">
+        <seg>正如前面的 &lt;b3&gt;缓冲区数据类型&lt;/b3&gt; 部分中提到的，读取和写入缓冲将从我们添加数据的最后位置开始。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Well, for a single byte aligned buffer, each piece of data is written to the buffer sequentially, with each new data piece being added directly after the previous.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052703Z" creationid="tpxxn" creationdate="20181009T052647Z">
+        <seg>对于一个按字节排列的缓冲区，每个数据块是按顺序写入缓冲区的，每个新数据块是在前一个数据块之后直接添加的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>Well, here are just a few things that would be impossible without arrays -</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20171124T103510Z" creationid="36011" creationdate="20171124T103510Z">
@@ -68648,6 +69432,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170321T144429Z" creationid="36011" creationdate="20170321T144429Z">
         <seg>那么，清除标记呢？</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>What about receiving the data on the server?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T060346Z" creationid="tpxxn" creationdate="20181009T060346Z">
+        <seg>如何接收服务器上的数据？</seg>
       </tuv>
     </tu>
     <tu>
@@ -68876,6 +69668,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>When reading and writing data to a buffer, you do it in ''chunks'' of data defined by their '''data type'''.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T050501Z" creationid="tpxxn" creationdate="20181009T050418Z">
+        <seg>当您将数据读写到缓冲区时，您将在指定“数据类型”的“数据块”中执行此操作。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>When removing events, you can use &lt;i0&gt; + &lt;i1&gt; to select multiple events and then delete them all together.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T163301Z" creationid="KangKang" creationdate="20170424T163301Z">
@@ -68896,6 +69696,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20160219T043759Z" creationid="deciia" creationdate="20160219T043309Z">
         <seg>当设置为 &lt;t0&gt;true&lt;/t0&gt; （并且激活了垂直同步）时，替代方法将被使用，取代默认的方法，以减少任何可能的视觉延迟。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When the data being added reaches the limit of the buffer size, the overwrite will be placed back at the start of the buffer, and further writing will continue from that point.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045422Z" creationid="tpxxn" creationdate="20181009T045422Z">
+        <seg>当要添加的数据达到缓冲区大小的限制时，写入将回到缓冲区的开始位置，从那里将继续进行进一步的写入。</seg>
       </tuv>
     </tu>
     <tu>
@@ -68992,6 +69800,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="KangKang" changedate="20170424T163515Z" creationid="KangKang" creationdate="20170424T163515Z">
         <seg>使用&lt;i0&gt; GameMaker Studio 2 &lt;/i0&gt; IDE中的对象时，可以设置&lt;b1&gt;父/子层次结构&lt;/b1&gt;。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>When working with the &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; networking functions, you have to use buffers to create the data&lt;i1&gt;packet&lt;/i1&gt; that is being sent over the network connection.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T055330Z" creationid="tpxxn" creationdate="20181009T055252Z">
+        <seg>在使用 &lt;i0&gt;GameMaker Studio 2&lt;/i0&gt; 连网功能时，必须使用缓冲区创建通过网络连接发送的数据 &lt;i1&gt;包&lt;/i1&gt;。</seg>
       </tuv>
     </tu>
     <tu>
@@ -69355,6 +70171,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170316T090934Z" creationid="deciia" creationdate="20170103T134028Z">
         <seg>全词匹配</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Why do we use &lt;a1&gt;&lt;t2&gt;buffer_seek&lt;/t2&gt;&lt;/a1&gt;?</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T054719Z" creationid="tpxxn" creationdate="20181009T054209Z">
+        <seg>为什么要使用 &lt;a1&gt;&lt;t2&gt;buffer_seek&lt;/t2&gt;&lt;/a1&gt;？</seg>
       </tuv>
     </tu>
     <tu>
@@ -71753,6 +72577,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
     </tu>
     <tu>
       <tuv lang="EN-US">
+        <seg>You create it with an initial size (which should be an approximation of the size of the data expected to be stored), and then it will expand to accept further data that overflows this initial size.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T045313Z" creationid="tpxxn" creationdate="20181009T045313Z">
+        <seg>您使用初始大小创建它（它应该是预期存储的数据的近似大小），然后它将扩展以接受溢出初始大小的更多数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
         <seg>You do not currently have any assets in your Library.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="deciia" changedate="20180923T074923Z" creationid="deciia" creationdate="20170103T082324Z">
@@ -73629,6 +74461,14 @@ dll情境后面，调知中心前面，根据参考信息“Choose to submit all
       </tuv>
       <tuv lang="ZH-CN" changeid="36011" changedate="20170328T082031Z" creationid="36011" creationdate="20170328T082015Z">
         <seg>lives （不提倡使用）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>looking at the example above you can see that you can write different types of data to a buffer (you are only limited to a specific data type when using the &lt;b0&gt;fast&lt;/b0&gt; buffer type), and this data will be added into the buffer consecutively (although its actual position in the buffer will depend on its &lt;b1&gt;byte alignment&lt;/b1&gt;, explained below).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="tpxxn" changedate="20181009T052516Z" creationid="tpxxn" creationdate="20181009T052114Z">
+        <seg>从上面的例子可以看到，你可以编写不同数据类型的缓冲区（你在使用 &lt;b0&gt;快速&lt;/b0&gt; 缓冲类型时限于一个特定的数据类型），这个数据将被添加到连续的缓冲区（尽管其实际位置在缓冲将取决于其 &lt;b1&gt;字节对齐&lt;/b1&gt;，见下面的解释）。</seg>
       </tuv>
     </tu>
     <tu>
