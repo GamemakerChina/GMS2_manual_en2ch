@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,52 +36,21 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><i>GameMaker Studio 2</i> has a series of functions in GML to
-deal with <b>buffers</b>. Most people should be familiar with this
-term as it is used all the time when dealing with computers and
-programming, but knowing the word doesn't mean you actually know
-what it means. So this page aims to explain what a buffer is and
-how to use them within the context of <i>GameMaker Studio 2</i>
-programming, although the general way they work is the same no
-matter the language or the technology, which is one of the reasons
-why they are so important.</p>
+<p><i>GameMaker Studio 2</i> 在 GML 中有一系列功能来处理 <b>缓冲区</b>。大多数人应该熟悉这个术语，因为它在处理计算机和编程时一直被使用，但是知道这个词并不意味着你实际上知道它代表什么。所以这个页面的目的是解释缓冲区是什么以及如何在 <i>GameMaker Studio 2</i> 编程环境中使用它们，尽管它们的工作方式无论语言还是技术都是一样的，这也是它们如此重要的原因之一。</p>
 
 <blockquote><a name="buffers" id="buffers"></a> <label class=
 "collapse" for="one">什么是缓冲区？</label> <input id="one"
 type="checkbox">
-<div class="index_list">A buffer (in programming) is basically a
-space within the system memory that is used to store small
-<i>packets</i> of data for just about anything (for example data
-transfer, collisions, colour data etc...). Since it is held in
-system memory it is very fast to access, and a buffer would
-generally be used for very short-term storage, like receiving
-network information before processing it, or for storing a
-checkpoint in your game (this is explained in the example given
-further down the page). <img class="center" src=
-"images/buffer_memory.png" alt="缓冲区内存"> Buffers are created
-by allocating a space in the system memory, calculated in
-<b>bytes</b>, which is then reserved for your game as long as your
-game is running or until you delete the buffer using the
-appropriate function. This means that even when your game is not in
-focus (for example, on a mobile device when you take a call the
-game will be put into the background) the buffer will still exist,
-however if the game is closed or re-started the buffer will be
-lost.<br>
+<div class="index_list">缓冲区（在编程中）基本上是系统内存中的一个空间，用于存储几乎任何东西（例如数据传输、碰撞、颜色数据等等）的小数据 <i>包</i>。由于它保存在系统内存中，访问速度非常快，而且缓冲区通常用于非常短期的存储，比如在处理之前接收网络信息，或者存储游戏中的检查点（在页面后面给出的示例中对此进行了解释）。<img class="center" src=
+"images/buffer_memory.png" alt="缓冲区内存"> 缓冲区是通过在系统内存中分配空间来创建的，以 <b>字节</b> 为单位计算，然后在游戏运行或使用适当的函数删除缓冲区之前为游戏保留空间。这意味着，即使你的游戏没有获得焦点（例如，在移动设备上，当你打电话时，游戏会被放到后台），缓冲区仍然存在，但是如果游戏关闭或重新启动，缓冲区就会丢失。<br>
 <br>
 
-<div class="note"><b>注意：</b> Restarting the game will not clear or delete the buffer!But it will prevent any further access to the previously created buffer as the id <b>handle</b> will have been lost, causing a memory leak which will crash your game eventually. So, when re-starting a game, remember to delete the buffer first.</div></div>
+<div class="note"><b>注意：</b> 重新启动游戏将不会清除或删除缓冲区！但它将防止对先前创建的缓冲区的任何进一步访问，因为 ID 句柄已经丢失，导致内存泄漏，最终导致游戏崩溃。所以，当重新启动游戏时，记得先删除缓冲区。</div></div>
 <br>
 <a name="buffer_types" id="buffer_types"></a> <label class=
 "collapse" for="two">缓冲区类型</label> <input id="two" type=
 "checkbox">
-<div class="index_list"><i>GameMaker Studio 2</i> permits the
-creation of four different buffer types. The reason for this is
-that buffers are designed to be a highly optimised temporary
-storage medium, and as such you should create a buffer that is
-appropriate to the type of data that you wish it to store,
-otherwise you could get errors or cause a <i>bottleneck</i> in your
-code. Before explaining this further, let's look at the four
-available buffer types (defined as <b>constants</b> in GML):<br>
+<div class="index_list"><i>GameMaker Studio 2</i> 允许创建四种不同的缓冲区类型原因是缓冲区被设计成一个高度优化临时存储介质，因此您应该创建一个适用于你所期望的数据类型的缓冲区，否则你可能会在代码中造成错误或遇到 <i>瓶颈</i>。在进一步解释这一点之前，让我们看看四种可用的缓冲区类型（在 GML 中定义为 <b>常量</b>）：<br>
 <br>
 
 <div class="compat">
@@ -94,97 +63,47 @@ available buffer types (defined as <b>constants</b> in GML):<br>
 <tr>
 <td>buffer_fixed</td>
 <td><br>
-
-A buffer of a fixed size in bytes. The size is set when the buffer
-is created and cannot be changed again.<br>
+以字节为单位的固定大小的缓冲区。缓冲区的大小是在创建时设置的，不能再次更改。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>buffer_grow</td>
 <td><br>
-
-A buffer that will <i>grow</i> dynamically as data is added. You
-create it with an initial size (which should be an approximation of
-the size of the data expected to be stored), and then it will
-expand to accept further data that overflows this initial size.<br>
+在添加数据时将动态 <i>增长</i> 的缓冲区。您使用初始大小创建它（它应该是预期存储的数据的近似大小），然后它将扩展以接受溢出初始大小的更多数据。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>buffer_wrap</td>
 <td><br>
-
-A buffer where the data will <i>wrap</i>. When the data being added
-reaches the limit of the buffer size, the overwrite will be placed
-back at the start of the buffer, and further writing will continue
-from that point.<br>
+数据会被 <i>覆盖</i> 的缓冲区。当要添加的数据达到缓冲区大小的限制时，写入将回到缓冲区的开始位置，从那里将继续进行进一步的写入。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>buffer_fast</td>
 <td><br>
-
-This is a special "stripped down" buffer that is extremely fast to
-read/write to. However it can only be used with <tt>buffer_u8</tt>
-data types, and must be 1 byte aligned. (Information on <b>data
-types</b> and <b>byte alignment</b> can be found further down this
-page).<br>
+这是一个特殊的“剥离”缓冲区，读写速度非常快。然而，它只能与 <tt>buffer_u8</tt> 数据类型一起使用，并且必须是 1 字节对齐的。（关于 <b>数据类型</b> 和 <b>字节对齐</b> 的信息可以在本页下面找到）。<br>
 <br></td>
 </tr>
 </table>
 </div>
 <br>
 <br>
-
-Those are the buffer types available to you when using <i>GameMaker
-Studio 2</i>, and which one you choose will greatly depend on the
-use you wish to put it to. For example, a <b>grow</b> buffer would
-be used for storing a "snapshot" of data to create a save game
-since you do not know the actual amount of data that is going to be
-placed in it, or a <b>fast</b> buffer would be used when you know
-that the values you are working with are all between 0 and 255 or
--128 and 127, for example when processing RGB data from an image.
-<img class="center" src="images/buffer_types.png" alt=
-"缓冲区类型"> When creating a buffer, you should always try to
-create it to a size that is appropriate to the type, with the
-general rule being that it should be created to accommodate the
-maximum size of data that it is to store, and if in doubt, use a
-<b>grow</b> buffer to prevent overwrite errors.<br>
-<br>
-The actual code to create a buffer would look something like
-this:<br>
+这些是在使用 <i>GameMaker Studio 2</i> 时可用的缓冲区类型，您选择哪种类型将在很大程度上取决于您希望使用哪种类型。例如，<b>增长</b> 缓冲将用于存储数据的“快照”来创建一个保存游戏，因为你不知道实际所需的数据量；<b>快速</b> 缓冲在当你知道你正在使用的值都是 0 到 255 或 -128 到 127 之间时使用，例如在处理 RGB 图像数据。<img class="center" src="images/buffer_types.png" alt=
+"缓冲区类型"> 当创建一个缓冲区时，你应该总是试图创建一个大小合适的类型，一般规则是，它应该适应最大大小创建数据存储，如果不确定，请使用 <b>增长</b> 缓冲以防止错误覆盖数据。<br><br>创建缓冲区的实际代码是这样的：
 <br>
 
 <p class="code">player_buffer = buffer_create(16384, buffer_fixed,
 2);</p>
 <br>
-
-That would create a fixed buffer of 16384 bytes and <b>byte
-aligned</b> to 2, with the function returning a unique <b>id</b>
-value that is stored in a variable for later referencing of this
-buffer. Now we have the basic concept of a buffer explained you
-should learn about <b>data types</b> and the previously mentioned
-<b>byte alignment</b>.</div>
+这将创建一个 16384 字节和 2 <b>字节对齐</b> 的固定缓冲区，函数返回一个惟一的 <b>id</b> 值，该值存储在一个变量中，以便以后引用该缓冲区。现在我们已经了解了缓冲区的基本概念，您应该了解 <b>数据类型</b> 和前面提到的 <b>字节对齐</b> 方式。</div>
 <br>
 <a name="buffer_data_types" id="buffer_data_types"></a>
 <label class="collapse" for="three">缓冲区数据类型</label>
 <input id="three" type="checkbox">
-<div class="index_list">When reading and writing data to a buffer,
-you do it in ''chunks'' of data defined by their '''data type'''.
-The '''data type''' sets the number of bytes allocated within the
-buffer for the value being written, and it is essential that you
-get this correct otherwise you will get some very strange results
-(or even errors) for your code.<br>
-<br>
-Buffers are written to (and read from) <i>sequentially</i>, in that
-one piece of data is written after another, with each piece of data
-being of a set type. This means that you should ideally be aware of
-what data you are writing to the buffer at all times. These <b>data
-types</b> are defined in GML by the following <i>constants</i>:
-
-
+<div class="index_list">当您将数据读写到缓冲区时，您将在指定“数据类型”的“数据块”中执行此操作。“数据类型”设置了在缓冲区中为正在写入的值分配的字节数，并且必须正确，否则您的代码会得到一些非常奇怪的结果（甚至错误）。<br><br>缓冲区是 <i>按顺序</i> 写入（和读取）的，在这种情况下，数据块是一个接一个写入的，每个数据块都是一种类型。这意味着，理想情况下，您应该知道您一直在向缓冲区写入什么数据。这些 <b>数据类型</b> 在 GML 中由以下 <i>常量</i> 定义：
 
 <div class="compat">
 <table>
@@ -198,9 +117,7 @@ types</b> are defined in GML by the following <i>constants</i>:
 <td>buffer_u8</td>
 <td>1</td>
 <td><br>
-
-An unsigned, 8bit integer. This is a positive value from 0 to
-255.<br>
+无符号 8 位整型。值域为 0 到 255。<br>
 <br></td>
 </tr>
 
@@ -208,7 +125,7 @@ An unsigned, 8bit integer. This is a positive value from 0 to
 <td>buffer_s8</td>
 <td>1</td>
 <td><br>
-一个有符号的8位整数。值域为-128到127的正值和负值（0被归类为正值）。<br>
+有符号 8 位整型。值域为 -128 到 127（0为正数）。<br>
 <br></td>
 </tr>
 
@@ -216,7 +133,7 @@ An unsigned, 8bit integer. This is a positive value from 0 to
 <td>buffer_u16</td>
 <td>2</td>
 <td><br>
-一个无符号的16位整数值域为0到65535的正值。<br>
+无符号 16 位整型。值域为 0 到 65535 。<br>
 <br></td>
 </tr>
 
@@ -224,30 +141,7 @@ An unsigned, 8bit integer. This is a positive value from 0 to
 <td>buffer_s16</td>
 <td>2</td>
 <td><br>
-
-A signed, 16bit integer. This can be a positive or negative value
-from -32,768 to 32,767 (0 is classed as positive).<br>
-<br></td>
-</tr>
-
-<tr>
-<td>buffer_u32</td>
-<td>4</td>
-<td><br>
-
-An unsigned, 32bit integer. This is a positive value from 0 to
-4,294,967,295.<br>
-<br></td>
-</tr>
-
-<tr class="alt">
-<td>buffer_s32</td>
-<td>4</td>
-<td><br>
-
-A signed, 32bit integer. This can be a positive or negative value
-from -2,147,483,648 to 2,147,483,647 (0 is classed as
-positive).<br>
+有符号 16 位整型。值域为 -32768 到 32767（0为正数）。<br>
 <br></td>
 </tr>
 
@@ -255,20 +149,39 @@ positive).<br>
 <td>buffer_f16</td>
 <td>2</td>
 <td><br>
+16 位浮点型。值域为 -65504 到 +65504。<b>（目前不支持！）</b><br>
+<br></td>
+</tr>
 
-A 16bit floating point number. This can be a positive or negative
-value within the range of +/- 65504. <b>(Not currently
-supported!)</b><br>
+<tr>
+<td>buffer_u32</td>
+<td>4</td>
+<td><br>
+无符号 32 位整型。值域为 0 到 4,294,967,295。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
+<td>buffer_s32</td>
+<td>4</td>
+<td><br>
+有符号 32 位整形。值域为 -2,147,483,648 到 2,147,483,647（0为正数）。<br>
+<br></td>
+</tr>
+
+<tr>
 <td>buffer_f32</td>
 <td>4</td>
 <td><br>
+32 位浮点型。值域为 -16777216 到 +16777216。<br>
+<br></td>
+</tr>
 
-A 32bit floating point number. This can be a positive or negative
-value within the range of +/-16777216.<br>
+<tr class="alt">
+<td>buffer_u64</td>
+<td>8</td>
+<td><br>
+无符号 64 位整型。<b>（当前不支持所有缓冲函数！）</b><br>
 <br></td>
 </tr>
 
@@ -276,9 +189,7 @@ value within the range of +/-16777216.<br>
 <td>buffer_f64</td>
 <td>8</td>
 <td><br>
-
-A 64bit floating point number. This can be a positive or negative
-value from -(2<sup>52</sup>) to 2<sup>52</sup> - 1.<br>
+64 位浮点型。<br>
 <br></td>
 </tr>
 
@@ -286,9 +197,7 @@ value from -(2<sup>52</sup>) to 2<sup>52</sup> - 1.<br>
 <td>buffer_bool</td>
 <td>1</td>
 <td><br>
-
-A boolean value. Can only be either 1 or 0 (<tt>true</tt> or
-<tt>false</tt>)<br>
+布尔类型。只能为 1 或 0 (<tt>true</tt> 或 <tt>false</tt>)<br>
 <br></td>
 </tr>
 
@@ -296,19 +205,14 @@ A boolean value. Can only be either 1 or 0 (<tt>true</tt> or
 <td>buffer_string</td>
 <td>N/A</td>
 <td><br>
-
-This is a UTF-8 null terminated (0x00) string. Basically a
-GameMaker string is dumped in the buffer, and a 0 is put at the
-end.<br>
+这是一个以 UTF-8 null 结尾的字符串（0x00）。最基本的，一个 GameMaker 字符串被转储在缓冲区中时是以 0 结尾的。<br>
 <br></td>
 </tr>
 </table>
 </div>
 <br>
 <br>
-
-So, say you have created a buffer and you want to write information
-to it, then you would use something like the following code:<br>
+因此，假设你创建了一个缓冲区，你可以使用以下代码向它写入信息：<br>
 <br>
 
 <p class="code">buffer_write(buff, buffer_bool, global.Sound);<br>
@@ -317,16 +221,7 @@ buffer_write(buff, buffer_s16, obj_Player.x);<br>
 buffer_write(buff, buffer_s16, obj_Player.y);<br>
 buffer_write(buff, buffer_string, global.Player_Name);<br></p>
 <br>
-
-looking at the example above you can see that you can write
-different types of data to a buffer (you are only limited to a
-specific data type when using the <b>fast</b> buffer type), and
-this data will be added into the buffer consecutively (although its
-actual position in the buffer will depend on its <b>byte
-alignment</b>, explained below). This is the same for reading
-information from the buffer too, and in the case of the example
-given above, you would read from the buffer in the same order that
-you wrote the data, checking for the same data type, eg:<br>
+从上面的例子可以看到，你可以编写不同数据类型的缓冲区（你在使用 <b>快速</b> 缓冲类型时限于一个特定的数据类型），这个数据将被添加到连续的缓冲区（尽管其实际位置在缓冲将取决于其 <b>字节对齐</b>，见下面的解释）。从缓冲区读取信息的顺序也是一样的，在上面给出的例子中，您将按照编写数据的顺序从缓冲区读取信息，检查相同的数据类型，例如：<br>
 <br>
 
 <p class="code">global.Sound = buffer_read(buff, buffer_bool);<br>
@@ -335,86 +230,45 @@ obj_Player.x = buffer_read(buff, buffer_s16);<br>
 obj_Player.y = buffer_read(buff, buffer_s16);<br>
 global.Player_Name = buffer_read(buff, buffer_string);<br></p>
 <br>
-
-As you can see, you read out information in the same order that you
-read it into the buffer. For further information on how to add and
-remove data from the buffer please see the <b>Examples</b> section
-below.</div>
+如您所见，您读取信息的顺序与读取缓冲区的顺序相同。有关如何从缓冲区中添加和删除数据的详细信息，请参阅下面的 <b>示例</b> 部分。</div>
 <br>
 <a name="buffer_alignment" id="buffer_alignment"></a> <label class=
 "collapse" for="four">缓冲区对齐</label> <input id="four"
 type="checkbox">
-<div class="index_list">If you have been reading through this page you will have seen references to the <b>byte alignment</b> of a buffer. This basically refers to the <i>position</i> that new data will stored at within a given buffer. 它是如何运作的？Well, for a single byte aligned buffer, each piece of data is written to the buffer sequentially, with each new data piece being added directly after the previous. However a 2 byte aligned buffer will write each piece of data to intervals of 2 bytes, so that even if your initial write is 1 byte of data, the <i>next</i> write will be moved to align to two bytes. <img class="center" src=
-"images/buffer_byte_alignment.png" alt="缓冲区字节对齐"> So, if your byte alignment is set to, say, 4 bytes and you write a single piece of data which is 1 byte in size then do a <i>buffer tell</i> (a <b>tell</b> gets the current position for reading/writing for the buffer), you'll get an <i>offset</i> of 1 (the offset in this case is the number of bytes from the start of the buffer to the current read/write position).<br><br>However, if you write another piece of data, also 1 byte in size, <i>then</i> do a buffer tell, you'll get an offset of 5 bytes (even though you have only written 2 bytes of data) as the alignment has <i>padded</i> the data to align it with the 4 byte buffer alignment.<br><br>Basically, what this means is that alignment will only affect <i>where things are written to</i>, so if you do a buffer tell after you write something, it'll return the current write position which immediately follows the data you've previously written. Note, however, that if you then write another piece of data, internally the buffer will move the write position along to the next multiple of the alignment size before actually writing the piece of data.</div>
+<div class="index_list">如果您一直阅读此页，您将看到对缓冲区 <b>字节对齐</b>的引用。这基本上是指新数据将存储在给定缓冲区中的 <i>位置</i>。它是如何运作的？对于一个按字节排列的缓冲区，每个数据块是按顺序写入缓冲区的，每个新数据块是在前一个数据块之后直接添加的。然而，一个 2 字节对齐的缓冲区会将每段数据以 2 字节为间隔写入，因此即使您的初始写入是 1 字节的数据，<i>下一个</i> 写入也会被移动，以对齐到两个字节。<img class="center" src=
+"images/buffer_byte_alignment.png" alt="缓冲区字节对齐"> 所以,如果你的字节对齐方式设置为，比如说，4个字节,你写一段 1 个字节大小的数据然后做一个 <i>缓冲告知</i>（<b>告知</b> 使得当前位置为读/写缓冲区），你会得到 1 字节的 <i>偏移量</i>（抵消在这种情况下从开始的缓冲区到当前读写位置的字节数）。<br><br>然而，如果你写入另一块数据，仍然是 1 个字节大小， <i>然后</i> 做一个缓冲告知，你会得到一个 5 字节的偏移量（即使你只写入 2 个字节的数据），因为对齐已经 <i>填充</i> 了数据，将它与 4 字节缓冲区对齐。<br><br>基本上，这意味着对齐只会影响到<i>写入对象的位置</i>，所以如果在写入内容后执行缓冲区告知，它将返回当前写入位置，该位置紧跟在先前写入的数据之后。但是，请注意，如果您随后编写另一个数据片段，那么在实际编写该数据片段之前，缓冲区会在内部将写入位置移动到对齐大小的下一个倍数。</div>
 <br>
 <a name="buffer_examples" id="buffer_examples"></a> <label class=
 "collapse" for="five">缓冲区范例</label> <input id="five"
 type="checkbox">
-<div class="index_list">Below you can find some examples of common
-uses for buffers.<br>
+<div class="index_list">下面是一些缓冲区的常用用法示例。<br>
 <br>
 <a name="buffer_checkpoint" id="buffer_checkpoint"></a>
-<label class="collapse" for="six">制作一个检查点</label>
+<label class="collapse" for="six">制作一个存档点</label>
 <input id="six" type="checkbox">
-<div class="index_list">A simple example of how a buffer can be
-used in any <i>GameMaker Studio 2</i> game for any platform, is the
-function <a href=
-"../../3_scripting/4_gml_reference/game/game_save_buffer.html"><tt>game_save_buffer</tt></a>.
-This function will take a "snapshot" of the current game state and
-save it to a pre-defined buffer, which can then be read from to
-load the game at that point again.<br>
+<div class="index_list">一个关于如何在任何平台的 <i>GameMaker Studio 2</i> 游戏中使用缓冲区的简单例子是 <a href=
+"../../3_scripting/4_gml_reference/game/game_save_buffer.html"><tt>game_save_buffer</tt></a> 函数。此函数将获取当前游戏状态的“快照”，并将其保存到预定义的缓冲区中，然后可以从缓冲区中读取该缓冲区，以便在此时再次加载游戏。<br>
 <br>
 
-<div class="note"><b>NOTE:</b> This function is very limited and it
-is designed for the beginner to get a checkpoint system up and
-running quickly, but more advanced users may prefer to code their
-own system using the <a href=
-"../../3_scripting/4_gml_reference/file%20handling/index.html">File
-functions</a>, due to the fact that the game will not save any of
-the dynamic resources that you can create at run-time like data
-structures, surfaces, added backgrounds and sprites etc...</div>
+<div class="note"><b>注意：</b>这个函数是非常有限的，这是为初学者设计的一个快速启动并运行的检查点系统，但是更高级的用户可能更愿意使用 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/index.html">文件函数</a> 代码创建自己的系统，因为这个游戏不会保存任何的动态资源，您可以创建在运行时的数据结构、表面、添加背景和精灵等等……</div>
 <br>
-
-The first thing we need to do is create a new object to control the
-saving and loading, so you would make one and give it a <b>Create
-Event</b>. In this event, you could place the following code:<br>
+我们需要做的第一件事是创建一个新物体来控制保存和加载，你可以创建这样一个物体并给它添加 <b>创建事件</b>。在这种情况下，你可以编写以下代码：<br>
 <br>
 
 <p class="code">SaveBuffer = buffer_create(1024, buffer_grow,
 1);<br>
 StateSaved = false;<br></p>
 <br>
-
-The first line creates a <b>grow</b> buffer (since we don't know
-the final size of the saved data) of 1024 bytes and aligned to 1
-byte. A variable is then created to check against and see if the
-game has been saved or not (this will be used for loading).<br>
-<br>
-Next we would add a <b>Keypress Event</b> (for example) in which we
-will save the current game state to the created buffer:<br>
+第一行创建 1024 字节的 <b>增长缓冲区</b>（因为我们不知道保存数据的最终大小），并对齐到 1 字节。然后创建一个变量来检查是否保存了游戏（这将用于加载）。<br><br>接下来，我们将添加一个 <b>按键事件</b>（例如），其中我们将保存当前游戏状态到创建的缓冲区：<br>
 <br>
 
 <p class="code">StateSaved = true;<br>
 buffer_seek(SaveBuffer, buffer_seek_start, 0);<br>
 game_save_buffer(SaveBuffer);<br></p>
 <br>
-
-The above will first set the control variable to true (so that this
-is saved when we save the game to the buffer) and then <i>seek</i>
-to the start of the buffer before writing the current save state
-into it. Why do we use <a href=
-"../../3_scripting/4_gml_reference/buffers/buffer_seek.html"><tt>buffer_seek</tt></a>?
-Well, as mentioned in the <b>Buffer Data Types</b> section above,
-you read and write to a buffer from the last position that data was
-added to it. This means that if you don't set the buffer
-<i>tell</i> back to the start then when you save you will be adding
-the data into the buffer at the current buffer read/write position,
-so we use the function <tt>buffer_seek</tt> to move the <i>tell</i>
-to the buffer start.<br>
-<br>
-We have now saved the current game state to a buffer. The next step
-would be to code how to load it, probably in another <b>Keypress
-Event</b>:<br>
+以上代码首先将控制变量设置为 true（以便在将游戏保存到缓冲区时保存），然后在将当前保存状态写入缓冲区之前 <i>查找</i> 缓冲区的开始位置。为什么要使用 <a href=
+"../../3_scripting/4_gml_reference/buffers/buffer_seek.html"><tt>buffer_seek</tt></a>？正如前面的 <b>缓冲区数据类型</b> 部分中提到的，读取和写入缓冲将从我们添加数据的最后位置开始。这意味着，如果不将缓冲区 <i>告知</i> 回到开始，那么在保存时，将在当前缓冲区的读/写位置向缓冲区添加数据，因此我们使用 <tt>buffer_seek</tt> 函数将 <i>告知</i> 移动到缓冲区起点。<br><br>我们现在已经将当前游戏状态保存到一个缓冲区中。下一步是编写代码如何加载它，可能在另一个 <b>按键事件</b>：<br>
 <br>
 
 <p class="code">if StateSaved<br>
@@ -424,59 +278,28 @@ Event</b>:<br>
 &nbsp;&nbsp;&nbsp;game_load_buffer(SaveBuffer);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 <br>
-
-The game will then be loaded at the end of the event in which you
-place the above code.<br>
+然后，游戏将在您放置上述代码的事件结束时加载。<br>
 <br>
 
-<div class="note"><b>注意：</b> This is only for use in the same room, and not for generating complete saved games for after your game has been closed or restarted!</div>
+<div class="note"><b>注意：</b> 这只能在同一个房间使用，而不是用于在你的游戏关闭或重新启动后获取完整保存的游戏状态。</div>
 <br>
-
-The final thing to add to the controller object is a "clean up"
-code. Buffers are stored in memory and as such if you do not clean
-up when you are finished with them, you can get memory leaks that
-will eventually lag and crash your game. So you would probably add
-a <b>Room End Event</b> (from the <b>Other</b> event category)
-with:<br>
+最后一件事是向控制器物体添加“清理”代码。缓冲区存储在内存中，因此，如果在使用缓冲区时没有进行清理，就会出现内存泄漏，最终导致游戏延迟并崩溃。因此，您可能需要添加一个<b>房间结束事件</b>（来自 <b>其他</b> 事件类别）：<br>
 <br>
 
 <p class="code">buffer_delete(SaveBuffer);</p>
 <br>
-
-This object can now be placed into a room and on a key press save
-and load the room state from a buffer.<br>
+这个物体现在可以被放置到一个房间中，并且从缓冲区一键保存或加载房间状态。<br>
 <br></div>
 <br>
 <a name="buffer_networking" id="buffer_networking"></a>
 <label class="collapse" for="seven">网络缓冲区</label>
 <input id="seven" type="checkbox">
-<div class="index_list">When working with the <i>GameMaker Studio
-2</i> networking functions, you have to use buffers to create the
-data<i>packet</i> that is being sent over the network connection.
-This example intends to show how this is done, but due to the scope
-of the networking possibilities, it is only designed to show how to
-use the buffers themselves, and not the full networking system.<br>
-<br>
-The first thing we will show is the creation and use of a buffer
-for the client side of the network connection. This buffer will be
-used to create small data packets that can then be sent to the
-server, so in the <b>Create Event</b> of an instance we would
-assign a buffer like this:<br>
+<div class="index_list">在使用 <i>GameMaker Studio 2</i> 连网功能时，必须使用缓冲区创建通过网络连接发送的数据 <i>包</i>。本示例旨在展示如何完成此任务，但由于联网的领域非常大，因此仅设计此示例来展示如何使用缓冲区本身，而不是完整的联网系统。<br><br>我们将展示的第一件事是为网络连接的客户端创建和使用缓冲区。这个缓冲区将用于创建小的数据包，然后这些数据包可以被发送到服务器，所以在实例的 <b>创建事件</b> 中，我们将分配一个这样的缓冲区：<br>
 <br>
 
 <p class="code">send_buff = buffer_create(256, buffer_grow, 1);</p>
 <br>
-
-We make the buffer small (256bytes) as it is not intended for
-holding large amounts of data, we make it a <i>grow</i> buffer to
-ensure no errors should we need to add more data to be sent at any
-time, and the alignment is set to one for convenience.<br>
-<br>
-Now, let's say that we want our client to send data to the server.
-For that we need to create a buffer "packet", and in this example
-we are going to send a <b>Key Press Event</b>, like when the player
-presses <b>Left Arrow</b> to move around the game. To do this we
-write the necessary data to the buffer first then send it off:<br>
+我们将缓冲区设置为较小（256 字节），因为它不是用来保存大量数据的，我们将它设置为一个 <i>增长</i> 缓冲区，以确保在任何时候需要添加更多发送数据时不会出现错误，并且为了方便起见，将对齐设置为 1 字节。<br><br>现在，假设我们希望客户机向服务器发送数据。为此，我们需要创建一个缓冲区“包”，在本例中，我们将发送一个 <b>按键按下事件</b>，比如当玩家按下 <b>左箭头</b> 在游戏中移动时。为此，我们先将必要的数据写入缓冲区，然后发送出去：<br>
 <br>
 
 <p class="code">buffer_seek(buff, buffer_seek_start, 0);<br>
@@ -485,27 +308,9 @@ buffer_write(buff, buffer_s16, vk_left);<br>
 buffer_write(buff, buffer_bool, true);<br>
 network_send_packet(client, buff, buffer_tell(buff));<br></p>
 <br>
-
-Before writing to the buffer we have set the "tell" to the start of
-the buffer as networking <i>always</i> takes the data from the
-<b>start</b> of a buffer. We then write the <i>check</i> value
-(this will be used by the server to determine the type of event to
-be processed), then the key being used, and then the state of the
-key (in this case <tt>true</tt> for pressed). This buffer is then
-sent as a data packet by the network function. Note that we do
-<i>not</i> send the whole buffer! We only send the data written,
-using the <a href=
-"../../3_scripting/4_gml_reference/buffers/buffer_tell.html"><tt>buffer_tell</tt></a>
-function to return the current read/write position of the buffer
-(remember that writing to the buffer moves the "tell" to the end of
-what has been written).<br>
-<br>
-What about receiving the data on the server? The received data
-packet that must be written into the buffer on the server and then
-used to update the game. For that we would use the <a href=
-"../../2_interface/1_editors/events/async_events.html">Networking
-Asynchronous Event</a> in the network controller object of the
-server, as this simplified code below shows:<br>
+在写入缓冲区之前，我们将“告知”设置为缓冲区的开始，因为网络 <i>总是</i> 从缓冲区的 <b>开始</b> 获取数据。然后写入 <i>检查</i> 值（服务器将使用该值来确定要处理的事件的类型）、使用的键以及键的状态（在本例中为 <tt>true</tt>）。然后，网络函数将该缓冲区作为数据包发送。注意，我们 <i>没有</i> 发送整个缓冲区！我们只发送了写入的数据，使用 <a href=
+"../../3_scripting/4_gml_reference/buffers/buffer_tell.html"><tt>buffer_tell</tt></a> 函数返回缓冲区的当前读/写位置（记住写入缓冲区会将“告知”移动到已写入的内容的末尾。）。<br><br>如何接收服务器上的数据？接收到的数据包必须写入服务器上的缓冲区，然后用来更新游戏。为此，我们将在服务器的网络控制器对象中使用 <a href=
+"../../2_interface/1_editors/events/async_events.html">网络异步事件</a>，如下面的简化代码所示：<br>
 <br>
 
 <p class="code">var buff = ds_map_find_value(async_load,
@@ -516,27 +321,11 @@ if cmd == buffer_read(buff, buffer_u8);<br>
 &nbsp;&nbsp;&nbsp;key_state = buffer_read(buff, buffer_bool);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 <br>
-
-The asynchronous event will contain a special temporary
-<tt>ds_map</tt> (it is removed at the end of the event
-automatically) which contains different information depending on
-the type of incoming data from the network. In this case, we are
-assuming that the map has been checked and found to be a buffer
-data packet sent from a client. We now check the first piece of
-data that is in the buffer to see what kind of event has been sent
-- in this case the value "1" represents a <i>key</i> event, however
-when coding these things you should define <b>constants</b> to hold
-these values to simplify things - and then store the key being
-pressed and its state (<tt>true</tt> = pressed, <tt>false</tt> =
-released). This information would then be used to update all the
-clients with the new status of the sending client player.<br>
+异步事件将包含一个特殊的临时 <tt>ds_map</tt>（它将在事件结束时自动删除），根据来自网络的传入数据的类型，它将包含不同的信息。在本例中，我们假设已经检查了映射，发现它是一个从客户机发送的缓冲区数据包。我们现在检查的第一条数据缓冲区，看看会发送什么样的事件——在这种情况下,值 “1” 代表了一个 <i>按键</i> 事件，然而当编码这些事情你应该定义 <b>常量</b> 保存这些值来简化，然后存储键被按下的状态（<tt>true</tt> = 按下，<tt>false</tt> = 松开）。然后，此信息将用于使用玩家发送客户端的新状态更新所有客户端。<br>
 <br>
 
-<div class="note"><b>NOTE:</b> The buffer that is created from the
-ds_map is automatically removed at the end of the Network
-Asynchronous Event so there is no need to use <a href=
-"../../3_scripting/4_gml_reference/buffers/buffer_delete.html"><tt>buffer_delete</tt></a>
-here.</div></div></div></blockquote>
+<div class="note"><b>注意：</b>从 ds_map 创建的缓冲区在网络异步事件结束时自动删除，因此这里不需要使用 <a href=
+"../../3_scripting/4_gml_reference/buffers/buffer_delete.html"><tt>buffer_delete</tt></a>。</div></div></div></blockquote>
 
 <p><br>
 </p>
@@ -551,7 +340,7 @@ here.</div></div></div></blockquote>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
