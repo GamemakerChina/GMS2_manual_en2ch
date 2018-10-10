@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,81 +36,26 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><i>GameMaker Studio 2</i> is not just limited to the resources
-that you create within the program. It has a special section in the
-<b>resource tree</b> of the main window for <b>Included Files</b>.
-Here you can load different file types (and even create
-sub-directories for them) into <i>GameMaker Studio 2</i> and they
-will then be included in the final game as part of the package for
-the chosen target platform. So, for example, in a windows game they
-will be bundled within the <tt>*.exe</tt> and exported when run, or
-in HTML5 they will be included in the <tt>html5_game</tt> folder
-and stored on the server.</p>
+<p><i>GameMaker Studio 2</i> 使用的资源不局限于你在程序中创建的。在 主窗口的 <b>资源树</b> 中有一个特殊部分 —— <b>内含文件</b> 。在这里，你可以将不同的文件类型（甚至为它们创建子目录）加载到 <i>GameMaker Studio 2</i> 中，然后它们将作为所选目标平台的包的一部分包含在最终游戏中。 因此，例如，在Windows游戏中，它们将捆绑在 <tt>* .exe</tt> 中并在运行时导出，或者在 HTML5 中，它们将包含在 <tt>html5_game</tt> 文件夹中并存储在服务器上。</p>
 
-<p>To add a file to your resources you must right-click <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> on the
-<b>Included Files</b> section of the resource tree and select
-<i>Insert Included File</i> or, if you want to create a
-sub-directory to store other files, <i>Create Group</i>. This will
-then prompt you to add a file, or files if you select more than
-one, to the list. Once they have been added you can right-click
-<img style="vertical-align:middle" src="../../images/icon_rmb.png">
-on it and select <i>Properties</i> to edit the properties of the
-file. <img class="center" src=
+<p>要将文件添加到资源，必须右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 资源树的 <b>内含文件</b> 部分，然后选择 <i>插入内含的文件</i>，或者，如果要创建用于存储其他文件的子目录，请单击 <i>添加组</i>。然后，这将提示你向列表添加一个文件或多个文件。添加完成后，你可以右键单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 它并选择 <i>属性</i> 以编辑文件的属性。<img class="center" src=
 "images/editor_includedfileproperties.png" alt=
-"Included File Properties"> Here you can rename the file if you
-choose by changing the <i>File Name</i>. Beneath the file name
-there are also a series of options for the target platform that
-this included file should be copied to. If you wish it to be only
-exported when you run the game in a browser, then you would only
-tick the HTML5 box, and if you want it to be exported only to
-Android and iOS targets you would tick those, and so on. If you
-choose not to tick any targets then that file will not be exported
-at all. This option is especially useful for those that wish to
-make use of the Configurations Manager to store certain
-configurations and export specific files depending on them (click
-on the configuration you wish to use, check/un-check the platforms
-you require and then if you change configurations the files
-selected for each one will be remembered).</p>
+"Included File Properties"> 如果你修改 <i>文件名</i>，可以在此重命名文件。 在文件名下方还有一系列选项用来设置这个文件需要被包含进哪些目标平台的程序中。如果你希望仅在浏览器中运行游戏时将其导出，那么你只需勾选 HTML5 框，如果你希望仅将其导出到 Android 和 iOS 目标，则可以勾选这些内容，依此类推。如果你选择不勾选任何目标，则根本不会导出该文件。此选项对于那些希望使用配置管理器来存储某些配置并根据它们导出特定文件的用户特别有用（单击你要使用的配置，勾选 / 取消勾选你需要的平台，然后如果你更改配置，那么选择的文件将会继承你的更改）。</p>
 
-<p>Once you click on "OK" the file will be stored with your current
-project in its own folder called <tt>data-files</tt> found in the
-project directory. If you have chosen to change the name of the
-file when you added it to the resource tree, then the file will now
-be stored <i>with that new name</i>. Please note that from now on
-you should edit the files stored in this folder and not the
-original files (unless you plan on including them again, but
-generally there is no need).</p>
+<p>单击“确定”后，文件将与当前项目一起存储在项目目录中名为 <tt>data-files</tt> 的文件夹中。如果在将文件添加到资源树时选择更改文件名，则现在将 <i>使用该新名称</i> 存储该文件。请注意，从现在开始，你应该编辑存储在此文件夹中的文件而不是原始文件（除非你打算再次包含它们，但通常没有必要）。</p>
 
-<p>For further information on how included files are stored with
-your game and how they are accessed please see the section of the
-manual dedicated to the <a href=
-"../../1_overview/3_additional_information/file_system.html">File
-System</a>.</p>
+<p>有关如何在游戏中存储包含文件以及如何访问它们的详细信息，请参阅 <a href=
+"../../1_overview/3_additional_information/file_system.html">文件系统</a> 部分。</p>
 
-<div class="note"><b>IMPORTANT!</b> When including sound files, you
-should ensure that the files avoid names that clash with
-<b>streaming</b> sound resources. For example, a sound resource
-called "music" and an included file called "music.ogg" is going to
-be <tt>undefined</tt> when the project runs.</div>
+<div class="note"><b>重要！</b> 包含声音文件时，应确保文件避免与 <b>流式</b> 声音资源的名称冲突。例如，当项目运行时，名为 “music” 的声音资源和名为 “music.ogg” 的内含文件将被 <tt>取消定义</tt>。</div>
 
 <p><br>
+值得注意的是，你可以将 DLL（在 WIndows上）或 DyLib（在 Mac OS上）文件作为内含文件包含在内，然后使用 <a href=
+"../../3_scripting/4_gml_reference/miscellaneous/external_define.html"><tt>external_define</tt></a> 创建自己的自定义函数来处理它们。然后可以使用这 <a href=
+"../../3_scripting/4_gml_reference/miscellaneous/external_call.html"><tt>external_call</tt></a> 调用这些函数。</p>
 
-It is worth noting that you can include DLL (on WIndows) or DyLib
-(on Mac OS) files as included files and then create your own custom
-functions to deal with them using <a href=
-"../../3_scripting/4_gml_reference/miscellaneous/external_define.html">
-<tt>external_define</tt></a>. These can then be used calling the
-<a href=
-"../../3_scripting/4_gml_reference/miscellaneous/external_call.html">
-<tt>external_call</tt></a> function.</p>
-
-<div class="note"><b>WARNING!</b> Using included files to create
-extra functionality in this way is <b>incompatible</b> with the
-<a href="extensions.html">Extension</a> system, in so much as you
-cannot use use the <tt>external_</tt> functions with files added in
-an extension, since extensions already have a method for adding
-constants and functions.</div>
+<div class="note"><b>警告！</b> 使用内含文件这种方式创建额外的功能与 <a href="extensions.html">扩展</a> 系统 <b>不兼容</b>，因为你不能使用 <tt>external_</tt> 函数，并在扩展中添加文件，因为扩展已经有一个添加常量和函数的方法。</div>
 
 <p><br>
 </p>
@@ -126,7 +71,7 @@ constants and functions.</div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -36,7 +36,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>游戏的核心将通过资源创建并被添加到<b>资源树</b>中。 这是所有你可以添加的游戏运行所需内容，包括房间，精灵，对象，路径和其他一些内容。 <i>GameMaker Studio 2</i> 中的游戏至少需要一个房间来运行，至少存在一个对象和一个精灵，当然你不止会使用一个！<img class="center" src="images/qs_resources.png" alt=
+<p>游戏的核心将通过资源创建并被添加到<b>资源树</b>中。 这是所有你可以添加的游戏运行所需内容，包括房间，精灵，物体，路径和其他一些内容。 <i>GameMaker Studio 2</i> 中的游戏至少需要一个房间来运行，至少存在一个物体和一个精灵，当然你不止会使用一个！<img class="center" src="images/qs_resources.png" alt=
 "资源树"> 您可以通过右键单击 <img style="vertical-align:middle" src=
 "../../images/icon_rmb.png"> 资源树来添加资源，然后从弹出菜单中选择 <b>创建</b> 选项（有关此弹出菜单的详细信息，请参阅下文）。所有可用资源操作都是如此，但每种资源都有自己的专用的编辑器，当你完成上述操作时会打开它。 请注意，资源树左上角有 <b>全部折叠</b> 按钮 <img style="vertical-align:middle" src=
 "images/icon_collapseresources.png"> ，可用于关闭所有已打开的资源文件夹。</p>
@@ -48,7 +48,7 @@ if (window.name != "content")
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_sprite.png">精灵</label>
 <input id="zero" type="checkbox">
-<div class="index_list">精灵通常是您创建的游戏中的对象的视觉表现。 因此，精灵使用  <i>GameMaker Studio 2</i> 图像编辑器来绘制图像，或使用外部绘图程序制作并导入到 <i>GameMaker Studio 2</i> 中。使用的图像不一定是单个静态图像，也可以是“条装”图像，即单个文件中含有多个图像，可用于制作一个动画精灵。 例如，以下10张图像就形成一个精灵，是一个跳伞时挥舞着双臂的角色。<br><br><img class="center" src="images/qs_spritestrip.png" alt=
+<div class="index_list">精灵通常是您创建的游戏中的物体的视觉表现。 因此，精灵使用  <i>GameMaker Studio 2</i> 图像编辑器来绘制图像，或使用外部绘图程序制作并导入到 <i>GameMaker Studio 2</i> 中。使用的图像不一定是单个静态图像，也可以是“条装”图像，即单个文件中含有多个图像，可用于制作一个动画精灵。 例如，以下10张图像就形成一个精灵，是一个跳伞时挥舞着双臂的角色。<br><br><img class="center" src="images/qs_spritestrip.png" alt=
 "精灵长带图"><br>实际完成的动画放置在游戏中看起来是这样的：<br><br><img class="center" src="images/qs_spriteanim.gif" alt=
 "精灵动画"><br>像上图这样的精灵通常是一个 <tt>PNG</tt> 格式的文件，但是 <i> GameMaker Studio 2</i> 也兼容 <tt>SWF</tt> 格式的矢量精灵和 <tt>JSON</tt> 格式的 <b>Spine</b> 精灵（及其伴随的atlas条状图像）。<br><br>您可以从 <a href="../../2_interface/1_editors/sprites.html">精灵编辑器</a> 部分中了解更多关于添加和编辑精灵的信息。</div>
 <br>
@@ -56,7 +56,7 @@ if (window.name != "content")
 "one"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_tileset.png">图块集</label> <input id="one" type="checkbox">
-<div class="index_list">图块集从精灵资源中获取，但是由于 <i>GameMaker Studio 2</i> 在创建游戏时会以不同于精灵的方式编辑图块集，所以它们被单独分类出来。基本上，一个基础图块就是一个单一图像，<i>GameMaker Studio 2</i> 将根据您所设置的各种值将图像拆分成不同的基础图块。 然后，您可以在房间编辑器（或在程序中通过代码）使用这些图块在房间中生成图块地图。它们可以在房间中很方便地组合出各种静态物品，如地形，墙壁，背景等，并且它们不需要对象那么多的系统资源。<br><br><img class="center" src="images/qs_tileset.png" alt="图块集"><br>上图是一个示例精灵，被用作绘制墙壁的图块集。正如你所看到的，它被“分割”成 64x64 个像素块，然后将其放入房间编辑器组合。
+<div class="index_list">图块集从精灵资源中获取，但是由于 <i>GameMaker Studio 2</i> 在创建游戏时会以不同于精灵的方式编辑图块集，所以它们被单独分类出来。基本上，一个基础图块就是一个单一图像，<i>GameMaker Studio 2</i> 将根据您所设置的各种值将图像拆分成不同的基础图块。 然后，您可以在房间编辑器（或在程序中通过代码）使用这些图块在房间中生成图块地图。它们可以在房间中很方便地组合出各种静态物品，如地形，墙壁，背景等，并且它们不需要物体那么多的系统资源。<br><br><img class="center" src="images/qs_tileset.png" alt="图块集"><br>上图是一个示例精灵，被用作绘制墙壁的图块集。正如你所看到的，它被“分割”成 64x64 个像素块，然后将其放入房间编辑器组合。<br>
 <br>
 
 <div class="note"> <b>注意</b>：图块 <b>一般是正方形的</b>，所以如果你需要制作其他形状，那么应该在房间编辑器中使用其他形状实例组成的精灵或在资源图层中制作。 </div>
@@ -76,14 +76,14 @@ if (window.name != "content")
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_path.png">路径</label>
 <input id="three" type="checkbox">
-<div class="index_list">在您创建游戏过程中的某些时候，您可能需要对象中的实例沿着一定的路径来通过这一关。你可以先简单地在房间中创建一些简单的位置排列，接着让实例在他们之间移动。但这个工作很繁重而且不好修改，测试和适配。这时你需要创建一个路径资源。<br>&gt; <br>路径资源的基本思路很简单-你可以通过在路径编辑器中绘制路径来对路径资源进行定义，然后你可以通过在对象的事件中放置动作模块或者添加代码来使对象在房间中沿着特定路径（来行动）。你可以设置对象跟随路径的速度以及房间中其他一些关于路径的位置和方向的值。 <br><br>您可以在<a href="../../2_interface/1_editors/paths.html">路径编辑器</a>部分中找到其他相关信息。</div>
+<div class="index_list">在您创建游戏过程中的某些时候，您可能需要物体中的实例沿着一定的路径来通过这一关。你可以先简单地在房间中创建一些简单的位置排列，接着让实例在他们之间移动。但这个工作很繁重而且不好修改，测试和适配。这时你需要创建一个路径资源。<br>&gt; <br>路径资源的基本思路很简单-你可以通过在路径编辑器中绘制路径来对路径资源进行定义，然后你可以通过在物体的事件中放置动作模块或者添加代码来使物体在房间中沿着特定路径（来行动）。你可以设置物体跟随路径的速度以及房间中其他一些关于路径的位置和方向的值。 <br><br>您可以在<a href="../../2_interface/1_editors/paths.html">路径编辑器</a>部分中找到其他相关信息。</div>
 <br>
 <a name="scripts" id="scripts"></a> <label class="collapse" for=
 "four"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_script.png">脚本（Scripts）</label>
 <input id="four" type="checkbox">
-<div class="index_list">脚本资源是一个你自己创建的功能函数的代码集合。例如，假设你想让一个敌人在死的时候创造一些实例，比如掉一些金子，产生爆炸或者流血效果，以及发出一些声音。为此你 <i>可以</i> 将实现这些效果的代码添加到每个对象的中，但是更好的方法是创建一个脚本资源，在其中输入实现上述功能的代码，然后在每个对象中调用它。这样的话，您只需在对象中添加一行调用代码即可调用此脚本实现预期的功能，如果您希望修改一些代码，您只需要在脚本中更改，所有调用的对象会自动运行新的代码，而不需要在所有对象中逐一修改，并且在多个地方改变修改同样的代码。 <br><br>您可以在 <a href="../../2_interface/1_editors/scripts.html">脚本编辑器</a> 部分找到更多相关信息。</div>
+<div class="index_list">脚本资源是一个你自己创建的功能函数的代码集合。例如，假设你想让一个敌人在死的时候创造一些实例，比如掉一些金子，产生爆炸或者流血效果，以及发出一些声音。为此你 <i>可以</i> 将实现这些效果的代码添加到每个物体的中，但是更好的方法是创建一个脚本资源，在其中输入实现上述功能的代码，然后在每个物体中调用它。这样的话，您只需在物体中添加一行调用代码即可调用此脚本实现预期的功能，如果您希望修改一些代码，您只需要在脚本中更改，所有调用的物体会自动运行新的代码，而不需要在所有物体中逐一修改，并且在多个地方改变修改同样的代码。 <br><br>您可以在 <a href="../../2_interface/1_editors/scripts.html">脚本编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="shaders" id="shaders"></a> <label class="collapse" for=
 "five"><img style=
@@ -142,23 +142,23 @@ for="seven"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_timeline.png">时间轴（Timelines）</label>
 <input id="seven" type="checkbox">
-<div class="index_list">在大部分游戏中，你可能希望一些事情在特定的时间里发生。您可以通过在实例中使用 <i>闹钟事件</i> 来实现该目的，但是当事情很复杂的时候，闹钟事件就不太适用了，特别是闹钟事件的设置上限为12个。这就是为什么会存在时间轴资源的原因。在时间轴中，您可以设置在游戏内事件的任何特定时刻要执行那些操作，并且可以在不同的事件以及代码中使用可用于对象的所有操作。创建时间线后，您可以将其分配给某个对象，然后该对象的实例将在所放置或者创建的房间在指定时刻执行操作以及代码。<br><br> 您可以在 <a href="../../2_interface/1_editors/timelines.html">时间轴编辑器</a> 部分找到更多相关信息。</div>
+<div class="index_list">在大部分游戏中，你可能希望一些事情在特定的时间里发生。您可以通过在实例中使用 <i>闹钟事件</i> 来实现该目的，但是当事情很复杂的时候，闹钟事件就不太适用了，特别是闹钟事件的设置上限为12个。这就是为什么会存在时间轴资源的原因。在时间轴中，您可以设置在游戏内事件的任何特定时刻要执行那些操作，并且可以在不同的事件以及代码中使用可用于物体的所有操作。创建时间线后，您可以将其分配给某个物体，然后该物体的实例将在所放置或者创建的房间在指定时刻执行操作以及代码。<br><br> 您可以在 <a href="../../2_interface/1_editors/timelines.html">时间轴编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="objects" id="objects"></a> <label class="collapse" for=
 "eight"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_object.png">物体（Objects）</label>
 <input id="eight" type="checkbox">
-<div class="index_list">物体是一个用来控制游戏各方面的具体事件的特殊资源。大多数时候这些对象都会关联一个精灵以便可以在房间中看见。但有时候它们也被用作“幕后”控制器来做与用户或时间相关的事情。他们可以给予行为和对某些事件做出反应以及彼此,和你在游戏看到的大多数事情都是基于对象和他们的相互作用。请注意，我们说‘基于’是因为您并不能直接把对象放置在房间中，而是将这些对象的 <b>实例</b> （相当于对象资源的副本或拷贝）放置入其中。这是非常重要的事情，因为对象和实例不一样，各自有一组可设置的属性。<br><br>
-所有对象都有一组可在对象编辑器中被设置的属性，例如链接精灵，是否使用物理规则，或者设置为其他对象的子对象。他们还具有一系列内置变量，可以在动作模块，脚本以及代码中使用。这些内置变量用于定义实例放置在游戏室中的位置，动画速度，移动方向以及其他一些内容。为了更好地控制随时间推移中的对象，每帧游戏内容都会被分割成一系列 <b>事件</b>，所以你可以将代码或动作模块添加到某一个实践中，事件只有在被触发时才会运行，事件可以通过操作鼠标或者与其他实例碰撞来触发。<br><br>
-对象实际上是游戏的构建模块，它与房间一起构成了所有游戏项目的核心。<br><br>您可以在 <a href="../../2_interface/1_editors/objects.html">物体编辑器</a> 部分找到更多相关信息。</div>
+<div class="index_list">物体是一个用来控制游戏各方面的具体事件的特殊资源。大多数时候这些物体都会关联一个精灵以便可以在房间中看见。但有时候它们也被用作“幕后”控制器来做与用户或时间相关的事情。他们可以给予行为和对某些事件做出反应以及彼此,和你在游戏看到的大多数事情都是基于物体和他们的相互作用。请注意，我们说‘基于’是因为您并不能直接把物体放置在房间中，而是将这些对象的 <b>实例</b> （相当于对象资源的副本或拷贝）放置入其中。这是非常重要的事情，因为物体和实例不一样，各自有一组可设置的属性。<br><br>
+所有物体都有一组可在对象编辑器中被设置的属性，例如链接精灵，是否使用物理规则，或者设置为其他对象的子对象。他们还具有一系列内置变量，可以在动作模块，脚本以及代码中使用。这些内置变量用于定义实例放置在游戏室中的位置，动画速度，移动方向以及其他一些内容。为了更好地控制随时间推移中的物体，每帧游戏内容都会被分割成一系列 <b>事件</b>，所以你可以将代码或动作模块添加到某一个实践中，事件只有在被触发时才会运行，事件可以通过操作鼠标或者与其他实例碰撞来触发。<br><br>
+物体实际上是游戏的构建模块，它与房间一起构成了所有游戏项目的核心。<br><br>您可以在 <a href="../../2_interface/1_editors/objects.html">物体编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="rooms" id="rooms"></a> <label class="collapse" for=
 "nine"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_room.png">房间</label>
 <input id="nine" type="checkbox">
-<div class="index_list">您在 <i>GameMaker Studio 2</i> 中所做的游戏至少需要一个空间来运行（当然可以不止一个），一个房间是一个基础空间，您可以在其中放置组成游戏的对象的实例，这里也是实例的事件触发和实现的场所。当然房间编辑器也是您可用的最强大的资源编辑器之一，因为它不仅允许您添加对象的实例，还可以添加图像，添加背景以及图块来绘制创建游戏世界，创建独立于对象/实例系统的额外特殊效果，以及独立于对象来运行代码。房间也可以设置从其他房间 <b>继承</b> 资源，这意味着您可以创建一个房间，然后在其中加载瓷砖，然后再创建一个房间来继承这些瓷砖，以便使您不必重复两次操作来加载瓷砖。<br><br>您可以从 <a href="../../2_interface/1_editors/rooms.html">房间编辑器</a> 中找到更多相关的信息。</div>
+<div class="index_list">您在 <i>GameMaker Studio 2</i> 中所做的游戏至少需要一个空间来运行（当然可以不止一个），一个房间是一个基础空间，您可以在其中放置组成游戏的物体的实例，这里也是实例的事件触发和实现的场所。当然房间编辑器也是您可用的最强大的资源编辑器之一，因为它不仅允许您添加物体的实例，还可以添加图像，添加背景以及图块来绘制创建游戏世界，创建独立于物体/实例系统的额外特殊效果，以及独立于物体来运行代码。房间也可以设置从其他房间 <b>继承</b> 资源，这意味着您可以创建一个房间，然后在其中加载瓷砖，然后再创建一个房间来继承这些瓷砖，以便使您不必重复两次操作来加载瓷砖。<br><br>您可以从 <a href="../../2_interface/1_editors/rooms.html">房间编辑器</a> 中找到更多相关的信息。</div>
 <br>
 <a name="Notes" id="Notes"></a> <label class="collapse" for=
 "thirteen"><img style=
@@ -231,7 +231,7 @@ alt="Resource Tree RMB Menu">：您可以使用的选项有：<br>
 <li><b>创建</b> - 创建您打开菜单所点击类型的新资源。<br>
 <br></li>
 
-<li><b>打开属性</b> - 打开所点击资源类型的资源属性编辑器（请注意，您也可以双击 <img style="vertical-align:middle" src="../../images/icon_lmb.png">）。<br>
+<li><b>打开属性</b> - 打开所点击资源类型的资源属性编辑器（请注意，您也可以双击 <img style="vertical-align:middle" src="../../images/icon_rmb.png">）。<br>
 <br></li>
 
 <li><b>添加现有资源</b> - 从不同的 <i>GameMaker Studio 2</i> 项目文件夹中添加现有资源。<br>
