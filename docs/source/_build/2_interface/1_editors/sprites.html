@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>The Sprite Editor</title>
+<title>精灵编辑器</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,362 +30,184 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>The Sprite Editor</h2>
+<h2>精灵编辑器</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
 <p><img class="center" src="images/editor_sprites.png" alt=
-"精灵编辑器（Sprite Editor）">
+"精灵编辑器">
 </p>
 
-<p>The sprite editor is where you set the general properties for
-any sprite resource that you make. You can open this window by
-creating a new sprite (right-click <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> on the
-sprite resource folder and select "Create"), by double-clicking
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-on an existing sprite or by right-clicking <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> an
-existing sprite and selecting "Properties". The parts that make up
-the Sprite Editor are as follows:</p>
+<p>精灵编辑器是你为精灵资源设置常规属性的地方。你可以通过创建一个新的精灵（右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 精灵资源文件夹并选择 “创建精灵”）打开此窗口，另一个方法是双击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 现有的精灵或右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 现有的精灵并选择 “属性”。构成精灵编辑器的部分如下：</p>
 
 <blockquote><a name="sprite_name" id="sprite_name"></a>
 <label class="collapse" for="one">精灵名称</label> <input id=
 "one" type="checkbox">
 <div class="index_list">
-<p>Here you can name the sprite . The sprite name is what will be
-used throughout your game project to identify the sprite as a
-resource and can <i>only</i> be alpha-numeric and may only use the
-underbar "_" symbol. While you can use numbers in the sprites name,
-the name cannot start with a number as that would make it an
-invalid resource name when using GML or DnD™.</p>
+<p>在这里你可以命名精灵。精灵名称将在整个游戏项目中用于将精灵标识为资源，并且 <i>只能</i> 是字母数字，并且只能使用下划线 “_” 符号。 虽然你可以在精灵名称中使用数字，但名称不能以数字开头，因为在使用 GML 或 DnD™ 时会使其成为无效的资源名称。</p>
 </div>
 <br>
 <a name="sprite_image" id="sprite_image"></a> <label class=
 "collapse" for="seven">图像</label> <input id="seven" type=
 "checkbox">
 <div class="index_list">
-<p>In this section you can set the image size by clicking the
-<b>Sprite Size</b> button <img style="vertical-align:middle" src=
-"images/icon_spritesize.png">. This will open the following window:
-<img class="center" src=
+<p>在本节中，你可以通过单击 <b>调整精灵大小</b> 按钮 <img style="vertical-align:middle" src=
+"images/icon_spritesize.png"> 来设置图像大小。这将打开以下窗口：<img class="center" src=
 "images/editor_sprites_resizeproperties.png" alt=
 "Sprite Editor Resize Properties"></p>
 
-<p>Here you can see a preview of the sprite before and after
-applying the chosen transforms, and the section below is for
-setting the new sprite properties and is split into two parts:</p>
+<p>在这里，你可以看到应用所选变换之前和之后的精灵预览，下面的部分用于设置新的精灵属性，并分为两部分：</p>
 
 <ul>
-<li><b>Scale Image</b>: With this option you can resize the sprite
-draw canvas and any images contained on the sprite will be
-stretched and scaled to fit the new size. You can choose to scale
-and maintain the aspect ratio of the base image, and you can also
-choose whether to scale in Pixels or in Percentage. Depending on
-the type of image you are working with you may also want to enable
-linear interpolation or not (in general, linear interpolation will
-"smooth" pixels over an area and so is best left off for pixel
-art).<br>
+<li><b>缩放图像</b>: 使用此选项，你可以调整精灵绘制画布的大小，并且精灵上包含的任何图像都将被拉伸和缩放以适合新的大小。你可以选择缩放并保持长宽比，还可以选择是以像素还是以百分比缩放。根据你正在使用的图像类型，你可能还想要启用线性插值（通常，线性插值会在一个区域上 “平滑” 像素，因此最好不要用于像素艺术）。<br>
 <br></li>
 
-<li><b>Resize Canvas</b>: This option will resize the draw canvas
-to the new size without scaling the contents. You can set the
-"anchor" point for the resize using the directional arrows then set
-the size value. There is an option to maintain aspect ratio when
-resizing the canvas and at the bottom you can choose to set the
-resize values in either pixels or as a percentage.</li>
+<li><b>调整画布尺寸</b>: 此选项会将绘制画布调整为新尺寸而不缩放内容。你可以使用方向箭头设置调整尺寸的 “锚点”，然后设置尺寸值。在调整画布尺寸时可以选择保持纵横比，在底部，你可以选择以像素或百分比形式设置调整尺寸值。</li>
 </ul>
 
-<p>When you are happy with the new size, you can click <i>Apply</i>
-to apply the changes and close the Resize Properties window.</p>
+<p>如果对新尺寸感到满意，可以单击 <i>应用</i> 以应用更改并关闭 “调整尺寸属性” 窗口。</p>
 
-<div class="note"><b>注意</b>： This option is only available for bitmap sprites and will be greyed out for SWF or skeleton animation sprites.</div>
+<div class="note"><b>注意</b>： 此选项仅适用于位图精灵，并且对于 SWF 或骨架动画精灵将显示为灰色。</div>
 <br>
 
-<p>In this section you can also either open the <a href=
-"images.html">Image Editor</a> to draw on your sprite, or you can
-click on the "<i>Import</i>" button to import a previously created
-sprite. Sprites can be imported from most common bitmap formats
-(<tt>PNG</tt>, <tt>JPG</tt>, <tt>GIF</tt>, etc...) but <i>GameMaker
-Studio 2</i> also supports vector sprites (SWF) and skeletal
-animation sprites (Spine). For more information on these formats,
-please see the section on <a href=
-"../../1_overview/3_additional_information/importing_non_bitmap_sprites.html">
-Importing Non-Bitmap Sprites</a>. Note that when importing bitmap
-sprites you can select multiple image files in the file explorer
-and each one will be added to the same sprite as separate
-<i>sub-images</i> (frames).</p>
+<p>在这一部分中，你还可以打开 <a href=
+"images.html">图像编辑器</a> 以在精灵上绘制，也可以单击 “<i>导入</i>” 按钮导入以前创建的精灵。 精灵可以从最常见的位图格式（<tt>PNG</tt>、<tt>JPG</tt>、<tt>GIF</tt> 等）导入，但 <i>GameMaker Studio 2</i> 还支持矢量精灵（SWF）和骨架动画精灵（Spine）。有关这些格式的更多信息，请参阅有关 <a href=
+"../../1_overview/3_additional_information/importing_non_bitmap_sprites.html">导入非位图精灵</a> 的部分。 请注意，导入位图精灵时，你可以在文件资源管理器中选择多个图像文件，每个图像文件将作为单独的 <i>子图像</i>（帧）添加到同一个精灵中。</p>
 </div>
 <br>
 <a name="sprite_textures" id="sprite_textures"></a> <label class=
 "collapse" for="eigth">纹理设定</label> <input id="eigth"
 type="checkbox">
 <div class="index_list">
-<p>This section of the sprite properties window deals with how
-<i>GameMaker Studio 2</i> stores the images that make up your
-sprite on <b>texture pages</b> for use with devices and browsers.
-For desktop platforms this is not normally <i>too</i> important,
-but when you start to develop for mobile or web the proper
-management of your image assets (textures) becomes very important
-as poorly managed textures can have detrimental effect on your
-game, causing performance issues.</p>
+<p>精灵属性窗口的这一部分处理 <i>GameMaker Studio 2</i> 如何将构成精灵的图像存储在 <b>纹理页</b> 上，以便与设备和浏览器一起使用。对于桌面平台而言，这通常 <i>不太</i> 重要，但是当你开始为移动设备或网络开发时，对图像资产（纹理）的正确管理变得非常重要，因为管理不善的纹理会对你的游戏产生不利影响，从而导致性能问题。
+</p>
 
-<p>The <b>Tile:Horizontal</b> and <b>Tile:Vertical</b> check boxes
-are, by default, not normally checked as most times you do not want
-to tile sprites. However, in certain circumstances you may wish
-them to tile, meaning that you should check these options,
-especially if you are going to be scaling the view or room as
-scaling can introduce artefacts into the graphics of a game if the
-texture page is not generated properly.</p>
+<p><b>水平平铺</b> 和 <b>垂直平铺</b>默认情况下不会被检查，因为大多数时候你不想平铺精灵。但是，在某些情况下，你可能希望它们平铺，这意味着你应该勾选这些选项，特别是如果你要缩放视图或房间，因为如果纹理页没有正确生成，缩放会将人工制品引入到游戏的图形中。</p>
 
-<p>If your sprite is going to be used as a texture map, then you
-should check the <b>Separate Texture Page</b> box and the sprite
-will be given a texture page all of its own (note that each
-sub-image will <i>also</i> get its own texture page, so if your
-sprite has 10 images you will generate 10 texture pages). This will
-increase the texture memory needs of your game tremendously and so
-great care must be taken when using this option. Also note that in
-general if your sprite is using this option for 3D, then the
-textures should be a power of 2 (ie&gt; 128x128, 256x256, 512x512
-etc...).</p>
+<p>如果你的精灵将用作纹理贴图，那么你应该勾选 <b>独立的纹理页</b> 复选框，并且精灵将被赋予一个独立的纹理页（请注意，每个子图像 <i>也</i> 将获得自己的纹理页，因此，如果你的精灵有 10 个图像，你将生成 10 个纹理页）。这将极大地增加游戏的纹理内存需求，因此在使用此选项时必须非常小心。另请注意，一般情况下，如果你的精灵使用此选项进行 3D，则纹理应为 2 的次方数（例如 &gt; 128 x 128、256 x 256、512 x 512等...）。</p>
 
-<p>Next, you can chose the texture group that you wish the sprite
-resource to belong to. Basically, a texture group (previously
-defined in the <a href=
-"../../2_interface/3_settings/textures.html">Texture Group
-Manager</a>) is something that you can set up so that all the image
-resources that you need for specific rooms or levels of your game
-can be stored together. So, for example, you can have all your
-level 1 images in one texture group, all your level 2 images in
-another etc... and <i>GameMaker Studio 2</i> will try to place all
-those grouped resources on the same texture page to reduce texture
-page swapping while your game is running on the chosen target
-platform.</p>
+<p>接下来，你可以选择希望精灵资源所属的纹理组。基本上，纹理组（先前在 <a href=
+"../../2_interface/3_settings/textures.html">纹理组管理器</a> 中定义）是你可以设置的，以便你可以将特定房间或游戏关卡所需的所有图像资源存储在一起。因此，例如，你可以在一个纹理组中包含所有第一关图像，在另一个纹理组中包含所有第二关图像...而 <i>GameMaker Studio 2</i> 会尝试将所有这些分组资源放在同一纹理页上以减少纹理页在你选择的目标平台上运行游戏时进行交换。</p>
 
-<div class="note"><b>注意</b>： This may not always be necessary and the performance increase from this method will depend on whether the target device is CPU bound or GPU bound.</div>
+<div class="note"><b>注意</b>： 这可能并不总是必要的，并且此方法的性能提升将取决于目标设备是 CPU 绑定还是 GPU 绑定。
+</div>
 
 <p><br>
+你可以在 <a href=
+"../../1_overview/3_additional_information/texture_pages.html">此处</a> 找到有关纹理页的更多信息。</p>
 
-You can find out more about texture pages <a href=
-"../../1_overview/3_additional_information/texture_pages.html">here</a>.</p>
+<p>下一个选项是为精灵图像启用 <b>预乘 Alpha 值</b>。启用时，这将预先乘以精灵的所有子图像的 alpha，这通常只需要将精灵绘制到曲面或某些特定的特殊效果。对于普通精灵使用，你不会看到普通精灵和预乘精灵之间有任何明显的差异。
+</p>
 
-<p>The next option is to enable <b>pre-multiplied alpha</b> for the
-sprite images. When enabled, this will pre-multiply the alpha of
-all sub-images of the sprite, and this is normally only necessary
-drawing sprites to surfaces, or for some specific special effects.
-For normal sprite use you should not see any noticeable difference
-between the normal sprite and the pre-multiplied one.</p>
-
-<p>Finally we have <b>Edge Filtering</b>. This option is
-specifically for when you have linear interpolation enabled for
-your game and you are seeing "halos" of colour around your sprites.
-This is caused by the hardware interpolating from multiple source
-texels on the texture page all at once, and can be particularly
-obvious when you scale games up in resolution. Enabling this will
-filter the edge pixels to take on the colour of the nearest full
-alpha sprite pixel and so blend the interpolated pixels without the
-halo that was present previously.</p>
+<p>最后我们有 <b>边缘过滤</b> 选项。此选项专门用于为游戏启用线性插值并且在精灵周围看到 “晕圈” 时。这是由同时从纹理页上的多个源文本插值的硬件造成的，当你在分辨率上缩放游戏时，这一点尤其明显。启用此选项将过滤边缘像素以采用最近的完整 alpha 精灵像素的颜色，从而混合插值像素，而不使用先前存在的光晕。</p>
 </div>
 <br>
 <a name="sprite_mask" id="sprite_mask"></a> <label class="collapse"
 for="two">碰撞遮罩</label> <input id="two" type="checkbox">
 <div class="index_list">
-<p>All sprites have a <i>collision mask</i> which corresponds to
-the area of the sprite that will be used to detect collisions when
-the sprite is assigned to an instance. You can first set the
-<b>Mode</b> for the collision mask, which can be one of the
-following:<br>
+<p>所有精灵都有一个 <i>碰撞遮罩</i>，它对应于精灵区域，当精灵被分配给一个实例时，该区域将用于检测碰撞。 你可以先为碰撞遮罩设置 <b>模式</b>，该模式可以是以下之一：<br>
 <br></p>
 
 <ul>
-<li><b>Automatic</b>: <i>GameMaker Studio 2</i> will calculate the
-collision mask automatically based on the sprite alpha values (this
-will depend on the <i>Tolerance</i> setting explained below).<br>
+<li><b>自动</b>： <i>GameMaker Studio 2</i> 将根据精灵 alpha 值自动计算碰撞遮罩（这取决于下面解释的 <i>容差</i> 设置）。<br>
 <br></li>
 
-<li><b>Full Image</b>: The mask will be calculated with it's bounds
-being the same as the left, right, top and bottom bounds of the
-sprite.<br>
+<li><b>全图</b>： 它将使用与精灵相同的左、右、顶部和底部边界来计算遮罩。<br>
 <br></li>
 
-<li><b>Manual</b>: Selecting this means that you wish to set the
-bounds of the collision mask using the input values for left,
-right, top and bottom.<br>
+<li><b>手动</b>： 选择此选项意味着你希望使用左、右、上和下的输入值设置碰撞遮罩的边界。<br>
 <br></li>
 </ul>
-
-Apart from the collision mask Mode, there are also various
-<b>types</b> of collision mask which you can choose from the drop
-down menu:<br>
+除了碰撞遮罩模式外，还有各种 <b>类型</b> 的碰撞遮罩，你可以从下拉菜单中选择：<br>
 <br>
 
 <ul>
-<li><b>Rectangle</b>: A simple rectangular collision mask. This is
-the fastest to resolve when used in your project.<br>
+<li><b>矩形</b>： 一个简单的矩形碰撞遮罩。在项目中使用时，这是最快解决问题的选项。<br>
 <br></li>
 
-<li><b>Ellipse</b>: Creates an elliptical collision mask. This is
-slower to resolve.<br>
+<li><b>旋转矩形</b>： 这是一个简单的矩形碰撞遮罩，它将与指定了精灵的实例的 <tt>image_angle</tt> 值一起旋转。这比常规矩形碰撞遮罩要慢，但比精确的碰撞遮罩更快。<br>
 <br></li>
 
-<li><b>Diamond</b>: Creates a "diamond" collision mask. This is
-slower to resolve and generates more CPU overhead.<br>
+<li><b>椭圆</b>： 创建椭圆形碰撞遮罩。解析起来比较慢。<br>
 <br></li>
 
-<li><b>Precise</b>: This creates a precise collision mask based on
-the outline of the sprite. If the sprite has multiple sub-images,
-then this will be a composite of the edges of all the sub-images
-placed over each other. This is very slow and generates a lot of
-CPU overhead.<br>
+<li><b>菱形</b>： 创建 “菱形” 碰撞遮罩。解析起来速度较慢，并产生更多的 CPU 开销。<br>
 <br></li>
 
-<li><b>Precise</b> (per frame): This creates a precise collision
-mask on a per-frame basis (ie: the mask will change to conform to
-the outline of each different frame). This is by far the slowest
-type of collision mask to resolve and should be avoided except in
-very, very specific and infrequent cases.</li>
+<li><b>精确</b>： 这将根据精灵的轮廓创建精确的碰撞遮罩。 如果精灵具有多个子图像，则这将是放置在彼此之上的所有子图像的边缘的合成。请注意，如果将 <b>模式</b> 设置为 <i>手动</i> 并更改默认值，则精确遮罩将被剪切到边界框。这非常慢并且会产生大量的 CPU 开销。<br>
+<br></li>
+
+<li><b>精确</b> （每帧）： 这会在每帧的基础上创建一个精确的碰撞遮罩（即：遮罩将改变以符合每个不同帧的轮廓）。请注意，如果将 <b>模式</b> 设置为 <i>手动</i> 并且你更改默认值，则精确遮罩将被剪切到边界框。这是迄今为止要解决的最慢类型的碰撞遮罩，应该避免，除非是非常非常具体且不常见案例。</li>
 </ul>
-
-The following image illustrates the different mask options:
-
-
+下图说明了不同的遮罩选项：
 
 <p><img class="center" src="images/bbox_image.png" alt=
 "碰撞">
 </p>
 
-<p>The collision checking options are very important ones for your
-game, as they will directly influence how your objects interact and
-how your game runs, with the wrong settings even having a negative
-impact on the over all performance. Why is that? Well, whenever two
-instances meet, and both instances have a valid mask, a collision
-event is generated by checking the overlap of the mask, which can
-either be precise or not, and adapted to the image index or not.
-Below is an image to illustrate this:</p>
+<p>碰撞检查选项对于你的游戏非常重要，因为它们将直接影响你的物体如何交互以及你的游戏如何运行，错误的设置甚至会对整个性能产生负面影响。 这是为什么？ 每当两个实例相遇，并且两个实例都具有有效遮罩时，通过检查遮罩的重叠来生成冲突事件，该重叠可以是精确的或不精确的，并且适合于图像索引。 下面是一张图片来说明这一点：</p>
 
 <p><img class="center" src="images/basic_collisions_image.png" alt=
 "碰撞">
 </p>
 
-<p>Beneath this, you have the <i>alpha tolerance</i> slider, which
-indicates the tolerance for creating the mask with respect to the
-transparency of the sprites pixels - with a higher tolerance pixels
-that are partially transparent are left outside the mask, while
-with a lower tolerance the mask will take into account those
-pixels. This influences both the bounding box (when not set to
-manual) and the mask for precise collision checking.</p>
+<p>在此下方，你有 <i>alpha 容差</i> 滑块，它指示相对于精灵像素的透明度创建遮罩的容差 - 具有较高容差的部分透明的公差像素留在遮罩外部，而具有较低容差的遮罩将考虑这些像素。这会影响边界框（未设置为手动时）和用于精确碰撞检查的遮罩。</p>
 
-<p>Finally you can set the <b>Bounding Box</b> limits for the mask.
-The bounding box is the name given to the rectangular area that the
-sprite mask fits in. Only pixels inside this bounding box are used
-for the mask and will be involved in collision checking, and by
-default this is automatically computed, taking the alpha tolerance
-into account. If you have precise checked then this will be
-separate for each sub-image too. When setting it yourself, you can
-input the values in the boxes for left, right top and bottom, or
-you can click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> in the sprite view and drag to "draw"
-it over the sprite. Note that when "drawing" the bounding box, the
-mask is automatically generated to fit within the end values.</p>
+<p>最后，你可以为遮罩设置 <b>边界框</b> 限制。边界框是精灵面具所适合的矩形区域的名称。只有这个边界框内的像素用于遮罩，并且将参与碰撞检查，默认情况下会自动计算，并考虑 alpha 容差。如果你检查了 “精确（每帧）”，则每个子图像也将分开。自己设置时，可以在左侧，右上方和下方的框中输入值，也可以在精灵视图中单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并拖动以在精灵上 “绘制” 它。请注意，在 “绘制” 边界框时，会自动生成遮罩以适合最终值。</p>
 
-<p>It is worth noting that if you go to the Preview window, you can
-adjust the collision mask using the "handles" found in each corner.
-Clicking and dragging these will adjust the collision mask just the
-same as inputing values for the bounding box would.</p></div>
+<p>值得注意的是，如果你转到 “预览” 窗口，则可以使用每个角落中的 “手柄” 调整碰撞遮罩。单击并拖动这些将调整碰撞遮罩，就像输入边界框的值一样。</p></div>
 <br>
 <a name="sprite_properties" id="sprite_properties"></a>
-<label class="collapse" for="four">Origin / Zoom</label> <input id=
+<label class="collapse" for="four">原点 / 缩放</label> <input id=
 "four" type="checkbox">
 <div class="index_list">
-<p>The top bar of the sprite editor contains the sprite origin
-properties and the zoom controls for the preview window. Here you
-can see the width and height of the sprite, as well as set the
-<b>origin</b>. This is the point in the sprite that corresponds to
-its position within the room, ie: when you create an instance at a
-particular x/y position, the origin of the sprite is placed there.
-Default it is the top left corner of the sprite but it is often
-more convenient to use the centre or you may wish to have some
-other position used, so you can click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on the
-origin drop-down menu and select one of the default values. You can
-also set the origin manually by clicking <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> in the
-sprite preview image which will move the cross to the point you
-clicked, or by inputting different values for x and y in the
-corresponding boxes. Note that you can even set an origin outside
-the area of sprite by using negative numbers (for left and up) or
-positive numbers larger than the sprite width and height (for right
-and down), which can be very useful when dealing with objects that
-need to draw composite sprites.</p>
+<p>精灵编辑器的顶部栏包含精灵原点属性和预览窗口的缩放控件。在这里，你可以看到精灵的宽度和高度，以及设置 <b>原点</b>。原点是精灵中与其在房间内的位置对应的点，即：当你在特定的 x / y 位置创建实例时，精灵的原点放在那里。默认它是精灵的左上角，但使用中心通常更方便，或者你可能希望使用其他位置，因此你可以单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 原点下拉菜单并选择其中一个默认值。你还可以通过单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 精灵预览图像手动设置原点，该图像将十字移动到你单击的点，或者在相应的框中输入 x 和 y 的不同值。请注意，你甚至可以使用负数（左侧和上侧）或大于精灵宽度和高度（右侧和下侧）的正数来设置精灵区域之外的原点，这在处理需要绘制复合精灵物体时非常有用。</p>
 
-<p>To the top right are the zoom controls, where you can zoom the
-preview image in or out as required. Click the <img style=
-"vertical-align:middle" src="images/editor_sprites_eyeglass.png">
-icon to make the image 1:1 with the actual pixels.</p>
+<p>右上角是缩放控件，你可以根据需要在其中放大或缩小预览图像。单击 <img style=
+"vertical-align:middle" src="images/editor_sprites_eyeglass.png"> 图标可使图像与实际像素成 1:1。</p>
 </div>
 <br>
 <a name="sprite_preview" id="sprite_preview"></a> <label class=
 "collapse" for="five">预览</label> <input id="five" type=
 "checkbox">
 <div class="index_list">
-<p>The sprite preview window shows the sprite as it will look in
-the game, and can be zoomed in or out by using the mouse wheel
-<img style="vertical-align:middle" src=
-"../../images/icon_mmb.png">, and panned around by using the
-<img style="vertical-align:middle" src="../../images/icon_mmb.png">
-or by holding <img style="vertical-align:middle" src=
+<p>精灵预览窗口显示游戏中的精灵，可以使用鼠标滚轮 <img style="vertical-align:middle" src=
+"../../images/icon_mmb.png"> 放大或缩小，并通过使用 <img style="vertical-align:middle" src="../../images/icon_mmb.png"> 或按住 <img style="vertical-align:middle" src=
 "../../images/icon_space.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> and dragging. You can use the
-Frame controls (explained below) to change how the preview image is
-displayed too.</p>
+src="../../images/icon_rmb.png"> 和拖动来平移。 你可以使用帧工具栏（如下所述）更改预览图像的显示方式。</p>
 </div>
 <br>
 <a name="sprite_frames" id="sprite_frames"></a> <label class=
 "collapse" for="three">帧</label> <input id="three" type=
 "checkbox">
 <div class="index_list">
-<p>This part of the sprite editor shows each of the different
-frames that make up a single sprite. You can click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on any
-frame and drag it left or right to change the order in which they
-will be animated, and you can also double click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on any
-frame to launch the <a href="images.html">Image Editor</a> and edit
-them. A selected frame will have a Delete icon <img style=
-"vertical-align:middle" src="images/icon_removeframe.png"> at the
-top corner, and you can click that to remove the frame from the
-sprite. You can also click <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+<p>精灵编辑器的这一部分显示构成单个精灵的每个不同的帧。你可以单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 任一帧并向左或向右拖动以更改它们的动画顺序，也可以双击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 任何帧以启动 <a href="images.html">图像编辑器</a> 并进行编辑。 选定的帧顶部有一个删除图标 <img style=
+"vertical-align:middle" src="images/icon_removeframe.png">，你可以单击该图标从精灵中删除帧。你还可以单击多个帧上的 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on
-multiple frames to select them together, in which case clicking the
-Delete icon will delete <i>all</i> the selected frames.</p>
+"vertical-align:middle" src="../../images/icon_rmb.png"> 多选它们，在这种情况下，单击删除图标将删除 <i>所有</i> 选定的帧。</p>
 </div>
 <br>
 <a name="sprite_controls" id="sprite_controls"></a> <label class=
-"collapse" for="six">Frame Controls</label> <input id="six" type=
+"collapse" for="six">帧工具栏</label> <input id="six" type=
 "checkbox">
 <div class="index_list">
-<p>The frame controls are for playing back in the preview window
-the animation of the frames, with the play button starting/stopping
-the animation and the Loop button <img style=
-"vertical-align:middle" src="images/icon_loop.png"> used to set
-whether the sprite loops <img style="vertical-align:middle" src=
-"images/icon_loopon.png"> (goes back to frame 1 when the last frame
-is reached) or ping-pongs <img style="vertical-align:middle" src=
-"images/icon_pingpong.png"> (goes backwards through the frames when
-the last frame is reached) and you can set the speed at which they
-should be played back from the input box on the left. The frame
-speed can either be based on "Frames per second", or "Frames per
-game frame". The total number of frames available are shown to the
-right along with the current frame that has been selected, and you
-can select multiple frames with you can select frames by using
-<img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+<p>帧工具栏用于在预览窗口中播放帧的动画，播放按钮开始 / 停止动画，循环按钮 <img style=
+"vertical-align:middle" src="images/icon_loop.png"> 用于设置精灵是否循环 <img style="vertical-align:middle" src=
+"images/icon_loopon.png">（到达最后一帧时返回到第 1 帧） 或类似乒乓球 <img style="vertical-align:middle" src=
+"images/icon_pingpong.png">（到达最后一帧时掉头向后移动），你可以从左侧输入框设置它们的播放速度。 帧速度可以设置为 “FPS（cpu steps）” 或 “游戏 FPS（game steps）”。 可用的帧总数与所选的当前帧一起显示在右侧，你可以选择多个帧，可以使用 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png">.</p>
+"vertical-align:middle" src="../../images/icon_rmb.png"> 选择帧。</p>
 </div></blockquote>
 
 <p><br>
@@ -397,12 +219,11 @@ src="../../images/icon_cmd.png"> + <img style=
 <div class="clear">
 <div style="float:left">上一页：<a href="index.html">编辑器索引</a></div>
 
-<div style="float:right">Next: <a href="images.html">The Image
-Editor</a></div>
+<div style="float:right">下一页: <a href="images.html">图像编辑器</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

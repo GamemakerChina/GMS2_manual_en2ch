@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>The Script Editor</title>
+<title>脚本编辑器</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,7 +30,7 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>The Script Editor</h2>
+<h2>脚本编辑器</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,326 +40,175 @@ if (window.name != "content")
 "Script Editor">
 </p>
 
-<p>You can use code in a number of places within <i>GameMaker
-Studio 2</i> from objects, to rooms, to instances, and there are a
-number of built in functions that make your life easier when
-programming with GML or Drag and Drop. However it is often
-necessary for you to create your own functions to do a specific
-task, or to condense a large section of code into a more manageable
-chunk, or even to be able to re-use a particular code block in many
-different places, which is why <i>GameMaker Studio 2</i> gives you
-the ability to create <b>scripts</b>.</p>
+<p>你可以在 <i>GameMaker Studio 2</i> 中的许多地方使用代码，从物体到房间，再到实例，还有许多内置函数可以让你在使用 GML 或进行拖放编程时更轻松。但是，通常需要创建自己的函数来执行特定任务，或者将大部分代码压缩到更易于管理的块中，或者甚至能够在许多不同的位置重用特定的代码块， 这就是 <i>GameMaker Studio 2</i> 为你提供创建 <b>脚本</b> 的能力的原因。
+</p>
 
 <blockquote>
-<div class="note"><b>注意</b>： While this section deals with scripts, the code window that you write your scripts in is the same as that for <a href="objects.html#object_events">Events</a>, <a href="rooms.html">room or instance creation code</a> or <a href=
-"shaders.html">Shaders</a>, and the functionality outlined here applies to all of them.</div>
+<div class="note"><b>注意</b>： 虽然本节涉及脚本，但你编写脚本的代码窗口与 <a href="objects.html#object_events">事件</a>、<a href="rooms.html">房间或实例创建代码</a> 或 <a href=
+"shaders.html">着色器</a> 的代码窗口相同，此处概述的功能适用于所有脚本。</div>
 <br>
 
-<div class="note"><b>注意</b>： This page references GML for writing scripts, but you can also create scripts using Drag and Drop (see <a href=
-"../../3_scripting/1_drag_and_drop_overview/action_scripts.html">here</a>) . No matter what you use to code your project, the information on this page is still valid for the editor itself.</div>
+<div class="note"><b>注意</b>： 此页面引用了用于编写脚本的 GML，但你也可以使用拖拽创建脚本（请参阅 <a href=
+"../../3_scripting/1_drag_and_drop_overview/action_scripts.html">此处</a>）。无论你使用什么来编写项目代码，此页面上的信息仍然对编辑器本身有效。</div>
 </blockquote>
 
-<p>Scripts are written using the scripting language GML (see the
-<a href="../../3_scripting/3_gml_overview/index.html">GML
-Overview</a> section for more details), which is the built-in
-programming language that <i>GameMaker Studio 2</i> uses. Once you
-become more familiar with <i>GameMaker Studio 2</i> and want to use
-it to its fullest extent, it is advisable to start learning to use
-this language, as it greatly expands your possibilities when
-creating games. You can also write scripts using Drag and Drop, but
-that requires a different editor and is discussed in the section of
-the manual for <a href=
-"../../3_scripting/1_drag_and_drop_overview/action_scripts.html">Action
-Scripts</a></p>
+<p>脚本使用脚本语言 GML 编写（有关详细信息，请参阅 <a href="../../3_scripting/3_gml_overview/index.html">GML 概述</a> 部分），这是 <i>GameMaker Studio 2</i> 使用的内置编程语言。一旦你对 <i>GameMaker Studio 2</i> 更加熟悉并希望最大程度地使用它，建议你开始学习使用这种语言，因为它可以极大地扩展你创建游戏时的可能性。你也可以使用拖拽编写脚本，但这需要不同的编辑器，并在 <a href=
+"../../3_scripting/1_drag_and_drop_overview/action_scripts.html">动作脚本</a>手册一节中讨论。</p>
 
-<p>A script (like any built-in function) can take different input
-variables, with real, string, boolean and special values like
-<tt>all</tt> or <tt>noone</tt> being accepted, and these input
-variables are generally called <b>arguments</b>, although they are
-also often referred to as <b>parameters</b>. To execute a script
-from an object or a time line you use the script name as if it were
-a function or by using the GML function <a href=
-"../../3_scripting/4_gml_reference/scripts/script_execute.html">script_execute</a>.
-You can name the script by right-clicking <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> on it in
-the resource tree and selecting <b>Rename</b>, but note that the
-script name must conform to the scripting rules for functions, so
-they must start with a letter and only contain letters, numbers or
-the "_" under-bar symbol.</p>
+<p>脚本（与任何内置函数一样）可以使用不同的输入变量，包括实数、字符串、布尔值和特殊值（例如 <tt>all</tt> 或者 <tt>noone</tt>），并且这些输入变量通常称为 <b>参数</b>，尽管它们通常也称为 <b>参数</b>。要从物体或时间线执行脚本，请使用脚本名称，就像它是函数一样，也可以使用 GML 函数 <a href=
+"../../3_scripting/4_gml_reference/scripts/script_execute.html">script_execute</a>。你可以通过在资源树中右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 脚本并选择 <b>重命名</b> 来命名脚本，但请注意脚本名称必须符合函数的脚本规则，因此它们必须以字母开头，并且只包含字母，数字或下划线符号 “_”。</p>
 
-<p>As mentioned above, you can pass a number of arguments to a script (16 in total), and it will use these to perform the task you have written it for. To understand this better, take, for example, an action (or a code in GML) and think about how it works... you place it in an event and specify a number of parameters and it will make your instance do something. 脚本也是如此，唯一的区别就是它们是由<i>你</i>所编写的。Not only can you pass arguments into a script, but you can also ask a script to <b>return</b> a value too (using the <a href=
-"../../3_scripting/3_gml_overview/3_scripts.html#return"><tt>return</tt></a> keyword), so you can use them to build calculating methods (mathematical methods) or give back an instance id after a complex collision detection or any number of things. Please note, however, that <i>using return ends the script</i>, and so no code after it has been used will be executed, and this means that a certain amount of thought has to go into how your scripts are structured.</p>
+<p>如上所述，你可以将许多参数传递给脚本（总共 16 个），它将使用这些参数来执行你为其编写的任务。为了让你更好的理解，让我们拿物体的一个​​动作来举个例子：你把动作添加到事件中，同时指定好一些相应的参数，那么你的实例就会执行你设置的动作。脚本也是如此，唯一的区别就是它们是由 <i>你</i> 所编写的。不仅可以将参数传递给脚本，你也可以要求脚本 <b>返回</b> 一个值（使用 <a href=
+"../../3_scripting/3_gml_overview/3_scripts.html#return"><tt>return</tt></a> 关键字），因此，你可以使用它们来构建计算方法（数学方法），或者在复杂的碰撞检测或任何事情之后返回实例 id。但请注意，使用 <i>return 会结束脚本</i>，因此在执行之后不会执行任何代码，这意味着必须考虑脚本的结构。</p>
 
-<p>When you first create a resource the script editor window will
-open with the following options:</p>
+<p>首次创建资源时，将打开脚本编辑器窗口，其中包含以下选项：</p>
 
 <blockquote><a name="script_tabs" id="script_tabs"></a>
-<label class="collapse" for="one">Script Tabs</label> <input id=
+<label class="collapse" for="one">脚本选项卡</label> <input id=
 "one" type="checkbox">
 <div class="index_list">
-<p>The script editor opens in a window with tabs across the top to
-let you have multiple scripts in one window (although this
-behaviour can be changed from the <a href=
-"../../1_overview/1_getting_started/preferences/prefs_general.html">
-Preferences</a> to give a new window to each script). You can click
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-on a script and then drag it to re-order the tabs, or if you
-prefer, you can pull it out of the current window and place it on
-the workspace to create a new window for that script (or add it to
-a different window), and you can also maximise the script editor to
-create a new workspace too. If you drag a script tab out of the IDE
-window, then a new IDE will be spawned to hold this script
-resource, and it can be used as you would the Main window.</p>
+<p>脚本编辑器在一个窗口中打开，顶部有选项卡，让你在一个窗口中拥有多个脚本（尽管可以从 <a href=
+"../../1_overview/1_getting_started/preferences/prefs_general.html">首选项</a> 更改此行为，为每个脚本提供一个新窗口）。 你可以单击一个脚本，然后拖动它以重新排序选项卡，或者如果你愿意，可以将其拉出当前窗口并将其放在工作区上为该脚本创建一个新窗口（或将其添加到 一个不同的窗口），你也可以最大化脚本编辑器来创建一个新的工作区。 如果将脚本选项卡拖出 IDE 窗口，则会生成一个新 IDE 以保存此脚本资源，并且可以像使用主窗口一样使用它。</p>
 
-<p>Note that if you are editing code from an <b>object event</b> in
-the script editor and you have maximised the script editor or have
-it on a separate window or workspace, then the right-click
-<img style="vertical-align:middle" src="../../images/icon_rmb.png">
-editor menu will have some extra options: <img class="center" src=
-"images/editor_scripts_rmb_object_menu.png" alt=
-"Script Editor RMB Object Menu"></p>
+<p>请注意，如果要在脚本编辑器中编辑 <b>物体事件</b> 中的代码，并且已最大化脚本编辑器或将其放在单独的窗口或工作区中，则右键单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 编辑器菜单将具有一些额外选项：</p>
 
 <ul>
-<li><b>Restore to workspace</b>: This will take the script editor
-out of a maximised/workspace state and re-chain it to the object in
-the workspace.</li>
+<li><b>恢复到工作区</b>： 这将使脚本编辑器脱离最大化 / 工作区状态，并将其重新链接到工作区中的物体。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Go to Object</b>: This will take you to the workspace that
-the object with the code is on and focus on the object.</li>
+<li><b>转到物体</b>： 这将带你进入具有代码的物体所在的工作区，并将焦点放在物体上。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Add /Open Event</b>: This permits you to add a new event to
-the object the current script belongs to, and will open a new code
-tab in the Script Editor for the added event. If the event selected
-already has code in it, then this will be opened in a new tab.</li>
+<li><b>添加 / 打开事件</b>： 这允许你向当前脚本所属的物体添加新事件，并将在脚本编辑器中为添加的事件打开新的代码选项卡。如果所选事件中已包含代码，则会在新选项卡中打开该代码。</li>
 </ul>
 
-<p>For information on the rest of the right-click <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> menu
-options, see the section on <b>Editing</b> below.</p>
+<p>有关其余右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 菜单选项的信息，请参阅下面的 <b>编辑</b> 部分。</p>
 </div>
 <br>
 <a name="script_gutter" id="script_gutter"></a> <label class=
-"collapse" for="five">Gutter</label> <input id="five" type=
+"collapse" for="five">行号栏（Gutter）</label> <input id="five" type=
 "checkbox">
 <div class="index_list">
-<p>The Gutter is used to show the line numbers for your code and
-also to convey some specific pieces of information. Most
-importantly, if you make mistakes or construct the code
-incorrectly, the <i>GameMaker Studio 2</i> IDE will inform you of
-the issue by flagging the line of code that is causing the issue
-with a red exclamation mark <img style="vertical-align:middle" src=
-"images/icon_codeerror.png">. You can then mouse over the symbol to
-get a brief description of what the issue is: <img class="center"
+<p>行号栏用于显示代码的行号，并用于传达一些特定的信息。最重要的是，如果你犯了错误或错误地构造了代码，<i>GameMaker Studio 2</i> IDE 将通过标记导致问题的代码行带有红色感叹号来通知你该问题。然后，你可以将鼠标悬停在符号上以获得问题的简要说明：<img class="center"
 src="images/editor_scripts_errors.png" alt=
 "Script Editor Syntax Error"></p>
 
-<p>The gutter will also mark any line of the script that has had a
-<b>breakpoint</b> added. A breakpoint is simply a place in the
-script where you want the <a href=
-"../2_extras/debugging.html">debug module</a> to pause the
-execution of your game when it is reached. You can toggle a
-breakpoint from any line of any script or object event by pressing
-"<b>f9</b>" or using the right-click <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> menu. When
-you add a breakpoint, it will show up like this in the gutter:
-<img class="center" src="images/editor_scripts_breakpoint.png" alt=
+<p>行号栏也会标记脚本中添加了断点的行。断点是你希望调试模块在到达时暂停执行游戏的脚本中的一个位置。你可以通过按 <b>f9</b> 或使用右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 菜单从脚本或物体事件的行切换断点。添加断点时，它会在行号栏中显示如下：<img class="center" src="images/editor_scripts_breakpoint.png" alt=
 "Script Editor Breakpoint Marker"></p>
 
-<p>Finally, the gutter will also show any bookmarked items too. To
-bookmark a line of code simply hold down <img style=
-"vertical-align:middle" src="../../images/icon_ctrl.png"> /
-<img style="vertical-align:middle" src="../../images/icon_cmd.png">
-+ <img style="vertical-align:middle" src=
-"../../images/icon_shift.png"> + Number (from 0 to 9), and this
-will permit you to skip back to this line of code from anywhere in
-the IDE simply by using <img style="vertical-align:middle" src=
+<p>最后，行号栏也会显示书签项目。要为一行代码添加书签，只需按住 <img style=
+"vertical-align:middle" src="../../images/icon_ctrl.png"> / <img style="vertical-align:middle" src="../../images/icon_cmd.png"> + <img style="vertical-align:middle" src=
+"../../images/icon_shift.png"> + 数字（从 0 到 9），这将允许你只需使用 <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + Number (from 0 to 9). To delete
-the bookmark, simply perform the same action as you used to add it
-on the line of code again. When a bookmark has been added, it will
-show like this: <img class="center" src=
+src="../../images/icon_cmd.png"> + 数字（从 0 到 9）从 IDE 中的任何位置跳回到这行代码。要删除书签，只需执行与将其添加到代码行上相同的操作。添加书签后，它将显示如下：<img class="center" src=
 "images/editor_scripts_bookmark.png" alt=
 "Script Editor Bookmark Marker"></p>
 </div>
 <br>
 <a name="script_search" id="script_search"></a> <label class=
-"collapse" for="four">Search/Replace</label> <input id="four" type=
+"collapse" for="four">搜索 / 替换</label> <input id="four" type=
 "checkbox">
 <div class="index_list">
-<p>While working in the script editor, you can press <img style=
+<p>在脚本编辑器中工作时，你可以按 <img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + "F" to open up the Search box or
-<img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + "H" to open up Search And
-Replace: <img class="center" src="images/editor_scripts_search.png"
-alt="Script Editor Search Box"></p>
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + “F” 打开搜索框或 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + “H” 打开搜索和替换：</p>
 
-<p>Here you can perform a <i>local</i> search for the keyword you
-input and once you have entered your search term, you can then use
-the arrows at the top right of the search window to skip from one
-found term to the next in the script. You can change how the search
-operation is carried out by toggling the following buttons:</p>
+<p>在这里，你可以对输入的关键字执行 <i>本地</i> 搜索，输入搜索词后，可以使用搜索窗口右上角的箭头从脚本中的一个找到的词语跳到下一个。 你可以通过切换以下按钮来更改搜索操作的执行方式：</p>
 
 <table class="icons">
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_exactword.png" alt="全词匹配">
 </td>
-<td class="text"><b>Whole Word Only</b>: When you toggle this, the
-search function will only highlight those strings that match the
-whole input string. For example, with it <i>off</i> a search for
-"random" will show up all words that contain this string - like
-<tt>irandom()</tt>, or <tt>randomise()</tt> - while toggling it to
-<i>on</i> would only show the function <tt>random()</tt>.</td>
+<td class="text"><b>全词匹配</b>： 当你切换此选项时，搜索功能将仅突出显示与整个输入字符串匹配的字符串。例如，全词匹配 <i>关闭</i> 时搜索 “random” 将显示包含此字符串的所有单词 - 如 <tt>irandom()</tt> 或 <tt>randomise()</tt> - 而将其切换为 <i>打开</i> 只会显示函数 <tt>random()</tt>。</td>
 </tr>
 
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_casesensitive.png" alt="Case Sensitive Toggle">
 </td>
-<td class="text"><b>Case Sensitive</b>: When this option is
-toggled, you are telling <i>GameMaker Studio 2</i> to check not
-only the contents of the search string, but the case too. For
-example, if you have a sprite called "spr_Dog" and do a search for
-"dog" with this toggle <i>off</i>, then the sprite string will be
-highlighted, however if the toggle is <i>on</i> then it won't since
-"Dog" is no longer considered the same as "dog".</td>
+<td class="text"><b>区分大小写</b>： 当切换此选项时，你告诉 <i>GameMaker Studio 2</i> 不仅要检查搜索字符串的内容，还要检查大小写。例如，如果你有一个名为 “spr_Dog” 的精灵，并且在 <i>关闭</i> 此项时搜索 “dog”，那么精灵字符串将被突出显示，但是如果切换 <i>打开</i> 则不会，因为 “Dog” 不再被认为与 “dog” 相同。</td>
 </tr>
 </table>
 
-<p>If you have opened the search window using <img style=
-"vertical-align:middle" src="../../images/icon_ctrl.png"> /
-<img style="vertical-align:middle" src="../../images/icon_cmd.png">
-+ "F", then the replace functionality will not be visible, so you
-need to click the Replace button <img style="vertical-align:middle"
-src="images/icon_replacetoggle.png"> to open it. Once open you can
-then enter a string that will be used to replace any given search
-string, using the following buttons to perform the action:</p>
+<p>如果你使用 <img style=
+"vertical-align:middle" src="../../images/icon_ctrl.png"> / <img style="vertical-align:middle" src="../../images/icon_cmd.png"> + “F” 打开了搜索窗口，则替换功能将不可见，因此你需要单击 “替换” 按钮 <img style="vertical-align:middle"
+src="images/icon_replacetoggle.png"> 将其打开。 打开后，你可以输入一个字符串，用于替换任何给定的搜索字符串，使用以下按钮执行操作：</p>
 
 <table class="icons">
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_replacenext.png" alt="替换下一个">
 </td>
-<td class="text"><b>Replace Next</b>: Clicking this will replace
-the next search string found in the script with the given replace
-string. Note that the "next" term is considered the next one after
-the current cursor position, and you can skip to different ones
-using arrow buttons at the top right of the search window.</td>
+<td class="text"><b>替换下一个</b>： 单击此按钮将使用给定的替换字符串替换脚本中找到的下一个匹配字符串。请注意，“下一个” 匹配项被视为当前光标位置之后的下一个匹配项，你可以使用搜索窗口右上角的箭头按钮跳到不同的匹配项。</td>
 </tr>
 
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_replaceall.png" alt="替换全部">
 </td>
-<td class="text"><b>Replace All</b>: Clicking this will replace
-<i>all</i> examples of the search string within the script using
-the given replace string.</td>
+<td class="text"><b>替换全部</b>： 单击此按钮将使用给定的替换字符串替换脚本中搜索字符串的 <i>所有</i> 示例。</td>
 </tr>
 </table>
 
-<p>Note that if you want to do a global search (ie: search the
-whole project rather than the current script), then you can press
-<img style="vertical-align:middle" src=
+<p>请注意，如果要进行全局搜索（即：搜索整个项目而不是当前脚本），则可以按 <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_shift.png"> +
-"F".</p>
+"vertical-align:middle" src="../../images/icon_shift.png"> + “F”。</p>
 </div>
 <br>
 <a name="script_edition" id="script_edition"></a> <label class=
-"collapse" for="two">Editing</label> <input id="two" type=
+"collapse" for="two">编辑</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
-<p>The main script editor is where you'll write all your code to
-create the script or fill an object event. Scripts and code events
-are written following the general rules for GML syntax (see the
-<a href="../../3_scripting/3_gml_overview/index.html">GML
-Overview</a> section for more details), and you can get help while
-writing your scripts from the auto-complete window:  <img class=
+<p>主脚本编辑器是你编写所有代码以创建脚本或填充物体事件的地方。脚本和代码事件是按照 GML 语法的一般规则编写的（有关详细信息，请参阅 <a href="../../3_scripting/3_gml_overview/index.html">GML 概述</a> 部分），你可以在从自动完成窗口编写脚本时获得帮助： <img class=
 "center" src="images/editor_scripts_codecomplete.png" alt=
 "Script Editor Code Complete"></p>
 
-<p>This window will pop up while you are writing your code
-(normally after a slight pause, but this can be set in the <a href=
-"../../1_overview/1_getting_started/preferences/prefs_texteditor.html">
-Preferences</a>) and give you a selection of "best-fit" answers in
-alphabetical order. While using the code editor you can click
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-and drag the mouse to select a row of code or hold down <img style=
-"vertical-align:middle" src="../../images/icon_alt.png"> then click
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-and drag to select columns of code. Anything selected in this way
-can then be copied, cut and pasted using the standard window
-shortcuts of <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <tt>C</tt>, <img style=
+<p>在编写代码时会弹出此窗口（通常在稍微暂停后，但可以在 <a href=
+"../../1_overview/1_getting_started/preferences/prefs_texteditor.html">首选项</a> 中设置），并按字母顺序为你提供“最佳”答案选择。使用代码编辑器时，你可以单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 并拖动鼠标以选择一行代码或按住 <img style=
+"vertical-align:middle" src="../../images/icon_alt.png"> 然后单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 并拖动以选择代码列。然后可以使用 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>C</tt>、<img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <tt>X</tt> and <img style=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>X</tt> 和 <img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <tt>V</tt>.</p>
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>V</tt> 的标准窗口快捷方式复制、剪切和粘贴以这种方式选择的任何内容。</p>
 
-<p>It is worth noting that you can comment your code in various
-ways. Commenting your code is very important for maintaining
-productivity as it keeps things clear and separates sections of
-code in such a way that it is obvious what each part does and why
-it is there. It also means that if you are working in a team then
-you can leave notes for other members and that they will know
-exactly what you have done or what a specific section of code is
-for. Even if you are a solo developer, leaving comments for your
-code is important, especially if you have to leave the project and
-come back to it at a later date.</p>
+<p>值得注意的是，你可以通过各种方式注释你的代码。注释代码对于保持生产力非常重要，因为它可以保持清晰，并以一种显而易见的方式分离代码部分，使每个部分的功能和原因显而易见。这也意味着，如果你在团队中工作，那么你可以为其他成员留下笔记，并且他们将确切地知道你已完成的工作或特定的代码部分。即使你是独立开发人员，为代码留下注释也很重要，特别是如果你必须离开项目并在以后再回到它。
+</p>
 
-<p>Commenting your code is simple, as you just have to use
-"<tt>//</tt>" before any line of text or you can comment out whole
-paragraphs by using "<tt>/* text here */</tt>". There are even two
-keyboard shortcuts to comment and uncomment selected lines of code:
-<img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <tt>K</tt> to comment, and
-<img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_shift.png"> +
-<tt>K</tt> to uncomment. The following image illustrates a script
-using both these methods: <img class="center" src=
+<p>注释你的代码很简单，因为你只需在文本行之前添加 “<tt>//</tt>” 即可，或者你可以使用 “<tt>/* 在这里添加文本 */</tt>” 注释掉整个段落。甚至还有两个键盘快捷键可以注释和取消注释选定的代码行：<img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>K</tt> 表示注释，而 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> +  <img style=
+"vertical-align:middle" src="../../images/icon_shift.png"> + <tt>K</tt> 表示取消注释。下图说明了使用这两种方法的脚本：<img class="center" src=
 "images/editor_scripts_comments.png" alt=
 "Script Editor Comments"></p>
 
-<p>Scripts can also have certain <b>JSDoc</b> style comments added
-so that when you use them in your code they show up in
-auto-complete along with their arguments and other details. you can
-find out more about this from the section <a href=
-"../../1_overview/3_additional_information/jsdoc.html">JSDoc Script
-Comments</a> for more information. It is important to note that
-script comments can be formatted and parsed by the To-Do List so
-that items can be added to the list automatically (for more
-information see <a href="../2_extras/todo_list.html">here</a>).</p>
+<p>脚本还可以添加某些 <b>JSDoc</b> 样式注释，以便在代码中使用它们时，它们会自动显示，并显示其参数和其他详细信息。 你可以从 <a href=
+"../../1_overview/3_additional_information/jsdoc.html">JSDoc 脚本注释</a> 部分获取更多信息。 请务必注意，脚本注释可以通过 To-Do 列表进行格式化和解析，以便该项可以添加到自动列表中（有关详细信息，请参见 <a href="../2_extras/todo_list.html">此处</a>）。</p>
 
-<p>Apart from comments you can also use special <tt>#region</tt>
-tags to mark a section of code for <b>Code Folding</b>. How this
-works is that you add a <tt>#region</tt> tag (along with any
-comment text) to the top of a section of code and then add a
-corresponding <tt>#endregion</tt> tag to the bottom of the section
-and then you can "fold" the code, ie: hide it away so you can cut
-down on the number of lines of code visible in the editor at any
-one time:</p>
+<p>除了注释，你还可以使用特殊的 <tt>#region</tt> 标记来标记代码的 <b>折叠代码</b> 部分。这是如何工作的，你将 <tt>#region</tt> 标记（以及任何注释文本）添加到代码部分的顶部，然后在该部分的底部添加相应的 <tt>#endregion</tt> 标记，然后你可以“折叠”代码， 即：将其隐藏起来，这样你就可以减少编辑器中可见的代码行数：</p>
 
 <p><img class="center" src="images/editor_scripts_coderegion.gif"
 alt="Script Editor Code Regions">
 </p>
 
-<p>The actual code looks something like this:</p>
+<p>实际代码看起来像这样：</p>
 
 <p class="code">#region This is an example region<br>
 <br>
@@ -370,88 +219,47 @@ yoff = sprite_get_yoffset(sprite);<br>
 <br>
 #endregion Further comment here if required<br></p>
 
-<p>As you might have noticed, parts of the script text are
-coloured. The script editor "knows" about existing objects,
-built-in variables and functions, etc. and colour codes them
-accordingly. Colour-coding helps a lot in avoiding mistakes as you
-can see immediately if you have misspelled some name or use a
-keyword as a variable, or have a syntax error. However, if you
-don't like the colour coding, in the <a href=
-"../../1_overview/1_getting_started/preferences/prefs_texteditor.html">
-Preferences</a> you can switch it on and off (you can also use F10)
-as well as customise the colours that are used.</p>
+<p>你可能已经注意到，脚本文本的某些部分是彩色的。脚本编辑器 “知道” 现有物体、内置变量和函数等，并相应地对它们进行颜色编码。颜色编码有助于避免错误，因为如果你拼错了一些名称或使用关键字作为变量，或者语法错误，你可以立即看到。但是，如果你不喜欢颜色编码，可以在 <a href=
+"../../1_overview/1_getting_started/preferences/prefs_texteditor.html">首选项</a> 中打开和关闭它（你也可以使用 F10）以及自定义使用的颜色。</p>
 
-<p>You can right-click <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> anywhere in the editor too to open up
-the following menu: <img class="center" src=
+<p>你也可以右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 编辑器中的任意位置以打开以下菜单：<img class="center" src=
 "images/editor_scripts_rmb_menu.png" alt="Script Editor Menu"></p>
 
-<p>Apart from the regular functions you'd expect to cut, copy and
-paste lines of code you also have the option to comment or
-uncomment any selected text, add or remove indents, as well split
-the code window into 1, 2 or 3 separate panes (note that the
-options relating to <tt>#regions</tt> will not be available if you
-have not defined any in the code being edited). These last options
-will split the window into different parts where you can then drag
-a script and have it show alongside the other ones for comparing
-and editing.  <img class="center" src=
+<p>除了剪切、复制和粘贴代码行的常规方法之外，你还可以选择注释或取消注释任何选定的文本、添加或删除缩进以及将代码窗口拆分为 1、2 或 3个单独的窗格 （请注意，如果你未在编辑的代码中定义任何选项，则与 <tt>#regions</tt> 相关的选项将不可用）。 这些最后的选项会将窗口拆分为不同的部分，然后你可以拖动脚本并将其与其他部分一起显示以进行比较和编辑。 <img class="center" src=
 "images/editor_scripts_panes.png" alt="Script Editor Panes"></p>
 
-<p>This is exceptionally useful for comparing two scripts or for
-viewing connected scripts at the same time, without needing another
-window or having to switch constantly between tabs. The other
-options in this menu are to toggle a breakpoint for use with the
-Debugger, and to convert the GML code into DnD™ or vice versa. Note
-that if converting code to DnD™, then it will <i>not</i> create
-individual actions for each line of code, but rather use a single
-code action to hold everything that was previously in the event or
-script.</p>
+<p>这对于比较两个脚本或同时查看连接的脚本非常有用，无需另外一个窗口或选项卡之间不断切换。此菜单中的其他选项是切换断点配合调试器一起使用，还有将 GML 代码转换为 DnD™，反之亦然。请注意，如果将代码转换为 DnD™，则 <i>不会</i> 为每行代码创建单独的动作，而是使用单个代码动作来保存先前在事件或脚本中的所有内容。
+</p>
 
-<p>Another very handy tool you have at your disposal when editing
-your scripts is the use of <b>Code Snippets</b>. By pressing
-<tt>F4</tt> you will open the code snippet pop-up, which permits
-you to select one of the commonly used code methods. You can also
-define your <i>own</i> code snippets if you want to, saving them to
-the directory where you installed <i>GameMaker Studio 2</i> in the
-following location: <tt>\GameMaker Studio
-2\TextEditor\snippets.txt</tt>. You can edit this file with any
-text editor following these rules:</p>
+<p>在编辑脚本时，你可以使用的另一个非常方便的工具是使用 <b>代码片段</b>。按 <tt>F4</tt>，你将打开代码片段弹出窗口，允许你选择一种常用的代码方法。如果需要，你还可以定义 <i>自己的</i> 代码片段，将它们保存到安装 <i>GameMaker Studio 2</i> 的目录：<tt>\GameMaker Studio 2\TextEditor\snippets.txt</tt>。你可以按照以下规则使用任何文本编辑器编辑此文件：</p>
 
 <ul>
-<li>Each snippet is on a separate line (there should be no blank
-lines).</li>
+<li>每个片段都在一个单独的行上（不应该有空行）。</li>
 
-<li>Each snippet starts with the name of the snippet (which is what
-is shown in the menu) followed by the colon (:) followed by the
-actual snippet of code.</li>
+<li>每个片段都以片段名称（菜单中显示的名称）开头，后跟冒号（:），然后是实际的代码片段。
+</li>
 
-<li>Use # for a newline and put the text that needs to be selected
-first between | symbols.</li>
+<li>使用 $ 作为换行符，并将需要首先选择的文本放在 | 符号之间。</li>
 </ul>
 
-<p>See the examples that are already in the file to see how it is
-set up following the rules above, and it is strongly recommended
-that you make a backup of it before you start changing anything,
-and also back up any edits you make to the file, as should
-re-installing the program or updating it revert the changes that
-you make you can use the backup to redo them again.</p>
+<p>请参阅文件中已有的示例，了解如何按照上述规则进行设置，强烈建议你在开始更改任何内容之前对其进行备份，并备份你对文件所做的任何编辑，更新或重新安装程序还原你所做的更改，你可以使用备份再次重做它们。</p>
 </div>
 <br>
 <a name="script_information" id="script_information"></a>
 <label class="collapse" for="three">信息</label> <input id=
 "three" type="checkbox">
 <div class="index_list">
-<p>The information bar at the bottom of the IDE shows you the
-current line number you are on and the position along the line. It
-is also where you can see the code helper, which is a line of text
-that shows the function you are currently editing along with the
-arguments it requires. As you fill in the function in the editor,
-the arguments will highlight to show you which one you are
-currently editing. If you have used the <a href=
-"../../1_overview/3_additional_information/jsdoc.html">JSDoc Script
-Comments</a> within a custom script then the information you have
-supplied will also show here.</p>
+<p>IDE底部的信息栏显示你当前的行号以及该行的位置。 它也是你可以看到代码帮助器的地方，代码帮助器是一行文本，显示你当前正在编辑的函数及其所需的参数。当你在编辑器中填写函数时，参数将突出显示以显示你当前正在编辑的那个。如果你在自定义脚本中使用了 <a href=
+"../../1_overview/3_additional_information/jsdoc.html">JSDoc 脚本注释</a>，那么你提供的信息也将显示在此处。</p>
 </div></blockquote>
+
+<p>请注意，如果你正在为 Web 开发（即：<b>HTML5</b> 平台），那么你可以使用其他脚本协议，即使用 <b>gmcallback_</b> 作为脚本名称的 <i>前缀</i>，例如：</p>
+
+<p class="code">gmcallback_create_button</p>
+
+<p>使用上面的脚本名称意味着脚本 <tt>gmcallback_create_button</tt> <i>不会</i> 被混淆，因此可以在 JavaScript 扩展和游戏的其他区域中使用，例如，在使用 <a href=
+"../../3_scripting/4_gml_reference/web/index.html"><tt>clickable_*</tt></a> 函数时。</p>
 
 <p><br>
 </p>
@@ -462,12 +270,11 @@ supplied will also show here.</p>
 <div class="clear">
 <div style="float:left">上一页：<a href="index.html">编辑器索引</a></div>
 
-<div style="float:right">Next: <a href="shaders.html">The Shader
-Editor</a></div>
+<div style="float:right">下一页: <a href="shaders.html">着色器编辑器</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

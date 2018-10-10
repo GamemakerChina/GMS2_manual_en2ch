@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>The Sound Editor</title>
+<title>声音编辑器</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,7 +30,7 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>The Sound Editor</h2>
+<h2>声音编辑器</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,140 +40,63 @@ if (window.name != "content")
 "Sound Editor">
 </p>
 
-<p>The sound editor is where you can load sounds into a new audio
-resource as well as set its properties. To load a sound, press the
-<b>Load Sound</b> button to the right of the sound name. A file
-selector dialogue pops up in which you can select the sound file.
-This be either a <tt>WAV</tt>, an <tt>MP3</tt> file or an
-<tt>OGG</tt> file. In general <tt>*.wav</tt> are used for the short
-sound effects as even though they are generally larger files they
-will play instantaneously due to the fact that they do not need any
-type of decoding for playing. <tt>*.mp3</tt> or <tt>*.ogg</tt>
-format files should be used for background music or for sound
-effects that are longer or larger in size. These files are much
-smaller than a wave file would be but have a small CPU overhead as
-they have to be decoded before being played.</p>
+<p>声音编辑器可以将声音加载到新的音频资源中并设置其属性。要加载声音，请按声音名称右侧的 <b>选择声音文件</b> 按钮。弹出文件选择器对话框，你可以在其中选择声音文件。这可以是 <tt>WAV</tt>、<tt>MP3</tt> 或 <tt>OGG</tt> 文件。通常 <tt>*.wav</tt> 用于短音效，因为即使它们是较大的文件，也会立即播放，因为它们不需要任何类型的解码来播放。<tt>*.mp3</tt> 或 <tt>*.ogg</tt> 格式文件应用于背景音乐更长或更大音效。这些文件比波形文件小得多，但需要一点 CPU 开销，因为它们必须在播放前进行解码。</p>
 
-<p>Once you have loaded your file you can preview the sound by
-using the play button which will loop it continuously. This is very
-handy as it means you can make changes to the volume using the
-slider at the bottom of the window and hear what the effect it will
-have on the sound. There is a stop button too, so you can stop the
-preview at any time.</p>
+<p>加载好文件后可以使用播放按钮预览音乐，这将循环播放音乐。这使得你可以使用窗口底部的音量按钮调整音量大小。还有一个停止按钮，因此你可以随时停止预览。</p>
 
-<p>The sound window also has other options which are explained
-below.</p>
+<p>声音窗口还有其他选项，如下所述。</p>
 
 <blockquote><a name="sound_name" id="sound_name"></a> <label class=
-"collapse" for="one">Name and File</label> <input id="one" type=
+"collapse" for="one">名称和文件</label> <input id="one" type=
 "checkbox">
 <div class="index_list">
-<p>Here you can click the "open" button to open the file explorer
-and choose an audio file to load. You can also set the name of the
-new resource from the "Name" field on the left. Names can only be
-alpha-numeric and may only use the underbar "_" symbol, and they
-cannot start with a number.</p>
+<p>在这里，你可以单击 “打开” 按钮打开文件资源管理器，然后选择要加载的音频文件。你还可以从左侧的 “名称” 字段中设置新资源的名称。 名称只能由字母、数字下划线 “_” 符号组成，并且不能以数字开头。</p>
 </div>
 <br>
 <a name="sound_attributes" id="sound_attributes"></a> <label class=
-"collapse" for="two">Attributes</label> <input id="two" type=
+"collapse" for="two">属性</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
-<p>This section is for setting the sound attributes. These are the
-attributes that will be set when you export your game and will
-affect how the sound id played back at run-time. For sound effects
-(<tt>WAV</tt> format) you will want them to be uncompressed so that
-they play quickly and don't require decoding, however for
-<tt>OGG</tt> and <tt>MP3</tt> you'd cgenerally want one of the
-other three options available.</p>
+<p>此部分用于设置声音属性。这些是导出游戏时将设置的属性，并将影响声音 ID 在运行时播放的方式。对于声音效果（<tt>WAV</tt> 格式），你会希望它们无压缩，以便它们快速播放并且不需要解码，但是对于 <tt>OGG</tt> 和 <tt>MP3</tt>，你通常需要其他三个选项之一。</p>
 
-<p>Compressed audio will force all your sound files (irrespective
-of whether they are <tt>*.wav</tt> or <tt>*.mp3</tt> or
-<tt>*.ogg</tt>) to be compressed down to Ogg Vorbis <tt>*.ogg</tt>
-format files for all platforms. These sounds are smaller on disc,
-but will have a slight CPU overhead due to the need to be
-uncompressed and loaded into memory before being played, so you
-should keep that in mind if you wish to use compression in an
-already CPU intensive game.</p>
+<p>压缩音频将在所有平台强制所有声音文件（无论它们是 <tt>*.wav</tt> 还是 <tt>*.mp3</tt> 或 <tt>*.ogg</tt>）压缩为 Ogg Vorbis <tt>*.ogg</tt> 格式文件。这些声音在光盘上较小，但由于需要在播放前需要解压缩并加载到内存中，因此会产生轻微的 CPU 开销，因此如果你希望在已经 CPU 密集的游戏中使用压缩，请记住这一点。</p>
 
-<p>You can mitigate this CPU overhead somewhat by choosing to
-uncompress on load, which will place all the sounds into the device
-memory for faster playback, at the expense of increased memory
-use.</p>
+<p>你可以通过选择在加载时解压缩来缓解此 CPU 开销，这会将所有声音放入设备内存中以便更快地播放，代价是增加内存使用。
+</p>
 
-<p>If you have chosen compressed audio, you can then also choose to
-have your sound streamed from disk too. A streamed sound will be
-one that is uncompressed and played in real time, streamed from the
-disc rather than loaded into memory. Streaming is ideal for music
-as it reduces the one-off overhead of uncompressing the whole file,
-which may cause a pause in the game, but is not recommended for
-simple sound effects where the hit on the CPU is much less.</p>
+<p>如果你选择了压缩音频，那么你也可以选择让你的声音从磁盘流式传输。流式传输声音是从光盘流式传输而不是加载到内存中的未压缩并实时播放的声音。流媒体是音乐的理想选择，因为它减少了解压缩整个文件的一次性开销，这可能会导致游戏暂停，但不建议用于简单的声音效果，因为 CPU 的命中率要低得多。</p>
 </div>
 <br>
 <a name="sound_volume" id="sound_volume"></a> <label class=
 "collapse" for="three">音量</label> <input id="three" type=
 "checkbox">
 <div class="index_list">
-<p>Here you can set the playback volume for the given sound. This
-is the <i>absolute</i> volume, where if the slider is in the middle
-- for example - then the maximum volume for that sound when the
-gain is 1, will be half the recorded volume for the sound. Beside
-the volume controls you also have the <b>Playback</b> controls
-where you can preview the sound, set it to loop or rewind. You can
-also click the <img style="vertical-align:middle" src=
-"images/icon_openmixer.png"> Icon to open the sound in the <b>Sound
-Mixer</b> (see the section on <a href=
-"../2_extras/sound_mixer.html">Mixing Sounds</a> for more
-information).</p>
+<p>你可以在此设置给定声音的播放音量。 这是 <i>绝对</i> 音量，如果滑块位于中间，那么当增益为 1 时该声音的最大音量将是录音音量的一半。 除了音量控制之外，你还可以使用 <b>回放</b> 控件来预览声音，将其设置为循环播放或快退。 你也可以单击 <img style="vertical-align:middle" src=
+"images/icon_openmixer.png"> 图标以在 <b>混音器</b> 中打开声音（有关更多信息，请参阅 <a href=
+"../2_extras/sound_mixer.html">混音</a> 部分）。</p>
 </div>
 <br>
 <a name="sound_options" id="sound_options"></a> <label class=
-"collapse" for="four">Target Options</label> <input id="four" type=
+"collapse" for="four">目标选项</label> <input id="four" type=
 "checkbox">
 <div class="index_list">
-<p>The Target Options panel is where you set the conversion rates
-for your game. These settings will affect how the sound is exported
-for the target platform, and <i>GameMaker Studio 2</i> will
-automatically convert your sound files for you - you simply control
-the final quality of those sounds when converted. Generally the
-default settings of 16 bit, 44100kHz and 192kbps are perfectly
-adequate, but it may be that you wish sound effects (for example)
-to have a lower quality and music to have a higher quality, in
-which case these settings can be changed.</p>
+<p>你可以在 “目标选项” 面板中设置游戏的转化率。这些设置将影响为目标平台导出声音的方式，<i>GameMaker Studio 2</i> 将自动为你转换声音文件 - 你只需在转换时控制这些声音的最终质量。通常，16 位，44100 kHz 和 192kbps 的默认设置是完全足够的，但可能是你希望音效质量较低而音乐具有更高的质量，在这种情况下可以更改这些设置。</p>
 
-<p>You can also choose whether the conversion should be
-<b>mono</b>, <b>stereo</b> or <b>3D</b>. If you plan on using the
-audio emitter functions to create 3D sound effects, you should
-indicate this here, otherwise choose mono or stereo depending on
-the use that the sounds are going to be put to. If you choose to
-use the sound for 3D audio, it will be exported as a <b>mono</b>
-sound.</p>
+<p>你还可以选择转换是 <b>单声道</b>、<b>立体声</b> 还是 <b>3D</b>。如果你打算使用音频发射器功能来创建 3D 音效，则应在此处指明，否则请根据声音的使用情况选择单声道或立体声。如果你选择将声音用于 3D 音频，则会将其导出为 <b>单声道</b> 声音。
+</p>
 
-<div class="note"><b>NOTE:</b> The higher the quality, the larger
-the file, and this should be taken into account when deciding what
-bitrate to choose.</div>
+<div class="note"><b>注意：</b> 质量越高，文件越大，在决定选择什么比特率时应考虑到这一点。</div>
 </div>
 <br>
 <a name="sound_group" id="sound_group"></a> <label class="collapse"
-for="five">Audio Group</label> <input id="five" type="checkbox">
+for="five">音频组</label> <input id="five" type="checkbox">
 <div class="index_list">
-<p>You can assign your audio file to a specific <b>Audio group</b>.
-These are created from the <a href="../3_settings/audio.html">Audio
-Groups</a> window and are used to group audio assets together for
-easier memory management and volume control. Once an audio file has
-been assigned to a group you can then use the specific audio group
-functions to change them and lo load/unload them from memory. See
-the reference section on <a href=
-"../../3_scripting/4_gml_reference/audio/index.html">Audio
-Functions</a> for further information. Note that while the rest of
-the audio properties are configuration specific, the audio group
-setting is not and a sound will belong to the same group on all
-configurations that you use.</p>
+<p>你可以将你的音频文件分到一个特定的 <b>音频组（Audio group）</b>。这些是从 <a href="../3_settings/audio.html">音频组</a> 窗口创建的，用于将音频资产组合在一起，以便更轻松地进行内存管理和音量控制。一旦音频文件被分到了一组，你就可以使用特定的音频组函数改变它们或从内存中加载 / 卸载它们。有关详细信息，请参阅 <a href=
+"../../3_scripting/4_gml_reference/audio/index.html">音频函数</a> 部分。 请注意，虽然其余音频属性是特定于配置的，但音频组设置不是，并且在你使用的所有配置中，声音都属于同一组。</p>
 </div></blockquote>
 
-<p>Note that apart from these options for individual sounds, you
-can also preview and mix sounds using the dedicated <a href=
-"../2_extras/sound_mixer.html">Sound Mixer</a></p>
+<p>请注意，除了单个声音的这些选项外，你还可以使用专用的混音器预览和 <a href=
+"../2_extras/sound_mixer.html">混音</a></p>
 
 <p><br>
 </p>
@@ -184,12 +107,11 @@ can also preview and mix sounds using the dedicated <a href=
 <div class="clear">
 <div style="float:left">上一页：<a href="index.html">编辑器索引</a></div>
 
-<div style="float:right">Next: <a href="paths.html">The Path
-Editor</a></div>
+<div style="float:right">下一页: <a href="paths.html">路径编辑器</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
