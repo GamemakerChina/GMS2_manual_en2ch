@@ -72,7 +72,7 @@ var TITEMS = [
   ["字体编辑器", "source/_build/2_interface/1_editors/fonts.html", "11"],
   ["图像编辑器", "source/_build/2_interface/1_editors/images.html", "11"],
   ["内含文件", "source/_build/2_interface/1_editors/included_files.html", "11"],
-  ["便签", "source/_build/2_interface/1_editors/notes.html", "11"],
+  ["便签编辑器", "source/_build/2_interface/1_editors/notes.html", "11"],
   ["物体编辑器", "source/_build/2_interface/1_editors/objects.html", "11"],
   ["路径编辑器", "source/_build/2_interface/1_editors/paths.html", "11"],
   ["房间编辑器", "source/_build/2_interface/1_editors/rooms.html", "11"],
