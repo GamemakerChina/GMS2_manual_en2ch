@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,106 +37,49 @@ if (window.name != "content")
 </p>
 
 <p><img class="center" src="images/editor_paths.png" alt=
-"路径编辑器">  At some point while creating your games you may need
-one of your instances to follow a path through a level. Now, this
-can be done in code by simply creating an array of positions within
-the room and then having an instance move between them, but that
-can be a chore to set up and is difficult to change, test and adapt
-for different instances. For this reason <i>GameMaker Studio 2</i>
-has path resources and a dedicated path editor.</p>
+"路径编辑器"> 在创建游戏的某个时刻，你可能需要一个实例来跟踪某个路径。现在，这可以在代码中完成，只需在房间内创建一个位置数组，然后在它们之间移动实例，但这可能是一件苦差事，无法更改、测试和适应不同的实例。为此，<i>GameMaker Studio 2</i> 具有路径资源和专用路径编辑器。</p>
 
-<p>The basic idea is rather simple - you define a path by drawing
-it in the path editor, then you can place an action (or code) in
-the creation event of an object to tell the instance to follow that
-particular path. You can also set the speed to follow the path and
-a number of other actions relating to the position and orientation
-of the path within the room. When you first create a path resource
-the path editor window will open with the following options:</p>
+<p>基本思想相当简单 - 你通过在路径编辑器中绘制路径来定义路径，然后你可以在物体的创建事件中放置一个操作（或代码），以告诉实例遵循该特定路径。同时你也可以设置沿路径运动时的速度，以及在运动到不同位置及方向时执行不同的动作。你还可以设置速度以遵循路径以及与房间内路径的位置和方向相关的许多其他操作。 首次创建路径资源时，将打开路径编辑器窗口，其中包含以下选项：</p>
 
 <blockquote><a name="path_properties" id="path_properties"></a>
-<label class="collapse" for="one">Path Properties</label>
+<label class="collapse" for="one">路径属性</label>
 <input id="one" type="checkbox">
 <div class="index_list">
-<p>As with all resources in <i>GameMaker Studio 2</i> you should
-give your new path a unique name as this is what will be used to
-identify it throughout the game you are making, and a good system
-that a lot of people use is to prefix (or suffix) the resource for
-easy recognition in code or actions (eg: <tt>path_Enemy_1</tt> or
-<tt>PowerUp_path</tt>). Once you have named the path, you can start
-to define it by placing points in the main editor on the right,
-with each point being added to the list here along with its
-position and speed.</p>
+<p>与 <i>GameMaker Studio 2</i> 中的所有资源一样，你应该为你的新路径指定一个唯一的名称，因为这将用于在你制作的游戏中识别它，并且许多人的好命名习惯是系统地使用前缀（或后缀 ）用于在代码或动作中轻松识别的资源（例如： <tt>path_Enemy_1</tt> 或 <tt>PowerUp_path</tt>）。命名路径后，你可以通过在右侧主编辑器中放置点来开始定义它，每个点以及它的位置和速度都会添加到列表中。</p>
 
-<p>You can edit each value in the path properties by double
-clicking <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> on it and entering a value. The
-<b>speed</b> value for path points is defined by a percentage of
-the speed at which you make the instance move along the path
-(default is 100%). So if you start an instance at a speed of 2 (2
-pixels per step) along a path and then one of the path points has a
-speed value of 50%, the instance will reduce speed as it approaches
-this points to a speed of 1 (50% of the path speed). Equally, you
-can set the speed to 150% and the instance will accelerate as it
-reaches the point. In this way you can create some nice dynamic
-looking movement without any code whatsoever.</p>
+<p>你可以通过双击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 路径属性并输入值来编辑路径属性中的每个值。路径点的 <b>速度</b> 值由实例沿路径移动的速度的百分比定义（默认值为100％）。因此，如果沿路径以 2 的速度（每步 2 像素）启动一个实例，然后其中一个路径点的速度值为 50％，则实例将降低速度，因为它接近此点的速度为 1 （路径速度的 50％）。同样，你可以将速度设置为 150％，实例将在达到该点时加速。通过这种方式，你可以无需任何代码就创建一些漂亮的动态外观。</p>
 
-<p>You can also specify the connection kind for the whole path and
-whether the path should be closed or not (a closed path will
-connect the last point on the path with the first). The connection
-kind can be either <b>straight line</b>, or <b>smooth</b> where a
-straight line connect simply connects the points of a path in a
-linear basis, with angular changes at each point, while a smooth
-connection will create a much softer path that may not pass
-directly through any of the points, but rather take an approximate
-line, creating nice curves. You can also specify the precision for
-the curves (default is 4) which can be from 1 to 8 with 8 being the
-smoothest. The image below shows an example of how these options
-affect the path:  <img class="center" src=
+<p>你还可以指定整个路径的连接类型以及路径是否应该闭合（闭合路径将路径上的最后一个点与第一个点连接）。连接类型可以是 <b>直线</b> 或 <b>平滑曲线</b>，其中直线连接简单地以线性方式连接路径的点，每个点处的角度变化，而平滑连接将创建更柔和的路径，可能无法直接通过一点而是采取近似线，创造美妙的曲线。同时你可以设置曲线的平滑程度（默认是 4），范围是 1 至 8，其中 8 最为平滑。如下图片展示了一些设置为不同的路径的样例： <img class="center" src=
 "images/editor_paths_examples.png" alt="Path Editor Examples"></p>
 </div>
 <br>
 <a name="path_edit" id="path_edit"></a> <label class="collapse"
-for="two">Editing</label> <input id="two" type="checkbox">
+for="two">编辑路径</label> <input id="two" type="checkbox">
 <div class="index_list">
-<p>You can add points to the path clicking <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> anywhere
-in the edit window, and all subsequent clicks will add further
-points. Once placed in the editor a point can be moved by clicking
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-and dragging on it or by changing the values presented to you on
-the left for the X and Y position and speed (see <a href=
-"#path_properties">Path Properties</a>, above). You can use
-<img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> and left click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on
-multiple points to select them together, and this group of points
-can then be dragged around and placed as you require. You can press
-<img style="vertical-align:middle" src=
-"../../images/icon_delete.png"> to delete the selected point or
-points too.</p>
+<p>你可以在编辑窗口中的任意位置点击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 添加点到路径，所有后续点击都会添加更多点。放置在编辑器中后，可以通过单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 并拖动它来移动点，或者通过更改左侧显示的值来获取 X 和 Y 位置和速度（请参阅上面的 <a href=
+"#path_properties">路径属性</a>）。你可以使用 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> 和左键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 多个点来一起选择它们，然后可以根据需要拖动并放置这组点。你也可以按此键 <img style="vertical-align:middle" src=
+"../../images/icon_delete.png"> 删除选定的一个或多个点。</p>
 
-<p>There is an additional menu available to you in the editor
-window when you right click, shown below: <img class="center" src=
-"images/editor_paths_menu.png" alt="Path Editor Menu"> Each of the
-items in this menu work as follows:</p>
+<p>右键单击时，编辑器窗口中还有一个可用的附加菜单，如下所示：<img class="center" src=
+"images/editor_paths_menu.png" alt="Path Editor Menu"> 此菜单中的每个项目的工作方式如下：</p>
 
 <ul>
-<li><b>Edit Points</b> - Edit the path points.</li>
+<li><b>编辑点</b> - 编辑路径点。</li>
 
-<li><b>Pan To Path</b> - Pan the view in the editor to the center
-of the path.</li>
+<li><b>平移到路径位置</b> - 将编辑器中的视图平移到路径的中心。</li>
 
-<li><b>Reverse</b> - Reverse the order of the path points. This
-doesn't move them, but rather changes the order that they will be
-processed in so that the start becomes the end and vice-versa.</li>
+<li><b>反向</b> - 反转路径点的顺序。这不会移动它们，而是改变它们将被处理的顺序，以便开始变为结束，反之亦然。</li>
 
-<li><b>Flip</b> - Flip the path along the horizontal axis.</li>
+<li><b>翻转</b> - 沿水平轴翻转路径。</li>
 
-<li><b>Minrror</b> - Flip the path along the vertical axis.</li>
+<li><b>镜像</b> - 沿垂直轴翻转路径。</li>
 
-<li><b>Delete Points</b> - Delete the selected point or
-points.</li>
+<li><b>删除点</b> - 删除选定的点。</li>
 </ul>
 </div>
 <br>
@@ -144,55 +87,32 @@ points.</li>
 "collapse" for="three">工具箱</label> <input id="three" type=
 "checkbox">
 <div class="index_list">
-<p>The tool box buttons at the top are where you can control how
-things are drawn in the editor window. You can toggle the
-background grid on or off, as well as set the addition of path
-points to either be snapped to this grid or not. The snap values
-indicate the size of the grid cells and this can be changed to any
-value you require. The rest of the tools are dedicated to zooming
-and panning the editor area, and you can click the (=) button to
-reset to be 1:1 with the display. Note that if you pan too far from
-where you want to draw the path, you can use the <a href=
-"#path_edit">right mouse button menu</a>, and then click <b>pan to
-path</b> to scroll back to where you were working.</p>
+<p>顶部的工具箱按钮可以控制在编辑器窗口中绘制内容的方式。你可以打开或关闭背景网格，也可以将路径点的添加设置为是否与此网格对齐。 捕捉值表示网格单元的大小，可以将其更改为你需要的值。其余工具用于缩放和平移编辑器区域，你可以单击（=）按钮以使显示重置为1：1。请注意，如果平移到想要绘制路径的位置太远，可以使用 <a href=
+"#path_edit">鼠标右键菜单</a>，然后单击 <b>平移到路径位置</b> 以回到你工作的位置。</p>
 </div>
 <br>
 <a name="path_points" id="path_points"></a> <label class="collapse"
-for="four">Path Points</label> <input id="four" type="checkbox">
+for="four">路径点</label> <input id="four" type="checkbox">
 <div class="index_list">
-<p>Paths are simply a collection of points joined together by a
-line. In the editor, you place these points by using the left mouse
-button. You can add points anywhere in the room editor and they
-will be added to the point list consecutively to make a path. If
-you place a point near a connecting line or another node, the new
-point will be inserted in the path rather than added to it (you can
-set the detection distance for this in the <a href=
-"../../1_overview/1_getting_started/preferences/prefs_splineeditor.html">
-Preferences</a>). You can press <img style="vertical-align:middle"
+<p>路径只是由一条线连接在一起的点的集合。在编辑器中，使用鼠标左键放置这些点。你可以在房间编辑器中的任何位置添加点，它们将连续添加到点列表中以创建路径。如果在连接线或其他节点附近放置一个点，则新点将插入路径而不是添加到路径中（你可以在 <a href=
+"../../1_overview/1_getting_started/preferences/prefs_splineeditor.html">首选项</a> 中为此设置检测距离）。你可以按 <img style="vertical-align:middle"
 src="../../images/icon_ctrl.png">/<img style=
-"vertical-align:middle" src="../../images/icon_cmd.png"> and click
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-on already placed points to select them, and then any operations
-done on the path points like moving them, will be applied to all
-the selected points as a group. To remove a point or selection of
-points you can right-click <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> and select "Delete Point" or press the
-<img style="vertical-align:middle" src=
-"../../images/icon_delete.png"> key.</p>
+"vertical-align:middle" src="../../images/icon_cmd.png"> 并单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 已放置的点以选择它们，然后在路径点上完成的任何操作（如移动它们）将作为一个组应用于所有选定的点。要删除一个点或选定点，你可以右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并选择 “删除点” 或按 <img style="vertical-align:middle" src=
+"../../images/icon_delete.png"> 键。</p>
 
-<p>Note that you can also use the following shortcuts to perform
-some extra operations that are not available through the right
-mouse button menu on the choose path point(s):</p>
+<p>请注意，你还可以使用以下快捷方式执行一些额外操作，在选择路径点上点击鼠标右键菜单并没有这些操作：
+</p>
 
 <ul>
 <li><b>T</b> + <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png">: Translate (move) the path points</li>
+"../../images/icon_rmb.png">：转换（移动）路径点</li>
 
 <li><b>R</b> + <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png">: Rotate the path points</li>
+"../../images/icon_rmb.png">：旋转路径点</li>
 
 <li><b>S</b> + <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png">: Scale the path points</li>
+"../../images/icon_rmb.png">：缩放路径点</li>
 </ul>
 </div></blockquote>
 
@@ -205,12 +125,11 @@ mouse button menu on the choose path point(s):</p>
 <div class="clear">
 <div style="float:left">上一页：<a href="index.html">编辑器索引</a></div>
 
-<div style="float:right">Next: <a href="scripts.html">The Script
-Editor</a></div>
+<div style="float:right">下一页: <a href="scripts.html">脚本编辑器</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
