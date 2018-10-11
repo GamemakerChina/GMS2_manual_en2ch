@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -33,216 +33,65 @@ if (window.name != "content")
 <h2>绘制事件</h2>
 
 <div class="body-scroll">
-<p>The <b>Draw Event</b> is the one that governs what you see on
-the screen when you run your game, and it is split into various
-separate sub-events to better handle the different drawing
-requirements for your game. The image below illustrates the order
-in which each event is performed: <img class="center" src=
+<p><b>绘制事件</b> 管理游戏运行时你在屏幕上看到的内容，它分为多种独立事件来满足你游戏绘图的不同需求。 下图说明了每个事件的执行顺序：<img class="center" src=
 "images/editor_events_draworder.png" alt=
-"Object Editor Draw Diagram"> The normal <b>Draw</b> event falls
-into three sub-event types: The <b>Draw Begin</b>, the standard
-<b>Draw</b> and the <b>Draw End</b> events. In general, you will
-only need to use the standard <b>Draw</b> sub-event and you should
-be aware that all instances in a room will have this event
-triggered each step of the game, so this sub-event will <i>always
-be called as long as the instance has the <b>visible</b> flag set
-to true</i>. Even if you have defined nothing for this sub-event in
-the object properties (ie: no code nor actions), if the object has
-a sprite assigned it will <i>still</i> have a draw sub-event which
-will be triggered. This is because <i>GameMaker Studio 2</i> has
-two ways to draw things in the Draw sub-event: application<br>
+"物体编辑器绘制图标"> 普通 <b>绘制</b> 事件有 3 种子事件类型： <b>绘制开始</b>、标准 <b>绘制</b>和 <b>绘制结束</b> 事件。通常，你只需要使用基础 <b>绘制</b>事件，需要注意的是，所有房间中的实例，在游戏中每步都会触发这个事件。所以， <i>只要勾选这个实例 <b>可见</b> 复选框，这个事件就会一直被调用。</i>即使你没有在物体属性中为这个事件定义任何内容（例如：无代码，无动作），只要这个物体被指定了精灵，它就 <i>依然</i> 会触发绘制事件。这是因为 <i>GameMaker Studio 2</i> 在处理绘制事件时有两种绘制方式：<br>
 <br></p>
 
 <ul>
-<li><b>the default draw</b>, which is when you define the sprite in
-the object properties and place no actions or code in the normal
-<b>Draw</b> sub-event, in which case <i>GameMaker Studio 2</i> will
-draw that sprite. Note that any transforms you perform in other
-events to change the image scale, index, blending etc... will be
-reflected too as long as the draw event is empty.<br>
+<li><b>默认绘制</b>，当你在一个物体中定义了精灵，但没有在 <b>绘制</b> 事件中放置任何动作或代码时，<i>GameMaker Studio 2</i> 会绘制此精灵。请注意，只要绘制事件为空，你在其他事件中执行的例如更改图像比例，索引，混合等的任何变换都将被反映出来。<br>
 <br></li>
 
-<li><b>the custom draw</b>, which is when you place code or actions
-in the draw event. This is telling <i>GameMaker Studio 2</i> "I
-want to control what you draw for instances of this object" and it
-completely overrides the default drawing. This means that, for
-example, you can have an object with a sprite assigned, then set
-the draw event to draw text and the sprite will not be drawn as you
-have not told <i>GameMaker Studio 2</i> to draw it along with the
-text.<br></li>
+<li><b>自定义绘制</b>，这是在绘制事件中放置代码或操作的时候。这告诉 <i>GameMaker Studio 2</i> “我想控制你为这个物体的实例绘制的内容”，它完全覆盖了默认的绘图。 这意味着，例如，你可以拥有一个分配了精灵的物体，然后将绘制事件设置为绘制文本，并且不会绘制精灵，因为你没有告诉 <i>GameMaker Studio 2</i> 将其与文本一起绘制。<br></li>
 </ul>
 
-<p>The rest of the draw events are explained in the sections listed
-below:</p>
+<p>其余的绘制事件将在下面列出的部分中进行说明：</p>
 
 <blockquote><a name="draw_begin_end" id="draw_begin_end"></a>
 <label class="collapse" for="one">开始绘制与结束绘制</label>
 <input id="one" type="checkbox">
-<div class="index_list">Apart from the main <b>Draw</b> sub-event,
-you also have a <b>Draw Begin</b> and a <b>Draw End</b> sub-event
-too. These act exactly the same as a standard <b>Draw</b> sub-event
-(ie: they will draw whatever you put in them every step of the game
-and for all views), but they do not "default draw" anything if not
-added to an object, and they will always run before/after the
-standard <b>Draw</b> sub-event. So, you would have the <b>Draw
-Begin</b> step for all instances, then the <b>Draw</b> for all
-instances, then finally the <b>Draw End</b> step for all
-instances.<br>
-<br>
-In this way, you can draw things or set draw properties in the Draw
-Begin step in one instance and be sure that all instances with a
-standard Draw event or Draw End event will use these properties or
-draw over what the first instance has drawn. Basically its a sure
-fire way to guarantee that certain things are drawn at certain
-times, much like the Begin Step and End Step events do.<br>
-<br>
-There are a few things to note when drawing things in <i>GameMaker
-Studio 2</i>, whether it's a sprite you are drawing or a shader, or
-3D:<br>
+<div class="index_list">除了主要的 <b>绘制</b> 子事件外，你还有一个 <b>开始绘制</b> 和 <b>绘制结束</b> 子事件。这些动作与标准 <b>绘制</b> 子事件完全相同（即：它们将绘制游戏的每一步和所有视图中的任何内容），但如果没有添加到物体，它们不会 “默认绘制” 任何内容，它们将始终在标准 <b>绘制</b> 子事件之前 / 之后运行。因此，你将拥有所有实例的 <b>开始绘制（Draw Begin）</b> 步骤，然后是所有实例的 <b>绘制（Draw）</b>，最后是所有实例的 <b>绘制结束（Draw End）</b>步骤。<br><br>通过这种方式，你可以在一个实例的开始绘制步骤中绘制内容或设置绘图属性，并确保具有标准绘制事件或绘制结束事件的所有实例都将使用这些属性或绘制第一个实例绘制的内容。基本上它是确保在特定时间绘制某些东西的确定方法，就像步开始（Begin Step）和步结束（End Step）事件一样。<br><br>在 <i>GameMaker Studio 2</i> 中绘制内容时，有几件事需要注意，无论是绘图的精灵还是着色器，还是 3D：<br>
 <br>
 
 <ul>
-<li>The draw event is a very intensive event, in that it's one of
-the events that takes up most time and resources... to that end it
-is never a good idea to do anything in the draw event other than
-drawing. So save your large code or complex actions for the Step
-event or Alarms or whatever other event fits, but leave the draw
-event clear for the drawing as that's what it does best.<br>
+<li>绘制事件是一个非常密集的事件，因为它是占用大部分时间和资源的事件之一......为此，除了绘图之外，在绘制事件中做任何事情都不是一个好主意。因此，在步事件或计时器或任何其他适合的事件保存大型代码或复杂操作，保留绘制事件用于绘图是很清晰的，因为它是最适合的。<br>
 <br></li>
 
-<li>If your object has had the visible parameter set to off (so
-that the instances of the object are not drawn) then all draw
-events are skipped (except for the <b>Resize</b> event). This means
-that making an instance invisible will <i>stop all code placed in
-any of these events from running</i>, so don't put essential code
-in the draw events if they are not going to be visible.<br>
+<li>如果你的物体将可见（visible）参数设置为否（off，以便不绘制物体的实例），则会跳过所有绘制事件（<b>窗口大小调整</b> 事件除外）。这意味着使实例不可见将 <i>阻止放置在任何这些事件中的所有代码运行</i>，因此如果它们不可见，则不要将基本代码放在绘制事件中。<br>
 <br></li>
 
-<li>What you draw has nothing to do with the collision engine you
-choose (traditional or physics) as that is defined by the object
-properties and the sprite (or mask) that the object has been
-given.<br></li>
+<li>你绘制的内容与你选择的碰撞引擎（传统或物理）无关，因为它是由物体属性和给定物体的精灵（或遮罩）定义的。<br></li>
 </ul></div>
 <br>
 <a name="draw_GUI" id="draw_GUI"></a> <label class="collapse" for=
-"two">绘制GUI</label> <input id="two" type="checkbox">
-<div class="index_list">The <b>Draw Gui</b> sub-event type falls
-under the <b>Draw Event</b> category and is specifically designed
-for drawing GUI (Graphical User Interface) elements that are not
-affected by the view scale or rotation. This means that you can
-have an instance draw all the elements for your HUD without having
-to base all the positioning of the elements on the the instance
-position within the room or the position of the current view.<br>
-<br>
-When drawing in these event it is important that you understand
-that the draw coordinates do not change even when views are active
-and (0,0) is <i>always</i> the top left hand corner of either the
-application surface or the display (see the note at the bottom of
-this section), and the default width and height are 1:1 with the
-application surface. Depth ordering is still maintained between
-different instances on different layers (so an instance on a lower
-layer will draw under one at a higher layer) and also within the
-events themselves, as the <b>Draw GUI Begin</b> sub-event will draw
-for all instances first, then the standard <b>Draw GUI</b> will
-draw for all instances over that, and finally the <b>Draw Gui
-End</b> sub-event is triggered.<br>
-<br>
-In this way, you can draw things or set draw properties in the
-<b>Draw GUI Begin</b> in one instance and be sure that all
-instances with a standard <b>Draw GUI</b> or <b>Draw GUI End</b>
-sub-events will use these properties or draw over what the first
-instance has drawn. Basically it's a sure fire way to guarantee
-that certain things are drawn at certain times, much like the
-<b>Begin Step</b> and <b>End Step</b> sub-events do.<br>
-<br>
-These events can also be used in conjunction with the normal
-<b>Draw</b> sub-events (which will be affected by the view
-position, scale and rotation as normal). If you have no <b>Draw
-Event</b> but you do have a <b>Draw GUI Event</b>, then
-<i>GameMaker Studio 2</i> will still default draw the sprite for
-the instance (if it has one) as normal.<br>
-<br>
-With relation to the other draw sub-events, the <b>Draw GUI</b>
-events will always draw over anything drawn in the normal draw
-events. So, if you have an instance on a lower layer with a <b>Draw
-GUI</b> event, it will draw over the instance that is on a higher
-layer with a regular draw event. If both instances have a <b>Draw
-GUI</b> sub-event, then the layer order will be respected.<br>
+"two">绘制 GUI</label> <input id="two" type="checkbox">
+<div class="index_list"><b>绘制 GUI（Draw GUI）</b> 子事件类型属于 <b>绘制事件</b>类别，专门用于绘制不受视图比例或旋转影响的 GUI（图形用户界面）元素。这意味着你可以让实例绘制 HUD 的所有元素，而不必将元素的所有定位基于房间内的实例位置或当前视图的位置。<br><br>在这些事件中绘图时，重要的是要了解即使视图处于活动状态时绘制坐标也不会改变，并且 (0,0) <i>始终</i> 是应用程序表面或显示的左上角（请参阅本节的底部），应用程序表面的默认宽度和高度是 1:1。深度排序仍然保持在不同层上的不同实例之间（因此较低层上的实例将在较高层之后绘制）并且也在事件本身内，因为 <b>开始绘制 GUI（Draw GUI Begin）</b> 子事件将首先为所有实例绘制，然后标准的 <b>绘制 GUI（Draw GUI）</b> 将为其绘制所有实例，最后触发 <b>绘制 GUI 结束（Draw Gui End）</b> 子事件。<br><br>通过这种方式，你可以在一个实例中在 <b>开始绘制 GUI</b> 中绘制内容或设置绘图属性，并确保具有标准 <b>绘制 GUI</b> 或 <b>绘制 GUI 结束</b> 子事件的所有实例都将使用这些属性或绘制第一个实例具有的内容画。基本上它是确保在特定时间绘制某些东西的确定方法，就像 <b>步开始</b> 和 <b>步结束</b> 子事件一样。<br><br>这些事件也可以与普通的 <b>绘制</b> 子事件一起使用（它将受到视图位置、比例和正常旋转的影响）。如果你没有 <b>绘制事件</b>，但你确实有 <b>绘制 GUI 事件</b>，那么 <i>GameMaker Studio 2</i> 仍会默认为实例绘制精灵（如果它有一个）。<br><br>与其他绘制子事件相关，<b>绘制 GUI</b> 事件将始终绘制在正常绘制事件中绘制的任何内容。因此，如果你在较低层上有一个带有 <b>绘制 GUI</b> 事件的实例，它将使用常规绘制事件绘制更高层上的实例。如果两个实例都具有 <b>绘制 GUI</b> 子事件，则将遵循图层顺序。<br>
 <br>
 
-<div class="note"><b>注意</b>： This event will, by default, draw 1:1 with the application surface size, which is normally the size of the room or the view port. This means that when you have <b>Aspect Ratio Correction</b> on in the <a href=
-"../../3_settings/game_options/index.html">Game Options</a> the GUI is not going to be drawn over the black bars that "letterbox" the game. This behaviour can be switched off using the <a href=
-"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_maximise.html"> <tt>display_set_gui_maximise</tt></a> function, and you can also lock the GUI event to a specific size which will then be scaled to fit the display or application surface dimensions automatically by using the function <a href=
-"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_size.html"> <tt>display_set_gui_size</tt></a>.</div></div>
+<div class="note"><b>注意</b>：默认情况下，此事件将使用应用程序表面大小绘制 1:1，通常是房间大小或视口。这意味着当你在 <a href=
+"../../3_settings/game_options/index.html">游戏选项</a> 中进行 <b>宽高比校正</b> 时，GUI 不会被绘制在游戏 “宽银幕” 的黑框上。可以使用 <a href=
+"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_maximise.html"><tt>display_set_gui_maximise</tt></a> 函数关闭此行为，还可以将 GUI 事件锁定为特定大小，然后使用函数 <a href=
+"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_size.html"><tt>display_set_gui_size</tt></a> 自动缩放以适应显示或应用程序表面尺寸。</div></div>
 <br>
 <a name="draw_pre_post" id="draw_pre_post"></a> <label class=
-"collapse" for="three">预绘制与后绘制</label> <input id="three"
+"collapse" for="three">绘制预处理与绘制后处理</label> <input id="three"
 type="checkbox">
-<div class="index_list">The <b>Pre Draw</b> and <b>Post Draw</b>
-sub-events are part of the <b>Draw Event</b> category. However,
-unlike the other Draw events these draw directly to the screen
-buffer, which will be the size of the combined screen space for all
-views currently visible, or the window size if only using one view
-or none at all. The image below illustrates this: <img class=
+<div class="index_list"><b>绘制预处理（Pre Draw）</b> 和 <b>绘制后处理（Post Draw）</b> 子事件是 <b>绘制事件</b> 类别的一部分。但是，与其他绘制事件不同，它们直接绘制到屏幕缓冲区，这将是当前可见的所有视图的组合屏幕空间的大小，或者如果仅使用一个视图或根本不显示窗口大小。 下图说明了这一点：<img class=
 "center" src="images/editor_object_postdraw.png" alt=
-"Object Editor Post Draw"> So, if you are using the <b>Pre</b> or
-<b>Post</b> draw events, you are drawing to the full screen render
-target which will have the same size as the window to which all
-views are made to fit. If you have no views active, this is instead
-set to the size of the window itself.<br>
-<br>
-The <b>Pre Draw</b> sub-event is triggered before any other draw
-event, and in it you can set values, set draw properties and even
-draw things without worrying about the views or the size of the GUI
-layer (the GUI layer size may be the same as the screen buffer, but
-it may not since you can set the GUI resolution in code).<br>
-<br>
-It is worth noting that this event happens before the screen buffer
-is cleared meaning that if you do not switch off view clearing in
-the room editor then nothing that is drawn in the <b>Pre Draw</b>
-event will be seen, as the first view will clear it. If you want to
-be able to see through the views themselves, or you are not using
-views at all, then you should also have set the background colour
-to have an alpha of 0 in the <a href="../rooms.html">Room
-Editor</a>.<br>
+"Object Editor Post Draw"> 因此，如果你正在使用绘制 <b>预</b> 或 <b>后</b> 处理事件，则你将绘制到全屏渲染目标，该目标的大小与所有视图所适合的窗口大小相同。 如果你没有活动的视图，则将其设置为窗口本身的大小。<br><br><b>绘制预处理</b> 子事件在任何其他绘制事件之前触发，在其中你可以设置值，设置绘制属性甚至绘制内容而无需担心 GUI 层的视图或大小（GUI 层的大小可能与屏幕缓冲区相同，但可能不一样，因为你可以在代码中设置 GUI 分辨率）。<br><br>值得注意的是，此事件发生在清除屏幕缓冲区之前，这意味着如果你未在房间编辑器中关闭视图清除，则将看到 <b>绘制预处理</b> 事件中绘制的任何内容，因为第一个视图将清除它。如果你希望能够自己查看视图，或者根本没有使用视图，那么你还应该在 <a href="../rooms.html">房间编辑器</a> 中将背景颜色设置为透明度为 0。<br>
 <br>
 
-<div class="note"><b>NOTE:</b> If you switch off these options, you
-may notice unwanted artefacts being drawn on the screen when the
-game is tested (like "trails" from instances). This is because you
-are drawing directly over the previous frame of the draw buffer
-without it being cleared. However you can use <a href=
-"../../../3_scripting/4_gml_reference/drawing/colour/draw_clear_alpha.html">
-<tt>draw_clear_alpha</tt></a> to do this yourself.</div>
+<div class="note"><b>注意：</b> 如果你关闭这些选项，你可能会注意到在测试游戏时屏幕上绘制了不需要的假象（例如来自实例的 “踪迹”）。这是因为你直接绘制了绘制缓冲区的前一帧而不清除它。但是你可以使用 <a href=
+"../../../3_scripting/4_gml_reference/drawing/colour/draw_clear_alpha.html"><tt>draw_clear_alpha</tt></a> 自己完成此操作。</div>
 <br>
-
-The <b>Post Draw</b> sub-event is triggered after the standard draw
-events, but before the Draw GUI events. Like the Pre Draw event, it
-is based on the size of the screen buffer size, and is placed
-before the Draw GUI events to enable you to perform post-processing
-effects and other things on a full screen basis simply and easily
-without interfering with any HUD/GUI elements that you may have in
-your game.</div>
+<b>绘制后处理</b> 子事件在标准绘制事件之后但在绘制 GUI 事件之前触发。与绘制预处理事件一样，它基于屏幕缓冲区大小的大小，并且放置在绘制 GUI 事件之前，使你能够简单轻松地在全屏的基础上执行后处理效果和其他事物，而不会干扰任何事件。你可能在游戏中拥有的 HUD / GUI 元素。</div>
 <br>
 <a name="draw_resize" id="draw_resize"></a> <label class="collapse"
 for="four">窗口大小调整</label> <input id="four" type="checkbox">
-<div class="index_list">This event type falls under the <b>Draw
-Event</b> category, and although it doesn't actually draw anything,
-it does react to changes in the draw canvas - specifically, it is
-designed for reacting to the change in the Windows 8/10 canvas size
-when the game window is "snapped".<br>
-<br>
-On the Windows 8 target platform it is important that you catch any
-resizing of the game canvas from the "snapping" of the game window
-(when the user drags the window to the side of the display, for
-example). This event will do just that and is triggered every time
-the canvas is changed, permitting you to add custom code here that
-will resize the view or reposition HUD elements as necessary. This
-function is provided as a convenient way to avoid having step event
-code that checks for these things all the time.<br>
+<div class="index_list">此事件类型属于 <b>绘制事件</b> 类别，虽然它实际上并未绘制任何内容，但它确实对绘制画布中的更改做出了反应 - 具体来说，它是为在游戏窗口 “snapped（突然变化）” 时响应 UWP 画布大小的变化而设计的。<br><br>在 UWP 目标平台上，重要的是从游戏窗口的 “snapping” 中捕获游戏画布的大小（例如，当用户将窗口拖动到显示器的侧面时）。 此事件将执行此操作并在每次更改画布时触发，允许你在此处添加自定义代码，以调整视图大小或根据需要重新定位 HUD 元素。提供此函数是一种方便的方法，可以避免使用步事件代码来检查这些事情。<br>
 <br>
 
-<div class="note"><b>注意</b>： You cannot draw in this event!It is triggered by resizing the canvas and is only for catching this change... any drawing that should be done still must be in one of the other draw events.</div></div></blockquote>
+<div class="note"><b>注意</b>： 你无法在这个事件中绘制！它是通过调整画布大小来触发的，仅用于捕捉这个变化......任何应该完成的绘图仍然必须在其他一个绘制事件中。</div></div></blockquote>
 
 <p><br>
 </p>
@@ -258,7 +107,7 @@ code that checks for these things all the time.<br>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

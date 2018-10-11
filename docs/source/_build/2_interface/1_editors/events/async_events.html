@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,84 +34,41 @@ if (window.name != "content")
 
 <div class="body-scroll">
 <p><img class="center" src="images/editor_objects_async.png" alt=
-"物体编辑器异步事件">  An <b>asynchronous event</b> is one
-that is fired off when <i>GameMaker Studio 2</i> receives a "call
-back" from some external source, which can be from the web or from
-the device running your game. Basically, you tell <i>GameMaker
-Studio 2</i> to do something, like load an image, and it'll start
-to do this but continue doing whatever it else it has to do
-meanwhile its working. Then, when the request has been completed, a
-call-back will be sent to <i>GameMaker Studio 2</i> and any
-<b>Asynchronous Events</b> defined for that type of call back will
-be fired. Please note that the Asynchronous Events are fired for
-<i>all</i> instances that have them, much like the key events, so
-you can do an <tt>http_get</tt> call in one instance, yet have the
-Asynchronous HTTP event in another to deal with the call
-back.<br></p>
+"物体编辑器异步事件"> <b>异步事件</b> 是当 <i>GameMaker Studio 2</i> 从某些外部源（可以来自 Web 或运行游戏的设备）收到 “回调” 时触发的事件。你告诉 <i>GameMaker Studio 2</i> 做一些事情，比如加载一个图像，然后它就会开始这样做但是继续做其他事情，同时它的工作。 然后，当请求完成后，将向 <i>GameMaker Studio 2</i> 发送回调，并且将触发为该类型的回调定义的 <b>异步事件</b>。请注意，异步事件将针对具有它们的 <i>所有</i> 实例触发，就像按键事件一样，因此你可以在一个实例中执行 <tt>http_get</tt> 调用，但在另一个实例中使用异步 HTTP 事件来处理回调。<br></p>
 
-<div class="note"><b>注意</b>： You should be aware that due to XSS protection in browsers, requests to and attempts to load resources from across domains are blocked and may appear to return blank results when using any of the following events</div>
+<div class="note"><b>注意</b>： 你应该知道，由于浏览器中的 XSS 保护，对来自跨域的请求和尝试加载资源的操作都被阻止，并且在使用以下任何事件时可能会返回空白结果</div>
 
 <p><br>
+有与异步事件类别相关的各种类型的事件，它们都在以下部分中解释：</p>
 
-There are various types of events associated with the Asynchronous
-event category, and they are all explained in the sections
-below:</p>
-
-<div class="note"><b>注意：</b> The variable <tt>async_load</tt> which is mentioned in the following sections is <b>only valid in these events</b>, as the <tt>ds_map</tt> that is points to is created at the start of the event, then deleted again at the end, with this variable being reset to a value of -1 at all other times.</div>
+<div class="note"><b>注意：</b> 以下各节中提到的变量 <tt>async_load</tt> 仅在这些事件中有效，因为指向的 <tt>ds_map</tt> 是在 <b>事件开始时创建的</b>，然后在结尾处再次删除，此变量在其他时间被重置为 -1。</div>
 
 <p><br>
 </p>
 
 <blockquote><a name="async_audio_play" id="async_audio_play"></a>
-<label class="collapse" for="thirteen">音频播放器</label>
+<label class="collapse" for="thirteen">录音回放</label>
 <input id="thirteen" type="checkbox">
-<div class="index_list">This event can only be triggered by the
-<a href=
-"../../../3_scripting/4_gml_reference/audio/audio%20buffers.html">audio
-queue play functions</a> and will return a <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-<tt>ds_map</tt></a> stored in the variable <tt>async_load</tt>,
-containing different key/value pairs relating to the audio queue
-that has triggered the event. The event is triggered when you have
-selected an audio queue to playback and a buffer in that audio
-queue is finished playing.<br>
-<br>
-The following keys will be available in the ds_map:<br>
+<div class="index_list">此事件只能由 <a href=
+"../../../3_scripting/4_gml_reference/audio/audio%20buffers.html">音频队列播放函数</a> 触发，并将返回存储在变量 <tt>async_load</tt> 中的 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，其中包含与触发事件的音频队列相关的不同键 / 值对。 选择要回放的音频队列并完成该音频队列中的缓冲区播放后，将触发该事件。<br><br>ds_map 中将提供以下键：<br>
 <br>
 
 <ul>
-<li>"<b>queue_id</b>" - the queue index for the queue that has
-finished playing, as returned by the function <a href=
-"../../../3_scripting/4_gml_reference/audio/audio_create_play_queue.html">
-<tt>audio_create_play_queue</tt></a>.</li>
+<li>"<b>queue_id</b>" - 已完成播放的队列的索引，由函数 <a href=
+"../../../3_scripting/4_gml_reference/audio/audio_create_play_queue.html"><tt>audio_create_play_queue</tt></a> 返回。</li>
 
-<li>"<b>buffer_id</b>" - the buffer ID for the buffer that is no
-longer being played from</li>
+<li>"<b>buffer_id</b>" - 不再播放的缓冲区的缓冲区 ID</li>
 
-<li>"<b>queue_shutdown</b>" - this is set to 0 during normal
-playback and 1 when the event is received because <a href=
-"../../../3_scripting/4_gml_reference/audio/audio_free_play_queue.html">
-<tt>audio_free_play_queue</tt></a> has been called. When this is
-set to 1, you don't want to queue up any further data.</li>
+<li>"<b>queue_shutdown</b>" - 在正常播放期间设置为 0，在接收到事件时设置为 1，因为已调用 <a href=
+"../../../3_scripting/4_gml_reference/audio/audio_free_play_queue.html"><tt>audio_free_play_queue</tt></a>。如果将其设置为 1，你不希望排队等待任何进一步的数据。</li>
 </ul>
-
-Since an audio queue can be created from multiple buffers, this
-event can be triggered multiple times for one queue as the end of
-each section of buffered audio is reached, hence the "buffer_id"
-key.<br>
+由于可以从多个缓冲区创建音频队列，因此当到达缓冲音频的每个部分的末尾时，可以针对一个队列多次触发该事件，因此使用了 “buffer_id” 键。<br>
 <br>
 
-<div class="note"><b>NOTE:</b> The variable <tt>async_load</tt> is
-only valid in the asynchronous events, as the <tt>ds_map</tt> that
-is points to is created at the start of the event, then deleted
-again at the end, with this variable being reset to a value of -1.
-However, all further data-structures created from the event <b>must
-be cleaned up using the appropriate functions</b>.</div>
+<div class="note"><b>注意：</b> 变量 <tt>async_load</tt> 仅在异步事件中有效，因为指向的 <tt>ds_map</tt> 是在事件开始时创建的，然后在结尾处再次删除，此变量将重置为值 -1。但是，<b>必须使用适当的函数清除</b> 从事件创建的所有其他数据结构。</div>
 <br>
-
-In the example of use given below we will create an audio queue
-with 10 buffered audio sounds added to it and then play the
-queue:<br>
+在下面给出的使用示例中，我们将创建一个音频队列，其中添加了 10 个缓冲的音频声音，然后播放队列：<br>
 <br>
 
 <p class="code">audio_queue = audio_create_play_queue(buffer_s16,
@@ -123,10 +80,7 @@ for (var i = 0; i &lt; 10; i++;)<br>
 &nbsp;&nbsp;&nbsp;}<br>
 audio_play_sound(audio_queue, 0, true);<br></p>
 <br>
-
-Every game step now that the recording is detected will trigger an
-asynchronous Audio Recording event where you can deal with the
-recorded input something like this:<br>
+现在每个游戏步都会检测到录音将触发异步音频录制事件，你可以在此处处理录制的输入，如下所示：<br>
 <br>
 
 <p class="code">var queue = async_load[? "queue_id"];<br>
@@ -152,63 +106,33 @@ buffer_seek_start, 0);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 <br>
-
-Here we check the queue ID and if it's the one we want, we then
-check the buffer ID to see which buffer has finished being played.
-We also then set a local var to that index value for checking later
-and set the buffer back to the start for that sound. Once our local
-variable reaches 9, indicating that the queue has finished, we stop
-the sound playing and free the queue.</div>
+在这里我们检查队列 ID，如果它是我们想要的那个，我们就检查缓冲区 ID 以查看哪个缓冲已经完成播放。 然后，我们还将局部变量设置为该索引值以便稍后检查，并将缓冲区设置回该声音的开始。 一旦我们的局部变量达到 9，表明队列已经完成，我们停止播放声音并释放队列。</div>
 <br>
 <a name="async_audio_rec" id="async_audio_rec"></a> <label class=
-"collapse" for="twelve">Audio Recording</label> <input id="twelve"
+"collapse" for="twelve">录音</label> <input id="twelve"
 type="checkbox">
-<div class="index_list">This event can only be triggered by the
-<a href=
-"../../../3_scripting/4_gml_reference/audio/audio_start_recording.html">
-<tt>audio_start_recording()</tt></a> function and will return a
-<a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-<tt>ds_map</tt></a> stored in the variable <tt>async_load</tt>,
-containing different key/value pairs depending on the call-back
-from the function that has triggered the event.<br>
-<br>
-The following keys will be available in the ds_map:<br>
+<div class="index_list">此事件只能由 <a href=
+"../../../3_scripting/4_gml_reference/audio/audio_start_recording.html"><tt>audio_start_recording()</tt></a> 函数触发，并将返回存储在变量 <tt>async_load</tt> 中的 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，其中包含不同的键 / 值对，具体取决于触发事件的函数的回调。<br><br>ds_map 中将提供以下键：<br>
 <br>
 
 <ul>
-<li>"<b>buffer_id</b>" - the ID of the temporary buffer you can use
-to retrieve the audio data</li>
+<li>"<b>buffer_id</b>" - 可用于检索音频数据的临时缓冲区的 ID</li>
 
-<li>"<b>channel_index</b>" - the recording channel index as
-returned by the calling function that this data came from</li>
+<li>"<b>channel_index</b>" - 由此数据来自的调用函数返回的记录通道索引</li>
 
-<li>"<b>data_len</b>" - the length of data (in bytes) you've
-received</li>
+<li>"<b>data_len</b>" - 你收到的数据长度（以字节为单位）</li>
 </ul>
 
-<div class="note"><b>NOTE:</b> As mentioned at the start of this
-page, the variable <tt>async_load</tt> is only valid in the
-asynchronous events, as the <tt>ds_map</tt> that is points to is
-created at the start of the event, then deleted again at the end.
-However, note that the temporary buffer in which all audio is
-stored with the map will also be removed at the end of the event so
-you should copy it to a custom buffer if you want to keep it for
-later use.</div>
+<div class="note"><b>注意：</b> 如本页开头所述，变量 <tt>async_load</tt> 仅在异步事件中有效，因为指向的 <tt>ds_map</tt> 是在事件开始时创建的，然后在结束时再次删除。但是，请注意，所有音频与地图一起存储的临时缓冲区也将在事件结束时删除，因此如果要保留以供以后使用，则应将其复制到自定义缓冲区。</div>
 <br>
-
-In the usage example below we will create a custom buffer to store
-our recorded audio, and also set our game to record from input
-source 0:<br>
+在下面的用法示例中，我们将创建一个自定义缓冲区来存储我们录制的音频，并将我们的游戏设置为从输入源 0 录制：<br>
 <br>
 
 <p class="code">channel_index = audio_start_recording(0);<br>
 audio_buffer = buffer_create(len, buffer_fast, 1);<br></p>
 <br>
-
-Every game step now that the recording is detected will trigger an
-asynchronous Audio Recording event where you can deal with the
-recorded input something like this:<br>
+现在每个游戏步都会检测到录音将触发异步音频录制事件，你可以在此处处理录制的输入，如下所示：<br>
 <br>
 
 <p class="code">var channel = async_load[? "channel_index"];<br>
@@ -219,69 +143,41 @@ if channel == channel_index<br>
 audio_buffer, 0);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 <br>
-
-Here we simply check the "channel_index" key to make sure it
-matches the value returned when we started recording, and if it
-does we copy the contents of the temporary buffer created for this
-event into our custom buffer. After that you can do what you want
-with the custom buffer - you could play it using the dedicated
-buffer audio functions, you could process it and send it over the
-network, you could save it to disk... Once you have your recorded
-audio in a buffer, you can do basically anything you want.</div>
+在这里，我们只需检查 “channel_index” 键以确保它与我们开始记录时返回的值匹配，如果是，我们将为此事件创建的临时缓冲区的内容复制到我们的自定义缓冲区中。 之后，你可以使用自定义缓冲区执行所需操作 - 你可以使用专用缓冲区音频函数播放它，你可以处理它并通过网络发送它，你可以将其保存到磁盘... 一旦你在缓冲区中有录制的音频，你可以做任何你想要的事情。
+</div>
 <br>
 <a name="async_cloud" id="async_cloud"></a> <label class="collapse"
 for="five">云</label> <input id="five" type="checkbox">
-<div class="index_list">The Cloud Event is one that is triggered by
-the call back from one of the <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html">
-<tt>cloud_</tt> functions</a>, like <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/cloud_synchronise.html">
-<tt>cloud_synchronise</tt></a>. It actually generates a
-<tt>ds_map</tt> that is exclusive to this event and is stored in
-the special variable <b>async_load</b> (please see the individual
-functions for code examples that explain the use of this event in
-further detail). This ds_map has the following structure:<br>
+<div class="index_list">云事件是由其中一个 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html"><tt>cloud_</tt> 函数</a>（如 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/cloud_synchronise.html"><tt>cloud_synchronise</tt></a>）的回调触发的事件。它实际上生成了一个独特的 <tt>ds_map</tt>，并存储在特殊变量 <b>async_load</b> 中（请参阅各个函数以获取更详细地解释此事件使用的代码示例）。 此 ds_map 具有以下结构：<br>
 <br>
 
 <ul>
-<li><b>"status":</b> This holds the status code, where a negative
-value denotes an error, a description of which will be contained in
-the “errorString”. A value of 0 (or a positive value) indicates a
-success(see below for exact values), and the “resultString” will
-contain the returned data or a success message.</li>
+<li><b>"status":</b> 这是状态码，其中负值表示错误，错误详情包含在 “errorstring” 中。
+0 （或者大于 0 的值）代表成功（见下文）的返回, “resultString” 中包含返回的消息数据。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"id":</b> The id which was returned from the called
-function. If you fire off a series of <tt>cloud_</tt> requests then
-you need to know which one you are getting the reply to, and so you
-would use this value to compare to the value you stored when you
-originally sent the request to find the right one.</li>
+<li><b>"id":</b> 返回被调用的函数的 id，如果你发送了一系列的 <tt>cloud_</tt> 请求，你需要知道被回应的是哪一个，所以你要用这个值来和发送时存储的值进行比较来找到你需要的请求。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"description":</b> The description of the last uploaded
-file.</li>
+<li><b>"description":</b> 上传的最后一个文件的描述。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"resultString":</b> This holds a string which is the data
-blob returned from the cloud.</li>
+<li><b>"resultString":</b> 从云端返回的二进制数据。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"errorString":</b> returns an Error String for any
-error.</li>
+<li><b>"errorString":</b> 返回的错误消息。</li>
 </ul>
-
-The exact meaning of the returned "status" map entry is explained
-in the following table:
-
-
+返回值 "status" 的详细映射关系如下如下：
 
 <div class="compat">
 <table>
@@ -294,193 +190,124 @@ in the following table:
 <tr>
 <td>-1</td>
 <td>errorString = "Not logged in to &lt;SERVICE&gt;"</td>
-<td>You have not successfully logged in to the given Cloud
-Service</td>
+<td>未能成功登陆到给定的云服务。</td>
 </tr>
 
 <tr class="alt">
 <td>0</td>
 <td>resultString = recovered data</td>
-<td>New game data downloaded from the cloud (following a
-cloud_synchronise call)</td>
+<td>从云端下载新的游戏数据（在 cloud_synchronise 后调用）。</td>
 </tr>
 
 <tr>
 <td>1</td>
 <td>resultString = "AlreadySynchronized"</td>
-<td>No new data since you last called cloud_synchronise</td>
+<td>自从上次调用以来 cloud_synchronise 没有新的数据。</td>
 </tr>
 
 <tr class="alt">
 <td>2</td>
 <td>resultString = "ConflictDeferral"</td>
-<td>A conflict was encountered, but the gamer chose to ignore
-it</td>
+<td>遇到冲突,但玩家选择忽略它。</td>
 </tr>
 
 <tr>
 <td>3</td>
 <td>resultString = "GameUploadSuccess"</td>
-<td>data from <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/cloud_string_save.html">
-<tt>cloud_string_save</tt></a> or <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/cloud_file_save.html">
-<tt>cloud_file_save</tt></a> was successfully uploaded to the
-cloud</td>
+<td>来自 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/cloud_string_save.html"><tt>cloud_string_save</tt></a> 或 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/cloud_file_save.html"><tt>cloud_file_save</tt></a> 的数据已成功上传到云端</td>
 </tr>
 
 <tr class="alt">
 <td>-n</td>
 <td>errorString = Description of error</td>
-<td>Any other negative number means a synchronisation failure</td>
+<td>负数意味着同步失败。</td>
 </tr>
 </table>
 </div></div>
 <br>
 <a name="async_dialogue" id="async_dialogue"></a> <label class=
-"collapse" for="three">Dialogue</label> <input id="three" type=
+"collapse" for="three">对话框</label> <input id="three" type=
 "checkbox">
-<div class="index_list">Like the above events, the <b>Dialogues</b>
-event is only triggered when it gets a call back from one of the
-special asynchronous user functions, like <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/get_login_async.html">
-<tt>get_login_async()</tt></a> (please see this function for an
-extended code example of how this event is used). These events are
-the ones that ask for some type of user input, which can be a name,
-login details, a number or a colour etc... As most devices do not
-like sitting in a loop waiting for a reply, they have to be
-asynchronous and <i>GameMaker Studio 2</i> will continue to run in
-the background while these functions have a dialogue open and until
-they get the required user input which triggers this event.<br>
-<br>
-Again, a <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-<tt>ds_map</tt></a> is returned with the id held in the special
-variable <b>async_load</b>. The values held in this map will depend
-on the function used, and you should consult the individual entries
-for each function in this manual for more details.</div>
+<div class="index_list">与上述事件一样， <b>对话框</b> 事件仅在从其中一个特殊异步用户函数（如 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/get_login_async.html"><tt>get_login_async()</tt></a>）返回时触发（请参阅此函数以获取有关如何使用此事件的扩展代码示例）。 这些事件是要求某种类型的用户输入的事件，可以是名称、登录详细信息、数字或颜色等...... 由于大多数设备不喜欢在循环中等待回复，它们必须是异步的，<i>GameMaker Studio 2</i> 将继续在后台运行，而这些函数打开对话框，直到它们获得触发此事件的所需用户输入。<br><br>同样，会返回 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，其 id 保存在特殊变量 <b>async_load</b> 中。此映射中保存的值取决于所使用的功能，有关详细信息，请参阅本手册中每个功能的各个条目。</div>
 <br>
 <a name="async_http" id="async_http"></a> <label class="collapse"
 for="two">HTTP</label> <input id="two" type="checkbox">
-<div class="index_list">The HTTP Event is one that is triggered by
-the call back from one of the <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html">
-<tt>http_</tt> functions</a>, like <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/http_post_string.html">
-<tt>http_post_string</tt></a>. It actually generates a
-<tt>ds_map</tt> (sometimes known as a "dictionary") that is
-exclusive to this event and is stored in the special variable
-<tt>async_load</tt> (please see the individual functions for code
-examples that explain the use of this event in further detail).
-This <tt>ds_map</tt> has the following structure:<br>
+<div class="index_list">HTTP 事件是由一个 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html"><tt>http_</tt> 函数</a>（如 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/http_post_string.html"><tt>http_post_string</tt></a>）的回调触发的事件。它实际上生成了一个 <tt>ds_map</tt>（有时称为“字典”），它独有于此事件并存储在特殊变量 <tt>async_load</tt> 中（请参阅各个函数以获取更详细地解释此事件使用的代码示例）。 此 <tt>ds_map</tt> 具有以下结构：<br>
 <br>
 
 <ul>
-<li><b>"id":</b> The id which was returned from the command. If you
-fire off a series of <tt>http_</tt> requests then you need to know
-which one you are getting the reply to, and so you would use this
-value to compare to the value you stored when you originally sent
-the request to find the right one.</li>
+<li><b>"id":</b> 从命令返回的id。如果你发出一系列 <tt>http_</tt> 请求，那么你需要知道你得到了哪一个回复，因此你可以使用这个值来比较你最初发送请求时存储的值，以找到正确的请求。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"status":</b> Returns a value of less than 0 for an error, 0
-for success and 1 if content is being downloaded.</li>
+<li><b>"status":</b> 为错误返回小于 0 的值，为成功返回 0，如果正在下载内容则返回 1。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"result":</b> The data received (string only), or the path
-to the file downloaded if you have used <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/http_get_file.html">
-<tt>http_get_file()</tt></a>.</li>
+<li><b>"result":</b> 收到的数据（仅限字符串），或者如果使用了 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/http_get_file.html"><tt>http_get_file()</tt></a>，则是下载的文件的路径。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"url":</b> The complete URL you requested.</li>
+<li><b>"url":</b> 你请求的完整网址。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"http_status":</b> The raw http status code (if available).
-This returns the standard web status code for most browsers, eg:
-304 for "Not Modified" or 204 for "No Content", etc...</li>
+<li><b>"http_status":</b> 原始 http 状态代码（如果可用）。这将返回大多数浏览器的标准 Web 状态代码，例如：304 表示 “未修改” 或 204 表示 “无内容” 等...</li>
 </ul>
-
-That is for when you use the <tt>http_post_string()</tt> function,
-but each of the <tt>http_</tt> functions may return a slightly
-different map, so please refer to the manual entry for each
-function to find out the precise data that is returned for it.<br>
-<br>
-
-<div class="note"><b>NOTE:</b> As <tt>async_load</tt> creates a
-<a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-<tt>ds_map</tt></a>, these functions are particularly useful when
-coupled with the <a href=
-"../../../3_scripting/4_gml_reference/file%20handling/json_encode.html">
-<tt>json_encode</tt></a> and <a href=
-"../../../3_scripting/4_gml_reference/file%20handling/json_decode.html">
-<tt>json_decode</tt></a> functions.</div>
+这适用于使用 <tt>http_post_string()</tt> 函数时，但每个 <tt>http_</tt> 函数可能会返回略有不同的映射，因此请参阅每个函数的手册条目，以找出为其返回的精确数据。
 <br>
 <br>
 
-There could also be additional data supplied by this map if you
-have requested files for downloading. In this case, the "status"
-will have a value of 1 and the ds_map will hold these extra
-keys:<br>
+<div class="note"><b>注意：</b> 当 <tt>async_load</tt> 创建 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> 时，这些函数在与 <a href=
+"../../../3_scripting/4_gml_reference/file%20handling/json_encode.html"><tt>json_encode</tt></a> 和 <a href=
+"../../../3_scripting/4_gml_reference/file%20handling/json_decode.html"><tt>json_decode</tt></a> 函数结合使用时特别有用。
+</div>
+<br>
+<br>
+如果你已请求下载文件，则此映射还可能提供其他数据。 在这种情况下，“status” 的值为 1，ds_map 将保存这些额外的键：<br>
 <br>
 
 <ul>
-<li><b>"contentLength":</b> This is the size of file that the web
-server has said you should expect to receive (may be -1 if the
-server does not return this data).</li>
+<li><b>"contentLength":</b> 这是 Web 服务器所说的你应该接收的文件大小（如果服务器不返回此数据，则可能为 -1）。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"sizeDownloaded":</b> The size of the data that has already
-been downloaded.</li>
+<li><b>"sizeDownloaded":</b> 已下载的数据大小。</li>
 </ul>
-
-Note that the event will <i>not</i> be triggered for every single
-data packet that is received, but will rather update at any time
-during the download within the main game loop. Also note that
-currently this functionality is only available for regular
-<i>Windows</i> target platforms.</div>
+请注意，<i>不会</i> 为接收到的每个数据包触发事件，而是在主游戏循环中的下载过程中随时更新事件。 另请注意，目前此功能仅适用于常规 <i>Windows</i> 目标平台。</div>
 <br>
 <a name="async_iap" id="async_iap"></a> <label class="collapse"
-for="four">IAP</label> <input id="four" type="checkbox">
-<div class="index_list">This event can only be triggered when you
-have activated <a href=
-"../../../3_scripting/4_gml_reference/in%20app%20purchases/index.html">
-In App Purchases</a> for your game. If you have this functionality
-added, then the event will be triggered under the following
-circumstances:<br>
+for="four">应用内购</label> <input id="four" type="checkbox">
+<div class="index_list">只有在为游戏激活 <a href=
+"../../../3_scripting/4_gml_reference/in%20app%20purchases/index.html">应用内购</a> 时才能触发此事件。 如果添加了此功能，则在以下情况下将触发该事件：<br>
 <br>
 
 <ul>
-<li>The store state changes.</li>
+<li>商店状态发生变化。</li>
 
-<li>A product (or products) have been activated.</li>
+<li>一种产品（或多种产品）已被激活。</li>
 
-<li>The product and purchases have been restored.</li>
+<li>产品和购买已经恢复。</li>
 
-<li>A product has been purchased.</li>
+<li>已购买产品。</li>
 
-<li>A product has been consumed.</li>
+<li>产品已被消费。</li>
 </ul>
-
-The event will always create a special <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-<tt>ds_map</tt></a> with an index ID stored in the built in
-variable <tt><b>iap_data</b></tt>. This map will <i>always</i>
-contain the key "<b>type</b>", which will hold one of the following
-constant values:
-
-
+该事件将始终创建一个特殊的 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，其索引 ID 存储在内置变量 <tt><b>iap_data</b></tt> 中。 此映射将 <i>始终</i> 包含键 “<b>type</b>”，它将包含以下常量值之一：
 
 <div class="compat">
 <table>
@@ -491,55 +318,41 @@ constant values:
 
 <tr>
 <td>iap_ev_storeload</td>
-<td>This is triggered when a change is detected in the target
-platform store.</td>
+<td>在目标平台存储中检测到更改时会触发此操作。</td>
 </tr>
 
 <tr class="alt">
 <td>iap_ev_product</td>
-<td>This event is triggered when a product is activated and will
-contain additional information about the product.</td>
+<td>激活产品时会触发此事件，并包含有关产品的其他信息。</td>
 </tr>
 
 <tr>
 <td>iap_ev_restore</td>
-<td>This event is only triggered when you use the <a href=
-"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_restore_all.html">
-<tt>iap_restore_all</tt></a> function.</td>
+<td>只有在使用 <a href=
+"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_restore_all.html"><tt>iap_restore_all</tt></a> 函数时才会触发此事件。</td>
 </tr>
 
 <tr class="alt">
 <td>iap_ev_purchase</td>
-<td>When a purchase has been completed, this event is
-triggered.</td>
+<td>购买完成后，将触发此事件。</td>
 </tr>
 
 <tr>
 <td>iap_ev_consume</td>
-<td>When you use the function <a href=
-"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_consume.html">
-<tt>iap_consume</tt></a> it triggers this event.</td>
+<td>当你使用函数 <a href=
+"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_consume.html"><tt>iap_consume</tt></a> 时，它会触发此事件。</td>
 </tr>
 </table>
 </div>
 
 <p><br>
 <br>
-
-Each of these possible event "types" will add extra keys to the
-<tt>iap_data</tt> ds_map, which can then be parsed to get the
-purchase or product information necessary. The exact contents of
-the <tt>iap_data</tt> map are listed below for each event
-"type".</p>
+这些可能的事件 “类型” 中的每一个都将为 <tt>iap_data</tt> ds_map 添加额外的密钥，然后可以对其进行解析以获取必要的购买或产品信息。 下面列出了每个事件 “类型” 的 <tt>iap_data</tt> 映射的确切内容。</p>
 
 <blockquote><a name="iap_ev_storeload" id="iap_ev_storeload"></a>
 <label class="collapse" for="fifteen">iap_ev_storeload</label>
 <input id="fifteen" type="checkbox">
-<div class="index_list">When you activate your purchases, your game
-will try to contact the target store, triggering this event in the
-process. The <tt>iap_data</tt> map will then have an addition key
-"<b>status"</b>, which will have one of the following constants as
-it's value:<br>
+<div class="index_list">当你激活购买时，你的游戏将尝试联系目标商店，在此过程中触发此事件。 然后，<tt>iap_data</tt> 映射将具有一个附加键 “<b>status</b>”，它将具有以下常量之一作为其值：<br>
 <br>
 
 <div class="compat">
@@ -551,13 +364,12 @@ it's value:<br>
 
 <tr>
 <td>iap_storeload_ok</td>
-<td>The store has been contacted and the connection is good.</td>
+<td>已连接商店，连接良好。</td>
 </tr>
 
 <tr class="alt">
 <td>iap_storeload_failed</td>
-<td>There has been a connection error or for some reason the store
-is unavailable.</td>
+<td>存在连接错误或由于某种原因存储不可用。</td>
 </tr>
 </table>
 </div></div>
@@ -565,113 +377,61 @@ is unavailable.</td>
 <a name="iap_ev_product" id="iap_ev_product"></a> <label class=
 "collapse" for="sixteen">iap_ev_product</label> <input id="sixteen"
 type="checkbox">
-<div class="index_list">All activated purchases will trigger this
-event "type", but only once per purchase, so if you have activated
-ten products you should expect this event to trigger ten times. If
-you have received this event, the <tt>iap_data</tt> ds_map will
-hold the additional key "<b>index</b>" which holds the unique
-<b>product ID string</b> for the product being activated. You can
-then use the function <a href=
-"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_product_details.html">
-<tt>iap_product_details</tt></a> along with this product ID to get
-further information.<br>
+<div class="index_list">所有激活的购买都会触发此事件 “类型”，但每次购买只会触发一次，因此如果你已激活十个产品，则应该会触发此事件十次。 如果你收到此事件，则 <tt>iap_data</tt> ds_map 将保留附加键 “<b>index</b>”，其中包含正在激活的产品的唯一 <b>产品 ID </b> 字符串。 然后，你可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_product_details.html"><tt>iap_product_details</tt></a> 以及此产品 ID 来获取更多信息。<br>
 <br>
 
-<div class="note"><b>NOTE:</b> Google Play (Android) can only
-request details for products 20 at a time which can lead to quite
-long load times for applications with a significant number of
-products.</div></div>
+<div class="note"><b>注意：</b> Google Play（Android）一次只能请求产品的 20 条详细信息，这会导致具有大量产品的应用程序的加载时间相当长。</div></div>
 <br>
 <a name="iap_ev_restore" id="iap_ev_restore"></a> <label class=
 "collapse" for="seventeen">iap_ev_restore</label> <input id=
 "seventeen" type="checkbox">
-<div class="index_list">When you call the function <a href=
-"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_restore_all.html">
-<tt>iap_restore_all</tt></a> it will trigger this event, adding a
-"<b>result</b>" key to the <tt>iap_data</tt> ds_map. This key will
-hold either <tt>true</tt> or <tt>false</tt> to indicate whether the
-purchase data has been successfully restored from the target
-store.</div>
+<div class="index_list">当你调用函数 <a href=
+"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_restore_all.html"><tt>iap_restore_all</tt></a> 时，它将触发此事件，向 <tt>iap_data ds_map</tt> 添加 “<b>result</b>” 键。 此键将包含 <tt>true</tt> 或 <tt>false</tt>，以指示是否已从目标商店成功还原购买数据。</div>
 <br>
 <a name="iap_ev_purchase" id="iap_ev_purchase"></a> <label class=
 "collapse" for="eighteen">iap_ev_purchase</label> <input id=
 "eighteen" type="checkbox">
-<div class="index_list">On requesting a purchase using the function
-<a href=
-"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_acquire.html">
-<tt>iap_acquire</tt></a> this event type will be triggered. The
-<tt>iap_data</tt> ds_map will have the additional key
-"<b>index</b>" which holds the unique <b>purchase ID</b> value for
-the product being purchased. You can then use the function <a href=
-"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_purchase_details.html">
-<tt>iap_purchase_details</tt></a> along with this purchase ID to
-get further information.<br>
+<div class="index_list">在使用函数 <a href=
+"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_acquire.html"><tt>iap_acquire</tt></a> 请求购买时，将触发此事件类型。<tt>iap_data</tt> ds_map 将具有附加键 “<b>index</b>”，其中包含所购买产品的唯一 <b>购买 ID</b> 值。 然后，你可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_purchase_details.html"><tt>iap_purchase_details</tt></a> 以及此购买 ID 来获取更多信息。<br>
 <br>
 
-<div class="note"><b>NOTE:</b> If the product purchased is
-consumable then it <b>must be used</b> using <tt>iap_consume</tt>
-before a further purchase can be made.</div></div>
+<div class="note"><b>注意：</b> 如果购买的产品是消耗品，则 <b>必须先使用</b> <tt>iap_consume</tt> 进行购买，然后才能进一步购买。</div></div>
 <br>
 <a name="iap_ev_consume" id="iap_ev_consume"></a> <label class=
 "collapse" for="nineteen">iap_ev_consume</label> <input id=
 "nineteen" type="checkbox">
-<div class="index_list">When using the function <a href=
-"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_consume.html">
-<tt>iap_consume</tt></a> this event type will be triggered. The
-<tt>iap_data</tt> ds_map will have the additional key
-"<b>product</b>" which holds the unique <b>product ID</b> string
-for the product being consumed.</div></blockquote></div>
+<div class="index_list">使用函数 <a href=
+"../../../3_scripting/4_gml_reference/in%20app%20purchases/iap_consume.html"><tt>iap_consume</tt></a> 时，将触发此事件类型。 <tt>iap_data</tt> ds_map 将具有附加密钥 “<b>product</b>”，其中包含正在使用的产品的唯一 <b>产品 ID</b> 字符串。</div></blockquote></div>
 <br>
 <a name="async_image_loaded" id="async_image_loaded"></a>
-<label class="collapse" for="one">Image Loaded</label> <input id=
+<label class="collapse" for="one">加载图片</label> <input id=
 "one" type="checkbox">
-<div class="index_list">This event is triggered when you load an
-image into <i>GameMaker Studio 2</i>, as long as you have used a
-valid URL or path with the applicable load file function. For
-example say you want to load a sprite image, and only change the
-current sprite for the instance to the new one when it has loaded.
-Well you would have something like this in a create event or an
-alarm event (for example):
-
-
+<div class="index_list">只要你使用了具有适用加载文件功能的有效 URL 或路径，就会在将图像加载到 <i>GameMaker Studio 2</i> 时触发此事件。例如，假设你要加载精灵图像，并且仅在加载时将实例的当前精灵更改为新精灵。 那么你会在创建事件或计时器事件中有这样的事情（例如）：
 
 <p class="code">spr =
 sprite_add("http://www.angusgames.com/game/background1.png", 0,
 false, false, 0, 0);</p>
 
-<p>This will now start to load the image into the device or the
-browser, but it will <i>not</i> block <i>GameMaker Studio 2</i>
-while it waits for the file to be loaded. Instead <i>GameMaker
-Studio 2</i> will keep running as normal until the image is loaded
-and the call back triggers the <b>Image Loaded</b> event, where a
-<a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-<tt>ds_map</tt></a> is created and stored in the special variable
-<b>async_load</b>. The map contains the following information:</p>
+<p>现在，这将开始将图像加载到设备或浏览器中，但在等待加载文件时 <i>不会</i> 阻止 <i>GameMaker Studio 2</i>。 相反，<i>GameMaker Studio 2</i> 将继续正常运行，直到加载图像并且回调触发 <b>加载图片</b> 事件，其中创建 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> 并将其存储在特殊变量 <b>async_load</b> 中。 该映射包含以下信息：</p>
 
 <ul>
-<li><b>"filename":</b> The complete path to the file you
-requested.</li>
+<li><b>"filename":</b> 你请求的文件的完整路径。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"id":</b> The ID of the resource that you have loaded. This
-will be the same as the variable that you have assigned the
-resource to.</li>
+<li><b>"id":</b> 已加载资源的 ID。这与你为其分配资源的变量相同。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"status":</b> Returns a value of less than 0 for an
-error.</li>
+<li><b>"status":</b> 为错误返回小于 0 的值。</li>
 </ul>
 
-<p>You would then assign the newly loaded image to a background in
-this event. The above is also true for sprites and sounds, with a
-ds_map being generated for each of these resources as shown above,
-and the following code example demonstrates how the returned
-information would be used in this event:</p>
+<p>然后，你将在此事件中将新加载的图像分配给背景。 对于精灵和声音也是如此，如上所示为每个资源生成 ds_map，以下代码示例演示了如何在此事件中使用返回的信息：</p>
 
 <p class="code">if ds_map_find_value(async_load, "id") == spr<br>
 &nbsp;&nbsp;&nbsp;{<br>
@@ -682,71 +442,43 @@ information would be used in this event:</p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will first check the id of the ds_map that has
-been created, then check the status of the callback. If the value
-is greater than or equal to 0 (signalling success) the result from
-the callback will then be used to set the background index to the
-newly loaded image.</p></div>
+<p>上面的代码将首先检查已创建的 ds_map 的 id，然后检查回调的状态。如果该值大于或等于 0（信号成功），则回调的结果将用于将背景索引设置为新加载的图像。</p></div>
 <br>
 <a name="async_networking" id="async_networking"></a> <label class=
-"collapse" for="six">Networking</label> <input id="six" type=
+"collapse" for="six">联网</label> <input id="six" type=
 "checkbox">
-<div class="index_list">The Networking event is one which will be
-triggered by any incoming network traffic, and is linked to the
-<a href=
-"../../../3_scripting/4_gml_reference/networking/index.html">Network
-Functions</a>. This event generates a special <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-ds_map</a> that is exclusive to this event and is stored in the
-special variable <b>async_load</b>. This <tt>ds_map</tt> will
-contain different information depending on the type of network
-event that generated it.
-
-
+<div class="index_list">网络事件是由任何传入网络流量触发的事件，并链接到 <a href=
+"../../../3_scripting/4_gml_reference/networking/index.html">网络函数</a>。此事件生成一个特殊的 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">ds_map</a>，该事件专用于此事件，并存储在特殊变量 <b>async_load</b> 中。 此 <tt>ds_map</tt> 将包含不同的信息，具体取决于生成它的网络事件的类型。
 
 <blockquote><a name="async_network_common" id=
 "async_network_common"></a> <label class="collapse" for=
-"twenty">Common Networking Events</label> <input id="twenty" type=
+"twenty">常见网络事件</label> <input id="twenty" type=
 "checkbox">
-<div class="index_list">The following keys are common to all
-received network functions and will always be present in the
-<tt>async_load</tt> map:<br>
+<div class="index_list">以下键对所有接收的网络功能都是通用的，并且始终存在于 <tt>async_load</tt> 映射中：<br>
 <br>
 
 <ul>
-<li><b>"type":</b> This will have one of the constants listed below
-as its return value, and designates the network event type.</li>
+<li><b>"type":</b> 这将使下面列出的常量之一作为其返回值，并指定网络事件类型。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"id":</b> The socket id (a real number, as returned by the
-<a href=
-"../../../3_scripting/4_gml_reference/networking/network_create_server.html">
-network_create_server</a> or <a href=
-"../../../3_scripting/4_gml_reference/networking/network_create_socket.html">
-network_create_socket</a> function) that is receiving the event. In
-most cases the socket ID returned is the ID of TCP or UDP socket
-that triggered the event, however if the event is triggered in a
-<i>server</i> and it's a Data Event (see below) then the socket ID
-is that of the <i>client</i> that sent the data.</li>
+<li><b>"id":</b> 正在接收事件的套接字 id（由 <a href=
+"../../../3_scripting/4_gml_reference/networking/network_create_server.html">network_create_server</a> 或 <a href=
+"../../../3_scripting/4_gml_reference/networking/network_create_socket.html">network_create_socket</a> 函数返回的实数）。 在大多数情况下，返回的套接字 ID 是触发事件的 TCP 或 UDP 套接字的 ID，但是如果在 <i>服务器</i> 中触发事件并且它是数据事件（见下文），那么套接字 ID 是发送数据的 <i>客户端</i> 套接字 ID。 </li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"ip":</b> The IP address of the socket (as a string).</li>
+<li><b>"ip":</b> 套接字的 IP 地址（作为字符串）。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"port":</b> The port associated with the IP address (useful
-when working with UDP).</li>
+<li><b>"port":</b> 与 IP 地址关联的端口（在使用 UDP 时很有用）。</li>
 </ul>
-
-The possible return values for the "type" key can be any of the
-three constants listed below:
-
-
+“type” 键的可能返回值可以是下面列出的四个常量中的任何一个：
 
 <div class="compat">
 <table>
@@ -757,138 +489,89 @@ three constants listed below:
 
 <tr>
 <td>network_type_connect</td>
-<td>The event was triggered by a connection.</td>
+<td>事件由连接触发。</td>
 </tr>
 
 <tr class="alt">
 <td>network_type_disconnect</td>
-<td>The event was triggered by a disconnection.</td>
+<td>事件由断开连接触发。</td>
 </tr>
 
 <tr>
 <td>network_type_data</td>
-<td>The event was triggered by incoming data.</td>
+<td>事件由传入数据触发。</td>
 </tr>
 
 <tr class="alt">
 <td>network_type_non_blocking_connect</td>
-<td>The event was triggered by a connection configured as
-non-blocking (you can use the function <a href=
-"../../../3_scripting/4_gml_reference/networking/network_set_config.html">
-<tt>network_set_config()</tt></a> for this).</td>
+<td>事件由配置为非阻塞的连接触发（你可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/networking/network_set_config.html"><tt>network_set_config()</tt></a>）。</td>
 </tr>
 </table>
 </div></div>
 <br>
 <a name="async_network_connect" id="async_network_connect"></a>
-<label class="collapse" for="twentyone">Connecting /
-Disconnecting</label> <input id="twentyone" type="checkbox">
-<div class="index_list">When you have an event of the type
-<tt>network_type_connect</tt>,
-<tt>network_type_non_blocking_connect</tt> or
-<tt>network_type_disconnect</tt>, the <tt>async_load</tt> map will
-have the following additional keys:<br>
+<label class="collapse" for="twentyone">连接 / 断开连接</label> <input id="twentyone" type="checkbox">
+<div class="index_list">如果你有类型为 <tt>network_type_connect</tt>、<tt>network_type_non_blocking_connect</tt> 或 <tt>network_type_disconnect</tt> 的事件，则 <tt>async_load</tt> 映射将具有以下附加键：<br>
 <br>
 
 <ul>
-<li><b>"socket":</b> This key will hold the
-connecting/disconnecting socket id.</li>
+<li><b>"socket":</b> 此键将保持连接 / 断开套接字 ID。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"succeeded":</b> This key will be either 0 or 1, where 0
-means the connection timed out and 1 means it succeeded and the
-socket is ready to use.</li>
+<li><b>"succeeded":</b> 此键将为 0 或 1，其中 0 表示连接超时，1 表示成功，套接字可以使用。</li>
 </ul>
-
-It is worth noting that the Networking Event does not get triggered
-in <i>clients</i> when the <i>server</i> disconnects, and that
-neither of the <tt>network_type_*</tt> events will be triggered in
-clients when the server they are connected to disconnects, even if
-the connection is TCP based.</div>
+值得注意的是，当 <i>服务器</i> 断开连接时，网络事件不会在 <i>客户端</i> 中触发，并且当连接的服务器断开连接时，即使连接基于 TCP，也不会在客户端中触发 <tt>network_type_*</tt> 事件。</div>
 <br>
 <a name="async_network_receive" id="async_network_receive"></a>
-<label class="collapse" for="twentytwo">Receiving Data</label>
+<label class="collapse" for="twentytwo">接收数据</label>
 <input id="twentytwo" type="checkbox">
-<div class="index_list">When you have a <tt>network_type_data</tt>
-type event, which signifies that your network has received data,
-the map created will have the following keys:<br>
+<div class="index_list">当你有 <tt>network_type_data</tt> 类型事件（表示你的网络已收到数据）时，创建的映射将具有以下键：
+<br>
 <br>
 
 <ul>
-<li><b>"buffer":</b> This is the unique "buffer id" which is
-generated by the event. A "grow" type buffer, byte aligned to 1, is
-created to hold the id should be stored in a variable and used for
-all further function calls to the buffer <i><b>in this
-event</b></i>. Just like the <tt>async_load</tt> map, the buffer
-created is automatically removed from memory at the end of this
-event. For more information on buffers, please see <a href=
-"../../../3_scripting/4_gml_reference/buffers/index.html">Reference
-- Buffers</a></li>
+<li><b>"buffer":</b> 这是由事件生成的唯一 “缓冲区 ID”。 创建一个 “增长” 类型缓冲区，字节对齐为 1，以保存 id 应存储在变量中，并用于 <i><b>此事件中</b></i> 对缓冲区的所有进一步函数调用。 就像 <tt>async_load</tt> 映射一样，创建的缓冲区会在此事件结束时自动从内存中删除。 有关缓冲区的更多信息，请参阅 <a href=
+"../../../3_scripting/4_gml_reference/buffers/index.html">参考 - 缓冲区</a></li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"size":</b> This is the size (in bytes) of the buffer data
-that is being received.</li>
+<li><b>"size":</b> 这是正在接收的缓冲区数据的大小（以字节为单位）。</li>
 </ul>
 
-<div class="note"><b>NOTE:</b> The buffer created is <b>only valid
-in these events</b> and will be freed when the event is
-over.</div></div></blockquote></div>
+<div class="note"><b>注意：</b> 创建的缓冲区 <b>仅在这些事件中有效</b>，并在事件结束时释放。</div></div></blockquote></div>
 <br>
 <a name="async_push" id="async_push"></a> <label class="collapse"
-for="ten">Push Notification</label> <input id="ten" type=
+for="ten">推送通知</label> <input id="ten" type=
 "checkbox">
-<div class="index_list">The Push Notification Event is one that is
-triggered by the call back from <b>push notifications</b> on the
-device OS, either from a local source using the function <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/push_local_notification.html">
-<tt>push_local_notification</tt></a>, or from a remote source (ie:
-your server). It generates a <tt>ds_map</tt> that is exclusive to
-this event and is stored in the special variable <b>async_load</b>
-(please see the individual functions that trigger asynchronous
-events for code examples that explain the use of this event in
-further detail). This <tt>ds_map</tt> has the following keys:<br>
+<div class="index_list">推送通知事件是由设备操作系统上的 <b>推送通知</b> 回调触发的事件，可以是使用函数 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/push_local_notification.html"><tt>push_local_notification</tt></a> 的本地源，也可以是远程源（即：你的服务器）。它生成一个独特于此事件的 <tt>ds_map</tt>，并存储在特殊变量 <b>async_load</b> 中（请参阅触发异步事件的各个函数，以获取更详细地解释此事件使用的代码示例）。此 <tt>ds_map</tt> 具有以下键：
+<br>
 <br>
 
 <ul>
-<li><b>"type":</b> Value can be "local" for a device local
-notification, "remote" for a remote notification, or "register" for
-remote notification registration.</li>
+<li><b>"type":</b> 值可以是设备本地通知的 “local”，远程通知的 “reomte” 或远程通知注册的 “register”。</li>
 
-<li><b>"status":</b> Value will be "1" for success or "0" for an
-error.</li>
+<li><b>"status":</b> 成功的值为 “1”，错误的值为 “0”。</li>
 </ul>
-
-There may be additional key entries based on the "type" returned
-and the "status" value. For "status", if an error has been returned
-("0"), then you will also have the following key:<br>
+根据返回的 “类型” 和 “状态” 值，可能存在其他键条目。对于 “status”，如果返回错误（“0”），那么你还将拥有以下键：<br>
 <br>
 
 <ul>
-<li><b>"error":</b> Contains details of the error received.</li>
+<li><b>"error":</b> 包含收到的错误的详细信息。</li>
 </ul>
-
-If the "status" value is 1 (ie: no errors) then the <tt>ds_map</tt>
-will contain the following additional values, depending on the
-value of the "type" key:<br>
+如果 “status” 值为 1（即：无错误），则 <tt>ds_map</tt> 将包含以下附加值，具体取决于 “type” 键的值：<br>
 <br>
 
 <ul>
-<li><b>"reg_id":</b> If the "type" received was "register", then
-this key will hold the device registration id for remote
-notifications.</li>
+<li><b>"reg_id":</b> 如果收到的 “type” 是 “register”，则该键将保存设备注册 ID 以进行远程通知。</li>
 
-<li><b>"data":</b> If the "type" received was "local" or "remote",
-then this key will hold the string payload that you defined when
-you called the notification function.</li>
+<li><b>"data":</b> 如果收到的 “type” 是 “local” 或 “remote”，则此键将保存你在调用通知函数时定义的字符串有效内容。</li>
 </ul>
-
-To understand this better, we have created a small example snippet
-below for you to look at. In this example we will send a local push
-notification using the following code:<br>
+为了更好地理解这一点，我们在下面创建了一个小示例代码段供你查看。在这个示例中,我们将使用下面的代码来发送一个本地推送通知：<br>
 <br>
 
 <p class="code">var fireTime =
@@ -897,17 +580,7 @@ var data = "daily_reward";<br>
 push_local_notification(fireTime, "Ahoy!", "Catch The Haggis Has A
 Present", data);<br></p>
 <br>
-
-This will set a timer to "push" a notification to the device when
-one day has passed. When the day is up, if your game is either in
-the background or not running, a notification will be shown to the
-user with the given title and message (on iOS, the game name is
-shown and the title is ignored), and then an asynchronous Push
-Notification Event will be called. Note that if the game is in the
-foreground when the time for the notification comes, it will
-<i>not</i> be shown, but the asynchronous event <b>will still
-trigger</b>. In the event itself you would handle the callback
-something like this:<br>
+设置一个计时器在一天后向设备 “推送” 一个通知。一天以后，无论你的程序是在后台还是未启动状态，玩家都将收到之前设置的通知（在 iOS 平台标题被游戏的名字替代），然后一个异步的推送通知事件（Push Notification Event）会被触发。需要注意的是，如果推送时程序运行在前台，通知将 <i>不会</i> 被展示，但是异步推送事件 <b>仍会触发</b>。在事件本身你会这样处理回调：<br>
 <br>
 
 <p class="code">var type = ds_map_find_value(async_load,
@@ -941,186 +614,118 @@ ds_map_find_value(async_load, "data");<br>
 &nbsp;&nbsp;&nbsp;}<br></p></div>
 <br>
 <a name="async_saveload" id="async_saveload"></a> <label class=
-"collapse" for="eleven">Save / Load</label> <input id="eleven"
+"collapse" for="eleven">保存 / 载入</label> <input id="eleven"
 type="checkbox">
-<div class="index_list">This event will be triggered by certain
-functions related to loading and saving buffers to files, as well
-as when loading or unloading audio from memory. The event itself
-will contain the built in <tt>async_load</tt> DS map which will be
-populated by the keys required for the specific function. These are
-listed in the sections below.
-
-
+<div class="index_list">此事件将由与加载和保存文件缓冲区以及从内存加载或卸载音频时相关的某些函数触发。 事件本身将包含内置的 <tt>async_load</tt> DS 映射，该映射将由特定函数所需的密钥填充。 这些列在下面的部分中。
 
 <blockquote><a name="async_saveload_buffers" id=
 "async_saveload_buffers"></a> <label class="collapse" for=
 "twentynine">缓冲区</label> <input id="twentynine" type=
 "checkbox">
-<div class="index_list">When you use the functions <a href=
-"../../../3_scripting/4_gml_reference/buffers/buffer_save_async.html">
-<tt>buffer_save_async()</tt></a> or <a href=
-"../../../3_scripting/4_gml_reference/buffers/buffer_load_async.html">
-<tt>buffer_load_async()</tt></a> an asynchronous event will be
-triggered when the data transfer has been completed. This event
-will populate the <tt>async_load</tt> map with the following
-key/value pairs<br>
+<div class="index_list">使用函数 <a href=
+"../../../3_scripting/4_gml_reference/buffers/buffer_save_async.html"><tt>buffer_save_async()</tt></a> 或 <a href=
+"../../../3_scripting/4_gml_reference/buffers/buffer_load_async.html"><tt>buffer_load_async()</tt></a> 时，将在数据传输完成时触发异步事件。 此事件将使用以下键 / 值对填充 <tt>async_load</tt> 映射<br>
 <br>
 
 <ul>
-<li><b>"id":</b> the ID of the async function as returned by the
-function used.</li>
+<li><b>"id":</b> 由所使用的函数返回的异步函数的 ID。</li>
 
-<li><b>"status":</b> will return <tt>true</tt> if the data was
-saved/loaded correctly, and <tt>false</tt> otherwise.</li>
+<li><b>"status":</b> 如果正确保存/加载数据，则返回 <tt>true</tt>，否则返回 <tt>false</tt>。</li>
 </ul>
-
-This permits you to poll the saving/loading progress and display a
-message or change rooms etc... when the process is complete.</div>
+这允许你轮询保存 / 加载进度并显示消息或更改房间等...当过程完成时。</div>
 <br>
 <a name="async_saveload_audio" id="async_saveload_audio"></a>
 <label class="collapse" for="thirty">音频组</label>
 <input id="thirty" type="checkbox">
-<div class="index_list">When working with <a href=
-"../../../3_scripting/4_gml_reference/audio/audio%20groups.html">Audio
-Groups</a>, you can load them an unload them from memory using the
-functions <a href=
-"../../../3_scripting/4_gml_reference/audio/audio_group_load.html"><tt>
-audio_group_load()</tt></a> and <a href=
-"../../../3_scripting/4_gml_reference/audio/audio_group_unload.html">
-<tt>audio_group_unload()</tt></a>. When using the load function, it
-will trigger this event when the full set of audio files set for
-the group has been loaded into memory and will populate the map
-with the following key/value pairs:<br>
+<div class="index_list">使用 <a href=
+"../../../3_scripting/4_gml_reference/audio/audio%20groups.html">音频组</a> 时，你可以使用 <a href=
+"../../../3_scripting/4_gml_reference/audio/audio_group_load.html"><tt>audio_group_load()</tt></a> 和 <a href=
+"../../../3_scripting/4_gml_reference/audio/audio_group_unload.html"><tt>audio_group_unload()</tt></a> 函数加载它们并从内存中卸载它们。使用加载功能时，当为该组设置的完整音频文件集已加载到内存中时，它将触发此事件，并使用以下键 / 值对填充映射：<br>
 <br>
 
 <ul>
-<li><b>"type":</b> this tells us the type of event being called and
-will be "<tt>audiogroup_load</tt>" for loading audio.</li>
+<li><b>"type":</b> 这告诉我们被调用的事件的类型，并且将是 “<tt>audiogroup_load</tt>” 来加载音频。</li>
 
-<li><b>"group_id":</b> will return the ID of the audio group that
-has been loaded (as defined in the <a href=
-"c:/source/yoyostudio/documentation/english/2_interface/3_settings/audio.html">
-Audio Group Editor</a>).</li>
+<li><b>"group_id":</b> 将返回已加载的音频组的 ID（如 <a href=
+"c:/source/yoyostudio/documentation/english/2_interface/3_settings/audio.html">音频组编辑器</a> 中所定义）。</li>
 </ul>
-
-When all audio has been loaded for a group, this event will trigger
-and it can then be used to change rooms, or play a music track
-etc...</div></blockquote></div>
+当为一个组加载所有音频时，此事件将触发，然后可用于更改房间，或播放音乐曲目等...</div></blockquote></div>
 <br>
 <a name="async_social" id="async_social"></a> <label class=
 "collapse" for="eight">社交（Social）</label> <input id="eight" type=
 "checkbox">
-<div class="index_list">This event can only be triggered by the
-various specific <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html">
-Social Functions</a> and will return a <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-<tt>ds_map</tt></a> stored in the variable <tt>async_load</tt>,
-containing different key/value pairs depending on the callback from
-the function that has triggered the event.<br>
-<br>
-The ds_map will contain a number of keys, the most important of
-which is the "<i>id</i>" key. This will return a <b>constant</b>
-which can then be checked in code to determine which of the many
-callbacks the event has received. Once you have parsed this key and
-compared the value returned with the available constants, you can
-then continue to extract the rest of the information from the map.
-
-
+<div class="index_list">此事件只能由各种特定的 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html">社交函数</a> 触发，并将返回存储在变量 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html"><tt>async_load</tt></a> 中的 <tt>ds_map</tt>，其中包含不同的键 / 值对，具体取决于触发事件的函数的回调。<br><br>ds_map 将包含许多键，其中最重要的是 “<i>id</i>” 键。 这将返回一个 <b>常量</b>，然后可以在代码中检查该常量以确定事件已收到的许多回调中的哪一个。 解析此密钥并将返回的值与可用常量进行比较后，你可以继续从映射中提取其余信息。
 
 <blockquote><a name="async_social_leaderboards" id=
 "async_social_leaderboards"></a> <label class="collapse" for=
-"twentyseven">Leaderboards and Achievements</label> <input id=
+"twentyseven">成就和排行榜</label> <input id=
 "twentyseven" type="checkbox">
-<div class="index_list">The function pages on <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/achievements%20and%20leaderboards/index.html">
-Social Gaming - Achievements and Leaderboards</a> in the Reference
-section detail the functions and callbacks as well as the constants
-used to trigger this event, but there are also certain
-circumstances in which it will be triggered without a function call
-from the game that is running:<br>
+<div class="index_list">函数页面 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/achievements%20and%20leaderboards/index.html">社交游戏 - 成就和排行榜</a> 参考部分中详细介绍了函数和回调以及用于触发此事件的常量，但是在某些情况下，如果没有来自游戏的函数调用，它将在运行时被触发：<br>
 <br>
 
 <ul>
-<li>when your game is launched from the OS dashboard</li>
+<li>从操作系统仪表板 (?) 启动游戏时</li>
 
-<li>when you complete a challenge</li>
+<li>当你完成挑战时</li>
 
-<li>when another player completes a challenge</li>
+<li>当另一位玩家完成挑战时</li>
 
-<li>when the game is started from the OS dashboard by selecting a
-challenge</li>
+<li>从操作系统仪表板启动游戏时选择挑战</li>
 </ul>
 
-<p>Any of the above callbacks will trigger the <b>Social Event</b>
-and an <tt>async_load</tt> map will be generated with the following
-details (note that there is a different "id" key value to define
-each of the different reasons that the event was called, but all
-other contents of the map are the same):<br>
+<p>任何上述回调都将触发 <b>社交事件（Social Event）</b>，并且将生成带有以下详细信息的 <tt>async_load</tt> 映射（请注意，有一个不同的 “id” 键值来定义调用该事件的每个不同原因，但所有其他内容映射是一样的）：<br>
 <br></p>
 
 <ul>
-<li>"<b>id</b>" - The value of this key will depend on the type of
-callback triggering the event. it can be one of these
-constants:<br>
+<li>"<b>id</b>" - 此键的值取决于触发事件的回调类型。 它可以是以下常量之一：<br>
 <br>
 
 <ul>
-<li><b><tt>achievement_challenge_received</tt></b> - A challenge
-has been received<br></li>
+<li><b><tt>achievement_challenge_received</tt></b> - 已收到挑战<br></li>
 
-<li><b><tt>achievement_challenge_completed</tt></b> - A challenge
-has been completed.<br></li>
+<li><b><tt>achievement_challenge_completed</tt></b> - 挑战已经完成。<br></li>
 
-<li><b><tt>achievement_challenge_completed_by_remote</tt></b> - A
-challenge has been completed by the other player.<br></li>
+<li><b><tt>achievement_challenge_completed_by_remote</tt></b> - 其他玩家已完成挑战。<br></li>
 
-<li><b><tt>achievement_challenge_launched</tt></b> - The game was
-launched from the OS dashboard with the given challenge.<br></li>
+<li><b><tt>achievement_challenge_launched</tt></b> - 游戏是从具有给定挑战的操作系统仪表板启动的。<br></li>
 </ul></li>
 
-<li>"<b>playerid</b>" - The player id for the challenge.<br>
+<li>"<b>playerid</b>" - 挑战的玩家 id。<br>
 <br></li>
 
-<li>"<b>issuerid</b>" - The id of the person that issued the
-challenge.<br>
+<li>"<b>issuerid</b>" - 发出挑战的人的 id。<br>
 <br></li>
 
-<li>"<b>state</b>" - The state of the challenge, which will have a
-value of 0 - 3 (as a string) for <i>invalid</i>, <i>pending</i>,
-<i>completed</i> or <i>declined</i>.<br>
+<li>"<b>state</b>" - 挑战的状态，对于 <i>无效</i>、<i>待定</i>、<i>已完成</i> 或 <i>已拒绝</i>，其值为 0 - 3（作为字符串）。<br>
 <br></li>
 
-<li>"<b>message</b>" - The text message for challenge.<br>
+<li>"<b>message</b>" - 挑战的消息。<br>
 <br></li>
 
-<li>"<b>issueddate</b>" - The issue date for challenge<br>
+<li>"<b>issueddate</b>" - 挑战的发布日期<br>
 <br></li>
 
-<li>"<b>completeddate</b>" - The completion date for challenge.<br>
+<li>"<b>completeddate</b>" - 挑战的完成日期。<br>
 <br></li>
 
-<li>"<b>type</b>" - The type of challenge given. Can be one of two
-constants:<br>
+<li>"<b>type</b>" - 给出的挑战类型。 可以是两个常量之一：<br>
 <br>
 
 <ul>
-<li><b><tt>achievement_type_score_challenge</tt></b> - A challenge
-based on the score value.<br></li>
+<li><b><tt>achievement_type_score_challenge</tt></b> - 基于分数值的挑战。<br></li>
 
-<li><b><tt>achievement_type_achievement_challenge</tt></b> - A
-challenge based on an achievement.<br></li>
+<li><b><tt>achievement_type_achievement_challenge</tt></b> - 基于成就的挑战。<br></li>
 </ul></li>
 
-<li>"<b>identifier</b>" - The identifying string for the
-challenge.<br>
+<li>"<b>identifier</b>" - 挑战的识别字符串。<br>
 <br></li>
 
-<li>"<b>score</b>" - The score tied in with the challenge.</li>
+<li>"<b>score</b>" - 分数与挑战是一致的。</li>
 </ul>
-
-Below you can find a small snippet of code as an example of
-use:<br>
+你可以在下面找到一小段代码作为使用示例：<br>
 <br>
 
 <p class="code">var ident = ds_map_find_value(async_load, "id"
@@ -1148,214 +753,137 @@ if ident == achievement_challenge_completed;<br>
 <a name="async_social_facebook" id="async_social_facebook"></a>
 <label class="collapse" for="twentyeight">Facebook</label>
 <input id="twentyeight" type="checkbox">
-<div class="index_list">Some of the <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/facebook/index.html">
-Facebook functions</a> will trigger a social asynchronous event and
-create a <tt>ds_map</tt> with some specific information. The
-information returned will depend on the "type" of event that has
-been called. You can check this by reading the "type" key from the
-ds_map, which will be the following string for a Facebook
-event:<br>
+<div class="index_list">一些 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/facebook/index.html">Facebook 函数</a> 将触发社交异步事件并创建带有一些特定信息的 <tt>ds_map</tt>。 返回的信息将取决于已调用事件的 “类型”。 你可以通过读取 ds_map 中的 “type” 键来检查这一点，这将是以下 Facebook 事件的字符串：<br>
 <br>
 
 <ul>
 <li>"<b>facebook_permission_request</b>"</li>
 </ul>
 
-<p>When the event is triggered and is of this type, there will also
-be additional keys that can be checked:</p>
+<p>当事件被触发并且属于这种类型时，还会有其他可以检查的键：</p>
 
 <ul>
-<li>"<b>requestId</b>" - The request ID value returned by the
-<tt>facebook_request_xxx_permission()</tt> function that triggered
-the event<br>
+<li>"<b>requestId</b>" - 触发事件的 <tt>facebook_request_xxx_permission()</tt> 函数返回的请求 ID 值<br>
 <br></li>
 
-<li>"<b>result</b>" - This will be one of the following
-strings:<br>
+<li>"<b>result</b>" - 这将是以下字符串之一：<br>
 <br>
 
 <ul>
-<li>"<b>granted</b>" – permission(s) were accepted by the user</li>
+<li>"<b>granted</b>" – 用户接受了许可</li>
 
-<li>"<b>denied</b>" – one or more permissions were not accepted by
-user</li>
+<li>"<b>denied</b>" – 用户不接受一个或多个权限</li>
 
-<li>"<b>error</b>" – an error occurred</li>
+<li>"<b>error</b>" – 发生错误</li>
 </ul></li>
 
-<li><b>"error</b>" - This will contain a description of the error,
-but is <i>only</i> present when "<b>result</b>" =
-"<b>error</b>".</li>
+<li><b>"error</b>" - 这将包含错误的描述，但 <i>仅</i> 在 “<b>result</b>” = “<b>error</b>”时出现。</li>
 </ul></div></blockquote></div>
 <br>
 <a name="async_steam" id="async_steam"></a> <label class="collapse"
 for="seven">Steam</label> <input id="seven" type="checkbox">
-<div class="index_list">This event can only be triggered by the
-<a href=
-"../../../3_scripting/4_gml_reference/steam%20api/index.html">Steam
-API</a> functions and will return a <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-<tt>ds_map</tt></a> stored in the variable <tt>async_load</tt>,
-containing different key/value pairs depending on the call-back
-from the function that has triggered the event. The map will always
-contain the key "<b>event_type</b>" which can then be parsed to
-find the type of function that triggered the event and change the
-code required to suit.<br>
-<br>
-When calling any function that triggers this event, it will
-generate a unique async ID value which should be stored in a
-variable and checked, as the <tt>async_load</tt> map will always
-contain an ID key which you can then parse and ensure that you are
-responding to the correct event. In fact, the map will
-<i>always</i> hold the following keys, regardless of the Steam
-function used to generate the async response:<br>
+<div class="index_list">此事件只能由 <a href=
+"../../../3_scripting/4_gml_reference/steam%20api/index.html">Steam API</a> 函数触发，并将返回存储在变量 <tt>async_load</tt> 中的 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，其中包含不同的键 / 值对，具体取决于触发事件的函数的回调。映射将始终包含键 “<b>event_type</b>”，然后可以对其进行解析以查找触发事件的函数类型并更改所需的代码。<br><br>当调用任何触发此事件的函数时，它将生成一个唯一的异步 ID 值，该值应存储在变量中并进行检查，因为 <tt>async_load</tt> 映射将始终包含一个 ID 密钥，然后你可以解析该密钥并确保你正在响应正确的事件。实际上，无论用于生成异步响应的 Steam 函数如何，映射都将 <i>始终</i> 包含以下键：<br>
+
 <br>
 
 <ul>
-<li>"<b>id</b>" - The async ID returned by the function that
-triggered the event</li>
+<li>"<b>id</b>" - 触发事件的函数返回的异步 ID</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>result</b>" - The result of the operation (a real value).
-This will either be the GML constant <tt>ugc_result_success</tt> or
-some other real number. So you should check for this constant to
-ensure that the call was successful, and if otherwise something has
-not worked correctly. The rest of the possible values returned are
-shown as the result of the Steam "EResult" value and you should see
-<tt>steamclientpublic.h</tt> in the SDK headers for all 89 possible
-values.</li>
+<li>"<b>result</b>" - 操作的结果（实际值）。这将是 GML 常量 <tt>ugc_result_success</tt> 或其他一些实数。因此，你应检查此常量以确保调用成功，否则某些内容无法正常工作。返回的其余可能值显示为 Steam “EResult” 值的结果，你应该在 SDK 头文件 <tt>steamclientpublic.h</tt> 中看到所有 89 个可能值。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>event_type</b>" - A string denoting the type of event (see
-below for the details)</li>
+<li>"<b>event_type</b>" - 表示事件类型的字符串（详见下文）</li>
 </ul>
 
 <blockquote><a name="async_steam_uploading" id=
 "async_steam_uploading"></a> <label class="collapse" for=
-"twentythree">Uploading Data</label> <input id="twentythree" type=
+"twentythree">上传数据</label> <input id="twentythree" type=
 "checkbox">
-<div class="index_list">When using the Steam functions for
-uploading a leaderboard (either <a href=
-"../../../3_scripting/4_gml_reference/steam%20api/steam_upload_score.html">
-<tt>steam_upload_score()</tt></a> or <a href=
-"../../../3_scripting/4_gml_reference/steam%20api/steam_upload_score_buffer.html">
-<tt>steam_upload_score_buffer()</tt></a>) the returned
-<tt>ds_map</tt> will have the following key/value pairs:<br>
+<div class="index_list">使用 Steam 函数上传排行榜（<a href=
+"../../../3_scripting/4_gml_reference/steam%20api/steam_upload_score.html"><tt>steam_upload_score()</tt></a> 或 <a href=
+"../../../3_scripting/4_gml_reference/steam%20api/steam_upload_score_buffer.html"><tt>steam_upload_score_buffer()</tt></a>）时，返回的 <tt>ds_map</tt> 将具有以下键 / 值对：<br>
 <br>
 
 <ul>
-<li>"<b>event_type</b>" - This key will hold the value
-"<b>leaderboard_upload</b>"</li>
+<li>"<b>event_type</b>" - 此键将保存 “<b>leaderboard_upload</b>” 值</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>post_id</b>" - This key should match the ID value returned
-by the upload calling function</li>
+<li>"<b>post_id</b>" - 此键应与上传调用函数返回的 ID 值匹配</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>lb_name</b>" - This key holds the name of the leaderboard
-which was posted to</li>
+<li>"<b>lb_name</b>" - 此键包含已发布到的排行榜的名称</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>success</b>" - Will be 1 if the post succeeded, 0
-failed</li>
+<li>"<b>success</b>" - 如果传输成功，则为 1，0 为失败</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>updated</b>" - Will be 1 if the leaderboard score was
-actually updated (ie: the new score was better) or 0 otherwise</li>
+<li>"<b>updated</b>" - 如果排行榜得分实际更新（即：新得分更高），则为 1，否则为 0</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>score</b>" - This key holds the score which was posted</li>
+<li>"<b>score</b>" - 此键保留已发布的分数</li>
 </ul>
-
-You can see examples of this on the pages for the score upload
-functions.</div>
+你可以在分数上传功能的页面上查看此示例。</div>
 <br>
 <a name="async_steam_downloading" id="async_steam_downloading"></a>
-<label class="collapse" for="twentyfour">Downloading
-Leaderboards</label> <input id="twentyfour" type="checkbox">
-<div class="index_list">When using the Steam functions for
-downloading a leaderboard (<a href=
-"../../../3_scripting/4_gml_reference/steam%20api/steam_download_scores.html"><tt>steam_download_scores()</tt></a>,
-<a href=
-"../../../3_scripting/4_gml_reference/steam%20api/steam_download_scores_around_user.html">
-<tt>steam_download_scores_around_user()</tt></a> or <a href=
-"../../../3_scripting/4_gml_reference/steam%20api/steam_download_friends_scores.html">
-<tt>steam_download_friends_scores()</tt></a>) the returned
-<tt>ds_map</tt> will have the following key/value pairs:<br>
+<label class="collapse" for="twentyfour">下载排行榜</label> <input id="twentyfour" type="checkbox">
+<div class="index_list">使用 Steam 函数下载排行榜（<a href=
+"../../../3_scripting/4_gml_reference/steam%20api/steam_download_scores.html"><tt>steam_download_scores()</tt></a>、<a href=
+"../../../3_scripting/4_gml_reference/steam%20api/steam_download_scores_around_user.html"><tt>steam_download_scores_around_user()</tt></a> 或 <a href=
+"../../../3_scripting/4_gml_reference/steam%20api/steam_download_friends_scores.html"><tt>steam_download_friends_scores()</tt></a>）时，返回的 <tt>ds_map</tt> 将具有以下键 / 值对：
+<br>
 <br>
 
 <ul>
-<li>"<b>event_type</b>" - This key will hold the value
-"<b>leaderboard_download</b>"</li>
+<li>"<b>event_type</b>" - 此键将保存 “<b>leaderboard_download</b>” 值</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>id</b>" - This key should match the ID value returned by
-the download calling function</li>
+<li>"<b>id</b>" - 此键应与下载调用函数返回的 ID 值匹配</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>status</b>" - The status of the callback, where -1 equals a
-failure or that no results were returned, and 0 equals a
-success.</li>
+<li>"<b>status</b>" - 回调的状态，其中 -1 等于失败或没有返回结果，0 等于成功。</li>
 
-<li>"<b>lb_name</b>" - This key holds the name of the leaderboard
-which was posted to</li>
+<li>"<b>lb_name</b>" - 此键包含已发布到的排行榜的名称</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>numEntries</b>" - The number of "rows" of leaderboard data
-that is being returned.</li>
+<li>"<b>numEntries</b>" - 要返回的排行榜数据的 “行” 数。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>entries</b>" - A JSON object string that contains another
-ds_map, which will either contain the key "default" (signifying
-that no results are contained within) or the key "entries", which
-you can then get the value of. this returned value for "entries"
-will be a <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20lists/index.html">
-<tt>ds_list</tt></a> containing each of the ranks from the
-leaderboard, where each entry in the list will itself reference
-another <tt>ds_map</tt> which will contain the keys "name", "score"
-and "rank", and it may also contain a "data" key depending on the
-function used to upload.</li>
+<li>"<b>entries</b>" - 包含另一个 ds_map 的 JSON 对象字符串，它将包含键 “default”（表示其中未包含任何结果）或键 “entries”（你可以获取其值）。 “entries” 的返回值将是包含排行榜中每个排名的 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>，其中列表中的每个条目本身将引用另一个 <tt>ds_map</tt>，其中包含键 “name”、“score” 和 “rank”，以及它也可能包含 “数据” 键，具体取决于用于上载的功能。</li>
 </ul>
-
-We will show an example of how downloading score data works by
-requesting the top ten ranking for the given leaderboard and
-parsing its results in the <b>Steam Async Event</b> (for uploading
-examples, please see the appropriate function pages). To start with
-we need to request the scores with the following code:<br>
+我们将通过请求给定排行榜的前十名排名并在 <b>Steam 异步事件</b> 中解析其结果来显示下载得分数据如何工作的示例（有关上传示例，请参阅相应的功能页面）。首先，我们需要使用以下代码请求分数：<br>
 <br>
 
 <p class="code">score_get = steam_download_scores("Game Scores", 1,
 10);<br></p>
 <br>
-
-This will send off a request to the Steam Server for the scores
-from the leaderboard "Game Scores", storing the <b>async ID</b> of
-the request in the variable "score_get". This will then be handled
-in the <b>Steam Async Event</b> in the following way:<br>
+这将向 Steam 服务器发送请求，以获取排行榜 “Game Scores” 中的分数，并将请求的 <b>异步 ID</b> 存储在变量 “score_get” 中。 然后，将通过以下方式在 <b>Steam 异步事件</b> 中处理：<br>
 <br>
 
 <p class="code">var async_id = ds_map_find_value(async_load,
@@ -1412,115 +940,60 @@ message = buffer_read(buffId, buffer_string);<br>
 &nbsp;&nbsp;&nbsp;ds_map_destroy(map)<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 <br>
-
-What we do here is first check the "id" key of the special
-<tt>async_load</tt> map. If this value is the same as the value of
-the original call-back function (stored in the "score_get"
-variable) we then continue to process the data. The first thing we
-do is parse the <tt>async_load</tt> ds_map for the key "entries"
-which will contain a JSON object containing the leaderboard data.
-This JSON object is then decoded (see <a href=
-"../../../3_scripting/4_gml_reference/file%20handling/json_decode.html">
-<tt>json_decode</tt></a>) as another ds_map, and this new map id is
-stored in the variable "map".<br>
-<br>
-This map is checked for the key "default" and if that is found then
-the map is destroyed and the event is exited. If no "default" key
-is found, the code will then parse the map to extract the necessary
-information about the leaderboard, by first extracting a ds_list
-from the "entries" key of the ds_map, and then looping through each
-entry of the list to get <i>another</i> ds_map with the name, score
-and rank of each entry. These values are then stored in arrays and
-then we check to see if there is an additional "data" key. If there
-is (ie: the score was uploaded with an additional data package)
-then we also parse that and send it to the compiler console for
-debugging, before destroying the buffer and then continuing on to
-destroy the map. Note that if the "data" key is included, it needs
-to be decoded using the <a href=
-"../../../3_scripting/4_gml_reference/buffers/buffer_base64_decode.html">
-<tt>buffer_base64_decode()</tt></a> before it can be correctly
-read.<br>
-<br>
-Once the loop has finished, the entries list is destroyed as is the
-map that it was taken from. There is no need to destroy the
-<tt>async_load</tt> ds_map as this is handled for you by
-<i>GameMaker Studio 2</i>.</div>
+我们在这里做的是首先检查特殊 <tt>async_load</tt> 映射的 “id” 键。如果此值与原始回调函数的值（存储在 “score_get” 变量中）相同，则我们将继续处理数据。我们要做的第一件事就是为关键 “entries” 解析 <tt>async_load</tt> ds_map，它将包含一个包含排行榜数据的 JSON 对象。然后将此 JSON 对象解码（请参阅 <a href=
+"../../../3_scripting/4_gml_reference/file%20handling/json_decode.html"><tt>json_decode</tt></a>）作为另一个 ds_map，并将此新映射 ID 存储在变量 “map” 中。<br><br>检查该映射是否为 “default” 键，如果找到，则销毁该映射并退出该事件。如果未找到 “default” 键，则代码将解析映射以提取有关排行榜的必要信息，方法是首先从 ds_map 的 “entries” 键中提取 ds_list，然后循环遍历列表的每个条目以获取 <i>另一个</i> ds_map，其中包含每个条目的名称，分数和排名。然后将这些值存储在数组中，然后检查是否有其他 “数据” 键。如果有（即：分数是使用附加数据包上传的），那么我们也会解析它并将其发送到编译器控制台进行调试，然后再销毁缓冲区然后继续销毁映射。请注意，如果包含 “data” 键，则需要先使用 <a href=
+"../../../3_scripting/4_gml_reference/buffers/buffer_base64_decode.html"><tt>buffer_base64_decode()</tt></a> 对其进行解码，然后才能正确读取。<br><br>一旦循环完成，条目列表就会像从其获取的映射一样被销毁。无需销毁 <tt>async_load</tt> ds_map，因为这是由 <i>GameMaker Studio 2</i> 为你处理的。</div>
 <br>
 <a name="async_steam_downloadingugc" id=
 "async_steam_downloadingugc"></a> <label class="collapse" for=
-"twentyfive">Downloading UGC (user Generated Content)</label>
+"twentyfive">下载 UGC（用户生成的内容）</label>
 <input id="twentyfive" type="checkbox">
-<div class="index_list">When using the Steam functions for
-downloading <a href=
-"../../../3_scripting/4_gml_reference/steam%20api/user%20generated%20content/index.html">
-User Generated Content (UGC)</a>, a number of them will trigger
-this event. However, each function will generate an
-<tt>async_load</tt> ds_map with differing key/value pairs (although
-they will always contain the general "<b>id</b>", "<b>result</b>"
-and "<b>event_type</b>" keys), so please see the page specific to
-the function being used for details and examples.</div>
+<div class="index_list">使用 Steam 功能下载 <a href=
+"../../../3_scripting/4_gml_reference/steam%20api/user%20generated%20content/index.html">用户生成内容（UGC）</a> 时，其中一些将触发此事件。但是，每个函数都会生成一个具有不同键 / 值对的 <tt>async_load</tt> ds_map（尽管它们通常将始终包含 “<b>id</b>”、“<b>result</b>” 和 “<b>event_type</b>” 键），因此，请参阅特定于所使用的函数的页面，以获得详细信息和示例。</div>
 <br>
 <a name="async_steam_ugc_events" id="async_steam_ugc_events"></a>
-<label class="collapse" for="twentysix">Unique UGC Events</label>
+<label class="collapse" for="twentysix">独特的 UGC 事件</label>
 <input id="twentysix" type="checkbox">
-<div class="index_list">The Steam Async event can also be triggered
-when a user subscribes to an item outside of the game - for
-example, they tab away to a browser and subscribe to a new item
-then tab back to the game. In these cases the <tt>async_load</tt>
-map will <b>only</b> contain the following details (and none of the
-default values listed at the top of this page):<br>
+<div class="index_list">当用户订阅游戏外的项目时，也可以触发 Steam 异步事件 - 例如，他们选择跳转到浏览器并订阅新项目然后选项回到游戏。在这些情况下，<tt>async_load</tt> 映射将 <b>仅</b> 包含以下详细信息（并且没有列出本页顶部的默认值）：<br>
 <br>
 
 <ul>
-<li>"<b>event_type</b>" - This key will hold the value
-"<b>ugc_item_installed</b>"</li>
+<li>"<b>event_type</b>" - 此键将保存 “<b>ugc_item_installed</b>” 值</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>published_file_id</b>" - the ID of the newly installed UGC
-item (you can use the function <a href=
-"../../../3_scripting/4_gml_reference/steam%20api/user%20generated%20content/steam_ugc_get_item_install_info.html">
-<tt>steam_ugc_get_item_install_info()</tt></a> to get the path to
-the installed item)</li>
+<li>"<b>published_file_id</b>" - 新安装的 UGC 项的 ID（你可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/steam%20api/user%20generated%20content/steam_ugc_get_item_install_info.html"><tt>steam_ugc_get_item_install_info()</tt></a> 来获取已安装项的路径）</li>
 
 <li style="list-style: none"><br>
 </li>
 </ul>
-
-The Steam Async event can also be triggered when a workshop item is
-subscribed to - either from within the app, or externally from a
-workshop browser - and in these cases the <tt>async_load</tt> map
-will contain the following key/value pairs:<br>
+订阅研讨会项目时也可以触发 Steam 异步事件 - 从应用程序内部或从研讨会浏览器外部 - 并且在这些情况下，<tt>async_load</tt> 映射将包含以下键 / 值对：
+<br>
 <br>
 
 <ul>
-<li>"<b>event_type</b>" - This key will hold the value
-"<b>ugc_item_subscribed"</b>"</li>
+<li>"<b>event_type</b>" - 此键将保存 “<b>ugc_item_subscribed</b>” 值</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>published_file_id</b>" : This key has the published file ID
-of the newly subscribed item</li>
+<li>"<b>published_file_id</b>" : 此密钥具有新订阅项的已发布文件ID</li>
 
 <li style="list-style: none"><br>
 </li>
 </ul>
-
-The event will be triggered should any item be un-subscribed too,
-with the DS map holding the following:<br>
+如果任何项目也未被订阅，则会触发该事件，数据结构映射包含以下内容：<br>
 <br>
 
 <ul>
-<li>"<b>event_type</b>" - This key will hold the value
-"<b>ugc_item_unsubscribed"</b>"</li>
+<li>"<b>event_type</b>" - 此键将保存 “<b>ugc_item_unsubscribed</b>” 值</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>published_file_id</b>" : This key has the published file ID
-of the un-subscribed item</li>
+<li>"<b>published_file_id</b>" : 此密钥具有未订阅项的已发布文件 ID</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -1530,82 +1003,93 @@ of the un-subscribed item</li>
 "collapse" for="fourteen">系统</label> <input id="fourteen" type=
 "checkbox">
 <div class="index_list">
-<p>This event can only be triggered by a system level event (such
-as the detection of a gamepad or the automatic signing in to XBox
-Live) and it will return a <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-<tt>ds_map</tt></a> stored in the variable <tt>async_load</tt>,
-containing different key/value pairs depending on the system level
-event that triggered the call-back.</p>
+<p>此事件只能由系统级事件触发（例如检测到游戏手柄或自动登录到 XBox Live），它将返回存储在变量 <tt>async_load</tt> 中的 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，其中包含不同的键 / 值对，具体取决于系统触发回调的事件级别。</p>
 
 <blockquote><a name="async_system_gamepads" id=
 "async_system_gamepads"></a> <label class="collapse" for=
-"thirtyone">Game Pads</label> <input id="thirtyone" type=
+"thirtyone">游戏手柄</label> <input id="thirtyone" type=
 "checkbox">
 <div class="index_list">
-<p>When this event is triggered for a gamepad being connected or
-disconnected it will return one of the following key/value pairs in
-the <tt>async_load</tt> map:<br>
+<p>当连接或断开游戏手柄触发此事件时，它将返回 <tt>async_load</tt> 映射中的以下键 / 值对之一：<br>
 <br></p>
 
 <ul>
-<li>"<b>event_type</b>" - the type of system event received, which
-will be one of the following strings:<br>
+<li>"<b>event_type</b>" - 收到的系统事件的类型，它将是以下字符串之一：<br>
 <br>
 
 <ul>
-<li>"<b>gamepad discovered</b>" - happens when the system reports a
-new gamepad has been connected</li>
+<li>"<b>gamepad discovered</b>" - 当系统报告已连接新游戏手柄时发生</li>
 
-<li>"<b>gamepad lost</b>" - happens when the system has lost
-connection to a gamepad</li>
+<li>"<b>gamepad lost</b>" - 当系统失去与游戏手柄的连接时发生</li>
 </ul></li>
 
-<li>"<b>pad_index</b>" - the index of the pad that has been added
-or removed</li>
+<li>"<b>pad_index</b>" - 已添加或删除的打击垫的索引</li>
 </ul>
 
-<p>This event now permits you to move all your gamepad checking
-logic from the Step Event or an Alarm event into the System Event
-and only run it when it's actually required.</p>
+<p>此事件现在允许你将所有游戏手柄检查逻辑从步骤事件或警报事件移动到系统事件中，并仅在实际需要时运行它。
+</p>
+</div>
+<br>
+<a name="async_system_gamepads" id="async_system_gamepads"></a>
+<label class="collapse" for="thirtythree">虚拟键盘</label>
+<input id="thirtythree" type="checkbox">
+<div class="index_list">
+<p>当为打开或关闭的虚拟键盘触发此事件时，它将在 <tt>async_load</tt> 映射中返回以下键 / 值对：<br>
+<br></p>
+
+<ul>
+<li>"<b>event_type</b>" - 收到的系统事件的类型，它将是虚拟键盘的 “<b>虚拟键盘状态</b>”。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>screen_height</b>" - 虚拟键盘的高度（以像素为单位）。 如果键盘不可见，则该值为 0。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>keyboard_status</b>" - 键盘的当前状态，作为以下字符串之一返回：<br>
+<br>
+
+<ul>
+<li>"hiding"</li>
+
+<li>"hidden"</li>
+
+<li>"showing"</li>
+
+<li>"visible"</li>
+</ul></li>
+</ul>
+
+<p>有关虚拟键盘的更多信息，请参阅 <a href=
+"../../../3_scripting/4_gml_reference/controls/virtual%20keys/index.html">此处</a>。</p>
 </div>
 <br>
 <a name="async_system_xboxlive" id="async_system_xboxlive"></a>
 <label class="collapse" for="thirtytwo">XBox Live</label>
 <input id="thirtytwo" type="checkbox">
 <div class="index_list">
-<p>The asynchronous system event can be triggered when targeting
-the <b>XBox One</b> using the <b>UWP</b> export and checking the
-<b>Enable XBox Live</b> option in the <a href=
-"../../../2_interface/3_settings/game_options/options_windowsuwp.html">
-UWP Game Options</a>. When you start <i>GameMaker Studio 2</i> UWP
-project that has Xbox Live enabled the project will automatically
-try silently sign-in to Xbox Live. The results of this sign-in
-attempt will be returned as one of the following key/value pairs in
-the <tt>async_load</tt> map:</p>
+<p>在以 <b>XBox One</b> 为目标平台并使用 <b>UWP</b> 导出时，如果勾选 <a href=
+"../../../2_interface/3_settings/game_options/options_windowsuwp.html">UWP 游戏选项</a> 中的 <b>启用 XBox Live</b> 选项，可以触发异步系统事件。当你启动启用了 Xbox Live 的 <i>GameMaker Studio 2</i> UWP 项目时，项目将自动尝试以静默方式登录 Xbox Live。 此登录尝试的结果将作为 <tt>async_load</tt> 映射中的以下键 / 值对之一返回：</p>
 
 <ul>
-<li>"<b>event_type</b>" - the type of system event received, which
-will be one of the following strings:<br>
+<li>"<b>event_type</b>" - 收到的系统事件的类型，它将是以下字符串之一：<br>
 <br>
 
 <ul>
-<li>"<b>user signed in</b>" - the silent user sign-in has been
-completed successfully</li>
+<li>"<b>user signed in</b>" - 静默用户登录已成功完成</li>
 
-<li>"<b>user sign in failed</b>" - the silent user sign-in has
-failed (when this happens you can use the function <a href=
-"../../../3_scripting/4_gml_reference/xbox_live/xboxlive_show_account_picker.html">
-<tt>xboxlive_show_account_picker()</tt></a> to get the user to
-choose an account to sign in with)</li>
+<li>"<b>user sign in failed</b>" - 静默用户登录失败（当发生这种情况时，你可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/xbox_live/xboxlive_show_account_picker.html"><tt>xboxlive_show_account_picker()</tt></a> 让用户选择要登录的帐户）</li>
 
-<li>"<b>user signed out</b>" - the user has signed out</li>
+<li>"<b>user signed out</b>" - 用户已退出</li>
 </ul></li>
 </ul>
 
-<p>For more information on the specific functions available for
-XBox Live, please see <a href=
-"../../../3_scripting/4_gml_reference/xbox_live/index.html">here</a>.</p>
+<p>有关 XBox Live 可用特定函数的更多信息，请参阅 <a href=
+"../../../3_scripting/4_gml_reference/xbox_live/index.html">此处</a>。</p>
 </div></blockquote>
 </div></blockquote>
 
@@ -1622,7 +1106,7 @@ XBox Live, please see <a href=
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

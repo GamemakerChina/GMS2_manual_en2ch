@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -33,12 +33,7 @@ if (window.name != "content")
 <h2>物体事件</h2>
 
 <div class="body-scroll">
-<p>Each object you create has its own discreet list of events which
-are added into it from the <a href="../objects.html">Object
-Editor</a>. These events fall into two categories: those that run
-every single game step, and those that are "triggered" by a game
-event, like the instance reaching the room edge or a keyboard or
-mouse press. The full list of events is given below:</p>
+<p>你创建的每个物体都有自己独立的事件列表，这些事件从 <a href="../objects.html">物体编辑器</a> 添加到其中。这些事件分为两类：每个游戏步中运行的事件，以及由游戏事件 “触发” 的事件，例如实例到达房间边缘或键盘、鼠标按下。 完整的事件清单如下：</p>
 
 <blockquote><a name="object_event_create" id=
 "object_event_create"></a>
@@ -49,24 +44,13 @@ mouse press. The full list of events is given below:</p>
 <label class="collapse" for="one">创建</label> <input id="one"
 type="checkbox">
 <div class="index_list">
-<p>This event happens when an instance of the object is first
-created, and is the very first thing that happens within an
-instance placed in the room through the room editor when a room is
-entered. This means that this event is the ideal place to
-initialize variables, start <a href=
-"../timelines.html">Timelines</a>, set <a href=
-"../paths.html">Paths</a> etc... and do anything else that
-generally only needs to be done once or only when an instance is
-first created in the room. If your object has any <b>Object
-Variables</b> or <b>Instance Variables</b> added in either the
-<a href="../objects.html">Object Editor</a> or the <a href=
-"../rooms.html">Room Editor</a>, then these variables will be
-initialised <i>first</i> and then the Create Event will be run.</p>
+<p>此事件在首次创建物体的实例时发生，并且是在进入房间时通过房间编辑器放置在房间中的实例中发生的第一件事。这意味着此事件是初始化变量、启动 <a href=
+"../timelines.html">时间轴</a>、设置 <a href=
+"../paths.html">路径</a> 等的理想位置......并执行通常只需要执行一次或仅在房间中首次创建实例时执行的任何其他操作。如果你的物体在 <a href="../objects.html">物体编辑器</a> 或 <a href=
+"../rooms.html">房间编辑器</a> 中添加了任何 <b>物体变量</b> 或 <b>实例变量</b>，则 <i>首先</i> 初始化这些变量，然后运行创建事件。
+</p>
 
-<p>Remember that you can modify anything you set up in the create
-event from the <a href="../rooms.html">Instance Creation Code</a>
-in the Room Editor, as this is run directly after the create event
-for the instance.</p>
+<p>请记住，你可以在房间编辑器中的 <a href="../rooms.html">实例创建代码</a> 中修改你在创建事件中设置的任何内容，因为这是在实例的创建事件之后直接运行的。</p>
 </div>
 <br>
 <a name="object_event_destroy" id="object_event_destroy"></a>
@@ -77,12 +61,7 @@ for the instance.</p>
 <label class="collapse" for="two">销毁</label> <input id="two"
 type="checkbox">
 <div class="index_list">
-<p>This event is the event to be executed when an instance is
-destroyed. It is often overlooked when adding behaviours to
-objects, but it can be very useful, for example by creating
-explosion or particle effects when an enemy is killed, or for
-re-spawning a new instance of the object in another part of the
-room, or even for adding points onto a score.</p>
+<p>此事件是销毁实例时要执行的事件。在向物体添加行为时经常会忽略它，但它可能非常有用，例如在敌人被杀时创建爆炸或粒子效果，或者在房间的另一部分重新生成物体的新实例，甚至可以在积分上添加积分。</p>
 </div>
 <br>
 <a name="object_event_clean_up" id="object_event_clean_up"></a>
@@ -93,16 +72,7 @@ room, or even for adding points onto a score.</p>
 <label class="collapse" for="f">清理</label> <input id="f"
 type="checkbox">
 <div class="index_list">
-<p>This event will be called after any event that removes an
-instance of the object from the room. So, it will be triggered if
-the instance is destroyed, if the room ends, or if the game ends,
-and is designed for you to use to "clean up" any dynamic resources
-that you may have in your game (like surfaces, data structures,
-etc...) or to perform any task that you need performed once when
-the instance is removed. Note that this event will be called only
-after every other event has been called, so it will always be the
-last event to run in any instance as it is removed from the room or
-the room/game is ended.</p>
+<p>在从房间中删除物体实例的所有事件之后，将调用此事件。因此，如果实例被销毁，房间结束或游戏结束，它将被触发，并且专门用于 “清理” 游戏中可能拥有的动态资源（如表面、数据结构等...），或执行除去实例后需要执行的任务。 请注意，只有在调用所有其他事件后才会调用此事件，因此它将始终是在任何实例中运行的最后一个事件，因为它将在从房间中移除或者房间 / 游戏结束时运行。</p>
 </div>
 <br>
 <a name="object_event_alarm" id="object_event_alarm"></a>
@@ -113,47 +83,15 @@ the room/game is ended.</p>
 <label class="collapse" for="three">计时器</label> <input id="three"
 type="checkbox">
 <div class="index_list">
-<p>The alarm event is split into 12 sub events, one for each of the
-possible alarms that can be set in an instance. So, when you click
-on the add alarm button you are presented with this window:
-
+<p>计时器事件被分成 12 个子事件，每个事件对应于可在实例中设置的每个可能计时器。因此，当你单击添加计时器按钮时，你将看到此窗口：
 <img class="center" src="images/editor_objects_alarmevents.png"
 alt="Object Editor Alarm Events"></p>
 
-<p>Here you select the alarm that you wish to create and, once that
-is done, you will see that it has been added to the event window
-allowing you to add code to it as normal. But what is an alarm?
-Well, it is a special event that does nothing unless the alarm has
-been previously set, and then it will wait until that alarm has
-counted down to 0 before running the actions or code that you have
-added into it. Once the alarm has reached 0 and run the code, it
-will then count down to -1, where it will remain until set again
-(meaning you can check the value of an alarm to see if it is
-greater than -1, which will tell you if it's running or not). So,
-say you set <tt>alarm[0]</tt> in the create event of the object to
-30, this means that <i>GameMaker Studio 2</i> will count down 30
-game steps before it runs the actions or code that are placed in
-the <tt>alarm[0]</tt> event. Note that setting an alarm to 0 will
-<i>not</i> run the alarm code, as the event is triggered, but the
-alarm set to -1 immediately, so the code is skipped. If you need an
-alarm to run the very next step, then you should set it to 1.</p>
+<p>在这里，你可以选择要创建的计时器，一旦完成，你将看到它已添加到事件窗口，允许你正常添加代码。但什么是计时器？好吧，这是一个特殊事件，除非先前已经设置了计时器，否则它将一直执行任何操作，然后它会等到该计时器计数到 0 后再运行你添加到其中的操作或代码。一旦警报达到 0 并运行代码，它将向下计数到 -1，然后保持 -1 不变直到再次设置（这意味着你可以检查计时器的值以查看它是否大于 -1，这将告诉你是否正在运行）。因此，假设你将物体的创建事件中的 <tt>alarm[0]</tt> 设置为 30，这意味着 <i>GameMaker Studio 2</i> 将在运行置于 <tt>alarm[0]</tt> 事件中的动作或代码之前倒计时 30 个游戏步。请注意，将计时器设置为 0 将 <i>不会</i> 运行计时器代码，因为事件已触发，但计时器会被设置为 -1，因此将跳过代码。如果需要计时器下一步运行，则应将其设置为 1。</p>
 
-<p>This can be very useful as it allows you to set things in motion
-at precise moments, and you can even have them repeat as there is
-nothing to stop you setting an alarm in its own event. Imagine you
-have a monster and you want it to turn right every three seconds...
-well, you would set an alarm in its create event to the <tt>room
-speed * 3</tt> (if the room speed is 30, that's 30 steps per
-second, so multiply that by 3 and you get 3 seconds!) and then in
-the alarm event you would have the code or action to set its
-direction, as well as the action (or code) to set its alarm to
-<tt>room speed * 30</tt> again. In this way, you can set up simple
-game loops where things only happen at specific intervals.</p>
+<p>这可能非常有用，因为它允许你在精确的时刻设置运动，甚至可以让它们重复，因为没有什么可以阻止你在自己的事件中设置计时器。想象一下，你有一个怪物，你希望它每三秒钟向右转......好吧，你会在它的创建事件中设置一个计时器为 <tt>房间速度 * 3</tt>（如果房间速度是 30，那就是每秒 30 步，所以乘以 3 就是 3 秒！）然后在计时器事件中你将有代码或动作设置其方向，以及动作（或代码）再次将其警报设置为 <tt>房间速度（room speed） * 30</tt>。通过这种方式，你可以设置简单的游戏循环，其中事物只在特定的时间间隔发生。</p>
 
-<p>It is worth noting that an alarm with <i>no</i> actions or code
-in it in it will <i>not run down</i>. However, even with just a
-comment and no code or actions, then the alarm will continue to
-count down and can be set and checked as you would normally.</p>
+<p>值得注意的是，其中 <i>没有</i> 动作或代码的计时器 <i>不会运行</i>。但是，即使只是注释而没有代码或操作，计时器也会继续倒计时，并且可以像平常一样进行设置和检查。</p>
 </div>
 <br>
 <a name="object_event_step" id="object_event_step"></a>
@@ -161,41 +99,18 @@ count down and can be set and checked as you would normally.</p>
 "vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_step.png">
 </div>
-<label class="collapse" for="four">步事件</label> <input id="four"
+<label class="collapse" for="four">步</label> <input id="four"
 type="checkbox">
 <div class="index_list">
-<p><i>GameMaker Studio 2</i> splits time into <b>steps</b> with the
-room speed defining how many of these steps there are supposed to
-be per second. A step, is basically the loop that runs constantly
-with all the events being checked and triggered as necessary while
-the game runs, so as you can imagine, the Step Event is an event
-that is checked every single step of the game while the instance
-exists.</p>
+<p><i>GameMaker Studio 2</i> 将时间分割成 <b>步（step）</b>，房间速度定义了每秒应该有多少步。一步，是所有事件在游戏运行时被检查和触发的基础循环，所以你可以想到，步事件是一个每步都会被检查和触发一遍的事件。 </p>
 
-<p>The step event is actually comprised of three sub events that
-are outlined below:  <img class="center" src=
+<p>步事件实际上包含三个子事件，概述如下： <img class="center" src=
 "images/editor_objects_step.png" alt=
 "Object Editor Step Events"></p>
 
-<p>For most things the standard step event will be fine to use, but
-sometimes you want a bit more control over what code runs and at
-what time, so for that you are provided with the <b>Begin</b> and
-<b>End</b> step events. All three are checked every step, but their
-order will never vary even through future updates to the
-<i>GameMaker Studio 2</i> engine, which means that this is the only
-reliable method of making sure that something always happens before
-something else.</p>
+<p>对于大多数事情，标准步事件可以很好地使用，但有时你需要更多地控制运行什么代码以及在什么时间运行，因此为你提供了 <b>步开始（Begin step）</b> 和 <b>步结束（End step）</b> 事件。这三个事件都在每一步都被检查，但是即使未来对 <i>GameMaker Studio 2</i> 引擎的更新，它们的顺序也永远不会改变，这意味着这是确保某些东西总是在其他东西之前发生的唯一可靠方法。</p>
 
-<p>What can the step event be used for? Well, it can be used for
-actions or code that needs to be executed continuously. For
-example, if one object should follow another, here you can adapt
-the direction of motion towards the object we are following to keep
-it moving smoothly behind. Be careful with this event though, and
-don't put many complicated actions in the step event of objects,
-especially if you are planning on having lots of instances of the
-object in your game room, as this might slow the game down. Many
-things can be placed into alarms, or set to trigger using some of
-the <b>Other</b> events, rather than happening all the time.</p>
+<p>步事件可以用于什么？好吧，它可以用于需要连续执行的动作或代码。例如，如果一个物体应该跟随另一个物体，在这里你可以调整运动方向朝向我们所遵循的物体，以保持它在后面顺利移动。但要小心这个事件，并且不要在物体的步事件中放置许多复杂的动作，特别是如果你计划在游戏房间中有大量的物体实例，因为这可能会减慢游戏速度。可以将许多内容放入计时器中，或设置为使用某些 <b>其他</b> 事件触发，而不是一直发生。</p>
 </div>
 <br>
 <a name="object_event_collision" id="object_event_collision"></a>
@@ -206,26 +121,14 @@ the <b>Other</b> events, rather than happening all the time.</p>
 <label class="collapse" for="five">碰撞</label> <input id=
 "five" type="checkbox">
 <div class="index_list">
-<p>Obviously when making a game, it is very important that you know
-when two (or more) instances of an object have collided, and for
-that we have the collision event. This is an event that you place
-in an object and then specify against which other object you should
-be checking for collisions.</p>
+<p>显然，在制作游戏时，知道物体的两个（或多个）实例是否发生碰撞以及触发碰撞事件是非常重要的。 这是一个放置于一个物体，然后指定对其他物体进行碰撞检查的事件。</p>
 
-<p>When you don't have physics turned on, these collisions will be
-calculated based on the mask of the two objects (the mask is
-defined within the sprite properties, or can be assigned
-independently in the object properties) and whether they overlap or
-not. Note, that if one or the other instances in the collision does
-not have a mask assigned (or the sprite mask is set to nothing),
-even if it is drawing something no collisions will be detected. If
-you have <a href="../objects.html">Physics</a> on, then the
-collision will be based on the type of <b>collision shape</b>
-(<b>Fixture</b>) that you have defined for the object in its
-physics properties, as will its reaction to the collision. This
-means you may not need any code to deal with the collision, but
-this event will <i>still need to have at least a comment in it for
-the collisions to be detected</i>.</p>
+<p>如果未启用物理，则将根据两个物体的遮罩（遮罩在精灵属性中定义，或者可以在物体属性中单独分配）以及它们是否重叠来计算这些碰撞。请注意，如果碰撞中的一个或其他实例没有指定遮罩（或者精灵掩码设置为空），即使它正在绘制某些内容，也不会检测到任何碰撞。</p>
+
+<p>如果启用了 <a href="../objects.html">物理</a>，则碰撞将基于你在物理属性中为物体定义的 <b>碰撞形状</b>（<b>固定装置（Fixture）</b>）的类型，以及它对碰撞的反应。这意味着你可能不需要任何代码来处理碰撞，但是此事件 <i>仍然需要至少包含一条注释才能检测到碰撞</i>。
+</p>
+
+<p>最后，应该注意的是，在碰撞事件被触发之前，<i>每个游戏步</i> 将计算一次所有碰撞，使得当碰撞事件运行时，所有碰撞将已经计算并且已经预先分配。这意味着如果你在此事件中创建实例然后尝试检查与它的碰撞，则在游戏循环的 <i>下一次</i> 迭代之前不会检测或解决碰撞。</p>
 </div>
 <br>
 <a name="object_event_keyboard" id="object_event_keyboard"></a>
@@ -233,54 +136,28 @@ the collisions to be detected</i>.</p>
 "vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_keyboard.png">
 </div>
-<label class="collapse" for="six">Keyboard <img style=
+<label class="collapse" for="six">键盘 <img style=
 "vertical-align:top;padding-top:0px;padding-left:10px;" src=
-"images/icon_keyboardpress.png"> Keyboard Press <img style=
+"images/icon_keyboardpress.png"> 按下键 <img style=
 "vertical-align:top; padding-top:0px;padding-left:10px;" src=
-"images/icon_keyboardrelease.png"> Keyboard Release</label>
+"images/icon_keyboardrelease.png"> 松开键</label>
 <input id="six" type="checkbox">
 <div class="index_list">
-<p>Letting the player control the different aspects of your game is
-very important, and to that end <i>GameMaker Studio 2</i> provides
-you with a very comprehensive list of keyboard sub events that can
-be used in any of the three main keyboard events. For the general
-keyboard event, it is triggered continuously, every step, for as
-long as the selected key is pressed down.</p>
+<p>让玩家控制游戏的不同方面非常重要，为此，<i>GameMaker Studio 2</i> 为你提供了一个非常全面的键盘子事件列表，可用于三个主要键盘事件中的任何一个。对于一般键盘事件，只要按下所选键，就会每一步连续触发。
+</p>
 
-<p>It should be noted that keyboard events are actually triggered
-in <i>all</i> active instances in a room whenever a key is used,
-but only those that have an event defined for that particular key
-will respond and you can create multiple keyboard events in any
-object and the instances of that object will respond to all of them
-while the game is running.</p>
+<p>应该注意的是，无论何时使用按键，键盘事件实际上都会在房间中的 <i>所有</i> 活动实例中触发，但只有那些具有为该特定键定义的事件的键盘事件才会响应，你可以在物体和实例中创建多个键盘事件，当游戏运行时，该物体将响应所有按键事件。
+</p>
 
-<p>When you add any keyboard event to an object, you will be
-presented with the keyboard sub event menu where you can specify
-the key you are to be checking for:  <img class="center" src=
+<p>向物体添加键盘事件时，将显示键盘子事件菜单，你可以在其中指定要检测的键： <img class="center" src=
 "images/editor_objects_keyboard.png" alt=
 "Object Editor Keyboard Events"></p>
 
-<p>Most of them are fairly obvious, but let's just go through the
-sections briefly - at the top we have the arrow keys, followed by
-the most used modifier keys, then the rest of the keyboard (split
-into further sub-sections so you can get the exact key required
-like <img style="vertical-align:middle" src=
-"../../../images/icon_escape.png"> or <img style=
-"vertical-align:middle" src="../../../images/icon_insert.png">) and
-finally two very special sub events, <b>No Key</b> and <b>Any
-Key</b>. As their names imply, these are sub events that check for
-when no key is pressed or for when any key is pressed. Please note
-that the keys on the numeric keypad only produce the corresponding
-events when <b>Number Lock</b> is enabled.</p>
+<p>它们大多是相当明显的，但我们打算简述这一部分 - 在我们顶部有方向键，其次是最常用的组合键，然后在键盘的其余部分（分裂成进一步的子部分，这样就可以得到确切需要的按键像 <img style="vertical-align:middle" src=
+"../../../images/icon_escape.png"> 或 <img style=
+"vertical-align:middle" src="../../../images/icon_insert.png">）最后两个非常特殊的子事件，<b>无键位</b>和 <b>任意键</b>。正如他们的名字所暗示的那样，这些是子事件，用于检查何时没有按下按键或何时按下任何按键。请注意，数字小键盘上的按键仅在启用 <b>数字锁定（Number Lock）</b> 时产生相应的事件。</p>
 
-<p>The <b>Press</b> and <b>Release</b> events for the keyboard are
-almost exactly the same as the regular keyboard event, except that
-instead of being triggered continuously, they are triggered
-<i>once</i> only. When the keyboard first registers that a key has
-been pressed it will generate a <b>Keyboard Pressed</b> event (as
-well as a regular Keyboard event), and the first time after that
-where a key is no longer being detected as pressed it will trigger
-a single <b>Keyboard Release</b> event.</p>
+<p>键盘的 <b>按下键</b> 和 <b>松开键</b> 事件几乎与常规键盘事件完全相同，除了不是连续触发，它们仅触发 <i>一次</i>。当键盘第一次按下一个键，就会产生一个 <b>按下键</b> 事件（以及常规的键盘事件），在那之后第一时间，当按键不再按下时，它将触发一个 <b>松开键</b> 事件。</p>
 </div>
 <br>
 <a name="object_event_mouse" id="object_event_mouse"></a>
@@ -291,56 +168,23 @@ a single <b>Keyboard Release</b> event.</p>
 <label class="collapse" for="seven">鼠标</label> <input id="seven"
 type="checkbox">
 <div class="index_list">
-<p>The mouse event is separated into a series of sub events that
-can be selected to give you a more precise control over what is
-happening in your game. Here you can see exactly what these sub
-events are:  <img class="center" src=
+<p>鼠标事件被分成一系列子事件，可以选择这些子事件以更精确地控制游戏中发生的事情。 在这里，你可以准确地看到这些子事件是什么： <img class="center" src=
 "images/editor_objects_mouse.png" alt=
 "Object Editor Mouse Events"></p>
 
-<p>The left <img style="vertical-align:middle" src=
-"../../../images/icon_lmb.png">, right <img style=
-"vertical-align:middle" src="../../../images/icon_rmb.png"> and
-middle <img style="vertical-align:middle" src=
-"../../../images/icon_mmb.png"> button events (whether normal,
-pressed or released) all work on the mask of the instance that has
-the event. What this means is that <i>GameMaker Studio 2</i> will
-check the position of the mouse in the room when those buttons are
-used against the collision masks of the instances that have a mouse
-event. If there is a "collision" then the event will be triggered,
-so make sure that any instance with these events has a sprite with
-a valid mask or that the object has a mask selected in the object
-properties. As their names imply, these events will be triggered
-either once when the chosen mouse button is first pressed or
-released, or continuously each step while the button is
-maintained.</p>
+<p>左 <img style="vertical-align:middle" src=
+"../../../images/icon_lmb.png">、右 <img style=
+"vertical-align:middle" src="../../../images/icon_rmb.png"> 和中间 <img style="vertical-align:middle" src=
+"../../../images/icon_mmb.png"> 按钮事件（无论是正常、按下还是释放）都在具有事件的实例的遮罩上工作。这意味着 <i>GameMaker Studio 2</i> 将检查鼠标在房间中的位置，当这些按钮用于具有鼠标事件的实例的碰撞遮罩时。如果存在 “碰撞”，则将触发事件，因此请确保具有这些事件的任何实例具有带有效遮罩的子画面，或者该物体在物体属性中选择了遮罩。正如它们的名字所暗示的那样，这些事件将在首次按下或释放所选鼠标按钮时触发一次，或者在维持按钮时连续每一步触发。
+</p>
 
-<p>The mouse enter and leave events are also similar to the button
-events in that they too rely on the mask of the instance to work,
-but this time they are triggered when the mouse first "enters"
-(touches) the instance or when the mouse "leaves" (stops touching)
-the instance. These events are not continuous however, and are
-triggered only once for each time the mouse enters or leaves the
-object - so they are an ideal method for creating, for example,
-buttons that need to change as the mouse hovers over them before
-going back to normal when the mouse is removed.</p>
+<p>鼠标移入和移出事件也类似于按钮事件，因为它们也依赖于实例的遮罩来工作，但是它们在鼠标首次 “移入”（触摸）实例或鼠标 “移出“（停止触摸）实例时被触发。然而，这些事件不是连续的，并且每次鼠标进入或离开物体时仅触发一次 - 因此它们是创建例如在鼠标悬停在它们之前需要更改的按钮的理想方法，然后移除鼠标时再返回正常。</p>
 
-<p>Finally we have another section to the mouse events which is
-called the <b>Global Mouse</b>. In this sub-menu you will find a
-selection of events that are for recording mouse events in
-instances even when the mouse is not over them or even near them.
-These are events that are generated for all instances and if there
-are actions or code defined for the specified event then it will be
-run, regardless of the position of the mouse within the game
-room.</p>
+<p>最后，我们还有另一个鼠标事件部分，称为 <b>全局鼠标（Global Mouse）</b>。在此子菜单中，你将找到一系列事件，用于在实例中记录鼠标事件，即使鼠标未在其上方或甚至在它们附近也是如此。这些是为所有实例生成的事件，如果有针对指定事件定义的操作或代码，则无论鼠标在游戏房间内的位置如何，都将运行它。</p>
 
-<p>Please note that on mobile or touch-screen devices the left
-mouse button <img style="vertical-align:middle" src=
-"../../../images/icon_lmb.png"> can also be used to check for a
-finger tab on a touch screen, and the right mouse button
-<img style="vertical-align:middle" src=
-"../../../images/icon_rmb.png"> is triggered by a double tap on the
-screen (this behaviour can be changed using code).</p>
+<p>请注意，在移动或触摸屏设备上，鼠标左键 <img style="vertical-align:middle" src=
+"../../../images/icon_lmb.png"> 也可用于检查触摸屏上的手指触摸，并通过双击屏幕触发鼠标右键 <img style="vertical-align:middle" src=
+"../../../images/icon_rmb.png">（此行为可以使用代码）。</p>
 </div>
 <br>
 <a name="object_event_gesture" id="object_event_gesture"></a>
@@ -351,52 +195,41 @@ screen (this behaviour can be changed using code).</p>
 <label class="collapse" for="thirteen">手势</label> <input id=
 "thirteen" type="checkbox">
 <div class="index_list">
-<p>This event is the one that will be triggered by the user
-touching the screen (on mobile) or clicking and moving the mouse
-(on all other platforms). It detects the following:</p>
+<p>此事件将由用户触摸屏幕（在移动设备上）或单击并移动鼠标（在所有其他平台上）触发。它会检测到以下内容：</p>
 
 <ul>
 <li><img style=
 "vertical-align:middle;padding-left:2px;padding-right:4px;" src=
-"images/icon_tap.png"><b>taps</b> - when a user clicks/touches and
-releases quickly<br>
+"images/icon_tap.png"><b>点按（taps）</b> - 当用户点击 / 触摸并快速释放时<br>
 <br></li>
 
 <li><img style=
 "vertical-align:middle;padding-left:2px;padding-right:4px;" src=
-"images/icon_drag.png"><b>drags</b> - when a user touches/clicks
-and maintains it then moves their finger/cursor<br>
+"images/icon_drag.png"><b>拖动（drags）</b> - 当用户持续触摸 / 点击它然后移动手指 / 光标<br>
 <br></li>
 
 <li><img style=
 "vertical-align:middle;padding-left:2px;padding-right:4px;" src=
-"images/icon_flick.png"><b>flicks</b> - when the user moves and
-releases a touch/click in one movement<br>
+"images/icon_flick.png"><b>轻抚（flicks）</b> - 当用户移动并在一次移动中释放触摸 / 点击时<br>
 <br></li>
 
 <li><img style=
 "vertical-align:middle;padding-left:2px;padding-right:4px;" src=
-"images/icon_pinch.png"><b>pinches</b> - when the user has two
-fingers on the screen and then moves them together/apart<br>
+"images/icon_pinch.png"><b>捏合（pinches）</b> - 当用户在屏幕上用两个手指然后将它们合拢 / 分开时<br>
 <br></li>
 
 <li><img style=
 "vertical-align:middle;padding-left:2px;padding-right:4px;" src=
-"images/icon_rotate.png"><b>rotates</b> - when the user has two
-fingers on the screen and then rotates them around a point</li>
+"images/icon_rotate.png"><b>旋转（rotates）</b> - 当用户在屏幕上用两个手指然后围绕一个点旋转它们时</li>
 </ul>
 <img class="center" src="images/editor_objects_gesture.png" alt=
 "物体编辑器的手势事件">
-<p>The different events will always contain a <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-DS Map</a> called the "<tt>event_data</tt>" map, which will contain
-a number of key/value pairs with data on the touch/click position
-and movement. For full details on all the available sub-events and
-how they work, please see the following section:</p>
+<p>不同的事件将始终包含称为 <tt>event_data</tt> 映射的 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">映射数据</a>，该映射将包含许多键 / 值对，其中包含触摸 / 点击位置和移动的数据。 有关所有可用子事件及其工作方式的完整详细信息，请参阅以下部分：</p>
 
 <blockquote>
 <ol>
-<li><a href="gesture_events.html">Gesture Events List</a>
+<li><a href="gesture_events.html">手势事件列表</a>
 </li>
 </ol>
 </blockquote>
@@ -407,203 +240,98 @@ how they work, please see the following section:</p>
 "vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_other.png">
 </div>
-<label class="collapse" for="eight">对方</label> <input id="eight"
+<label class="collapse" for="eight">其它</label> <input id="eight"
 type="checkbox">
 <div class="index_list">
-<p>There are a number of special events for use when making games
-with <i>GameMaker Studio 2</i> and they are mostly grouped together
-under the <b>Other</b> event and can be selected from the pop up
-menu of sub events that comes up when you select this. Here is an
-image of all these other events:  <img class="center" src=
+<p>在使用 <i>GameMaker Studio 2</i> 制作游戏时，有许多特殊事件可供使用，它们大多在 <b>其他</b> 事件下组合在一起，可以从选择此项时出现的子事件的弹出菜单中选择。 这是所有其他事件的图像： <img class="center" src=
 "images/editor_objects_otherevents.png" alt=
 "Object Editor Other Events"></p>
 <label class="collapse" for="h">离开房间</label> <input id="h"
 type="checkbox">
 <div class="index_list">
-<p>This event is triggered when an instance goes outside the room,
-and is based on a check done against the assigned sprite (and its
-properties) of the instance, so that even if you have set the image
-x or y scale to a value other than one, this event will only be
-triggered when the whole sprite would be out the screen. If the
-instance has no sprite, then the position of the instance is used
-and the moment its x or y position is outside of the room then it
-will trigger the event too. This event is typically used for things
-like bullets, where they are destroyed once they leave the room so
-you don't end up with millions of bullets flying away infinitely
-and causing your game to slow down. Note that this event is only
-triggered once when the instance leaves the room initially.</p>
+<p>当实例离开房间时会触发此事件，并且该事件基于针对实例的指定精灵（及其属性）执行的检查，因此即使你已将图像 x 或 y 比例设置为除 1 以外的值，只有当整个精灵出现在屏幕外时才会触发此事件。如果实例没有精灵，则使用实例的位置，当 x 或 y 位置在房间外时，它也会触发事件。这个事件通常用于像子弹这样的东西，一旦它们离开房间就被摧毁，这样你就不会有数百万个子弹无限飞走而导致你的游戏减速。 请注意，此事件仅在实例最初离开房间时触发一次。</p>
 </div>
 <br>
-<label class="collapse" for="fourteen">接触边界</label>
+<label class="collapse" for="fourteen">相交边界</label>
 <input id="fourteen" type="checkbox">
 <div class="index_list">
-<p>This event is triggered when an instance "touches" the inside
-edge of the room, and, like the outside room event, is based on a
-check done against the assigned sprite (and its properties) of the
-instance, so that even if you have set the image x or y scale to a
-value other than one, this event still be triggered the moment a
-part of the sprite intersects the room boundary. If the instance
-has no sprite, then the position of the instance is used and the
-moment its x or y position intersects the room boundary then it
-will trigger the event too. You can use this event to do things
-like tell an instance to "bounce" back in towards the room again
-rather than go outside.</p>
+<p>当一个实例 “触碰” 房间的内部边缘时触发此事件，并且像离开房间事件一样，基于对实例的指定精灵（及其属性）进行的检查，这样即使你有 将图像 x 或 y 缩放设置为除 1 以外的值，此事件仍然在精灵的一部分与房间边界相交时触发。 如果实例没有精灵，则使用实例的位置，当 x 或 y 位置与房间边界相交时，它也将触发事件。你可以使用此事件来执行诸如告诉实例再次向房间 “反弹” 而不是离开的事件。</p>
 </div>
 <br>
 <label class="collapse" for="fifteen">视野</label> <input id=
 "fifteen" type="checkbox">
 <div class="index_list">
-<p>Views are normally defined in the room editor and used to show
-only a small area of a large room at any one time. This event has
-its own sub event list that is split into two categories (outside
-view and intersect boundary), with eight different events in each
-corresponding to the eight available views. These two categories
-function exactly the same as the respective room events, only
-taking the boundary of the view as the thing for the instance to
-check against rather than the room.</p>
+<p>视野通常在房间编辑器中定义，用于在任何时候仅显示大房间的一小块区域。此事件具有自己的子事件列表，该列表分为两个类别（离开视野和相交边界），每个事件对应于八个可用视野和相交边界。 这两个类别的功能与相应的房间事件完全相同，只是将视野的边界作为实例检查而不是房间。</p>
 </div>
 <br>
 <label class="collapse" for="sixteen">游戏开始</label> <input id=
 "sixteen" type="checkbox">
 <div class="index_list">
-<p>This special event is triggered only once in the whole game and
-only for those instances with actions or code placed in the event.
-These instances must be present in the first room of the game and
-have been placed there in the room editor, rather than have been
-created dynamically. It should be noted that this event happens
-after the create event of all instances and so can contain code or
-actions with variables that have been previously defined in that
-event. This event is typically defined in only one "controller"
-object and is typically used to initialize global variables, start
-music, read from files and any other thing that is usually only
-done once at the start of a game.</p>
+<p>此特殊事件仅在整个游戏中触发一次，并且仅针对在事件中放置操作或代码的那些实例。这些实例必须存在于游戏的第一个房间中，并且已经放置在房间编辑器中，而不是动态创建的。应该注意的是，此事件发生在所有实例的创建事件之后，因此可以包含具有先前在该事件中定义的变量的代码或操作。此事件通常仅在一个 “控制器” 物体中定义，通常用于初始化全局变量，启动音乐，从文件读取以及通常仅在游戏开始时执行一次的任何其他操作。</p>
 </div>
 <br>
 <label class="collapse" for="seventeen">游戏结束</label> <input id=
 "seventeen" type="checkbox">
 <div class="index_list">
-<p>Similar to the above mentioned Game Start event, this event is
-only triggered once in the whole game and that is just before the
-game window actually closes. Again, for an instance with this event
-to actually do anything it has to be in the room as the game is
-closed. Please note that this event in really only viable for
-Windows, Ubuntu (Linux) and MacOS games as mobile devices may just
-close the game without giving <i>GameMaker Studio 2</i> the chance
-to call this event. For browser games made with the HTML5 module,
-this event should work when the game tab or browser is closed, but
-not all browsers support this feature (Firefox, Chrome and Safari
-do at the time of writing) so care must be taken when using it.
-Typically you would use this event to save data.</p>
+<p>与上面提到的游戏开始事件类似，此事件仅在整个游戏中触发一次，即在游戏窗口实际关闭之前。同样，对于具有此事件的实例在实际触发事件时，它必须在游戏关闭时在房间中。请注意，此事件实际上仅适用于 Windows、Ubuntu（Linux）和 MacOS 游戏，作为移动设备可能只是关闭游戏而不给 <i>GameMaker Studio 2</i> 提供调用此事件的机会。 对于使用 HTML5 模块制作的浏览器游戏，此事件应在游戏标签或浏览器关闭时起作用，但并非所有浏览器都支持此功能（Firefox、Chrome 和 Safari 在撰写本文时会触发此事件）因此在使用时必须小心。通常，你将使用此事件来保存数据。</p>
 </div>
 <br>
 <label class="collapse" for="eighteen">房间开始事件</label>
 <input id="eighteen" type="checkbox">
 <div class="index_list">
-<p>This event happens for all instances initially in a room when
-the room starts. Please note that it happens after the creation
-event and so can depend on variables and things defined previously
-in that event.</p>
+<p>当房间开始时，此事件最初发生在房间中的所有实例上。请注意，它发生在创建事件之后，因此可以使用在该事件之前的事件中定义的变量和事物。</p>
 </div>
 <br>
 <label class="collapse" for="ineteen">房间结束事件</label> <input id=
 "ineteen" type="checkbox">
 <div class="index_list">
-<p>This event happens to all instances that are in the room when
-the room ends. This event is very useful for "cleaning up" after a
-level has ended, for example you can delete loaded resources here,
-or remove a particle system to prevent memory leaks etc...</p>
+<p>此事件发生在房间结束时房间内的所有实例。此事件对于关卡结束后的 “清理” 非常有用，例如，你可以在此处删除已加载的资源，或删除粒子系统以防止内存泄漏等...</p>
 </div>
 <br>
 <label class="collapse" for="a">动画结束</label> <input id="a"
 type="checkbox">
 <div class="index_list">
-<p>In <i>GameMaker Studio 2</i> sprites are not static things as
-they can have sub-images and be animated at different speeds. Each
-frame of an animation (called a sub-image) has its own number,
-starting at 0, which can be checked in code or even through
-actions, but sometimes all you really need to know is when the
-animation has ended. That's when this event is triggered, right at
-the end of the animation when the sub image index shows that the
-last frame has been reached. This event is really useful for many
-things, for example an explosion object where you can set the
-instance to destroy itself when the last frame of the animation is
-reached.</p>
+<p>在 <i>GameMaker Studio 2</i> 中，精灵不是静态的东西，因为它们可以有子图像并以不同的速度进行动画处理。 动画的每一帧（称为子图像）都有自己的编号，从 0 开始，可以通过代码或甚至通过动作进行检查，但有时你真正需要知道的是动画结束的时间。 当触发此事件时，就在动画结束时，子图像索引显示已到达最后一帧。此事件对于许多事情非常有用，例如爆炸物体，你可以将实例设置为在到达动画的最后一帧时自行销毁。</p>
 </div>
 <br>
 <label class="collapse" for="b">动画更新</label> <input id=
 "b" type="checkbox">
 <div class="index_list">
-<p>This event is designed only for use with the <a href=
-"../../../3_scripting/4_gml_reference/sprites/skeletal%20animations/index.html">
-Skeletal Animation Functions</a>. It is a special event that is
-triggered every step in an instance that uses a skeletal animation
-sprite, and is designed to "intercept" the bone data after the
-orientation of the bones has been calculated for the current
-animation state but before this data is committed to use for
-drawing. This allows you to make modifications to the bone data
-using the appropriate functions.</p>
+<p>此事件仅适用于 <a href=
+"../../../3_scripting/4_gml_reference/sprites/skeletal%20animations/index.html">骨骼动画函数</a>。 这是一个特殊事件，在使用骨骼动画精灵的实例中的每一步触发，并且设计为在为当前动画状态计算骨骼方向之后但在提交此数据之前 “拦截” 骨骼数据用于绘图。 这允许你使用适当的函数修改骨骼数据。</p>
 </div>
 <br>
 <label class="collapse" for="c">动画事件</label> <input id=
 "c" type="checkbox">
 <div class="index_list">
-<p>This event is designed only for use with the <a href=
-"../../../3_scripting/4_gml_reference/sprites/skeletal%20animations/index.html">
-Skeletal Animation Functions</a>. This event is triggered in an
-object which has a skeletal animation sprite assigned to it, and
-where the object is using the <i>default</i> draw for the assigned
-sprite, or the sprite is being drawn via <tt>draw_self()</tt>.
-<i>It currently won’t trigger on skeleton animation sprites drawn
-any other way</i>. The event is designed to capture and transmit
-data that has been assigned to particular events in the sprite
-animation as defined in the editor used to make them.</p>
+<p>此事件仅适用于 <a href=
+"../../../3_scripting/4_gml_reference/sprites/skeletal%20animations/index.html">骨骼动画函数</a>。 此事件在具有分配给它的骨骼动画精灵，并且使用 <i>默认</i> 绘制作为指定的精灵，或者通过 <tt>draw_self()</tt> 绘制精灵的物体中触发。 <i>它目前不会触发任何其他方式绘制的骨架动画精灵。</i>该事件旨在捕获和传输已分配给精灵动画中特定事件的数据，如在用于制作它们的编辑器中定义的那样。</p>
 
-<p>When the Animation Event is triggered, a special <tt>ds_map</tt>
-will be created called the <tt><b>event_data</b></tt> map (much the
-same as we have the <tt>async_load</tt> map for an async event).
-This map will have all of the following key/value pairs that you
-can parse to get information about the event:</p>
+<p>触发动画事件时，将创建一个特殊的 <tt>ds_map</tt>，称为 <tt><b>event_data</b></tt> 映射（与异步事件的 <tt>async_load</tt> 映射非常相似）。 此映射将包含以下所有键 / 值对，你可以解析它们以获取有关该事件的信息：</p>
 
 <ul>
-<li>"name": the name of the event (as defined in the animation
-program)</li>
+<li>"name": 事件的名称（在动画程序中定义）</li>
 
-<li>"track": the index of the track the animation is playing on
-(default is 0)</li>
+<li>"track": 动画正在播放的轨道的索引（默认为0）</li>
 
-<li>"integer": an integer value associated with the event (as
-defined in the animation program, default is 0)</li>
+<li>"integer": 与事件关联的整数值（在动画程序中定义，默认为0）</li>
 
-<li>"float": a float value associated with the event (as defined in
-the animation program, default is 0.0)</li>
+<li>"float": 与事件关联的浮点数值（在动画程序中定义，默认为0.0）</li>
 
-<li>"string": a string value associated with the event (as defined
-in the animation program, default is an empty string "")</li>
+<li>"string": 与事件关联的字符串（在动画程序中定义，默认为 ""）</li>
 </ul>
 </div>
 <br>
 <label class="collapse" for="d">路径结束</label> <input id="d"
 type="checkbox">
 <div class="index_list">
-<p>Paths can be an important part of making any game, whether it is
-for a tower defence type game, or a shoot-em-up or whatever, and
-it's often really important that an instance does some particular
-action when it reaches the end of its path. This event detects this
-and is triggered when it happens allowing you to add in code or
-actions to deal with the circumstances, for example in a tower
-defence game you would use this to destroy the instance and remove
-a health point from the goal object.</p>
+<p>路径可以是制作任何游戏的重要部分，无论是用于塔式防御型游戏，还是用于射击游戏或其他任何游戏，并且当一个实例到达路径结束时执行某些特定操作通常非常重要。此事件检测到此事件并在事件发生时触发，允许你添加代码或操作来处理环境，例如在塔防游戏中，你将使用它来销毁实例并从目标物体中删除生命点。</p>
 </div>
 <br>
 <label class="collapse" for="e">用户事件</label> <input id="e"
 type="checkbox">
 <div class="index_list">
-<p>These are special events that are not triggered by <i>GameMaker
-Studio 2</i> itself, but have to be implicitly called by you from a
-code box while the game is running. These events can contain code
-or actions and do the same things as any other event, making them
-very useful for creating your own events that happen when you
-decide.</p>
+<p>这些特殊事件不是由 <i>GameMaker Studio 2</i> 本身触发的，但必须在游戏运行时由代码框隐式调用。 这些事件可以包含代码或操作，并执行与任何其他事件相同的操作，这使得它们对于创建你自己决定发生时刻的事件非常有用。</p>
 </div>
 <br></div>
 <br>
@@ -615,41 +343,20 @@ decide.</p>
 <label class="collapse" for="nine">绘制</label> <input id="nine"
 type="checkbox">
 <div class="index_list">
-<p>This event is the one that governs what you see on the screen
-when you run your game, and is split into various separate
-"sub-events":  <img class="center" src=
+<p>此事件是管理你在运行游戏时在屏幕上看到的内容的事件，并分为各种单独的“子事件”： <img class="center" src=
 "images/editor_objects_draw.png" alt=
 "Object Editor Draw Events"></p>
 
-<p>As you can see, the draw event category has multiple different
-event types. <b>Draw Begin</b>, <b>Draw</b> and <b>Draw End</b> are
-the "standard" draw events which you will probably use most. By
-default the main Draw event is <i>always</i> called for every
-instance, regardless of whether it has a sprite or not, although if
-you flag the instance as invisible, the event will not be triggered
-(so keep this in mind if you have any game logic in the draw event
-of an invisible object, as it won't run). The main draw event is
-also where <i>GameMaker Studio 2</i> default draws the instance
-sprite when there is no code nor actions in the event (ie: you
-haven't added it into the event list for the object). Default
-drawing uses the sprite associated with the instance and will draw
-that with any transforms set in code or actions applied.</p>
+<p>如你所见，绘制事件类别具有多种不同的事件类型。 <b>绘制开始</b>、<b>绘制</b> 和 <b>绘制结束</b> 是你可能最常使用的 “标准” 绘图事件​​。默认情况下，<i>总是</i> 为每个实例调用主绘制事件，无论它是否具有精灵，但是如果将实例标记为不可见，则不会触发事件（因此，如果你在一个不可见物体的绘制事件中有任何游戏逻辑，请记住这一点，因为它不会运行）。主绘制事件也是 <i>GameMaker Studio 2</i> 默认在事件中没有代码或动作时绘制实例精灵的地方（即：你尚未将其添加到物体的事件列表中）。默认绘图使用与实例关联的精灵，并将使用在应用的代码或操作中设置的任何变换进行绘制。</p>
 
-<p>The standard draw events draw <i>before</i> the <b>Draw GUI</b>
-events and <i>between</i> the <b>Pre Draw</b> and <b>Post Draw</b>
-events, meaning that everything that is drawn in this event is
-drawn beneath that of the <b>Draw GUI</b> event, regardless of the
-layer (ie: anything drawn in the <b>Draw GUI</b> event will
-<i>always</i> be drawn over anything drawn in the normal draw
-event, regardless of layer order).</p>
+<p>标准绘制事件在 <b>绘制 GUI</b> 事件 <i>之前</i> 以及 <b>绘制预处理</b> 和 <b>绘制后处理</b> 事件 <i>之间</i> 绘制，这意味着在此事件中绘制的所有内容都绘制在 <b>绘制 GUI</b> 事件的下方，而不管图层（即：在无论图层顺序如何，<b>绘制 GUI</b> 事件将 <i>始终</i> 绘制在正常绘制事件中绘制的任何内容上。
+</p>
 
-<p>Note that the above is simply an overview of how the Draw Events
-work, but for full details on all the available sub-events, please
-see the following section:</p>
+<p>请注意，上面只是概述绘制事件如何工作，但有关所有可用子事件的完整详细信息，请参阅以下部分：</p>
 
 <blockquote>
 <ol>
-<li><a href="draw_events.html">Draw Events List</a>
+<li><a href="draw_events.html">绘制事件列表</a>
 </li>
 </ol>
 </blockquote>
@@ -663,132 +370,87 @@ see the following section:</p>
 <label class="collapse" for="twelve">异步</label>
 <input id="twelve" type="checkbox">
 <div class="index_list">
-<p>This event is special in that it is not triggered by default by
-<i>GameMaker Studio 2</i>, but rather by the end of some other
-action, like the loading of a file, or the reply from a web server.
-The actual event is split into various sub-events:  <img class=
+<p>此事件的特殊之处在于它不是由 <i>GameMaker Studio 2</i> 默认触发，而是由其他一些操作结束，例如加载文件或来自 Web 服务器的反馈。 实际事件被分成各种子事件： <img class=
 "center" src="images/editor_objects_async.png" alt=
 "Object Editor Asynchronous Events"></p>
 
-<p>So, say you want to add an image file to <i>GameMaker Studio
-2</i>. Well, you would code this in another event (maybe the Create
-Event) of an object and then have that object draw a loading bar
-while waiting, polling the appropriate asynchronous event until the
-callback that tells <i>GameMaker Studio 2</i> the file has loaded.
-You can then use the data returned in this event to do other
-things, like change room, or purchase an item.</p>
+<p>所以，假设你要将图像文件添加到 <i>GameMaker Studio 2</i>。那么，你可以在物体的另一个事件（可能是创建事件）中对此进行编码，然后让该物体在等待时绘制一个加载栏，轮询相应的异步事件直到告诉 <i>GameMaker Studio 2</i> 文件已加载的回调。 然后，你可以使用此事件中返回的数据执行其他操作，例如更改房间或购买物品。</p>
 
-<p>Note that the above is simply an overview of how the
-Asynchronous Event works, but for full details on all the available
-sub-events, please see the following section:</p>
+<p>请注意，上面只是概述了异步事件的工作原理，但有关所有可用子事件的完整详细信息，请参阅以下部分：</p>
 
 <blockquote>
 <ol>
-<li><a href="async_events.html">Asynchronous Events List</a>
+<li><a href="async_events.html">异步事件列表</a>
 </li>
 </ol>
 </blockquote>
 </div></blockquote>
 
-<p>It is worth noting that you can <b>name events</b>, or at least give them a short descriptive text that will be shown beside them in the Event Editor. 为此，只需将以下内容添加到事件代码编辑器的第一行：</p>
+<p>值得注意的是，你可以为 <b>事件命名</b>，或者至少为它们提供一个简短的描述性文本，这些文本将在事件编辑器中显示在它们旁边。
+为此，只需将以下内容添加到事件代码编辑器的第一行：</p>
 
-<p class="code">/// @description你的文字在这里</p>
+<p class="code">/// @description 在这里输入你的文本</p>
 
-<p>所以，你可能会有这样的东西 - 例如 - 一个Alarm事件</p>
+<p>所以，你可能会有这样的东西 - 例如 - 一个计时器事件</p>
 
-<p class="code">/// @description这是AI战斗警报</p>
+<p class="code">/// @description 这是 AI 战斗计时器</p>
 
-<p>现在在您的活动编辑器中，您将看到： <img class=
+<p>现在在你的事件编辑器中，你将看到： <img class=
 "center" src="../images/editor_objects_namedevents.png" alt=
-"对象编辑器命名事件"></p>
+"物体编辑器命名事件"></p>
 
 <p><br>
 </p>
 <a name="object_event_order" id="object_event_order"></a>
-<h2>Event Order</h2>
+<h2>事件顺序</h2>
 
-<p>When considering Events in <i>GameMaker Studio 2</i>, it should
-be noted that <i>the exact order that the events are going to occur
-in each step cannot be clearly stated</i>, simply because it
-depends on the internal workings of <i>GameMaker Studio 2</i> and
-this is subject to change as the software develops. However there
-are certain events that will <i>always</i> run in the same order.
-The first set of events that will always happen the same way are
-those that occur when a room is first entered. The order that the
-different events will fire is:</p>
+<p>在考虑 <i>GameMaker Studio 2</i> 中的事件时，应该注意的是，<i>事件将在每步中发生的确切顺序无法清楚地说明</i>，因为它取决于 <i>GameMaker Studio 2</i> 的内部工作方式，并且可能会随着软件开发而发生变化。但是，某些事件 <i>始终</i> 以相同的顺序运行。始终以相同方式发生的第一组事件是首次进入房间时发生的事件。 不同事件将触发的顺序是：</p>
 
 <ul>
-<li><b>Object Variables / Instance Variables</b> are initialised
-(these are the variables that you can define in the IDE of the
-<a href="../objects.html">Object Editor</a> or the <a href=
-"../rooms.html">Room Editor</a>). If you have an object with
-variables attached then they will be created before anything else
-and then any instances that have variables attached will be defined
-after so you can overwrite object variables with instance specific
-ones in the room editor.</li>
-
-<li><b>Create Event</b> followed by the <b>Instance Creation
-Code</b> of each instance - so <i>as each instance is created</i>,
-it will run first its Create event and then its Instance Creation
-Code before moving on to the next instance to be created<br>
+<li><b>物体变量 / 实例变量（Object Variables / Instance Variables）</b> 已初始化（这些是你可以在 <a href="../objects.html">物体编辑器</a> 或 <a href=
+"../rooms.html">房间编辑器</a> 的 IDE 中定义的变量）。 如果你有一个附加变量的物体，那么它们将在其他任何东西之前创建，然后任何附加了变量的实例将被定义，因此你可以在房间编辑器中用特定于实例的物体变量覆盖它们。<br>
 <br></li>
 
-<li><b>Game Start Event</b> - this event is triggered once in the
-very first room of the game for all instances placed in the room
-from the room editor (note that calling <tt>game_restart()</tt>
-will trigger this event again.<br>
+<li><b>创建事件（Create Event）</b> 在每个实例的 <b>实例创建代码</b> 之前 - 因此 <i>在创建每个实例时</i>，它将首先运行其创建事件，然后运行其实例创建代码，然后再转到要创建的下一个实例<br>
 <br></li>
 
-<li><b>Room Creation Code</b> - this is the one-off code written in
-the <a href="../rooms.html">Room Editor</a> for when a room is
-first entered<br>
+<li><b>游戏开始事件（Game Start Event）</b> - 对于从房间编辑器放置在房间中的所有实例，此事件在游戏的第一个房间中触发一次（请注意，调用 <tt>game_restart()</tt> 将再次触发此事件。<br>
 <br></li>
 
-<li><b>Room Start Event</b> of all instances - one of the "other"
-category of events and will fire for all instances, persistent or
-otherwise</li>
+<li><b>房间创建代码（Room Creation Code）</b> - 这是在 <a href="../rooms.html">房间编辑器</a> 中为首次进入房间时编写的一次性代码<br>
+<br></li>
+
+<li>所有实例的 <b>房间开始事件（Room Start Event）</b> - “其他”类的事件之一，将对所有实例（保持或其他）触发</li>
 </ul>
 
 <p><br>
+还值得注意的是，你还可以通过在 <a href=
+"../rooms.html">实例层属性</a> 窗口的列表中向上或向下移动来设置在房间编辑器本身中创建特定实例的顺序。</p>
 
-It is also worth noting that you can also set the order in which
-specific instances are created within the room editor itself by
-moving them up or down the list of the <a href=
-"../rooms.html">Instance Layer Properties</a> window.</p>
-
-<p>Other than those specific events, the only known order that will
-<i>always</i> occur in the same way no matter what belongs to the
-three <b>step</b> events and the different <b>draw</b> events.
-These will always remain consistent, so if you have code that
-relies on specific timing during each step of your game, you should
-use:</p>
+<p>除了那些特定事件之外，唯一已知的顺序将 <i>始终</i> 以相同的方式出现无非是三个 <b>步</b> 事件和不同的 <b>绘制</b> 事件。这些将始终保持一致，因此如果你的代码在游戏的每步依赖于特定的事件，你应该使用：</p>
 
 <ul>
-<li><b>Begin Step Event</b><br>
+<li><b>步开始事件</b><br>
 <br>
 </li>
 
-<li><b>Step Event</b> (note that the step event is executed just
-before instances are put in their new positions)<br>
+<li><b>步事件</b>（请注意，在将实例放入新位置之前执行步事件）<br>
 <br></li>
 
-<li><b>End Step Event</b><br>
+<li><b>步结束事件</b><br>
 <br>
 </li>
 </ul>
 
 <p><br>
-
-All of the sub events for drawing are also always dealt with in the
-same order as follows (except for the <b>Resize</b> event, which is
-triggered differently):</p>
+绘图的所有子事件也始终按照以下相同的顺序处理（<b>窗口大小调整</b> 事件除外，它以不同的方式触发）：</p>
 
 <ul>
-<li><b>Pre Draw Event<br>
+<li><b>绘制预处理事件<br>
 <br></b>
 </li>
 
-<li><b>Draw Begin Event<br>
+<li><b>绘制开始事件<br>
 <br></b>
 </li>
 
@@ -796,23 +458,23 @@ triggered differently):</p>
 <br></b>
 </li>
 
-<li><b>Draw End Event<br>
+<li><b>绘制结束事件<br>
 <br></b>
 </li>
 
-<li><b>Post Draw Event<br>
+<li><b>绘制后处理事件<br>
 <br></b>
 </li>
 
-<li><b>Draw GUI Begin Event<br>
+<li><b>绘制 GUI 开始事件<br>
 <br></b>
 </li>
 
-<li><b>Draw GUI Event<br>
+<li><b>绘制 GUI 事件<br>
 <br></b>
 </li>
 
-<li><b>Draw GUI End Event<br>
+<li><b>绘制 GUI 结束事件<br>
 <br></b>
 </li>
 </ul>
@@ -830,7 +492,7 @@ triggered differently):</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

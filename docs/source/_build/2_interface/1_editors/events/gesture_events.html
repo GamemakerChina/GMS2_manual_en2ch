@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,63 +37,23 @@ if (window.name != "content")
 </p>
 <img class="center" src="images/editor_objects_gesture.png" alt=
 "物体编辑器的手势事件">
-<p>Events in the <b>Gesture Event</b> category will be triggered
-whenever <i>GameMaker Studio 2</i> detects a "gesture" of the mouse
-or a touch screen event (while these gesture events are designed
-specifically for mobile use, they can also be used on other targets
-to detect the mouse, although they will not detect multiple touches
-in this case). The goal of the gesture system is to try and
-recognise inputs at a higher level than the direct mouse\touch
-reading functions, and is designed to simplify the implementation
-of commonly used inputs on touch-based devices.</p>
+<p>只要 <i>GameMaker Studio 2</i> 检测到鼠标或触摸屏事件的 “手势”（这些手势事件专为移动设备使用而设计，它们也可用于其他目标平台以检测鼠标，虽然在这种情况下它们不会检测到多次触摸），将触发手势事件类别中的 <b>手势事件（Gesture Event）</b>。手势系统的目标是尝试识别比直接鼠标 \ 触摸读取功能更高级别的输入，并且旨在简化基于触摸的设备上的常用输入的实现。</p>
 
-<div class="note"><b>NOTE:</b> These events will <b>not be
-triggered on the HTML5</b> platform. If you are looking for
-gestures on that target then you should be using the <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/index.html">
-device functions</a>.</div>
+<div class="note"><b>注意：</b> 这些事件 <b>不会在 HTML5 平台上触发</b>。如果你正在寻找该目标上的手势，那么你应该使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/index.html">设备函数</a>。</div>
 
 <p><br>
+你可以选择检测 <b>实例</b> 手势或 <b>全局</b> 手势，其中实例手势事件仅在初始触摸 / 单击位于房间内的实例上时触发。请注意，实例 <i>必须</i> 具有有效的碰撞遮罩（有关详细信息，请参阅 <a href="../../1_editors/sprites.html">精灵编辑器 - 碰撞遮罩</a> 和 <a href="../../1_editors/objects.html">物体编辑器 - 碰撞遮罩</a> 部分）以触发此事件。但是，全局事件将通过触摸 / 点击游戏房间内的任何位置以及所有具有该事件的实例来触发。
+</p>
 
-You can choose to detect either <b>instance</b> gestures or
-<b>global</b> gestures, where instance gesture events will only be
-triggered when the initial touch/click is on an instance within the
-room. Note that the instance <i>must</i> have a valid collision
-mask (see <a href="../../1_editors/sprites.html">The Sprite Editor
-- Collision Mask</a> and <a href="../../1_editors/objects.html">The
-Object Editor - Collision Mask</a> sections for more details) for
-this event to be triggered. Global events, however, will be
-triggered by touching/clicking anywhere within the game room, and
-for all instances that have the event.</p>
+<p>当识别出手势事件时，它将触发一个或多个可用子事件，并且触发的子事件将取决于已检测到的手势的类型。但是，在每种情况下，都会为你生成 <a href=
+"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">数据结构映射（DS Map）</a> 并存储在内置变量 <tt><b>event_data</b></tt> 中。可用的密钥取决于它创建的事件类型，并显示在下面的每个子部分中。</p>
 
-<p>When a gesture event is recognised, it will trigger one or more
-of the available sub-events, and the sub-event triggered will
-depend on the type of gesture that has been detected. In every
-case, however, a <a href=
-"../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">
-DS Map</a> will be generated for you and stored in the built-in
-variable <tt><b>event_data</b></tt>. The keys available will depend
-on which kind of event it has been created by and are shown in each
-of the sub-sections below.</p>
-
-<div class="note"><b>NOTE:</b> The variable <tt>event_data</tt> is
-<b>only valid in these events</b>, as the <tt>ds_map</tt> that it
-points to is automatically created at the start of the event, then
-destroyed again at the end, with this variable being reset to a
-value of -1 at all other times.</div>
+<div class="note"><b>注意：</b> 变量 <tt>event_data</tt> <b>仅在这些事件中有效</b>，因为它指向的 <tt>ds_map</tt> 在事件开始时自动创建，然后在结束时再次销毁，此变量在所有其他事件中重置为 -1 倍。
+</div>
 
 <p><br>
-
-It is worth noting that if you have multiple instances under the
-position being touched and they all have a gesture event, then all
-of them will trigger, not just the "topmost" instance. Also note
-that when using multiple views and dragging an instance, the values
-returned will be based on the view you were in when the initial
-touch/click was received - this is true for all subsequent events
-in that gesture for that instance. So touching and dragging an
-instance in one view then releasing the touch in another view, will
-return values relative to the initial view where the gesture was
-first detected.</p>
+值得注意的是，如果你触摸的位置下有多个实例并且它们都有一个手势事件，那么所有这些实例都将触发，而不仅仅是 “最顶层” 实例。另请注意，在使用多个视图并拖动实例时，返回的值将基于你在接收到初始触摸 / 单击时所处的视图 - 对于该实例的该手势中的所有后续事件都是如此。因此，在一个视图中触摸并拖动实例然后在另一个视图中释放触摸，将返回相对于首次检测到手势的初始视图的值。</p>
 
 <p><br>
 </p>
@@ -104,16 +64,14 @@ first detected.</p>
 "vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_tap.png">
 </div>
-<label class="collapse" for="one">Tap, <img style=
+<label class="collapse" for="one">点按, <img style=
 "vertical-align:middle;padding-top:0px;padding-left:5px;" src=
-"images/icon_drag.png"> Drag and <img style=
+"images/icon_drag.png"> 拖动和 <img style=
 "vertical-align:middle;padding-top:0px;padding-left:5px;" src=
-"images/icon_flick.png"> Flick Events</label> <input id="one" type=
+"images/icon_flick.png"> 轻抚事件</label> <input id="one" type=
 "checkbox">
 <div class="index_list">
-<p>The "Tap", "Drag" and "Flick" events are all based on a single
-touch or mouse click on the screen and the <tt>event_data</tt> DS
-Map will contain the following keys:</p>
+<p>“点按（Tap）”、“拖动（Drag）” 和 “轻抚（Flick）” 事件都基于屏幕上的单触摸或鼠标单击，<tt>event_data</tt> 数据结构映射将包含以下键：</p>
 
 <div class="compat">
 <table>
@@ -125,151 +83,151 @@ Map will contain the following keys:</p>
 <tr>
 <td>"gesture"</td>
 <td><br>
-
-This is an ID value that is <i>unique</i> to the gesture that is in
-play. This allows you to link the different parts of multi-part
-gestures (such as drag start, dragging and drag end) together.<br>
+这是一个 ID 值，对于正在运行的手势是 <i>唯一</i> 的。这允许你将多个手势的不同部分（例如拖动开始，拖动和拖动结束）链接在一起。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"touch"</td>
 <td><br>
-
-This is the index of the touch that is being used for the gesture.
-In general this will start at 0 and increase for each finger that
-is held down, then reset back to 0 when all fingers are removed,
-but if the user is touching the screen anywhere else when this
-event is triggered by another touch, then the value will be greater
-than 0.<br>
+这是用于手势的触摸索引。一般来说，这将从 0 开始，并且每次手指按下时增加，然后在所有手指被移除时重置为 0，但如果用户在此事件触发时触摸屏幕其他地方，则值将大于 0。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"posX"</td>
 <td><br>
-
-This is the room-space X position of the touch.<br>
+触摸相对于房间的 X 点。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"posY"</td>
 <td><br>
-
-This is the room-space Y position of the touch.<br>
+触摸相对于房间的 Y 点。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"rawposX"</td>
 <td><br>
-
-This is the <i>raw</i> window-space X position of the touch
-(equivalent to getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html">
-<tt>device_mouse_raw_x()</tt></a>).<br>
+触摸相对于窗口的 <i>原始</i>  X 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html"><tt>device_mouse_raw_x()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"rawposY"</td>
 <td><br>
-
-This is the <i>raw</i> window-space Y position of the touch
-(equivalent to getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html">
-<tt>device_mouse_raw_y()</tt></a>).<br>
+触摸相对于窗口的 <i>原始</i>  Y 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html"><tt>device_mouse_raw_y()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"guiposX"</td>
 <td><br>
-
-This is the gui-space X position of the touch (equivalent to
-getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html">
-<tt>device_mouse_x_to_gui()</tt></a>).<br>
+触摸相对于 GUI 层的 X 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html"><tt>device_mouse_x_to_gui()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"guiposY"</td>
 <td><br>
-
-This is the gui-space Y position of the touch (equivalent to
-getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html">
-<tt>device_mouse_y_to_gui()</tt></a>).<br>
+触摸相对于 GUI 层的 Y 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html"><tt>device_mouse_y_to_gui()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"diffX"</td>
 <td><br>
-
-This is the room-space X difference between the position of the
-current touch and the position of the last touch in this
-gesture.<br>
+这是当前触摸的位置与该手势中的最后一次触摸的位置之间的以房间为基准的 X 距离。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"diffY"</td>
 <td><br>
-
-This is the room-space Y difference between the position of the
-current touch and the position of the last touch in this
-gesture.<br>
+这是当前触摸的位置与该手势中的最后一次触摸的位置之间的以房间为基准的 Y 距离。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"rawdiffX"</td>
 <td><br>
-
-This is the raw X difference between the position of the current
-touch and the position of the last touch in this gesture.<br>
+这是当前触摸的位置与该手势中的最后一次触摸的位置之间的以屏幕为基准的 X 距离。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"rawdiffY"</td>
 <td><br>
-
-This is the raw Y difference between the position of the current
-touch and the position of the last touch in this gesture.<br>
+这是当前触摸的位置与该手势中的最后一次触摸的位置之间的以屏幕为基准的 Y 距离。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"guidiffX"</td>
 <td><br>
-
-This is the gui-space X difference between the position of the
-current touch and the position of the last touch in this
-gesture.<br>
+这是当前触摸的位置与该手势中的最后一次触摸的位置之间的以 GUI 层为基准的 X 距离。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"guidiffY"</td>
 <td><br>
+这是当前触摸的位置与该手势中的最后一次触摸的位置之间的以 GUI 层为基准的 Y 距离。<br>
+<br></td>
+</tr>
 
-This is the gui-space Y difference between the position of the
-current touch and the position of the last touch in this
-gesture.<br>
+<tr class="alt">
+<td>"viewstartposX"</td>
+<td><br>
+这是当前触摸的位置与房间开始时 X 坐标距离。<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"viewstartposY"</td>
+<td><br>
+这是当前触摸的位置与房间开始时 Y 坐标距离。<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"rawstartposX"</td>
+<td><br>
+这是当前触摸的位置与屏幕开始时 X 坐标距离。<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"rawstartposY"</td>
+<td><br>
+这是当前触摸的位置与屏幕开始时 Y 坐标距离。<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>"guistartposX"</td>
+<td><br>
+这是当前触摸的位置与 GUI 层开始时 X 坐标距离。<br>
+<br></td>
+</tr>
+
+<tr>
+<td>"guistartposY"</td>
+<td><br>
+这是当前触摸的位置与 GUI 层开始时 Y 坐标距离。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"isflick"</td>
 <td><br>
-<b>Only available in the Drag End event</b>. This is set to 1 if
-the end of the drag is detected as a flick, meaning that you don’t
-need a separate <b>Flick Event</b> if you’re handling dragging
-anyway.<br>
+<b>仅在拖拽结束（Drag End）事件中可用。</b>如果拖拽结束被检测为轻抚，则设置为 1，这意味着如果你正在处理拖动，则不需要单独的 <b>轻抚事件</b>。<br>
 <br></td>
 </tr>
 </table>
@@ -279,14 +237,14 @@ anyway.<br>
 <label class="collapse" for="a">点按</label> <input id="a" type=
 "checkbox">
 <div class="index_list">
-<p>The <b>Tap</b> event will be triggered when an instance has been touched or clicked or - if it is a global event - when the game registers a touch or click anywhere in the room. A tap is considered a quick touch and release, and if the touch lasts too long then it will be considered a Drag (and trigger the Drag gesture events instead of the Tap event). This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
+<p>当触摸或点击实例时触发 <b>点按</b> 事件，或者 - 如果是全局事件 - 当游戏在房间的任何地方注册触摸或点击时触发。轻击被认为是快速触摸和释放，如果触摸持续时间过长，则将其视为拖动（并触发拖动手势事件而不是点按事件）。 此事件将生成 <tt>event_data</tt> 数据结构映射，你可以使用该地图获取有关该事件的信息。比如：比如：</p>
 
 <h3>创建事件</h3>
 
 <p class="code">x_goto = x;<br>
 y_goto = y;<br></p>
 
-<h3>Tap Event</h3>
+<h3>点按事件</h3>
 
 <p class="code">x_goto = event_data[? "posX"];<br>
 y_goto = event_data[? "posY"];<br></p>
@@ -297,129 +255,89 @@ y_goto = event_data[? "posY"];<br></p>
 move_towards_point(x_goto, y_goto, clamp(_pd, 0, 5);<br></p>
 
 <p><br>
-
-The above code will detect a tap on the screen and then get the
-position of the tap to move the instance to that position. Note
-that if you want to have a longer or shorter tap detection time
-then you can set it with the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_time.html">
-<tt>gesture_drag_time</tt></a>. This sets the time between the
-initial detection and the tap becoming a drag, so set it to a
-higher value to make tap detection longer or a lower value to make
-it shorter (value is in seconds and defaults to 0.16).</p>
+上面的代码将检测屏幕上的点击，然后获取点击的位置以将实例移动到该位置。请注意，如果你想要更长或更短的点击检测时间，则可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_time.html"><tt>gesture_drag_time</tt></a> 进行设置。这将初始检测和点击之间的时间设置为拖动，因此将其设置为较高的值以使点击检测更长或将更低的值设置为更短（值以秒为单位，默认为 0.16）。</p>
 </div>
 <br>
 <a name="gesture_double_tap" id="gesture_double_tap"></a>
-<label class="collapse" for="b">双点按</label> <input id="b"
+<label class="collapse" for="b">双击</label> <input id="b"
 type="checkbox">
 <div class="index_list">
-<p>The <b>Double Tap</b> event will be triggered when an instance has been touched or clicked twice in quick succession (or - if it is a global event - when the game registers two quick touches or clicks anywhere in the room). A double tap is considered two quick touches and releases, but if any of the touches lasts too long then it will be considered a Drag (and trigger the Drag gesture events instead of the Double Tap event). This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
+<p>当一个实例被快速连续触摸或点击两次时（或者 - 如果它是全局事件 - 当游戏在房间的任何地方注册两次快速触摸或点击时）将触发 <b>双击</b> 事件。 双击被认为是两次快速触摸和释放，但如果任何触摸持续时间过长，则将其视为拖动（并触发拖动手势事件而不是双击事件）。此事件将生成 <tt>event_data</tt> 数据结构映射，你可以使用该地图获取有关该事件的信息。比如：比如：</p>
 
 <h3>创建事件</h3>
 
 <p class="code">x_goto = x;<br>
 y_goto = y;<br></p>
 
-<h3>Double Tap Event</h3>
+<h3>双击事件</h3>
 
 <p class="code">instance_destroy();<br></p>
 
 <p><br>
-
-The above code simply detects a double tap and then destroys the
-instance. Note that you can set the time between taps to trigger a
-double tap using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_double_tap_time.html">
-<tt>gesture_double_tap_time</tt></a> (which has a default value -
-in seconds - of 0.16) and you can also set the distance for
-detection between taps with the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_double_tap_distance.html">
-<tt>gesture_double_tap_distance</tt></a> (if a second tap is
-detected outside of this distance it will be considered a regular
-tap event).</p>
+上面的代码只是检测到双击，然后销毁实例。 请注意，你可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_double_tap_time.html"><tt>gesture_double_tap_time</tt></a>（其默认值 - 以秒为单位 - 为 0.16）设置点击触发双击之间的时间，你还可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_double_tap_distance.html"><tt>gesture_double_tap_distance</tt></a> 设置点击之间的检测距离（如果第二次点按在此距离之外它将被视为常规点按事件）。</p>
 </div>
 <br>
 <a name="gesture_drag_start" id="gesture_drag_start"></a>
 <label class="collapse" for="c">拖动开始</label> <input id="c"
 type="checkbox">
 <div class="index_list">
-<p>The <b>Drag Start</b> event will be triggered when the user maintains a touch or click without releasing it. It will be triggered once when a set time has passed after the initial touch, which is 0.16 seconds by default (although you can set this to any other value in seconds using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_time.html"> <tt>gesture_drag_time</tt></a>). After this event has been triggered, and as long as the user has a touch/click held down, then the <b>Dragging</b> event will be triggered every step until the touch/click has been released. This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
+<p>当用户保持触摸或单击而不释放它时，将触发 <b>拖动开始（Drag Start）</b> 事件。在初始触摸后经过设定时间后将触发一次，默认情况下为 0.16秒（尽管你可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_time.html"><tt>gesture_drag_time</tt></a> 将其设置为以秒为单位的任何其他值）。 触发此事件后，只要用户按住触摸 / 点击，就会在每步触发 <b>拖动</b> 事件，直到触摸 / 点击被释放。 此事件将生成 <tt>event_data</tt> 数据结构映射，你可以使用该映射获取有关该事件的信息。比如：</p>
 
 <h3>创建事件</h3>
 
 <p class="code">drag_offsetX = 0;<br>
 drag_offsetY = 0;<br></p>
 
-<h3>Drag Start Event</h3>
+<h3>拖动开始事件</h3>
 
 <p class="code">drag_offsetX = x - event_data[?"posX"];<br>
 drag_offsetY = y - event_data[?"posY"];<br></p>
 
 <p><br>
-
-The above code uses the Drag Start event to get the position of the
-touch/click and use it to set an offset value for the x and y axis.
-This can then be used when dragging the instance to ensure that it
-doesn't "jump" to the position that the touch/click was detected at
-(see the <b>Dragging</b> event below for a continuation of this
-example).</p>
+上面的代码使用拖动开始事件来获取触摸 / 单击的位置，并使用它来设置 x 和 y 轴的偏移值。然后可以在拖动实例时使用它以确保它不会 “跳转” 到检测到触摸 / 单击的位置（请参阅下面的 <b>拖动</b> 事件以继续此示例）。</p>
 </div>
 <br>
 <a name="gesture_dragging" id="gesture_dragging"></a> <label class=
 "collapse" for="d">拖动</label> <input id="d" type="checkbox">
 <div class="index_list">
-<p>The <b>Dragging</b> event is triggered after the <b>Drag Start</b> event, and will be triggered for every step that the user maintains the touch/click on the instance (or the screen, if it's a global event) and moves more than the defined dragging threshold. This distance is 0.1 inches by default but can be set using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_distance.html"> <tt>gesture_drag_distance</tt></a>. If there is no movement or the movement is under the defined threshold, the event will not be triggered. This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
+<p><b>拖动（Dragging）</b> 事件在 <b>拖动开始</b> 事件之后触发，并且将在用户维持触摸 / 单击实例（或屏幕，如果它是全局事件）并且移动超过定义的拖动阈值的每步触发。默认情况下，此距离为 0.1 英寸，但可以使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_drag_distance.html"><tt>gesture_drag_distance</tt></a> 函数进行设置。如果没有移动或移动低于定义的阈值，则不会触发事件。 此事件将生成 <tt>event_data</tt> 数据结构映射，你可以使用该映射获取有关该事件的信息。比如：</p>
 
 <h3>创建事件</h3>
 
 <p class="code">drag_offsetX = 0;<br>
 drag_offsetY = 0;<br></p>
 
-<h3>Drag Start Event</h3>
+<h3>拖动开始事件</h3>
 
 <p class="code">drag_offsetX = x - event_data[?"posX"];<br>
 drag_offsetY = y - event_data[?"posY"];<br></p>
 
-<h3>Dragging Event</h3>
+<h3>拖动事件</h3>
 
 <p class="code">x = event_data[?"posX"] + drag_offsetX;<br>
 y = event_data[?"posY"] + drag_offsetY;<br></p>
 
 <p><br>
-
-The example code above uses the offset variables set in the <b>Drag
-Start</b> event to move the instance when the <b>Dragging</b> event
-is triggered.</p>
+上面的示例代码使用 <b>拖动开始</b> 事件中设置的偏移变量来在触发 <b>拖动</b> 事件时移动实例。</p>
 </div>
 <br>
 <a name="gesture_drag_end" id="gesture_drag_end"></a> <label class=
 "collapse" for="e">拖动结束</label> <input id="e" type="checkbox">
 <div class="index_list">
-<p>The <b>Drag End</b> event is triggered when the user releases
-the touch/click on the instance (or the screen if the event is
-global). This event will generate an <tt>event_data</tt> DS map
-which you can then use to get information about the event, but in
-this event the map will have an extra key: "<tt>isflick</tt>".
-Flick is calculated as the <i>distance per second</i> that the drag
-has occurred over, and the value for the "<tt>isflick</tt>" key
-will be <tt>true</tt> if it is greater than the defined distance
-per second value, or <tt>false</tt> otherwise. Note that the
-default is 2 inches per second, but you can set it to another value
-using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_flick_speed.html">
-<tt>gesture_flick_speed</tt></a>. Also note that there is a
-dedicated <b>Flick</b> event which will also be triggered if the
-"<tt>isflick</tt>" variable is <tt>true</tt>. An example of use
-would be:</p>
+<p>当用户在实例（如果事件是全局的，则触发屏幕）上释放触摸 / 单击时触发 <b>拖动结束（Drag End）</b> 事件。此事件将生成一个 <tt>event_data</tt> 数据结构映射，你可以使用该映射获取有关该事件的信息，但在这种情况下，映射将有一个额外的键：“<tt>isflick</tt>”。 轻抚计算为拖动发生的 <i>每秒距离</i>，如果 “<tt>轻抚</tt>” 键的值大于定义的每秒距离值，则该值将为 <tt>true</tt>，否则为 <tt>false</tt>。 请注意，默认值为每秒 2 英寸，但你可以使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_flick_speed.html"><tt>gesture_flick_speed</tt></a> 函数将其设置为其他值。 另请注意，如果 “<tt>isflick</tt>” 变量为 <tt>true</tt>，则会触发专用的 <b>轻抚</b> 事件。使用的一个例子是：</p>
 
 <h3>创建事件</h3>
 
 <p class="code">flickVelX = 0.0;<br>
 flickVelY = 0.0;<br></p>
 
-<h3>Drag End Event</h3>
+<h3>拖动结束事件</h3>
 
 <p class="code">isFlick = event_data[?"isflick"];<br>
 if (isFlick)<br>
@@ -441,26 +359,21 @@ flickVelX *= 0.7;<br>
 flickVelY *= 0.7;<br></p>
 
 <p><br>
-
-The above code simply gets the difference in x and y position of
-the last <b>Dragging</b> event and the current <b>Drag End</b>
-event, and if the movement has been greater than the flick
-threshold, it sets some variables that are use to the move the
-instance in the step event.</p>
+上面的代码简单地得到了最后一个 <b>拖动</b> 事件和当前 <b>拖动结束</b> 事件的 x 和 y 位置的差异，如果移动大于轻抚阈值，它设置了一些用于在步事件中移动实例的变量。</p>
 </div>
 <br>
 <a name="gesture_flick" id="gesture_flick"></a> <label class=
-"collapse" for="f">轻扫</label> <input id="f" type="checkbox">
+"collapse" for="f">轻抚</label> <input id="f" type="checkbox">
 <div class="index_list">
-<p>The <b>Flick</b> event is only triggered when a touch/click has been held, dragged and then released and the distance between the last drag position and the release position is greater than 2 inches per second (this is the default setting, although this can be changed using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_flick_speed.html"> <tt>gesture_flick_speed</tt></a>). This event will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
+<p><b>轻抚（Flick）</b> 事件仅在按住 / 拖动，拖动然后释放并且最后拖动位置和释放位置之间的距离大于每秒 2 英寸时触发（这是默认设置，尽管可以 使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_flick_speed.html"><tt>gesture_flick_speed</tt></a> 函数更改）。此事件将生成 <tt>event_data</tt> 数据结构映射，你可以使用该映射获取有关该事件的信息。比如：</p>
 
 <h3>创建事件</h3>
 
 <p class="code">flickVelX = 0.0;<br>
 flickVelY = 0.0;<br></p>
 
-<h3>Flick Event</h3>
+<h3>轻抚事件</h3>
 
 <p class="code">flickVelX = event_data[?"diffX"];<br>
 flickVelY = event_data[?"diffY"];<br></p>
@@ -473,12 +386,7 @@ flickVelX *= 0.7;<br>
 flickVelY *= 0.7;<br></p>
 
 <p><br>
-
-The above code simply gets the difference in x and y position of
-the last <b>Dragging</b> event and the current <b>Flick</b> event,
-and if the movement has been greater than the flick threshold, it
-sets some variables that are use to the move the instance in the
-step event.</p>
+上面的代码简单地得到了最后一个 <b>拖动</b> 事件和当前 <b>轻抚</b> 事件的 x 和 y 位置的差异，如果移动大于轻弹阈值，它会设置一些变量用于移动步骤中的实例事件。</p>
 </div></blockquote>
 </div>
 <br>
@@ -487,35 +395,20 @@ step event.</p>
 "vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_pinch.png">
 </div>
-<label class="collapse" for="two">Pinch Events</label> <input id=
+<label class="collapse" for="two">捏合事件</label> <input id=
 "two" type="checkbox">
 <div class="index_list">
-<p>The "Pinch" events are based on two touches to the devices
-screen being recognised at once, where one (or both) have moved
-more than a certain distance. The angle of movement of the touches
-along with the movement of each touch is what will determine the
-detection of a Pinch or Rotate event, where (in the case of the
-<b>Pinch Event</b> type):</p>
+<p>“捏合” 事件基于对设备屏幕的一次识别的两次触摸，其中一个（或两个）移动超过一定距离。 触摸的移动角度以及每次触摸的移动将决定捏合或旋转事件的检测，其中（在 <b>捏合事件（Pinch Event）</b> 类型的情况下）：</p>
 
 <ul>
-<li>If one of the touches isn't moving, the other must be moving
-<i>towards</i> it or <i>away</i> from it within a threshold angle
-(which can be set using the functions <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_towards.html">
-<tt>gesture_pinch_angle_towards()</tt></a> and <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_away.html">
-<tt>- gesture_pinch_angle_away()</tt></a>).</li>
+<li>如果其中一个触摸未移动，则另一个触摸必须在阈值角度内 <i>靠近</i> 或 <i>远离</i> 它（可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_towards.html"><tt>gesture_pinch_angle_towards()</tt></a> 和 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_away.html"><tt>gesture_pinch_angle_away()</tt></a> 设置）。</li>
 
-<li>If both touches are moving, their velocities must be in
-approximately opposite directions and the same angular threshold
-check is also done to ensure the touches are moving in approximate
-alignment.</li>
+<li>如果两个触摸都在移动，则它们的速度必须在大致相反的方向上，并且还进行相同的角度阈值检查以确保触摸以近似对准的方式移动。</li>
 </ul>
 
-<p>When two touches and a movement are detected with the above
-criteria, a Pinch Event will be triggered, and in each of the
-events the <tt>event_data</tt> DS Map will be populated with the
-following keys:</p>
+<p>当使用上述标准检测到两次触摸和移动时，将触发一个捏合事件，并且在每个事件中，将使用以下键填充 <tt>event_data</tt> 数据结构映射：</p>
 
 <div class="compat">
 <table>
@@ -527,214 +420,165 @@ following keys:</p>
 <tr>
 <td>"gesture"</td>
 <td><br>
-
-This is an ID value that is <i>unique</i> to the gesture that is in
-play. This allows you to link the different parts of multi-part
-gestures (such as drag start, dragging and drag end) together.<br>
+这是一个 ID 值，对于正在运行的手势是 <i>唯一</i> 的。这允许你将多个手势的不同部分（例如拖动开始，拖动和拖动结束）链接在一起。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"touch1"</td>
 <td><br>
-
-This is the index of the first touch that is being used as part of
-the pinch gesture. In general this will be 0, but if the user is
-touching the screen anywhere else when this event is triggered by
-another touch, then the value will be greater than 0.<br>
+这是第一次触摸的索引，用作捏合手势的一部分。一般情况下，这将是 0，但如果用户在其他任何地方触摸屏幕时此触发此事件，则该值将大于0。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"touch2"</td>
 <td><br>
-
-This is the index of the second touch that is being used as part of
-the pinch gesture. In general this will be 1 more than the value
-for touch1, but may be some other value depending on the number of
-touches being detected elsewhere.<br>
+这是第二次触摸的索引，用作捏合手势的一部分。通常，这将比 touch1 的值多 1，但可能是其他值，具体取决于在其他地方检测到的触摸次数。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"posX1"</td>
 <td><br>
-
-This is the room-space X position of the first touch.<br>
+第一次触摸相对于房间的 X 点。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"posY1"</td>
 <td><br>
-
-This is the room-space Y position of the first touch.<br>
+第一次触摸相对于房间的 Y 点。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"rawposX1"</td>
 <td><br>
-
-This is the <i>raw</i> window-space X position of the first touch
-(equivalent to getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html">
-<tt>device_mouse_raw_x()</tt></a>).<br>
+第一次触摸相对于窗口的 <i>原始</i> X 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html"><tt>device_mouse_raw_x()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"rawposY1"</td>
 <td><br>
-
-This is the <i>raw</i> window-space Y position of the first touch
-(equivalent to getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html">
-<tt>device_mouse_raw_y()</tt></a>).<br>
+第一次触摸相对于窗口的 <i>原始</i> Y 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html"><tt>device_mouse_raw_y()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"guiposX1"</td>
 <td><br>
-
-This is the gui-space X position of the first touch (equivalent to
-getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html">
-<tt>device_mouse_x_to_gui()</tt></a>).<br>
+第一次触摸相对于 GUI 层的 X 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html"><tt>device_mouse_x_to_gui()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"guiposY1"</td>
 <td><br>
-
-This is the gui-space Y position of the second touch (equivalent to
-getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html">
-<tt>device_mouse_y_to_gui()</tt></a>).<br>
+第一次触摸相对于 GUI 层的 Y 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html"><tt>device_mouse_y_to_gui()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"posX2"</td>
 <td><br>
-
-This is the room-space X position of the second touch.<br>
+第二次触摸相对于房间的 X 点。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"posY2"</td>
 <td><br>
-
-This is the room-space Y position of the second touch.<br>
+第二次触摸相对于房间的 Y 点。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"rawposX2"</td>
 <td><br>
-
-This is the <i>raw</i> window-space X position of the first
-touch.<br>
+第二次触摸相对于 <i>原始</i> 窗口的X 点<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"rawposY2"</td>
 <td><br>
-
-This is the <i>raw</i> window-space Y position of the second
-touch.<br>
+第二次触摸相对于 <i>原始</i> 窗口的  Y 点<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"guiposX2"</td>
 <td><br>
-
-This is the gui-space X position of the second touch.<br>
+第二次触摸相对于 GUI 层的 X 点<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"guiposY2"</td>
 <td><br>
-
-This is the gui-space Y position of the second touch.<br>
+第二次触摸相对于 GUI 层的 Y 点<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"midpointX"</td>
 <td><br>
-
-The X position of the mid point between the two touches in room
-space.<br>
+房间空间中两个触摸之间的中点的 X 位置。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"midpointY"</td>
 <td><br>
-
-The Y position of the mid point between the two touches in room
-space.<br>
+房间空间中两个触摸之间的中点的 Y 位置。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"rawmidpointX"</td>
 <td><br>
-
-This is the raw window-space X position of the mid point.<br>
+这是原始窗口空间中点的 X 位置。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"rawmidpointY"</td>
 <td><br>
-
-This is the raw window-space Y position of the mid point.<br>
+这是原始窗口空间中点的 Y 位置。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"guimidpointX"</td>
 <td><br>
-
-This the gui-space X position of the mid point.<br>
+这是 GUI 层中点的 X 位置。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"guimidpointY"</td>
 <td><br>
-
-This the gui-space Y position of the mid point.<br>
+这是 GUI 层中点的 Y 位置。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"relativescale"</td>
 <td><br>
-
-This is difference in scale compared to the last event in this
-gesture (so for <b>Pinch In</b> events this will always be smaller
-than 1.0, whereas for <b>Pinch Out</b> events it will always be
-larger than 1.0)<br>
+这是与该手势中最后一个事件相比的缩放差异（因此，对于 <b>捏入（Pinch In）</b> 事件中的缩放，它总是小于 1.0，而对于 <b>捏出（Pinch Out）</b>事件，它总是大于 1.0）<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"absolutescale"</td>
 <td><br>
-
-This is the scale compared to where the fingers were when the
-gesture started (so if the distance between the fingers has halved
-then this will be 0.5 whereas if the distance has doubled it will
-be 2.0).<br>
+这是与手势开始时手指所处位置的比例（如果手指之间的距离减半，这将是 0.5，而如果距离增加一倍，这将是 2.0）。<br>
 <br></td>
 </tr>
 </table>
@@ -743,30 +587,28 @@ be 2.0).<br>
 <blockquote><a name="gesture_pinch_start" id=
 "gesture_pinch_start"></a> <label class="collapse" for="g">捏合开始</label> <input id="g" type="checkbox">
 <div class="index_list">
-<p>The <b>Pinch Start</b> event will be triggered when an instance (or the screen if the event is global) has been touched by two "fingers" (and the touch is maintained) and then one or both of the "fingers" is moved. If the touches move away from each other or towards each other more than the minimum check distance (which is 0.1 inches by default, but it can be set using the function <a href="../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html"> <tt>gesture_pinch_distance</tt></a>), and the angle between them is within the defined value (this defaults to 45° but can be set using <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_towards.html"> <tt>gesture_pinch_angle_towards()</tt></a> and <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_away.html"> <tt>- gesture_pinch_angle_away()</tt></a>), then a <b>Pinch Start</b> event will be triggered. In this event you can set variables or store position date for future use. 比如：</p>
+<p>当一个实例（或事件是全局的则为屏幕）被两个 “手指” 触摸（并且保持触摸）然后移动一个或两个 “手指” 时，将触发 <b>捏合开始（Pinch Start）</b>事件。如果触摸彼此远离或朝向彼此移动超过最小检查距离（默认为 0.1 英寸，但可以使用函数 <a href="../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html"><tt>gesture_pinch_distance</tt></a> 设置），并且它们之间的角度在定义的值内（默认值到 45° 但可以使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_towards.html"><tt>gesture_pinch_angle_towards()</tt></a> 和 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_angle_away.html"><tt>gesture_pinch_angle_away()</tt></a>进行设置），就会触发 <b>捏合开始</b> 事件。 在这种情况下，你可以设置变量或存储位置数据以供将来使用。比如：</p>
 
-<h3>Pinch Start Event</h3>
+<h3>捏合开始事件</h3>
 
 <p class="code">pinching = true;<br>
 pinch_x = event_data[? "midpointX"]; pinch_y = event_data[?
 "midpointY"];</p>
 
 <p><br>
-
-The above code will detect a pinch and store the midpoint position
-for that pinch.</p>
+上面的代码将检测一个缩放，并存储该缩放的中点位置。</p>
 </div>
 <br>
 <a name="gesture_pinch_in_out" id="gesture_pinch_in_out"></a>
-<label class="collapse" for="h">Pinch In / Pinch Out</label>
+<label class="collapse" for="h">捏入 / 捏出</label>
 <input id="h" type="checkbox">
 <div class="index_list">
-<p>The <b>Pinch In</b> and <b>Pinch Out</b> events will be triggered every step that the distance between the two touches that make up the pinch changes over the minimum threshold (set to +/- 0.1 inches by default, but you can change it using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html"> <tt>gesture_pinch_distance</tt></a>). If there is no movement of the pinch touches then these events will not trigger. These events will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
+<p>每个步骤都会触发 <b>捏入（Pinch In）</b> 和 <b>捏出（Pinch Out）</b> 事件，构成捏合的两个触摸之间的距离会在最小阈值上变化（默认设置为 +/- 0.1 英寸，但你可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html"><tt>gesture_pinch_distance</tt></a> 更改它）。 If there is no movement of the pinch touches then these events will not trigger. 这些事件将生成一个 <tt>event_data</tt> 数据结构映射，你可以使用该映射获取有关该事件的信息。比如：</p>
 
-<h3>Global Pinch In /Pinch Out Event</h3>
+<h3>全局捏入 / 捏出事件</h3>
 
 <p class="code">var _scale = event_data[? "relativescale"];<br>
 var _w = camera_get_view_width(view_camera[0]);<br>
@@ -783,18 +625,16 @@ camera_set_view_pos(view_camera[0], _x, _y);<br>
 camera_set_view_size(view_camera[0], _w, _h);<br></p>
 
 <p><br>
-
-The above code will scale the view based on the relative scale of
-the pinch touches.</p>
+上面的代码将根据捏合触摸的相对比例缩放视图。</p>
 </div>
 <br>
 <a name="gesture_pinch_end" id="gesture_pinch_end"></a>
 <label class="collapse" for="i">捏合结束</label> <input id="i"
 type="checkbox">
 <div class="index_list">
-<p>The <b>Pinch End</b> event will be triggered when the user releases one (or both) of the touches from the device. This events will generate an <tt>event_data</tt> DS map which you can then use to get information about the event. 比如：</p>
+<p>当用户从设备释放一个（或两个）触摸时，将触发 <b>捏合结束（Pinch End）</b> 事件。 此事件将生成 <tt>event_data</tt> 数据结构映射，你可以使用该映射获取有关该事件的信息。比如：</p>
 
-<h3>Pinch End Event</h3>
+<h3>捏合结束事件</h3>
 
 <p class="code">var _pinchx = event_data[? "midpointX"]; var
 _pinchy = event_data[? "midpointY"]; var _w =
@@ -806,10 +646,7 @@ var _y = _pinchy - (_h / 2);<br>
 camera_set_view_pos(view_camera[0], _x, _y);<br></p>
 
 <p><br>
-
-The above code will set the view position to be centered on the
-midpoint of the two touches that made up the pinch when the touches
-are released.</p>
+上面的代码将视图位置设置为在释放触摸时构成捏合的两个触摸的中点。</p>
 </div>
 <br></blockquote>
 </div>
@@ -819,39 +656,22 @@ are released.</p>
 "vertical-align:middle;padding-top:6px;padding-left:10px;" src=
 "images/icon_rotate.png">
 </div>
-<label class="collapse" for="three">Rotate Events</label>
+<label class="collapse" for="three">旋转事件</label>
 <input id="three" type="checkbox">
 <div class="index_list">
-<p>The "Rotate" events are based on two touches to the devices
-screen being recognised at once, and where there has been a
-consistent angular rotation between the two within a specific time.
-The angle of movement of the touches along with the movement of
-each touch is what will determine the detection of a Pinch or
-Rotate event, where (in the case of the <b>Rotate Event</b>
-type):</p>
+<p>“旋转” 事件基于对设备屏幕的两次触摸的一次识别，并且在特定时间内两者之间存在一致的角度旋转。触摸的移动角度以及每次触摸的移动将决定捏合或旋转事件的检测，其中（在 <b>旋转事件（Rotate Event）</b> 类型的情况下）：</p>
 
 <ul>
-<li>Two touches must be held down for a specified minimum time (the
-default time is 0.16 seconds, but you can change it using the
-function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_time.html">
-<tt>gesture_rotate_time()</tt></a>).</li>
+<li>必须按住指定的最短时间进行两次触摸（默认时间为 0.16 秒，但你可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_time.html"><tt>gesture_rotate_time()</tt></a> 更改它）。</li>
 
-<li>Within this minimum time period they must rotate in a
-consistent direction (if the rotation direction changes within that
-time then no rotate is started).</li>
+<li>在这个最小时间段内，它们必须以一致的方向旋转（如果旋转方向在该时间内发生变化，则不会开始旋转）。</li>
 
-<li>The rotation amount must exceed the minimum threshold angle
-(which is set to 5° by default, but this can be changed using the
-function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_angle.html">
-<tt>gesture_rotate_angle()</tt></a>).</li>
+<li>旋转量必须超过最小阈值角度（默认设置为 5°，但可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_angle.html"><tt>gesture_rotate_angle()</tt></a> 更改）。</li>
 </ul>
 
-<p>When two touches and a movement are detected with the above
-criteria, a Rotate Event will be triggered, and in each of the
-events the <tt>event_data</tt> DS Map will be populated with the
-following keys:</p>
+<p>当使用上述标准检测到两次触摸和移动时，将触发旋转事件，并且在每个事件中，将使用以下键填充 <tt>event_data</tt> 数据结构映射：</p>
 
 <div class="compat">
 <table>
@@ -863,200 +683,158 @@ following keys:</p>
 <tr>
 <td>"gesture"</td>
 <td><br>
-
-This is an ID value that is <i>unique</i> to the gesture that is in
-play. This allows you to link the different parts of multi-part
-gestures (such as drag start, dragging and drag end) together.<br>
+这是一个 ID 值，对于正在运行的手势是 <i>唯一</i> 的。这允许你将多个手势的不同部分（例如拖动开始，拖动和拖动结束）链接在一起。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"touch1"</td>
 <td><br>
-
-This is the index of the first touch that is being used as part of
-the pinch gesture. In general this will be 0, but if the user is
-touching the screen anywhere else when this event is triggered by
-another touch, then the value will be greater than 0.<br>
+这是第一次触摸的索引，用作捏合手势的一部分。一般情况下，这将是 0，但如果用户在其他任何地方触摸屏幕时此触发此事件，则该值将大于0。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"touch2"</td>
 <td><br>
-
-This is the index of the second touch that is being used as part of
-the pinch gesture. In general this will be 1 more than the value
-for touch1, but may be some other value depending on the number of
-touches being detected elsewhere.<br>
+这是第二次触摸的索引，用作捏合手势的一部分。通常，这将比 touch1 的值多 1，但可能是其他值，具体取决于在其他地方检测到的触摸次数。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"posX1"</td>
 <td><br>
-
-This is the room-space X position of the first touch.<br>
+第一次触摸相对于房间的 X 点。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"posY1"</td>
 <td><br>
-
-This is the room-space Y position of the first touch.<br>
+第一次触摸相对于房间的 Y 点。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"rawposX1"</td>
 <td><br>
-
-This is the <i>raw</i> window-space X position of the first touch
-(equivalent to getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html">
-<tt>device_mouse_raw_x()</tt></a>).<br>
+第一次触摸相对于窗口的 <i>原始</i> X 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_x.html"><tt>device_mouse_raw_x()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"rawposY1"</td>
 <td><br>
-
-This is the <i>raw</i> window-space Y position of the first touch
-(equivalent to getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html">
-<tt>device_mouse_raw_y()</tt></a>).<br>
+第一次触摸相对于窗口的 <i>原始</i> Y 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_raw_y.html"><tt>device_mouse_raw_y()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"guiposX1"</td>
 <td><br>
-
-This is the gui-space X position of the first touch (equivalent to
-getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html">
-<tt>device_mouse_x_to_gui()</tt></a>).<br>
+第一次触摸相对于 GUI 层的 X 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_x_to_gui.html"><tt>device_mouse_x_to_gui()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"guiposY1"</td>
 <td><br>
-
-This is the gui-space Y position of the second touch (equivalent to
-getting the mouse position using <a href=
-"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html">
-<tt>device_mouse_y_to_gui()</tt></a>).<br>
+第一次触摸相对于 GUI 层的 Y 点（相当于使用 <a href=
+"../../../3_scripting/4_gml_reference/controls/device%20input/device_mouse_y_to_gui.html"><tt>device_mouse_y_to_gui()</tt></a> 获取鼠标位置）<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"posX2"</td>
 <td><br>
-
-This is the room-space X position of the second touch.<br>
+第二次触摸相对于房间的 X 点。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"posY2"</td>
 <td><br>
-
-This is the room-space Y position of the second touch.<br>
+第二次触摸相对于房间的 Y 点。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"rawposX2"</td>
 <td><br>
-
-This is the <i>raw</i> window-space X position of the first
-touch.<br>
+第二次触摸相对于 <i>原始</i> 窗口的X 点<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"rawposY2"</td>
 <td><br>
-
-This is the <i>raw</i> window-space Y position of the second
-touch.<br>
+第二次触摸相对于 <i>原始</i> 窗口的  Y 点<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"guiposX2"</td>
 <td><br>
-
-This is the gui-space X position of the second touch.<br>
+第二次触摸相对于 GUI 层的 X 点<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"guiposY2"</td>
 <td><br>
-
-This is the gui-space Y position of the second touch.<br>
+第二次触摸相对于 GUI 层的 Y 点<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"pivotX"</td>
 <td><br>
-
-The X position of the rotation pivot point in room space.<br>
+在房间空间中旋转枢轴点的 X 位置。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"pivotY"</td>
 <td><br>
-
-The Y position of the rotation pivot point in room space.<br>
+在房间空间中旋转枢轴点的 Y 位置。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"rawpivotX"</td>
 <td><br>
-
-This is the raw window-space X position of the rotational pivot
-point.<br>
+这是旋转枢轴点在原始窗口空间的 X 位置。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"rawpivotY"</td>
 <td><br>
-
-This is the raw window-space Y position of the rotational pivot
-point.<br>
+这是旋转枢轴点在原始窗口空间的 Y 位置。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"guipivotX"</td>
 <td><br>
-
-This the gui-space X position of the rotational pivot point.<br>
+这是旋转枢轴点在 GUI 层的 X 位置。<br>
 <br></td>
 </tr>
 
 <tr>
 <td>"guipivotY"</td>
 <td><br>
-
-This the gui-space Y position of the rotational pivot point.<br>
+这是旋转枢轴点在 GUI 层的 Y 位置。<br>
 <br></td>
 </tr>
 
 <tr class="alt">
 <td>"relativeangle"</td>
 <td><br>
-<b>This is difference in rotation compared to the last event in
-this gesture, measured in degrees<br>
+<b>与此手势中的最后一个事件相比，这是旋转的差异，以角度为单位<br>
 <br></b>
 </td>
 </tr>
@@ -1064,12 +842,7 @@ this gesture, measured in degrees<br>
 <tr>
 <td>"absoluteangle"</td>
 <td><br>
-
-This is the difference in angle compared to where the fingers were
-when the gesture started, measured in degrees. So, for example, if
-the fingers have rotated a quarter-circle since the start of the
-gesture then this value will be 90° or -90°, depending on the
-direction of rotation.<br>
+这是与手指开始时手指的位置相比的角度差异，以角度为单位。 因此，例如，如果手指自手势开始以来已经旋转了四分之一圆，则该值将是 90° 或 -90°，这取决于旋转方向。<br>
 <br></td>
 </tr>
 </table>
@@ -1078,38 +851,30 @@ direction of rotation.<br>
 <blockquote><a name="gesture_rotate_start" id=
 "gesture_rotate_start"></a> <label class="collapse" for="j">旋转开始</label> <input id="j" type="checkbox">
 <div class="index_list">
-<p>The <b>Rotate Start</b> event will be triggered when an instance (or the screen if the event is global) has been touched by two "fingers" (and the touch is maintained) and then one or both of the "fingers" is rotated from its start position. The rotation of the touches needs to have started within a short period of time (0.16 seconds by default, but it can be set using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_time.html"> <tt>gesture_rotate_time()</tt></a>) and be greater than the minimum angular threshold (by default 5°, but, this can be changed using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_angle.html"> <tt>gesture_rotate_angle()</tt></a>). If these checks are true, then a <b>Rotate Start</b> event will be triggered and you can use it to store values or set variables for use with the rest of the rotate events. 比如：</p>
+<p>当一个实例（或事件是全局的则为屏幕）被两个 “手指” 触摸（并保持触摸）然后一个或两个 “手指” 从其开始旋转时，将在开始的位置触发 <b>旋转开始（Rotate Start）</b> 事件。 触摸的旋转需要在很短的时间内开始（默认为 0.16 秒，但可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_time.html"><tt>gesture_rotate_time()</tt></a> 设置）并且大于最小角度阈值（默认为 5°，但是可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_angle.html"><tt>gesture_rotate_angle()</tt></a> 更改。 如果这些检查为真，则将触发 <b>旋转启动</b> 事件，你可以使用它来存储值或设置变量以与其余旋转事件一起使用。比如：</p>
 
 <h3>创建事件</h3>
 
 <p class="code">rotating = false;<br>
 view_a = camera_get_view_angle(view_camera[0]);<br></p>
 
-<h3>Rotate Start Event</h3>
+<h3>旋转开始事件</h3>
 
 <p class="code">rotating = true;<br></p>
 
 <p><br>
-
-The above code simply sets up some variables for rotating the view
-camera, and then in the Rotate Start event, it sets one of them to
-<tt>true</tt>.</p>
+上面的代码只是为旋转视图相机设置了一些变量，然后在旋转开始事件中，它将其中一个设置为 <tt>true</tt>。</p>
 </div>
 <br>
 <a name="gesture_rotating" id="gesture_rotating"></a> <label class=
 "collapse" for="k">旋转</label> <input id="k" type="checkbox">
 <div class="index_list">
-<p>The <b>Rotating</b> event will be triggered every step that the
-touches on the screen rotate around each other, as long as the
-movement is greater than the minimum angular threshold (by default
-5°, but, this can be changed using the function <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_angle.html">
-<tt>gesture_rotate_angle()</tt></a>). This event can be used to set
-variables and manipulate instances, for example:</p>
+<p>只要移动大于最小角度阈值（默认为 5°，但是，可以使用函数 <a href=
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_rotate_angle.html"><tt>gesture_rotate_angle()</tt></a> 更改），<b>旋转</b> 事件将在屏幕上的触摸相互旋转的每一步触发。此事件可用于设置变量和操作实例，例如：</p>
 
-<h3>Rotating Event</h3>
+<h3>旋转事件</h3>
 
 <p class="code">var _relangle = event_data[?"relativeangle"];<br>
 var _a = camera_get_view_angle(view_camera[0]);<br>
@@ -1117,21 +882,16 @@ _a += _relangle;<br>
 camera_set_view_angle(view_camera[0], _a);<br></p>
 
 <p><br>
-
-The above code rotates the camera view depending on the rotational
-movement of the touches in the event.</p>
+上述代码根据事件中触摸的旋转运动来旋转摄像机视图。</p>
 </div>
 <br>
 <a name="gesture_rotate_end" id="gesture_rotate_end"></a>
 <label class="collapse" for="l">旋转结束</label> <input id="l"
 type="checkbox">
 <div class="index_list">
-<p>The <b>Rotate End</b> event will be triggered when one (or both)
-touches that comprise the gesture are released from the device
-screen. This event can be used to set variables and manipulate
-instances, for example:</p>
+<p>当从设备屏幕释放构成手势的一个（或两个）触摸时，将触发 <b>旋转结束（Rotate End）</b> 事件。此事件可用于设置变量和操作实例，例如：</p>
 
-<h3>Rotate End Event</h3>
+<h3>旋转结束事件</h3>
 
 <p class="code">rotating = false;<br></p>
 
@@ -1149,11 +909,7 @@ _a);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p><br>
-
-The above code uses the Rotate End event to detect when the user
-stops the gesture and then sets a variable. This variable is then
-used in the step event to rotate the view camera back to its
-original position.</p>
+上面的代码使用旋转结束事件来检测用户何时停止手势然后设置变量。然后在步事件中使用此变量将视图相机旋转回其原始位置。</p>
 </div>
 <br></blockquote>
 </div>
@@ -1172,7 +928,7 @@ original position.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
