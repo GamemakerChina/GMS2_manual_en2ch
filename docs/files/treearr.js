@@ -81,7 +81,7 @@ var TITEMS = [
   ["声音编辑器", "source/_build/2_interface/1_editors/sounds.html", "11"],
   ["精灵编辑器", "source/_build/2_interface/1_editors/sprites.html", "11"],
   ["图块集编辑器", "source/_build/2_interface/1_editors/tilesets.html", "11"],
-  ["时间线编辑器", "source/_build/2_interface/1_editors/timelines.html", "11"],
+  ["时间轴编辑器", "source/_build/2_interface/1_editors/timelines.html", "11"],
   ["物体事件", "source/_build/2_interface/1_editors/events/index.html", "1",
    ["异步事件", "source/_build/2_interface/1_editors/events/async_events.html", "11"],
    ["绘制事件", "source/_build/2_interface/1_editors/events/draw_events.html", "11"],

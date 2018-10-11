@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>The Tile Set Editor</title>
+<title>图块集编辑器</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,19 +30,14 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>The Tile Set Editor</h2>
+<h2>图块集编辑器</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
 <p><img class="center" src="images/editor_tilesets.png" alt=
-"图块集编辑器（Tile Set Editor）">  A tile set is a graphic resource for drawing
-levels and other static components of your game. A tile set is
-comprised of a single image that is then split into different
-"cells" (tiles), and each tile can be place into the room editor to
-create a complete image. Below you can see two example sprites that
-can be used as tile sets:  <img class="center" src=
+"图块集编辑器（Tile Set Editor）"> 图块集是一种图形资源，用于绘制游戏的关卡和其他静态组件。图块集由单个图像组成，然后将其分割为不同的 “单元” (图块)，每个图块可以放入房间编辑器中创建一个完整的图像。下面你可以看到两个可以用作图块集的示例精灵: <img class="center" src=
 "images/editor_tilesets_example.png" alt="Tile Set Example"></p>
 
 <div class="note" style="text-align:center;">Images by <a href=
@@ -52,292 +47,132 @@ target="_blank">Lost Garden</a></div>
 <p><br>
 </p>
 
-<p>These are the most common ways that people create tile sets -
-either all jammed up together or with little spaces separating them
-out, and <i>GameMaker Studio 2</i> can handle both types.
-Essentially all tilesets must be comprised of images that fit
-within a clearly defined grid, with each cell of the grid being the
-exact same size (note that while the images shown above are all
-made up of square tiles, a tile set can be made from rectangular
-tiles too). When creating your tilesets, keep in mind that the top
-left grid cell must <i>always</i> be empty as this is the tile that
-<i>GameMaker Studio 2</i> will use for "empty" tiles in a room and
-for erasing existing tiles (and even if you have pixels in that
-part of the image they will be ignored).</p>
+<p>这些是人们创建图块集的最常见方式 - 要么全部挤在一起（无缝），要么用很小的空隙（比如一个像素的线条）将它们分开，<i>GameMaker Studio 2</i> 可以处理这两种类型。 基本上所有的图块集必须由符合明确定义的网格的图像组成，网格的每个单元格大小完全相同（请注意，虽然上面显示的图像都是由方形图块组成，但图块组也可以由矩形图块组成）。在创建图块集时，请记住左上角的网格单元格必须 <i>始终</i> 为空，因为这是 <i>GameMaker Studio 2</i> 将用于房间中 “空” 图块并用于擦除现有图块（即使在图像的这一部分有像素，它们也会被忽略）。</p>
 
-<p>When you first create a tile set resource the tile set editor
-window will open with the following options:</p>
+<p>首次创建图块集资源时，将使用以下选项打开图块集编辑器窗口：</p>
 
 <blockquote><a name="tileset_name" id="tileset_name"></a>
 <label class="collapse" for="one">名称</label> <input id="one"
 type="checkbox">
 <div class="index_list">
-<p>Here you can give a name to your tile set. Names can only be
-alpha-numeric and may only use the underbar "_" symbol, and they
-cannot start with a number.</p>
+<p>在这里，你可以为你的图块集命名。名称只能由字母、数字下划线 “_” 符号组成，并且不能以数字开头。</p>
 </div>
 <br>
 <a name="tileset_sprite" id="tileset_sprite"></a> <label class=
 "collapse" for="two">精灵</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
-<p>Here you can select the sprite resource from which to create our
-tile set. Clicking on the main button will open the <b>Asset
-Explorer</b> where you can choose the sprite you wish to use for
-the tile set:  <img class="center" src=
+<p>在这里，你可以选择从中创建图块集的精灵资源。 单击主按钮将打开 <b>资源浏览器</b>，你可以在其中选择要用于图块集的精灵： <img class="center" src=
 "../../1_overview/2_quick_start/images/qs_assetexplorer.png" alt=
 "The Asset Explorer Window"></p>
 
-<p>You can also click on the <b>New Sprite</b> button <img style=
-"vertical-align:middle" src="images/icon_newsprite.png"> button to
-create a new sprite resource (which will open the Sprite Editor for
-the new resource within the workspace for editing), or you can edit
-the currently selected sprite using the <b>Edit Sprite</b> button
-<img style="vertical-align:middle" src=
-"images/icon_editsprite.png">, or even choose to edit the sprite
-image itself in the Image Editor by pressing the <img style=
-"vertical-align:middle" src="images/icon_editimage.png">
-button.</p>
+<p>你还可以单击 <b>新的精灵</b> 按钮 <img style=
+"vertical-align:middle" src="images/icon_newsprite.png"> 创建一个新的精灵资源（它将为工作区内的新资源打开精灵编辑器进行编辑），或者你可以使用 <b>编辑精灵</b> 按钮 <img style="vertical-align:middle" src=
+"images/icon_editsprite.png"> 编辑当前选择的精灵，甚至通过按下 <img style=
+"vertical-align:middle" src="images/icon_editimage.png"> 按钮在图像编辑器中选择编辑精灵图像本身。</p>
 
-<p>By default when you open a tile set the Tile Set Properties
-window will also be shown (see below), but if you close it then you
-can click the button here to reopen it again.</p>
+<p>默认情况下，当你打开图块集时，也会显示 “图块集属性” 窗口（如下所示），但如果你将其关闭，则可以单击此处的按钮再次重新打开。</p>
 </div>
 <br>
 <a name="tileset_properties" id="tileset_properties"></a>
-<label class="collapse" for="three">属性</label> <input id=
+<label class="collapse" for="three">图块集属性</label> <input id=
 "three" type="checkbox">
 <div class="index_list">
-<p>The Tile Set Properties window is for designating the base tile
-size (default is 16px square), the offset amount and the separation
-between tiles (these last two options are for use with sprites like
-the one shown above where there are gaps between the individual
-parts of the tiles). You can also set the <b>Output Border</b>
-values for the tile set image, which controls how the image will be
-stored on disk and add extra pixels around each tile as
-required.</p>
+<p>“图块集属性”窗口用于指定基本图块大小（默认为 16 平方像素），偏移量和图块之间的间隔（这两个选项适用于上面所示各个部分之间存在间隙的图块的精灵）。你还可以为图块集图像设置 <b>输出边界</b> 值，该图像控制图像将如何存储在磁盘上，并根据需要在每个图块周围添加额外的像素。</p>
 
-<p>Due to how tiles are rendered they need to be prepared
-beforehand with a border around each one to "smear" the edges. The
-image shown below illustrates how tiles are generally mapped by the
-device graphic drivers, with the red line around the tile showing
-where the U,V coordinates are mapped to (The letters "U" and "V"
-are used to describe the 2D texture mesh because "X", "Y" and "Z"
-are already used to describe room and object spatial coordinates):
-
+<p>由于图块的渲染方式，需要事先准备图块，并在每个边框周围 “涂抹” 边框。下图显示了图块通常如何通过设备图形驱动程序进行映射，图块周围的红线显示 U,V 坐标映射到的位置（字母 “U” 和 “V” 用于描述 2D纹理网格因为 “X”、“Y” 和 “Z” 已用于描述房间和物体的空间坐标）：
 <img class="center" src="images/editor_tilesets_single.png" alt=
 "Single Tile"></p>
 
-<p>As you can see it picks the center of the texel (a texel is just
-a pixel in a texture map) to map directly when drawing the image in
-the room. Now at a scale of 1:1, this is all well and good, but
-what will happen when we scale this tile down? The issue with
-scaling down is that when you shrink, the UVs also scale down and
-try to fit into a more compressed space, but this obviously can't
-happen, so the graphics driver picks which texels to draw based on
-the available pixel centers. So, if we are "just" moving into a new
-screen pixel then, because the graphics drivers use the center of
-the pixel to decide what to draw with, it'll pick a texel
-<i>surrounding</i> the tile, not a texel <i>on</i> the tile itself.
-
+<p>正如你所看到的那样，它会选择纹理的中心（纹理像素只是纹理贴图中的一个像素），以便在房间中绘制图像时直接进行贴图。 现在以 1:1 的比例，这一切都很好，但是当我们缩小这个图块时会发生什么？ 缩小的问题是，当缩小时，U、V 也会缩小并尝试适应更加压缩的空间，但这显然不会发生，因此图形驱动程序会根据可用的像素中心选择要绘制的纹素。 因此，如果我们“只是”移动到新的屏幕像素，那么，因为图形驱动程序使用像素的中心来决定要绘制的内容，它将选择 <i>围绕</i> 图块的纹理像素，而不是图块本身 <i>上</i> 的纹理像素。
 <img class="center" src="images/editor_tilesets_texel.png" alt=
 "Texel Tile"></p>
 
-<p>Shown above is a tile being draw scaled down into 6 screen
-pixels, and this shows that when you overlap a little into the next
-screen pixel, the graphics driver has to make a choice to either
-drop that texel, or it try and fill it with what it thinks is a
-valid texel. Let's just say that in this case it decides to draw
-the overlapped texel into the screen pixel, and, since it's now
-clearly outside our tile it gets this pixel from either the next
-tile, or the little bits of space you provided around the tiles,
-which means that when it shrinks you'll get cracks between tiles
-"glitches" in how they are drawn and this is where a lot of
-confusion arises... Each graphics driver and device actually does
-this in its own way, meaning that the results can be unpredictable
-and look terrible... but if you're careful and plan ahead you can
-work around it.</p>
+<p>上面显示的是一个正在绘制缩小为 6 个屏幕像素的图块，这表明当你将一点点重叠到下一个屏幕像素时，图形驱动程序必须选择删除该纹理元素，或者认为它是有效的纹理元素并尝试填充它。 在这种情况下，它决定将重叠的纹理像素绘制到屏幕像素中，并且，因为它现在明显位于我们的图块之外，它从下一个图块或你在图块周围提供的一小块空间中获取此像素， 这意味着当它收缩的时候，你会发现图块之间的 “有瑕疵的” 裂缝是如何画出来的，这就是产生很多混乱的地方...... 每个图形驱动程序和设备实际上都是以自己的方式做到这一点，这意味着结果可能是不可预测的，看起来很糟糕...但如果你小心并提前计划，你可以避免这一点。</p>
 
-<p>With high end games if you draw from a single texture (not on a
-texture page or texture atlas), you have the option of using a
-texture mode called clamp and what this does is repeats the last
-row of texels infinitely off into the distance, allowing you to
-scale without problems as it forces the hardware to get the last
-row of pixels no matter what. This is what the <b>Output Border</b>
-settings here do for you:  <img class="center" src=
+<p>对于高端游戏，如果你从单个纹理（不在纹理页或纹理图集）上绘制，你可以选择使用称为 clamp 的纹理模式，这样做会将最后一行纹理重复无限远， 使得你缩放时不会出现问题，因为它会强制硬件无论如何都能获得最后一行像素。 这就是 <b>输出边界</b> 设置在这里为你做的事情： <img class="center" src=
 "images/editor_tilesets_smear.png" alt="Smear Tile"></p>
 
-<p>Shown above is a "fixed" tile sprite and you can see it now has
-a repeated section around each tile meaning that when the hardware
-overruns, it will always pick the last texel from the tile rather
-than one of the spaces or the tile after that. So, when creating a
-tile set, keep in mind that if you are going to be zooming the game
-view in or out or are going to be rendering the tiles scaled, you
-may need to have a higher <b>Output Border</b> width or height than
-the default value of 2.</p>
+<p>上面显示的是一个 “修正” 的图块精灵，你可以看到它现在在每个图块周围有一个重复的部分，这意味着当硬件超出时，它总是从图块中选择最后一个纹理，而不是图块之间的间隙像素或之后的图块。 因此，在创建图块集时，请记住，如果你要将游戏视图放大或缩小，或者将要渲染图块缩放，你可能需要具有比默认值大 2 的 <b>输出边界</b>宽度或高度。</p>
 
-<p>The final option in the tile set properties is <b>Disable Source
-Sprite Export</b>. This is checked by default, and what it does is
-flags the source sprite resource to be omitted when the texture
-page for your project is being generated. This works under the
-assumption that a sprite used as a tile set will not be getting
-used for anything else, and so only needs to be exported once.
-However if you are using the base sprite resource for anything
-other than tiles, then you would want to un-check this so that the
-base sprite <i>and</i> the tile set are both added into the texture
-page on compile.</p>
+<p>图块集属性中的最后一个选项是 <b>禁止源精灵导出</b>。默认情况下会勾选此项，它的作用是标记在生成项目的纹理页时要忽略源精灵资源。 这可以假设用作图块集的精灵不会被用于其他任何东西，因此只需要导出一次。但是，如果你将基本精灵资源用于除图块之外的其他内容，那么你可能需要取消选中此选项，以便在编译时将基本精灵 <i>和</i> 图块集都添加到纹理页面中。</p>
 </div>
 <br>
 <a name="tileset_editors" id="tileset_editors"></a> <label class=
 "collapse" for="six">编辑器</label> <input id="six" type=
 "checkbox">
 <div class="index_list">
-<p>Each of the buttons in the <b>Editors</b> section will open a
-different editor for specific tile set functionality. You can
-create tile set brushes based on multiple tiles together, animated
-tiles, using different tiles as individual frames, and you can also
-create auto-tiles that will "join" together based on the tiles that
-surround them. Each of these editors is explained in detail
-below.</p>
+<p><b>编辑器</b> 部分中的每个按钮都将为特定的图块集功能打开不同的编辑器。 你可以基于多个图块创建图块集画笔，图块动画（使用不同的图块作为单独帧），你还可以创建将根据周围的图块 “连接” 在一起的自动图块。 下面详细解释了这些编辑器中的每一个。</p>
 </div>
 <br>
 <a name="tileset_preview_toolbox" id="tileset_preview_toolbox"></a>
-<label class="collapse" for="five">Preview Toolbox</label>
+<label class="collapse" for="five">预览工具栏</label>
 <input id="five" type="checkbox">
 <div class="index_list">
-<p>These are the tools you can use to preview the sprite selected
-for the tile set. You can use them to zoom in and zoom out (along
-with <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + the mouse wheel <img style=
-"vertical-align:middle" src="../../images/icon_mmb.png">) or use
-the <img style="vertical-align:middle" src=
-"images/icon_zoomequals.png"> to make it 1:1 again. You can also
-click the Window Fit button <img style="vertical-align:middle" src=
-"images/icon_canvasfit.png"> to make the entire room canvas fit
-within the current editor workspace (this will zoom in/out as
-appropriate to make it fit).</p>
+<p>这些是可用于预览用于图块集的精灵的工具。 你可以使用它们放大和缩小（<img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + 鼠标滚轮 <img style=
+"vertical-align:middle" src="../../images/icon_mmb.png">）或使用 <img style="vertical-align:middle" src=
+"images/icon_zoomequals.png"> 使它再次还原 1:1。你还可以单击居中适配 <img style="vertical-align:middle" src=
+"images/icon_canvasfit.png"> 按钮，使整个房间画布填充当前编辑器工作区（这将根据需要放大 / 缩小以使其适合）。</p>
 
-<p>Another feature is that you can switch the grid view on or off
-by clicking the <img style="vertical-align:middle" src=
-"images/icon_canvasgrid.png"> button, as well as set the colour for
-the grid to be used (clicking the <img style=
-"vertical-align:middle" src="images/icon_canvasoptions.png">
-button). When the grid is active it will show a coloured outline
-for each of the tiles in the grid, respecting the settings for
-separation, etc... You can edit the colour and alpha of the grid by
-clicking the arrow beside the Grid icon.</p>
+<p>另一个功能是你可以通过单击 <img style="vertical-align:middle" src=
+"images/icon_canvasgrid.png"> 按钮打开或关闭网格视图，以及设置要使用的网格的颜色（单击 <img style=
+"vertical-align:middle" src="images/icon_canvasoptions.png"> 按钮）。 当网格处于活动状态时，它将为网格中的每个图块显示彩色轮廓，以突显分离设置等... 你可以通过单击网格图标旁边的箭头来编辑网格的颜色和透明度。</p>
 </div>
 <br>
 <a name="tileset_preview" id="tileset_preview"></a> <label class=
 "collapse" for="twelve">预览</label> <input id="twelve" type=
 "checkbox">
 <div class="index_list">
-<p>This section is the tile set <b>Preview</b> window. You can use
-the middle mouse button <img style="vertical-align:middle" src=
-"../../images/icon_mmb.png"> to pan around here, with the mouse
-wheel <img style="vertical-align:middle" src=
-"../../images/icon_mmb.png"> scrolling the image and <img style=
+<p>此部分是图块集 <b>预览</b> 窗口。 你可以使用鼠标中键 <img style="vertical-align:middle" src=
+"../../images/icon_mmb.png"> 在此处平移、鼠标滚轮 <img style="vertical-align:middle" src=
+"../../images/icon_mmb.png"> 滚动图像以及 <img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + the mouse wheel <img style=
-"vertical-align:middle" src="../../images/icon_mmb.png"> being used
-to zoom in and out. You can also use the different buttons in the
-<b>Preview Toolbox</b> to change the zoom and enable/disable the
-grid cell overlay.</p>
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + 鼠标滚轮 <img style=
+"vertical-align:middle" src="../../images/icon_mmb.png"> 用于放大和缩小。你还可以使用 <b>预览工具栏</b> 中的不同按钮更改缩放并启用 / 禁用网格单元格覆盖。</p>
 </div></blockquote>
 
 <p><br>
 </p>
 
-<h2>Tile Set Editors</h2>
+<h2>图块集编辑器</h2>
 
-<p>Once you have set up the basic properties for your tile set in
-the main editor, you can open any one of three other editors to add
-further tile set information. Each editor corresponds to a
-different functionality, but all are based on the current image
-selected for the tile set. So, you can have a single large tile set
-and in it incorporate your auto-tiles and animated tiles, etc...
-The sections below explain each of the editors in detail:</p>
+<p>在主编辑器中设置图块集的基本属性后，可以打开其他三个编辑器中的任何一个以添加更多图块集信息。每个编辑器对应不同的功能，但都基于为图块集选择的当前图像。 因此，你可以拥有一个大的图块集，并在其中包含你的自动图块和动画图块等... 以下部分详细解释了每个编辑器：</p>
 
 <blockquote><a name="tilemap_brushes" id="tilemap_brushes"></a>
 <label class="collapse" for="nine">笔刷生成器</label> <input id=
 "nine" type="checkbox">
 <div class="index_list">
-<p>By default when you "paint" tiles onto a tilemap layer in the
-room editor, you select a single tile and paint with that. However,
-tilesets are almost always designed to have sections that fit
-together in different ways to form whole sections. For example, an
-RPG tile set may have landscape feature tiles that can be connected
-to create larger or smaller features depending on the number of
-tiles used. Now, placing multiple features like this on a room
-layer would require you to go back and forth many times to change
-tile, which is not good for your workflow. To resolve this, we have
-added tile <b>Brushes</b> to the tile set editor, available when
-you click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> on the <i>Brush Builder</i> button:
-<img class="center" src="images/03_01_brushes.png" alt=
+<p>默认情况下，当你在房间编辑器中将图块 “绘制” 到图块地图层上时，你可以选择单个图块并使用该图块进行绘制。 但是，图块集几乎总是设计成具有以不同方式组合在一起的部分以形成整个部分。例如，RPG 图块集可能有景观特征图块，可以通过连接来创建更大或更小的场景，这取决于使用的图块的数量。现在，在房间层上放置多个这样的场景需要你多次来回更换图块，这对你的工作流程不利。要解决此问题，我们将图块 <b>笔刷</b> 添加到图块集编辑器，当你单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> <i>笔刷生成器</i> 按钮时可以使用它：<img class="center" src="images/03_01_brushes.png" alt=
 "笔刷"></p>
 
-<p>In the <b>Brush Builder</b> you have the original tile set on
-the left and a blank "canvas" on the right. You can now select any
-tile from the left and paint it on the right to create custom
-"brushes" which you can then use in the room editor. Note that you
-can click and hold the left mouse button <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> then drag
-on the tile set to select multiple tiles to paint into the brush
-canvas and you can also hold down <img style=
+<p>在 <b>笔刷生成器</b> 中，左边是原始图块，右边是空白“画布”。你现在可以从左侧选择任何图块并在右侧绘制它以创建自定义 “笔刷”，然后你可以在房间编辑器中使用它们。 请注意，你可以单击并按住鼠标左键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png">，然后拖动图块集以选择多个图块以绘制到笔刷画布中，你还可以按住 <img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> to add
-specific individual tiles or hold down <img style=
-"vertical-align:middle" src="../../images/icon_alt.png"> +
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-to remove specific tiles. The following image shows our previously
-mentioned landscape features as an example of three custom brushes
-made from a single tile set: <img class="center" src=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 添加特定的单个图块或按住 <img style=
+"vertical-align:middle" src="../../images/icon_alt.png"> + <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 删除特定图块。 下图显示了我们之前提到的景观特征，作为由单个图块集制作的三个自定义笔刷的示例：<img class="center" src=
 "images/03_02_featuresbrushes.png" alt=
 "Features As Brushes Example"></p>
 
-<p>On the right you can see three features that we've made
-(highlighted orange in the image). Notice how we've left a gap of
-one tile between each feature - this is because <i><b>any touching
-group of tiles will be treated as a single brush in the room
-editor</b></i>, so we leave a gap of one tile to show that each set
-is a distinct brush we want to create. While creating your brushes,
-you paint with the left mouse button <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> and delete
-with the right mouse button <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png">. You can also zoom the tile sheet or
-the brush canvas using <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> and the mouse wheel <img style=
-"vertical-align:middle" src="../../images/icon_mmb.png"> when the
-mouse is over one of the windows, or you can pan around using
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-+ <img style="vertical-align:middle" src=
-"../../images/icon_space.png"> or the middle mouse button
-<img style="vertical-align:middle" src=
-"../../images/icon_mmb.png">. Note that you can also use the
-preview tools within the editor windows to change the zoom levels
-of either window.</p>
+<p>在右侧，你可以看到我们制作的三个特征（图像中以橙色突出显示）。请注意我们如何在每个要素之间留下一个图块的间隙 - 这是因为 <i><b>任何触摸的图块组将在房间编辑器中被视为单个笔刷</b></i>，因此我们留下一个图块的间隙以显示每个图块是我们想要创建的独特笔刷。 在创建笔刷时，使用鼠标左键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 进行绘制，然后使用鼠标右键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 删除。 当鼠标悬停在其中一个窗口上时，你也可以使用 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> 和鼠标滚轮 <img style=
+"vertical-align:middle" src="../../images/icon_mmb.png"> 缩放图块画布或笔刷画布，或者使用 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> + <img style="vertical-align:middle" src=
+"../../images/icon_space.png"> 或鼠标中键进行平移。 <img style="vertical-align:middle" src=
+"../../images/icon_mmb.png">请注意，你还可以使用编辑器窗口中的预览工具更改任一窗口的缩放级别。</p>
 
-<p>At the top right you can see the currently selected tool, and
-you can also set the <i>size</i> of the brush that you want to
-paint with. The default size is 1, which is a single tile, but if
-you set it to higher values then you can paint (and erase) with a
-larger brush composed of the selected tile repeated, as shown in
-the image below:  <img class="center" src="images/tile_size.gif"
+<p>在右上角，你可以看到当前选定的工具，还可以设置要绘制的笔刷 <i>大小</i>。默认大小为 1，即单个图块，但如果将其设置为较高值，则可以使用由重复选定图块组成的较大笔刷绘制（并擦除），如下图所示： <img class="center" src="images/tile_size.gif"
 alt="Tile Size Animation"></p>
 
-<p>The <b>toolbox</b> is where you can select the tool to use for
-many different tasks in the tile set editor, some of which will
-depend on whether you have anything defined in your autotile
-library. A brief outline of each tool is given below (note that
-when you have selected a tile layer in the <a href=
-"rooms.html#room_tile_layer">Room Editor</a>, then this toolbox is
-displayed at the top of the room workspace):</p>
+<p>你可以在 <b>工具栏</b> 中选择要用于图块集编辑器中许多不同任务的工具，其中一些工具取决于你是否在自动图块库中定义了任何内容。下面给出了每个工具的简要概述（请注意，当你在 <a href=
+"rooms.html#room_tile_layer">房间编辑器</a> 中选择了图块层时，此工具栏将显示在房间工作区的顶部）：</p>
 
 <blockquote>
 <table class="icons">
@@ -345,300 +180,157 @@ displayed at the top of the room workspace):</p>
 <td class="icons"><img align="middle" src=
 "images/icon_tile_draw.png" alt="Pencil Tool">
 </td>
-<td class="text">This is the pencil tool. It uses the selected tile
-to paint in the Room Editor with the left mouse button <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> and you
-can erase with the right mouse button <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png">.</td>
+<td class="text">这是画笔工具。它使用选定的图块在房间编辑器中使用鼠标左键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 进行绘制，你可以使用鼠标右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 进行擦除。 </td>
 </tr>
 
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_tile_erase.png" alt="Eraser Tool">
 </td>
-<td class="text">With the eraser tool you can use the left mouse
-button <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> to erase a given tile in the room
-editor.</td>
+<td class="text">使用橡皮擦工具，你可以使用鼠标左键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 在房间编辑器中擦除给定的图块。 </td>
 </tr>
 
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_tile_grid.png" alt="Selection Tool">
 </td>
-<td class="text">This is the selection tool, which can be used to
-define an area of the tile layer for working on. You can click the
-left mouse button <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> and then drag the mouse to create a
-rectangular area, or you can press <img style=
+<td class="text">这是选择工具，可用于选择图块层的区域以进行处理。 你可以单击鼠标左键然 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 后拖动鼠标以创建矩形区域，也可以按 <img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+"../../images/icon_ctrl.png"> /  <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> to add
-multiple selections and <img style="vertical-align:middle" src=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 添加多个选区和 <img style="vertical-align:middle" src=
 "../../images/icon_alt.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> to remove areas of the selection.
-To clear the selection you can press <img style=
-"vertical-align:middle" src="../../images/icon_escape.png">. When
-you have an area of a tile layer selected, the rest of the tools
-(Pencil, Flip, Rotate, etc...) will only work within the selected
-area. Note that you can also copy (<img style=
+src="../../images/icon_rmb.png"> 以删除选区域。 要清除选择，你可以按 <img style=
+"vertical-align:middle" src="../../images/icon_escape.png">。当你选择了图块层的区域时，其余工具（铅笔、翻转、旋转等）将仅在选定区域内工作。 请注意，你还可以在房间编辑器中复制（<img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <b>C</b>) and cut (<img style=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <b>C</b>）和剪切（<img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <b>X</b>) selected tiles within
-the room editor which will then switch the tool to the Pencil and
-permit you to paint the room layer with the selected tiles. Tiles
-copied/cut in this way can be pasted into the Brush Builder
-too.</td>
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <b>X</b>）选定的图块，然后将工具切换到铅笔，并允许你使用选定的图块绘制房间层。 以这种方式复制 / 剪切的图块也可以粘贴到笔刷生成器中。</td>
 </tr>
 
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_tile_auto.png" alt="Pencil Tool">
 </td>
-<td class="text">Clicking this tool enables the <b>Auto tiling</b>
-paint style. When this is active you can select any tile from the
-Autotile Library, and then paint it into the room layer and
-<i>GameMaker Studio 2</i> will automatically change it to match the
-surrounding tiles, as long as you have correctly set up the
-<a href="tilesets.html#autotile">Auto Tile Tab</a>.</td>
+<td class="text">单击此工具可启用 <b>自动图块</b> 绘画样式。当它处于活动状态时，你可以从自动图块库中选择任何图块，然后将其绘制到房间层中，只要你正确设置了 <a href="tilesets.html#autotile">自动平铺选项卡</a>，<i>GameMaker Studio 2</i> 就会自动更改它以匹配周围的图块。</td>
 </tr>
 
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_tile_flip.png" alt="Flip Tool">
 </td>
-<td class="text">Clicking the Flip tool with the left mouse button
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-(or using the keyboard shortcut "<b>X</b>" ) will flip the tile
-currently selected for drawing along the horizontal axis, without
-changing drawing tool (if you have a custom brush selected for
-drawing, the whole brush will flip). If you have no tile selected
-for drawing, but <i>do</i> have a group of tiles selected on a
-canvas, then the flip tool will Flip the selected tiles.</td>
+<td class="text">使用鼠标左键单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png">（或使用键盘快捷键 “<b>X</b>”）翻转工具将翻转当前选择用于沿水平轴绘制的图块，而不更改绘图工具（如果你选择了自定义笔刷进行绘制，则整个笔刷会水平翻转）。如果你没有选择要绘制的图块，但 <i>在</i> 画布上选择了一组图块，则翻转工具将翻转所选图块。</td>
 </tr>
 
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_tile_mirror.png" alt="Mirror Tool">
 </td>
-<td class="text">Clicking the Mirror tool with the left mouse
-button <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> (or using the keyboard shortcut
-"<b>Y</b>" ) will mirror the tile currently selected for drawing
-along the vertical axis, without changing drawing tool (if you have
-a custom brush selected for drawing, the whole brush will mirror).
-If you have no tile selected for drawing, but <i>do</i> have a
-group of tiles selected on a canvas, then the Mirror tool will
-mirror the selected tiles.</td>
+<td class="text">使用鼠标左键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png">（或使用键盘快捷键 “<b>Y</b>”）镜像工具将镜像当前选择用于沿垂直轴绘制的图块，而不更改绘图工具（如果选择了自定义笔刷进行绘制，则整个笔刷将垂直翻转）。如果没有选择要绘制的图块，但 <i>在</i> 画布上选择了一组图块，则 “镜像” 工具将镜像选定的图块。</td>
 </tr>
 
 <tr>
 <td class="icons"><img align="middle" src=
 "images/icon_tile_rotate.png" alt="旋转工具（Rotate Tool）">
 </td>
-<td class="text">Clicking the Rotate tool with the left mouse
-button <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> (or using the keyboard shortcut
-"<b>Z</b>" ) will rotate the tile currently selected for drawing
-90° clockwise, without changing drawing tool (if you have a custom
-brush selected for drawing, the whole brush will rotate). If you
-have no tile selected for drawing, but <i>do</i> have a group of
-tiles selected on a canvas, then the Rotate tool will rotate the
-selected tiles.</td>
+<td class="text">使用鼠标左键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png">（或使用键盘快捷键 “<b>Z</b>”）旋转工具将旋转当前选择的图块顺时针旋转 90°，而不更改绘图工具（如果你选择了自定义笔刷进行绘制，整个笔刷将旋转）。如果没有选择要绘制的图块，但 <i>在</i> 画布上选择了一组图块，则 “旋转” 工具将旋转所选图块。</td>
 </tr>
 </table>
 </blockquote>
 
-<p>Below the tools, you can find two different sections for
-selecting any autotile or animated tiles that have been created
-using the current tile set image. A single sprite that is used for
-a tile set can have many, many, single cell images in it, and these
-can be combined in the Animation or Autotile editor to create
-custom brushes which will show up in these sections and can be used
-in conjunction with regular static tiles to create brushes (note
-that an animated tile will animate regardless of whether you have
-selected it from the library or from the base tile set).</p>
+<p>在工具下栏方，你可以找到两个不同的部分，用于选择使用当前图块集图像创建的自动图块或动画图块。用于图块集的单个子画面中可以包含许多单个单元格图像，这些图像可以在动画编辑器或自动图块编辑器中组合以创建自定义笔刷，这些笔刷将显示在这些部分中并可以结合使用常规静态图块创建的笔刷（请注意，无论你是从库中还是从基础图块集中选择图块动画，图块动画都会生成动画。</p>
 
-<p>Once you have set up all the brushes you require, you can then
-use them to paint tiles onto any tilemap layer within the room
-editor.</p>
+<p>一旦设置了所需的所有笔刷，就可以使用它们将画面绘制到房间编辑器中的任何图块地图层上。</p>
 </div>
 <br>
 <a name="tileset_animated" id="tileset_animated"></a> <label class=
-"collapse" for="ten">动画</label> <input id="ten" type=
+"collapse" for="ten">图块动画</label> <input id="ten" type=
 "checkbox">
 <div class="index_list">
-<p>Tiles are generally considered to be static cells within the
-game room, however with <i>GameMaker Studio 2</i> it is possible to
-animate them, just as you would a sprite. Why not just use sprites,
-you ask? Well, sprites have a certain processing overhead due to
-them being associated with a bounding box and the way in which they
-are rendered, but tiles have a much lower processing overhead and
-so are faster to render. This does come at a price however, in that
-with tile set animations you are limited to creating animations
-that <i>must be a power of two in length</i> - ie: of 2, 4, 8, 16,
-etc... frames - and they must obviously be created within the tile
-grid, and they must all animate at the same speed (on a per-tile
-set basis). However, even with these limitations, animated tiles
-are a powerful feature that can be used to add life and colour to
-otherwise static environments and backgrounds.</p>
+<p>图块通常被认为是组成游戏房间内的静态细胞，但是使用 <i>GameMaker Studio 2</i> 可以为它们设置动画，就像精灵一样。你问为什么不只是使用精灵？ 好吧，精灵有一定的处理开销，因为它们与边界框以及它们的渲染方式相关联，但是图块处理开销要低得多，因此渲染速度更快。然而，这确实是有代价的，因为使用图块设置动画，你必须于创建帧长度 <i>必须为 2 的次方数</i> 的动画 - 即：2、4、8、16 等...... - 并且它们必须是在图块网格中创建的，并且它们必须以相同的速度（基于每个图块集）进行动画处理。 然而，即使有这些限制，动画图块也是一个强大的功能，可用于为静态环境和背景添加活力和色彩。</p>
 
-<p>To create a tile animation you must first have a tile set that
-has the required tiles all within the one sprite image (but
-<i>not</i> as sprite frames, so a single large sprite frame with
-all the animation images within it), and then in the tile set
-editor you click on the <b>Tile Animation</b> button to bring up
-the <b>Animation Editor</b>:  <img class="center" src=
-"images/04_01_animations.png" alt="动画"></p>
+<p>要创建图块动画，你必须首先拥有一个图块集，其中所有图块图像中都包含所需的图块（但 <i>不是</i> 精灵帧，而是一个带有所有动画图像的大型精灵帧），然后在图块集编辑器中单击 <b>图块动画</b> 按钮以显示 <b>动画编辑器</b>： <img class="center" src=
+"images/04_01_animations.png" alt="图块动画"></p>
 
-<p>The example image above is a single image with all animation
-frames contained within it, but it should be noted that the image
-could also contain other non-animation tiles too, since you can use
-a single massive tile set and then "cherry pick" the parts of it
-that you want to create the animation from. For example, you could
-have a large landscape tile set with trees, earth and water, and
-within the tile set have multiple tiles to be animated to make the
-water ripple.</p>
+<p>上面的示例图像其中包含所有动画帧的单个图像，但应注意图像也可以包含其他非动画图块，因为你可以使用单个大量图块集然后 “樱桃挑选（选出最佳项）” 你想要创建动画的部分。 例如，你可以使用树木，泥土和水来设置大型景观图块，并且在图块集内有多个图块可以设置动画制作水波。
+</p>
 
-<p>To create a tile animation you first have to add an animation to
-the animation library by clicking the <b>Add Animation</b> button
-<img style="vertical-align:middle" src="images/icon_addproxy.png">,
-which will add an empty animation strip to the library and request
-that you select a number of frames to be used: <img class="center"
+<p>要创建图块动画，首先必须通过单击 <b>添加动画</b> 按钮 <img style="vertical-align:middle" src="images/icon_addproxy.png"> 将动画添加到动画库，这将向库中添加一个空动画条并请求你选择要使用的帧数：<img class="center"
 src="images/04_02_animationadd.png" alt="添加动画"></p>
 
-<p>You will then be presented with a view of each empty animation
-frame, with the initial frame highlighted for you:  <img class=
+<p>然后，你将看到每个空动画帧的视图，并为你突出显示初始帧： <img class=
 "center" src="images/04_03_emptyanim.png" alt=
 "Empty Animation"></p>
 
-<p>If you then go back to the tile set image on the left of the
-editor you can click on any tile to add it into the animation and
-the frame will advance to the next one. Clicking successive tiles
-will fill up the animation, which you can then preview by clicking
-on the "play" button beside the frames:  <img class="center" src=
+<p>如果你返回编辑器左侧的图块集图像，则可以单击任何图块将其添加到动画中，并且将前进到下一帧。单击连续的图块将填充动画，然后你可以通过单击帧旁边的 “播放动画” 按钮进行预览： <img class="center" src=
 "images/04_04_addframes.gif" alt="Add Animation Frames"></p>
 
-<p>Once you have done that your animation will become part of the
-animation library and when you enter the room editor you can select
-it and place it within the room. Note that if you select <i>any</i>
-of the tiles from an animation to place in a room, that tile will
-animate from the tile onwards, so you can "desynchronise" an
-animation by placing separate frames within the room and they will
-all animate. The only caveat to this is that the animation speed
-will always be the same, since it is defined for the whole tile set
-and not individual animations within the library.</p>
+<p>完成后，你的动画将成为动画库的一部分，当你进入房间编辑器时，你可以选择它并将其放置在房间内。请注意，如果你选择动画中的 <i>任何</i> 图块放置在房间中，则图块动画将从该图块开始，因此，你可以通过在房间内放置独立的帧来 “同步” 一个动画，它们将全部动画。唯一需要注意的是动画速度将始终相同，因为它是为整个图块集定义的，而不是库中的单个动画。
+</p>
 
-<p>A few things to note about tiles that are being used in
-animations:</p>
+<p>有关动画中使用图块的一些注意事项：</p>
 
 <ul>
-<li>If the tile has its own animation specified (so there is an
-animation where it is set as the first tile) then it will use that
-animation.</li>
+<li>如果图块指定了自己的动画（因此这儿将其设置为第一个图块的动画），则它将使用该动画。</li>
 
-<li>If the tile doesn't have its own animation but is used in only
-one other animation, then it will use that animation starting at
-the first position that tile is present in the animation.</li>
+<li>如果图块没有自己的动画，仅用于其他的动画，则它将使用从动画中存在图块的第一个位置开始动画。</li>
 
-<li>If the tile doesn't have its own animation and is used in
-multiple other animations, then it will not animate at all. You
-will need to explicitly specify an animation with it as the first
-tile.</li>
+<li>如果图块没有自己的动画并且在多个其他动画中使用，那么它根本不会动。你需要显式指定它作为动画图块的第一个图块。</li>
 </ul>
 </div>
 <br>
 <a name="tilemap_autotile" id="tilemap_autotile"></a> <label class=
-"collapse" for="eleven">Auto Tile</label> <input id="eleven" type=
+"collapse" for="eleven">自动图块</label> <input id="eleven" type=
 "checkbox">
 <div class="index_list">
-<p>The <b>Auto Tile</b> feature is an incredibly powerful tool that
-can be used to make level building much easier, whether it is for a
-top down or side on view project. Essentially, you create an
-autotile library, and then whenever you lay down a tile from that
-library it will "connect" with those tiles that are around it to
-create a seamless wall or platform.</p>
+<p><b>自动图块</b> 功能是一个非常强大的工具，无论是自上而下还是侧视图项目，都可以更轻松地进行关卡构建。基本上，你创建了一个自动图块库，然后每当你从该库中放置一个图块时，它将与其周围的图块 “连接” 以创建无缝墙或平台。
+</p>
 
-<p>Before you start using the autotile feature however, it is very
-important that you have set up the tile set sprite correctly and
-that you choose an appropriate type of autotile. The types
-available to you are 47 tile autotiles, or 16 tile autotiles, with
-(in general) 16 tiles being used for top down (since they give
-nicer transitions) and 47 being used for platformer/side on views,
-but that is by no means a hard and fast rule and will depend on how
-you want your final project to look.</p>
+<p>但是，在开始使用自动图块功能之前，正确设置图块集精灵并选择合适类型的自动图块非常重要。 你可以使用的类型是 47 或 16 块自动图块，通常 16 个图块用于自上而下（因为它们提供更好的过渡），47 个用于平台上的平面 / 侧面，但是并不意味着一个固定而快速的规则，实际将取决于你希望的最终项目的外观。</p>
 
-<p>The image below shows a typical 47 tile and 16 tile tile set for
-autotiling:  <img class="center" src="images/05_01_autotiles.png"
+<p>下图显示了用于自动图块的典型 47 个图块和 16 个图块版的图块： <img class="center" src="images/05_01_autotiles.png"
 alt="Two Autotile Examples"></p>
 
-<p>Now, just looking at the images doesn't really tell you how they
-will fit together so we'll open the Autotile Editor from the Tile
-Set Editor and add them. The Autotile Editor looks like this:
-
+<p>现在，只是看图像并不能真正告诉你它们将如何组合在一起所以我们将从图块集编辑器打开自动图块编辑器并添加它们。自动图块编辑器如下所示：
 <img class="center" src="images/05_02_autotileeditor.png" alt=
 "Autotile Editor"></p>
 
-<p>Note that the sprite being used has ALL the tiles we require
-(and can also have other tiles, since you can pick and choose which
-ones to be in the autotile). You can now click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on the 47
-tile button in the <b>Templates</b> area to create a new 47 tile
-library entry and it will bring up the template to use for
-selecting the tiles you need: <img class="center" src=
+<p>请注意，正在使用的精灵具有我们需要的所有图块（并且还可以包含其他图块，因为你可以选择在自动图块中选择哪些图块）。 现在，你可以单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> <b>模板</b> 区域中的 “添加 47 块类型图块集” 按钮创建一个新的 47 图块库条目，它将显示用于选择所需图块的模板：<img class="center" src=
 "images/05_03_47tiles.png" alt="47 Tile Template"></p>
 
-<p>In the template, the light grey area represents the outside edge
-of the tile being used and the darker grey is the "fill" area. To
-add a tile into the template, simply click on the first available
-template cell and then select the tile to add from the left:</p>
+<p>在模板中，浅灰色区域表示正在使用的图块的外边缘，而深灰色表示 “填充” 区域。 要在模板中添加图块，只需单击第一个可用的模板单元格，然后从左侧选择要添加的图块：</p>
 
 <p><img class="center" src="images/add_tiles.gif" alt=
 "Adding Tiles Animation">
 </p>
 
-<p>If you make a mistake, simply select the autotile that you want
-to remove and select the "empty" tile from the tile set. After you
-have added them all in you can check the tiles against the template
-by clicking the "Show Template" button <img style=
-"vertical-align:middle" src="images/icon_template.png"> at the top,
-and this will toggle the template overlay on the final autotile, as
-shown in the image below: <img class="center" src=
+<p>如果你犯了错误，只需选择要删除的自动图块，然后从图块集中选择 “删除所选图块集”。 将所有内容添加到其中后，可以通过单击顶部的 “显示引导层” 按钮 <img style=
+"vertical-align:middle" src="images/icon_template.png"> 来检查模板上的图块，这将在最终的自动图块上切换模板覆盖，如下图所示：<img class="center" src=
 "images/show_template.gif" alt="Show The Autotile Template"></p>
 
-<p>If you want to make a 16 tile autotile, the proceedure is
-exactly the same as that explained above, only instead of using the
-47 tile template you use the 16 tile template:</p>
+<p>如果你想制作一个16 图块的图块集，程序与上面说明的完全相同，只是使用 16 图块模板而不是使用 47 图块模板：</p>
 
 <p><img class="center" src="images/16tiles.gif" alt=
 "16 Tile Template">
 </p>
 
-<p>We now have some autotiles in our autotile library taken from a
-tile set. These can be used in the room editor by simply creating a
-tilemap layer and then selecting one of the autotiles from the
-library (which will select automatically the autotile brush from
-the top of the room editor) and painting in your room. The tiles
-will now "auto-magically" connect up to create properly sequenced
-tile maps.</p>
+<p>我们现在在我们的自动图块库中有一些自动图块文件。 这些可以在房间编辑器中使用，只需创建一个图块地图层，然后从库中选择一个自动图块（它将从房间编辑器的顶部自动选择自动图块画笔）并在房间内绘画。 图块现在将 “自动神奇地” 连接起来以创建正确排序的图块地图。</p>
 
 <p><img class="center" src="images/roomtile.gif" alt=
 "Autotile In The Room Editor">
 </p>
 
-<p>Please note that the behaviour of an autotile around the room
-edges will depend on the <b>Open Or Closed Edges</b> button
-<img style="vertical-align:middle" src=
-"images/icon_opencloseedges.png">. By default when an autotile is
-placed along the edge of a room, it will choose a tile as if the
-outside of the room was empty (ie: it'll give the room an "edge").
-However if you click this button, the autotile will tile the room
-as if the area outside was filled with tiles and so choose tiles
-that blend and have no "edge".</p>
+<p>请注意，房间边缘周围自动调整的行为取决于 <b>打开或关闭房间边缘检测</b> 按钮 <img style="vertical-align:middle" src=
+"images/icon_opencloseedges.png">。 默认情况下，当沿着房间的边缘放置自动图块时，它将选择一个图块，好像房间外面是空的（即：它将给房间一个“边缘”）。 但是，如果单击此按钮，自动图块将平铺房间，就好像外面的区域填充了瓷砖一样，因此选择混合且没有 “边缘” 的图块。</p>
 </div></blockquote>
 
 <p><br>
@@ -650,12 +342,11 @@ that blend and have no "edge".</p>
 <div class="clear">
 <div style="float:left">上一页：<a href="index.html">编辑器索引</a></div>
 
-<div style="float:right">Next: <a href="sounds.html">The Sound
-Editor</a></div>
+<div style="float:right">下一页: <a href="sounds.html">声音编辑器</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

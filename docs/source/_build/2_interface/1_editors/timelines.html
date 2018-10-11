@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>The Timeline Editor</title>
+<title>时间轴编辑器</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,109 +30,54 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>The Timeline Editor</h2>
+<h2>时间轴编辑器</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
 <p><img class="center" src="images/editor_timelines.png" alt=
-"时间轴编辑器">  In most games you will want certain things to
-happen at precise moments in time. Now, you can try to achieve this
-by using the alarm events but when things get too complicated this
-won't work any more, especially as you are limited to only twelve
-alarms. That's why we have the timeline resource. In a time line
-you specify which actions must happen at certain moments in game
-time, and you can use all the actions that are also available for
-an object in its different events or code to define this. Once you
-create a time line you can then assign it to an object, and the
-instance of that object will then execute the actions at the
-indicated moments of time when placed or created within a room.</p>
+"时间轴编辑器"> 在大多数游戏中，你会希望某些事情在精确的时刻发生。通常，你可以使用定时事件来完成这件事，但是当你的要完成的事情过于复杂的时候这根本行不通，特别是你只有 12 个定时器可以用。这就是为什么会存在时间轴资源的原因。在时间轴中，你可以指定在游戏时间的某些时刻必须执行的操作，并且你可以使用在其不同事件或代码中也可用于物体的所有动作来定义此操作。当你创建了一个时间轴以后，你可以绑定在一个物体上，然后这个物体的实例就会在你指定的特定时间点上执行这些动作。</p>
 
-<p>For example, assume you want to make a guard and that this guard
-should move 20 time steps to the left, then 10 upwards, then 20 to
-the right, then 10 downwards and then finally stop. To achieve this
-you can make a time line where you start with setting a motion to
-the left. You would then create moment 20 (a "moment" is just
-another way of saying "game step") and set a motion upward, then at
-moment 30 a motion to the right, at moment 50 a motion downwards
-and finally at moment 60 you would stop the motion. Once that is
-done, you can assign this time line to the guard and the guard will
-do exactly what you planned. You could even set an alarm in the
-time line so that it is repeated after a certain length of time and
-in this way your guard can patrol an area. You can also use a time
-line to control your game more globally, for example by create an
-invisible controller object, then a time line that at certain
-moments creates enemies, and then assigning it to the controller
-object and placing an instance into the room. This is an easy way
-to get timed spawns of the enemies.</p>
+<p>例如，假设你想做一个后卫，并且这个后卫应该向左移动 20 步，然后向上移动 10 步，然后向右移动 20 步，然后向下移动 10 步，然后最后停止。要做到这个，你可以通过创建一个时间轴，在起始时间设置向左运动。然后，你将创建时刻 20（“时刻” 只是说 “游戏步” 的另一种方式）并设置向上动作，然后在时刻 30 向右运动，在时刻 50 向下运动，最后在 60 时刻会停止移动。完成后，你就可以把这个时间轴绑定在你的守卫上，然后这个守卫就会完全按照你计划中的那样行动了。你甚至可以在时间轴上设置一个定时器，以便在一段时间后，你的警卫就可以重复巡逻一个区域。你还可以使用时间轴来更全面地控制游戏，例如通过创建一个不可见的控制器物体，然后在某些时刻创建敌人的时间轴，然后将其分配给控制器物体并将实例放入房间。这是使敌人定时生成的简单方法。</p>
 
-<p>To create a time line, right click <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> on the timeline resource in the resource tree and select "Create". 这将打开此页面顶部的窗口，具有以下部分：</p>
+<p>要创建时间轴，请右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 资源树中的时间轴资源，然后选择 “创建时间轴”。这将打开此页面顶部的窗口，具有以下部分：</p>
 
 <blockquote><a name="timeline_name" id="timeline_name"></a>
 <label class="collapse" for="one">名称</label> <input id="one"
 type="checkbox">
 <div class="index_list">
-<p>Here you give your timeline resource a name. This must only
-contain alpha-numeric characters or the "_" under-bar and be
-unique, as it will be used to reference your timeline through code.
-This name will also be the unique timeline ID which can be used in
-DnD™ actions or code functions to identify the timeline.</p>
+<p>在这里，你可以为时间轴资源命名。 这必须只包含字母、数字或下划线 “_” 字符并且是唯一的，因为它将用于通过代码引用你的时间轴。 此名称也是唯一的时间轴 ID，可用于 DnD™ 操作或代码功能以识别时间轴。</p>
 </div>
 <br>
 <a name="timeline_moment" id="timeline_moment"></a> <label class=
 "collapse" for="two">时刻</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
-<p>You can set the moment value here. The moment value is
-calculated as the number of game steps after the timeline has
-started. So if you have a timeline with moments at 0 and at 60,
-then moment 0 will be triggered when the timeline is started and
-moment 60 will happen 60 steps later. If your room speed is set to
-60 too, then moment 60 will happen one second after the timeline is
-started. You can do a double click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on the
-moment value or you can use the right button <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> menu and
-select "change" (see the section on the button menu below) to
-change it. To add a new moment, simply click the <i>Add</i> button
-at the bottom of the editor. Adding new moments will then open the
-code or action editor where you can add the functions or DnD™ that
-you want to call in that moment.</p>
+<p>你可以在此处设置时刻值。时刻值为时间轴开始后的游戏步数。因此，如果时间轴的时刻为 0 和 60，则时刻 0 将在时间轴开始时触发，时刻 60 将在 60 步后发生。如果你的房间速度也设置为 60，那么在时间轴开始后一秒钟将发生 60 时刻。你可以双击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 时刻值，也可以使用右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 菜单并选择 “更改时刻”（参见下面按钮菜单部分）进行更改。要添加新时刻，只需单击编辑器底部的 <i>添加</i> 按钮。 添加新时刻将打开代码或动作编辑器，你可以在此处添加要在此时调用的函数或 DnD™。</p>
 </div>
 <br>
 <a name="timeline_moment_name" id="timeline_moment_name"></a>
-<label class="collapse" for="three">Moment Name</label> <input id=
+<label class="collapse" for="three">时刻名称</label> <input id=
 "three" type="checkbox">
 <div class="index_list">
-<p>To help you understand what your timeline is doing it is
-permitted that you give moments a name to identify them. This is
-simply a string and will not be used in the game code or anywhere
-else, as it's purely for organising and understanding what your
-timeline does. You can do a double click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on the
-moment value or you can use the right button <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> menu and
-select "change" (see the section on the button menu below) to
-change it .</p>
+<p>为了帮助你了解你的时间轴正在做什么，允许你给时刻一个名称来识别它们。 这只是一个字符串，不会在游戏代码或其他任何地方使用，因为它纯粹是为了组织和理解你的时间轴。你可以双击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 时刻值，也可以使用右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 菜单并选择 “更改”（参见下面按钮菜单部分）进行更改。</p>
 </div></blockquote>
 
-<p>The timeline editor permits you to use <img style=
-"vertical-align:middle" src="../../images/icon_shift.png"> +
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-select all moments between the first click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> and the
-second click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png">, or you can use <img style=
+<p>时间轴编辑器允许你使用 <img style=
+"vertical-align:middle" src="../../images/icon_shift.png"> + <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 选择第一次单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 和第二次单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 之间的所有时刻，或者你可以使用 <img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> to click
-on single moments to select them independently. Timeline moments
-can be edited using the right mouse button <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> menu on
-one of the selected elements: <img class="center" src=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 单击单个时刻来单独选择它们。 可以使用其中一个选定元素上的鼠标右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 菜单编辑时间轴时刻：<img class="center" src=
 "images/editor_timelines_rmbmenu.png" alt=
 "Timeline Editor Menu"></p>
 
@@ -140,100 +85,82 @@ one of the selected elements: <img class="center" src=
 <label class="collapse" for="four">添加</label> <input id="four"
 type="checkbox">
 <div class="index_list">
-<p>This option permits you to add a new moment to the timeline. It
-will be added directly after the last moment, so if the last moment
-in your timeline is 120, the next one you add will be 121. You cab
-change the moment position by double clicking <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on the
-moment value in the editor or by right-clicking <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> and
-choosing "Change".</p>
+<p>此选项允许你向时间轴添加新时刻。 它会在最后一刻之后直接添加，所以如果时间轴中的最后一刻是 120，那么你添加的下一个将是 121。你可以通过双击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 编辑器中的时刻值或右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 来改变时刻位置。 单击并选择“更改时刻”。</p>
 </div>
 <br>
 <a name="timeline_edit" id="timeline_edit"></a> <label class=
 "collapse" for="five">编辑</label> <input id="five" type=
 "checkbox">
 <div class="index_list">
-<p>This opens the current timeline moment for editing.</p>
+<p>这将打开当前时刻进行编辑。</p>
 </div>
 <br>
 <a name="timeline_change" id="timeline_change"></a> <label class=
-"collapse" for="six">更改时刻?</label> <input id="six" type=
+"collapse" for="six">更改时刻</label> <input id="six" type=
 "checkbox">
 <div class="index_list">
-<p>Change the value for the selected timeline moment. This is the
-same as slow double clicking <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> on the timeline value in the
-editor window.</p>
+<p>更改所选时刻的值。 这与在编辑器窗口中慢速双击 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> 时间轴值相同。</p>
 </div>
 <br>
 <a name="timeline_change_name" id="timeline_change_name"></a>
 <label class="collapse" for="ten">更改描述</label>
 <input id="ten" type="checkbox">
 <div class="index_list">
-<p>Change the descriptive name for the selected timeline moment.
-This is the same as slow double clicking <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on the
-timeline description in the editor window.</p>
+<p>更改所选时刻的描述性名称。 这与在编辑器窗口中慢速双击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 时间轴描述相同。</p>
 </div>
 <br>
 <a name="timeline_duplicate" id="timeline_duplicate"></a>
-<label class="collapse" for="seven">复制</label> <input id=
+<label class="collapse" for="seven">复制（Duplicate，重复）</label> <input id=
 "seven" type="checkbox">
 <div class="index_list">
-<p>This will duplicate all the selected timeline moments and add
-them consecutively to the end of the current timeline.</p>
+<p>复制所有选定的时刻，并将它们连续添加到当前时间轴的末尾。</p>
 </div>
 <br>
 <a name="timeline_merge" id="timeline_merge"></a> <label class=
 "collapse" for="eight">合并</label> <input id="eight" type=
 "checkbox">
 <div class="index_list">
-<p>If you select two or more moments from a timeline you can choose
-to merge them. This will create a single timeline moment at the
-position of the first moment selected with all the code and actions
-together concurrently.</p>
+<p>如果你从时间轴中选择两个或更多时刻，则可以选择合并它们。 这将在所选择的第一时刻的位置创建单个时刻，同时将所有代码和动作放在一起。</p>
 </div>
 <br>
 <a name="timeline_remove" id="timeline_remove"></a> <label class=
 "collapse" for="nine">移除</label> <input id="nine" type=
 "checkbox">
 <div class="index_list">
-<p>This will remove the selected moment (or moments) from the
-timeline.</p>
+<p>这将从时间轴中删除选定的时刻。</p>
 </div>
 <br>
 <a name="timeline_cut" id="timeline_cut"></a> <label class=
-"collapse" for="thirteen">Cut / Copy / Paste</label> <input id=
+"collapse" for="thirteen">剪切 / 复制 / 粘贴</label> <input id=
 "thirteen" type="checkbox">
 <div class="index_list">
-<p>These options permit you to cut, copy or paste one or more
-timeline moments. You can use the standard keyboard shortcuts here
-too: <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <tt>X</tt>, <img style=
+<p>这些选项允许你剪切、复制或粘贴一个或多个时刻。你也可以在此处使用标准键盘快捷键： <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>X</tt>、<img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <tt>C</tt>, and <img style=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>C</tt> 和 <img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> + <tt>V</tt>.</p>
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
+src="../../images/icon_cmd.png"> + <tt>V</tt>。</p>
 </div>
 <br>
 <a name="timeline_select" id="timeline_select"></a> <label class=
 "collapse" for="eleven">全选</label> <input id="eleven" type=
 "checkbox">
 <div class="index_list">
-<p>With this option you can select all the moments in a timeline.
-Selected moments can then be removed, merged, duplicated, cut, or
-copied.</p>
+<p>使用此选项，你可以选择时间轴中的所有时刻。然后可以删除、合并、复制（duplicated，重复）、剪切或复制选定的时刻。</p>
 </div>
 <br>
 <a name="timeline_dnd" id="timeline_dnd"></a> <label class=
-"collapse" for="twelve">Convert to Drag and Drop / Code</label>
+"collapse" for="twelve">转换为DnD™ / 代码</label>
 <input id="twelve" type="checkbox">
 <div class="index_list">
-<p>Timeline moments will be created using the method chosen when you created the project, either using code or using Drag and Drop actions. 使用此选项，无论项目类型如何，都可以将其从一个转换为另一个。</p>
+<p>时刻会使用您在创建项目时选择的方法（使用代码或使用拖放操作）创建。使用此选项，无论项目类型如何，都可以将其从一个转换为另一个。</p>
 </div>
 <br></blockquote>
 
@@ -251,7 +178,7 @@ Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
