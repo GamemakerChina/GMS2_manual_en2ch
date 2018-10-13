@@ -48,11 +48,11 @@ var TITEMS = [
    ["窗口菜单", "source/_build/1_overview/2_quick_start/menus/windows_menu.html", "11"]
   ],
   ["工作流", "source/_build/1_overview/2_quick_start/workflow/index.html", "1",
-   ["精灵编辑器", "source/_build/1_overview/2_quick_start/workflow/1_sprites.html", "11"],
-   ["图块集编辑器", "source/_build/1_overview/2_quick_start/workflow/2_tilesets.html", "11"],
-   ["声音编辑器", "source/_build/1_overview/2_quick_start/workflow/3_sounds.html", "11"],
-   ["物体编辑器", "source/_build/1_overview/2_quick_start/workflow/4_objects.html", "11"],
-   ["房间编辑器", "source/_build/1_overview/2_quick_start/workflow/5_rooms.html", "11"]
+   ["精灵", "source/_build/1_overview/2_quick_start/workflow/1_sprites.html", "11"],
+   ["图块集", "source/_build/1_overview/2_quick_start/workflow/2_tilesets.html", "11"],
+   ["声音", "source/_build/1_overview/2_quick_start/workflow/3_sounds.html", "11"],
+   ["物体", "source/_build/1_overview/2_quick_start/workflow/4_objects.html", "11"],
+   ["房间", "source/_build/1_overview/2_quick_start/workflow/5_rooms.html", "11"]
   ]
  ],
  ["附加信息", "source/_build/1_overview/3_additional_information/index.html", "1",
@@ -413,7 +413,7 @@ var TITEMS = [
    ["访问器", "source/_build/3_scripting/3_gml_overview/13_accessors.html", "11"],
    ["语言特性", "source/_build/3_scripting/3_gml_overview/14_language_features.html", "11"],
    ["函数", "source/_build/3_scripting/3_gml_overview/2_functions.html", "11"],
-   ["脚本编辑器", "source/_build/3_scripting/3_gml_overview/3_scripts.html", "11"],
+   ["脚本", "source/_build/3_scripting/3_gml_overview/3_scripts.html", "11"],
    ["注释", "source/_build/3_scripting/3_gml_overview/4_comments.html", "11"],
    ["关键词", "source/_build/3_scripting/3_gml_overview/5_keywords.html", "11"],
    ["范围", "source/_build/3_scripting/3_gml_overview/6_scope.html", "11"],
