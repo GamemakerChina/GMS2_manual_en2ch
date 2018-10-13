@@ -57,55 +57,32 @@ other special characters at all, nor should it have uppercase
 characters. These details will then be used to generate a Package
 ID with the format "<tt>com.company.myappname</tt>".</p>
 
-<div class="note"><b>NOTE</b>: If you have already set up the
-<b>Amazon Fire</b> Game Options, you can click the "Sync from
-Amazon Fire" button at the top to transfer the relevant information
-from the Fire options to the Android options.</div>
+<p>You then need to set the <b>Target</b>, <b>Minimum</b> and
+<b>Compile</b> SDK versions. The Compile SDK version is the version
+of the API that the project is compiled against. This means you can
+use Android API features included in that version of the API. If
+you try and use API 16 features - for example - but set Compile SDK
+15, then you will get a compilation error. If you set the Compile
+SDK to 16 then you can still run the app on an API 15 device (as
+well as all other previous versions too).</p>
 
-<p><br>
-You then need to set the <b>Build Tools</b> and <b>Support
-Library</b> versions, as well as the <b>Target</b>, <b>Minimum</b>
-and <b>Compile</b> SDK versions. The <b>Build Tools</b> and
-<b>Support Library</b> are used when <i>GameMaker Studio 2</i>
-builds your game for the Android target and should be set to
-appropriate values based on the tools you have installed using the
-Android SDK Manager or Android Studio.</p>
+<p>The Target SDK, however, has nothing to do with how your app is
+compiled or what APIs you can utilize. The Target SDK indicates
+that you have tested your app on (up to and including) the version
+you specify. This is simply to give the Android OS an idea of how
+it should handle your app in terms of OS features. For all
+practical purposes, most apps are going to want to set Target SDK
+to the latest released version of the API (as used by the Compile
+SDK setting). This will ensure your app looks as good as possible
+on the most recent Android devices.</p>
 
-<p>The <b>Compile SDK</b> version is the version of the API that
-the project is compiled against. This means you can use Android API
-features included in that version of the API. If you try and use
-API 16 features - for example - but set Compile SDK 15, then you
-will get a compilation error. If you set the Compile SDK to 16 then
-you can still run the app on an API 15 device (as well as all other
-previous versions too).</p>
+<p>The Minimum SDK version is the minimum API level that will run
+your project. This is set to 9 by default, and in general this will
+be fine, but if you add extensions then they may require a higher
+minimum API level. <img class="center" src=
+"images/android_general2_options.png" alt=
+"Android General Options Part 2"></p>
 
-<p>The <b>Target SDK</b>, however, has nothing to do with how your
-app is compiled or what APIs you can utilize. The Target SDK
-indicates that you have tested your app on (up to and including)
-the version you specify. This is simply to give the Android OS an
-idea of how it should handle your app in terms of OS features. For
-all practical purposes, most apps are going to want to set Target
-SDK to the latest released version of the API (as used by the
-Compile SDK setting). This will ensure your app looks as good as
-possible on the most recent Android devices.</p>
-
-<p>The <b>Minimum SDK</b> version is the minimum API level that
-will run your project. This is set to 9 by default, and in general
-this will be fine, but if you add extensions then they may require
-a higher minimum API level.</p>
-
-<p>You can select from one of the predefined target settings by
-clicking on the <b>Pre-populate SDK values to chosen API level</b>
-button, which will open a list of different APIs to choose from.
-Selecting any one of them will populate all the SDK files with
-appropriate values which you can then use or edit as required.</p>
-
-<div class="note"><b>NOTE</b>: You must have installed the
-appropriate APIs in the Android SDK Manager or through Android
-Studio for your projects to compile correctly.</div>
-<br>
-<img class="center" src="images/android_general2_options.png" alt=
-"Android General Options Part 2">
 <p>The second part of the <b>General</b> section covers the CPU
 <i>Architectures</i> to build for, with the following options
 available (you can select all of them or only those that you
@@ -117,13 +94,9 @@ compiled <tt>apk</tt>):</p>
 
 <li>Build for ARMV7 (Checked by default)</li>
 
-<li>Build for x86 (checked by default)</li>
+<li>Build for x86</li>
 
-<li>Build for Mips (checked by default)</li>
-
-<li>Build for ARM64</li>
-
-<li>Build for x86_64</li>
+<li>Build for Mips</li>
 </ul>
 
 <p>After setting that up you can select the different
@@ -229,10 +202,12 @@ getting negative comments and poor rating for your game due to
 graphical errors or crashes on older devices.<br>
 <br></li>
 
-<li><b>Scaling</b>: Here you can select to scale the draw canvas
-maintaining the aspect ratio within the device screen - adding
-"padding" around the edges to fit the screen - or you can select to
-have the draw canvas stretched stretch to fit.</li>
+<li><b>Scaling</b>: Your game can be configured to scale the draw
+canvas automatically to maintain the aspect ratio within the
+browser, or you can select to have it stretch to fit. The stretch
+to fit option will not full screen the game in the browser, but
+rather stretch what is drawn to fit the canvas size, as defined by
+the first room of the game.</li>
 </ul>
 
 <p>Finally there is the option to set the size of the <b>Texture
@@ -284,12 +259,7 @@ specific time then you can also set it here from 0 to 10 seconds
 (the default time of 0 means that it will only show for the
 duration of the asset loading).</p>
 
-<div class="note"><b>IMPORTANT!</b> On very old and very low end
-devices, a splash screen greater than 1024x768 may cause an out of
-memory error.</div>
-
-<p><br>
-It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
+<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
 "../../2_extras/project_image_generator.html">Project Image
 Generator</a> tool which can be used to automatically create all
 the images required for all the different target platforms your
@@ -381,8 +351,8 @@ input from the microphone.<br>
 
 <div class="note"><b>NOTE</b>: If you are not sure that you need
 these, you should probably just leave them un-checked by default
-and let <i>GameMaker Studio 2</i> deal with the permissions for
-your game.</div>
+and let GameMaker: Studio deal with the permissions for your
+game.</div>
 </div>
 <br>
 <label class="collapse" for="f">Social</label> <input id="f" type=
@@ -426,11 +396,15 @@ Google Play Developers dashboard).<br>
 
 <li><b>Google - Enable Cloud Saving</b>: Checking this will enable
 Google Cloud Saving, and (as above) will prompt you to download and
-install the relevant extension from the Marketplace. See the
-section on Cloud Saving from the <a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html">
-Asynchronous Functions</a> page.<br>
+install the relevant extension from the Marketplace.<br>
 <br></li>
+
+<li><b>Amazon - Enable Amazon IAPs</b>: If you are using any
+<b>Amazon Services</b>, you need to select this checkbox. Once you
+have selected this, you will be prompted to download and install
+the corresponding extension from the Marketplace, and all the
+required functions are included as part of the extension
+package.</li>
 </ul>
 </div></blockquote>
 
@@ -449,7 +423,7 @@ Options</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

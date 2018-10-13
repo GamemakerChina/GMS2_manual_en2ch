@@ -137,7 +137,10 @@ ds_list_find_value(list, i );<br>
 = ds_map_find_value(entry, "score");<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_rank[i]
 = ds_map_find_value(entry, "rank");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_map_destroy(entry);<br>
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_list_destroy(list)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;ds_map_destroy(map)<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
@@ -161,12 +164,13 @@ is found, the code will then parse the map to extract the necessary
 information about the leaderboard, by first extracting a ds_list
 from the "entries" key of the ds_map, and then looping through each
 entry of the list to get <i>another</i> ds_map with the name, score
-and rank of each entry. These values are then stored to arrays.<br>
+and rank of each entry. These values are then stored to arrays and
+the map destroyed.<br>
 <br>
-Once the loop has finished, the JSON ds_map is destroyed (which in
-turn destroys all the internal maps and lists). There is no need to
-destroy the <tt>async_load</tt> ds_map as this is handled for you
-by <i>GameMaker Studio 2</i>.</p>
+Once the loop has finished, the entries list is destroyed as is the
+map that it was taken from. There is no need to destroy the
+<tt>async_load</tt> ds_map as this is handled for you by
+<i>GameMaker Studio 2</i>.</p>
 
 <p><br>
 </p>
@@ -183,7 +187,7 @@ API</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

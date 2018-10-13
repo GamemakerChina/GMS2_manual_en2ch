@@ -32,85 +32,11 @@ if (window.name != "content")
 <h2>json_decode</h2>
 
 <div class="body-scroll">
-<p><br>
-</p>
-
-<h3>Description</h3>
-
-<blockquote>
-<p>JSON (JavaScript Object Notation) is a lightweight
-data-interchange format which is easy for to read and write, for
-both people and machines. It is built on two basic structures:</p>
-
-<ul>
-<li>A collection of name/value pairs, called a <a href=
-"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> in
-<i>GameMaker Studio 2</i> but also known as a "dictionary" or
-"object".</li>
-
-<li style="list-style: none"><br>
-</li>
-
-<li>An ordered list of values, called a <a href=
-"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a> in
-<i>GameMaker Studio 2</i> but this can also be called an "array" or
-"sequence".</li>
-</ul>
-
-<p>With this function, you can decode a piece of JSON and convert
-it into a <tt>ds_map</tt>, ready for use in <i>GameMaker Studio
-2</i>. If the JSON to be decoded requires a hierarchy of lists and
-maps within the central ds_map, these are decoded too and also
-created for you, using the following rules (note that these rules
-apply to the top-level structure only):</p>
-
-<ul>
-<li><i>Json is a single value</i> - returns a ds_map with a single
-entry "default" that is the value</li>
-
-<li style="list-style: none"><br>
-</li>
-
-<li><i>Json is an array of objects or values</i> - returns a ds_map
-with a single entry "default" that is a ds_list of the objects or
-values</li>
-
-<li style="list-style: none"><br>
-</li>
-
-<li><i>Json is an object</i> - returns a ds_map that has the object
-entries in it</li>
-</ul>
-
-<div class="note"><b>NOTE</b>: When decoding arrays, there is a map
-with the key "default" ONLY when an array is the top level
-structure, and ONLY for that top-level array. Internal lists decode
-directly to ds_lists without being enclosed in a ds_map.</div>
-
-<p><br>
-Normally you would know what keys the JSON decodes to, but if not
-then you can use the <a href=
-"../data_structures/ds%20maps/ds_map_size.html"><tt>ds_map_size</tt></a>,
-<a href=
-"../data_structures/ds%20maps/ds_map_find_first.html"><tt>ds_map_find_first</tt></a>
-and <a href=
-"../data_structures/ds%20maps/ds_map_find_next.html"><tt>ds_map_find_next</tt></a>
-functions to parse the map and get the necessary information.</p>
-
-<div class="note"><b>NOTE</b>: <i>GameMaker Studio 2</i> creates
-the necessary ds_maps and lists from the JSON, and for cleaning up
-you only need to delete the <b>top level</b> map or list and
-<i>GameMaker Studio 2</i> will automatically delete from memory all
-the maps and lists underneath.</div>
-</blockquote>
-
-<p><br>
-</p>
-
 <h3>Syntax:</h3>
 
 <p class="code">json_decode(string)</p>
 
+<blockquote>
 <p><br>
 </p>
 
@@ -139,6 +65,75 @@ decoding</td>
 <p><br>
 </p>
 
+<h3>Description</h3>
+
+<blockquote>
+<p>JSON (JavaScript Object Notation) is a lightweight
+data-interchange format which is easy for to read and write, for
+both people and machines. It is built on two basic structures:</p>
+
+<blockquote>
+<ul>
+<li>A collection of name/value pairs, called a <a href=
+"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> in
+<i>GameMaker Studio 2</i> but also known as a "dictionary" or
+"object".</li>
+
+<li>An ordered list of values, called a <a href=
+"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a> in
+<i>GameMaker Studio 2</i> but this can also be called an "array" or
+"sequence".</li>
+</ul>
+</blockquote>
+
+<p>With this function, you can decode a piece of JSON and convert
+it into a <tt>ds_map</tt>, ready for use in <i>GameMaker Studio
+2</i>. If the JSON to be decoded requires a hierarchy of lists and
+maps within the central ds_map, these are decoded too and also
+created for you, using the following rules (note that these rules
+apply to the top-level structure only):</p>
+
+<blockquote>
+<ul>
+<li><i>Json is a single value</i> - returns a ds_map with a single
+entry "default" that is the value</li>
+
+<li><i>Json is an array of objects or values</i> - returns a ds_map
+with a single entry "default" that is a ds_list of the objects or
+values</li>
+
+<li><i>Json is an object</i> - returns a ds_map that has the object
+entries in it</li>
+</ul>
+</blockquote>
+
+<div class="note"><b>NOTE:</b> When decoding arrays, there is a map
+with the key "default" ONLY when an array is the top level
+structure, and ONLY for that top-level array. Internal lists decode
+directly to ds_lists without being enclosed in a ds_map.<br>
+<br>
+Normally you would know what keys the JSON decodes to, but if not
+then you can use the <a href=
+"../data_structures/ds%20maps/ds_map_size.html"><tt>ds_map_size</tt></a>,
+<a href=
+"../data_structures/ds%20maps/ds_map_find_first.html"><tt>ds_map_find_first</tt></a>
+and <a href=
+"../data_structures/ds%20maps/ds_map_find_next.html"><tt>ds_map_find_next</tt></a>
+functions to parse the map and get the necessary information.<br>
+<br>
+<br>
+<br>
+
+<div class="note"><b>NOTE:</b> <i>GameMaker Studio 2</i> creates
+the necessary ds_maps and lists from the JSON, and for cleaning up
+you only need to delete the <b>top level</b> map or list and
+<i>GameMaker Studio 2</i> will automatically delete from memory all
+the maps and lists underneath.<br>
+<br>
+
+<p><br>
+</p>
+
 <h3>Example:</h3>
 
 <p class="code">var resultMap = json_decode(requestResult);<br>
@@ -161,11 +156,10 @@ ds_map_destroy(resultMap);<br></p>
 <blockquote>
 <p>The above code will decode a JSON string and parse it to
 generate a global array.</p>
-</blockquote>
 
 <p><br>
 </p>
-</div>
+</blockquote></div>
 
 <div class="footer">
 <div class="buttons">
@@ -178,10 +172,13 @@ Handling</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div></div>
+</blockquote>
+</blockquote>
 </div>
 
 <script type="text/JavaScript">
