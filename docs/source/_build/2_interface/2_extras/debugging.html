@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>调试</title>
+<title>正在调试</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,122 +30,70 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>调试</h2>
+<h2>正在调试</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>The <b>Debugger</b> is a powerful tool for checking your game,
-and is especially useful for tracking down errors and bugs in your
-code, as well as checking that scripts are run when they should be,
-and that variables and arrays contain the values you expect etc...
-You can start the Debugger by running your game from <i>GameMaker
-Studio 2</i> IDE using the <b>Debug</b> button <img style=
-"vertical-align:middle" src="images/icon_debug.png"> at the top of
-the IDE, or by going to the <a href=
-"../../1_overview/2_quick_start/menus/build_menu.html">Build
-menu</a> and selecting "Debug".</p>
+<p><b>调试器</b> 是一个用于检查游戏的强大工具，对于跟踪代码中的错误和漏洞以及检查脚本应该运行的时间以及包含你期望的值的变量和数组等特别有用。你可以使用 <i>GameMaker Studio 2</i> IDE 顶部的 <b>调试</b> 按钮 <img style=
+"vertical-align:middle" src="images/icon_debug.png">，或者转到 <a href=
+"../../1_overview/2_quick_start/menus/build_menu.html">构建菜单</a> 并选择 “调试” 来运行游戏并启动 “调试器”。</p>
 
-<div class="note"><b>NOTE:</b> You may be prompted by Windows
-Firewall (or any other firewall program that you run) to create a
-security exception for this module. <b>You must do this</b>
-otherwise it will not work correctly. This is due to the way the
-Debugger works and is essential for debugging mobile
-platforms.</div>
+<div class="note"><b>注意：</b> Windows防火墙（或你运行的任何其他防火墙程序）可能会提示你为此模块创建安全例外。<b>你必须这样做</b>，否则它将无法正常工作。 这是由于调试器的工作方式，对调试移动平台至关重要。</div>
 
-<p>When you run a game in debug mode, the IDE will display the
-different tools available for the Debugger:  <img class="center"
-src="images/debug_module.png" alt="Debugger"></p>
+<p>在调试模式下运行游戏时，IDE 将显示调试器可用的不同工具： <img class="center"
+src="images/debug_module.png" alt="调试器"></p>
 
-<p>The image shown above shows the default layout for the debugger,
-but as with other aspects of the IDE you can customise this to suit
-your needs, closing windows you don't need or changing the sizes of
-the docs and windows that you do need. You can reset the debugger
-layout at any time - or reopen closed windows - from the
-<b>Debugger</b> context menu at the top of the IDE:  <img class=
+<p>上面图像显示了调试器的默认布局，但与 IDE 的其他方面一样，你可以自定义此选项以满足你的需要，关闭你不需要的窗口或更改你需要的文档和窗口的大小。你可以随时从 IDE 顶部的 <b>调试器</b> 上下文菜单重置调试器布局 - 或重新打开关闭的窗口： <img class=
 "center" src="images/debug_module_context_menu.png" alt=
 "Debugger Context Menu"></p>
 
-<p>Below we explain what each section of the debugger is for:</p>
+<p>下面我们解释一下调试器的每个部分：</p>
 
 <blockquote><a name="graph_view" id="graph_view"></a> <label class=
-"collapse" for="a">Graph View</label> <input id="a" type=
+"collapse" for="a">图表视图</label> <input id="a" type=
 "checkbox">
 <div class="index_list">
-<p>The <b>Graph</b> view shows you a graphic display of how your
-project is using memory and its framerate over time. :  <img class=
+<p><b>图表</b> 视图显示了项目如何使用内存及其帧率随时间变化的图形显示：: <img class=
 "center" src="images/debug_graph.png" alt="Debug Graph"></p>
 
-<p>The graph shows the current and average memory use as well as
-the current and average FPS over time, and you can zoom in or out
-using the <img style="vertical-align:middle" src=
+<p>该图显示了当前和平均内存使用情况以及当前和平均 FPS 随时间的变化，你可以使用 <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
-src="../../images/icon_cmd.png"> along with the mouse wheel
-<img style="vertical-align:middle" src=
-"../../images/icon_mmb.png">, and if you position the mouse cursor
-over any of the graph elements, it will show you the value for that
-element at the selected point.</p>
+src="../../images/icon_cmd.png"> 和鼠标滚轮 <img style="vertical-align:middle" src=
+"../../images/icon_mmb.png"> 放大或缩小，如果将鼠标光标放在图形元素上， 它将显示所选点上该元素的值。</p>
 
-<p>The Graph view will also show certain <b>debug events</b> as
-points along the length of the graph. These events are generated
-automatically by <i>GameMaker Studio 2</i> at certain points in the
-running of a game to show specific important events, but you can
-also add in your own graph elements using the functions <a href=
+<p>图表视图还会将某些 <b>调试事件</b> 显示为沿图形长度的点。 These events are generated automatically by <i>GameMaker Studio 2</i> at certain points in the running of a game to show specific important events, but you can also add in your own graph elements using the functions <a href=
 ""><tt>show_debug_message()</tt></a> and <a href=
-""><tt>debug_event</tt></a>. System events will be flagged in a
-different colour to those events that are triggered through code:
-<img class="center" src="images/debug_graph_events.png" alt=
-"Debug Graph Events"> When running the game in debug and mousing
-over these events, a list will be shown of all the events that were
-triggered at that point in the game, and you have the option of
-pulling the list out into a separate window for revising by
-clicking the "<i>Click to open in a new window</i>" text:
-<img class="center" src="images/debug_events.png" alt=
+""><tt>debug_event</tt></a>. 系统事件将以与通过代码触发的事件不同的颜色标记：<img class="center" src="images/debug_graph_events.png" alt=
+"Debug Graph Events"> 在调试中运行游戏并将鼠标移动到这些事件上时，将显示一个列表，其中列出了游戏中该点触发的所有事件，你可以通过单击 “<i>单击在新窗口中打开</i>” 文本将列表拉出到单独的窗口中进行修改：<img class="center" src="images/debug_events.png" alt=
 "Debug Events"></p>
 </div>
 <br>
 <a name="resource_view" id="resource_view"></a> <label class=
-"collapse" for="b">Resource View</label> <input id="b" type=
+"collapse" for="b">资源视图</label> <input id="b" type=
 "checkbox">
 <div class="index_list">
-<p>The <b>Resource View</b> shows you a list of all the resources
-being used in the project that can contain code or DnD™ actions.
-This section works much like the Resource Tree and you can expand
-the items in it to show more information, for example, the
-different events for a specific object. You can then double click
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-on any of the resources to open the code for it in the <b>Code
-View</b> window, where you can check values and add or remove
-breakpoints.</p>
+<p><b>资源视图</b> 显示项目中正在使用的所有资源的列表，其中包含代码或 DnD™ 动作。此部分与资源树非常相似，你可以展开其中的项目以显示更多信息，例如，特定物体的不同事件。 然后，你可以双击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 任何资源，在 <b>代码视图</b> 窗口中打开它的代码，你可以在其中检查值并添加或删除断点。</p>
 </div>
 <br>
 <a name="call_stack" id="call_stack"></a> <label class="collapse"
-for="c">Call Stack</label> <input id="c" type="checkbox">
+for="c">调用堆栈</label> <input id="c" type="checkbox">
 <div class="index_list">
-<p>This window will display the current call stack of events, as
-well as the line number for the code being stepped through. The
-debugger will need to have been Paused before any information will
-be shown here.</p>
+<p>这个窗口会显示当前事件的调用栈，还有按步跳过代码的行号。在此处显示任何信息之前需要暂停调试器。</p>
 </div>
 <br>
 <a name="toolbar" id="toolbar"></a> <label class="collapse" for=
-"d">Toolbar</label> <input id="d" type="checkbox">
+"d">工具栏</label> <input id="d" type="checkbox">
 <div class="index_list">
-<p>The toolbar has the debugger controls along with some basic
-information such as memory use, the current (real) FPS for the game
-and an indicator to show whether the debugger is currently
-connected or not (the indicator will be green when connected to a
-running instance of your project and red otherwise). The available
-controls are:</p>
+<p>工具栏具有调试器控件以及一些基本信息，如内存使用，游戏的当前（真实）FPS 以及显示调试器当前是否已连接的指示器（连接到你的项目正在运行的实例时指示器将为绿色否则为红色）。可用的控件是：</p>
 
 <table class="icons">
 <tr>
 <td class="icons"><img style="vertical-align:middle" src=
 "images/debug_play.png" alt="Debug Play">
 </td>
-<td class="text">This starts the game again after it has been
-paused (keyboard shortcut <tt>f5</tt>).</td>
+<td class="text">这会在暂停后再次启动游戏（键盘快捷键 <tt>f5</tt>）。</td>
 </tr>
 
 <tr>
@@ -157,7 +105,7 @@ paused (keyboard shortcut <tt>f5</tt>).</td>
 <td class="icons"><img style="vertical-align:middle" src=
 "images/debug_pause.png" alt="Debug Pause">
 </td>
-<td class="text">This will pause (break) the game.</td>
+<td class="text">这将暂停（中断）游戏。</td>
 </tr>
 
 <tr>
@@ -169,7 +117,7 @@ paused (keyboard shortcut <tt>f5</tt>).</td>
 <td class="icons"><img style="vertical-align:middle" src=
 "images/debug_restart.png" alt="Debug Restart">
 </td>
-<td class="text">Restarts the game.</td>
+<td class="text">重启游戏</td>
 </tr>
 
 <tr>
@@ -181,7 +129,7 @@ paused (keyboard shortcut <tt>f5</tt>).</td>
 <td class="icons"><img style="vertical-align:middle" src=
 "images/debug_stop.png" alt="Debug Stop">
 </td>
-<td class="text">Stops the game.</td>
+<td class="text">停止游戏</td>
 </tr>
 
 <tr>
@@ -193,8 +141,7 @@ paused (keyboard shortcut <tt>f5</tt>).</td>
 <td class="icons"><img style="vertical-align:middle" src=
 "images/debug_stepin.png" alt="Debug Step In">
 </td>
-<td class="text">Step into a code block or script (keyboard
-shortcut <tt>f11</tt>).</td>
+<td class="text">跳入代码块或脚本（键盘快捷键 <tt>f11</tt>）</td>
 </tr>
 
 <tr>
@@ -206,8 +153,7 @@ shortcut <tt>f11</tt>).</td>
 <td class="icons"><img style="vertical-align:middle" src=
 "images/debug_stepover.png" alt="Debug Step Over">
 </td>
-<td class="text">Step over a code block or script (keyboard
-shortcut <tt>f10</tt>).</td>
+<td class="text">跳过代码块或脚本（键盘快捷键 <tt>f10</tt>）</td>
 </tr>
 
 <tr>
@@ -219,9 +165,8 @@ shortcut <tt>f10</tt>).</td>
 <td class="icons"><img style="vertical-align:middle" src=
 "images/debug_stepout.png" alt="Debug Step Out">
 </td>
-<td class="text">Step out of a code block or script (keyboard
-shortcut <img style="vertical-align:middle" src=
-"../../images/icon_shift.png"> + <tt>f11</tt>).</td>
+<td class="text">跳出代码块或脚本（键盘快捷键 <img style="vertical-align:middle" src=
+"../../images/icon_shift.png"> + <tt>f11</tt>）</td>
 </tr>
 
 <tr>
@@ -233,169 +178,86 @@ shortcut <img style="vertical-align:middle" src=
 <td class="icons"><img style="vertical-align:middle" src=
 "images/debug_realtime.png" alt="Debug Real Time">
 </td>
-<td class="text">Turn on or off real time updates for the debug
-information (this is off by default).</td>
+<td class="text">打开或关闭调试信息的实时更新（默认情况下关闭）。</td>
 </tr>
 </table>
 
-<p>The first three buttons are used to control your game,
-permitting you to start, pause, restart or stop it at any time.
-When the game is paused 8either by clicking the Pause button or
-from a Breakpoint) you can then use the three "step" buttons for
-stepping through your code. This simply means that you can tell
-your game to run the current line of code, then step onto the next
-one, permitting you to run through your entire game one line of
-code at a time should you wish. Normally you would simply use the
-<i>Step In</i> button to do this, but you also have one for
-stepping over code and one for stepping out of the code. Stepping
-over is useful when you have large scripts to run through, as
-clicking this will run the whole script or code block as a single
-step and stop on the next line afterwards, while stepping out will
-take you out of a script (they will run, but all at once) and stop
-on the next step afterwards when the scope changes. The final icon
-permits the debug window to update its data in real time, so you
-can see how variables change or instances are created and destroyed
-as it happens. Note that this may affect the games performance and
-that not all information is available in real time. For example,
-the <b>Render State</b> watch (see the section on Watches, below)
-cannot be viewed in real time.</p>
+<p>前三个按钮用于控制游戏，允许你随时启动、暂停、重启或停止游戏。通过单击 “暂停” 按钮或从 “断点” 暂停游戏时，你可以使用三个 “步” 按钮逐步执行代码。这意味着你可以告诉你的游戏运行代码中的当前行，之后跳转到下一行。只要你想，就允许你跨越整个游戏来运行一行代码。通常你只需要用 <i>跳入</i> 按钮来做这件事，不过你还有另外两个选择，一个跳过代码和一个跳出代码。当你有大型脚本要运行时，跳过非常有用，因为单击此操作会将整个脚本或代码块作为一个步骤运行，然后在下一行停止，而跳出将使你退出脚本（它们将运行 ，但一下子全部）并在范围改变后的下一步停止。最后的这个图标允许调试窗口实时更新数据，这样的话你就能看见变量如何改变或者实例如何生成与破坏的了。不过要注意这样也许会影响游戏表现，而且并不是所有的信息都会实时有效。例如，无法实时查看 <b>渲染状态</b> 监视（请参阅下面的 “监视器” 部分）。</p>
 </div>
 <br>
 <a name="code_view" id="code_view"></a> <label class="collapse"
-for="e">Code View</label> <input id="e" type="checkbox">
+for="e">代码视图</label> <input id="e" type="checkbox">
 <div class="index_list">
-<p>The code view is where we can see and review different scripts
-or event code from our project as it runs. By default this starts
-empty, but you can double click <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> on any resource from the Resource
-View to open it here. You can open multiple different events or
-scripts too, and they will be added to the Code View workspace as
-tabs along the top. While any code window is open in the Code View,
-you can left click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> in the gutter (where the line numbers
-are) to add or remove <b>Breakpoints</b> (a breakpoint is a line in
-your code where the debugger should pause your game, permitting you
-to then step through the code a line at a time if required).</p>
+<p>代码视图是我们在项目运行时可以查看和检查不同脚本或事件代码的地方。 默认情况下，这将开始为空，但你可以双击 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> 资源视图中的任何资源以在此处打开它。 你也可以打开多个不同的事件或脚本，它们将作为顶部的选项卡添加到 “代码视图” 工作区。在代码视图中打开任何代码窗口时，你可以左键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 单击行号栏（行号所在的位置）来添加或删除 <b>断点</b>（断点是代码中调试器应暂停你的游戏的一行，如果需要的话，允许你之后单行地执行代码）。</p>
 
-<p>You can also use the right mouse button <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> to open
-the Context Menu, which also permits you to add or remove
-breakpoints and copy any selected code to the clipboard.</p>
+<p>你还可以使用鼠标右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 打开上下文菜单，该菜单还允许你添加或删除断点并将任何选定的代码复制到剪贴板。</p>
 
-<p>More information on BreakPoints can be found further down this
-page.</p>
+<p>有关断点的更多信息可以在此页面的下方找到。</p>
 </div>
 <br>
 <a name="Watches" id="Watches"></a> <label class="collapse" for=
-"f">Watches</label> <input id="f" type="checkbox">
+"f">监视器</label> <input id="f" type="checkbox">
 <div class="index_list">
-<p>The whole idea of the Debugger is to permit you to "watch" every
-detail of your game. This is done using "watch windows" which, by
-default, are opened in the <b>Output</b> window docked at the
-bottom of the IDE. You can click on each of the different tabs to
-see the watches that they contain, some of which will update in
-real time (like the Global watches) while others (like the Local
-watches) will require the debugger to have paused the game. We've
-listed each of the watch windows here separately along with an
-explanation of what they do:</p>
+<p>调试器的全部思想是允许你 “观察” 游戏的每个细节。这是使用 “监视窗口” 完成的，默认情况下，它是在停靠在 IDE 底部的 <b>输出</b> 窗口中打开的。 你可以单击每个不同的选项卡以查看它们包含的监视器，其中一些将实时更新（如全局监视器），而其他（如局部监视器）则需要调试器暂停游戏。 我们在这里单独列出了每个监视窗口，并说明了它们的作用：</p>
 
-<blockquote><label class="collapse" for="two">Locals</label>
+<blockquote><label class="collapse" for="two">局部</label>
 <input id="two" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_local_window.png" alt=
 "Debug Local Variables Window">
 </p>
 
-<p>The <b>Locals</b> window shows the current step properties,
-which includes the name of the current event (or script) being run,
-the offset in the virtual machine code for the current script (the
-acronym "PC" is for "program counter"), the "self" instance running
-the code block, and the "other" instance in the event. This last
-part is only ever valid when the event is a collision event or
-there is a <tt>with</tt> used in the code. If the instance is in
-collision, "other" will show the other instance (and its variables)
-in the collision, but if it is a <tt>with</tt> then the "Self"
-instance becomes that which is running the code, while "Other" is
-then the instance that actually contains the <tt>with</tt>. At all
-other times, "other" will simply show the same data as "Self".
-After all this information, you will then find a list of all
-<i>local</i> variables that are currently declared for the code
-block being stepped through. If you right click <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> on a value
-you can set its type (see <b>Data Types</b>, below) to see details
-of data structures.</p>
+<p><b>局部</b> 窗口显示当前步属性，其中包括正在运行的当前事件（或脚本）的名称，当前脚本的虚拟机代码中的偏移量（首字母缩写词 “PC” 为 “程序计数器”）， 运行代码块的 “self” 实例，以及事件中的 “other” 实例。当事件是碰撞事件或代码中使用了 <tt>with</tt> 时，最后一部分才有效。如果实例处于碰撞状态，“other” 将在碰撞中显示另一个实例（及其变量），但如果它使用了 <tt>with</tt>，那么 “Self” 实例将成为运行代码的实例，而 “Other ”则是实际包含 <tt>with</tt> 的实例。除此之外的其他时间，“other” 仅会显示与 “self” 相同的数据。在完成所有这些信息之后，你将找到当前步执行的代码块声明的所有 <i>局部</i> 变量的列表。 如果右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 某个值，则可以设置其类型（请参阅下面的 <b>数据类型</b>）以查看数据结构的详细信息。</p>
 </div>
 <br>
-<label class="collapse" for="three">Globals</label> <input id=
+<label class="collapse" for="three">全局</label> <input id=
 "three" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_global_window.png" alt=
 "Debug Global Variables Window">
 </p>
 
-<p>The <b>Globals</b> window will show a list of all the currently
-declared global variables and their values. If you right click
-<img style="vertical-align:middle" src="../../images/icon_rmb.png">
-on a value you can set its type (see <b>Data Types</b>, below) to
-see details of data structures.</p>
+<p><b>全局</b> 窗口将显示当前所有声明的全局变量及其值的列表。 如果右键单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 某个值，则可以设置其类型（请参阅下面的 <b>数据类型</b>）以查看数据结构的详细信息。</p>
 </div>
 <br>
-<label class="collapse" for="four">Watches</label> <input id="four"
+<label class="collapse" for="four">监视</label> <input id="four"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_watch_window.png" alt=
 "Debug Watches Variables Window">
 </p>
 
-<p>This window is for you to add a specific variable that you want
-to keep track of. This can be a global or instance scope variable,
-a built in variable or even an array or data structure. If the the
-instance code being stepped through has the watched variable it
-will be shown here, meaning you can easily keep track of a value
-without having to search for it in the Locals or Globals windows.
-If you right click <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on a value you can set its type (see
-<b>Data Types</b>, below), delete it, or clear <i>all</i> watches
-from the window. You can also change some of the values for the
-variables shown by simply double clicking <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on the
-value and giving it a new one. Note that you cannot re-assign
-arrays or data structures in this way, but you <i>can</i> change
-some of their contents (you cannot change the "key" values in maps,
-nor the priority value for priority queues).</p>
+<p>这个窗口可以让你添加你想一直追踪的特定的变量。追踪的内容可以是一个全局或实例范围的变量，一个内置的变量，甚至数组或数据结构。如果按步跳过的实例代码中包含被监视的变量，那么它就会在这里显示出来。这意味着你可以轻易追踪变量而不用在局部或者全局窗口中查找它。如果右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 某个值，则可以设置其类型（请参阅下面的 <b>数据类型</b>），将其删除，或从窗口中清除 <i>所有</i> 监视器。你还可以通过双击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 该值并为其赋予新值来更改所显示变量的某些值。请注意，你不能以这种方式重新分配数组或数据结构，但你 <i>可以</i> 更改其中的一些内容（你不能更改映射中的 “键” 值，也不能更改优先级队列的优先级值）。</p>
 </div>
 <br>
-<label class="collapse" for="five">Instance</label> <input id=
+<label class="collapse" for="five">实例</label> <input id=
 "five" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_instance_watches.png" alt=
 "Debug Instance Watches Window">
 </p>
 
-<p>As the name implies, this window will show all instance
-variables, local variables and built in variables associated with
-the instance currently being stepped through in the Source window
-(if an instance is being referenced using the keyword "other" or
-the <tt>with</tt> statement, then this window will show that
-instances properties instead).</p>
+<p>顾名思义，这个窗口会显示所有实例变量、局部变量和与当前源代码窗口中按步跳过的实例的内置变量。（如果一个实例是用关键词 “other” 或者 <tt>with</tt> 语句引用来的，那么这个窗口中会显示该实例的属性）。</p>
 </div>
 <br>
-<label class="collapse" for="seven">All Instances</label>
+<label class="collapse" for="seven">所有实例</label>
 <input id="seven" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_allinstance_watches.png"
 alt="Debug All Instance Watches Window">
 </p>
 
-<p>Should you need to see all instances that are currently in the
-room, you can select this window and they will be listed. You can
-also see the state of any built in or instance variables that they
-have, and you can right click <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> on a value to set its type (see
-<b>Data Types</b>, below)</p>
+<p>如果你需要监视所有的当前房间中的实例，你可以选择这个窗口，它们就会被列出来。你还可以查看它们具有的任何内置变量或实例变量的状态，你可以右键单击 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> 某个值来设置其类型（请参阅下面的 <b>数据类型</b>）</p>
 </div>
 <br>
-<label class="collapse" for="eight">Selected Instance</label>
+<label class="collapse" for="eight">选中的实例</label>
 <input id="eight" type="checkbox">
 <div class="index_list">
 <p><img class="center" src=
@@ -403,89 +265,54 @@ src="../../images/icon_rmb.png"> on a value to set its type (see
 "Debug Selected Instance Watches Window">
 </p>
 
-<p>This window is for when you select an instance from your game.
-This is done by simply pausing the game and then clicking on any
-visible instance within the game window. The instance found beneath
-the mouse cursor will then have its information displayed in the
-Selected Instance window, where you can see it's built in and
-instance variables, the same as for the Instances window.</p>
+<p>这个窗口是为了你在游戏中选择的实例而存在的。暂停游戏，只需要点击游戏窗口中任何可见的实例，你就能实现该功能。在鼠标指针下的实例的信息会显示在选中的实例窗口中，在此处你能看到它的内置信息和实例变量，与实例窗口是一样的。</p>
 </div>
 <br>
-<label class="collapse" for="thirteen">Render States</label>
+<label class="collapse" for="thirteen">渲染状态</label>
 <input id="thirteen" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_renderstate_window.png"
 alt="Debug Render State Window">
 </p>
 
-<p>This watch shows you all the information available for the state
-of the current frame being rendered, like the draw alpha or fill
-colour. This cannot be updated in real time so you will need to
-pause the game to get and update the frame details.</p>
+<p>这个窗口为你显示所有被渲染当前帧的可用信息，例如绘制的透明度或者填充颜色。这不能实时更新，因此你需要暂停游戏以获取和更新帧详细信息。</p>
 </div>
 <br>
-<label class="collapse" for="fourteen">Surfaces / Textures</label>
+<label class="collapse" for="fourteen">表面 / 纹理页</label>
 <input id="fourteen" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/debug_surfacetexture_window.png"
 alt="Debug Surfaces / Textures Watches Window">
 </p>
 
-<p>This watch enables you to see exactly what is being drawn to any
-surfaces you have in your game (including the <tt>application
-surface</tt>) as well as see the texture pages that are in memory.
-You can select from textures or surfaces from the bottom of the
-watch, and then mouse over the texture or surface ID to have it
-displayed in a pop-up window.  <img class="center" src=
+<p>在此视图中允许你查看到底哪些东西正画在你的表面上（包括<tt>应用表面</tt>）以及查看内存中的材质页。你可以从监视器底部的纹理或表面中进行选择，然后将鼠标悬停在纹理或表面 ID 上，以使其显示在弹出窗口中。 <img class="center" src=
 "images/debug_textures.png" alt="Debug Texture View"></p>
 
-<p>Note that the debugger must be paused before these will
-update.</p>
+<p>请注意，在更新之前必须暂停调试器。</p>
 </div>
 <br>
-<label class="collapse" for="eleven">Profile</label> <input id=
+<label class="collapse" for="eleven">剖析</label> <input id=
 "eleven" type="checkbox">
 <div class="index_list">
-<p>This window is where you can see the current system profile for
-the game being tested where you can check everything in your game
-from whole events to individual function calls to see how they are
-performing and spot any trouble areas or bottlenecks. For further
-information on profiling see the section further down on this
-page.</p>
+<p>该窗口是你查看当前被测试游戏所处系统概况的地方，在此处你能查看你游戏中从整个事件到单独的函数调用中的各种细节，以此了解程序如何表现它们的功能，而麻烦区域或者瓶颈又在哪里。有关分析的更多信息，请参阅本页后面的部分。</p>
 </div>
 <br>
 <label class="collapse" for="ten">缓冲区</label> <input id="ten"
 type="checkbox">
 <div class="index_list">
-<p>If you have initialised any buffers in your game, then this
-window will show you the buffer data. You can select any buffer
-created by setting the <i>Buffer ID</i> value, which will start at
-0 for the first buffer created in your game, and increment by 1 for
-each consecutive buffer.  <img class="center" src=
+<p>如果你在游戏中初始化了缓冲器，这个窗口会给你显示缓冲数据。你可以选择任一使用 <i>缓冲ID</i> 的值产生的缓冲器，其中缓冲 ID 对第一个缓冲器是从 0 开始的，接下来的缓冲器每一个的 ID 加 1。 <img class="center" src=
 "images/debug_buffer.png" alt="Debug Buffer Window"></p>
 
-<p>If you right click <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on the data window or click the
-<i>Data Display</i> button, you can select how the data is
-displayed, setting the alignment and type, and you can also set how
-the data is laid out from the <i>Column Select</i> box. There is a
-drop-down window here where you can select from a default list of
-layouts.</p>
+<p>如果右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 数据窗口或单击 <i>数据显示（Data Display）</i> 按钮，则可以选择数据的显示方式，设置对齐方式和类型，还可以从 <i>列选择</i> 框中设置数据的布局方式。这里有一个下拉窗口，你可以从默认的布局列表中进行选择。</p>
 </div>
 <br></blockquote>
 </div></blockquote>
 
-<p>It is important to note that while the game is running it
-<i>doesn't update the debug windows with variable values and other
-details by default</i>, therefore you must first either use the
-<b>Pause</b> button <img style="vertical-align:middle" src=
-"images/debug_pause.png"> in the Debugger to pause the game before
-Locals, Globals and other data will be available, or enable
-real-time updating from the icons at the top <img style=
-"vertical-align:middle" src="images/debug_realtime.png">. The only
-exception to this rule is the <i>Profile</i> view, which updates in
-real time when enabled independently of the real-time switch, as it
-has its own on/off button.</p>
+<p>重要的是要注意，在游戏运行时，默认情况下它 <i>不会使用变量值和其他详细信息更新调试窗口</i>，因此你必须首先使用调试器中的 <b>暂停</b> 按钮 <img style="vertical-align:middle" src=
+"images/debug_pause.png">，在局部、全局和其他数据可用之前暂停游戏 ，或从顶部的图标启用实时更新 <img style=
+"vertical-align:middle" src="images/debug_realtime.png">。此规则的唯一例外是 <i>剖析</i> 视图，它在独立于实时开关的情况下实时更新，因为它具有自己的开 / 关按钮。
+</p>
 
 <p><br>
 </p>
@@ -493,33 +320,13 @@ has its own on/off button.</p>
 <h2>数据类型</h2>
 
 <p><br>
-
-When you are watching a variable in any of the windows, it can be
-one of multiple <b>data-types</b>. However, due to the way that
-<i>GameMaker Studio 2</i> stores certain things, the Debugger does
-not always know exactly what the variable holds. This is because
-the internal ID values for data structures or instances are
-integers and so the Debugger doesn't always know if the integer
-value being stored in a variable is for a data structure or an
-instance or is simply an integer value. For that reason, you can
-right click <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on any variable value and get a pop-up
-window that lists the available data-types that this variable could
-be. <img class="center" src="images/debug_datatypes.png" alt=
+当你观察任何窗口中的变量时，它都可能是数种 <b>数据类型</b> 中的任意一个。但是，由于 <i>GameMaker Studio 2</i> 存储某些内容的方式，调试器并不总是确切知道该变量的含义。 这是因为数据结构或实例的内部 ID 值是整数，因此调试器并不总是知道存储在变量中的整数值是用于数据结构还是实例，或者只是一个整数值。 因此，你可以右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 变量值并弹出一个窗口，其中列出了此变量可能存在的可用数据类型。<img class="center" src="images/debug_datatypes.png" alt=
 "Debug Data Types"></p>
 
-<p>Strings and arrays do not permit this option, and it is worth
-noting that even if a data structure is stored in an instance
-variable, its ID number is <b>global</b>, so if you have four
-instances and each one creates a ds_list (for example), each list
-will have an ID from 0 to 3, and they won't all be 0.</p>
+<p>字符串和数组不允许使用此选项，值得注意的是，即使数据结构存储在实例变量中，其 ID 号也是 <b>全局</b> 的，因此如果你有四个实例并且每个实例都创建一个 ds_list（例如）， 每个列表的 ID 为从 0 到 3，它们不会同时为 0。</p>
 
-<p>Once you have selected your data-type, the variable will then
-show the entries in the structure simply by clicking the small
-<img style="vertical-align:middle" src="images/debug_expand.png">
-next to its name. This will expand the structures contents, and, in
-the case of the "Watches" window, permit you to modify them
-too.</p>
+<p>选择数据类型后，只需单击其名称旁边的小写字母 <img style="vertical-align:middle" src="images/debug_expand.png"> 即可显示结构中的变量条目。 这将扩展结构内容，并且在 “监视器” 窗口的情况下，也允许你修改它们。</p>
 
 <p><br>
 </p>
@@ -527,129 +334,61 @@ too.</p>
 <h2>断点</h2>
 
 <p><br>
-
-A <b>breakpoint</b> is a place in your project code that you wish
-it to stop at so you can see what's going on. With the Debugger
-running, you can add or remove breakpoints at any time and in any
-code or script block by left clicking <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> in the
-gutter (where the line numbers are), or you can use the right mouse
-button <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> to open the <i>Context Menu</i>, which
-also permits you to add or remove breakpoints:</p>
+<b>断点</b> 是项目代码中你希望停止的位置，以便你可以看到正在发生的事情。 在调试器运行的情况下，你可以通过左键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 行号栏（行号所在的位置）随时在任何代码或脚本块中添加或删除断点，也可以使用鼠标右键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 打开 <i>上下文菜单</i>， 同样可以添加或删除断点：</p>
 
 <p><img class="center" src="images/add_remove_breakpoint.gif" alt=
 "Add/Remove Breakpoints">
 </p>
 
-<p>Breakpoints can also be set from the <i>GameMaker Studio 2</i>
-IDE. When writing your project, they can be added or removed at any
-time using <tt>f9</tt> (or using the right mouse button <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> and
-selecting "toggle breakpoint"), either on an action in the object
-window, or on a line in a code editor window. Now, when you run
-your game in debug mode it will pause at the point (or points) that
-you have defined. Breakpoints set from the IDE are saved along with
-your project and will persist over various runs until removed
-again, however if you add a breakpoint to your code in the
-Debugger, this will be lost after the module is closed, or a new
-test run started. Note that all breakpoints will appear in the
-<a href="output.html">Output Window</a> where they can be enabled
-or disabled or even removed.</p>
+<p>也可以从 <i>GameMaker Studio 2</i> IDE 设置断点。 编写项目时，可以使用 <tt>f9</tt>（或使用鼠标右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 并选择 “开/关断点”）对物体窗口中的动作或代码编辑器窗口中的行添加或删除断点。现在，当你在调试模式运行游戏的时候，它就会在断点停下。从 IDE 中设置的断点与项目一起保存，并且在每次运行中保留，直到删除它。但是，如果在调试器中向代码添加断点，则在关闭模块或启动新测试运行后丢失。请注意，所有断点都将显示在 <a href="output.html">输出</a> 窗口中，可在其中启用或禁用甚至删除它们。</p>
 
 <p><br>
 </p>
 
-<h2>Profiling</h2>
+<h2>剖析）</h2>
 
 <p><br>
-
-The Debugger permits you to step through your code and find any
-issues with the code base, but sometimes you need to check for
-subtler details in order to properly optimise your games. The
-<b>Profile</b> option helps to do just that by giving you a
-performance overview, showing the time takes to call functions,
-scripts, and even how long it took a specific event to complete.
-
+调试器允许你单步执行代码并查找代码库的任何问题，但有时你需要检查更微妙的详细信息以便正确优化你的游戏。 <b>剖析（Profile）</b> 选项通过为你提供性能概述，显示调用函数、脚本所需的时间，甚至完成特定事件所需的时间来帮助实现此目的。
 <img class="center" src="images/debug_profile.png" alt=
 "Debug Profile Window"></p>
 
-<p>Apart from the main window showing all the different events,
-scripts and functions being called, you also have the following
-options for using the Profiler:</p>
+<p>除了显示所有不同事件、脚本和函数的主窗口外，剖析中还有以下选项：</p>
 
-<blockquote><label class="collapse" for="m">Enable /
-Disable</label> <input id="m" type="checkbox">
+<blockquote><label class="collapse" for="m">开始分析 / 停止分析</label> <input id="m" type="checkbox">
 <div class="index_list">
-<p>This is the button to enable or disable the Profiler. When
-enabled, the profiler will start and you will start to see events,
-scripts and functions be listed in the main window along with
-different data values for each of them. How this data is displayed
-will depend on the Time Display and the View Mode (both explained
-further down this page).</p>
+<p>这是启用或禁用剖析的按钮。启用后，剖析将启动，你将开始看到主窗口中列出的事件、脚本和函数以及每个事件、脚本和函数的不同数据值。 显示此数据的方式取决于时间显示和查看模式（本页后面都有解释）。</p>
 </div>
 <br>
-<label class="collapse" for="n">Time Display</label> <input id="n"
+<label class="collapse" for="n">时间显示</label> <input id="n"
 type="checkbox">
 <div class="index_list">
-<p>This checkbox permits you to switch between the average time and
-the absolute time for the profiler. When it is not checked, the
-values shown in the main window will be the <i>total</i> number of
-calls made to the function, script or event and the <i>total</i>
-time taken (times are in <i>microseconds</i>) over the course of
-the profile. However if you enable this then these columns show the
-<i>average</i> time taken per step for each function, script or
-event, and the <i>average</i> number of times that it was
-called.</p>
+<p>此复选框允许你在剖析的平均时间和绝对时间之间切换。如果未选中，则主窗口中显示的值将是对函数，脚本或事件的调用 <i>总数</i> 以及在配置文件过程中所花费的 <i>总</i> 时间（以 <i>毫秒（ms）</i> 为单位）。但是，如果启用此选项，则这些列将显示每个函数、脚本或事件的每步的 <i>平均</i> 时间以及调用它的 <i>平均</i> 次数。</p>
 </div>
 <br>
-<label class="collapse" for="o">View Mode</label> <input id="o"
+<label class="collapse" for="o">查看模式</label> <input id="o"
 type="checkbox">
 <div class="index_list">
-<p>This menu lets you choose the view mode, which can be either
-<b>Top Down</b> or <b>Bottom Up</b>.</p>
+<p>此菜单允许你选择查看模式，可以是 <b>自上而下</b> 或 <b>自下而上</b>。</p>
 
-<p>Selecting the Top Down view mode will show the profile from the
-top down (more or less the same as the callstack hierarchy) so it
-will show the event, then the script and then any functions used.
-Note that you can double click <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> on any of the entries to have it
-open in the <b>Source</b> debug window if you have one. If you see
-a <img style="vertical-align:middle" src="images/debug_expand.png">
-icon beside a name then there are further script or function calls
-within that section, and clicking the <img style=
-"vertical-align:middle" src="images/debug_expand.png"> will expand
-the tree to show them.</p>
+<p>选择自上而下视图模式将从上到下显示配置文件（与调用栈层次结构大致相同），因此它将显示事件，然后显示脚本，然后显示所使用的函数。请注意，如果有源码，你可以双击 <img style="vertical-align:middle"
+src="../../images/icon_rmb.png"> 条目，在 <b>源代码</b> 调试窗口中打开它。如果在名称旁边看到一个 <img style="vertical-align:middle" src="images/debug_expand.png"> 图标，则该部分中还会有进一步的脚本或函数调用，单击 <img style=
+"vertical-align:middle" src="images/debug_expand.png"> 将展开树以显示它们。</p>
 
-<p>Selecting the Bottom Up view mode will show things from the
-bottom up so you can see all the functions and script calls
-individually. When using this view mode, clicking on the
-<img style="vertical-align:middle" src="images/debug_expand.png">
-will expand the function or script to show what actually called
-it.</p>
+<p>选择自下而上视图模式将自下而上显示内容，以便你可以单独查看所有函数和脚本调用。使用此视图模式时，单击 <img style="vertical-align:middle" src="images/debug_expand.png"> 将展开函数或脚本以显示实际调用的内容。</p>
 </div>
 <br>
-<label class="collapse" for="p">View Target</label> <input id="p"
+<label class="collapse" for="p">查看目标</label> <input id="p"
 type="checkbox">
 <div class="index_list">
-<p>The View Target permits you to choose between viewing the
-project GML (event and code data), the background engine processes
-or both. If you choose "GML", then you will get the events,
-functions and scripts being called each step while the "Engine"
-view will only show the engine calls required by the project,
-enabling you to see any bottlenecks in the way that your project is
-handling things. If you select "Both", then both sets of data will
-be displayed, but note that when combined with the "Bottom Up"
-view, the different script and function calls will be nested within
-the engine calls and you will need to click the <img style=
-"vertical-align:middle" src="images/debug_expand.png"> to expand
-these out to see them.</p>
+<p>查看目标（View Target） 允许你在查看项目 GML（事件和代码数据）与后台引擎进程或两者之间进行选择。 如果你选择 “我的代码”，那么你将获得每步调用的事件、函数和脚本，而 “引擎代码” 视图仅显示项目所需的引擎调用，使你能够看到项目处理问题的方式中的任何瓶颈。如果选择 “组合”，则会显示两组数据，但请注意，当与 “自下而上” 视图结合使用时，不同的脚本和函数调用将嵌套在引擎调用中，你需要单击 <img style=
+"vertical-align:middle" src="images/debug_expand.png"> 展开以便看到它们。</p>
 </div></blockquote>
 
 <p><br>
-
-The profile data is shown in four columns, and clicking on any of
-them will sort the data according to the column criteria.</p>
+配置文件数据显示在四列中，单击其中任何一列将根据列标准对数据进行排序。</p>
 
 <p><img class="center" src="images/profiler_display.gif" alt=
 "Profile Display">
@@ -659,40 +398,22 @@ them will sort the data according to the column criteria.</p>
 </p>
 
 <ul>
-<li><b>Name</b> - This is the name of the event, script or function
-being called, and may have a <img style="vertical-align:middle"
-src="images/debug_expand.png"> beside it to denote further calls to
-it or from it (depending on the View Mode you have selected). You
-can double click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> on any of the names to have it open
-the code block or script within the <b>Source</b> window. Clicking
-the top of this column will sort the names in alphabetical
-order.<br>
+<li><b>名称</b> - 这是被调用的事件、脚本或函数的名称，旁边可能有一个 <img style="vertical-align:middle"
+src="images/debug_expand.png"> 表示进一步调用它或从中调用的内容（取决于你选择的视图模式）。 
+你可以双击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 任何名称，使其在 <b>源代码</b> 窗口中打开代码块或脚本。单击此列的顶部将按字母顺序对名称进行排序。<br>
 <br></li>
 
-<li><b>Time</b> - This will show either the total time that a
-function (or script or event) has taken while profiling, or the
-average time that it has taken each step to be called (depending on
-the Time Display option selected) and it is displayed in
-<b>microseconds</b>.<br>
+<li><b>时间（毫秒）</b> - 这将显示函数（或脚本、事件）在剖析时所花费的总时间，或者显示每步被调用的平均时间（取决于所选的时间显示选项），并以 <b>毫秒</b> 为单位显示。<br>
 <br></li>
 
-<li><b>Calls</b> - Here you can see either the total number of
-calls to the given event, function or script, or the average number
-of calls to it in a single step (again, depending on the Time
-Display option selected).<br>
+<li><b>调用次数</b> - 你可以在此处查看给定事件、函数或脚本的调用总数，或者在一步中对其进行的平均调用次数（同样，取决于所选的时间显示选项）。<br>
 <br></li>
 
-<li><b>Step%</b> - The value shown here is the overall percentage
-of a single step that the call has taken.</li>
+<li><b>步 %</b> - 这里显示的值是调用所采取的单步的总体百分比。</li>
 </ul>
 
-<p>You can export the profile data at any time by right clicking
-<img style="vertical-align:middle" src="../../images/icon_rmb.png">
-on the window and selecting the <i>Export to file</i> option. This
-will write the current view (after expanding all the nodes) in
-<tt>.csv</tt> format, which you can then load into any spreadsheet,
-like Excel for example.</p>
+<p>你可以随时导出剖析数据，方法是右键单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 窗口并选择 <i>导出到文件</i> 选项。这将以 <tt>.csv</tt> 格式编写当前视图（在扩展所有节点之后），然后可以将其加载到任何电子表格中，例如Excel。</p>
 
 <p><br>
 </p>
@@ -701,11 +422,9 @@ like Excel for example.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Extras
-Index</a></div>
+<div style="float:left">上一页: <a href="index.html">附加功能</a></div>
 
-<div style="float:right">Next: <a href="source_control.html">Source
-Control</a></div>
+<div style="float:right">下一页: <a href="source_control.html">源代码控制</a></div>
 </div>
 </div>
 
