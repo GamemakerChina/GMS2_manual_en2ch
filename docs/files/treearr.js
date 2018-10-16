@@ -92,12 +92,12 @@ var TITEMS = [
   ["调试", "source/_build/2_interface/2_extras/debugging.html", "11"],
   ["设备管理器", "source/_build/2_interface/2_extras/device_manager.html", "11"],
   ["市场", "source/_build/2_interface/2_extras/marketplace.html", "11"],
-  ["输出", "source/_build/2_interface/2_extras/output.html", "11"],
+  ["输出停靠栏", "source/_build/2_interface/2_extras/output.html", "11"],
   ["项目图片生成器", "source/_build/2_interface/2_extras/project_image_generator.html", "11"],
-  ["近期窗口", "source/_build/2_interface/2_extras/recent_windows.html", "11"],
+  ["最近窗口", "source/_build/2_interface/2_extras/recent_windows.html", "11"],
   ["远程工作者", "source/_build/2_interface/2_extras/remote_worker.html", "11"],
   ["混音器", "source/_build/2_interface/2_extras/sound_mixer.html", "11"],
-  ["源代码控制", "source/_build/2_interface/2_extras/source_control.html", "11"]
+  ["源码控制", "source/_build/2_interface/2_extras/source_control.html", "11"]
  ],
  ["设置", "source/_build/2_interface/3_settings/index.html", "1",
   ["音频", "source/_build/2_interface/3_settings/audio.html", "11"],
