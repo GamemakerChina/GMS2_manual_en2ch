@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,76 +37,37 @@ if (window.name != "content")
 </p>
 <img class="center" src="images/project_image_generator.png" alt=
 "生成项目图片">
-<p>The <b>Project Image Generator</b> is accessed from the <a href=
-"../../1_overview/2_quick_start/menus/tools_menu.html">Tools
-Menu</a> at the top of the <i>GameMaker Studio 2</i> IDE. This tool
-is designed to quickly create all the different splash screens,
-promo images and icons that are required by all the different
-target platforms from a single set of images. You supply the base
-image and the base icon and then click the <i>Generate</i> button,
-and your <a href="../3_settings/game_options/index.html">Game
-Options</a> for each platform will update with the new images.</p>
+<p>可以从 <i>GameMaker Studio 2</i> IDE 顶部的 <a href=
+"../../1_overview/2_quick_start/menus/tools_menu.html">工具菜单</a> 访问 <b>项目图片生成器</b>。此工具旨在从一组图像中快速创建所有不同目标平台所需的不同的初始屏幕、促销图像和图标。你提供基本图像和基本图标，然后单击 <i>生成</i> 按钮，每个平台的 <a href="../3_settings/game_options/index.html">游戏选项</a> 将使用新图像进行更新。</p>
 
-<p>For this to work correctly you need to supply a high resolution
-splash screen and a high resolution icon image. The recommended
-sizes would be:</p>
+<p>为了使其正常工作，你需要提供高分辨率启动画面和高分辨率图标图像。建议的尺寸为：</p>
 
 <ul>
-<li><b>Splash Screen</b>: at least 1920x1080px, or 1080x1920px for
-portrait, and authored as a 24bit PNG with no transparencies.<br>
+<li><b>启动画面</b>：纵向至少为 1920 x 1080 像素，或 1080 x 1920 像素，并且为 24 位无透明度 PNG 格式<br>
 <br></li>
 
-<li><b>Icons</b>: at least 1024x1024px (which is the size of the
-largest icon required), and authored as a 24bit PNG which
-<i>can</i> have transparencies</li>
+<li><b>图标</b>：至少 1024 x 1024px（这是所需的最大图标的大小），并且为 24 位 <i>可以</i> 有透明像素的 PNG 格式</li>
 </ul>
 
-<p>Once you have supplied these images they will be shown in the
-Preview Windows and you can then set the type of "fit" to be used
-when applying them to the different platforms. You can choose from
-the following:</p>
+<p>提供这些图像后，它们将显示在预览窗口中，然后你可以设置在将它们应用到不同平台时要使用的 “填充” 类型。你可以选择以下内容：</p>
 
 <ul>
-<li><b>Keep Aspect Ratio</b> - this will scale the image to fit
-maintaining the aspect ratio and adding in a background colour to
-fill in the sides if the fit is not 1:1<br>
+<li><b>保持长宽比例</b> - 这将缩放图像以适应保持长宽比并添加背景颜色以填充侧面（如果填充不是 1:1）<br>
 <br></li>
 
-<li><b>Stretch To Fit</b> - this will stretch the images to fit the
-full size of the image/icon.<br>
+<li><b>拉伸</b> - 这将拉伸图像以适合图像 / 图标的完整大小。<br>
 <br></li>
 
-<li><b>Crop To Fit</b> - this will take the base image and make it
-fit best along either the horizontal or vertical axis and then crop
-the remainder. For example, if you have a 640x480 image that has to
-be used as a splash screen for 480x800, then the image will be
-scaled <i>up</i> to fit the vertical axis (480 -&gt; 800) and the
-rest of the image will be cropped away. Likewise if you have a
-1080x1920 image that has to fit 800x800 then the image will be
-scaled <i>down</i> to fit the horizontal axis and the rest cropped
-away.</li>
+<li><b>裁剪以适应</b> -  这将得到基本图像，使它最适合沿水平轴或垂直轴，然后裁剪其余部分。例如，如果你的 640 x 480 图像必须用作 480 x 800 的闪屏，则图像将按比例 <i>放大</i> 以适合垂直轴（480 -&gt; 800），图像的其余部分将被裁剪掉。同样，如果你的 1080 x 1920 图像必须适合 800 x 800，那么图像将按比例 <i>缩小</i> 以适合水平轴，其余图像将被裁剪掉。</li>
 </ul>
 
-<p>You can also set the background colour for the both icons and
-images. This colour will be used to "pad" the image when scaled
-with aspect ratio. The following image shows how this will look
-once everything has been set up:  <img class="center" src=
+<p>你还可以设置图标和图像的背景颜色。当使用保持长宽比例时，此颜色将用于 “填充” 图像。下图显示了设置后的外观： <img class="center" src=
 "images/project_image_generator_example.png" alt=
 "Generate Project Images Example"></p>
 
-<p>Now all you have to do is click on <i>Generate</i> and
-<i>GameMaker Studio 2</i> will populate all the Game Options
-<i>Image</i> and <i>Icon</i> settings with images for each
-platform.</p>
+<p>现在，你只需单击 <i>Generate</i>，<i>GameMaker Studio 2</i> 将为每个平台填充所有游戏选项 <i>图像</i> 和 <i>图标</i> 设置的图像。</p>
 
-<div class="note"><b>IMPORTANT!</b> While this tool will generate
-all the images you require, that does not mean it is perfect! It
-will try to do its best to make the images suit the different sizes
-and resolutions for each platform but sometimes this may not look
-how you really want since there really is no "one size fits all".
-Therefore after running this tool we recommend that you revise all
-the images in each platforms Game Options and tweak those that may
-not look exactly how you want manually.</div>
+<div class="note"><b>重要！</b> 虽然此工具将生成你需要的所有图像，但这并不意味着它是完美的！ 它将尽力使图像适合每个平台的不同尺寸和分辨率，但有时这可能看起来不像你真正想要的，因为它确实没有 “一刀切”。 因此，在运行此工具后，我们建议你修改每个平台游戏选项中的所有图像，并手动调整那些可能看起来不像你想要的图像。</div>
 
 <p><br>
 </p>
@@ -115,11 +76,10 @@ not look exactly how you want manually.</div>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Extras
-Index</a></div>
+<div style="float:left">上一页: <a href="index.html">附加功能</a></div>
 
 <div style="float:right">下一页：<a href=
-"debugging.html">调试</a></div>
+"recent_windows.html">调试</a></div>
 </div>
 </div>
 

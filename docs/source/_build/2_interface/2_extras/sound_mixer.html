@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>The Sound Mixer</title>
+<title>混音器</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,94 +30,54 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>The Sound Mixer</h2>
+<h2>混音器</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 <img class="center" src="images/audio_mixer.png" alt=
-"The Sound Mixer">
-<p>While creating any project it can be useful to check and set
-volumes of groups of sounds together, so that you can be sure that
-in-game they all sound correct. This can be tricky when you have to
-open each individual sound editor within the workspace, and so
-<i>GameMaker Studio 2</i> permits you to open a <b>Sound Mixer</b>
-window where you can play multiple sounds all from the same place
-and tweak their volume levels accordingly. This window can be
-opened from the <a href="../1_editors/sounds.html">Sound Editor</a>
-(which will add that selected sound to the mixer view) or from the
-<a href=
-"../../1_overview/2_quick_start/menus/tools_menu.html">Tools
-Menu</a>.</p>
+"混音器">
+<p>在创建任何项目时，同时检查和设置声音组的音量会很有用，这样你就可以确保在游戏中它们听起来都是正确的。 当你必须打开工作区内的每个声音编辑器时，这可能会非常棘手，因此 <i>GameMaker Studio 2</i> 允许你打开 <b>混音器</b> 窗口，你可以在该窗口中播放来自同一位置的多个声音并相应地调整其音量级别。可以从 <a href="../1_editors/sounds.html">声音编辑器</a>（将选定的声音添加到调音台视图）或从 <a href=
+"../../1_overview/2_quick_start/menus/tools_menu.html">工具菜单</a> 中打开此窗口。</p>
 
-<p>To add sounds to the mixer, you can use <img style=
+<p>要向混音器添加声音，你可以使用 <img style=
 "vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> to select
-sounds in the resource tree and then open the right click
-<img style="vertical-align:middle" src="../../images/icon_rmb.png">
-menu and select <i>Open In Sound Mixer</i>. Alternatively, you can
-click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> on a sound resource and drag it into
-the mixer.</p>
+"vertical-align:middle" src="../../images/icon_rmb.png"> 在资源树中选择声音，然后打开右键菜单 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 并选择 <i>在混音器中打开</i>。或者，你可以单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 声音资源并将其拖动到调音台中。</p>
 
-<p>The mixer itself is split into the following sections:</p>
+<p>混音器本身分为以下几个部分：</p>
 
-<blockquote><label class="collapse" for="one">Column
-Controls</label> <input id="one" type="checkbox">
+<blockquote><label class="collapse" for="one">列控制</label> <input id="one" type="checkbox">
 <div class="index_list">
-<p>This section contains the controls for the column of sounds. You
-can choose to play back all sounds in the column, as well as set
-them to loop or rewind to the start. You can also set the volume
-that they should be played back at, and changing this value will
-change it for <i>all</i> sounds in the group in real time.</p>
+<p>此部分包含声音列的控件。你可以选择播放列中的所有声音，也可以将它们设置为循环播放或快退到开头。 你还可以设置应该播放的音量，并且更改此值将实时更改组中的 <i>所有</i> 声音。</p>
 </div>
 <br>
-<label class="collapse" for="two">Audio Group</label> <input id=
+<label class="collapse" for="two">音频组</label> <input id=
 "two" type="checkbox">
 <div class="index_list">
-<p>If you have assigned sound resources to different <a href=
-"../3_settings/audio.html">Audio Groups</a> then you can select the
-group from this drop-down menu and all the sounds will be added to
-the current sound mixer column.</p>
+<p>如果你已将声音资源分配给不同的 <a href=
+"../3_settings/audio.html">音频组</a>，则可以从此下拉菜单中选择该组，并将所有声音添加到当前混音器列。</p>
 </div>
 <br>
-<label class="collapse" for="three">Sound Resources</label>
+<label class="collapse" for="three">声音资源</label>
 <input id="three" type="checkbox">
 <div class="index_list">
-<p>This part of the column view shows each of the sounds that have
-been added to the mixer. You can set the overall volume for all
-sounds for the column at the top of the mixer, then use the
-individual sound volume controller to change it as required, and
-you can also playback and loop individual sounds. To remove a sound
-from the column view, simply click the close icon, and you can also
-expand/collapse the individual sound playback and volume controls
-to make the view more compact.</p>
+<p>列视图的这一部分显示了已添加到调音台的每个声音。 你可以使用混音器顶部的列音量设置所有声音的总音量，然后使用单独的音量控制器根据需要进行更改，你还可以播放和循环各个声音。 要从列视图中删除声音，只需单击关闭图标，你还可以展开 / 折叠单个声音播放和音量控制以使视图更加紧凑。</p>
 </div>
 <br>
-<label class="collapse" for="four">Link Columns</label> <input id=
+<label class="collapse" for="four">连接列</label> <input id=
 "four" type="checkbox">
 <div class="index_list">
-<p>The <b>Link Columns</b> button <img style=
-"vertical-align:middle" src="images/icon_linkcolumns.png"> will
-link adjacent columns meaning that their volume and playback
-controls will now be linked. So, any sounds that are in
-<i>either</i> of the linked columns will have their volume affected
-by changes to either column control.</p>
+<p><b>链接组</b> 按钮 <img style=
+"vertical-align:middle" src="images/icon_linkcolumns.png"> 将链接相邻列，这意味着链接其音量和回放控件。因此，<i>任何一个</i> 链接列中的声音都会受到列控件更改的影响。</p>
 </div>
 <br>
-<label class="collapse" for="five">Extra Column / Add
-Column</label> <input id="five" type="checkbox">
+<label class="collapse" for="five">额外列 / 添加列</label> <input id="five" type="checkbox">
 <div class="index_list">
-<p>You can add as many extra columns to the sound mixer as required
-by clicking the large button to the right of the mixer. Each extra
-column will be added to he right-most column and can then be linked
-the previous one, and you can add sounds or audio groups as you
-would normally. If you meed to remove a column from the mixer, then
-you can find the <b>Remove Sound Group</b> button <img style=
-"vertical-align:middle" src="images/icon_closecolumn.png"> found
-beside the Audio Group drop down menu.</p>
+<p>你可以根据需要通过单击调音台右侧的大按钮向混音器添加任意数量的额外列。每个额外的列将添加到列的最右侧，然后可以链接到前一列，你可以像平常一样添加声音或音频组。如果你需要从调音台中删除一列，则可以在 “音频组” 下拉菜单中找到 <b>删除声音组</b> 按钮 <img style=
+"vertical-align:middle" src="images/icon_closecolumn.png">。</p>
 </div></blockquote>
 
 <p><br>
@@ -127,11 +87,10 @@ beside the Audio Group drop down menu.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Extras
-Index</a></div>
+<div style="float:left">上一页: <a href="index.html">附加功能</a></div>
 
-<div style="float:right">Next: <a href=
-"output.html">Output</a></div>
+<div style="float:right">下一页: <a href=
+"output.html">输出停靠栏</a></div>
 </div>
 </div>
 

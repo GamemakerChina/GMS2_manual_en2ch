@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Remote Workers</title>
+<title>远程工作者</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,172 +30,95 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Remote Workers</h2>
+<h2>远程工作者</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>When you compile your game, you usually use the "Local" worker,
-which is the computer that <i>GameMaker Studio 2</i> has been
-installed on. However under some circumstances you may need to use
-another computer to build your projects. For example, if you are
-working on a Mac and you want to build a Windows project, then you
-would want to configure a <b>Remote Worker</b> and have a Windows
-PC do the build. Essentially, when you use a remote worker,
-<i>GameMaker Studio 2</i> will send all the required files from the
-(local) machine it is running on to the remote worker machine, and
-then use that machine to build the final executable for the project
-(either saving it on the remote machine, or returning it to the
-local machine afterwards). However, before you can use this
-functionality you will have to have installed certain tools on the
-build machine and performed some setting up, which we will explain
-here.</p>
+<p>编译游戏时，通常使用 “本地” 工作程序，即安装了 <i>GameMaker Studio 2</i> 的计算机。但是，在某些情况下，你可能需要使用另一台计算机来构建项目。例如，如果你正在使用 Mac 并且想要构建 Windows 项目，那么你可能希望配置 <b>远程工作者</b> 并让 Windows PC 执行构建。基本上，当你使用远程工作者时，<i>GameMaker Studio 2</i> 会将其运行的（本地）计算机上的所有必需文件发送到远程工作计算机，然后使用该计算机为项目构建最终可执行文件（保存它在远程机器上，或之后将其返回到本地机器上）。但是，在使用此功能之前，你必须在构建计算机上安装某些工具并执行一些设置，我们将在此处解释。</p>
 
-<div class="note"><b>IMPORTANT!</b> You can set up a remote worker
-using a local Windows PC and remote Windows PC, or between a local
-Mac PC and a remote Windows PC, but currently you <b>cannot</b> set
-up a local Windows (or Mac) PC and a remote Mac PC, ie: you cannot
-have a Mac remote worker, only a Windows one.</div>
+<div class="note"><b>重要！</b> 你可以使用本地 Windows PC 和远程 Windows PC，或本地 Mac PC 和远程 Windows PC 之间设置远程工作者，但目前你 <b>无法</b> 设置本地 Windows（或 Mac）PC 和 远程 Mac PC，即：你不能拥有 Mac 远程工作者，只能拥有 Windows 远程工作者。</div>
 
 <p><br>
 </p>
 
 <blockquote><a name="setup_remote" id="setup_remote"></a>
-<label class="collapse" for="a">Initial Setup</label> <input id="a"
+<label class="collapse" for="a">初始设置</label> <input id="a"
 type="checkbox">
 <div class="index_list">
-<p>To set up a remote worker you will need to first install the
-Remote Worker build tool application onto the PC that is to be
-used. You can find this tool by going to the <a href=
-"../../1_overview/2_quick_start/menus/build_menu.html">Build
-Menu</a> in <i>GameMaker Studio 2</i> on the local machine and
-selecting the option "Show Remote Worker Installer":  <img class=
+<p>要设置远程工作者，你需要首先将远程工作者构建工具应用程序安装到要使用的 PC 上。 你可以通过点击本地计算机上 <a href=
+"../../1_overview/2_quick_start/menus/build_menu.html">GameMaker Studio 2</a> 中的 <i>构建</i> 菜单并选择 “显示远程工作者安装程序” 选项来找到此工具： <img class=
 "center" src="images/remoteworker_menu.png" alt=
 "Build Menu Remote Worker Installer"></p>
 
-<p>Alternatively, you can click the "eye" icon in the <a href=
-"../../1_overview/2_quick_start/6_compiling.html">Target
-Manager</a>, and get the Remote Worker installer that way:
-
+<p>或者，你可以单击 <a href=
+"../../1_overview/2_quick_start/6_compiling.html">目标平台管理器</a> 中的 “眼睛” 图标，然后以这种方式获取远程工作者安装程序：
 <img class="center" src="images/remoteworker_targeteye.png" alt=
 "Target Manager Remote Worker Installer"></p>
 
-<p>The installer will be called something like
-"<tt>GameMakerStudio-Remote-Installer-X.X.X.XXX.exe</tt>" and you
-need to copy it over to the PC that you want to use as the remote
-worker (you do <i>not</i> need to have <i>GameMaker Studio 2</i>
-installed on the remote worker, just this program). Once you have
-copied it to the build PC, install it following the on-screen
-prompts and when the installer has finished, you may be asked by
-the OS for access through the firewall to your network. Once you
-grant access, the installer will then open a page in your web
-browser and you <b>must note down the IP address and Port number
-shown on this page</b> as you will need it for the next step.
-
+<p>安装程序将被称为 “<tt>GameMakerStudio-Remote-Installer-X.X.X.XXX.exe</tt>”，你需要将其复制到要用作远程工作者的 PC（你 <i>不</i> 需要安装 <i>GameMaker Studio 2</i>，只需要安装这个程序）。将其复制到构建 PC 后，按照屏幕上的提示进行安装，安装完成后，操作系统可能会要求你通过防火墙访问网络。 授予访问权限后，安装程序将在你的 Web 浏览器中打开一个页面，你 <b>必须记下此页面上显示的 IP 地址和端口号</b>，因为下一步将需要它。
 <img class="center" src="images/remoteworker_ip.png" alt=
 "IP Address for Remote Worker"></p>
 
-<p>You now need to go back to the machine where you have
-<i>GameMaker Studio 2</i> installed and click the Target Manager
-button <img style="vertical-align:middle" src=
-"images/icon_targetmanager.png"> to open up the Target Manager
-window, and there go to the <b>Worker</b> section and click the
-<i>Add Worker</i> button <img style="vertical-align:middle" src=
-"images/icon_addworker.png">. This will then open the following
-window: <img class="center" src="images/remoteworker_add.png" alt=
+<p>你现在需要返回安装了 <i>GameMaker Studio 2</i> 的计算机，然后单击目标平台管理按钮 <img style="vertical-align:middle" src=
+"images/icon_targetmanager.png"> 打开目标平台管理窗口，然后转到 <b>工作者</b> 部分并单击 <i>添加工作者</i> 按钮。<img style="vertical-align:middle" src=
+"images/icon_addworker.png">然后，这将打开以下窗口：<img class="center" src="images/remoteworker_add.png" alt=
 "Add IP Address for Remote Worker"></p>
 
-<p>Here you need to give your Remote Worker a name (this is what
-will be shown in the Worker list in the Target Manager) and in then
-in the <i>Host Name</i> section, add the address you were shown and
-noted previously from the worker machine, including the port
-number.</p>
+<p>在这里，你需要为远程工作者命名（这将在目标平台管理的 “工作者” 列表中显示），然后在 <i>主机名</i> 部分中，添加你之前从工作者计算机上显示和记录的地址及端口号。</p>
 
-<p>If all has gone correctly you should now get a message saying
-that you can successfully connect to the remote worker machine.
-Once you have your Remote Worker installed and connected to your
-main IDE computer, you will need to go and set up the <b>Local
-Build Settings</b> for each platform (see the section below for
-more details) before being able to compile your project.</p>
+<p>如果一切正确，你现在应该收到一条消息，说明你可以成功连接到远程工作者计算机。 安装远程工作者并连接到主 IDE 计算机后，你需要先为每个平台设置 <b>本地构建设置</b>（请参阅下面的部分以获取更多详细信息），然后才能编译项目。</p>
 </div>
 <br>
 <a name="settings_remote" id="settings_remote"></a> <label class=
-"collapse" for="c">Remote Settings</label> <input id="c" type=
+"collapse" for="c">远程设置</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
-<p>The settings page shows the different paths and build settings
-for the Remote Worker application. At the top of the settings you
-have the different paths that will be used by the Remote Worker
-application and before doing anything else these should be revised
-and set to alternative paths if required (in general the Default
-paths should be fine though). You can access the Remote Worker
-settings page using any one of the following methods:</p>
+<p>设置页面显示远程工作者应用程序的不同路径和构建设置。 在设置的顶部，你有远程工作者应用程序将使用的不同路径，在执行任何其他操作之前，应根据需要修改这些路径并将其设置为备用路径（通常，默认路径应该没问题）。你可以使用以下任一方法访问 “远程工作者” 设置页面：</p>
 
 <ul>
-<li>Click the "Settings" link at the top of the Remote Worker page
-that opens in the browser of your remote machine:  <img class=
+<li>单击远程计算机浏览器中打开的 “远程工作者” 页面顶部的 “设置” 链接： <img class=
 "center" src="images/remoteworker_settingsbrowser.png" alt=
 "Remote Worker Settings - Browser"></li>
 
-<li>Use the RMB on the Remote Worker tray icon to open the settings
-in the browser of your remote machine:  <img class="center" src=
+<li>使用远程工作者托盘图标上的鼠标右键菜单打开远程计算机浏览器中的设置： <img class="center" src=
 "images/remoteworker_settingstray.png" alt=
 "Remote Worker Settings - System Tray"></li>
 
-<li>On your local machine, open the Target Manager and click the
-"cog" icon <img style="vertical-align:middle" src=
-"images/icon_cog.png"> top open the worker settings in a window on
-your local machine : <img class="center" src=
+<li>在本地计算机上，打开目标平台管理器，然后单击 “cog” 图标 <img style="vertical-align:middle" src=
+"images/icon_cog.png">，在本地计算机的窗口中打开工作者设置：<img class="center" src=
 "images/remoteworker_settingside.png" alt=
 "Remote Worker Settings - GameMaker Studio 2 IDE"></li>
 </ul>
 
-<p>This will show the settings page where you can see (and set) the
-different options that permit you to set the paths for building
-your project:  <img class="center" src=
+<p>这将显示设置页面，你可以在其中查看（和设置）允许你设置构建项目的路径的不同选项： <img class="center" src=
 "images/remoteworker_settings.png" alt=
 "Remote Worker Settings"></p>
 </div>
 <br>
 <a name="local_build_settings_remote" id=
 "local_build_settings_remote"></a> <label class="collapse" for=
-"d">Local Build Settings</label> <input id="d" type="checkbox">
+"d">本地编译设置</label> <input id="d" type="checkbox">
 <div class="index_list">
-<p>After checking the paths for the Remote Worker application to
-use, you can then set (if required) the different <b>Local Build
-Settings</b>. Different platforms will require different build
-tools to be installed on the build PC and the remote worker will
-need to be able to use them to build your games through the
-Settings page. The first settings here are the <b>General</b>
-settings:  <img class="center" src=
+<p>在检查要使用的远程工作者应用程序的路径之后，你可以设置（如果需要）不同的 <b>本地构建设置</b>。不同的平台需要在构建 PC 上安装不同的构建工具，远程工作者需要能够通过 “设置” 页面使用它们来构建游戏。这里的第一个设置是 <b>常规</b> 设置： <img class="center" src=
 "images/remote_worker_local_general.png" alt=
 "Local General Settings"></p>
 
-<p>Here you can set up the Port for the Help Server and the port
-for the Debugger to use. These can be changed should you have any
-connection issues when using the debug module but in general should
-be left at their default values.</p>
+<p>你可以在此处设置帮助服务器的端口和调试器要使用的端口。如果在使用调试模块时遇到任何连接问题，可以更改这些，但通常应保留其默认值。</p>
 
-<p>You can now go ahead and setup the different options for the
-platforms that the Remote Worker can build for:</p>
+<p>你现在可以继续为远程工作者可以为其构建的平台设置不同的选项：</p>
 
 <ul>
 <li><b>Windows</b> <img class="center" src=
 "images/remote_worker_local_windows.png" alt=
 "Local Windows Settings">
-<p>If you have access to the Windows target platform, you should be
-able to build using the remote worker on the Windows PC immediately
-using the <b>VM</b> option. However if you wish to use the
-<b>YYC</b> then you will also need to set the path to <b>Visual
-Studio</b> on the build PC. For full details of how to set up a
-Windows PC to compile your projects, please see the following
-helpdesk article:</p>
+<p>如果你可以访问 Windows 目标平台，则应该能够使用 <b>VM</b> 选项立即使用 Windows PC 上的远程工作者进行构建。但是，如果你希望使用 <b>YYC</b>，则还需要在构建 PC 上设置 <b>Visual Studio</b> 的路径。 有关如何设置 Windows PC 以编译项目的完整详细信息，请参阅以下帮助台文章：</p>
 
 <ul>
 <li><a href=
 "https://help.yoyogames.com/hc/en-us/articles/235186048-Setting-Up-For-Windows"
-target="_blank">Setting Up For Windows</a>
+target="_blank">设置 Windows</a>
 </li>
 
 <li style="list-style: none"><br>
@@ -207,68 +130,37 @@ target="_blank">Setting Up For Windows</a>
 <a name="compiling_remote" id="compiling_remote"></a> <label class=
 "collapse" for="b">编译</label> <input id="b" type="checkbox">
 <div class="index_list">
-<p>Once you have your Remote Worker set up and have completed the
-Local Build Settings (see the section above), you can start to use
-it for compiling your games. For this, it's simply a case of
-selecting the Remote Worker from the Target Manager list, selecting
-the platform to test/compile for, as well as any other options
-(like compile type or configuration), and then pressing <b>Play</b>
-<img style="vertical-align:middle" src="images/icon_play.png"> or
-<b>Create Executable</b> <img style="vertical-align:middle" src=
-"images/icon_compile.png">.</p>
+<p>一旦你设置了远程工作者并完成了本地构建设置（请参阅上面的部分），你就可以开始使用它来编译游戏了。为此，只需从目标平台管理器列表中选择远程工作者，选择要测试 / 编译的平台，以及任何其他选项（如编译类型或配置），然后按 <b>运行</b> <img style="vertical-align:middle" src="images/icon_play.png"> 或 <b>创建可以执行程序</b> <img style="vertical-align:middle" src=
+"images/icon_compile.png">。</p>
 
-<div class="note"><b>NOTE</b>: The available platforms in the
-Target Manager will change depending on the capabilities of the
-Remote Worker computer, and not all targets will be available. Also
-note that there is no "Test" target for Remote Workers.</div>
+<div class="note"><b>注意</b>：目标平台管理器中的可用平台将根据远程工作者计算机的功能而更改，并非所有目标平台都可用。另请注意，远程工作者没有 “测试” 目标。</div>
 
 <p><br>
+如果你只是在运行项目，那么远程工作者计算机将编译并运行它，但如果你要创建可执行文件，则远程工作程序将编译该项目，然后将 <tt>*.zip</tt> 文件返回到本地计算机以进行保存。
+</p>
 
-If you are simply playing the project, then the Remote Worker
-machine will compile and run it, but if you are creating an
-executable, then then Remote Worker will compile the project and
-then return a <tt>*.zip</tt> file to the local machine for
-saving.</p>
-
-<p>It should be noted that neither the Debug button <img style=
-"vertical-align:middle" src="images/icon_debug.png"> nor the Clean
-button <img style="vertical-align:middle" src=
-"images/icon_clean.png"> will be available when using a Remote
-Worker. Also note that you can only perform <i>one</i> remote build
-at a time currently.</p>
+<p>应该注意的是，使用远程工作者时，调试按钮 <img style=
+"vertical-align:middle" src="images/icon_debug.png"> 和 清理 <img style="vertical-align:middle" src=
+"images/icon_clean.png"> 按钮都不可用。另请注意，你目前同时只能执行 <i>一次</i> 远程构建。</p>
 </div>
 <br></blockquote>
 
-<p>Once you have the Remote Worker installed and running on your
-remote machine, it will appear in the task bar as an icon, and you
-can right-click on it to bring up the following options:
-
+<p>在远程计算机上安装并运行远程工作者后，它将作为图标显示在任务栏中，你可以右键单击它以显示以下选项：
 <img class="center" src="images/remoteworker_rmbmenu.png" alt=
 "Remote Worker RMB System Menu"></p>
 
 <ul>
-<li><b>Open</b>: Open the Remote Worker application in your default
-browser.</li>
+<li><b>打开</b>：在默认浏览器中打开远程工作者应用程序。</li>
 
-<li><b>Show Log</b>: Open the log file for the Remote Worker in
-your browser.</li>
+<li><b>显示日志</b>：在浏览器中打开远程工作者的日志文件。</li>
 
-<li><b>Network Settings</b>: Here you can filter which machines you
-want to be able to send builds to the Remote Worker machine. Each
-filter can be a <a href=
+<li><b>网络设置</b>：你可以在此处过滤希望能够将构建发送到远程工作者计算机的计算机。每个过滤器可以是 <a href=
 "https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing#CIDR_notation"
-target="_blank">CIDR style</a> filter or a hostname of a machine to
-allow. You should be aware that if you want multiple machines to
-connect to one remote worker, or if you're mixing connection types
-(ie: wired and wifi), then you may need to edit the IP allowed
-range here.</li>
+target="_blank">CIDR 样式</a> 过滤器或允许的机器主机名。你应该知道，如果你希望多台计算机连接到一个远程工作线程，或者你正在混合连接类型（即：有线和 wifi），那么你可能需要在此处编辑 IP 允许范围。</li>
 
-<li><b>Edit Settings</b>: Open the Remote Worker settings menu
-(explained in the <i>Settings</i> section, above).</li>
+<li><b>编辑设置</b>：打开 “远程工作者” 设置菜单（在上面的 <i>设置</i> 部分中进行了说明）。</li>
 
-<li><b>Exit</b>: Exit the Remote Worker app. This will mean that
-you can no longer connect (nor compile) with the app from a local
-machine until you restart the Remote Worker app.</li>
+<li><b>退出</b>：退出远程工作者应用程序。这意味着在重新启动远程工作者应用程序之前，你无法再从本地计算机连接（或编译）应用程序。</li>
 </ul>
 
 <p><br>
@@ -278,11 +170,10 @@ machine until you restart the Remote Worker app.</li>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Extras
-Index</a></div>
+<div style="float:left">上一页: <a href="index.html">附加功能</a></div>
 
-<div style="float:right">Next: <a href=
-"project_image_generator.html">Project_Image_Generator</a></div>
+<div style="float:right">下一页: <a href=
+"project_image_generator.html">项目图像生成器</a></div>
 </div>
 </div>
 
