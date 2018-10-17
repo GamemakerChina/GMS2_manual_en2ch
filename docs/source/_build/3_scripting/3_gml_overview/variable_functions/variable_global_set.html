@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -39,15 +39,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can set the value of a given global
-variable. You supply the name of the global variable to set the
-value of <i>as a string</i> (see example code below), and then the
-value to set (can be any valid <a href="../9_data_types.html">data
-type</a>). If the global variable does not exist already in the
-game it will be created and then assigned the value.</p>
+<p>使用此函数，你可以设置给定全局变量的值。 你需要提供待设置值的全局变量的 <i>字符串形式的</i> 名称（请参阅下面的示例代码），然后设置要设置的值（可以是任何有效的 <a href="../9_data_types.html">数据类型</a>）。 如果游戏中给定的全局变量不存在，则将创建该变量，然后为其分配值。</p>
 
-<div class="note"><b>注意</b>： 该函数基本上是用于所导入工程的<a href=
-"../../../1_overview/3_additional_information/obsolete_functions.html">兼容性脚本（Compatibility）</a>及拖拽按钮（Drag and Drop）动作转换而成的代码中的。<br>
+<div class="note"><b>注意</b>： 该函数基本上是用于所导入工程的 <a href=
+"../../../1_overview/3_additional_information/obsolete_functions.html">兼容性脚本（Compatibility）</a> 及拖拽按钮（Drag and Drop）动作转换而成的代码中的。<br>
 <br></div>
 </blockquote>
 
@@ -72,12 +67,12 @@ game it will be created and then assigned the value.</p>
 
 <tr>
 <td>name</td>
-<td>The name of the global variable to set (as a string)</td>
+<td>要设置的全局变量的名称（作为字符串）</td>
 </tr>
 
 <tr class="alt">
 <td>val</td>
-<td>The value to set the global variable to</td>
+<td>要将全局变量设置为的值</td>
 </tr>
 </table>
 </blockquote>
@@ -91,14 +86,10 @@ game it will be created and then assigned the value.</p>
 
 <h3>举例：</h3>
 
-<p class="code">if !variable_global_exists("enemy_num")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;variable_global_set("enemy_num", 0);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !variable_global_exists("enemy_num")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;variable_global_set("enemy_num", 0);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check to see if a global variable exists and
-if it does not then it is created and set to 0.</p>
+<p>上面的代码将检查是否存在全局变量，如果不存在，则创建它并将其设置为 0。</p>
 </blockquote>
 
 <p><br>

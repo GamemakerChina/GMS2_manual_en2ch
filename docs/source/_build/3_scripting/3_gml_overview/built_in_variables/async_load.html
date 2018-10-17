@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,15 +49,9 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<p>This variable is <b>global</b> in scope and is used to hold a
-<a href=
-"../../4_gml_reference/data_structures/ds%20maps/index.html">DS
-map</a> when used in the <a href=
-"../../../2_interface/1_editors/events/async_events.html">Asynchronous
-Events</a>, and -1 at all other times. The actual contents of the
-DS map will depend on the type of asynchronous event that it is
-populated in, and the function that was used to trigger the event,
-so refer to the individual pages for those events.<br>
+<p>此变量在 <b>全局</b> 范围内，用于在 <a href=
+"../../../2_interface/1_editors/events/async_events.html">异步事件</a> 中使用时保存 <a href=
+"../../4_gml_reference/data_structures/ds%20maps/index.html">数据结构映射</a>，在其他时间使用时均为 -1。数据结构映射的实际内容将取决于它所填充的异步事件的类型以及用于触发事件的函数，因此请参阅这些事件的各个页面。<br>
 <br></p>
 
 <p><br>
@@ -65,21 +59,9 @@ so refer to the individual pages for those events.<br>
 
 <h3>举例：</h3>
 
-<p class="code">if ds_map_find_value(async_load, "id") == back<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if ds_map_find_value(async_load, "status") &gt;=
-0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background_index[0] = back<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if ds_map_find_value(async_load, "id") == back<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if ds_map_find_value(async_load, "status") &gt;= 0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background_index[0] = back<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code is taken from the Image Loaded Asynchrnous Event
-and will first check the ID of the <tt>async_load</tt> DS map that
-has been populated, then check the status of the callback. If the
-value is greater than or equal to 0 (signalling success) the result
-from the callback will then be used to set the background index to
-the newly loaded image.</p>
+<p>上面的代码取自图像加载异步事件（Image Loaded Asynchrnous Event），它将首先检查已填充的 <tt>async_load</tt> 数据结构映射的 ID，然后检查回调的状态。 如果该值大于或等于 0（信号成功），则回调的结果将用于将背景索引设置为新加载的图像。</p>
 
 <p><br>
 </p>

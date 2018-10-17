@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>lives （不提倡使用）</title>
+<title>lives（弃用）</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
 type="text/css">
@@ -29,7 +29,7 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>lives （不提倡使用）</h2>
+<h2>lives（弃用）</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -49,35 +49,18 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<p>This variable is <b>global</b> in scope and is used to hold a
-numeric value which is usually used for the player lives. Bear in
-mind this is not necessarily always the case - just because it's
-called "lives" doesn't mean it has to be used for the lives... it
-can hold any real or integer value you wish for your game.</p>
+<p>此变量在 <b>全局</b> 范围内，是通常用于保存玩家生命状况的数值。请记住，并不一定总是这样 - 只是因为它被称为 “生命值” 并不意味着它必须用于生命...它可以保存你希望用于游戏的任何实数型或整型值。</p>
 
-<div class="note"><b>IMPORTANT!</b> This variable is only included
-to support legacy projects from previous versions of
-<i>GameMaker</i> and should <b><i>not be used in new
-projects</i></b> as it is deprecated and in future versions or
-updates may be removed entirely.</div>
+<div class="note"><b>重要！</b> 此变量仅用于支持以前版本的 <i>GameMaker</i> 中的旧项目，<b><i>不应在新项目中使用</i></b>，因为它已弃用，并且在将来的版本或更新中可能会完全删除。</div>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">if place_meeting(x, y, obj_Enemy_Bullet)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;health -= 10;<br>
-&nbsp;&nbsp;&nbsp;if health &lt;= 0 lives -=1;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if place_meeting(x, y, obj_Enemy_Bullet)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;health -= 10;<br>&nbsp;&nbsp;&nbsp;if health &lt;= 0 lives -=1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks the current instance to see if there is a
-collision with the instance of the object indexed in
-"obj_Enemy_Bullet", and if there is, it removes 10 points from the
-global health variable and then checks this value to see if it is
-less than or equal to 0. If it is then the instance removes 1 from
-the global lives variable.</p>
+<p>上面的代码检查当前实例以查看是否与 “obj_Enemy_Bullet” 索引的物体实例发生冲突，如果存在，则从全局健康变量中删除 10 点，然后检查该值以查看它是否小于或等于 0。如果是，则实例从全局生命变量中减 1。</p>
 
 <p><br>
 </p>

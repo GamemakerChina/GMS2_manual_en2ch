@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -39,28 +39,16 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can get the value from a given named
-variable. You supply the unique instance ID value (which can be
-found from the <a href=
-"../../../2_interface/1_editors/rooms.html#room_instance_layer">Instance
-Properties</a> in the room editor, or is returned when you call the
-function <a href=
-"../../4_gml_reference/instances/instance_functions/instance_create_layer.html">
-<tt>instance_create_layer</tt></a>) as well as the name of the
-variable to get the value of <i>as a string</i> (see example code
-below). The function will return the value held by the
-variable.</p>
+<p>使用此函数，你可以从给定名称的变量中获取值。 你提供实例的唯一 ID 值（可以从房间编辑器中的 <a href=
+"../../../2_interface/1_editors/rooms.html#room_instance_layer">实例属性</a> 中找到，或者在调用函数 <a href=
+"../../4_gml_reference/instances/instance_functions/instance_create_layer.html"><tt>instance_create_layer</tt></a> 时返回）以及要获取的 <i>字符串形式的</i> 变量名（请参阅如下示例代码）。该函数将返回变量保存的值。</p>
 
-<div class="note"><b>注意</b>： 该函数基本上是用于所导入工程的<a href=
-"../../../1_overview/3_additional_information/obsolete_functions.html">兼容性脚本（Compatibility）</a>及拖拽按钮（Drag and Drop）动作转换而成的代码中的。<br>
+<div class="note"><b>注意</b>： 该函数基本上是用于所导入工程的 <a href=
+"../../../1_overview/3_additional_information/obsolete_functions.html">兼容性脚本（Compatibility）</a> 及拖拽按钮（Drag and Drop）动作转换而成的代码中的。<br>
 <br></div>
 
-<div class="note"><b>IMPORTANT!</b> If the variable you are getting
-does not exist then the function will return the keyword
-<tt>undefined</tt> and you may get errors that will stop the game
-from functioning, so if in doubt use the function <a href=
-"variable_instance_exists.html"><tt>variable_instance_exists</tt></a>
-first.</div>
+<div class="note"><b>重要！</b> 如果你获取的变量不存在，那么该函数将返回关键字 <tt>undefined</tt>，你可能会收到错误以阻止游戏运行，因此如果有疑问，请首先使用函数 <a href=
+"variable_instance_exists.html"><tt>variable_instance_exists</tt></a>。</div>
 </blockquote>
 
 <p><br>
@@ -84,40 +72,29 @@ first.</div>
 
 <tr>
 <td>instance_id</td>
-<td>The unique ID value of the instance to use</td>
+<td>要使用的实例的唯一 ID 值</td>
 </tr>
 
 <tr class="alt">
 <td>name</td>
-<td>The name of the variable to get (as a string)</td>
+<td>要获取的变量的（字符串）名称</td>
 </tr>
 </table>
 </blockquote>
 
 <h3>返回：</h3>
 
-<p class="code">值（任意数据类型）或<tt>undefined</tt>（如果该名称的变量不存在）</p>
+<p class="code">值（任意数据类型）或 <tt>undefined</tt>（如果该名称的变量不存在）</p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">if variable_instance_exists(id, "shields")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var ss = variable_instance_get(id,
-"shields");<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;var ss = -1;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if variable_instance_exists(id, "shields")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var ss = variable_instance_get(id, "shields");<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;var ss = -1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check to see if a variable exists and if it
-does then the value it holds is retrieved and stored in a local
-variable. If it does not exist, the local variable is set to
--1.</p>
+<p>上面的代码将检查变量是否存在，如果存在，则检索它保存的值并存储在局部变量中。 如果它不存在，则将局部变量设置为 -1。</p>
 </blockquote>
 
 <p><br>
@@ -129,7 +106,7 @@ variable. If it does not exist, the local variable is set to
 <div class="clear">
 <div style="float:left">上一页：<a href="../6_scope.html">变量及变量作用域</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "variable_instance_set.html">variable_instance_set</a></div>
 </div>
 </div>
