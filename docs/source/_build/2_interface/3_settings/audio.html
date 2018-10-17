@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,69 +37,22 @@ if (window.name != "content")
 "Audio Group Editor">
 </p>
 
-<p>The <b>Audio Group Manager</b> is available from the <a href=
-"../../1_overview/2_quick_start/menus/tools_menu.html">Tools</a>
-Menu in the IDE. Here you can add, delete and rename <b>Audio
-Groups</b>, as well as set their platform export options.
-<i>GameMaker Studio 2</i> permits you to assign each of the audio
-resources (sound effects and music) to different audio groups to
-try and optimise the number of sounds that are being played at any
-one time, as well as give you further control over what platforms
-they are exported to. To define an audio group you need to click
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-on the <i>Add New</i> button which will create new group that you
-can then name. To change group, click <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on the
-drop-down menu and select the one you wish to edit.</p>
+<p><b>音频组管理器</b> 可从 IDE 的 <a href=
+"../../1_overview/2_quick_start/menus/tools_menu.html">工具</a> 菜单中获得。你可以在此处添加、删除和重命名 <b>音频组</b>，以及设置其平台导出选项。<i>GameMaker Studio 2</i> 允许你将每个音频资源（声音效果和音乐）分配给不同的音频组，以尝试和优化任何时候播放的声音数量，并让你进一步控制它们输出到的平台。要定义音频组，你需要单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> <i>新增</i> 按钮，这将创建你可以命名的新音频组。要更改组，请单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 下拉菜单，然后选择要编辑的音频组。</p>
 
-<div class="note"><b>IMPORTANT!</b> Audio Groups are <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b> 音频组 <b>不</b> 适用于产品的试用许可证。</div>
 
 <p><br>
+要向音频组添加声音，你需要打开该声音的 <a href=
+"../1_editors/sounds.html">声音编辑器</a>，然后从底部选项中选择该组。将声音添加到自定义音频组后，你可以使用此窗口有选择地选择将声音导出到哪个平台。默认情况下，你可能拥有最高质量的所有声音，但对于 HTML5（例如），你希望使用较低质量的声音文件集来使用较少的内存。在这种情况下，你将较低质量的文件添加到 <i>GameMaker Studio 2</i>，然后将它们分配给新的音频组。然后，你可以从下拉菜单中选择该音频组，并将其设置为仅导出为 HTML5，并从更高质量的音频组导出选项中删除 HTML5 导出。请务必注意，你无法更改“默认”音频组的导出选项，并且在构建最终游戏包时始终会将其导出到所有可用平台。</p>
 
-To add a sound to an audio group, you need to open the <a href=
-"../1_editors/sounds.html">Sound Editor</a> for that sound and then
-select the group from the option you will find there. Once you have
-a sound added to a custom audio group then you can use this window
-to selectively choose which platform to export that sound to. It
-may be that by default you have all your sounds at the highest
-quality, but that for HTML5 (for example) you want to use a lower
-quality sound file set to use less memory. In that case you add the
-lower quality files to <i>GameMaker Studio 2</i> and then assign
-them to a new audio group. You would then select that audio group
-from the drop down menu and set it to export only to HTML5, and
-remove the HTML5 export from the higher quality audio group export
-options. It is important to note that you cannot change the export
-options for the "default" audio group and that it will always be
-exported to all available platforms when you build a final game
-package.</p>
+<p>一旦定义了音频组并为其分配了声音，你就可以在选择音频组时在左侧列表中看到它们。将始终存在 “默认” 音频组，并且该组中的所有声音将 <i>始终包含在所有平台的游戏包中</i>，并且它们将在启动时全部加载到内存中（除非在声音编辑器属性中标记为 “流式”），但是当你创建自定义音频组时，添加到它的文件将 <i>不会加载到内存中，直到你调用函数 <a href=
+"../../3_scripting/4_gml_reference/audio/audio_group_load.html"><tt>audio_group_load()</tt></a></i>。通过这种方式，你可以随时控制内存中的音频。另请注意，对于所有 <a href=
+"../../3_scripting/4_gml_reference/audio/audio%20groups.html">音频组函数</a>，你需要提供音频组 ID 值。这只是你为音频组提供的名称。</p>
 
-<p>Once you have defined audio groups and assigned sounds to them
-you can see them in the list on the left when you select the group.
-There will always be a "default" audio group available and all the
-sounds that are within this group will <i>always be included in the
-game package for all platforms</i> and they will all be loaded into
-memory on start-up (unless flagged as "streamed" in the Sound
-Editor properties), but when you create a custom audio group, the
-files that are added to it will <i>not be loaded into memory until
-you call the function <a href=
-"../../3_scripting/4_gml_reference/audio/audio_group_load.html"><tt>
-audio_group_load()</tt></a></i>. In this way you can control what
-audio is resident in memory at any time. Note too that for all the
-<a href=
-"../../3_scripting/4_gml_reference/audio/audio%20groups.html">audio
-group functions</a>, you will need to supply the audio group ID
-value. This is simply the name that you have given the audio
-group.</p>
-
-<p>Audio Groups are also linked to the <a href=
-"configurations.html">Configurations</a> settings. When you select
-a configuration, you can then open the Audio Groups window and
-select the export targets from the right hand side for that
-configuration, and then changing configurations will change these
-output targets. Note that you <i>cannot</i> set sound resources to
-different groups on a per-configuration basis, only the export
-target for the given group.</p>
+<p>音频组也链接到 <a href=
+"configurations.html">配置</a> 设置。选择配置后，可以打开 “音频组” 窗口并从右侧为该配置选择导出目标，然后更改配置将更改这些输出目标。请注意，你 <i>不能</i> 在每个配置的基础上将声音资源设置为不同的组，只能将给定组的导出目标设置为不同的组。</p>
 
 <p><br>
 </p>
@@ -108,10 +61,9 @@ target for the given group.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Settings
-Index</a></div>
+<div style="float:left">上一页: <a href="index.html">设置</a></div>
 
-<div style="float:right">上一页：<a href=
+<div style="float:right">下一页：<a href=
 "configurations.html">配置</a></div>
 </div>
 </div>

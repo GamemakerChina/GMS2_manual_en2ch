@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,63 +34,25 @@ if (window.name != "content")
 
 <div class="body-scroll">
 <p><img class="center" src="images/configs.png" alt=
-"Configurations In The Resource Tree">  Due to the demands of cross
-platform development and the need for one product to be available
-and customised for different clients and/or devices, <i>GameMaker
-Studio 2</i> includes configurations to make things simpler. Using
-this system, you can quickly switch between different splash
-screens, icons and included files and test or export only those
-that are relevant to the target platform or client at any time, all
-from the same base code.</p>
+"Configurations In The Resource Tree"> 由于跨平台开发的需求以及为不同客户端和设备提供和定制一种产品的需求，<i>GameMaker Studio 2</i> 包含使配置更简单的 “配置（Configurations）”。使用此系统，你可以在不同的启动屏幕、图标和内含文件之间快速切换，并且可以随时测试或导出与目标平台或客户端相关的文件，所有这些都来自相同的基本代码。</p>
 
-<div class="note"><b>IMPORTANT!</b> Configurations are <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b> 产品的试用许可证 <b>不</b> 提供配置。</div>
 
 <p><br>
+要设置配置，建议你首先通过将项目的 <i>所有</i> 可配置资产合并到 <i>GameMaker Studio 2</i> 中来准备 “默认” 配置，包括图标和启动画面（通过 <a href=
+"game_options/index.html">游戏选项</a> 完成）、<a href=
+"../../2_interface/1_editors/included_files.html">内含文件</a> 和你可能需要 <a href=
+"../../2_interface/1_editors/extensions.html">扩展</a>，还可以更改声音资源或纹理组设置的输出属性以及许多其他选项... 几乎可以在 IDE 中配置的任何内容都将存储在当前选定的配置中。</p>
 
-To set up your configurations it is recommended that you first
-prepare a "default" config by incorporating <i>all</i> the
-configurable assets for the project into <i>GameMaker Studio 2</i>,
-including icons and splash screens (done through the <a href=
-"game_options/index.html">Game Options</a>), <a href=
-"../../2_interface/1_editors/included_files.html">Included
-Files</a> and any <a href=
-"../../2_interface/1_editors/extensions.html">Extensions</a> that
-you may need, and you can also go and change the output properties
-for sound resources or the texture group settings and many other
-options... Just about anything that can be configured in the IDE
-will be stored in the currently selected configuration.</p>
-
-<div class="note"><b>注意</b>： With the included files and extensions you can select a target platform for them to export to. That should also be set so that when you create individual configurations it is simply a question of un-ticking those that you don't need.</div>
+<div class="note"><b>注意</b>： 使用内含文件和扩展，你可以选择要导出到的目标平台。这也应该设置，以便当你创建单独的配置时，只需要取消那些你不需要的配置。</div>
 
 <p><br>
+设置默认配置后，可以通过右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 配置文件夹并选择 <b>添加</b>，将新的配置添加到资源树。完成后，你可以从资源树顶部选择新配置，一旦选定，你可以继续进行自定义，以便随配置一起更改。为此，你现在应该查看每个目标平台的游戏选项，添加、删除或更改图标，启动画面以及与配置相关的任何其他信息，以及为每个配置设置纹理组。如果你为每个配置设置了纹理组，则还需要遍历所有图形资源（精灵和背景）并重新分配它们。你对这些设置所做的每项更改都将由配置管理器记住，并在你更改配置时调用。</p>
 
-Once you have set up the default configuration, you can then add a
-new one to the resource tree by right clicking <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> on the
-configurations folder and selecting <b>Add</b>. Once that has been
-done, you can select the new configuration from the top of the
-resource tree and once selected, you can go ahead and customise
-them so that they change along with the configurations. For that
-you should now review the Game Options for each target platform and
-add, remove or change icons, splash screens and any other
-information that is relevant to the configuration, as well as set
-up the Texture Groups for each configuration. If you have set
-texture groups for each configuration you will also need to go
-through all the graphics assets (sprites and backgrounds) and
-re-assign them. Every change you make to these settings will be
-remembered by the configuration manager and recalled whenever you
-change configurations.</p>
-
-<p>It is worth noting that you can have <i>GameMaker Studio 2</i>
-automatically apply any given config to any given target platform.
-This is done by selecting the config you require for that platform
-from within the <b>Targets Window</b>. Once you have set a
-configuration to be used in this way, every time you compile to
-that target, either for testing or to create a final asset package,
-the configuration will be used. For more information on the Targets
-Window, please see the section on <a href=
-"../../1_overview/2_quick_start/6_compiling.html">Compiling</a>.</p>
+<p>值得注意的是，你可以让 <i>GameMaker Studio 2</i> 自动将任何给定的配置应用于任何给定的目标平台。这可以通过从 <b>目标窗口</b> 中选择该平台所需的配置来完成。一旦以这种方式设置了使用的配置，每次编译到该目标时，无论是测试还是创建最终资产包，都将使用配置。有关目标窗口的更多信息，请参阅 <a href=
+"../../1_overview/2_quick_start/6_compiling.html">编译</a> 一节。
+</p>
 
 <p><br>
 </p>
@@ -99,11 +61,9 @@ Window, please see the section on <a href=
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Settings
-Index</a></div>
+<div style="float:left">上一页: <a href="index.html">设置</a></div>
 
-<div style="float:right">Next: <a href="preferences.html">Platform
-Specific Preferences</a></div>
+<div style="float:right">下一页: <a href="preferences.html">平台特定偏好设置</a></div>
 </div>
 </div>
 

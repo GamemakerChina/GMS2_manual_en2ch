@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,167 +36,102 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>The Game Options are split into two sections, <b>Main
-Options</b> and the <b>Platform Settings</b>. Details of the Main
-Options are given in the sections below:</p>
+<p>游戏选项分为两个部分，<b>主要选项</b> 和 <b>平台设置</b>。 主要选项的详细信息在以下部分中给出：</p>
 
-<blockquote><label class="collapse" for="a">全局</label>
+<blockquote><label class="collapse" for="a">常规</label>
 <input id="a" type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/general_options.png" alt=
 "General Game Options">
 </p>
 
-<p>The <b>General Options</b> window is where you can set certain
-things that will affect the game regardless of the platform that it
-is being designed to run on. The window has the following
-sections:</p>
+<p>你可以在 <b>常规选项</b> 窗口中设置将影响游戏的某些内容，而不管其运行的平台是什么。 该窗口包含以下部分：</p>
 
 <ul>
-<li><b>Use DnD™ As default Script Type</b>: When this option is
-ticked, all new scripts and object events will be open using the
-DnD™ editor rather than the code editor.</li>
+<li><b>默认使用 DnD™ 脚本</b>： 勾选此选项后，将使用 DnD™ 编辑器而不是代码编辑器打开所有新脚本和物体事件。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Game Frames Per Second</b>: This value sets the limit on the
-number of frames per-second that <i>GameMaker Studio 2</i> should
-try to maintain your games when running. This value represents the
-number of times that the game loop will run in one second (a single
-game loop is considered a single "frame") and is set to a default
-value of 30, although 60 is often used too. There are many
-arguments about which room speed is the ideal, but the actual
-answer depends on what type of game you are making, the size of the
-room, the number of instances and how intensive the code is. For
-example, if you have a large room and a room speed of 30, the game
-may appear "choppy" as the larger the area you are looking at, the
-easier it is for the eye to perceive low room speeds, but if the
-game is intensive then setting the room speed to 100 may cause the
-game to "lag" as the fps drops due to the amount of processing
-being done. So take care with this value and try to always adjust
-it to what your game needs.</li>
+<li><b>每秒游戏帧数(FPS)</b>： 此值设置 <i>GameMaker Studio 2</i> 在运行时应尝试保持游戏的每秒帧数限制。此值表示游戏循环将在一秒钟内运行的次数（单个游戏循环被视为单个 “帧”）并设置为默认值 30，尽管通常也使用 60。关于哪个房间速度是理想的，有很多争论，但实际的答案取决于你正在制作什么类型的游戏、房间的大小、实例的数量以及代码的密集程度。例如，如果你有一个大房间和 30 的房间速度，游戏可能会显得 “波涛汹涌”，因为你正在看的区域越大，眼睛就越容易感知低房间速度，但是如果游戏密集然后将房间速度设置为 100 可能导致游戏 “滞后”，因为 fps 由于处理量的增加而下降。所以要注意这个值，并尝试始终根据游戏需要调整它。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Default Draw Colour</b>: The default colour for drawing text
-or forums (and other things) when no colour has been set using
-code.</li>
+<li><b>默认绘制颜色</b>： 使用代码未设置颜色时绘制文本或窗口(?)（以及其他内容）的默认颜色。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Generate Project Images</b>: Clicking this will open the
-<a href="../../2_extras/project_image_generator.html">Project Image
-Generator</a> tool.</li>
+<li><b>生成项目图片</b>: 单击此按钮将打开 <a href="../../2_extras/project_image_generator.html">项目图像生成器</a> 工具。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Project Start Date</b>: The date that the project was
-initiated.</li>
+<li><b>项目起始日期</b>： 项目启动的日期。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Project Use Time</b>: The length of time that has passed
-since you initiated the project.</li>
+<li><b>项目用时</b>： 自你启动项目以来经过的时间长度。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Project GUID</b>: This is the unique identifier that is
-created for each project within <i>GameMaker Studio 2</i>. If you
-wish to change this you can click the <i>Create New GUID</i> button
-to generate a new one.</li>
+<li><b>项目 GUID</b>： 这是为 <i>GameMaker Studio 2</i> 中的每个项目创建的唯一标识符。如果要更改此项，可以单击 <i>创建新的GUID</i> 按钮以生成新项。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Generate mipmaps for separate texture pages</b>: This option will have <i>GameMaker Studio 2</i> create mipmaps for those sprites that have flagged the <b>Seperate Texture Page</b> option in the <a href="../../1_editors/sprites.html">Texture settings</a> of the Sprite Editor. Enabling mipmapping means that the original texture page for the sprite is to be scaled and filtered into multiple resolutions within the texture file. This is normally off, but if you are using views to zoom in or out on large areas of the game room, or you are working with a 3D game, then you may want to enable this and then use the <a href=
-"../../../3_scripting/4_gml_reference/drawing/mipmapping/index.html"> Mipmapping Functions</a> to adjust how the game deals with the different mipmap levels. Note that if you are not flagging sprites as using individual texture pages, you can still enable mipmapping on a per-texture group basis from the <a href=
-"../textures.html">Texture Group Manager</a>. 该选项默认为关。</li>
+<li><b>为单独的纹理页生成多级渐进纹理（mipmap）</b>： 此选项将让 <i>GameMaker Studio 2</i> 为在精灵编辑器的 <a href="../../1_editors/sprites.html">纹理设置</a> 中标记了 <b>单独的纹理页</b> 选项的精灵创建多级纹理渐进。启用多级纹理渐进意味着精灵的原始纹理页将被缩放并在纹理文件中过滤为多个分辨率。理页，则仍可以从纹理组管理器基于每个这通常是关闭的，但是如果你使用视图放大或缩小游戏房间的大部分区域，或者你正在制作 3D 游戏，那么你可能想要启用此功能，然后使用 <a href=
+"../../../3_scripting/4_gml_reference/drawing/mipmapping/index.html">多级纹理渐进函数</a> 来调整游戏处理不同的多级纹理渐进级别。请注意，如果你没有将精灵标记为使用单独的纹理页，则仍可以从 <a href=
+"../textures.html">纹理组管理器</a> 基于每个纹理组启用多级纹理渐进。该选项默认为关。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Steam ID</b>: If you are creating a game that is to be
-distributed through <a target="_blank">Steam</a>, then you need to
-supply the <b>Steam App ID</b> here. Make sure you have added the
-path to the Steamworks SDK in the <a href=
-"../preferences.html">Platform Preferences</a> when using this
-option, and ensure that you have everything set up correctly on the
-<a href="https://partner.steamgames.com/" target=
-"_blank">Steamworks dashboard</a>.</li>
+<li><b>Steam ID</b>： 如果你要创建要通过 <a target="_blank">Steam</a> 分发的游戏，则需要在此处提供 <b>Steam App ID</b>。使用此选项时，请确保已在 <a href=
+"../preferences.html">平台首选项</a> 中添加了 Steamworks SDK 的路径，并确保在 <a href="https://partner.steamgames.com/" target=
+"_blank">Steamworks 仪表板</a> 上正确设置了所有内容。
+</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Allow anonymous Game Statistics</b>: Enable or disable the
-sending of <i>GameMaker Studio 2</i> games analytics data to YoYo
-Games, both from the IDE and the from the games you create. When
-enabled this will send anonymous data about the PC running the
-program/game (things like monitor size, CPU, GPU, memory, etc…) and
-final executables will also send data on what the game is called.
-This data is being accumulated so that YoYo Games can better target
-their services towards the needs of the user, and in the future
-YoYo Games hope to make this data available to developers (much
-like Steam does with their <a href=
-"http://store.steampowered.com/hwsurvey" target="_blank">Steam
-Software Survey</a>). For full details see part 6 of the section
-<b>Information Which We Collect</b> of the <a href=
-"https://www.yoyogames.com/legal/privacy" target="_blank">YoYo
-Games Privacy Policy</a>. <b>This option is available to those
-users with a</b> Paid Licence (Desktop, Mobile, HTML5, UWP or
-Console) only, and users with the Trial Licence will always send
-anonymous statistical data.</li>
+<li><b>允许匿名游戏统计</b>： 启用或禁用从 IDE 和你创建的游戏向 YoYo Games 发送 <i>GameMaker Studio 2</i> 游戏分析数据。启用后，这将发送有关运行程序 / 游戏的 PC 的匿名数据（监视器大小、CPU、GPU、内存等等），最终的可执行文件也将发送有关游戏内容的数据。这些数据正在积累，以便 YoYo Games 可以更好地针对用户的需求定位他们的服务，并且在未来 YoYo Games 希望将这些数据提供给开发人员（就像 Steam 对他们的 <a href=
+"http://store.steampowered.com/hwsurvey" target="_blank">Steam 软件调查</a> 一样）。有关详细信息，请参阅 <a href=
+"https://www.yoyogames.com/legal/privacy" target="_blank">YoYo 游戏隐私政策</a> 章节的第 6 部分 <b>我们收集的信息</b>。<b>此选项仅适用于具有</b> 付费许可（桌面，移动，HTML5，UWP或控制台）的用户，具有试用许可的用户将始终发送匿名统计数据。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Enable Source Control</b>: If you wish the project to be
-under SCM (Source Control Management) then you need to check this.
-It is off by default (see <a href=
-"../../2_extras/source_control.html">here</a> for more information
-on source control).</li>
+<li><b>启用源代码管理</b>：如果你希望项目位于 SCM（源代码管理）下，则需要进行勾选。它默认是关闭的（有关源代码管理的更多信息，请参见 <a href=
+"../../2_extras/source_control.html">此处</a>）。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Author</b>: The name of the game author (or publisher or
-studio).</li>
+<li><b>作者</b>： 游戏作者（或出版商 / 工作室）的名称。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Project Last Changed</b>: This section simply shows the
-date/time stamp for the last time that the project was changed
-(this is <i>not</i> editable).</li>
+<li><b>项目最后更改</b>： 此部分仅显示上次更改项目的日期 / 时间戳（这是 <i>不可</i> 编辑的）。</li>
 </ul>
 </div>
 <br>
-<label class="collapse" for="b">Add-Ons</label> <input id="b" type=
+<label class="collapse" for="b">附加组件</label> <input id="b" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/general_addons.png" alt=
 "Add-on Game Options">
 </p>
 
-<p><i>GameMaker Studio 2</i> requires certain add-ons to be
-installed as extensions for your project if you wish to use
-extended features like leaderboards or in-app-purchases on specific
-platforms. Clicking the "<i>Download</i>" button will download the
-extension and install it in the current project for you, ready to
-use.</p>
+<p>如果你希望在特定平台上使用排行榜或应用内购买等扩展功能，<i>GameMaker Studio 2</i> 需要安装某些附加组件作为项目的扩展。 单击 <i>下载</i> 按钮将下载扩展并将其安装在当前项目中，随时可以使用。</p>
 </div></blockquote>
 
-<p>The resource tree will also have other Game Options available to
-you depending on the target platforms that are available for the
-<a href=
-"../../../1_overview/1_getting_started/6_licensing.html">licence</a>
-that you have and not all of them may be available or visible. The
-following platform options exist:</p>
+<p>资源树还将提供其他游戏选项，具体取决于你拥有的 <a href=
+"../../../1_overview/1_getting_started/6_licensing.html">许可</a> 可用的目标平台，而不是所有这些平台都可用或可见。 存在以下平台选项：</p>
 
 <blockquote>
 <div class="index_list">
@@ -240,11 +175,10 @@ OS</span></a>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"../index.html">Settings</a></div>
+<div style="float:left">上一页: <a href=
+"../index.html">设置</a></div>
 
-<div style="float:right">Next: <a href="../textures.html">Texture
-Groups</a></div>
+<div style="float:right">下一页: <a href="../textures.html">纹理组</a></div>
 </div>
 </div>
 
