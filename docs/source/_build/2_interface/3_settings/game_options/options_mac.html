@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Mac OS Options</title>
+<title>Mac OS 选项</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -30,15 +30,13 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Mac OS Options</h2>
+<h2>Mac OS 选项</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>This section outlines the different options available to you
-that control how your Mac OS game projects will be compiled. The
-different sections are:</p>
+<p>本节概述了可用于控制 Mac OS 游戏项目编译方式的不同选项。不同的部分如下：</p>
 
 <blockquote><label class="collapse" for="a">全局</label>
 <input id="a" type="checkbox">
@@ -47,141 +45,81 @@ different sections are:</p>
 "Mac General Options">
 </p>
 
-<p>In the <b>Product Information</b> section, the first thing to do
-is fill in the <i>Display Name</i> of your game then fill in its
-<i>Version Number</i>, <i>App ID</i>, <i>App Output</i> file and
-the <i>Copyright</i> details. The App Output is the location to
-which your game installation files go to on your Mac development
-machine. When you create your <tt>.app.zip</tt>, that file can go
-anywhere (the location you specify when doing the save dialogue is
-not the only copy made of that <tt>.app.zip</tt>), but the
-<tt>.pkg</tt> and other files are left in this folder, permitting
-you to test local installations via Terminal in such a way as to
-simulate Mac Store purchasing, etc...</p>
+<p>在 <b>产品信息</b> 部分中，首先要填写游戏的 <i>显示名称</i>，然后填写其 <i>版本号</i>、<i>应用程序 ID</i>、<i>应用输出</i> 文件和 <i>版权</i> 详细信息。 应用输出是你的 Mac 开发计算机上的游戏安装文件所在的位置。当你创建 <tt>.app.zip</tt> 时，该文件可以放在任何位置（执行保存对话时指定的位置不是该 <tt>.app.zip</tt> 的唯一副本），但 <tt>.pkg</tt> 和其他文件保留在此文件夹中，允许你通过终端测试本地安装，以模拟 Mac 应用商店购买等...</p>
 
-<p>Here you also need to give the <b>Team Identifier</b> that you
-wish to use for signing the final application that <i>GameMaker
-Studio 2</i> creates for you. Setting it here will overide the Team
-ID that you have supplied in the <a href=
-"../preferences.html">macOS Preferences</a>. After the Team
-Identifier you also have the option to supply the <b>Signing
-Identifier</b>, which is required by Apple for all non-appstore
-applications (like Steam games, for example).</p>
+<p>在这里，你还需要提供你希望用于签署 <i>GameMaker Studio 2</i> 为你创建的最终应用程序的 <b>团队标识符</b>。在此处设置将覆盖你在 <a href=
+"../preferences.html">macOS 首选项</a> 中提供的团队 ID。在团队标识符之后，你还可以选择提供 <b>签名标识符</b>，这是 Apple 要求的所有非 appstore 应用程序都应该有这一项（例如 Steam 游戏）。</p>
 
-<p>The final option is for enabling Steam in your game. If you
-enable this option, make sure you have the Steamworks SDK installed
-(see <a href="../preferences.html">here</a>), and that you have
-added the Steam app ID into the <a href="index.html">General
-Options</a> for the game.</p>
+<p>最后一个选项是在游戏中启用 Steam。如果启用此选项，请确保已安装 Steamworks SDK（请参阅 <a href="../preferences.html">此处</a>），并且已将 Steam 应用程序 ID 添加到游戏的 <a href="index.html">全局选项</a> 中。</p>
 </div>
 <br>
-<label class="collapse" for="b">Graphics</label> <input id="b"
+<label class="collapse" for="b">图形</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/mac_graphics_options.png" alt=
 "Mac Graphics Options">
 </p>
 
-<p>The graphics options are those that you should configure to
-determine how your game will use the graphics card of your target
-Mac. The following options are included for you to modify:</p>
+<p>图形选项是你应该配置的选项，以确定你的游戏将如何使用目标 Mac 的显卡。包含以下选项供你修改：</p>
 
 <ul>
-<li><b>Allow Menu And Dock In Fullscreen</b>: When checked, this option will show the OS menu and dock if the game is in fullscreen mode. 该选项默认为关<br>
+<li><b>全屏时允许菜单和停靠栏</b>： 选中后，如果游戏处于全屏模式，此选项将显示操作系统菜单和停靠。该选项默认为关<br>
 <br></li>
 
-<li><b>Display Cursor</b>: When this is checked the regular Mac OS cursor will be show, and un-checking it will mean that no cursor is shown unless you have created one in your game code. 该选项默认为关<br>
+<li><b>显示光标</b>： 选中此选项后，将显示全局 Mac OS 光标，取消选中它将意味着除非你在游戏代码中创建了光标，否则不会显示光标。该选项默认为关<br>
 <br></li>
 
-<li><b>Start Fullscreen</b>: If this is checked, the game will start in fullscreen mode otherwise it will start windowed. 该选项默认为关<br>
+<li><b>开始全屏</b>： 如果选中此项，游戏将以全屏模式启动，否则将以窗口模式启动。该选项默认为关<br>
 <br></li>
 
-<li><b>Allow Fullscreen Switching</b>: With this ticked the user can switch from fullscreen to windowed and back again using the standard Mac OS shortcuts. 该选项默认为关<br>
+<li><b>允许全屏切换</b>： 通过此选项，用户可以使用标准 Mac OS 快捷方式从全屏切换到窗口并再次返回。该选项默认为关<br>
 <br></li>
 
-<li><b>Interpolate colours between pixels</b>: Turns on
-interpolation, which basically "smooths" pixels. For crisp pixel
-graphics, it should be off, but if you have nice alpha blends and
-smoothed edged graphics it is better left on.This is off by
-default.<br>
+<li><b>对像素间颜色进行插值</b>： 打开插值，基本上会使像素 “平滑”。对于清晰的像素图形，它应该关闭，但如果你有漂亮的 透明混合和平滑的边缘图形，最好保持开启。默认情况下这是关闭的。<br>
 <br></li>
 
-<li><b>Use synchronization to avoid tearing</b>: This toggles v-sync on or off (v-sync is used to synchronise your game update speed to the refresh rate of the monitor). Note, that if you have a game with a room speed of 120 and the player has a monitor with a refresh rate of 60, turning this option on will lock your game speed to 60 too. 该选项默认为关<br>
+<li><b>启用垂直同步避免画面撕裂</b>： 这会打开或关闭垂直同步（垂直同步用于将游戏更新速度与监视器的刷新率同步）。请注意，如果你的游戏房间速度为 120 且玩家显示器的刷新率为 60，则启用此选项会将你的游戏速度锁定为 60。该选项默认为关<br>
 <br></li>
 
-<li><b>Allow the player to resize the game window</b>: Checking this permits the user to change the size of the game window (the <b>Borderless Window</b> option needs to be <i>off</i> for this to work). 该选项默认为关。<br>
+<li><b>允许玩家调整游戏窗口的大小</b>： 选中此项允许用户更改游戏窗口的大小（需要 <i>关闭</i> <b>无边框窗口</b> 选项才能使其生效）。该选项默认为关。<br>
 <br></li>
 
-<li><b>Scaling</b>: Here you can choose to maintain aspect ratio
-(so a 4:3 room will be "letter boxed" on a 16:9) or to scale fully
-(stretching the image to fit the full screen).
+<li><b>缩放</b>: 在这里，你可以选择保持纵横比（因此 4:3 的房间将被封装成 16:9 的盒子）或完全缩放（拉伸图像以适应整个屏幕）。
 
-
-
-<div class="note"><b>WARNING!</b> Switching off the application
-surface will disable all the scaling options set in the Mac Game
-Options until it has been switched back on again. See <a href=
-"../../../3_scripting/4_gml_reference/drawing/surfaces/the%20application%20surface.html">
-The Application Surface</a> for further details.</div></li>
+<div class="note"><b>警告！ </b> 关闭应用程序表面将禁用 Mac 游戏选项中设置的所有缩放选项，直到它再次重新打开。有关详细信息，请参阅 <a href=
+"../../../3_scripting/4_gml_reference/drawing/surfaces/the%20application%20surface.html">应用程序表面</a>。</div></li>
 </ul>
 
-<p>Finally there is the option to set the size of the Texture Page.
-The default (and most compatible) size is 2048x2048, but you can
-choose from anywhere between 256x256 up to a whopping 8192x8192!
-There is also a button marked View which will generate the texture
-pages for this platform and then open a window so that you can see
-how they look. This can be very useful if you wish to see how the
-texture pages are structured and to prevent having texture pages
-larger (or smaller) than necessary.</p>
+<p>最后，可以选择设置纹理页的大小。 默认（和最兼容）的大小是 2048 x 2048，但你可以选择 256 x 256 到高达 8192 x 8192 之间的任何位置！还有一个标记为预览的按钮，它将生成此平台的纹理页，然后打开一个窗口以便你可以看看他们的样子。如果你希望查看纹理页面的结构并防止纹理页面比必要的更大（或更小），这可能非常有用。</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be on Macs with lower specifications.</div>
+<div class="note"><b>注意</b>： 请注意，纹理页的大小越大，你在具有更低规格的 Mac 上的游戏兼容性就越低。</div>
 </div>
 <br>
-<label class="collapse" for="c">图片</label> <input id="c" type=
+<label class="collapse" for="c">图像</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/mac_images_options.png" alt=
 "Mac Images Options">
 </p>
 
-<p>The images section is where you supply the images that your game
-requires. For Mac, you need to supply an icon file (that must be in
-<tt>.png</tt> format and 1024x1024px) and also a splash screen
-(which can be <tt>.png</tt>, <tt>.bmp</tt>, <tt>.jpg</tt> or
-<tt>.gif</tt> format). The splash screen will be shown while the
-game loads.</p>
+<p>图像部分是你提供游戏所需图像的位置。 对于 Mac，你需要提供一个图标文件（必须是 <tt>.png</tt> 格式，并且为 1024 x 1024 像素）以及一个启动画面（可以是 <tt>.png</tt>、<tt>.bmp</tt>、<tt>.jpg</tt> 或 <tt>.gif</tt> 格式）。 游戏加载时将显示启动画面。</p>
 </div>
 <br>
-<label class="collapse" for="d">Packaging</label> <input id="d"
+<label class="collapse" for="d">打包</label> <input id="d"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/mac_packaging_options.png" alt=
 "Mac Packaging Options">
 </p>
 
-<p>If you wish the finished game to be <i>App Store Ready</i> then
-you need to check the <b>Build for Mac App Store</b> option, but be
-aware that this will only function if you are a registered
-Developer and have the necessary certificates. Under that are the
-app <b>Permissions</b> which you should only check if they are true
-as Apple can reject your app if they are checked when they are not
-needed or vice-versa. These options simply permit your game to use
-the <a href=""><tt>http_</tt></a> and <a href=""><tt>url_</tt></a>
-functions. It is worth noting that if you wish to support GamePads
-in your game then the option to create an App Store ready package
-should be off.</p>
+<p>如果你希望已完成的游戏为 <i>准备好提交到应用商店（App Store Ready）</i>，则需要检查 <b>为苹果应用商店（Mac App Store）构建</b> 选项，但请注意，只有你是注册开发人员且拥有必要的证书才能运行。 在那之下是应用 <b>权限</b>，你应该只检查它们是否属实，因为 Apple 如果在检查它们时发现不需要可以拒绝你的应用，反之亦然。 这些选项只允许你的游戏使用 <a href=""><tt>http_</tt></a> 和 <a href=""><tt>url_</tt></a> 函数。值得注意的是，如果你希望在游戏中支持 GamePads，则应该关闭创建准备好提交到应用商店软件包的选项。</p>
 
-<p>Finally, you need to select its App Category (for more
-information, see <a href=
+<p>最后，你需要选择其应用类别（有关详细信息，请参阅 <a href=
 "https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html"
-target="_blank">here</a>).</p>
+target="_blank">此处</a>）。</p>
 
-<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../2_extras/project_image_generator.html">Project Image
-Generator</a> tool which can be used to automatically create all
-the images required for all the different target platforms your
-game is being compiled to. If you use this tool, you should revise
-the images created to ensure that they are what you require.</p>
+<p>值得注意的是，<i>GameMaker Studio 2</i> 有一个叫做 <a href=
+"../../2_extras/project_image_generator.html">项目图像生成器</a> 的工具，可用于自动创建游戏编译到不同目标平台所需的所有图像。 如果使用此工具，则应修改创建的图像以确保它们符合你的要求。</p>
 </div></blockquote>
 
 <p><br>
@@ -191,11 +129,9 @@ the images created to ensure that they are what you require.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Game
-Options</a></div>
+<div style="float:left">上一页: <a href="index.html">游戏选项</a></div>
 
-<div style="float:right">Next: <a href="options_linux.html">Ubuntu
-- Linux Options</a></div>
+<div style="float:right">下一页: <a href="options_linux.html">Ubuntu (Linux) 选项</a></div>
 </div>
 </div>
 

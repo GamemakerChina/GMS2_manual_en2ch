@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>tvOS Options</title>
+<title>tvOS 选项</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -30,15 +30,13 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>tvOS Options</h2>
+<h2>tvOS 选项</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>This section outlines the different options available to you
-that control how your tvOS game projects will be compiled. The
-different sections are:</p>
+<p>本节概述了可用于控制 tvOS 游戏项目编译方式的不同选项。不同的部分如下：</p>
 
 <blockquote><label class="collapse" for="a">全局</label>
 <input id="a" type="checkbox">
@@ -47,48 +45,28 @@ different sections are:</p>
 "tvOS General Options">
 </p>
 
-<p>Here you need to fill in the <b>Product Information</b> about
-your game, including its <i>Display Name</i>, its <i>Bundle ID</i>
-and the <i>Version info</i>. Note that the <i>Bundle ID</i> must be
-in the correct reverse URL format for the final build of the game
-to work correctly, EG: <tt>com.[Company].[GameName]</tt>. Here you
-also need to give the <b>Team Identifier</b> that you wish to use
-for signing the final application that <i>GameMaker Studio 2</i>
-creates for you. Setting it here will override the Team ID that you
-have supplied in the <a href="../preferences.html">tvOS
-Preferences</a>.</p>
+<p>在这里，你需要填写有关你的游戏的 <b>产品信息</b>，包括其 <i>显示名称</i>、<i>捆绑包 ID</i> 和 <i>版本信息</i>。 请注意，<i>捆绑包 ID</i> 必须采用正确的反向 URL 格式才能使游戏的最终版本正常工作，例如：<tt>com.[公司].[游戏名]</tt>。在这里，你还需要提供你希望用于签署 <i>GameMaker Studio 2</i> 为你创建的最终应用程序的 <b>团队标识符</b>。在此处设置将覆盖你在 <a href="../preferences.html">tvOS 首选项</a> 中提供的团队 ID。</p>
 </div>
 <br>
-<label class="collapse" for="b">图像</label> <input id="b"
+<label class="collapse" for="b">图形</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/tvos_graphics_options.png" alt=
 "tvOS Graphics Options">
 </p>
 
-<p>Here you can change the following details related to how your
-game will be displayed, with the following options available:</p>
+<p>你可以在此处更改以下有关游戏显示方式的详细信息，并提供以下选项：</p>
 
 <ul>
-<li><b>Interpolate colours between pixels</b>: Turns on interpolation, which basically "smooths" pixels. for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edge graphics it is better left on. 默认为关。<br>
+<li><b>对像素间颜色进行插值</b>： 打开插值，基本上会使像素 “平滑”。对于清晰的像素图形，它应该是关闭的，但如果你有漂亮的 alpha 混合和平滑的边缘图形，最好打开。默认为关。<br>
 <br></li>
 
-<li><b>Scaling</b>: Here you can select to scale the draw canvas
-maintaining the aspect ratio within the device screen - adding
-"padding" around the edges to fit the screen - or you can select to
-have the draw canvas stretched stretch to fit.</li>
+<li><b>缩放</b>： 在这里，你可以选择缩放绘制画布，在设备屏幕中保持纵横比 - 在边缘周围添加 “填充（padding）” 以适合屏幕 - 或者你可以选择让绘制画布拉伸拉伸以适合。</li>
 </ul>
 
-<p>Finally there is the option to set the size of the <b>Texture
-Page</b>. The default (and most compatible) size is 2048x2048, but
-you can choose from anywhere between 256x256 up to 8192x8192. There
-is also a button marked <i>Preview</i> which will generate the
-texture pages for this platform and then open a window so that you
-can see how they look. This can be very useful if you wish to see
-how the texture pages are structured and to prevent having texture
-pages larger (or smaller) than necessary.</p>
+<p>最后，可以选择设置 <b>纹理页</b> 的大小。默认（和最兼容）大小为 2048 x 2048，但你可以选择 256 x 256 到 8192 x 8192 之间的任何值。还有一个 <i>预览</i> 的按钮，它将为该平台生成纹理页面，然后打开一个窗口，以便你可以看到它们的外观。如果你希望查看纹理页面的结构并防止纹理页面比必要的更大（或更小），这可能非常有用。</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be.</div>
+<div class="note"><b>注意</b>： 请小心，纹理页面的大小越大，游戏的兼容性就越差。</div>
 </div>
 <br>
 <label class="collapse" for="e">图标</label> <input id="e" type=
@@ -98,41 +76,25 @@ pages larger (or smaller) than necessary.</p>
 "tvOS Images Icons Options">
 </p>
 
-<p>This section permits you to add the various different icons
-required by the various devices and the different parts of the tvOS
-App Store. These icons should be authored as 24bit <tt>.png</tt>
-images at the size specified for each one.</p>
+<p>本部分允许你添加各种设备和 tvOS 应用商店不同部分所需的各种不同图标。这些图标应该以每个指定大小的 24 位 <tt>.png</tt> 图像创作。</p>
 
-<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../../2_interface/2_extras/project_image_generator.html">Project
-Image Generator</a> tool which can be used to automatically create
-all the Icons required for all the different target platforms your
-game is being compiled to. If you use this tool, you should revise
-the images created to ensure that they are what you require.</p>
+<p>值得注意的是，<i>GameMaker Studio 2</i> 有一个 <a href=
+"../../../2_interface/2_extras/project_image_generator.html">项目图像生成器</a> 工具，可用于自动创建游戏编译到不同目标平台所需的所有图标。 如果使用此工具，则应修改创建的图像以确保它们符合你的要求。</p>
 </div>
 <br>
-<label class="collapse" for="c">图片</label> <input id="c" type=
+<label class="collapse" for="c">图像</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/tvos_images_options.png" alt=
 "tvOS Images Splash Screens Options">
 </p>
 
-<p>This section permits you to add separate graphics as splash
-screens (the image that will be shown briefly while your app loads)
-and as top-shelf <b>static</b> banners (dynamic content is not
-natively supported). All images must be authored as individual
-24bit *.png images with no transparencies. For more information on
-the top-shelf, see the <a href=
+<p>本部分允许你将单独的图形添加为启动画面（在应用程序加载时将短暂显示的图像）以及作为顶级 <b>静态</b> 横幅（动态内容不受本机支持）。 所有图像都必须作为单独的 24 位 *.png 图像创作，没有透明像素。有关顶层的更多信息，请参阅 <a href=
 "https://developer.apple.com/tvos/human-interface-guidelines/icons-and-images/top-shelf-images/"
-target="_blank">Apple documentation</a>.</p>
+target="_blank">Apple</a> 文档。</p>
 
-<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../2_extras/project_image_generator.html">Project Image
-Generator</a> tool which can be used to automatically create all
-the images required for all the different target platforms your
-game is being compiled to. If you use this tool, you should revise
-the images created to ensure that they are what you require.</p>
+<p>值得注意的是，<i>GameMaker Studio 2</i> 有一个叫做 <a href=
+"../../2_extras/project_image_generator.html">项目图像生成器</a> 的工具，可用于自动创建游戏编译到不同目标平台所需的所有图像。 如果使用此工具，则应修改创建的图像以确保它们符合你的要求。</p>
 </div></blockquote>
 </div>
 
@@ -142,11 +104,10 @@ the images created to ensure that they are what you require.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Game
-Options</a></div>
+<div style="float:left">上一页: <a href="index.html">游戏选项</a></div>
 
-<div style="float:right">Next: <a href=
-"options_windows.html">Windows Options</a></div>
+<div style="float:right">下一页: <a href=
+"options_windows.html">Windows 选项</a></div>
 </div>
 </div>
 

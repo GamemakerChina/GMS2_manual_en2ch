@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>iOS Options</title>
+<title>iOS 选项</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -30,15 +30,13 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>iOS Options</h2>
+<h2>iOS 选项</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>This section outlines the different options available to you
-that control how your iOS game projects will be compiled. The
-different sections are:</p>
+<p>本节概述了可用于控制 iOS 游戏项目编译方式的不同选项。不同的部分如下：</p>
 
 <blockquote><label class="collapse" for="a">全局</label>
 <input id="a" type="checkbox">
@@ -47,149 +45,97 @@ different sections are:</p>
 "iOS General Options">
 </p>
 
-<p>The first thing to do is fill in the <b>Product Information</b>
-about your game, including its <i>Display Name</i>, its <i>Bundle
-ID</i> and the <i>Version info</i>. Note that the <i>Bundle ID</i>
-must be in the correct reverse URL format for the final build of
-the game to work correctly, EG:
-<tt>com.[Company].[GameName]</tt></p>
+<p>首先要做的是填写有关游戏的 <b>产品信息</b>，包括其 <i>显示名称</i>、<i>捆绑包 ID</i> 和 <i>版本信息</i>。请注意，<i>捆绑包 ID</i> 必须采用正确的反向 URL 格式才能使游戏的最终版本正常工作，例如：<tt>com.[公司].[游戏名]</tt></p>
 
-<p>The second part of the General section covers the <b>Build
-Settings</b>, with the following options available for setting what
-type of device to target:</p>
+<p>“全局” 部分的第二部分介绍了 <b>构建设置</b>，其中提供了以下选项，用于设置要定位的设备类型：</p>
 
 <ul>
-<li><b>iPhone or iPod Touch</b>: iPhone 4 and above or iPod Touch
-devices</li>
+<li><b>iPhone 或 iPod Touch</b>： iPhone 4 及更高版本或 iPod Touch 设备</li>
 
-<li><b>iPad</b>: iPad devices</li>
+<li><b>iPad</b>： iPad 设备</li>
 
-<li><b>Both</b>: Both iPhone/iPod and iPad</li>
+<li><b>两者都选</b>: iPhone / iPod 和 iPad</li>
 </ul>
 
-<p>You can then select the <b>App Output</b> folder for the game, and then the different <i>Orientations</i> that your game can be run on for the best user experience. 可用的选项有：</p>
+<p>然后，你可以为游戏选择 <b>应用输出</b> 文件夹，然后选择可以运行游戏的不同 <i>朝向</i> 以获得最佳用户体验。可用的选项有：</p>
 
 <ul>
 <li>纵向</li>
 
-<li>Flipped Portrait</li>
+<li>翻转纵向</li>
 
 <li>横向</li>
 
-<li>Flipped Landscape</li>
+<li>翻转横向</li>
 </ul>
 </div>
 <br>
-<label class="collapse" for="b">Graphics</label> <input id="b"
+<label class="collapse" for="b">图形</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/ios_graphics_options.png" alt=
 "iOS Graphics Options">
 </p>
 
-<p>Here you can change the following details related to how your
-game will be displayed, with the following options available:</p>
+<p>你可以在此处更改以下有关游戏显示方式的详细信息，并提供以下选项：</p>
 
 <ul>
-<li><b>Interpolate colours between pixels</b>: Turns on interpolation, which basically "smooths" pixels. for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edge graphics it is better left on. 默认为关。<br>
+<li><b>对像素间颜色进行插值</b>： 打开插值，基本上会使像素 “平滑”。对于清晰的像素图形，它应该是关闭的，但如果你有漂亮的 alpha 混合和平滑的边缘图形，最好打开。默认为关。<br>
 <br></li>
 
-<li><b>Half iPad 1 Textures</b>: The iPad 1 has much less texture
-memory than more recent devices so you can enable this option to
-reduce the size of textures by half if you want to target this
-device or get maximum compatibility.<br>
+<li><b>一半 iPad 1纹理</b>：iPad 1 的纹理内存比最近的设备少得多，因此如果你想要定位此设备或获得最大兼容性，你可以启用此选项以将纹理大小减半。<br>
 <br></li>
 
-<li><b>Scaling</b>: Your game can be configured to scale the draw
-canvas automatically to maintain the aspect ratio within the
-browser, or you can select to have it stretch to fit. The stretch
-to fit option will not full screen the game in the browser, but
-rather stretch what is drawn to fit the canvas size, as defined by
-the first room of the game.</li>
+<li><b>缩放</b>： 你的游戏可以配置为自动缩放绘制画布以在浏览器中保持纵横比，或者你可以选择将其拉伸以适应。拉伸到适合选项不会在浏览器中全屏显示游戏，而是按照游戏的第一个房间的定义，拉伸贴图以适应画布大小。</li>
 </ul>
 
-<p>Finally there is the option to set the size of the <b>Texture
-Page</b>. The default (and most compatible) size is 2048x2048, but
-you can choose from anywhere between 256x256 up to 4096x4096. There
-is also a button marked <i>Preview</i> which will generate the
-texture pages for this platform and then open a window so that you
-can see how they look. This can be very useful if you wish to see
-how the texture pages are structured and to prevent having texture
-pages larger (or smaller) than necessary.</p>
+<p>最后，可以选择设置 <b>纹理页</b> 的大小。默认（和最兼容）大小为 2048 x 2048，但你可以选择 256 x 256 到 4096 x 4096之间的任何位置。还有一个 <i>预览</i> 的按钮，它将为该平台生成纹理页面，然后打开一个窗口，以便你可以看到它们的外观。如果你希望查看纹理页面的结构并防止纹理页面比必要的更大（或更小），这可能非常有用。</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be.</div>
+<div class="note"><b>注意</b>： 请小心，纹理页面的大小越大，游戏的兼容性就越差。</div>
 </div>
 <br>
-<label class="collapse" for="e">Icons</label> <input id="e" type=
+<label class="collapse" for="e">图标</label> <input id="e" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/ios_icons_options.png" alt=
 "iOS Images Icons Options">
 </p>
 
-<p>This section permits you to add the various different icons
-required by the various devices and the different parts of the iOS
-App Store. These icons should be authored as 24bit <tt>.png</tt>
-images at the size specified for each one.</p>
+<p>本部分允许你添加各种设备和 iOS App Store 不同部分所需的各种不同图标。
+这些图标应该以每个指定大小的 24 位 <tt>.png</tt> 图像创作。</p>
 
-<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../../2_interface/2_extras/project_image_generator.html">Project
-Image Generator</a> tool which can be used to automatically create
-all the Icons required for all the different target platforms your
-game is being compiled to. If you use this tool, you should revise
-the images created to ensure that they are what you require.</p>
+<p>值得注意的是，<i>GameMaker Studio 2</i> 有一个 <a href=
+"../../../2_interface/2_extras/project_image_generator.html">项目图像生成器</a> 工具，可用于自动创建游戏编译到不同目标平台所需的所有图标。 如果使用此工具，则应修改创建的图像以确保它们符合你的要求。</p>
 </div>
 <br>
-<label class="collapse" for="c">图片</label> <input id="c" type=
+<label class="collapse" for="c">图像</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/ios_images_options.png" alt=
 "iOS Images Splash Screens Options">
 </p>
 
-<p>This section permits you to add separate graphics as splash
-screens (the image that will be shown briefly while your app loads)
-for each of the different iOS target devices. These images must be
-authored as individual 24bit *.png images with no transparencies
-and at the correct size for each of the devices and orientations
-required. You can also set a minimum time for showing the splash
-screens from the drop down menu at the bottom (from 0 to 10
-seconds).</p>
+<p>本部分允许你为每个不同的 iOS 目标设备添加单独的图形作为启动屏幕（将在应用程序加载时短暂显示的图像）。 这些图像必须作为单独的 24 位 *.png 图像创作，没有透明度，并且每个设备和方向的大小都必须正确。 你还可以从底部的下拉菜单中设置显示启动画面的最短时间（从 0 到 10 秒）。</p>
 
-<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../2_extras/project_image_generator.html">Project Image
-Generator</a> tool which can be used to automatically create all
-the images required for all the different target platforms your
-game is being compiled to. If you use this tool, you should revise
-the images created to ensure that they are what you require.</p>
+<p>值得注意的是，<i>GameMaker Studio 2</i> 有一个叫做 <a href=
+"../../2_extras/project_image_generator.html">项目图像生成器</a> 的工具，可用于自动创建游戏编译到不同目标平台所需的所有图像。 如果使用此工具，则应修改创建的图像以确保它们符合你的要求。</p>
 </div>
 <br>
-<label class="collapse" for="d">社交（Social）</label> <input id="d" type=
+<label class="collapse" for="d">社交</label> <input id="d" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/ios_social_options.png" alt=
 "iOS Social Options">
 </p>
 
-<p>This section is for enabling different <b>Social</b> features in
-your Android game. The following options can be chosen:</p>
+<p>此部分用于在 Android 游戏中启用不同的 <b>社交</b> 功能。 可以选择以下选项：</p>
 
 <ul>
-<li><b>Facebook</b>: If you require the Facebook functions, you
-need to select this checkbox and then supply the <b>Facebook App
-ID</b> and <b>Facebook App Name</b>. Note that all Facebook
-functionality is accessed via an extension, and when you first
-check the <b>Use Facebook</b> box you will be prompted to download
-and install the Facebook extension from the Marketplace.<br>
+<li><b>Facebook</b>： 如果你需要 Facebook 功能，则需要选中此复选框，然后提供 <b>Facebook 应用 ID</b> 和 <b>Facebook 应用名称</b>。请注意，所有 Facebook 功能都通过扩展程序访问，当你第一次选中 <b>使用 Facebook</b> 框时，系统将提示你从市场下载并安装 Facebook 扩展程序。<br>
 <br></li>
 
-<li><b>Enable Push Notifications</b>: In order for your game to use
-<a href=
-"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html">
-Push Notifications</a> they must be enabled here first otherwise
-they will not work. Local notifications on Android do not require
-the "GCM Sender ID", but you must add it should you wish to create
-remote notifications.</li>
+<li><b>启用推送通知</b>： 为了让你的游戏使用 <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html">推送通知</a>，必须先在此处启用它们，否则它们将无效。iOS 上的本地通知不需要 “GCM 发送者 ID”，但如果你希望创建远程通知，则必须添加它。(?)</li>
 </ul>
 </div></blockquote>
 
@@ -200,11 +146,10 @@ remote notifications.</li>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Game
-Options</a></div>
+<div style="float:left">上一页: <a href="index.html">游戏选项</a></div>
 
-<div style="float:right">Next: <a href=
-"options_windows.html">Windows Options</a></div>
+<div style="float:right">下一页: <a href=
+"options_windows.html">Windows 选项</a></div>
 </div>
 </div>
 

@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>HTML5 Options</title>
+<title>HTML5 选项</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -30,15 +30,13 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>HTML5 Options</h2>
+<h2>HTML5 选项</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>This section outlines the different options available to you
-that control how your HTML5 game projects will be compiled. The
-different sections are:</p>
+<p>本节概述了可用于控制 HTML5 游戏项目编译方式的不同选项。不同的部分如下：</p>
 
 <blockquote><label class="collapse" for="c">全局</label>
 <input id="c" type="checkbox">
@@ -47,199 +45,115 @@ different sections are:</p>
 "HTML5 General Options">
 </p>
 
-<p>In this section you have some general options at the top:</p>
+<p>在本节中，你在顶部有一些全局选项：</p>
 
 <ul>
-<li><b>Output Debug To Console</b>: This will send all debug output to the JS console of your browser. 该选项默认为关<br>
+<li><b>输出调试到控制台</b>： 这会将所有调试输出发送到浏览器的 JS 控制台。该选项默认为关<br>
 <br></li>
 
-<li><b>Display Cursor</b>: This will disable the mouse cursor when it is over the game canvas. 该选项默认为“开”。<br>
+<li><b>显示光标</b>： 当鼠标光标位于游戏画布上时，将禁用鼠标光标。该选项默认为“开”。<br>
 <br></li>
 
-<li><b>Display "Running Outside Server" Alert</b>: If you are
-testing a game locally (ie: clicking on the index file from your
-computer rather than a server - not recommended), then you normally
-get a warning informing you that things won't work as you may
-expect due to browser security for local files. You can suppress
-this warning by un-checking this option. It is on by default.</li>
+<li><b>显示 "运行外部服务器" 警报</b>： 如果你在本地测试游戏（即：从你的计算机而不是服务器点击索引文件 - 不推荐），那么你通常会收到一条警告，通知你由于本地文件的浏览器安全性期望的事情可能无法正常工作。你可以通过取消选中此选项来取消此警告。此选项默认打开。</li>
 </ul>
 
-<p>Below the general settings, you have the <i>Advanced</i>
-options, which are:</p>
+<p>在全局设置下方，你有 <i>高级</i> 选项，它们是：</p>
 
 <ul>
-<li><b>Included file as index.html</b>: This is for adding a custom
-"index.html" file to use instead of the pre-defined one that
-<i>GameMaker Studio 2</i> generates by default. This can be very
-useful if you have a website design implemented or want to include
-certain features in all your HTML5 builds. The file to use
-<i>must</i> be included as an <a href=
-"../../1_editors/included_files.html">Included File</a> in the game
-project.<br>
+<li><b>内含文件作为 index.html</b>： 这是用于添加自定义 “index.html” 文件而不是默认情况下 <i>GameMaker Studio 2</i> 生成的预定义文件。如果你设计了网站或希望在所有 HTML5 版本中包含某些功能，这将非常有用。要使用的文件 <i>必须</i> 作为 <a href=
+"../../1_editors/included_files.html">内含文件</a> 包含在游戏项目中。<br>
 <br></li>
 
-<li><b>Loading Bar Extension</b>: This will change the default
-loading bar for one that has been added to your <i>GameMaker Studio
-2</i> project as an <a href=
-"../../1_editors/extensions.html">Extension</a> (there is a demo of
-this available from the <a href=
-"../../../1_overview/2_quick_start/2_start.html">Start
-Page</a>).<br>
+<li><b>进度条扩展</b>： 这将把默认进度条更改为添加到 <i>GameMaker Studio 2</i> 项目的进度条 <a href=
+"../../1_editors/extensions.html">扩展</a> （可从 <a href=
+"../../../1_overview/2_quick_start/2_start.html">起始页</a> 获得此演示）。<br>
 <br></li>
 
-<li><b>Prepend output .js</b>: Here you can prepend the
-<tt>*.js</tt> output with any extra JavaScript necessary for your
-game. For example, a Chrome Store app may require that you add
-<tt>window.localStorage = undefined;</tt> to the output JS, for
-which you would use this option.<br>
+<li><b>对输出的.js文件开头插入下列内容</b>： 这里你可以在 <tt>*.js</tt> 输出前加上游戏所需的任何额外 JavaScript。例如，Chrome Store 应用可能要求你添加 <tt>window.localStorage = undefined;</tt> 输出 JS，你将使用此选项。<br>
 <br></li>
 
-<li><b>Title for browser</b>: Here you can give text to be used for
-the title bar of the tab for your game in the browser.<br>
+<li><b>浏览器标题</b>： 你可以在此处为运行游戏的浏览器的标题提供文本。<br>
 <br></li>
 
-<li><b>Version</b>: The version number for you project.<br>
+<li><b>版本</b>： 项目的版本号。<br>
 <br></li>
 
-<li><b>Name of folder</b>: The name for the folder where your HTML5
-game files will be stored (default is "html5game").<br>
+<li><b>文件夹名称</b>： 将存储 HTML5 游戏文件的文件夹的名称（默认为 “html5game”）。<br>
 <br></li>
 
-<li><b>Output Name</b>: This is the output HTML file name and can
-be changed to something other than the default "index.html".</li>
+<li><b>输出名称</b>： 这是输出 HTML 文件名，可以更改为默认的 “index.html” 以外的其他名称。</li>
 </ul>
 </div>
 <br>
-<label class="collapse" for="b">Analytics</label> <input id="b"
+<label class="collapse" for="b">分析</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/html5_analytics_options.png"
 alt="HTML5 Analytics Options">
 </p>
 
-<p>This section permits you to add analytics to your game,
-permitting you to use certain third-party products to track your
-game and its sales or plays. You can specify whether to use
-<a href="http://www.flurry.com/" target="_blank">Flurry
-Analytics</a> or <a href="http://www.google.com/analytics/" target=
-"_blank">Google Analytics</a> to track your game. Due to the nature
-of these functions, you can only have one active at a time, and
-once you have flagged the <i>Enable Flurry Analytics</i> or
-<i>Enable Google Analytics</i> you should also add the unique ID
-that you have been assigned into the appropriate area.</p>
+<p>本部分允许你向游戏添加分析，允许你使用某些第三方产品来跟踪你的游戏及其销售或游戏信息。 你可以指定是使用 <a href="http://www.flurry.com/" target="_blank">Flurry Analytics</a> 还是 <a href="http://www.google.com/analytics/" target=
+"_blank">Google Analytics</a> 来跟踪你的游戏。由于这些功能的性质，你一次只能激活一个，一旦你勾选了 <i>启用 Flurry Analytics</i> 或 <i>启用 Google Analytics</i>，你还应该将已分配的唯一 ID 添加到相应的区域。</p>
 
-<p>For more general information on analytics, please see the
-<a href=
+<p>有关分析的更多全局信息，请参阅 <a href=
 "http://help.yoyogames.com/forums/22239281-Ads-and-Analytics"
-target="_blank">YoYo Knowledge Base</a>, and for information on the
-functions that you can use to send analytics data, please see
-<a href=
-"../../../3_scripting/4_gml_reference/web/index.html">here</a>.</p>
+target="_blank">YoYo 知识库</a>，有关可用于发送分析数据的功能的信息，请参阅 <a href=
+"../../../3_scripting/4_gml_reference/web/index.html">此处</a>。</p>
 </div>
 <br>
-<label class="collapse" for="d">Graphics</label> <input id="d"
+<label class="collapse" for="d">图形</label> <input id="d"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/html5_graphics_options.png" alt=
 "HTML5 Graphics Options">
 </p>
 
-<p>Here you can change the following details related to how your
-game will be displayed (note that not all browsers will display
-your game in the same way, so test these options on as many
-browsers as possible to make sure that they have the desired
-effect):</p>
+<p>在这里，你可以更改以下与游戏显示方式相关的详细信息（请注意，并非所有浏览器都以相同的方式显示你的游戏，因此请在尽可能多的浏览器上测试这些选项，以确保它们具有所需的效果）：</p>
 
 <ul>
-<li><b>Allow switching to fullscreen</b>: Checking this will allow the user to toggle the game from windowed to fullscreen mode using <i>&lt;CTRL&gt; + &lt;CMD&gt; + &lt;F&gt;</i> on Mac and <i>F10</i> on Windows. 该选项默认为“开”。<br>
+<li><b>允许切换到全屏</b>： 选中此项将允许用户使用 Mac 上的 <i>&lt;CTRL&gt; + &lt;CMD&gt; + &lt;F&gt;</i> 和 Windows 上的 <i>F10</i> 将游戏从窗口模式切换到全屏模式。该选项默认为“开”。<br>
 <br></li>
 
-<li><b>Interpolate colours between pixels</b>: Turns on interpolation, which basically "smooths" pixels. for crisp pixel graphics, it should be off, but if you have nice alpha blends and smoothed edge graphics it is better left on. 默认为关。<br>
+<li><b>对像素间颜色进行插值</b>： 打开插值，基本上会使像素 “平滑”。对于清晰的像素图形，它应该是关闭的，但如果你有漂亮的 alpha 混合和平滑的边缘图形，最好打开。默认为关。<br>
 <br></li>
 
-<li><b>Center the game in the browser</b>: Checking this will
-automatically center the game screen within the browser running the
-game.<br>
+<li><b>将游戏置于浏览器中心</b>： 选中此项将自动将游戏屏幕置于运行游戏的浏览器中心。<br>
 <br></li>
 
-<li><b>Use Built In Particles</b> This option will export the
-sprites required for the built in particle system along with your
-game. These sprites are stored in individual texture pages, meaning
-that they are not the most efficient method of generating particles
-for this platform, therefore it is recommended that (unless using
-WebGL) you un-check this option and use your own particle sprites
-which will be stored on the main texture pages all together for
-your game.<br>
+<li><b>使用内置粒子系统</b>： 此选项将导出你的游戏中内置粒子系统所需的精灵。这些精灵存储在单独的纹理页面中，这意味着它们不是为此平台生成粒子的最有效方法，因此建议你（除非使用 WebGL）取消选中此选项并使用你自己的粒子精灵，这将与你的游戏一起存储在主纹理页上。<br>
 <br></li>
 
-<li><b>WebGL</b>: Choose whether to switch off WebGL support, make
-it optional (auto-detect), or make it a requirement for your game.
-It should be noted that to test performance under all
-circumstances, you should have this as disabled, then normally set
-it to auto-detect for publishing. Making it a requirement may
-reduce considerably the compatibility that your game has with
-different browser types.</li>
+<li><b>WebGL</b>: 选择是否关闭 WebGL 支持，使其成为可选（自动检测），或使其成为游戏必需。应该注意的是，要在所有情况下测试性能，你应该将其设置为禁用，然后通常将其设置为自动检测以进行发布。 使其成为必需可能会大大降低你的游戏与不同浏览器类型的兼容性。</li>
 
-<li><b>Scaling</b>: Your game can be configured to scale the draw
-canvas automatically to maintain the aspect ratio within the
-browser, or you can select to have it stretch to fit. The stretch
-to fit option will not full screen the game in the browser, but
-rather stretch what is drawn to fit the canvas size, as defined by
-the first room of the game.</li>
+<li><b>缩放</b>： 你的游戏可以配置为自动缩放绘制画布以在浏览器中保持纵横比，或者你可以选择将其拉伸以适应。拉伸到适合选项不会在浏览器中全屏显示游戏，而是按照游戏的第一个房间的定义，拉伸贴图以适应画布大小。</li>
 </ul>
 
-<p>Finally there is the option to set the size of the <b>Texture
-Page</b>. The default (and most compatible) size is 2048x2048, but
-you can choose from anywhere between 256x256 up to 8192x8192. There
-is also a button marked <i>Preview</i> which will generate the
-texture pages for this platform and then open a window so that you
-can see how they look. This can be very useful if you wish to see
-how the texture pages are structured and to prevent having texture
-pages larger (or smaller) than necessary.</p>
+<p>最后，可以选择设置 <b>纹理页</b> 的大小。默认（和最兼容）大小为 2048 x 2048，但你可以选择 256 x 256 到 8192 x 8192 之间的任何值。还有一个 <i>预览</i> 的按钮，它将为该平台生成纹理页面，然后打开一个窗口，以便你可以看到它们的外观。如果你希望查看纹理页面的结构并防止纹理页面比必要的更大（或更小），这可能非常有用。</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be.</div>
+<div class="note"><b>注意</b>： 请小心，纹理页面的大小越大，游戏的兼容性就越差。</div>
 </div>
 <br>
-<label class="collapse" for="e">图片</label> <input id="e" type=
+<label class="collapse" for="e">图像</label> <input id="e" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/html5_images_options.png" alt=
 "HTML5 Images Options">
 </p>
 
-<p>This section is where you can define the favicon and the Splash
-Screen. The icon should be authored as an <tt>*.ico</tt> file and
-can be 16x16, 32x32, 48x48, or 64x64 pixels in size, and 8-bit,
-24-bit, or 32-bit in colour depth. The splash screen should be the
-size of the canvas that is going to hold your game and will
-override any loading bars if you tick the <b>Use Splash Screen</b>
-option (ie: you can have a loading bar, OR a splash screen, but not
-both). Smaller or larger images are permitted but will be scaled to
-fit.</p>
+<p>在此部分中，你可以定义网站图标和启动画面。 该图标应该被创作为 <tt>*.ico</tt> 文件，大小可以是 16 x 16、32 x 32、48 x 48 或 64 x 64 像素，颜色深度可以是 8 位、24 位或 32 位。 启动画面应该是用于保存游戏的画布大小，如果勾选 <b>使用启动画面</b> 选项，则会覆盖任何进度条（即：你可以有一个进度条，或者一个启动画面，但不能同时使用两者）。允许更小或更大的图像，但将缩放至适合大小。</p>
 
-<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../2_extras/project_image_generator.html">Project Image
-Generator</a> tool which can be used to automatically create all
-the images required for all the different target platforms your
-game is being compiled to. If you use this tool, you should revise
-the images created to ensure that they are what you require.</p>
+<p>值得注意的是，<i>GameMaker Studio 2</i> 有一个叫做 <a href=
+"../../2_extras/project_image_generator.html">项目图像生成器</a> 的工具，可用于自动创建游戏编译到不同目标平台所需的所有图像。 如果使用此工具，则应修改创建的图像以确保它们符合你的要求。</p>
 </div>
 <br>
-<label class="collapse" for="f">社交（Social）</label> <input id="f" type=
+<label class="collapse" for="f">社交</label> <input id="f" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/html5_social_options.png" alt=
 "HTML5 Social Options">
 </p>
 
-<p>The social tab is used for setting up Facebook communication in
-your game. If you require the Facebook functions, you need to click
-the "Use Facebook" checkbox and then supply the Facebook App ID and
-Facebook App Display Name. Note that all Facebook functionality is
-accessed via an extension, and when you first check the Use
-Facebook box you will be prompted to download and install the
-Facebook extension from the Marketplace (you may need to log into
-your YoYo Account before it can be downloaded).</p>
+<p>社交标签用于在游戏中设置 Facebook 通信。 如果你需要 Facebook 功能，则需要单击 “使用 Facebook” 复选框，然后提供 Facebook 应用程序 ID 和 Facebook 应用程序显示名称。请注意，所有 Facebook 功能都是通过扩展程序访问的，当你第一次勾选使用 Facebook 框时，系统将提示你从市场下载并安装 Facebook 扩展程序（你可能需要先登录你的 YoYo 帐户才能下载）。</p>
 </div></blockquote>
 
 <p><br>
@@ -249,11 +163,10 @@ your YoYo Account before it can be downloaded).</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Game
-Options</a></div>
+<div style="float:left">上一页: <a href="index.html">游戏选项</a></div>
 
-<div style="float:right">Next: <a href=
-"options_android.html">Android Options</a></div>
+<div style="float:right">下一页: <a href=
+"options_android.html">Android 选项</a></div>
 </div>
 </div>
 

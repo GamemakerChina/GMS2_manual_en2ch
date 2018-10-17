@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,9 +36,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>This section outlines the different options available to you
-that control how your Windows game projects will be compiled. The
-different sections are:</p>
+<p>本节概述了可用于控制 Windows 游戏项目编译方式的不同选项。不同的部分如下：</p>
 
 <blockquote><label class="collapse" for="a">全局</label>
 <input id="a" type="checkbox">
@@ -47,154 +45,86 @@ different sections are:</p>
 alt="Windows General Options">
 </p>
 
-<p>The <b>General</b> page for Windows games is where you should
-supply the necessary information for Windows to display when your
-game has been installed and is running. This information goes in
-the <b>Product Information</b> section, and should be filled out
-completely.</p>
+<p>Windows 游戏的 <b>全局</b> 页面是你应该为 Windows 提供必要信息的地方，以便在游戏安装和运行时显示。此信息位于 <b>产品信息</b> 部分，应完整填写。</p>
 
-<p>The <b>Options</b> section of this window permits you to choose
-where the game package is to be installed to, either the
-"<tt>%localappdata%</tt>" or "<tt>%appdata%</tt>" folders. You can
-also set the <b>Windows Sleep Margin</b> here. This option is
-related to reducing stuttering when running your game on specific
-systems. Basically, if your game is running faster than your room
-speed <i>GameMaker Studio 2</i> will "sleep" for the remaining
-time, but this sleep can be quite inaccurate and you can often end
-of sleeping for longer than necessary, causing your frame to take
-longer which causes stuttering. To get around this we can sleep for
-less time, then sit in a tight loop for the remainder of the time
-to make it more accurate - although the problem with sitting in a
-loop is that it causes CPU usage to increase, which in turn can
-cause your CPU temperatures to rise and your fan to run faster. By
-default, this value is set to 10, and in 99.99% of the cases you'll
-be fine with this, but for low end machines or for machines with a
-lot of background processes running this may not be an ideal
-solution (or for very high end machines too) and a value of 1 or 15
-or something may be required. Note though that this is very much a
-system specific configuration and what works on your build machine
-may not be appropriate for another user, and as such if in doubt
-leave it set to 10.</p>
+<p>此窗口的 <b>选项</b> 部分允许你选择要安装游戏包的位置，可以是 “<tt>%localappdata%</tt>” 或 “<tt>%appdata%</tt>” 文件夹。你也可以在此处设置 <b>Windows 睡眠余量</b>。此选项与在特定系统上运行游戏时减少停顿（stutter）有关。基本上，如果你的游戏运行速度超过你的房间速度，<i>GameMaker Studio 2</i> 将在剩余时间内 “睡眠”，但这种睡眠可能会非常不准确经常睡眠时间超过必要的时间，导致你的框架需要更长时间才能导致停顿。为了解决这个问题，我们可以在更短的时间内休眠，然后在其余的时间内进行紧密循环以使其更准确 - 尽管进行循环中的问题是它会导致 CPU 使用率增加，这反过来可以导致 CPU 温度上升，风扇运行得更快。默认情况下，此值设置为 10，在 99.99％ 的情况下，你可以使用它，但对于低端计算机或运行大量后台进程的计算机，这可能不是一个理想的解决方案（或非常高端的机器也可能需要 1 或 15 或某些值。请注意，这是一个非常特定于系统的配置，并且在你的构建计算机上运行的可能不适合其他用户，因此如果有疑问则将其设置为 10。</p>
 
-<p>The final option is for enabling Steam in your game. If you
-enable this option, make sure you have the Steamworks SDK installed
-(see <a href="../preferences.html">here</a>), and that you have
-added the Steam app ID into the <a href="index.html">General
-Options</a> for the game.</p>
+<p>最后一个选项是在游戏中启用 Steam。如果启用此选项，请确保已安装 Steamworks SDK（请参阅 <a href="../preferences.html">此处</a>），并且已将 Steam 应用程序 ID 添加到游戏的 <a href="index.html">全局选项</a> 中。</p>
 </div>
 <br>
-<label class="collapse" for="b">Graphics</label> <input id="b"
+<label class="collapse" for="b">图形</label> <input id="b"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/windows_graphics_options.png"
 alt="Windows Graphics Options">
 </p>
 
-<p>The graphics options are those that you should configure to
-determine how your game will use the graphics card of your target
-Windows PC. The following options are included for you to
-modify:</p>
+<p>图形选项是你应该配置的选项，以确定你的游戏将如何使用目标 Windows 计算机的显卡。 包含以下选项供你修改：包含以下选项供你修改：</p>
 
 <ul>
-<li><b>Display Cursor</b>: When this is checked the regular windows cursor will be show, and un-checking it will mean that no cursor is shown unless you have created one in your game code. 该选项默认为“开”。<br>
+<li><b>显示光标</b>： 选中此选项后，将显示全局 Windows 光标，取消选中它将意味着除非你在游戏代码中创建了光标，否则不会显示光标。该选项默认为“开”。<br>
 <br></li>
 
-<li><b>Start Fullscreen</b>: If this is checked, the game will start in fullscreen mode otherwise it will start windowed. 该选项默认为关<br>
+<li><b>开始全屏</b>： 如果选中此项，游戏将以全屏模式启动，否则将以窗口模式启动。该选项默认为关<br>
 <br></li>
 
-<li><b>Allow Fullscreen Switching</b>: With this ticked the user can switch from fullscreen to windowed and back again using the standard Windows shortcuts. 该选项默认为关<br>
+<li><b>允许全屏切换</b>： 通过此选项，用户可以使用标准的 Windows 快捷键从全屏切换到窗口并再次返回。该选项默认为关<br>
 <br></li>
 
-<li><b>Interpolate colours between pixels</b>: Turns on
-interpolation, which basically "smooths" pixels. For crisp pixel
-graphics, it should be off, but if you have nice alpha blends and
-smoothed edged graphics it is better left on.This is on by
-default.<br>
+<li><b>对像素间颜色进行插值</b>： 打开插值，基本上会使像素 “平滑”。对于清晰的像素图形，它应该关闭，但如果你有漂亮的 透明混合和平滑的边缘图形，最好保持开启。默认情况下这是开启的。
+<br>
 <br></li>
 
-<li><b>Use synchronization to avoid tearing</b>: This toggles v-sync on or off (v-sync is used to synchronise your game update speed to the refresh rate of the monitor). Note, that if you have a game with a room speed of 120 and the player has a monitor with a refresh rate of 60, turning this option on will lock your game speed to 60 too. 该选项默认为关<br>
+<li><b>启用垂直同步避免画面撕裂</b>： 这会打开或关闭垂直同步（垂直同步用于将游戏更新速度与监视器的刷新率同步）。请注意，如果你的游戏房间速度为 120 且玩家显示器的刷新率为 60，则启用此选项会将你的游戏速度锁定为 60。该选项默认为关<br>
 <br></li>
 
-<li><b>Allow the player to resize the game window</b>: Checking this permits the user to change the size of the game window (the <b>Borderless Window</b> option needs to be <i>off</i> for this to work). 该选项默认为关。<br>
+<li><b>允许玩家调整游戏窗口的大小</b>： 选中此项允许用户更改游戏窗口的大小（需要 <i>关闭</i> <b>无边框窗口</b> 选项才能使其生效）。该选项默认为关。<br>
 <br></li>
 
-<li><b>Borderless Window</b>: Checking this will make your game run with a borderless window, removing the normal minimise, maximise and close buttons as well as the game title. 该选项默认为关<br>
+<li><b>无边框窗口</b>： 选中此选项将使你的游戏以无边框窗口运行，删除正常的最小化、最大化和关闭按钮以及游戏标题。该选项默认为关<br>
 <br></li>
 
-<li><b>Scaling</b>: Here you can choose to maintain aspect ratio
-(so a 4:3 room will be "letter boxed" on a 16:9) or to scale fully
-(stretching the image to fit the full screen).
+<li><b>缩放</b>: 在这里，你可以选择保持纵横比（因此 4:3 的房间将被封装成 16:9 的盒子）或完全缩放（拉伸图像以适应整个屏幕）。
 
-
-
-<div class="note"><b>WARNING!</b> Switching off the application
-surface will disable all the scaling options set in the Windows
-Game Options until it has been switched back on again. See <a href=
-"../../../3_scripting/4_gml_reference/drawing/surfaces/the%20application%20surface.html">
-The Application Surface</a> for further details.</div></li>
+<div class="note"><b>警告！</b> 关闭应用程序表面将禁用 Windows 游戏选项中设置的所有缩放选项，直到它再次重新打开。有关详细信息，请参阅 <a href=
+"../../../3_scripting/4_gml_reference/drawing/surfaces/the%20application%20surface.html">应用程序表面</a>。</div></li>
 </ul>
 
-<p>Finally there is the option to set the size of the Texture Page.
-The default (and most compatible) size is 2048x2048, but you can
-choose from anywhere between 256x256 up to a whopping 8192x8192!
-There is also a button marked View which will generate the texture
-pages for this platform and then open a window so that you can see
-how they look. This can be very useful if you wish to see how the
-texture pages are structured and to prevent having texture pages
-larger (or smaller) than necessary.</p>
+<p>最后，可以选择设置纹理页的大小。 默认（和最兼容）的大小是 2048 x 2048，但你可以选择 256 x 256 到高达 8192 x 8192 之间的任何位置！还有一个标记为预览的按钮，它将生成此平台的纹理页，然后打开一个窗口以便你可以看看他们的样子。如果你希望查看纹理页面的结构并防止纹理页面比必要的更大（或更小），这可能非常有用。</p>
 
-<div class="note"><b>注意</b>： Be aware that the larger the size of the texture page, the less compatible your game will be on PC's with lower specifications.</div>
+<div class="note"><b>注意</b>： 请注意，纹理页的大小越大，你在具有更低规格的 Windows 上的游戏兼容性就越低。</div>
 </div>
 <br>
-<label class="collapse" for="c">图片</label> <input id="c" type=
+<label class="collapse" for="c">图像</label> <input id="c" type=
 "checkbox">
 <div class="index_list">
 <p><img class="center" src="images/windows_images_options.png" alt=
 "Windows Images Options">
 </p>
 
-<p>The images section is where you supply the images that your game
-requires. For Windows, you need to supply an icon file (that must
-be in <tt>.ico</tt> format) and also a splash screen (which can be
-<tt>.png</tt>, <tt>.bmp</tt>, <tt>.jpg</tt> or <tt>.gif</tt>
-format). The splash screen will be shown while the game loads, and
-can be enabled or disabled by checking the <i>Use Splash Screen</i>
-option (which is off by default).</p>
+<p>图像部分是你提供游戏所需图像的位置。图像部分是你提供游戏所需图像的位置。对于 Windows，你需要提供图标文件（必须采用 <tt>.ico</tt> 格式）以及启动画面（可以是 <tt>.png</tt>、<tt>.bmp</tt>、<tt>.jpg</tt> 或 <tt>.gif</tt> 格式）。 加载游戏时将显示启动画面，可以通过选中 <i>使用启动画面</i> 选项（默认情况下关闭）启用或禁用启动画面。</p>
 
-<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
-"../../2_extras/project_image_generator.html">Project Image
-Generator</a> tool which can be used to automatically create all
-the images required for all the different target platforms your
-game is being compiled to. If you use this tool, you should revise
-the images created to ensure that they are what you require.</p>
+<p>值得注意的是，<i>GameMaker Studio 2</i> 有一个叫做 <a href=
+"../../2_extras/project_image_generator.html">项目图像生成器</a> 的工具，可用于自动创建游戏编译到不同目标平台所需的所有图像。 如果使用此工具，则应修改创建的图像以确保它们符合你的要求。</p>
 </div>
 <br>
-<label class="collapse" for="d">Installer</label> <input id="d"
+<label class="collapse" for="d">安装程序</label> <input id="d"
 type="checkbox">
 <div class="index_list">
 <p><img class="center" src="images/windows_installer_options.png"
 alt="Windows Installer Options">
 </p>
 
-<p>Windows games can be created with an installer and here you can
-define the various settings and graphics that <i>GameMaker Studio
-2</i> will use when creating it. First of all we have the graphical
-options which will define the look of the installer itself:</p>
+<p>可以使用安装程序创建 Windows 游戏，你可以在此处定义 <i>GameMaker Studio 2</i> 在创建时将使用的各种设置和图形。 首先，我们有图形选项，它们将定义安装程序本身的外观：</p>
 
 <ul>
-<li><b>Finished</b>: The graphic that appears on the "Finished"
-page of the installer. Must be in *.bmp format and measure
-164x314px.<br>
+<li><b>完成</b>： 安装程序 “完成” 页面上显示的图形。 必须采用 *.bmp 格式并且大小为 164 x 314 像素。<br>
 <br></li>
 
-<li><b>Header</b>: The graphic that appears while the installer is
-running. Must be in *.bmp format and measure 150x57px.</li>
+<li><b>标题</b>： 安装程序运行时显示的图形。 必须采用 *.bmp 格式并且大小为 150 x 57 像素。</li>
 </ul>
 
-<p>You can also point to a specific License Agreement (an example
-is supplied with <i>GameMaker Studio 2</i>) and a custom NSI script
-(details <a href="http://nsis.sourceforge.net/Main_Page">here</a>)
-should you need one.</p>
+<p>如果需要，你还可以指向特定的许可协议（<i>GameMaker Studio 2</i> 提供的示例）和自定义 NSI 脚本（详情请参见 <a href="http://nsis.sourceforge.net/Main_Page">此处</a>）。</p>
 </div></blockquote>
 
 <p><br>
@@ -204,11 +134,9 @@ should you need one.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Game
-Options</a></div>
+<div style="float:left">上一页: <a href="index.html">游戏选项</a></div>
 
-<div style="float:right">Next: <a href="options_mac.html">Mac OS
-Options</a></div>
+<div style="float:right">下一页: <a href="options_mac.html">Mac OS 选项</a></div>
 </div>
 </div>
 
