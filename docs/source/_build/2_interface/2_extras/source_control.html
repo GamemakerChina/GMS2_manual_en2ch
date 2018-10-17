@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>源码控制</title>
+<title>源代码管理</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,770 +30,428 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>源码控制</h2>
+<h2>源代码管理</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p><b>Source Control Management</b> (SCM) is the name given to the
-method of working with <i>sub-versions</i> or backups of your
-projects through a repository and local source. Basically, an SCM
-solution is an independent software package which controls all the
-aspects of maintaining, changing and comparing versions of your
-project as you work on it. This is especially useful to those that
-work in a team and need to be able to control who does what and not
-worry about losing data or making changes that may need to be
-undone at a later date, but individuals can benefit from this
-powerful yet flexible system too.</p>
+<p><b>源代码管理（SCM）</b> 是通过存储库和本地源代码在 <i>子版本</i> 工作或备份项目的方法的名称。基本上，SCM 解决方案是一个独立的软件包，它在你处理项目时控制项目维护、更改和比较的所有方面。这对那些在团队中工作并且需要能够控制谁做什么而不用担心丢失数据或可能需要在以后进行撤消更改的人尤其有用，但是个人也可以从系统这种强大而灵活的方面受益。</p>
 
-<p>There are various SCM tools available to you, and <i>GameMaker
-Studio 2</i> comes with a Git plugin included which can be used
-straight away, and you have no need to install any extra packages
-as it is all bundled with the plugin itself. Below we give a small
-tutorial on how to set up this plugin and use the SCM tools with a
-project. At the bottom of the page we also give an overview of the
-SCM Context Menu, which is also referenced in the tutorial
-sections.</p>
+<p>你可以使用各种 SCM 工具，<i>GameMaker Studio 2</i> 附带一个 Git 插件，可以立即使用，而且你无需安装任何额外的软件包，因为它与插件本身捆绑在一起。下面我们提供一个关于如何设置此插件的小教程，并将 SCM 工具与项目一起使用。在页面底部，我们还概述了 SCM 上下文菜单，这也在教程部分中引用。</p>
 
-<div class="note"><b>IMPORTANT!</b> Source Control is <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b> 试用许可 <b>不能</b> 使用源代码管理。</div>
 
-<div class="note"><b>IMPORTANT!</b> We recommend that you have some
-working knowledge of how source control works before attempting to
-use it in <i>GameMaker Studio 2</i>.</div>
+<div class="note"><b>重要！</b> 我们建议你在尝试在 <i>GameMaker Studio 2</i> 中使用源控件之前，先了解源代码管理的工作原理。</div>
 
 <p><br>
 </p>
 
 <blockquote><a name="scm_setup_git" id="scm_setup_git"></a>
-<label class="collapse" for="one">Setting up the Source Control Git
-Plugin</label> <input id="one" type="checkbox">
+<label class="collapse" for="one">设置源代码管理 Git 插件</label> <input id="one" type="checkbox">
 <div class="index_list">
-<p>First of all, we need to setup an identity for Git to commit as,
-which means we need to go to the <a href=
-"../../1_overview/1_getting_started/preferences/prefs_plugins.html">
-PLugins - Source Control (Git)</a> section of the Preferences and
-add your authentication details.  <img class="center" src=
+<p>首先，我们需要为 Git 设置一个提交身份，这意味着我们需要转到首选项的 <a href=
+"../../1_overview/1_getting_started/preferences/prefs_plugins.html">插件 - 源代码管理（Git）</a> 部分并添加你的身份验证详细信息。 <img class="center" src=
 "images/scm_identityprefs.png" alt="SCM Identity Preferences"></p>
 
-<p>This authentication identity will be used for all future
-projects, and <i>GameMaker Studio 2</i> gives you two different
-ways that you can set it up:</p>
+<p>此身份验证标识将用于所有未来的项目，<i>GameMaker Studio 2</i> 为你提供了两种不同的设置方式：
+</p>
 
 <ul>
-<li><b>Username And Password</b>: Clicking the "Add New User/Pass
-Authentication" button will present you with the following window
-where you can input the <b>Repository URL</b>, the <b>Username</b>
-and the <b>Passord</b>: <img class="center" src=
-"images/scm_usernamepassword.png" alt="SCM Username and Password">
-If you want this to affect just a <i>specific</i> repository then
-place the URL for the repository in the top field. However, if it's
-domain wide authentication you want (ie: "<tt>bitbucket.org</tt>"
-or "<tt>github.com</tt>" ) then just place the domain and nothing
-else. When something needs to check for authentication, it will
-look for a specific repository match first, and <i>then</i> a
-domain match. This will allow you to have a default authentication
-for a domain, and override with specific details for certain
-repositories later.
+<li><b>用户名和密码</b>：单击 “添加用户 / 密码身份验证” 按钮将显示以下窗口，你可以在其中输入 <b>存储库 URL</b>、<b>用户名</b> 和 <b>密码</b>：<img class="center" src=
+"images/scm_usernamepassword.png" alt="SCM Username and Password"> 如果你希望这仅影响 <i>特定</i> 存储库，则将存储库的 URL 放在顶部字段中。 但是，如果它是你想要的域范围身份验证（即：“<tt>bitbucket.org</tt>” 或 “<tt>github.com</tt>”），那么只需放置域名而不是其他内容。当某些东西需要检查身份验证时，它将首先查找特定的存储库匹配，<i>然后</i> 查找域匹配。 这将允许你对域进行默认身份验证，并在以后覆盖某些存储库的特定详细信息。
 
-
-
-<div class="note"><b>注意</b>： If you are using an external repository, then you should be using the username and password associated with the account set up for that repository, but if you are wanting to use a local repository then you can use any username and password.<br>
+<div class="note"><b>注意</b>： 如果你使用的是外部存储库，那么你应该使用与为该存储库设置的帐户关联的用户名和密码，但如果你想使用本地存储库，则可以使用任何用户名和密码。<br>
 <br>
 <br></div></li>
 
-<li><b>SSH Keypairs</b>: Clicking the "Add New SSH Keypair
-Authentication" will present you with the following window where
-you can input the <b>Repository URL</b> and <b>Password</b> before
-giving the paths to the <b>Public Key</b> and <b>Private Key</b>
-files required: <img class="center" src="images/scm_ssh.png" alt=
-"SCM SSH Settings"> Like the Username/Password authentications, you
-can have domain and repository specific authentications when using
-SSH keypairs. If you already have an SSH Keypair generated, you can
-set the paths up here, as well as any password required to access
-them. Note that should you need quick access to the public key, the
-copy button <img style="vertical-align:middle" src=
-"images/icon_copy.png"> will automatically copy the contents to the
-clipboard for you. If you don’t already have an SSH Keypair,
-clicking on the <b>Create KeyPair</b> button will bring up a file
-dialog of where to place the private key, and the public key will
-be created adjacent to it - this will fill out the paths to the
-public and private keys automatically for you.</li>
+<li><b>SSH 密钥对</b>：单击 “添加 SSH 密钥对身份验证” 将显示以下窗口，你可以在其中输入 <b>存储库 URL</b> 和 <b>密码</b>，然后提供所需的 <b>公钥</b> 和 <b>私钥</b> 文件的路径：<img class="center" src="images/scm_ssh.png" alt=
+"SCM SSH Settings"> 与用户名 / 密码身份验证一样，你可以在使用 SSH 密钥对时进行域和存储库特定的身份验证。 如果你已经生成了 SSH 密钥对，则可以在此处设置路径，以及访问它们所需的密码。 请注意，如果你需要快速访问公钥，复制按钮 <img style="vertical-align:middle" src=
+"images/icon_copy.png"> 将自动将内容复制到剪贴板。如果你还没有 SSH 密钥对，单击 <b>创建秘钥对</b> 按钮将弹出一个文件对话框，显示私钥的放置位置，并在其旁边创建公钥 - 这将自动为你填写公钥和私钥的路径。</li>
 </ul>
 
 <p><br>
-
-These settings will now be used to communicate with the repository
-(IE: Git Hub, Bit Bucket, etc.. ) when handling clone, push and
-pull requests. However you still need to set up the per-project
-options which can be done by opening up the <a href=
-"../3_settings/game_options/index.html">Main Options</a> and
-clicking the <i>Enable Source Control</i> option. This will
-activate SCM for the current project.  <img class="center" src=
+在处理克隆、推送和拉取请求时，这些设置现在将用于与存储库（例如：Git Hub、Bit Bucket 等）进行通信。但是，你仍然需要设置每个项目选项，可以通过打开 <a href=
+"../3_settings/game_options/index.html">主要选项</a> 并单击 <i>启用源代码管理</i> 选项来完成。
+这将激活当前项目的 SCM。 <img class="center" src=
 "images/scm_enablesourcecontrol.png" alt=
-"启用源码控制"></p>
+"启用源代码管理"></p>
 
-<p>Once you have enabled source control (and applied it or closed
-the Game Options) a new context menu will appear at the top of the
-IDE with the following option (which we'll explore in the rest of
-the sections of this page):  <img class="center" src=
-"images/scm_contextmenu.png" alt="Source Control Context Menu"></p>
+<p>一旦启用了源代码管理（并应用它或关闭了游戏选项），IDE 的顶部将出现一个新的上下文菜单，其中包含以下选项（我们将在本页的其余部分中介绍）： <img class="center" src=
+"images/scm_contextmenu.png" alt="源代码管理上下文菜单"></p>
 
-<div class="note"><b>NOTE</b>: If you need to edit the
-authentication details again, just double click on the entry and
-the details window will open for you to edit, but you will
-<b>not</b> be able to rename the URL. If you need to change the URL
-then you will need to delete the authentication details and re-add.
-To delete the authentication details, click on the close button on
-the left of the row in the main Preferences window.  <img class=
+<div class="note"><b>注意</b>：如果你需要再次编辑身份验证详细信息，只需双击该条目，将打开详细信息窗口供你编辑，但你将 <b>无法</b> 重命名该 URL。 如果你需要更改 URL，则需要删除身份验证详细信息并重新添加。 要删除身份验证详细信息，请单击 “偏好设置” 主窗口中该行左侧的关闭按钮。 <img class=
 "center" src="images/scm_deletessh.png" alt=
 "Delete SSH Keypairs"></div>
 </div>
 <br>
 <a name="scm_repository_options" id="scm_repository_options"></a>
-<label class="collapse" for="two">Repository Options</label>
+<label class="collapse" for="two">存储库选项</label>
 <input id="two" type="checkbox">
 <div class="index_list">
-<p>You now need to link the <i>GameMaker Studio 2</i> IDE to a
-repository:</p>
+<p>你现在需要将 <i>GameMaker Studio 2</i> IDE 链接到存储库：</p>
 
 <ul>
-<li>Create a Project Repository</li>
+<li>创建项目存储库</li>
 
-<li>Push the current Project into an External Repository</li>
+<li>将当前项目推送到外部存储库</li>
 
-<li>Clone an existing Repository</li>
+<li>克隆现有存储库</li>
 </ul>
 
-<p>In the first case, creating a project repository, this will
-create a Git repository directly where your project is. In Git
-parlance this is a "non-bare repository", so Push/Pull make no
-sense in this case, but you can still commit and keep track of
-project changes, as well as revert changes and revisions if need
-be. To set this up, you just need to click <i>Source Control</i>
-&gt; <i>Create Project Repository</i> on the main menu.  <img class=
+<p>在第一种情况下，创建项目存储库，这将直接在项目所在的位置创建一个 Git 存储库。 在 Git 的说法中，这是一个 “非裸存储库”，因此在这种情况下 推送 / 拉取 没有任何意义，但你仍然可以提交并跟踪项目更改，并在需要时还原更改和修正。要进行此设置，只需在主菜单上单击 <i>源代码管理</i> &gt; <i>创建项目库</i> 即可。 <img class=
 "center" src="images/scm_createprojectrepository.png" alt=
 "Source Control Create Project Repository"></p>
 
-<p>However, you may already have an existing project and want to
-put it into an <i>external</i> repository for tracking and sharing
-amongst your team. This requires an external repository to have
-been already set up, as well as the correct username and password
-set in your identity preferences to access it. If you have this
-ready then click <i>Source Control</i> &gt; <i>Import Project into
-Repository</i>, and fill out the URL.  <img class="center" src=
+<p>但是，你可能已经有一个现有项目，并希望将其放入 <i>外部</i> 存储库，以便在你的团队中进行跟踪和共享。这需要已设置外部存储库，以及在身份首选项中设置的正确用户名和密码才能访问它。 如果准备好了，请单击 <i>源代码管理</i> &gt; <i>将项目导入库中</i>，然后填写 URL。 <img class="center" src=
 "images/scm_importproject.png" alt=
 "Source Control Import Project To Repository"></p>
 
-<p>Finally, as a convenience function, you can <i>Clone</i> an
-external repository through the IDE. Again, you’ll need the
-username and password for the repository you are going to connect
-to setup in your identity preferences, and then it’s just a case of
-clicking <i>Source Control</i> &gt; <i>Clone Repository</i>. Fill
-out the URL (using the HTTPS variant rather than SSH) and say where
-you want it to go.  <img class="center" src=
+<p>最后，作为便捷功能，你可以通过 IDE <i>克隆</i> 外部存储库。 同样，你需要输入要在身份首选项中设置的存储库的用户名和密码，然后只需单击 <i>源代码管理</i> &gt; <i>克隆存储库</i> 即可。 填写 URL（使用 HTTPS 变体而不是 SSH）并说出你想要的位置。 <img class="center" src=
 "images/scm_clonerepository.png" alt=
 "Source Control Clone Repository"></p>
 
-<p>Once the clone is done, it will automatically open up a file
-browser for you to open the project if you wish.</p>
+<p>克隆完成后，它将自动打开文件浏览器，以便你根据需要打开项目。</p>
 </div>
 <br>
 <a name="scm_workflow" id="scm_workflow"></a> <label class=
-"collapse" for="three">Standard Workflow</label> <input id="three"
+"collapse" for="three">标准工作流程</label> <input id="three"
 type="checkbox">
 <div class="index_list">
-<p>As you work on your project, you will naturally create sprites,
-edit scripts, delete timelines, and whatever else is required as
-your project develops over time. These are all actions which you
-may want to keep track of and get back should something go wrong.
-This is the main reason to use Source Control - so that any
-accidents can be reverted - and we will quickly take you through
-the basic workflow from start so you understand how this works.</p>
+<p>当你处理项目时，你将自然地创建精灵、编辑脚本、删除时间轴，以及随着项目的不断发展所需的其他内容。 这些都是你可能想要跟踪的行为，如果出现问题则可以返回。这是使用源代码管理的主要原因 - 以便可以恢复任何事故 - 我们将从一开始就快速引导你完成基本工作流程，以便你了解其工作原理。</p>
 
-<p>Starting from the beginning, create a new GML project and then
-activate source control through the main options. This gives us
-access to the Source Control menu on the top, so we’ll immediately
-go and <i>Create Project Repository</i>. If you look at the room
-resources, you can see that the default room has gained a red
-exclamation <img style="vertical-align:middle" src=
-"images/icon_scm_modified.png">, meaning that it has been modified
-from it's last state. If we had other resources in the project,
-you'd see that they all have the same icon as shown in the image
-below: <img class="center" src="images/scm_modifiedstate.png" alt=
+<p>从头开始，创建一个新的 GML 项目，然后通过主要选项激活源代码管理。这使我们可以访问顶部的源代码管理菜单，因此我们将立即启动 <i>创建项目库</i>。如果你查看房间资源，你可以看到默认房间已经拥有红色感叹号 <img style="vertical-align:middle" src=
+"images/icon_scm_modified.png">，这意味着它已经从它的最后状态进行了修改。 如果我们在项目中有其他资源，你会看到它们都具有相同的图标，如下图所示：<img class="center" src="images/scm_modifiedstate.png" alt=
 "Source Control Modified Assets"></p>
 
-<p>We now have the option of either committing the blank project as
-it is, or getting it to a base state. For now, we'll do our first
-commit so click <i>Source Control</i> &gt; <i>Commit Changes</i>.
-This will We'll now get a window split into three areas:
-
+<p>我们现在可以选择提交空白项目，也可以将其设置为基本状态。现在，我们将进行第一次提交，然后单击 <i>源代码管理</i> &gt; <i>提交更改</i>。我们将获得一个被分为三个区域的窗口：
 <img class="center" src="images/scm_commitwindow.png" alt=
 "Source Control Commit Window"></p>
 
 <ul>
-<li>Staged Changes - This represent the changes which will be
-committed to source. This will likely be blank, but it may show a
-Main Options change, which is fine.<br>
+<li>提交更改 - 这表示将提交给源的更改。这可能是空白的，但它可能会显示主选项更改，这很好。<br>
 <br></li>
 
-<li>Unstaged Changes - This shows the files that have changed, but
-that we haven't told Git that we want to commit them - they're
-"pending" changes.<br>
+<li>不提交更改 - 显示已更改的文件，但我们没有告诉 Git 我们要提交它们 - 它们是 “待定” 更改。<br>
 <br></li>
 
-<li>Commit Message - This is a note that we can add to explain what
-the changes are.</li>
+<li>提交消息 - 这是我们可以添加的注释，用于解释更改的内容。</li>
 </ul>
 
-<p>For now, click the <i>Stage All</i> button, as we want to commit
-all the changes, and type something like "First Commit!" into the
-Commit Message and click <i>Commit</i>. All our resources should
-now have a green tick <img style="vertical-align:middle" src=
-"images/icon_scm_committed.png">, meaning there's no modifications
-found.</p>
+<p>现在，单击 <i>提交所有</i> 按钮，因为我们要提交所有更改，并在提交消息内输入类似 “首次提交！” 的内容并单击 <i>提交</i>。 我们所有的资源现在都应该有绿色勾号 <img style="vertical-align:middle" src=
+"images/icon_scm_committed.png">，这意味着没有找到任何修改。</p>
 
-<p>Our work process can now begin, and we can start to build our
-project and save and commit changes, just as we've done in the
-paragraphs above.</p>
+<p>我们的工作流程现在可以开始，我们可以开始构建我们的项目并保存和提交更改，就像我们在上面的段落中所做的那样。</p>
 
-<p>After working for a while, you may want to check and see what
-you've committed at any given time, and so for that you'll want to
-open the <b>Commit History</b>. To open the history window you
-simply go to <i>Source Control</i> &gt; <i>View History</i> which
-opens another window with three panes:  <img class="center" src=
+<p>工作一段时间后，你可能希望检查并查看你在任何给定时间所做的事情，因此你需要打开 <b>提交历史记录</b>要打开历史记录窗口，只需转到 <i>源代码管理</i> &gt; <i>查看历史记录</i>，打开另一个包含三个窗格的窗口：。 <img class="center" src=
 "images/scm_historywindow.png" alt=
 "Source Control History Window"></p>
 
-<p>The top pane describes the commits, the middle pane describes
-the comment given to the selected commit, and the bottom pane
-describes the files that have been modified in this commit. Note
-that if you have set up a <b>Diff Tool</b>, then double-clicking on
-any file in this window will open the diff tool and you'll be able
-to see the changes between the files.</p>
+<p>顶部窗格描述了提交，中间窗格描述了为选定提交提供的注释，底部窗格描述了在此提交中已修改的文件。请注意，如果你已设置了 <b>差异工具</b>，则双击此窗口中的任何文件将打开差异工具，你将能够看到文件之间的更改。</p>
 </div>
 <br>
 <a name="scm_reverting" id="scm_reverting"></a> <label class=
-"collapse" for="six">Reverting Files</label> <input id="six" type=
+"collapse" for="six">还原文件</label> <input id="six" type=
 "checkbox">
 <div class="index_list">
-<p>Above you've seen how to create a repository and commit things
-to it, but what happens if you make a mistake and want to "roll
-back" to a previous commit? Let's make a deliberate error and see
-how we can deal with it then...</p>
+<p>上面你已经看到了如何创建一个存储库并向它提交，但是如果你犯了一个错误并想要 “回滚” 到之前的提交会发生什么呢？让我们故意做一个错误，然后看看我们如何处理它......</p>
 
-<p>First of all create a new resource - in this example we'll make
-a Script resource - and initially you'll see no status icon since
-as far as source control is concerned it doesn't exist exist yet.
-In the script resource add a simple line of code, like:</p>
+<p>首先创建一个新资源 - 在这个例子中我们将创建一个脚本资源 - 最初你将看不到状态图标，因为就源代码管理而言它还不存在。在脚本资源中添加一行简单的代码，如：</p>
 
 <p class="code">show_debug_message("Hello World");</p>
 
-<p>If you now close the code editor, the script will save and the
-modified file icon <img style="vertical-align:middle" src=
-"images/icon_scm_modified.png"> will appear beside it in the
-resource tree. Now, open up the Commit window and you'll see there
-are four staged changes, as new resources automatically get added:
-<img class="center" src="images/scm_stagedchanges.png" alt=
+<p>如果现在关闭代码编辑器，脚本将保存，修改后的文件图标 <img style="vertical-align:middle" src=
+"images/icon_scm_modified.png"> 将显示在资源树中。现在，打开提交窗口，你将看到有四个可提交更改，因为会自动添加新资源：<img class="center" src="images/scm_stagedchanges.png" alt=
 "Source Control Staged Changes"></p>
 
-<p>The changes staged will be:</p>
+<p>可提交更改如下：</p>
 
 <ul>
-<li>the .yyp project file</li>
+<li>.yyp 项目文件</li>
 
-<li>a view file</li>
+<li>视图文件（view file）</li>
 
-<li>the script GML itself</li>
+<li>GML 脚本本身</li>
 
-<li>the .yy file referencing it</li>
+<li>引用脚本的 .yy 文件</li>
 </ul>
 
-<p>You should type in a commit message and then click the
-<i>Commit</i> button, just as we explained previously. Now, we go
-back to our script and change the line of code to (for
-example):</p>
+<p>你应该输入提交消息，然后单击 <i>提交</i> 按钮，就像我们之前解释的那样。 现在，我们回到脚本并将代码行更改为（例如）：</p>
 
 <p class="code">show_debug_message("Hello World, how are
 you?");</p>
 
-<p>When we close the code editor, again a red icon will be shown
-beside the script, but we've realised that we made a mistake with
-our code and we want to roll back to a previous version to fix it
-(obviously, you could just open the script and fix it easily, since
-the example is so simple, but in large projects that's not normally
-a feasible approach). What we need to do is <i>revert</i> our
-changes.</p>
+<p>当我们关闭代码编辑器时，脚本旁边会再次显示一个红色图标，但我们已经意识到我们的代码出错了，我们想回滚到以前的版本来修复它（显然，你可能只是打开脚本并轻松修复它，因为示例非常简单，但在大型项目中通常不是一种可行的方法）。 我们需要做的是 <i>恢复</i> 我们的更改。</p>
 
-<p>To revert a change we first need to open up the commit window
-again, so we go to <i>Source Control</i> &gt; <i>Commit Changes</i>
-once more. Our changed file will again be staged ready for
-committing, but this isn't what we want so we click the button
-<i>Unstage All</i> to take it out of the staging area.</p>
+<p>要还原更改，我们首先需要再次打开提交窗口，因此我们再次进入 <i>源代码管理</i> &gt; <i>提交更改</i>。 我们更改的文件将再次准备好进行提交，但这不是我们想要的，所以我们单击 <i>不提交所有</i> 按钮将其从暂存区域中取出。</p>
 
-<p>If we now right click <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on the file we changed we'll get a
-context menu with an option to <b>Revert Path</b>: <img class=
+<p>如果我们现在右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 我们更改的文件，我们将获得一个上下文菜单，其中包含 <b>还原路径</b> 选项：<img class=
 "center" src="images/scm_revertpath.png" alt=
 "Source Control Revert Path"></p>
 
-<p>When you select this option, you will revert the files back to
-the previous state that they were in.</p>
+<p>选择此选项后，你将文件还原为它们所处的先前状态。</p>
 
-<div class="note"><b>IMPORTANT!</b> When you revert you will get a
-message asking you to reload or save the current project due to the
-file checker detecting changes on disk: <img class="center" src=
-"images/scm_warning.png" alt="Source Control Warning"> You
-<b>must</b> hit <b>Reload</b> and not save, as saving will save
-what is memory rather than reloading the reverted files.</div>
+<div class="note"><b>重要！</b> 当你还原时，由于文件检查器检测到磁盘上的更改，你将收到一条消息，要求你重新加载或保存当前项目：<img class="center" src=
+"images/scm_warning.png" alt="Source Control Warning"> 你 <b>必须</b> 点击 <b>重新载入</b> 而不保存，因为保存将保存内存而不是重新载入恢复的文件。</div>
 
 <p><br>
-
-That's all great for when you edit something and want to change
-back without having already performed a commit, but what about when
-you have committed one or more changes and want to roll back to a
-previous commit? Well, let's edit our script again to say:</p>
+这对于编辑某些内容并且想要在没有执行提交的情况下进行更改时非常有用，但是当你提交了一个或多个更改并希望回滚到之前的提交时呢？ 那么，让我们再次编辑我们的脚本：</p>
 
 <p class="code">show_debug_message("This is a bad idea");</p>
 
-<p>Now we commit it as before to get it under source control. So,
-this was a bad idea and we want to roll back, which means to start
-with we need to open the <i>Source Control</i> &gt; <i>View
-History</i> window again. We will see a list of all previous
-commits now in this window, starting with the initial commit, the
-commit for the script, and then the commit for the script that we
-have edited as a "bad idea":  <img class="center" src=
+<p>现在我们像以前一样提交它以使其受源代码管理。所以，这是一个坏主意并且我们想要回滚，这意味着首先我们需要再次打开<i>源代码管理</i> &gt; <i>查看历史</i> 窗口。我们将在此窗口中看到所有先前提交的列表，从初始提交，脚本提交开始，然后提交我们编辑为 “bad idea” 的脚本： <img class="center" src=
 "images/scm_badidea.png" alt="Source Control Bad Idea History"></p>
 
-<p>We now have two choices. We can revert an entire revision -
-which will revert <i>all</i> files that were changed to those of
-the chosen commit - or we can choose to revert a path - which will
-simply revert a single file. Let's do the first option to start
-with:</p>
+<p>我们现在有两个选择。 我们可以还原整个修订版本 - 这将修改 <i>所有</i> 已更改为所选提交文件的文件 - 或者我们可以选择还原路径 - 这将只恢复单个文件。让我们做第一个选择：</p>
 
 <ul>
-<li>Right click <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> our second commit in the <i>Commit
-History</i> pane (the "Hello World" commit).<br>
+<li>右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> <i>提交历史</i> 窗格中的第二个提交（“Hello World”提交）。<br>
 <br></li>
 
-<li>Select <i>Revert To This Revision</i> and then choose
-<b>ReLoad</b> on the warning message.<br>
+<li>选择 <i>还原到这次修订</i>，然后在警告消息上选择 <b>重新加载</b>。<br>
 <br></li>
 </ul>
 
-<p>You should see that the script now has a red status icon
-<img style="vertical-align:middle" src=
-"images/icon_scm_modified.png">, and if we open it up, we'll have
-the following: <img class="center" src=
+<p>你应该看到脚本现在有一个红色状态图标 <img style="vertical-align:middle" src=
+"images/icon_scm_modified.png">，如果我们打开它，我们将有以下内容：<img class="center" src=
 "images/scm_reverttorevision.png" alt=
 "Source Control Revert To Revision"></p>
 
-<p>We can then do a commit on the project and we'll be back to
-where we were once again. However we can also undo that action for
-the file and get our "bad idea" commit back by doing the
-following:</p>
+<p>然后我们可以对项目进行提交，我们将再次回到原来的位置。 但是，我们也可以撤消该文件的操作，并通过执行以下操作让我们的 “坏主意” 提交回来：
+</p>
 
 <ul>
-<li>Open the <i>Commit Changes</i> Window.<br>
+<li>打开 <i>提交更改</i> 窗口。<br>
 <br></li>
 
-<li>Unstage the script with the "Hello World" code in it.<br>
+<li>选择不提交 "Hello World" 代码脚本。<br>
 <br></li>
 
-<li>Right click <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> and <i>Revert Path</i>.</li>
+<li>右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并选择 <i>还原路径</i>。</li>
 </ul>
 
-<p>Now we are back to having the erroneous file in the project
-again! Well, we can take this opportunity to revert only that file
-path instead of revrting everything to a previous revision. For
-that we need to do the following:</p>
+<p>现在我们又回到了项目中的错误文件！ 好吧，我们可以借此机会仅恢复该文件路径，而不是将所有内容都重新修改为以前的版本。 为此我们需要做以下事情：</p>
 
 <ul>
-<li>Open the <i>View History</i> window.<br>
+<li>打开 <i>查看历史</i> 窗口<br>
 <br></li>
 
-<li>Click on the second commit (the "Hello World" commit).<br>
+<li>单击第二个提交（“Hello World”提交）。<br>
 <br></li>
 
-<li>Right click <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on our script GML in the <b>Files</b>
-pane and select <i>Revert Path</i>.</li>
+<li>右键单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> <b>提交中修改的文件</b> 窗格中的 GML 脚本，然后选择 <i>还原路径</i>。</li>
 </ul>
 
-<p>We should be back to having our "Hello World" code and we can
-then do a fresh commit to update the source control again with the
-corrected file.</p>
+<p>我们将会回到我们的 “Hello World” 代码，然后我们可以再次使用更正的文件更新源代码管理。</p>
 </div>
 <br>
 <a name="scm_cloning" id="scm_cloning"></a> <label class="collapse"
-for="four">Cloning A Repository</label> <input id="four" type=
+for="four">克隆存储库</label> <input id="four" type=
 "checkbox">
 <div class="index_list">
-<p>When your project is stored in an external repository, you need
-to remember to both <i>push</i> your changes and <i>pull</i> any
-new ones. The reason for this is that when you commit, you store
-your changes locally, which allows you to work away from an
-internet connection and sync up when you're ready, and to sync up
-you push your changes to the remote repository. Pulling changes
-means that you want to pull any changes that others have made from
-the remote repository into your local repository. However, this
-means that there may be times when people can be editing the
-<i>same</i> files, which in turn creates a <b>merge conflict</b>.
-You need to know how to handle these conflicts so we're going to
-deliberately create one now and then show you how to deal with
-it.</p>
+<p>当你的项目存储在外部存储库中时，你需要记住 <i>推送（push）</i> 更改并 <i>拉取（pull）</i> 任何新更改。这样做的原因是，当你提交时，你可以在本地存储更改，这样你就可以远离网络连接并在准备就绪时进行同步，并且可以同步将更改推送到远程存储库。拉取更改意味着你希望将其他人从远程存储库中所做的任何更改提取到本地存储库中。但是，这意味着有时候人们可以编辑 <i>相同</i> 的文件，从而产生 <b>合并冲突</b>。你需要知道如何处理这些冲突，所以我们现在要刻意创建一个，然后告诉你如何处理它。</p>
 
-<div class="note"><b>注意</b>： Sharing a local project repository (even through a file synchronization service like Dropbox) isn't recommended, as commits are generally written directly to it, and thus you have very little conflict protection.</div>
+<div class="note"><b>注意</b>：不建议共享本地项目存储库（甚至通过像 Dropbox 这样的文件同步服务），因为提交通常直接写入它，因此你几乎没有冲突保护。</div>
 
 <p><br>
-
-To generate our conflict we first need to have two local
-repositories, one for the Master repository and one for our copy.
-To create this we need to <b>Clone</b> the repository, which is
-done with the following steps:</p>
+为了产生我们的冲突，我们首先需要有两个本地存储库，一个用于主存储库，一个用于我们的副本。要创建它，我们需要 <b>克隆</b> 存储库，这是通过以下步骤完成的：</p>
 
 <ul>
-<li>Go to <i>Source Control</i> &gt; <i>Clone Repository</i>.<br>
+<li>转到 <i>源代码管理</i> &gt; <i>克隆存储库</i>。<br>
 <br></li>
 
-<li>In the URL field, type the path to the project that we setup in
-the Reverting Files guide above (by default this will be
-<tt>D:\Users\&lt;Username&gt;\Documents\GameMakerStudio2\&lt;ProjectName&gt;</tt>).
-
+<li>在URL字段中，键入我们在上面的 “还原文件” 指南中设置的项目的路径（默认情况下，这将是 <tt>C:\Users\&lt;用户名&gt;\Documents\GameMakerStudio2\&lt;项目名称&gt;</tt>）.
 <img class="center" src="images/scm_repositorytoclone.png" alt=
 "Source Control Clone Repository From"></li>
 
-<li>You then need to set a path to clone to: <img class="center"
+<li>然后，你需要设置克隆到的路径： <img class="center"
 src="images/scm_cloneto.png" alt=
-"Source Control Clone Repository To"> When you click the "Okay"
-button you'll get the following warning about trying to clone a
-"non-bare" repository: <img class="center" src=
-"images/scm_clonewarning.png" alt="Source Control Clone Warning">
-You can click "Okay" here again.<br>
+"Source Control Clone Repository To"> 当你单击“确定”按钮时，你将收到有关尝试克隆 “非裸” 存储库的以下警告：<img class="center" src=
+"images/scm_clonewarning.png" alt="Source Control Clone Warning"> 你可以再次点击“确定”。<br>
 <br></li>
 
-<li>You'll now be presented with a directory explorer to create a
-"bare" proxy repository (this is a repository which you <i>can</i>
-safely store on Dropbox, for example). Browse to where you want to
-create this proxy repository and select (or create) the folder to
-use.</li>
+<li>现在，你将看到一个目录资源管理器创建了一个 “裸” 代理存储库（例如，这是一个 <i>可以</i> 安全地存储在 Dropbox 上的存储库）。浏览到要创建此代理存储库的位置，然后选择（或创建）要使用的文件夹。
+</li>
 </ul>
 
 <p><br>
-
-Once you've done that, <i>GameMaker Studio 2</i> will push your
-original project to the proxy, and pull a new one to the path you
-set in the Clone Repository window and then automatically open a
-file browser so you can open the stored project. If you now go to
-<i>Source Control</i> &gt; <i>View History</i> we'll see our
-original commits plus a new "Push For Clone":  <img class="center"
+完成后，<i>GameMaker Studio 2</i> 会将原始项目推送到代理，然后将新项目拉到你在克隆存储库窗口中设置的路径，然后自动打开文件浏览器，以便打开存储的项目。 如果你现在转到 <i>源代码管理</i> &gt; <i>查看历史</i>，我们将看到我们的原始提交以及新的 “推送克隆”： <img class="center"
 src="images/scm_pushforclone.png" alt=
 "Source Control Push For Clone"></p>
 
-<p>You have now cloned your repository and can continue working on
-the local version of the project.</p>
+<p>你现在已经克隆了存储库，可以继续处理项目的本地版本。</p>
 </div>
 <br>
 <a name="scm_conflicts" id="scm_conflicts"></a> <label class=
-"collapse" for="five">Conflicts</label> <input id="five" type=
+"collapse" for="five">冲突</label> <input id="five" type=
 "checkbox">
 <div class="index_list">
-<p>In this section we are going to look at resolving conflicts
-between a cloned local repository and a master repository (see the
-section on Cloning for more details). Assuming you are now using a
-local repository we'll need to edit a file and then cause some kind
-of conflict, so open the test script we've been using and change
-the "Hello World" message to something like this:</p>
+<p>在本节中，我们将讨论解决克隆的本地存储库和主存储库之间的冲突（有关更多详细信息，请参阅克隆部分）。 假设你现在正在使用本地存储库，我们需要编辑一个文件然后导致某种冲突，因此打开我们一直使用的测试脚本并将 “Hello World” 消息更改为以下内容：</p>
 
 <p class="code">show_debug_message("Hello World, How Are
 You?");</p>
 
-<p>You should now save the project and commit it to the local
-repository. Now, since we are linked to a remote master repository
-(even if it's one we've cloned to the same disk) we need to do a
-<b>Push</b> to get the changes on to master. For that, go to
-<i>Source Control</i> &gt; <i>Push Changes</i>, which will give us
-a status update in the Source Control <a href="output.html">Output
-Tab</a>:  <img class="center" src="images/scm_outputpanel.png" alt=
+<p>你现在应该保存项目并将其提交到本地存储库。 现在，由于我们链接到远程主存储库（即使它是我们克隆到同一磁盘的存储库），我们需要执行 <b>推送</b> 以更改主存储库。为此，请转到 <i>源代码管理</i> &gt; <i>推送更改</i>，这将在源代码管理 <a href="output.html">输出选项卡</a> 中为我们提供状态更新： <img class="center" src="images/scm_outputpanel.png" alt=
 "Source Control Output Panel"></p>
 
-<p>We now need to open up our <i>original</i> project (not the
-cloned one), so browse to where you saved it on disk - or simply
-check the <i>Recent Projects</i> in the <i>File</i> menu, as it
-should be directly under the current one - and load it into
-<i>GameMaker Studio 2</i>. An easy way to check you have the right
-project is to simply check the script you have and if the message
-is "Hello World" then you have the right one, or you can open up
-the <i>View History</i> window and check that way.</p>
+<p>我们现在需要打开我们的 <i>原始</i> 项目（而不是克隆的项目），因此浏览到将其保存在磁盘上的位置 - 或者只需检查 <i>文件</i> 菜单中的 <i>最近项目</i>，因为它应该直接在当前项目下 - 并将其加载到 <i>GameMaker Studio 2</i>。一个检查你的项目是正确的简单方法是检查你的脚本，如果消息是 “Hello World”，那么你的项目是正确的，或者你可以打开 <i>查看历史</i> 窗口并检查。</p>
 
-<p>You now need to edit the script again, so make it read something
-like this:</p>
+<p>你现在需要再次编辑脚本，因此请修改为：</p>
 
 <p class="code">show_debug_message("This will cause a
 conflict.");</p>
 
-<p>This can be saved to disk, and the changes committed, but if you
-try to push these changes you'll get the following message:
-
+<p>这可以保存到磁盘，并提交更改，但如果你尝试推送这些更改，你将收到以下消息：
 <img class="center" src="images/scm_pushconflict.png" alt=
 "Source Control Push Conflict Message"></p>
 
-<p>Someone has already pushed changes which you don't have yet!
-This means that you need to do a pull on the repository and see
-what exactly the issue is, so go to <i>Source Control</i> &gt;
-<i>Pull Changes</i>. This will show two windows, the first is a
-warning about changed files (as with previous actions, you want to
-choose <b>Reload</b> here and <i>not</i> Save), and the other is
-the Conflicts window:  <img class="center" src=
+<p>有人已经推送了你还没有的变化！ 这意味着你需要对存储库进行拉取并查看问题究竟是什么，因此请转到 <i>源代码管理</i> &gt; <i>拉取更改</i>。这将显示两个窗口，第一个是关于已更改文件的警告（与之前的操作一样，你希望选择此处 <b>重新加载</b> 而 <i>不是</i> 保存），另一个是 “冲突” 窗口： <img class="center" src=
 "images/scm_conflictswindow.png" alt=
 "Source Control Conflict Window"></p>
 
-<p>This window will show the conflicted files in a list to the
-left, and you can select the files from that list using the left
-mouse button <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> (or select multiple files using
-<img style="vertical-align:middle" src=
+<p>此窗口将在左侧列表中显示冲突的文件，你可以使用鼠标左键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 从该列表中选择文件（或使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png">). You have four options for
-dealing with the conflicted files, available from the buttons on
-the right:</p>
+src="../../images/icon_rmb.png"> 选择多个文件）。 你有四种处理冲突文件的选项，可从右侧的按钮获得：</p>
 
 <ul>
-<li><b>Use Theirs</b> - This will overwrite the changes you have
-made with the one from the remote repository.<br>
+<li><b>使用他们的</b> - 这将覆盖你使用远程存储库中的更改所做的更改。<br>
 <br></li>
 
-<li><b>Use Mine</b> - This will overrule the changes from the
-remote repository with the ones you've just made.<br>
+<li><b>使用我的</b> - 这将取消远程存储库中你刚刚创建的更改。<br>
 <br></li>
 
-<li><b>Merge</b> - This will attempt to open an External Merge Tool
-to handle the conflict.<br>
+<li><b>合并</b> - 这将尝试打开外部合并工具来处理冲突。<br>
 <br></li>
 
-<li><b>Choose Merge Tool</b> - This will let you configure the
-Merge Tool (see the section on Using An External Merge Tool below
-for more details).</li>
+<li><b>选择合并工具</b> - 这将允许你配置合并工具（有关详细信息，请参阅下面的使用外部合并工具一节）。</li>
 </ul>
 
 <p><br>
 </p>
 
-<p>Now, you can use the buttons to sort out the conflict, but
-before you do, let's just open the conflicted file to see exactly
-what the issue is. If you open the script that is conflicted it
-will now look like this:  <img class="center" src=
+<p>现在，你可以使用按钮来解决冲突，但在此之前，让我们打开冲突的文件以确切了解问题所在。 如果你打开冲突的脚本，它现在将如下所示： <img class="center" src=
 "images/scm_conflictedcode.png" alt=
 "Source Control Conflicted Code"></p>
 
-<p>This shows that "This Will Cause A Conflict" is on the
-<b>HEAD</b> (this is what we have pushed to the local repository)
-and that "Hello World, How Are You?" is being pulled from
-<b>master</b>, the remote repository. You can go back to the
-<i>Conflicts</i> window now and click on <i>Use Theirs</i> to pull
-the changed file and overwrite the current HEAD file. The script
-will now be flagged as changed and you should do a new commit and
-push before continuing.</p>
+<p>在 <b>HEAD</b> 文件将显示 “This Will Cause A Conflict”（这是我们推送到本地存储库）和从远程存储库 <b>master</b> 中拉取的 “Hello World，How Are You？”。你可以立即返回 <i>冲突</i> 窗口，然后单击 <i>使用他们额</i> 以拉取已更改的文件并覆盖当前的 HEAD 文件。 该脚本现在将被标记为已更改，你应该在继续之前执行新的提交和推送。</p>
 
-<p>Note that we could actually fix this in the <i>GameMaker Studio
-2</i> IDE. If we remove lines 1, 2, 3 and 5 so we are left with
-just <tt>show_debug_message(“Hello World, How Are You?”)</tt> and
-save it, it'll clear the conflict, as Git will assume that you know
-what you are doing with your own file. It is error prone, so it is
-recommended to install a merge tool, then configure and use that
-instead of manually trying to merge.</p>
+<p>请注意，我们可以在 <i>GameMaker Studio 2</i> IDE中实际修复此问题。 如果我们删除第 1、2、3、5 行，那么我们只剩下 <tt>show_debug_message("Hello World, How Are You?")</tt> 并保存它，它将清除冲突，因为 Git 会认为你知道你在对你自己的文件做什么。 它容易出错，因此建议安装合并工具，然后配置并使用它，而不是手动尝试合并。</p>
 </div>
 <br>
 <a name="scm_external_merge" id="scm_external_merge"></a>
-<label class="collapse" for="seven">Setting Up External Merge/Diff
-Tools</label> <input id="seven" type="checkbox">
+<label class="collapse" for="seven">设置外部合并 / 差异工具</label> <input id="seven" type="checkbox">
 <div class="index_list">
-<p>When you work on a project with other people, there's always a
-chance there could be a conflict, as multiple people edit the same
-file and most source control systems can make a good attempt at
-merging any conflicted files, but when there are changes in the
-same place, it requires a bit of help to know what to do – this is
-where a <b>merge tool</b> comes in to show you the changes, and let
-you decide.</p>
+<p>当你与其他人一起处理项目时，总会有可能发生冲突，因为多人编辑同一个文件，并且大多数源代码管理系统可以很好地尝试合并任何冲突的文件，但是当在同一个地方有变化时 ，它需要一些帮助才能知道该做什么 - 此时 <b>合并工具</b> 将向你展示更改的地方，让你自己决定。</p>
 
-<p>As each merge tool is different, there are four macros that can
-be used to help specify files to it which can be set up from the
-<i>Conflicts</i> window by clicking the button labelled<i>Choose
-Merge Tool</i>:  <img class="center" src=
+<p>由于每个合并工具都不同，因此有四个宏可用于指定文件，可以通过从 <i>冲突</i> 窗口单击按钮 <i>选择合并工具</i> 设置文件： <img class="center" src=
 "images/scm_conflictswindow.png" alt=
 "Source Control Conflict Window"></p>
 
-<p>When you click that button the <b>Preferences</b> window will
-open on the Git plugin:  <img class="center" src=
+<p>当你单击该按钮时，将在 Git 插件上打开 <b>偏好设置</b> 窗口： <img class="center" src=
 "images/scm_choosemergetool.png" alt=
 "Source Control Choose Merge Tool"></p>
 
-<p>Here you provide a path to the chosen merge tool and then a
-<i>Merge Tool Options</i> macro (or macros) to use when deciding
-what to do, with the following options available:</p>
+<p>在这里，你提供了所选合并工具的路径，然后提供了一个 <i>合并工具选项</i> 宏，以便在决定要执行的操作时使用以下选项：</p>
 
 <ul>
-<li><tt>${scm_mine}</tt>: path to your version<br>
+<li><tt>${scm_mine}</tt>: 你的版本的路径<br>
 <br></li>
 
-<li><tt>${scm_thers}</tt>: path to their version<br>
+<li><tt>${scm_thers}</tt>: 其它版本的路径<br>
 <br></li>
 
-<li><tt>${scm_base}</tt>: path to the version before the conflicted
-changes occurred<br>
+<li><tt>${scm_base}</tt>: 发生冲突更改之前的版本路径<br>
 <br></li>
 
-<li><tt>${scm_merged}</tt>: path to where the merge tool should
-save to<br></li>
+<li><tt>${scm_merged}</tt>: 合并工具应保存到的路径<br></li>
 </ul>
 
 <p><br>
-
-As a help to setting up, when you give a path to certain merge
-tools, <i>GameMaker Studio 2</i> will fill in some defaults to get
-started with, depending on the tool chosen:</p>
+作为设置的帮助，当你提供某些合并工具的路径时，<i>GameMaker Studio 2</i> 将填写一些默认值以开始使用，具体取决于所选的工具：</p>
 
 <ul>
-<li>KDiff3: <tt>${scm_theirs} ${scm_mine} -o ${scm_merged}</tt><br>
+<li>KDiff3： <tt>${scm_theirs} ${scm_mine} -o ${scm_merged}</tt><br>
 <br></li>
 
-<li>Meld: <tt>${scm_mine} ${scm_merged} ${scm_theirs}</tt><br>
+<li>Meld： <tt>${scm_mine} ${scm_merged} ${scm_theirs}</tt><br>
 <br></li>
 
-<li>Notepadd++: <tt>${scm_merged}</tt><br>
+<li>Notepadd++： <tt>${scm_merged}</tt><br>
 <br></li>
 
-<li>TortoiseMerge: <tt>/base:${scm_base} /theirs:${scm_theirs}
-/mine:${scm_mine} /merged:${scm_merged}</tt><br></li>
+<li>TortoiseMerge： <tt>/base:${scm_base} /theirs:${scm_theirs} /mine:${scm_mine} /merged:${scm_merged}</tt><br></li>
 </ul>
 
-<p>Note that if you don't have (or don't want to use) a merge tool,
-then you can open up the script in the IDE and attempt to fix it
-from there.</p>
+<p>请注意，如果你没有（或不想使用）合并工具，则可以在 IDE 中打开脚本并尝试从那里（手动）修复它。</p>
 
-<p>So, back to our example Conflict as stated in the section above
-on Conflicts... You have done a pull from master and one of the
-files is conflicted. This opens the Source Control Conflicts
-window, where you can click on the conflicted script, and now click
-on Merge, since you have configured your merge tool. Clicking merge
-will now open the tool where you can deal with the conflict and
-then use the macro(s) supplied to make the required changes. Once
-you have finished and closed the merge tool, the <i>GameMaker
-Studio 2</i> IDE will show the following confirmation window:
-
+<p>所以，回到我们的示例冲突，如上面关于冲突的部分所述... 你已经从 master 完成了拉取，其中一个文件是冲突的。这将打开 “源代码管理冲突” 窗口，你可以在其中单击冲突的脚本，然后单击 “合并”，因为你已配置了合并工具。现在单击合并将打开你可以处理冲突的工具，然后使用提供的宏来进行所需的更改。完成并关闭合并工具后，<i>GameMaker Studio 2</i> IDE 将显示以下确认窗口：
 <img class="center" src="images/scm_mergeconfirm.png" alt=
 "Source Control Merge Confirm"></p>
 
-<p>Simply answer "Yes" to this prompt as you've just done it
-yourself using the merge tool, and then you need to commit this
-change to signify the end of the merge operation (<i>Source
-Control</i> &gt; <i>Commit Changes</i>. The Commit window will now
-show that a merge is in progress as well as show some unstaged
-files:  <img class="center" src="images/scm_mergeinprogress.png"
+<p>只需对此提示回答 “是”，因为你刚刚使用合并工具完成此操作，然后你需要提交此更改以表示合并操作的结束（ <i>源代码管理</i> &gt; <i>提交更改</i>。提交窗口现在将显示合并正在进行中以及显示一些未提交更改的文件： <img class="center" src="images/scm_mergeinprogress.png"
 alt="Source Control Merge In Progress"></p>
 
-<p>These unstaged files are our script file with the addition of
-<tt>.base</tt>, <tt>.ours</tt> and <tt>.theirs</tt>. We can safely
-delete all these so click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> on the top one and then <img style=
-"vertical-align:middle" src="../../images/icon_shift.png"> +
-<img style="vertical-align:middle" src="../../images/icon_lmb.png">
-on the bottom one to select them all. Next, right click <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png">on the
-selected files and choose <i>Delete Path</i> to remove them.
-There's also a commit message pre-filled for you as well, stating
-that this was a merge, and that there was a conflict (you can add
-to this or edit it as you wish).</p>
+<p>这些未提交更改的文件是我们的脚本文件，添加了<tt>.base</tt>、<tt>.ours</tt> 和 <tt>.theirs</tt>。 我们可以安全地删除所有这些，因此请单击 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 顶部的一个，然后单击底部的 <img style=
+"vertical-align:middle" src="../../images/icon_shift.png"> + <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 以全部选中它们。接下来，右键单击 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 所选文件，然后选择 <i>删除路径</i> 将其删除。 还有一个预先填写的提交消息，说明这是一个合并，并且存在冲突（你可以添加或根据需要编辑它）。</p>
 
-<p>You can click <i>Commit</i> now.</p>
+<p>你现在可以单击 <i>提交</i>。</p>
 
-<p>Due to the fact that you can have issues with outher files, it
-means that your workflow when using remote or shared repositories
-should be as follows:</p>
+<p>由于你可能存在其他文件的问题，这意味着使用远程或共享存储库时的工作流程应如下所示：</p>
 
-<p class="code">Make Changes &gt; Save &gt; Commit &gt; Pull &gt;
-Merge &gt; Push<br></p>
+<p class="code">产生更改 &gt; 保存 &gt; 提交 &gt; 拉取 &gt; 合并 &gt; 推送<br></p>
 
-<p>You should also set up a Diff Tool for use when doing commits to
-a repository. This is setup from the <b>Preferences</b>, same as
-for the Merge tool:  <img class="center" src=
+<p>你还应该设置一个差异工具（Diff Tool），以便在提交到存储库时使用。这是从 <b>偏好设置</b> 设置的，与合并工具相同： <img class="center" src=
 "images/scm_choosedifftool.png" alt=
 "Source Control Choose Diff Tool"></p>
 
-<p>The Diff tool is configured in much the same manner as the Merge
-tool, but only uses the <tt>${scm_base}</tt> and
-<tt>${scm_theirs}</tt> options - in this case, <tt>${scm_base}</tt>
-represents the unmodified file whereas <tt>${scm_theirs}</tt>
-represents the current state of the file. The <i>Tool Options</i>
-should be pre-populated with the default options for <i>Meld</i>,
-<i>KDiff3</i> and <i>TortoiseMerge</i>, just as they were for the
-Merge tool. Note that <i>GameMaker Studio 2</i> does not support
-the outputting of single file diff patches, therefore there is no
-default for <i>Notepad</i>.</p>
+<p>差异工具的配置方式与合并工具的配置方式大致相同，但仅使用 <tt>${scm_base}</tt> 和 <tt>${scm_theirs}</tt> 选项 - 在这种情况下，<tt>${scm_base}</tt> 表示未修改的文件，而 <tt>${scm_theirs}</tt> 表示当前文件的状态。 <i>工具选项</i> 应预先填充 <i>Meld</i>、<i>KDiff3</i> 和 <i>TortoiseMerge</i> 的默认选项，就像它们用于合并工具一样。请注意，<i>GameMaker Studio 2</i> 不支持输出单个文件差异补丁，因此 <i>Notepad++</i> 没有默认值。</p>
 
-<p>In order to view changes between current and previous revisions
-using the Diff tool, simply open up the <b>Commit</b> window and
-then double click on a file. If the tool has been setup correctly,
-it will be launched and you'll be able to see the changes between
-the files.</p>
+<p>要使用差异工具查看当前和以前版本之间的更改，只需打开 <b>提交</b> 窗口，然后双击文件。如果工具设置正确，它将启动，你将能够看到文件之间的更改。</p>
 </div>
 
 <p><br>
 </p></blockquote>
 
-<h2>Source Control Context Menu</h2>
+<h2>源代码管理上下文菜单</h2>
 
 <p><br>
 </p>
 
-<p>When you have activated Source Control for any project (see the
-section <i>Setting Up The Source Control Git Plugin</i> above for
-details), the <i>GameMaker Studio 2</i> will show the following
-context menu at the top:  <img class="center" src=
-"images/scm_contextmenu.png" alt="Source Control Context Menu"></p>
+<p>当你为任何项目激活源代码管理时（有关详细信息，请参阅上面的 <i>设置源代码管理 Git 插件</i> 一节），<i>GameMaker Studio 2</i> 将在顶部显示以下上下文菜单： <img class="center" src=
+"images/scm_contextmenu.png" alt="源代码管理上下文菜单"></p>
 
-<p>Here we outline each of the available options (most of them are
-explained in more depth in the tutorial sections above):</p>
+<p>在这里，我们概述了每个可用的选项（其中大部分在上面的教程部分中有更深入的解释）：</p>
 
 <ul>
-<li><b>Create Project Repository</b>: This option permits you to
-create a local repository in the same directory as your project
-files.<br>
+<li><b>创建项目存储库</b>： 此选项允许你在与项目文件相同的目录中创建本地存储库。<br>
 <br></li>
 
-<li><b>Import Project Into Repository</b>: This option permits you
-to import a project to an external repository.<br>
+<li><b>将项目导入存储库中</b>： 此选项允许你将项目导入外部存储库。<br>
 <br></li>
 
-<li><b>Clone Repository</b>: This option will permit you to clone a
-repository from a source to a new destination.<br>
+<li><b>克隆存储库</b>： 此选项允许你将存储库从源代码克隆到新目标。<br>
 <br></li>
 
-<li><b>Commit Changes</b>: With this option you can stage changed
-files in your project and then commit them to the repository.<br>
+<li><b>提交更改</b>： 使用此选项，你可以在项目中暂存已更改的文件，然后将它们提交到存储库。<br>
 <br></li>
 
-<li><b>Push Changes</b>: After doing a commit or a merge this
-option is used to push the changes to the master repository.<br>
+<li><b>推送更改</b>： 执行提交或合并后，此选项用于将更改推送到主存储库。<br>
 <br></li>
 
-<li><b>Pull Changes</b>: With this option you can update the local
-repository by pulling the changed files from the master
-repository.<br>
+<li><b>拉取更改</b>： 使用此选项，你可以通过从主存储库中拉取已更改的文件来更新本地存储库。<br>
 <br></li>
 
-<li><b>View History</b>: This will open the history window where
-you can view all the version history of the project and choose to
-roll back specific file paths or whole revisions.<br>
+<li><b>查看历史</b>： 这将打开历史记录窗口，你可以在其中查看项目的所有版本历史记录，并选择回滚特定文件路径或整个修订版本。<br>
 <br></li>
 
-<li><b>Show Conflicts</b>: This will open the Conflicts window and
-list any conflicted files that may exist in the project, permitting
-you to deal with them either through the <i>GameMaker Studio 2</i>
-IDE or using a specific <b>Merge Tool</b>.</li>
+<li><b>显示冲突</b>： 这将打开 “冲突” 窗口并列出项目中可能存在的任何冲突文件，允许你通过 <i>GameMaker Studio 2</i> IDE 或使用特定的 <b>合并工具</b> 来处理它们。</li>
 </ul>
 
 <p><br>
@@ -803,7 +461,7 @@ IDE or using a specific <b>Merge Tool</b>.</li>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Extras</a></div>
+<div style="float:left">上一页: <a href="index.html">附加功能</a></div>
 
 <div style="float:right">下一页：<a href=
 "marketplace.html">市场</a></div>
