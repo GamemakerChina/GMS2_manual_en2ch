@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,68 +36,32 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>Another feature of DnD™ is that you can convert it into GML
-(GameMaker Language) code, and in this way see what exactly is
-going on behind the scenes when you use actions. Before actually
-changing the actions into GML however, you can first <i>Preview</i>
-them by using the right mouse button <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> menu
-option <b>Live Preview</b>: <img class="center" src=
+<p>DnD™ 的另一个特性是你可以将其转换为 GML（GameMaker 语言）代码，并以这种方式查看使用动作时幕后的确切情况。然而，在将动作实际更改为 GML 之前，你可以先使用鼠标右键 <img style=
+"vertical-align:middle" src="../../images/icon_rmb.png"> 菜单选项 <b>实时预览</b> 来 <i>预览</i>：<img class="center" src=
 "images/dnd_preview_rmbmenu.png" alt="实时预览"></p>
 
-<p>Which will open a new window:  <img class="center" src=
+<p>这会打开一个新窗口： <img class="center" src=
 "images/dnd_preview.png" alt="DnD实时预览窗口"></p>
 
-<p>As you add, change or remove DnD™ actions, the GML Live Preview
-will update to show you the actual code that is being created
-"behind the scenes". The code in the live preview cannot be edited
-directly, but you can select sections and copy them for pasting
-into GML scripts or Code Actions (for example).</p>
+<p>当你添加、更改或删除 DnD™ 动作时，GML 实时预览将更新以向你显示 “幕后” 创建的实际代码。 实时预览中的代码无法直接编辑，但你可以选择部分并将其复制以粘贴到 GML 脚本或代码动作。</p>
 
-<p>If you decide that you want to convert the DnD™ into code after
-seeing the preview, then this can be done again by clicking the
-right mouse button <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> in any event workspace with actions
-and selecting <b>Convert To GML</b>. <img class="center" src=
+<p>如果你决定在看到预览后将 DnD™ 转换为代码，则可以通过在任何具有动作的事件工作区中单击鼠标右键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并选择 <b>转成为 GML</b> 再次完成此操作。<img class="center" src=
 "images/dnd_code_rmbmenu.png" alt="转换成GML"></p>
 
-<p>The first time you do this you will be given a warning message
-saying that this is a <b>one way conversion</b>, since you can
-convert actions to code, but you cannot convert them back to
-<i>individual</i> actions again later. Clicking "okay" here will
-perform the conversion for you.  <img class="center" src=
+<p>第一次执行此操作时，你将收到一条警告消息，指出这是 <b>单向转换</b>，因为你可以将动作转换为代码，但以后无法再将其转换回单个动作。点击 “确定”，这将为你执行转换。 <img class="center" src=
 "images/dnd_code.png" alt="DnD™ as code"></p>
 
-<p>The resulting code will use {} to delimit individual actions,
-and you can clearly see what actions relate to which functions or
-variable declarations within the code. If the DnD™ is more complex
-then the code will be too, but the same general rules apply and
-code will be structures sequentially exactly the same as you have
-written the DnD™. Note that sometimes the code will have extra
-local (temporary) variables added in to store certain values that
-will be used, for example this:  <img class="center" src=
+<p>生成的代码将使用 {} 来分隔单个动作，你可以清楚地看到哪些动作与代码中的哪些函数或变量声明相关。如果 DnD™ 更复杂，那么代码也将如此，但是相同的一般规则适用，代码将按顺序与你编写 DnD™ 的顺序完全相同。 请注意，有时代码会添加额外的本地（临时）变量来存储将要使用的某些值，例如： <img class="center" src=
 "images/dnd_instanceexists.png" alt="DnD™ Instance Exists"></p>
 
-<p>Will become this code:  <img class="center" src=
+<p>将变成如下代码： <img class="center" src=
 "images/code_instanceexists.png" alt="Code Instance Exists"></p>
 
-<p>Here the code first of all creates a local (temporary) variable
-and sets it to false, then it checks if the instance exists and
-sets the local variable to the return of the function call. The
-local variable is then checked to see if it is <tt>true</tt> or
-<tt>false</tt> and if it is true the rest of the code is run.</p>
+<p>这里的代码首先创建一个本地（临时）变量并将其设置为 false，然后检查实例是否存在并将局部变量设置为函数调用的返回值。 然后检查局部变量以查看它是 <tt>true</tt> 还是 <tt>false</tt>，如果为 true，则运行其余代码。</p>
 
-<p>When learning to program using Drag and Drop, this can be an
-important tool in moving on to using GML at a later stage, but it's
-by no means obligatory and you can still make great games using
-DnD™! It's also worth noting that while the conversion process is
-one way, after converting actions to code, you <i>can</i> go back
-to using DnD™ again by using the right click menu in the code
-editor and selecting "Convert To DnD™". This will place the
-previously created code within an <a href=
-"../2_drag_and_drop_reference/common_actions/execute_code.html">Execute
-Code</a> action and you can then continue to use DnD™ as before:
-
+<p>当学习使用拖放进行编程时，这可能是在后期使用 GML 的重要工具，但它绝不是强制性的，你仍然可以使用 DnD™ 制作出色的游戏！同样值得注意的是，虽然转换过程是一种方式，但在将动作转换为代码后，你 <i>可以</i> 通过使用代码编辑器中的右键菜单并选择 “转换成DnD™” 再次使用DnD™。 这会将先前创建的代码置于 <a href=
+"../2_drag_and_drop_reference/common_actions/execute_code.html">执行代码</a> 动作中，然后你可以像以前一样继续使用 DnD™：
 <img class="center" src="images/dnd_executecode.png" alt=
 "DnD™ Execute Code"></p>
 

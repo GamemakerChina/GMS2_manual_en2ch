@@ -2,11 +2,11 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<meta name="generator" content="chm2web Pro 2.85 (unicode)时不是编程代码，只是你的代码是使用 “块” 操作而" />
 <title>将动作应用于其他实例</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
@@ -36,26 +36,11 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>Most actions in the DnD™ libraries have an option to apply the
-action in different ways. This is called setting the action
-<i>scope</i> and it can be one of several things: <img class=
-"center" src="images/dnd_applies_to.png" alt="DnD™ 应用于">
-Essentially what you are telling <i>GameMaker Studio 2</i> from
-which instance to run the action. The default action scope is
-<tt>self</tt>, which means that once the object is created as an
-instance in the room, that instance will run the action code.
-However this isn't always what you want, and you may want some
-actions to affect other, or even all, instances in the room. This
-is where changing the action <i>scope</i> comes in.</p>
+<p>DnD™ 库中的大多数动作都可以选择以不同方式应用动作。这称为设置动作 <i>作用域</i>，它可以是以下几种方法之一：<img class=
+"center" src="images/dnd_applies_to.png" alt="DnD™ 应用于"> 基本上你告诉 <i>GameMaker Studio 2</i> 从哪个实例执行动作。 默认操作范围是 <tt>自身（self）</tt>，这意味着一旦将物体创建为房间中的实例，该实例将运行动作代码。 但是，这并不总是你想要的，并且你可能希望某些动作影响房间中的其他甚至所有实例。 这是改变动作 <i>作用域</i> 的地方。</p>
 
-<p>The different scopes for performing actions are listed below,
-but it should be noted that changing the scope on an action in this
-way <b>will only apply the new scope to that action</b> and
-<i>not</i> to subsequent actions in the chain. If you want to apply
-a change of action scope to multiple chained actions, then use the
-<a href=
-"../2_drag_and_drop_reference/common_actions/apply_to.html">Apply
-to...</a> action first.</p>
+<p>下面列出了执行动作的不同作用域，但应注意以这种方式更改动作的作用域 <b>仅将新作用域应用于该动作</b>，而 <i>不</i> 应用于链中的后续动作。如果要将动作作用域更改应用于多个链式动作，请首先使用 <a href=
+"../2_drag_and_drop_reference/common_actions/apply_to.html">应用到...</a> 动作。</p>
 
 <blockquote><a name="dnd_scope_self" id="dnd_scope_self"></a>
 <label class="collapse" for="one"><img style=
@@ -63,52 +48,23 @@ to...</a> action first.</p>
 <input id="one" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>This is the default scope for an action and simply states that
-the action should only be called by the instance that is running
-the code.</p>
+<p>这是动作的默认作用域，只是声明动作只应由运行代码的实例调用。</p>
 </div>
 </div>
 <br>
 <a name="dnd_scope_other" id="dnd_scope_other"></a> <label class=
 "collapse" for="two"><img style="vertical-align:middle" src=
-"images/i_scope_other.png"> 对方</label> <input id="two" type=
+"images/i_scope_other.png"> 其它</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>The <tt>other</tt> scope has two main functions, and the value
-it returns will depend on where and how you use it. In the <a href=
-"../../2_interface/1_editors/events/index.html">Collision
-Event</a>, <tt>other</tt> will return the unique <i>instance ID</i>
-value (a unique value that is used to distinguish individual
-instances of every object), so you can, for example, create a
-"bullet" instance and have a collision event with a "player"
-instance and in that use the <tt>other</tt> scope to remove hit
-points from the "player" object and then return to <tt>self</tt>
-scope to destroy the "bullet" instance.</p>
+<p><tt>其它（other）</tt> 作用域有两个主要功能，它返回的值取决于你使用它的位置和方式。在 <a href=
+"../../2_interface/1_editors/events/index.html">碰撞事件</a> 中，<tt>其它</tt> 将返回唯一的 <i>实例 ID</i> 值（用于区分每个物体的各个实例的唯一值），因此你可以创建一个 “子弹” 实例并使用拥有作用域为 <tt>其它</tt> 的碰撞事件的 “玩家” 实例，该事件会在碰撞时移除 “玩家” 物体生命点，然后返回 <tt>自身（self）</tt> 作用域以销毁 “子弹” 实例。</p>
 
-<p>Outside of the collision event the <tt>other</tt> setting will
-behave as if it was set to <a href=
-"../3_gml_overview/5_keywords.html"><tt>noone</tt></a>
-<i>unless</i> it is being called from within a scoped block of
-actions. What this means is that if you change the scope of a group
-of actions to a specific object, then while those actions are being
-called, the <tt>other</tt> scope will return the instance ID of the
-instance that initially called the action group. For example, you
-could run an <a href=
-"../2_drag_and_drop_reference/common_actions/apply_to.html">Apply
-to...</a> action and then in the next code block reference set the
-scope to <tt>other</tt> to perform an action on the instance
-running the whole event block, and not the instance that is being
-scoped in the apply yo code blocks. The image below gives an
-example: <img class="center" src="images/dnd_scope_other.png" alt=
-"DnD™ 作用域"> In the image, we are checking for a mouse press in
-the instance, and if one is detected we change scope using the
-<b>Apply To...</b> action. The next two action blocks are now being
-called from the "obj_Player" instance (if there is more than one
-then it will run for <i>all</i> of them) and so the object will
-change its sprite and then create an object at the <tt>other</tt>
-position, ie: the position of the object that is running the event
-and detected the mouse press.</p>
+<p>在碰撞事件之外，<tt>其它</tt> 设置的行为就像设置为 <a href=
+"../3_gml_overview/5_keywords.html"><tt>noone</tt></a> 一样，<i>除非</i> 从一个范围的动作块中调用它。这意味着如果将一组动作的作用域更改为特定物体，则在调用这些动作时，<tt>其它</tt> 作用域将返回最初调用动作组的实例的实例 ID。例如，你可以运行 <a href=
+"../2_drag_and_drop_reference/common_actions/apply_to.html">应用到...</a> 动作，然后在下一个代码块引用中将范围设置为 <tt>其它</tt>，以对运行整个事件块的实例执行动作，而不是在应用到代码块中作用域的实例。下图给出了一个例子：<img class="center" src="images/dnd_scope_other.png" alt=
+"DnD™ 作用域"> 在图像中，我们正在检查实例中的鼠标按下，如果检测到一个，我们使用 <b>“应用到...”</b> 动作更改作用域。接下来的两个动作块现在从 “obj_Player” 实例调用（如果有多个动作块将为 <i>所有</i> 动作运行），因此物体将更改其精灵，然后在 <tt>其它</tt> 位置创建一个物体，即 ：正在运行事件的物体的位置并检测到鼠标按下。</p>
 </div>
 </div>
 <br>
@@ -118,13 +74,8 @@ and detected the mouse press.</p>
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>When you scope an action for <tt>all</tt>, you are telling
-<i>GameMaker Studio 2</i> to run that block for every single active
-instance within the current room. For example creating an <a href=
-"../2_drag_and_drop_reference/instance_actions/destroy_object_instance.html">
-Destroy Object Instance</a> action and setting its scope to
-<tt>all</tt> will cause every instance in the room to disappear, no
-matter what object they have been created from.</p>
+<p>当你将动作的作用域设置为 <tt>所有（all）</tt> 时，你告诉 <i>GameMaker Studio 2</i> 为当前房间内的每个活动实例运行该动作块。 例如，创建 <a href=
+"../2_drag_and_drop_reference/instance_actions/destroy_object_instance.html">摧毁物体实例</a> 动作并将其作用域设置为 <tt>所有</tt> 将导致房间中的每个实例消失，无论它们是从哪个物体创建的。</p>
 </div>
 </div>
 <br>
@@ -134,15 +85,8 @@ matter what object they have been created from.</p>
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>An action can also be given an <b>object</b> as it's scope. What
-this means is that <i>all</i> instances of the given object will
-run that action at the same time it is called. So if you have 100
-enemy instances in the room, for example, and you want to set them
-all to point towards a specific point. You'd call the <a href=
-"../2_drag_and_drop_reference/movement_actions/set_point_direction.html">
-Set Point Direction</a> and set the action scope to the object
-"obj_Enemy" and when it is called, all instances of that object
-will change direction.</p>
+<p>一个动作也可以给它一个 <b>物体</b> 作为它的作用域。 这意味着给定物体的 <i>所有</i> 实例将在调用它的同时运行该动作。因此，如果你在房间中有 100 个敌人实例，并且你想将它们全部设置为指向特定点。你将调用 <a href=
+"../2_drag_and_drop_reference/movement_actions/set_point_direction.html">设置点向</a> 并将动作范围设置为物体 “obj_Enemy”，并且在调用它时，该物体的所有实例都将更改方向。</p>
 </div>
 </div>
 <br>
@@ -151,11 +95,11 @@ will change direction.</p>
 "five" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p><b>表达式（Expression）</b>输入字段供你输入一个你希望执行动作的实例id。It can be the unique ID value assigned to an instance from the <a href=
-"../../2_interface/1_editors/rooms.html#room_instance_layer">Room Editor</a> or it can be the ID of an instance that you've stored in a variable (where the variable would be the input value) or it can even be an expression using code, as shown in the image below: <img class="center" src="images/dnd_scope_target.png" alt=
-"DnD™ 目标变量"> In this case, an instance calls the <a href=
-"../2_drag_and_drop_reference/instance_actions/set_sprite.html">Set Sprite</a> from the instance created by the code given for the Expression. Note that in this case, the instance being created will run its <a href=
-"../../2_interface/1_editors/events/index.html">Create Event</a> <i>first</i> before the action is applied to it.</p>
+<p><b>表达式（Expression）</b> 输入字段供你输入一个你希望执行动作的实例 id。它可以是从 <a href=
+"../../2_interface/1_editors/rooms.html#room_instance_layer">房间编辑器</a> 分配给实例的唯一 ID 值，也可以是你存储在变量中的实例的 ID（变量将是输入值），或者它甚至可以是使用的表达式代码，如下图所示：<img class="center" src="images/dnd_scope_target.png" alt=
+"DnD™ 目标变量"> 在这种情况下，实例从代码给定的表达式创建的实例调用 <a href=
+"../2_drag_and_drop_reference/instance_actions/set_sprite.html">设置精灵</a> 动作 。 请注意，在这种情况下，正在创建的实例将在应用动作之前 <a href=
+"../../2_interface/1_editors/events/index.html">首先</a> 运行其 <i>创建事件</i>。</p>
 </div>
 </div></blockquote>
 

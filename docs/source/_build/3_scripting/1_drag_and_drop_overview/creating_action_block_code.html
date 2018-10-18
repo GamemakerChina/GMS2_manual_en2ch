@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,122 +36,50 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>To add behaviours to objects you can construct your code using
-Actions from the different libraries available to you from the
-<b>Action Toolbox</b>. To start with you'll need to make a new
-<a href=
-"../../1_overview/2_quick_start/2_start.html#new_project">Drag and
-Drop project</a> and then make a <a href=
-"../../1_overview/2_quick_start/workflow/4_objects.html">new
-object</a> (you can assign a <a href=
-"../../1_overview/2_quick_start/workflow/1_sprites.html">sprite</a>
-to the object too if required). In your new object you can start to
-add <a href=
-"../../2_interface/1_editors/events/index.html">events</a>, and in
-the events add your DnD™ code actions.  <img class="center" src=
+<p>要向物体添加行为，可以使用 <b>动作工具箱</b> 中可用的不同库中的动作构建代码。 首先，您需要创建一个新的 <a href=
+"../../1_overview/2_quick_start/2_start.html#new_project">拖拽项目</a>，然后创建一个 <a href=
+"../../1_overview/2_quick_start/workflow/4_objects.html">新物体</a>（如果需要，您也可以为该物体分配一个 <a href=
+"../../1_overview/2_quick_start/workflow/1_sprites.html">精灵</a>）。在新物体中，您可以开始添加 <a href=
+"../../2_interface/1_editors/events/index.html">事件</a>，并在事件中添加您的 DnD™ 代码动作。 <img class="center" src=
 "images/dnd_create_event.png" alt="DnD™ 创建事件（Create Event）"></p>
 
-<p>Note that when you add a new event, a "code" window is opened
-with a tab for the given event (see the image above), and you can
-now drag any action you wish from the Toolbox on the right into the
-Action Block pane of the code window. Now, while it's true that you
-can add <i>any</i> action, that doesn't mean that they will all
-work or that the project will compile with them. Some actions
-require <a href="../3_gml_overview/6_scope.html">Variables</a> to
-work, while others - like the <b>Draw</b> actions - will only work
-if used in a specific event. How do you know which ones to use?
-Well, generally, it's simply a question of using logic... if an
-action requires a variable and we haven't defined one yet, then we
-shouldn't be using it until we've added an action to create the
-variable.</p>
+<p>请注意，当您添加新事件时，会打开一个 “代码” 窗口，其中包含给定事件的选项卡（请参见上图），现在您可以将所需的任何动作从右侧的 “工具箱” 拖动到 “动作块” 窗格中代码窗口。现在，虽然您可以添加 <i>任何</i> 动作，但这并不意味着它们将全部工作或项目将与它们一起编译。某些动作需要 <a href="../3_gml_overview/6_scope.html">变量</a> 才能工作，而其他动作（如 <b>绘制</b> 动作）只有在特定事件中使用时才会起作用。你怎么知道使用哪些？好吧，一般来说，这只是一个使用逻辑的问题......如果一个动作需要一个变量而我们还没有定义一个变量，那么在我们添加动作来创建变量之前我们不应该使用它。</p>
 
-<p>When you drag an action from the Toolbox into the main Action
-Block workspace, it will expand to show you the available
-parameters (arguments) that you can fill in and change to set the
-behaviour. In the image below, we have dragged an <b>Assign
-Variable</b> action from the Toolbox <a href=
-"../2_drag_and_drop_reference/common_actions/index.html">Common</a>
-library into the action block workspace:  <img class="center" src=
+<p>将动作从 “工具箱” 拖动到主 “动作块” 工作区时，它将展开以显示可填写的可用参数并更改以设置行为。在下图中，我们将工具箱 “常规” 中的 “变量赋值” 动作拖到了动作块工作区中：
+ <img class="center" src=
 "images/dnd_add_var.png" alt="DnD™ 变量赋值（Assign Variable）"></p>
 
-<p>You can see that the new action is also shown on the left of the
-code window in a shorthand form. This list of actions, called the
-action <b>Overview</b>, can be clicked on to quickly navigate to
-that action for editing. You can continue to add actions to the
-event should you need to, with each new action being "chained" to
-the previous one to show the flow of the DnD™ code you are
-constructing. Note that the area where you can drop further actions
-is highlighted for you underneath the initial action, and,
-depending on the action you are using, different areas will
-highlight to show where in the chain you can add it:  <img class=
+<p>您可以看到新动作也以缩写形式显示在代码窗口的左侧。 可以单击此动作列表（称为动作 <b>概述</b>）以快速导航到该动作以进行编辑。 如果需要，您可以继续向事件添加动作，每个新动作都被 “链接” 到前一个动作，以显示您正在构建的 DnD™ 代码的流程。请注意，在初始动作下面会突出显示您可以拖拽进一步动作的区域，并且，根据您使用的动作，将突出显示不同区域以显示链中可添加的位置： <img class=
 "center" src="images/dnd_set_dir.png" alt=
 "DnD™ 设置方向变量（Set Direction Variable）"></p>
 
-<p>As you add actions to the workspace, they will be "chained" to
-the actions above so you can see how the DnD™ code flows, with one
-action leading to another, and the overview pane shows them in
-shorthand form and in order of execution:  <img class="center" src=
+<p>当您向工作区添加动作时，它们将 “链接” 到上面的动作，以便您可以看到 DnD™ 代码如何一个动作流向另一个，并且概览窗格以缩写形式和执行顺序显示它们： <img class="center" src=
 "images/dnd_scope_other.png" alt="DnD™ 动作链"></p>
 
-<p>Some actions will place code in a separate chain away from the
-main flow - things like <a href=
-"../2_drag_and_drop_reference/common_actions/if_variable.html">if</a>
-will create a sub-chain of actions that should occur if the correct
-conditions are met before continuing on with the main chain:
-
+<p>有些动作会将代码放在远离主流的单独链中 - <a href=
+"../2_drag_and_drop_reference/common_actions/if_variable.html">如果</a> 在继续使用主链之前，如果满足正确的条件，则会创建应该发生的子动作链：
 <img class="center" src=
 "../2_drag_and_drop_reference/common_actions/images/e_common_if_variable.png"
 alt="DnD™ 动作支链"></p>
 
-<p>Note that when using actions that can have a side chain block
-like this, the action will have <i>two</i> areas highlighted for
-dropping further actions: One below the action as normal, and one
-to the right of the action to show that you want to create a
-separate block of actions to run when the condition of the first
-action returns <tt>true</tt>:  <img class="center" src=
+<p>请注意，当使用可能具有此类侧链块的动作时，动作将突出显示 <i>两个</i> 区域以拖拽进一步动作：一个位于正常动作下方，另一个位于动作右侧以显示您要创建的当第一个动作的条件返回 <tt>true</tt> 时，要运行的单独动作块： <img class="center" src=
 "../2_drag_and_drop_reference/common_actions/images/a_common_if_drop.png"
 alt="DnD™ 动作支链"></p>
 
-<p>You can change the position of actions within the chain by
-simply clicking <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> and dragging them into the new
-position that you require, and if you do a click and hold for a
-second then move the mouse, you can move the action within the
-workspace while maintaining its place within the action block
-chain.</p>
+<p>您只需单击并将其拖动到所需的新位置即可更改链中动作的位置，如果单击并按住一秒钟然后移动鼠标，则可以在工作区中移动动作，同时保持其在动作块链中的位置。</p>
 
-<p>That's the basics of using the Drag and Drop code editor, but
-there are further important details explained in the sections
-below:</p>
+<p>这是使用拖拽代码编辑器的基础知识，但在下面的部分中解释了更多重要的细节：</p>
 
 <blockquote><label class="collapse" for="a">目标变量</label> <input id="a" type="checkbox">
 <div class="index_list">
-<p>It is important to note that many actions offer a "target"
-variable, which can be flagged as "Temporary", for example:
-
+<p>重要的是要注意许多动作提供 “目标列表” 变量，可以将其标记为 “临时”，例如：
 <img class="center" src=
 "../2_drag_and_drop_reference/audio_actions/images/a_audio_get_audio_volume.png"
 alt="目标变量样例"></p>
 
-<p>What this means is that you can supply a "target" variable which
-will hold the value returned by the action. In the example action
-above, the action will return the volume of the audio resource that
-you select, so you supply a target variable to hold this value so
-you can reference it later. Now, this target variable will need to
-have been declared previously either using <a href=
-"../2_drag_and_drop_reference/common_actions/assign_var.html">Assign
-Variable</a> (which creates an <b>Instance Variable</b>) or
-<a href="../2_drag_and_drop_reference/common_actions/temp_var.html">
-Declare Temporary Variable</a> (which creates a <b>Local Temporary
-Variable</b>), but if you check the "Temp" option, then you can
-simply add a variable name and the action will create that variable
-and set it to hold the return value for you (creating a temporary
-local variable). Any actions used <i>after</i> this can now access
-the value in the temporary variable, but <i>only within the same
-Event or Script</i>. Temporary variables are only available within
-the scope that they were created. For more in depth information on
-variables and variable scope, please see <a href=
-"../3_gml_overview/6_scope.html">here</a>.</p>
+<p>这意味着您可以提供一个 “目标” 变量，该变量将保存动作的返回值。在上面的示例动作中，动作将返回您选择的音频资源的音量，因此您提供一个目标变量来保存此值，以便稍后可以引用它。现在，需要先使用 <a href=
+"../2_drag_and_drop_reference/common_actions/assign_var.html">变量赋值（Assign Variable）</a>（这会创建一个 <b>实例变量</b>）或 <a href="../2_drag_and_drop_reference/common_actions/temp_var.html">声明临时变量（Declare Temporary Variable） </a>（这会创建一个 <b>局部临时变量</b>）声明此目标变量，但如果选中 “临时（Temp）” 选项，则可以简单地添加变量名称，动作将创建该变量并将其设置为保存返回值（创建临时局部变量）。<i>此后</i> 使用的任何动作现在都可以访问临时变量中的值，但只能在同一个事件或脚本中访问。临时变量仅在创建它们的作用域内可用。 有关变量和变量作用域的更多深入信息，请参见 <a href=
+"../3_gml_overview/6_scope.html">此处</a>。</p>
 </div>
 <br>
 <label class="collapse" for="b">动作作用域</label> <input id="b"
@@ -233,7 +161,7 @@ returned:  <img class="center" src=
 alt="Choose Expansion Example"></p>
 </div>
 <br>
-<label class="collapse" for="e">RMB Menu</label> <input id="e"
+<label class="collapse" for="e">右键菜单</label> <input id="e"
 type="checkbox">
 <div class="index_list">
 <p>When working on your DnD™ code, you can click the right mouse
@@ -242,41 +170,23 @@ button <img style="vertical-align:middle" src=
 shortlist on the left) to open up the following menu: <img class=
 "center" src="images/dnd_rmb_menu.png" alt="DnD™ RMB Menu"></p>
 
-<p>This menu has the following options:</p>
+<p>此菜单包含以下选项：</p>
 
 <ul>
-<li><b>Cut / Copy / Paste</b>: This will permit you cut, copy or
-paste any action that is selected. Note that you can use
-<img style="vertical-align:middle" src=
+<li><b>Cut / Copy / Paste</b>: This will permit you cut, copy or paste any action that is selected. 请注意，你可以在动作之外使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_lmb.png"> outside of the actions and drag,
-or use <img style="vertical-align:middle" src=
-"../../images/icon_ctrl.png">/<img style="vertical-align:middle"
+src="../../images/icon_lmb.png"> 并拖动，或在单个动作上使用 <img style="vertical-align:middle" src=
+"../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_lmb.png"> on
-individual actions, to select more than one and apply the command
-to all of them.<br>
+"vertical-align:middle" src="../../images/icon_lmb.png"> 来选择多个动作并将命令应用于所有动作。<br>
 <br></li>
 
-<li><b>Disable</b>: This command will disable the action (or
-actions) selected. When an action is disabled, it is still visible
-in the workspace but it <i>will not run</i> when you compile the
-game. In this way you can add/remove actions for testing and
-debugging. The image below shows some DnD™ code with actions
-disabled: <img class="center" src="images/dnd_disable_actions.png"
-alt="DnD™ Disable Actions"> You can see that the actions "<tt>If
-Score</tt>" and "<tt>Go To Next Room</tt>" have been disabled and
-so they will be skipped when the game is tested or compiled.<br>
+<li><b>禁用</b>：此命令将禁用所选的动作。禁用某个动作后，它仍然可以在工作区中看到，但在编译游戏时它 <i>不会运行</i>。通过这种方式，你可以添加 / 删除用于测试和调试的动作。下图显示了一些禁用了动作的 DnD™ 代码：<img class="center" src="images/dnd_disable_actions.png"
+alt="DnD™ Disable Actions"> 你可以看到 “<tt>If Score（如果得分）</tt>” 和 “<tt>Go To Next Room（前往下一个房间）</tt>” 动作已被禁用，因此在测试或编译游戏时将跳过它们。<br>
 <br></li>
 
-<li><b>Toggle Breakpoint</b>: This command will toggle a
-<b>breakpoint</b> on or off for the selected action. A breakpoint
-is simply a point in the DnD™ code where the debugger should stop
-when the game is being run in <a href=
-"../../2_interface/2_extras/debugging.html">Debug Mode</a>. An
-action with a breakpoint assigned to it will be highlighted, as
-shown in the image below (the "<tt>If Health</tt>" action has been
-set as a breakpoint):  <img class="center" src=
+<li><b>切换断点</b>：此命令将为所选动作打开或关闭 <b>断点</b>。断点只是 DnD™ 代码中调试器应该在 <a href=
+"../../2_interface/2_extras/debugging.html">调试模式</a> 下运行时停止的一个点。将突出显示分配了断点的动作，如下图所示（“<tt>If Health（如果健康值）</tt>” 动作已设置为断点）： <img class="center" src=
 "images/dnd_togglebreakpoint.png" alt="DnD™ Breakpoint"></li>
 
 <li><b>Pan</b>: Selecting this will pan and zoom the workspace to
