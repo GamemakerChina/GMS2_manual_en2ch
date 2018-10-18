@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,16 +37,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function takes a 1D array of 16 values, corresponding to a
-given 4x4 matrix type, where elements [0 - 3] would be row 1,
-elements [4 -7] would be row 2, etc... (see the image on the
-<a href="index.html">main page</a>). You can create such a matrix
-using the <a href="matrix_build.html"><tt>matrix_build</tt></a> or
-<a href="matrix_get.html"><tt>matrix_get</tt></a> functions or
-simply building the array yourself and passing that into the
-function. The available matrix types are <i>view</i>,
-<i>projection</i> and <i>world</i>, for which you would use one of
-the following constants:</p>
+<p>此函数采用 16 个值的一维数组，对应于给定的 4 x 4 矩阵类型，其中元素 [0 - 3] 将是行 1，元素 [4 - 7] 将是行 2，等等...（请参阅 <a href="index.html">主页</a> 图像）。你可以使用 <a href="matrix_build.html"><tt>matrix_build</tt></a> 或 <a href="matrix_get.html"><tt>matrix_get</tt></a> 函数创建这样的矩阵，或者只是自己构建数组并将其传递给函数。可用的矩阵是 <i>视野（view）</i>、<i>投影（projection）</i> 和 <i>世界（world）</i>，你可以使用以下常量之一：</p>
 
 <div class="compat">
 <table>
@@ -57,17 +48,17 @@ the following constants:</p>
 
 <tr>
 <td>matrix_view</td>
-<td>The current view matrix</td>
+<td>当前的视野矩阵</td>
 </tr>
 
 <tr class="alt">
 <td>matrix_projection</td>
-<td>The current projection matrix</td>
+<td>当前的投影矩阵</td>
 </tr>
 
 <tr>
 <td>matrix_world</td>
-<td>The current world matrix</td>
+<td>当前的世界矩阵</td>
 </tr>
 </table>
 </div>
@@ -94,13 +85,12 @@ the following constants:</p>
 
 <tr>
 <td>type</td>
-<td>The type of matrix to get the values of (see the
-<i>constants</i> listed above)</td>
+<td>获取值的矩阵类型（参见上面列出的 <i>常量</i>）</td>
 </tr>
 
 <tr class="alt">
 <td>matrix</td>
-<td>The matrix data as an array</td>
+<td>以数组形式存在的矩阵数据</td>
 </tr>
 </table>
 </blockquote>
@@ -110,7 +100,7 @@ the following constants:</p>
 
 <h3>返回：</h3>
 
-<p class="code">NA</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -120,18 +110,16 @@ the following constants:</p>
 <p class="code">matrix_set(matrix_world, m_array);<br></p>
 
 <blockquote>
-<p>The above code will set the values of the current world matrix
-to those stored in the array matrix "m_array".</p>
+<p>上面的代码将当前世界矩阵的值设置为存储在数组矩阵 “m_array” 中的值。</p>
 </blockquote>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Matrix
-Functions</a></div>
+<div style="float:left">上一页：<a href="index.html">矩阵函数</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "matrix_build.html">matrix_build</a></div>
 </div>
 

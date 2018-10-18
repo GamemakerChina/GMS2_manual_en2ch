@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,18 +37,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function builds an orthographic projection matrix based on
-the specified parameters listed below (this is the default
-projection method used when you create a room in <i>GameMaker
-Studio 2</i> without changing anything). Sometimes you need to
-switch from a perspective projection to an orthographic projection
-which is what this function is for. It is typically used to draw an
-overlay, for example, to show the score or other aspects as this
-gives a "flat" view of the elements drawn (ie: no perspective) in a
-3D game. See the image below to get an idea of the difference
-between orthographic and perspective views.</p>
+<p>此函数基于下面列出的指定参数构建正交投影矩阵（这是在 GameMaker Studio 2 中创建房间而不更改任何内容时使用的默认投影方法）。有时您需要从透视投影切换到正交投影，这是此函数的用途。它通常用于绘制叠加，例如，显示得分或其他方面，因为这给出了 3D 游戏中绘制的元素（即：无透视）的 “平面” 视图。 请参阅下图，了解正交视图和透视视图之间的区别。</p>
 
-<div class="note"><b>注意</b>： You may also need to temporarily switch off hidden surface removal if you want the information to be drawn regardless of the current depth value.</div>
+<div class="note"><b>注意</b>： 如果您希望绘制信息而无论当前深度值如何，您可能还需要暂时关闭隐藏表面移除(?)。</div>
 <img class="center" src="images/ortho_persp_image.png">
 </blockquote>
 
@@ -74,22 +65,22 @@ zfar);</p>
 
 <tr>
 <td>w</td>
-<td>The width of the projection.</td>
+<td>投影的宽度。</td>
 </tr>
 
 <tr class="alt">
 <td>h</td>
-<td>The height of the projection.</td>
+<td>投影的高度。</td>
 </tr>
 
 <tr>
 <td>znear</td>
-<td>The near clipping plane.</td>
+<td>近剪裁平面。</td>
 </tr>
 
 <tr class="alt">
 <td>zfar</td>
-<td>The far clipping plane.</td>
+<td>远剪裁平面。</td>
 </tr>
 </table>
 </blockquote>
@@ -99,35 +90,26 @@ zfar);</p>
 
 <h3>返回：</h3>
 
-<p class="code">Matrix index</p>
+<p class="code">Matrix index（矩阵索引）</p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640,
-240, 0, 0, 1, 0);<br>
-projmat = matrix_build_projection_ortho(640, 480, 1.0,
-32000.0);<br>
-camera_set_view_mat(view_camera[0], viewmat);<br>
-camera_set_proj_mat(view_camera[0], projmat);<br></p>
+<p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br>projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br>camera_set_view_mat(view_camera[0], viewmat);<br>camera_set_proj_mat(view_camera[0], projmat);<br></p>
 
 <blockquote>
-<p>The above code creates a new look-at matrix and orthographic
-matrix, stores their IDs in local variables and then uses them to
-set the view and projection matrices for the camera assigned to
-view port[0].</p>
+<p>上面的代码创建了一个新的视野矩阵和正交矩阵，将它们的 ID 存储在局部变量中，然后使用它们来设置分配给 view port[0]（视口 0） 的摄像机的视野和投影矩阵。</p>
 </blockquote>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Matrix
-Functions</a></div>
+<div style="float:left">上一页：<a href="index.html">矩阵函数</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "matrix_build_projection_perspective.html">matrix_build_projection_perspective</a></div>
 </div>
 

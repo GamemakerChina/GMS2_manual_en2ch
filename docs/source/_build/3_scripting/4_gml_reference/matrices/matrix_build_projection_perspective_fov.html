@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,9 +37,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function builds a perspective projection matrix matrix
-based on field of view, using the specified parameters listed
-below.</p>
+<p>该函数使用下面列出的指定参数，基于视场构建一个透视投影矩阵矩阵。</p>
 </blockquote>
 
 <p><br>
@@ -64,22 +62,22 @@ aspect, znear, zfar);</p>
 
 <tr>
 <td>fov</td>
-<td>The angle of the field of view.</td>
+<td>视场的角度。</td>
 </tr>
 
 <tr class="alt">
 <td>aspect</td>
-<td>The aspect ratio of the field of view.</td>
+<td>视场的纵横比。</td>
 </tr>
 
 <tr>
 <td>znear</td>
-<td>The near clipping plane.</td>
+<td>近剪裁平面。</td>
 </tr>
 
 <tr class="alt">
 <td>zfar</td>
-<td>The far clipping plane.</td>
+<td>远剪裁平面。</td>
 </tr>
 </table>
 </blockquote>
@@ -89,32 +87,26 @@ aspect, znear, zfar);</p>
 
 <h3>返回：</h3>
 
-<p class="code">Matrix index</p>
+<p class="code">Matrix index（矩阵索引）</p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">projmat =
-matrix_build_projection_perspective_fov(60, 320/240, 1.0,
-32000.0);<br>
-camera_set_proj_mat(view_camera[0], projmat);<br></p>
+<p class="code">projmat = matrix_build_projection_perspective_fov(60, 320/240, 1.0, 32000.0);<br>camera_set_proj_mat(view_camera[0], projmat);<br></p>
 
 <blockquote>
-<p>The above code creates a field of view projection matrix which
-is then stored in a variable. This matrix is then used to set up
-the camera assigned to view port[0].</p>
+<p>上面的代码创建了一个视场投影矩阵，然后将其存储在一个变量中。然后使用该矩阵设置分配给view port[0]（视口 0）的摄像机。</p>
 </blockquote>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Matrix
-Functions</a></div>
+<div style="float:left">上一页：<a href="index.html">矩阵函数</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "matrix_transform_vertex.html">matrix_transform_vertex</a></div>
 </div>
 

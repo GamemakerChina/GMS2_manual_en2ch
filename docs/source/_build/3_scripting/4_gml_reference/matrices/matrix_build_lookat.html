@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,24 +37,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function builds a "look-at" (view) matrix based on the
-specified parameters listed below. Since this function modifies the
-view matrix and not the projection matrix, you should first
-initialize the projection matrix using the other matrix function
-<a href=
-"matrix_build_projection_perspective.html"><tt>matrix_build_projection_perspective</tt></a>,
-then use this function to move the view camera around within the
-projection.</p>
+<p>此函数基于下面列出的指定参数构建 “观察”（视野）矩阵。由于此函数修改视图矩阵而不是投影矩阵，因此应首先使用其他矩阵函数 <a href=
+"matrix_build_projection_perspective.html"><tt>matrix_build_projection_perspective</tt></a> 初始化投影矩阵，然后使用此函数在投影内移动视图相机。</p>
 
-<p>To set the view you first need to define the position you look
-<i>from</i>, which is indicated by the parameters (xfrom, yfrom,
-zfrom). Next you must specify the direction you look <i>at</i> and
-this is done by giving a second point to look towards with the
-arguments (xto, yto, zto). Finally, you can still rotate the camera
-around the line from the viewpoint to the looking point, and to
-specify this we must give an "up" vector - the direction that is
-upwards in the camera. This is given by the last three arguments
-(xup, yup, zup).</p>
+<p>要设置视图，首先需要定义你 <i>从</i> 什么位置查看，该位置由参数 (xfrom, yfrom, zfrom）指定。 接下来，你必须指定你所 <i>看到</i> 的方向，这是通过给出第二个要查看的参数 (xto, yto, zto) 来完成的。 最后，你仍然可以围绕从视点（viewpoint）到观察点（looking point）的线旋转摄像机，并且为了指定这一点，我们必须给出一个 “up” 矢量 - 摄像机中向上的方向。这是由最后三个参数 (xup, yup, zup) 给出的。</p>
 </blockquote>
 
 <p><br>
@@ -79,47 +65,47 @@ zto, xup, yup, zup);</p>
 
 <tr>
 <td>xfrom</td>
-<td>The x coordinate of the position to look from.</td>
+<td>观察位置的 x 坐标。</td>
 </tr>
 
 <tr class="alt">
 <td>yfrom</td>
-<td>The y coordinate of the position to look from.</td>
+<td>观察位置的 y 坐标。</td>
 </tr>
 
 <tr>
 <td>zfrom</td>
-<td>The z coordinate of the position to look from.</td>
+<td>观察位置的 z 坐标。</td>
 </tr>
 
 <tr class="alt">
 <td>xto</td>
-<td>The x coordinate of the position to look to.</td>
+<td>要观察位置的 x 坐标。</td>
 </tr>
 
 <tr>
 <td>yto</td>
-<td>The x coordinate of the position to look to.</td>
+<td>要观察位置的 y 坐标。</td>
 </tr>
 
 <tr class="alt">
 <td>zto</td>
-<td>The x coordinate of the position to look to.</td>
+<td>要观察位置的 z 坐标。</td>
 </tr>
 
 <tr>
 <td>xup</td>
-<td>The x coordinate of the "up" vector.</td>
+<td>up 矢量的 x 坐标。</td>
 </tr>
 
 <tr class="alt">
 <td>yup</td>
-<td>The y coordinate of the "up" vector.</td>
+<td>up 矢量的 y 坐标。</td>
 </tr>
 
 <tr>
 <td>zup</td>
-<td>The z coordinate of the "up" vector.</td>
+<td>up 矢量的 z 坐标。</td>
 </tr>
 </table>
 </blockquote>
@@ -129,35 +115,26 @@ zto, xup, yup, zup);</p>
 
 <h3>返回：</h3>
 
-<p class="code">Matrix index</p>
+<p class="code">Matrix index（矩阵索引）</p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640,
-240, 0, 0, 1, 0);<br>
-projmat = matrix_build_projection_ortho(640, 480, 1.0,
-32000.0);<br>
-camera_set_view_mat(view_camera[0], viewmat);<br>
-camera_set_proj_mat(view_camera[0], projmat);<br></p>
+<p class="code">viewmat = matrix_build_lookat(640, 240, -10, 640, 240, 0, 0, 1, 0);<br>projmat = matrix_build_projection_ortho(640, 480, 1.0, 32000.0);<br>camera_set_view_mat(view_camera[0], viewmat);<br>camera_set_proj_mat(view_camera[0], projmat);<br></p>
 
 <blockquote>
-<p>The above code creates a new look-at matrix and orthographic
-matrix, stores their IDs in local variables and then uses them to
-set the view and projection matrices for the camera assigned to
-view port[0].</p>
+<p>上面的代码创建了一个新的视野矩阵和正交矩阵，将它们的 ID 存储在局部变量中，然后使用它们来设置分配给 view port[0]（视口 0） 的摄像机的视野和投影矩阵。</p>
 </blockquote>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Matrix
-Functions</a></div>
+<div style="float:left">上一页：<a href="index.html">矩阵函数</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "matrix_build_projection_ortho.html">matrix_build_projection_ortho</a></div>
 </div>
 

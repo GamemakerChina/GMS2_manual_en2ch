@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,13 +37,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can multiply two matrix arrays together
-to create a new transform matrix. The function will return the new
-matrix index which should be stored in a variable for future
-use.</p>
+<p>使用此函数，您可以将两个矩阵数组相乘以创建新的变换矩阵。该函数将返回新的矩阵索引，该索引应存储在变量中以备将来使用。</p>
 
-<div class="note"><b>注意</b>： You can't use a matrix constant as an argument with this function, so if you wish to multiply the (for example) view matrix with a custom matrix that you have built, you must first call <a href=
-"matrix_get.html"><tt>matrix_get(type)</tt></a> and assign the view matrix values to an array variable, then multiply it by your custom matrix, and then set the chosen matrix (view, projection or world).</div>
+<div class="note"><b>注意</b>： 您不能将矩阵常量用作此函数的参数，因此，如果您希望将（例如）视图矩阵与您构建的自定义矩阵相乘，则必须首先调用 <a href=
+"matrix_get.html"><tt>matrix_get(type)</tt></a> 并指定视野矩阵值赋给数组变量，然后将其乘以自定义矩阵，然后设置所选矩阵（视野、投影或世界）。</div>
 </blockquote>
 
 <p><br>
@@ -67,12 +64,12 @@ use.</p>
 
 <tr>
 <td>matrix1</td>
-<td>The first matrix index to use.</td>
+<td>所使用的第一个矩阵索引</td>
 </tr>
 
 <tr class="alt">
 <td>matrix2</td>
-<td>The second matrix index to use.</td>
+<td>所使用的第二个矩阵索引</td>
 </tr>
 </table>
 </blockquote>
@@ -82,31 +79,26 @@ use.</p>
 
 <h3>返回：</h3>
 
-<p class="code">4x4 Matrix</p>
+<p class="code">4 x 4 Matrix（矩阵）</p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">var v_matrix = matrix_get(matrix_view);<br>
-var new_matrix = matrix_multiply(v_matrix, my_matrix);<br>
-matrix_set(matrix_view, new_matrix);<br></p>
+<p class="code">var v_matrix = matrix_get(matrix_view);<br>var new_matrix = matrix_multiply(v_matrix, my_matrix);<br>matrix_set(matrix_view, new_matrix);<br></p>
 
 <blockquote>
-<p>The above code will get the current view matrix, then multiply
-that with a custom matrix and then use the resulting matrix index
-to set the view matrix again.</p>
+<p>上面的代码将获得当前视野矩阵，然后将其与自定义矩阵相乘，然后使用结果矩阵索引再次设置视野矩阵。</p>
 </blockquote>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Matrix
-Functions</a></div>
+<div style="float:left">上一页：<a href="index.html">矩阵函数</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "matrix_build_identity.html">matrix_build_identity</a></div>
 </div>
 
