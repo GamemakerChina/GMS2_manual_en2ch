@@ -106,7 +106,7 @@ var TITEMS = [
   ["纹理组", "source/_build/2_interface/3_settings/textures.html", "11"],
   ["游戏选项", "source/_build/2_interface/3_settings/game_options/index.html", "1",
    ["AmazonFire 选项", "source/_build/2_interface/3_settings/game_options/options_amazonfire.html", "11"],
-   ["安卓选项", "source/_build/2_interface/3_settings/game_options/options_android.html", "11"],
+   ["Android 选项", "source/_build/2_interface/3_settings/game_options/options_android.html", "11"],
    ["HTML5 选项", "source/_build/2_interface/3_settings/game_options/options_html5.html", "11"],
    ["iOS 选项", "source/_build/2_interface/3_settings/game_options/options_ios.html", "11"],
    ["Linux 选项", "source/_build/2_interface/3_settings/game_options/options_linux.html", "11"],
@@ -118,10 +118,10 @@ var TITEMS = [
  ],
  ["脚本", "source/_build/3_scripting/index.html", "1",
   ["DnD概述", "source/_build/3_scripting/1_drag_and_drop_overview/index.html", "1",
-   ["动作脚本", "source/_build/3_scripting/1_drag_and_drop_overview/action_scripts.html", "11"],
-   ["DnD应用动作", "source/_build/3_scripting/1_drag_and_drop_overview/applying_actions.html", "11"],
-   ["DnD转换", "source/_build/3_scripting/1_drag_and_drop_overview/changing_dnd.html", "11"],
-   ["创建动作块代码", "source/_build/3_scripting/1_drag_and_drop_overview/creating_action_block_code.html", "11"]
+   ["动作脚本块", "source/_build/3_scripting/1_drag_and_drop_overview/action_scripts.html", "11"],
+   ["将动作应用于其他实例", "source/_build/3_scripting/1_drag_and_drop_overview/applying_actions.html", "11"],
+   ["拖拽按钮转换为代码", "source/_build/3_scripting/1_drag_and_drop_overview/changing_dnd.html", "11"],
+   ["构造动作代码块", "source/_build/3_scripting/1_drag_and_drop_overview/creating_action_block_code.html", "11"]
   ],
   ["DnD参考", "source/_build/3_scripting/2_drag_and_drop_reference/index.html", "1",
    ["音频动作", "source/_build/3_scripting/2_drag_and_drop_reference/audio_actions/index.html", "1",
