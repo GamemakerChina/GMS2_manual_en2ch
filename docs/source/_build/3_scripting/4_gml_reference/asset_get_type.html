@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -39,9 +39,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can get the type of asset being
-referenced from its name (a string). One of the <b>constants</b>
-listed below will be returned.</p>
+<p>使用此函数，你可以从引用资产的（字符串）名称中获取类型。将返回下面列出的 <b>常量</b> 之一。</p>
 </blockquote>
 
 <p><br>
@@ -60,7 +58,7 @@ listed below will be returned.</p>
 
 <tr>
 <td>name</td>
-<td>The name of the game asset to get the type of (a string).</td>
+<td>获取的游戏资产的（字符串）类型名称。</td>
 </tr>
 </table>
 </blockquote>
@@ -82,68 +80,67 @@ listed below will be returned.</p>
 
 <tr>
 <td>asset_object</td>
-<td>The given name refers to an <a href=
-"../../2_interface/1_editors/objects.html">object</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/objects.html">物体</a>。</td>
 </tr>
 
 <tr class="alt">
 <td>asset_sprite</td>
-<td>The given name refers to a <a href=
-"../../2_interface/1_editors/sprites.html">sprite</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/sprites.html">精灵</a>。</td>
 </tr>
 
 <tr>
 <td>asset_sound</td>
-<td>The given name refers to a <a href=
-"../../2_interface/1_editors/sounds.html">sound</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/sounds.html">声音</a>。</td>
 </tr>
 
 <tr class="alt">
 <td>asset_room</td>
-<td>The given name refers to a <a href=
-"../../2_interface/1_editors/rooms.html">room</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/rooms.html">房间</a>。</td>
 </tr>
 
 <tr>
 <td>asset_tile</td>
-<td>The given name refers to a <a href=
-"../../2_interface/1_editors/tilesets.html">tile set</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/tilesets.html">图块集</a>。</td>
 </tr>
 
 <tr class="alt">
 <td>asset_path</td>
-<td>The given name refers to a <a href=
-"../../2_interface/1_editors/paths.html">path</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/paths.html">路径</a>。</td>
 </tr>
 
 <tr>
 <td>asset_script</td>
-<td>The given name refers to a <a href=
-"../../2_interface/1_editors/scripts.html">script</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/scripts.html">脚本</a>。</td>
 </tr>
 
 <tr class="alt">
 <td>asset_font</td>
-<td>The given name refers to a <a href=
-"../../2_interface/1_editors/fonts.html">font</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/fonts.html">字体</a>。</td>
 </tr>
 
 <tr>
 <td>asset_timeline</td>
-<td>The given name refers to a <a href=
-"../../2_interface/1_editors/timelines.html">time line</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/timelines.html">时间轴</a>。</td>
 </tr>
 
 <tr class="alt">
 <td>asset_shader</td>
-<td>The given name refers to a <a href=
-"../../2_interface/1_editors/shaders.html">shader</a>.</td>
+<td>给定名称的资产是 <a href=
+"../../2_interface/1_editors/shaders.html">着色器</a>。</td>
 </tr>
 
 <tr class="alt">
 <td>asset_unknown</td>
-<td>The given name refers to an asset that either does not exist,
-or is not one of the above listed.</td>
+<td>给定名称的资产不存在，或不在上述列表类型中。</td>
 </tr>
 </table>
 </div>
@@ -154,22 +151,10 @@ or is not one of the above listed.</td>
 
 <h3>举例：</h3>
 
-<p class="code">if asset_get_type("pth_Path_" +
-string(global.Game)) == asset_unknown<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;show_debug_message("Path doesn't exist!!!");<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;path_index = asset_get_index("pth_Path_" +
-string(global.Game));<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if asset_get_type("pth_Path_" + string(global.Game)) == asset_unknown<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;show_debug_message("Path doesn't exist!!!");<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;path_index = asset_get_index("pth_Path_" + string(global.Game));<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks a dynamically created asset name to see if
-the asset is of the correct type. If it is not, then a debug
-message will be shown, otherwise the asset name is used to assign
-the asset to the instance.</p>
+<p>上面的代码检查动态创建的资产名称，以查看资产的类型是否正确。如果不正确，则显示调试消息，否则使用资产名称将资产分配给实例。</p>
 </blockquote>
 
 <p><br>
@@ -179,10 +164,9 @@ the asset to the instance.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Language
-Reference</a></div>
+<div style="float:left">上一页: <a href="index.html">GML 参考</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "asset_get_index.html">asset_get_index</a></div>
 </div>
 </div>

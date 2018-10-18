@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <tr>
 <td>name</td>
-<td>The name of the game asset to get the index of (a string).</td>
+<td>获取游戏资产的（字符串）索引的名称。</td>
 </tr>
 </table>
 </blockquote>
@@ -67,23 +67,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>You can use this function to get the unique identifying index
-for a game asset from its name. If the asset is not found, the
-function will return a value of -1, otherwise it will return the
-unique index id for the asset being checked. This id can then be
-used in other functions as you would any other index value, like
-the <a href=
-"instances/instance_variables/sprite_index.html"><tt>sprite_index</tt></a>
-or the <a href="paths/path_index.html"><tt>path_index</tt></a>, for
-example. Please note that although this function can be used to
-reference assets from strings (see example below) you should always
-make sure that the asset exists before using it otherwise you may
-get errors that will crash your game.</p>
+<p>你可以使用此函数从游戏资产的名称中获取唯一标识索引。如果未找到资产，则函数将返回值 -1，否则将返回正在检查的资产的唯一索引 ID。 然后，可以像使用任何其他索引值一样在其他函数中使用此 id，例如 <a href=
+"instances/instance_variables/sprite_index.html"><tt>sprite_index</tt></a> 或 <a href="paths/path_index.html"><tt>path_index</tt></a>。 请注意，尽管此函数可用于引用字符串中的资源（请参阅下面的示例），但在使用之前应始终确保资产存在，否则可能会出现会导致游戏崩溃的错误。</p>
 
-<div class="note"><b>NOTE:</b> Script names will not resolve as
-assets on the HTML5 target platform due to obfuscation of the final
-code, which may cause issues and should be taken into consideration
-when using the function.</div>
+<div class="note"><b>注意：</b> 由于最终代码的混淆，脚本名称将不会作为 HTML5 目标平台上的资源解析，这可能会导致问题，并且在使用该函数时应予以考虑。</div>
 </blockquote>
 
 <p><br>
@@ -91,18 +78,10 @@ when using the function.</div>
 
 <h3>举例：</h3>
 
-<p class="code">var obj = asset_get_index("obj_Enemy_" +
-string(global.Level));<br>
-if obj &gt; -1<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;instance_create_layer(random(room_width),
-random(room_height), obj, "Enemy_Layer");<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var obj = asset_get_index("obj_Enemy_" + string(global.Level));<br>if obj &gt; -1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_create_layer(random(room_width), random(room_height), obj, "Enemy_Layer");<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will get an object index from a string, and if
-that index exists, create an instance of the object in the
-game.</p>
+<p>上面的代码将从字符串中获取物体索引，如果该索引存在，则在游戏中创建物体的实例。</p>
 </blockquote>
 
 <p><br>
@@ -112,10 +91,9 @@ game.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Language
-Reference</a></div>
+<div style="float:left">上一页: <a href="index.html">GML 参考</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "asset_get_type.html">asset_get_type</a></div>
 </div>
 </div>
