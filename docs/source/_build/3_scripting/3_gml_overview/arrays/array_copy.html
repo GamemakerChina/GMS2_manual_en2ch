@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -39,15 +39,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can copy all or part of one array into
-another array at any position. You need to supply both the source
-and the destination arrays (both need to have been created
-previously), as well as a position within the source array to copy
-from and a position within the destination array to copy to.
-Finally you need to specify the length of the array (or the length
-of the part that you want) to copy. If the data being copied
-exceeds the length of the destination array, the array will be
-extended to accept the data.</p>
+<p>使用此函数，你可以将一个数组的全部或部分复制到另一个数组中的任何位置。你需要同时提供源数组和目标数组（两者都需要预先创建），以及要从中复制的源数组中的位置以及要复制到的目标数组中的位置。最后，你需要指定要复制的数组长度（或所需部分的长度）。如果要复制的数据超出目标数组的长度，则将扩展该数组以接受数据。</p>
 </blockquote>
 
 <p><br>
@@ -71,50 +63,45 @@ length);</p>
 </tr>
 
 <tr>
-<td>dest</td>
-<td>The ID of the array to copy to.</td>
+<td>目标</td>
+<td>要复制到的数组的ID。</td>
 </tr>
 
 <tr class="alt">
-<td>dest_index</td>
-<td>The index within the array to copy to.</td>
+<td>目标索引</td>
+<td>要复制到的数组中的索引。</td>
 </tr>
 
 <tr>
-<td>src</td>
-<td>The ID of the array to copy from.</td>
+<td>源</td>
+<td>要从中复制的数组的ID。</td>
 </tr>
 
 <tr class="alt">
-<td>src_index</td>
-<td>The index with the array to start copying from.</td>
+<td>源索引</td>
+<td>待复制的源数组的索引位置</td>
 </tr>
 
 <tr>
-<td>length</td>
-<td>待拷贝的长度（数组索引个数）。</td>
+<td>长度</td>
+<td>待复制的长度（数组索引个数）。</td>
 </tr>
 </table>
 </blockquote>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">if !array_equals(inventory_array, item_array)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var len = array_length_1d(inventory_array);<br>
-&nbsp;&nbsp;&nbsp;array_copy(item_array, 0, inventory_array, 0,
-len);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !array_equals(inventory_array, item_array)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var len = array_length_1d(inventory_array);<br>&nbsp;&nbsp;&nbsp;array_copy(item_array, 0, inventory_array, 0, len);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>上述代码将会检测两个数组来查看它们是否承载了相等的值，如果不是，这段代码将会拷贝数组"inventory_array"的全部内容给数组"item_array"。</p>
+<p>上述代码将会检测两个数组来查看它们是否承载了相等的值，如果不是，这段代码将会拷贝数组 "inventory_array" 的全部内容给数组 "item_array"。</p>
 </blockquote>
 
 <p><br>

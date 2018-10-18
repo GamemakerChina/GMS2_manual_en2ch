@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -39,19 +39,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>使用该函数你可以检测两个数组是否相等（等价或一致）你需要两个待检测的数组，并且如果它们相等（可以是等价或者一致），函数将会返回<tt>true</tt>，否则返回<tt>false</tt>。请注意，这并<i>不</i>与使用==来判断数组是否相同的方法完全一致，使用==判断的方法不会检测两个数组是否具有相同的值，而只会查看两个数组是否引用了同一个初始数组。比如：</p>
+<p>使用该函数你可以检测两个数组是否相等（等价或一致）你需要两个待检测的数组，并且如果它们相等（可以是等价或者一致），函数将会返回 <tt>true</tt>，否则返回 <tt>false</tt>。请注意，这并 <i>不</i> 与使用 == 来判断数组是否相同的方法完全一致，使用 == 判断的方法不会检测两个数组是否具有相同的值，而只会查看两个数组是否引用了同一个初始数组。比如：</p>
 
-<p class="code">var a = [1,2,3,4];<br>
-var b = [1,2,3,4];<br>
-if (a == b)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;show_debug_message( "This will never fire, as a
-and be do not reference the SAME array" );<br>
-&nbsp;&nbsp;&nbsp;}<br>
-if (array_equals(a, b))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;show_debug_message( "This will fire now" );<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var a = [1,2,3,4];<br>var b = [1,2,3,4];<br>if (a == b)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;show_debug_message( "This will never fire, as a and be do not reference the SAME array" );<br>&nbsp;&nbsp;&nbsp;}<br>if (array_equals(a, b))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;show_debug_message( "This will fire now" );<br>&nbsp;&nbsp;&nbsp;}<br></p>
 </blockquote>
 
 <p><br>
@@ -74,12 +64,12 @@ if (array_equals(a, b))<br>
 </tr>
 
 <tr>
-<td>var1</td>
+<td>变量1</td>
 <td>第一个数组的句柄</td>
 </tr>
 
 <tr>
-<td>var2</td>
+<td>变量2</td>
 <td>第二个数组的句柄</td>
 </tr>
 </table>
@@ -87,22 +77,17 @@ if (array_equals(a, b))<br>
 
 <h3>返回：</h3>
 
-<p class="code">布尔值</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">if !array_equals(inventory_array, item_array)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var len = array_length_1d(inventory_array);<br>
-&nbsp;&nbsp;&nbsp;array_copy(item_array, 0, inventory_array, 0,
-len);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !array_equals(inventory_array, item_array)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var len = array_length_1d(inventory_array);<br>&nbsp;&nbsp;&nbsp;array_copy(item_array, 0, inventory_array, 0, len);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>上述代码将会检测两个数组来查看它们是否承载了相等的值，如果不是，这段代码将会拷贝数组"inventory_array"的全部内容给数组"item_array"。</p>
+<p>上述代码将会检测两个数组来查看它们是否承载了相等的值，如果不是，这段代码将会拷贝数组 "inventory_array" 的全部内容给数组 "item_array"。</p>
 </blockquote>
 
 <p><br>
