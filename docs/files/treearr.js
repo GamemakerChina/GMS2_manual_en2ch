@@ -25,7 +25,7 @@ var TITEMS = [
    ["精灵编辑器预设", "source/_build/1_overview/1_getting_started/preferences/prefs_spriteeditor.html", "11"],
    ["文本编辑器预设", "source/_build/1_overview/1_getting_started/preferences/prefs_texteditor.html", "11"],
    ["图块集编辑器预设", "source/_build/1_overview/1_getting_started/preferences/prefs_tileseteditor.html", "11"],
-   ["时间线预设", "source/_build/1_overview/1_getting_started/preferences/prefs_timelines.html", "11"]
+   ["时间轴预设", "source/_build/1_overview/1_getting_started/preferences/prefs_timelines.html", "11"]
   ]
  ],
  ["快速入门", "source/_build/1_overview/2_quick_start/index.html", "1",
@@ -143,17 +143,17 @@ var TITEMS = [
     ["停止所有音频的播放", "source/_build/3_scripting/2_drag_and_drop_reference/audio_actions/stop_all_audio.html", "11"],
     ["停止音频的播放", "source/_build/3_scripting/2_drag_and_drop_reference/audio_actions/stop_audio.html", "11"]
    ],
-   ["缓冲器动作", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/index.html", "1",
-    ["复制缓冲器", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/copy_buffer.html", "11"],
-    ["创建缓冲器", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/create_buffer.html", "11"],
-    ["删除缓冲器", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/delete_buffer.html", "11"],
-    ["获取缓冲器位置", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/get_buffer_position.html", "11"],
-    ["获取缓冲器大小", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/get_buffer_size.html", "11"],
-    ["判断缓冲器是否存在", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/if_buffer_exists.html", "11"],
-    ["判断是否在缓冲器的结束位置", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/if_end_of_buffer.html", "11"],
-    ["读取缓冲器", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/read_buffer.html", "11"],
-    ["搜寻缓冲器", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/seek_buffer.html", "11"],
-    ["写入缓冲器", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/write_buffer.html", "11"]
+   ["缓冲区动作", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/index.html", "1",
+    ["复制缓冲区", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/copy_buffer.html", "11"],
+    ["创建缓冲区", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/create_buffer.html", "11"],
+    ["删除缓冲区", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/delete_buffer.html", "11"],
+    ["获取缓冲区位置", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/get_buffer_position.html", "11"],
+    ["获取缓冲区大小", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/get_buffer_size.html", "11"],
+    ["判断缓冲区是否存在", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/if_buffer_exists.html", "11"],
+    ["判断是否在缓冲区的结束位置", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/if_end_of_buffer.html", "11"],
+    ["读取缓冲区", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/read_buffer.html", "11"],
+    ["搜寻缓冲区", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/seek_buffer.html", "11"],
+    ["写入缓冲区", "source/_build/3_scripting/2_drag_and_drop_reference/buffer_actions/write_buffer.html", "11"]
    ],
    ["相机动作", "source/_build/3_scripting/2_drag_and_drop_reference/camera_actions/index.html", "1",
     ["获取视频变量", "source/_build/3_scripting/2_drag_and_drop_reference/camera_actions/get_view_variable.html", "11"],
@@ -234,11 +234,11 @@ var TITEMS = [
     ["复制文件", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/copy_file.html", "11"],
     ["删除文件", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/delete_file.html", "11"],
     ["文件是否存在", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/if_file_exists.html", "11"],
-    ["载入缓冲器", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/load_buffer.html", "11"],
+    ["载入缓冲区", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/load_buffer.html", "11"],
     ["打开ini文件", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/open_ini_file.html", "11"],
     ["读取ini文件", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/read_ini_file.html", "11"],
     ["重命名文件", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/rename_file.html", "11"],
-    ["保存缓冲器", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/save_buffer.html", "11"],
+    ["保存缓冲区", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/save_buffer.html", "11"],
     ["写入ini文件", "source/_build/3_scripting/2_drag_and_drop_reference/file_actions/write_to_ini_file.html", "11"]
    ],
    ["游戏动作", "source/_build/3_scripting/2_drag_and_drop_reference/game_actions/index.html", "1",
@@ -393,11 +393,11 @@ var TITEMS = [
     ["设置指定格子的图块", "source/_build/3_scripting/2_drag_and_drop_reference/tile_actions/set_tile_in_cell.html", "11"],
     ["设置图块集", "source/_build/3_scripting/2_drag_and_drop_reference/tile_actions/set_tile_set.html", "11"]
    ],
-   ["时间线动作", "source/_build/3_scripting/2_drag_and_drop_reference/timeline_actions/index.html", "1",
-    ["在实例中设置时间线", "source/_build/3_scripting/2_drag_and_drop_reference/timeline_actions/set_instance_timeline.html", "11"],
+   ["时间轴动作", "source/_build/3_scripting/2_drag_and_drop_reference/timeline_actions/index.html", "1",
+    ["在实例中设置时间轴", "source/_build/3_scripting/2_drag_and_drop_reference/timeline_actions/set_instance_timeline.html", "11"],
     ["设置时刻", "source/_build/3_scripting/2_drag_and_drop_reference/timeline_actions/set_timeline_moment.html", "11"],
-    ["设置时间线速度", "source/_build/3_scripting/2_drag_and_drop_reference/timeline_actions/set_timeline_speed.html", "11"],
-    ["设置时间线状态", "source/_build/3_scripting/2_drag_and_drop_reference/timeline_actions/set_timeline_state.html", "11"]
+    ["设置时间轴速度", "source/_build/3_scripting/2_drag_and_drop_reference/timeline_actions/set_timeline_speed.html", "11"],
+    ["设置时间轴状态", "source/_build/3_scripting/2_drag_and_drop_reference/timeline_actions/set_timeline_state.html", "11"]
    ],
    ["类型动作", "source/_build/3_scripting/2_drag_and_drop_reference/type_actions/index.html", "1",
     ["取整", "source/_build/3_scripting/2_drag_and_drop_reference/type_actions/decimal_to_integer.html", "11"],
@@ -523,7 +523,7 @@ var TITEMS = [
     ["音频缓冲区", "source/_build/3_scripting/4_gml_reference/audio/audio buffers.html", "11"],
     ["音频发射器", "source/_build/3_scripting/4_gml_reference/audio/audio emitters.html", "11"],
     ["音频组", "source/_build/3_scripting/4_gml_reference/audio/audio groups.html", "11"],
-    ["音频帧听器", "source/_build/3_scripting/4_gml_reference/audio/audio listeners.html", "11"],
+    ["音频侦听器", "source/_build/3_scripting/4_gml_reference/audio/audio listeners.html", "11"],
     ["音频同步", "source/_build/3_scripting/4_gml_reference/audio/audio synchronisation.html", "11"],
     ["audio_channel_num", "source/_build/3_scripting/4_gml_reference/audio/audio_channel_num.html", "11"],
     ["audio_create_buffer_sound", "source/_build/3_scripting/4_gml_reference/audio/audio_create_buffer_sound.html", "11"],
@@ -612,7 +612,7 @@ var TITEMS = [
     ["audio_sync_group_get_track_pos", "source/_build/3_scripting/4_gml_reference/audio/audio_sync_group_get_track_pos.html", "11"],
     ["audio_sync_group_is_playing", "source/_build/3_scripting/4_gml_reference/audio/audio_sync_group_is_playing.html", "11"]
    ],
-   ["缓冲器", "source/_build/3_scripting/4_gml_reference/buffers/index.html", "1",
+   ["缓冲区", "source/_build/3_scripting/4_gml_reference/buffers/index.html", "1",
     ["buffer_async_group_begin", "source/_build/3_scripting/4_gml_reference/buffers/buffer_async_group_begin.html", "11"],
     ["buffer_async_group_end", "source/_build/3_scripting/4_gml_reference/buffers/buffer_async_group_end.html", "11"],
     ["buffer_async_group_option", "source/_build/3_scripting/4_gml_reference/buffers/buffer_async_group_option.html", "11"],
@@ -1675,11 +1675,11 @@ var TITEMS = [
      ["dot_product_3d", "source/_build/3_scripting/4_gml_reference/maths/vector functions/dot_product_3d.html", "11"],
      ["dot_product_3d_normalised", "source/_build/3_scripting/4_gml_reference/maths/vector functions/dot_product_3d_normalised.html", "11"],
      ["dot_product_normalised", "source/_build/3_scripting/4_gml_reference/maths/vector functions/dot_product_normalised.html", "11"],
-     ["单位矢量s", "source/_build/3_scripting/4_gml_reference/maths/vector functions/normalised vectors.html", "11"],
+     ["单位矢量", "source/_build/3_scripting/4_gml_reference/maths/vector functions/normalised vectors.html", "11"],
      ["point_direction", "source/_build/3_scripting/4_gml_reference/maths/vector functions/point_direction.html", "11"],
      ["point_distance", "source/_build/3_scripting/4_gml_reference/maths/vector functions/point_distance.html", "11"],
      ["point_distance_3d", "source/_build/3_scripting/4_gml_reference/maths/vector functions/point_distance_3d.html", "11"],
-     ["矢量", "source/_build/3_scripting/4_gml_reference/maths/vector functions/vectors.html", "11"]
+     ["什么是矢量", "source/_build/3_scripting/4_gml_reference/maths/vector functions/vectors.html", "11"]
     ]
    ],
    ["矩阵", "source/_build/3_scripting/4_gml_reference/matrices/index.html", "1",
@@ -2407,7 +2407,7 @@ var TITEMS = [
     ["string_width", "source/_build/3_scripting/4_gml_reference/strings/string_width.html", "11"],
     ["string_width_ext", "source/_build/3_scripting/4_gml_reference/strings/string_width_ext.html", "11"]
    ],
-   ["时间线", "source/_build/3_scripting/4_gml_reference/timelines/index.html", "1",
+   ["时间轴", "source/_build/3_scripting/4_gml_reference/timelines/index.html", "1",
     ["timeline_add", "source/_build/3_scripting/4_gml_reference/timelines/timeline_add.html", "11"],
     ["timeline_clear", "source/_build/3_scripting/4_gml_reference/timelines/timeline_clear.html", "11"],
     ["timeline_delete", "source/_build/3_scripting/4_gml_reference/timelines/timeline_delete.html", "11"],
