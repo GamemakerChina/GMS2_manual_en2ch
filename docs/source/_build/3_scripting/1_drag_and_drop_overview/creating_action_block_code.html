@@ -36,24 +36,24 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>要向物体添加行为，可以使用 <b>动作工具箱</b> 中可用的不同库中的动作构建代码。 首先，您需要创建一个新的 <a href=
+<p>要向物体添加行为，可以使用 <b>动作工具箱</b> 中可用的不同库中的动作构建代码。 首先，你需要创建一个新的 <a href=
 "../../1_overview/2_quick_start/2_start.html#new_project">拖拽项目</a>，然后创建一个 <a href=
-"../../1_overview/2_quick_start/workflow/4_objects.html">新物体</a>（如果需要，您也可以为该物体分配一个 <a href=
-"../../1_overview/2_quick_start/workflow/1_sprites.html">精灵</a>）。在新物体中，您可以开始添加 <a href=
-"../../2_interface/1_editors/events/index.html">事件</a>，并在事件中添加您的 DnD™ 代码动作。 <img class="center" src=
+"../../1_overview/2_quick_start/workflow/4_objects.html">新物体</a>（如果需要，你也可以为该物体分配一个 <a href=
+"../../1_overview/2_quick_start/workflow/1_sprites.html">精灵</a>）。在新物体中，你可以开始添加 <a href=
+"../../2_interface/1_editors/events/index.html">事件</a>，并在事件中添加你的 DnD™ 代码动作。 <img class="center" src=
 "images/dnd_create_event.png" alt="DnD™ 创建事件（Create Event）"></p>
 
-<p>请注意，当您添加新事件时，会打开一个 “代码” 窗口，其中包含给定事件的选项卡（请参见上图），现在您可以将所需的任何动作从右侧的 “工具箱” 拖动到 “动作块” 窗格中代码窗口。现在，虽然您可以添加 <i>任何</i> 动作，但这并不意味着它们将全部工作或项目将与它们一起编译。某些动作需要 <a href="../3_gml_overview/6_scope.html">变量</a> 才能工作，而其他动作（如 <b>绘制</b> 动作）只有在特定事件中使用时才会起作用。你怎么知道使用哪些？好吧，一般来说，这只是一个使用逻辑的问题......如果一个动作需要一个变量而我们还没有定义一个变量，那么在我们添加动作来创建变量之前我们不应该使用它。</p>
+<p>请注意，当你添加新事件时，会打开一个 “代码” 窗口，其中包含给定事件的选项卡（请参见上图），现在你可以将所需的任何动作从右侧的 “工具箱” 拖动到 “动作块” 窗格中代码窗口。现在，虽然你可以添加 <i>任何</i> 动作，但这并不意味着它们将全部工作或项目将与它们一起编译。某些动作需要 <a href="../3_gml_overview/6_scope.html">变量</a> 才能工作，而其他动作（如 <b>绘制</b> 动作）只有在特定事件中使用时才会起作用。你怎么知道使用哪些？好吧，一般来说，这只是一个使用逻辑的问题......如果一个动作需要一个变量而我们还没有定义一个变量，那么在我们添加动作来创建变量之前我们不应该使用它。</p>
 
-<p>将动作从 “工具箱” 拖动到主 “动作块” 工作区时，它将展开以显示可填写的可用参数并更改以设置行为。在下图中，我们将工具箱 “常规” 中的 “变量赋值” 动作拖到了动作块工作区中：
- <img class="center" src=
+<p>将动作从 “工具箱” 拖动到主 “动作块” 工作区时，它将展开以显示可填写的可用参数并更改以设置行为。在下图中，我们将工具箱 <a href=
+"../2_drag_and_drop_reference/common_actions/index.html">常规</a> 中的 <b>变量赋值</b> 动作拖到了动作块工作区中： <img class="center" src=
 "images/dnd_add_var.png" alt="DnD™ 变量赋值（Assign Variable）"></p>
 
-<p>您可以看到新动作也以缩写形式显示在代码窗口的左侧。 可以单击此动作列表（称为动作 <b>概述</b>）以快速导航到该动作以进行编辑。 如果需要，您可以继续向事件添加动作，每个新动作都被 “链接” 到前一个动作，以显示您正在构建的 DnD™ 代码的流程。请注意，在初始动作下面会突出显示您可以拖拽进一步动作的区域，并且，根据您使用的动作，将突出显示不同区域以显示链中可添加的位置： <img class=
+<p>你可以看到新动作也以缩写形式显示在代码窗口的左侧。 可以单击此动作列表（称为动作 <b>概述</b>）以快速导航到该动作以进行编辑。 如果需要，你可以继续向事件添加动作，每个新动作都被 “链接” 到前一个动作，以显示你正在构建的 DnD™ 代码的流程。请注意，在初始动作下面会突出显示你可以拖拽进一步动作的区域，并且，根据你使用的动作，将突出显示不同区域以显示链中可添加的位置： <img class=
 "center" src="images/dnd_set_dir.png" alt=
 "DnD™ 设置方向变量（Set Direction Variable）"></p>
 
-<p>当您向工作区添加动作时，它们将 “链接” 到上面的动作，以便您可以看到 DnD™ 代码如何一个动作流向另一个，并且概览窗格以缩写形式和执行顺序显示它们： <img class="center" src=
+<p>当你向工作区添加动作时，它们将 “链接” 到上面的动作，以便你可以看到 DnD™ 代码如何一个动作流向另一个，并且概览窗格以缩写形式和执行顺序显示它们： <img class="center" src=
 "images/dnd_scope_other.png" alt="DnD™ 动作链"></p>
 
 <p>有些动作会将代码放在远离主流的单独链中 - <a href=
@@ -62,11 +62,12 @@ if (window.name != "content")
 "../2_drag_and_drop_reference/common_actions/images/e_common_if_variable.png"
 alt="DnD™ 动作支链"></p>
 
-<p>请注意，当使用可能具有此类侧链块的动作时，动作将突出显示 <i>两个</i> 区域以拖拽进一步动作：一个位于正常动作下方，另一个位于动作右侧以显示您要创建的当第一个动作的条件返回 <tt>true</tt> 时，要运行的单独动作块： <img class="center" src=
+<p>请注意，当使用可能具有此类侧链块的动作时，动作将突出显示 <i>两个</i> 区域以拖拽进一步动作：一个位于正常动作下方，另一个位于动作右侧以显示你要创建的当第一个动作的条件返回 <tt>true</tt> 时，要运行的单独动作块： <img class="center" src=
 "../2_drag_and_drop_reference/common_actions/images/a_common_if_drop.png"
 alt="DnD™ 动作支链"></p>
 
-<p>您只需单击并将其拖动到所需的新位置即可更改链中动作的位置，如果单击并按住一秒钟然后移动鼠标，则可以在工作区中移动动作，同时保持其在动作块链中的位置。</p>
+<p>你只需单击 <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> 并将其拖动到所需的新位置即可更改链中动作的位置，如果单击并按住一秒钟然后移动鼠标，则可以在工作区中移动动作，同时保持其在动作块链中的位置。</p>
 
 <p>这是使用拖拽代码编辑器的基础知识，但在下面的部分中解释了更多重要的细节：</p>
 
@@ -77,26 +78,19 @@ alt="DnD™ 动作支链"></p>
 "../2_drag_and_drop_reference/audio_actions/images/a_audio_get_audio_volume.png"
 alt="目标变量样例"></p>
 
-<p>这意味着您可以提供一个 “目标” 变量，该变量将保存动作的返回值。在上面的示例动作中，动作将返回您选择的音频资源的音量，因此您提供一个目标变量来保存此值，以便稍后可以引用它。现在，需要先使用 <a href=
-"../2_drag_and_drop_reference/common_actions/assign_var.html">变量赋值（Assign Variable）</a>（这会创建一个 <b>实例变量</b>）或 <a href="../2_drag_and_drop_reference/common_actions/temp_var.html">声明临时变量（Declare Temporary Variable） </a>（这会创建一个 <b>局部临时变量</b>）声明此目标变量，但如果选中 “临时（Temp）” 选项，则可以简单地添加变量名称，动作将创建该变量并将其设置为保存返回值（创建临时局部变量）。<i>此后</i> 使用的任何动作现在都可以访问临时变量中的值，但只能在同一个事件或脚本中访问。临时变量仅在创建它们的作用域内可用。 有关变量和变量作用域的更多深入信息，请参见 <a href=
+<p>这意味着你可以提供一个 “目标” 变量，该变量将保存动作的返回值。在上面的示例动作中，动作将返回你选择的音频资源的音量，因此你提供一个目标变量来保存此值，以便稍后可以引用它。现在，需要先使用 <a href=
+"../2_drag_and_drop_reference/common_actions/assign_var.html">变量赋值（Assign Variable）</a>（这会创建一个 <b>实例变量</b>）或 <a href="../2_drag_and_drop_reference/common_actions/temp_var.html">声明临时变量（Declare Temporary Variable） </a>（这会创建一个 <b>局部临时变量</b>）声明此目标变量，但如果选中 “临时（Temp）” 选项，则可以简单地添加变量名称，动作将创建该变量并将其设置为保存返回值（创建临时局部变量）。<i>此后</i> 使用的任何动作现在都可以访问临时变量中的值，但 <i>只能在同一个事件或脚本中访问</i>。临时变量仅在创建它们的作用域内可用。 有关变量和变量作用域的更多深入信息，请参见 <a href=
 "../3_gml_overview/6_scope.html">此处</a>。</p>
 </div>
 <br>
 <label class="collapse" for="b">动作作用域</label> <input id="b"
 type="checkbox">
 <div class="index_list">
-<p>Not only variables have scopes (see <b>Target Variables</b>,
-above), actions can have different <i>scopes</i> too. In fact,
-almost all actions can be given a different scope to work in, set
-from the drop down window opened in the action itself as shown
-here:  <img class="center" src="images/dnd_applies_to.png" alt=
+<p>不仅变量具有作用域（参见上面的 <b>目标变量</b>），动作也可以具有不同的 <i>作用域</i>。事实上，几乎所有的动作都可以被赋予不同的工作作用域，这需要从动作本身打开的下拉窗口设置，如下所示： <img class="center" src="images/dnd_applies_to.png" alt=
 "DnD™ 应用于"></p>
 
-<p>You can also set the scope for all further actions using the
-special action <a href=
-"../2_drag_and_drop_reference/common_actions/apply_to.html">Apply
-to</a>. For more information on this feature of the DnD™ actions,
-please see here:</p>
+<p>你还可以使用特殊动作 <a href=
+"../2_drag_and_drop_reference/common_actions/apply_to.html">应用到</a> 为所有后续动作设置作用域。 有关 DnD™ 动作的此功能的更多信息，请参阅此处：</p>
 
 <blockquote>
 <ol>
@@ -110,53 +104,28 @@ please see here:</p>
 <label class="collapse" for="c">自动完成</label> <input id="c"
 type="checkbox">
 <div class="index_list">
-<p>When working with Drag and Drop you will have to add variables
-and expressions into the different input fields of the actions.
-However, as you do this you will often get the Auto Complete window
-popping up to help you:  <img class="center" src=
+<p>使用拖拽动作时，你必须将变量和表达式添加到动作的不同输入字段中。但是，当你执行此操作时，通常会弹出 “自动完成” 窗口以帮助你： <img class="center" src=
 "images/action_autocomplete.png" alt="自动完成"></p>
 
-<p>This pop up window will list all the built in GML (GameMaker
-Language) variables, constants and functions, as well as any
-resources that contain the initial letters of what you were typing.
-It can be used to quickly find the resource or variable that you
-are wanting for the action without having to type it all in
-yourself. For example, if all your rooms are prefixed "rm_" then
-typing that and waiting a moment will show the auto complete window
-with all the resources beginning with "rm_". Note that all the
-built in variables that are shown in the auto complete window can
-be used anywhere where a variable or expression is expected in an
-action, as can most GML functions.</p>
+<p>此弹出窗口将列出所有内置的 GML（GameMaker 语言）变量、常量和函数，以及包含你键入的首字母的资源。 它可用于快速查找你希望动作的资源或变量，而无需自己键入所有内容。 例如，如果你的所有房间都以 “rm_” 作为前缀，那么输入并等待片刻将显示自动完成窗口，其中所有资源都以 “rm_” 开头。 请注意，自动完成窗口中显示的所有内置变量都可以在动作中需要变量或表达式的任何位置使用，大多数 GML 函数也是如此。</p>
 </div>
 <br>
 <label class="collapse" for="d">扩增动作</label> <input id=
 "d" type="checkbox">
 <div class="index_list">
-<p>Sometimes when using an action you will see a small <b>plus
-icon</b> <img style="vertical-align:middle" src=
-"../2_drag_and_drop_reference/icon_expand_arguments.png"> to the
-side. This means that you can <i>expand</i> the action to perform
-extra tasks or take further arguments. For example, if you look at
-the <a href=
-"../2_drag_and_drop_reference/common_actions/temp_var.html">Declare
-Temporary Variables</a> action, you can see that it has this
-<img style="vertical-align:middle" src=
-"../2_drag_and_drop_reference/icon_expand_arguments.png"> icon:
-<img class="center" src=
+<p>有时使用动作时，你会看到侧面有一个小的 <b>加号图标</b> <img style="vertical-align:middle" src=
+"../2_drag_and_drop_reference/icon_expand_arguments.png">。这意味着你可以 <i>扩展</i> 动作以执行额外任务或进一步参数。 例如，如果查看 <a href=
+"../2_drag_and_drop_reference/common_actions/temp_var.html">声明临时变量</a> 动作，可以看到它有这个图标 <img style="vertical-align:middle" src=
+"../2_drag_and_drop_reference/icon_expand_arguments.png">：<img class="center" src=
 "../2_drag_and_drop_reference/common_actions/images/a_common_declare_temp_var.png"
 alt="扩增临时变量"></p>
 
-<p>When you click the icon, the action will expand and permit you
-to declare more variables, making it easier and faster to define
-multiple variables at the same time.  <img class="center" src=
+<p>单击该图标时，动作将展开并允许你声明更多变量，从而可以更轻松，更快速地同时定义多个变量。 <img class="center" src=
 "images/action_expansion_example.png" alt=
 "Temp Variable Expansion Example"></p>
 
-<p>The icon can also be used for those actions that require
-optional arguments, like the <a href=
-"../2_drag_and_drop_reference/random_actions/choose.html">Choose</a>
-action, which permits you to add various different values to be
-returned:  <img class="center" src=
+<p>该图标还可用于需要可选参数的动作，例如 <a href=
+"../2_drag_and_drop_reference/random_actions/choose.html">选择（Choose）</a> 动作，它允许你添加要返回的各种不同值： <img class="center" src=
 "../2_drag_and_drop_reference/random_actions/images/e_mathematics_choose.png"
 alt="Choose Expansion Example"></p>
 </div>
@@ -164,16 +133,14 @@ alt="Choose Expansion Example"></p>
 <label class="collapse" for="e">右键菜单</label> <input id="e"
 type="checkbox">
 <div class="index_list">
-<p>When working on your DnD™ code, you can click the right mouse
-button <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> on the action (or on the text in the
-shortlist on the left) to open up the following menu: <img class=
+<p>处理 DnD™ 代码时，可以单击动作上的鼠标右键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png">（或左侧短列表中的文本）以打开以下菜单：<img class=
 "center" src="images/dnd_rmb_menu.png" alt="DnD™ RMB Menu"></p>
 
 <p>此菜单包含以下选项：</p>
 
 <ul>
-<li><b>Cut / Copy / Paste</b>: This will permit you cut, copy or paste any action that is selected. 请注意，你可以在动作之外使用 <img style="vertical-align:middle" src=
+<li><b>剪切 / 复制 / 粘贴</b>：这将允许你剪切、复制或粘贴所选的任何动作。请注意，你可以在动作之外使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
 src="../../images/icon_lmb.png"> 并拖动，或在单个动作上使用 <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
@@ -189,13 +156,10 @@ alt="DnD™ Disable Actions"> 你可以看到 “<tt>If Score（如果得分）<
 "../../2_interface/2_extras/debugging.html">调试模式</a> 下运行时停止的一个点。将突出显示分配了断点的动作，如下图所示（“<tt>If Health（如果健康值）</tt>” 动作已设置为断点）： <img class="center" src=
 "images/dnd_togglebreakpoint.png" alt="DnD™ Breakpoint"></li>
 
-<li><b>Pan</b>: Selecting this will pan and zoom the workspace to
-focus on the selected action.<br>
+<li><b>平移</b>：选择此选项将平移和缩放工作空间以聚焦所选动作。<br>
 <br></li>
 
-<li><b>Show Help...</b>: This option will open the manual on the
-page associated with the DnD™ action that is currently selected so
-you can check how it works.</li>
+<li><b>显示帮助...</b>：此选项将打开与当前所选 DnD™ 动作关联的页面上的手册，以便你查看其工作原理。</li>
 </ul>
 </div></blockquote>
 
