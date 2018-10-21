@@ -1398,7 +1398,7 @@ var TITEMS = [
      ["get_save_filename", "source/_build/3_scripting/4_gml_reference/file handling/file system/get_save_filename.html", "11"],
      ["get_save_filename_ext", "source/_build/3_scripting/4_gml_reference/file handling/file system/get_save_filename_ext.html", "11"]
     ],
-    ["文件", "source/_build/3_scripting/4_gml_reference/file handling/files/index.html", "1",
+    ["文本文件", "source/_build/3_scripting/4_gml_reference/file handling/files/index.html", "1",
      ["file_text_close", "source/_build/3_scripting/4_gml_reference/file handling/files/file_text_close.html", "11"],
      ["file_text_eof", "source/_build/3_scripting/4_gml_reference/file handling/files/file_text_eof.html", "11"],
      ["file_text_eoln", "source/_build/3_scripting/4_gml_reference/file handling/files/file_text_eoln.html", "11"],
@@ -1413,7 +1413,7 @@ var TITEMS = [
      ["file_text_write_string", "source/_build/3_scripting/4_gml_reference/file handling/files/file_text_write_string.html", "11"],
      ["file_text_writeln", "source/_build/3_scripting/4_gml_reference/file handling/files/file_text_writeln.html", "11"]
     ],
-    ["Ini文件", "source/_build/3_scripting/4_gml_reference/file handling/ini files/index.html", "1",
+    ["Ini 文件", "source/_build/3_scripting/4_gml_reference/file handling/ini files/index.html", "1",
      ["ini_close", "source/_build/3_scripting/4_gml_reference/file handling/ini files/ini_close.html", "11"],
      ["ini_key_delete", "source/_build/3_scripting/4_gml_reference/file handling/ini files/ini_key_delete.html", "11"],
      ["ini_key_exists", "source/_build/3_scripting/4_gml_reference/file handling/ini files/ini_key_exists.html", "11"],
