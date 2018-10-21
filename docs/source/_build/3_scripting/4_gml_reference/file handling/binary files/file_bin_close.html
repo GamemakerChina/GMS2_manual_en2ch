@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>binfile</td>
-<td>The ID of the file to close.</td>
+<td>要关闭的文件 ID。</td>
 </tr>
 </table>
 </div>
@@ -56,32 +56,26 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>Closes a previously opened binary file. You supply the file ID
-value, as returned by the function <a href=
-"file_bin_open.html"><tt>file_bin_open</tt></a>.</p>
+<p>关闭之前打开的二进制文件。你提供由函数 <a href=
+"file_bin_open.html"><tt>file_bin_open</tt></a> 返回的文件 ID 值。</p>
 
-<blockquote><i><b>NOTE:</b> These functions <b>do not</b> work when
-the target module is HTML5</i>.</blockquote>
+<blockquote><i><b>注意：</b>当目标模块是 HTML5 时，这些函数 <b>不起</b> 作用。</i></blockquote>
 
 <p><br>
 </p>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">file = file_bin_open('myfile.bin', 2);<br>
-file_bin_rewrite(file);<br>
-file_bin_close(file);<br></p>
+<p class="code">file = file_bin_open('myfile.bin', 2);<br>file_bin_rewrite(file);<br>file_bin_close(file);<br></p>
 
-<p>This would open a file from the same directory as the game, and
-assign its index to the variable "file". It would then re-write the
-file (clearing it of data), and close it again.</p>
+<p>这将从与游戏相同的目录中打开一个文件，并将其索引分配给变量 “file”。然后它将重新写入文件（清除数据），然后再次关闭它。</p>
 
 <p><br>
 </p>
@@ -90,10 +84,9 @@ file (clearing it of data), and close it again.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Binary
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">二进制文件</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "file_bin_size.html">file_bin_size</a></div>
 </div>
 </div>

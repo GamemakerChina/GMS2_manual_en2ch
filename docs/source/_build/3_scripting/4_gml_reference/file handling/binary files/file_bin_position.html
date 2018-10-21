@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>binfile</td>
-<td>The ID of the file to get the position in.</td>
+<td>获取指定 id 的文件的位置（读写偏移量）。</td>
 </tr>
 </table>
 </div>
@@ -56,20 +56,17 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will returns the current position in bytes, where
-0 is the first position, of the file with the given file id. You
-supply the file ID value, as returned by the function <a href=
-"file_bin_open.html"><tt>file_bin_open</tt></a>.</p>
+<p>此函数将返回具有给定 id 的文件的当前位置（以字节为单位，其中 0 是第一个位置）。你提供由函数 <a href=
+"file_bin_open.html"><tt>file_bin_open</tt></a> 返回的文件 ID 值。</p>
 
-<blockquote><i><b>NOTE:</b> These functions <b>do not</b> work when
-the target module is HTML5</i>.</blockquote>
+<blockquote><i><b>注意：</b>当目标模块是 HTML5 时，这些函数 <b>不起</b> 作用。</i></blockquote>
 
 <p><br>
 </p>
@@ -78,7 +75,7 @@ the target module is HTML5</i>.</blockquote>
 
 <p class="code">pos = file_bin_position(file);</p>
 
-<p>This would store the current position in the variable "pos".</p>
+<p>这会将当前位置存储在变量 “pos” 中。</p>
 
 <p><br>
 </p>
@@ -87,10 +84,9 @@ the target module is HTML5</i>.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Binary
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">二进制文件</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "file_bin_seek.html">file_bin_seek</a></div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>fname</td>
-<td>The name of the file to read from.</td>
+<td>要读取的文件的名称。</td>
 </tr>
 
 <tr class="alt">
 <td>mode</td>
-<td>the indicator of what can be done with the file.</td>
+<td>打开文件的模式（对文件的读写权限）。</td>
 </tr>
 </table>
 </div>
@@ -61,37 +61,27 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will open the binary file with the indicated name.
-The mode indicates what can be done with the file:</p>
+<p>此函数将打开带有指定名称的二进制文件。 模式指示可以对文件执行的操作：</p>
 
 <ul>
-<li>0 = reading</li>
+<li>0 = 只读</li>
 
-<li>1 = writing</li>
+<li>1 = 只写</li>
 
-<li>2 = both reading and writing</li>
+<li>2 = 可读可写</li>
 </ul>
 
-<p>When the file does not exist it is created, and the function
-returns the id of the file that must be used in the other
-functions. You can open multiple files at the same time (32 max),
-but don't forget to close them once you are finished with them.<br>
-<br>
-<i><b>WARNING!</b> This function may not work as you expect due
-to</i> GameMaker Studio 2 being sandboxed! Please see the section
-on <a href=
-"../../../../1_overview/3_additional_information/file_system.html">File
-System Limits</a> for more information.</p>
+<p>当文件不存在时，它将被创建，并且该函数返回必须在其他函数中使用的文件的 id。 你可以同时打开多个文件（最多 32 个），但一旦完成操作，请不要忘记关闭它们。<br><br><i><b>警告！</b> 此函数可能无法正常工作！</i> 因为 GameMaker Studio 2 被沙盒化。有关更多信息，请参阅 <a href=
+"../../../../1_overview/3_additional_information/file_system.html">文件系统限制</a> 一节。</p>
 
-<blockquote><i><b>NOTE:</b> These functions <b>do not</b> work when
-the target module is HTML5</i>.</blockquote>
+<blockquote><i><b>注意：</b>当目标模块是 HTML5 时，这些函数 <b>不起</b> 作用。</i></blockquote>
 
 <p><br>
 </p>
@@ -100,8 +90,7 @@ the target module is HTML5</i>.</blockquote>
 
 <p class="code">file = file_bin_open('myfile.bin', 2);</p>
 
-<p>This would open a file from the same directory as the game, and
-assign its index to the variable "file".</p>
+<p>这将从与游戏相同的目录中打开一个文件，并将其索引分配给变量 “file”。</p>
 
 <p><br>
 </p>
@@ -110,10 +99,9 @@ assign its index to the variable "file".</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Binary
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">二进制文件</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "file_bin_rewrite.html">file_bin_rewrite</a></div>
 </div>
 </div>
