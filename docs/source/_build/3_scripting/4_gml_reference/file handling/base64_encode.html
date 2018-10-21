@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>string</td>
-<td>The string to encode.</td>
+<td>要编码的字符串。</td>
 </tr>
 </table>
 </div>
@@ -56,18 +56,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<p><b>返回：</b> String（字符串）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will convert a string into a base64 format encoded
-string. This is a commonly used encoding scheme that is often used
-for any media that needs to be stored or transferred over the
-internet as text, and renders the output unreadable to the human
-eye.<br>
+<p>此函数将字符串转换为 base64 格式编码的字符串。这是一种常用的编码方案，通常用于需要通过互联网作为文本存储或传输的媒体，并使输出对人眼不可读。<br>
 <br></p>
 
 <p><br>
@@ -75,15 +71,9 @@ eye.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var str, file;<br>
-str = base64_encode(game_data);<br>
-file = file_text_open_write("save.txt");<br>
-file_text_write_string(file, str);<br>
-file_text_close(file);<br></p>
+<p class="code">var str, file;<br>str = base64_encode(game_data);<br>file = file_text_open_write("save.txt");<br>file_text_write_string(file, str);<br>file_text_close(file);<br></p>
 
-<p>The above code will covert the string stored in "game_data" into
-a base64 encoded string which is then stored in an external text
-file.</p>
+<p>上面的代码将存储在 “game_data” 中的字符串转换为 base64 编码的字符串，然后将其存储在外部文本文件中。</p>
 
 <p><br>
 </p>
@@ -92,10 +82,9 @@ file.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">File
-Handling</a></div>
+<div style="float:left">上一页: <a href="index.html">文件处理</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "base64_decode.html">base64_decode</a></div>
 </div>
 </div>

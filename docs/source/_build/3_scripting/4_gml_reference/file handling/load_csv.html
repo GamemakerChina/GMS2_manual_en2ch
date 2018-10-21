@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>filename</td>
-<td>The name of the file to open (as a string)</td>
+<td>要打开的文件的名称（字符串）</td>
 </tr>
 </table>
 </div>
@@ -56,42 +56,23 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> DS Grid Index (real)</p>
+<p><b>返回:</b> DS Grid Index (real)（栅格数据索引，实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will load a CSV format file and convert it into a
-DS grid, returning the unique ID value for the grid created.</p>
+<p>此函数将加载 CSV 格式文件并将其转换为栅格数据，返回创建的栅格的唯一 ID 值。</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">file_grid = load_csv("spreadsheet.csv");<br>
-var ww = ds_grid_get_width(file_grid);<br>
-var hh = ds_grid_get_height(file_grid);<br>
-var xx = 32;<br>
-var yy = 32;<br>
-for (var i = 0; i &lt; ww; i++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;for (var j = 0; j &lt; hh; j++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(xx, yy,
-string(file_grid[# i, j]));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yy += 32;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;yy = 32;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;xx += 32;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">file_grid = load_csv("spreadsheet.csv");<br>var ww = ds_grid_get_width(file_grid);<br>var hh = ds_grid_get_height(file_grid);<br>var xx = 32;<br>var yy = 32;<br>for (var i = 0; i &lt; ww; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;for (var j = 0; j &lt; hh; j++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(xx, yy, string(file_grid[# i, j]));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yy += 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;yy = 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;xx += 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will open the given CSV file and store the
-returned DS grid in the variable "file_grid". This grid is then
-parsed in a couple of <tt>for</tt> lops and the contents drawn to
-the screen.</p>
+<p>上面的代码将打开给定的 CSV 文件，并将返回的栅格数据存储在变量 “file_grid” 中。 然后，这个栅格被两个 <tt>for</tt> 循环解析并且将内容绘制到屏幕上。</p>
 
 <p><br>
 </p>
@@ -100,10 +81,9 @@ the screen.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">File
-Handling</a></div>
+<div style="float:left">上一页: <a href="index.html">文件处理</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "directory_exists.html">directory_exists</a></div>
 </div>
 </div>

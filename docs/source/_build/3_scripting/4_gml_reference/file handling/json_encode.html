@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>map</td>
-<td>a ds_map with the information to encode</td>
+<td>包含要编码的信息的ds_map</td>
 </tr>
 </table>
 </div>
@@ -56,40 +56,27 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> string</p>
+<p><b>返回:</b> string（字符串）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>JSON (JavaScript Object Notation) is a lightweight
-data-interchange format which is easy for to read and write, for
-both people and machines. It is built on two basic structures:</p>
+<p>SON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于读取和写入，适用于人和机器。它建立在两个基本结构上：</p>
 
 <blockquote>
 <ul>
-<li>A collection of name/value pairs, called a <a href=
-"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> in
-<i>GameMaker Studio 2</i> but also known as a "dictionary" or
-"object".</li>
+<li>一组 “名称 / 值” 对，在 <i>GameMaker Studio 2</i> 中称为 <a href=
+"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，但也称为 “字典” 或 “对象”。</li>
 
-<li>An ordered list of values, called a <a href=
-"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a> in
-<i>GameMaker Studio 2</i> but this can also be called an "array" or
-"sequence".</li>
+<li>一个有序的值列表，在 <i>GameMaker Studio 2</i> 中称为 <a href=
+"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>，但这也可以称为 “数组” 或 “队列”。</li>
 </ul>
 </blockquote>
 
-<p><tt>json_encode</tt> takes a ds_map that you have previously
-created and encoded as a JSON string which you can then use as (for
-example) part of an <a href=
-"../asynchronous%20functions/http_post_string.html"><tt>http_post_string()</tt></a>
-call, or so it can be stored externally, written to a file.<br>
-<br>
-<i><b>NOTE:</b> The hierarchal functionality of JSON is available
-through special ds_map and ds_list functions, so you are able to
-encode sub-lists and maps.</i><br>
+<p><tt>json_encode</tt> 采用你之前创建的 ds_map 并编码为 JSON 字符串，然后你可以将其用作（例如） <a href=
+"../asynchronous%20functions/http_post_string.html"><tt>http_post_string()</tt></a> 调用的一部分，或者可以将其存储在外部，写入文件。<br><br><i><b>注意：</b> JSON 的层级函数可通过特殊的 ds_map 和 ds_list 函数获得，因此你可以对子列表和映射进行编码。</i><br>
 <br></p>
 
 <p><br>
@@ -97,23 +84,9 @@ encode sub-lists and maps.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var hiscore_map, i, str;<br>
-hiscore_map = ds_map_create();<br>
-for (i = 0; i &lt; 10; i ++;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;ds_map_add(name[i], score[i]);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-str = json_encode(hiscore_map);<br>
-get[0] = http_post_string("http://www.angusgames.com/game?game_id="
-+ string(global.game_id), str)<br>
-ds_map_destroy(hiscore_map);</p>
+<p class="code">var hiscore_map, i, str;<br>hiscore_map = ds_map_create();<br>for (i = 0; i &lt; 10; i ++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;ds_map_add(name[i], score[i]);<br>&nbsp;&nbsp;&nbsp;}<br>str = json_encode(hiscore_map);<br>get[0] = http_post_string("http://www.angusgames.com/game?game_id=" + string(global.game_id), str)<br>ds_map_destroy(hiscore_map);</p>
 
-<p>The above code creates a ds_map and then loops through the name
-and score arrays, adding each key/value pair to the new map. Next,
-this map is encoded using <tt>json_encode</tt> and stored as a
-string in the variable "str". This string is then sent to a web
-server using <tt>http_post_string</tt> and the ds_map is destroyed
-to prevent a memory leak as it is no-longer needed.</p>
+<p>上面的代码创建了一个 ds_map，然后循环遍历 name 和 score 数组，将每个键 / 值对添加到新映射中。 接下来，使用 <tt>json_encode</tt> 对此映射进行编码，并将其作为字符串存储在变量 “str” 中。 然后使用 <tt>http_post_string</tt> 将此字符串发送到 Web 服务器，并销毁 ds_map 以防止内存泄漏，因为不再需要它。</p>
 
 <p><br>
 </p>
@@ -122,10 +95,9 @@ to prevent a memory leak as it is no-longer needed.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">File
-Handling</a></div>
+<div style="float:left">上一页: <a href="index.html">文件处理</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "json_decode.html">json_decode()</a></div>
 </div>
 </div>

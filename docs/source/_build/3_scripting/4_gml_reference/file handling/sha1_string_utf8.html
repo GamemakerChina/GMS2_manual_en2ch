@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>string</td>
-<td>The string to hash.</td>
+<td>用于生成 MD5 散列的字符串。</td>
 </tr>
 </table>
 </div>
@@ -56,37 +56,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<p><b>返回：</b> String（字符串）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>In cryptography, SHA-1 is a cryptographic hash function designed
-by the United States <i>National Security Agency</i> and is
-employed in several widely used applications and protocols like the
-popular <b>Git</b> where it is used to check for file changes. This
-function will take an input UTF-8 string (which has a variable
-number of bytes per character) and returns a 160 bit message digest
-in ASCII format, for example:<br>
+<p>在密码学中，SHA-1 是由美国 <i>国家安全局</i> 设计的加密散列函数，用于几种广泛使用的流行 <b>Git</b> 应用程序中检查文件更改。此函数将获取输入的 UTF-8 格式字符串并以 ASCII 格式返回 160 位消息摘要，例如：<br>
 <br></p>
 
-<p class="code">sha1 input string = "The quick brown fox jumps over
-the lazy dog"<br>
-sha1 output hash = "2fd4e1c6 7a2d28fc ed849ee1 bb76e739
-1b93eb12"</p>
+<p class="code">sha1 input string = "The quick brown fox jumps over the lazy dog"<br>sha1 output hash = "2fd4e1c6 7a2d28fc ed849ee1 bb76e739 1b93eb12"</p>
 
 <p><br>
-
-In this way you can generate a secure key which can be stored and
-used to check the integrity of the information being sent to (or
-received from) an external server (for example).<br>
-<br>
-<i><b>NOTE:</b> There are two formats for the sha1 encoding, UTF-8
-and unicode. Both are provided to facilitate communication with
-different server setups, but the most common to use is
-unicode.</i><br>
+一个使用它的例子是，通过这种方式生成一个安全密钥，该密钥可以存储并用于检查发送到外部服务器（或从外部服务器接收的信息）的完整性。<br><br><i><b>注意：</b> sha1 编码有两种格式，UTF-8 和 unicode。两者都是为了便于与不同的服务器设置进行通信，但最常用的是 unicode。</i><br>
 <br></p>
 
 <p><br>
@@ -94,21 +77,9 @@ unicode.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var hash, str;<br>
-str = json_encode(hiscore_map);<br>
-hash = sha1_string_utf8(str);<br>
-ini_open("local.ini");<br>
-ini_write_string("info", "0", hash);<br>
-ini_close();<br>
-get[0] = http_post_string("http://www.MacSweeney
-Games.com/CatchTheHaggis?game_hiscores=" + string(global.game_id),
-str)<br></p>
+<p class="code">var hash, str;<br>str = json_encode(hiscore_map);<br>hash = sha1_string_utf8(str);<br>ini_open("local.ini");<br>ini_write_string("info", "0", hash);<br>ini_close();<br>get[0] = http_post_string("http://www.MacSweeney Games.com/CatchTheHaggis?game_hiscores=" + string(global.game_id), str)<br></p>
 
-<p>The above code will encode a ds_map into a JSON string. A sha1
-hash is then generated and stored in an ini file so that this can
-later be used to check the integrity of the JSON should the same
-information be received later form the server. The JSON is then
-sent.</p>
+<p>上面的代码将 ds_map 编码为 JSON 字符串。然后生成 sha1 散列并将其存储在 ini 文件中，以便稍后可以使用它来检查 JSON 的完整性，如果稍后从服务器接收到相同的信息，JSON 就会被发送。</p>
 
 <p><br>
 </p>
@@ -117,10 +88,9 @@ sent.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">File
-Handling</a></div>
+<div style="float:left">上一页: <a href="index.html">文件处理</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "sha1_string_unicode.html">sha1_string_unicode</a></div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>dname</td>
-<td>The name of the directory to look for.</td>
+<td>要查找的目录名称。</td>
 </tr>
 </table>
 </div>
@@ -56,25 +56,16 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean.</p>
+<p><b>返回:</b> Boolean（布尔值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will return <tt>true</tt> if the indicated
-directory exists or <tt>false</tt> if it does not. The specified
-name must include the full path, not a relative path and you cannot
-access any directories from out-with the game bundle as all games
-are sandboxed.<br>
-<br>
-<br>
-<i><b>WARNING!</b> This function may not work as you expect due
-to</i> GameMaker Studio 2 being sandboxed! Please see the section
-on <a href=
-"../../../1_overview/3_additional_information/file_system.html">File
-System Limits</a> for more information.<br>
+<p>如果指定的目录存在，则此函数将返回 <tt>true</tt>，否则返回 <tt>false</tt>。指定的名称必须包含完整路径，而不是相对路径，并且你无法访问游戏包中的任何目录，因为所有游戏都沙盒化了。
+<br><br><i><b>警告！</b> 此函数可能无法正常工作！</i> 因为 GameMaker Studio 2 被沙盒化。有关更多信息，请参阅 <a href=
+"../../../1_overview/3_additional_information/file_system.html">文件系统限制</a> 一节。<br>
 <br></p>
 
 <p><br>
@@ -82,16 +73,9 @@ System Limits</a> for more information.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if directory_exists(working_directory +
-"\Saves\")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;file = file_find_first(working_directory +
-"\Saves\*.doc", fa_readonly);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if directory_exists(working_directory + "\Saves\")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;file = file_find_first(working_directory + "\Saves\*.doc", fa_readonly);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>This will check to see if the specified directory exists then,
-if it does, go there and return the first "read only" <tt>doc</tt>
-file found.</p>
+<p>这将检查指定的目录是否存在，如果存在，则去那里并返回找到的第一个 “只读” <tt>doc</tt> 文件。</p>
 
 <p><br>
 </p>
@@ -100,10 +84,9 @@ file found.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">File
-Handling</a></div>
+<div style="float:left">上一页: <a href="index.html">文件处理</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "directory_create.html">directory_create</a></div>
 </div>
 </div>

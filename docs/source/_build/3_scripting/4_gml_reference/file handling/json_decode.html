@@ -1,20 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
+<html><head>
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web">
+<meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<meta name="generator" content="chm2web Pro 2.85 (unicode)">
 <title>json_decode</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
-<link rel="stylesheet" href="../../../../../files/helpindex.css"
-type="text/css">
-<link rel="stylesheet" href="../../../../../default.css" type=
-"text/css">
+<link rel="stylesheet" href="../../../../../files/helpindex.css" type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type="text/css">
 
-<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
 <script type="text/JavaScript">
 chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/file handling/json_decode.html";
 </script>
@@ -32,27 +27,69 @@ if (window.name != "content")
 <h2>json_decode</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>SON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于读取和写入，适用于人和机器。它建立在两个基本结构上：</p>
+
+<ul>
+<li>一组 “名称 / 值” 对，在 <i>GameMaker Studio 2</i> 中称为 <a href="../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，但也称为 “字典” 或 “对象”。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>一个有序的值列表，在 <i>GameMaker Studio 2</i> 中称为 <a href="../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>，但这也可以称为 “数组” 或 “队列”。</li>
+</ul>
+
+<p>使用此函数，你可以解码一段 JSON 并将其转换为 <tt>ds_map</tt>，准备在 <i>GameMaker Studio 2</i> 中使用。如果要解码的 JSON 需要在中心 ds_map 中使用列表和映射的层次结构，那么也会使用以下规则（注意，这些规则仅适用于顶级结构）对其进行解码并为你创建：</p>
+
+<ul>
+<li><i>Json 是单个值</i> - 返回带有单个条目 “default” 的 ds_map，该值是值</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><i>Json 是一个对象或值的数组</i> - 返回一个带有单个条目 “default” 的 ds_map，它是对象或值的 ds_list</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><i>Json 是一个对象</i> - 返回一个 ds_map，其中包含对象条目</li>
+</ul>
+
+<div class="note"><b>注意</b>：解码数组时，只有当数组是顶级结构时，才会有一个带 “default” 键的映射，并且仅适用于该顶级数组。 内部列表直接解码为 ds_lists，而不包含在 ds_map 中。</div>
+
+<p><br>
+通常你会知道 JSON 解码的键，但如果没有，那么你可以使用 <a href="../data_structures/ds%20maps/ds_map_size.html"><tt>ds_map_size</tt></a>、<a href="../data_structures/ds%20maps/ds_map_find_first.html"><tt>ds_map_find_first</tt></a> 和 <a href="../data_structures/ds%20maps/ds_map_find_next.html"><tt>ds_map_find_next</tt></a> 函数来解析映射并获取必要的信息。</p>
+
+<div class="note"><b>注意</b>：<i>GameMaker Studio 2</i> 从 JSON 创建必要的 ds_maps 和列表，并且为了清理你只需要删除 <b>顶级</b> 映射或列表，<i>GameMaker Studio 2</i> 将自动从内存中删除其下所有映射和列表。</div>
+</blockquote>
+
+<p><br>
+</p>
+
 <h3>语法：</h3>
 
 <p class="code">json_decode(string)</p>
 
-<blockquote>
 <p><br>
 </p>
 
 <div class="param">
 <table>
-<tr>
+<tbody><tr>
 <th>参数</th>
 <th>描述</th>
 </tr>
 
 <tr>
 <td>string</td>
-<td>The JSON format string that you are passing to the function for
-decoding</td>
+<td>要传递给函数进行解码的 JSON 格式字符串</td>
 </tr>
-</table>
+</tbody></table>
 </div>
 
 <p><br>
@@ -60,125 +97,36 @@ decoding</td>
 
 <h3>返回：</h3>
 
-<p class="code">ds_map id or -1 if it fails</p>
-
-<p><br>
-</p>
-
-<h3>描述</h3>
-
-<blockquote>
-<p>JSON (JavaScript Object Notation) is a lightweight
-data-interchange format which is easy for to read and write, for
-both people and machines. It is built on two basic structures:</p>
-
-<blockquote>
-<ul>
-<li>A collection of name/value pairs, called a <a href=
-"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> in
-<i>GameMaker Studio 2</i> but also known as a "dictionary" or
-"object".</li>
-
-<li>An ordered list of values, called a <a href=
-"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a> in
-<i>GameMaker Studio 2</i> but this can also be called an "array" or
-"sequence".</li>
-</ul>
-</blockquote>
-
-<p>With this function, you can decode a piece of JSON and convert
-it into a <tt>ds_map</tt>, ready for use in <i>GameMaker Studio
-2</i>. If the JSON to be decoded requires a hierarchy of lists and
-maps within the central ds_map, these are decoded too and also
-created for you, using the following rules (note that these rules
-apply to the top-level structure only):</p>
-
-<blockquote>
-<ul>
-<li><i>Json is a single value</i> - returns a ds_map with a single
-entry "default" that is the value</li>
-
-<li><i>Json is an array of objects or values</i> - returns a ds_map
-with a single entry "default" that is a ds_list of the objects or
-values</li>
-
-<li><i>Json is an object</i> - returns a ds_map that has the object
-entries in it</li>
-</ul>
-</blockquote>
-
-<div class="note"><b>NOTE:</b> When decoding arrays, there is a map
-with the key "default" ONLY when an array is the top level
-structure, and ONLY for that top-level array. Internal lists decode
-directly to ds_lists without being enclosed in a ds_map.<br>
-<br>
-Normally you would know what keys the JSON decodes to, but if not
-then you can use the <a href=
-"../data_structures/ds%20maps/ds_map_size.html"><tt>ds_map_size</tt></a>,
-<a href=
-"../data_structures/ds%20maps/ds_map_find_first.html"><tt>ds_map_find_first</tt></a>
-and <a href=
-"../data_structures/ds%20maps/ds_map_find_next.html"><tt>ds_map_find_next</tt></a>
-functions to parse the map and get the necessary information.<br>
-<br>
-<br>
-<br>
-
-<div class="note"><b>NOTE:</b> <i>GameMaker Studio 2</i> creates
-the necessary ds_maps and lists from the JSON, and for cleaning up
-you only need to delete the <b>top level</b> map or list and
-<i>GameMaker Studio 2</i> will automatically delete from memory all
-the maps and lists underneath.<br>
-<br>
+<p class="code">ds_map id，如果失败则返回 -1 </p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">var resultMap = json_decode(requestResult);<br>
-var list = ds_map_find_value(resultMap, "default");<br>
-var size = ds_list_size(list);<br>
-for (var n = 0; n &lt; ds_list_size(list); n++;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var map = ds_list_find_value(list, n);<br>
-&nbsp;&nbsp;&nbsp;var curr = ds_map_find_first(map);<br>
-&nbsp;&nbsp;&nbsp;while (is_string(curr))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Name[n] =
-ds_map_find_value(map, "name");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr = ds_map_find_next(map,
-curr);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br>
-ds_map_destroy(resultMap);<br></p>
+<p class="code">var resultMap = json_decode(requestResult);<br>var list = ds_map_find_value(resultMap, "default");<br>var size = ds_list_size(list);<br>for (var n = 0; n &lt; ds_list_size(list); n++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var map = ds_list_find_value(list, n);<br>&nbsp;&nbsp;&nbsp;var curr = ds_map_find_first(map);<br>&nbsp;&nbsp;&nbsp;while (is_string(curr))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Name[n] = ds_map_find_value(map, "name");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr = ds_map_find_next(map, curr);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br>ds_map_destroy(resultMap);<br></p>
 
 <blockquote>
-<p>The above code will decode a JSON string and parse it to
-generate a global array.</p>
+<p>上面的代码将解码 JSON 字符串并解析它以生成全局数组。</p>
+</blockquote>
 
 <p><br>
 </p>
-</blockquote></div>
+</div>
 
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">File
-Handling</a></div>
+<div style="float:left">上一页: <a href="index.html">文件处理</a></div>
 
-<div style="float:right">Next: <a href=
-"md5_string_utf8.html">md5_string_utf8</a></div>
+<div style="float:right">下一页: <a href="md5_string_utf8.html">md5_string_utf8</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
-</div></div>
-</blockquote>
-</blockquote>
 </div>
 
 <script type="text/JavaScript">
@@ -188,5 +136,6 @@ if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
     chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
 }
 </script>
-</body>
-</html>
+
+
+</body></html>

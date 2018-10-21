@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>File Handling</title>
+<title>文件处理</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
 type="text/css">
@@ -29,81 +29,54 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>File Handling</h2>
+<h2>文件处理</h2>
 
 <div class="body-scroll">
-<p>At some point while creating your game it will be necessary to
-store information externally and be able to retrieve this
-information. For example, you may wish to store login details, or
-hi-scores, or maybe the progression of the player through your
-levels. Whatever the reason, you will need to know how to use the
-different file functions that are available to you when working
-with <i>GameMaker Studio 2</i>.</p>
+<p>在创建游戏的某个时刻，有必要在外部存储信息并能够检索此信息。例如，你可能希望存储有关登录或高分的详细信息，或者可能存储玩家在你的关卡中的进度。 无论是什么原因，你都需要知道在使用 <i>GameMaker Studio 2</i> 时如何使用文件函数。</p>
 
-<p>It is very important to realise that <i>GameMaker Studio 2</i>
-is <b>Sandboxed</b>, meaning that there are a number of limits and
-minor complications when using the file system functions that are
-available, and it is worth noting too that the file system will
-work slightly differently depending on the platform you are
-targeting. For more information this, please see the following
-section:</p>
+<p>认识到 <i>GameMaker Studio 2</i> 是 <b>沙盒型</b> 的非常重要，这意味着在使用可用的文件系统函数时存在许多限制和微小的复杂性，值得注意的是文件系统的工作方式在不同的目标平台上略有不同。有关详细信息，请参阅以下部分：</p>
 
 <blockquote>
 <ol>
 <li><a href=
-"../../../1_overview/3_additional_information/file_system.html">File
-System Limits</a><br>
+"../../../1_overview/3_additional_information/file_system.html">文件系统限制</a><br>
 </li>
 </ol>
 </blockquote>
 
-<p>If you have been granted permission by Steam to use their
-dedicated API with your game, you will find that there is also a
-new set of file functions available to you. These are explained in
-the <a href="../steam%20api/index.html">Steam API</a> section of
-this manual.</p>
+<p>如果你已获得 Steam 的许可，可以在游戏中使用专用 API，你会发现还有一组新的文件函数可供你使用。 这些在本手册的 <a href="../steam%20api/index.html">Steam API</a> 部分中有说明。</p>
 
-<div class="note"><b>IMPORTANT!</b> All <i>GameMaker Studio 2</i>
-projects have a file called "<tt>opions.ini</tt>", so you
-<b>cannot</b> name any file with that name (you will get a uild
-failure when you try to compile your game project).</div>
+<div class="note"><b>重要！ </b> 所有 <i>GameMaker Studio 2</i> 项目都有一个名为 “<tt>options.ini</tt>” 的文件(?)，因此你 <b>无法</b> 使用该名称命名任何文件（当你尝试编译游戏项目时，你将构建失败）。</div>
 
 <p><br>
+以下部分都涉及不同类型的文件处理：</p>
 
-The following sections all deal with different types of file
-handling:</p>
-
-<blockquote><label class="collapse" for="one">File Systems</label>
+<blockquote><label class="collapse" for="one">文件系统</label>
 <input id="one" type="checkbox">
 <div class="index_list">
-<p>Information on the different file functions can be found in the
-following pages:</p>
+<p>有关不同文件函数的信息，请参见以下页面：</p>
 
 <blockquote>
 <ol>
-<li><a href="file%20system/index.html">File System
-Functions</a><br>
+<li><a href="file%20system/index.html">文件系统函数</a><br>
 </li>
 
-<li><a href="ini%20files/index.html">Ini Files</a><br>
+<li><a href="ini%20files/index.html">Ini 文件</a><br>
 </li>
 
-<li><a href="files/index.html">Text Files</a><br>
+<li><a href="files/index.html">文本文件</a><br>
 </li>
 
-<li><a href="binary%20files/index.html">Binary Files</a><br>
+<li><a href="binary%20files/index.html">二进制文件</a><br>
 </li>
 </ol>
 </blockquote>
 </div>
 <br>
-<label class="collapse" for="two">File Directories</label>
+<label class="collapse" for="two">文件目录</label>
 <input id="two" type="checkbox">
 <div class="index_list">
-<p>Obviously, there will be moments when you need to reference the
-directory in which files are store and <i>GameMaker Studio 2</i>
-also has some special functions relating to the different possible
-directories that you may need:</p>
+<p>显然，有时你需要引用存储文件的目录，而 <i>GameMaker Studio 2</i> 也有一些与你可能需要的不同目录相关的特殊函数：</p>
 
 <ul>
 <li><a href="directory_exists.html">directory_exists</a><br>
@@ -126,19 +99,10 @@ directories that you may need:</p>
 </ul>
 </div>
 <br>
-<label class="collapse" for="three">Encoding</label> <input id=
+<label class="collapse" for="three">编码</label> <input id=
 "three" type="checkbox">
 <div class="index_list">
-<p>When dealing with external files, there is always the
-possibility that the end user could open and change the information
-that they contain, and so change your game. This can result in
-broken game-play elements or fraudulent scores on-line (for
-example), and so <i>GameMaker Studio 2</i> provides you with some
-basic encoding functions as well as functions to perform md5 checks
-on strings and files to make sure that they have maintained their
-integrity before being used. There are also two functions supplied
-for encoding and decoding JSON (JavaScript Object Notation) format
-strings.</p>
+<p>处理外部文件时，最终用户总是可以打开并更改其中包含的信息，从而改变你的游戏。 这可能导致（例如）游戏元素损坏或在线欺诈分数，因此 <i>GameMaker Studio 2</i> 为你提供了一些基本的编码函数以及对字符串和文件执行 md5 检查以确保它们具有的功能，使文件在使用之前保持其完整性。还提供了两个用于编码和解码 JSON（JavaScript Object Notation）格式字符串的函数。</p>
 
 <ul>
 <li><a href="base64_encode.html">base64_encode</a><br>
@@ -178,12 +142,7 @@ strings.</p>
 </li>
 </ul>
 
-<div class="note"><b>NOTE:</b> Encoding is NOT encryption! A base64
-encoding renders the file unreadable to the naked eye and will
-require an effort on behalf of the user to decode, but it is not
-secure from hacking. It is recommended that you mix those functions
-with your own encryption (there are many forms of encryption and
-scripts are available on the internet).</div>
+<div class="note"><b>注意：</b> 编码不是加密！base64 编码使文件难以被肉眼读取，需要用户进行解码，但是不能防止破解。 建议你将这些函数与你自己的加密混合使用（互联网上有许多形式的加密和脚本）。</div>
 </div>
 <br></blockquote>
 
@@ -194,10 +153,10 @@ scripts are available on the internet).</div>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页<a href="../index.html"><i>GameMaker Studio 2</i>语言参考</a></div>
+<div style="float:left">上一页：<a href="../index.html"><i>GameMaker Studio 2</i>语言参考</a></div>
 
-<div style="float:right">Next: <a href=
-"../buffers/index.html">Buffers</a></div>
+<div style="float:right">下一页: <a href=
+"../buffers/index.html">缓冲区</a></div>
 </div>
 </div>
 
