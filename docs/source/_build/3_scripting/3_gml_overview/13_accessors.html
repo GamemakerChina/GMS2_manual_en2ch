@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,194 +36,95 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>The GameMaker Language (GML) also permits you to access certain
-<a href="../4_gml_reference/data_structures/index.html">Data
-Structures</a> and <a href=
-"../4_gml_reference/buffers/index.html">Buffers</a> through the use
-of logical expressions called <b>accessors</b>. This is done in a
-similar way as you would for working with <a href=
-"10_arrays.html">arrays</a> only we use an identifier symbol before
-the first argument to tell <i>GameMaker Studio 2</i> that you are
-working on a (previously created) data structure.<br>
+<p>GameMaker语言（GML）还允许你访问某些<a href="../4_gml_reference/data_structures/index.html">数据结构</a>和<a href=
+"../4_gml_reference/buffers/index.html">缓冲区</a>，通过使用名为<b>访问器</b>逻辑表达式。这样做的方式与使用<a href=
+"10_arrays.html">数组</a>的方法类似，只有我们在第一个参数之前使用的标识符符号才能告诉<i>GameMaker Studio 2</i>你正在处理（以前创建的）数据结构。<br>
 <br></p>
 
 <h2>数据结构</h2>
 
-<p>You can add, replace and get values and keys for the following
-data structure types: <a href=
-"../4_gml_reference/data_structures/ds%20maps/index.html">ds_maps</a>,
-<a href=
-"../4_gml_reference/data_structures/ds%20lists/index.html">ds_lists</a>,
-and <a href=
-"../4_gml_reference/data_structures/ds%20grids/index.html">ds_grids</a>.
-Each one has been given its own symbol and method for accessing,
-changing or setting values, as shown below.</p>
+<p>你可以添加、替换和获取以下数据结构类型的值和键：<a href=
+"../4_gml_reference/data_structures/ds%20maps/index.html">ds_maps</a>、 <a href=
+"../4_gml_reference/data_structures/ds%20lists/index.html">ds_lists</a>和<a href=
+"../4_gml_reference/data_structures/ds%20grids/index.html">ds_grids</a>。每一个都有自己的符号和方法来访问、更改或设置值，如下所示。</p>
 
 <blockquote><label class="collapse" for="one">ds_list [| ]</label>
 <input id="one" type="checkbox">
-<div class="index_list">The syntax for lists is:<br>
+<div class="index_list">列表的语法是：<br>
 <br>
 
 <p class="code">list_index[| index]</p>
 <br>
-
-So when you have used <tt>ds_list_create()</tt> to create your
-list, you would use the list index (that you have stored in a
-variable) to reference it, with the "index" value being the
-position in the list to set or add. For example, the following code
-creates a list and then adds 10 entries, setting each entry to
-random number from 0 to 9:<br>
+所以，当你使用<tt>ds_list_create()</tt>创建了列表，你可以使用列表索引（已存储在变量中）来引用它，“index”的值是要设置或添加的列表中的位置。例如，以下代码创建一个列表，然后添加10个条目，将每个条目设置为0到9之间的随机数：<br>
 <br>
 
-<p class="code">ds = ds_list_create();<br>
-var index = 0;<br>
-repeat(10)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;ds[| index++] = irandom(9);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">ds = ds_list_create();<br>var index = 0;<br>repeat(10)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;ds[| index++] = irandom(9);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 <br>
-
-Once you have created your list structure and filled it with data,
-to get values from the list you would have something like:<br>
+创建列表结构并填充数据后，要从列表中获取值，你可以这样做：<br>
 <br>
 
 <p class="code">value = ds[| 5];</p>
 <br>
-
-The above will get the value from position 5 (the sixth index,
-since lists start at 0) and store it in a variable. Note that if
-you are using an expression to add a reference to an index that
-already has a value, the previous value will be replaced rather
-than have a further index added to the list. To add further entries
-you would need to know the ds_list size and add them to the end. It
-is also worth noting that you can set a list index that is
-<i>greater</i> than the size of the list being referenced, and this
-will set that value, expanding the list at the same time, as well
-as initialise all the positions in the list up to the given index
-as 0.</div>
+以上将从位置5获取值（第六个索引，因为列表从0开始）并将其存储在变量中。请注意，如果你使用表达式添加对已具有值的索引的引用，则将替换先前的值，而不是将更多索引添加到列表中。要添加更多条目， 你需要知道 ds_list 的大小并将其添加到末尾。还值得注意的是，你可以设置一个大于所引用列表<i></i>大小的列表索引，这将设置该值，同时扩展列表，以及将列表中的所有位置的值初始化为0。</div>
 <br>
-<label class="collapse" for="two">ds_map [? ]</label> <input id=
+<label class="collapse" for="two">ds_map [?]</label> <input id=
 "two" type="checkbox">
-<div class="index_list">The syntax for maps is:<br>
+<div class="index_list">映射数据（译者注：也可以直接叫map数据）的语法是:<br>
 <br>
 
-<p class="code">map_index[? key]</p>
+<p class="code">map_index[?key]</p>
+<br>
+用<tt>ds_map_create()</tt>创建映射数据后，你将使用存储在变量中的映射索引（map index）来引用它，其中“key”值是要设置或获取的映射键（map key）。例如，以下代码创建一个映射数据，然后使用以下语法向其添加一些条目：<br>
 <br>
 
-After creating your map with <tt>ds_map_create()</tt>, you would
-use the map index that you have stored in a variable to reference
-it, with the "key" value being the map key to set or get. For
-example, the following code creates a map and then adds a few
-entries to it using this syntax:<br>
+<p class="code">ds = ds_map_create();<br>ds[?"Name"] = "Hamish";<br>ds[?"Company"] = "MacSeweeny Games";<br>ds[?"Game"] = "Catch The Haggis";<br></p>
+<br>
+创建映射数据结构并填入数据后， 若要从特定映射键（map key）获取值，你可以这样做：<br>
 <br>
 
-<p class="code">ds = ds_map_create();<br>
-ds[? "Name"] = "Hamish";<br>
-ds[? "Company"] = "MacSeweeny Games";<br>
-ds[? "Game"] = "Catch The Haggis";<br></p>
+<p class="code">value = ds[?"Name"];</p>
 <br>
-
-Once you have created your map structure and filled it with data,
-to get values from a specific map key you would have something
-like:<br>
-<br>
-
-<p class="code">value = ds[? "Name"];</p>
-<br>
-
-The above will get the value from the key "Name" and store it in a
-variable. Note that if the map already contains the same key value
-as you are trying to add, it will not create a duplicate key with
-the new value, but rather the previous value will be
-replaced.</div>
+以上将从键“名”获取值并将其存储在变量中。请注意，如果映射数据已包含与你尝试添加的键值相同的键值，则不会使用新值创建重复的映射键，而是直接替换先前的值。</div>
 <br>
 <label class="collapse" for="three">ds_grid [# ]</label> <input id=
 "three" type="checkbox">
-<div class="index_list">The syntax for grids is:<br>
+<div class="index_list">栅格数据（译者注：也可称为网格数据或者grid数据，文档中统一翻译为栅格数据）的用法是：<br>
 <br>
 
 <p class="code">grid_index[# xpos, ypos]</p>
 <br>
-
-After creating your grid with the <tt>ds_grid_create()</tt>
-function, you would use the grid index that you have stored in a
-variable to reference it, with the "xpos" and "ypos" being the
-position within the grid to get or set a value. For example, the
-following code creates a grid, clears it to 0, then and then adds a
-few entries to it:<br>
+使用<tt>ds_grid_create()</tt>函数创建你的栅格数据后，你将使用存储在变量中的栅格索引（grid index）来引用它，“xpos”和“ypos”是网格中用于获取或设置值的位置。例如，以下代码创建一个栅格，并将其清除为0（译者注：二维网格结构的所有位置全设置为0），然后向其中添加一些条目：<br>
 <br>
 
-<p class="code">ds = ds_grid_create();<br>
-ds_grid_clear(ds, 0);<br>
-var gw = ds_grid_width(ds) - 1;<br>
-var gh = ds_grid_height(ds) - 1;<br>
-repeat(10)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var xx = irandom(gw);<br>
-&nbsp;&nbsp;&nbsp;var yy = irandom(gh);<br>
-&nbsp;&nbsp;&nbsp;if ds[# xx, yy] == 0 ds[# xx, yy] = 1;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">ds = ds_grid_create(); // 创建栅格<br>ds_grid_clear(ds, 0); // 清除为0<br>var gw = ds_grid_width(ds) - 1; // 获取栅格宽度<br>var gh = ds_grid_height(ds) - 1; // 获取栅格高度<br>repeat(10)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var xx = irandom(gw); // 获取随机数<br>&nbsp;&nbsp;&nbsp;var yy = irandom(gh);<br>&nbsp;&nbsp;&nbsp;if ds[# xx, yy] == 0 ds[# xx, yy] = 1; // 在随机的栅格位置添加数据<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<br>
+一旦创建了栅格结构，并填充了数据，要从特定网格位置获取值，你可以这样操作：<br>
 <br>
 
-Once you have created your grid structure and filled it with data,
-to get values from a specific grid position you would have
-something like:<br>
+<p class="code">value = ds[# mouse_x div 16, mouse_y div 16]; //根据鼠标位置获取栅格数据的值</p>
 <br>
-
-<p class="code">value = ds[# mouse_x div 16, mouse_y div 16];</p>
-<br>
-
-The above will get the value from the given ds_grid based on the
-mouse position (divided by the "cell" width in the room to get the
-correct location).</div></blockquote>
+以上将根据鼠标位置获取给定栅格数据的值（除以房间中的“单元格”宽度以获得正确的位置）。</div></blockquote>
 
 <p><br>
 </p>
 
 <h2>数组</h2>
 
-<p>Arrays also have their own accessors which works in a similar
-way as those listed above for data structures. however array
-accessors have an interesting property and that is to permit you to
-modify an array from a script without having to copy it. When you
-pass an array into a script, it is <i>passed by reference</i>,
-meaning that the array itself isn't being copied into the script
-but rather it is simply being referenced to get the data. Normally
-if you then need to change the array, it would be copied to the
-script and then you would need to pass back the copied array for
-the original array to be updated. This can have costly processing
-overheads, and you can use the accessor instead, as that will
-change the original array directly without the need for it to be
-copied. You can see how this works in the examples below.</p>
+<p>数组也有自己的访问器，其工作方式与上面列出的数据结构类似。但是数组访问器有一个有趣的属性，允许你通过脚本修改数组而不必复制数据。当数组传递给脚本时，它是<i>通过引用传递</i>，这意味着数组本身没有被复制到脚本中，而只是被引用来获取数据。通常，如果你需要更改数组，它将被复制到脚本中，然后你需要传回复制的数组以便更新原始数组。这可能会产生昂贵的处理开销，于是你可以使用访问器，因为这是直接更改原始数组，而无需复制它。你可以在下面的示例中看到它的工作原理。</p>
 
-<p>The syntax for arrays is:<br></p>
+<p>数组的语法是：<br></p>
 
-<p class="code">array[@ xpos]<br>
-array[@ xpos, ypos]<br></p>
+<p class="code">array[@ xpos]<br>array[@ xpos, ypos]<br></p>
 
-<p>After you have created your array in an instance, you can then
-pass it to a script by reference and use the accessor <tt>@</tt> to
-change it directly. For example you would create the array and call
-the script like this:<br></p>
+<p>在实例中创建数组后，可以通过引用将其传递给脚本并使用访问器<tt>@</tt>直接更改它。例如，你将创建数组并像这样调用脚本：<br></p>
 
-<p class="code">array[99] = 0;<br>
-scr_Array_Populate(array);<br></p>
+<p class="code">array[99] = 0; // 创建一个数组<br>scr_Array_Populate(array); // 数组作为参数传入脚本<br></p>
 
-<p>The script itself would have something like this:<br></p>
+<p>脚本自身就像这样：<br></p>
 
-<p class="code">var a = argument0; var i = 0; repeat(25)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;i = irandom(99);<br>
-&nbsp;&nbsp;&nbsp;while (a[i] != 0)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = irandom(99);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;a[@ i] = 100;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var a = argument0; var i = 0; repeat(25) // 开启一个循环<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;i = irandom(99); // 获取随机数<br>&nbsp;&nbsp;&nbsp;while (a[i] != 0) // 循环检测数组的值<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i = irandom(99);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;a[@ i] = 100; // 直接修改原始数组<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>All this script is doing is selecting 25 random positions in the
-array and setting the value of the chosen array position to
-100.</p>
+<p>这个脚本正在做的是在数组中选择25个随机位置，并将所选数组位置的值设置为100。</p>
 
 <p><br>
 </p>

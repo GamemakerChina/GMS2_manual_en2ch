@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -66,7 +66,7 @@ if (window.name != "content")
 <label class="collapse" for="four">布尔值（Boolean）</label> <input id="four"
 type="checkbox">
 <div class="index_list">
-<p>布尔值可以是<tt>true</tt>或<tt>false</tt>。请注意，当前的<i>GameMaker Studio 2</i>还不支持“真正的”布尔值，并且实际上是视所有低于0.5的实数为假（false），所有大于等于0.5的值为真（true）。然而，这也<i>不</i>意味着你应该使用1或0（或者别的实数）来进行检测真假，因此还提供了<b>常量</b><tt>true</tt>和<tt>false</tt>，你应该总是使用它们以防止在未来的更新中引入真正的布尔数据类型时可能引发的问题。</p>
+<p>布尔值可以是<tt>true</tt>或<tt>false</tt>。请注意，当前的<i>GameMaker Studio 2</i>还不支持“真正的”布尔值，并且实际上是视所有低于0.5的实数为假（false），所有大于等于0.5的值为真（true）。然而，这也<i>不</i>意味着你应该使用1或0（或者别的实数）来进行检测真假，为此还提供了<b>常量</b><tt>true</tt>和<tt>false</tt>，你应该总是使用它们以防止在未来的更新中引入真正的布尔数据类型时可能引发的问题。</p>
 </div>
 <br>
 <label class="collapse" for="five">指针（Pointer）</label> <input id="five"
@@ -108,7 +108,7 @@ type="checkbox">
 <label class="collapse" for="six">枚举（Enum）</label> <input id="six"
 type="checkbox">
 <div class="index_list">
-<p>一个枚举也成为一个枚举器（Enumerator），它们允许你使用常量值列表创建自己的有限的数据类型。枚举具有<a href="6_scope.html">全局作用域</a>（这是隐式的，而且不需要<tt>global</tt>前缀）并且它们具有如下结构：</p>
+<p>一个枚举也就是一个枚举器（Enumerator），它们允许你使用常量值列表创建自己的有限的数据类型。枚举具有<a href="6_scope.html">全局作用域</a>（这是隐式的，而且不需要<tt>global</tt>前缀）并且它们具有如下结构：</p>
 
 <p class="code">enum
 <i>&lt;variable&gt;</i>{<i>&lt;constant&gt;</i> [=
@@ -116,61 +116,33 @@ type="checkbox">
 
 <p>在下述范例中，我们为彩虹的颜色创建一个枚举，并为其赋予不同的变量以及默认值：</p>
 
-<p class="code">enum rainbowcolors {<br>
-&nbsp;&nbsp;&nbsp;red,<br>
-&nbsp;&nbsp;&nbsp;orange,<br>
-&nbsp;&nbsp;&nbsp;yellow,<br>
-&nbsp;&nbsp;&nbsp;green,<br>
-&nbsp;&nbsp;&nbsp;blue,<br>
-&nbsp;&nbsp;&nbsp;indigo,<br>
-&nbsp;&nbsp;&nbsp;violet<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">enum rainbowcolors {<br>&nbsp;&nbsp;&nbsp;red,<br>&nbsp;&nbsp;&nbsp;orange,<br>&nbsp;&nbsp;&nbsp;yellow,<br>&nbsp;&nbsp;&nbsp;green,<br>&nbsp;&nbsp;&nbsp;blue,<br>&nbsp;&nbsp;&nbsp;indigo,<br>&nbsp;&nbsp;&nbsp;violet<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>枚举的项目只可以是<b>实数</b>或<b>包含前面枚举的表达式</b>，并且默认地数字从0开始向上走，因此我们上面所给的例子会默认<tt>red = 0</tt><tt>orange = 1</tt><tt>yellow = 2</tt>等……你也可以在制作过程中将值赋给枚举变量：</p>
 
-<p class="code">enum rainbowcolors {<br>
-&nbsp;&nbsp;&nbsp;red = 5,<br>
-&nbsp;&nbsp;&nbsp;orange = 5 * 2,<br>
-&nbsp;&nbsp;&nbsp;yellow = 15,<br>
-&nbsp;&nbsp;&nbsp;green = 20,<br>
-&nbsp;&nbsp;&nbsp;blue = 25,<br>
-&nbsp;&nbsp;&nbsp;indigo = 30,<br>
-&nbsp;&nbsp;&nbsp;violet = 35 * enum_test.entry<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">enum rainbowcolors {<br>&nbsp;&nbsp;&nbsp;red = 5,<br>&nbsp;&nbsp;&nbsp;orange = 5 * 2,<br>&nbsp;&nbsp;&nbsp;yellow = 15,<br>&nbsp;&nbsp;&nbsp;green = 20,<br>&nbsp;&nbsp;&nbsp;blue = 25,<br>&nbsp;&nbsp;&nbsp;indigo = 30,<br>&nbsp;&nbsp;&nbsp;violet = 35 * enum_test.entry<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>请注意，上面的例子中我们使用了另一个枚举为"violet"创建了一个表达式。This only works if the enum being referenced was created <i>before</i> the enum that is using it in an expression, but it will not work for variables or functions, since the enum value must be able to be evaluated as a constant on compile. Also note that all enum values evaluate to<b>integer</b> values, and when you create your own you should be aware that <i>only integer values are permitted</i> for enums to work.</p>
+<p>请注意，上面的例子中我们使用了另一个枚举为"violet"创建了一个表达式。这仅适用在，所引用的枚举在一个表达式中使用它<i>之前</i>创建的时候，但它不适用于变量或函数，因为枚举值必须能够在编译时作为常量进行求值。另请注意，所有枚举值都会评估为<b>整数</b>值，当你创造自己的枚举时，你应该意识到这一点：枚举生效<i>只允许整数值</i>。</p>
 
-<p>To later access the value within a given enum type, you can use
-the point <tt>"."</tt> method, like this:</p>
+<p>要稍后访问给定枚举类型中的值，你可以使用<tt>“.”</tt>方法，像这样：</p>
 
 <p class="code">var value = rainbowcolours.green;</p>
 
-<p>Note that you cannot modify the values for any enum constant
-after it has been created.</p>
+<p>请注意，在任何枚举常量创建后，你无法修改它们的值。</p>
 </div>
 <br>
 <label class="collapse" for="sevem">未定义（Undefined）</label> <input id=
 "sevem" type="checkbox">
 <div class="index_list">
-<p>An undefined value (also known as a "null" value") is one where
-an expression doesn't have a correct value, although it is
-syntactically correct, and so must return <i>something</i>. For
-example, say you have a <tt>ds_map</tt> and use the function
-<tt>ds_map_find_value()</tt>. Now, what happens when the map does
-not have the value being looked for? Well, since the function is
-correctly formatted, and the issue is that the no such value
-exists, then it would return the <b>constant</b>
-<tt>undefined</tt>, and you can check for this constant as you
-would check for <tt>true</tt> or any other value.</p>
+<p>未定义的值（也称为“null”值“）是指一个表达式没有正确值的情况，尽管它在语法上是正确的，因此必须返回<i>某些事物</i>。例如，假设你有一个<tt>ds_map</tt>并使用函数<tt>ds_map_find_value()</tt>。现在，当map（译者注：映射数据）没有找到值时会发生什么？好吧，函数格式正确，问题是没有这样的值存在，那么它将返回<b>常数</b><tt>undefined</tt>，你可以检查这个常数<tt>为真</tt>或任何其他值。</p>
 </div></blockquote>
 
 <p><br>
 </p>
 
-<h2>数据类型检测</h2>
+<h2>检测数据类型</h2>
 
-<p><i>GameMaker Studio 2</i> permits you to check the data type of
-a given variable using the following functions:</p>
+<p><i>GameMaker Studio 2</i>允许你使用以下函数检查给定变量的数据类型：</p>
 
 <ul>
 <li><a href="checking_data_types/is_string.html">is_string</a><br>

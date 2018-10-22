@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,80 +36,28 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>Like any programming language <b>GML</b> uses <i>variables</i>
-as the basic unit for most programming operations. Variables are
-used to store information in the devices memory for later (or
-instant) use, and they are given a name so that you can refer to
-them in functions and scripts. A variable in <b>GML</b> can store
-many different data types, like a real number (like 100, 2.456575,
--56 etc...), a string (like "Hello world!"), an integer (like 1,
-556, -7), or a boolean (<tt>true</tt> or <tt>false</tt>).</p>
+<p>像其它编程语言一样<b>GML</b>使用<i>变量（variables）</i>作为大多数编程操作的基本单元。变量用于在设备存储器中存储信息以供之后（或即时）使用，并且它们被赋予一个名称，然后你可以在函数和脚本中引用它们。<b>GML</b>中的一个变量可以存储许多不同的数据类型，如实数（如100,2.456575，-56等...），字符串（如“Hello world！”），整数（如1,556，-7）或布尔值（<tt>true</tt>或<tt>false</tt>）。</p>
 
-<p>A variable is something that we use to store a value for use in one or more operations or functions. Think of "pi", for example... it is a real world variable that holds the value 3.14159265(etc...). 为什么？Well, it's much easier to say to someone "pi" than "three point one four one five nine two six five"!So, naming things makes life a lot simpler and it also means that should the value of that variable ever change, we don't have to change the number everywhere as the variable <i>name</i> is still the same. In <b>GML</b> a variable has a name that must start with a letter and can contain only letters, numbers, and the underscore symbol '_' with a maximum length of 64 symbols. So, valid variables are things like <tt>fish</tt>, <tt>foo_bar</tt>, <tt>num1</tt>, and invalid variables would be <tt>6fish</tt>, <tt>foo bar</tt>, or <tt>*num</tt>.</p>
+<p>我们用变量来存储一个值以便在一个或多个操作或函数中使用。想想“pi”，例如......它是一个真实世界的变量，其值为3.14159265（等等......）。为什么？嗯，对某人说“pi”要比“三点一四一五九二六五”要容易得多！因此，命名事物会使生活变得更简单，这也意味着如果该变量的值发生变化，我们不必到处修改数值，因为变量<i>名称</i>仍然是一样的。在<b>GML</b>中，变量的名称必须以字母开头，并且只能包含字母，数字和下划线符号“_”，最大长度为64个符号。所以，有效变量就像这样<tt>fish</tt>、 <tt>foo_bar</tt>、<tt>num1</tt>，无效的变量会是<tt>6fish</tt>、 <tt>foo bar</tt>，或者<tt>*num</tt>。</p>
 
-<p>Now, In many programming languages you need to "declare" a
-variable before you can use it. This basically means that you tell
-the computer the name you wish to use so that it can assign a place
-in memory to store whatever value you decide to hold in that
-variable. With <b>GML</b>, that is not always necessary as it
-depends on the <i>scope</i> of the variable. There are four main
-variable categories when you program with <i>GameMaker Studio 2</i>
-and each has its own <i>scope</i> (which is can be considered as
-its area of operation, or reach). These variables and their scope
-are outlined below:</p>
+<p>现在，在许多编程语言中，你需要先“声明”变量才能使用它。这基本上意味着你告诉计算机你要使用的名称，以便它可以在内存中分配一个位置来存储你决定在该变量中保存的任何值。对于<b>GML</b>，这并不总是必要的，因为它取决于变量的<i>范围（scope）</i>。在你使用<i>GameMaker Studio 2</i>编程的时候，有四个主要的变量类别，每个都有自己的<i>范围</i> （可以将其视为其操作区域或触及范围）。这些变量及其范围概述如下：</p>
 
 <blockquote><label class="collapse" for="one">实例变量</label> <input id="one" type="checkbox">
 <div class="index_list">
-<p>An instance variable is created within an instance of an object
-and is considered unique to that instance - ie: many instances of
-the same object can have the same variable, but each variable can
-hold a different value as they are unique to each instance. But
-<i>how</i> is an instance variable created? Well, you create new
-variables simply by assigning a value to them as shown in this
-small example:</p>
+<p>实例变量是在物体的实例中创建的，并且被认为是该实例的唯一变量 - 即：同一物体的许多实例可以具有相同的变量，但每个变量可以包含不同的值，因为它们对于每个实例都是唯一的。但一个实例变量是<i>怎样</i>创建的呢？好吧，只需为它们赋值，就可以创建新变量，如下面的小例子所示：</p>
 
-<p class="code">potions = 12;<br>
-life = 100;<br>
-name = "Jock MacSweeney";<br>
-strength = 5.5;<br>
-armour = -2;<br></p>
+<p class="code">potions = 12;<br>life = 100;<br>name = "Jock MacSweeney";<br>strength = 5.5;<br>armour = -2;<br></p>
 
-<p>As you can see you just have to give the name and then a value
-(either numeric or a string) to set that variable and have it ready
-for use within an instance of the object you are coding for. These
-variables can then be used and modified in a number of ways from
-within the instance, for example this code could be in a collision
-event and used to take an amount off of the variable "life":</p>
+<p>正如你所看到的，你只需要提供名称，然后使用值（数字或字符串）来设置该变量，并准备好在你编码的物体的实例中使用它。然后可以在实例中以多种方式使用和修改这些变量，例如，此代码可能处于碰撞事件中，并用于从变量“life”中减去一定的量：</p>
 
 <p class="code">life -= 5 + armour;<br></p>
 
-<p>If "life" is at 100 it will now have a value of 97 (100 - (5 +
--2) = 97). Now, that's a simple example, and you <i>could</i>
-replace "armour" for the actual value of -2, but what happens if
-you use that value in multiple places and then decide to change it?
-You would have to go through ALL your code and change every -2 to
-whatever the new value is, which is time consuming and very error
-prone! But if you use a variable, all you have to do is reassign it
-a new value and the code will automatically use that new value from
-then onwards, making things far more flexible and far easier to fix
-should there be a problem. It should also be noted that even if a
-value is not going to change it is far easier to remember what a
-variable called "life" means rather than just looking at a
-number.</p>
+<p>如果“life”为100，则它现在的值为97（100  - (5 + -2) = 97）。现在，这是一个简单的例子，而你<i>可以</i>将“armor”替换为-2的实际值，但如果你在多个位置直接使用该值（即-2）然后决定更改它，这样会发生什么？你将不得不找遍所有代码并将每个-2更改为新值，这是耗时且非常容易出错的！但是如果你使用一个变量，你所要做的就是重新分配一个新值，代码将从那时开始自动使用那个新值，使得事情变得更加灵活，如果出现问题则更容易修复。还应该注意的是，即使不打算改变一个值，也更容易记住一个名为“life”的变量意味着什么，而不仅仅是一个数字。</p>
 
-<p><i>GameMaker Studio 2</i> has a collection of "built in"
-instance variables too, so you should be aware of them as you may
-name one of your own instance variables the same or wish to have
-your own global variable with the same name and wonder why you are
-getting errors. They are easy to spot, however, as they are shown
-in a different colour in the code editor and also come up in the
-auto-complete bar at the bottom.</p>
+<p><i>GameMaker Studio 2</i>还有一个“内置”实例变量的集合，你应该知道它们，因为你可能会将自己的一个实例变量命名为和它们相同的名称，或者希望拥有和那些同名的全局变量，所以你要知道为什么会出现错误。然而，它们很容易被发现，因为它们在代码编辑器中以不同的颜色显示，并且也会出现在底部的自动补全（auto-complete）栏中。</p>
 
-<p>There are a couple of functions designed to help you when
-dealing with instance variables (primarily for use with <a href=
-"../../1_overview/3_additional_information/obsolete_functions.html">
-Compatibility Scrpts</a> for imported projects and the code for
-Drag and Drop actions, but they can be used elsewhere too):</p>
+<p>有几个函数旨在帮助你处理实例变量（主要用于导入的项目和拖放动作编码的<a href=
+"../../1_overview/3_additional_information/obsolete_functions.html">兼容性脚本</a>，但它们也可以在其他地方使用）：</p>
 
 <ul>
 <li><a href=
@@ -130,150 +78,55 @@ Drag and Drop actions, but they can be used elsewhere too):</p>
 </ul>
 </div>
 <br>
-<label class="collapse" for="two">Local Variables</label>
+<label class="collapse" for="two">局部变量</label>
 <input id="two" type="checkbox">
 <div class="index_list">
-<p>A local variable is one that we create for a specific event
-<i>only</i> and then discard when the <b>event</b> has finished
-(the only exception to this is in the script resources, where a
-<tt>var</tt> declared variable is local to the script and then
-discarded). Why would we need them? Well, variables take up space
-in memory and it may be that we are only going to use them for one
-operation or function in which case we only need to have it in
-memory for that short time that it's used. This keeps your code
-base clean and tidy as well as keeping memory space optimised for
-the things that really need it. To declare a local variable we use
-the function <tt>var</tt> like this:</p>
+<p>局部变量是我们<i>只</i>为特定事件创建的变量，然后在<b>事件</b>已经完成的时候废弃它们（唯一的例外是脚本资源，其中<tt>var</tt>声明的变量只是在脚本本地的，离开脚本就会废弃）。我们为什么需要它们？好吧，变量会占用内存中的空间，可能我们只会将它们用于一个动作或函数（脚本），在这种情况下，我们只需要让它在内存中停留一个短暂的时间。这可以使你的代码库保持干净整洁，同时保持内存空间优化以满足真正需要的内容。要声明局部变量，我们使用该函数<tt>var</tt>，就像这样：</p>
 
 <p class="code">var i, num, str;<br>
 i = 0;<br>
 num = 24.5;<br>
 str = "Hi there!";<br></p>
 
-<p>All of the variables created above will be "forgotten" (ie:
-removed from memory) at the end of the event (or script) in which
-they were created. You must be careful that the name you give
-<tt>var</tt> declared variables does not coincide with another
-instance variable within the object running the code, and also make
-sure that you have no intention of using the value stored in that
-variable outside of the event declare it in. These variables are
-used a lot in programs, especially in loops for counting
-iterations, or when using a value several times in one operation
-that is not going to be repeated again. Here are another couple of
-examples:</p>
+<p>上面创建的所有变量将在创建它们的事件（或脚本）的末尾被“遗忘”（即：从内存中删除）。你必须注意你用<tt>var</tt>声明的临时变量名不能跟运行该段代码的物体中的其它变量名重复，还要确保你没有不小心在声明该变量的事件以外的事件中调用它。这些变量在程序中经常使用，特别是在用于计算迭代的循环中，或者在一个不会再次重复的操作中多次使用一个值的时候。这是另外两个例子：</p>
 
-<p class="code">var i = 0;<br>
-repeat (10)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;inventory[i] = 0;<br>
-&nbsp;&nbsp;&nbsp;i+=1;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var i = 0; // 译者注：创建局部变量并设置为0<br>repeat (10)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;inventory[i] = 0;<br>&nbsp;&nbsp;&nbsp;i+=1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code creates a local variable called "i" and sets it
-to 0, all in the same line. Note that in previous versions of
-<i>GameMaker</i> you had to declare your local variables first and
-<i>then</i> assign them values, but in this version you can declare
-<i>and</i> assign them a value at the same time. The above code
-then uses this variable to initialize an array. As the variable "i"
-is not going to be used for any further functions in the instance
-other than this, it can be local in scope. Here is one more
-example:</p>
+<p>上面的代码创建了一个名为“i”的局部变量，并将其设置为0，所有这些都在同一行中完成。请注意，在<i>GameMaker</i>以前的版本中，你必须首先声明局部变量，<i>然后</i>再为它们分配值，但在这个版本中你可以声明<i>并</i>同时为它们分配一个值。然后，上面的代码中使用此变量初始化一个数组。除了当前这个，变量“i”不会用于实例中的任何其他函数，因此它可以认为是本地范围的。这是另一个例子：</p>
 
-<p class="code">var xx,yy;<br>
-xx = x - 32 +irandom(64);<br>
-yy = y - 32 +irandom(64);<br>
-instance_create_layer(xx, yy, "Effects", obj_blood);<br></p>
+<p class="code">var xx,yy;<br>xx = x - 32 +irandom(64);<br>yy = y - 32 +irandom(64);<br>instance_create_layer(xx, yy, "Effects", obj_blood);<br></p>
 
-<p>Here we have used the local variables to store some random
-coordinates that we then use to create an instance. In this example
-you can see that it is not strictly necessary that we use these
-variables but for the sake of readability and ease of use, we do.
-It is MUCH clearer and obvious what we are doing there than if we
-used this code:</p>
+<p>在此我们使用局部变量来存储一些随机的坐标，然后我们用它来创建一个实例。在这个例子中，你可以看到我们使用这些变量并不是绝对必要的，但为了便于阅读和使用，我们这样做了。比起下面使用的代码，上面那里写得更清晰，更明显：</p>
 
 <p class="code">instance_create_layer(x - 32 + irandom(64), y - 32
 + irandom(64), "Effects", obj_guts);</p>
 
-<p>One other thing about <tt>var</tt> declared variables should be
-noted... As they are unique to the event that runs them, they can
-be used in any other instances through code too! This means that we
-can use these variables to set and change things in other instances
-using the "with()" construct (there is a section on this in the
-<b>GML Overview</b> section of the manual). The actual code itself
-would look something like this:</p>
+<p>关于<tt>var</tt>声明的变量还有一件事应该注意...... 因为它们对于运行它们的事件是唯一的，所以它们也可以通过代码在任何其他实例中使用！这意味着我们可以在其他实例中通过使用“with()”结构，来使用这些变量设置和更改内容（关于这个，手册<b>GML概述</b>部分还有一个章节）。实际代码看起来就像这样：</p>
 
-<p class="code">var num = instance_number(obj_Enemy);<br>
-with (obj_Enemy)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if num&gt;10 instance_destroy();<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var num = instance_number(obj_Enemy);<br>with (obj_Enemy)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if num&gt;10 instance_destroy();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code works because the <tt>var</tt> declared variable
-is local to the <i>event</i> (or script) it is contained in, not
-the instance, nor the game world, and so can be used in any
-function in any object as long as it is in the same code block.</p>
+<p>上面的代码有效是因为<tt>var</tt>声明的变量包含在本地的<i>事件</i> （或脚本），不是实例，也不是游戏世界中，因此可以在任何物体的任何函数中使用，只要它在同一个代码块中即可。</p>
 </div>
 <br>
-<label class="collapse" for="three">Global Variables</label>
+<label class="collapse" for="three">全局变量</label>
 <input id="three" type="checkbox">
 <div class="index_list">
-<p>A basic description of a global variable is one that, once
-declared, belongs to no instance in particular and yet can be
-accessed by all. Just like local variables, global variables must
-be declared, but unlike a local variable, a global variable remains
-in memory until the end of the game. So, you can create a global
-variable to keep track of (for example) the number of bullets that
-the player has and then just update this variable at different
-points in the game. A global variable does not belong to any
-specific instance and can be accessed, changed and used by all
-instances at any time, but any change made to the variable are
-"global", in that all instances using the variable will be affected
-by the change. Let's have a look at an example:</p>
+<p>全局变量的基本描述是，一旦声明，就不属于任何特定的实例，可以被所有位置访问（译者注：使用地方的运行顺序需要在声明之后）。就像局部变量一样，必须声明全局变量，但与局部变量不同，全局变量保留在内存中直到游戏结束。因此，你可以创建一个全局变量来跟踪（例如）玩家拥有的子弹数量，然后在游戏中的不同地方更新此变量。全局变量不属于任何特定实例，并且可以随时被所有实例访问、更改和使用，但对变量所做的任何更改都是“全局”的，因此使用该变量的所有实例都将受到更改的影响。我们来看一个例子：</p>
 
 <p class="code">global.food = 5;<br></p>
 
-<p>We declare the "food" variable by first writing "global" and
-then a "." to tell <i>GameMaker Studio 2</i> that this variable is
-now global scope. We will need to use this method from now on any
-time we are required to access or to change this variable in any
-way. So, we have created a new variable called "food" and we have
-declared it as global. Now, any instance can use and change this
-variable in any way and all other instances will "see" this. For
-example we could have a different food object that the player
-collides with and in the collision event we have:</p>
+<p>我们通过先写“global”然后再写一个 “.” 来声明“food”变量，以此来告诉<i>GameMaker Studio 2</i>此变量现在是全局范围的变量。任何时候我们想要访问和更改这个变量只要用这个方法就可以了。因此，我们创建了一个名为“food”的新变量，并将其声明为全局变量。现在，任何实例都可以以任何方式使用和更改此变量，所有其他实例都将“看到”这个（译者注：看到这个global.food）。例如，我们可能有与玩家碰撞的不同食物物体，在碰撞事件中有这样的代码：</p>
 
 <p class="code">global.food +=1;<br></p>
 
-<p>We also have another object that draws this value like
-this:<br></p>
+<p>我们还有另一个物体像这样绘制这个值：<br></p>
 
 <p class="code">draw_text(32, 32, "food = " +
 string(global.food));<br></p>
 
-<p>With global variables we can change values and see those changes
-reflected in all instances of the objects that reference this
-variable. As with <i>local</i> variables you have to take care not
-to name your global variables the same as any instance variables as
-that will cause you problems and make bugs creep into your games
-due to variable overlap, which can be a difficult issue to debug
-sometimes. In general you should have a single script or object
-that declares all your global variables at the very start of the
-game (for example, in the Room Start Event), so that they are
-initialised and ready for any instance to use, and this also gives
-you a handy place to go back and reference should you need to check
-a variable name.</p>
+<p>使用全局变量，我们可以更改值并查看这些更改，这些反映到引用此变量的物体的所有实例中。你必须注意，同<i>局部</i>变量一样，全局变量命名时不要使用任何实例变量相同的名字，这会导致变量重叠的bug，并且有时可能是难以调试的问题（译者注：可以采用特殊的命名法，比如全部大写，global.FOOD，特殊前缀，global.GL_food、global.FO_food、vFood、varFood、v_food）。通常，你应该有一个脚本或物体，它在游戏最开始时声明所有全局变量（例如，在房间开始事件 Room Start Event中），以便全部初始化并准备好供任何其它实例使用，并且如果你需要检查变量名称，这也是为你提供一个方便的地方返回去参考。</p>
 
-<p><i>GameMaker Studio 2</i> has a collection of "built in" global
-variables too, so you should be aware of them as you may name one
-of your instance variables the same or wish to have your own global
-variable with the same name and wonder why you are getting errors!
-They are easy to spot, however, as they are shown in a different
-colour in the code editor and also come up in the auto-complete bar
-at the bottom. The majority of built in global variables are very
-specific and will only be used on rare occasions - and are listed
-in the appropriate sections of the manual - but there is one
-important one that is used frequently and isn't listed
-elsewhere:</p>
+<p><i>GameMaker Studio 2</i>还有一个“内置”全局变量的集合，你应该知道它们，因为你可能将你的一个实例变量命名为相同的名字，或者希望拥有和它们同名的全局变量，所以你要知道为什么会出现错误！然而，它们很容易被发现，因为它们在代码编辑器中以不同的颜色显示，并且也会出现在底部的自动补全（auto-complete）栏中。大多数内置全局变量都是非常具体的，并且只会在极少数情况下使用 - 并且列在手册的相应部分中 - 但是有一个重要的并没有在其他地方列出：</p>
 
 <blockquote>
 <ul>
@@ -283,7 +136,7 @@ elsewhere:</p>
 </ul>
 </blockquote>
 
-<p>要注意，还有三个<b>不提倡用的</b>内置全局变量（这三个变量仅用于支持从<i>GameMaker</i>前代版本中导入的传统项目，不要再新版本的项目中使用）：</p>
+<p>要注意，还有三个 <b>弃用的</b> 内置全局变量，你也应该知道（这三个变量仅用于支持从 <i>GameMaker</i> 前代版本中导入的传统项目，<b><i>请不要在新项目中使用</i></b>）：</p>
 
 <blockquote>
 <ul>
@@ -298,53 +151,30 @@ elsewhere:</p>
 </ul>
 </blockquote>
 
-<p>The following method can also be used to declare global
-variables, but it is <i><b>only included for backwards
-compatibility</b></i>, and it is not recommended that you use this
-method for new projects as future versions of <i>GameMaker Studio
-2</i> may not support it.</p>
+<p>以下方法也可用于声明全局变量，但它<i><b>仅用于向后兼容性</b></i>，并且不建议你将此方法用作新项目，<i>GameMaker Studio 2</i>将来的版本可能不会支持它。</p>
 
-<p>The second method for creating global variables is to declare
-them as such using the <tt>globalvar</tt> declaration, much as you
-would a local variable using the <tt>var</tt> declaration.</p>
+<p>创建全局变量的第二种方法是使用<tt>globalvar</tt>声明，就像你想要一个局部变量用<tt>var</tt>声明一样。</p>
 
-<div class="note"><b>IMPORTANT!</b> The <tt>globalvar</tt>
-declaration is <b>deprecated</b> and only supported for legacy
-purposes. You should <b>always</b> use the <tt>global.</tt>
-identifier to mark global variables.</div>
+<div class="note"><b>重要！</b>使用<tt>globalvar</tt>声明是一种<b>弃用</b>的方法，仅支持传统用途。你应该<b>总是</b>使用<tt>global.</tt>来标记全局变量的名称。</div>
 
 <p><br>
+此（已弃用）声明将按如下方式使用：</p>
 
-This (deprecated) declaration would be used as follows:</p>
+<p class="code">globalvar food;<br>food = 5;<br></p>
 
-<p class="code">globalvar food;<br>
-food = 5;<br></p>
-
-<p>Once declared in this way that variable "food" is now considered
-global and requires no <tt>global.</tt> prefix - which also means
-that it's a lot harder to identify global variables in your code
-and it's also much easier to get variable overlap as you use the
-same variable name in different objects or from extensions that
-you've installed. Once declared in this way the global variable is
-accessed as follows:</p>
+<p>一旦以这种方式声明变量，“food”现在将被认为是全局的，不再需要<tt>global.</tt>前缀 - 这也意味着在代码中识别全局变量要困难得多，这也意味着当你在不同的物体或者安装的插件中使用相同的变量名更容易产生变量重叠。以这种方式声明后，全局变量的访问方式如下：</p>
 
 <p class="code">food += 2;<br></p>
 
-<p>or:</p>
+<p>要么：</p>
 
 <p class="code">draw_text(32, 32, "food = " +
 string(food));<br></p>
 
-<p>As you can see, with nothing to show that the variable is global
-in scope you are potentially setting yourself up for many subtle
-problems to arise in your game, which is why this declaration
-should be avoided.</p>
+<p>正如你所看到的，没有任何东西可以证明这个变量是全局的，你可能会在游戏中出现许多微妙的问题，这就是为什么应该避免使用这个声明的原因。</p>
 
-<p>There are a couple of functions designed to help you when
-dealing with global variables (primarily for use with <a href=
-"../../1_overview/3_additional_information/obsolete_functions.html">
-Compatibility Scripts</a> for imported projects and the code for
-Drag and Drop actions, but they can be used elsewhere too):</p>
+<p>有几个函数旨在帮助你处理全局变量（主要用于导入项目和拖放动作编码产生的<a href=
+"../../1_overview/3_additional_information/obsolete_functions.html">兼容性脚本</a>，但它们也可以在其他地方使用）：</p>
 
 <ul>
 <li><a href=
@@ -361,16 +191,10 @@ Drag and Drop actions, but they can be used elsewhere too):</p>
 </ul>
 </div>
 <br>
-<label class="collapse" for="four">Built In Variables</label>
+<label class="collapse" for="four">内置变量</label>
 <input id="four" type="checkbox">
 <div class="index_list">
-<p>Built in variables are special variables that are "built into"
-the objects and the rooms in the game world and they can be either
-instance or global in scope (but <i>never</i> local). Some global
-variables are listed in the section above, and the different
-sections of the manual for sprites, rooms, objects etc... also
-outline the built-in variables available. Examples of such built-in
-instance variables would be:</p>
+<p>内置变量是“内置于”游戏世界中物体和房间中的特殊变量，它们可能是实例的或全局范围的（但<i>决不</i>是局部的变量）。上面的部分列出了一些全局变量，手册的精灵、房间、物体等不同部分也概述了可用的内置变量。这类内置实例变量的示例如下：</p>
 
 <blockquote>
 <ul>
@@ -391,7 +215,7 @@ path_scale</tt></a>
 </ul>
 </blockquote>
 
-<p>And examples of built-in global variables would be:</p>
+<p>内置全局变量的示例如下：</p>
 
 <blockquote>
 <ul>
@@ -410,59 +234,37 @@ path_scale</tt></a>
 </ul>
 </blockquote>
 
-<p>Built-in variables can be changed and set like most other
-variables, and some can even be arrays, only you don't have to set
-them to create them like you would a regular variable as they will
-already be initialised to a default value.</p>
+<p>内置变量可以像大多数其他变量一样进行更改和设置，有些甚至可以是数组，只是不需要像常规变量一样通过设置它们来创建它们，因为它们已经初始化为默认值。</p>
 </div>
 <br>
-<label class="collapse" for="five">Macros (Constants)</label>
+<label class="collapse" for="five">宏（常量）</label>
 <input id="five" type="checkbox">
 <div class="index_list">
-<p>While not exactly variables, macros are similar to them in how
-they are used, ie: they are named values that you can use
-throughout your code to replace hard values. Basically, a macro
-(also called a <b>constant</b> when used like this) is a named
-variable that holds a constant single value (or string). You can
-define your own constants using the <a href=
-"../../2_interface/1_editors/scripts.html">Script Editor</a> and
-then use them in your code and DnD as if they were regular
-variables, with the one difference being that they <i>can't be
-changed in the game</i>. For example say you define the following
-macro as a constant (note the preceding "#" and the lack of a colon
-";" at the end):</p>
+<p>虽然不完全是变量，但宏在使用方式上与变量类似，即：它们是一些命名的值，你可以在所有代码中使用它们，代替一些硬值（译者注：常数）。基本上，一个宏（像这样使用的时候也称为<b>常量</b>）是一个命名变量，它包含一个作为常量的单个值（或字符串）。你可以使用<a href=
+"../../2_interface/1_editors/scripts.html">脚本编辑器</a>定义自己的常量，然后在你的代码和DnD中使用它们，就像它们是常规变量一样，唯一的区别在于它们的值<i>在游戏中无法改变</i>。例如，假设你将定义以下的宏作为为一个常量（请注意前面的“＃”，以及末尾没有冒号“;”）：</p>
 
 <p class="code">#macro total_weapons 10<br></p>
 
-<p>You would then call this in your code like this:</p>
+<p>然后你会在代码中调用它，如下所示：</p>
 
-<p class="code">if ++pos == total_weapons<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;pos = 0;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if ++pos == total_weapons<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;pos = 0;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>Note that you would not be able to change the constant value, so
-code like this will cause the game to crash:</p>
+<p>请注意，你将无法更改常量值，因此这样的代码将导致游戏崩溃：</p>
 
 <p class="code">total_weapons = 11;<br></p>
 
-<p>You can define a macro anywhere in your code or scripts and it
-will be <i>pre-compiled</i> and included in your game as if it was
-there from the start, but we recommend that you create a dedicated
-script resource and define all your macros in there. It will be
-easier to organise and debug later!</p>
+<p>你可以在代码或脚本中的任何位置定义宏常量，它将会<i>预编译</i>并且从一开始就包含在你的游戏中，但我们建议你创建专用的脚本并在其中定义所有宏常量。以后组织和调试会更容易！</p>
 
-<p>If you need the value of a macro to change at run-time then you should probably make it a global variable, since these can be changed from code during a game, unless you set the macro to be a <i>function</i>. By setting the macro to a function it means that this function will be called every time you use the macro. 比如：</p>
+<p>如果你需要在运行时更改宏的值，那么你应该将其设置为全局变量，因为这些可以在代码里更改，除非你将宏设置为<i>函数</i>。通过将宏设置为函数，意味着每次使用宏时都会调用此函数。比如：</p>
 
 <p class="code">#macro col make_colour_hsv(irandom(255), 255,
 255)</p>
 
-<p>You would then call this macro something like this:</p>
+<p>然后你会像这样调用宏常量：</p>
 
 <p class="code">image_blend = col;</p>
 
-<p>Using this code will make the image blend a different colour
-every time the macro is used.</p>
+<p>使用此代码将在每次使用宏时，图像混合为不同的颜色。</p>
 </div></blockquote>
 
 <p><br>

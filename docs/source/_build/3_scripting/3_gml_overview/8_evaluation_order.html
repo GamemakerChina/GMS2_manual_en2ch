@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Evaluation Order</title>
+<title>求值顺序</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,70 +30,33 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Evaluation Order</h2>
+<h2>求值顺序</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>When programming your game using <i>GML</i> you should be aware
-that function call arguments are not guaranteed an evaluation
-order. What this means is that the order in which you place
-functions in your code will change from platform to platform, so
-you should code them in an explicit manner. This is due to
-optimisation differences between the different target platforms,
-for example on the Windows target functions may be evaluated from
-right to left, but on the HTML5 target, they may be evaluated from
-left to right. So to avoid any issues you are best not to call
-multiple functions in the arguments of a function call as you may
-well be building in a reliance on the order of evaluation.</p>
+<p>在使用<i>GML</i>编写游戏的时候，你会注意到函数调用参数的顺序并非固定的。这也就意味着在你的代码中函数的顺序会依照平台的不同而发生变化，因此你需要以一种显式的方式来进行编写。这是不同目标平台之间的优化差异导致的，比如说在Windows目标平台上函数是从右到左求值的，而在HTML5平台上则是从左到右的。因此，为避免出现任何问题，最好不要在函数调用的参数中调用多个函数，因为它可能依赖于求值顺序。</p>
 
-<p>To see an example of what this means, consider the following
-code which is calling several functions and using them as arguments
-to a script:</p>
+<p>要用一个例子说明这意味着什么，请考虑下面的代码，该代码调用多个函数并将它们用作脚本的参数：</p>
 
-<p class="code">buffer_seek(buff, buffer_seek_start, 0);<br>
-scr_buffer_get_info(buffer_read(buff, buffer_s8), buffer_read(buff,
-buffer_s16),buffer_read(buff, buffer_s16));<br></p>
+<p class="code">buffer_seek(buff, buffer_seek_start, 0);<br>scr_buffer_get_info(buffer_read(buff, buffer_s8), buffer_read(buff, buffer_s16),buffer_read(buff, buffer_s16));<br></p>
 
-<p>Now, the problem here is that on some platforms, the <i>last</i>
-<tt>buffer_read</tt> will be called <i>first</i>, and so all the
-arguments of the script will be wrong as the data is being read
-from the buffer in "reverse" order as you would perceive it. This
-has the knock-on effect here of affecting all further values for
-the <tt>buffer_read</tt> function so all the arguments being passed
-to this script will be wrong!</p>
+<p>现在，问题是在某些平台上， <i>最后的</i><tt>buffer_read</tt>将被<i>第一个</i>调用，所以脚本的所有参数都是错误的，因为正如你所感觉的那样，以“反向”顺序从缓冲区读取数据。对于<tt>buffer_read</tt>函数，它具有影响所有其他值的连锁效应，所以传递给这个脚本的所有参数都是错误的！</p>
 
-<p>To get around this you should <i>explicitly</i> call the
-functions in the required order and store the returned values in
-variables, like this:</p>
+<p>为了解决这个问题你应该<i>明确地</i>按照所需顺序调用函数并将返回的值存储在变量中，如下所示：</p>
 
-<p class="code">var val[0] = buffer_read(buff, buffer_s8);<br>
-var val[1] = buffer_read(buff, buffer_s16);<br>
-var val[2] = buffer_read(buff, buffer_s16);<br>
-scr_buffer_get_info(val[0], val[1], val[2]);<br></p>
+<p class="code">var val[0] = buffer_read(buff, buffer_s8);<br>var val[1] = buffer_read(buff, buffer_s16);<br>var val[2] = buffer_read(buff, buffer_s16);<br>scr_buffer_get_info(val[0], val[1], val[2]);<br></p>
 
-<p>While it may seem a more verbose method, it keeps everything
-clear and avoids any possible problems with evaluation order.</p>
+<p>虽然它看起来似乎是一种更冗长的方法，但它可以保持一切清晰，并避免求值顺序出现任何可能的问题。</p>
 
-<p>You should also take care when using expressions too, as the
-order in which they are evaluated in will change depending on which
-target you are compiling to. So, when using expressions in your
-code, ensure you use brackets () to properly control the order of
-operations. This is very important to ensure the correct behaviour
-of your games across all the target platforms games and is
-<i>essential</i> for JavaScript platforms. For example, consider
-the following code:</p>
+<p>在使用表达式时也应该小心，因为它们的计算顺序将根据你要编译的目标平台而改变。因此在代码中使用表达式的时候，请确保合理使用圆括号来控制运算符顺序。这对于确保游戏在所有目标平台的行为正确上非常重要，尤其<i>必要</i>的是JavaScript平台。比如说，考虑如下代码：</p>
 
 <p class="code">a = b == c || d;<br></p>
 
-<p>The different target compilers will perform the operations in
-different orders since they are not explicitly shown, giving rise
-to "odd" results that you may not expect when you play your game.
-To avoid this, use the () to separate out the parts, like this:</p>
+<p>不同平台的编译器用不同的顺序执行运算，如果没有明确体现，可能会导致得出一个奇怪的结果，而影响游戏的体验。为了避免这个问题，可以用圆括号()将各部分分开，如下所示：</p>
 
-<p class="code">a = (b == c || d);&nbsp;&nbsp;&nbsp;//better<br>
-a = ((b == c) || d); //best<br></p>
+<p class="code">a = (b == c || d);&nbsp;&nbsp;&nbsp;//较好<br>a = ((b == c) || d); //最好<br></p>
 
 <p><br>
 </p>
@@ -104,8 +67,7 @@ a = ((b == c) || d); //best<br></p>
 <div class="clear">
 <div style="float:left">上一页：<a href="index.html">GML概述</a></div>
 
-<div style="float:right">Next: <a href="9_data_types.html">Data
-Types</a></div>
+<div style="float:right">下一页：<a href="9_data_types.html">数据类型</a></div>
 </div>
 </div>
 

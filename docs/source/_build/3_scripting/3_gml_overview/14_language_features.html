@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,402 +36,178 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>The GameMaker Language (GML) has a number of features which are
-part of the essential structure of all code written with the
-language. Each of these will be used in any code you write multiple
-times, so you should know what they are and how they work before
-getting started with programming a project.</p>
+<p>GameMaker语言（GML）有许多功能特性，这些功能是使用该语言编写的所有代码的基本结构的组成部分。它们之中的每一个在你编写任何代码时都会多次使用，因此在开始编写项目之前，你应该知道它们是什么以及它们是如何工作的。</p>
 
-<blockquote><label class="collapse" for="one">if/条件运算符</label> <input id="one" type="checkbox">
-<div class="index_list">A simple "if" statement takes this
-form:<br>
+<blockquote><label class="collapse" for="one">if / 条件运算符</label> <input id="one" type="checkbox">
+<div class="index_list">一个简单的"if"语句具有这种形式结构<br>
 <br>
 
-<p class="code">if (&lt;expression&gt;) &lt;statement&gt;</p>
+<p class="code">if (&lt;表达式&gt;) &lt;语句&gt;</p>
+<br>
+或者它也可以有略微复杂的"if... else..."结构：<br>
 <br>
 
-or it can have the slightly more complex "if... else..." form:<br>
+<p class="code">if (&lt;表达式&gt;) &lt;语句1&gt; else &lt;语句2&gt;</p>
+<br>
+在这个情况下，对这个表达式进行求值，并且如果（近似）值是&lt;=0（<tt>false</tt>），语句后面的else被执行，否则（<tt>true</tt>）是另一个语句被执行。经常在 if 后面的语句加上花括号是一个好习惯，并且为每一个语句另起一行，所以最终代码将会有这种格式：<br>
 <br>
 
-<p class="code">if (&lt;expression&gt;) &lt;statement&gt; else
-&lt;statement&gt;</p>
+<p class="code">if (&lt;表达式&gt;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&lt;语句&gt;<br>&nbsp;&nbsp;&nbsp;...<br>&nbsp;&nbsp;&nbsp;&lt;语句&gt;<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&lt;语句&gt;<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<br>
+作为一个小例子，想一想下面的代码，哪一块将移动实例朝着x=200移动：<br>
 <br>
 
-In this case the expression will be evaluated, and if the (rounded)
-value is &lt; = 0 (<tt>false</tt>) the statement after else is
-executed, otherwise (<tt>true</tt>) the other statement is
-executed. It is a good habit to always put curly brackets around
-the statements in the if", and take a new line in the block for
-each statement, so the end code will have this form:<br>
+<p class="code">if (x &lt; 200)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x += 4;<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x -= 4;<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<br>
+请注意，你也可以这样在一个 if 中做<i>复合</i>检查，即：检查同一语句中的各种值或表达式。当你这样做， <i>GameMaker Studio 2</i>将逐个求值，如果其中任何一个值为false，则将跳过其余部分。比如：<br>
 <br>
 
-<p class="code">if (&lt;expression&gt;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&lt;statement&gt;<br>
-&nbsp;&nbsp;&nbsp;...<br>
-&nbsp;&nbsp;&nbsp;&lt;statement&gt;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&lt;statement&gt;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if (keyboard_check_pressed(vk_enter) &amp;&amp; !instance_exists(obj_Player))  // 同时检测两个<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;go = false<br>&nbsp;&nbsp;&nbsp;alarm[0] = room_speed // 设置计时器为房间速度<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<br>
+你也可以执行<b>条件运算</b> （也叫作<b>三元</b>运算），这实际上是执行一个最基本的“if”的“快捷方式”。它具有以下语法：<br>
 <br>
 
-As a small example, consider the following code which will move the
-instance towards the position x=200 in the room:<br>
+<p class="code">变量 = 条件语句 ?&lt;表达式1 (条件为<i>真</i>)返回表达式1的值&gt; : &lt;表达式2 (条件为<i>假</i>返回表达式2的值)&gt;</p>
+<br>
+条件运算符将返回两个给定值中的一个，具体取决于条件计算结果是<tt>真</tt>还是<tt>假</tt>， 例如：<br>
 <br>
 
-<p class="code">if (x &lt; 200)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;x += 4;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;x -= 4;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var temp_x = x &lt; (room_width / 2) ?32: room_width - 32;</p>
 <br>
-Note that you can also do <i>compound</i> checks in an if, ie: check various values or expressions in the same statement. When you do this, <i>GameMaker Studio 2</i> will evaluate each of them one at a time, and if any one of them evaluates to false, then the rest will be skipped. 比如：<br>
+上面的代码将检查“x”的值与房间宽度一半的值，然后如果是小于，它将“temp_x”设置为32，否则“temp_x”将是room_width  -  32。以下是更多的使用示例：<br>
 <br>
 
-<p class="code">if (keyboard_check_pressed(vk_enter) &amp;&amp;
-!instance_exists(obj_Player))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;go = false<br>
-&nbsp;&nbsp;&nbsp;alarm[0] = room_speed<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">draw_text(x, y, "The fee is " + (global.Member ?"$2.00" : "$10.00")); // 判断是不是会员，然后返回不同的费用<br>path_start((global.level &gt; 10 ?path_hard : path_easy;), 2, path_action_reverse, true); // 判断等级再决定难度<br>--hp &lt;= 0 ?instance_destroy() : score += 10; // 判断血值决定销毁还是得分</p>
+<br>
+值得注意的是，你可以嵌套条件运算，但如果你这样做，每个操作都需要括在括号中，例如：<br>
 <br>
 
-You can also perform <b>conditional operations</b> (also know as
-<b>ternary</b> operations), which is essentially a "shortcut" way
-of performing a basic "if". It has the following syntax:<br>
-<br>
-
-<p class="code">variable = condition ? &lt;expression1 (if
-<i>true</i>)&gt; : &lt;expression2 (if <i>false</i>)&gt;</p>
-<br>
-
-The conditional operator will return one of two given values
-depending on whether the condition evaluates to <tt>true</tt> or
-<tt>false</tt>, for example:<br>
-<br>
-
-<p class="code">var temp_x = x &lt; (room_width / 2) ? 32:
-room_width - 32;</p>
-<br>
-
-The above code will check the value of "x" against the value of
-half the room width and then if it is less it will set "temp_x" to
-32 otherwise "temp_x" will be room_width - 32. Here are a few more
-examples of use:<br>
-<br>
-
-<p class="code">draw_text(x, y, "The fee is " + (global.Member ?
-"$2.00" : "$10.00"));<br>
-path_start((global.level &gt; 10 ? path_hard : path_easy;), 2,
-path_action_reverse, true);<br>
---hp &lt;= 0 ? instance_destroy() : score += 10;</p>
-<br>
-
-It is worth noting that you can nest conditional operations but
-that if you do then each operation will need to be enclosed in
-brackets, for example:<br>
-<br>
-
-<p class="code">var c = a ? "foo" : (b ? "bar" : "wii"); //
-Correct<br>
-var c = a ? "foo" : b ? "bar" : "wii";&nbsp;&nbsp; // Will cause an
-error</p></div>
+<p class="code">var c = a ?"foo" : (b ?"bar" : "wii"); // 正确的方式<br>var c = a ?"foo" : b ?"bar" : "wii";&nbsp;&nbsp; // 会出错</p></div>
 <br>
 <label class="collapse" for="two">repeat</label> <input id="two"
 type="checkbox">
-<div class="index_list">A "repeat" statement has the form<br>
+<div class="index_list">“repeat” 语句的结构：<br>
 <br>
 
-<p class="code">repeat (&lt;expression&gt;) &lt;statement&gt;</p>
+<p class="code">repeat (&lt;表达式&gt;) &lt;语句&gt;</p>
+<br>
+语句被重复执行的次数由表达式的近似值指定。比如说，下面的程序将会在随机位置创建5个球。<br>
 <br>
 
-The statement is repeated the number of times indicated by the
-rounded value of the expression. For example, the following program
-creates five balls at random positions.<br>
-<br>
-
-<p class="code">{<br>
-repeat (5) instance_create_layer(random(400), random(400),
-"Instances", obj_ball);<br>
-}<br></p>
+<p class="code">{<br>repeat (5) instance_create_layer(random(400), random(400), "Instances", obj_ball);<br>}<br></p>
 
 <p><br>
-This can be very useful to avoid typing out the same code multiple times, or for using arrays, or for counting through a number of operations etc... 比如：<br>
+这对于规避键入多次相同的代码、或者使用数组的情况、又或者一些运算中的计数等等是非常有效的。比如：<br>
 <br></p>
 
-<p class="code">{<br>
-var i, total;<br>
-i = 0;<br>
-total = 0;<br>
-repeat (10)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;total += array[i];<br>
-&nbsp;&nbsp;&nbsp;i += 1<br>
-&nbsp;&nbsp;&nbsp;}<br>
-draw_text(32, 32, total);<br>
-}<br></p></div>
+<p class="code">{<br>var i, total;<br>i = 0;<br>total = 0;<br>repeat (10)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;total += array[i];<br>&nbsp;&nbsp;&nbsp;i += 1<br>&nbsp;&nbsp;&nbsp;}<br>draw_text(32, 32, total);<br>}<br></p></div>
 <br>
 <label class="collapse" for="three">while</label> <input id="three"
 type="checkbox">
-<div class="index_list">A "while" statement has the form<br>
+<div class="index_list">一个“while”循环语句具有这种形式：<br>
 <br>
 
-<p class="code">while (&lt;expression&gt;) &lt;statement&gt;</p>
+<p class="code">while (&lt;表达式&gt;) &lt;语句</p>
+<br>
+只要表达式是true，这些语句（也可以是语句块）就会被反复执行。<b>请小心你的while循环！</b> 它很容易就能造成无限循环，在这种情况下你的游戏将被挂起并且不再响应任何的用户输入。下文你能找到一个典型使用“while”循环方式的一个范例：<br>
 <br>
 
-As long as the expression is true, the statement (which can also be
-a code block) is executed. <b>Be careful with your while loops!</b>
-You can easily make infinite loops, in which case your game will
-hang and not react to any user input anymore. Below you can find an
-example of a typical way to use "while":<br>
+<p class="code">{<br>while (!place_free(x, y))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x = random(room_width);<br>&nbsp;&nbsp;&nbsp;y = random(room_height);<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 <br>
-
-<p class="code">{<br>
-while (!place_free(x, y))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;x = random(room_width);<br>
-&nbsp;&nbsp;&nbsp;y = random(room_height);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}<br></p>
-<br>
-
-The above program tries to place the current object at a free
-position (this is about the same as the action to move an object to
-a random position).</div>
+上面的程序试图将当前物体放置在空闲位置（这与将物体移动到随机位置的操作大致相同）。</div>
 <br>
 <label class="collapse" for="four">do / until</label> <input id=
 "four" type="checkbox">
-<div class="index_list">A "do" is really the "do... until"
-statement as you cannot have one without the other. It has this
-form:<br>
+<div class="index_list">“do”实际上也就是“do... until”，缺一不可。结构如下：<br>
 <br>
 
-<p class="code">do &lt;statement&gt; until (&lt;expression&gt;)</p>
+<p class="code">do &lt;语句&gt; until (&lt;表达式&gt;)</p>
+<br>
+语句（也可以是代码块）会一直运行直到表达式为真，至少会运行一次。注意这是一个循环，可能会出现死循环，游戏将会挂起不响应输入。下面是“do... until”的一个经典例子：<br>
 <br>
 
-The statement (which can also be a code block) is executed until
-the expression is found true, and the initial statement is always
-executed at least once. Be careful with your do loops, as you can
-easily make them loop forever, in which case your game will hang
-and not react to any user input anymore. Below you can find an
-example of a typical way to use "do... until":<br>
+<p class="code">{<br>do<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x = random(room_width);<br>&nbsp;&nbsp;&nbsp;y = random(room_height);<br>&nbsp;&nbsp;&nbsp;}<br>until (place_free(x, y)); }<br></p>
 <br>
-
-<p class="code">{<br>
-do<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;x = random(room_width);<br>
-&nbsp;&nbsp;&nbsp;y = random(room_height);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-until (place_free(x, y)); }<br></p>
-<br>
-
-The above program tries to place the current object at a free
-position (this is about the same as the action to move an object to
-a random position).</div>
+上面的程序试图将当前物体放置在空闲位置（这与将物体移动到随机位置的操作大致相同）。</div>
 <br>
 <label class="collapse" for="five">for</label> <input id="five"
 type="checkbox">
-<div class="index_list">A "for" statement has this form:<br>
+<div class="index_list">“For”语句的结构：<br>
 <br>
 
-<p class="code">for (&lt;statement1&gt; ; &lt;expression&gt;
-;&lt;statement2&gt;) &lt;statement3&gt;</p>
+<p class="code">for (&lt;statement1&gt; ; &lt;表达式&gt; ;&lt;statement2&gt;) &lt;statement3&gt;</p>
 <br>
-
-This works as follows - First statement1 is executed, then the
-expression is evaluated and, if it is true, statement 3 is
-executed. Then statement 2 and then the expression is evaluated
-again. This loop will continue until the expression is found to be
-false.<br>
-<br>
-Now, this may sound complicated when written like that, but you
-should interpret it as:<br>
+工作原理 - 首先执行语句1，然后判断表达式，表达式为真则执行语句3。然后语句2，并再次判断表达式。如此循环，直到表达式为假。<br><br>现在，这样写的可能听起来很复杂，但你应该把它解释为：<br>
 <br>
 
 <ul>
-<li>The first statement initializes the for-loop.</li>
+<li>语句1初始化，用于循环。</li>
 
-<li>The expression tests whether the loop should be ended.</li>
+<li>表达式测试是否结束循环。</li>
 
-<li>Statement2 is the "step" statement that goes to the next loop
-evaluation.</li>
+<li>表达式2是“步”语句，递进一个值进入下一个循环。</li>
 </ul>
-
-This extremely useful for doing repetitive tasks that would involve
-multiple lines of code in any other way, and is commonly used as a
-counter for evaluating arrays, or drawing things. the following
-code example illustrates a typical use for this type of
-statement:<br>
+这个循环在处理包含很多行代码的重复任务极其 有用，通常用来数组计数，或者绘制。下面的代码解释这种语句的典型用法：<br>
 <br>
 
-<p class="code">{<br>
-for (var i = 0; i &lt; 10; i += 1)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), string(i) + ". "+
-string(scr[i]));<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}<br></p>
+<p class="code">{<br>for (var i = 0; i &lt; 10; i += 1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), string(i) + ". "+ string(scr[i]));<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 <br>
-
-The above code initialises a for loop, starting at 0 and counting
-up until 9, and then uses the loop value of "i" to draw the values
-stored in an array down the screen. Note how the "for" loop
-variable "i" is used to not only loop through the array, but to
-draw a number as well as tell <i>GameMaker Studio 2</i> where to
-draw the values to in the room. This flexibility is one of the main
-reasons why "for" loops are so important in programming.</div>
+上述代码初始化“i”用于循环，始于0累计至9，使用循环值“i”在屏幕上绘制数组的值。注意“for”循环变量“i”如何不仅用于循环遍历数组，还有绘制数字以及告诉<i>GameMaker Studio 2</i>在房间里绘制值的位置。这种灵活性也是“for”循环在编程中如此重要的原因。</div>
 <br>
 <label class="collapse" for="six">switch</label> <input id="six"
 type="checkbox">
-<div class="index_list">In a number of situations you want to let
-your instances complete an action depending on a particular value.
-You can do this using a number of consecutive "<tt>if</tt>"
-statements but when the possible choices gets above two or three it
-is usually easier to use the "switch" statement. A switch statement
-has the following form:<br>
+<div class="index_list">很多情况下，你想要实例根据一个特定值完成一个动作。你可以连续多次使用“<tt>如果</tt>“语句，但是当可能的选择超过两个或三个时，通常使用”switch“语句更容易。switch语句结构如下：<br>
 <br>
 
-<p class="code">switch (&lt;expression&gt;)<br>
-{<br>
-case &lt;expression1&gt;: &lt;statement1&gt;; ... ; break;<br>
-case &lt;expression2&gt;: &lt;statement2&gt;; ... ; break;<br>
-...<br>
-default: &lt;statement&gt;;<br>
-}<br></p>
+<p class="code">switch (&lt;表达式&gt;)<br>{<br>case &lt;expression1&gt;: &lt;statement1&gt;; ... ; break;<br>case &lt;expression2&gt;: &lt;statement2&gt;; ... ; break;<br>...<br>default: &lt;statement&gt;;<br>}<br></p>
 <br>
-
-This works as follows:<br>
+工作流程如下：<br>
 <br>
 
 <ul>
-<li>First the expression is executed.</li>
+<li>首先括号里面的运行表达式</li>
 
-<li>Next it is compared with the results of the different
-expressions after each of the case statements.</li>
+<li>下一步与case后面的表达式的结果进行比较。</li>
 
-<li>The execution continues after the first case statement with the
-correct value, <i>until a break statement is encountered</i>.</li>
+<li>遇到第一个正确的值后运行会继续，<i>直到出现一个“break”语句。</i>.</li>
 
-<li>If no case statement has the right value, execution is
-continued after the default statement (it is not required to have a
-default statement, in which case no action will be taken).</li>
+<li>如果没有一个case表达式正确，将会在“default”语句后继续（default并非必须，那时没有动作执行）。</li>
 </ul>
-
-Note that multiple case statements can be placed for the same
-statement. Also, the break is not required, and if there is no
-break statement the execution simply continues with the code for
-the next case statement. This means that you can create a hierarchy
-"switch" in which different sections of code are run depending on
-the input value. here is an example of a typical "switch" from a
-game:<br>
+注意，同一个语句前可以出现多个case。同样，“break”也不是必须的，没有它时，简单的继续到下一个case语句。这意味着你可以创建一个分层的“开关”，根据输入值运行不同部分的代码。下面是游戏中的“switch”典型用法：<br>
 <br>
 
-<p class="code">{<br>
-switch (keyboard_key)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;case vk_left:<br>
-&nbsp;&nbsp;&nbsp;case ord("A"):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x -= 4;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-&nbsp;&nbsp;&nbsp;case vk_right:<br>
-&nbsp;&nbsp;&nbsp;case ord("D"):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x += 4;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-&nbsp;&nbsp;&nbsp;case vk_up:<br>
-&nbsp;&nbsp;&nbsp;case ord("W"):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y -= 4;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-&nbsp;&nbsp;&nbsp;case vk_down:<br>
-&nbsp;&nbsp;&nbsp;case ord("S"):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y += 4;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}<br></p>
+<p class="code">{<br>switch (keyboard_key)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case vk_left:<br>&nbsp;&nbsp;&nbsp;case ord("A"):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x -= 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;case vk_right:<br>&nbsp;&nbsp;&nbsp;case ord("D"):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x += 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;case vk_up:<br>&nbsp;&nbsp;&nbsp;case ord("W"):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y -= 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;case vk_down:<br>&nbsp;&nbsp;&nbsp;case ord("S"):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y += 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 <br>
-
-The above code uses "switch" to check for a keyboard event and then
-compares that to the cases listed. If it meets any of the required
-values then the corresponding code is executed. Note how in the
-code we have used the way that "switch" can check multiple cases
-and continue if no break is encountered to permit various keys to
-be used to get the same result. This is just one of the ways that
-you can permit multiple configurations for movement in your
-games.</div>
+上述代码使用“switch”检测键盘事件，然后和一系列的case（条件）比较。遇到了适当的条件后运行相应的代码。请注意我们在代码中是怎么用的，“switch”可以检测多个条件，如果没有“break”就会一直继续，以允许使用多个按键得到相同的结果。这仅是允许多种设置处理移动的一种方法。</div>
 <br>
 <label class="collapse" for="seven">break</label> <input id="seven"
 type="checkbox">
-<div class="index_list">The "break" statement is used to end
-prematurely a <tt>for</tt>, <tt>repeat</tt>, <tt>while</tt>,
-<tt>do... until</tt> loop of some kind, or to tell a
-<tt>switch</tt> statement to end at that point, or to prematurely
-end a <tt>with</tt> call. Below you can see a few examples of how
-this can be used, and its syntax is simply:<br>
+<div class="index_list">“break”语句用于提前结束 <tt>for</tt>、<tt>repeat</tt>、<tt>while</tt>、<tt>do...until</tt>这些类型的循环，或告诉一个<tt>switch</tt>声明在那里结束，或者提前结束一个 <tt>with</tt>调用。下面可以看到一些用法的例子，语法挺简单的：<br>
 <br>
 
 <p class="code">break;</p>
 <br>
 
-<p>"break" in a <tt>for</tt> loop:<br>
+<p> <tt>for</tt> 循环中的“break”：<br>
 <br></p>
 
-<p class="code">{<br>
-var i;<br>
-for (i = 0; i &lt; 10; i += 1)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if array[i] = 234 break;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-num = i;<br>
-}<br></p>
+<p class="code">{<br>var i;<br>for (i = 0; i &lt; 10; i += 1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if array[i] = 234 break;<br>&nbsp;&nbsp;&nbsp;}<br>num = i;<br>}<br></p>
+<br>
+ <tt>repeat</tt> 循环中的“break”：<br>
 <br>
 
-"break" in a <tt>repeat</tt> loop:<br>
+<p class="code">{<br>var i, temp;<br>i = 0;<br>temp = 0;<br>repeat (10)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;temp += array[i];<br>&nbsp;&nbsp;&nbsp;if temp &gt; max_total break else i += 1;<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
+<br>
+<tt>while</tt>循环中的“break”：<br>
 <br>
 
-<p class="code">{<br>
-var i, temp;<br>
-i = 0;<br>
-temp = 0;<br>
-repeat (10)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;temp += array[i];<br>
-&nbsp;&nbsp;&nbsp;if temp &gt; max_total break else i += 1;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}<br></p>
-<br>
-
-"break" in a <tt>while</tt> loop:<br>
-<br>
-
-<p class="code">{<br>
-var i;<br>
-i = 0;<br>
-while (!place_free(x, y))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;x = random(room_width);<br>
-&nbsp;&nbsp;&nbsp;y = random(room_height);<br>
-&nbsp;&nbsp;&nbsp;if i &gt; 50 break else i+=1;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}<br></p>
+<p class="code">{<br>var i;<br>i = 0;<br>while (!place_free(x, y))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x = random(room_width);<br>&nbsp;&nbsp;&nbsp;y = random(room_height);<br>&nbsp;&nbsp;&nbsp;if i &gt; 50 break else i+=1;<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 <br>
 
 "break" when using <tt>with</tt>:<br>
 <br>
 
-<p class="code">{<br>
-var count = 0;<br>
-with (obj_Enemy)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;count++;<br>
-&nbsp;&nbsp;&nbsp;if count &gt; 10 break;<br>
-&nbsp;&nbsp;&nbsp;hp = 100;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}<br></p></div>
+<p class="code">{<br>var count = 0;<br>with (obj_Enemy)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;count++;<br>&nbsp;&nbsp;&nbsp;if count &gt; 10 break;<br>&nbsp;&nbsp;&nbsp;hp = 100;<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p></div>
 <br>
 <label class="collapse" for="eight">continue</label> <input id=
 "eight" type="checkbox">
@@ -440,237 +216,97 @@ with (obj_Enemy)<br>
 
 <p class="code">continue</p>
 <br>
-
-If used inside of a statement that forms a loop (<tt>repeat</tt>,
-<tt>while</tt>, <tt>do... until</tt> or <tt>for</tt>), it will
-immediately jump back to the beginning of the loop as if the loop
-had run through and looped back (if used outside of a loop it acts
-as an <tt>exit</tt> statement, exiting the event). It will also do
-the same when using the <tt>with</tt> function, where it will cause
-the code to skip to the next instance and run again.<br>
-<br>
-Below is an example of its use in a "for" loop:<br>
+如果在一个循环语句内使用（<tt>repeat</tt>、 <tt>while</tt>、<tt>do...until</tt>，或者<tt>for</tt>），它会立即跳回到循环的开头，就好像循环已经通过并再循环回来（如果在循环之外使用，行为如同<tt>exit</tt>的退出事件）。它在<tt>with</tt>函数中也是一样的，它将导致代码跳到下一个实例并再次运行。<br><br>下面是它在“for”循环中使用的一个例子：<br>
 <br>
 
-<p class="code">{<br>
-var i;<br>
-for (i = 0; i &lt; 10; i += 1)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if array[i] = "" continue;<br>
-&nbsp;&nbsp;&nbsp;array[i] = "";<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}<br></p>
+<p class="code">{<br>var i;<br>for (i = 0; i &lt; 10; i += 1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if array[i] = "" continue;<br>&nbsp;&nbsp;&nbsp;array[i] = "";<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 <br>
-
-The above code will skip back to the beginning of the loop if the
-array[i] value is already an empty string.</div>
+上述代码将判断array[i]的值，如果是一个空字符，它将跳回到循环的开始。</div>
 <br>
 <label class="collapse" for="eleven">exit</label> <input id=
 "eleven" type="checkbox">
-<div class="index_list">The exit statement has the form:<br>
+<div class="index_list">“exit”语句的结构：<br>
 <br>
 
 <p class="code">exit;</p>
 <br>
-
-"Exit" simply ends the execution of the current script or event.
-Note there is a slight difference in use here depending on the
-scope: if you use <tt>exit</tt> in a script is will simply exit the
-script and return to the code that called the script, however if
-you use this event in a code block from within an object, it will
-exit <i>the entire event</i> even if there are various separate
-code blocks after the function has been called. Typically it is
-used to avoid an instance running a specific block of code in, for
-example a collision event. The code below gives a simple example of
-this:<br>
+“Exit”简单的结束当前脚本或事件的运行。请注意，这里的使用略有不同，具体取决于范围：如果你在脚本中使用<tt>exit</tt>，它将简单地退出脚本并返回到调用脚本的代码位置，但是如果在物体内的代码块中使用，它将退出<i>整个事件</i>，即使在调用函数的位置后面还存在各种单独的代码块。通常它是用来避免运行一个特定的代码块，比如碰撞事件。下面的代码给出了一个简单的例子：<br>
 <br>
 
-<p class="code">{<br>
-if !visible exit;<br>
-while (place_meeting(x, y))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;x -= lengthdir_x(1, direction - 180);<br>
-&nbsp;&nbsp;&nbsp;y -= lengthdir_y(1, direction - 180);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}<br></p>
+<p class="code">{<br>if !visible exit; // 如果物体是隐藏的就退出<br>while (place_meeting(x, y)) // 检查对应位置的碰撞<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x -= lengthdir_x(1, direction - 180); // 掉个头<br>&nbsp;&nbsp;&nbsp;y -= lengthdir_y(1, direction - 180);<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 <br>
+上面的代码检查一个变量，如果它为真（true），就退出代码块，否则它继续执行并运行其余的代码。
 
-The above code checks a variable and if it resolves to true, then
-it exists the code block, otherwise it goes ahead and runs the rest
-of the code.
-
-
-
-<div class="note"><b>Note:</b> It does not end the execution of the
-game. For that you need to use the function <a href=
-"../4_gml_reference/game/game_end.html"><tt>game_end</tt></a>.</div></div>
+<div class="note"><b>注意：</b>它不是结束游戏的运行。如果要那样，你需要使用<a href=
+"../4_gml_reference/game/game_end.html"><tt>game_end</tt></a>函数。</div></div>
 <br>
 <label class="collapse" for="nine">with</label> <input id="nine"
 type="checkbox">
-<div class="index_list">As indicated in the section <a hreff=
-"7_Addressing_Variables.html">Addressing Variables in Other
-Instances</a>, it is possible to read and change the value of
-variables in other instances. But in a number of cases you want to
-do a lot more than just change a single variable with those other
-instances. For example, imagine that you want to move all the ball
-objects in your game 8 pixels. You may think that this is achieved
-simply by the following piece of code:<br>
+<div class="index_list">如<a hreff=
+"7_Addressing_Variables.html">访问其它实例的变量</a>这一节所说，可以在其他实例中读取和更改变量的值。但在许多情况下，你希望能做更多，而不仅仅更改其它实例的一个变量。例如，假设你想要将游戏中的所有球物体（ball objects）移动8个像素。你可能认为只需通过以下代码即可实现：<br>
 <br>
 
 <p class="code">obj_ball.y = obj_ball.y + 8;</p>
 <br>
-
-But this is not correct, as the right side of the assignment gets
-the value of the y-coordinate of the first ball and adds 8 to it.
-Next this new value is set as y-coordinate of all balls, so the
-result is that all balls get the same y-coordinate, and even if you
-use the following:<br>
+但这是不正确的，因为赋值的右侧只是获得第一个球的y坐标值并将其加8。接下来，这个新值将设置为所有球的y坐标，因此结果是所有球都得到了相同的y坐标，就如同下面的写法：<br>
 <br>
 
 <p class="code">obj_ball.y += 8;</p>
 <br>
-
-it will have exactly the same effect because it is simply an
-abbreviation of the first statement. So how <i>do</i> we achieve
-this? For this purpose there exists the <b>with</b> statement in
-GML. Its global form is:<br>
+它具有完全相同的效果，因为它只是第一个语句的简写。所以怎样<i>做</i>才能实现呢？GML中<b>with</b>语句就是为了这个目的而存在的。它的整体结构是：<br>
 <br>
 
-<p class="code">with (&lt;expression&gt;) &lt;statement&gt;</p>
+<p class="code">with (&lt;表达式&gt;) &lt;语句&gt;</p>
 <br>
-
-&lt;Expression&gt; indicates one or more instances, and for this
-you can use an instance id, the name of an object (which indicates
-<i>all instances</i> of this object are to run the code block) or
-one of the special <i>keywords</i> (<b>all</b>, <b>self</b>,
-<b>other</b>). &lt;Statement&gt; is now executed for each of the
-indicated instances, as if that instance is the current (self)
-instance. So, to move all instances of the ball object 8 pixels
-down, you can type:<br>
+&lt;表达式&gt;表示一个或多个实例，对于这个你可以使用实例id、物体的名称（表示这个物体的<i>所有实例</i>都运行代码块），或一个特殊的<i>关键词</i> （<b>all</b>， <b>self</b>， <b>other</b>）。&lt;语句&gt; 现在让指定实例的每一个运行一次代码，就像这个实例是当前（self）的实例一样。因此，要将球物体的所有实例向下移动8个像素，你可以键入：<br>
 <br>
 
 <p class="code">with (obj_ball) y += 8;</p>
 <br>
-
-If you want to execute multiple statements, put curly brackets
-around them, the same as you would around any other program. So for
-example, to move all balls to a random position, you can use:<br>
+如果要执行多个语句，和任何其它程序一样，请在它们周围加上大括号。例如，要将所有球移动到随机位置，你可以使用：<br>
 <br>
 
-<p class="code">with (obj_ball)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;x = random(room_width);<br>
-&nbsp;&nbsp;&nbsp;y = random(room_height);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">with (obj_ball)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x = random(room_width); // 获取房间的随机位置<br>&nbsp;&nbsp;&nbsp;y = random(room_height);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 <br>
-
-Note that, within the statement(s), the indicated instance has
-become the target (self) instance that runs the code block, which
-means that the statements the original instance (that contains the
-"with" and the code block) has become the <b>other</b> instance. So
-for example, to move all balls to the position of the current
-instance, you can type this:<br>
+请注意，在语句中，指示的实例已成为运行代码块的目标实例（self），这意味着原始实例（包含“with”和代码块的实例）的语句已成为<b>other</b>实例。例如，要将所有球移动到当前实例的位置，你可以键入：<br>
 <br>
 
 <p class="code">with (obj_ball) { x = other.x; y = other.y; }</p>
 <br>
-
-The with statement is an extremely powerful tool and is useful in
-many, many circumstances so it is important that you understand
-fully how it can be used. To help there are a few more examples of
-use below:<br>
+with语句是一个非常强大的工具，在很多很多情况下都很有用，所以你必须完全理解如何去使用它。为了帮助你，下面还有一些使用示例：<br>
 <br>
 
-<p class="code">with (instance_create_layer(x, y, "Instances",
-obj_Ball))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;speed = other.speed;<br>
-&nbsp;&nbsp;&nbsp;direction = other.direction;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">with (instance_create_layer(x, y, "Instances", obj_Ball)) // 新创建一个球实例<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;speed = other.speed; // 让它的速度与with语句所在实例的速度一致<br>&nbsp;&nbsp;&nbsp;direction = other.direction;<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<br>
+上面的代码将创建一个 obj_Ball 实例，并为其指定一个速度和方向，使用的是运行整个代码块的实例的值（译者注：也就是with外面的实例）。<br>
 <br>
 
-The above code will create an instance of obj_Ball and assign it
-the speed and direction of the instance that runs the whole code
-block.<br>
+<p class="code">with (instance_nearest(x, y, obj_Ball)) //with所在实例相临的一个obj_Ball 实例<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_destroy(); // 销毁实例<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<br>
+上面的代码将破坏与with所在实例最近的obj_Ball实例。<br>
 <br>
 
-<p class="code">with (instance_nearest(x, y, obj_Ball))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;instance_destroy();<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var inst;<br>inst = noone;<br>with (obj_ball)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if str &gt; other.str inst = id; // 比较两个值，获取这个实例的id<br>&nbsp;&nbsp;&nbsp;}<br>if inst != noone target = inst; // 对于符合条件的实例，赋值给target变量<br></p>
 <br>
-
-The above code will destroy the instance of obj_Ball nearest to the
-instance running the code.<br>
-<br>
-
-<p class="code">var inst;<br>
-inst = noone;<br>
-with (obj_ball)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if str &gt; other.str inst = id;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-if inst != noone target = inst;<br></p>
-<br>
-
-The above code is slightly more complex than previous ones due to
-it using a local variable. This variable is local to the
-<i>script</i> and not to the instance and so can be used and
-accessed by all instances that are referenced within the code
-block. So, in the code we have set it to the special <i>keyword</i>
-<b>noone</b> and then use the "with" construction to have every
-instance of obj_Ball check their "str" variable against that of the
-instance running the code block. If the value of the variable is
-larger, then they store their unique id in the "inst" local
-variable, meaning that at the end of the code, only the instance
-with a value greater than the calling instance (or the
-<i>keyword</i> <b>noone</b> if none are larger) will be stored in
-the local variable inst. For more information on local variables
-see the section <a href="6_scope.html">Variables And variable
-Scope</a>.</div>
+上面的代码比之前的代码稍微复杂了一些，因为使用了局部变量。这个变量相对于<i>脚本</i>是本地的，而不是相对于实例，因此可以被代码块中引用的所有实例使用和访问。所以，在代码中我们将它设置为特殊的<i>关键词</i><b>noone</b>然后使用“with”结构让obj_Ball物体的每个实例检查它们的“str”变量，与运行代码块的实例的变量进行比较。如果变量的值较大，那么将它们的唯一id存储在“inst”局部变量中，这意味着在代码的末尾，只有值大于调用实例的情况（或者如果没有更大的话，将是这个<i>关键词</i><b>noone</b>），它的id将存储在局部变量inst中。有关局部变量（译者注：或者说本地变量）的更多信息，请参阅章节<a href="6_scope.html">变量和变量的作用域</a>。</div>
 <br>
 <label class="collapse" for="ten">return</label> <input id="ten"
 type="checkbox">
-<div class="index_list">The return statement has the form:<br>
+<div class="index_list">return语句具有以下形式：<br>
 <br>
 
-<p class="code">return (&lt;expression&gt;)<br></p>
+<p class="code">return (&lt;表达式&gt;)<br></p>
+<br>
+你只能在<a href=
+"../../2_interface/1_editors/scripts.html">脚本</a>中使用<tt>return</tt>语句，它用于从脚本返回一个值，以便在之后的代码或脚本调用中使用。应该指出的是<i>脚本的运行在return语句处结束</i>，意味着在脚本中return语句之后的任何代码都不会被运行。这是一个简短的示例脚本“<tt>scr_sqr</tt>“，它计算传递给它的任何值的平方，并且它包含错误捕获，以防传递的参数不是实数：<br>
 <br>
 
-You only use the <tt>return</tt> statement in <a href=
-"../../2_interface/1_editors/scripts.html">scripts</a>, and it is
-used to return a value from the script to be used in further code
-or script calls. It should be noted that the <i>execution of the
-script ends at the return statement</i>, meaning that any code
-which comes after the return has been called will not be run. Here
-is a short example script called "<tt>scr_sqr</tt>" which
-calculates the square of whatever value is passed to it, and it
-includes error catching in case the argument that it is passed is
-not a real number:<br>
+<p class="code">{<br>if !is_real(argument0) // 如果不是实数<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return 0; // 在这里跳出<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return (argument0 * argument0); // 正常的平方值<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
+<br>
+在一个代码块中调用脚本就像调用函数一样 - 使用脚本的名字，括号内填写参数的值。所以，上面的脚本这样使用：<br>
 <br>
 
-<p class="code">{<br>
-if !is_real(argument0)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;return 0;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;return (argument0 * argument0);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}<br></p>
-<br>
-
-To call a script from within a piece of code, just act the same way
-as when calling functions - that is, write the script name with the
-argument values in parentheses. So, the above script would be
-called like this:<br>
-<br>
-
-<p class="code">if keyboard_check_pressed(vk_enter)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;val = scr_sqr(amount);<br>
-&nbsp;&nbsp;&nbsp;}<br></p></div>
+<p class="code">if keyboard_check_pressed(vk_enter) // 检测回车键<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;val = scr_sqr(amount);  // 传递变量amount，返回值赋值给val<br>&nbsp;&nbsp;&nbsp;}<br></p></div>
 <br></blockquote>
 
 <p><br>

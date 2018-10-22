@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,47 +36,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>Scripts are essentially functions that you write yourself as
-short snippets of code that can resolve expressions, return values
-or anything else that the language permits. Basically if you have a
-block of code that you use in more than one place or object, then
-it's probably better off in a script, as it means that you can
-change it once when required and the change will be "picked up" by
-every object that has a call to the script. They can also be very
-handy from an organisational point of view, even if the code they
-hold is called only once by a single object, since it permits you
-to break large code blocks into more easily managed "chunks" at
-logical points.</p>
+<p>脚本本质上是你自己编写的函数，作为简短的代码片段，它们可以解析表达式、返回值或语言允许的任何其他内容。基本上, 如果你的代码块在多个位置或物体中使用，那写在在脚本中可能会更好，因为它意味着你可以在需要时更改它，并且每个调用脚本的物体都会 "拾取" 更改。从组织的角度来看，它们也非常方便，即使它们持有的代码只被一个物体调用一次，因为它允许你将大型代码块分解为更容易管理的逻辑点“块”。</p>
 
-<p>When you create a script the values that you choose to pass into
-it are called <b>arguments</b> and you'll want to access these
-arguments - either when using the script action, or when calling
-the script as a function from a program or from another script.
-These arguments are stored in the <i>built in</i> variables:</p>
+<p>创建脚本时，你选择传入其中的值叫做<b>参数</b>，并且你可以要访问这些参数 - 无论是使用脚本操作，还是从一个程序或其他脚本中，作为函数调用这个脚本都可以。这些参数存储在<i>内置的</i>变量：</p>
 
-<p class="code"><tt>argument0</tt>, <tt>argument1</tt>, ..., etc...
-up to <tt>argument15</tt></p>
+<p class="code"><tt>argument0</tt>， <tt>argument1</tt>， ...等等... 直至 <tt>argument15</tt></p>
 
-<p>So there can be at most 16 arguments passed through to a script
-when called from code using the argument variables, and when using
-the <tt>argument0...15</tt> variables for a script, you <b>must
-ensure that the script uses all the supplied arguments</b>. For
-example if you have a script that takes two arguments and you only
-supply one then you will get an error for that script. The same
-goes if you supply more arguments than you require.</p>
+<p>因此，当使用参数变量从代码调用时，使用时最多可以有16个参数传递给脚本，作为脚本的变量，分别是<tt>argument0 ... 15</tt>，你<b>必须确保脚本使用所有提供的参数</b>（译者注：括号中提供了多少参数，脚本中就必须使用多少参数）。比如你有一个脚本需要两个参数，而你只是提供了一个参数，这样就会报错。同时，提供的参数数量超过需要的也会报错。</p>
 
-<p>However you can supply a variable number of arguments to a
-script using the <i>built in</i> argument array, and you are
-<i>not</i> limited to a maximum of 16 arguments either when using
-this array, but instead can have as many as you require (although,
-again, you must ensure that all arguments are referenced within the
-script):</p>
+<p>但是，你可以使用以下命令为脚本提供可变数量的参数<i>内置的</i>参数数组（argument array），在使用此数组时，<i>不</i>再最多限制为16个参数，可以根据需要使用多个参数（尽管如此，你必须确保在脚本中引用所有参数）：</p>
 
 <p class="code"><tt>argument[0 ... max_num]</tt>
 </p>
 
-<p>When passing in a variable number of arguments as an array of
-values you can use the following function:</p>
+<p>将可变数量的参数作为包含数多值的数组传递时，可以使用以下函数：</p>
 
 <blockquote>
 <ul>
@@ -85,59 +58,25 @@ values you can use the following function:</p>
 </ul>
 </blockquote>
 
-<p>This can be used to find out how many arguments have been passed
-and adapt the script to use only those arguments supplied.</p>
+<p>这可用于找出已传递的参数数量，并使脚本仅使用提供的参数（译者注：一般在循环中使用）。</p>
 
-<div class="note"><b>NOTE:</b> You cannot mix the two types of
-argument variables when calling a script. You must use
-<b>either</b> <tt>argument0...15</tt> <b>or</b> argument[n].</div>
+<div class="note"><b>注意：</b>调用脚本时，不能混合使用两种类型的参数变量。你必须使用<b>要么</b>是<tt>argument0 ... 15</tt>，<b>要么</b>是argument[N]。</div>
 
-<p><a name="return" id="return"></a>  Scripts can also return a
-value, so that they can be used in expressions. For this you would
-use the <tt>return</tt> statement:</p>
+<p><a name="return" id="return"></a> 脚本还可以返回一个值，以便可以在表达式中使用它们。对于这个，你会使用<tt>return</tt>语句：</p>
 
-<p class="code">return &lt;expression&gt;</p>
+<p class="code">return &lt;表达式&gt;</p>
 
-<p>It should be noted that the <i>execution of the script ends at
-the return statement</i>, meaning that any code which comes after
-the return has been called <i>will not be run</i>. Here is a short
-example script called "scr_sqr" which calculates the square of
-whatever value is passed to it, and it includes error catching in
-case the argument that it is passed is not a real number:</p>
+<p>应该指出的是<i>脚本的执行在return语句处结束</i>，它意味着在return之后的任何代码都<i>不会运行</i>。这是一个名为“scr_sqr”的简短示例脚本，它计算传递给它的任何值的平方，并且它包含错误捕获，以防它传递的参数不是实数：</p>
 
-<p class="code">{<br>
-if !is_real(argument0)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;return 0;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;return (argument0 * argument0);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-}</p>
+<p class="code">{<br>if !is_real(argument0) // 如果不是实数<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return 0; // 在这里跳出<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return (argument0 * argument0); // 正常的平方值<br>&nbsp;&nbsp;&nbsp;}<br>}</p>
 
-<p>To call a script from within a piece of code, just act the same
-way as when calling functions - that is, write the script name with
-the argument values in parentheses. So, the above script would be
-called like this:</p>
+<p>在一个代码块中调用脚本就像调用函数一样 - 使用脚本的名字，括号内填写参数的值。所以，上面的脚本这样使用：</p>
 
-<p class="code">if keyboard_check_pressed(vk_enter)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;val = scr_sqr(amount);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check_pressed(vk_enter) // 检测回车键<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;val = scr_sqr(amount);  // 传递变量amount，返回值赋值给val<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>It is worth noting that when writing your own scripts they can
-also have certain <b>JSDoc</b> style comments added so that when
-you use them in your code they show up in auto-complete along with
-their arguments and other details. you can find out more about this
-from the section <a href=
-"../../1_overview/3_additional_information/jsdoc.html">JSDoc Script
-Comments</a> for more information. Further note that when you are
-typing out your scripts in the code editor, you can click
-<img style="vertical-align:middle" src="../../images/icon_f1.png">
-or use the middle mouse button <img style="vertical-align:middle"
-src="../../images/icon_mmb.png"> on the script name to open it for
-editing directly.</p>
+<p>值得注意的是，在编写自己的脚本时，可以添加特定的<b>JSDoc</b>样式注释，以便在代码中使用时，这些脚本会在自动补全时（auto-complete）显示它们的参数和其他详细信息。你可以从 <a href=
+"../../1_overview/3_additional_information/jsdoc.html">JSDoc 脚本注释</a> 部分获取更多信息。 另请注意，在代码编辑器中键入脚本时，可以在脚本名称上单击<img style="vertical-align:middle" src="../../images/icon_f1.png">或使用鼠标中键<img style="vertical-align:middle"
+src="../../images/icon_mmb.png">打开它直接进行编辑。</p>
 
 <p><br>
 </p>

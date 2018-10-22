@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,59 +36,32 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>The general definition of a function in <b>GML</b> is something
-like this:</p>
+<p><b>GML</b> 中函数的一般定义如下所示：</p>
 
-<blockquote><i>A function has an input and an output, and the
-output is related somehow to the input.</i>
+<blockquote><i>函数具有输入和输出，并且输出以某种方式与输入相关。</i>
 </blockquote>
 
-<p>In <i>GameMaker Studio 2</i> you use functions as part of the
-<a href="1_code.html">code structure</a> to make things happen in
-your game and there are a great number of GML functions available
-to you, all of which are explained in the <a href=
-"../4_gml_reference/index.html">Language Reference</a> section of
-the manual.</p>
+<p>在 <i>GameMaker Studio 2</i> 中，你使用函数作为 <a href="1_code.html">代码结构</a> 的一部分，以使游戏中发生一些事情，并且有大量的 GML 函数可供使用，所有这些都可以在手册的 <a href=
+"../4_gml_reference/index.html">语言参考</a> 部分中找到解释。</p>
 
-<p>In GML a function has the form of a function name, followed by
-the input arguments between brackets and separated by commas (if
-the function has no input arguments then just brackets are used).
-Here is an outline of the structure of a function:</p>
+<p>GML 函数结构是，一个函数名，后面是括号之内的输入的参数，参数用逗号分隔（如果没有参数，仅仅用括号就可以了）。下面是函数结构的概述：</p>
 
 <p class="code">&lt;function&gt;(&lt;arg0&gt;, &lt;arg1&gt; ,...
 &lt;arg15&gt;);</p>
 
-<p>Generally there are two types of functions - first, there is the
-huge collection of built-in functions which are used to control all
-aspects of your game, and, second, any <a href=
-"3_scripts.html">scripts</a> you define in your game can also be
-used as a function (but not always).</p>
+<p>基本上有两类函数 - 首先是大量的内置函数，控制游戏的各个方面，其次是你在游戏中定义的<a href=
+"3_scripts.html">脚本</a>也可以当作函数使用（但不总是这样）。&lt;br1&gt;</p>
 
-<p>Some functions return values and can be used in expressions,
-while others simply execute commands, as illustrated in the
-following two examples:</p>
+<p>某些函数有返回值可以用在表达式中，而其它的只是简单的运行命令（注意不要将函数用在一个赋值的左手边），如以下两个示例：</p>
 
-<p class="code">instance_destroy();
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
-Destroy the calling instance - this requires no arguments and
-returns nothing<br>
-dist = point_distance(x, y, mouse_x, mouse_y; &nbsp;&nbsp;&nbsp;//
-Get the distance from the current instance position to the mouse
-position - takes four arguments and returns a real value</p>
+<p class="code">instance_destroy(); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 销毁正在调用的实例  - 它不需要参数且没有返回<br>dist = point_distance(x, y, mouse_x, mouse_y; &nbsp;&nbsp;&nbsp;// 获取从当前实例位置到鼠标位置的距离 - 接受四个参数并返回实数值</p>
 
-<p>You should note that it is impossible to use a function by
-itself as the left-hand side of an assignment. For example, the
-following code would give you an error:</p>
+<p>你应该注意，不可能将一个函数单独用在赋值的左侧。例如，下面的代码将会报错：</p>
 
 <p class="code">instance_nearest(x, y, obj).speed = 0;</p>
 
-<p>The return value for the expression in that code example is a
-real number (the unique ID value for the nearest instance) and so
-it must be enclosed in brackets to be used in this way and properly
-address the instance required (see <a href=
-"7_addressing_variables.html">Addressing Variables In Other
-Instances</a> for more information). The above code would be
-correctly written as:</p>
+<p>该代码示例中表达式的返回值是实数（距离最近实例的唯一ID值），因此必须将其括在括号中以便以这种方式使用并正确地处理所需的实例（请参阅<a href=
+"7_addressing_variables.html">访问其他实例中的变量&lt;/ a0&gt;以获取更多信息）。上述代码正确的写法是：</p>
 
 <p class="code">(instance_nearest(x, y, obj)).speed = 0;<br>
 //or<br>
