@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,18 +48,17 @@ if (window.name != "content")
 
 <tr>
 <td>ind</td>
-<td>The index of the sprite to change the cache size of.</td>
+<td>将要被改变存储大小的精灵的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>index</td>
-<td>The subimage of ind to change the cache size of.</td>
+<td>将要被改变存储大小的次级图像的精灵。</td>
 </tr>
 
 <tr>
 <td>max</td>
-<td>The maximum number of cached copies of the sprite that can be
-stored.</td>
+<td>此精灵可存储的最大复制的数量。</td>
 </tr>
 </table>
 </blockquote>
@@ -67,9 +66,9 @@ stored.</td>
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -77,7 +76,7 @@ stored.</td>
 <h3>描述</h3>
 
 <blockquote>
-<p>When performing image blending, HTML5 cannot do it dynamically in the same way an executable could be performed. Therefore <i>GameMaker Studio 2</i> has to temporarily save a blended copy of the image and load it in. This function sets how many blended copies of the given sprite can be cached before old ones are overwritten. 默认是4。This is applied to one single given subimage of the sprite.</p>
+<p>当你执行图像混合操作后，HTML5无法合适地执行它。. 因此 <i>GameMaker Studio 2</i> 将会暂时存储一个图像的混合复制品并加载它。此函数将会设置在原有精灵被重写前，可以存储多少给定精灵的混合复制品。默认是4。此函数只对精灵的一个给定次级图像有效。</p>
 </blockquote>
 
 <p><br>
@@ -88,8 +87,7 @@ stored.</td>
 <p class="code">sprite_set_cache_size_ext(sprite0, 0, 2);</p>
 
 <blockquote>
-<p>This will set the sprite cache of the first subimage of sprite0
-to 2 copies.</p>
+<p>上述代码将会把sprite0的第一个次级的图像的存储限制设为2。</p>
 </blockquote>
 
 <p><br>

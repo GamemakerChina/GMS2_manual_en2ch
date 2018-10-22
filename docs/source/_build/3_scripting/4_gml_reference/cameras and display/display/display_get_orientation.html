@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">display_get_orientation</h1>
 
-<h2 class="studio">This variable holds a different constant
-depending on the orientation of the device.</h2>
+<h2 class="studio">这个变量根据设备的方位保存不同的常量。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -41,7 +40,7 @@ depending on the orientation of the device.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Constant</p>
+<p><b>返回：</b> 常量</p>
 
 <p><br>
 </p>
@@ -61,64 +60,48 @@ being held in landscape or portrait mode:</p>
 
 <tr>
 <td>display_landscape</td>
-<td>The device is being held horizontally ie: The longest edge is
-from left to right, and the menu button is on the right.</td>
+<td>横向放置设备，如： 拥有从左到右最长的边缘，菜单按钮是在右边。</td>
 </tr>
 
 <tr class="alt">
 <td>display_landscape_flipped</td>
-<td>As above, only now the menu button is on the left.</td>
+<td>如上，只有菜单按钮在左边。</td>
 </tr>
 
 <tr>
 <td>display_portrait</td>
-<td>The device is being held vertically ie: The longest edge is
-from top to bottom, and the menu button is at the bottom.</td>
+<td>纵向放置设备 如：从顶部到底拥有最长的边缘，菜单在底部。</td>
 </tr>
 
 <tr class="alt">
 <td>display_portrait_flipped</td>
-<td>As above, only now the menu button is at the top.</td>
+<td>同上，只有菜单在顶部。</td>
 </tr>
 </table>
 </div>
 
-<p>Please note that this function may not correctly detect the
-orientation of the device when used in the HTML5 target module.
-However this is easily mimicked by the use of the following
-script:</p>
+<p>请注意，使用HTML5目标模块时，这个函数可能不会正确的检测到设备的朝向。然而使用起来很方便，仿照下面的脚本：</p>
 
 <p class="code">return (browser_width &lt; browser_height);<br></p>
 
-<p>It will return <tt>true</tt> for portrait and <tt>false</tt> for
-landscape.</p>
+<p>纵向返回 <tt>真</tt>横向返回 <tt>假</tt>。</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if display_get_orientation() =
-display_landscape<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.Config = 0;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.Config = 1;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if display_get_orientation() = display_landscape<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Config = 0;<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Config = 1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks the orientation of the device and sets a
-global variable depending on the value returned.</p>
+<p>上述代码检测设备的取向，根据返回值设置一个全局变量。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Windows And
-Views</a></div>
+<div style="float:left">返回: <a href="index.html">窗口和视野</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "display_get_dpi_x.html">display_get_dpi_x</a></div>
 </div>
 

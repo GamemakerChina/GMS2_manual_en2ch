@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -63,23 +63,9 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can save the current state of the game to
-a previously created "grow" buffer (see <a href=
-"../buffers/index.html">Buffers</a>) which can then be loaded again
-at any time using <a href=
-"game_load_buffer.html"><tt>game_load_buffer</tt></a> function.
-This function is designed for use in a single room at a time (ie:
-it's not advised to do a buffer save in one room, then try and load
-the buffer from another one) and should ideally be used only for
-checkpoints or level restarts.<br>
-<br>
-<i><b>NOTE:</b> This function is</i> very limited and it is
-designed for the beginner to get a checkpoint system up and running
-quickly, but more advanced users may prefer to code their own
-system using the <a href="../file%20handling/index.html">File</a>
-functions, due to the fact that the game will <i>not</i> save any
-of the dynamic resources like data structures, surfaces, added
-backgrounds and sprites etc..<br>
+<p>With this function you can save the current state of the game to a previously created "grow" buffer (see <a href=
+"../buffers/index.html">Buffers</a>) which can then be loaded again at any time using <a href=
+"game_load_buffer.html"><tt>game_load_buffer</tt></a> function. This function is designed for use in a single room at a time (ie: it's not advised to do a buffer save in one room, then try and load the buffer from another one) and should ideally be used only for checkpoints or level restarts.<br><br><i><b>NOTE:</b> This function is</i> very limited and it is designed for the beginner to get a checkpoint system up and running quickly, but more advanced users may prefer to code their own system using the <a href="../file%20handling/index.html">File</a> functions, due to the fact that the game will <i>not</i> save any of the dynamic resources like data structures, surfaces, added backgrounds and sprites etc..<br>
 <br></p>
 
 <p><br>
@@ -88,11 +74,7 @@ backgrounds and sprites etc..<br>
 <h3 class="studio"><b>举例：</b>
 </h3>
 
-<p class="code">if keyboard_check_pressed(ord("S"))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.Checkpoint = true;<br>
-&nbsp;&nbsp;&nbsp;game_save_buffer(save_buff);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check_pressed(ord("S"))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Checkpoint = true;<br>&nbsp;&nbsp;&nbsp;game_save_buffer(save_buff);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will set a global variable to <tt>true</tt> and
 then save the current game state to the buffer indexed in the

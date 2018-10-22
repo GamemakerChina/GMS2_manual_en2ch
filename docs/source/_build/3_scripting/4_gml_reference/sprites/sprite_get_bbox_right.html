@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>ind</td>
-<td>The index of the sprite to check.</td>
+<td>将会被检查的精灵的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -56,7 +56,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
 <p class="code">实数</p>
 
@@ -66,13 +66,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function returns the relative position of the right of the
-sprite bounding box. This value is given as a relative value based
-on the upper left corner of the base sprite asset being (0,0). it
-is the same value as can be found in the sprite editor for the
-<a href="../../../2_interface/1_editors/sprites.html">collision
-mask properties</a>. The image below shows how it is calculated:
-
+<p>This function returns the relative position of the right of the sprite bounding box. 此位置是相对与精灵资源的左上角（0，0）的。你可以在<a href="../../../2_interface/1_editors/sprites.html">collision mask properties</a>中找到相同的数值。下图描绘了这是如何工作的：
 <img class="center" src="spr_bbox.png"></p>
 </blockquote>
 
@@ -88,8 +82,7 @@ hh = sprite_get_bbox_bottom(sprite_index) -
 sprite_get_bbox_top(sprite_index);<br></p>
 
 <blockquote>
-<p>The above code calculates the width and height of the collision
-mask based on the relative bounding box side positions.</p>
+<p>上述代码将会根据边界框四边的相对位置来计算碰撞遮罩的高度和宽度。.</p>
 </blockquote>
 
 <p><br>

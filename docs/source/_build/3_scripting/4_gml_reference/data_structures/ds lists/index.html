@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>DS Lists</title>
+<title>列表数据结构</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
@@ -29,32 +29,13 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">DS Lists</h1>
+<h1 class="studio">列表数据结构</h1>
 
 <h2 class="studio">A ds_list stores a collection of values in a
 particular order.</h2>
 
-<p>A ds_list is a data-structure that stores information
-sequentially as it is added (much like a <a href=
-"../../../3_gml_overview/10_arrays.html">1D array</a>). DS lists
-are very flexible data structures that permit you to add values at
-the end or insert them somewhere in the middle of the list, as well
-as giving you the ability to shuffle the order (to randomise the
-values) or sort them in an ascending or descending order.<br>
-<br>
-When accessing DS list data structures, you should always try to
-use <b>integer values</b> for the list position, and all
-non-integer indices will be floored by GameMaker Studio 2 if you do
-not. If that is not what you require, then you will need to do the
-rounding yourself previously before passing the index that you wish
-to check.<br>
-<br>
-<i><b>NOTE:</b> As with all dynamic resources, data structures take
-up memory and so should <b>always</b> be destroyed when no longer
-needed to prevent memory leaks which will slow down and eventually
-crash your game.</i><br>
-<br>
-The following functions exist that deal with DS lists.</p>
+<p>A ds_list is a data-structure that stores information sequentially as it is added (much like a <a href=
+"../../../3_gml_overview/10_arrays.html">1D array</a>). DS lists are very flexible data structures that permit you to add values at the end or insert them somewhere in the middle of the list, as well as giving you the ability to shuffle the order (to randomise the values) or sort them in an ascending or descending order.<br><br>When accessing DS list data structures, you should always try to use <b>integer values</b> for the list position, and all non-integer indices will be floored by GameMaker Studio 2 if you do not. If that is not what you require, then you will need to do the rounding yourself previously before passing the index that you wish to check.<br><br><i><b>NOTE:</b> As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</i><br><br>The following functions exist that deal with DS lists.</p>
 
 <blockquote>
 <ol>

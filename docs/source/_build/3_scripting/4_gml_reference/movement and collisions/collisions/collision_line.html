@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -96,14 +96,7 @@ slow) or its bounding box in general (false = fast).</td>
 
 <h3 class="studio">描述</h3>
 
-<p>Collision line checks along a line from point x1,y1 to point
-x2,y2 for a collision with <b>any</b> instance of the object
-specified by the argument "obj". this check can be either precise
-or not, but for precise collisions to be enabled, the object or
-instance that you are checking for <i>must</i> also have precise
-collisions enabled for their sprite. If not, the default check is
-based on bounding boxes. The following image illustrates how this
-works:<br>
+<p>Collision line checks along a line from point x1,y1 to point x2,y2 for a collision with <b>any</b> instance of the object specified by the argument "obj". this check can be either precise or not, but for precise collisions to be enabled, the object or instance that you are checking for <i>must</i> also have precise collisions enabled for their sprite. If not, the default check is based on bounding boxes. 下面的图片说明了工作原理。<br>
 <br>
 <img class="center" src=
 "images/collision_line_illustration.png"></p>
@@ -122,11 +115,7 @@ value of the function.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">with (obj_Enemy)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if collision_line(100, 400, 100, 600, id, false,
-false) instance_destroy();<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">with (obj_Enemy)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if collision_line(100, 400, 100, 600, id, false, false) instance_destroy();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>This code gets all instances of "obj_Enemy" to check along a
 line from 100x, 400y to 100x, 600y for a collision with themselves,

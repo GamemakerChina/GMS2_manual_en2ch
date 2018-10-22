@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -51,7 +51,7 @@ device's current orientation.</h2>
 </tr>
 
 <tr>
-<td>flag</td>
+<td>标识</td>
 <td>Set to <tt>true</tt> or <tt>false</tt> to enable or disable
 orientation locking.</td>
 </tr>
@@ -61,7 +61,7 @@ orientation locking.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -80,10 +80,7 @@ before locking.<br></p>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if os_type == os_android || os_type == os_ios<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;os_lock_orientation(true);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if os_type == os_android || os_type == os_ios<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;os_lock_orientation(true);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks the OS type and if it is either Android or
 an iOS then the orientation locking is flagged as

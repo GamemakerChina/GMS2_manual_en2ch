@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -64,28 +64,14 @@ used.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>By using a series of predefined constants, you can ask
-<i>GameMaker Studio 2</i> to tell you a number of things about the
-state of any given joint. This is very useful as it gives you the
-ability to delete joints or change an instances behaviour depending
-on whatever your needs are at the time. There are a number of
-constants that can be used in this function and they can be found
-here: <a href="physics%20joint%20constants.html">Physics Joint
-Constants</a>, but be aware that complex calculations are done when
-you call these, so they should be used with care and only when
-necessary and note that <i>many are unique to a specific type of
-joint</i>.<br>
-<br>
-If the property does not exist (if, for example, you check a pulley
-joint for prismatic translation) then 0 will be the return
-value.<br>
+<p>By using a series of predefined constants, you can ask <i>GameMaker Studio 2</i> to tell you a number of things about the state of any given joint. This is very useful as it gives you the ability to delete joints or change an instances behaviour depending on whatever your needs are at the time. There are a number of constants that can be used in this function and they can be found here: <a href="physics%20joint%20constants.html">Physics Joint Constants</a>, but be aware that complex calculations are done when you call these, so they should be used with care and only when necessary and note that <i>many are unique to a specific type of joint</i>.<br><br>If the property does not exist (if, for example, you check a pulley joint for prismatic translation) then 0 will be the return value.<br>
 <br></p>
 
 <p><br>
@@ -93,23 +79,7 @@ value.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var reactionForceX, reactionForceY,
-reactionForce;<br>
-if shipJoint<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;reactionForceX =
-physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br>
-&nbsp;&nbsp;&nbsp;reactionForceY =
-physics_joint_get_value(shipJoint, phy_joint_reaction_force_y);<br>
-&nbsp;&nbsp;&nbsp;reactionForce = point_distance(0, 0,
-reactionForceX, reactionForceY);<br>
-&nbsp;&nbsp;&nbsp;if reactionForce &gt; 2<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_joint_delete(shipJoint);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipJoint = -1;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var reactionForceX, reactionForceY, reactionForce;<br>if shipJoint<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;reactionForceX = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br>&nbsp;&nbsp;&nbsp;reactionForceY = physics_joint_get_value(shipJoint, phy_joint_reaction_force_y);<br>&nbsp;&nbsp;&nbsp;reactionForce = point_distance(0, 0, reactionForceX, reactionForceY);<br>&nbsp;&nbsp;&nbsp;if reactionForce &gt; 2<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_joint_delete(shipJoint);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipJoint = -1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks to see if the variable "shipJoint" holds a joint index and if it does, it then calculates the force being applied to that joint using the two constants. 最后，如果关节合力大于2，则该关节会删除失效。</p>
 

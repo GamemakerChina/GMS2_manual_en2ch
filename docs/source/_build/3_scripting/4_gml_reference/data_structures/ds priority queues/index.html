@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>DS Priority Queues</title>
+<title>优先队列数据结构</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
@@ -29,25 +29,12 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">DS Priority Queues</h1>
+<h1 class="studio">优先队列数据结构</h1>
 
 <h2 class="studio">A ds_priority is a data structure based on the
 importance value of the information it contains.</h2>
 
-<p>A ds_priority queue is a special data structure similar to a
-<a href="../ds%20queues/index.html"><tt>ds_queue</tt></a>, only
-here the queue of values is ordered by the priorities (always real
-numbers) that the values have been assigned. This structure can be
-very useful for constructing leaderboards or information lists
-where the importance of each entry can be weighted.<br>
-<br>
-<i><b>NOTE:</b> As with all dynamic resources, data structures take
-up memory and so should <b>always</b> be destroyed when no longer
-needed to prevent memory leaks which will slow down and eventually
-crash your game.</i><br>
-<br>
-The following functions exist that deal with ds_priority
-queues:</p>
+<p>A ds_priority queue is a special data structure similar to a <a href="../ds%20queues/index.html"><tt>ds_queue</tt></a>, only here the queue of values is ordered by the priorities (always real numbers) that the values have been assigned. This structure can be very useful for constructing leaderboards or information lists where the importance of each entry can be weighted.<br><br><i><b>NOTE:</b> As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</i><br><br>The following functions exist that deal with ds_priority queues:</p>
 
 <blockquote>
 <ol>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -140,36 +140,8 @@ works:<br>
 <br>
 <img class="center" src="images/prismatic_joint_image_1.png"></p>
 
-<p>We have two instances joined at the anchor point, with an axis
-for movement defined from the vector the two w_axis x/y coordinates
-relative to the (0,0) coordinates of the physics world (so an x
-component of 0 and a y component of 1 (0,1) would make the joint a
-vertical prismatic joint). This joint can then <i>only</i> move
-relative to this axis, like a spring or a piston. If you set the
-lower or upper trans limit, you are basically limiting the amount
-of movement along this axis, where the 0 position is the exact spot
-that you defined with w_anchor x/y, so a negative value would go to
-the "left" of that point along the axis and a positive value to the
-"right" as shown in the following diagram (realise that "left" and
-"right" are relative terms!): <img class="center" src=
-"images/prismatic_joint_image_2.png"> You can also define the joint
-as having a motor or not. This means that when un-influenced by a
-collision the joint will move in a direction along the axis. this
-direction is defined by the motor speed, with a positive number
-being towards the axis coordinates ("right") and a negative number
-being towards the anchor point ("left"). The "max_motor_force"
-argument is for limiting the speed of the movement so that you
-don't get a perpetually accelerating motor and to limit the
-influence that a collision may have on the movement. In this way
-you can use a joint motor to simulate joint friction by setting the
-joint speed to zero and maximum force to some small, but
-significant value. The motor will try to prevent the joint from
-moving, but will yield to a significant load.<br>
-<br>
-As with all the joints, if you set the "col" value to <tt>true</tt>
-then the two instances can interact and collide with each other but
-<i>only</i> if they have collision events, however if it is set to
-<tt>false</tt>, they will not collide no matter what.<br></p>
+<p>We have two instances joined at the anchor point, with an axis for movement defined from the vector the two w_axis x/y coordinates relative to the (0,0) coordinates of the physics world (so an x component of 0 and a y component of 1 (0,1) would make the joint a vertical prismatic joint). This joint can then <i>only</i> move relative to this axis, like a spring or a piston. If you set the lower or upper trans limit, you are basically limiting the amount of movement along this axis, where the 0 position is the exact spot that you defined with w_anchor x/y, so a negative value would go to the "left" of that point along the axis and a positive value to the "right" as shown in the following diagram (realise that "left" and "right" are relative terms!): <img class="center" src=
+"images/prismatic_joint_image_2.png"> You can also define the joint as having a motor or not. This means that when un-influenced by a collision the joint will move in a direction along the axis. this direction is defined by the motor speed, with a positive number being towards the axis coordinates ("right") and a negative number being towards the anchor point ("left"). The "max_motor_force" argument is for limiting the speed of the movement so that you don't get a perpetually accelerating motor and to limit the influence that a collision may have on the movement. In this way you can use a joint motor to simulate joint friction by setting the joint speed to zero and maximum force to some small, but significant value. The motor will try to prevent the joint from moving, but will yield to a significant load.<br><br>As with all the joints, if you set the "col" value to <tt>true</tt> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <tt>false</tt>, they will not collide no matter what.<br></p>
 
 <p><br>
 </p>

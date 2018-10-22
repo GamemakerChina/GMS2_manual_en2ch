@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -58,7 +58,7 @@ gamepad.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<p><b>返回：</b> String（字符串）</p>
 
 <p><br>
 </p>
@@ -79,20 +79,7 @@ checked.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var gp_num = gamepad_get_device_count();<br>
-for (var i = 0; i &lt; gp_num; i++;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if gamepad_is_connected(i)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32),
-gamepad_get_description(i));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32),
-"No Gamepad Connected");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var gp_num = gamepad_get_device_count();<br>for (var i = 0; i &lt; gp_num; i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if gamepad_is_connected(i)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), gamepad_get_description(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), "No Gamepad Connected");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p><br>
 </p>

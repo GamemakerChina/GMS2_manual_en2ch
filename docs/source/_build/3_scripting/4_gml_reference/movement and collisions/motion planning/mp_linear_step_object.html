@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -73,7 +73,7 @@ an instance id or the special keyword, <b>all</b></td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean.</p>
+<p><b>返回:</b> Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -98,13 +98,7 @@ choice.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if mp_linear_step_object(mouse_x, mouse_y, 5,
-obj_Wall)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Effects",
-obj_Explosion);<br>
-&nbsp;&nbsp;&nbsp;instance_destroy();<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if mp_linear_step_object(mouse_x, mouse_y, 5, obj_Wall)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Effects", obj_Explosion);<br>&nbsp;&nbsp;&nbsp;instance_destroy();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will make the object move towards the mouse at a
 speed of 5 pixels per step, only checking for collisions with the

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -51,7 +51,7 @@ exists or not.</h2>
 
 <tr>
 <td>obj</td>
-<td>The index of the object to check.</td>
+<td>待检测的物体索引。</td>
 </tr>
 </table>
 </div>
@@ -59,18 +59,15 @@ exists or not.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns whether an object with the specified index
-exists or not. Note that this checks to see if an object is present
-in the resource tree, and not actually in the game room. For that
-you should use the function <a href=
-"../instances/instance_functions/instance_exists.html"><tt>instance_exists</tt></a>.<br>
+<p>该函数返回指定索引的物体是否存在。请注意这个函数检查的是该物体是否出现在资源树中而非实际的游戏房间中。如欲那么做请使用函数<a href=
+"../instances/instance_functions/instance_exists.html"><tt>instance_exists</tt></a>。<br>
 
 <br></p>
 
@@ -79,10 +76,7 @@ you should use the function <a href=
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if object_exists(obj_temp)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;with (obj_Temp) scr_add_event();<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if object_exists(obj_temp)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;with (obj_Temp) scr_add_event();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks the variable "obj_temp" to make sure that
 it stores the index of an object and then, if it does, it makes the
@@ -92,10 +86,10 @@ object run a script.</p>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Objects</a></div>
+<div style="float:left">上一页：<a href=
+"index.html">物体</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "object_get_mask.html">object_get_mask</a></div>
 </div>
 

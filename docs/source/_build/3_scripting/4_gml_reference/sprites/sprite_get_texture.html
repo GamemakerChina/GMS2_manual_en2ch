@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>spr</td>
-<td>The index of the sprite to use.</td>
+<td>将被使用的精灵的索引。</td>
 </tr>
 
 <tr>
 <td>subimg</td>
-<td>The sub-image of the sprite to use.</td>
+<td>精灵的次级图像的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -61,7 +61,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
 <p class="code">Pointer (texture page ID)</p>
 
@@ -71,14 +71,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function returns a special <i>pointer</i> for the sprite
-texture page. This value can then be used in other draw functions,
-particularly in the <a href="../drawing/primitives/index.html">2D
-primitive</a> functions, as well as the <a href=
-"../shaders/index.html">Shader</a> functions. You can get more
-information about the returned texture page using the different
-<tt>texture_</tt> functions found <a href=
-"../drawing/textures/index.html">here</a>.</p>
+<p>此函数将会为精灵纹理页返回一个特殊的<i>指针</i> 。此函数返回值将可以用在 <a href="../drawing/primitives/index.html">2D primitive</a> 和 <a href=
+"../shaders/index.html">Shader</a> 函数。你可以使用不同的<tt>texture_</tt> 函数来获得更多信息。请点击 <a href=
+"../drawing/textures/index.html">这儿</a>。</p>
 </blockquote>
 
 <p><br>
@@ -96,8 +91,7 @@ draw_vertex_texture(0, 640, 0, 1);<br>
 draw_primitive_end();<br></p>
 
 <blockquote>
-<p>The above code will draw a 4 vertex triangle strip textured with
-the texture held in the "tex" variable.</p>
+<p>上述函数将会创建一个四定点的三角形带（即两个共享一条边的三角形）并为其使用“vex"变量中储存的纹理。</p>
 </blockquote>
 
 <p><br>

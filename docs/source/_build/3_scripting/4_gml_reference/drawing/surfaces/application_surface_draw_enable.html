@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -47,9 +47,8 @@ if (window.name != "content")
 </tr>
 
 <tr>
-<td>flag</td>
-<td>The flag will be either <tt>true</tt> (enabled, the default
-value) or <tt>false</tt> (disabled).</td>
+<td>标识</td>
+<td>标识可以为 <tt>真</tt> (允许，默认值) 或 <tt>假</tt> (不允许)。</td>
 </tr>
 </table>
 </blockquote>
@@ -59,7 +58,7 @@ value) or <tt>false</tt> (disabled).</td>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -67,12 +66,7 @@ value) or <tt>false</tt> (disabled).</td>
 <h3>描述</h3>
 
 <blockquote>
-<p>You can use this function to enable or disable the automatic
-drawing of the application surface. By default this is enabled, but
-in many cases you will want to take over when and how the surface
-is drawn (when using shaders for example), in which case you would
-use this function to set it to false so that you can draw it
-yourself when and how you require.</p>
+<p>你可以使用这个函数决定允许或者不允许应用表面层的自动绘制。默认是允许，但是也有许多需要接管何时及怎样进行表面绘制的情况 (比如使用着色器的时候)，这里你可以用这个函数设置为假，自主决定绘制的时间和方式。</p>
 </blockquote>
 
 <p><br>
@@ -83,8 +77,7 @@ yourself when and how you require.</p>
 <p class="code">application_surface_draw_enable(false);</p>
 
 <blockquote>
-<p>The above code will switch off the automatic drawing of the
-application surface.</p>
+<p>上述代码将切换应用表面层的自动绘制为假。</p>
 </blockquote>
 
 <p><br>
@@ -94,10 +87,10 @@ application surface.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "application_surface.html">application_surface</a></div>
 </div>
 </div>

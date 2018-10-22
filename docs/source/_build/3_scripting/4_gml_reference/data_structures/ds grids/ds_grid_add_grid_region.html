@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">ds_grid_add_grid_region</h1>
 
-<h2 class="studio">Adds the contents of the cells in a source grid
-to the cells in a destination grid.</h2>
+<h2 class="studio">将源栅格的单元格内容叠加给一个靶栅格内的单元格。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -51,48 +50,42 @@ y2, xpos, ypos);</p>
 
 <tr>
 <td>index</td>
-<td>The index of the destination grid.</td>
+<td>靶栅格的索引</td>
 </tr>
 
 <tr class="alt">
 <td>source</td>
-<td>The index of the source grid.</td>
+<td>源栅格的索引</td>
 </tr>
 
 <tr>
 <td>x1</td>
-<td>The left position of the region of cells to copy from the
-source grid.</td>
+<td>从源栅格复制的单元格区域的左端位置</td>
 </tr>
 
 <tr class="alt">
 <td>y1</td>
-<td>The top position of the region of cells to copy from the source
-grid.</td>
+<td>从源栅格复制的单元格区域的顶端位置</td>
 </tr>
 
 <tr>
 <td>x2</td>
-<td>The right position of the region of cells to copy from the
-source grid.</td>
+<td>从源栅格复制的单元格区域的右端位置</td>
 </tr>
 
 <tr class="alt">
 <td>y2</td>
-<td>The bottom position of the region of cells to copy from the
-source grid.</td>
+<td>从源栅格复制的单元格区域的底端位置</td>
 </tr>
 
 <tr>
 <td>xpos</td>
-<td>The x position on the destination grid to add the source region
-to.</td>
+<td>待叠加给的靶栅格上的x位置</td>
 </tr>
 
 <tr class="alt">
 <td>ypos</td>
-<td>The y position on the destination grid to add the source region
-to.</td>
+<td>待叠加给的靶栅格上的y位置&lt;</td>
 </tr>
 </table>
 </div>
@@ -100,19 +93,15 @@ to.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to add all the values of all the cells
-found within the source area of a grid to the values within the
-destination grid, as illustrated below: <img class="center" src=
-"ds_grid_add_grid_region.png"> <i><b>NOTE:</b> You can also use
-this function on the same grid to add values from one region of the
-grid to those stored in another (see code example below).</i><br>
+<p>这个函数能被用于去把从源栅格中区域内找到的值叠加给一个靶栅格，正如下方插图所示 <img class="center" src=
+"ds_grid_add_grid_region.png"> <i><b>注意：</b> 你也能对同一栅格使用这个函数来把一片区域内的值叠加给另一片区域（详见下方代码）。</i><br>
 <br></p>
 
 <p><br>
@@ -131,10 +120,9 @@ the cells from position (2,0) of the same ds_grid.</p>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">DS
-Grids</a></div>
+<div style="float:left">上一页： <a href="index.html">数据结构</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页： <a href=
 "ds_grid_multiply.html">ds_grid_multiply</a></div>
 </div>
 

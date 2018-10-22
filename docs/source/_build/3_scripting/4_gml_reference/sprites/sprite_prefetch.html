@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>ind</td>
-<td>The sprite index to fetch</td>
+<td>将要被预读取的精灵的所有。</td>
 </tr>
 </table>
 </blockquote>
@@ -58,7 +58,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -66,12 +66,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to prefetch (place into texture
-memory) a texture page with the given sprite. You supply the sprite
-index as defined when you created the sprite asset, and the texture
-page it is on will be loaded into memory.</p>
+<p>此函数可以用来预读取给定精灵的纹理页，并将它放进纹理存储中。你要提供在创建精灵资源时定义的精灵索引，然后此精灵所在的纹理页将会被加载进存储中。.</p>
 
-<div class="note"><b>注意</b>： There is a performance hit as the texture is uploaded to texture memory on most devices, so it's recommended that you call <tt>sprite_preftech</tt> on any required graphics at the start of a level to avoid any stalls.</div>
+<div class="note"><b>注意</b>： 在多数设备上，将纹理放进纹理存储会暂时降低性能。所以推荐你使用 <tt>sprite_preftech</tt> 在游戏关卡开始就预读取需要用到的图像来避免性能降低。</div>
 </blockquote>
 
 <p><br>
@@ -82,8 +79,7 @@ page it is on will be loaded into memory.</p>
 <p class="code">sprite_prefetch(spr_Player_Aura);</p>
 
 <blockquote>
-<p>The above code will place the referenced sprite into texture
-memory ready for use.</p>
+<p>上述代码将会把给定的精灵放进纹理存储中并供将来使用。</p>
 </blockquote>
 
 <p><br>

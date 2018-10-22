@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -67,20 +67,8 @@ selected.</td>
 
 <h3 class="studio">描述</h3>
 
-<p>This very useful function only returns integers (whole numbers).
-So, for example, to get a random number from 0 to 9 you can use
-<tt>irandom(9)</tt> and it will return a number from 0 to 9
-inclusive... real numbers can also be used but the upper value will
-be excluded, so <tt>irandom(9.7)</tt> will return a value from 0 to
-9 only. The function has an upper bound of $7fffffffffffffffLL, so
-care should be taken if using very large numbers.<br>
-<br>
-<i><b>NOTE:</b> This function will return the same value every time
-the game is run afresh due to the fact that GameMaker Studio 2
-generates the same initial random seed every time to make debugging
-code a far easier task. To avoid this behaviour use <a href=
-"randomise.html"><tt>randomise</tt></a> at the start of your
-game.</i><br>
+<p>This very useful function only returns integers (whole numbers). So, for example, to get a random number from 0 to 9 you can use <tt>irandom(9)</tt> and it will return a number from 0 to 9 inclusive... real numbers can also be used but the upper value will be excluded, so <tt>irandom(9.7)</tt> will return a value from 0 to 9 only. The function has an upper bound of $7fffffffffffffffLL, so care should be taken if using very large numbers.<br><br><i><b>NOTE:</b> This function will return the same value every time the game is run afresh due to the fact that GameMaker Studio 2 generates the same initial random seed every time to make debugging code a far easier task. To avoid this behaviour use <a href=
+"randomise.html"><tt>randomise</tt></a> at the start of your game.</i><br>
 <br></p>
 
 <p><br>
@@ -89,10 +77,7 @@ game.</i><br>
 <h3><b>举例：</b>
 </h3>
 
-<p class="code">if irandom(9) = 1<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;score += 100;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if irandom(9) = 1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;score += 100;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>This will produce a one in ten (since 0 is included) chance of
 adding 100 to the score.</p>

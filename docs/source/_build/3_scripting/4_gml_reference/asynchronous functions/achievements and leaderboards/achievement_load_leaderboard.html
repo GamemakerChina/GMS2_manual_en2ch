@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -77,7 +77,7 @@ list or to all players (see the <b>Description</b> below)</td>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -164,16 +164,7 @@ list of all friends leaderboard positions for the game, on either
 Android or iOS:</p>
 
 <blockquote>
-<p class="code">if os_type == os_android<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;achievement_load_leaderboard("CgkIs9_51u0PEAIQBw",
-1, 100, achievement_filter_friends_only);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;achievement_load_leaderboard("leaderboard1id", 1,
-100, achievement_filter_friends_only);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if os_type == os_android<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;achievement_load_leaderboard("CgkIs9_51u0PEAIQBw", 1, 100, achievement_filter_friends_only);<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;achievement_load_leaderboard("leaderboard1id", 1, 100, achievement_filter_friends_only);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>This will send off a request for the information on the given
@@ -181,33 +172,7 @@ leaderboard and generate an asynchronous callback with the special
 <tt>async_load</tt> ds_map containing the following data:</p>
 </blockquote>
 
-<p class="code">var ident = ds_map_find_value(async_load,
-"id");<br>
-if ident == achievement_leaderboard_info<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var lbid =
-ds_map_find_value(async_load,"leaderboardid");<br>
-&nbsp;&nbsp;&nbsp;if lbid == "CgkIs9_51u0PEAIQBw" || lbid ==
-"leaderboard1id"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.numentries =
-ds_map_find_value(async_load,"numentries");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt;
-numentries; i++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playername[i]
-= ds_map_find_value(async_load, "Player" + string(i));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playerid[i]
-= ds_map_find_value(async_load, "Playerid" + string(i));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playerrank[i]
-= ds_map_find_value(async_load, "Rank" + string(i));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playerscore[i]
-= ds_map_find_value(async_load, "Score" + string(i));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;achievement_get_pic(global.playerid[i]);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var ident = ds_map_find_value(async_load, "id");<br>if ident == achievement_leaderboard_info<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var lbid = ds_map_find_value(async_load,"leaderboardid");<br>&nbsp;&nbsp;&nbsp;if lbid == "CgkIs9_51u0PEAIQBw" || lbid == "leaderboard1id"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.numentries = ds_map_find_value(async_load,"numentries");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; numentries; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playername[i] = ds_map_find_value(async_load, "Player" + string(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playerid[i] = ds_map_find_value(async_load, "Playerid" + string(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playerrank[i] = ds_map_find_value(async_load, "Rank" + string(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playerscore[i] = ds_map_find_value(async_load, "Score" + string(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;achievement_get_pic(global.playerid[i]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the

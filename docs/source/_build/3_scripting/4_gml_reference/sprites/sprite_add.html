@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -50,34 +50,32 @@ xorig, yorig);</p>
 
 <tr>
 <td>fname</td>
-<td>The name (a string file path) of the file to add.</td>
+<td>需要添加的文件的名字（字符串文件路径）.</td>
 </tr>
 
 <tr class="alt">
 <td>imgnum</td>
-<td>Use to indicate the number of sub-images (1 for a single image
-or for a <tt>*.gif</tt>).</td>
+<td>用来指示所包含的图像数量 (1 代表一张静态图片或一张<tt>*.gif</tt>).</td>
 </tr>
 
 <tr>
 <td>removeback</td>
-<td>Indicates whether to make all pixels with the background colour
-(left-bottom pixel) transparent.</td>
+<td>指示是否将所有与背景（左下角的像素）颜色相同的像素变成透明</td>
 </tr>
 
 <tr class="alt">
 <td>smooth</td>
-<td>Indicates whether to smooth the edges if transparent.</td>
+<td>指示是否将边缘变得平滑（如果它是透明的）</td>
 </tr>
 
 <tr>
 <td>xorig</td>
-<td>Indicate the x position of the origin in the sprite.</td>
+<td>指示此精灵的原始X轴坐标。</td>
 </tr>
 
 <tr class="alt">
 <td>yorig</td>
-<td>Indicate the y position of the origin in the sprite.</td>
+<td>指示此精灵的原始Y轴坐标。</td>
 </tr>
 </table>
 </div>
@@ -96,65 +94,25 @@ or for a <tt>*.gif</tt>).</td>
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can add an image as a sprite, loading it
-from an external source where the image file to be loaded should
-<b>always</b> be in either <tt>*.png</tt>, <tt>*.gif</tt> or
-<tt>*.jpg/jpeg</tt> format. The function returns the new sprite
-index which must then be used in all further codes that relate to
-the sprite. If you use this function with HTML5 or are getting an
-image from an URL, this function will also generate an asynchronous
-event. See <a href=
-"../../../2_interface/1_editors/events/async_events.html">The
-Asynchronous Event</a> for more information.</p>
+<p>你可以使用此函数来将一张图片作为精灵添加进来，此函数将从外部资源（即图片文件的位置）加载这张图片。这张图片的个格式 <b>一定</b> 需要是 <tt>*.png</tt>, <tt>*.gif</tt> or <tt>*.jpg/jpeg</tt>此函数将会返回一个新的精灵索引，将来与此精灵有关的代码会用到此索引。If you use this function with HTML5 or are getting an image from an URL, this function will also generate an asynchronous event. See <a href=
+"../../../2_interface/1_editors/events/async_events.html">The Asynchronous Event</a> for more information.</p>
 
-<p>All images that are to be turned into animated sprites - except
-for <tt>*.gif</tt> (see below) - should have a "strip" format (see
-the image below) and it will be split into the number of sub-images
-specified following the rule <b>sprite width = strip width / sub
-images</b>.  <img class="center" src="spr_strip.png"></p>
+<p>所有被转变成动态精灵（即动画）的图片 - 除了 <tt>*.gif</tt> (请看下面) - 会变成长带状，(看下面的图片) ，每帧图片依次分布在这条长带上。并且 <b>精灵的宽度与长带的宽度一直。（次级图片也是一样的）</b>. <img class="center" src="spr_strip.png"></p>
 
-<p>As you can see in the above image, the sprite has been placed on
-a dark purple background, and this can be removed by setting the
-"removeback" argument to <tt>true</tt>. This works by checking the
-<i>bottom left</i> pixel of the sprite for the colour there and
-then uses that as the colour to be removed. For example, in the
-above image, if we had the bottom left pixel colour as green, all
-the green parts of the sprite would have been removed and the rest
-of the purple background ignored.</p>
+<p>正如上图所示，精灵已经被放置在了紫黑色的背景上。如果需要移除背景，你需要将“removeback"的参数设为 <tt>true</tt>. 该方法的工作原理是通过检查精灵 <i>左下角</i> 处的像素颜色，并将此颜色作为将要被移除的颜色。假如在上面这张图片中，左下角的颜色为绿色的话，那么被移除的将会是所有绿色部分而非紫色部分，尽管紫色才是背景色。</p>
 
-<p>If you choose the "removeback" option, you may also want
-<i>GameMaker Studio 2</i> to smooth the edges of the sprite by
-setting the "smooth" argument to <tt>true</tt>. All this does is
-create a semi-transparent border around the edges of the sprite
-after it has had its background removed.</p>
+<p>如果你选择了“removeback"选项，你可能也希望 <i>GameMaker Studio 2</i> 将其边缘变得平滑，因此你将 "smooth" 参数设置为  <tt>true</tt>. 但你所做的实际上就是在移除精灵的背景后，为精灵边缘创建一个半透明的边框。</p>
 
-<p>Finally you can also specify the x and y <i>origin</i> for the
-sprite. This is the point where the sprite is "fixed" onto the
-instance that uses it, and is always calculated as relative to the
-0,0 top left corner of one sprite sub-image. So, for example, a
-sprite that is 32 x 32 pixels with these values set to (16,16) will
-have its origin in the center.</p>
+<p>最后，你当然也可以为精灵设置具体的X轴和Y轴 <i>原点</i>。这个原点就是此精灵固定在模板上的固定点，并且这个点的位置坐标就是与精灵最左上角的点的相对坐标。. 比如，一个精灵是32X32的像素大小，如果你设置它的原点坐标为(16,16),那么原点就在精灵的中心。</p>
 
-<p>If you are adding a <tt>*.gif</tt> format image, then you only
-need to specify the filename and image number (which should be 1
-for the first frame) and can leave all the other arguments as 0,
-noting that <b>only the first image of the GIF will be
-loaded</b>.</p>
+<p>如果你添加一张 <tt>*.gif</tt> 格式的图片,，那么你只需要指定文件名和图像编号（第一帧为1），其它的参数设为0，这样就能<b>只加载这张GIF的第一帧图像</b>。</p>
 
-<p>By default all new sprites have their bounding boxes calculated
-automatically (the exact bounding box will depend on the size and
-transparency of the sprite), however you may wish to customise
-this, in which case you should also use the function <a href=
-"sprite_collision_mask.html"><tt>sprite_collision_mask</tt></a>.</p>
+<p>默认情况下，系统会自动根据图片的尺寸和透明度为图片加上一个边界框，用于之后可能的碰撞检测或其它。如果需要修改边界框，你需要使用 <a href=
+"sprite_collision_mask.html"><tt>sprite_collision_mask</tt></a>函数。</p>
 
-<div class="note"><b>NOTE:</b> When you load a sprite into
-<i>GameMaker Studio 2</i> you must remember to remove it again
-(with <a href="sprite_delete.html"><tt>sprite_delete</tt></a>) when
-no longer needed, otherwise there is risk of a memory leak which
-will slow down and eventually crash your game.</div>
+<div class="note"><b>注意:</b> 当你将一张精灵导入 <i>GameMaker Studio 2</i> 而之后又不再需要时，你必须使用 <a href="sprite_delete.html"><tt>sprite_delete</tt></a>函数将其删除，否则可能会使存储泄露。</div>
 
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 </blockquote>
 
 <p><br>
@@ -166,8 +124,7 @@ available with the Trial Licence of the product.</div>
 0);</p>
 
 <blockquote>
-<p>The above code loads a sprite into the game and stores its index
-in the variable "spr".</p>
+<p>上面这段代码将会加载精灵，并将它的索引存储在"spr"变量中。</p>
 </blockquote>
 
 <p><br>

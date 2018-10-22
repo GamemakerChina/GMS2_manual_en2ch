@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -127,51 +127,7 @@ if (window.name != "content")
 </tr>
 </table>
 
-<p><br>
-<i>GameMaker: Studio 1.4</i> 也有一些不同的背景变量访问全局背景数组。在 <i>GameMaker Studio 2</i> 中不再需要这些：</p>
-
-<table>
-<tr>
-<td>background_index[0..7]</td>
-<td>background_visible[0..7]</td>
-<td>background_alpha[0..7]</td>
-<td>background_blend[0..7]</td>
-</tr>
-
-<tr>
-<td>background_x[0..7]</td>
-<td>background_y[0..7]</td>
-<td>background_colour</td>
-<td>background_showcolour</td>
-</tr>
-
-<tr>
-<td>background_foreground[0..7]</td>
-<td>background_hspeed[0..7]</td>
-<td>background_vspeed[0..7]</td>
-<td>background_htiled[0..7]</td>
-</tr>
-
-<tr>
-<td>background_vtiled[0..7]</td>
-<td>background_width[0..7]</td>
-<td>background_height[0..7]</td>
-<td>background_xscale[0..7]</td>
-</tr>
-
-<tr>
-<td>background_yscale[0..7]</td>
-<td>
-</td>
-<td>
-</td>
-<td>
-</td>
-</tr>
-</table>
-
-<p><br>
-您可以在 <a href=
+<p>你可以在 <a href=
 "../../2_interface/1_editors/rooms.html#room_layers">房间编辑器</a> 的部分中找到关于 <b>背景层</b> 的更多信息，有关使用代码控制背景层的函数的更多信息，请参阅 <a href=
 "../../3_scripting/4_gml_reference/rooms/backgrounds/index.html">背景层</a>。</p>
 </div>
@@ -181,7 +137,7 @@ if (window.name != "content")
 "collapse" for="two">图块</label> <input id="two" type="checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>和背景一样(如上所述)，来自 <i>GameMaker: Studio 1.4</i> 的图块资源已经不存在了，取而代之的是 <i>GameMaker Studio 2</i> 中有 <b>图块集</b>。在 <i>GameMaker: Studio 1.4</i> 中，图块使用了后台资源，它们被放置在不同深度的房间编辑器中或通过代码放置，但是使用的方法并不灵活，效率也不高。为了解决这些问题，在 <i>GameMaker Studio 2</i> 中，瓷砖现在是由精灵资源创建的，可以有各种不同的属性（比如动画或自动图块）。然后将它们放置在房间编辑器内的 <i>图块层</i> 或通过代码放置。由于这些变化，下列函数现已弃用：</p>
+<p>和背景一样(如上所述)，来自 <i>GameMaker: Studio 1.4</i> 的图块资源已经不存在了，取而代之的是 <i>GameMaker Studio 2</i> 中有 <b>图块集</b>。在 <i>GameMaker: Studio 1.4</i> 中，图块使用了后台资源，它们被放置在不同深度的房间编辑器中或通过代码放置，但是使用的方法并不灵活，效率也不高。为了解决这些问题，在 <i>GameMaker Studio 2</i> 中，图块现在是由精灵资源创建的，可以有各种不同的属性（比如动画或自动图块）。然后将它们放置在房间编辑器内的 <i>图块层</i> 或通过代码放置。由于这些变化，下列函数现已弃用：</p>
 
 <table>
 <tr>
@@ -258,8 +214,7 @@ if (window.name != "content")
 </tr>
 </table>
 
-<p><br>
-您可以从文档的 <a href=
+<p>你可以从文档的 <a href=
 "../../2_interface/1_editors/tilesets.html">图块集编辑器</a> 的部分找到关于<b>图块集</b> 的更多信息，以及如何在房间编辑器中使用 <a href="../../2_interface/1_editors/rooms.html#room_layers">图块层</a> 部分。有关使用代码控制后台层的函数的更多信息，请参阅 <a href=
 "../../3_scripting/4_gml_reference/rooms/tilemaps/index.html">图块层</a>。</p>
 </div>
@@ -270,7 +225,7 @@ if (window.name != "content")
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>在 <i>GameMaker Studio 2</i> 中，物体的处理方式由于房间编辑器中引入了层而略有改变。“depth” 变量仍然存在，但它现在仅用于兼容性，您不能再为对象（仅为实例）获取或设置深度。这使得下列函数弃用：</p>
+<p>在 <i>GameMaker Studio 2</i> 中，物体的处理方式由于房间编辑器中引入了层而略有改变。“depth” 变量仍然存在，但它现在仅用于兼容性，你不能再为物体（仅为实例）获取或设置深度。这使得下列函数弃用：</p>
 
 <table>
 <tr>
@@ -282,8 +237,7 @@ if (window.name != "content")
 </tr>
 </table>
 
-<p><br>
-在手册的 <a href=
+<p>在手册的 <a href=
 "../../2_interface/1_editors/objects.html">物体编辑器</a> 部分，你可以找到关物体资源的更多信息，在 <a href=
 "../../3_scripting/4_gml_reference/objects/index.html">物体</a> 部分，你可以找到用代码控制物体的函数。</p>
 </div>
@@ -344,8 +298,8 @@ if (window.name != "content")
 </tr>
 </table>
 
-<p><br>
-你可以在手册的 <a href="../../2_interface/1_editors/sounds.html">声音编辑器</a> 一节中找到关于音频资源的更多信息，并从 <a href=
+<p>你可以在手册的 <a href=
+"../../2_interface/1_editors/sounds.html">声音编辑器</a> 一节中找到关于音频资源的更多信息，并从 <a href=
 "../../3_scripting/4_gml_reference/audio/index.html">音频</a> 一节中找到使用代码控制音频的函数。</p>
 </div>
 </div>
@@ -515,8 +469,7 @@ if (window.name != "content")
 </tr>
 </table>
 
-<p><br>
-你可以找到更多关于 <a href=
+<p>你可以找到更多关于 <a href=
 "../../3_scripting/4_gml_reference/drawing/primitives/index.html">顶点缓冲</a>、<a href=
 "../../3_scripting/4_gml_reference/matrices/index.html">矩阵</a>、 <a href=
 "../../3_scripting/4_gml_reference/cameras%20and%20display/index.html">摄像机</a> 和 <a href=
@@ -562,8 +515,7 @@ if (window.name != "content")
 </tr>
 </table>
 
-<p><br>
-你可以从文档的 <a href=
+<p>你可以从文档的 <a href=
 "../../3_scripting/4_gml_reference/cameras%20and%20display/index.html">相机和显示</a> 部分找到更多关于相机的信息。</p>
 </div>
 </div>
@@ -635,8 +587,7 @@ if (window.name != "content")
 </tr>
 </table>
 
-<p><br>
-你可以从 <a href=
+<p>你可以从 <a href=
 "https://marketplace.yoyogames.com/publishers/23/yoyo-games"
 target="_blank">市场页面</a> 上获得关于广告和分析的官方 YoYo Games 扩展。</p>
 </div>
@@ -647,7 +598,7 @@ target="_blank">市场页面</a> 上获得关于广告和分析的官方 YoYo Ga
 "checkbox">
 <div class="index_list">
 <div style="margin-left: 2em">
-<p>无论是 <i>GameMaker: Studio 1.4</i> 还是 <i>GameMaker Studio 2</i> 都有一个可视化撰写 <b>拖拽按钮</b>（DnD™）界面来供您创作，然而，在 <i>GameMaker Studio 2</i> 中处理它的方式与以前的使用方法有很大不同。以前，所有 DnD™ 操作有自己的相应的函数“幕后”工作得到预期的结果，但这不是很透明，函数调用中增加的额外开销会导致性能降低。在 <i>GameMaker Studio 2</i> 中，这一点已经被改变了，现在所有的动作都被编译成纯代码（如果需要的话可以这样显示），这意味着下面的动作函数已经弃用了</p>
+<p>无论是 <i>GameMaker: Studio 1.4</i> 还是 <i>GameMaker Studio 2</i> 都有一个可视化撰写 <b>拖拽按钮</b>（DnD™）界面来供你创作，然而，在 <i>GameMaker Studio 2</i> 中处理它的方式与以前的使用方法有很大不同。以前，所有 DnD™ 操作有自己的相应的函数“幕后”工作得到预期的结果，但这不是很透明，函数调用中增加的额外开销会导致性能降低。在 <i>GameMaker Studio 2</i> 中，这一点已经被改变了，现在所有的动作都被编译成纯代码（如果需要的话可以这样显示），这意味着下面的动作函数已经弃用了</p>
 
 <table>
 <tr>
@@ -899,8 +850,7 @@ target="_blank">市场页面</a> 上获得关于广告和分析的官方 YoYo Ga
 </tr>
 </table>
 
-<p><br>
-你可以找到更多关于新 DnD™ 的 <a href=
+<p>你可以找到更多关于新 DnD™ 的 <a href=
 "../../3_scripting/1_drag_and_drop_overview/index.html">拖拽概述</a> 部分。</p>
 </div>
 </div>
@@ -914,17 +864,17 @@ target="_blank">市场页面</a> 上获得关于广告和分析的官方 YoYo Ga
 <p><br>
 </p>
 
-<p>当您导入一个用以前版本的 <i>GameMaker Studio</i> 制作的项目时，任何已经使用的弃用函数 <i>仍然可以</i>工作，因为 IDE 会自动将它们转换为 <b>兼容性脚本</b>。接下来，<i>GameMaker Studio 2</i> 将解析你的项目中所有使用过的弃用函数和变量，然后使用这些函数名创建一系列脚本。这些脚本将包含新的等效函数或执行与废弃函数相同操作的简短代码脚本。</p>
+<p>当你导入一个用以前版本的 <i>GameMaker Studio</i> 制作的项目时，任何已经使用的弃用函数 <i>仍然可以</i>工作，因为 IDE 会自动将它们转换为 <b>兼容性脚本</b>。接下来，<i>GameMaker Studio 2</i> 将解析你的项目中所有使用过的弃用函数和变量，然后使用这些函数名创建一系列脚本。这些脚本将包含新的等效函数或执行与废弃函数相同操作的简短代码脚本。</p>
 
-<p>每当你第一次导入一个 <i>GameMaker Studio 2</i> 项目，就会有一个大致像这样的 <b>兼容性报告</b> 出现在您的面前：
+<p>每当你第一次导入一个 <i>GameMaker Studio 2</i> 项目，就会有一个大致像这样的 <b>兼容性报告</b> 出现在你的面前：
 <img class="center" src="images/compatibility_overview.png" alt=
 "兼容性报告"></p>
 
-<p>报告的主体展现了哪些物体和脚本及其哪个位置受到了影响，而在报告的记为您会看到一系列被创建到您项目中的脚本。您可以单击鼠标中键 <img style="vertical-align:middle" src=
+<p>报告的主体展现了哪些物体和脚本及其哪个位置受到了影响，而在报告的记为你会看到一系列被创建到你项目中的脚本。你可以单击鼠标中键 <img style="vertical-align:middle" src=
 "../../images/icon_mmb.png"> 或按下 <img style=
 "vertical-align:middle" src="../../images/icon_f1.png"> 在报告中列出的任何脚本打开它，看看已经完成什么。请注意，如果你看到任何脚本名字以双下划线开头（例如：<tt>__global_object_depths</tt>），那是 <i>IDE 创建的为了兼容性</i> 的脚本而不是从弃用函数转换而来的脚本，因此，它们 <i>不</i> 应该被篡改，因为它们需要其他兼容脚本来工作。</p>
 
-<p>当您完成了兼容性报告的修改后，您可以关闭工作区，但是如果您需要修改报告中的任何内容，您可以通过访问资源树的 <a href=
+<p>当你完成了兼容性报告的修改后，你可以关闭工作区，但是如果你需要修改报告中的任何内容，你可以通过访问资源树的 <a href=
 "../../2_interface/1_editors/notes.html">便签</a> 部分再次找到它。</p>
 
 <p>请注意，有些函数已经引入到 GameMaker 语言中，以确保与旧项目的兼容性，这些函数将出现在这些兼容脚本中。然而这些函数 <b>不应该被用于你自己的项目中</b>。你可以在如下章节中找到这些函数的列表：</p>
@@ -950,7 +900,7 @@ target="_blank">市场页面</a> 上获得关于广告和分析的官方 YoYo Ga
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

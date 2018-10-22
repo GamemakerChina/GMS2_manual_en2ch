@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -85,17 +85,7 @@ of frames of animation (exclusive))</p>
 
 <h3>举例：</h3>
 
-<p class="code">var lay_id = layer_get_id("Tiles_Traps");<br>
-var map_id = layer_tilemap_get_id(lay_id);<br>
-if tilemap_get_frame(map_id) &gt;= 2 &amp;&amp;
-tilemap_get_frame(map_id) &lt; 4<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.activate = true;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.activate = false;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var lay_id = layer_get_id("Tiles_Traps");<br>var map_id = layer_tilemap_get_id(lay_id);<br>if tilemap_get_frame(map_id) &gt;= 2 &amp;&amp; tilemap_get_frame(map_id) &lt; 4<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.activate = true;<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.activate = false;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>The above code checks the current animation frame for
 the given tilemap on the given layer, and sets a global variable

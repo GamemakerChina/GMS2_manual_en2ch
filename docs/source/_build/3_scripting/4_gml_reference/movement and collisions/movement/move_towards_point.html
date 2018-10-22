@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -66,31 +66,16 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function simply tells the instance running the code to move
-towards a set point at a set speed. Bear in mind that it is up to
-you to tell it what to do once it gets there, as it won't just stop
-by itself. This means that you can get a "vibrating" instance as it
-moves (for example) 3 pixels forward, overshoots the x/y target
-position by 2, then moves 3 pixels back again, overshooting the
-target point by one and so on... There are a number of ways that
-this can be avoided, for example using <a href=
-"../../maths/vector%20functions/distance_to_point.html"><tt>distance_to_point</tt></a>
-to see how far from the specified location the instance is before
-moving.<br>
-<br>
-<i><b>Note:</b> this function sets the speed of the instance, so
-even if you stop using this code, the instance will keep moving in
-the previous direction, so it is necessary to set the instance
-<a href=
-"../../instances/instance_variables/speed.html"><tt>speed</tt></a>
-to 0 if you wish it to stop. See the code example below.</i><br>
+<p>This function simply tells the instance running the code to move towards a set point at a set speed. Bear in mind that it is up to you to tell it what to do once it gets there, as it won't just stop by itself. This means that you can get a "vibrating" instance as it moves (for example) 3 pixels forward, overshoots the x/y target position by 2, then moves 3 pixels back again, overshooting the target point by one and so on... There are a number of ways that this can be avoided, for example using <a href=
+"../../maths/vector%20functions/distance_to_point.html"><tt>distance_to_point</tt></a> to see how far from the specified location the instance is before moving.<br><br><i><b>Note:</b> this function sets the speed of the instance, so even if you stop using this code, the instance will keep moving in the previous direction, so it is necessary to set the instance <a href=
+"../../instances/instance_variables/speed.html"><tt>speed</tt></a> to 0 if you wish it to stop. See the code example below.</i><br>
 <br></p>
 
 <p><br>
@@ -98,12 +83,7 @@ to 0 if you wish it to stop. See the code example below.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if point_distance(x, y, target.x, target.y) &gt;
-5<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;move_towards_point(target.x, target.y, 5);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else speed = 0;<br></p>
+<p class="code">if point_distance(x, y, target.x, target.y) &gt; 5<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;move_towards_point(target.x, target.y, 5);<br>&nbsp;&nbsp;&nbsp;}<br>else speed = 0;<br></p>
 
 <p>The above code will move the instance towards the position of
 the instance indexed in the variable "target" at a speed of 5

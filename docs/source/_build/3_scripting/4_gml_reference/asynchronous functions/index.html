@@ -1,12 +1,12 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Asynchronous Functions</title>
+<title>异步函数</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
 type="text/css">
@@ -28,7 +28,7 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Asynchronous Functions</h2>
+<h2>异步函数</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -119,15 +119,11 @@ that are not included in the PHP allow list).</p>
 <p>The following is an example of the code you can use for
 this:</p>
 
-<p class="code">$http_origin = $_SERVER['HTTP_ORIGIN'];<br>
-if ($http_origin == "http://127.0.0.1:51268")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;header('Access-Control-Allow-Origin: *');<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">$http_origin = $_SERVER['HTTP_ORIGIN'];<br>if ($http_origin == "http://127.0.0.1:51268")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;header('Access-Control-Allow-Origin: *');<br>&nbsp;&nbsp;&nbsp;}<br></p>
 </div>
 <br>
 <a name="async_dialogue" id="async_dialogue"></a> <label class=
-"collapse" for="two">Dialogue</label> <input id="two" type=
+"collapse" for="two">对话框</label> <input id="two" type=
 "checkbox">
 <div class="index_list">
 <p>Previous versions of <i>GameMaker</i> had pop-up dialogues that
@@ -167,32 +163,19 @@ functions:</p>
 <a name="async_http" id="async_http"></a> <label class="collapse"
 for="three">云</label> <input id="three" type="checkbox">
 <div class="index_list">
-<p>When making games, it is often necessary to store information
-about the game state in a file of some type, but storing this
-information on the device is not always the best option as, if the
-player deleted the game and then re-installs, this information may
-be lost. To prevent this you can use various different <b>cloud
-services</b>, which offer data storage over the internet for
-retrieval and modification at any time. You should note that this
-function is limited to <b>one</b> single data "blob" per game, so
-every time you send a new save to the cloud service, whether it is
-a string or a file, it will overwrite any previously stored
-data.</p>
+<p>在游戏开发过程中，常常需要将游戏的状态信息保存在特定类型的文件中，但是把这些信息保存在本地设备上在大多数时候并不是一个好的选择，因为当玩家在卸载游戏之后重新安装时，这些数据可能会丢失。为了防止这种情况的出现你可以使用各种不同的<b>云服务 </b>，用来提供可以修改和检索数据的云端据存储服务。You should note that this function is limited to <b>one</b> single data "blob" per game, so every time you send a new save to the cloud service, whether it is a string or a file, it will overwrite any previously stored data.</p>
 
-<p><i>GameMaker Studio 2</i> supports this with a few simple
-functions that work in conjunction with the <a href=
-"../../../2_interface/1_editors/events/async_events.html">Asynchronous
-Cloud Event</a>. These functions are explained on the following
-pages:</p>
+<p><i>GameMaker Studio 2</i> supports this with a few simple functions that work in conjunction with the <a href=
+"../../../2_interface/1_editors/events/async_events.html">Asynchronous Cloud Event</a>. 下面的网页将详细介绍这些函数：</p>
 
 <ul>
-<li><a href="cloud_synchronise.html">cloud_synchronise</a>
+<li><a href="cloud_synchronise.html">cloud_synchronise 云端同步</a>
 </li>
 
-<li><a href="cloud_string_save.html">cloud_string_save</a>
+<li><a href="cloud_string_save.html">cloud_string_save 云端字符串保存</a>
 </li>
 
-<li><a href="cloud_file_save.html">cloud_file_save</a>
+<li><a href="cloud_file_save.html">cloud_file_save 云端文件保存</a>
 </li>
 </ul>
 
@@ -204,29 +187,13 @@ can call them.</div>
 </div>
 <br>
 <a name="async_push" id="async_push"></a> <label class="collapse"
-for="four">Push Notifications</label> <input id="four" type=
+for="four">推送通知</label> <input id="four" type=
 "checkbox">
 <div class="index_list">
-<p>On mobile devices, normally only one application can be active
-in the foreground at any time, but many games and applications
-operate in a time-based or interconnected environment where events
-of interest to users can occur when the application is <i>not</i>
-in the foreground. In these cases, <b>Local</b> and <b>Remote</b>
-push notifications can allow these games to notify their users when
-events occur.</p>
+<p>在移动设备上,通常只有一个应用程序可以在任何时候活跃在前台,但是许多的游戏和应用程序需要基于时间或者其他特定的用户行为来触发事件， 并且<i>不需要</i>活跃在前台。In these cases, <b>Local</b> and <b>Remote</b> push notifications can allow these games to notify their users when events occur.</p>
 
-<p>When the operating system delivers a local or remote push
-notification and the target application is not running in the
-foreground, it presents the notification to the user in the form of
-a banner. If there is a notification alert and the user taps on it,
-then the game is launched and an <a href=
-"../../../2_interface/1_editors/events/async_events.html">Asynchronous
-Push Event</a> is called where you can check the callback string
-that you specify and resolve the push based on its value. If the
-application is running in the foreground when the notification is
-delivered, the application will still receive an Asynchronous Push
-Event, but the user will get no message displayed unless you create
-it yourself.</p>
+<p>当操作系统推送了一个本地或远程的通知而目标程序并没有在前台运行时，通知将会以banner(横幅) 的形式来展示。If there is a notification alert and the user taps on it, then the game is launched and an <a href=
+"../../../2_interface/1_editors/events/async_events.html">Asynchronous Push Event</a> is called where you can check the callback string that you specify and resolve the push based on its value. If the application is running in the foreground when the notification is delivered, the application will still receive an Asynchronous Push Event, but the user will get no message displayed unless you create it yourself.</p>
 
 <p>There are a few differences to note between supported
 platforms:</p>
@@ -250,21 +217,12 @@ Game Options</a> for them to work.<br>
 </ul>
 
 <blockquote><a name="async_push_local" id="async_push_local"></a>
-<label class="collapse" for="a">Local Notifications</label>
+<label class="collapse" for="a">本地通知</label>
 <input id="a" type="checkbox">
 <div class="index_list">
-<p>A local push notification is local to the device that the game
-is installed on, and requires no backend server. You simply set the
-date and time for the notification and it will be displayed to the
-user if the game is not currently running. This type of
-notification is useful to set "reminders" for the user to play your
-game again, or to offer a daily reward for playing, etc... and when
-the user taps the notification it will launch the game and pass in
-a data string which can then be parsed by the game to give a reward
-or whatever.</p>
+<p>本地通知由安装游戏的设备直接推送，并不需要后端服务器。你仅仅需要设置时间日期和通知内容，如果你的程序当前没有在运行的话，通知就会被推送。You simply set the date and time for the notification and it will be displayed to the user if the game is not currently running. This type of notification is useful to set "reminders" for the user to play your game again, or to offer a daily reward for playing, etc... and when the user taps the notification it will launch the game and pass in a data string which can then be parsed by the game to give a reward or whatever.</p>
 
-<p>The following functions are available for local
-notifications:</p>
+<p>以下函数可用于本地通知:</p>
 
 <ul>
 <li><a href=
@@ -291,14 +249,10 @@ target="_blank">Google Play Services Extension</a> and have enabled push notific
 </div>
 <br>
 <a name="async_push_remote" id="async_push_remote"></a>
-<label class="collapse" for="b">Remote Notifications</label>
+<label class="collapse" for="b">远程通知</label>
 <input id="b" type="checkbox">
 <div class="index_list">
-<p>Remote notification messages are sent by a server to a service
-provided by the device platform App Store, and this then forwards
-those messages onto all the devices on which your application is
-installed. This is supported by <i>GameMaker Studio 2</i> on the
-iOS and Android target modules.</p>
+<p>远程通知由对应平台的应用商店提供的推送服务发送，通知将会被发送到所有安装了你的应用的设备上。This is supported by <i>GameMaker Studio 2</i> on the iOS and Android target modules.</p>
 
 <p>There are no functions in <i>GameMaker Studio 2</i> to deal with
 remote notifications, as they must all be generated by your server
@@ -308,49 +262,23 @@ notifications, which can then be dealt with in the <a href=
 "../../../2_interface/1_editors/events/async_events.html">Asynchronous
 Push Event</a>, as you would a local notification.</p>
 
-<p>For all available platforms, once you have done the necessary
-set-up, when the game is run on a device it will <b>register</b>
-that device with the platforms push notification service. This will
-trigger an <b>Asynchronous Push Notification Event</b>, and the
-<tt>ds_map</tt> key "<i>type</i>" will have the value
-"<i>register</i>" as well as a new key, "<i>reg_id</i>", containing
-the <b>registration id</b> (or an error message in the
-"<i>error</i>" key, if "<i>status</i>" is 0). You must then send
-this registration id to your server, and every device that your
-game is installed on will have a different registration id. Your
-server <i>must maintain a list of ids for registered devices</i>,
-as when when you send a push notification message from your server,
-you use the registration ids to send the message to the registered
-devices.</p>
+<p>For all available platforms, once you have done the necessary set-up, when the game is run on a device it will <b>register</b> that device with the platforms push notification service. This will trigger an <b>Asynchronous Push Notification Event</b>, and the <tt>ds_map</tt> key "<i>type</i>" will have the value "<i>register</i>" as well as a new key, "<i>reg_id</i>", containing the <b>registration id</b> (or an error message in the "<i>error</i>" key, if "<i>status</i>" is 0). 你必须发送这个注册ID（registration id）到你的服务器，每个设备都拥有独一无二的注册ID（registration id）。Your server <i>must maintain a list of ids for registered devices</i>, as when when you send a push notification message from your server, you use the registration ids to send the message to the registered devices.</p>
 
-<p>Please note that there is no guarantee that remote push
-notifications will be delivered, and that the allowed data payload
-is fairly small. This varies between platforms, but iOS is
-particularly limited - the apple service only delivers the most
-recent notification, which must be selected by the recipient for
-the payload data to be delivered to your async event, and these
-notifications have a maximum payload size of 256bytes. Typically a
-remote push notification would just indicate that new data is
-available from your server for example.</p>
+<p>请注意，远程推送通知不能保证一定传递成功，并且允许传送的数据的负载也非常小。This varies between platforms, but iOS is particularly limited - the apple service only delivers the most recent notification, which must be selected by the recipient for the payload data to be delivered to your async event, and these notifications have a maximum payload size of 256bytes. 举个例子，通常一个远程推送式通知就表明服务器上有新的数据。</p>
 
 <div class="note"><b>注意</b>： Android requires that you add the <b>GCM Sender ID</b> into the <a href=
-"../../../2_interface/3_settings/game_options/options_android.html"> Android Game Options</a>. This is the <b>Project Number</b> that is assigned when you create your Google Play API Project.</div>
+"../../../2_interface/3_settings/game_options/options_android.html"> Android Game Options</a>.  <b>Project Number</b> 在你创建安卓工程时被创建。</div>
 
-<p>For further details on how to go about setting up a server, as
-well as information specific to the available platforms, please see
-the following pages on the <a href=
-"http://help.yoyogames.com/forums" target="_blank">YoYo Games
-Knowledge Base</a>:</p>
+<p>如何搭建一个可用的服务器，或者可用的信息平台,请查看以下页面 <a href=
+"http://help.yoyogames.com/forums" target="_blank">YoYo Games 知识库</a>:</p>
 
 <ul>
 <li><a href="http://help.yoyogames.com/entries/28184776" target=
-"_blank"><span class="list_link">Push Notifications -
-Android</span></a>
+"_blank"><span class="list_link">推送通知 - Android</span></a>
 </li>
 
 <li><a href="http://help.yoyogames.com/entries/27695268" target=
-"_blank"><span class="list_link">Push Notifications -
-iOS</span></a>
+"_blank"><span class="list_link">推送通知 - iOS</span></a>
 </li>
 </ul>
 
@@ -380,7 +308,7 @@ social media integration:</p>
 
 <li><a href=
 "achievements%20and%20leaderboards/index.html"><span class=
-"list_link">Achievements and Leaderboards</span></a>
+"list_link">成就和排行榜</span></a>
 </li>
 </ol>
 </blockquote>
@@ -403,8 +331,8 @@ or rating on a specific web page:</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"../index.html">Reference</a></div>
+<div style="float:left">返回: <a href=
+"../index.html">GML参考</a></div>
 
 <div style="float:right">Next: <a href=
 "../networking/index.html">Networking</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -82,24 +82,7 @@ set which can then be applied using the <a href=
 
 <h3>举例：</h3>
 
-<p class="code">var lay_id = layer_get_id("Tiles_sky");<br>
-var map_id = layer_tilemap_get_id(lay_id);<br>
-for (var i = 0; i &lt; tilemap_get_width(map_id); i++;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;for (var j = 0; j &lt;
-tilemap_get_height(map_id); j++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var data = tilemap_get(map_id,
-i, j);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if !tile_get_empty(data)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data =
-tile_set_empty(data)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tilemap_set(map_id,
-data, i, j);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var lay_id = layer_get_id("Tiles_sky");<br>var map_id = layer_tilemap_get_id(lay_id);<br>for (var i = 0; i &lt; tilemap_get_width(map_id); i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;for (var j = 0; j &lt; tilemap_get_height(map_id); j++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var data = tilemap_get(map_id, i, j);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if !tile_get_empty(data)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data = tile_set_empty(data)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tilemap_set(map_id, data, i, j);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>The above code gets the tilemap ID from the given layer
 and then proceeds to check every tile cell on the map to see if it

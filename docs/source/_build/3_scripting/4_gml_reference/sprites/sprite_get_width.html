@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the sprite to find the width of.</td>
+<td>将要被获取宽度的精灵的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -56,7 +56,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
 <p class="code">实数</p>
 
@@ -66,8 +66,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can find the width of the base resource
-sprite, with no transforms, in pixels.</p>
+<p>你可以使用此函数获得未经改变的基础精灵资源的宽度，单位是像素。</p>
 </blockquote>
 
 <p><br>
@@ -75,16 +74,10 @@ sprite, with no transforms, in pixels.</p>
 
 <h3>举例：</h3>
 
-<p class="code">if sprite_width !=
-sprite_get_width(sprite_index)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;image_xscale = 1;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if sprite_width != sprite_get_width(sprite_index)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;image_xscale = 1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks the width of the sprite as it is in the
-current instance and if there is a difference between that and the
-original base sprite, it resets the x axis scale.</p>
+<p>上述代码将会检查目前精灵实例和原始基础精灵的宽度，如果不同，它将会重设X轴尺寸。</p>
 </blockquote>
 
 <p><br>

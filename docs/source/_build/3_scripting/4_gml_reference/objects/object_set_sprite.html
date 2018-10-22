@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -62,28 +62,15 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can set the sprite index of a specific
-object. This means that all instances of this object that are
-created <i>after the sprite_index has been changed</i> will be
-created with this new sprite_index, while instances that are
-already in the room may not be affected.<br>
-<br>
-Please note that this is not an instance function! You can set the
-sprite index of individual instances using the <a href=
-"../instances/instance_variables/sprite_index.html"><tt>sprite_index</tt></a>
-variable and so have ten instances all with a different sprite to
-the object they are created from, and even if you change the sprite
-index of the object using this function, all instances that are
-currently in the room will remain as they were, and only instances
-created after calling the function will start with the new
-sprite.<br>
+<p>With this function you can set the sprite index of a specific object. This means that all instances of this object that are created <i>after the sprite_index has been changed</i> will be created with this new sprite_index, while instances that are already in the room may not be affected.<br><br>Please note that this is not an instance function!You can set the sprite index of individual instances using the <a href=
+"../instances/instance_variables/sprite_index.html"><tt>sprite_index</tt></a> variable and so have ten instances all with a different sprite to the object they are created from, and even if you change the sprite index of the object using this function, all instances that are currently in the room will remain as they were, and only instances created after calling the function will start with the new sprite.<br>
 <br></p>
 
 <p><br>
@@ -91,16 +78,7 @@ sprite.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">switch (room)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;case rm_start: object_set_sprite(obj_Player,
-spr_uniform); break;<br>
-&nbsp;&nbsp;&nbsp;case rm_middle: object_set_sprite(obj_Player,
-spr_swimsuit); break;<br>
-&nbsp;&nbsp;&nbsp;case rm_end: object_set_sprite(obj_Player,
-spr_casual); break;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-instance_create_layer(32, 32, "Instances", obj_Player);<br></p>
+<p class="code">switch (room)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case rm_start: object_set_sprite(obj_Player, spr_uniform); break;<br>&nbsp;&nbsp;&nbsp;case rm_middle: object_set_sprite(obj_Player, spr_swimsuit); break;<br>&nbsp;&nbsp;&nbsp;case rm_end: object_set_sprite(obj_Player, spr_casual); break;<br>&nbsp;&nbsp;&nbsp;}<br>instance_create_layer(32, 32, "Instances", obj_Player);<br></p>
 
 <p>The above code will set the object "obj_Player" sprite index to
 different values depending on the room that the instance running
@@ -111,8 +89,8 @@ the code is currently in. It then creates an instance of
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Objects</a></div>
+<div style="float:left">上一页：<a href=
+"index.html">物体</a></div>
 
 <div style="float:right">Next: <a href=
 "object_set_visible.html">object_set_visible</a></div>

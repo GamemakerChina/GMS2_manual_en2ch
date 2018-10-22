@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -92,14 +92,7 @@ slow) or its bounding box in general (false = fast).</td>
 
 <h3 class="studio">描述</h3>
 
-<p>Collision circle creates a circular zone of the radius given by
-the user around the points x1,y1 and then checks that zone for a
-collision with <b>any</b> instance of the object specified by the
-argument "obj". This check can be either precise or not, but for
-precise collisions to be enabled, the object or instance that you
-are checking for <i>must</i> also have precise collisions enabled
-for their sprite. If not, the default check is based on bounding
-boxes. The following image illustrates how this works:<br>
+<p>Collision circle creates a circular zone of the radius given by the user around the points x1,y1 and then checks that zone for a collision with <b>any</b> instance of the object specified by the argument "obj". This check can be either precise or not, but for precise collisions to be enabled, the object or instance that you are checking for <i>must</i> also have precise collisions enabled for their sprite. If not, the default check is based on bounding boxes. 下面的图片说明了工作原理。<br>
 <br>
 <img class="center" src=
 "images/collision_circle_illustration.png"></p>
@@ -124,12 +117,7 @@ considered to be in collision.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if collision_circle(x, y, 20, obj_Cursor, false,
-true)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;image_index = 1;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else image_index = 0;</p>
+<p class="code">if collision_circle(x, y, 20, obj_Cursor, false, true)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;image_index = 1;<br>&nbsp;&nbsp;&nbsp;}<br>else image_index = 0;</p>
 
 <p>The code above will check a circular are with a 20pixel radius
 for a collision with "obj_Cursor" and if there is one it will set

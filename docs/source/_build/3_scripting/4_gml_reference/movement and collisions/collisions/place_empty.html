@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -61,30 +61,15 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean.</p>
+<p><b>返回:</b> Boolean（布尔值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>You can use this function to check and see if the calling
-instance would collide with <i>any other instance</i> in your game.
-Now, it should be noted that for this to work, the instance running
-the code must have a valid collision mask (either for the sprite
-itself, or through the <a href=
-"../../instances/instance_variables/mask_index.html"><tt>mask_index</tt></a>)
-and it will only register collisions with those instances that also
-have a valid mask.<br>
-<br>
-The function itself basically works by taking the instance and
-testing for collisions when placed at the position specified by the
-x/y arguments. The collision checking can be either precise or
-based on the bounding box of the instance, depending on what kind
-of collision mask has been selected.<br>
-<br>
-Note that the given x/y coordinates will be floored to the nearest
-integer before the check is performed.<br>
+<p>You can use this function to check and see if the calling instance would collide with <i>any other instance</i> in your game. Now, it should be noted that for this to work, the instance running the code must have a valid collision mask (either for the sprite itself, or through the <a href=
+"../../instances/instance_variables/mask_index.html"><tt>mask_index</tt></a>) and it will only register collisions with those instances that also have a valid mask.<br><br>The function itself basically works by taking the instance and testing for collisions when placed at the position specified by the x/y arguments. The collision checking can be either precise or based on the bounding box of the instance, depending on what kind of collision mask has been selected.<br><br>Note that the given x/y coordinates will be floored to the nearest integer before the check is performed.<br>
 <br></p>
 
 <p><br>
@@ -92,11 +77,7 @@ integer before the check is performed.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if place_empty(mouse_x, mouse_y)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;x = mouse_x;<br>
-&nbsp;&nbsp;&nbsp;y = mouse_y;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if place_empty(mouse_x, mouse_y)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x = mouse_x;<br>&nbsp;&nbsp;&nbsp;y = mouse_y;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will check for a collision with any other
 instance if the calling instance were to be placed at the same

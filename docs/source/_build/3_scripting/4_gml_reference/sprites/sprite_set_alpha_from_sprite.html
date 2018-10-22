@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,13 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>ind</td>
-<td>The index of the sprite to change the transparency map of.</td>
+<td>将要被改变透明地图的精灵的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>spr</td>
-<td>The index of the sprite to take the transparency map data
-from.</td>
+<td>将被采集透明地图数据的精灵的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -62,9 +61,9 @@ from.</td>
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -72,28 +71,12 @@ from.</td>
 <h3>描述</h3>
 
 <blockquote>
-<p>This function uses the value/saturation of one sprite and
-multiplies it with the alpha of the target sprite. Ideally the
-sprite being used to generate the new alpha map should be
-greyscale, with the white areas having an equivalent alpha value of
-1 (opaque), the black areas being equivalent to alpha 0
-(transparent), and the grey areas being an alpha in between 0 and
-1. The sprite that you are setting the alpha of <i>cannot be a
-permanent resource</i>, nor can the sprite you use to set the
-alpha, as this will give an error. This means that you must create
-two completely new sprites "on the fly" in some way for the
-function to work correctly. This can be achieved by using surfaces,
-or by creating a sprite from the screen (the code example below
-shows how the effect can be achieved with surfaces).</p>
+<p>此函数使用一个精灵的值/饱和度并将它的阿尔法通道给与目标精灵。理想状态下，此函数产生的新的阿尔法地图（ALPHA MAP）将是以灰度为尺寸的。例如白色区域的阿尔法值相当于1（不透明），黑色区域的阿尔法值相当于0（不透明），灰色区域的阿尔法值介于0到1。你在函数中提供的两个精灵都<i>不能是永久的原始资源</i>，否则将会出错。. . 你可以从表面或屏幕上重新创建精灵，下面的代码将显示如何影响表面。</p>
 
-<div class="note"><b>NOTE:</b> This function is only useful for
-<b>bitmap</b> sprites and will not work with SWF or JSON (Spine)
-sprites.</div>
+<div class="note"><b>注意</b>此函数只对 <b>位图</b> 精灵有用，并且对SWF或JSON（骨骼）精灵不起作用。</div>
 
 <p><br>
-
-Below is an image that illustrates how this function works:
-
+下面的图片将会说明此函数如何工作。
 <img class="center" src="spr_alpha.png"></p>
 </blockquote>
 
@@ -103,68 +86,21 @@ Below is an image that illustrates how this function works:
 <h3>Extended 举例：</h3>
 
 <blockquote>
-<p>In this extended example we show how you can create a special
-effect sprite from two sprite resources. To start with we need to
-have a controller variable in the <b>Create Event</b> of the
-instance. This variable is to ensure that the sprite is only
-created once:</p>
+<p>下面的扩展代码展示了如何从两个精灵资源中创建一个特殊效果的精灵。开始我们需要一个在 <b>创建事件</b> 中的控制器变量。这个变量保证了这个精灵只会被创建一次。</p>
 </blockquote>
 
 <p class="code">spr_create = true;</p>
 
 <blockquote>
-<p>Once that is done we need to then go to the <b>Draw Event</b>
-and add in this code:</p>
+<p>完成之后我们需要使用 <b>绘制事件</b> 并且把它添加进代码中。</p>
 </blockquote>
 
-<p class="code">if spr_create<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;spr_create = false;<br>
-&nbsp;&nbsp;&nbsp;var surf, spr;<br>
-&nbsp;&nbsp;&nbsp;surf =
-surface_create(sprite_get_width(spr_Explosion_Alpha),
-sprite_get_height(spr_Explosion_Alpha));<br>
-&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>
-&nbsp;&nbsp;&nbsp;draw_clear_alpha(c_black, 0);<br>
-&nbsp;&nbsp;&nbsp;draw_sprite(spr_Gradient, 0, 0, 0);<br>
-&nbsp;&nbsp;&nbsp;sprite_index = sprite_create_from_surface(surf,
-0, 0, sprite_width, sprite_height, false, false,
-sprite_get_xoffset(spr_Gradient),
-sprite_get_xoffset(spr_Gradient));<br>
-&nbsp;&nbsp;&nbsp;draw_clear_alpha(c_black, 0);<br>
-&nbsp;&nbsp;&nbsp;draw_sprite(spr_Explosion_Alpha, 0,
-sprite_get_xoffset(spr_Gradient),
-sprite_get_xoffset(spr_Gradient));<br>
-&nbsp;&nbsp;&nbsp;spr = sprite_create_from_surface(surf, 0, 0,
-sprite_width, sprite_height, false, false,
-sprite_get_xoffset(spr_Gradient),
-sprite_get_xoffset(spr_Gradient));<br>
-&nbsp;&nbsp;&nbsp;surface_reset_target();<br>
-&nbsp;&nbsp;&nbsp;surface_free(surf);<br>
-&nbsp;&nbsp;&nbsp;sprite_set_alpha_from_sprite(sprite_index,
-spr);<br>
-&nbsp;&nbsp;&nbsp;sprite_delete(spr);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-draw_sprite(sprite_index, 0, x, y);<br></p>
+<p class="code">if spr_create<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;spr_create = false;<br>&nbsp;&nbsp;&nbsp;var surf, spr;<br>&nbsp;&nbsp;&nbsp;surf = surface_create(sprite_get_width(spr_Explosion_Alpha), sprite_get_height(spr_Explosion_Alpha));<br>&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>&nbsp;&nbsp;&nbsp;draw_clear_alpha(c_black, 0);<br>&nbsp;&nbsp;&nbsp;draw_sprite(spr_Gradient, 0, 0, 0);<br>&nbsp;&nbsp;&nbsp;sprite_index = sprite_create_from_surface(surf, 0, 0, sprite_width, sprite_height, false, false, sprite_get_xoffset(spr_Gradient), sprite_get_xoffset(spr_Gradient));<br>&nbsp;&nbsp;&nbsp;draw_clear_alpha(c_black, 0);<br>&nbsp;&nbsp;&nbsp;draw_sprite(spr_Explosion_Alpha, 0, sprite_get_xoffset(spr_Gradient), sprite_get_xoffset(spr_Gradient));<br>&nbsp;&nbsp;&nbsp;spr = sprite_create_from_surface(surf, 0, 0, sprite_width, sprite_height, false, false, sprite_get_xoffset(spr_Gradient), sprite_get_xoffset(spr_Gradient));<br>&nbsp;&nbsp;&nbsp;surface_reset_target();<br>&nbsp;&nbsp;&nbsp;surface_free(surf);<br>&nbsp;&nbsp;&nbsp;sprite_set_alpha_from_sprite(sprite_index, spr);<br>&nbsp;&nbsp;&nbsp;sprite_delete(spr);<br>&nbsp;&nbsp;&nbsp;}<br>draw_sprite(sprite_index, 0, x, y);<br></p>
 
 <blockquote>
-<p>The above code first checks to see if the control variable is
-true or not, and if it is, it then runs the code to set the sprite
-alpha, setting the variable to false to prevent the code from
-running more than once. In this case, it creates a surface the size
-of the alpha mask that we wish to use, then draws the sprite that
-is to have its alpha changed onto the surface and creates a new
-sprite from it, assigning it as the <tt>sprite_index</tt> of the
-object. The code then clears the surface and draws the alpha map
-sprite to it and creates another new sprite, storing its index in a
-local variable. Finally, the new sprite assigned to the object gets
-its alpha set from this temporary sprite, the surface is freed and
-the temporary sprite is removed.</p>
+<p>上述代码首先检查控制变量是否为真。如果是的话，它就设置精灵的阿尔法，然后将变量设为false来防止代码被多次执行。之后，它将创建与阿尔法遮罩相同尺寸的表面。然后绘制一个在表面上改变阿尔法值的精灵，并从上面创建一个新精灵并将它的索引赋给 <tt>sprite_index</tt> 。然后此代码将清除表面，然后绘制一个阿尔法地图精灵，并创建另一个精灵，并将后者的索引存储进本地变量。最后，被赋予新精灵的物体将从一个合适的精灵上得到阿尔法，然后移除表面和合适的精灵。</p>
 
-<p>There is one final thing to do here, and that is remove the
-sprite that has been created for the object from memory when not in
-use. This would either be done in the <b>Destroy Event</b> or the
-<b>Room End Event</b> like this:</p>
+<p>还有一件事，不再使用精灵时请将它们从存储中移除。. 这在 <b>毁灭事件（Destroy Event）</b> 或 <b>房间终止事件（Room End Event）</b> 将会是这样的：</p>
 </blockquote>
 
 <p class="code">sprite_delete(sprite_index);<br></p>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,21 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can remove any number of sprite textures
-- and the texture pages they are assigned to - from video memory
-(their texture pages will be reloaded on next use). You supply an
-array of sprite asset indices and they will be removed from memory
-when the function is called. It is worth noting that <i>by
-default</i> on the Windows platforms (YYC and standard) all
-textures will always be loaded into memory on start-up. If you are
-making a cross platform game, then you can leave this function in
-your code for the Windows target as it will not give any error and
-just not do anything. However you can also force the Windows target
-to not load any textures on startup and so use the flush and
-prefetch functions as you would on all other platforms (the setting
-can be found in the <a href=
-"../../../../2_interface/3_settings/game_options/options_windows.html">
-Windows Options</a> window).</p>
+<p>使用此函数你可以移除任意数量的精灵纹理，和它们所在的纹理页——从显存中移除。纹理页将在下次使用时被加载。你需要提供精灵资源的索引数组，然后它们将在调用此函数时被从存储中移除。 <i>默认情况下</i> ，此函数在windows平台（YYC和标准）没什么用，因为所有纹理将在一开始就被加载进存储中。. 如果你在制作跨平台游戏，你在windows平台中不管此函数，它将不会起任何作用，也不报任何错。但你可以强迫windows平台在一开始不加载任何文件，那么你就可像在其它平台上那样在windows平台上使用清除和预加载函数。此设置可以在 <a href=
+"../../../../2_interface/3_settings/game_options/options_windows.html"> Windows Options</a> 窗口中找到。</p>
 </blockquote>
 
 <p><br>
@@ -86,7 +73,7 @@ Windows Options</a> window).</p>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -99,9 +86,7 @@ spr_a[2] = spr_Player_Aura3;<br>
 spr_a[3] = spr_Player_Aura4;<br>
 sprite_flush_multi(spr_a);<br></p>
 
-<blockquote>The above code creates an array where each element
-holds a sprite index. This array is then used to clear those sprite
-textures from memory.</blockquote>
+<blockquote>上述函数将会创建一个数组，数组中每个元素都存储一个精灵索引。此数组将会被用来从存储中清除那些精灵纹理。</blockquote>
 
 <p><br>
 </p>

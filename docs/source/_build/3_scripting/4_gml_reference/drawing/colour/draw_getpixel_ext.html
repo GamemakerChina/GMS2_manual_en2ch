@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -50,12 +50,12 @@ displayed at a given coordinate.</h2>
 
 <tr>
 <td>x</td>
-<td>The x coordinate of the pixel to check</td>
+<td>表面上的x坐标，用于获取对应的像素。</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y coordinate of the pixel to check</td>
+<td>表面上的y坐标，用于获取对应的像素。</td>
 </tr>
 </table>
 </div>
@@ -63,20 +63,14 @@ displayed at a given coordinate.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can get the full <b>abgr 32bit</b> value
-of any pixel that is being drawn to the current render target. This
-means that the results will depend on the event in which the
-function is called, and also on the target surface being used.<br>
-<br>
-<i><b>NOTE:</b> This function is slow and so should only be used
-when absolutely necessary.</i><br>
+<p>With this function you can get the full <b>abgr 32bit</b> value of any pixel that is being drawn to the current render target. This means that the results will depend on the event in which the function is called, and also on the target surface being used.<br><br><i><b>注：</b> 这个函数效率极低，绝对必要时才用它。</i><br>
 <br></p>
 
 <p><br>
@@ -90,16 +84,13 @@ blue = (col &gt;&gt; 16) &amp; 255;<br>
 green = (col &gt;&gt; 8) &amp; 255;<br>
 red = col &amp; 255;<br></p>
 
-<p>The above code will get the 32bit colour value at the position
-of the mouse and then split it into its component values, storing
-them in variables.</p>
+<p>上述代码将获取鼠标位置的32位真颜色，提取它的分量值，储存到不同的变量上。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Colour And
-Blending</a></div>
+<div style="float:left">上一页：<a href="index.html">颜色与混合</a></div>
 
 <div style="float:right">Next: <a href=
 "draw_get_alpha.html">draw_get_alpha</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -41,7 +41,7 @@ number.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
@@ -57,18 +57,7 @@ value, where Sunday is 0 and Saturday is 6.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var day;<br>
-switch(current_weekday)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;case 0: day = "Sunday"; break;<br>
-&nbsp;&nbsp;&nbsp;case 1: day = "Monday"; break;<br>
-&nbsp;&nbsp;&nbsp;case 2: day = "Tuesday"; break;<br>
-&nbsp;&nbsp;&nbsp;case 3: day = "Wednesday"; break;<br>
-&nbsp;&nbsp;&nbsp;case 4: day = "Thursday"; break;<br>
-&nbsp;&nbsp;&nbsp;case 5: day = "Friday"; break;<br>
-&nbsp;&nbsp;&nbsp;case 6: day = "Saturday"; break;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-draw_text(32, 32, "Today is " + day +".");<br></p>
+<p class="code">var day;<br>switch(current_weekday)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case 0: day = "Sunday"; break;<br>&nbsp;&nbsp;&nbsp;case 1: day = "Monday"; break;<br>&nbsp;&nbsp;&nbsp;case 2: day = "Tuesday"; break;<br>&nbsp;&nbsp;&nbsp;case 3: day = "Wednesday"; break;<br>&nbsp;&nbsp;&nbsp;case 4: day = "Thursday"; break;<br>&nbsp;&nbsp;&nbsp;case 5: day = "Friday"; break;<br>&nbsp;&nbsp;&nbsp;case 6: day = "Saturday"; break;<br>&nbsp;&nbsp;&nbsp;}<br>draw_text(32, 32, "Today is " + day +".");<br></p>
 
 <p>The above code uses the <tt>current_weekday</tt> value to set a
 variable with the correct day in text, then draws that for the user

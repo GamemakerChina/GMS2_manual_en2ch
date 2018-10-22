@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -82,7 +82,7 @@ details.</td>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -125,13 +125,7 @@ request.</p>
 <p>You can send a friends invite in the following way:</p>
 </blockquote>
 
-<p class="code">if mouse_check_button_pressed(mb_left)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;map = ds_map_create();<br>
-&nbsp;&nbsp;&nbsp;facebook_send_invite("Catch The Haggis!", "Come
-and play Catch The Haggis with me...",
-"http://MacSweeneygames.com/Clown.jpg", "", map);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if mouse_check_button_pressed(mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;map = ds_map_create();<br>&nbsp;&nbsp;&nbsp;facebook_send_invite("Catch The Haggis!", "Come and play Catch The Haggis with me...", "http://MacSweeneygames.com/Clown.jpg", "", map);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code will display an "apprequest" dialogue where you
@@ -141,17 +135,7 @@ invited. This then needs to be polled in the <b>Step</b> event of
 an instance to receive the results, like this:</p>
 </blockquote>
 
-<p class="code">if ds_map_exists(map, "to")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var list = ds_map_find_value(map, "to");<br>
-&nbsp;&nbsp;&nbsp;var size = ds_list_size(list);<br>
-&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; size; i++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fb_uid[i] =
-ds_list_find_value(list, i);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;ds_map_clear(map);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if ds_map_exists(map, "to")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var list = ds_map_find_value(map, "to");<br>&nbsp;&nbsp;&nbsp;var size = ds_list_size(list);<br>&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; size; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fb_uid[i] = ds_list_find_value(list, i);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;ds_map_clear(map);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>This code checks the ds_map for the key "to" and when it's

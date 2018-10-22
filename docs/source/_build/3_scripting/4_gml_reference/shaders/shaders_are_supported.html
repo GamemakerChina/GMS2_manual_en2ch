@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -44,7 +44,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">布尔值</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -60,8 +60,7 @@ defined, then the function will <i>always return
 <tt>false</tt></i>, regardless of whether the device supports
 shaders or not.</p>
 
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 </blockquote>
 
 <p><br>
@@ -69,15 +68,7 @@ available with the Trial Licence of the product.</div>
 
 <h3>举例：</h3>
 
-<p class="code">global.GFX = false;<br>
-if shaders_are_supported()<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if shader_is_compiled(sh_glass) &amp;&amp;
-shader_is_compiled(sh_warp)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.GFX = true;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">global.GFX = false;<br>if shaders_are_supported()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if shader_is_compiled(sh_glass) &amp;&amp; shader_is_compiled(sh_warp)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.GFX = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code will set a global variable to <tt>false</tt>, and

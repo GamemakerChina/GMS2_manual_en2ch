@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>cloud_file_save</title>
+<title>cloud_file_save 云端文件保存</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
 type="text/css">
@@ -29,7 +29,7 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>cloud_file_save</h2>
+<h2>cloud_file_save 云端文件保存</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -38,17 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will commit a file to the chosen cloud service for
-storage. The function will return a unique <b>id</b> value that
-should then be used in the appropriate asynchronous event to
-identify the ds_map that is returned as a "call back" from the
-cloud service. The file should contain <i>all</i> the information
-that you need to save for your game as you can only store one
-single "data blob" to the cloud, and running this function again
-will overwrite any previously stored values (as will using the
-<a href="cloud_string_save.html"><tt>cloud_string_save</tt></a>
-function). The description should be a short string of information
-that describes the save, eg: "Level2, Stage2".</p>
+<p>这个函数将提交一个文件到所选云服务用于存储。该函数将返回惟一的<b>id</b> 值，那么应该使用适当的异步事件识别 ds_map 返回作为云服务的“回调（call back）”。The file should contain <i>all</i> the information that you need to save for your game as you can only store one single "data blob" to the cloud, and running this function again will overwrite any previously stored values (as will using the <a href="cloud_string_save.html"><tt>cloud_string_save</tt></a> function). The description should be a short string of information that describes the save, eg: "Level2, Stage2".</p>
 
 <p>For further information on the returned asynchronous data,
 please see the function <a href=
@@ -71,12 +61,12 @@ please see the function <a href=
 
 <tr>
 <td>string</td>
-<td>The file to be uploaded (as a string).</td>
+<td>将被上传的文件(同i符串)。</td>
 </tr>
 
 <tr class="alt">
 <td>描述</td>
-<td>A brief description of the data being stored.</td>
+<td>所存储数据的简要说明。</td>
 </tr>
 </table>
 </blockquote>
@@ -93,22 +83,10 @@ please see the function <a href=
 
 <h3>举例：</h3>
 
-<p class="code">var t_str = "";<br>
-for (var i = 0; i &lt; 10; i++;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;t_str += string(global.Highscore[i]) + "|"<br>
-&nbsp;&nbsp;&nbsp;}<br>
-var file = file_text_open_write("Highscores.txt");<br>
-file_text_write_string(file, t_str);<br>
-file_text_close(file);<br>
-save_check = cloud_file_save("Highscores.txt", "Current
-Highscores");<br></p>
+<p class="code">var t_str = "";<br>for (var i = 0; i &lt; 10; i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;t_str += string(global.Highscore[i]) + "|"<br>&nbsp;&nbsp;&nbsp;}<br>var file = file_text_open_write("Highscores.txt");<br>file_text_write_string(file, t_str);<br>file_text_close(file);<br>save_check = cloud_file_save("Highscores.txt", "Current Highscores");<br></p>
 
 <blockquote>
-<p>The above code creates a string from the values stored in the
-global array "Highscores" and then writes this string to a file for
-local storage. The file is then sent to the cloud service for
-storage.</p>
+<p>以上的代码创建了一个字符串的值存储在全局数组“Highscores”中,然后将该字符串写入本地存储。该文件之后被提交到云端服务器中存储。</p>
 </blockquote>
 
 <p><br>
@@ -121,7 +99,7 @@ storage.</p>
 <div style="float:left">Back: <a href="index.html">Asynchronous
 Functions</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "push_local_notification.html">push_local_notification</a></div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">ds_grid_add</h1>
 
-<h2 class="studio">Adds a value to a cell in a grid.</h2>
+<h2 class="studio">向栅格中的一个单元格叠加一个值</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,22 +49,22 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the grid.</td>
+<td>栅格的索引</td>
 </tr>
 
 <tr class="alt">
 <td>x</td>
-<td>The x position of the cell in the grid.</td>
+<td>栅格内单元格的x位置</td>
 </tr>
 
 <tr>
 <td>y</td>
-<td>The y position of the cell in the grid.</td>
+<td>栅格内单元格的y位置</td>
 </tr>
 
 <tr class="alt">
 <td>val</td>
-<td>The value to add to the cell.</td>
+<td>待叠加到单元格的值</td>
 </tr>
 </table>
 </div>
@@ -72,18 +72,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to add a given value (real or string)
-to the value of the given cell within the grid. The value to be
-added must be the same type as that held within the grid cell, ie:
-you cannot add a string to a real or vice-versa, and for strings
-this corresponds to concatenation.<br>
+<p>这个函数可以被用于向一个栅格的被给定单元格的值叠加一个给定的值（实数或字符串）这个待叠加的值必须和栅格内单元格所承载的值是同一类型，比如你不能把一个字符串叠加给一个实数，反之亦然，并且对于字符串来说，这相当于串接。.<br>
 <br></p>
 
 <p><br>
@@ -93,17 +89,15 @@ this corresponds to concatenation.<br>
 
 <p class="code">ds_grid_add(grid, 5, 5, 6);</p>
 
-<p>This would add 6 to the given cell within the ds_grid referenced
-by the variable "grid".</p>
+<p>这将会向索引为变量"grid"的栅格结构中被给定的单元格叠加6.</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">DS
-Grids</a></div>
+<div style="float:left">上一页： <a href="index.html">数据结构</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页： <a href=
 "ds_grid_add_region.html">ds_grid_add_region</a></div>
 </div>
 

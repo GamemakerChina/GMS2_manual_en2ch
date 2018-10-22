@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -89,42 +89,14 @@ particle's motion (true) or not (false).</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function is used to determine the orientation of the
-particle sprite when it is created and can also be used to make the
-particle orientation increase or decrease over its lifetime. The
-minimum and maximum orientation values default at 0 but these
-values can be changed to randomise the orientation following the
-standard <i>GameMaker Studio 2</i> directions of 0 degrees being
-right, 90 degrees being up, 180 degrees being left and 270 degrees
-being down. If you set them to the same value the particles will
-all be created with the same orientation.<br>
-<br>
-You can also set an increment value which will add (if a positive
-number) or subtract (if a negative number) an amount of degrees to
-the orientation over its lifetime. This value can be a minimum of
-(+/-) 0.01.<br>
-<br>
-You can set the "wiggle" factor too, the same as other particle
-functions. This is a value that will be added or subtracted
-randomly to the orientation each step of the particles lifetime.
-Obviously larger values are more pronounced than smaller ones, and
-this value can even be a negative with the maximum range being
-between -20 and 20.<br>
-<br>
-Finally, you can choose to have the orientation relative or not,
-which means that while the particle has a direction (and speed) the
-particle sprite will be orientated around that vector. Bear in mind
-that if you have the particle speed set to reduce and it reaches 0,
-the lack of speed sets the direction to the default value of 0° and
-so a relative orientation will cause the particle sprite to "jump"
-to a different angle.<br>
+<p>This function is used to determine the orientation of the particle sprite when it is created and can also be used to make the particle orientation increase or decrease over its lifetime. The minimum and maximum orientation values default at 0 but these values can be changed to randomise the orientation following the standard <i>GameMaker Studio 2</i> directions of 0 degrees being right, 90 degrees being up, 180 degrees being left and 270 degrees being down. If you set them to the same value the particles will all be created with the same orientation.<br><br>You can also set an increment value which will add (if a positive number) or subtract (if a negative number) an amount of degrees to the orientation over its lifetime. This value can be a minimum of (+/-) 0.01.<br><br>You can set the "wiggle" factor too, the same as other particle functions. This is a value that will be added or subtracted randomly to the orientation each step of the particles lifetime. Obviously larger values are more pronounced than smaller ones, and this value can even be a negative with the maximum range being between -20 and 20.<br><br>Finally, you can choose to have the orientation relative or not, which means that while the particle has a direction (and speed) the particle sprite will be orientated around that vector. Bear in mind that if you have the particle speed set to reduce and it reaches 0, the lack of speed sets the direction to the default value of 0° and so a relative orientation will cause the particle sprite to "jump" to a different angle.<br>
 <br></p>
 
 <p><br>

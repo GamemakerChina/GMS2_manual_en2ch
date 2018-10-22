@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -69,7 +69,7 @@ set (a real number).</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -89,29 +89,7 @@ further details on how this can be used.<br>
 
 <h3 class="studio">Extended 举例：</h3>
 
-<p>Since the average stat function can be complex to understand, we
-will illustrate its use with the following example. Consider the
-case where you'd like to track an average statistic, such as
-"Points earned per hour". One approach would be to have two stats:
-an <i>integer</i> stat, "TotalPoints", and a <i>float</i> stat
-"TotalPlayTimeHours", and then divide the total points by the total
-time to get the "Points per Hour" value.<br>
-<br>
-However, once the player has accumulated a significant amount of
-playtime, the calculated average will change extremely slowly, and
-the more the user plays the game, the less responsive that average
-will be. If the user has spent 100 hours playing the game, the
-calculated average will "lag" by about 50 hours of that, and if
-they increase their skill, they will not see the increase in
-"Points Per Hour" that they expect. To get around that we can use a
-"sliding window" to only calculate the "Points per hour" for the
-last 10 hours played.<br>
-<br>
-So, to use this function, we would need to create a Steam stat (in
-the control panel for the game on the Workshop) called
-"AvgPointsPerHour" and set its <b>Window</b> property to 10. Now in
-your game you would have to add some global variables into an
-instance at the start:</p>
+<p>Since the average stat function can be complex to understand, we will illustrate its use with the following example. Consider the case where you'd like to track an average statistic, such as "Points earned per hour". One approach would be to have two stats: an <i>integer</i> stat, "TotalPoints", and a <i>float</i> stat "TotalPlayTimeHours", and then divide the total points by the total time to get the "Points per Hour" value.<br><br>However, once the player has accumulated a significant amount of playtime, the calculated average will change extremely slowly, and the more the user plays the game, the less responsive that average will be. If the user has spent 100 hours playing the game, the calculated average will "lag" by about 50 hours of that, and if they increase their skill, they will not see the increase in "Points Per Hour" that they expect. To get around that we can use a "sliding window" to only calculate the "Points per hour" for the last 10 hours played.<br><br>So, to use this function, we would need to create a Steam stat (in the control panel for the game on the Workshop) called "AvgPointsPerHour" and set its <b>Window</b> property to 10. Now in your game you would have to add some global variables into an instance at the start:</p>
 
 <p class="code">global.Points = 0;<br>
 global.Time = 0;<br></p>

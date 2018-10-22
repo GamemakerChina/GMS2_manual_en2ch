@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -63,35 +63,17 @@ particle system should be automatically drawn or not.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to switch off the drawing of a
-particle system so that any updates done to the system (automatic
-or otherwise) will not be seen. This is a purely visual option and
-when set to <tt>false</tt> you will not be able to see the
-particles as they are not drawn, but they still exists and are
-changing position, colour etc... as they would normally. When
-automatic drawing is off, you can <i>explicitly</i> order
-<i>GameMaker Studio 2</i> to draw the current state of the particle
-system using the function <a href=
-"part_system_drawit.html"><tt>part_system_drawit</tt></a>, and if
-you set this function to <tt>true</tt> again you can switch
-automatic drawing back on.<br>
-<br>
-One thing to note is that if you are using the simple effects
-created by the functions <a href=
-"../simple%20effects/effect_create_above.html"><tt>effect_create_above</tt></a>
-or <a href=
-"../simple%20effects/effect_create_below.html"><tt>effect_create_below</tt></a>
-then you can use the values of 0 (for below effects) or 1 (for
-above effects) as the particle system index and so toggle the
-automatic draw for these too (this will also work to toggle drawing
-for the DnD™ particle effects).<br>
+<p>This function can be used to switch off the drawing of a particle system so that any updates done to the system (automatic or otherwise) will not be seen. This is a purely visual option and when set to <tt>false</tt> you will not be able to see the particles as they are not drawn, but they still exists and are changing position, colour etc... as they would normally. When automatic drawing is off, you can <i>explicitly</i> order <i>GameMaker Studio 2</i> to draw the current state of the particle system using the function <a href=
+"part_system_drawit.html"><tt>part_system_drawit</tt></a>, and if you set this function to <tt>true</tt> again you can switch automatic drawing back on.<br><br>One thing to note is that if you are using the simple effects created by the functions <a href=
+"../simple%20effects/effect_create_above.html"><tt>effect_create_above</tt></a> or <a href=
+"../simple%20effects/effect_create_below.html"><tt>effect_create_below</tt></a> then you can use the values of 0 (for below effects) or 1 (for above effects) as the particle system index and so toggle the automatic draw for these too (this will also work to toggle drawing for the DnD™ particle effects).<br>
 <br></p>
 
 <p><br>

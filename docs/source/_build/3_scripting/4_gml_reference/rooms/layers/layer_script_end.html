@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -87,7 +87,7 @@ as a string)</td>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -104,37 +104,14 @@ only run on the specific event that we require it to work on - in
 this case, only on the main draw event:</p>
 </blockquote>
 
-<p class="code">/// scr_LayerShader_Start();<br>
-if event_type == ev_draw<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if event_number == 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colour_to_find =
-shader_get_uniform(sShaderDemo5, "f_Colour1");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colour_to_set =
-shader_get_uniform(sShaderDemo5, "f_Colour2");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shader_set(s_ColourChanger);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shader_set_uniform_f(colour_to_find,
-1,1,1 );<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shader_set_uniform_f(colour_to_set,
-1,0,0 );<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">/// scr_LayerShader_Start();<br>if event_type == ev_draw<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if event_number == 0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colour_to_find = shader_get_uniform(sShaderDemo5, "f_Colour1");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colour_to_set = shader_get_uniform(sShaderDemo5, "f_Colour2");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shader_set(s_ColourChanger);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shader_set_uniform_f(colour_to_find, 1,1,1 );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shader_set_uniform_f(colour_to_set, 1,0,0 );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>We would then have a companion script to reset the shader after
 all the drawing is done:</p>
 </blockquote>
 
-<p class="code">/// scr_LayerShader_End();<br>
-if event_type == ev_draw<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if event_number == 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shader_reset();<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">/// scr_LayerShader_End();<br>if event_type == ev_draw<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if event_number == 0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shader_reset();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>Now that we have defined our scripts for setting the shader, we

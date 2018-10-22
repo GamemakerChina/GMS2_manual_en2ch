@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -86,24 +86,14 @@ layer name as a string)</td>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">var a = layer_get_all_elements(layer);<br>
-asset_layer = layer_create(-100);<br>
-for (var i = 0; i Alt; array_length_1d(a); i++;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if layer_get_element_type(a[i]) ==
-layerelementtype_sprite<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer_element_move(a[i],
-asset_layer)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var a = layer_get_all_elements(layer);<br>asset_layer = layer_create(-100);<br>for (var i = 0; i Alt; array_length_1d(a); i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if layer_get_element_type(a[i]) == layerelementtype_sprite<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer_element_move(a[i], asset_layer)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>The above code gets the elements on the layer that the
 instance running the code is assigned to, then checks them to see

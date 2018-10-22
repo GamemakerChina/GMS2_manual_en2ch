@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,17 +48,17 @@ if (window.name != "content")
 
 <tr>
 <td>surface_id</td>
-<td>The ID of the surface to change.</td>
+<td>即将发生变化的表面层的ID。</td>
 </tr>
 
 <tr class="alt">
 <td>w</td>
-<td>The width of the new surface.</td>
+<td>新表面层的宽度。</td>
 </tr>
 
 <tr>
 <td>h</td>
-<td>The height of the new surface.</td>
+<td>新的表面层的高度。</td>
 </tr>
 </table>
 </blockquote>
@@ -68,7 +68,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -76,25 +76,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will resize a surface to the given dimensions (in
-pixels). The surface_id is that of a surface you have created
-previously, or the <a href=
-"the%20application%20surface.html"><tt>application_suface</tt></a>,
-and the function will resize that surface. Note that this will
-neither crop nor stretch the contents of the surface, but rather it
-destroys the current surface and recreates it with the same handle
-(surface_id) with the new dimensions, meaning that it will need to
-be cleared and drawn to again (unless it is the
-<tt>application_surface</tt> in which case <i>GameMaker Studio
-2</i> will do this automatically).</p>
+<p>这个函数将重置表面的大小为给定的长宽值（像素）。这个 surface_id 是之前创建好的表面层，或者是<a href=
+"the%20application%20surface.html"><tt>application_suface</tt></a>，这个函数将重置表面层的大小。Note that this will neither crop nor stretch the contents of the surface, but rather it destroys the current surface and recreates it with the same handle (surface_id) with the new dimensions, meaning that it will need to be cleared and drawn to again (unless it is the <tt>application_surface</tt> in which case <i>GameMaker Studio 2</i> will do this automatically).</p>
 
-<div class="note"><b>NOTE:</b> If you are resizing the application
-surface, these changes will not be registered until the start of
-the next draw frame, meaning that calling the <a href=
-"surface_get_width.html"><tt>surface_get_width()</tt></a> or
-<a href="surface_get_height.html"><tt>surface_get_height()</tt></a>
-functions in the same event or step will return the previous
-values.</div>
+<div class="note"><b>注：</b>如果你重置应用表面层的大小，它不会马上发生改变，直至下一个绘制帧，这意味着在同一个事件或者步事件中使用 <a href=
+"surface_get_width.html"><tt>surface_get_width()</tt></a> 或者 <a href="surface_get_height.html"><tt>surface_get_height()</tt></a> 函数将返回之前的值。</div>
 </blockquote>
 
 <p><br>
@@ -102,18 +88,10 @@ values.</div>
 
 <h3>举例：</h3>
 
-<p class="code">if view_wport[0] !=
-surface_get_width(application_surface) || view_hport[0] !=
-surface_get_height(application_surface)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surface_resize(application_surface,
-view_wport[0],view_hport[0]);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if view_wport[0] != surface_get_width(application_surface) || view_hport[0] != surface_get_height(application_surface)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surface_resize(application_surface, view_wport[0],view_hport[0]);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check the view port size against that of the
-surface "aplication_surface" and if it is different, the surface is
-re-sized.</p>
+<p>上述代码将检测视野输出大小是否与“应用表面”的一致，如果不同，将重置表面层的大小。</p>
 </blockquote>
 
 <p><br>
@@ -123,10 +101,10 @@ re-sized.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "surface_set_target.html">surface_set_target</a></div>
 </div>
 </div>

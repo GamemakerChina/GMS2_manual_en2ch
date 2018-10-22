@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,24 +38,15 @@ if (window.name != "content")
 <h3 class="studio">描述</h3>
 
 <blockquote>
-<p>With this function you can get the gamer picture for a given
-user ID pointer. The function works asynchronously, and will
-trigger an <a href=
-"../../../2_interface/1_editors/events/async_events.html">Image
-Loaded</a> asynchronous event to inform you that the function is
-finished (like with HTML5/URL calls to <a href=
-"../sprites/sprite_add.html"><tt>sprite_add()</tt></a>). The
-Asynchronous Image Loaded event will have a DS map stored in the
-built in variable <tt>async_load</tt>. The map contains the
-following information:</p>
+<p>With this function you can get the gamer picture for a given user ID pointer. The function works asynchronously, and will trigger an <a href=
+"../../../2_interface/1_editors/events/async_events.html">Image Loaded</a> asynchronous event to inform you that the function is finished (like with HTML5/URL calls to <a href=
+"../sprites/sprite_add.html"><tt>sprite_add()</tt></a>). The Asynchronous Image Loaded event will have a DS map stored in the built in variable <tt>async_load</tt>. 该映射包含以下信息：</p>
 
 <ul>
 <li>"<b>filename</b>": The complete path to the file you
 requested.</li>
 
-<li>"<b>id</b>": The ID of the resource that you have loaded. This
-will be the same as the variable that you have assigned the
-resource to.</li>
+<li>"<b>id</b>": The ID of the resource that you have loaded. 这与你为其分配资源的变量相同。</li>
 
 <li>"<b>status</b>": Returns a value of less than 0 for an
 error.</li>

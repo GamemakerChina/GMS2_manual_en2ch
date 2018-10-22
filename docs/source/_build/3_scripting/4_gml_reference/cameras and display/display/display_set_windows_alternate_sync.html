@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -28,8 +28,7 @@ if (window.name != "content")
 
 <h1 class="studio">display_set_windows_alternate_sync</h1>
 
-<h2 class="studio">Set the vertical synchronisation method (Windows
-Only).</h2>
+<h2 class="studio">设置垂直同步的方法（只适用Windows）。</h2>
 
 <h3 class="studio"><b>语法：</b>
 </h3>
@@ -47,9 +46,8 @@ Only).</h2>
 </tr>
 
 <tr>
-<td>flag</td>
-<td>Use an alternative method (<tt>true</tt>) or the regular method
-(<tt>false</tt>).</td>
+<td>标识</td>
+<td>使用替代的方法（<tt>true</tt>）或者常规的方法（<tt>false</tt>）。</td>
 </tr>
 </table>
 </div>
@@ -57,7 +55,7 @@ Only).</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b>N/A</p>
+<p><b>返回：</b>N/A</p>
 
 <p><br>
 </p>
@@ -65,16 +63,7 @@ Only).</h2>
 <h3 class="studio"><b>描述</b>
 </h3>
 
-<p>This Windows only function can be used to change the vertical
-synchronisation method at runtime. When set to <tt>true</tt> (and
-you have vSync active) an alternative method will be used to that
-which is the default, with the aim to reduce any possible visual
-lag or stuttering of your game. Note that this can also be set in
-the Global Game Settings and that it is <i>only applicable Windows
-7 and above</i> - it will just use the default method if you have
-this option ticked and run on XP or Vista - and that it does
-<i>not</i> switch it on or off, for that you would use the function
-<a href="display_reset.html"><tt>display_reset()</tt></a>.<br>
+<p>这个只用于 Windows 的函数可以用于在运行时改变垂直同步方法。当设置为 <tt>true</tt> （并且激活了垂直同步）时，替代方法将被使用，取代默认的方法，以减少任何可能的视觉延迟。注意，你也可以在全局游戏设定中设置并且<i>只适用 Windows 7 或更高的系统</i> - XP 或者 Vista 上，勾上这个选项也将使用默认的方法 - 并且它 <i>不会</i> 开启或关闭垂直同步，因为那个你将需要使用到函数 <a href="display_reset.html"><tt>display_reset()</tt></a>。<br>
 <br></p>
 
 <p><br>
@@ -82,23 +71,17 @@ this option ticked and run on XP or Vista - and that it does
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if !display_get_windows_alternate_sync()<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;display_set_windows_alternate_sync(true);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !display_get_windows_alternate_sync()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;display_set_windows_alternate_sync(true);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will check to see if the v-sync method is using
-the alternative or the default, and if it's the default it will
-switch to the alternative instead.</p>
+<p>上述代码检测是否使用于替代的垂直同步方法，如果是默认的则切换为替代的方法。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Windows and
-Views</a></div>
+<div style="float:left">返回: <a href="index.html">Windows and Views</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "display_get_windows_vertex_buffer_method.html">display_get_windows_vertex_buffer_method</a></div>
 </div>
 

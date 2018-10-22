@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -60,27 +60,15 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will "mark" (or "flag") a given position within a
-previously created ds_list as holding a previously created ds_map.
-This functionality is designed only for use when encoding JSON
-strings (which you can create using <a href=
-"../../file%20handling/json_encode.html"><tt>json_encode</tt></a>)
-and the complimentary <a href="../ds%20maps/index.html">ds map
-functions</a>.<br>
-<br>
-<i><b>NOTE:</b> Once a ds_list has had a value within it flagged as
-another list or map, destroying the list will also destroy the
-marked lists and maps too. This means that you do not have to
-manually go through the list contents and destroy the marked data
-structures individually before destroying the "parent"
-list.</i><br>
+<p>This function will "mark" (or "flag") a given position within a previously created ds_list as holding a previously created ds_map. This functionality is designed only for use when encoding JSON strings (which you can create using <a href=
+"../../file%20handling/json_encode.html"><tt>json_encode</tt></a>) and the complimentary <a href="../ds%20maps/index.html">ds map functions</a>.<br><br><i><b>NOTE:</b> Once a ds_list has had a value within it flagged as another list or map, destroying the list will also destroy the marked lists and maps too. This means that you do not have to manually go through the list contents and destroy the marked data structures individually before destroying the "parent" list.</i><br>
 <br></p>
 
 <p><br>

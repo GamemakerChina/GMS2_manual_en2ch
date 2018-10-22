@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -28,8 +28,7 @@ if (window.name != "content")
 
 <h1 class="studio">display_get_windows_alternate_sync</h1>
 
-<h2 class="studio">Get the current vertical synchronisation method
-(Windows Only).</h2>
+<h2 class="studio">获取当前的垂直同步方法（只适用于windows）。</h2>
 
 <h3 class="studio"><b>语法：</b>
 </h3>
@@ -39,7 +38,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
@@ -47,16 +46,9 @@ if (window.name != "content")
 <h3 class="studio"><b>描述</b>
 </h3>
 
-<p>This Windows only function can be used to get the current
-vertical synchronisation method at runtime. It will return
-<tt>true</tt> if you have active the alternative method v-sync
-method, or <tt>false</tt> if you are using the regular v-sync
-option. Note that this does not report if v-sync is active or not
-(you can switch function <a href=
-"display_reset.html"><tt>display_reset()</tt></a>), and that you
-can set the v-sync method from the Global Game Settings or using
-the function <a href=
-"display_set_windows_alternate_sync"><tt>display_set_windows_alternate_sync()</tt></a>.<br>
+<p>这个只用于 Windows 的函数在运行时获取当前垂直同步的方法。如果你激活了垂直同步的替代方法（断水注：并非返回垂直同步是否激活，而是指替代方法），它将返回<tt>true</tt> ，或者如果你使用常规的垂直同步方式，它则返回<tt>false</tt> 。注意这个函数并不是报告垂直同步是否激活（这个通过切换函数 <a href=
+"display_reset.html"><tt>display_reset()</tt></a>实现），你可以在全局游戏设定中或者或者使用函数 <a href=
+"display_set_windows_alternate_sync"><tt>display_set_windows_alternate_sync()</tt></a>来设置垂直同步的方法。<br>
 
 <br></p>
 
@@ -65,21 +57,15 @@ the function <a href=
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if !display_get_windows_alternate_sync()<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;display_set_windows_alternate_sync(true);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !display_get_windows_alternate_sync()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;display_set_windows_alternate_sync(true);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will check to see if the v-sync method is using
-the alternative or the default, and if it's the default it will
-switch to the alternative instead.</p>
+<p>上述代码检测是否使用于替代的垂直同步方法，如果是默认的则切换为替代的方法。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Windows and
-Views</a></div>
+<div style="float:left">返回: <a href="index.html">Windows and Views</a></div>
 
 <div style="float:right">Next: <a href=
 "display_mouse_get_x.html">display_mouse_get_x</a></div>

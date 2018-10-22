@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">window_view_mouse_get_x</h1>
 
-<h2 class="studio">Returns the x coordinate of the mouse in the
-window with respect to the given view.</h2>
+<h2 class="studio">返回相对于给定视野鼠标的x坐标。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,7 +49,7 @@ window with respect to the given view.</h2>
 
 <tr>
 <td>id</td>
-<td>The id of the view to compare the mouse position to.</td>
+<td>比较鼠标位置的视野的id。</td>
 </tr>
 </table>
 </div>
@@ -58,48 +57,34 @@ window with respect to the given view.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will return the mouse x position relative to the
-view selected.</p>
+<p>这个函数将返回相对于所选视野的鼠标x坐标。</p>
 
-<div class="note"><b>注意</b>： For regular mouse functions see the section on <a href=
-"../../../controls/mouse%20input/index.html">Mouse Input</a>.</div>
+<div class="note"><b>注意</b>：对于常规的鼠标函数请参见<a href=
+"../../../controls/mouse%20input/index.html">鼠标输入</a>部分。</div>
 
 <p><br>
 </p>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if mouse_check_button_pressed(mb_left)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var xx, yy;<br>
-&nbsp;&nbsp;&nbsp;xx = window_view_mouse_get_x(0);<br>
-&nbsp;&nbsp;&nbsp;yy = window_view_mouse_get_y(0);<br>
-&nbsp;&nbsp;&nbsp;if xx &gt; 0 &amp;&amp; xx &lt; 32 &amp;&amp; yy
-&gt; 0 &amp;&amp; yy &lt; 32<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b_press[0] = true;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if mouse_check_button_pressed(mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var xx, yy;<br>&nbsp;&nbsp;&nbsp;xx = window_view_mouse_get_x(0);<br>&nbsp;&nbsp;&nbsp;yy = window_view_mouse_get_y(0);<br>&nbsp;&nbsp;&nbsp;if xx &gt; 0 &amp;&amp; xx &lt; 32 &amp;&amp; yy &gt; 0 &amp;&amp; yy &lt; 32<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b_press[0] = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will check for a mouse button being pressed, and
-if it is it then gets the mouse position relative to the view[0]
-and compares it to see if a variable should be set to true.</p>
+<p>上述代码将检测鼠标是否按下，如果是，然后它会获取相对于视野0（view[0]）的鼠标位置，并且比较它的值，看是否应该设置为真。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">The Game
-Window</a></div>
+<div style="float:left">上一页：<a href="index.html">游戏窗口</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页 <a href=
 "window_view_mouse_get_y.html">window_view_mouse_get_y</a></div>
 </div>
 

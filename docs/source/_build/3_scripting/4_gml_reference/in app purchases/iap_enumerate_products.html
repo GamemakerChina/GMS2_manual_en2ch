@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -41,7 +41,7 @@ available IAP products from the target store.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -69,12 +69,7 @@ using <a href="iap_activate.html"><tt>iap_activate</tt></a>.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var status = iap_status();<br>
-var iap_list = ds_list_create();<br>
-if status == iap_status_available<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;iap_enumerate_products(iap_list);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var status = iap_status();<br>var iap_list = ds_list_create();<br>if status == iap_status_available<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;iap_enumerate_products(iap_list);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks the status of the target IAP store, and if
 it is available it will populate the created list with the

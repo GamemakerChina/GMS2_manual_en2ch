@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Application Surface</title>
+<title>应用表面层</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
@@ -29,82 +29,54 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">Application Surface</h1>
+<h1 class="studio">应用表面层</h1>
 
-<h2 class="studio">This section deals with the application surface
-and the functions specific to it.</h2>
+<h2 class="studio">本节论述了应用表面层，以及它的特定函数。</h2>
 
-<p><i>GameMaker Studio 2</i> doesn't actually render most things to
-the screen directly, but instead it renders them to the
-<b>application surface</b>. This is essentially a surface, just
-like any that you can make yourself using the surface functions,
-and as such can be manipulated with the surface functions, drawn
-to, sent to shaders and anything else that you would normally do
-with surface are also applicable to this.</p>
+<p><i>GameMaker Studio 2</i> doesn't actually render most things to the screen directly, but instead it renders them to the <b>application surface</b>. 应用表面层本质上是一种表面层，可以随心所欲的使用表面层函数，并因此可以操作表面层函数，绘制、发送到着色器，通常表面可以做到的，应用表面层也可以。</p>
 
-<blockquote><i><b>NOTE:</b> The only thing you <b>cannot</b> do
-with the application surface is free it. It always exists, although
-the index value to access it may change.</i>
+<blockquote><i><b>注：</b> 唯一你 <b>不可以</b> 操作的是释放应用表面层。它一直会存在，尽管访问它的索引值可能会改变。</i>
 </blockquote>
 
-<p>When you run your game, this surface is created the first time
-that the draw event is called in each new room that you enter,
-which means that nothing is drawn until that point. However, you
-can still get the application surface position and resize it in the
-<b>CreateEvent</b> or any other event without getting any errors
-and the values used will be relevant to the surface when it is
-created. The actual sequence of events is as follows:</p>
+<p>当你运行游戏时，在进入每个新房间调用绘制事件的第一时间会创建这个表面， 这意味着在那之前什么都不会绘制。然而，你仍然可以获取应用表面层的位置并且在 <b>创建事件</b>或任何其它事件中 重置大小，不会出现任何错误，使用的值也会在它创建时建立关联。实际的事件序列如下所示：</p>
 
 <blockquote>
 <ul>
-<li>Pre-draw event<br>
+<li>Pre-draw 事件<br>
 <br></li>
 
-<li>--- &gt; <b>application surface created and render target
-set</b><br>
+<li>--- &gt; <b>应用表面层创建及渲染目标设置</b><br>
 <br></li>
 
-<li>For each visible view, or, if no views are active, once<br>
+<li>为每个可见的视野执行一次下述序列，如果激活的视野，仅执行一次<br>
 
-<blockquote>Draw begin event<br>
-Draw event<br>
-Draw end event<br></blockquote></li>
+<blockquote>Draw begin 事件<br>Draw 事件<br>Draw end 事件<br></blockquote></li>
 
-<li>--- &gt; <b>the application surface target is reset
-here</b><br>
+<li>--- &gt; <b>应用表面层在此重置</b><br>
 <br></li>
 
-<li>Post draw event<br>
+<li>Post draw 事件（发布绘制事件）<br>
 <br></li>
 
-<li>--- &gt; <b>the application surface is now drawn to the back
-buffer by default (although you can switch this off)</b><br>
+<li>--- &gt; <b>应用表面层现在绘制到默认的背面缓存区（虽然你可以关掉这个过程）。</b><br>
 <br></li>
 
-<li>Draw GUI begin event<br></li>
+<li>Draw GUI begin 事件<br></li>
 
-<li>Draw GUI event<br></li>
+<li>Draw GUI 事件<br></li>
 
-<li>Draw GUI end event<br></li>
+<li>Draw GUI end 事件<br></li>
 </ul>
 </blockquote>
 
-<p>The use of this surface means that you can easily create
-incredible transitions using shaders, or take the screen and wrap
-it around a 3D form, or simply scale a low-res game up to any
-resolution screen... The possibilities are endless!<br>
-<br>
-To access this surface, you need to use the built-in global
-variable <tt>application_surface</tt> which is explained on the
-following page:</p>
+<p>使用这个表面层意味着你可以轻松地过渡到使用着色器，采集屏幕用并3D模式环绕，或者简单的缩放低分辨率的游戏到任意分辨率的屏幕上。它有无限种可能性！<br><br>若要访问这个表面层，你需要用到内置变量<tt>application_surface</tt>，接下来的章节会进行解释：</p>
 
 <ul>
 <li><a href="application_surface.html">application_surface</a><br>
 </li>
 </ul>
 
-<p>You also have a couple of specialist functions that are designed
-only for use with the application surface:</p>
+<p>你也有只为应用表面专门设计的函数可以使用：</p>
 
 <ul>
 <li><a href=
@@ -131,8 +103,8 @@ only for use with the application surface:</p>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 </div>
 
 <h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>

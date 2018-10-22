@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,30 +40,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to check and see if there is a collision
-with an instance of a given object. You give the object to check
-for, the position - which can be an absolute position or a position
-relative to the instance - and the action will return <tt>true</tt>
-if there is a collision or <tt>false</tt> if there is not. You can
-also check the "Not" flag to check if there is <i>not</i> a
-collision at the given position, and the action will then return
-<tt>true</tt> if no collisions are found and <tt>false</tt>
-otherwise. Collisions are calculated based on the collision mask of
-the calling instance overlapping the collision mask of the instance
-or object being checked for (as if it was being "placed" at the
-position).</p>
+<p>此动作用来检查是否有一个给定物体的实例发生了碰撞。你需要给出需要检查的物体，位置，这个位置可以是绝对位置也可以是与实例的相对位置，如果确实有碰撞，此动作将会返回 <tt>true</tt>否则将返回<tt>false</tt> 。你也可以选中”反向“（NOT）标签，这样如果 在给定位置<i>没有</i> 碰撞，此动作将返回 <tt>true</tt>，有碰撞将返回 <tt>false</tt> 。碰撞的计算原理是：被调用的实例的碰撞遮罩，是否与其它实例的碰撞遮罩在某一个位置有重叠。</p>
 
-<div class="note"><b>IMPORTANT!</b> Collisions will only register
-for those instances that have a valid collision mask, ie: they have
-a sprite assigned to the <tt>sprite_index</tt>, or a sprite
-assigned to the <tt>mask_index</tt>. If either of the instances in
-the collision have no collision mask then the collision will not be
-detected, regardless of what the instance is drawing at the
-time.</div>
+<div class="note"><b>重要！</b> 碰撞检测只对那些有碰撞遮罩的实例有效 （碰撞双方都要有）。例子：它们有一个被分配给<tt>sprite_index</tt>的精灵， 或被分配给 <tt>mask_index</tt>的精灵。如果接触双方的任何一方没有碰撞遮罩，那么将不会发生碰撞，而不管在此时绘制了什么实例。</div>
 
-<p>Note that to add actions into an "if" block, they should be
-dropped to the <i>side</i> of the action, as shown in the image
-below:  <img class="center" src="images/if_collision_at.png" alt=
+<p>注意如果需要添加此动作进”if"代码块，它们应该被放到动作的 <i>一边</i> ，如下图所示： <img class="center" src="images/if_collision_at.png" alt=
 "If Drop Example"></p>
 </blockquote>
 
@@ -87,17 +68,17 @@ below:  <img class="center" src="images/if_collision_at.png" alt=
 
 <tr>
 <td>物体</td>
-<td>The object to check for instances of</td>
+<td>要检查的对象的实例</td>
 </tr>
 
 <tr class="alt">
 <td>x</td>
-<td>The x position to check</td>
+<td>需要检查的X坐标</td>
 </tr>
 
 <tr>
 <td>y</td>
-<td>The y position to check</td>
+<td>需要检查的X坐标</td>
 </tr>
 </table>
 </blockquote>
@@ -108,10 +89,7 @@ below:  <img class="center" src="images/if_collision_at.png" alt=
 <h3>举例：</h3>
 <img class="center" src="images/e_collision_at.png" alt=
 "If Any Object At Example">
-<blockquote>The above action block code checks for a collision with
-any instances of the object "obj_Wall" to the left and to the right
-and if one is found it reverses the horizontal direction of the
-calling instance.</blockquote>
+<blockquote>上述代码块将检查是否有任何实例与物体”obj_wall"的左边或右边有碰撞，如果有，它将反转被调用物体的水平方向（左右颠倒）。</blockquote>
 
 <p><br>
 </p>

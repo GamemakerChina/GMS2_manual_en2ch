@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -68,7 +68,7 @@ completely.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -93,14 +93,7 @@ version.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">queue = ds_queue_create();<br>
-ini_open("save.ini");<br>
-var str = ini_read_string("Queues", "0", "");<br>
-if str != ""<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;ds_queue_read(queue, str);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-ini_close();</p>
+<p class="code">queue = ds_queue_create();<br>ini_open("save.ini");<br>var str = ini_read_string("Queues", "0", "");<br>if str != ""<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;ds_queue_read(queue, str);<br>&nbsp;&nbsp;&nbsp;}<br>ini_close();</p>
 
 <p>The above code creates a queue and stores the index in the
 variable "queue". It then opens an <tt>ini</tt> file and reads a

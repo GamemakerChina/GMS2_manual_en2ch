@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -47,7 +47,7 @@ if (window.name != "content")
 </tr>
 
 <tr>
-<td>flag</td>
+<td>标识</td>
 <td>Either <tt>true</tt> to set release mode or false for general
 development.</td>
 </tr>
@@ -57,34 +57,14 @@ development.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>When your game is compiled, it also includes certain internal
-functions to error check while running. These internal checks cover
-many aspects of a games code, including ranges, parameters and some
-general aspects of the internal GML compiler and are what spawn the
-final error messages in many cases. However this function can be
-used to switch these internal checks off (ie: remove them
-completely from the compiled game), giving a speed boost to your
-final project.<br>
-<br>
-Please note that this means that should you do something in your
-game code that is incorrect, the compiled game <i>may simply
-crash</i>, or it may experience some <i>very unexpected
-behaviour</i>. For example, if a <tt>ds_grid</tt> is accessed at a
-coordinate outside of the defined size, in developer mode you would
-get a compiler window error message but the checks in place would
-permit the game to continue running. However in release mode these
-checks will not be there and so the code could return either a NULL
-pointer, or a bad pointer which in turn will point to some random
-memory. So at best you could get the wrong data returned, or at
-worst you could overwrite something in memory - data, graphics, or
-even code itself.<br>
+<p>When your game is compiled, it also includes certain internal functions to error check while running. These internal checks cover many aspects of a games code, including ranges, parameters and some general aspects of the internal GML compiler and are what spawn the final error messages in many cases. However this function can be used to switch these internal checks off (ie: remove them completely from the compiled game), giving a speed boost to your final project.<br><br>Please note that this means that should you do something in your game code that is incorrect, the compiled game <i>may simply crash</i>, or it may experience some <i>very unexpected behaviour</i>. For example, if a <tt>ds_grid</tt> is accessed at a coordinate outside of the defined size, in developer mode you would get a compiler window error message but the checks in place would permit the game to continue running. However in release mode these checks will not be there and so the code could return either a NULL pointer, or a bad pointer which in turn will point to some random memory. So at best you could get the wrong data returned, or at worst you could overwrite something in memory - data, graphics, or even code itself.<br>
 <br></p>
 
 <p><br>

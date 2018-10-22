@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">window_handle</h1>
 
-<h2 class="studio">Returns the id of the game window.</h2>
+<h2 class="studio">返回游戏窗口的id。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -40,26 +40,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> Pointer</p>
+<p><b>返回：</b> 指针</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can get the internal Windows id value
-(the HWND, a <i>pointer</i>). This function is really only useful
-for extension writers who need the <tt>window handle</tt> to call
-Windows API's in DLL code (the returned pointer should be cast into
-a string and then in the C++ just cast it to an HWND). The table
-below shows the platforms supported along with what they
-return:</p>
+<p>使用该函数你能获取到内部Windows内部id值（HWND，一个<i>指针</i>）。This function is really only useful for extension writers who need the <tt>window handle</tt> to call Windows API's in DLL code (the returned pointer should be cast into a string and then in the C++ just cast it to an HWND). The table below shows the platforms supported along with what they return:</p>
 
 <div class="compat">
 <table>
 <tr>
-<th>Platform</th>
-<th>Returns</th>
+<th>平台</th>
+<th>返回</th>
 </tr>
 
 <tr>
@@ -69,12 +63,12 @@ return:</p>
 
 <tr class="alt">
 <td>macOS</td>
-<td>NSWindow class</td>
+<td>NSWindow类</td>
 </tr>
 
 <tr>
 <td>Ubuntu (Linux)</td>
-<td>XWindow handle</td>
+<td>XWindow句柄</td>
 </tr>
 
 <tr class="alt">
@@ -91,16 +85,15 @@ return:</p>
 
 <p class="code">win_id = windows_handle();</p>
 
-<p>The above code will store the game window id in a variable.</p>
+<p>上述代码将游戏窗口id存入一个变量。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">The Game
-Window</a></div>
+<div style="float:left">上一页：<a href="index.html">游戏窗口</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "window_get_caption.html">window_get_caption</a></div>
 </div>
 

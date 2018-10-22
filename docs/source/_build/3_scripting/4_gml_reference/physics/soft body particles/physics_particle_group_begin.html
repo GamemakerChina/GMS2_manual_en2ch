@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -115,7 +115,7 @@ below).</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -159,34 +159,8 @@ even when they collide with other fixtures.</td>
 
 <p><br>
 <br>
-
-These group flags use bit-masking to create a final output value
-that is then checked to set the different basic properties of the
-group, apart from those set by the particle flags. You can use
-none, one or both of these constants by using the bitwise <i>or</i>
-"|" to mask the appropriate bits (as shown in the example
-below).<br>
-<br>
-Other than the flags, you can also set the position in the room to
-create the particle group at (the position given will be the center
-of mass of the finished group), the initial horizontal and vertical
-velocity, as well as the angular velocity of the group, permitting
-you to create moving, rotating groups.<br>
-<br>
-You can also set initial colour and alpha of all particles in the
-group, with the values being used when drawing the particles using
-the function <a href=
-"physics_particle_draw.html"><tt>physics_particle_draw()</tt></a>.
-After that you set the cohesive strength of particles in the group,
-which is another way of saying how stongly they "stick" to each
-other. The strength can be a value between 0 and 1, where 0 is no
-cohesion, and 1 is maximum cohesion.<br>
-<br>
-Finally you have to give the category for your particle group. This
-value is an arbitrary integer value that you give each particle
-group that you want to have similar properties, and it can be used
-to set flags later for that specific category as well as a number
-of other things.<br>
+These group flags use bit-masking to create a final output value that is then checked to set the different basic properties of the group, apart from those set by the particle flags. You can use none, one or both of these constants by using the bitwise <i>or</i> "|" to mask the appropriate bits (as shown in the example below).<br><br>Other than the flags, you can also set the position in the room to create the particle group at (the position given will be the center of mass of the finished group), the initial horizontal and vertical velocity, as well as the angular velocity of the group, permitting you to create moving, rotating groups.<br><br>You can also set initial colour and alpha of all particles in the group, with the values being used when drawing the particles using the function <a href=
+"physics_particle_draw.html"><tt>physics_particle_draw()</tt></a>. After that you set the cohesive strength of particles in the group, which is another way of saying how stongly they "stick" to each other. The strength can be a value between 0 and 1, where 0 is no cohesion, and 1 is maximum cohesion.<br><br>Finally you have to give the category for your particle group. This value is an arbitrary integer value that you give each particle group that you want to have similar properties, and it can be used to set flags later for that specific category as well as a number of other things.<br>
 <br></p>
 
 <blockquote><i><b>NOTE:</b> You can use any integer value for the

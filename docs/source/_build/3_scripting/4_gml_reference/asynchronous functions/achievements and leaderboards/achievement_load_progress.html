@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -45,7 +45,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -98,10 +98,7 @@ only.</div>
 user is on an iOS device:</p>
 </blockquote>
 
-<p class="code">if os_type == os_ios<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;achievement_load_progress();<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if os_type == os_ios<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;achievement_load_progress();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>This will send off a request for the information on achievements
@@ -109,20 +106,7 @@ and generate an asynchronous callback with the special
 <tt>async_load</tt> ds_map containing the following data:</p>
 </blockquote>
 
-<p class="code">var ident = ds_map_find_value(async_load,
-"id");<br>
-if ident == achievement_achievement_info<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var numentries = ds_map_find_value(async_load,
-"numentries");<br>
-&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; numentries; i++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ach_id[i] =
-ds_map_find_value(async_load, "Ach" + string(i));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comp[i] =
-ds_map_find_value(async_load, "AchComp" + string(i));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var ident = ds_map_find_value(async_load, "id");<br>if ident == achievement_achievement_info<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var numentries = ds_map_find_value(async_load, "numentries");<br>&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; numentries; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ach_id[i] = ds_map_find_value(async_load, "Ach" + string(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comp[i] = ds_map_find_value(async_load, "AchComp" + string(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the

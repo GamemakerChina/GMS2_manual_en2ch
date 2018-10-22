@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">draw_clear_alpha</h1>
 
-<h2 class="studio">Clears the entire screen with an alpha-blended
-given colour.</h2>
+<h2 class="studio">用指定透明度的指定颜色填充整个屏幕。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,13 +49,12 @@ given colour.</h2>
 
 <tr>
 <td>col</td>
-<td>The colour with which the screen will be cleared</td>
+<td>用来填充屏幕的颜色</td>
 </tr>
 
 <tr>
 <td>alpha</td>
-<td>The transparency of the colour with which the screen will be
-cleared</td>
+<td>用来填充屏幕的颜色的透明度</td>
 </tr>
 </table>
 </div>
@@ -64,38 +62,16 @@ cleared</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to clear the entire screen with a
-given colour and the alpha component of the destination is set to
-the value you have set - this function does <i>not</i> do any
-blending as it works but any subsequent blend operations can be set
-up to use the destination alpha that you have set. This is only for
-use in the draw event of an instance (it will not show if used in
-any other event), and it can also be very useful for clearing
-<a href="../surfaces/index.html">surfaces</a> when they are newly
-created.<br>
-<br>
-It is worth noting that when using the HTML5 module, you can use
-this function to make the canvas background transparent, which will
-then permit any images being used in the host HTML to be seen with
-the game running over them. To achieve this effect you must first
-go into the room editor and remove any <b>Background Layers</b>
-from the <a href=
-"../../../../2_interface/1_editors/rooms.html">Room Editor</a>,
-then untick the option <b>Clear View Background</b> found on the
-<a href=
-"../../../../2_interface/1_editors/rooms.html#room_properties">View
-Properties</a>. Finally, you will need to make a new object, place
-it in the first room of the game, and assign it a very low depth
-(for example, -1000000). Then in the <b>Pre Draw</b> event use this
-function to set the canvas alpha to the colour and transparency
-that you wish it to have.<br>
+<p>这个函数可以用指定的颜色和透明度填充整个屏幕，屏幕原有图像的透明度保持不变 - 这个函数 <i>不</i> 会对原有图像的透明度与混合模式做任何修改。随后你可以再次修改其混合操作。它仅能用于实例的draw事件（用于其它事件时不发挥作用）。当新建表面时，它也可用于填充 <a href="../surfaces/index.html">表面</a> 。<br><br>当使用HTML5模式的时候需要注意，你可以使用本函数使一个canvas背景透明，它允许你在游戏运行的时候从网络上载入一些图像。To achieve this effect you must first go into the room editor and remove any <b>Background Layers</b> from the <a href=
+"../../../../2_interface/1_editors/rooms.html">Room Editor</a>, then untick the option <b>Clear View Background</b> found on the <a href=
+"../../../../2_interface/1_editors/rooms.html#room_properties">View Properties</a>. Finally, you will need to make a new object, place it in the first room of the game, and assign it a very low depth (for example, -1000000). Then in the <b>Pre Draw</b> event use this function to set the canvas alpha to the colour and transparency that you wish it to have.<br>
 <br></p>
 
 <p><br>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -63,29 +63,14 @@ that the fixture is to be treated as a sensor only.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>Some times you will want your game to detect and recognise when
-two instances with fixtures collide, but not have any physical
-reaction to the collision. This can be done by converting the
-fixture into a sensor, which basically means that they will
-generate a collision event but with no physical response so that
-you can use these instances as "triggers" for other events to
-happen in the game room. Any fixture can be flagged as a sensor,
-and it makes no difference if the instance it is bound to is static
-or in movement.<br>
-<br>
-<b><i>NOTE:</i> A sensor fixture will fire off the collision event
-when the collision</b> first occurs only, meaning you don't get a
-stream of collision events as the two bodies continue to overlap
-(which is what would traditionally occur). If they stop overlapping
-and overlap subsequently there will be another collision event
-triggered.<br>
+<p>Some times you will want your game to detect and recognise when two instances with fixtures collide, but not have any physical reaction to the collision. This can be done by converting the fixture into a sensor, which basically means that they will generate a collision event but with no physical response so that you can use these instances as "triggers" for other events to happen in the game room. Any fixture can be flagged as a sensor, and it makes no difference if the instance it is bound to is static or in movement.<br><br><b><i>NOTE:</i> A sensor fixture will fire off the collision event when the collision</b> first occurs only, meaning you don't get a stream of collision events as the two bodies continue to overlap (which is what would traditionally occur). If they stop overlapping and overlap subsequently there will be another collision event triggered.<br>
 <br></p>
 
 <p><br>

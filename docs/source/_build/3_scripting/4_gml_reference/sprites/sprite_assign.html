@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,12 +49,12 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the sprite to be copied to (ie: overwritten).</td>
+<td>复制者的索引。 (ie: overwritten).</td>
 </tr>
 
 <tr>
 <td class="alt">sprite</td>
-<td>The sprite to be copied from.</td>
+<td>被复制者。</td>
 </tr>
 </table>
 </div>
@@ -63,9 +63,9 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -73,14 +73,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function takes two previously created (or included) sprite
-indexes, and copies the image from one to the other. In this way
-you can copy (or "clone") one sprite into another index. Note that
-<i>you cannot copy to a game resource</i>. You have to have created
-the sprite to be copied to previously using the <a href=
-"sprite_add.html"><tt>sprite_add</tt></a> or <a href=
-"sprite_duplicate.html"><tt>sprite_duplicate</tt></a>
-functions.</p>
+<p>此函数将会给一张精灵指定另一个精灵的索引，前提是这两个精灵都已经被创建了。这样你就能将一个精灵复制给另一个索引。注意 <i>你不能复制游戏资源</i>. 你必须已经使用 <a href=
+"sprite_add.html"><tt>sprite_add</tt></a> 或 <a href=
+"sprite_duplicate.html"><tt>sprite_duplicate</tt></a> 函数创建了图片</p>
 
 <blockquote>
 <p><br>
@@ -88,25 +83,10 @@ functions.</p>
 
 <h3>举例：</h3>
 
-<p class="code">if sprite_exists(global.Player_Sprite)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var t_spr = sprite_add("player.png", 16, true,
-true, 0, 0);<br>
-&nbsp;&nbsp;&nbsp;sprite_assign(global.Player_Sprite, t_spr);<br>
-&nbsp;&nbsp;&nbsp;sprite_delete(t_spr);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.Player_Sprite = sprite_add("player.png",
-16, true, true, 0, 0);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if sprite_exists(global.Player_Sprite)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var t_spr = sprite_add("player.png", 16, true, true, 0, 0);<br>&nbsp;&nbsp;&nbsp;sprite_assign(global.Player_Sprite, t_spr);<br>&nbsp;&nbsp;&nbsp;sprite_delete(t_spr);<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Player_Sprite = sprite_add("player.png", 16, true, true, 0, 0);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks to see if the global variable
-"Player_Sprite" contains a sprite and if it does it uses
-sprite_assign to change it for one that has been loaded from an
-external file. If it does not contain a sprite one is loaded and
-its index is stored in that variable.</p>
+<p>上述代码先检查变量"Player_Sprite" 是否包含一个精灵。 如果是的话，就用 sprite_assign 将索引指派给一个已经加载的外部文件。如果变量并不包含精灵，那么索引将继续储存在变量中。</p>
 </blockquote>
 
 <p><br>

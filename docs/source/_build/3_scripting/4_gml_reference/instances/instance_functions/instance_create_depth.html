@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -53,10 +53,7 @@ access it, and the <a href=
 "../instance_variables/layer.html"><tt>layer</tt></a> instance
 variable will return -1.</p>
 
-<div class="note"><b>IMPORTANT!</b> There is a minimum and maximum
-layer depth of -16000 to 16000. Anything placed on a layer outside
-that range <b>will not be drawn</b> although all events will still
-run as normal.</div>
+<div class="note"><b>重要！</b> 最小和最大层深度为 -16000 到 16000。尽管所有事件仍将正常运行，但 <b>不会绘制</b> 放在该范围之外的层上的任何内容。</div>
 
 <p>This function returns the <a href=
 "../instance_variables/id.html"><tt>id</tt></a> of the new instance
@@ -119,13 +116,7 @@ code or actions for the event that called the function.</p>
 
 <h3>举例：</h3>
 
-<p class="code">var inst;<br>
-inst = instance_create_depth(x, y, -10000, obj_Bullet);<br>
-with (inst)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;speed = other.shoot_speed;<br>
-&nbsp;&nbsp;&nbsp;direction = other.image_angle;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var inst;<br>inst = instance_create_depth(x, y, -10000, obj_Bullet);<br>with (inst)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;speed = other.shoot_speed;<br>&nbsp;&nbsp;&nbsp;direction = other.image_angle;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code creates a new instance of the object "obj_Bullet"

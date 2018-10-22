@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 <p>与 <i>GameMaker Studio 2</i> 中的所有资源一样，你应该为你的新路径指定一个唯一的名称，因为这将用于在你制作的游戏中识别它，并且许多人的好命名习惯是系统地使用前缀（或后缀 ）用于在代码或动作中轻松识别的资源（例如： <tt>path_Enemy_1</tt> 或 <tt>PowerUp_path</tt>）。命名路径后，你可以通过在右侧主编辑器中放置点来开始定义它，每个点以及它的位置和速度都会添加到列表中。</p>
 
 <p>你可以通过双击 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 路径属性并输入值来编辑路径属性中的每个值。路径点的 <b>速度</b> 值由实例沿路径移动的速度的百分比定义（默认值为100％）。因此，如果沿路径以 2 的速度（每步 2 像素）启动一个实例，然后其中一个路径点的速度值为 50％，则实例将降低速度，因为它接近此点的速度为 1 （路径速度的 50％）。同样，你可以将速度设置为 150％，实例将在达到该点时加速。通过这种方式，你可以无需任何代码就创建一些漂亮的动态外观。</p>
+"../../images/icon_lmb.png"> 路径属性并输入值来编辑路径属性中的每个值。路径点的 <b>速度</b> 值由实例沿路径移动的速度的百分比定义（默认值为100％）。因此，如果沿路径以 2 的速度（每步 2 像素）启动一个实例，然后其中一个路径点的速度值为 50％，则实例将降低速度，因为它接近此点的速度为 1 （路径速度的 50％）。同样，你可以将速度设置为 150％，实例将在达到该点时加速。通过这种方式，你可以无需任何代码就创建一些漂亮的动态外观。</p>
 
 <p>你还可以指定整个路径的连接类型以及路径是否应该闭合（闭合路径将路径上的最后一个点与第一个点连接）。连接类型可以是 <b>直线</b> 或 <b>平滑曲线</b>，其中直线连接简单地以线性方式连接路径的点，每个点处的角度变化，而平滑连接将创建更柔和的路径，可能无法直接通过一点而是采取近似线，创造美妙的曲线。同时你可以设置曲线的平滑程度（默认是 4），范围是 1 至 8，其中 8 最为平滑。如下图片展示了一些设置为不同的路径的样例： <img class="center" src=
 "images/editor_paths_examples.png" alt="Path Editor Examples"></p>
@@ -58,11 +58,11 @@ if (window.name != "content")
 for="two">编辑路径</label> <input id="two" type="checkbox">
 <div class="index_list">
 <p>你可以在编辑窗口中的任意位置点击 <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> 添加点到路径，所有后续点击都会添加更多点。放置在编辑器中后，可以通过单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 并拖动它来移动点，或者通过更改左侧显示的值来获取 X 和 Y 位置和速度（请参阅上面的 <a href=
+"vertical-align:middle" src="../../images/icon_lmb.png"> 添加点到路径，所有后续点击都会添加更多点。放置在编辑器中后，可以通过单击 <img style="vertical-align:middle" src="../../images/icon_lmb.png"> 并拖动它来移动点，或者通过更改左侧显示的值来获取 X 和 Y 位置和速度（请参阅上面的 <a href=
 "#path_properties">路径属性</a>）。你可以使用 <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> 和左键单击 <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> 多个点来一起选择它们，然后可以根据需要拖动并放置这组点。你也可以按此键 <img style="vertical-align:middle" src=
+"vertical-align:middle" src="../../images/icon_lmb.png"> 多个点来一起选择它们，然后可以根据需要拖动并放置这组点。你也可以按此键 <img style="vertical-align:middle" src=
 "../../images/icon_delete.png"> 删除选定的一个或多个点。</p>
 
 <p>右键单击时，编辑器窗口中还有一个可用的附加菜单，如下所示：<img class="center" src=
@@ -97,7 +97,7 @@ for="four">路径点</label> <input id="four" type="checkbox">
 <p>路径只是由一条线连接在一起的点的集合。在编辑器中，使用鼠标左键放置这些点。你可以在房间编辑器中的任何位置添加点，它们将连续添加到点列表中以创建路径。如果在连接线或其他节点附近放置一个点，则新点将插入路径而不是添加到路径中（你可以在 <a href=
 "../../1_overview/1_getting_started/preferences/prefs_splineeditor.html">首选项</a> 中为此设置检测距离）。你可以按 <img style="vertical-align:middle"
 src="../../images/icon_ctrl.png">/<img style=
-"vertical-align:middle" src="../../images/icon_cmd.png"> 并单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 已放置的点以选择它们，然后在路径点上完成的任何操作（如移动它们）将作为一个组应用于所有选定的点。要删除一个点或选定点，你可以右键单击 <img style="vertical-align:middle" src=
+"vertical-align:middle" src="../../images/icon_cmd.png"> 并单击 <img style="vertical-align:middle" src="../../images/icon_lmb.png"> 已放置的点以选择它们，然后在路径点上完成的任何操作（如移动它们）将作为一个组应用于所有选定的点。要删除一个点或选定点，你可以右键单击 <img style="vertical-align:middle" src=
 "../../images/icon_rmb.png"> 并选择 “删除点” 或按 <img style="vertical-align:middle" src=
 "../../images/icon_delete.png"> 键。</p>
 
@@ -106,13 +106,13 @@ src="../../images/icon_ctrl.png">/<img style=
 
 <ul>
 <li><b>T</b> + <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png">：转换（移动）路径点</li>
+"../../images/icon_lmb.png">：转换（移动）路径点</li>
 
 <li><b>R</b> + <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png">：旋转路径点</li>
+"../../images/icon_lmb.png">：旋转路径点</li>
 
 <li><b>S</b> + <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png">：缩放路径点</li>
+"../../images/icon_lmb.png">：缩放路径点</li>
 </ul>
 </div></blockquote>
 
@@ -129,7 +129,7 @@ src="../../images/icon_ctrl.png">/<img style=
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

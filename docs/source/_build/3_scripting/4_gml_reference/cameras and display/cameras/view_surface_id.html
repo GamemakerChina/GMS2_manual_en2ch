@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,27 +37,16 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this variable you can set the contents of a given view port
-to draw to a surface, or get the current surface id if one has been
-assigned to a view port. When working with surfaces, it is often
-required that you capture the <i>whole</i> visible region of the
-screen to the surface, and so you would assign it to a view port
-using this variable. This means that everything that is shown in
-the chosen view will now be drawn to the assigned surface. The view
-will now <i>not</i> be drawn to the screen, meaning that you will
-need to either:</p>
+<p>With this variable you can set the contents of a given view port to draw to a surface, or get the current surface id if one has been assigned to a view port. When working with surfaces, it is often required that you capture the <i>whole</i> visible region of the screen to the surface, and so you would assign it to a view port using this variable. 这意味着所选视野内的所有显示的画面将被绘制到指定的表面。The view will now <i>not</i> be drawn to the screen, meaning that you will need to either:</p>
 
 <blockquote>
 <ul>
-<li>Enable a new view and draw the surface only in that view (using
-<a href="view_current.html"><tt>view_current</tt></a> to check
-which view is being drawn)</li>
+<li>启用一个新的视野，在新视野中绘制表面（使用 <a href="view_current.html"><tt>view_current</tt></a> 检测正在绘制哪个视野）。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>Draw the surface in the Draw GUI event of an instance, since
-the GUI layer is independent of views.</li>
+<li>既然GUI层是独立出视野的，那么可以在一个实例的GUI事件中绘制表面。</li>
 </ul>
 </blockquote>
 
@@ -96,48 +85,22 @@ assigned)</p>
 <h3>Extended 举例：</h3>
 
 <blockquote>
-<p>In this extended example, we will create a surface and assign it
-to view port[0] so it captures the camera view assigned to that
-port, then draw that to the screen in the Draw GUI event. To start
-with we need to initialise our surface variable in the <b>Create
-Event</b> of a controller instance:</p>
+<p>In this extended example, we will create a surface and assign it to view port[0] so it captures the camera view assigned to that port, then draw that to the screen in the Draw GUI event. 首先我们需要在<b>创建事件（Create Event）</b>中初始化表面变量。</p>
 </blockquote>
 
 <p class="code">surf = -1;</p>
 
 <blockquote>
-<p>We set the surface variable to -1, as all surface functions
-should really be used in the <b>Draw</b> events to prevent odd
-errors or undefined behaviours. So, with that done, we would then
-have this in the main <b>Draw</b> event:</p>
+<p>由于所有的表面函数真正在 <b>Draw</b> 事件中使 用，为了防止奇怪的错误或者未定义的行为，我们设置表面变量为-1。 接着，那个完成之后，我们需要在主要的<b>Draw</b> 事件中做这些事件：</p>
 </blockquote>
 
-<p class="code">if !surface_exists(surf)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surf =
-surface_create(camera_get_view_width(view_camera[0]),
-camera_get_view_height(view_camera[0]));<br>
-&nbsp;&nbsp;&nbsp;view_surface_id[0] = surf;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !surface_exists(surf)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surf = surface_create(camera_get_view_width(view_camera[0]), camera_get_view_height(view_camera[0]));<br>&nbsp;&nbsp;&nbsp;view_surface_id[0] = surf;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>Surfaces are <i>volatile</i> meaning that they could be removed
-from memory at any time due to OS memory management and other
-things, so here we check to see if our surface exists and if it
-doesn't we create it and assign it to the view 0. With that done,
-everything that would appear in view 0 will now be drawn to the
-surface we have created instead. If you do nothing else at this
-point, when you run your game you will simply get a blank screen as
-all drawing is being done on the surface, but the surface itself is
-not being drawn anywhere. Therefore we now need to draw the surface
-to the screen in the <b>Draw GUI</b> event like this:</p>
+<p>表面是 <i>不稳定的</i>，意味着系统内存的管理或其它原因，它们可能会从内存中销毁，所以这里检测表面是否存在，如不存在则创建它，并指定给一个视野。之后，所以将出现在视野view 0中的事物现在绘制到我们创建的表面层里。. 如果不做到这一步，运行游戏时将会简单的获得一个空白的屏幕，因为所有的绘制都是在表面里完成的，但是表面层并不会在任何地方绘制出来。因为现在需要在 <b>Draw GUI</b> 事件中，像这样绘制这个表面到屏幕上：</p>
 </blockquote>
 
-<p class="code">if surface_exists(surf)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;draw_surface_stretched(surf, 0, 0,
-display_get_gui_width(), display_get_gui_height());<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if surface_exists(surf)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_surface_stretched(surf, 0, 0, display_get_gui_width(), display_get_gui_height());<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>This code will now draw the surface that we have created from

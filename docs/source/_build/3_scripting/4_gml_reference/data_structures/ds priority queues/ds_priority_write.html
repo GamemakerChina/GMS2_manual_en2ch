@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -59,19 +59,15 @@ file for future use.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<p><b>返回：</b> String（字符串）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns a string which can then be stored or
-transferred to another data structure using the <a href=
-"ds_priority_read.html"><tt>ds_priority_read</tt></a> function.<br>
-<br>
-<i><b>NOTE:</b> The returned string is not a human readable string,
-but rather a dump of the contents of the data-structure</i><br>
+<p>This function returns a string which can then be stored or transferred to another data structure using the <a href=
+"ds_priority_read.html"><tt>ds_priority_read</tt></a> function.<br><br><i><b>NOTE:</b> The returned string is not a human readable string, but rather a dump of the contents of the data-structure</i><br>
 <br></p>
 
 <p><br>
@@ -79,12 +75,7 @@ but rather a dump of the contents of the data-structure</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var str;<br>
-ini_open("save.ini");<br>
-str =ds_priority_write(p_queue);<br>
-ini_write_string("P_Queues", "0", str);<br>
-ds_priority_clear(p_queue);<br>
-ini_close();<br></p>
+<p class="code">var str;<br>ini_open("save.ini");<br>str =ds_priority_write(p_queue);<br>ini_write_string("P_Queues", "0", str);<br>ds_priority_clear(p_queue);<br>ini_close();<br></p>
 
 <p>The above code opens an ini file and then writes a string
 containing the information stored in the ds_priority queue indexed

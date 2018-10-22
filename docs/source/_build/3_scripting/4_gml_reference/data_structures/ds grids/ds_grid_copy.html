@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">ds_grid_copy</h1>
 
-<h2 class="studio">Copies one grid into another grid.</h2>
+<h2 class="studio">将一个栅格复制给另一个。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,12 +49,12 @@ if (window.name != "content")
 
 <tr>
 <td>destination</td>
-<td>This index of the grid to copy to.</td>
+<td>待拷贝到的栅格</td>
 </tr>
 
 <tr>
 <td>source</td>
-<td>This index of the grid to copy from.</td>
+<td>待拷贝的栅格</td>
 </tr>
 </table>
 </div>
@@ -62,17 +62,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can copy the contents of one grid into
-another one. Both grids must have been created previously using the
-<a href="ds_grid_create.html"><tt>ds_grid_create</tt></a>
-function.<br>
+<p>使用这个函数你能够把一个栅格内的内容复制给另一个。两个栅格必须都已经通过函数 <a href="ds_grid_create.html"><tt>ds_grid_create</tt></a> 被创建。<br>
 <br></p>
 
 <p><br>
@@ -85,19 +82,15 @@ ds_grid_height(a_grid));<br>
 ds_grid_copy(n_grid, a_grid);<br>
 ds_grid_clear(a_grid, -1);<br></p>
 
-<p>The above code creates a new ds_grid, based on the width and
-height of a previously created grid, then copies the information
-form the previous grid to the new one. Finally it clears the old
-grid so that all cells have a value of -1.</p>
+<p>上述代码创建了一个新的栅格结构，基于先前创建的栅格的宽度和高度，然后从先前的栅格中拷贝信息给新的栅格。最终清空旧栅格以便所有单元格都承载值-1.</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">DS
-Grids</a></div>
+<div style="float:left">上一页： <a href="index.html">数据结构</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页： <a href=
 "ds_grid_read.html">ds_grid_read</a></div>
 </div>
 

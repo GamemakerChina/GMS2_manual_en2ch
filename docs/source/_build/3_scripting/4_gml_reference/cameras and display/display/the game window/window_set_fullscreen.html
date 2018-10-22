@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">window_set_fullscreen</h1>
 
-<h2 class="studio">Sets whether the game is run in fullscreen or
-not.</h2>
+<h2 class="studio">设置游戏是否全屏运行或者窗口运行。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,9 +48,8 @@ not.</h2>
 </tr>
 
 <tr>
-<td>full</td>
-<td>Whether to set the screen to fullscreen (true) or not
-(false).</td>
+<td>全屏</td>
+<td>设置屏幕为全屏（true）或不是（false）。</td>
 </tr>
 </table>
 </div>
@@ -59,7 +57,7 @@ not.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -67,13 +65,8 @@ not.</h2>
 <h3 class="studio"><b>描述</b>
 </h3>
 
-<p>With this function you can set the game window to be full screen
-(<tt>true</tt>) or not (<tt>false</tt>). Please note that for the
-<b>Mac OS</b> target, you <i>must</i> have unchecked the "Start In
-Fullscreen" option and checked the "Allow the player to resize the
-game window" option in the <a href=
-"../../../../../2_interface/3_settings/game_options/options_mac.html">
-Game Options</a>, otherwise this function will fail.<br>
+<p>有了这个函数，你可以设置游戏窗口为全屏幕（<tt>true</tt>）或者不是全屏（<tt>false</tt>）。Please note that for the <b>Mac OS</b> target, you <i>must</i> have unchecked the "Start In Fullscreen" option and checked the "Allow the player to resize the game window" option in the <a href=
+"../../../../../2_interface/3_settings/game_options/options_mac.html"> Game Options</a>, otherwise this function will fail.<br>
 <br></p>
 
 <p><br>
@@ -81,32 +74,17 @@ Game Options</a>, otherwise this function will fail.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if mouse_check_button_pressed(mb_left)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if window_get_fullscreen()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window_set_fullscreen(false);<br>
+<p class="code">if mouse_check_button_pressed(mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if window_get_fullscreen()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window_set_fullscreen(false);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window_set_fullscreen(true);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window_set_fullscreen(true);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
-
-<p>The above code checks for a mouse button press and then sets the
-window to fullscreen if it is not already, or sets it to windowed
-if it is already.</p>
+<p>上述代码将检测鼠标按下，如果还不是全屏则设置窗口为全屏，否则在已经是全屏模式时设置为窗口。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">The Game
-Window</a></div>
+<div style="float:left">上一页：<a href="index.html">游戏窗口</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "window_set_position.html">window_set_position</a></div>
 </div>
 

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -50,7 +50,7 @@ if (window.name != "content")
 </tr>
 
 <tr>
-<td>flag</td>
+<td>标识</td>
 <td>Set to <tt>true</tt> or <tt>false</tt> to enable or disable
 powersave functions.</td>
 </tr>
@@ -60,23 +60,14 @@ powersave functions.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can turn on or off the power saving
-features of the device. This is important as certain games (for
-example those that use the tilt functions) may not generate events
-that the OS can interpret as being user input and so shut down the
-screen or exit the game. By setting this function to <tt>false</tt>
-you can disable the power saving features and ensure that the
-screen (and game) are always functioning.<br>
-<br>
-<i><b>NOTE:</b> This is limited to iOS, Android and Windows 8 Phone
-targets.</i><br>
+<p>With this function you can turn on or off the power saving features of the device. This is important as certain games (for example those that use the tilt functions) may not generate events that the OS can interpret as being user input and so shut down the screen or exit the game. By setting this function to <tt>false</tt> you can disable the power saving features and ensure that the screen (and game) are always functioning.<br><br><i><b>NOTE:</b> This is limited to iOS, Android and Windows 8 Phone targets.</i><br>
 <br></p>
 
 <p><br>
@@ -84,10 +75,7 @@ targets.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if os_type == os_android || os_type == os_ios<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;os_powersave_enable(false);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if os_type == os_android || os_type == os_ios<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;os_powersave_enable(false);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks the OS type and if it is either Android or
 an iOS then power saving features are deactivated.</p>

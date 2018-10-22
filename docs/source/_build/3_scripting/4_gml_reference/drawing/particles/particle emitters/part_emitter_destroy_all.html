@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">part_emitter_destroy_all</h1>
 
-<h2 class="studio">Destroys all emitters in the given particle
-system.</h2>
+<h2 class="studio">销毁指定粒子系统中的所有发射器。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,7 +49,7 @@ system.</h2>
 
 <tr>
 <td>ps</td>
-<td>The particle system to destroy all emitters from.</td>
+<td>要删除所有发射器的粒子系统。</td>
 </tr>
 </table>
 </div>
@@ -58,7 +57,7 @@ system.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -78,11 +77,7 @@ prevent memory leaks and errors.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if lives = 0<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;part_emitter_destroy_all(global.Sname);<br>
-&nbsp;&nbsp;&nbsp;room_goto(rm_Menu);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if lives = 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;part_emitter_destroy_all(global.Sname);<br>&nbsp;&nbsp;&nbsp;room_goto(rm_Menu);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks the built in global variable "lives" and
 if it is 0, it destroys all particle emitters and then changes
@@ -92,10 +87,10 @@ room.</p>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href=
-"../index.html">Particles</a></div>
+<div style="float:left">上一页：<a href=
+"../index.html">粒子</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "part_emitter_exists.html">part_emitter_exists</a></div>
 </div>
 

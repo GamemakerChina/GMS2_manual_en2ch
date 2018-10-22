@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">ds_grid_add_disk</h1>
 
-<h2 class="studio">Adds to all the cells in a circular region in a
-grid to an indicated value (can both be a number or a string).</h2>
+<h2 class="studio">向一个栅格内的一个圆形区域内的所有单元格叠加一个指定的值</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,27 +49,27 @@ grid to an indicated value (can both be a number or a string).</h2>
 
 <tr>
 <td>index</td>
-<td>The index of the grid.</td>
+<td>栅格的索引</td>
 </tr>
 
 <tr class="alt">
 <td>xm</td>
-<td>The x position of the disk on the grid.</td>
+<td>栅格内圆盘区域x位置。</td>
 </tr>
 
 <tr>
 <td>ym</td>
-<td>The y position of the disk on the grid.</td>
+<td>栅格内圆盘区域的y位置。</td>
 </tr>
 
 <tr class="alt">
 <td>r</td>
-<td>The radius of the disk on the grid.</td>
+<td>栅格中圆盘的半径</td>
 </tr>
 
 <tr>
 <td>val</td>
-<td>The value to add to the cells within the disk.</td>
+<td>待叠加给圆盘内单元格的值</td>
 </tr>
 </table>
 </div>
@@ -78,19 +77,14 @@ grid to an indicated value (can both be a number or a string).</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to add a given value (real or string)
-to all the values of the cells found within the defined disk area
-of a grid. The value to be added must be of the same type as that
-held within the grid cells, ie: you cannot add a string to a real
-or vice-versa, and for strings this corresponds to
-concatenation.<br>
+<p>这个函数可以被用于向一个栅格中一个确定圆盘区域内所有单元格的数值中叠加一个被给定的值（实数或字符串）。这个待叠加的值必须和这些栅格的单元格中所承载的值是同一类型，比如：你不能把一个字符串叠加给一个实数，反之亦然，并且对于字符串来说这相当于串接<br>
 <br></p>
 
 <p><br>
@@ -100,18 +94,15 @@ concatenation.<br>
 
 <p class="code">ds_grid_add_disk(grid, 7, 6, 5, 2);</p>
 
-<p>This would add 2 to all the values held in the cells within the
-defined disk area of the ds_grid referenced by the variable
-"grid".</p>
+<p>这将会向索引为变量"grid"的栅格结构中确定圆盘区域内的单元格中的所有值叠加2。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">DS
-Grids</a></div>
+<div style="float:left">上一页： <a href="index.html">数据结构</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页： <a href=
 "ds_grid_add_grid_region.html">ds_grid_add_grid_region</a></div>
 </div>
 

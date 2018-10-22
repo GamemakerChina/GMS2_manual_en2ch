@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -61,7 +61,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<p><b>返回：</b> String（字符串）</p>
 
 <p><br>
 </p>
@@ -95,16 +95,8 @@ not wish to add any attributes, use 0):<br>
 </blockquote>
 
 <p><br>
-<i><b>WARNING!</b> This function may not work as you expect due
-to</i> GameMaker Studio 2 being sandboxed! Please see the section
-on <a href=
-"../../../../1_overview/3_additional_information/file_system.html">File
-System Limits</a> for more information.<br>
-<br>
-<i><b>NOTE:</b> This function will not work at all on the JS target
-platforms (Windows8, Tizen, and HTML5), and the filter flags will
-only work on Windows and WinPhone (use 0 for all other
-platforms).</i><br>
+<i><b>WARNING!</b> This function may not work as you expect due to</i> GameMaker Studio 2 being sandboxed!Please see the section on <a href=
+"../../../../1_overview/3_additional_information/file_system.html">File System Limits</a> for more information.<br><br><i><b>NOTE:</b> This function will not work at all on the JS target platforms (Windows8, Tizen, and HTML5), and the filter flags will only work on Windows and WinPhone (use 0 for all other platforms).</i><br>
 <br></p>
 
 <p><br>
@@ -112,15 +104,9 @@ platforms).</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if directory_exists("\User Content")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;file = file_find_first("\User Content\*.doc",
-fa_readonly);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if directory_exists("\User Content")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;file = file_find_first("\User Content\*.doc", fa_readonly);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>This will check to see if the specified directory exists then,
-if it does, go there and return the first "read only" <tt>doc</tt>
-file found.</p>
+<p>这将检查指定的目录是否存在，如果存在，则去那里并返回找到的第一个 “只读” <tt>doc</tt> 文件。</p>
 
 <p><br>
 </p>

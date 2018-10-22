@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -54,7 +54,10 @@ if (window.name != "content")
 
 <blockquote><label class="collapse" for="a">使用扩展</label> <input id="a" type="checkbox">
 <div class="index_list">
-<p>一旦向资源树添加了一个扩展，就应该给它一个名称和版本号，并设置要将其导出到哪个平台。通过取消选定平台的勾选，您可以告诉 <i>GameMaker Studio 2</i> 不要将扩展导出为这些平台的可执行文件的一部分。您还应确保扩展属性与目标平台匹配，并根据以下内容编辑扩展文件的导出目标：</p>
+<p>Once you have added an extension you can start to use it in your
+projects, however you should ensure that the extension properties
+match up with the target platform, and edit the export targets for
+the extension files based on the following:</p>
 
 <ul>
 <li><b>所有平台</b>： GML 扩展。这些是使用 GameMaker 语言（GML）编写的扩展，与所有目标平台兼容。<br>
@@ -96,17 +99,18 @@ if (window.name != "content")
 </li>
 </ul>
 
-<p>由于单个扩展可以具有各种相关文件，因此可以为多个平台创建单个扩展，在这种情况下，您希望在主扩展编辑器中指定 <i>所有</i> 兼容平台（即：勾选它们旁边的复选框），然后在扩展的每个部分的单个文件属性，设置应该导出这些文件的平台。 要更改特定扩展文件或占位符的目标平台，你必须首先打开扩展属性（双击 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 资源树中的扩展名或使用 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 并选择 <i>打开属性</i>），然后在扩展属性中选择右侧的资源文件中你要编辑的内容：<img class="center" src=
+<p>To change the target platform for a specific extension file or
+placeholder you must first open the extension properties (double
+click <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> the extension i the Resource tree or
+use <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> and select <i>Open Properties</i>),
+and then once in the extension properties select the resource file
+from the right that you want to edit: <img class="center" src=
 "images/editor_extensions_targets.png" alt=
 "Extension Target Platforms"></p>
 
-<div class="note"><b>注意</b>：如果要导出到 macOS 或 Ubuntu 平台，则可以将“解压缩为 zip 文件”选项设置为保留扩展的文件权限。</div>
-
-<p><br>
-一旦安装了扩展，就可以像使用 GameMaker 语言中使用的内置函数和常量一样使用函数和常量。如果您的游戏是跨平台的（例如，它设计为在 Windows 和 Android 平台上运行），那么您应该在调用扩展特定功能之前使用 <a href=
-"../3_scripting/4_gml_reference/miscellaneous/index.html">OS 常量和函数</a> 来检查平台以防止出现问题，例如：</p>
+<p>一旦安装了扩展，就可以像使用 GameMaker 语言中使用的内置函数和常量一样使用函数和常量。If your game is cross-platform (for example, it is designed to run on both Windows and Android targets), then you should do an OS check before calling extension specific functions to prevent issues, for example:</p>
 
 <p class="code">switch(os_type)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -120,7 +124,7 @@ y, z);<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>请注意，对于不同的平台，您的扩展可以共享功能名称，因此如果您有一个包含不同文件的扩展名（例如）弹出 Windows <i>和</i> Android 的消息，则两个扩展文件可以共享相同的功能名称，只要它们两者都设置为 <i>仅</i> 导出到各自的平台。</p>
+<p>请注意，对于不同的平台，你的扩展可以共享功能名称，因此如果你有一个包含不同文件的扩展名（例如）弹出 Windows <i>和</i> Android 的消息，则两个扩展文件可以共享相同的功能名称，只要它们两者都设置为 <i>仅</i> 导出到各自的平台。</p>
 </div>
 <br>
 <label class="collapse" for="b">创建扩展</label>
@@ -136,7 +140,7 @@ y, z);<br>
 
 <p>“Generic” 占位符可以是任何类型的文件，除了特定平台所需的文件（例如，没有 DLL 或 SO 文件），除了作为 “链接器” 文件连接之外，它不会被使用。具有给定扩展名的函数或常量集（通常仅用于 iOS 和 Android 扩展，在下面的部分中针对这些平台进行了解释）。你还可以添加 “GML” 和 “JS” 占位符文件以供更具体的使用。</p>
 
-<p>通常，除非为 iOS 和 Android 构建，否则你不需要使用占位符，因此你可以选择 <i>添加文件</i> 选项以根据它们的目标平台添加以下任何一个文件：您会注意到</p>
+<p>通常，除非为 iOS 和 Android 构建，否则你不需要使用占位符，因此你可以选择 <i>添加文件</i> 选项以根据它们的目标平台添加以下任何一个文件：你会注意到</p>
 
 <ul>
 <li><b><tt>.gml</tt></b>： 这是一个仅使用 GameMaker 语言制作的文件，并且与所有平台兼容。<br>
@@ -162,16 +166,7 @@ y, z);<br>
 
 <p>首先，你需要创建将要使用的文件。对于 GML 扩展，这将是一个文本文件（以 <tt>.gml</tt> 扩展名保存），并且格式如下：</p>
 
-<p class="code">#define c_alice_blue<br>
-return make_color_rgb(240,248,255);<br>
-<br>
-#define instance_create_colour<br>
-var i = instance_create_layer(argument0, argument1, argument2);<br>
-with (i)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;image_blend = argument3;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-return i;<br></p>
+<p class="code">#define c_alice_blue<br>return make_color_rgb(240,248,255);<br><br>#define instance_create_colour<br>var i = instance_create_layer(argument0, argument1, argument2);<br>with (i)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;image_blend = argument3;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>return i;<br></p>
 
 <p>如你所见，我们使用 <tt>#define</tt> 调用启动每个部分，在上面的示例中，它用于定义两个函数。你不需要为函数提供参数字段，因为稍后将添加它，只需使用 define 然后使用函数的名称并继续添加 GML 以匹配。如果你正在编写 DLL 或 JS 扩展，那么该过程将类似于扩展文件格式的正确语言。</p>
 
@@ -179,8 +174,8 @@ return i;<br></p>
 "center" src="images/editor_extensions_fileproperties.png" alt=
 "File Property Window"></p>
 
-<p>在这里，你将选择扩展的目标平台（对于 GM，你将全部选择它们），以及重命名扩展文件并设置其他一些细节，我们将在稍后介绍。首先，我们想要添加常量和函数，以便用户可以从他们的项目代码中调用扩展。为此，你需要单击功能菜单按钮 <img style=
-"vertical-align:middle" src="images/icon_extensionmenu.png"> 并选择所需内容：<img class="center" src=
+<p>在这里，你将选择扩展的目标平台（对于 GM，你将全部选择它们），以及重命名扩展文件并设置其他一些细节，我们将在稍后介绍。首先，我们想要添加常量和函数，以便用户可以从他们的项目代码中调用扩展。For that you need to click the extensions menu button <img style=
+"vertical-align:middle" src="images/icon_extensionmenu.png"> and select what you require: <img class="center" src=
 "images/editor_extensions_addfunctions.png" alt=
 "Add functions/Constants To An Extension"></p>
 
@@ -195,9 +190,7 @@ return i;<br></p>
 
 <p>最后，添加函数可以使用的参数（如果有）。参数可以是 <b>doubles（双精度型）</b> 或 <b>strings（字符串）</b>，你可以通过单击添加按钮 <img style=
 "vertical-align:middle" src="images/icon_addargument.png"> 添加它们，然后单击删除按钮 <img style=
-"vertical-align:middle" src="images/icon_removeargument.png"> 将其删除。如果你的函数可以接受变量参数，你还应该确保检查底部的 <b>可变长度参数</b> 复选框。</p>
-
-<div class="note"><b>注意</b>：如果要创建 Windows <tt>dll</tt> 文件并且它具有四个以上的参数，则 <i>所有参数必须属于同一类型</i>。</div>
+"vertical-align:middle" src="images/icon_removeargument.png"> 将其删除。Note that if you are creating a Windows <tt>dll</tt> file and it has more than four arguments, <i>all arguments must be of the same type</i>.</p>
 
 <p>完成所有操作后，就可以在项目中使用该函数，它将自动完成并进行颜色编码。定义的函数也可以设置为 <b>初始函数[Init Functions]</b> 或 <b>最终函数[Final Functions]</b>，这意味着它们将在游戏开始时（Init）和游戏结束时（Final）自动调用。</p>
 
@@ -205,7 +198,7 @@ return i;<br></p>
 
 <p><br>
 你拥有的另一个选项是创建一个 <b>宏</b>。宏可以是 <b>常量</b> 值或单个代码段（有关宏的更多信息，请参见 <a href=
-"../../3_scripting/3_gml_overview/6_scope.html">此处</a>）。例如，我们可以从上面的示例 GML 扩展中删除用于颜色的已定义的函数 <tt>c_alice_blue</tt>，并使其成为宏。要创建宏，只需单击“扩展属性属性”窗口中的 <b>宏</b> 按钮： <img class="center" src=
+"../../3_scripting/3_gml_overview/6_scope.html">此处</a>）。For example, we could remove the defined function from our example GML extension above for the colour <tt>c_alice_blue</tt> and make it a macro instead: <img class="center" src=
 "images/editor_extensions_macroeditor.png" alt="Macro Editor"></p>
 
 <p>这里的编辑器几乎是不言自明的 —— 你可以给出宏/常量的名称和值，或者一行简短的代码。请注意，如果宏是一行代码，则 <i>每次调用宏时都会对其进行求值</i>。</p>
@@ -213,7 +206,7 @@ return i;<br></p>
 <p>使用多个目标平台时，值得注意的是，你可以创建一个只包含 <i>一组</i> 功能/宏的扩展，这些功能/宏可以在 <i>所有</i> 平台上运行。这是通过将一个链接库作为扩展添加到游戏中并将其他链接库放入扩展属性窗口的 <b>代理文件</b>列表中来实现的。例如，假设你有一个名为 “Haggis.dll” 的 Windows dll 扩展。你只需将此 dll 复制为 Mac DyLib，将其命名为 “libHaggis.dylib” 并确保内部函数名称与原始 Windows dll的名称相匹配。然后将此 DyLib 添加到代理文件中并设置为在 Mac 平台上运行游戏时导出，并且 <i>GameMaker Studio 2</i> 将在调用扩展功能时自动使用它。</p>
 
 <p>要添加代理文件，只需单击 <img style=
-"vertical-align:middle" src="images/icon_addproxy.png"> 扩展的扩展属性窗口中的按钮，然后浏览文件位置。添加后，你可能需要将扩展目标更改为相应的模块，当你下次运行游戏时，它将作为该平台的代理文件包含在内。您也可以通过单击 <img style=
+"vertical-align:middle" src="images/icon_addproxy.png"> 扩展的扩展属性窗口中的按钮，然后浏览文件位置。添加后，你可能需要将扩展目标更改为相应的模块，当你下次运行游戏时，它将作为该平台的代理文件包含在内。你也可以通过单击 <img style=
 "vertical-align:middle" src="images/icon_removeproxy.png"> 按钮删除代理文件，这将删除列表中的最后一个。</p>
 
 <p>添加代理文件后，它们将存储在游戏的 <tt>YYP</tt> 中的 Extensions 文件夹中（你可以通过右键单击 <img style="vertical-align:middle"
@@ -283,7 +276,7 @@ src="../../images/icon_rmb.png">扩展名并选择<i> 在资源管理器中打�
 "http://developer.android.com/reference/android/Manifest.permission.html"
 target="_blank">Google 为 Android 平台提供的文档</a>，或者，如果你使用的是第三方 SDK，则应查看 SDK 附带的文档。要添加新权限，你需要单击按钮 <img style="vertical-align:middle" src=
 "images/icon_addproxy.png"> 添加占位符权限，然后慢慢 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 单击该权限以将其编辑为所需内容。你可以使用 <img style=
+"../../images/icon_lmb.png"> 单击该权限以将其编辑为所需内容。你可以使用 <img style=
 "vertical-align:middle" src="images/icon_removeproxy.png"> 按钮删除权限。<br>
 <br></li>
 
@@ -324,7 +317,7 @@ target="_BLANK">YoYo 游戏知识库</a>。</p>
 <br></li>
 
 <li><b>系统框架（System Frameworks）</b>： 在这里，你可以将任何 iOS 系统框架添加到你的扩展程序中。通过单击 <img style="vertical-align:middle" src="images/icon_addproxy.png"> 将添加占位符框架的按钮添加这些，然后你可以通过慢速单击 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 来编辑它。你可以在 <a href=
+"../../images/icon_lmb.png"> 来编辑它。你可以在 <a href=
 "https://developer.apple.com/library/ios/documentation/miscellaneous/conceptual/iphoneostechoverview/iPhoneOSFrameworks/iPhoneOSFrameworks.html"
 target="_blank">此处</a> 找到有关可用系统框架的更多信息。要删除系统框架，只需选择它，然后单击 <img style="vertical-align:middle"
 src="images/icon_removeproxy.png"> 按钮。<br>
@@ -392,7 +385,7 @@ target="_blank">YoYo Games 资源市场</a>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,7 +40,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A.</p>
+<p><b>返回：</b> N/A</p>
 
 <p><br>
 </p>
@@ -48,17 +48,8 @@ if (window.name != "content")
 <h3 class="studio">描述</h3>
 
 <p>This <b>constant</b> is for use in the functions <a href=
-"effect_create_above.html"><tt>effect_create_above</tt></a> and
-<a href=
-"effect_create_below.html"><tt>effect_create_below</tt></a>, and
-will create a snow effect as illustrated in the image below:<br>
-<br>
-<img class="center" src="images/ef_snow.png"><br>
-<br>
-<i><b>NOTE:</b> This effect needs no x/y position as it is always
-drawn at the 0,0 room position to cover the full screen and the
-size value relates to the number of particles created, not the size
-of individual particles.</i><br>
+"effect_create_above.html"><tt>effect_create_above</tt></a> and <a href=
+"effect_create_below.html"><tt>effect_create_below</tt></a>, and will create a snow effect as illustrated in the image below:<br><br><img class="center" src="images/ef_snow.png"><br><br><i><b>NOTE:</b> This effect needs no x/y position as it is always drawn at the 0,0 room position to cover the full screen and the size value relates to the number of particles created, not the size of individual particles.</i><br>
 <br></p>
 
 <p><br>
@@ -66,17 +57,7 @@ of individual particles.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">switch (global.weather)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;case 1:<br>
-&nbsp;&nbsp;&nbsp;effect_create_above(ef_rain, 0, 0, 1,
-c_gray);<br>
-&nbsp;&nbsp;&nbsp;break;<br>
-&nbsp;&nbsp;&nbsp;case 2:<br>
-&nbsp;&nbsp;&nbsp;effect_create_above(ef_snow, 0, 0, 1,
-c_gray);<br>
-&nbsp;&nbsp;&nbsp;break;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">switch (global.weather)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case 1:<br>&nbsp;&nbsp;&nbsp;effect_create_above(ef_rain, 0, 0, 1, c_gray);<br>&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;case 2:<br>&nbsp;&nbsp;&nbsp;effect_create_above(ef_snow, 0, 0, 1, c_gray);<br>&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will create a rain or snow effect depending on
 the value of the global variable "weather".</p>

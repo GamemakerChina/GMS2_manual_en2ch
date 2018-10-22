@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">draw_clear</h1>
 
-<h2 class="studio">Clears the entire screen with colour.</h2>
+<h2 class="studio">用指定颜色填充整个屏幕。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <tr>
 <td>col</td>
-<td>The colour with which the screen will be cleared</td>
+<td>用来填充屏幕的颜色</td>
 </tr>
 </table>
 </div>
@@ -57,19 +57,15 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to clear the entire screen (with no
-alpha blend) to the given colour, and is only for use in the draw
-event of an instance (it will not show if used in any other event).
-It can also be useful for clearing <a href=
-"../surfaces/index.html">surfaces</a> when they are newly
-created.<br>
+<p>这个函数用指定颜色来填充（清空）整个屏幕（没有透明度设定），它仅能用于实例的draw事件（用于其它事件时不发挥作用）。当新建表面时，它也可用于填充 <a href=
+"../surfaces/index.html">表面</a> 。<br>
 <br></p>
 
 <p><br>
@@ -79,7 +75,7 @@ created.<br>
 
 <p class="code">draw_clear(c_blue);</p>
 
-<p>This will clear the screen with the colour blue.</p>
+<p>这将用蓝色填充整个屏幕。</p>
 
 <p><br>
 </p>

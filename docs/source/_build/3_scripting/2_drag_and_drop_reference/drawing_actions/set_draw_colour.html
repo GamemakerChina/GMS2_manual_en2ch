@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>设置绘制的颜色</title>
+<title>设置绘制颜色</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_drawing_set_draw_colour.png"> 设置绘制的颜色</h2>
+"images/i_drawing_set_draw_colour.png"> 设置绘制颜色</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,23 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can set the colour to use for any shapes
-(rectangle/ellipse/line) or for any text that is drawn
-subsequently. Note that this does not have to be called before
-every draw action, and can be set once only at the start of the
-game. For example, if all your text is going to be yellow, you can
-call this action in the Create Event of the first room of the game,
-and all text (and shapes) will then be drawn yellow from then
-onwards. However if you need to use multiple different colours,
-then you will need to call this before each text or shape that
-requires a different colour.</p>
+<p>使用这个动作，你可以设置之后将绘制图形的颜色（绘制图形，例如矩形、椭圆、线）或者绘制文字的颜色。注意：不需要每次绘制动作前都使用这个动作，可以只在游戏开始设置一次。举例来说，假如你的所有文字都希望是黄色的，你可以第一个房间的创建事件中调用这个动作，之后所有的文字（和图形）都会用黄色绘制。此外，如果你需要多次使用不同的颜色，每次更换颜色前需要调用这条动作。</p>
 
-<p>The action has a checkbox at the bottom for <b>Use alpha</b>.
-This enables the alpha component of the colour to be used to set
-the draw alpha too (much the same as using <a href=
-"set_draw_alpha.html">Set Draw Alpha</a> does. If you do not want
-to include the alpha component and just have a solid colour, this
-can be disabled (it is enabled by default).</p>
+<p>此动作在底端有一个勾选框 <b>使用透明度</b>. 这样，设置颜色动作就也可以同时设置绘制的透明度了。效果与动作 <a href=
+"set_draw_alpha.html">设置绘制透明度</a> 一致。如果你不希望绘制时有透明度，指向用固定颜色绘制，可以取消勾选该选项。（默认是勾选的）。</p>
 </blockquote>
 
 <p><br>
@@ -64,15 +51,14 @@ can be disabled (it is enabled by default).</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_drawing_set_draw_colour.png" alt=
-"Set Draw Colour Syntax">
+"设置绘制颜色语法">
 <p><br>
 </p>
 
 <h3>举例：</h3>
 <img class="center" src="images/e_drawing_set_font.png" alt=
-"Set Draw Colour Example">
-<blockquote>The above action block code sets the draw colour, the
-font, and the alignment for some text that is drawn.</blockquote>
+"设置绘制颜色举例">
+<blockquote>上述动作块代码设置了将要绘制的文字的颜色，字体和对齐方式。</blockquote>
 
 <p><br>
 </p>
@@ -81,11 +67,9 @@ font, and the alignment for some text that is drawn.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Drawing
-Actions</a></div>
+<div style="float:left">上一页： <a href="index.html">绘制动作</a></div>
 
-<div style="float:right">next: <a href="get_draw_colour.html">Get
-Draw Colour</a></div>
+<div style="float:right">下一页 <a href="get_draw_colour.html">获取绘制颜色</a></div>
 </div>
 </div>
 

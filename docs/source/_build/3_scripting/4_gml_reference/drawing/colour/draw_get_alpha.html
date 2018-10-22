@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">draw_get_alpha</h1>
 
-<h2 class="studio">Gets the current draw alpha value.</h2>
+<h2 class="studio">获取当前的绘制透明度值。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -40,18 +40,15 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns the current value of the draw alpha, which
-will range between 0 (fully transparent) and 1 (fully opaque). The
-draw alpha affects the transparency of all draw functions, and can
-be set with the <a href=
-"draw_set_alpha.html"><tt>draw_set_alpha</tt></a> function.<br>
+<p>这个函数返回当前的绘制透明度值，这个数值的范围是从0（完全透明）到1（完全不透明）。这个绘制透明度会影响所有的绘制函数，你可以使用 <a href=
+"draw_set_alpha.html"><tt>draw_set_alpha</tt></a> 函数来修改它。<br>
 <br></p>
 
 <p><br>
@@ -59,20 +56,15 @@ be set with the <a href=
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if draw_get_alpha() != 1<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;draw_set_alpha(1);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if draw_get_alpha() != 1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_set_alpha(1);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code first checks the current draw alpha and then if
-it is not set to 1 it sets it to 1.</p>
+<p>上述代码首先检测当前绘制透明度，当其不为1时，将其设为1。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Colour And
-Blending</a></div>
+<div style="float:left">上一页：<a href="index.html">颜色与混合</a></div>
 
 <div style="float:right">Next: <a href=
 "draw_get_colour.html">draw_get_colour</a></div>

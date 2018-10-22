@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -45,7 +45,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -102,15 +102,12 @@ which will have a value of 0 - 3 (as a string) for <i>invalid</i>,
 challenge "N".<br>
 <br></li>
 
-<li>"<b>ChallengeNtype</b>" - The type of challenge given. Can be
-one of two constants:<br>
+<li>"<b>ChallengeNtype</b>" - The type of challenge given. 可以是两个常量之一：<br>
 
 <ul>
-<li><b><tt>achievement_type_score_challenge</tt></b> - A challenge
-based on the score value.<br></li>
+<li><b><tt>achievement_type_score_challenge</tt></b> - 基于分数值的挑战。<br></li>
 
-<li><b><tt>achievement_type_achievement_challenge</tt></b> - A
-challenge based on an achievement.<br></li>
+<li><b><tt>achievement_type_achievement_challenge</tt></b> - 基于成就的挑战。<br></li>
 </ul></li>
 
 <li>"<b>ChallengeNidentifier</b>" - The identifying string for the
@@ -145,39 +142,7 @@ information and generate an asynchronous callback with the special
 <tt>async_load</tt> ds_map containing the following data:</p>
 
 <blockquote>
-<p class="code">var ident = ds_map_find_value(async_load,
-"id");<br>
-if ident == achievement_challenge_list_received<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var numentries =
-ds_map_find_value(async_load,"numchallenges");<br>
-&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; numentries; i++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player_id[i] =
-ds_map_find_value(async_load, "Challenge" +
-string(i)+"playerid");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issuer_id[i] =
-ds_map_find_value(async_load, "Challenge" + string(i)
-+"issuerid");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state[i] =
-ds_map_find_value(async_load, "Challenge" + string(i)+"state");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message[i] =
-ds_map_find_value(async_load, "Challenge" +
-string(i)+"message");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date_completed[i] =
-ds_map_find_value(async_load, "Challenge" +
-string(i)+"completeddate");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date_issued[i] =
-ds_map_find_value(async_load, "Challenge" +
-string(i)+"issueddate");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ach_type[i] =
-ds_map_find_value(async_load, "Challenge" + string(i)+"type");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ach_ident[i] =
-ds_map_find_value(async_load, "Challenge" +
-string(i)+"identifier");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ach_score[i] =
-ds_map_find_value(async_load, "Challenge" + string(i)+"score");<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var ident = ds_map_find_value(async_load, "id");<br>if ident == achievement_challenge_list_received<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var numentries = ds_map_find_value(async_load,"numchallenges");<br>&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; numentries; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player_id[i] = ds_map_find_value(async_load, "Challenge" + string(i)+"playerid");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issuer_id[i] = ds_map_find_value(async_load, "Challenge" + string(i) +"issuerid");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;state[i] = ds_map_find_value(async_load, "Challenge" + string(i)+"state");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message[i] = ds_map_find_value(async_load, "Challenge" + string(i)+"message");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date_completed[i] = ds_map_find_value(async_load, "Challenge" + string(i)+"completeddate");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date_issued[i] = ds_map_find_value(async_load, "Challenge" + string(i)+"issueddate");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ach_type[i] = ds_map_find_value(async_load, "Challenge" + string(i)+"type");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ach_ident[i] = ds_map_find_value(async_load, "Challenge" + string(i)+"identifier");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ach_score[i] = ds_map_find_value(async_load, "Challenge" + string(i)+"score");<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the

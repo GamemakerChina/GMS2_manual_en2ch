@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -55,26 +55,15 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can shuffle a list, which will re-order
-all the component values into random positions from those in which
-they were originally added to the list.<br>
-<br>
-<i><b>NOTE:</b> This function will shuffle the list items to the
-same positions every time the game is run afresh due to the fact
-that GameMaker Studio 2 generates the same initial random seed
-every time to make debugging code a far easier task. To avoid this
-behaviour use <a href=
-"../../maths/real%20valued%20functions/randomise.html"><tt>randomise</tt></a>
-at the start of your game. This is only true when testing and
-debugging the game, as the final executable package will not show
-this behaviour and will be random every play.</i><br>
+<p>With this function you can shuffle a list, which will re-order all the component values into random positions from those in which they were originally added to the list.<br><br><i><b>NOTE:</b> This function will shuffle the list items to the same positions every time the game is run afresh due to the fact that GameMaker Studio 2 generates the same initial random seed every time to make debugging code a far easier task. To avoid this behaviour use <a href=
+"../../maths/real%20valued%20functions/randomise.html"><tt>randomise</tt></a> at the start of your game. This is only true when testing and debugging the game, as the final executable package will not show this behaviour and will be random every play.</i><br>
 <br></p>
 
 <p><br>
@@ -82,10 +71,7 @@ this behaviour and will be random every play.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if restart<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;ds_list_shuffle(card_list);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if restart<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;ds_list_shuffle(card_list);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will shuffle the list indexed in the variable
 "card_list" if the variable "restart" is flagged as

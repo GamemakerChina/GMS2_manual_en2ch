@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -129,7 +129,7 @@ xscale, yscale, rot, c1, c2, c3, c4, alpha);</p>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -147,13 +147,9 @@ surface part can be blended with an individual colour.</p>
 <div class="note"><b>NOTE:</b> Gradient blending is not available
 for the HTML5 target unless WebGL is enabled.</div>
 
-<div class="note"><b>NOTE:</b> When working with surfaces there is
-the possibility that they can cease to exist at any time due to
-them being stored in texture memory. You should <b>ALWAYS</b> check
-that a surface exists using <a href=
-"surface_exists.html"><tt>surface_exists</tt></a> before
-referencing them directly. For further information see <a href=
-"index.html">Surfaces</a>.</div>
+<div class="note"><b>注：</b>由于储存在显存里，表面层运行时存在随时停止并退出的可能性。在直接引用它们之前，你需要 <b>一直</b>使用 <a href=
+"surface_exists.html"><tt>surface_exists</tt></a>检测表面层是否退出。更多信息请查阅 <a href=
+"index.html">表面层</a>。</div>
 </blockquote>
 
 <p><br>

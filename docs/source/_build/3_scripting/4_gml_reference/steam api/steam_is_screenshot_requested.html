@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -39,26 +39,16 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will poll the Steam API to see if the key for
-taking a screenshot of the game has been pressed. The function will
-only return <tt>true</tt> for one step (game tick) if the key has
-been pressed, and will return <tt>false</tt> at all other
-times.<br>
-<br>
-<i><b>NOTE:</b> this does <b>not</b> take a screenshot for you.
-This only signals that the key has been pressed and you must use
-the</i> GameMaker Studio 2 functions <a href=
-"../cameras%20and%20display/display/screen_save.html"><tt>screen_save</tt></a>
-or <a href=
-"../cameras%20and%20display/display/screen_save_part.html"><tt>screen_save_part</tt></a>
-to save a local copy of the file to be uploaded.<br>
+<p>This function will poll the Steam API to see if the key for taking a screenshot of the game has been pressed. The function will only return <tt>true</tt> for one step (game tick) if the key has been pressed, and will return <tt>false</tt> at all other times.<br><br><i><b>NOTE:</b> this does <b>not</b> take a screenshot for you. This only signals that the key has been pressed and you must use the</i> GameMaker Studio 2 functions <a href=
+"../cameras%20and%20display/display/screen_save.html"><tt>screen_save</tt></a> or <a href=
+"../cameras%20and%20display/display/screen_save_part.html"><tt>screen_save_part</tt></a> to save a local copy of the file to be uploaded.<br>
 <br></p>
 
 <p><br>
@@ -66,15 +56,7 @@ to save a local copy of the file to be uploaded.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if steam_is_screenshot_requested()<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var file = "Catch_The_Haggis_" +
-string(global.scrn_num) + ".png");<br>
-&nbsp;&nbsp;&nbsp;screen_save(file)<br>
-&nbsp;&nbsp;&nbsp;steam_send_screenshot(file, window_get_width(),
-window_get_height());<br>
-&nbsp;&nbsp;&nbsp;global.scrn_num += 1;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if steam_is_screenshot_requested()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var file = "Catch_The_Haggis_" + string(global.scrn_num) + ".png");<br>&nbsp;&nbsp;&nbsp;screen_save(file)<br>&nbsp;&nbsp;&nbsp;steam_send_screenshot(file, window_get_width(), window_get_height());<br>&nbsp;&nbsp;&nbsp;global.scrn_num += 1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will poll the Steam API for a screenshot request
 and if it has been, a unique name for the image file will be

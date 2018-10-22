@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">screen_save_part</h1>
 
-<h2 class="studio">Saves a screenshot of a defined area of the game
-window as a .png to a given filename.</h2>
+<h2 class="studio">将游戏窗口的一个定义区域保存为a.png文件格式的截图。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,29 +49,27 @@ window as a .png to a given filename.</h2>
 
 <tr>
 <td>fname</td>
-<td>The filename for the screenshot to save</td>
+<td>屏幕截图保存的名称。</td>
 </tr>
 
 <tr>
 <td>x</td>
-<td>The x coordinate of the top left corner of the area of the
-screen to capture</td>
+<td>捕捉屏幕区域的左上角X坐标。</td>
 </tr>
 
 <tr>
 <td>y</td>
-<td>The y coordinate of the top left corner of the area of the
-screen to capture</td>
+<td>捕捉屏幕区域的右上角Y坐标。</td>
 </tr>
 
 <tr>
 <td>w</td>
-<td>The width of the area of the screen to capture</td>
+<td>捕捉屏幕区域的宽度。</td>
 </tr>
 
 <tr>
 <td>h</td>
-<td>The height of the area of the screen to capture</td>
+<td>捕捉屏幕区域的高度。</td>
 </tr>
 </table>
 </div>
@@ -80,24 +77,15 @@ screen to capture</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can save a screenshot of a part of the
-game as it currently appears in the game window or browser. The
-selection coordinates are based on the <i>absolute</i> size of the
-display, so (0,0) is always the top left hand corner of the screen.
-Below is an image that shows how this function works: <img class=
-"center" src="images/screen_save.png"> The file will be saved to
-the <a href="../../file%20handling/working_directory.html">working
-directory</a> of the game.<br>
-<br>
-<i><b>NOTE:</b> This function does not work on the HTML5
-target.</i><br>
+<p>使用这个函数可以对当前游戏窗口浏览器显示的内容的一部分进行截图保存。选择区域的坐标基于显示器的 <i>绝对</i>尺寸，所以 (0,0)一直是屏幕的左上角。Below is an image that shows how this function works: <img class=
+"center" src="images/screen_save.png"> The file will be saved to the <a href="../../file%20handling/working_directory.html">working directory</a> of the game.<br><br><i><b>注：</b> 这个函数不支持HTML5平台。</i><br>
 <br></p>
 
 <p><br>
@@ -105,26 +93,17 @@ target.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if keyboard_check_pressed(ord("S"))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;screen_save_part(working_directory +
-"\Screens\Screen_"+string(num)+".png", 0, 0, 100, 100)<br>
-&nbsp;&nbsp;&nbsp;num += 1;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check_pressed(ord("S"))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;screen_save_part(working_directory + "\Screens\Screen_"+string(num)+".png", 0, 0, 100, 100)<br>&nbsp;&nbsp;&nbsp;num += 1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code takes a screenshot of a part of the game screen
-that is 100 pixels square when the user presses the "S" key. This
-screen shot is saved to a specific directory and numbered using a
-variable which is then incremented.</p>
+<p>上述代码在按下“S”键时将游戏屏幕边长100像素的正方形区域保存为截图。截图保存在特定的目录里，其编号使用一个变量递增后得到。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Windows and
-Views</a></div>
+<div style="float:left">返回: <a href="index.html">Windows and Views</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "display_reset.html">display_reset</a></div>
 </div>
 

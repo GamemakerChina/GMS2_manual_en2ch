@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -82,19 +82,7 @@ been playing.</p>
 
 <h3>举例：</h3>
 
-<p class="code">var real_secs =
-audio_sync_group_get_track_pos(sg);<br>
-var secs = real_secs mod 60;<br>
-var mins = string(real_secs div 60);<br>
-if (secs &gt; 9)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;secs = string(secs);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;secs = "0" + string(secs);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-draw_text(32, 32, "Time = " + mins + ":" + secs);<br></p>
+<p class="code">var real_secs = audio_sync_group_get_track_pos(sg);<br>var secs = real_secs mod 60;<br>var mins = string(real_secs div 60);<br>if (secs &gt; 9)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;secs = string(secs);<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;secs = "0" + string(secs);<br>&nbsp;&nbsp;&nbsp;}<br>draw_text(32, 32, "Time = " + mins + ":" + secs);<br></p>
 
 <blockquote>
 <p>The above code gets the time position for the sync group indexed

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -78,7 +78,7 @@ below).</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
@@ -117,10 +117,7 @@ following constants being used to define the buffer type:<br>
 
 <tr>
 <td>buffer_wrap</td>
-<td>A buffer where the data will "wrap". When the data being added
-reaches the limit of the buffer size, the overwrite will be placed
-back at the start of the buffer, and further writing will continue
-from that point.</td>
+<td>A buffer where the data will "wrap". 当要添加的数据达到缓冲区大小的限制时，写入将回到缓冲区的开始位置，从那里将继续进行进一步的写入。</td>
 </tr>
 
 <tr class="alt">
@@ -178,30 +175,9 @@ currently supported!)</i></li>
 </ul>
 </blockquote>
 
-<p><i><b>NOTE:</b> Vertex buffers are 1 byte aligned, but you can
-create the buffer with any alignment depending on how you want to
-treat the data, as the vertex data is simply a raw memory copy into
-the buffer.</i><br>
-<br>
-The final two arguments are used to specify the range of vertex
-data that you wish to copy into the newly created buffer. The start
-vertex can be anywhere between 0 and the number of vertices -1, and
-then you give the number of vertices from that point to copy. You
-can use the function <a href=
-"../drawing/primitives/primitive%20building/vertex_get_number.html">
-<tt>vertex_get_number()</tt></a> on the vertex buffer to get the
-total number of vertices stored.<br>
-<br>
-<i><b>NOTE:</b> It's important that you remove any dynamically
-created resources like this from memory when you no longer need
-them to prevent memory leaks, so when you are finished with the
-buffer that you have created you should free it up again using
-<a href="buffer_delete.html"><tt>buffer_delete</tt></a>. Also note
-that the vertex buffer used to create the new buffer is not removed
-from memory either and you should use the function <a href=
-"../drawing/primitives/primitive%20building/vertex_delete_buffer.html">
-<tt>vertex_delete_buffer()</tt></a> when it is no longer
-required.</i><br>
+<p><i><b>NOTE:</b> Vertex buffers are 1 byte aligned, but you can create the buffer with any alignment depending on how you want to treat the data, as the vertex data is simply a raw memory copy into the buffer.</i><br><br>The final two arguments are used to specify the range of vertex data that you wish to copy into the newly created buffer. The start vertex can be anywhere between 0 and the number of vertices -1, and then you give the number of vertices from that point to copy. You can use the function <a href=
+"../drawing/primitives/primitive%20building/vertex_get_number.html"> <tt>vertex_get_number()</tt></a> on the vertex buffer to get the total number of vertices stored.<br><br><i><b>NOTE:</b> It's important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again using <a href="buffer_delete.html"><tt>buffer_delete</tt></a>. Also note that the vertex buffer used to create the new buffer is not removed from memory either and you should use the function <a href=
+"../drawing/primitives/primitive%20building/vertex_delete_buffer.html"> <tt>vertex_delete_buffer()</tt></a> when it is no longer required.</i><br>
 <br></p>
 
 <p><br>

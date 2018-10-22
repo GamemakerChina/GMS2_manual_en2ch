@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -73,7 +73,7 @@ checkall)</p>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean.</p>
+<p><b>返回:</b> Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -95,12 +95,7 @@ returns whether the goal was reached or not.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if instance_exists(obj_Enemy)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var inst;<br>
-&nbsp;&nbsp;&nbsp;inst = instance_nearest(x, y, obj_Enemy);<br>
-&nbsp;&nbsp;&nbsp;mp_potential_step(inst.x, inst.y, 5, false);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if instance_exists(obj_Enemy)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var inst;<br>&nbsp;&nbsp;&nbsp;inst = instance_nearest(x, y, obj_Enemy);<br>&nbsp;&nbsp;&nbsp;mp_potential_step(inst.x, inst.y, 5, false);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code first checks to see if there are any instances of
 "obj_Enemy" in the room. If there are it then finds the nearest one

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -64,7 +64,7 @@ particle system should be automatically updated or not.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -102,11 +102,7 @@ updating for the DnD™ particle effects).<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if global.Pause<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;part_system_automatic_update(global.Sname,
-false);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if global.Pause<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;part_system_automatic_update(global.Sname, false);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will switch off the particle updates if the
 global variable "Paused" is true.</p>

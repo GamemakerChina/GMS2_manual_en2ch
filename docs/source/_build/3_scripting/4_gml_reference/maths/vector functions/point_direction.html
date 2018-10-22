@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,22 +48,22 @@ if (window.name != "content")
 
 <tr>
 <td>x1</td>
-<td>The x coordinate of the first component of the vector</td>
+<td>向量组件的第一个x坐标</td>
 </tr>
 
 <tr class="alt">
 <td>y1</td>
-<td>The y coordinate of the first component of the vector</td>
+<td>向量组件的第一个y坐标</td>
 </tr>
 
 <tr>
 <td>x2</td>
-<td>The x coordinate of the second component of the vector</td>
+<td>向量组件的第二个x坐标</td>
 </tr>
 
 <tr class="alt">
 <td>y2</td>
-<td>The y coordinate of the second component of the vector</td>
+<td>向量组件的第二个y坐标</td>
 </tr>
 </table>
 </div>
@@ -71,20 +71,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns the direction of a vector formed by the
-specified components [x1,y1] and [x2,y2] in relation to the fixed
-x/y coordinates of the room. For example, in the image below if we
-want to get the direction from the player ship position to the
-enemy position so that we can fire a missile at the enemy then we
-would use this function (the exact code is in the example below the
-image):<br>
+<p>这个函数返回由特定的相对于房间的x/y坐标组件(x1,y1)和(x2,y2)形成的一个向量的方向。For example, in the image below if we want to get the direction from the player ship position to the enemy position so that we can fire a missile at the enemy then we would use this function (the exact code is in the example below the image):<br>
 <br>
 <img class="center" src="images/point_direction.png"></p>
 
@@ -93,13 +87,7 @@ image):<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var ex, ey;<br>
-ex = instance_nearest(x, y, enemy).x;<br>
-ey = instance_nearest(x, y, enemy).y;<br>
-with (instance_create_layer(x, y, "Bullets", obj_Missile))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;direction = point_direction(x, y, ex, ey);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var ex, ey;<br>ex = instance_nearest(x, y, enemy).x;<br>ey = instance_nearest(x, y, enemy).y;<br>with (instance_create_layer(x, y, "Bullets", obj_Missile))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;direction = point_direction(x, y, ex, ey);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will get the x and y coordinates of the nearest
 enemy and then pass them to a bullet object to use in the
@@ -113,8 +101,7 @@ correctly.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Vector
-Functions</a></div>
+<div style="float:left">上一页: <a href="index.html">向量函数</a></div>
 
 <div style="float:right">Next: <a href=
 "point_distance.html">point_distance</a></div>

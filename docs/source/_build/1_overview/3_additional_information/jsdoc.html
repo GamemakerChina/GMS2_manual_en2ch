@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,7 +38,7 @@ if (window.name != "content")
 
 <p>如果你希望你的自定义脚本有代码完成和显示所需的参数等，你需要在脚本编辑器中添加一些 <a href=
 "http://www.oracle.com/technetwork/articles/java/index-137868.html"
-target="_blank">JSDoc</a> 样式的注释。如果您已经导入了一个使用以前版本的 <i>GameMaker Studio</i> 创建的项目，那么您可能已经在该函数的 <a href="obsolete_functions.html">兼容脚本顶</a> 部看到了这样的注释： <img class="center" src=
+target="_blank">JSDoc</a> 样式的注释。如果你已经导入了一个使用以前版本的 <i>GameMaker Studio</i> 创建的项目，那么你可能已经在该函数的 <a href="obsolete_functions.html">兼容脚本顶</a> 部看到了这样的注释： <img class="center" src=
 "images/javadoc_import_example.png" alt="JSDoc导入范例"></p>
 
 <p>典型的脚本开头的格式是描述函数、函数名，然后是函数不同的参数列表，确保每一行以三重反斜杠“///”开始，告诉 <i>GameMaker Studio 2</i>  以 JSDoc 格式解析注释。这种注释本身需要一个标识符（以“@”打头）及其内容，其中可供使用的标识符如下所示：</p>
@@ -69,35 +69,15 @@ target="_blank">JSDoc</a> 样式的注释。如果您已经导入了一个使用
 
 <p>为了了解其在你撰写自己脚本时候的工作机理，我们来看一下这个基本的例子：</p>
 
-<p class="code">// is_same_object(id, object)<br>
-if argument0.object_index == argument1<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;return true;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else return false;<br></p>
+<p class="code">// is_same_object(id, object)<br>if argument0.object_index == argument1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;}<br>else return false;<br></p>
 
 <p>该脚本所做的事情无非就是检测实例是否具有和所给定物体一致的 object_index，并且可以简化调用为：</p>
 
-<p class="code">if is_same_object(id, obj_Player)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;instance_destroy()<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if is_same_object(id, obj_Player)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_destroy()<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>然而，在脚本编辑器中写入这些东西既不会向你显示参数也不会给你关于它用法的任何信息，因此，我们需要按照 JSDoc 注释的格式加入一个描述、一个函数名、以及参数如下：</p>
 
-<p class="code">/// @function is_same_object(id, object)<br>
-/// @description Compare an instance object index with that of
-another.<br>
-/// @param {real} instance_id The unique instance ID value of the
-instance to check.<br>
-/// @param {real} object_index The object index to be checked
-against.<br>
-<br>
-if argument0.object_index == argument1<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;return true;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else return false;<br></p>
+<p class="code">/// @function is_same_object(id, object)<br>/// @description Compare an instance object index with that of another.<br>/// @param {real} instance_id The unique instance ID value of the instance to check.<br>/// @param {real} object_index The object index to be checked against.<br><br>if argument0.object_index == argument1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;}<br>else return false;<br></p>
 
 <p>现在，在其他任意位置的代码中调用该脚本的时候，就会有自动补全以及参数提示等信息了。 <img class="center" src=
 "images/javadoc_example.png" alt="JSDoc 范例"></p>
@@ -121,7 +101,7 @@ else return false;<br></p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

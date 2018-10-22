@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -61,7 +61,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<p><b>返回：</b> String（字符串）</p>
 
 <p><br>
 </p>
@@ -79,47 +79,28 @@ lists the available constants and their settings:<br>
 <tr>
 <th>常量</th>
 <th>描述</th>
-<th>Setting</th>
+<th>设定</th>
 </tr>
 
 <tr>
 <td>network_config_connect_timeout</td>
-<td>Set a connection timeout value</td>
-<td>A value in milliseconds</td>
+<td>设置单次连接的超时数</td>
+<td>以毫秒为单位</td>
 </tr>
 
 <tr class="alt">
 <td>network_config_use_non_blocking_socket</td>
-<td>Tell GameMaker Studio 2 not to block on connect.</td>
-<td>0 = block, 1 = don't block</td>
+<td>告知GameMaker Studio 2不要阻止连接</td>
+<td>0 = 阻止, 1 = 不阻止</td>
 </tr>
 </table>
 </div>
 
 <p><br>
 <br>
-
-The first option (<tt>network_config_connect_timeout</tt>) simply
-sets the timeout for connecting to a server but doesn't change
-connection behaviour apart from the time you have to wait. It is
-recommended that you don't set this too low and keep it at about
-1000 for a LAN only game or 4000 or so for internet, or the game
-may fail to connect randomly. If you wish to set a timeout value
-for sending/receiving packets then use the function <a href=
-"network_set_timeout.html"><tt>network_set_timeout()</tt></a>.<br>
-<br>
-The second option (<tt>network_config_use_non_blocking_socket</tt>)
-means that the network connect functions will all return a
-<tt>socket_id</tt> instantly, <i>but you can't send or receive on
-that socket until you've received an async network event</i>. The
-event triggered will have the "type" key set to
-<tt>network_type_non_blocking_connect</tt> (you can find further
-details from the page on the <a href=
-"../../../2_interface/1_editors/events/async_events.html">Networking
-Asynchronous Event</a>). This is a <b>global</b> setting as
-<i>GameMaker Studio 2 does not support a mixture of blocking and
-non-blocking in one application.<br>
-<br></i></p>
+The first option (<tt>network_config_connect_timeout</tt>) simply sets the timeout for connecting to a server but doesn't change connection behaviour apart from the time you have to wait. It is recommended that you don't set this too low and keep it at about 1000 for a LAN only game or 4000 or so for internet, or the game may fail to connect randomly. If you wish to set a timeout value for sending/receiving packets then use the function <a href=
+"network_set_timeout.html"><tt>network_set_timeout()</tt></a>.<br><br>The second option (<tt>network_config_use_non_blocking_socket</tt>) means that the network connect functions will all return a <tt>socket_id</tt> instantly, <i>but you can't send or receive on that socket until you've received an async network event</i>. The event triggered will have the "type" key set to <tt>network_type_non_blocking_connect</tt> (you can find further details from the page on the <a href=
+"../../../2_interface/1_editors/events/async_events.html">Networking Asynchronous Event</a>). This is a <b>global</b> setting as <i>GameMaker Studio 2 does not support a mixture of blocking and non-blocking in one application.<br><br></i></p>
 
 <p><i><br></i>
 </p>
@@ -131,8 +112,7 @@ non-blocking in one application.<br>
 network_set_config(network_config_use_non_blocking_socket,
 1);<br></p>
 
-<p>The above code will set the timeout for the network connection
-to 1000ms and tell GameMaker Studio 2 not to block on connect.</p>
+<p>上述代码会设置网络连接超时限制为1000毫秒并告知GameMaker Studio 2不阻止连接。</p>
 
 <p><br>
 </p>
@@ -141,10 +121,10 @@ to 1000ms and tell GameMaker Studio 2 not to block on connect.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Networking</a></div>
+<div style="float:left">上一页：<a href=
+"index.html">联网</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "network_set_timeout.html">network_set_timeout</a></div>
 </div>
 </div>

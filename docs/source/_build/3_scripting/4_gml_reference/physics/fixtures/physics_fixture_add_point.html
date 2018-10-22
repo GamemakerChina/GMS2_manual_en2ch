@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -70,7 +70,7 @@ origin</i> for polygon shapes)</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -93,24 +93,7 @@ process:<br>
 <img class="center" src=
 "images/physics_fixture_add_point_image.png"></p>
 
-<p>As you can see, any simple <b>convex</b> polygon can be modelled
-in this way, but <b>concave</b> polygons are <i>not</i> supported
-at this moment. Finally, to close the polygon, you must bind the
-fixture to an instance. You should note too that you must also have
-at least <b>three</b> points defined for your polygon before
-binding it to an instance or you will get an error and that adding
-a point to a fixture that does not have a polygon shape set
-previously will also cause an error. Note too that the maximum
-number of points permitted for a fixture is <b>eight</b>.<br>
-<br>
-For chain shapes (which are simply a series connected edge shapes)
-this function will set a point as a "connection" to chain the edges
-together at. Therefore you need to have defined at least two points
-before binding the fixture to the instance otherwise you will get
-an error. However, unlike for polygons, you are not limited to a
-maximum of eight points and can add as many as you require to
-create the chain and the points are defined in actual room
-coordinates, rather than relative to the instance.<br>
+<p>As you can see, any simple <b>convex</b> polygon can be modelled in this way, but <b>concave</b> polygons are <i>not</i> supported at this moment. Finally, to close the polygon, you must bind the fixture to an instance. You should note too that you must also have at least <b>three</b> points defined for your polygon before binding it to an instance or you will get an error and that adding a point to a fixture that does not have a polygon shape set previously will also cause an error. Note too that the maximum number of points permitted for a fixture is <b>eight</b>.<br><br>For chain shapes (which are simply a series connected edge shapes) this function will set a point as a "connection" to chain the edges together at. Therefore you need to have defined at least two points before binding the fixture to the instance otherwise you will get an error. However, unlike for polygons, you are not limited to a maximum of eight points and can add as many as you require to create the chain and the points are defined in actual room coordinates, rather than relative to the instance.<br>
 <br></p>
 
 <p><br>

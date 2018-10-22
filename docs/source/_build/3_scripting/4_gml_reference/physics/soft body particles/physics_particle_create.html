@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -94,7 +94,7 @@ alpha, category)</p>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
@@ -188,32 +188,8 @@ retains its pre-collision colour.</td>
 
 <p><br>
 <br>
-
-These flags use bit-masking to create a final output value that is
-then checked to set the different basic properties of the particle
-(with the base property always being that of
-<tt>phy_particle_flag_water</tt>). For example, if you want to
-simulate a viscous liquid with surface tension you would use the
-bitwise <i>or</i> "|" to flag the appropriate bits as shown in the
-example below. In this way you can set different properties (other
-than the global properties) for each individual particle
-created.<br>
-<br>
-Other than the flags, you can also set the position in the room to
-create the particle at, the initial horizontal and vertical
-velocity, the initial colour and alpha, as well as the user
-<b>category</b>. The colour and alpha values are only used when
-drawing the particle using the function <a href=
-"physics_particle_draw.html"><tt>physics_particle_draw()</tt></a>,
-but the category value is used in multiple other functions. This
-value is an arbitrary integer value that you give each particle
-that you want to have similar properties, and it can be used to set
-flags later for that specific category as well as a number of other
-things. For example, if you have defined a "water" and an "oil"
-particle, you would give all those particles flagged as "water" the
-user category of 1 and all those particles created as "oil" the
-user category of 2, permitting you to later target a single
-category to change it's flags or get specific data.<br>
+These flags use bit-masking to create a final output value that is then checked to set the different basic properties of the particle (with the base property always being that of <tt>phy_particle_flag_water</tt>). For example, if you want to simulate a viscous liquid with surface tension you would use the bitwise <i>or</i> "|" to flag the appropriate bits as shown in the example below. In this way you can set different properties (other than the global properties) for each individual particle created.<br><br>Other than the flags, you can also set the position in the room to create the particle at, the initial horizontal and vertical velocity, the initial colour and alpha, as well as the user <b>category</b>. The colour and alpha values are only used when drawing the particle using the function <a href=
+"physics_particle_draw.html"><tt>physics_particle_draw()</tt></a>, but the category value is used in multiple other functions. This value is an arbitrary integer value that you give each particle that you want to have similar properties, and it can be used to set flags later for that specific category as well as a number of other things. For example, if you have defined a "water" and an "oil" particle, you would give all those particles flagged as "water" the user category of 1 and all those particles created as "oil" the user category of 2, permitting you to later target a single category to change it's flags or get specific data.<br>
 <br></p>
 
 <blockquote><i><b>NOTE:</b> You can use any integer value for the

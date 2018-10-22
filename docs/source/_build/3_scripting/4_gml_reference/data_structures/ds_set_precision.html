@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">ds_set_precision</h1>
 
-<h2 class="studio">Sets the precision used for comparisons.</h2>
+<h2 class="studio">设置用于比较操作的精度.</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <tr>
 <td>prec</td>
-<td>The precision value (default 0.0000001)</td>
+<td>精度值 (默认 0.0000001)</td>
 </tr>
 </table>
 </div>
@@ -57,27 +57,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>When comparing values, for example when searching in a map or
-sorting a list, <i>GameMaker Studio 2</i> must decide when two
-values are equal. For strings and integer values this is clear but
-for real numbers, due to floating point round-off errors, seemingly
-equal numbers can easily become unequal. For example, it's possible
-that <b>(5 / 3) * 3</b> will <i>not</i> be equal to 5! To help
-avoid this, a precision value is used on all real number functions,
-and when the <i>difference between two numbers is smaller</i> than
-this precision they are considered equal. The default a precision
-of 0.0000001 is used for all data structure functions unless
-changed by this function.<br>
-<br>
-<i><b>NOTE:</b> This precision is used in all data structures but
-not in other comparisons in GML!</i><br>
+<p>当比较不同值时,比如在一个映射表中搜索或对一个列表进行排序时，<i>GameMaker Studio 2</i>必须确定两个值何时是相等的。对于字符串和整数值，这是非常明确的，但对于实数，由于浮点数取值存在误差，因此看似相等的数字很容易变成不相等。比如说， <b>(5 / 3) * 3</b>的结果最后很可能并<i>不</i> 等于5！为了避免这种情况，所有实数函数都会设置一个精度值。当<i>两个值之间的误差小于</i> 这个精度值是，则认为二者相等。默认作用于所有数据结构的精度是0.0000001，除非你使用本函数进行修改<br><br><i><b>注意:</b> 这个精度将作用于所有的数据结构，但是不会影响GML中其他比较行为</i><br>
 <br></p>
 
 <p><br>
@@ -87,17 +74,16 @@ not in other comparisons in GML!</i><br>
 
 <p class="code">ds_set_precision(0.0001);</p>
 
-<p>The above code will change the default precision setting for all
-data structure functions.</p>
+<p>以上代码将修改所有数据结构函数的精度</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Data_Structures</a></div>
+<div style="float:left">返回: <a href=
+"index.html">数据结构（Data_Structures）</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一条： <a href=
 "ds_exists.html">ds_exists</a></div>
 </div>
 

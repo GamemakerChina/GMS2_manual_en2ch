@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -56,7 +56,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -75,14 +75,7 @@ file limit by having more than 32 files open.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">file = file_text_open_write(working_directory +
-"\Game_Data.txt");<br>
-while (!file_text_eof(file))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;file_text_readln(file);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-file_text_write_string(file, level_data);<br>
-file_text_close(file);<br></p>
+<p class="code">file = file_text_open_write(working_directory + "\Game_Data.txt");<br>while (!file_text_eof(file))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;file_text_readln(file);<br>&nbsp;&nbsp;&nbsp;}<br>file_text_write_string(file, level_data);<br>file_text_close(file);<br></p>
 
 <p>The above code opens a file for writing then loops through the
 lines of text already written to the file until it reaches the end.

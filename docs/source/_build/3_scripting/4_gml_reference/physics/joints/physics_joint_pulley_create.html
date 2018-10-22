@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -133,32 +133,11 @@ instance</td>
 
 <h3 class="studio">描述</h3>
 
-<p>The pulley joint is used to connect two instances within the
-physics world in such a way that moving one will directly influence
-the movement of the other. These joints are first anchored in the
-world space at two points, each one connected to an instance at its
-center of mass. This can be changed by setting the local anchor x/y
-coordinates relative to the origin of the instance, meaning that
-the actual connection from the instance to the physics world anchor
-point can be offset somewhere other than its origin. The following
-image illustrates this:<br>
+<p>The pulley joint is used to connect two instances within the physics world in such a way that moving one will directly influence the movement of the other. These joints are first anchored in the world space at two points, each one connected to an instance at its center of mass. This can be changed by setting the local anchor x/y coordinates relative to the origin of the instance, meaning that the actual connection from the instance to the physics world anchor point can be offset somewhere other than its origin. 下面的图像说明这一点:<br>
 <br>
 <img class="center" src="images/pulley_joint_image.png"></p>
 
-<p>If you look at inst2 you can see that its local anchor point has
-been offset 20 pixels to the "left" of its origin (Remember! The
-world anchor points are defined using the room coordinates, while
-the local anchor points are defined relative to the origin of the
-instance). You can also specify a ratio for the pulley joint, which
-tells one side or the other to move faster, with a value below 1
-making the first instance move faster (E.G. 0.5 will make it move
-twice as fast) and a value above 1 making the second instance move
-faster (E.G. 2 will make it move twice as fast).<br>
-<br>
-As with all the joints, if you set the "col" value to <tt>true</tt>
-then the two instances can interact and collide with each other but
-<i>only</i> if they have collision events, however if it is set to
-<tt>false</tt>, they will not collide no matter what.<br></p>
+<p>If you look at inst2 you can see that its local anchor point has been offset 20 pixels to the "left" of its origin (Remember!The world anchor points are defined using the room coordinates, while the local anchor points are defined relative to the origin of the instance). You can also specify a ratio for the pulley joint, which tells one side or the other to move faster, with a value below 1 making the first instance move faster (E.G. 0.5 will make it move twice as fast) and a value above 1 making the second instance move faster (E.G. 2 will make it move twice as fast).<br><br>As with all the joints, if you set the "col" value to <tt>true</tt> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <tt>false</tt>, they will not collide no matter what.<br></p>
 
 <p><br>
 </p>

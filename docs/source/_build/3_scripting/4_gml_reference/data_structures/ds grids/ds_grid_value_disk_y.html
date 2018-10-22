@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -50,22 +50,22 @@ circular region of a grid.</h2>
 
 <tr>
 <td>index</td>
-<td>The index of the grid.</td>
+<td>栅格的索引</td>
 </tr>
 
 <tr class="alt">
 <td>xm</td>
-<td>The x position of the disk on the grid.</td>
+<td>栅格内圆盘区域x位置。</td>
 </tr>
 
 <tr>
 <td>ym</td>
-<td>The y position of the disk on the grid.</td>
+<td>栅格内圆盘区域的y位置。</td>
 </tr>
 
 <tr class="alt">
 <td>r</td>
-<td>The radius of the disk on the grid.</td>
+<td>栅格中圆盘的半径</td>
 </tr>
 
 <tr>
@@ -78,7 +78,7 @@ circular region of a grid.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
@@ -101,14 +101,7 @@ function) to get the exact position within disc being searched.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if ds_grid_value_disk_exists(grid, 5, 5, 5,
-val)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;xpos = ds_grid_value_disk_x(grid, 5, 5, 5,
-val);<br>
-&nbsp;&nbsp;&nbsp;ypos = ds_grid_value_disk_y(grid, 5, 5, 5,
-val);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if ds_grid_value_disk_exists(grid, 5, 5, 5, val)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;xpos = ds_grid_value_disk_x(grid, 5, 5, 5, val);<br>&nbsp;&nbsp;&nbsp;ypos = ds_grid_value_disk_y(grid, 5, 5, 5, val);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks a ds_grid for a specific value within a
 disk region. if it is found, it then stores the x and y position of
@@ -118,8 +111,7 @@ the value in two variables for later use.</p>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">DS
-Grids</a></div>
+<div style="float:left">上一页： <a href="index.html">数据结构</a></div>
 
 <div style="float:right">Next: <a href=
 "ds_grid_copy.html">ds_grid_copy</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -66,7 +66,7 @@ colour, number);</p>
 
 <tr class="alt">
 <td>parttype</td>
-<td>The index (type) of the particles to be created.</td>
+<td>所创建的粒子索引（类型）。</td>
 </tr>
 
 <tr>
@@ -76,7 +76,7 @@ colour, number);</p>
 
 <tr class="alt">
 <td>number</td>
-<td>The number of particles to create.</td>
+<td>要创建粒子的数量。</td>
 </tr>
 </table>
 </div>
@@ -84,7 +84,7 @@ colour, number);</p>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -109,11 +109,7 @@ previously for this function to be used.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if speed &gt; 1<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;part_particles_create_colour(sname, x, y,
-p_MagicSmoke, choose(c_aqua, c_lime, c_fuschia, c_orange), 1);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if speed &gt; 1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;part_particles_create_colour(sname, x, y, p_MagicSmoke, choose(c_aqua, c_lime, c_fuschia, c_orange), 1);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will generate a single particle every step that
 the instance with the code has a speed greater than one. These

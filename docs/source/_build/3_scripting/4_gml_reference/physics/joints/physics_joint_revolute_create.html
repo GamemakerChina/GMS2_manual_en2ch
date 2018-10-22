@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -133,32 +133,7 @@ provided:<br>
 <br>
 <img class="center" src="images/revolute_joint_image_2.png"></p>
 
-<p>As you can see, angles in the physics world are <i>not</i> the
-same as the standard <i>GameMaker Studio 2</i> angles where right
-is 0 degrees and then it goes anti-clockwise so that up is 90, left
-is 180, and down is 270. No, when dealing with the revolute joint,
-the 0 degrees axis runs from the joint position to the origin of
-the second instance defined by the function and the angles are then
-calculated in a clockwise direction. If you switch on angle
-limiting, the limits are defined as being relative to this 0 degree
-axis and the limit range <i>should include zero</i>, otherwise the
-joint will lurch when the room begins. Finally, you can define the
-joint as having a motor or not. This means that when uninfluenced
-by a collision the joint will move in a direction, which is defined
-by the motor speed with a positive number being clockwise and a
-negative number being anti-clockwise. The "max_motor_torque"
-argument is for limiting the speed of the rotation so that you
-don't get a perpetually accelerating motor and to limit the
-influence that a collision may have on the rotation. In this way
-you can use a joint motor to simulate joint friction by setting
-joint speed to zero and maximum torque to some small, but
-significant value. The motor will try to prevent the joint from
-rotating, but will yield to a significant load.<br>
-<br>
-As with all the joints, if you set the "col" value to <tt>true</tt>
-then the two instances can interact and collide with each other but
-<i>only</i> if they have collision events, however if it is set to
-<tt>false</tt>, they will not collide no matter what.<br></p>
+<p>As you can see, angles in the physics world are <i>not</i> the same as the standard <i>GameMaker Studio 2</i> angles where right is 0 degrees and then it goes anti-clockwise so that up is 90, left is 180, and down is 270. No, when dealing with the revolute joint, the 0 degrees axis runs from the joint position to the origin of the second instance defined by the function and the angles are then calculated in a clockwise direction. If you switch on angle limiting, the limits are defined as being relative to this 0 degree axis and the limit range <i>should include zero</i>, otherwise the joint will lurch when the room begins. Finally, you can define the joint as having a motor or not. This means that when uninfluenced by a collision the joint will move in a direction, which is defined by the motor speed with a positive number being clockwise and a negative number being anti-clockwise. The "max_motor_torque" argument is for limiting the speed of the rotation so that you don't get a perpetually accelerating motor and to limit the influence that a collision may have on the rotation. In this way you can use a joint motor to simulate joint friction by setting joint speed to zero and maximum torque to some small, but significant value. The motor will try to prevent the joint from rotating, but will yield to a significant load.<br><br>As with all the joints, if you set the "col" value to <tt>true</tt> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <tt>false</tt>, they will not collide no matter what.<br></p>
 
 <p><br>
 </p>

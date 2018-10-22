@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,17 +36,7 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<blockquote>This <b>read only</b> variable is only valid in the
-<b>Draw Event</b> and returns the current view port being rendered.
-The return value will change during the draw event when you have
-various views as the draw event is called <i>once for each view
-port in succession</i>. So when (for example) you are using view
-port[0] and view port[1] in your game room, the draw event for
-<i>ALL</i> instances will be run twice, once for each port, and
-with this variable you can check to see what view is currently
-being drawn. In general, this is used to only render specific
-details to a single port when multiple view ports are visible in
-the room at the same time. See the example code below.</blockquote>
+<blockquote>This <b>read only</b> variable is only valid in the <b>Draw Event</b> and returns the current view port being rendered. The return value will change during the draw event when you have various views as the draw event is called <i>once for each view port in succession</i>. So when (for example) you are using view port[0] and view port[1] in your game room, the draw event for <i>ALL</i> instances will be run twice, once for each port, and with this variable you can check to see what view is currently being drawn. In general, this is used to only render specific details to a single port when multiple view ports are visible in the room at the same time. 请看下面示例代码：</blockquote>
 
 <p><br>
 </p>
@@ -67,22 +57,9 @@ the room at the same time. See the example code below.</blockquote>
 
 <h3>举例：</h3>
 
-<p class="code">if view_current == 0<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var xx = camera_get_view_x(view_camera[0]);<br>
-&nbsp;&nbsp;&nbsp;var yy = camera_get_view_y(view_camera[0]);<br>
-&nbsp;&nbsp;&nbsp;draw_text(xx + 32, yy + 32, "Player 1");<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var xx = camera_get_view_x(view_camera[1]);<br>
-&nbsp;&nbsp;&nbsp;var yy = camera_get_view_y(view_camera[1]);<br>
-&nbsp;&nbsp;&nbsp;draw_text(xx + 32, yy + 32, "Player 2");<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if view_current == 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var xx = camera_get_view_x(view_camera[0]);<br>&nbsp;&nbsp;&nbsp;var yy = camera_get_view_y(view_camera[0]);<br>&nbsp;&nbsp;&nbsp;draw_text(xx + 32, yy + 32, "Player 1");<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var xx = camera_get_view_x(view_camera[1]);<br>&nbsp;&nbsp;&nbsp;var yy = camera_get_view_y(view_camera[1]);<br>&nbsp;&nbsp;&nbsp;draw_text(xx + 32, yy + 32, "Player 2");<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks to see which view is currently being drawn
-and then draws a different text to each view based on the return
-value.</p>
+<p>上述代码将基于返回值检测当前绘制的是哪个视野并绘制不同的文字。</p>
 
 <p><br>
 </p>
@@ -91,7 +68,7 @@ value.</p>
 <div style="float:left">Back: <a href=
 "index.html">Cameras</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "view_enabled.html">view_enabled</a></div>
 </div>
 

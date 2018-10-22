@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -50,51 +50,47 @@ bbleft, bbtop, bbright, bbbottom, kind, tolerance);</p>
 
 <tr>
 <td>ind</td>
-<td>The index of the sprite to set the bounding box of.</td>
+<td>将被被设置边界框的精灵的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>sepmasks</td>
-<td>Whether to create collision masks for each sub-image of the
-sprite (<tt>true</tt>), or one mask for all (<tt>false</tt>).</td>
+<td>为每一个次级图像分别设置碰撞遮罩则设为 (<tt>true</tt>)，为所有次级图像设置同一个碰撞遮罩则设为 (<tt>false</tt>).</td>
 </tr>
 
 <tr>
 <td>bboxmode</td>
-<td>What kind of bounding box to use. 0 = automatic, 1 = full
-image, 2 = user defined.</td>
+<td>使用哪种边界框。0为自动，1为覆盖全图像，2为自定义。</td>
 </tr>
 
 <tr class="alt">
 <td>bbleft</td>
-<td>The maximum left position of the bounding box.</td>
+<td>边界框的左侧最大位置。</td>
 </tr>
 
 <tr>
 <td>bbtop</td>
-<td>The maximum top position of the bounding box.</td>
+<td>边界框的顶部最大位置。</td>
 </tr>
 
 <tr class="alt">
 <td>bbright</td>
-<td>The maximum right position of the bounding box.</td>
+<td>边界框的右侧最大位置。</td>
 </tr>
 
 <tr>
 <td>bbbottom</td>
-<td>The maximum bottom position of the bounding box.</td>
+<td>边界框的底部最大位置。</td>
 </tr>
 
 <tr class="alt">
 <td>kind</td>
-<td>The kind of mask (0 = precise, 1=bounding box, 2 = disk, 3 =
-diamond).</td>
+<td>遮罩种类，0为精确，1为根据边界框，2为圆形，3为菱形。</td>
 </tr>
 
 <tr>
 <td>tolerance</td>
-<td>Indicates the tolerance in the transparency value (0=no
-tolerance, 255=full tolerance).</td>
+<td>指示透明容忍度。0为不容忍，1为全部容忍，具体请看描述。</td>
 </tr>
 </table>
 </div>
@@ -103,9 +99,9 @@ tolerance, 255=full tolerance).</td>
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -113,35 +109,15 @@ tolerance, 255=full tolerance).</td>
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can set the type of collision mask that a
-sprite should have. If you select either automatic (0) or full
-image (1) as the bounding box mode then the individual bounding box
-values can be set to 0. However for a user defined mask (2) you
-will have to set these values. The different bounding box values
-are always relative to the top left corner of the sprite
-(irrespective of the x and y origin) which is considered position
-(0, 0).</p>
+<p>使用此函数你可设置精灵的碰撞遮罩。如果你选择自动或覆盖全图像，那么其它的边界框的参数可以被设置为0。. 如果你选择自定义遮罩，那么你必须设置这些值。不同的边界框值总是以精灵的左上角为相对位置（0，0）。</p>
 
-<p>Setting the kind of mask sets the general shape for the mask
-itself, but note that anything other than a rectangular mask will
-require more processing power when resolving collisions, with a
-subsequent drop in performance. In general, you should only use
-mask types other than rectangular when absolutely necessary.</p>
+<p>如果你将遮罩面设为方形以外的其它的形状，那么需要更多的资源来计算它，降低性能。所以一般情况下，应该将遮罩种类设为方形。</p>
 
-<p>Finally, tolerance is used to define how precise the precise the
-mask is (when used with a "full image" mask, this will have no
-effect), with a tolerance of 0 meaning that the mask will follow
-every single pixel that has a transparency over 0, while other
-values will shift the collision mask perimeter depending on the
-transparency of the pixels.</p>
+<p>容忍度是用来定义精确遮罩是有多精确的。例如使用覆盖全部图像将不会起作用。0容忍度意味遮罩将会覆盖所有透明度超过0的地区（即不透明的地方）。设为X遮盖将会覆盖透明度超过X的地方。</p>
 
-<div class="note"><b>NOTE:</b> This function is only useful for
-<b>bitmap</b> sprites and will not work with SWF or JSON (Spine)
-sprites.</div>
+<div class="note"><b>注意</b>此函数只对 <b>位图</b> 精灵有用，并且对SWF或JSON（骨骼）精灵不起作用。</div>
 
-<div class="note"><b>NOTE:</b> This function will only work on
-duplicated sprites and <b>not</b> directly on pre-made resources.
-you can duplicate sprites using the function <a href=
+<div class="note"><b>作用：</b> 此函数只对复制出来的精灵起作用。而 <b>不</b> 是直接对预制资源起作用。you can duplicate sprites using the function <a href=
 "sprite_duplicate.html"><tt>sprite_duplicate</tt></a>.</div>
 </blockquote>
 
@@ -155,10 +131,7 @@ you can duplicate sprites using the function <a href=
 sprite_collision_mask(spr, true, 1, 0, 0, 0, 0, 0, 0);<br></p>
 
 <blockquote>
-<p>The above code loads a sprite from an external source and stores
-the new index in the variable "spr". The code then sets the new
-sprite to have a precise collision mask for each of its
-sub-images.</p>
+<p>上面这段代码将会从外部资源加载精灵，并将它的索引存储在"spr"变量中。然后将精确的遮罩应用到每个次级图像上。.</p>
 </blockquote>
 
 <p><br>

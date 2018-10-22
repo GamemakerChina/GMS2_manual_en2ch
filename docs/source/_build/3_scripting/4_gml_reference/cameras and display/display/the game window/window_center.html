@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">window_center</h1>
 
-<h2 class="studio">Centers the region based on the viewable or
-browser area.</h2>
+<h2 class="studio">在可视范围或浏览器上将一个区域居中放置。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -41,23 +40,14 @@ browser area.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can center the game window in the display
-when the target module is Windows, Ubuntu (Linux) or MacOS, or you
-can center it in the browser if the target module is HTML5. This
-function has no effect on any other device.<br>
-<br>
-<i><b>NOTE:</b> If you have resized the game window (for example,
-by switching from full screen to windowed), and wish to center the
-new window, this function should be called in an <b>alarm[0]</b> at
-least one step later than the window size change, otherwise it will
-not work correctly.</i><br>
+<p>对于Windows, Ubuntu (Linux) 或者 MacOS 平台， 你可以使用这个函数将游戏窗口屏幕居中，而对于HTML5目标模块，是浏览器居中。这个函数对移动设备无效。<br><br><i><b>注：</b> 如果你已经在重置游戏窗口大小（例如切换全屏到窗口），并且希望新的窗口屏幕居中，你应该使用一个<b>alarm[0]（计时器）</b> 来调用这个函数，至少在窗口更改 one step（一步）之后，否则可能会出现问题。</i><br>
 <br></p>
 
 <p><br>
@@ -65,22 +55,17 @@ not work correctly.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if !window_get_fullscreen()<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;window_center();<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !window_get_fullscreen()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;window_center();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will center the game window within the display if
-it is not in full screen mode.</p>
+<p>在不是全屏模式下的情况下，让游戏窗口屏幕居中放置。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">The Game
-Window</a></div>
+<div style="float:left">上一页：<a href="index.html">游戏窗口</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "window_handle.html">window_handle</a></div>
 </div>
 

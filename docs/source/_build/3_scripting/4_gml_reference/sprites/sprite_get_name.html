@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the sprite to get the name of.</td>
+<td>将会被获取名称的精灵的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -56,7 +56,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
 <p class="code">字符串</p>
 
@@ -66,15 +66,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return the name <i>as a string</i> of the
-specified sprite. This name is the one that has been specified for
-the sprite in the resource tree of the main <i>GameMaker Studio
-2</i> window. Please note that this is <i>only</i> a string and
-cannot be used to reference the sprite directly - for that you
-would need the <i>sprite index</i>. You can, however, use this
-string to get the <i>sprite index</i> using the returned string
-along with the function <a href=
-"../asset_get_index.html"><tt>asset_get_index()</tt></a>.</p>
+<p>此函数将把特定精灵的名称 <i>作为字符串</i> 返回。这个名称是指在<i>GameMaker Studio 2</i> 主窗口的资源树中的特定名称 。请注意，此函数只返回字符串，你不能使用名称调用精灵，而需要使用<i>精灵索引</i>来调用。你可以在 <a href=
+"../asset_get_index.html"><tt>asset_get_index()</tt></a>函数中使用名称字符串来获取精灵索引。</p>
 </blockquote>
 
 <p><br>
@@ -86,9 +79,7 @@ along with the function <a href=
 <p class="code">str = sprite_get_name(sprite_index);</p>
 
 <blockquote>
-<p>The above code will get the name of the sprite index for the
-instance running the code and store the return value in the
-variable "str".</p>
+<p>上述代码将会根据精灵索引获得精灵名称并将其存储在变量 "str"中。</p>
 </blockquote>
 
 <p><br>

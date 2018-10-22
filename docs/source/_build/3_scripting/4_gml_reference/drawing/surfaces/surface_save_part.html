@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,32 +49,32 @@ height);</p>
 
 <tr>
 <td>surface_id</td>
-<td>The ID of the surface to set as the drawing target.</td>
+<td>作为绘制目标的表面层的ID。</td>
 </tr>
 
 <tr class="alt">
 <td>fname</td>
-<td>The name of the saved image file.</td>
+<td>保存的图像文件的名称。</td>
 </tr>
 
 <tr>
 <td>x</td>
-<td>The starting x position within the surface.</td>
+<td>表面层内的起始x位置</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The starting y position within the surface.</td>
+<td>表面层内的起始y位置。</td>
 </tr>
 
 <tr>
 <td>width</td>
-<td>The width of the part to save.</td>
+<td>保存部分的宽度。</td>
 </tr>
 
 <tr class="alt">
 <td>height</td>
-<td>The height of the part to save.</td>
+<td>保存部分的高度。</td>
 </tr>
 </table>
 </blockquote>
@@ -84,7 +84,7 @@ height);</p>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -92,11 +92,7 @@ height);</p>
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will save a part of a surface to disc using the
-given filename. The surface <i>must</i> be saved as a
-<tt>*.png</tt> format file, and the (x,y) position must be given as
-local coordinates to the surface, bearing in mind that the top left
-corner of the surface is always (0,0).</p>
+<p>此函数将使用给定的文件名保存表面层到硬盘上。表面层 <i>只能</i> 保存为 <tt>*.png</tt> 格式的文件，给定的 (x,y)坐标必须是表面层的局部坐标，铭记的表面的左上角总是（0,0）。</p>
 </blockquote>
 
 <p><br>
@@ -104,16 +100,10 @@ corner of the surface is always (0,0).</p>
 
 <h3>举例：</h3>
 
-<p class="code">if keyboard_check_pressed(ord("S")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surface_save_part(surf, "test.png", 0, 0, 100,
-100);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check_pressed(ord("S")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surface_save_part(surf, "test.png", 0, 0, 100, 100);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check to see if the user presses the "S" key
-on the keyboard and if they do it will save a part of the surface
-indexed in the variable "surf" to disc.</p>
+<p>上面的代码将检查是否用户按下键盘上的“S”键，如果他们这样操作了，将对变量“surf”索引的表面层的一部分进行存盘保存。</p>
 </blockquote>
 
 <p><br>
@@ -123,10 +113,10 @@ indexed in the variable "surf" to disc.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "surface_exists.html">surface_exists</a></div>
 </div>
 </div>

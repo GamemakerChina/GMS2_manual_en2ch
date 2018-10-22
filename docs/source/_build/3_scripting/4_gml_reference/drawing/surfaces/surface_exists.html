@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>surface_id</td>
-<td>The ID of the surface to check.</td>
+<td>检测的表面层索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -58,7 +58,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">布尔值</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -66,17 +66,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function is essential when working with surfaces due to
-their volatile nature. Surfaces are always held in texture memory
-which means that they can be destroyed from one moment to the next
-(for example, when a screensaver starts on windows, or when
-minimised on an Android device), so you should always check that a
-surface exists before doing anything with it (this includes drawing
-it to the screen). The example code below shows a typical use of
-this command in the draw event of an instance to check for a
-surface and re-create it if it has been removed (note that the
-surface will have been originally created in the create event of
-the object).</p>
+<p>由于表面层的不稳定性，在使用到表面时，这个函数还是有必要的。表面一直保存在显存里，这意味着从这一刻到另一刻（比如，电脑启动屏幕时，或者安卓设备最小化时），它可能会被破坏，所以在做与表面层相关的操作之前，你一直都需要检测是否存在一个表面层（包括向屏幕绘制表面时）。下面是这个命令在实例绘制事件中检测表面层的典型使用，如果发现被破坏了就会重新创建（注意，表面将在创建事件中提前创建好）。</p>
 </blockquote>
 
 <p><br>
@@ -84,23 +74,10 @@ the object).</p>
 
 <h3>举例：</h3>
 
-<p class="code">if !surface_exists(surf)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surf = surface_create(1024, 1024);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if view_current = 1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_surface(surf,0,0);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !surface_exists(surf)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surf = surface_create(1024, 1024);<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if view_current = 1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_surface(surf,0,0);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check to see if a surface indexed in the
-variable "surf" exists, and if it does not, it will re-create it.
-If it does exist, it then checks to see which view is currently
-being drawn and if it is view[1] it draws the surface.</p>
+<p>上面的例子中将检测变量为 "surf"的表面层是否存在，如果不存在，将重新创建一个。如果存在，然后会检测当前视野是哪一个，是 view[1]的话就绘制表面。</p>
 </blockquote>
 
 <p><br>
@@ -110,10 +87,10 @@ being drawn and if it is view[1] it draws the surface.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "surface_create.html">surface_create</a></div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">window_has_focus</h1>
 
-<h2 class="studio">Returns if the game window is in focus or
-not.</h2>
+<h2 class="studio">返回游戏窗口是否被聚焦。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -41,7 +40,7 @@ not.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
@@ -49,17 +48,8 @@ not.</h2>
 <h3 class="studio"><b>描述</b>
 </h3>
 
-<p>With this function you can poll the window (or tab) state and if
-it loses focus the function will return <tt>false</tt> otherwise it
-will return <tt>true</tt>. In most cases you can simply use the
-<a href=
-"../../../miscellaneous/os_is_paused.html"><tt>os_is_paused</tt></a>
-function to test this, but in some very specific cases (for example
-games on Chrome Apps) that function will not trigger, in which case
-you should use this function instead.<br>
-<br>
-<i><b>NOTE:</b> This function is only valid for the HTML5, Windows,
-MacOS, Windows 8 (JS), and Tizen (JS) modules.</i><br>
+<p>使用这个函数你能够得到窗口（或标签页）的状态，如果它失焦的时候，该函数会返回<tt>false</tt>，反之则返回<tt>true</tt>。大多数情况，简单的使用 <a href=
+"../../../miscellaneous/os_is_paused.html"><tt>os_is_paused</tt></a> 测试焦点是否存在，但是一些特殊的情况（比如Chrome Apps 游戏）那个函数不会触发，这时使用本节所说的这个函数替之。<br><br><i><b>注意：</b>该函数仅适用于HTML5、Windows、MacOS、Windows 8 (JS)以及Tizen (JS)模块。</i><br>
 <br></p>
 
 <p><br>
@@ -67,23 +57,17 @@ MacOS, Windows 8 (JS), and Tizen (JS) modules.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if !window_has_focus()<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;scr_PauseGame();<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !window_has_focus()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;scr_PauseGame();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will check to see if the game window is in focus
-or not, and if the function returns <tt>false</tt> a script will be
-called.</p>
+<p>上述代码将会检测游戏窗口是否处于焦点，若为<tt>false</tt>则调用一个脚本。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">The Game
-Window</a></div>
+<div style="float:left">上一页：<a href="index.html">游戏窗口</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "window_device.html">window_device</a></div>
 </div>
 

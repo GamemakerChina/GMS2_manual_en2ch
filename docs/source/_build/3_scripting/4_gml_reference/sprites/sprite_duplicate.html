@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the sprite to duplicate.</td>
+<td>被复制精灵的索引。</td>
 </tr>
 </table>
 </div>
@@ -58,7 +58,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
 <p class="code">Real (unique sprite ID value)</p>
 
@@ -68,27 +68,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return the index of a newly created sprite
-that is a duplicate (copy) of the one input as the "index"
-argument. If the function fails, -1 is returned. This function
-<i>must</i> be used to copy any sprites from the original assets
-before any transformations can be done on them. For example, if you
-wish to change the bounding box for a sprite, or set its alpha from
-another sprite, you must first duplicate it, then perform the
-operation on the duplicated sprite and use that. A duplicated
-sprite will be places on its own unique texture page when created,
-meaning that duplicating multiple sprites will create multiple
-texture pages and have an impact on performance, so use this
-function only when necessary.</p>
+<p>此函数将会依据给定的精灵索引复制图片，并返回新的复制精灵的索引。如果复制失败，将返回-1。 <i>必须</i> 先使用此函数复制原始组件中的精灵，然后才能在复制出来的精灵上进行操作。例如，如果你想改变精灵的碰撞框或阿尔法值，你必须先复制它，然后才能在复制出的精灵上操作。每个复制出来的精灵都将占据一个新的纹理页，也就是多次复制将会占据多个纹理页并影响性能。所以务必只在需要的时候使用此函数。</p>
 
-<div class="note"><b>NOTE:</b> When you duplicate a sprite in
-<i>GameMaker Studio 2</i> you must remember to remove it again
-(with <a href="sprite_delete.html"><tt>sprite_delete</tt></a>) when
-no longer needed, otherwise there is risk of a memory leak which
-will slow down and eventually crash your game.</div>
+<div class="note"><b>注意：</b> 当你在 <i>GameMaker Studio 2</i> 复制了一个精灵，之后不再需要时你必须使用 <a href="sprite_delete.html"><tt>sprite_delete</tt></a>函数删除它，否则可能导致存储泄露或游戏崩溃。</div>
 
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 </blockquote>
 
 <p><br>
@@ -99,9 +83,7 @@ available with the Trial Licence of the product.</div>
 <p class="code">new_spr = sprite_duplicate(sprite_index)</p>
 
 <blockquote>
-<p>The above code duplicates the sprite currently being used as the
-sprite index of the instance and stores the index for this new
-sprite in the variable "new_spr".</p>
+<p>上述代码将会根据索引复制出一个新精灵，并将新精灵的索引存储在变量“new_spr"。</p>
 </blockquote>
 
 <p><br>

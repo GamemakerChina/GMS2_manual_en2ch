@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -76,7 +76,7 @@ applied</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -97,22 +97,7 @@ example image to help illustrate:<br>
 <br>
 <img class="center" src="images/physics_apply_force_image.png"></p>
 
-<p>In the above example the spring object at the bottom has created
-a force on the ball object getting it to move in a different
-direction. The exact force is defined by the vector we get from the
-components xforce/yforce in relation to the xpos/ypos coordinates -
-which simply means that the force is calculated as the distance
-from xpos/ypos to xforce/yforce in Newtons (a Newton being defined
-as the amount of net force required to accelerate a mass of one
-kilogram at a rate of one meter per second squared)and the
-direction is the angle that we get from xpos/ypos to xforce/yforce.
-The code for a collision like the above would go in the collision
-event of the spring object and would look something like that
-provided in the example below.<br>
-<br>
-<i><b>NOTE:</b> The physics world uses metres for all its
-calculations, and the ratio of pixels per metre is defined in the
-room editor or using <a href=
+<p>In the above example the spring object at the bottom has created a force on the ball object getting it to move in a different direction. The exact force is defined by the vector we get from the components xforce/yforce in relation to the xpos/ypos coordinates - which simply means that the force is calculated as the distance from xpos/ypos to xforce/yforce in Newtons (a Newton being defined as the amount of net force required to accelerate a mass of one kilogram at a rate of one meter per second squared)and the direction is the angle that we get from xpos/ypos to xforce/yforce. The code for a collision like the above would go in the collision event of the spring object and would look something like that provided in the example below.<br><br><i><b>NOTE:</b> The physics world uses metres for all its calculations, and the ratio of pixels per metre is defined in the room editor or using <a href=
 "../the%20physics%20world/physics_world_create.html"><tt>physics_world_create</tt></a>.</i><br>
 
 <br></p>
@@ -122,10 +107,7 @@ room editor or using <a href=
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">with (other)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;physics_apply_force(x, y, 0, -30);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">with (other)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;physics_apply_force(x, y, 0, -30);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The code above will apply code to the <i>other</i> object in the
 collision with a force of 30 Newtons and a direction.</p>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,41 +49,37 @@ smooth, xorig, yorig);</p>
 
 <tr>
 <td>ind</td>
-<td>The index of the sprite to permanently replace.</td>
+<td>将要被永久代替的精灵的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>fname</td>
-<td>The filename of the image to make the new sprite.</td>
+<td>将要成为新精灵的图像的文件名。</td>
 </tr>
 
 <tr>
 <td>imgnumb</td>
-<td>The number of frames the sprite will be cut up into
-horizontally. 1 = one single image / <tt>*.gif</tt>.</td>
+<td>精灵将要被水平剪切的帧数。1 = one single image / <tt>*.gif</tt>.</td>
 </tr>
 
 <tr class="alt">
 <td>removeback</td>
-<td>Indicates whether to make all pixels with the background colour
-(left-bottom pixel) transparent.</td>
+<td>指示是否将所有与背景（左下角的像素）颜色相同的像素变成透明</td>
 </tr>
 
 <tr>
 <td>smooth</td>
-<td>Indicates whether to smooth the edges.</td>
+<td>指示是否将边缘变得平滑。</td>
 </tr>
 
 <tr class="alt">
 <td>xorig</td>
-<td>The x coordinate of the origin, relative to the sprite's top
-left corner.</td>
+<td>原点的X坐标，此坐标是相对于精灵的左上角来说的。</td>
 </tr>
 
 <tr>
 <td>yorig</td>
-<td>The y coordinate of the origin, relative to the sprite's top
-left corner.</td>
+<td>原点的Y坐标，此坐标是相对于精灵的左上角来说的。</td>
 </tr>
 </table>
 </blockquote>
@@ -91,9 +87,9 @@ left corner.</td>
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -101,81 +97,35 @@ left corner.</td>
 <h3>描述</h3>
 
 <blockquote>
-<p>This function works in almost the exact same manner as <a href=
-"sprite_add.html"><tt>sprite_add</tt></a>, only instead of
-returning the index of the sprite you are importing, it overwrites
-a previously created sprite index. When using this function you
-should use a sprite index that has been created and stored in a
-variable using other functions like <a href=
-"sprite_add.html"><tt>sprite_add</tt></a> or <a href=
-"sprite_create_from_surface.html"><tt>sprite_create_from_surface</tt></a>,
-or even <a href=
-"sprite_duplicate.html"><tt>sprite_duplicate</tt></a>, rather than
-a resource tree sprite asset. You <i>can</i> replace a sprite from
-the game assets using this function, but doing so means that you
-will lose the reference ID for the sprite that you are replacing,
-regardless of whether you call <tt>game_restart()</tt> or not, and
-so is not recommended. Regardless of the sprite being replaced,
-this function will <b>create a new texture page for the sprite</b>
-and so care should be taken when using it as it may adversely
-affect performance by increasing the number of required texture
-swaps for rendering.</p>
+<p>此函数的工作原理和 <a href=
+"sprite_add.html"><tt>sprite_add</tt></a>大体相同，不同的是后者将会返回你导入精灵的索引，而前者重写你之前创建的精灵的索引。如果要使用此函数，此处的精灵的索引应该是从 <a href=
+"sprite_add.html"><tt>sprite_add</tt></a> 或<a href=
+"sprite_create_from_surface.html"><tt>sprite_create_from_surface</tt></a>或  <a href=
+"sprite_duplicate.html"><tt>sprite_duplicate</tt></a>函数中得来的，而不是资源树上的精灵资源。你可以使用此函数来替代精灵，但这也意味着你会失去你正在代替的精灵的ID，与你是否调用 <tt>game_restart()</tt> 函数无关。正因为如此，此方法是不推荐使用的。无论被代替的精灵使什么，此函数将会 <b>为此精灵创建一个新的纹理页</b> ，所以你需要特别留心，这可能因为渲染而增加需要的纹理替换数量，从而对性能造成影响。</p>
 
-<p>The image file to be loaded should <b>always</b> be in
-<tt>*.png</tt> format and all images that are to be turned into
-animated sprites should have a "strip" format (see the image
-below). They will be split into the number of sub-images specified
-following the rule <b>sprite width = strip width / sub images</b>.
-
+<p>将被加载的图像文件的格式应该是 <tt>*.png</tt> 格式，而且所有被转换成动画精灵的图像的格式是长带状。(请看下面的图像）。它们将会被分割成给定数量的次级图像，而且它们 <b>的精灵宽度和长带的宽度一致。</b>.
 <img class="center" src="spr_strip.png"></p>
 
-<p>As you can see in the above image, the sprite has been placed on
-a dark purple background, and this can be removed by setting the
-"removeback" argument to <tt>true</tt>. This works by checking the
-<i>bottom left</i> pixel of the sprite for the colour there and
-then uses that as the colour to be removed. For example, in the
-above image, if we had the bottom left pixel colour as green, all
-the green parts of the sprite would have been removed and the rest
-of the purple background ignored.</p>
+<p>正如上图所示，精灵已经被放置在了紫黑色的背景上。如果需要移除背景，你需要将“removeback"的参数设为 <tt>true</tt>. 该方法的工作原理是通过检查精灵 <i>左下角</i> 处的像素颜色，并将此颜色作为将要被移除的颜色。假如在上面这张图片中，左下角的颜色为绿色的话，那么被移除的将会是所有绿色部分而非紫色部分，尽管紫色才是背景色。</p>
 
-<p>If you choose the "removeback" option, you may also want
-<i>GameMaker Studio 2</i> to smooth the edges of the sprite by
-setting the "smooth" argument to <tt>true</tt>. All this does is
-create a semi-transparent border around the edges of the sprite
-after it has had its background removed.</p>
+<p>如果你选择了“removeback"选项，你可能也希望 <i>GameMaker Studio 2</i> 将其边缘变得平滑，因此你将 "smooth" 参数设置为  <tt>true</tt>. 但你所做的实际上就是在移除精灵的背景后，为精灵边缘创建一个半透明的边框。</p>
 
-<p>Finally you can also specify the x and y <i>origin</i> for the
-sprite. This is the point where the sprite is "fixed" onto the
-instance that uses it, and is always calculated as relative to the
-0,0 top left corner of one sprite sub-image. So, for example, a
-sprite that is 32 x 32 pixels with these values set to (16,16) will
-have its origin in the center.</p>
+<p>最后，你当然也可以为精灵设置具体的X轴和Y轴 <i>原点</i>。这个原点就是此精灵固定在模板上的固定点，并且这个点的位置坐标就是与精灵最左上角的点的相对坐标。. 比如，一个精灵是32X32的像素大小，如果你设置它的原点坐标为(16,16),那么原点就在精灵的中心。</p>
 
-<p>By default all new sprites have their bounding boxes calculated
-automatically (the exact bbox will depend on the size and
-transparency of the sprite), however you may wish to customise
-this, in which case you should also use the function <a href=
-"sprite_collision_mask.html"><tt>sprite_collision_mask</tt></a>.</p>
+<p>默认情况下，系统会自动根据图片的尺寸和透明度为图片加上一个边界框，用于之后可能的碰撞检测或其它。如果需要修改边界框，你需要使用 <a href=
+"sprite_collision_mask.html"><tt>sprite_collision_mask</tt></a>函数。</p>
 
-<div class="note"><b>NOTE:</b> Depending on the target platform
-that is chosen you are limited as to where you can save and load
-files from. See <a href="../file%20handling/index.html">File
-Handling</a> for more information.</div>
+<div class="note"><b>注意：</b>如果目标平台不同，你保存和加载文件的地方也不同。更多信息请查看 <a href="../file%20handling/index.html">File Handling</a> 。</div>
 
 <p><br>
 </p>
 
-<div class="note"><b>NOTE:</b> You should be aware that if you are
-using this function in your HTML5 target game to load resources
-from an external server, then, due to XSS protection in browsers,
-attempts to load resources from across domains can be blocked and
-may appear to return blank results.</div>
+<div class="note"><b>注意：</b> 如果你在HTML5中使用此函数从外部服务器加载资源，由于浏览器的XSS保护，在域（domains)之间加载资源可能被封锁并不返回任何结果。</div>
 
 <p><br>
 </p>
 
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 </blockquote>
 
 <p><br>
@@ -187,8 +137,7 @@ available with the Trial Licence of the product.</div>
 false, false, 0, 0);</p>
 
 <blockquote>
-<p>The above code will replace the image asset indexed in
-"spr_banner" with another one loaded from an external source.</p>
+<p>上述代码将会替换索引存储在“sp_banner"中的图像资源.</p>
 </blockquote>
 
 <p><br>

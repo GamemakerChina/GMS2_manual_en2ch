@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -73,39 +73,20 @@ checkall);</p>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you tell an instance to take a "step" towards
-a specific point, specified by the xgoal and ygoal values. The size
-of the step (which is how many pixels the instance should move each
-step) is indicated by the stepsize, and if the instance is already
-at the position it will stop and not move any further, contrary to
-other, simpler functions like <a href=
-"../movement/move_towards_point.html"><tt>move_towards_point</tt></a>.
-The stepsize is also the distance "ahead" that the object will
-check each step for a collision, and you can choose whether the
-instance stops at a collision with <i>any</i> instance or only
-those that are flagged as solid.<br>
-<br>
-<i><b>Note:</b> This function does not try to make detours if it
-meets an obstacle, it simply fails and stops moving. The function
-will return whether it has reached the goal position (true) or if
-it has failed (false).</i><br>
+<p>With this function you tell an instance to take a "step" towards a specific point, specified by the xgoal and ygoal values. The size of the step (which is how many pixels the instance should move each step) is indicated by the stepsize, and if the instance is already at the position it will stop and not move any further, contrary to other, simpler functions like <a href=
+"../movement/move_towards_point.html"><tt>move_towards_point</tt></a>. The stepsize is also the distance "ahead" that the object will check each step for a collision, and you can choose whether the instance stops at a collision with <i>any</i> instance or only those that are flagged as solid.<br><br><i><b>Note:</b> This function does not try to make detours if it meets an obstacle, it simply fails and stops moving. The function will return whether it has reached the goal position (true) or if it has failed (false).</i><br>
 <br></p>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if mp_linear_step(mouse_x, mouse_y, 5, 0)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Effects",
-obj_Explosion);<br>
-&nbsp;&nbsp;&nbsp;instance_destroy();<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if mp_linear_step(mouse_x, mouse_y, 5, 0)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Effects", obj_Explosion);<br>&nbsp;&nbsp;&nbsp;instance_destroy();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will make the object move towards the mouse at a
 speed of 5 pixels per step. Once it reaches the mouse position it

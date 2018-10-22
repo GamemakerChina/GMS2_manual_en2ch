@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -64,7 +64,7 @@ that of a chain.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -93,17 +93,7 @@ can add to make up the finished fixture.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var xx = -100;<br>
-var yy = room_height / 2;<br>
-var fix = physics_fixture_create();
-physics_fixture_set_chain_shape(fix, false);<br>
-for (var i = 0; i &lt; 10; i++;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;physics_fixture_add_point(fix, xx, yy);<br>
-&nbsp;&nbsp;&nbsp;xx += 50 + random(150);<br>
-&nbsp;&nbsp;&nbsp;yy = (room_height / 2) - 250 + irandom(500);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-physics_fixture_bind(fix, id);<br></p>
+<p class="code">var xx = -100;<br>var yy = room_height / 2;<br>var fix = physics_fixture_create(); physics_fixture_set_chain_shape(fix, false);<br>for (var i = 0; i &lt; 10; i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;physics_fixture_add_point(fix, xx, yy);<br>&nbsp;&nbsp;&nbsp;xx += 50 + random(150);<br>&nbsp;&nbsp;&nbsp;yy = (room_height / 2) - 250 + irandom(500);<br>&nbsp;&nbsp;&nbsp;}<br>physics_fixture_bind(fix, id);<br></p>
 
 <p>The above code will create a line of "edge" fixtures with a
 variety of heights over the length of the room.</p>

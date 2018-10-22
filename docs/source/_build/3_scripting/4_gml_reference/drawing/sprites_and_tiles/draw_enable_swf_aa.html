@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -59,22 +59,17 @@ SWF sprites.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can enable or disable anti-aliasing (AA)
-for SWF format vector sprites. AA simply smooths the edges of
-vector images to give them a nicer look. The amount of AA used will
-depend on the value set using the function <a href=
-"draw_set_swf_aa_level.html"><tt>draw_set_swf_aa_level()</tt></a>.
-By default this is disabled.</p>
+<p>With this function you can enable or disable anti-aliasing (AA) for SWF format vector sprites. AA simply smooths the edges of vector images to give them a nicer look. The amount of AA used will depend on the value set using the function <a href=
+"draw_set_swf_aa_level.html"><tt>draw_set_swf_aa_level()</tt></a>. 默认禁用。</p>
 
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 <br>
 <br>
 
@@ -83,11 +78,7 @@ available with the Trial Licence of the product.</div>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if draw_get_swf_aa_level() == 0<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;draw_enable_swf_aa(true);<br>
-&nbsp;&nbsp;&nbsp;draw_set_swf_aa_level(0.5);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if draw_get_swf_aa_level() == 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_enable_swf_aa(true);<br>&nbsp;&nbsp;&nbsp;draw_set_swf_aa_level(0.5);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will check the AA value for SWF format sprites,
 and if it is 0 it enables AA and sets the value to 0.5.</p>

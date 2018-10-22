@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>w</td>
-<td>The width of the surface to be created.</td>
+<td>创建的表面层的宽度。</td>
 </tr>
 
 <tr class="alt">
 <td>h</td>
-<td>The height of the surface to be created.</td>
+<td>创建的表面层的高度。</td>
 </tr>
 </table>
 </blockquote>
@@ -71,22 +71,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function is used to create a surface and will return the
-index of the surface which should be stored in a variable for
-future function calls. When the surface is first created, it may
-contain "noise" as basically it is just an area of memory that is
-put aside for the purpose (and that memory may still contain
-information), so you may want to clear the surface before use with
-a function like <a href=
+<p>这个函数被用来创建一个表面层，而且将会返回这个表面的索引地址，这个索引应该储存在一个变量上，将来可以调用它。When the surface is first created, it may contain "noise" as basically it is just an area of memory that is put aside for the purpose (and that memory may still contain information), so you may want to clear the surface before use with a function like <a href=
 "../colour/draw_clear_alpha.html"><tt>draw_clear_alpha</tt></a>.</p>
 
-<p>It is highly recommended that all surfaces be created with a
-size that is a power of 2, ie: 16, 128, 512 or 1024 pixels in size,
-for example. This is not exactly necessary on certain platforms
-(like Windows and MacOS) but it will certainly increase
-compatibility on those targets, while for HTML5 and devices it is
-essential and very it's important that you remember this or you may
-run into problems later.</p>
+<p>强烈建议所有创建的表面层大小设置为2的N次方，比如16、128、512、1024像素。This is not exactly necessary on certain platforms (like Windows and MacOS) but it will certainly increase compatibility on those targets, while for HTML5 and devices it is essential and very it's important that you remember this or you may run into problems later.</p>
 </blockquote>
 
 <p><br>
@@ -94,22 +82,10 @@ run into problems later.</p>
 
 <h3>举例：</h3>
 
-<p class="code">if !surface_exists(surf)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surf = surface_create(1024, 1024);<br>
-&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>
-&nbsp;&nbsp;&nbsp;draw_clear_alpha(c_black, 0);<br>
-&nbsp;&nbsp;&nbsp;surface_reset_target();<br>
-&nbsp;&nbsp;&nbsp;view_surface_id[0] = surf;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !surface_exists(surf)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surf = surface_create(1024, 1024);<br>&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>&nbsp;&nbsp;&nbsp;draw_clear_alpha(c_black, 0);<br>&nbsp;&nbsp;&nbsp;surface_reset_target();<br>&nbsp;&nbsp;&nbsp;view_surface_id[0] = surf;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks to see if a surface exists and if it does
-not it will create a surface that is 1024 pixels wide and 1024
-pixels high, assigning the index to the variable "surf". The
-drawing target is then set to the new surface, which is cleared and
-made transparent before having the drawing target reset to the
-display. Finally the surface is assigned to a view.</p>
+<p>上述代码将检测是否存在一个表面层，如果没有则创建一个1024×1024px大小的表面层，并指定给索引为变量“surf”。然后绘制目标设置给这个新的表面层，接下来是清除表面，设置为透明，再是将绘制目标设置给显示器。最后，给这个表面层指定给一个视野。</p>
 </blockquote>
 
 <p><br>
@@ -119,10 +95,10 @@ display. Finally the surface is assigned to a view.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "surface_create_ext.html">surface_create_ext</a></div>
 </div>
 </div>

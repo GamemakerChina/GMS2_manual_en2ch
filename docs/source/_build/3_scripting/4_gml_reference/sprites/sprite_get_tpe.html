@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>sprite</td>
-<td>The index of the sprite to find the texture page entry of.</td>
+<td>纹理页上的精灵索引。</td>
 </tr>
 
 <tr class="alt">
 <td>index</td>
-<td>The image index of the sprite.</td>
+<td>精灵中图像的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -61,7 +61,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
 <p class="code">实数</p>
 
@@ -71,20 +71,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return a special value that relates to the
-position of the given sprite and sub-image on the texture page used
-by your game. In this way you can pass the value to extensions for
-use outside of the compiled game, effectively bypassing the
-<i>GameMaker Studio 2</i> drawing functions and permitting the
-sprite to be used in DOM content which can then be drawn anywhere
-within the window that contains the game canvas. This function is
-of particular interest to those that wish to create buttons and
-other interactive media outside of the <i>GameMaker Studio 2</i>
-canvas element on their host page using the function <a href=
-"../web/clickable_add.html"><tt>clickable_add</tt></a>.</p>
+<p>此函数将会返回一个特殊值，这个值与在游戏中使用的纹理上的精灵和次级图像的位置有关。你可以在编译游戏外扩展此函数的用途，例如绕过 <i>GameMaker Studio 2</i> 的绘制函数而将精灵用在DOM内容上，此DOM内容可以被绘制在包含游戏画布的窗口中的任何地方。如果你想在 <i>GameMaker Studio 2</i> 的画布元素之外为主页创建一个按钮或交互媒介，你可使用此函数和 <a href=
+"../web/clickable_add.html"><tt>clickable_add</tt></a>。</p>
 
-<div class="note"><b>NOTE:</b> This function is for HTML5
-only.</div>
+<div class="note"><b>注意</b> 此函数只能用在HTML5上。</div>
 </blockquote>
 
 <p><br>
@@ -98,11 +88,7 @@ sprite_get_tpe(spr_MS_Home, 0), "http://macsweeney_games.com",
 scrollbars=0");</p>
 
 <blockquote>
-<p>The above code creates a DOM button at the position (32, 32) of
-the page that the game canvas is running on. The button uses the
-sprite referenced from the texture page as "spr_MS_Home" and when
-clicked the button will open a new window for the specified URL and
-with the defined properties for that window.</p>
+<p>上述代码将会在游戏画布页的(32,32)位置创建一个DOM按钮。按钮将会使用纹理页上 为"spr_MS_Home"的图片。当按钮被点击，将会用特定的方法打开一个网页窗口。 </p>
 </blockquote>
 
 <p><br>

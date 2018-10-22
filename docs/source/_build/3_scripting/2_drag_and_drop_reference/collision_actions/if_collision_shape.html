@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>如果与一个形状发生碰撞...</title>
+<title>如果形状发生碰撞</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -40,43 +40,16 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to check and see if there is a collision
-with an instance of a given object within a given shaped area or
-along a line. You give the shape (rectangle, ellipse or line), the
-object to check for, and then supply the coordinates for the
-upper-left and lower-right corners of the shape being used, or in
-the case of a line, the start and end positions. These can be
-absolute positions within the game room, or positions relative to
-the instance performing the action. You can see how this works in
-the image below:  <img class="center" src=
+<p>此动作是用来检查是否有一个实例与给定的物体的给定区域或某条线有碰撞。你需要给出此物体需要检查碰撞区域的形状，例如方形，椭圆或线，你还要提供此形状左上角或右下角的坐标位置，如果形状是条线，那么你需要提供起点和终点的位置。位置可以是房间内的绝对位置，或者是与这个动作的实例所在的相对位置。你可以在下面的图片中看到这是如何工作的： <img class="center" src=
 "images/collision_shape_example.png" alt=
 "Collision Shape Example Image"></p>
 
-<p>As you can see, the results will depend on the collision mask of
-the instance being checked for, meaning the instance of the object
-you are looking for <i>must</i> have a sprite assigned to the
-<tt>sprite_index</tt>, or a sprite assigned to the
-<tt>mask_index</tt>. If it does not then it will not be detected by
-these functions, regardless of whether it is drawing a sprite or
-not. It is worth noting that any instance that falls completely
-within the boundaries set for the ellipse or rectangle shape will
-also return a collision.</p>
+<p>正如你所看到的，此结果将取决于被检查的实例的碰撞遮罩，这意味着被检查的实例必须有一个被分配给<tt>sprite_index</tt>的精灵， 或被分配给 <tt>mask_index</tt>的精灵。如果不这样，它将不会被这些函数检测到，无论它是否绘制了精灵。值得注意的是如果某实例完全进入方形或椭圆的边界框，那么也将检测到碰撞。</p>
 
-<p>The action will return the keyword <tt>noone</tt> if no
-collision is returned, or it will return the uniq ID value of the
-instance that is found to be in collision. You can also check the
-"Not" flag to check if there is <i>not</i> a collision at the given
-position. Note that if multiple instances are found to be in
-collision you will get returned a single ID value which could
-correspond to any of the instances (but only one of them). You can
-flag the target variable as a temporary (local) variable, which
-means that the action will create this variable to hold the return
-value until the end of the event.</p>
+<p>如果没有碰撞，此动作将会返回关键字 <tt>none（无）</tt> ，否则将会把碰撞的实例的独特ID返回。你也可以选中”反向“（NOT）标签，来检查这儿是不是没有碰撞。（即有碰撞将返回“没有”（none））。如果有多个实例碰撞，那么此动作将会返回这些实例中其中一个的独特ID（可能是其中任何一个）。如果你设置的目标变量是 &lt;b1&gt;临时&lt;/b1&gt; （局部）变量，那么此动作将创建变量来保存返回值，&lt;i2&gt;直到&lt;/i2&gt; 事件结束。</p>
 
-<p>Note that to add actions into an "if" block, they should be
-dropped to the <i>side</i> of the action, as shown in the image
-below:  <img class="center" src="images/if_collision_shape.png" alt=
-"If Collision Shape Example"></p>
+<p>注意如果需要添加此动作进”if"代码块，它们应该被放到动作的 <i>一边</i> ，如下图所示： <img class="center" src="images/if_collision_shape.png" alt=
+"如果发生形状碰撞的例子"></p>
 </blockquote>
 
 <p><br>
@@ -104,32 +77,32 @@ below:  <img class="center" src="images/if_collision_shape.png" alt=
 
 <tr class="alt">
 <td>物体</td>
-<td>The object to check for instances of</td>
+<td>要检查的对象的实例</td>
 </tr>
 
 <tr>
 <td>x1</td>
-<td>The x position to start from</td>
+<td>开始的X坐标位置</td>
 </tr>
 
 <tr class="alt">
 <td>y1</td>
-<td>The y position to start from</td>
+<td>开始的Y坐标位置</td>
 </tr>
 
 <tr>
 <td>x2</td>
-<td>The x position to end at</td>
+<td>结束的X坐标位置</td>
 </tr>
 
 <tr class="alt">
 <td>y2</td>
-<td>The y position to end at</td>
+<td>结束的Y坐标位置</td>
 </tr>
 
 <tr>
-<td>目标变量</td>
-<td>The variable to target for the return value of the action</td>
+<td>目标</td>
+<td>此动作返回值的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -139,14 +112,8 @@ below:  <img class="center" src="images/if_collision_shape.png" alt=
 
 <h3>举例：</h3>
 <img class="center" src="images/e_collision_shape.png" alt=
-"If Collision Shape Example">
-<blockquote>The above action block code checks for a collision with
-any instances of the object "obj_Player_Parent" along a 200px
-across the calling instance. The return value of the action is
-stored in a temporary (local) variable and then a check is done to
-see if the returned value is an instance that exists in the room.
-If it is, the instance has a value removed from an instance
-variable.</blockquote>
+"如果发生形状碰撞的例子">
+<blockquote>上述动作代码块检查被调用的物体“obj_player_parent"上的一条200像素的线是否被其它实例碰撞。此动作的返回值将被存储在一个临时（局部）变量中，此返回值将被检查——返回值是不是代表一个存在于房间中的例子。如果是的话，此返回值代表的实例将被从实例变量中移除。</blockquote>
 
 <p><br>
 </p>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -44,7 +44,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">布尔值</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -52,9 +52,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> if the application
-surface is being used for drawing, or <tt>false</tt> if the screen
-buffer is being used.</p>
+<p>如果使用应用表面层，这个函数将返回 <tt>真</tt> ， 或者如果使用屏幕缓存区返回 <tt>假</tt>。</p>
 </blockquote>
 
 <p><br>
@@ -62,24 +60,10 @@ buffer is being used.</p>
 
 <h3>举例：</h3>
 
-<p class="code">if keyboard_check_pressed(vk_space)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if application_surface_is_enabled()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;application_surface_enable(false);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;application_surface_enable(true);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check_pressed(vk_space)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if application_surface_is_enabled()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;application_surface_enable(false);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;application_surface_enable(true);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code check for a key press and the toggle the
-application surface on or off depending on its state (like in an
-options menu).</p>
+<p>上述代码检测按键并根据它的状态切换应用表面的启用(就像菜单的选项)。</p>
 </blockquote>
 
 <p><br>
@@ -89,10 +73,10 @@ options menu).</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "application_get_position.html">application_get_position</a></div>
 </div>
 </div>

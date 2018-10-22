@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -41,18 +41,14 @@ point.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This <b>read-only</b> array returns the x position of all points
-detected in a collision between two physics enabled instances.<br>
-<br>
-<i><b>NOTE:</b> This variable is only available in the collision
-event of a physics enabled instance.</i><br>
+<p>This <b>read-only</b> array returns the x position of all points detected in a collision between two physics enabled instances.<br><br><i><b>NOTE:</b> This variable is only available in the collision event of a physics enabled instance.</i><br>
 <br></p>
 
 <p><br>
@@ -60,12 +56,7 @@ event of a physics enabled instance.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var i;<br>
-for(i = 0; i &lt; phy_collision_points; i += 1;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;part_particles_create(global.Sname,
-phy_collision_x[i], phy_collision_y[i], global.Spark, 5);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var i;<br>for(i = 0; i &lt; phy_collision_points; i += 1;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;part_particles_create(global.Sname, phy_collision_x[i], phy_collision_y[i], global.Spark, 5);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code creates particles at all the defined points of a
 collision between two physics enabled instances.</p>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>ind</td>
-<td>The index of the sprite to change the transparency map of.</td>
+<td>将要被改变透明地图的精灵的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>filename</td>
-<td>The filename for the saved sprite strip.</td>
+<td>存储精灵长带的文件名。</td>
 </tr>
 </table>
 </blockquote>
@@ -61,47 +61,28 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3>描述</h3>
 
-<p>This function will create a strip image of all sub-images from a
-sprite. You can specify the name of the file to be saved, but the
-actual file type <i>must</i> be <tt>*.png</tt>.</p>
+<p>此函数将会从一个精灵创建一个长带图。你可以设定将要被保存的文件名，但文件类型 <i>必须</i> 是 <tt>*.png</tt>.</p>
 
-<div class="note"><b>NOTE:</b> Depending on the target platform
-that is chosen you are limited as to where you can save and load
-files from. See <a href="../file%20handling/index.html">File
-Handling</a> for more information.</div>
+<div class="note"><b>注意：</b>如果目标平台不同，你保存和加载文件的地方也不同。更多信息请查看 <a href="../file%20handling/index.html">File Handling</a> 。</div>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">var spr, i;<br>
-spr = sprite_create_from_surface(0, 0, 32, 32, true, true, 16,
-16);<br>
-for (i = 1; i &lt; 8; i +=1)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;sprite_add_from_surface(spr, i, 0, 32, 32, true,
-true, 16, 16);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-sprite_save_strip(spr, "Custom_Player_Sprite.png");<br>
-sprite_delete(spr);<br></p>
+<p class="code">var spr, i;<br>spr = sprite_create_from_surface(0, 0, 32, 32, true, true, 16, 16);<br>for (i = 1; i &lt; 8; i +=1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;sprite_add_from_surface(spr, i, 0, 32, 32, true, true, 16, 16);<br>&nbsp;&nbsp;&nbsp;}<br>sprite_save_strip(spr, "Custom_Player_Sprite.png");<br>sprite_delete(spr);<br></p>
 
 <blockquote>
-<p>The above code creates a sprite from the surface indexed in the
-variable "surf", assigning its index to the local variable
-"spr_Custom", and then uses a <tt>for</tt> loop to move across the
-surface and capture various sections which are added into the
-sprite as sub-images. this new sprite is then saved as a png strip
-before being removed from memory.</p>
+<p>上述代码将会根据变量 "surf"中存储的表面的索引创建一个精灵， 并将它的索引赋予 "spr_Custom"，然后使用 <tt>for</tt> 循环在表面上选择不同的部分并将它们作为精灵的次级变量。新精灵将会被保存为一个png格式的长带，然后从存储中移除。</p>
 </blockquote>
 
 <p><br>

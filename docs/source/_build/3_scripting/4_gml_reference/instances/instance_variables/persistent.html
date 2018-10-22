@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,7 +38,7 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<blockquote>This variable can be read to find out if the instance is flagged as <tt>persistent</tt> or not, or it can used to set persistence to <tt>true</tt> (persistent) or <tt>false</tt> (not persistent) for the instance. A persistent instance is one that will be "carried over" from room to room, meaning (for example) that it only has to be created once at the start of the game and it will be present in all further rooms. Care should be taken with persistence as it is easy to lose track of persistent instances which can lead to problems later in the development of the game.<br><br>A persistent object will still have its <b>Game Start</b>, <b>Game End</b>, <b>Room Start</b> and <b>Room End</b> events triggered, however if you restart the game (with, for example, the <tt>game_restart()</tt> function) all persistent objects will be removed and only exist when created again by the game. 另请注意，如果您停用持久性对象，它将不会再从一个房间传递到另一个房间，除非在客户端事件触发之前重新启动。</blockquote>
+<blockquote>This variable can be read to find out if the instance is flagged as <tt>persistent</tt> or not, or it can used to set persistence to <tt>true</tt> (persistent) or <tt>false</tt> (not persistent) for the instance. A persistent instance is one that will be "carried over" from room to room, meaning (for example) that it only has to be created once at the start of the game and it will be present in all further rooms. Care should be taken with persistence as it is easy to lose track of persistent instances which can lead to problems later in the development of the game.<br><br>A persistent object will still have its <b>Game Start</b>, <b>Game End</b>, <b>Room Start</b> and <b>Room End</b> events triggered, however if you restart the game (with, for example, the <tt>game_restart()</tt> function) all persistent objects will be removed and only exist when created again by the game. 另请注意，如果你释放持久性对象，它将不会再从一个房间传递到另一个房间，除非在客户端事件触发之前重新启动。</blockquote>
 
 <p><br>
 </p>
@@ -52,17 +52,14 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">布尔值</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">if !persistent<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;persistent = true;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !persistent<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;persistent = true;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>The above code will check the instance to see if
 persistence is flagged as <tt>false</tt> and if the instance is NOT

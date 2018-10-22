@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,15 +48,12 @@ that you will need to either:</p>
 
 <blockquote>
 <ul>
-<li>Enable a new view and draw the surface only in that view (using
-<a href="view_current.html"><tt>view_current</tt></a> to check
-which view is being drawn)</li>
+<li>启用一个新的视野，在新视野中绘制表面（使用 <a href="view_current.html"><tt>view_current</tt></a> 检测正在绘制哪个视野）。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>Draw the surface in the Draw GUI event of an instance, since
-the GUI layer is independent of views.</li>
+<li>既然GUI层是独立出视野的，那么可以在一个实例的GUI事件中绘制表面。</li>
 </ul>
 </blockquote>
 
@@ -109,10 +106,7 @@ view port to a surface see also the variable <a href=
 
 <h3>举例：</h3>
 
-<p class="code">if view_get_surface_id(0) == -1<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;view_set_surface_id(0, global.vSurf);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if view_get_surface_id(0) == -1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;view_set_surface_id(0, global.vSurf);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will check to see if a surface has been assigned
 to the view port[0] and if it has not then one is assigned.</p>

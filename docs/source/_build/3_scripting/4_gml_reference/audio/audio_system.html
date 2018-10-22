@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -41,7 +41,7 @@ is in use.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Constant</p>
+<p><b>返回：</b> 常量</p>
 
 <p><br>
 </p>
@@ -73,6 +73,8 @@ following two constants:</p>
 
 <p><br>
 
+
+
 This function is important only if you are using the HTML5 target
 module, as some browsers are not compatible with the new audio
 system, and so <i>GameMaker Studio 2</i> will automatically switch
@@ -84,14 +86,7 @@ back to the legacy audio.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if audio_system() == audio_old_system<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.SS = false;<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.SS = true;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if audio_system() == audio_old_system<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.SS = false;<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.SS = true;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks to see if the sound system being used is
 the legacy or the new one, and sets a global variable

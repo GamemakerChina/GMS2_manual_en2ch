@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -57,26 +57,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>Once two instances with physics representations have been bound
-by a joint, this can be deleted again at any time. Normally this
-will happen automatically when one of the two instances is
-destroyed, or when the room ends, but there are times when you may
-wish to do this manually. In those cases you would use this
-function.<br>
-<br>
-It should also be noted that whenever an instance that is part of a
-<a href="physics_joint_gear_create.html">gear joint</a> is
-destroyed, the gear joint should be deleted using this function
-<i>before</i> any of the instances involved in forming the gear
-(but the remaining joints will be deleted automatically), for
-example in the destroy event of the instance.<br>
+<p>Once two instances with physics representations have been bound by a joint, this can be deleted again at any time. Normally this will happen automatically when one of the two instances is destroyed, or when the room ends, but there are times when you may wish to do this manually. In those cases you would use this function.<br><br>It should also be noted that whenever an instance that is part of a <a href="physics_joint_gear_create.html">gear joint</a> is destroyed, the gear joint should be deleted using this function <i>before</i> any of the instances involved in forming the gear (but the remaining joints will be deleted automatically), for example in the destroy event of the instance.<br>
 <br></p>
 
 <p><br>
@@ -84,23 +72,7 @@ example in the destroy event of the instance.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var reactionForceX, reactionForceY,
-reactionForce;<br>
-if shipJoint<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;reactionForceX =
-physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br>
-&nbsp;&nbsp;&nbsp;reactionForceY =
-physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br>
-&nbsp;&nbsp;&nbsp;reactionForce = sqrt((reactionForceX +
-reactionForceX) + (reactionForceY + reactionForceY));<br>
-&nbsp;&nbsp;&nbsp;if reactionForce &gt; 2<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_joint_delete(shipJoint);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipJoint = -1;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var reactionForceX, reactionForceY, reactionForce;<br>if shipJoint<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;reactionForceX = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br>&nbsp;&nbsp;&nbsp;reactionForceY = physics_joint_get_value(shipJoint, phy_joint_reaction_force_x);<br>&nbsp;&nbsp;&nbsp;reactionForce = sqrt((reactionForceX + reactionForceX) + (reactionForceY + reactionForceY));<br>&nbsp;&nbsp;&nbsp;if reactionForce &gt; 2<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_joint_delete(shipJoint);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;shipJoint = -1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks to see if the variable "shipJoint" holds a joint index and if it does, it then calculates the force being applied to that joint using the two constants. 最后，如果关节合力大于2，则该关节会删除失效。</p>
 

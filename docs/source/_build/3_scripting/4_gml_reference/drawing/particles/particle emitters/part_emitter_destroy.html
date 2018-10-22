@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">part_emitter_destroy</h1>
 
-<h2 class="studio">Destroys a given emitter in the given particle
-system.</h2>
+<h2 class="studio">销毁位于指定粒子系统中的指定发射器。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,12 +49,12 @@ system.</h2>
 
 <tr>
 <td>ps</td>
-<td>The particle system to destroy the emitter from.</td>
+<td>待销毁发射器的粒子系统。</td>
 </tr>
 
 <tr>
 <td>ind</td>
-<td>The index of the emitter to destroy.</td>
+<td>待销毁的发射器索引。</td>
 </tr>
 </table>
 </div>
@@ -63,7 +62,7 @@ system.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -83,10 +82,7 @@ prevent memory leaks and errors.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if part_emitter_exists(global.Sname, p_emit)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;part_emitter_destroy(global.Sname, p_emit1);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if part_emitter_exists(global.Sname, p_emit)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;part_emitter_destroy(global.Sname, p_emit1);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will check to see if the particle emitter indexed
 in the variable "p_emit" exists in the give particle system and if
@@ -96,10 +92,10 @@ it does it is destroyed.</p>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href=
-"../index.html">Particles</a></div>
+<div style="float:left">上一页：<a href=
+"../index.html">粒子</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "part_emitter_destroy_all.html">part_emitter_destroy_all</a></div>
 </div>
 

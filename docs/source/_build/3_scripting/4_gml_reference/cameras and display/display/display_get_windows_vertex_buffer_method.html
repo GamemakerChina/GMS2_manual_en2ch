@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -28,8 +28,7 @@ if (window.name != "content")
 
 <h1 class="studio">display_get_windows_vertex_buffer_method</h1>
 
-<h2 class="studio">Gets the buffer method used on the Windows
-target platform.</h2>
+<h2 class="studio">获取 Windows 目标平台的缓冲区方法。</h2>
 
 <h3 class="studio"><b>语法：</b>
 </h3>
@@ -39,7 +38,7 @@ target platform.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b>Constant</p>
+<p><b>返回:</b>常量</p>
 
 <p><br>
 </p>
@@ -47,12 +46,8 @@ target platform.</h2>
 <h3 class="studio"><b>描述</b>
 </h3>
 
-<p>This Windows only function permits you to find out the current
-method for handling the game geometry vertex buffer. This can be
-set in the Global Game Settings Windows tab or with the function
-<a href=
-"display_set_windows_vertex_buffer_method.html"><tt>display_set_windows_vertex_buffer_method()</tt></a>,
-and will return one of the following constants:<br>
+<p>这个只用于 Windows 的函数，允许你找出当前处理游戏几何顶点缓冲区的方法。这个可以在全局游戏设定中或者使用函数 <a href=
+"display_set_windows_vertex_buffer_method.html"><tt>display_set_windows_vertex_buffer_method()</tt></a>设置，然后返回下面的一个常量：<br>
 <br></p>
 
 <div class="compat">
@@ -63,9 +58,8 @@ and will return one of the following constants:<br>
 </tr>
 
 <tr>
-<td>vbm_fast</td>
-<td>This is the default method and is the one recommended by Nvidia
-- it should give the highest performance.</td>
+<td>vbm_fastvbm_fast</td>
+<td>这是默认的，且是Nvidia推荐的方法 - 它应该是最高的性能。</td>
 </tr>
 
 <tr class="alt">
@@ -77,9 +71,7 @@ machines</td>
 
 <tr>
 <td>vbm_most_compatible</td>
-<td>This is the legacy method that was used in previous versions of
-GameMaker - performance is poorer than the other two, but it should
-be compatible with almost any machine.</td>
+<td>这是 GameMaker 之前使用的一个传统方法 - 性能不如上面两个，但是应该兼容几乎任何一台机器。</td>
 </tr>
 </table>
 </div>
@@ -89,24 +81,17 @@ be compatible with almost any machine.</td>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if display_get_windows_vertex_buffer_method() !=
-vbm_fast<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;display_set_windows_vertex_buffer_method(vbm_fast);<br>
+<p class="code">if display_get_windows_vertex_buffer_method() != vbm_fast<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;display_set_windows_vertex_buffer_method(vbm_fast);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-&nbsp;&nbsp;&nbsp;}<br></p>
-
-<p>The above code will check the current geometry method and set it
-to "fast" if it is not already.</p>
+<p>上述代码将检测当前的几何顶点缓冲区的方法，如果没有准备好则设置为 “fast（vbm_fast 方法）”。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Windows and
-Views</a></div>
+<div style="float:left">返回: <a href="index.html">Windows and Views</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "display_get_windows_alternate_sync.html">display_get_windows_alternate_sync</a></div>
 </div>
 

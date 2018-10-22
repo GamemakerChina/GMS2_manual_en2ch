@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -55,7 +55,7 @@ if (window.name != "content")
 <p>脚本使用脚本语言 GML 编写（有关详细信息，请参阅 <a href="../../3_scripting/3_gml_overview/index.html">GML 概述</a> 部分），这是 <i>GameMaker Studio 2</i> 使用的内置编程语言。一旦你对 <i>GameMaker Studio 2</i> 更加熟悉并希望最大程度地使用它，建议你开始学习使用这种语言，因为它可以极大地扩展你创建游戏时的可能性。你也可以使用拖拽编写脚本，但这需要不同的编辑器，并在 <a href=
 "../../3_scripting/1_drag_and_drop_overview/action_scripts.html">动作脚本</a>手册一节中讨论。</p>
 
-<p>脚本（与任何内置函数一样）可以使用不同的输入变量，包括实数、字符串、布尔值和特殊值（例如 <tt>all</tt> 或者 <tt>noone</tt>），并且这些输入变量通常称为 <b>参数</b>，尽管它们通常也称为 <b>参数</b>。要从物体或时间线执行脚本，请使用脚本名称，就像它是函数一样，也可以使用 GML 函数 <a href=
+<p>脚本（与任何内置函数一样）可以使用不同的输入变量，包括实数、字符串、布尔值和特殊值（例如 <tt>all</tt> 或者 <tt>noone</tt>），并且这些输入变量通常称为 <b>参数</b>，尽管它们通常也称为 <b>参数</b>。要从物体或时间轴执行脚本，请使用脚本名称，就像它是函数一样，也可以使用 GML 函数 <a href=
 "../../3_scripting/4_gml_reference/scripts/script_execute.html">script_execute</a>。你可以通过在资源树中右键单击 <img style=
 "vertical-align:middle" src="../../images/icon_rmb.png"> 脚本并选择 <b>重命名</b> 来命名脚本，但请注意脚本名称必须符合函数的脚本规则，因此它们必须以字母开头，并且只包含字母，数字或下划线符号 “_”。</p>
 
@@ -176,8 +176,8 @@ src="../../images/icon_cmd.png"> + <img style=
 "Script Editor Code Complete"></p>
 
 <p>在编写代码时会弹出此窗口（通常在稍微暂停后，但可以在 <a href=
-"../../1_overview/1_getting_started/preferences/prefs_texteditor.html">首选项</a> 中设置），并按字母顺序为你提供“最佳”答案选择。使用代码编辑器时，你可以单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 并拖动鼠标以选择一行代码或按住 <img style=
-"vertical-align:middle" src="../../images/icon_alt.png"> 然后单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 并拖动以选择代码列。然后可以使用 <img style="vertical-align:middle" src=
+"../../1_overview/1_getting_started/preferences/prefs_texteditor.html">首选项</a> 中设置），并按字母顺序为你提供“最佳”答案选择。使用代码编辑器时，你可以单击 <img style="vertical-align:middle" src="../../images/icon_lmb.png"> 并拖动鼠标以选择一行代码或按住 <img style=
+"vertical-align:middle" src="../../images/icon_alt.png"> 然后单击 <img style="vertical-align:middle" src="../../images/icon_lmb.png"> 并拖动以选择代码列。然后可以使用 <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <tt>C</tt>、<img style=
 "vertical-align:middle" src=
@@ -210,14 +210,7 @@ alt="Script Editor Code Regions">
 
 <p>实际代码看起来像这样：</p>
 
-<p class="code">#region This is an example region<br>
-<br>
-width = sprite_get_width(sprite);<br>
-height = sprite_get_height(sprite);<br>
-xoff = sprite_get_xoffset(sprite);<br>
-yoff = sprite_get_yoffset(sprite);<br>
-<br>
-#endregion Further comment here if required<br></p>
+<p class="code">#region This is an example region<br><br>width = sprite_get_width(sprite);<br>height = sprite_get_height(sprite);<br>xoff = sprite_get_xoffset(sprite);<br>yoff = sprite_get_yoffset(sprite);<br><br>#endregion Further comment here if required<br></p>
 
 <p>你可能已经注意到，脚本文本的某些部分是彩色的。脚本编辑器 “知道” 现有物体、内置变量和函数等，并相应地对它们进行颜色编码。颜色编码有助于避免错误，因为如果你拼错了一些名称或使用关键字作为变量，或者语法错误，你可以立即看到。但是，如果你不喜欢颜色编码，可以在 <a href=
 "../../1_overview/1_getting_started/preferences/prefs_texteditor.html">首选项</a> 中打开和关闭它（你也可以使用 F10）以及自定义使用的颜色。</p>
@@ -240,7 +233,8 @@ yoff = sprite_get_yoffset(sprite);<br>
 <li>每个片段都以片段名称（菜单中显示的名称）开头，后跟冒号（:），然后是实际的代码片段。
 </li>
 
-<li>使用 $ 作为换行符，并将需要首先选择的文本放在 | 符号之间。</li>
+<li>Use # for a newline and put the text that needs to be selected
+first between | symbols.</li>
 </ul>
 
 <p>请参阅文件中已有的示例，了解如何按照上述规则进行设置，强烈建议你在开始更改任何内容之前对其进行备份，并备份你对文件所做的任何编辑，更新或重新安装程序还原你所做的更改，你可以使用备份再次重做它们。</p>
@@ -253,13 +247,6 @@ yoff = sprite_get_yoffset(sprite);<br>
 <p>IDE底部的信息栏显示你当前的行号以及该行的位置。 它也是你可以看到代码帮助器的地方，代码帮助器是一行文本，显示你当前正在编辑的函数及其所需的参数。当你在编辑器中填写函数时，参数将突出显示以显示你当前正在编辑的那个。如果你在自定义脚本中使用了 <a href=
 "../../1_overview/3_additional_information/jsdoc.html">JSDoc 脚本注释</a>，那么你提供的信息也将显示在此处。</p>
 </div></blockquote>
-
-<p>请注意，如果你正在为 Web 开发（即：<b>HTML5</b> 平台），那么你可以使用其他脚本协议，即使用 <b>gmcallback_</b> 作为脚本名称的 <i>前缀</i>，例如：</p>
-
-<p class="code">gmcallback_create_button</p>
-
-<p>使用上面的脚本名称意味着脚本 <tt>gmcallback_create_button</tt> <i>不会</i> 被混淆，因此可以在 JavaScript 扩展和游戏的其他区域中使用，例如，在使用 <a href=
-"../../3_scripting/4_gml_reference/web/index.html"><tt>clickable_*</tt></a> 函数时。</p>
 
 <p><br>
 </p>
@@ -274,7 +261,7 @@ yoff = sprite_get_yoffset(sprite);<br>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

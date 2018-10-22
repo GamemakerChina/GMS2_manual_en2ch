@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">window_set_colour</h1>
 
-<h2 class="studio">Sets the colour of the region inside the game
-window but outside the visible views (default is black).</h2>
+<h2 class="studio">设置游戏窗口内但是视野之外区域的颜色（默认黑色）。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,7 +49,7 @@ window but outside the visible views (default is black).</h2>
 
 <tr>
 <td>colour</td>
-<td>The colour to set the region.</td>
+<td>颜色，用于设置那块区域。</td>
 </tr>
 </table>
 </div>
@@ -58,45 +57,31 @@ window but outside the visible views (default is black).</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b>N/A</p>
+<p><b>返回：</b>N/A</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can set the background colour of the game window.
-This colour represents that which will be used for those areas of
-the game window that are not occupied by any views. The following
-image illustrates this:<br>
-<br>
-<img class="center" src="images/window_set_colour.png"> The above
-image has two views with two view ports, each one drawn at
-different positions. This stretches the game window to accommodate
-both ports and uses the window colour to colour the background
-where no view is shown.</p>
+<p>这个函数可以设置游戏窗口的背景颜色。这个颜色表示的游戏窗口内视野间隙的背景颜色。下面的图片将说明这一点：<br><br><img class="center" src="images/window_set_colour.png"> 上面的图片输出了两个视野，每一个绘制在不同的位置。拉伸游戏窗口容纳两个视野输出，并用窗口颜色填充没有视野画面的区域。</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if window_get_colour() != c_black<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;window_set_colour(c_black);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if window_get_colour() != c_black<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;window_set_colour(c_black);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will check the window colour to see if it is set
-as black or not, and if it is not it sets it to black.</p>
+<p>上述代码检测窗口内背景颜色，如果不是黑色则设置为黑色。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">The Game
-Window</a></div>
+<div style="float:left">上一页：<a href="index.html">游戏窗口</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "window_set_fullscreen.html">window_set_fullscreen</a></div>
 </div>
 

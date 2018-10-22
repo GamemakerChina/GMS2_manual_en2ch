@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -41,19 +41,14 @@ keypad.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>You can use this function to find the status of the keypad
-number lock with <b>true</b> being returned for on, and
-<b>false</b> returned for off.<br>
-<br>
-<i><b>NOTE:</b> This functionality is only available in the Windows
-exe builds and will not function on any other device.</i><br>
+<p>You can use this function to find the status of the keypad number lock with <b>true</b> being returned for on, and <b>false</b> returned for off.<br><br><i><b>NOTE:</b> This functionality is only available in the Windows exe builds and will not function on any other device.</i><br>
 <br></p>
 
 <p><br>
@@ -61,14 +56,7 @@ exe builds and will not function on any other device.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if keyboard_get_numlock()<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;keyboard_set_numlock(false);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;keyboard_set_numlock(true);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_get_numlock()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;keyboard_set_numlock(false);<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;keyboard_set_numlock(true);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above example code will get the state of the numberlock key
 and if it is on (true) it will set it to off (false) and

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,28 +40,14 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to change the <a href=
-"../../1_drag_and_drop_overview/applying_actions.html">Action
-Scope</a> for all further actions to chained to this one. Like with
-an <a href="if_variable.html">if</a> action, if you drop further
-action to the right of the <b>Apply to...</b> action then it will
-be run from the scoped object or instance. The scope is chosen from
-the pop up menu shown when you click the small arrow at the top
-right of the action, and in this way you can tell a different set
-of objects, or even a single instance if you have the instance ID,
-to run multiple actions before continuing with the code of the
-current object.</p>
+<p>此动作可以用来改变此<a href=
+"../../1_drag_and_drop_overview/applying_actions.html">动作作用域</a> 使将来所有动作与此动作发生联系。像 <a href="if_variable.html">if</a> 动作，如果你把之后的动作都放到<b>应用于（Apply to...）</b> 的右边，那么他将在物体和实例的作用域来执行。当你点击此动作右上方可爱的小小箭头，那么你就能在弹出的目录中选中作用域，这样你就能使一组不同的物体，或一个单独的实例（你需要给出实例的ID）来在当前物体继续执行代码前，执行多个动作。</p>
 
-<p>Note that to add actions into the "Applies To" block, they
-should be dropped to the <i>side</i> of the action, as shown in the
-image below:<br>
+<p>注意如果你要把动作添加进应用（Applies to），这些动作应该被放进动作的<i>一边</i> ，具体请看下图：<br>
 <img class="center" src="images/drop_applies_to.png" alt=
-"Applies To Add Actions"></p>
+"确定添加动作"></p>
 
-<p>These actions will now be run from the object or instance that
-is being targeted by the "Applies To" block, while any actions
-dropped elsewhere will be performed after the "Applies To"
-block.</p>
+<p>这些动作将在被“应用于”选中的物体或实例上执行，其它的动作将在“应用于”中的动作后执行。</p>
 </blockquote>
 
 <p><br>
@@ -75,7 +61,7 @@ block.</p>
 
 <h3>参数：</h3>
 
-<blockquote>N/A</blockquote>
+<blockquote>N/A（无返回值）</blockquote>
 
 <p><br>
 </p>
@@ -83,13 +69,8 @@ block.</p>
 <h3>举例：</h3>
 <img class="center" src="images/e_common_apply_to.png" alt=
 "Apply To Example">
-<blockquote>The above action block code checks a variable to see if
-it equals 100 and if it does it changes scope to the "obj_Player"
-instances and tells them to run the <a href=
-"../instance_actions/set_sprite.html">Set Sprite</a> action (all
-instances of this object in the room will change sprite at this
-point), before continuing to add 1 onto the variable within the
-instance running the full code block.</blockquote>
+<blockquote>上述动作代码块将检查一个变量是否等于100，如果是的，它将把作用域改为“obj_player"实例并使实例执行<a href=
+"../instance_actions/set_sprite.html">设置精灵</a>动作。（此房间中此物体的所有实例都将在此时更换图片），然后将在能够完整执行代码块的实例的此变量中持续加1 </blockquote>
 
 <p><br>
 </p>

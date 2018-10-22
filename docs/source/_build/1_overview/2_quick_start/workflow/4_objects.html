@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="将反映在对象所衍生的所有online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,31 +36,31 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>到目前为止你可以添加漂亮的图像和优美的声音资源，但是它们还没有在游戏内做任何事！为此，我们需要创建 <i>GameMaker Studio 2</i> 最重要的资源，即 <b>物体</b> 资源。物体是一个用来控制游戏各方面的具体事件的特殊资源。大多数时候，他们会有一个与其相关联的精灵，以便可以在游戏房间中看到他们，但有时他们被用作“幕后” <i>控制器</i> 来做与用户有关的事情或计时等。他们可以给予行为和对某些事件做出反应以及彼此,和你在游戏看到的大多数事情都是基于物体和他们的相互作用。</p>
+<p>到目前为止你可以添加漂亮的图像和优美的声音资源，但是它们还没有在游戏内做任何事！为此，我们需要创建 <i>GameMaker Studio 2</i> 最重要的资源，即 <b>物体</b> 资源。物体是一个用来控制游戏各方面的具体事件的特殊资源。大多数时候，他们会有一个与其相关联的精灵，以便可以在游戏房间中看到他们，但有时他们被用作“幕后” <i>控制器</i> 来做与用户有关的事情或计时等。它们可以给予行为和对某些事件以及彼此做出反应，你在游戏看到的大多数事情都是基于物体和它们的相互作用。</p>
 
 <div class="note"><b>重要！</b> 在用 <i>GameMaker Studio 2</i> 制作的游戏中，角色，怪物，球，墙等等都是从资源树中找到的基本物体模板中复制的 <b>实例</b>，然后放置在一个房间中。所以当我们谈论影响或改变一个 <b>实例</b> 时，我们的意思是某个房间中某个物体的一个特定副本受到影响，而其余的则不受影响，但是当我们谈论影响或改变一个 <b>物体</b> 时，我们的意思是我们所做的所有事情也将反映在物体所衍生的所有实例中。所以，<b>物体是实例的模板，实例是我们用来放置在房间里制作游戏的</b>。</div>
 
 <p>要创建一个新的物体资源，与其他资源相同，只需右键单击 <img style=
-"vertical-align:middle" src="../../../images/icon_rmb.png"> 对象资源文件夹并选择 <i>创建</i>。<img class=
+"vertical-align:middle" src="../../../images/icon_rmb.png"> 物体资源文件夹并选择 <i>创建</i>。<img class=
 "center" src="../images/qs_objecteditor.png"></p>
 
 <p>这是物体编辑器窗口，显示当前属性，你首先应该做的事情是使用 “obj_” 或其他标识符等前缀命名物体。一般来说，除非这个物体用来绘制一些事物，或者与其他物体的实例产生碰撞，否则它需要有一个精灵，可以使用按钮 <img style="vertical-align:middle" src=
-"../images/icon_addsound.png"> 添加。这将会打开 <b>资源管理器</b>，您可以在其中选择要使用的精灵：<img class=
+"../images/icon_addsound.png"> 添加。这将会打开 <b>资源管理器</b>，你可以在其中选择要使用的精灵：<img class=
 "center" src="../images/qs_assetexplorer.png"></p>
 
 <p>如果你还没有合适的精灵，你可以点击 <img style="vertical-align:middle" src=
 "../../../images/icon_lmb.png"> 创建精灵按钮 <img style="vertical-align:middle" src=
-"../images/icon_newsprite.png"> 来创建一个新的精灵资源并按照你的意愿来进行编辑，就像你通过标准资源创建选项来创建资源一样，只是现在它会自动分配给您开始创建前所打开的物体。一旦你选择一个资源，你也可以点击 <img style="vertical-align:middle" src=
+"../images/icon_newsprite.png"> 来创建一个新的精灵资源并按照你的意愿来进行编辑，就像你通过标准资源创建选项来创建资源一样，只是现在它会自动分配给你开始创建前所打开的物体。一旦你选择一个资源，你也可以点击 <img style="vertical-align:middle" src=
 "../../../images/icon_lmb.png"> 编辑精灵 <img style=
 "vertical-align:middle" src="../images/icon_editsprite.png"> 或编辑图像 <img style="vertical-align:middle" src=
 "../images/icon_editimage.png"> 按钮来编辑图像本身或精灵资源。这比首先在资源列表中查找资源然后再进行编辑资源可能要快。</p>
 
-<p>一旦选择了精灵，你可以改变一些其他属性，比如它是否可见 ， 或者它应该具有什么形状的碰撞盒。对于简单的游戏来说，你可能不需要在这里改变一些属性。现在继续，添加一些 <b>事件</b> 到物体。基本上，事件是游戏循环中根据你为它们所做的设计发生事情的重要时刻。<i>GameMaker Studio 2</i> 根据这些事件组成的循环来进行工作 - 一个房间从开始到完成，即为一个游戏循环运行，每一步（游戏时间的一个步骤，由游戏速度控制） 一系列事件将会运行，您可以选择将代码或拖放模块放入响应这些事件的实例中。</p>
+<p>一旦选择了精灵，你可以改变一些其他属性，比如它是否可见 ， 或者它应该具有什么形状的碰撞盒。对于简单的游戏来说，你可能不需要在这里改变一些属性。现在继续，添加一些 <b>事件</b> 到物体。基本上，事件是游戏循环中根据你为它们所做的设计发生事情的重要时刻。<i>GameMaker Studio 2</i> 根据这些事件组成的循环来进行工作 - 一个房间从开始到完成，即为一个游戏循环运行，每一步（游戏时间的一个步骤，由游戏速度控制） 一系列事件将会运行，你可以选择将代码或拖放模块放入响应这些事件的实例中。</p>
 
 <p>要添加事件，请单击 <img style="vertical-align:middle"
 src="../../../images/icon_lmb.png">  <i>添加事件</i> 按钮：<img class="center" src="../images/qs_objecteditor_events.png"></p>
 
-<p>在下面的图片中，您可以看到所有的 <b>事件类别</b>，其中一些还包含子类别。我们不会在这里介绍所有种类的事件，但我们会简要地介绍五个最重要的事件：</p>
+<p>在下面的图片中，你可以看到所有的 <b>事件类别</b>，其中一些还包含子类别。我们不会在这里介绍所有种类的事件，但我们会简要地介绍五个最重要的事件：</p>
 
 <table class="icons">
 <tr>
@@ -81,7 +81,7 @@ src="../../../images/icon_lmb.png">  <i>添加事件</i> 按钮：<img class="ce
 "../images/qs_event_step.png" alt="步事件">
 </td>
 <td class="icons">步事件</td>
-<td class="text"><i>GameMaker Studio 2</i> 将游戏时间分成若干个 <i>步</i>，游戏速度定义了每秒应该执行的步数量。一个步，是一个所有事件在游戏运行时被检查和触发的基础循环运行，所以你可以想到，步事件是一个每一步都会被检查和触发一遍的事件。 请注意，“步事件”类别下有三个子类别可以在实例中“微调”时间，但是一般情况下，您最常使用的是主要步事件。</td>
+<td class="text"><i>GameMaker Studio 2</i> 将游戏时间分成若干个 <i>步</i>，游戏速度定义了每秒应该执行的步数量。一步，是所有事件在游戏运行时被检查和触发的基础循环，所以你可以想到，步事件是一个每步都会被检查和触发一遍的事件。 请注意，“步事件”类别下有三个子类别可以在实例中“微调”时间，但是一般情况下，你最常使用的是主要步事件。</td>
 </tr>
 
 <tr>
@@ -127,10 +127,10 @@ src="../../../images/icon_lmb.png">  <i>添加事件</i> 按钮：<img class="ce
 <p>有关所有类型事件的更多信息，请参阅 <a href=
 "../../../2_interface/1_editors/events/index.html">此处</a>。</p>
 
-<p>添加事件将打开代码编辑器或拖拽编辑器，具体取决于您创建的项目类型。 在这个窗口中，您可以添加您希望在游戏循环内每次触发事件时执行的代码或操作。 一个具有事件和代码的典型物体如下图所示：
+<p>添加事件将打开代码编辑器或拖拽编辑器，具体取决于你创建的项目类型。 在这个窗口中，你可以添加你希望在游戏循环内每次触发事件时执行的代码或操作。 一个具有事件和代码的典型物体如下图所示：
 <img class="center" src="../images/qs_objecteditor_chain.png"></p>
 
-<p>使用 DnD™ 或代码编写游戏不属于本基本快速入门指南的范围，但您可以从以下两页中找到更多信息：</p>
+<p>使用 DnD™ 或代码编写游戏不属于本基本快速入门指南的范围，但你可以从以下两页中找到更多信息：</p>
 
 <blockquote>
 <ol>
@@ -157,7 +157,7 @@ Drag and Drop™ 概览</span></a>
 </ol>
 </blockquote>
 
-<p>本指南的下一部分将着眼于 <b>房间编辑器</b>，在这里您学到的所有东西都将汇聚在一起，使您的项目真正成为游戏。</p>
+<p>本指南的下一部分将着眼于 <b>房间编辑器</b>，在这里你学到的所有东西都将汇聚在一起，使你的项目真正成为游戏。</p>
 
 <p><br>
 </p>
@@ -173,7 +173,7 @@ Drag and Drop™ 概览</span></a>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -74,50 +74,14 @@ local_center_y, inertia)</p>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to set custom mass and inertia values
-for a physics enabled instance. Normally the mass, center of mass,
-and inertia for an instance is calculated using a combination the
-surface area of the bound fixtures and their density. However in
-very special occasions you may need to offset the center of mass or
-change the inertia and that is when you would use this function.
-Bear in mind that the mass is calculated in real world weight
-(ie:kilograms) and you should always try and keep values realistic
-for what you are modelling. So if your physics object is meant to
-represent a person, their mass would be approximately 70 kilos.<br>
-<br>
-The center of mass is calculated automatically for you based on the
-shape of the fixture (or fixtures) you have defined. To get a
-general idea of where this could be, if you have a sprite that is
-the same shape as the fixtures you wish to create, then select the
-"center origin" option you will see approximately where the center
-of mass will be too. However, this may not be correct or you may be
-looking for a specific effect from your physics object, in which
-case this function can also be used to change the x and y
-coordinates for the center of mass. These are <b>local</b> values,
-so 0,0 is the point at which the fixtures are bound to the instance
-(the origin of the instance). So a center of mass of -4,0 would
-shift the center of mass to the left of the origin.<br>
-<br>
-As for the inertia, this basically defines how resistant the
-instance is to changes in its direction and velocity, so a higher
-inertia makes it more resistant and a low inertia makes it less
-resistant (inertia and mass cannot be negative values!).<br>
-<br>
-<i><b>NOTE:</b> This function does not set mass and inertia for
-individual fixtures, but rather for the whole physics enabled
-instance, no matter how many fixtures are bound to it.</i><br>
-<br>
-<i><b>NOTE:</b> This function should only be used when necessary as
-the physics simulation is designed for the mass and inertia to be
-optimal based on the density and size of the fixture. Changing
-these values can have unforeseen effects.</i><br>
+<p>This function can be used to set custom mass and inertia values for a physics enabled instance. Normally the mass, center of mass, and inertia for an instance is calculated using a combination the surface area of the bound fixtures and their density. However in very special occasions you may need to offset the center of mass or change the inertia and that is when you would use this function. Bear in mind that the mass is calculated in real world weight (ie:kilograms) and you should always try and keep values realistic for what you are modelling. So if your physics object is meant to represent a person, their mass would be approximately 70 kilos.<br><br>The center of mass is calculated automatically for you based on the shape of the fixture (or fixtures) you have defined. To get a general idea of where this could be, if you have a sprite that is the same shape as the fixtures you wish to create, then select the "center origin" option you will see approximately where the center of mass will be too. However, this may not be correct or you may be looking for a specific effect from your physics object, in which case this function can also be used to change the x and y coordinates for the center of mass. These are <b>local</b> values, so 0,0 is the point at which the fixtures are bound to the instance (the origin of the instance). So a center of mass of -4,0 would shift the center of mass to the left of the origin.<br><br>As for the inertia, this basically defines how resistant the instance is to changes in its direction and velocity, so a higher inertia makes it more resistant and a low inertia makes it less resistant (inertia and mass cannot be negative values!).<br><br><i><b>NOTE:</b> This function does not set mass and inertia for individual fixtures, but rather for the whole physics enabled instance, no matter how many fixtures are bound to it.</i><br><br><i><b>NOTE:</b> This function should only be used when necessary as the physics simulation is designed for the mass and inertia to be optimal based on the density and size of the fixture. Changing these values can have unforeseen effects.</i><br>
 <br></p>
 
 <p><br>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">display_mouse_get_x</h1>
 
-<h2 class="studio">Returns the x coordinate of the mouse relative
-to the display.</h2>
+<h2 class="studio">返回鼠标相对于显示器的x坐标。</h2>
 
 <h3 class="studio"><b>语法：</b>
 </h3>
@@ -42,7 +41,7 @@ to the display.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
@@ -50,17 +49,9 @@ to the display.</h2>
 <h3 class="studio"><b>描述</b>
 </h3>
 
-<p>This function will return the mouse x position within the
-<i>screen</i>. It should be noted that this function only works
-properly when used on the Windows target. It can be used for HTML5
-too, but will only return a value <i>relative</i> to the 0,0 of the
-canvas itself, and will not return any value while the mouse is
-outside of the canvas. For other devices it will return 0, and you
-should use the <a href=
-"../../controls/device%20input/device_mouse_raw_x.html"><tt>device_mouse_raw_x</tt></a>
-and <a href=
-"../../controls/device%20input/device_mouse_raw_y.html"><tt>device_mouse_raw_y</tt></a>
-functions instead.<br>
+<p>这个函数返回 <i>屏幕</i>上鼠标指针的x坐标。应该注意的是，这个函数只在windows平台有效。当然HTML5也可以一用，但只是返回<i>相对于</i>画布(0,0)的一个值，鼠标在画布外面时不会返回任何值。For other devices it will return 0, and you should use the <a href=
+"../../controls/device%20input/device_mouse_raw_x.html"><tt>device_mouse_raw_x</tt></a> and <a href=
+"../../controls/device%20input/device_mouse_raw_y.html"><tt>device_mouse_raw_y</tt></a> functions instead.<br>
 <br></p>
 
 <p><br>
@@ -70,17 +61,15 @@ functions instead.<br>
 
 <p class="code">my_x = display_mouse_get_x();</p>
 
-<p>This would set my_x to the x coordinate of the mouse relative to
-the display.</p>
+<p>上述将设置 my_x 等于相对于显示器的鼠标x坐标。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Windows And
-Views</a></div>
+<div style="float:left">返回: <a href="index.html">窗口和视野</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "display_mouse_get_y.html">display_mouse_get_y</a></div>
 </div>
 

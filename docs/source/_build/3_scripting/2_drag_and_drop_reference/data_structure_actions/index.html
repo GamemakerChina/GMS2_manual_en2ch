@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,14 +40,7 @@ if (window.name != "content")
 "Data Structure Actions">
 </p>
 
-<p>In games you often need to store information in a precise and
-ordered way. For example, you may need to store lists of items that
-a person carries or you may want to store a grid of places that
-still need to be visited. Now, you can use multiple variables for
-this, but if you want to do more complicated operations, like
-sorting the data or searching for a particular item, you need to
-write large chunks of action block code which can be slow to
-execute, difficult to debug and a real pain to write!</p>
+<p>在游戏中，你经常需要精确且有序地存储信息。比如，你可能需要保存一个人携带的刀具列表或你希望存储一组需要访问的地区。Now, you can use multiple variables for this, but if you want to do more complicated operations, like sorting the data or searching for a particular item, you need to write large chunks of action block code which can be slow to execute, difficult to debug and a real pain to write!</p>
 
 <p>To remedy this, <i>GameMaker Studio 2</i> has a number of
 built-in data structures that can be accessed through specialist
@@ -64,7 +57,7 @@ to manipulate it later - the four types are:</p>
 <td class="icons"><img align="middle" src=
 "images/i_ds_create_list.png" alt="DS List">
 </td>
-<td class="text"><b>列表</b>
+<td class="text"><b>列表（Lists）</b>
 </td>
 <td class="text">A list is a data-structure that stores information
 sequentially as it is added. List indexes start at 0 and will go up
@@ -78,7 +71,7 @@ the data from any index of the list at any time.</td>
 <td class="icons"><img align="middle" src=
 "images/i_ds_create_map.png" alt="DS Map">
 </td>
-<td class="text"><b>Maps</b>
+<td class="text"><b>映射表（Maps）</b>
 </td>
 <td class="text">The map data structure is an exceptionally useful
 one as it lets you store <i>key</i> and <i>value</i> pairs. For
@@ -99,7 +92,7 @@ values.</td>
 <td class="icons"><img align="middle" src=
 "images/i_ds_create_grid.png" alt="DS Grid">
 </td>
-<td class="text"><b>Grids</b>
+<td class="text"><b>栅格（Grids）</b>
 </td>
 <td class="text">A grid is two-dimensional array of values where
 you define its width and height. This sets the total number of grid
@@ -121,7 +114,7 @@ check.</td>
 <td class="icons"><img align="middle" src=
 "images/i_ds_create_stack.png" alt="DS Stack">
 </td>
-<td class="text"><b>Stacks</b>
+<td class="text"><b>堆栈（Stacks）</b>
 </td>
 <td class="text">A stack data structure is a so called
 last-in-first-out (LIFO) structure. You can push values onto a
@@ -136,14 +129,7 @@ or even when constructing a rudimentary AI for your games.</td>
 </table>
 </blockquote>
 
-<p>Essentially, all data structures work in the same way - You
-create a data structure and store its index value in a variable.
-You then use this index to reference the data structure in all
-further function calls that can perform operations on it. Finally,
-once you are done you destroy the data structure again to remove it
-from memory. You can use as many of the structures at the same time
-as you need, and all structures can store both strings and real
-values.</p>
+<p>Essentially, all data structures work in the same way - You create a data structure and store its index value in a variable. 然后，你可以使用这个索引值在其他函数中进行调用操作。最后，一旦你用完记得要销毁这个数据结构以将其从内存中移除。You can use as many of the structures at the same time as you need, and all structures can store both strings and real values.</p>
 
 <div class="note"><b>注意</b>： As with all dynamic resources, data structures take up memory and so should <b>always be destroyed when no longer needed</b> to prevent memory leaks which will slow down and eventually crash your game.</div>
 
@@ -154,17 +140,17 @@ The <b>Data Structure</b> library has the following actions:</p>
 <table class="icons">
 <tr>
 <td class="icons"><a href="create_list.html"><img align="middle"
-src="images/i_ds_create_list.png" alt="创建一个列表"></a>
+src="images/i_ds_create_list.png" alt="创建列表"></a>
 </td>
-<td class="text"><a href="create_list.html">创建一个列表</a>
+<td class="text"><a href="create_list.html">创建列表</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="create_map.html"><img align="middle"
-src="images/i_ds_create_map.png" alt="创建一个映射数据(map)"></a>
+src="images/i_ds_create_map.png" alt="创建映射(map)"></a>
 </td>
-<td class="text"><a href="create_map.html">创建一个映射数据(map)</a>
+<td class="text"><a href="create_map.html">创建映射(map)</a>
 </td>
 </tr>
 
@@ -187,9 +173,9 @@ src="images/i_ds_create_stack.png" alt="创建堆栈"></a>
 <tr>
 <td class="icons"><a href="clear_data_structure.html"><img align=
 "middle" src="images/i_ds_clear_data_structure.png" alt=
-"清除数据结构"></a>
+"清空数据结构"></a>
 </td>
-<td class="text"><a href="clear_data_structure.html">清除数据结构</a>
+<td class="text"><a href="clear_data_structure.html">清空数据结构</a>
 </td>
 </tr>
 
@@ -204,9 +190,9 @@ src="images/i_ds_create_stack.png" alt="创建堆栈"></a>
 
 <tr>
 <td class="icons"><a href="add_to_list.html"><img align="middle"
-src="images/i_ds_add_to_list.png" alt="添加到列表中"></a>
+src="images/i_ds_add_to_list.png" alt="添加到列表"></a>
 </td>
-<td class="text"><a href="add_to_list.html">添加到列表中</a>
+<td class="text"><a href="add_to_list.html">添加到列表</a>
 </td>
 </tr>
 
@@ -222,9 +208,9 @@ src="images/i_ds_add_to_list.png" alt="添加到列表中"></a>
 <tr>
 <td class="icons"><a href="get_list_item_at.html"><img align=
 "middle" src="images/i_ds_get_list_item_at.png" alt=
-"获取所在的列表项"></a>
+"获取所在处的列表项"></a>
 </td>
-<td class="text"><a href="get_list_item_at.html">获取所在的列表项</a>
+<td class="text"><a href="get_list_item_at.html">获取所在处的列表项</a>
 </td>
 </tr>
 
@@ -240,9 +226,9 @@ src="images/i_ds_add_to_list.png" alt="添加到列表中"></a>
 <tr>
 <td class="icons"><a href="insert_into_list.html"><img align=
 "middle" src="images/i_ds_insert_into_list.png" alt=
-"插入列表中"></a>
+"插入到列表"></a>
 </td>
-<td class="text"><a href="insert_into_list.html">插入列表中</a>
+<td class="text"><a href="insert_into_list.html">插入到列表</a>
 </td>
 </tr>
 
@@ -257,26 +243,26 @@ src="images/i_ds_add_to_list.png" alt="添加到列表中"></a>
 
 <tr>
 <td class="icons"><a href="set_map_value.html"><img align="middle"
-src="images/i_ds_set_map_value.png" alt="设置一个映射的值"></a>
+src="images/i_ds_set_map_value.png" alt="设置映射值"></a>
 </td>
-<td class="text"><a href="set_map_value.html">设置一个映射的值</a>
+<td class="text"><a href="set_map_value.html">设置映射值</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="get_map_value.html"><img align="middle"
-src="images/i_ds_get_map_value.png" alt="获取映射数据的值"></a>
+src="images/i_ds_get_map_value.png" alt="获取映射值"></a>
 </td>
-<td class="text"><a href="get_map_value.html">获取映射数据的值</a>
+<td class="text"><a href="get_map_value.html">获取映射值</a>
 </td>
 </tr>
 
 <tr>
 <td class="icons"><a href="remove_map_entry.html"><img align=
 "middle" src="images/i_ds_remove_map_entry.png" alt=
-"删除映射数据条目"></a>
+"移除映射项"></a>
 </td>
-<td class="text"><a href="remove_map_entry.html">删除映射数据条目</a>
+<td class="text"><a href="remove_map_entry.html">移除映射项</a>
 </td>
 </tr>
 
@@ -307,9 +293,9 @@ src="images/i_ds_clear_grid.png" alt="清空栅格"></a>
 <tr>
 <td class="icons"><a href="push_onto_stack.html"><img align=
 "middle" src="images/i_ds_push_onto_stack.png" alt=
-"入栈"></a>
+"压栈"></a>
 </td>
-<td class="text"><a href="push_onto_stack.html">入栈</a>
+<td class="text"><a href="push_onto_stack.html">压栈</a>
 </td>
 </tr>
 
@@ -325,9 +311,9 @@ src="images/i_ds_clear_grid.png" alt="清空栅格"></a>
 <td class="icons"><a href=
 "if_data_structure_exists.html"><img align="middle" src=
 "images/i_ds_if_data_structure_exists.png" alt=
-"是否存在数据结构"></a>
+"如果数据结构存在"></a>
 </td>
-<td class="text"><a href="if_data_structure_exists.html">是否存在数据结构</a>
+<td class="text"><a href="if_data_structure_exists.html">如果数据结构存在</a>
 </td>
 </tr>
 
@@ -335,9 +321,9 @@ src="images/i_ds_clear_grid.png" alt="清空栅格"></a>
 <td class="icons"><a href=
 "if_data_structure_empty.html"><img align="middle" src=
 "images/i_ds_if_data_structure_empty.png" alt=
-"是否数据结构为空"></a>
+"如果数据结构为空"></a>
 </td>
-<td class="text"><a href="if_data_structure_empty.html">是否数据结构为空</a>
+<td class="text"><a href="if_data_structure_empty.html">如果数据结构为空</a>
 </td>
 </tr>
 </table>

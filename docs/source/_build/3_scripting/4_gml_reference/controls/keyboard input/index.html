@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Keyboard Input</title>
+<title>键盘输入</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
@@ -29,7 +29,7 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Keyboard Input</h2>
+<h2>键盘输入</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -60,10 +60,7 @@ from ordinary typed characters (either letters or numbers).</p>
 <p>The following is a small example of how to use
 <tt>ord()</tt>:</p>
 
-<p class="code">if keyboard_check(ord("A"))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;hspeed = -5;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check(ord("A"))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;hspeed = -5;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>So, the above will check the "A" key and if it's being pressed
 then it'll set the horizontal speed of the object to -5. Note, that
@@ -279,11 +276,7 @@ in place of ord or the ascii code.</p>
 The following is a small example of how to use the <tt>vk_</tt>
 constants:</p>
 
-<p class="code">if keyboard_check_pressed(vk_tab)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Controllers",
-obj_Menu);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check_pressed(vk_tab)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Controllers", obj_Menu);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code will detect if the "Tab" key is <i>pressed</i>
 and create an instance of object "obj_Menu" if it is.</p>

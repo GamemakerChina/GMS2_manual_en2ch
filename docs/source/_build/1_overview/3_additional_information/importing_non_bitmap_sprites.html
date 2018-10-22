@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,7 +36,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><i>GameMaker Studio 2</i> 以矢量 SWF 文件或脊柱骨骼动画文件的形式支持非位图精灵。这两种格式都有其优缺点，下面的两个部分将解释如何将它们导入到 <a href=
+<p><i>GameMaker Studio 2</i> has support for non-bitmap sprites in the forum of vector SWF files or Spine Skeletal Animation files. 这两种格式都有其优缺点，下面的两个部分将解释如何将它们导入到 <a href=
 "../../2_interface/1_editors/sprites.html">精灵编辑器</a> 中，以及关于它们如何呈现的一些信息。</p>
 
 <div class="note"><b>重要！</b> 非位图精灵（SWF 和脊椎）在试用许可证版本下 <b>不</b> 可用。</div>
@@ -49,7 +49,10 @@ if (window.name != "content")
 <p><i>GameMaker Studio 2</i> 对向量精灵的支持有限通常，GameMaker 中的所有精灵都使用位图，虽然在内容方面很灵活，但位图精灵的大小和帧数会受到内存的限制。矢量精灵通过以不同的方式存储和绘制它们的内容来绕过这些限制——它们不是像素网格（缩放后会变得块状或模糊），而是以三角形的形式绘制，可以缩放而不会丢失清晰度，如下图所示： <img class=
 "center" src="images/vector_compare.png"></p>
 
-<p>为了帮助您看到这是如何做到的，下面的图片是相同的向量 Fireman 精灵，只有现在我们可以看到多边形，用于制作 GameMaker Studio 2 中的图像：
+<p>To help you visualise how this is done, the image below is of
+the same vector Fireman sprite only now we can see the polygons
+that are used to make the image within GameMaker: Studio:
+
 <img class="center" src="images/vector_polys.png"></p>
 
 <p>然而，当涉及到编程游戏时，没有什么是自由的，而体现在矢量精灵上的是绘制起来更加费劲，而且随着被导入的动画的复杂性的增加，这种速度差异也会增加。此外，与位图精灵不同，它们的内存使用受到 <i>视觉复杂性</i> 的影响。考虑到这一点，它们确实使添加大型动画图形成为可能，而不可能使用传统的位图精灵。</p>
@@ -71,10 +74,10 @@ if (window.name != "content")
 <p>目前，<i>GameMaker Studio 2</i> 只能从 <b>SWF 格式文件</b> 中导入矢量图像，而将矢量图像导入程序的方法与添加普通位图图像的方法几乎相同。要添加矢量精灵，请创建一个新的精灵，它将打开标准的加载精灵对话框，但请确保你已经在底部的文件过滤器中选择了 *.swf。
 <img class="center" src="images/import_vector.png"></p>
 
-<p>单击“加载”按钮将向资源树添加矢量图像或动画，并在处理文件时显示进度条。注意，根据文件的复杂性，这可能需要一段时间（对于更复杂的动画，最多需要一分钟）。处理完成后，您将返回到精灵属性对话框，现在它将如下所示： <img class=
+<p>单击“加载”按钮将向资源树添加矢量图像或动画，并在处理文件时显示进度条。注意，根据文件的复杂性，这可能需要一段时间（对于更复杂的动画，最多需要一分钟）。处理完成后，你将返回到精灵属性对话框，现在它将如下所示： <img class=
 "center" src="images/vector_sprite_properties.png"></p>
 
-<p>如您所见，它看起来像普通的精灵对话框，矢量文件的第一帧显示在图像预览窗口的右侧。不过，与正常的精灵对话框相比，有一些变化。首先，<i>编辑精灵</i> 按钮已经消失了，因为在这种精灵中没有任何要编辑的位图，其次，添加了一个新的 <i>显示精灵</i> 按钮。这个按钮将打开矢量文件默认关联的应用程序。这通常会使用默认的网页浏览器，但如果你没有相关程序文件，就什么都不会发生，按钮是禁用的（你可以通过打开 <b>Windows 资源管理器</b>，<i>右键单击</i> 一个矢量文件，然后使用 “<b>打开方式</b>” 选择程序与之关联解决这个问题）。您还可以在 <i>GameMaker Studio 2</i> 中的 <a href=
+<p>如你所见，它看起来像普通的精灵对话框，矢量文件的第一帧显示在图像预览窗口的右侧。不过，与正常的精灵对话框相比，有一些变化。首先，<i>编辑精灵</i> 按钮已经消失了，因为在这种精灵中没有任何要编辑的位图，其次，添加了一个新的 <i>显示精灵</i> 按钮。这个按钮将打开矢量文件默认关联的应用程序。这通常会使用默认的网页浏览器，但如果你没有相关程序文件，就什么都不会发生，按钮是禁用的（你可以通过打开 <b>Windows 资源管理器</b>，<i>右键单击</i> 一个矢量文件，然后使用 “<b>打开方式</b>” 选择程序与之关联解决这个问题）。你还可以在 <i>GameMaker Studio 2</i> 中的 <a href=
 "../1_getting_started/preferences/prefs_general.html">常规设置 - 路径</a> 部分中关联这些精灵的查看器，<i>显示精灵</i> 按钮将打开该查看器，而不是默认查看器。</p>
 
 <p><br>
@@ -83,27 +86,27 @@ if (window.name != "content")
 <div class="note"><b>注意</b>： 图像在你选择的预览编辑器中的样子和它在你的游戏中的样子是 <b>不</b> 一样的，在精灵编辑器的预览窗口中的样子也是不一样的。矢量图像将以创建时的大小导入，而不是预览显示时的大小（例如，浏览器通常会缩放图像以匹配）。</div>
 <br>
 
-<p>您还可以在绘制时设置向量精灵的 <i>质量</i>。这将简单地减少或增加用于生成精灵的三角形的数量，对于大多数游戏来说，默认的质量值为 50 就足够了，但是如果您使用的是极限缩放，或者存在性能问题，那么您应该尝试修改这个值。从这里开始，编辑器的其他部分应该与位图精灵的功能相同。</p>
+<p>你还可以在绘制时设置向量精灵的 <i>质量</i>。这将简单地减少或增加用于生成精灵的三角形的数量，对于大多数游戏来说，默认的质量值为 50 就足够了，但是如果你使用的是极限缩放，或者存在性能问题，那么你应该尝试修改这个值。从这里开始，编辑器的其他部分应该与位图精灵的功能相同。</p>
 
 <p>在导入矢量精灵时有许多的事情你应该知道，最重要的是,一些精灵绘制和精灵管理函数因为技术原因不支持，尤其是那些仅画精灵的一部分或以某种方式“倾斜”位置的绘制函数（具体细节请参阅 <a href=
 "../../3_scripting/4_gml_reference/sprites/index.html">draw_sprite_*()</a>）。然而，基本的精灵绘制函数和内建 <a href=
-"../../3_scripting/4_gml_reference/instances/instance_variables/index.html">精灵变量</a> 一样都得到了充分的支持。您还可以使用这里的函数为正在绘制的 SWF 精灵设置不同的 <i>抗锯齿</i> （AA） 值：<a href=
+"../../3_scripting/4_gml_reference/instances/instance_variables/index.html">精灵变量</a> 一样都得到了充分的支持。你还可以使用这里的函数为正在绘制的 SWF 精灵设置不同的 <i>抗锯齿</i> （AA） 值：<a href=
 "../../3_scripting/4_gml_reference/drawing/sprites_and_tiles/index.html">绘制精灵和图块</a>。</p>
 
 <p>你也应该知道以下几点：</p>
 
 <ul>
-<li>在导入 *.SWF 文件时，动作脚本 <i>是 <b>不</b></i> 支持的，所以如果你的 SWF 依赖于它来正确工作，那么它可能不会是正确的。同样的，任何有自己时间线的嵌入影片剪辑将只在动画中显示第一帧 —— 所有动画必须在主时间线上。</li>
+<li>在导入 *.SWF 文件时，动作脚本 <i>是 <b>不</b></i> 支持的，所以如果你的 SWF 依赖于它来正确工作，那么它可能不会是正确的。同样的，任何有自己时间轴的嵌入影片剪辑将只在动画中显示第一帧 —— 所有动画必须在主时间轴上。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>如果你的矢量文件有特别精细的细节，你可能偶尔会发现导出的精灵有洞或奇怪的三角形。这是因为在小尺度上，几何图形有时会合在一起，产生非三角的形状。在这种情况下，您有两种选择——您可以放大矢量文件的内容，这将给导入器提供更多的空间，或者您可以尝试降低正在崩溃的对象的细节级别。</li>
+<li>如果你的矢量文件有特别精细的细节，你可能偶尔会发现导出的精灵有洞或奇怪的三角形。这是因为在小尺度上，几何图形有时会合在一起，产生非三角的形状。在这种情况下，你有两种选择——你可以放大矢量文件的内容，这将给导入器提供更多的空间，或者你可以尝试降低正在崩溃的对象的细节级别。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><i>GameMaker Studio 2</i> 使用 SWF 的 <b>舞台大小</b> 作为生成精灵的边界。然而，如果舞台上有任何超出这些界限的东西，<i>它依然会被绘制</i>。这意味着，如果不希望显示任何内容，您应该尽量避免在舞台边界之外放置任何内容，或者使用遮罩层将绘图限制在该区域。</li>
+<li><i>GameMaker Studio 2</i> 使用 SWF 的 <b>舞台大小</b> 作为生成精灵的边界。然而，如果舞台上有任何超出这些界限的东西，<i>它依然会被绘制</i>。这意味着，如果不希望显示任何内容，你应该尽量避免在舞台边界之外放置任何内容，或者使用遮罩层将绘图限制在该区域。</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -118,26 +121,26 @@ if (window.name != "content")
 <li style="list-style: none"><br>
 </li>
 
-<li>位图填充 <i>是</i> 受支持的，但如果你使用平铺位图填充作为你的 SWF 文件的一部分，你需要确保位图的大小是 2 的次方数，否则它不会正确平铺。此外还支持文本呈现，但是您需要将字体嵌入到 SWF 文件中，使其显示在生成的精灵中。此外，目前只 <i>支持左对齐的单行文本</i>。<br></li>
+<li>位图填充 <i>是</i> 受支持的，但如果你使用平铺位图填充作为你的 SWF 文件的一部分，你需要确保位图的大小是 2 的次方数，否则它不会正确平铺。此外还支持文本呈现，但是你需要将字体嵌入到 SWF 文件中，使其显示在生成的精灵中。此外，目前只 <i>支持左对齐的单行文本</i>。<br></li>
 </ul>
 </div>
 <br>
 <label class="collapse" for="b">骨骼动画精灵 (Spine)</label> <input id="b" type="checkbox">
 <div class="index_list">
-<p>使用骨骼动画制作的精灵，是指一个基于 “骨骼” 创建的和随着时间的推移使用 <i>关键帧</i> 移动骨骼的组成部分的动画。然后，从纹理图集和导出的动画中 <i>剥离出</i> 这个骨架。<i>Gamemaker:Studio</i> 允许您导入这种类型的精灵，只要它已经导出为 <tt>*.json</tt> 格式文件，并且在同一个目录中有正确关联的纹理图集文件（<tt>*.atlas</tt>）和图像文件（<tt>*.png</tt>）。</p>
+<p>使用骨骼动画制作的精灵，是指一个基于 “骨骼” 创建的和随着时间的推移使用 <i>关键帧</i> 移动骨骼的组成部分的动画。然后，从纹理图集和导出的动画中 <i>剥离出</i> 这个骨架。<i>Gamemaker:Studio</i> 允许你导入这种类型的精灵，只要它已经导出为 <tt>*.json</tt> 格式文件，并且在同一个目录中有正确关联的纹理图集文件（<tt>*.atlas</tt>）和图像文件（<tt>*.png</tt>）。</p>
 
 <div class="note"><b>重要</b>：<i>GameMaker Studio 2</i> 仅支持每个精灵一个纹理图集。:</div>
 
 <div class="note"><b>注意</b>： 这个功能目前仅支持使用 <a href=
 "http://esotericsoftware.com/" target="_blank">Spine</a> 程序创建的骨骼。</div>
 <img class="center" src="images/spine_example.png">
-<p>目前，<i>GameMaker Studio 2</i> 只能从 <b>Spine</b> 程序制作的 <b>JSON 格式文件</b> 中导入矢量图像，但将它们导入程序的方法与添加普通位图图像的方法几乎相同。要添加骨骼动画，您需要创建一个新的精灵，它将打开标准的加载精灵对话框，但要确保你在底部的文件过滤器中选择了 <tt>*.json</tt> 。
+<p>目前，<i>GameMaker Studio 2</i> 只能从 <b>Spine</b> 程序制作的 <b>JSON 格式文件</b> 中导入矢量图像，但将它们导入程序的方法与添加普通位图图像的方法几乎相同。要添加骨骼动画，你需要创建一个新的精灵，它将打开标准的加载精灵对话框，但要确保你在底部的文件过滤器中选择了 <tt>*.json</tt> 。
 <img class="center" src="images/spine_import.png"></p>
 
-<p>单击“加载”按钮将把骨骼动画作为精灵添加到资源树中，并在处理文件时显示进度条。注意，根据文件的复杂性，这可能需要一到两分钟。处理完成后，您将返回到精灵属性对话框，现在它将如下所示： <img class="center" src=
+<p>单击“加载”按钮将把骨骼动画作为精灵添加到资源树中，并在处理文件时显示进度条。注意，根据文件的复杂性，这可能需要一到两分钟。处理完成后，你将返回到精灵属性对话框，现在它将如下所示： <img class="center" src=
 "images/spine_preview.png"></p>
 
-<p>导入动画后，您可以设置碰撞属性，但是请注意，这里的限制仅限于使用精确的碰撞或边框碰撞，骨骼动画的碰撞数据显式地取自提供的数据。如果从导入的文件中丢失了数据，<i>GameMaker Studio 2</i> 不会生成任何碰撞遮罩，这意味着如果在用于创建导入的映像的程序中没有正确设置遮罩，碰撞就不会发生。</p>
+<p>导入动画后，你可以设置碰撞属性，但是请注意，这里的限制仅限于使用精确的碰撞或边框碰撞，骨骼动画的碰撞数据显式地取自提供的数据。如果从导入的文件中丢失了数据，<i>GameMaker Studio 2</i> 不会生成任何碰撞遮罩，这意味着如果在用于创建导入的映像的程序中没有正确设置遮罩，碰撞就不会发生。</p>
 
 <div class="note"><b>注意</b>： 由于骨骼动画的复杂性，在精灵编辑器中显示的预览图像并不能准确地代表你的动画，而只是给你一个简单的图像，但是在房间编辑器中可视化动画却可以。</div>
 <br>
@@ -163,7 +166,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

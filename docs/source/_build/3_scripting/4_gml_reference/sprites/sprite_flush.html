@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,23 +38,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can remove the given sprite texture - and
-the texture page it is on - from video memory (the texture page
-will be reloaded on next use). You supply the sprite index (as
-defined when creating the sprite resource) and it will be removed
-from the texture memory. It is worth noting that <i>by default</i>
-on the Windows platforms (YYC and standard) all textures will
-always be loaded into memory on start-up. If you are making a cross
-platform game, then you can leave this function in your code for
-the Windows target as it will not give any error and just not do
-anything. However you can also force the Windows target to not load
-any textures on startup and so use the flush and prefetch functions
-as you would on all other platforms (the setting can be found in
-the <a href=
-"../../../../2_interface/3_settings/game_options/options_windows.html">
-Windows Options</a> window).</p>
+<p>使用此函数你可以移除给定的精灵纹理，和它们所在的纹理页——从显存中移除。纹理页将在下次使用时被加载。你要提供在创建精灵资源时定义的精灵索引，然后此精灵所在的纹理页将会被从纹理存储中移除。.  <i>默认情况下</i> ，此函数在windows平台（YYC和标准）没什么用，因为所有纹理将在一开始就被加载进存储中。. 如果你在制作跨平台游戏，你在windows平台中不管此函数，它将不会起任何作用，也不报任何错。但你可以强迫windows平台在一开始不加载任何文件，那么你就可像在其它平台上那样在windows平台上使用清除和预加载函数。此设置可以在 <a href=
+"../../../../2_interface/3_settings/game_options/options_windows.html"> Windows Options</a> 窗口中找到。</p>
 
-<div class="note"><b>注意</b>： There is a performance hit as the texture is uploaded to texture memory on most devices, so you can call <a href="sprite_prefetch.html"><tt>sprite_prefetch</tt></a> on any required graphics at the start of a level to avoid any stalls.</div>
+<div class="note"><b>注意</b>： 在多数设备上，将纹理放进纹理存储会暂时降低性能。所以推荐你使用 &lt;t1&gt;sprite_preftech&lt;/t1&gt; 在游戏关卡开始就预读取需要用到的图像来避免性能降低。</div>
 </blockquote>
 
 <p><br>
@@ -88,7 +75,7 @@ Windows Options</a> window).</p>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -97,8 +84,7 @@ Windows Options</a> window).</p>
 
 <p class="code">sprite_flush(spr_Player_Aura);</p>
 
-<blockquote>The above code flushes the sprite "spr_Player_Aura"
-from memory.</blockquote>
+<blockquote>上述函数将会从存储中清除 "spr_Player_Aura" 。</blockquote>
 
 <p><br>
 </p>

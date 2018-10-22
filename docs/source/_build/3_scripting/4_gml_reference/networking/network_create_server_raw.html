@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,18 +49,17 @@ max_client);</p>
 
 <tr>
 <td>type</td>
-<td>The type of server to create (see the constants listed
-below).</td>
+<td>要创建的服务器类型（详见以下常量表）。</td>
 </tr>
 
 <tr class="alt">
 <td>port</td>
-<td>The port that the server will use.</td>
+<td>服务端所使用的端口。</td>
 </tr>
 
 <tr>
 <td>max_client</td>
-<td>The maximum number of clients that can connect at once.</td>
+<td>一次性能连接客户端的最大数量。</td>
 </tr>
 </table>
 </div>
@@ -68,7 +67,7 @@ below).</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
@@ -96,17 +95,17 @@ functions, or a value of less than 0 if the connection fails.</p>
 
 <tr>
 <td>network_socket_tcp</td>
-<td>Create a web socket using TCP.</td>
+<td>使用TCP协议创建一个网络套接字。</td>
 </tr>
 
 <tr class="alt">
 <td>network_socket_udp</td>
-<td>Create a web socket using UDP.</td>
+<td>使用UDP协议创建一个网络套接字。</td>
 </tr>
 
 <tr>
 <td>network_socket_bluetooth</td>
-<td>Create a Bluetooth socket (<i>currently unavailable!</i>).</td>
+<td>创建一个蓝牙套接字（<i>尚不可用！</i>）</td>
 </tr>
 </table>
 </div>
@@ -124,19 +123,9 @@ send unformatted data to the server created.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var port = 6510;<br>
-server = network_create_server_raw(network_socket_tcp, port,
-32);<br>
-while (server &lt; 0 &amp;&amp; port &lt; 65535)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;port++<br>
-&nbsp;&nbsp;&nbsp;server =
-network_create_server(network_socket_tcp, port, 32);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var port = 6510;<br>server = network_create_server_raw(network_socket_tcp, port, 32);<br>while (server &lt; 0 &amp;&amp; port &lt; 65535)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;port++<br>&nbsp;&nbsp;&nbsp;server = network_create_server(network_socket_tcp, port, 32);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will try and create a server using TCP through
-port 32. If that port is unavailable, it will then loop through the
-ports to find one that is.</p>
+<p>上述代码将会尝试使用TCP协议通过端口32创建一个服务端。若端口不可用，则会遍历所有端口并找到合适的进行连接。</p>
 
 <p><br>
 </p>
@@ -145,10 +134,10 @@ ports to find one that is.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Networking</a></div>
+<div style="float:left">上一页：<a href=
+"index.html">联网</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "network_create_socket.html">network_create_socket</a></div>
 </div>
 </div>

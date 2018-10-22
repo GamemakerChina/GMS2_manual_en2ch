@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -60,7 +60,7 @@ list or a leaderboard)</td>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -133,20 +133,7 @@ callback with the special <tt>async_load</tt> ds_map containing the
 following data:</p>
 </blockquote>
 
-<p class="code">var ident = ds_map_find_value(async_load,
-"id");<br>
-if ident == achievement_pic_loaded<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var picid = ds_map_find_value(async_load,
-"playerid");<br>
-&nbsp;&nbsp;&nbsp;var spriteid = ds_map_find_value(async_load,
-"spriteid");<br>
-&nbsp;&nbsp;&nbsp;if global.playerid[0] == picid)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playerpic[0] =
-spriteid;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}</p>
+<p class="code">var ident = ds_map_find_value(async_load, "id");<br>if ident == achievement_pic_loaded<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var picid = ds_map_find_value(async_load, "playerid");<br>&nbsp;&nbsp;&nbsp;var spriteid = ds_map_find_value(async_load, "spriteid");<br>&nbsp;&nbsp;&nbsp;if global.playerid[0] == picid)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.playerpic[0] = spriteid;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}</p>
 
 <blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -68,30 +68,16 @@ to (a string).</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will send a score to the given leaderboard along
-with a data package created from a buffer. The buffer should be no
-more than 256 bytes in size - anything beyond that will be chopped
-off - and can contain any data you require. The score to be
-uploaded should be a real number, and the leaderboard name is a
-string that was defined when you created the leaderboard using the
-function <a href=
-"steam_create_leaderboard.html"><tt>steam_create_leaderboard</tt></a>.<br>
-
-<br>
-If the function fails, it will return a value of -1, while a
-successful post will return a unique ID for the upload and trigger
-an asynchronous <a href=
-"../../../2_interface/1_editors/events/async_events.html">Steam
-Event</a>. This event will create a <tt>ds_map</tt> in the built in
-variable <tt>async_load</tt> with the following key/value
-pairs:<br>
+<p>This function will send a score to the given leaderboard along with a data package created from a buffer. The buffer should be no more than 256 bytes in size - anything beyond that will be chopped off - and can contain any data you require. The score to be uploaded should be a real number, and the leaderboard name is a string that was defined when you created the leaderboard using the function <a href=
+"steam_create_leaderboard.html"><tt>steam_create_leaderboard</tt></a>.<br><br>If the function fails, it will return a value of -1, while a successful post will return a unique ID for the upload and trigger an asynchronous <a href=
+"../../../2_interface/1_editors/events/async_events.html">Steam Event</a>. This event will create a <tt>ds_map</tt> in the built in variable <tt>async_load</tt> with the following key/value pairs:<br>
 <br></p>
 
 <ul>
@@ -101,14 +87,12 @@ pairs:<br>
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>lb_name</b>" - This key holds the name of the leaderboard
-which was posted to</li>
+<li>"<b>lb_name</b>" - 此键包含已发布到的排行榜的名称</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>success</b>" - Will be 1 if the post succeeded, 0
-failed</li>
+<li>"<b>success</b>" - 如果传输成功，则为 1，0 为失败</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -127,7 +111,7 @@ by the upload call</li>
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>score</b>" - This key holds the score which was posted</li>
+<li>"<b>score</b>" - 此键保留已发布的分数</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -150,20 +134,7 @@ shows a typical example for uploading, with a buffer being created
 to hold a string telling us which level the score was uploaded
 from:</p>
 
-<p class="code">if (hp &lt;= 0)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var buff = buffer_create(256, buffer_fixed, 1
-);<br>
-&nbsp;&nbsp;&nbsp;buffer_write(buff, buffer_string, "Uploaded on
-level " + string(global.Level));<br>
-&nbsp;&nbsp;&nbsp;upload_ID = steam_upload_score("Game Scores",
-score, buff);<br>
-&nbsp;&nbsp;&nbsp;if (!upload_ID)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alarm[0] = room_speed;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;buffer_delete(buff);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if (hp &lt;= 0)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var buff = buffer_create(256, buffer_fixed, 1 );<br>&nbsp;&nbsp;&nbsp;buffer_write(buff, buffer_string, "Uploaded on level " + string(global.Level));<br>&nbsp;&nbsp;&nbsp;upload_ID = steam_upload_score("Game Scores", score, buff);<br>&nbsp;&nbsp;&nbsp;if (!upload_ID)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alarm[0] = room_speed;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;buffer_delete(buff);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>Note that we have set an alarm if the call fails. This would be
 used to try the upload again at a later time and you can add extra
@@ -173,37 +144,7 @@ delete the buffer, since it is no longer required for the function.
 We now add the following into the <b>Steam async event</b> for the
 instance controlling the scores:</p>
 
-<p class="code">var type = ds_map_find_value(async_load,
-"event_type");<br>
-if (type == "leaderboard_upload")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var lb_ID = ds_map_find_value(async_load,
-"post_id");<br>
-&nbsp;&nbsp;&nbsp;if lb_ID == upload_ID<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var lb_name =
-ds_map_find_value(async_load, "lb_name");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var lb_done =
-ds_map_find_value(async_load, "success");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var lb_score =
-ds_map_find_value(async_load, "score");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var lb_updated =
-ds_map_find_value(async_load, "updated");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_debug_message("leaderboard
-post id:" + string(lb_ID) + " to lb:" + string(lb_name) + " with
-score:" + string(lb_score) + " updated=" + string(lb_updated));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (lb_done)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_debug_message("-
-Succeeded");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_debug_message("-
-Failed");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var type = ds_map_find_value(async_load, "event_type");<br>if (type == "leaderboard_upload")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var lb_ID = ds_map_find_value(async_load, "post_id");<br>&nbsp;&nbsp;&nbsp;if lb_ID == upload_ID<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var lb_name = ds_map_find_value(async_load, "lb_name");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var lb_done = ds_map_find_value(async_load, "success");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var lb_score = ds_map_find_value(async_load, "score");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var lb_updated = ds_map_find_value(async_load, "updated");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_debug_message("leaderboard post id:" + string(lb_ID) + " to lb:" + string(lb_name) + " with score:" + string(lb_score) + " updated=" + string(lb_updated));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (lb_done)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_debug_message("- Succeeded");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_debug_message("- Failed");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>In the example we are simply outputting the return values to the
 compiler window as debug messages, but you can use this event to

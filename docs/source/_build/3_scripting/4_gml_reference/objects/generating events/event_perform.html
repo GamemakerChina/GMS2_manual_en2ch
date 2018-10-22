@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -51,13 +51,12 @@ instance.</h2>
 
 <tr>
 <td>type</td>
-<td>The type of event to perform. See below.</td>
+<td>要执行的事件类型。如下所示：</td>
 </tr>
 
 <tr class="alt">
 <td>numb</td>
-<td>The specific event constant or value, if one is necessary
-(otherwise, just use 0).</td>
+<td>在必要时指定具体事件的常量或值（否则用0即可）。</td>
 </tr>
 </table>
 </div>
@@ -65,7 +64,7 @@ instance.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -105,25 +104,25 @@ same as the return values for the <a href=
 <tr>
 <td><b>ev_create</b>
 </td>
-<td>Create event.</td>
+<td>创建事件</td>
 </tr>
 
 <tr class="alt">
 <td><b>ev_destroy</b>
 </td>
-<td>Destroy event</td>
+<td>销毁事件</td>
 </tr>
 
 <tr>
 <td><b>ev_step</b>
 </td>
-<td>Step event</td>
+<td>步事件</td>
 </tr>
 
 <tr class="alt">
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_step_normal</i>
 </td>
-<td>步事件</td>
+<td>步</td>
 </tr>
 
 <tr>
@@ -141,7 +140,7 @@ same as the return values for the <a href=
 <tr>
 <td><b>ev_alarm</b>
 </td>
-<td>Alarm event</td>
+<td>计时器事件</td>
 </tr>
 
 <tr class="alt">
@@ -154,19 +153,19 @@ trigger the event of</td>
 <tr>
 <td><b>ev_keyboard, ev_keypress, ev_keyrelease</b>
 </td>
-<td>Keyboard/Keyboard Pressed/Keyboard Released</td>
+<td>键盘/键盘按下/键盘放开事件</td>
 </tr>
 
 <tr class="alt">
-<td><i>&nbsp;&nbsp;&nbsp;---- any key code</i>
+<td><i>&nbsp;&nbsp;&nbsp;---- 任意一个键码</i>
 </td>
-<td>vk_space or ord("W") for example.</td>
+<td>vk_space 或形如 ord("W")。</td>
 </tr>
 
 <tr>
 <td><b>ev_mouse</b>
 </td>
-<td>Mouse event</td>
+<td>鼠标事件</td>
 </tr>
 
 <tr class="alt">
@@ -310,7 +309,7 @@ trigger the event of</td>
 <tr>
 <td><b>ev_gesture</b>
 </td>
-<td>A gesture event (Tap, Drag, Flick, Pinch or Rotate)</td>
+<td>手势事件（轻敲、拖动、划动、捏合或旋转）</td>
 </tr>
 
 <tr class="alt">
@@ -628,19 +627,19 @@ identifying the event when performed in these cases.</i></td>
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gui</i>
 </td>
-<td>The draw gui event.</td>
+<td>绘制GUI事件</td>
 </tr>
 
 <tr class="alt">
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gui_begin</i>
 </td>
-<td>The draw gui begin event.</td>
+<td>绘制GUI开始事件</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gui_end</i>
 </td>
-<td>The draw gui end event.</td>
+<td>绘制GUI结束事件</td>
 </tr>
 </table>
 </div>
@@ -648,11 +647,10 @@ identifying the event when performed in these cases.</i></td>
 <p><br>
 </p>
 
-<h3><b>Extended Example</b>
+<h3><b>扩展示例</b>
 </h3>
 
-<p>To help understand how this function can be use, please look at
-the following few examples:</p>
+<p>为了便于理解该函数的用法，请看下面几个样例：</p>
 
 <p class="code">event_perform(ev_keypress, ord("W"));</p>
 
@@ -673,10 +671,9 @@ be run twice).</p>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Generating
-Events</a></div>
+<div style="float:left">上一页：<a href="index.html">事件发生</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "event_perform_object.html">event_perform_object</a></div>
 </div>
 

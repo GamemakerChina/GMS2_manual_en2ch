@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the sprite to check.</td>
+<td>将会被检查的精灵的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -56,9 +56,9 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -66,10 +66,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function returns whether a sprite with the specified index
-exists or not. Please note, that the value used for checking
-<i>must have been initialised previously</i> or else you will get
-an error causing <i>GameMaker Studio 2: Studio</i> to close.</p>
+<p>此函数将会根据提供的精灵索引来判断精灵是否存在，并返回true或false。请注意，将要被检查的值 <i>必须在之前就被初始化。</i> 否则会导致 <i>GameMaker Studio 2: Studio</i> 出现错误。</p>
 </blockquote>
 
 <p><br>
@@ -77,19 +74,10 @@ an error causing <i>GameMaker Studio 2: Studio</i> to close.</p>
 
 <h3>举例：</h3>
 
-<p class="code">if sprite_exists(spr_array[0])<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;sprite_index = spr_array[0];<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;sprite_index = spr_BaseSprite;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if sprite_exists(spr_array[0])<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;sprite_index = spr_array[0];<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;sprite_index = spr_BaseSprite;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks an array to see if it contains a valid
-sprite index and if so it assigns that sprite to the instance, but
-if not, it assigns a sprite from the included resources.</p>
+<p>上述代码将会检查数组中是否包含合法的精灵索引。如果是的，它将会把精灵分配给实例。否则它会把另一个精灵分配给实例。</p>
 </blockquote>
 
 <p><br>

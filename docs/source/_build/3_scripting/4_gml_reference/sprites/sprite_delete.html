@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the sprite to be deleted.</td>
+<td>将要被删除的精灵的索引。</td>
 </tr>
 </table>
 </div>
@@ -58,9 +58,9 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -68,20 +68,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will delete a sprite from the game, freeing any
-memory that was reserved for it. This is a <i>permanent</i>
-removal, and if the asset that you delete was included as part of
-the game's resources, not even restarting the game (unless you
-close the application first) will recover it. This is a very
-important function for those moments when you need to create and
-change sprites from external resources and should always be used to
-remove those assets that are no longer needed by a game, or to
-clear an indexed asset from a variable before re-assigning another
-asset to that variable. <b>This cannot be used to delete sprites
-that are included in the game as part of the resource tree</b>.</p>
+<p>此函数将会从游戏中删除精灵，释放被它占用的内存。此函数的删除是 <i>永久</i> 的，如果你删除的是游戏资源的一部分，哪怕重新开始游戏（除非你将游戏进程关闭），被删除的部分也不会回复。此函数非常重要，尤其是当你从外部资源创建和改变精灵时。你要时刻注意用此函数删除那些无需再使用的资源。在重新把其它的资源指派给一个变量时，你也需要删除该变量上的原有资源的索引。<b>此函数不能被用于删除位于资源树上的精灵。</b>.</p>
 
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 </blockquote>
 
 <p><br>
@@ -96,10 +85,7 @@ sprite_merge(spr_Player, spr);<br>
 sprite_delete(spr);<br></p>
 
 <blockquote>
-<p>The above code creates a local variable and then stores the
-index of the sprite created from the application surface. This
-sprite is then merged with the asset indexed in the variable
-"spr_Player" before being removed from memory again.</p>
+<p>上面的函数将创建一个本地变量，并将从应用界面创建的精灵的索引存储在这个变量中。这个精灵之后将会与变量spr_Player中存储的索引所代表的精灵合并，而后前者将被删除。</p>
 </blockquote>
 
 <p><br>

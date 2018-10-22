@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -52,20 +52,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>When you have "maintain aspect ratio" ticked in the Game Options
-for a target platform, <i>GameMaker Studio 2</i> will automatically
-set the draw position for the application surface so that it is
-displayed correctly centered and scaled on the given display.
-However if you are manipulating this surface and wish to draw it
-yourself, then this function gives you an easy way to find exactly
-<i>where</i> within the display or window that the surface was
-being drawn so that you can then draw it there yourself, or align
-GUI images or post draw images to it.<br>
-<br>
-The function will return an array with four keys, where key 0 and 1
-are the x and y position of the top lefthand corner of the surface,
-and keys 2 and 3 are the x and y of the bottom righthand corner of
-the surface, all relative to the size of the display or window.<br>
+<p>When you have "maintain aspect ratio" ticked in the Game Options for a target platform, <i>GameMaker Studio 2</i> will automatically set the draw position for the application surface so that it is displayed correctly centered and scaled on the given display. 但是如果你想自己操作表面进行绘制，这个函数可以让你 <i>在显示器或窗口</i>方便的找到表面层绘制的位置，然后在那里绘制，或者对齐GUI图片或者上面绘制图片。<br><br>这个函数将返回包含四个键值的数组，键0和键1是表面左上角x/y的位置，键2和键3是表面右下x/y的位置，所有的这些值响应显示器及窗口发生变化。<br>
 <br></p>
 
 <p><br>
@@ -79,9 +66,7 @@ yy = a[1];<br>
 ww = a[2] - a[0];<br>
 hh = a[3] - a[1];<br></p>
 
-<p>The above code will get the position of the application surface,
-as well as the absolute width and height in relation to the display
-window, and store them in four variables for future use.</p>
+<p>上述代码获取应用表面层的位置，以及相对于显示器或窗口的绝对长宽值，保存到四个变量上备用。</p>
 
 <p><br>
 </p>
@@ -91,10 +76,10 @@ window, and store them in four variables for future use.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "application_surface_draw_enable.html">application_surface_draw_enable</a></div>
 </div>
 </div>

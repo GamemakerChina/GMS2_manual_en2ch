@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -108,7 +108,7 @@ yscale, angle, c1, c2, c3, c4, alpha);</p>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -117,21 +117,7 @@ yscale, angle, c1, c2, c3, c4, alpha);</p>
 
 <p>This function is a combination of the base <a href=
 "draw_text.html"><tt>draw_text</tt></a> function with the <a href=
-"draw_text_transformed.html"><tt>draw_text_transformed</tt></a> and
-<a href="draw_text_colour.html"><tt>draw_text_colour</tt></a>
-functions, permitting you to scale and rotate text as well as
-colour it with a gradient fill and change its alpha value, ignoring
-the base alpha and colour settings for drawing.<br>
-<br>
-<i><b>NOTE:</b> Gradient blending is not available for the HTML5
-target unless WebGL is enabled, although you can still set the
-blending colours and it will blend the font with the first given
-colour. However all blending in this way creates a duplicate font
-which is then stored in the cache and used when required, which is
-far from optimal and if you use multiple colour changes it will
-slow down your games performance. You can set the font cache size
-to try and limit this should it be necessary using the function
-<a href=
+"draw_text_transformed.html"><tt>draw_text_transformed</tt></a> and <a href="draw_text_colour.html"><tt>draw_text_colour</tt></a> functions, permitting you to scale and rotate text as well as colour it with a gradient fill and change its alpha value, ignoring the base alpha and colour settings for drawing.<br><br><i><b>NOTE:</b> Gradient blending is not available for the HTML5 target unless WebGL is enabled, although you can still set the blending colours and it will blend the font with the first given colour. However all blending in this way creates a duplicate font which is then stored in the cache and used when required, which is far from optimal and if you use multiple colour changes it will slow down your games performance. You can set the font cache size to try and limit this should it be necessary using the function <a href=
 "../../fonts/font_set_cache_size.html"><tt>font_set_cache_size</tt></a>.</i><br>
 
 <br></p>

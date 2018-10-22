@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -98,7 +98,7 @@ check.</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
@@ -116,23 +116,7 @@ the function will return <tt>false</tt>.<br></p>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var inst = instance_nearest(x, y, obj_Player);<br>
-if instance_exists(inst)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var x1 = x + lengthdir_x(100, image_angle -
-45);<br>
-&nbsp;&nbsp;&nbsp;var y1 = y + lengthdir_y(100, image_angle -
-45);<br>
-&nbsp;&nbsp;&nbsp;var x2 = x + lengthdir_x(100, image_angle +
-45);<br>
-&nbsp;&nbsp;&nbsp;var y2 = y + lengthdir_y(100, image_angle +
-45);<br>
-&nbsp;&nbsp;&nbsp;if point_in_triangle(inst.x, inst.y, x, y, x1,
-y1, x2, y2)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can_see = true;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var inst = instance_nearest(x, y, obj_Player);<br>if instance_exists(inst)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var x1 = x + lengthdir_x(100, image_angle - 45);<br>&nbsp;&nbsp;&nbsp;var y1 = y + lengthdir_y(100, image_angle - 45);<br>&nbsp;&nbsp;&nbsp;var x2 = x + lengthdir_x(100, image_angle + 45);<br>&nbsp;&nbsp;&nbsp;var y2 = y + lengthdir_y(100, image_angle + 45);<br>&nbsp;&nbsp;&nbsp;if point_in_triangle(inst.x, inst.y, x, y, x1, y1, x2, y2)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can_see = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code uses the <tt>point_in_triangle</tt> function as a
 "cone of vision" to check for an instance of "obj_player", setting

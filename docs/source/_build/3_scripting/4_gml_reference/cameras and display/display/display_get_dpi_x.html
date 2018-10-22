@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">display_get_dpi_x</h1>
 
-<h2 class="studio">Returns the dpi value of the x axis of the
-display.</h2>
+<h2 class="studio">返回显示器X轴的dpi值。</h2>
 
 <h3><b>语法：</b>
 </h3>
@@ -42,31 +41,14 @@ display.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>Dots per inch (DPI) is a measure of spatial printing or video
-dot density, in particular the number of individual dots that can
-be placed in a line within the span of 1 inch (2.54 cm). When
-working on mobile devices (in particular Android devices) this is
-an important factor to take into consideration as what may be
-appropriate for one display resolution, may not be appropriate for
-another. For example, you may have two displays with the same
-resolution of 400 x 800, but display 1 has a dpi of 60 and display
-2 has a dpi of 30. In this case, any text or image displayed on
-display 2 will appear much larger, even though the actual
-resolution is the same.<br>
-<br>
-This function will get the dpi of the device display along the x
-axis (this value is also dependant on the orientation of the
-device). Please note that Mac and iOS do not return specific dpi
-settings but appear to return the same values as the OS, which are
-not correct (but will have to do) as Apple do not give the correct
-values.<br>
+<p>每英寸打印的点数（DPI）是空间印刷或者视频点密度的量度，特别是指放置在一英寸（2.54 cm）直线跨度内的独立点的数目。在移动设备上运行时（尤其是安卓设备），这是一个重要的考量，适合这个显示器的分辨率时，可能不适合另外一个。比如，你可能有两个显示器，它们有相同的分辨率400 x 800，但是显示器1是60dpi，而显示器2是30dpi。这种情况下，显示器2上的任何文字或图像将会更大，即使实际上分辨率是一样的。<br><br>这个函数将获取设置显示器x轴的dpi（这个值也依赖设备的方向）。请注意Mac 和 iOS 不会返回特定的 dpi 设置，而是作为操作系统返回同一个值，这并不正确（但必须这样），因为苹果没有给出正确的值。<br>
 <br></p>
 
 <p><br>
@@ -76,17 +58,15 @@ values.<br>
 
 <p class="code">dpx = display_get_dpi_x();</p>
 
-<p>This would set the variable "dpx" to the dpi value of the x
-axis.</p>
+<p>设置变量“dpx”等于x轴的dpi值。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Windows And
-Views</a></div>
+<div style="float:left">返回: <a href="index.html">窗口和视野</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "display_get_dpi_y.html">display_get_dpi_y</a></div>
 </div>
 

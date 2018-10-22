@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -56,7 +56,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
@@ -75,12 +75,7 @@ ini file has saved specific data.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">ini_open("savedata.ini");<br>
-if !ini_section_exists("save1")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.savegame = '1';<br>
-&nbsp;&nbsp;&nbsp;}<br>
-ini_close();<br></p>
+<p class="code">ini_open("savedata.ini");<br>if !ini_section_exists("save1")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.savegame = '1';<br>&nbsp;&nbsp;&nbsp;}<br>ini_close();<br></p>
 
 <p>This will set variable global.savegame to '1' if 'save1' is NOT
 found. With a for loop, this could be used as a basic way of

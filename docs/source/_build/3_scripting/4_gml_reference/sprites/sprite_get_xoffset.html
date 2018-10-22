@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the sprite to find the xoffset of.</td>
+<td>将被获取原点X坐标的精灵的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -56,7 +56,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
 <p class="code">实数</p>
 
@@ -66,13 +66,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>When you define a sprite in the sprite editor, you need to set
-the <i>origin</i> for that sprite. This is the point at which the
-sprite will be "attached" or "drawn" when used with an instance.
-This function returns the relative offset for the x-axis of the
-origin based on the upper left corner being the 0,0 position, with
-a +x being right and a -x being left of this. The following image
-illustrates this:  <img class="center" src="spr_xyoffset.png"></p>
+<p>当你在精灵编辑器中设置精灵时，你需要为精灵设置<i>原点</i> 。原点就是此精灵被接触或绘制的点。此函数将会返回原点的Y轴坐标，此坐标是相对于精灵的左上角（0，0）点的。下面的图像说明这一点: <img class="center" src="spr_xyoffset.png"></p>
 </blockquote>
 
 <p><br>
@@ -80,14 +74,10 @@ illustrates this:  <img class="center" src="spr_xyoffset.png"></p>
 
 <h3>举例：</h3>
 
-<p class="code">if x - sprite_get_xoffset(sprite_index) &lt; 0<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;x = sprite_get_xoffset(sprite_index);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if x - sprite_get_xoffset(sprite_index) &lt; 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x = sprite_get_xoffset(sprite_index);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will ensure that an instance is maintained within
-the room based on the sprite (so the sprite is always visible).</p>
+<p>上述代码将会确保实例将会存在房间中，这样精灵就始终可见。</p>
 </blockquote>
 
 <p><br>

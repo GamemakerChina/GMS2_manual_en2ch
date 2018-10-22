@@ -1,0 +1,858 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>编译错误</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/1_overview/3_additonal_information/errors.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additonal_information%2Ferrors.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additonal_information%2Ferrors.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script><!-- !chm2web! -->
+
+
+<h2>编译错误</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p>创建游戏时，一个常见错误是忘记定义变量，或者将变量错误定义（例如将字符串变量定义为实数变量等等……）此类错误在编译或运行时会被 <i>GameMaker Studio 2</i> 捕获，捕获时，会弹出错误提示窗，提示窗中显示了错误内容，以及错误的位置。这些信息也会被显示在 <a href="../../2_interface/2_tools/output.html">编译错误输出停靠栏</a>, 如图:  <img class="center" src=
+"images/output_compileerrors.png" alt="编译错误"></p>
+
+<p>点击弹窗中的任意条目将打开该错误对应的物体或脚本，你可以根据错误提示定位错误在物体或脚本的位置。有时候错误提示含义不清，下方展示了全部的错误提示以及对该错误的解释，你可以根据下表来查找错误提示的意思：</p>
+
+<blockquote><label class="collapse" for="c">杂项</label>
+<input id="c" type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>No program to compile</tt>
+</td>
+<td class="arrow">→</td>
+<td>先前的编译错误导致编译器解析树无法创建，因此编译器没有要编译的程序数据</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Fatal Error while compiling <i>[name]</i> -
+bailing details below</tt>
+</td>
+<td class="arrow">→</td>
+<td>此信息表示编译器发现了错误，但是无法定位错误原因或位置。（如果经常发生此情况你可联系 <a href=
+"http://help.yoyogames.com/hc/en-us/requests/new" target=
+"_blank">YoYo Games Support</a> 并提供编译器输出窗口的详细信息）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Recursive macro expansion is not supported</tt>
+</td>
+<td class="arrow">→</td>
+<td>你使用了相互引用并不断扩展的递归宏</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unable to find TextureGroup <i>[group]</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>通常只有在尝试运行格式错误的项目文件时才会发现此错误（如果经常发生此情况你可联系 <a href="http://help.yoyogames.com/hc/en-us/requests/new" target=
+"_blank">YoYo Games Support</a> 并提供编译器输出窗口的详细信息）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Wrong to convert <i>[value]</i> to number</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试将给定值转换（例如说将一个字符串转换为一个数字）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Division by 0</tt>
+</td>
+<td class="arrow">→</td>
+<td>除数不能为0</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Invalid object id <i>[object ID]</i> used</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试使用不正确的 ID 值访问物体（更多有关物体 ID 的信息请查看 <a href=
+"../../3_scripting/4_gml_reference/instances/instance_variables/object_index.html"> 这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unclosed comment (/*) at tend of script</tt>
+</td>
+<td class="arrow">→</td>
+<td>你使用 <tt>/* [comment] */</tt> 创建了一个脚本注释，但是没有提供结束标记（更多相关信息请参阅 <a href=
+"../../3_scripting/3_gml_overview/4_comments.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Invalid token</tt>
+</td>
+<td class="arrow">→</td>
+<td>你的游戏代码中有一个无效字符，这可能发生在外语字符或 Unicode 中</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Number</tt> [num] in incorrect format</td>
+<td class="arrow">→</td>
+<td>（在错误中）给定的数字不是正在执行的函数或操作的正确格式，例如，当需要指针时，提供一个整型变量（更多相关信息请参阅 <a href=
+"../../3_scripting/3_gml_overview/9_data_types.html">数据类型</a> ）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unexpected EOF encountered</tt>
+</td>
+<td class="arrow">→</td>
+<td>在使用 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/index.html">文件函数</a> 时，意外地到达了文件的末尾</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="a">字符串</label> <input id="a" type=
+"checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Unable to Not a string</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试在字符串上使用 “!”（<tt>非</tt>）操作符（更多相关信息请参阅 <a href=
+"../../3_scripting/3_gml_overview/9_data_types.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unable to Negate a string</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试为字符串取反，例如 “<tt>string = -string</tt>”（更多相关信息请参阅 <a href=
+"../../3_scripting/3_gml_overview/9_data_types.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="b">函数/脚本/参数</label> <input id="b" type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Wrong number of arguments for function
+<i>[function]</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>对于给定的函数，你提供了过多或过少的参数</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Failed to parse action_execute_script() -
+incorrect number of arguments received</tt>
+</td>
+<td class="arrow">→</td>
+<td>动作 <tt>执行脚本</tt> 有过多或过少的参数用于调用给定的脚本</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Function <i>[function]</i> expects <i>n</i>
+arguments, <i>a</i> provided</tt>
+</td>
+<td class="arrow">→</td>
+<td>函数的参数数量错误</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unknown function <i>[function]</i> check to see
+if script is empty</tt>
+</td>
+<td class="arrow">→</td>
+<td>调用了一个编译器无法识别的脚本（这个错误通常由空的脚本资源引用引发，因为编译器在编译时会删除这些资源）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Assignment of an empty value (function does not
+return anything?)</tt>
+</td>
+<td class="arrow">→</td>
+<td>当脚本或函数没有返回任何东西时，你尝试从脚本或函数分配返回值</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unable to find function <i>[function]</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>你调用了未知函数</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Calling a function that needs an instance and
+no instance is available</tt>
+</td>
+<td class="arrow">→</td>
+<td>调用的函数或脚本用于对实例执行操作，但在运行时不存在实例</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Calling a function that needs an <i>other</i>
+and no <i>other</i> is available</tt>
+</td>
+<td class="arrow">→</td>
+<td>你已经在碰撞事件或 <tt>with</tt> 语句之外使用了关键字 <tt>other</tt></td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Argument naming error, <i>n</i> arguments but
+no reference found to <i>a</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>你已经为一个脚本提供了许多参数，但是没有在脚本中引用其中一个参数，例如，你的脚本接受三个参数，但是你只使用参数 [0] 和 [2]（关于脚本和参数的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/3_scripts.html">这里</a>)</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Cannot compare arguments</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试比较两种不同的参数类型，比如字符串和实数（有关脚本和参数的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/3_scripts.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unknown function or script
+<i>[functions/script]</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>编译器不能识别被调用的函数或脚本</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Cannot use resource name <i>[resource]</i> as
+it is not being exported</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试访问一个尚未标记为正在编译的平台项目部分的资源</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Cannot use function/script name for a variable,
+using <i>[functions/script]</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>You have tried to use either a function name or a script name
+as a variable, for example <tt>instance_create = "Hello
+World"</tt></td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Cannot use an argument outside a script</tt>
+</td>
+<td class="arrow">→</td>
+<td>内置的 <tt>参数</tt> 变量只能在脚本中使用，但你尝试在其他地方使用它们（有关脚本和参数的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/3_scripts.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>No references to argument<i>[num]</i> but
+references argument<i>[num]</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>你正在引用一个不存在的参数，但该引用可以映射到另一个参数（有关脚本和参数的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/3_scripts.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Incorrect number of arguments for accessor</tt>
+</td>
+<td class="arrow">→</td>
+<td>在使用访问器时，你提供了错误数量的参数（有关访问器的更多信息，请参阅<a href=
+"../../3_scripting/3_gml_overview/13_accessors.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Wrong type of arguments for /<br>
+Wrong type of arguments for div<br>
+Wrong type of arguments for mod<br>
+Wrong type of arguments for +<br>
+Wrong type of arguments for -<br>
+Wrong type of arguments for &amp;&amp;<br>
+Wrong type of arguments for ||<br>
+Wrong type of arguments for ||<br>
+Wrong type of arguments for &amp;<br>
+Wrong type of arguments for |<br>
+Wrong type of arguments for ^<br>
+Wrong type of arguments for &lt;&lt;<br>
+Wrong type of arguments for &gt;&gt;</tt>
+</td>
+<td class="arrow">→</td>
+<td>你为算数表达式提供了错误的参数类型（有关表达式的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="d">变量</label> <input id="d"
+type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Using uninitialised variable <i>[var]</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试在初始化命名变量之前使用它（有关变量的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Variable <i>[var]</i> is write-only</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试修改无法无法修改的变量（有关变量的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unable to find variable named <i>[var]</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>在当前编译中找不到指定的变量（有关变量的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Malformed variable reference</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试以错误的方式引用变量（有关变量的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Trying to set a read only variable
+<i>[var]</i></tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试设置一个只读变量（有关变量的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Cannot redeclare a built in variable</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试使用与内置变量相同的名称声明一个局部变量（有关变量的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Cannot use resource name for a variable</tt>
+</td>
+<td class="arrow">→</td>
+<td>你使用了与资源树中的资源相同的名称作为本地变量（有关变量的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt><i>[Variable]</i> is read-only</tt>
+</td>
+<td class="arrow">→</td>
+<td>你已经尝试使用标记为只读的变量（有关变量的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="e">常量</label> <input id="e"
+type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Cannot set a constant</tt> [constant] to a
+value</td>
+<td class="arrow">→</td>
+<td>你尝试将常数设置为不同的值</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Constant is invalid here</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试在某些地方使用对正在运行的代码无效的常量</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Cannot assign to</tt> [var] - it's a
+constant</td>
+<td class="arrow">→</td>
+<td>你已经尝试为命名的常量分配一个新值</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="f">数组</label> <input id="f" type=
+"checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Array index should not be negative</tt>
+</td>
+<td class="arrow">→</td>
+<td>你已经尝试使用负数组索引访问、创建或设置数组值（有关数组的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/10_arrays.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Only 1 or 2 dimensional arrays are
+supported</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试创建一个具有高于二维空间的数组（<i>GameMaker Studio 2</i> 只有一维和二维数组——有关数组的更多信息请参阅 <a href=
+"../../3_scripting/3_gml_overview/10_arrays.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="g">语句结构异常...</label> <input id="g"
+type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Malformed Conditional operator</tt>
+</td>
+<td class="arrow">→</td>
+<td>你使用了错误的条件（三元）运算符或 <tt>if</tt> 语句，而不是 <tt>[条件] ? [表达式 1] : [表达式 2]; 格式</tt> （有关 <tt>if</tt> 和三元运算符的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>If requires a then statement</tt>
+</td>
+<td class="arrow">→</td>
+<td>你已经编写了一个 <tt>if</tt> 语句和表达式来求值，但没有给出要运行的 <tt>then</tt> 部分（有关 <tt>if</tt> 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>malformed assignment statement</tt>
+</td>
+<td class="arrow">→</td>
+<td>在代码中，你使用的赋值运算符错误（有关赋值的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/11_assignments.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>if语句结构异常（Malformed if statement）<br>repeat语句结构异常（Malformed repeat statement）<br>while语句结构异常（Malformed while statement）<br>do语句结构异常（Malformed do statement）<br>for语句结构异常（Malformed for statement）<br>with语句结构异常（Malformed with statement）<br>switch语句结构异常（Malformed switch statement）<br>break语句结构异常（Malformed break statement）<br>continue语句结构异常（Malformed continue statement）<br>exit语句结构异常（Malformed exit statement）</tt>
+</td>
+<td class="arrow">→</td>
+<td>给定语句的结构是不正确的。具体细节请参阅相关部分: <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">GML概述</a></td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Malformed post inc or dec statement</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试以一种非法的方式使用 <tt>[var]++</tt> 或 <tt>[var]--</tt>（有关 ++ / -- 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Malformed pre inc or dec statement</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试以一种非法的方式使用 <tt>++[var]</tt> 或 <tt>--[var]</tt>（有关 ++ / -- 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Malformed global gml_pragma</tt>
+</td>
+<td class="arrow">→</td>
+<td>你在使用 <tt>gml_pragma</tt> 时创建了一个错误的全局字符串（有关 <tt>gml_pragma</tt>的详细信息，请参阅 <a href=
+"../../3_scripting/4_gml_reference/miscellaneous/gml_pragma.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Malformed PNGCrush gml_pragma</tt>
+</td>
+<td class="arrow">→</td>
+<td>你在使用 <tt>gml_pragma</tt> 时为 PNGCrush 创建了一个错误的字符串命令（有关 <tt>gml_pragma</tt> 的更多信息，请参阅 <a href=
+"../../3_scripting/4_gml_reference/miscellaneous/gml_pragma.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Malformed Texgroup.Scale gml_pragma</tt>
+</td>
+<td class="arrow">→</td>
+<td>你在使用 <tt>gml_pragma</tt> 时创建了一个错误的全局字符串（有关 <tt>gml_pragma</tt> 的详细信息，请参阅 <a href=
+"../../3_scripting/4_gml_reference/miscellaneous/gml_pragma.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="h">切换（Switch）</label> <input id="h" type=
+"checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Default cannot be used multiple times in a
+switch</tt>
+</td>
+<td class="arrow">→</td>
+<td>在 <tt>switch</tt> 语句中，你多次定义了 <tt>default:</tt>（有关 <tt>switch</tt> 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Clause expression type mismatch (clause
+expressions should all be the same type)</tt>
+</td>
+<td class="arrow">→</td>
+<td>在你的 <tt>switch</tt> 语句中，你正在检查两种不同的常量 <tt>case</tt> 类型，例如一种情况下是字符串，另一种情况下是整数（有关 <tt>switch</tt> 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Case argument should be a constant</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试在你的 <tt>switch</tt> case 中使用一个计算结果不为常数的值（有关 <tt>switch</tt> 的更多信息，请参阅<a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">here</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Statement in a switch MUST appear after case or
+default</tt>
+</td>
+<td class="arrow">→</td>
+<td>你向 <tt>switch</tt> 语句中 <tt>case:</tt> 或 <tt>default:</tt> 之外的地方添加了一条语句（有关<tt>switch</tt> 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Duplicate case statement found / original
+here</tt>
+</td>
+<td class="arrow">→</td>
+<td>你在 <tt>switch</tt> 语句的两个不同位置使用了相同的 <tt>case</tt> 常量（请注意，“original here” 注释将位于另一行上，可以单击它来显示原始（异常的来源）的 <tt>case:</tt>，你可以在 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a> 找到关于 <tt>switch</tt> 的更多信息）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="i">表达式</label> <input id="i"
+type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>No return value from expression (does
+expression have a return value?)</tt>
+</td>
+<td class="arrow">→</td>
+<td>当表达式不返回任何东西时，你尝试将表达式的返回值赋给变量（有关表达式的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Expecting expression after the '.'</tt>
+</td>
+<td class="arrow">→</td>
+<td>你错误地使用了点（“.”）符号，并且没有正确地添加表达式后文（有关表达式的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unexpected symbol</tt> [symbol] in
+expression</td>
+<td class="arrow">→</td>
+<td>表达式使用的符号不是被接受的表达式符号集的一部分——有问题的符号将显示出来（有关表达式的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="j">未知值</label> <input id=
+"j" type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Unknown Pre operator</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试使用不允许的符号作为前操作符，例如 <tt>**[var]</tt> 或 <tt>&gt;&gt;[var]</tt> —— 只接受 <tt>++</tt> 和 <tt>--</tt>（有关 ++ / -- 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unknown Post operator</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试使用不允许的符号作为后操作符，例如 <tt>[var]**</tt> 或 <tt>[var]&gt;&gt;</tt> —— 只接受 <tt>++</tt> 和 <tt>--</tt>（有关 ++ / -- 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a></td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unknown pragma</tt> [gml_pragma string]</td>
+<td class="arrow">→</td>
+<td>你使用了编译器不知道的 pragma 字符串（有关 <tt>gml_pragma</tt> 的更多信息请参阅 <a href=
+"../../3_scripting/4_gml_reference/miscellaneous/gml_pragma.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unknown unary operator</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试使用未知符号作为一元运算符（可用符号请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unknown binary operator</tt>
+</td>
+<td class="arrow">→</td>
+<td>你尝试使用未知符号作为二元运算符（可用符号请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Unknown operator</tt> [operator]</td>
+<td class="arrow">→</td>
+<td>你尝试使用未知符号作为操作符（该符号将显示在错误中，可用符号的列表请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="k">Break / Continue 异常</label> <input id=
+"k" type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Break used without context</tt>
+</td>
+<td class="arrow">→</td>
+<td>你没有在 <tt>switch</tt>、loop 或任何其他允许的结构中使用 <tt>break</tt>（有关 <tt>break</tt> 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Continue used without context</tt>
+</td>
+<td class="arrow">→</td>
+<td>你没有在正确的上下文中使用 <tt>continue</tt>(有关 <tt>continue</tt> 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>continue statement is not allowed at this
+point</tt>
+</td>
+<td class="arrow">→</td>
+<td>在不允许使用 continue 的代码中使用了 <tt>continue</tt>（有关 <tt>continue</tt> 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="l">枚举</label> <input id="l" type=
+"checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>enum num is invalid</tt>
+</td>
+<td class="arrow">→</td>
+<td>枚举数对枚举无效（有关枚举的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/9_data_types.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>malformed enum</tt>
+</td>
+<td class="arrow">→</td>
+<td>你没有正确地创建枚举（有关枚举的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/9_data_types.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>enum</tt> [enum] has already been defined</td>
+<td class="arrow">→</td>
+<td>你尝试使用与前面定义的枚举相同的名称来定义枚举（有关枚举的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/9_data_types.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>malformed enum entry</tt>
+</td>
+<td class="arrow">→</td>
+<td>枚举有一条无效条目（有关枚举的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/9_data_types.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>enum expression must be an integer
+constant</tt>
+</td>
+<td class="arrow">→</td>
+<td>枚举条目不作为整数常量计算（有关枚举的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/9_data_types.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>enum reference</tt> [key] does not exist in
+<tt>[enum]</tt></td>
+<td class="arrow">→</td>
+<td>你尝试使用没有为枚举定义的键引用枚举条目（有关枚举的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/9_data_types.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="m">期望符号 / 值</label>
+<input id="m" type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Symbol ( expected<br>
+Symbol ) expected<br>
+Symbol , or ) expected<br>
+Symbol { expected<br>
+Symbol } expected<br>
+Symbol , or } expected<br>
+Symbol : expected<br>
+Symbol ; expected<br>
+Symbol [ expected<br>
+symbol ] expected<br>
+Symbol , or ] expected</tt>
+</td>
+<td class="arrow">→</td>
+<td>你在编写代码时没有使用必需的符号（更多信息请参阅 <a href=
+"../../3_scripting/3_gml_overview/12_expressions.html">表达式</a> 或 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">语言特性</a> 部分）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Expected id or string</tt>
+</td>
+<td class="arrow">→</td>
+<td>你在其中一个 <a href=
+"../../3_scripting/4_gml_reference/rooms/layers/index.html">层函数</a> 中使用的值既不是层 ID，也不是层名称（字符串）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>keyword Until expected</tt>
+</td>
+<td class="arrow">→</td>
+<td>你创建了一个 <tt>do... until</tt> 循环，但没有提供 <tt>until</tt> 表达式(有关 <tt>do... until</tt> 的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/14_language_features.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Function name expected</tt>
+</td>
+<td class="arrow">→</td>
+<td>你在代码中应该使用函数的地方使用了函数名以外的东西（有关使用函数的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/2_functions.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>variable name expected</tt>
+</td>
+<td class="arrow">→</td>
+<td>你提供了一个不需要变量名（有关变量的更多信息，请参阅此处 <a href=
+"../../3_scripting/3_gml_overview/6_scope.html">这里</a>）</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Assignment operator expected</tt>
+</td>
+<td class="arrow">→</td>
+<td>你创建了一个赋值，它需要一个操作符，但是没有提供操作符（有关赋值的更多信息，请参阅 <a href=
+"../../3_scripting/3_gml_overview/11_assignments.html">这里</a>）</td>
+</tr>
+</table>
+</div>
+<br>
+<label class="collapse" for="n">Android 特定</label> <input id=
+"n" type="checkbox">
+<div class="index_list">
+<table>
+<tr>
+<td class="alt"><tt>Android ARM ToolChain directory</tt> [dir] does
+not exist</td>
+<td class="arrow">→</td>
+<td><a href=
+"../../2_interface/3_settings/preferences.html">Android 首选项</a> 中指定的 ARM toolchain 目录不正确，并且不存在。</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Android MIPS ToolChain directory</tt> [dir]
+does not exist</td>
+<td class="arrow">→</td>
+<td><a href=
+"../../2_interface/3_settings/preferences.html">Android 首选项</a> 中指定的 MIPS toolchain 目录不正确，并且不存在。</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Android x86 ToolChain directory</tt> [dir] does
+not exist</td>
+<td class="arrow">→</td>
+<td><a href=
+"../../2_interface/3_settings/preferences.html">Android 首选项</a> 中指定的 x86 toolchain 目录不正确，并且不存在。</td>
+</tr>
+
+<tr>
+<td class="alt"><tt>Android NDK directory</tt> [dir] does not
+exist</td>
+<td class="arrow">→</td>
+<td><a href=
+"../../2_interface/3_settings/preferences.html">Android 首选项</a> 中指定的 Android NDK 目录不正确，并且不存在。</td>
+</tr>
+</table>
+</div>
+<br>
+
+<p><br>
+</p></blockquote>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">上一页：<a href="index.html">附加信息索引</a></div>
+
+<div style="float:right">下一页：<a href=
+"javadoc.html">JSDoc</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

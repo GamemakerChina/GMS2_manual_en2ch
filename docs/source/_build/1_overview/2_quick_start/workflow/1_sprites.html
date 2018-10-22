@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,9 +37,9 @@ if (window.name != "content")
 </p>
 
 <p>我们将通过介绍在 <i>GameMaker Studio 2</i> 中制作任何项目都需要的第一个资源 -  <b>精灵</b> 来开始“快速入门指南”的这部分内容。如 <a href=
-"../4_resources.html">资源</a> 部分所述，精灵是一个图像， 可以是动画（不一定必须是），然后绘制到屏幕上。 一般而言，一个精灵将与一个物体相关联，当然你可以只绘制一个精灵，无论是用于代码还是在房间编辑器 <b>资源层</b> （后面会详细介绍）。您也可以创建一个精灵来用作 <b>图块集</b>，我们稍后也会详细介绍这个选项。</p>
+"../4_resources.html">资源</a> 部分所述，精灵是一个图像， 可以是动画（不一定必须是），然后绘制到屏幕上。 一般而言，一个精灵将与一个物体相关联，当然你可以只绘制一个精灵，无论是用于代码还是在房间编辑器 <b>资源层</b> （后面会详细介绍）。你也可以创建一个精灵来用作 <b>图块集</b>，我们稍后也会详细介绍这个选项。</p>
 
-<p><a name="sprite_editor" id="sprite_editor"></a> 当您从 <a href="../2_start.html">开始页面</a> 创建一个新项目时，资源树将只包含您可能需要的资源的空文件夹，因此您需要右键单击 <i>right-click</i> <img style="vertical-align:middle" src=
+<p><a name="sprite_editor" id="sprite_editor"></a> 当你从 <a href="../2_start.html">开始页面</a> 创建一个新项目时，资源树将只包含你可能需要的资源的空文件夹，因此你需要右键单击 <i>right-click</i> <img style="vertical-align:middle" src=
 "../../../images/icon_rmb.png"> 精灵资源文件夹，然后选择 <i>创建</i> 选项。 IDE 将会创建一个新的精灵并为你打开精灵编辑器（如果精灵编辑器没有打开，只需双击 <img style="vertical-align:middle" src=
 "../../../images/icon_lmb.png"> 新资源就可打开）：<img class=
 "center" src="../images/qs_sprites_spriteeditor.png"></p>
@@ -51,7 +51,7 @@ if (window.name != "content")
 
 <blockquote>
 <ul>
-<li>左上角是帧视图 - 这里显示了您的精灵的帧图像，可以使用放大镜图标调整大小<br>
+<li>左上角是帧视图 - 这里显示了你的精灵的帧图像，可以使用放大镜图标调整大小<br>
 <br></li>
 
 <li>中央部分是绘图画布 - 这里显示了当前选定的帧并准备好绘画，你可以使用 <i>鼠标中键</i> <img style="vertical-align:middle" src=
@@ -62,26 +62,26 @@ if (window.name != "content")
 <li>右上方是基本的画笔 - 在这里你可以选择绘画的画笔，添加任何自定义的画笔<br>
 <br></li>
 
-<li>中间靠右是颜色选择器 - 在这里，我们可以选择用于左键/右键的颜色，因为您可以同时在画布上用左键/右键进行绘制<br>
+<li>中间靠右是颜色选择器 - 在这里，我们可以选择用于左键/右键的颜色，因为你可以同时在画布上用左键/右键进行绘制<br>
 <br></li>
 
-<li>在颜色选择器下面是工具 - 这些是各种绘图工具，包括刷子，填充，遮罩和形状工具。请注意，某些工具是延对角线分割的，您需要点击对角线的某一侧来选择工具绘制轮廓线或填充形状<br>
+<li>在颜色选择器下面是工具 - 这些是各种绘图工具，包括刷子，填充，遮罩和形状工具。请注意，某些工具是延对角线分割的，你需要点击对角线的某一侧来选择工具绘制轮廓线或填充形状<br>
 <br></li>
 
-<li>在右下角是图层视图 - 就像其他许多绘图工具一样，您可以创建不同的图层来绘制图像，允许您尝试在各种位置使用各种颜色绘制，而不必担心会破坏图层下面的内容</li>
+<li>在右下角是层视图 - 就像其他许多绘图工具一样，你可以创建不同的层来绘制图像，允许你尝试在各种位置使用各种颜色绘制，而不必担心会破坏层下面的内容</li>
 </ul>
 </blockquote>
 
 <p>在图像编辑器中绘制一些东西，花一些时间来熟悉这些选项，然后当你准备完成后关闭工作空间（这将保存图像），带你回到带有精灵编辑器的工作空间。我们将讨论精灵编辑器的一些其他功能，这些功能的了解对于刚入门时很重要。</p>
 
 <p> 你需要知道的第一件事是如何设置精灵的 <b>原点</b>。原点用于设置将我们的精灵“锚定”在房间内的位置，在现在的情境下，我们希望将其设置在中心。所以我们点击 <img style=
-"vertical-align:middle" src="../../../images/icon_lmb.png"> 从下拉菜单来设置原点并选择“中间中心”：<img class="center" src="../images/qs_sprites_spriteorigin.png"> 你会看到预览图像中的原点十字线移动到精灵的中心。请注意，您只需单击预览图像即可将原点放置在所点击 <img style="vertical-align:middle" src=
+"vertical-align:middle" src="../../../images/icon_lmb.png"> 从下拉菜单来设置原点并选择“中间中心”：<img class="center" src="../images/qs_sprites_spriteorigin.png"> 你会看到预览图像中的原点十字线移动到精灵的中心。请注意，你只需单击预览图像即可将原点放置在所点击 <img style="vertical-align:middle" src=
 "../../../images/icon_lmb.png"> 的位置，也可以通过在顶部的x / y字段中添加值来手动设置原点位置。 </p>
 
-<p>另一个重要的事情是知道如何设置精灵的 <b>碰撞盒</b> 。碰撞盒是 <i>GameMaker Studio 2</i> 检查是否发生碰撞的区域，默认情况下设置为 <i>矩形</i> （这也是最快的解决办法）。 请注意，您可以将边界框的检测模式设置为自动（默认值）或手动。 如果您选择手动，您将能够设置左上右下的边界框值。
+<p>另一个重要的事情是知道如何设置精灵的 <b>碰撞盒</b> 。碰撞盒是 <i>GameMaker Studio 2</i> 检查是否发生碰撞的区域，默认情况下设置为 <i>矩形</i> （这也是最快的解决办法）。 请注意，你可以将边界框的检测模式设置为自动（默认值）或手动。 如果你选择手动，你将能够设置左上右下的边界框值。
 <img class="center" src="../images/qs_sprites_spritemask.png"></p>
 
-<p>除矩形以外的其他类型的碰撞盒设置相对较慢，但是当制作一个小而简单的游戏时，这通常不是问题。 现在您可以关闭精灵编辑器了，因为我们将继续讨论 <b>图块集</b>。</p>
+<p>除矩形以外的其他类型的碰撞盒设置相对较慢，但是当制作一个小而简单的游戏时，这通常不是问题。 现在你可以关闭精灵编辑器了，因为我们将继续讨论 <b>图块集</b>。</p>
 
 <p><br>
 </p>
@@ -97,7 +97,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -82,7 +82,7 @@ dashboard).</td>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -103,11 +103,9 @@ score, and a short text message as well as set the challenge
 
 <blockquote>
 <ul>
-<li><b><tt>achievement_type_score_challenge</tt></b> - A challenge
-based on the score value.<br></li>
+<li><b><tt>achievement_type_score_challenge</tt></b> - 基于分数值的挑战。<br></li>
 
-<li><b><tt>achievement_type_achievement_challenge</tt></b> - A
-challenge based on an achievement.<br></li>
+<li><b><tt>achievement_type_achievement_challenge</tt></b> - 基于成就的挑战。<br></li>
 </ul>
 </blockquote>
 
@@ -140,29 +138,24 @@ values you have chosen using the function <a href=
 <li>"<b>issuerid</b>" - The issuer ID for the challenge.<br>
 <br></li>
 
-<li>"<b>state</b>" - The state of the challenge, which will have a
-value of 0 - 3 (as a string) for <i>invalid</i>, <i>pending</i>,
-<i>completed</i> or <i>declined</i>.<br>
+<li>"<b>state</b>" - 挑战的状态，对于 <i>无效</i>、<i>待定</i>、<i>已完成</i> 或 <i>已拒绝</i>，其值为 0 - 3（作为字符串）。<br>
 <br></li>
 
-<li>"<b>message</b>" - The text message for challenge.<br>
+<li>"<b>message</b>" - 挑战的消息。<br>
 <br></li>
 
-<li>"<b>completeddate</b>" - The completion date for challenge.<br>
+<li>"<b>completeddate</b>" - 挑战的完成日期。<br>
 <br></li>
 
 <li>"<b>issueddate</b>" - The issue date for challenge.<br>
 <br></li>
 
-<li>"<b>type</b>" - The type of challenge given. Can be one of two
-constants:<br>
+<li>"<b>type</b>" - 给出的挑战类型。 可以是两个常量之一：<br>
 
 <ul>
-<li><b><tt>achievement_type_score_challenge</tt></b> - A challenge
-based on the score value.<br></li>
+<li><b><tt>achievement_type_score_challenge</tt></b> - 基于分数值的挑战。<br></li>
 
-<li><b><tt>achievement_type_achievement_challenge</tt></b> - A
-challenge based on an achievement.<br></li>
+<li><b><tt>achievement_type_achievement_challenge</tt></b> - 基于成就的挑战。<br></li>
 </ul></li>
 
 <li>"<b>identifier</b>" - The identifying string for the challenge,
@@ -195,29 +188,7 @@ game for the player that the challenge was directed at, and this
 can be dealt with in the following way:</p>
 </blockquote>
 
-<p class="code">var ident = ds_map_find_value(async_load,
-"id");<br>
-if ident == achievement_challenge_received<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;player_id = ds_map_find_value(async_load,
-"playerid");<br>
-&nbsp;&nbsp;&nbsp;issuer_id = ds_map_find_value(async_load,
-"issuerid");<br>
-&nbsp;&nbsp;&nbsp;state = ds_map_find_value(async_load,
-"state");<br>
-&nbsp;&nbsp;&nbsp;message = ds_map_find_value(async_load,
-"message");<br>
-&nbsp;&nbsp;&nbsp;date_completed = ds_map_find_value(async_load,
-"completeddate");<br>
-&nbsp;&nbsp;&nbsp;date_issued = ds_map_find_value(async_load,
-"issueddate");<br>
-&nbsp;&nbsp;&nbsp;ach_type = ds_map_find_value(async_load,
-"type");<br>
-&nbsp;&nbsp;&nbsp;ach_ident = ds_map_find_value(async_load,
-"identifier");<br>
-&nbsp;&nbsp;&nbsp;ach_score = ds_map_find_value(async_load,
-"score");<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var ident = ds_map_find_value(async_load, "id");<br>if ident == achievement_challenge_received<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;player_id = ds_map_find_value(async_load, "playerid");<br>&nbsp;&nbsp;&nbsp;issuer_id = ds_map_find_value(async_load, "issuerid");<br>&nbsp;&nbsp;&nbsp;state = ds_map_find_value(async_load, "state");<br>&nbsp;&nbsp;&nbsp;message = ds_map_find_value(async_load, "message");<br>&nbsp;&nbsp;&nbsp;date_completed = ds_map_find_value(async_load, "completeddate");<br>&nbsp;&nbsp;&nbsp;date_issued = ds_map_find_value(async_load, "issueddate");<br>&nbsp;&nbsp;&nbsp;ach_type = ds_map_find_value(async_load, "type");<br>&nbsp;&nbsp;&nbsp;ach_ident = ds_map_find_value(async_load, "identifier");<br>&nbsp;&nbsp;&nbsp;ach_score = ds_map_find_value(async_load, "score");<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the

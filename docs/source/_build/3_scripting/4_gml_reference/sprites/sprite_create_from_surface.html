@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -50,48 +50,47 @@ removeback, smooth, xorig, yorig);</p>
 
 <tr>
 <td>index</td>
-<td>The index of the surface to create from.</td>
+<td>将被使用的表面的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>x</td>
-<td>The x position to copy from.</td>
+<td>被复制点的X轴坐标。</td>
 </tr>
 
 <tr>
 <td>y</td>
-<td>The y position to copy from.</td>
+<td>被复制点的Y轴坐标。</td>
 </tr>
 
 <tr class="alt">
 <td>w</td>
-<td>The width of the area to be copied (from the x position).</td>
+<td>被复制区域的宽度。（从之前的X轴坐标算起。）</td>
 </tr>
 
 <tr>
 <td>h</td>
-<td>The height of the area to be copied (from the y position).</td>
+<td>被复制区域的长度。（从之前的Y轴坐标算起。）</td>
 </tr>
 
 <tr class="alt">
 <td>removeback</td>
-<td>Indicates whether to make all pixels with the background colour
-(left-bottom pixel) transparent.</td>
+<td>指示是否将所有与背景（左下角的像素）颜色相同的像素变成透明</td>
 </tr>
 
 <tr>
 <td>smooth</td>
-<td>Indicates whether to smooth the edges.</td>
+<td>指示是否将边缘变得平滑。</td>
 </tr>
 
 <tr class="alt">
 <td>xorig</td>
-<td>Indicates the x position of the origin in the sprite.</td>
+<td>指示此精灵的原点X轴坐标。</td>
 </tr>
 
 <tr>
 <td>yorig</td>
-<td>Indicates the y position of the origin in the sprite.</td>
+<td>指示此精灵的原点X轴坐标。</td>
 </tr>
 </table>
 </div>
@@ -100,7 +99,7 @@ removeback, smooth, xorig, yorig);</p>
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
 <p class="code">Real (unique sprite ID value)</p>
 
@@ -110,49 +109,22 @@ removeback, smooth, xorig, yorig);</p>
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can create a sprite from a previously
-initialised surface (the surface index ID value is returned when
-you create the surface using <a href=
-"../drawing/surfaces/surface_create.html"><tt>surface_create</tt></a>).
-The x and y coordinates that you then input in the function should
-be relative to the (0,0) position of the <i>surface</i> (the top
-left corner) and not the game window (nor the view if you have one
-active). The width and height arguments are in pixels and define
-the width and height of the part of the surface to use.</p>
+<p>使用此函数你将会从一个之前就被初始化的表面创建一个精灵。所需要的表面索引通过 <a href=
+"../drawing/surfaces/surface_create.html"><tt>surface_create</tt></a>函数获得。你将输入的X,Y坐标应该是与该<i>表面</i> 的原点（左上角）的相对位置，而不是游戏窗口或可用的视野。宽度和高度参数的单位是像素，并且使用此参数来规定使用的表面部分的高度和宽度。</p>
 
-<p>Setting the "removeback" argument to <tt>true</tt> will remove a
-colour from the sprite, by checking the <i>bottom left</i> pixel of
-the sprite for the colour there and then using that as the colour
-to be removed.</p>
+<p>将 "removeback" 参数设为 <tt>true</tt> 将会把背景色从精灵中移除， 该方法的工作原理是检查精灵<i>左下角</i>的颜色并移除这种颜色。 </p>
 
-<p>If you choose the "removeback" option, you may also want
-<i>GameMaker Studio 2</i> to smooth the edges of the sprite by
-setting the "smooth" argument to <tt>true</tt>. All this does is
-create a semi-transparent border around the edges of the sprite
-after it has had its background removed.</p>
+<p>如果你选择了“removeback"选项，你可能也希望 <i>GameMaker Studio 2</i> 将其边缘变得平滑，因此你将 "smooth" 参数设置为  <tt>true</tt>. 但你所做的实际上就是在移除精灵的背景后，为精灵边缘创建一个半透明的边框。</p>
 
-<p>Finally you can also specify the x and y <i>origin</i> for the
-sprite. This is the point where the sprite is "fixed" onto the
-instance that uses it, and is always calculated as relative to the
-0,0 top left corner of one sprite sub-image. So, for example, a
-sprite that is 32 x 32 pixels with these values set to (16,16) will
-have its origin in the center.</p>
+<p>最后，你当然也可以为精灵设置具体的X轴和Y轴 <i>原点</i>。这个原点就是此精灵固定在模板上的固定点，并且这个点的位置坐标就是与精灵最左上角的点的相对坐标。. 比如，一个精灵是32X32的像素大小，如果你设置它的原点坐标为(16,16),那么原点就在精灵的中心。</p>
 
-<p>By default all new sprites have their bounding boxes calculated
-automatically (the exact bbox will depend on the size and
-transparency of the sprite), however you may wish to customise
-this, in which case you should also use the function <a href=
-"sprite_collision_mask.html"><tt>sprite_collision_mask</tt></a>.</p>
+<p>默认情况下，系统会自动根据图片的尺寸和透明度为图片加上一个边界框，用于之后可能的碰撞检测或其它。如果需要修改边界框，你需要使用 <a href=
+"sprite_collision_mask.html"><tt>sprite_collision_mask</tt></a>函数。</p>
 
-<div class="note"><b>NOTE:</b> When you create a sprite in
-<i>GameMaker Studio 2</i> with this method you must remember to
-remove it again (with <a href=
-"sprite_delete.html"><tt>sprite_delete</tt></a>) when no longer
-needed, otherwise there is risk of a memory leak which will slow
-down and eventually crash your game.</div>
+<div class="note"><b>注意:</b> 当你使用该方法在 <i>GameMaker Studio 2</i>创建了一个精灵 而之后又不再需要时，你必须使用 <a href=
+"sprite_delete.html"><tt>sprite_delete</tt></a>函数将其删除，否则可能会使存储泄露或游戏崩溃。</div>
 
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 </blockquote>
 
 <p><br>
@@ -173,12 +145,7 @@ surface_reset_target();<br>
 surface_free(surf);<br></p>
 
 <blockquote>
-<p>The above code creates a surface and stores its index in the
-local variable "surf". It then targets that surface, clears it and
-draws several sprites on top of each other. Finally it creates a
-new sprite from the composite image drawn on the surface and
-assigns its index to "spr_Custom" before freeing up the memory used
-by the surface.</p>
+<p>上述代码将会首先创建表面，并将表面的索引存储在本地变量"surf"中。然后再选中刚才创建的表面，并在表面上绘制图片。最后它将从表面上的混合图像中创建一个新精灵，并将它的索引赋予"spr_Custom" ，最后释放被表面占用的存储。</p>
 </blockquote>
 
 <p><br>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -59,14 +59,14 @@ indicated to behave kinematically.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>基于物理的游戏将会有一些你想要移动的实例，但不希望被诸如重力等力量所影响，也不希望与动态对象碰撞所产生的力量（例如，在平台游戏中考虑移动平台）。For such objects simply setting the density of a fixture to 0 will mean that the physics will assume that the object is intended to be static. However, should you set the <tt>phy_speed_x</tt>, <tt>phy_speed_y</tt> or <tt>phy_angular_velocity</tt> variables for an instance that has had such a fixture bound to it, it will be converted into a kinematic object and begin movement. Change the instance from static to kinematic mid-simulation can be expensive in terms of processing (depending on the state of the instances in the physics world) and therefore it is recommended to set the fixture to be kinematic using this function prior to binding it to an instance, so that it will be unaffected by collisions and forces (such as gravity) but may move with constant linear and/or angular velocity.<br>
+<p>基于物理的游戏将会有一些你想要移动的实例，但不希望被诸如重力等力和与动态物体碰撞所产生的力量所影响（例如，在平台游戏中考虑移动平台）。For such objects simply setting the density of a fixture to 0 will mean that the physics will assume that the object is intended to be static. However, should you set the <tt>phy_speed_x</tt>, <tt>phy_speed_y</tt> or <tt>phy_angular_velocity</tt> variables for an instance that has had such a fixture bound to it, it will be converted into a kinematic object and begin movement. Change the instance from static to kinematic mid-simulation can be expensive in terms of processing (depending on the state of the instances in the physics world) and therefore it is recommended to set the fixture to be kinematic using this function prior to binding it to an instance, so that it will be unaffected by collisions and forces (such as gravity) but may move with constant linear and/or angular velocity.<br>
 <br></p>
 
 <p><br>

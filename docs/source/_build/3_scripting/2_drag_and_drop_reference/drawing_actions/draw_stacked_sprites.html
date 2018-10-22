@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_drawing_draw_stacked_sprites.png"> 绘制叠加的精灵</h2>
+"images/i_drawing_draw_stacked_sprites.png"> 绘制堆叠的精灵</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,22 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will draw a sprite a given number of sprites one
-after another at a given position within the room. You give the
-sprite to draw and the stack order, which can be either <b>Row</b>
-(horizontally, left to right), or <b>column</b> (vertically, top to
-bottom), as well as the number of sprites to draw and the position.
-The position can be an absolute position within the room, or one
-relative to the position of the instance doing the drawing, and the
-spacing between images will be based on the width or height of the
-sprite. Note that this simply draws a static image - the initial
-single image (frame 0) of the given sprite - and any further frames
-will be ignored, as will any transforms that have been added
-through changing the instance variables (like <tt>image_xscale</tt>
-or <tt>image_blend</tt>).</p>
+<p>This action will draw a sprite a given number of sprites one after another at a given position within the room. You give the sprite to draw and the stack order, which can be either <b>Row</b> (horizontally, left to right), or <b>column</b> (vertically, top to bottom), as well as the number of sprites to draw and the position. 位置可以是房间内的绝对位置，或者是调用这个动作的实例所在的位置。绘制间距默认为精灵的宽度或高度。Note that this simply draws a static image - the initial single image (frame 0) of the given sprite - and any further frames will be ignored, as will any transforms that have been added through changing the instance variables (like <tt>image_xscale</tt> or <tt>image_blend</tt>).</p>
 
-<div class="note"><b>注意</b>： This action is only for use in the various <a href=
-"../../../2_interface/1_editors/events/draw_events.html">Draw Events</a>, and will not draw anything if used elsewhere.</div>
+<div class="note"><b>注意</b>：这个动作只能用于各种 <a href=
+"../../../2_interface/1_editors/events/draw_events.html">绘制动作</a>，如果用在其它位置将不生效。</div>
 </blockquote>
 
 <p><br>
@@ -82,8 +70,8 @@ alt="Draw Stacked Sprites Syntax">
 </tr>
 
 <tr class="alt">
-<td>堆栈顺序</td>
-<td>The order to draw in (either Row or Column)</td>
+<td>堆叠方向</td>
+<td>绘制方向（行或列）</td>
 </tr>
 
 <tr>
@@ -120,8 +108,7 @@ number of marker sprites to the screen.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Drawing
-Actions</a></div>
+<div style="float:left">上一页： <a href="index.html">绘制动作</a></div>
 
 <div style="float:right">next: <a href="draw_rectangle.html">Draw
 Rectangle</a></div>

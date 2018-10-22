@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -57,22 +57,14 @@ listed below).</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> 实数</p>
+<p><b>返回：</b> Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function is used to create a new client socket for your
-game to communicate over the network. You must define the socket
-type (see the list of constants below) and the function will return
-a unique <i>id</i> for that socket, which should be used in all
-further function calls for that socket, or a value of less than 0
-if the connection fails.<br>
-<br>
-<i><b>NOTE:</b> You can use the IP "127.0.0.1" to connect back to
-the same device that is running the game.</i><br>
+<p>This function is used to create a new client socket for your game to communicate over the network. You must define the socket type (see the list of constants below) and the function will return a unique <i>id</i> for that socket, which should be used in all further function calls for that socket, or a value of less than 0 if the connection fails.<br><br><i><b>NOTE:</b> You can use the IP "127.0.0.1" to connect back to the same device that is running the game.</i><br>
 <br></p>
 
 <div class="compat">
@@ -84,17 +76,17 @@ the same device that is running the game.</i><br>
 
 <tr>
 <td>network_socket_tcp</td>
-<td>Create a web socket using TCP.</td>
+<td>使用TCP协议创建一个网络套接字。</td>
 </tr>
 
 <tr class="alt">
 <td>network_socket_udp</td>
-<td>Create a web socket using UDP.</td>
+<td>使用UDP协议创建一个网络套接字。</td>
 </tr>
 
 <tr>
 <td>network_socket_bluetooth</td>
-<td>Create a bluetooth socket (<i>currently unavailable!</i>).</td>
+<td>创建一个蓝牙套接字（<i>尚不可用！</i>）</td>
 </tr>
 </table>
 </div>
@@ -108,8 +100,7 @@ the same device that is running the game.</i><br>
 network_create_socket(network_socket_tcp);<br>
 network_connect( client, “192.134.0.1”, 6510 );<br></p>
 
-<p>The above code will create a new TCP socket then attempt to
-connect through that to the given IP address on port 6510.</p>
+<p>上述代码会新建一个TCP套接字然后尝试通过之去连接指定的IP地址的6510端口。</p>
 
 <p><br>
 </p>
@@ -118,10 +109,10 @@ connect through that to the given IP address on port 6510.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Networking</a></div>
+<div style="float:left">上一页：<a href=
+"index.html">联网</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页：<a href=
 "network_create_socket_ext.html">network_create_socket_ext</a></div>
 </div>
 </div>

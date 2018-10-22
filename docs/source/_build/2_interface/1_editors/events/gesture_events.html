@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -183,48 +183,6 @@ if (window.name != "content")
 </tr>
 
 <tr class="alt">
-<td>"viewstartposX"</td>
-<td><br>
-这是当前触摸的位置与房间开始时 X 坐标距离。<br>
-<br></td>
-</tr>
-
-<tr>
-<td>"viewstartposY"</td>
-<td><br>
-这是当前触摸的位置与房间开始时 Y 坐标距离。<br>
-<br></td>
-</tr>
-
-<tr class="alt">
-<td>"rawstartposX"</td>
-<td><br>
-这是当前触摸的位置与屏幕开始时 X 坐标距离。<br>
-<br></td>
-</tr>
-
-<tr>
-<td>"rawstartposY"</td>
-<td><br>
-这是当前触摸的位置与屏幕开始时 Y 坐标距离。<br>
-<br></td>
-</tr>
-
-<tr class="alt">
-<td>"guistartposX"</td>
-<td><br>
-这是当前触摸的位置与 GUI 层开始时 X 坐标距离。<br>
-<br></td>
-</tr>
-
-<tr>
-<td>"guistartposY"</td>
-<td><br>
-这是当前触摸的位置与 GUI 层开始时 Y 坐标距离。<br>
-<br></td>
-</tr>
-
-<tr class="alt">
 <td>"isflick"</td>
 <td><br>
 <b>仅在拖拽结束（Drag End）事件中可用。</b>如果拖拽结束被检测为轻抚，则设置为 1，这意味着如果你正在处理拖动，则不需要单独的 <b>轻抚事件</b>。<br>
@@ -339,17 +297,7 @@ flickVelY = 0.0;<br></p>
 
 <h3>拖动结束事件</h3>
 
-<p class="code">isFlick = event_data[?"isflick"];<br>
-if (isFlick)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flickVelX = event_data[?"diffX"];<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flickVelY = event_data[?"diffY"];<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flickVelX = 0;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;flickVelY = 0;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">isFlick = event_data[?"isflick"];<br>if (isFlick)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;flickVelX = event_data[?"diffX"];<br>&nbsp;&nbsp;&nbsp;&nbsp;flickVelY = event_data[?"diffY"];<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;flickVelX = 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;flickVelY = 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <h3>步事件</h3>
 
@@ -636,14 +584,7 @@ type="checkbox">
 
 <h3>捏合结束事件</h3>
 
-<p class="code">var _pinchx = event_data[? "midpointX"]; var
-_pinchy = event_data[? "midpointY"]; var _w =
-camera_get_view_width(view_camera[0]);<br>
-var _h = camera_get_view_height(view_camera[0]);<br>
-var _x = _pinchx - (_w / 2);<br>
-var _y = _pinchy - (_h / 2);<br>
-<br>
-camera_set_view_pos(view_camera[0], _x, _y);<br></p>
+<p class="code">var _pinchx = event_data[?"midpointX"]; var _pinchy = event_data[?"midpointY"]; var _w = camera_get_view_width(view_camera[0]);<br>var _h = camera_get_view_height(view_camera[0]);<br>var _x = _pinchx - (_w / 2);<br>var _y = _pinchy - (_h / 2);<br><br>camera_set_view_pos(view_camera[0], _x, _y);<br></p>
 
 <p><br>
 上面的代码将视图位置设置为在释放触摸时构成捏合的两个触摸的中点。</p>
@@ -928,7 +869,7 @@ _a);<br>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

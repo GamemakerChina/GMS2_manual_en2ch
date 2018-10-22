@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -42,43 +42,14 @@ not.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>When developing for mobile devices, you need to have a way to
-check that the device is still focused on your game or not,
-especially as if your game is on an iOS, Android or Windows Phone
-device then it can be interrupted by phone calls and other apps.
-You can use this function to check if the device is paused or
-not.<br>
-<br>
-It is worth noting that this function will run any code that is
-contained within the code block on devices but then <i>GameMaker:
-Studio</i> will be paused immediately after as the device caches
-the game as a background process. So if you have something like the
-example code provided below, the instance to be created will not
-actually appear or run any of its events <i>until after the game
-has been restarted from the cached state</i>. This means that you
-may prefer to have the <tt>os_is_paused</tt> function call an alarm
-and then in the alarm event (which will be set when the device is
-paused but not run until it is un-paused) create a pause menu,
-restart music etc...<br>
-<br>
-If you are using this function on Windows, Ubuntu (Linux), MacOS or
-HTML5 platforms, then the function is only toggled for <b>one
-step</b> to <tt>true</tt> when the game loses focus, and then it
-will return <tt>false</tt> again until the game is returned to
-focus (and loses it again). This is because these platforms do not
-cache apps and games, and so these will continue to run in the
-background.<br>
-<br>
-<i><b>NOTE:</b> On mobile devices, sounds and music will be stopped
-when the os is paused. They will <b>not</b> restart again unless
-you specifically start them with the appropriate function.</i><br>
+<p>When developing for mobile devices, you need to have a way to check that the device is still focused on your game or not, especially as if your game is on an iOS, Android or Windows Phone device then it can be interrupted by phone calls and other apps. You can use this function to check if the device is paused or not.<br><br>It is worth noting that this function will run any code that is contained within the code block on devices but then <i>GameMaker: Studio</i> will be paused immediately after as the device caches the game as a background process. So if you have something like the example code provided below, the instance to be created will not actually appear or run any of its events <i>until after the game has been restarted from the cached state</i>. This means that you may prefer to have the <tt>os_is_paused</tt> function call an alarm and then in the alarm event (which will be set when the device is paused but not run until it is un-paused) create a pause menu, restart music etc...<br><br>If you are using this function on Windows, Ubuntu (Linux), MacOS or HTML5 platforms, then the function is only toggled for <b>one step</b> to <tt>true</tt> when the game loses focus, and then it will return <tt>false</tt> again until the game is returned to focus (and loses it again). This is because these platforms do not cache apps and games, and so these will continue to run in the background.<br><br><i><b>NOTE:</b> On mobile devices, sounds and music will be stopped when the os is paused. They will <b>not</b> restart again unless you specifically start them with the appropriate function.</i><br>
 <br></p>
 
 <p><br>
@@ -86,11 +57,7 @@ you specifically start them with the appropriate function.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if os_is_paused()<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if !instance_exists(obj_PauseMenu)
-instance_create_layer(0, 0, "Controllers", obj_PauseMenu);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if os_is_paused()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if !instance_exists(obj_PauseMenu) instance_create_layer(0, 0, "Controllers", obj_PauseMenu);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks to see if the game has been paused, and if
 it has then it creates an instance of the object "obj_PauseMenu" if

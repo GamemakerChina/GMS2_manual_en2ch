@@ -40,7 +40,7 @@ if (window.name != "content")
 "vertical-align:middle" src="images/icon_debug.png">，或者转到 <a href=
 "../../1_overview/2_quick_start/menus/build_menu.html">构建菜单</a> 并选择 “调试” 来运行游戏并启动 “调试器”。</p>
 
-<div class="note"><b>注意：</b> Windows防火墙（或你运行的任何其他防火墙程序）可能会提示你为此模块创建安全例外。<b>你必须这样做</b>，否则它将无法正常工作。 这是由于调试器的工作方式，对调试移动平台至关重要。</div>
+<div class="note"><b>注意：</b> Windows 防火墙（或你运行的任何其他防火墙程序）可能会提示你为此模块创建安全例外。<b>你必须这样做</b>，否则它将无法正常工作。 这是由于调试器的工作方式，对调试移动平台至关重要。</div>
 
 <p>在调试模式下运行游戏时，IDE 将显示调试器可用的不同工具： <img class="center"
 src="images/debug_module.png" alt="调试器"></p>
@@ -74,7 +74,7 @@ src="../../images/icon_cmd.png"> 和鼠标滚轮 <img style="vertical-align:midd
 "collapse" for="b">资源视图</label> <input id="b" type=
 "checkbox">
 <div class="index_list">
-<p><b>资源视图</b> 显示项目中正在使用的所有资源的列表，其中包含代码或 DnD™ 动作。此部分与资源树非常相似，你可以展开其中的项目以显示更多信息，例如，特定物体的不同事件。 然后，你可以双击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 任何资源，在 <b>代码视图</b> 窗口中打开它的代码，你可以在其中检查值并添加或删除断点。</p>
+<p><b>资源视图</b> 显示项目中正在使用的所有资源的列表，其中包含代码或 DnD™ 动作。此部分与资源树非常相似，你可以展开其中的项目以显示更多信息，例如，特定物体的不同事件。 然后，你可以双击 <img style="vertical-align:middle" src="../../images/icon_lmb.png"> 任何资源，在 <b>代码视图</b> 窗口中打开它的代码，你可以在其中检查值并添加或删除断点。</p>
 </div>
 <br>
 <a name="call_stack" id="call_stack"></a> <label class="collapse"
@@ -189,8 +189,8 @@ for="c">调用堆栈</label> <input id="c" type="checkbox">
 for="e">代码视图</label> <input id="e" type="checkbox">
 <div class="index_list">
 <p>代码视图是我们在项目运行时可以查看和检查不同脚本或事件代码的地方。 默认情况下，这将开始为空，但你可以双击 <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> 资源视图中的任何资源以在此处打开它。 你也可以打开多个不同的事件或脚本，它们将作为顶部的选项卡添加到 “代码视图” 工作区。在代码视图中打开任何代码窗口时，你可以左键 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 单击行号栏（行号所在的位置）来添加或删除 <b>断点</b>（断点是代码中调试器应暂停你的游戏的一行，如果需要的话，允许你之后单行地执行代码）。</p>
+src="../../images/icon_lmb.png"> 资源视图中的任何资源以在此处打开它。 你也可以打开多个不同的事件或脚本，它们将作为顶部的选项卡添加到 “代码视图” 工作区。在代码视图中打开任何代码窗口时，你可以左键 <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> 单击行号栏（行号所在的位置）来添加或删除 <b>断点</b>（断点是代码中调试器应暂停你的游戏的一行，如果需要的话，允许你之后单行地执行代码）。</p>
 
 <p>你还可以使用鼠标右键 <img style=
 "vertical-align:middle" src="../../images/icon_rmb.png"> 打开上下文菜单，该菜单还允许你添加或删除断点并将任何选定的代码复制到剪贴板。</p>
@@ -233,7 +233,7 @@ type="checkbox">
 
 <p>这个窗口可以让你添加你想一直追踪的特定的变量。追踪的内容可以是一个全局或实例范围的变量，一个内置的变量，甚至数组或数据结构。如果按步跳过的实例代码中包含被监视的变量，那么它就会在这里显示出来。这意味着你可以轻易追踪变量而不用在局部或者全局窗口中查找它。如果右键单击 <img style="vertical-align:middle" src=
 "../../images/icon_rmb.png"> 某个值，则可以设置其类型（请参阅下面的 <b>数据类型</b>），将其删除，或从窗口中清除 <i>所有</i> 监视器。你还可以通过双击 <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> 该值并为其赋予新值来更改所显示变量的某些值。请注意，你不能以这种方式重新分配数组或数据结构，但你 <i>可以</i> 更改其中的一些内容（你不能更改映射中的 “键” 值，也不能更改优先级队列的优先级值）。</p>
+"vertical-align:middle" src="../../images/icon_lmb.png"> 该值并为其赋予新值来更改所显示变量的某些值。请注意，你不能以这种方式重新分配数组或数据结构，但你 <i>可以</i> 更改其中的一些内容（你不能更改映射中的 “键” 值，也不能更改优先级队列的优先级值）。</p>
 </div>
 <br>
 <label class="collapse" for="five">实例</label> <input id=
@@ -335,7 +335,7 @@ type="checkbox">
 
 <p><br>
 <b>断点</b> 是项目代码中你希望停止的位置，以便你可以看到正在发生的事情。 在调试器运行的情况下，你可以通过左键单击 <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> 行号栏（行号所在的位置）随时在任何代码或脚本块中添加或删除断点，也可以使用鼠标右键 <img style="vertical-align:middle" src=
+"vertical-align:middle" src="../../images/icon_lmb.png"> 行号栏（行号所在的位置）随时在任何代码或脚本块中添加或删除断点，也可以使用鼠标右键 <img style="vertical-align:middle" src=
 "../../images/icon_rmb.png"> 打开 <i>上下文菜单</i>， 同样可以添加或删除断点：</p>
 
 <p><img class="center" src="images/add_remove_breakpoint.gif" alt=
@@ -373,8 +373,8 @@ type="checkbox">
 <div class="index_list">
 <p>此菜单允许你选择查看模式，可以是 <b>自上而下</b> 或 <b>自下而上</b>。</p>
 
-<p>选择自上而下视图模式将从上到下显示配置文件（与调用栈层次结构大致相同），因此它将显示事件，然后显示脚本，然后显示所使用的函数。请注意，如果有源码，你可以双击 <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> 条目，在 <b>源代码</b> 调试窗口中打开它。如果在名称旁边看到一个 <img style="vertical-align:middle" src="images/debug_expand.png"> 图标，则该部分中还会有进一步的脚本或函数调用，单击 <img style=
+<p>选择自上而下视图模式将从上到下显示配置文件（与调用栈层次结构大致相同），因此它将显示事件，然后显示脚本，然后显示所使用的函数。请注意，如果有源代码，你可以双击 <img style="vertical-align:middle"
+src="../../images/icon_lmb.png"> 条目，在 <b>源代码</b> 调试窗口中打开它。如果在名称旁边看到一个 <img style="vertical-align:middle" src="images/debug_expand.png"> 图标，则该部分中还会有进一步的脚本或函数调用，单击 <img style=
 "vertical-align:middle" src="images/debug_expand.png"> 将展开树以显示它们。</p>
 
 <p>选择自下而上视图模式将自下而上显示内容，以便你可以单独查看所有函数和脚本调用。使用此视图模式时，单击 <img style="vertical-align:middle" src="images/debug_expand.png"> 将展开函数或脚本以显示实际调用的内容。</p>
@@ -401,7 +401,7 @@ type="checkbox">
 <li><b>名称</b> - 这是被调用的事件、脚本或函数的名称，旁边可能有一个 <img style="vertical-align:middle"
 src="images/debug_expand.png"> 表示进一步调用它或从中调用的内容（取决于你选择的视图模式）。 
 你可以双击 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 任何名称，使其在 <b>源代码</b> 窗口中打开代码块或脚本。单击此列的顶部将按字母顺序对名称进行排序。<br>
+"../../images/icon_lmb.png"> 任何名称，使其在 <b>源代码</b> 窗口中打开代码块或脚本。单击此列的顶部将按字母顺序对名称进行排序。<br>
 <br></li>
 
 <li><b>时间（毫秒）</b> - 这将显示函数（或脚本、事件）在剖析时所花费的总时间，或者显示每步被调用的平均时间（取决于所选的时间显示选项），并以 <b>毫秒</b> 为单位显示。<br>
@@ -410,7 +410,7 @@ src="images/debug_expand.png"> 表示进一步调用它或从中调用的内容�
 <li><b>调用次数</b> - 你可以在此处查看给定事件、函数或脚本的调用总数，或者在一步中对其进行的平均调用次数（同样，取决于所选的时间显示选项）。<br>
 <br></li>
 
-<li><b>步 %</b> - 这里显示的值是调用所采取的单步的总体百分比。</li>
+<li>构中<b>步 %</b> - 这里显示的值是调用所采取的单步的总体百分比。</li>
 </ul>
 
 <p>你可以随时导出剖析数据，方法是右键单击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 窗口并选择 <i>导出到文件</i> 选项。这将以 <tt>.csv</tt> 格式编写当前视图（在扩展所有节点之后），然后可以将其加载到任何电子表格中，例如Excel。</p>

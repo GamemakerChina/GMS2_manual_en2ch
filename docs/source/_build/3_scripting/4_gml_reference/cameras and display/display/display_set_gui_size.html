@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">display_set_gui_size</h1>
 
-<h2 class="studio">Scales the GUI to the given width or
-height.</h2>
+<h2 class="studio">缩放GUI为指定的长宽。</h2>
 
 <h3 class="studio"><b>语法：</b>
 </h3>
@@ -51,14 +50,12 @@ height.</h2>
 
 <tr>
 <td>width</td>
-<td>The width of the GUI (-1 equals 1:1 with the display or
-application_surface).</td>
+<td>GUI的宽度(-1 表示 与显示器或应用表面1:1的比例 ).</td>
 </tr>
 
 <tr class="alt">
 <td>height</td>
-<td>The height of the GUI (-1 equals 1:1 with the display or
-application_surface).</td>
+<td>GUI的高度 (-1 表面  与显示器或应用表面1:1的比例).</td>
 </tr>
 </table>
 </div>
@@ -66,7 +63,7 @@ application_surface).</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b>N/A</p>
+<p><b>返回：</b>N/A</p>
 
 <p><br>
 </p>
@@ -74,23 +71,9 @@ application_surface).</td>
 <h3 class="studio"><b>描述</b>
 </h3>
 
-<p>This function will only affect things drawn in the <a href=
-"../../../../2_interface/1_editors/events/draw_events.html">Draw
-GUI Event</a> and can be used to set a specific width and height
-for all GUI components in that event, and no matter what size of
-display or window is used to display the GUI, it will be scaled to
-fit correctly. Where the GUI is positioned (ie: the (0,0) position)
-will depend on whether you have used the function <a href=
-"display_set_gui_maximise.html"><tt>display_set_gui_maximise()</tt></a>
-or not. If you do not use this function (the default setting) then
-the GUI layer will be positioned with its (0,0) point at the same
-position as that for the application surface (the area where your
-game is being drawn) and the width and height will be stretched to
-fit the this surface, such that setting a GUI width of 256px with
-this function when the application surface is 512px would stretch
-those 256 pixels to fit, effectively making the pixels twice as
-large. This is ideal for those games that have aspect ratio
-correction set in the global Game Settings.</p>
+<p>此函数只会影响 <a href=
+"../../../../2_interface/1_editors/events/draw_events.html">Draw GUI Event</a> 中的绘制的内容，并可以用来给那个事件中所有GUI组件设定特定的宽度和高度， 不管显示器或窗口之前是怎样显示GUI，都会缩放到适当的效果。GUI放置的位置 (比如 (0,0)位置)取决于你是否使用这个函数 <a href=
+"display_set_gui_maximise.html"><tt>display_set_gui_maximise()</tt></a> 。如果你没有使用这个函数 (默认设置)， GUI层将被放置在同应用表面（游戏绘制的区域）一样的 (0,0)位置，宽度和高度将被拉伸以适合这个表面层，使用这个函数这样设置时宽度为256px的 GUI，当应用表面层是512px时，将会拉伸256像素为表面层的大小，使得像素放大两倍。This is ideal for those games that have aspect ratio correction set in the global Game Settings.</p>
 
 <p>If you have used the <tt>display_set_gui_maximise()</tt>
 function then the (0,0) position for the GUI layer will default to
@@ -109,18 +92,15 @@ height will be reset to 1:1 with the surface too.</p>
 
 <p class="code">display_set_gui_size(768, 1024);</p>
 
-<p>The above code will lock the draw GUI event to the given width
-and height, scaling all components to fit either the application
-surface, or the display, using that proportion.</p>
+<p>上述代码将锁定GUI绘制事件，以指定的宽度和高度，使用那个比例缩放所有的分量以适应应用表面或者显示器。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Windows and
-Views</a></div>
+<div style="float:left">返回: <a href="index.html">Windows and Views</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "display_set_gui_maximise.html">display_set_gui_maximise</a></div>
 </div>
 

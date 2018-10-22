@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -65,11 +65,7 @@ general structure for the ds_map will be as follows:</p>
 
 <blockquote>
 <ul>
-<li><b>id:</b> The ID which was returned from the command. If you
-fire off a series of <tt>http_</tt> requests then you need to know
-which one you are getting the reply to, and so you would use this
-value to compare to the value you stored when you originally sent
-the request to find the right one.</li>
+<li><b>id:</b> The ID which was returned from the command. 如果你发出一系列 <tt>http_</tt> 请求，那么你需要知道你得到了哪一个回复，因此你可以使用这个值来比较你最初发送请求时存储的值，以找到正确的请求。</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -91,9 +87,7 @@ details).</li>
 <li style="list-style: none"><br>
 </li>
 
-<li><b>http_status:</b> The raw http status code (if available).
-This returns the standard web status code for most browsers, eg:
-304 for "Not Modified" or 204 for "No Content", etc...</li>
+<li><b>http_status:</b> The raw http status code (if available). 这将返回大多数浏览器的标准 Web 状态代码，例如：304 表示 “未修改” 或 204 表示 “无内容” 等...</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -106,15 +100,12 @@ have the following additional keys:</p>
 
 <blockquote>
 <ol>
-<li><b>"contentLength":</b> This is the size of file that the web
-server has said you should expect to receive (may be -1 if the
-server does not return this data).</li>
+<li><b>"contentLength":</b> 这是 Web 服务器所说的你应该接收的文件大小（如果服务器不返回此数据，则可能为 -1）。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"sizeDownloaded":</b> The size of the data that has already
-been downloaded.</li>
+<li><b>"sizeDownloaded":</b> 已下载的数据大小。</li>
 </ol>
 </blockquote>
 
@@ -188,24 +179,10 @@ you run the correct code should you have used various
 shows how this would be done:</p>
 
 <blockquote>
-<p class="code">var r_str = "null";<br>
-if ds_map_find_value(async_load, "id") == post<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;if ds_map_find_value(async_load, "status") ==
-0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r_str =
-ds_map_find_value(async_load, "result");<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var r_str = "null";<br>if ds_map_find_value(async_load, "id") == post<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if ds_map_find_value(async_load, "status") == 0<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r_str = ds_map_find_value(async_load, "result");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will first check the id of the ds_map that has
-been created, then check the status of the callback. If the value
-is equal to 0 (signalling success) the result from the callback
-will then be stored in a variable for future use, otherwise the
-variable will simply hold a default value (in this case
-"null").</p>
+<p>上面的代码将首先检查已创建的 ds_map 的 id，然后检查回调的状态。If the value is equal to 0 (signalling success) the result from the callback will then be stored in a variable for future use, otherwise the variable will simply hold a default value (in this case "null").</p>
 </blockquote>
 
 <p><br>

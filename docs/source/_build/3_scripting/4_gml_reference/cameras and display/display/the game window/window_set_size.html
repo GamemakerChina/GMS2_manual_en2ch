@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">window_set_size</h1>
 
-<h2 class="studio">Sets the size of the window in pixels.</h2>
+<h2 class="studio">设置窗口的大小，以像素为单位。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,12 +49,12 @@ if (window.name != "content")
 
 <tr>
 <td>w</td>
-<td>The new width of the window.</td>
+<td>窗口的新宽度。</td>
 </tr>
 
 <tr>
 <td>h</td>
-<td>The new height of the window.</td>
+<td>窗口的新高度。</td>
 </tr>
 </table>
 </div>
@@ -62,7 +62,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b>N/A</p>
+<p><b>返回：</b>N/A</p>
 
 <p><br>
 </p>
@@ -70,18 +70,7 @@ if (window.name != "content")
 <h3 class="studio"><b>描述</b>
 </h3>
 
-<p>With this function you can change the size of the game window.
-If you use this function to change the size of the game window, the
-contents of the window will be scaled to fit with a 1:1 ratio to
-the background canvas which will keep the image crisp and clear
-(although scaled if the window is other than the room or view
-size). For example, if you have a 200 x 150 pixel window, and the
-player stretches the window by dragging the borders, the final
-window size may be 400 x 300 pixels, but the drawing canvas is
-STILL 200 x 150, which gives a blurred image as the pixel ratio is
-now 1:2. However, if you use this function to set the window size,
-the 1:1 ratio is maintained, even though the image is scaled to fit
-the new window size.<br>
+<p>有了这个函数，你可能更改游戏窗口的大小。如果你使用这个函数改变游戏窗口口的大小，窗口内容将与背景画布以1：1的比例进行调整，以保持图像的清晰和明确（尽管缩放窗口不同于房间或视野）。比如，你的窗口是 200 x 150 像素，玩家拖动边界拉伸窗口，最后窗口可能会是400 x 300 像素，但是绘制画布仍然是 200 x 150，因为像素缩放比例为1:2，图像变得模糊。尽管如此，如果你使用这个函数设置窗口大小，即使图像自适应至新的窗口大小，图像与窗口的缩放比例仍然保持1:1。<br>
 <br></p>
 
 <p><br>
@@ -89,25 +78,17 @@ the new window size.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if mouse_check_button_pressed(mb_left)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;global.scale += 1;<br>
-&nbsp;&nbsp;&nbsp;window_set_size(200 * global.scale, 150 *
-global.scale);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if mouse_check_button_pressed(mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.scale += 1;<br>&nbsp;&nbsp;&nbsp;window_set_size(200 * global.scale, 150 * global.scale);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will change the size of the window based on the
-value of the variable "global.scale" when the mouse button is
-pressed.</p>
+<p>上述代码将在鼠标按下时，基于变量“global.scale”改变窗口的大小。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">The Game
-Window</a></div>
+<div style="float:left">上一页：<a href="index.html">游戏窗口</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "window_set_rectangle.html">window_set_rectangle</a></div>
 </div>
 

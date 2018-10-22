@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -70,19 +70,9 @@ or in a continuous loop (OBSOLETE).</h2>
 
 <h3 class="studio">描述</h3>
 
-<p><i><b>WARNING!</b> This function has been obsoleted and you
-should use <a href=
+<p><i><b>WARNING!</b> This function has been obsoleted and you should use <a href=
 "audio_play_sound.html"><tt>audio_play_sound</tt> and</a> <a href=
-"audio_stop_sound.html"><tt>audio_stop_sound</tt></a>
-instead.</i><br>
-<br>
-This function can be used to start a piece of background music
-playing. You can only have one piece of background playing at a
-time when using this function, and starting a sound while a
-previous one is playing will end the previous one directly. You can
-also choose whether the sound should loop back to the beginning by
-setting the loop flag to <tt>true</tt>, or only to play once by
-setting it to <tt>false</tt>.<br>
+"audio_stop_sound.html"><tt>audio_stop_sound</tt></a> instead.</i><br><br>This function can be used to start a piece of background music playing. You can only have one piece of background playing at a time when using this function, and starting a sound while a previous one is playing will end the previous one directly. You can also choose whether the sound should loop back to the beginning by setting the loop flag to <tt>true</tt>, or only to play once by setting it to <tt>false</tt>.<br>
 <br></p>
 
 <p><br>
@@ -90,14 +80,7 @@ setting it to <tt>false</tt>.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if !global.Music<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;audio_stop_music();<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;audio_play_music(snd_MusicIntro, true);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !global.Music<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;audio_stop_music();<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;audio_play_music(snd_MusicIntro, true);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks the global variable "Music" and if it
 returns false, it will stop all background music that is currently

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web " />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -53,7 +53,7 @@ if (window.name != "content")
 <li>例如，当你使用复制功能复制图像选择时，复制的选择将添加到画笔列表中。 这意味着你可以选择图像的一部分，然后在其余的绘画工具中使用它来绘制线条、多边形或只是自由绘制。刷子可以缩放并混合颜色。 请注意，<i>粘贴</i> 功能不适合在编辑器内部使用，因为你复制的任何内容都会添加到画笔列表中，以便你可以用复制的内容作为笔刷涂抹。 而粘贴只是为了从外部程序捕获某些内容并将其粘贴到图像编辑器中。<br>
 <br></li>
 
-<li>借助方便的图层编辑器，每个精灵可以有多个图层。这些图层可以排序甚至放置在文件夹中，以便更轻松地创建更复杂的图像。</li>
+<li>借助方便的层编辑器，每个精灵可以有多个层。这些层可以排序甚至放置在文件夹中，以便更轻松地创建更复杂的图像。</li>
 </ul>
 </blockquote>
 
@@ -63,8 +63,8 @@ if (window.name != "content")
 "collapse" for="one">帧视图</label> <input id="one" type=
 "checkbox">
 <div class="index_list">
-<p>窗口的这一部分按照它们将被动画化的顺序显示帧。你可以单击左侧的（+）按钮以添加更多帧 - 或使用 <a href="#image_menu">图像</a> 菜单 - 你还可以单击并拖动任何一帧改变其沿时间线的位置。在“帧视图”的左上角，你可以选择“切换洋葱皮模式” <img style=
-"vertical-align:middle" src="images/icon_onionskin.png">，这意味着在精灵动画的单个帧中，您可以选择将前面或后面的帧看作目前正在编辑图像框下的半透明图层。关于这一点的好处是每一帧的绘制比最后一帧略亮，因此你可以看到动画在绘制下一个帧时帧与帧的进展情况。启用此选项将显示对帧的一些额外控制，你可以单击并拖动以设置要显示的前一帧的数量以及后一帧的数量。<img class="center"
+<p>窗口的这一部分按照它们将被动画化的顺序显示帧。你可以单击左侧的（+）按钮以添加更多帧 - 或使用 <a href="#image_menu">图像</a> 菜单 - 你还可以单击并拖动任何一帧改变其沿时间轴的位置。在“帧视图”的左上角，你可以选择“切换洋葱皮模式” <img style=
+"vertical-align:middle" src="images/icon_onionskin.png">，这意味着在精灵动画的单个帧中，你可以选择将前面或后面的帧看作目前正在编辑图像框下的半透明层。关于这一点的好处是每一帧的绘制比最后一帧略亮，因此你可以看到动画在绘制下一个帧时帧与帧的进展情况。启用此选项将显示对帧的一些额外控制，你可以单击并拖动以设置要显示的前一帧的数量以及后一帧的数量。<img class="center"
 src="images/editor_onionskin.png" alt=
 "Image Editor Onion Skin"></p>
 
@@ -75,15 +75,15 @@ src="images/editor_onionskin.png" alt=
 "vertical-align:middle" src="images/icon_removeframe.png">，你可以单击该图标从精灵中删除帧。你还可以单击多个帧上的 <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png">/<img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> + <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> 全选它们，在这种情况下，单击删除图标将删除 <i>所有</i> 选定帧。</p>
+"vertical-align:middle" src="../../images/icon_lmb.png"> 全选它们，在这种情况下，单击删除图标将删除 <i>所有</i> 选定帧。</p>
 </div>
 <br>
 <a name="image_controls" id="image_controls"></a> <label class=
 "collapse" for="two">帧信息栏</label> <input id="two"
 type="checkbox">
 <div class="index_list">
-<p>此工具栏包含帧控制栏。在这里，你可以使用左侧的输入框设置应播放动画帧的速度。帧速度可以设置为 “FPS（cpu steps）” 或 “游戏 FPS（game steps）”。 可用的帧总数以及已选择的当前帧显示在右侧，你可以通过单击左侧的 <img style="vertical-align:middle" src=
-"images/icon_collapse.png"> 图标折叠此栏（隐藏它）。请注意，此处用于动画速度的值还将 <i>设置精灵在游戏中使用时的动画方式</i>，无论是作为图层上的精灵资源还是作为分配给实例的精灵，尽管你可以在运行时使用适当的 <a href=
+<p>此工具栏包含帧工具栏。在这里，你可以使用左侧的输入框设置应播放动画帧的速度。帧速度可以设置为 “FPS（cpu steps）” 或 “游戏 FPS（game steps）”。 可用的帧总数以及已选择的当前帧显示在右侧，你可以通过单击左侧的 <img style="vertical-align:middle" src=
+"images/icon_collapse.png"> 图标折叠此栏（隐藏它）。请注意，此处用于动画速度的值还将 <i>设置精灵在游戏中使用时的动画方式</i>，无论是作为层上的精灵资源还是作为分配给实例的精灵，尽管你可以在运行时使用适当的 <a href=
 "../../3_scripting/4_gml_reference/rooms/sprites/layer_sprite_speed.html">函数</a> 和 <a href=
 "../../3_scripting/4_gml_reference/instances/instance_variables/image_speed.html">变量</a> 来修改它 。</p>
 </div>
@@ -102,7 +102,7 @@ src="images/icon_canvasgrid.png">: 这将打开/关闭画布网格。这是 <i>G
 <br></li>
 
 <li><b>画布缩放工具 </b> <img style="vertical-align:middle"
-src="images/icon_canvaszoom.png">: 这些按钮控制当前画布缩放级别。你可以放大或缩小，然后单击 <img style="vertical-align:middle" src=
+src="images/icon_canvaszoom.png">： 这些按钮控制当前画布缩放级别。你可以放大或缩小，然后单击 <img style="vertical-align:middle" src=
 "images/icon_zoomequals.png"> 按钮会将画布重置为1：1，并且开始编辑图像。 请注意，你也可以使用 <img style="vertical-align:middle" src=
 "../../images/icon_ctrl.png"> / <img style="vertical-align:middle"
 src="../../images/icon_cmd.png"> 和鼠标滚轮 <img style=
@@ -129,7 +129,7 @@ src="../../images/icon_cmd.png"> 和鼠标滚轮 <img style=
 src="../../images/icon_cmd.png"> + <b><tt>Enter</tt></b> 将画布与图像设置为1：1（或者你可以使用如上所述的 <b>画布工具栏</b>）。另请注意，你可以使用鼠标中键 <img style=
 "vertical-align:middle" src="../../images/icon_mmb.png"> 或 <img style="vertical-align:middle" src=
 "../../images/icon_space.png"> + <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> 来平移画布。</p>
+src="../../images/icon_lmb.png"> 来平移画布。</p>
 </div>
 <br>
 <a name="image_values" id="image_values"></a> <label class=
@@ -156,12 +156,12 @@ src="../../images/icon_cmd.png"> + ‘<b>C</b>’ 复制它。复制的部分将
 "checkbox">
 <div class="index_list">
 <p>此部分的顶部有一些数字或预定义的颜色色块，你可以选择它们，并且可以通过用按钮单击它们分别分配给鼠标左键 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> <i>和</i> 右键 <img style=
+"../../images/icon_lmb.png"> <i>和</i> 右键 <img style=
 "vertical-align:middle" src="../../images/icon_rmb.png">（你也可以通过单击色块旁的左右颜色互换按钮交换颜色）。所选颜色将在下方显示为鼠标图像旁边的色块，然后你可以单击这些颜色以打开 <b>颜色选择器</b> 窗口：<img class=
 "center" src="images/editor_colourpicker.png" alt=
 "Image Editor Colour Picker"></p>
 
-<p>在此窗口中，你可以使用可用的滑块和小工具定义颜色，也可以直接设定 RGBA 值或 HVS 值。请注意，如果双击 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 默认颜色样本，还可以调出颜色选择器工具并编辑精灵的默认调色板。在这种情况下，单击颜色选择器中的 “确认” 会将调色板设置为新颜色，并将其与精灵资源一起保存。然后可以使用调色板选项菜单交换这些调色板并将其应用于不同的精灵：<img class="center" src="images/editor_colourpicker_options.png"
+<p>在此窗口中，你可以使用可用的滑块和小工具定义颜色，也可以直接设定 RGBA 值或 HVS 值。请注意，如果双击 <img style="vertical-align:middle" src="../../images/icon_lmb.png"> 默认颜色样本，还可以调出颜色选择器工具并编辑精灵的默认调色板。在这种情况下，单击颜色选择器中的 “确认” 会将调色板设置为新颜色，并将其与精灵资源一起保存。然后可以使用调色板选项菜单交换这些调色板并将其应用于不同的精灵：<img class="center" src="images/editor_colourpicker_options.png"
 alt="Image Editor Colour Picker Options"></p>
 
 <p>因此，你可以在精灵图像中创建自定义调色板，然后使用它为资源树中的其他精灵设置调色板，或者你可以打开精灵图像并从资源树中的其他精灵导入调色板。</p>
@@ -171,7 +171,7 @@ alt="Image Editor Colour Picker Options"></p>
 for="seven">工具</label> <input id="seven" type="checkbox">
 <div class="index_list">
 <p>下面我们列出了默认情况下 <i>GameMaker Studio 2</i> 可用的工具 - 请注意，所有工具都可以与鼠标左键 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 和右键 <img style=
+"../../images/icon_lmb.png"> 和右键 <img style=
 "vertical-align:middle" src="../../images/icon_rmb.png"> 一起使用，并且大多数工具都有与之关联的键盘快捷键（此处列出了重要的快捷键），有关完整列表，请参阅 <a href=
 "../../1_overview/2_quick_start/8_shortcuts.html">快捷方式</a> 页面。大多数工具还有额外的选项，可以在图像编辑器的顶部看到，如下所示：</p>
 
@@ -186,7 +186,7 @@ alt="Pencil Tool">
 </td>
 <td class="text">这是画笔工具。它使用选定的笔刷以鼠标按钮的选定颜色进行绘制，你可以从图像编辑器的顶部栏设置大小以及启用/禁用平滑（插值）。请注意，你还可以通过按住 <img style=
 "vertical-align:middle" src="../../images/icon_shift.png"> + <tt>Z</tt> 然后单击 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 并拖动鼠标以更改画笔的比例来调整画笔的大小和缩放，或者从右上角选择一个预定义笔刷。</td>
+"../../images/icon_lmb.png"> 并拖动鼠标以更改画笔的比例来调整画笔的大小和缩放，或者从右上角选择一个预定义笔刷。</td>
 </tr>
 
 <tr>
@@ -223,7 +223,7 @@ alt="Paint Tool">
 "images/icon_colourremove.png" alt="Colour Remove Tool">
 </td>
 <td class="text">这是颜色删除工具。当你选择它时，你可以使用 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 或 <img style="vertical-align:middle"
+"../../images/icon_lmb.png"> 或 <img style="vertical-align:middle"
 src="../../images/icon_rmb.png"> 点击图像中的像素删除所有相同颜色的像素（它们在技术上被替换为透明度为 0 的黑色）。顶部栏有一个容差滑块，你可以在其中设置像素颜色容差 - 此值越低，颜色与单击的颜色相匹配的越精确，而较高的值将扩展此值使得点击能包括更多的颜色。如果你之前使用选择工具进行了选择，则只有单击选区内的像素才会生效，并且只会删除选区内的像素。</td>
 </tr>
 
@@ -237,7 +237,7 @@ src="../../images/icon_rmb.png"> 点击图像中的像素删除所有相同颜�
 "images/icon_colourreplace.png" alt="Colour Replace Tool">
 </td>
 <td class="text">这是颜色替换工具。当你选择它时，你可以使用 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 或 <img style="vertical-align:middle"
+"../../images/icon_lmb.png"> 或 <img style="vertical-align:middle"
 src="../../images/icon_rmb.png"> 点击图像中的像素，所有相同颜色的像素将被所用鼠标按钮的颜色替换。 顶部栏有一个容差滑块，你可以在其中设置像素颜色容差 - 此值越低，颜色与单击的颜色相匹配的越精确，而较高的值将扩展此值使得点击能包括更多的颜色。如果你之前使用选择工具进行了选择，则仅选择选区内的像素将产生效果，并且只有选区内的像素才会受到颜色更改的影响。</td>
 </tr>
 
@@ -264,7 +264,7 @@ alt="Line Tool">
 </td>
 <td class="text">此工具将绘制填充或轮廓矩形。如果单击图标的左上角，它将绘制轮廓，而点击右下角则填充，如果你需要两个，则可以从图像编辑器的顶部栏中选择该选项（或使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> 选择一个，然后另一个在工具箱图标上），以及设置正在使用的画笔的尺寸和平滑（插值）。 然后使用选定的画笔绘制矩形。 请注意，在绘制时，你可以按住 <img style="vertical-align:middle" src=
+src="../../images/icon_lmb.png"> 选择一个，然后另一个在工具箱图标上），以及设置正在使用的画笔的尺寸和平滑（插值）。 然后使用选定的画笔绘制矩形。 请注意，在绘制时，你可以按住 <img style="vertical-align:middle" src=
 "../../images/icon_alt.png"> 并单击从鼠标位置的 <i>中心</i> 绘制。</td>
 </tr>
 
@@ -279,7 +279,7 @@ alt="椭圆工具（Ellipse Tool）">
 </td>
 <td class="text">此工具将绘制填充或轮廓椭圆。如果单击图标的左上角，它将绘制轮廓，而点击右下角则填充，如果你需要两个，则可以从图像编辑器的顶部栏中选择该选项（或使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> 选择一个，然后另一个在工具箱图标上），以及设置正在使用的画笔的尺寸和平滑（插值）。 椭圆将使用选定的笔刷绘制轮廓。请注意，在绘制时，你可以按住 <img style="vertical-align:middle" src=
+src="../../images/icon_lmb.png"> 选择一个，然后另一个在工具箱图标上），以及设置正在使用的画笔的尺寸和平滑（插值）。 椭圆将使用选定的笔刷绘制轮廓。请注意，在绘制时，你可以按住 <img style="vertical-align:middle" src=
 "../../images/icon_alt.png"> 并单击从鼠标位置的 <i>中心</i> 绘制。</td>
 </tr>
 
@@ -294,7 +294,7 @@ alt="Polygon Tool">
 </td>
 <td class="text">此工具将绘制填充或轮廓多边形。如果单击图标的左上角，它将绘制轮廓，而点击右下角则填充，如果你需要两个，则可以从图像编辑器的顶部栏中选择该选项（或使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> 选择一个，然后另一个在工具箱图标上），以及设置正在使用的画笔的尺寸和平滑（插值）。 单击以向多边形添加点，当你对结果感到满意时，应选择其他工具来提交更改并生成图像。将使用所选画笔绘制多边形。</td>
+src="../../images/icon_lmb.png"> 选择一个，然后另一个在工具箱图标上），以及设置正在使用的画笔的尺寸和平滑（插值）。 单击以向多边形添加点，当你对结果感到满意时，应选择其他工具来提交更改并生成图像。将使用所选画笔绘制多边形。</td>
 </tr>
 
 <tr>
@@ -383,7 +383,7 @@ alt="Eyedropper Tool">
 alt="旋转工具（Rotate Tool）">
 </td>
 <td class="text">这是旋转笔刷工具。如果使用 “选择” 工具选择了某个区域，则单击此选项将允许你将所选区域从 0° 到 360° 旋转。 如果没有选择图像区域，则允许你旋转当前笔刷。 要旋转，只需按住鼠标左键 <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> 并向左或向右拖动或直接在顶部栏中设置角度。 要接受更改，你可以按 <img style="vertical-align:middle" src=
+src="../../images/icon_lmb.png"> 并向左或向右拖动或直接在顶部栏中设置角度。 要接受更改，你可以按 <img style="vertical-align:middle" src=
 "../../images/icon_escape.png"> 或 <tt>Enter</tt> 或选择其他工具。 请注意，接受更改 <i>不</i> 会更改源材质，而是创建一个新的笔刷资源，并按你设置的角度旋转所选图像或画笔。另请注意，键盘快捷键 <tt>Z</tt> 可用于将已选部分或笔刷旋转 90°，并且此选项 <i>不</i> 会创建新笔刷，只会影响当前笔刷的绘制方式。</td>
 </tr>
 
@@ -421,7 +421,7 @@ alt="Flip Tool">
 alt="游动工具">
 </td>
 <td class="text">这是平移图像工具。 选择此选项后，可以单击 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 并拖动鼠标以平移层中的 <i>层内容</i>。请注意，当你再次更改工具时，绘制画布外部的像素都将不可见，并且图像将被裁剪为绘制画布大小。请注意，如果你使用选择工具进行了选择，则将移动所选像素而不是层的内容。</td>
+"../../images/icon_lmb.png"> 并拖动鼠标以平移层中的 <i>层内容</i>。请注意，当你再次更改工具时，绘制画布外部的像素都将不可见，并且图像将被裁剪为绘制画布大小。请注意，如果你使用选择工具进行了选择，则将移动所选像素而不是层的内容。</td>
 </tr>
 </table>
 </div>
@@ -433,13 +433,13 @@ alt="游动工具">
 <p>你可以在图像编辑器中为图像的不同部分创建 <b>层</b>，并且可以使用各种笔刷和工具操作和绘制这些层。要创建新层，只需单击 <img style="vertical-align:middle" src=
 "images/icon_add.png"> 图标，然后再次单击将其删除 <img style=
 "vertical-align:middle" src="images/icon_remove.png"> 图标。也可以通过单击 <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> 层然后将层向上或向下拖动到所需位置来定位层，还可以通过使用 <img style=
+src="../../images/icon_lmb.png"> 层然后将层向上或向下拖动到所需位置来定位层，还可以通过使用 <img style=
 "vertical-align:middle" src="images/icon_folder.png"> 按钮创建文件夹然后拖入层来进一步组织层。 如果双击 <img style=
-"vertical-align:middle" src="../../images/icon_rmb.png"> 某个层（或使用 <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> 并选择 <i>编辑层属性</i>），你将可以访问 <b>图层属性</b> 窗口：<img class="center" src="images/editor_layerproperties.png"
+"vertical-align:middle" src="../../images/icon_lmb.png"> 某个层（或使用 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并选择 <i>编辑层属性</i>），你将可以访问 <b>层属性</b> 窗口：<img class="center" src="images/editor_layerproperties.png"
 alt="Image Editor Layer Properties"></p>
 
-<p>在这里，你可以命名层以及设置混合模式（它应该与下面的层“混合”的方式），从 <b>正常</b>、<b>相加</b>、<b>相减</b> 或 <b>相乘</b> 混合中进行选择。最后，你可以使用滑块设置图层的不透明度（透明度），但请注意，这与单个像素的实际透明度值 <i>叠加</i> - 例如，如果你有 50％ 不透明的像素并将图层不透明度设置为 50 ％，最终像素将以 25％ 的不透明度绘制。</p>
+<p>在这里，你可以命名层以及设置混合模式（它应该与下面的层“混合”的方式），从 <b>正常</b>、<b>相加</b>、<b>相减</b> 或 <b>相乘</b> 混合中进行选择。最后，你可以使用滑块设置层的不透明度（透明度），但请注意，这与单个像素的实际透明度值 <i>叠加</i> - 例如，如果你有 50％ 不透明的像素并将层不透明度设置为 50 ％，最终像素将以 25％ 的不透明度绘制。</p>
 </div></blockquote>
 
 <p><br>
@@ -489,15 +489,15 @@ alt="Image Editor Layer Properties"></p>
 
 <li><b>删除选定帧</b> - 从精灵移除选定帧（你可以使用 <img style="vertical-align:middle" src=
 "../../images/icon_shift.png"> + <img style="vertical-align:middle"
-src="../../images/icon_rmb.png"> 或 <img style=
-"vertical-align:middle" src="../../images/icon_shift.png"> + <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 选取多个帧）。<br>
+src="../../images/icon_lmb.png"> 或 <img style=
+"vertical-align:middle" src="../../images/icon_shift.png"> + <img style="vertical-align:middle" src="../../images/icon_lmb.png"> 选取多个帧）。<br>
 <br></li>
 
 <li><b>导入图像</b> - 从磁盘加载要用作帧的图像。请注意，你可以通过在资源管理器窗口中选择要导入的多个文件来一次加载多个帧。选择文件后，你将看到以下导入窗口：<img class="center" src=
 "images/editor_image_import.png" alt="Image Editor Import Window"> 在这里，你可以选择如何将导入的图像添加到当前精灵中，允许你调整整个绘制画布的大小，裁剪或填充它，还可以设置放置新图像的“锚点”位置。<br>
 <br></li>
 
-<li><b>转换为帧</b> - 此选项将单个图像转换为多个单独的帧。您必须首先创建一个包含动画的所有部分的单个帧（或导入单个条带图像），如下所示：<img class="center" src="images/editor_image_strip.png" alt=
+<li><b>转换为帧</b> - 此选项将单个图像转换为多个单独的帧。你必须首先创建一个包含动画的所有部分的单个帧（或导入单个条带图像），如下所示：<img class="center" src="images/editor_image_strip.png" alt=
 "Image Editor Animation Strip"> 由于这是单个图像，我们想将其转换为单独的帧，我们可以使用此选项，然后打开以下窗口：<img class="center" src=
 "images/editor_image_convertstrip.png" alt=
 "Image Editor Convert to Animation Frames"> 在这里，你可以设置如何分割单个图像以创建帧，设置帧数，帧的宽度和高度以及偏移值。<br>
@@ -587,7 +587,7 @@ for="ten">视图</label> <input id="ten" type="checkbox">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

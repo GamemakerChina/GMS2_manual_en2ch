@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -45,7 +45,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -106,23 +106,7 @@ friends and generate an asynchronous callback with the special
 <tt>async_load</tt> ds_map containing the following data:</p>
 </blockquote>
 
-<p class="code">var ident = ds_map_find_value(async_load,
-"id");<br>
-if ident == achievement_friends_info<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var numfriends = ds_map_find_value(async_load,
-"numfriends");<br>
-&nbsp;&nbsp;&nbsp;global.numfriends = numfriends;<br>
-&nbsp;&nbsp;&nbsp;for(var i=0; i &lt; numfriends; i++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.friendname[i] =
-ds_map_find_value(async_load, "Friend" + string(i));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.friendid[i] =
-ds_map_find_value(async_load, "Friendid" + string(i));<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;achievement_get_pic(global.friendid[i]);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var ident = ds_map_find_value(async_load, "id");<br>if ident == achievement_friends_info<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var numfriends = ds_map_find_value(async_load, "numfriends");<br>&nbsp;&nbsp;&nbsp;global.numfriends = numfriends;<br>&nbsp;&nbsp;&nbsp;for(var i=0; i &lt; numfriends; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.friendname[i] = ds_map_find_value(async_load, "Friend" + string(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.friendid[i] = ds_map_find_value(async_load, "Friendid" + string(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;achievement_get_pic(global.friendid[i]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code checks the returned <tt>ds_map</tt> in the

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>surface_id</td>
-<td>The ID of the surface to set as the drawing target.</td>
+<td>作为绘制目标的表面层的ID。</td>
 </tr>
 </table>
 </blockquote>
@@ -58,7 +58,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">布尔值</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -66,19 +66,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you set all further drawing to the target
-surface rather than the screen and in this way you can tell
-<i>GameMaker Studio 2</i> to only draw specific things to the
-specified surface. Please note that if you do not call <a href=
-"surface_reset_target.html"><tt>surface_reset_target</tt></a> after
-you have finished, nothing will be drawn on the screen as all
-further drawing (even in other instances) will be done on the
-surface. You should also realise that nothing will be seen if the
-surface itself is not drawn on the screen in the draw event of an
-instance. You can check the return value of this function too as a
-debug tool to check whether the surface target was set or not, with
-a return value of 0 being a failure to set the target and any other
-positive value being a success.</p>
+<p>With this function you set all further drawing to the target surface rather than the screen and in this way you can tell <i>GameMaker Studio 2</i> to only draw specific things to the specified surface. 请注意如果完成之后没有调用 <a href=
+"surface_reset_target.html"><tt>surface_reset_target</tt></a> ，接下来屏幕上什么都不会绘制（即使是其它实例），而是绘制到了表面上。还需要知道的是，还需要在实例的绘制事件中绘制才可以看到表面层的内容。You can check the return value of this function too as a debug tool to check whether the surface target was set or not, with a return value of 0 being a failure to set the target and any other positive value being a success.</p>
 
 <p>One thing that should be noted is that surfaces are
 <i>stacked</i> so you cannot jump from target to target and then
@@ -94,9 +83,7 @@ draw_text(32, 64, "surface2");<br>
 surface_reset_target();<br></p>
 
 <blockquote>
-<p>Instead, you must reset the target for each of the surfaces that
-you set, much like you must use opening and closing brackets {} for
-code blocks. So the above should be written as either this:</p>
+<p>换之，你必须为每一个设置的表面重置目标，就像你必须在代码中使用打开和关闭的大括号{} 。所以，上面的应该这样写：</p>
 </blockquote>
 
 <p class="code">surface_set_target(surf1);<br>
@@ -107,7 +94,7 @@ draw_text(32, 64, "surface2");<br>
 surface_reset_target();<br></p>
 
 <blockquote>
-<p>or as this:</p>
+<p>或者这样：</p>
 </blockquote>
 
 <p class="code">surface_set_target(surf1);<br>
@@ -117,39 +104,19 @@ draw_text(32, 64, "surface2");<br>
 surface_reset_target();<br>
 surface_reset_target();<br></p>
 
-<div class="note"><b>NOTE:</b> When working with surfaces there is
-the possibility that they can cease to exist at any time due to
-them being stored in texture memory. You should <b>ALWAYS</b> check
-that a surface exists using <a href=
-"surface_exists.html"><tt>surface_exists</tt></a> before
-referencing them directly. For further information see <a href=
-"index.html">Surfaces</a>.</div>
+<div class="note"><b>注：</b>由于储存在显存里，表面层运行时存在随时停止并退出的可能性。在直接引用它们之前，你需要 <b>一直</b>使用 <a href=
+"surface_exists.html"><tt>surface_exists</tt></a>检测表面层是否退出。更多信息请查阅 <a href=
+"index.html">表面层</a>。</div>
 
 <p><br>
 </p>
 
 <h3>举例：</h3>
 
-<p class="code">if view_current = 0<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>
-&nbsp;&nbsp;&nbsp;with (obj_Effect)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_self();<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;surface_reset_target();<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if view_current = 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>&nbsp;&nbsp;&nbsp;with (obj_Effect)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_self();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;surface_reset_target();<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check to see which view is currently being
-drawn, and if it is view[0] it sets the draw target to a surface
-and draws all instances of the object "obj_Effect" before resetting
-the draw target again. If the view is not view[0] the surface is
-drawn to the screen.</p>
+<p>上述代码将检测当前是哪个视野在绘制，如果是view[0] ，它将设置绘制目标到一个表面层，并在表面层上绘制“obj_Effect”所有实例 ，然后重置绘制目标。如果当前视野不是 view[0]，将表面层绘制到屏幕上。</p>
 </blockquote>
 
 <p><br>
@@ -159,10 +126,10 @@ drawn to the screen.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "surface_set_target_ext.html">surface_set_target_ext</a></div>
 </div>
 </div>

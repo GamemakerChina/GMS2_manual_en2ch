@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 </tr>
 
 <tr>
-<td>flag</td>
+<td>标识</td>
 <td>This can be set to <tt>true</tt> to pause the simulation, or
 <tt>false</tt> to start it again.</td>
 </tr>
@@ -58,26 +58,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>Normally for a physics simulation to work, it must be continuous
-and cannot be stopped and started, or have instances suddenly moved
-from one place to another in the room. However, there are moments
-when you <i>need</i> to pause the simulation as (for example) the
-device os has paused, and so you would use this function. It pauses
-the simulation if the flag is set to <tt>true</tt> and no further
-physics calculations will be done until the flag is set to
-<tt>false</tt> again.<br>
-<br>
-<i><b>NOTE:</b> This is of particular use should you wish to
-deactivate all the instances in a room as even when deactivated a
-physical body will still continue being calculated and simulated in
-the physics world.</i><br>
+<p>Normally for a physics simulation to work, it must be continuous and cannot be stopped and started, or have instances suddenly moved from one place to another in the room. However, there are moments when you <i>need</i> to pause the simulation as (for example) the device os has paused, and so you would use this function. It pauses the simulation if the flag is set to <tt>true</tt> and no further physics calculations will be done until the flag is set to <tt>false</tt> again.<br><br><i><b>NOTE:</b> This is of particular use should you wish to deactivate all the instances in a room as even when deactivated a physical body will still continue being calculated and simulated in the physics world.</i><br>
 <br></p>
 
 <p><br>
@@ -85,13 +73,7 @@ the physics world.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if os_is_paused()<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;physics_pause_enable(true);<br>
-&nbsp;&nbsp;&nbsp;instance_deactivate_all(true);<br>
-&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Controllers",
-obj_PauseMenu);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if os_is_paused()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;physics_pause_enable(true);<br>&nbsp;&nbsp;&nbsp;instance_deactivate_all(true);<br>&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Controllers", obj_PauseMenu);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The code above checks to see if the OS has been paused and if it
 has then it pauses the physics world, deactivates everything except

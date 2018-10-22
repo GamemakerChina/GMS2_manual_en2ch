@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -59,7 +59,7 @@ list of constants below).</td>
 
 <tr>
 <td>值</td>
-<td>The data to write.</td>
+<td>要写入的数据。</td>
 </tr>
 </table>
 </div>
@@ -67,7 +67,7 @@ list of constants below).</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -90,37 +90,32 @@ constants can be used to define the data type:<br>
 
 <tr>
 <td>buffer_u8</td>
-<td>An unsigned, 8bit integer. This is a positive value from 0 to
-255.</td>
+<td>无符号 8 位整型。值域为 0 到 255。</td>
 </tr>
 
 <tr class="alt">
 <td>buffer_s8</td>
-<td>一个有符号的8位整数。值域为-128到127的正值和负值（0被归类为正值）。</td>
+<td>有符号 8 位整型。值域为 -128 到 127（0为正数）。</td>
 </tr>
 
 <tr>
 <td>buffer_u16</td>
-<td>一个无符号的16位整数值域为0到65535的正值。</td>
+<td>无符号 16 位整型。值域为 0 到 65535 。</td>
 </tr>
 
 <tr class="alt">
 <td>buffer_s16</td>
-<td>A signed, 16bit integer. This can be a positive or negative
-value from -32,768 to 32,767 (0 is classed as positive).</td>
+<td>有符号 16 位整型。值域为 -32768 到 32767（0为正数）。</td>
 </tr>
 
 <tr>
 <td>buffer_u32</td>
-<td>An unsigned, 32bit integer. This is a positive value from 0 to
-4,294,967,295.</td>
+<td>无符号 32 位整型。值域为 0 到 4,294,967,295。</td>
 </tr>
 
 <tr class="alt">
 <td>buffer_s32</td>
-<td>A signed, 32bit integer. This can be a positive or negative
-value from -2,147,483,648 to 2,147,483,647 (0 is classed as
-positive).</td>
+<td>有符号 32 位整形。值域为 -2,147,483,648 到 2,147,483,647（0为正数）。</td>
 </tr>
 
 <tr>
@@ -150,8 +145,7 @@ the same range as a 32 bit signed integer.</td>
 
 <tr>
 <td>buffer_bool</td>
-<td>A boolean value. Can only be either 1 or 0 (<tt>true</tt> or
-<tt>false</tt>)</td>
+<td>布尔类型。只能为 1 或 0 (<tt>true</tt> 或 <tt>false</tt>)</td>
 </tr>
 
 <tr class="alt">
@@ -173,10 +167,7 @@ character.</td>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">buffer_seek(buff, buffer_seek_start, 0);<br>
-buffer_write(buff, buffer_s16, 0);<br>
-buffer_write(buff, buffer_s16, x);<br>
-buffer_write(buff, buffer_s16, y);<br></p>
+<p class="code">buffer_seek(buff, buffer_seek_start, 0);<br>buffer_write(buff, buffer_s16, 0);<br>buffer_write(buff, buffer_s16, x);<br>buffer_write(buff, buffer_s16, y);<br></p>
 
 <p>The above code finds the start of the buffer with the id stored
 in the variable "buff" them writes a series of signed 16bit integer

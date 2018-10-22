@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -44,7 +44,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -52,16 +52,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you reset all further drawing from the target
-surface back to the screen. Please note that to start drawing to a
-surface you must first have called the function <a href=
-"surface_set_target.html"><tt>surface_set_target</tt></a> and then
-this one after you have finished, <i>for each surface target that
-you have set</i> or else nothing will be drawn on the screen as all
-further drawing (even in other instances) will be done on the
-surface. You should also realise that nothing will be seen if the
-surface itself is not drawn on the screen in the draw event of an
-instance.</p>
+<p>用这个函数重置后面所有的绘制，从目标表面层返回到屏幕上。请注意，开始绘制到表面时必须调用这个函数<a href=
+"surface_set_target.html"><tt>surface_set_target</tt></a>，然后 <i>对于每个你设置的表面层</i>完成绘制时是这个函数，否则接下来将什么也不会绘制到屏幕上(即使是其它的实例) ，而是都绘制到了这个表面层上。还需要知道的是，还需要在实例的绘制事件中绘制才可以看到表面层的内容。</p>
 
 <div class="note"><b>NOTE:</b> if you have not previously set a
 render target with the function <a href=
@@ -75,26 +67,10 @@ all further code execution for the event.</div>
 
 <h3>举例：</h3>
 
-<p class="code">if view_current = 0<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>
-&nbsp;&nbsp;&nbsp;with (obj_Effect)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_self();<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;surface_reset_target();<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if view_current = 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>&nbsp;&nbsp;&nbsp;with (obj_Effect)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_self();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;surface_reset_target();<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check to see which view is currently being
-drawn, and if it is view[0] it sets the draw target to a surface
-and draws all instances of the object "obj_Effect" before resetting
-the draw target again. If the view is not view[0] the surface is
-drawn to the screen.</p>
+<p>上述代码将检测当前是哪个视野在绘制，如果是view[0] ，它将设置绘制目标到一个表面层，并在表面层上绘制“obj_Effect”所有实例 ，然后重置绘制目标。如果当前视野不是 view[0]，将表面层绘制到屏幕上。</p>
 </blockquote>
 
 <p><br>
@@ -104,10 +80,10 @@ drawn to the screen.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "surface_copy.html">surface_copy</a></div>
 </div>
 </div>

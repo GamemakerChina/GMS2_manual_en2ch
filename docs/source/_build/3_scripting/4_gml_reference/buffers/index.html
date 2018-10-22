@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -58,20 +58,7 @@ the size <i>in bytes</i> of the buffer.</li>
 <li style="list-style: none"><br>
 </li>
 
-<li>The "Alignment" argument refers to how data is stored within a
-buffer. If your alignment is set to say, 4, and you write a single
-piece of data which is 1 byte in size then do a
-<tt>buffer_tell</tt>, you'll get an offset of 1. However, if you
-write another piece of data, also 1 byte in size, then do a
-<tt>buffer_tell</tt>, you'll get an offset of 5 as the alignment
-has "padded" the data to that size. Alignment only affects
-<i>where</i> things are written to, so if you do a
-<tt>buffer_tell</tt> after you write something, it'll return the
-current write position which immediately follows the data you've
-written. Note, however, that if you then write another piece of
-data, internally the buffer will move the write position along to
-the next multiple of the alignment size before actually writing the
-piece of data.</li>
+<li>The "Alignment" argument refers to how data is stored within a buffer. If your alignment is set to say, 4, and you write a single piece of data which is 1 byte in size then do a <tt>buffer_tell</tt>, you'll get an offset of 1. However, if you write another piece of data, also 1 byte in size, then do a <tt>buffer_tell</tt>, you'll get an offset of 5 as the alignment has "padded" the data to that size. Alignment only affects <i>where</i> things are written to, so if you do a <tt>buffer_tell</tt> after you write something, it'll return the current write position which immediately follows the data you've written. 但是，请注意，如果你随后编写另一个数据片段，那么在实际编写该数据片段之前，缓冲区会在内部将写入位置移动到对齐大小的下一个倍数。</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -261,8 +248,7 @@ out more about these from the following section of the manual:</p>
 
 <blockquote>
 <ol>
-<li><a href="../miscellaneous/index.html">Miscellaneous Game
-Functions</a>
+<li><a href="../miscellaneous/index.html">杂项游戏功能</a>
 </li>
 </ol>
 </blockquote>
@@ -274,8 +260,8 @@ Functions</a>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"../index.html">Reference</a></div>
+<div style="float:left">返回: <a href=
+"../index.html">GML参考</a></div>
 
 <div style="float:right">Next: <a href=
 "../xbox_live/index.html">XBox Live Functions</a></div>

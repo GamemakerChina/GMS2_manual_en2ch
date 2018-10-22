@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -41,25 +41,15 @@ for the associated collision point.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<p><b>返回:</b> 布尔值</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This <b>read-only</b> variable returns the y component of the
-collision normal corresponding to the <a href=
-"phy_collision_y.html"><tt>phy_collision_y</tt></a> array value.
-For each contact point there is an associated contact normal (which
-is usually the same normal for all points of contact in the
-collision). This contact normal is a unit vector that points from
-one instance in the collision to another, and can be used, for
-example, to calculate the correct "push" direction to resolve
-collisions.<br>
-<br>
-<i><b>NOTE:</b> This variable is only available in the collision
-event of a physics enabled instance.</i><br>
+<p>This <b>read-only</b> variable returns the y component of the collision normal corresponding to the <a href=
+"phy_collision_y.html"><tt>phy_collision_y</tt></a> array value. For each contact point there is an associated contact normal (which is usually the same normal for all points of contact in the collision). This contact normal is a unit vector that points from one instance in the collision to another, and can be used, for example, to calculate the correct "push" direction to resolve collisions.<br><br><i><b>NOTE:</b> This variable is only available in the collision event of a physics enabled instance.</i><br>
 <br></p>
 
 <p><br>
@@ -67,15 +57,7 @@ event of a physics enabled instance.</i><br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">repeat(5 + irandom(5))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;with (instance_create_layer(x, y, "Effects",
-obj_Debris)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_apply_local_impulse(0,
-0, other.phy_col_normal_x[0], other.phy_col_normal_y[0]);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">repeat(5 + irandom(5))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;with (instance_create_layer(x, y, "Effects", obj_Debris)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_apply_local_impulse(0, 0, other.phy_col_normal_x[0], other.phy_col_normal_y[0]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code uses the contact normal to set the direction of
 movement for an instance created in the collision event between two

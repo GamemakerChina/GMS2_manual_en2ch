@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>ind1</td>
-<td>The index of the sprite to merge.</td>
+<td>将要合并另一个精灵(ind2)的精灵索引。</td>
 </tr>
 
 <tr class="alt">
 <td>ind2</td>
-<td>The index of the sprite that ind1 is to be merged with.</td>
+<td>将要被另一个精灵(ind1)合并的精灵的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -61,9 +61,9 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -71,30 +71,14 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will merge the sprite indexed in argument1
-("ind2") with that which is indexed in argument0 ("ind1"). The
-images themselves are <b>NOT</b> merged together, but rather the
-image indices are merged, with the sub images from sprite "ind2"
-appended onto those of sprite "ind1", ie: they are added on at the
-end. Note that if the sprites are different sizes, then the
-appended sprites are stretched to fit the image size for
-"ind1".</p>
+<p>此函数将会把参数一(ind2)所代表的精灵合并进参数一所代表的精灵(ind1)。图像本身 <b>不会</b> 合并，真正合并的是图片的索引。精灵ind2的次级图像将被附加到精灵ind1的后面。注意如果两个精灵尺寸不同，那么它们会主动适应精灵ind1的尺寸。</p>
 
-<p>This change is permanent, and from the moment you use this
-function until the game is closed or the sprite deleted, the sprite
-that is being merged into will be changed, however the sprite that
-it is being merged with will remain the same.</p>
+<p>改变是持续的，从此刻开始除非你关闭游戏或删除精灵，否则被合并的精灵将被改变。但合并另一个精灵的精灵将仍然保持一样。</p>
 
-<div class="note"><b>NOTE:</b> Neither the image asset that is
-being merged into, nor the image asset that is for merging, can be
-one of the original game resources. You must use <a href=
-"sprite_duplicate.html"><tt>sprite_duplicate</tt></a> first to
-create two new resources (if you are merging included game assets)
-and then merge those.</div>
+<div class="note"><b>注意：</b> 无论是合并者还是被合并者，都不能成为游戏原始资源。如果你要合并游戏内置资源，你必须先将使用 <a href=
+"sprite_duplicate.html"><tt>sprite_duplicate</tt></a> 函数复制出两个新的资源，然后再合并这些新的</div>
 
-<div class="note"><b>NOTE:</b> This function is only useful for
-<b>bitmap</b> sprites and will not work with SWF or JSON (Spine)
-sprites.</div>
+<div class="note"><b>注意</b>此函数只对 <b>位图</b> 精灵有用，并且对SWF或JSON（骨骼）精灵不起作用。</div>
 </blockquote>
 
 <p><br>
@@ -111,14 +95,8 @@ sprite_index = t_spr[0];<br>
 sprite_delete(tspr[1]);<br></p>
 
 <blockquote>
-<p>The above code loads a sprite into a local variable then merges
-it with another sprite that has been duplicated. Finally the merged
-sprite is assigned to the instance <tt>sprite_index</tt> while the
-loaded sprite is removed to free the memory it uses. Note that at
-some point after this operation, like in the Destroy or Room End
-events, you will also need to use <a href=
-"sprite_delete.html"><tt>sprite_delete</tt></a> to remove the
-merged sprite from memory too.</p>
+<p>上述函数将会将一个精灵加载进一个本地变量，并将它和另一个被复制出来的精灵合并。最后这个合并的精灵将会被指派给实例 <tt>sprite_index</tt> 同时被加载的图片将会被移除用来释放存储。注意在某些关键点，例如毁灭或房间结束事件 （Destroy or Room End events）,你同样需要使用<a href=
+"sprite_delete.html"><tt>sprite_delete</tt></a> 去删除不再使用的精灵来释放存储。</p>
 </blockquote>
 
 <p><br>

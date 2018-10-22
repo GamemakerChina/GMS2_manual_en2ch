@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>filename</td>
-<td>The name of the file to read from.</td>
+<td>要读取的文件的名称。</td>
 </tr>
 </table>
 </div>
@@ -56,7 +56,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<p><b>返回：</b> String（字符串）</p>
 
 <p><br>
 </p>
@@ -72,10 +72,7 @@ string which can later be parsed in your game.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">if steam_file_exists("Save.txt")<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;save_str = steam_file_read("Save.txt");<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if steam_file_exists("Save.txt")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;save_str = steam_file_read("Save.txt");<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code checks to see if a file exists on the Steam Cloud
 and if it does, it opens it and reads its contents into the

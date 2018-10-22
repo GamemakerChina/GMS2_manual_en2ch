@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -59,7 +59,7 @@ purchases.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -106,18 +106,8 @@ The type of purchase, which should be either "Consumable" or
 </ul>
 </blockquote>
 
-<p>It is worth noting that the only essential keys for any target
-store setup (per product ID) is the "id", except for Windows 8 and
-Windows Phone targets, in which case you also need the "type" key.
-Note that for these target platforms, if you want the store to
-report meaningful (correct) data when in <i>Sandbox</i> mode, then
-the "title", "description", etc... <b>are</b> necessary.<br>
-<br>
-Activating purchases will also trigger an <a href=
-"../../../2_interface/1_editors/events/async_events.html"><b>IAP
-Event</b></a>, which creates a special <tt>iap_data</tt> ds_map of
-the event type <tt>iap_ev_product</tt>. This ds_map will have the
-following additional key:</p>
+<p>It is worth noting that the only essential keys for any target store setup (per product ID) is the "id", except for Windows 8 and Windows Phone targets, in which case you also need the "type" key. Note that for these target platforms, if you want the store to report meaningful (correct) data when in <i>Sandbox</i> mode, then the "title", "description", etc... <b>are</b> necessary.<br><br>Activating purchases will also trigger an <a href=
+"../../../2_interface/1_editors/events/async_events.html"><b>IAP Event</b></a>, which creates a special <tt>iap_data</tt> ds_map of the event type <tt>iap_ev_product</tt>. This ds_map will have the following additional key:</p>
 
 <blockquote>
 <ul>
@@ -125,18 +115,7 @@ following additional key:</p>
 </ul>
 </blockquote>
 
-<p>If you are activating multiple products, then each product will
-trigger its own <b>IAP Event</b> of the type
-<tt>iap_ev_product</tt> where you can then get the product ID. It
-is worth noting that the Google Play store (for Android) can only
-process details for products 20 at a time which can lead to quite
-long load times for applications with a significant number of
-products.<br>
-<br>
-<br>
-<br>
-<i><b>NOTE:</b> All the key/value pairs that comprise a purchase
-map are strings!</i><br>
+<p>If you are activating multiple products, then each product will trigger its own <b>IAP Event</b> of the type <tt>iap_ev_product</tt> where you can then get the product ID. It is worth noting that the Google Play store (for Android) can only process details for products 20 at a time which can lead to quite long load times for applications with a significant number of products.<br><br><br><br><i><b>NOTE:</b> All the key/value pairs that comprise a purchase map are strings!</i><br>
 <br></p>
 
 <p><br>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">ds_grid_clear</h1>
 
-<h2 class="studio">Clears the grid with the given id to an
-indicated value.</h2>
+<h2 class="studio">将一个被给定id的栅格用一个指定的值清空。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,12 +49,12 @@ indicated value.</h2>
 
 <tr>
 <td>index</td>
-<td>This index of the grid to clear.</td>
+<td>待清空的栅格的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>val</td>
-<td>The new value for all grid cells.</td>
+<td>待叠加到栅格内所有单元格的值</td>
 </tr>
 </table>
 </div>
@@ -63,17 +62,14 @@ indicated value.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to clear a given ds_grid to a specific
-value. All cells within the grid will then contain this value,
-which can be a real number or a string. The image below illustrates
-how this works:  <img class="center" src="ds_grid_clear.png"><br>
+<p>这个函数可以被用于用一个特定的数值清空一个被给定的栅格结构。所有在这个栅格中的单元格接下来都会包含这个值，可以是一个实数或者一个字符串。下图描绘了这是如何工作的： <img class="center" src="ds_grid_clear.png"><br>
 <br></p>
 
 <p><br>
@@ -85,18 +81,15 @@ how this works:  <img class="center" src="ds_grid_clear.png"><br>
 room_height / 32);<br>
 ds_grid_clear(global.Grid, -1);<br></p>
 
-<p>The above code will resize the ds_grid indexed in the global
-variable "Grid" and then clear it so that each cell holds the value
--1.</p>
+<p>上述代码将会重设索引为全局变量"Grid"的栅格结构的大小，并且接下来清空它以便每个单元个都承载值-1.</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">DS
-Grids</a></div>
+<div style="float:left">上一页： <a href="index.html">数据结构</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页： <a href=
 "ds_grid_set.html">ds_grid_set</a></div>
 </div>
 

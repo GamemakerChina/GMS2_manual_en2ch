@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Surfaces</title>
+<title>表面层</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
@@ -29,55 +29,24 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Surfaces</h2>
+<h2>表面层</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>In the normal draw events, <i>GameMaker Studio 2</i> doesn't
-actually draw directly to the screen, but rather draws to a
-<b>surface</b> called the <i>application surface</i>. This surface
-is basically a blank "canvas" that can then later be manipulated
-before being drawn to the screen when needed, and in most cases
-GameMaker Studio 2 handles this for you (although you can also
-manipulate it yourself in code for shaders, scaling and many other
-things - further details are given below).</p>
+<p>在一般的绘制事件里， <i>GameMaker Studio 2</i> 不会真实的绘制屏幕上，而是绘制到 <b>表面</b>上，那个表面叫做<i>应用表面</i>。This surface is basically a blank "canvas" that can then later be manipulated before being drawn to the screen when needed, and in most cases GameMaker Studio 2 handles this for you (although you can also manipulate it yourself in code for shaders, scaling and many other things - further details are given below).</p>
 
-<p>However, apart from this application surface, you can also
-create your own surfaces and use them to create stunning or subtle
-special effects in your game. For example, you can use surfaces to
-"catch" instances, which can then be destroyed, and in this way you
-can create a decal effect where the sprite for the instance is
-displayed on the surface as if it still existed, permitting
-graphical effects like debris, blood, etc... without any real
-processing overhead. Another thing you can do with surfaces is use
-them as textures to be manipulated, or to create sprites "on the
-fly", or to create complex overlays. in fact, the uses for surfaces
-are endless!</p>
+<p>此外，除了应用表面，也可以创建自己的表面层，游戏中用来设计一些华丽的特效。例如，你可以使用表面来“捕捉”实例，然后摧毁它，并以这种方式，在表面(surfaces)上，实例的精灵显示的位置，创建一个贴花效果，就好像它仍然存在一样，以此来制作一些图像效果，如碎片，血液等.. 这上面没有任何真实的处理进程。另外就是使用表面作为需要操作的纹理贴图，或者创建“在飞”的精灵，或者创建复杂的叠加。in fact, the uses for surfaces are endless!</p>
 
-<p>Normal surfaces are quite easy to use, but there are a few basic
-rules to be followed when you use them:</p>
+<p>表面使用很简单，但在使用的时候，也有几个应遵循的基本规则：</p>
 
 <blockquote>
 <ul>
-<li>First, you should realise that surfaces (<i>except</i> the
-application surface) are "volatile". This means that if the device
-or window loses focus or is minimised (good examples are when a
-screensaver comes up in Windows, or on an Android device when the
-app loses focus due to a call) then the surface may be destroyed.
-This is because it is stored in the texture memory and may be
-overwritten when the target platform needs that memory for
-something else which means that you should <i><b>always</b></i>
-have some type of fail-safe code in place, usually with the
-<a href="surface_exists.html"><tt>surface_exists</tt></a>
-function.<br>
+<li>首先，应该认识到表面层（<i>除了</i> 应用表面层）是“不稳定的 ” are "volatile". 这意味着，如果设备或窗口失去焦点或最小化（很好的例子是，当Windows弹出屏幕保护程序或Android 设备来电话时应用程序失去焦点的情况），表面可能会被破坏。这是因为它储存在显存里，目标平台往内存里写入其它东西时就有可能会重写，所以你需要<i><b>一直</b></i> 在某些位置入置安全的代码，通常是 <a href="surface_exists.html"><tt>surface_exists</tt></a> 函数。<br>
 <br></li>
 
-<li>Second, you should note that surfaces require large quantities
-of texture memory to be used, and so you should attempt to keep
-them as small as possible. Normally you would try and keep them no
-larger than the size of the view or display window.<br>
+<li>其次，你应该注意，使用表面需要大量的显存，所以你应该尽可能的让它们更小。通常不要超过视野或者显示窗口的大小。<br>
 <br></li>
 
 <li>Third, you should <b>only create surfaces in the draw
@@ -95,51 +64,15 @@ outside of the draw event is possible and may even be necessary for
 some effects, but it's not how it should be done.<br>
 <br></li>
 
-<li>Fourth, when drawing to a surface manually, the surface is
-<i>always</i> at the position of (0,0). This means that you may
-need to convert absolute coordinates into local coordinates for the
-surface. For example, if you have a view-sized surface and wish to
-draw something that is currently in view to that surface, you
-should subtract the camera view x and y coordinates from the actual
-x and y coordinates to get a relative position to the surface (0,0)
-position. So, the code would look something like this:<br>
+<li>第四，手动绘制表面层时，表面 <i>始终</i> 在 (0,0)的位置。这意味着你可能需要为表面转换坐标，从绝对坐标转换到局部坐标系。For example, if you have a view-sized surface and wish to draw something that is currently in view to that surface, you should subtract the camera view x and y coordinates from the actual x and y coordinates to get a relative position to the surface (0,0) position. 因此，代码可以这样写：<br>
 <br>
 
-<p class="code">if view_current = 0<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>
-&nbsp;&nbsp;&nbsp;with (obj_Effect)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var _vx =
-camera_get_view_x(view_camera[1]);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var _vy =
-camera_get_view_y(view_camera[1]);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite(sprite_index,
-image_index, x - _vx, y - _vy);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;surface_reset_target();<br>
-&nbsp;&nbsp;&nbsp;}<br>
-else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>
-&nbsp;&nbsp;&nbsp;}<br></p></li>
+<p class="code">if view_current = 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surface_set_target(surf);<br>&nbsp;&nbsp;&nbsp;with (obj_Effect)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var _vx = camera_get_view_x(view_camera[1]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var _vy = camera_get_view_y(view_camera[1]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite(sprite_index, image_index, x - _vx, y - _vy);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;surface_reset_target();<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>&nbsp;&nbsp;&nbsp;}<br></p></li>
 </ul>
 </blockquote>
 
-<p>The basic use of a surface would be as follows - You first
-create a surface and assign its index to a variable. You would then
-set the drawing target to the surface rather than the display and
-draw the things you wish as well as perform any other
-manipulations. Once you are done you reset the drawing target so
-that all further drawing happens on the screen again. One thing to
-note is that should you require drawing the whole display to a
-surface (including tiles, backgrounds etc...) you can simply access
-the application surface itself (see below for further details) or
-you could assign a surface to a view port using the variable
-<a href=
-"../../cameras%20and%20display/cameras/view_surface_id.html"><tt>view_surface_id[0..7]</tt></a>
-as with this all that is visible in that view port will be drawn to
-the corresponding surface.</p>
+<p>表面层的基本用法如下 - 首先创建一个表面，给它的索引分配给一个变量。然后你可以设置绘图目标到表面上，而不是显示器，往里面绘制内容并进行一些调整。一旦完成，重置绘制目标，再让进一步的绘制发生在屏幕上。One thing to note is that should you require drawing the whole display to a surface (including tiles, backgrounds etc...) you can simply access the application surface itself (see below for further details) or you could assign a surface to a view port using the variable <a href=
+"../../cameras%20and%20display/cameras/view_surface_id.html"><tt>view_surface_id[0..7]</tt></a> as with this all that is visible in that view port will be drawn to the corresponding surface.</p>
 
 <blockquote><a name="surface_functions" id="surface_functions"></a>
 <label class="collapse" for="one">Surface Functions</label>
@@ -209,21 +142,14 @@ specific draw functions that can be found in the section on
 </div>
 <br>
 <a name="application_surface" id="application_surface"></a>
-<label class="collapse" for="two">The Application Surface</label>
+<label class="collapse" for="two">应用表面层</label>
 <input id="two" type="checkbox">
 <div class="index_list">
-<p>As mentioned above, all normal drawing in your game is done on
-the <i>application surface</i>, and this surface can be changed and
-manipulated just like a normal surface. However, it is <i>not</i> a
-normal surface and advanced users will find that it enables
-complete control over how and when things are drawn in <i>GameMaker
-Studio 2</i>. For more details, as well as specific functions for
-this feature, please see the following section:</p>
+<p>正如上面提过的，所有普通绘制都是在<i>应用表面层</i>里进行的，这个表面可以像通常的表面层一样改变或控制。However, it is <i>not</i> a normal surface and advanced users will find that it enables complete control over how and when things are drawn in <i>GameMaker Studio 2</i>. 更多具体的内容，以及一些特性函数，请查阅如下的章节：</p>
 
 <blockquote>
 <ol>
-<li><a href="the%20application%20surface.html">The Application
-Surface</a><br>
+<li><a href="the%20application%20surface.html">应用表面层</a><br>
 </li>
 </ol>
 </blockquote>
@@ -272,12 +198,8 @@ as they are basically a canvas that you draw to instead of the
 display screen, and this canvas can then be manipulated and changed
 before being drawn with the functions in this section.</p>
 
-<div class="note"><b>NOTE:</b> When working with surfaces there is
-the possibility that they can cease to exist at any time due to
-them being stored in texture memory. You should <b>ALWAYS</b> check
-that a surface exists using <a href=
-"surface_exists.html"><tt>surface_exists</tt></a> before
-referencing them directly.</div>
+<div class="note"><b>注：</b>由于储存在显存里，表面层运行时存在随时停止并退出的可能性。在直接引用它们之前，你需要 <b>一直</b>使用 <a href=
+"surface_exists.html"><tt>surface_exists</tt></a>检测表面层是否退出。</div>
 
 <p>The following functions exist for drawing surfaces:</p>
 

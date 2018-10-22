@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -133,29 +133,7 @@ or group to which it belongs).</td>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var count = physics_particle_count();<br>
-var flags = phy_particle_data_flag_position |
-phy_particle_data_flag_colour;<br>
-if (count &gt; 0)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;var buffer = buffer_create(count * 12,
-buffer_grow, 4);<br>
-&nbsp;&nbsp;&nbsp;physics_particle_get_data(buffer, flags);<br>
-&nbsp;&nbsp;&nbsp;for (var n = 0; n &lt; count; n++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var xx = buffer_read(buffer,
-buffer_f32);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var yy = buffer_read(buffer,
-buffer_f32);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var argb = buffer_read(buffer,
-buffer_u32);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var alpha = (argb &gt;&gt; 24)
-&amp; 255;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite_ext(sprBlob, 0, xx,
-yy, 1, 1, 0, c_green, alpha);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;buffer_delete(buffer);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var count = physics_particle_count();<br>var flags = phy_particle_data_flag_position | phy_particle_data_flag_colour;<br>if (count &gt; 0)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var buffer = buffer_create(count * 12, buffer_grow, 4);<br>&nbsp;&nbsp;&nbsp;physics_particle_get_data(buffer, flags);<br>&nbsp;&nbsp;&nbsp;for (var n = 0; n &lt; count; n++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var xx = buffer_read(buffer, buffer_f32);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var yy = buffer_read(buffer, buffer_f32);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var argb = buffer_read(buffer, buffer_u32);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var alpha = (argb &gt;&gt; 24) &amp; 255;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite_ext(sprBlob, 0, xx, yy, 1, 1, 0, c_green, alpha);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;buffer_delete(buffer);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>The above code gets the number of particles and creates a
 variable with the data flags to check, then checks to see if there

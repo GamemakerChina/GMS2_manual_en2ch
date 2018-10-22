@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>获取一个像素位置的图块数据</title>
+<title>获取像素位置的图块数据</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_tiles_get_tile_data_at_pixel.png"> 获取一个像素位置的图块数据</h2>
+"images/i_tiles_get_tile_data_at_pixel.png"> 获取像素位置的图块数据</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -57,13 +57,8 @@ tilemap.</p>
 <div class="note"><b>注意</b>： The layer selected <i>must</i> have been defined as a Tilemap Layer in the room editor, otherwise you may get errors.</div>
 
 <p><br>
-
-The returned value will then be stored in the target variable which
-can have been created previously or can be a new temporary one (if
-you check the "Temp" check-box). For more information on tiledata,
-please see the GML section on <a href=
-"../../4_gml_reference/rooms/tilemaps/index.html">Tilemaps - Tile
-Functions</a>.</p>
+返回值将被存储在目标变量中，此变量需要之前就被创建了，或你选中临时(temp)按钮来创建的新临时变量。For more information on tiledata, please see the GML section on <a href=
+"../../4_gml_reference/rooms/tilemaps/index.html">Tilemaps - Tile Functions</a>.</p>
 </blockquote>
 
 <p><br>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -68,7 +68,7 @@ to.</td>
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -93,16 +93,7 @@ constant name <tt>in_Colour</tt>, for a single colour, or
 <tt>in_Colour7</tt> for multiple input values. The following to
 examples show how this would look in the shader itself:</p>
 
-<p class="code">&nbsp;&nbsp;&nbsp;//Single colour<br>
-&nbsp;&nbsp;&nbsp;attribute vec2 in_Position;<br>
-&nbsp;&nbsp;&nbsp;attribute vec4 in_Colour;<br>
-&nbsp;&nbsp;&nbsp;attribute vec2 in_TextureCoord;<br>
-<br>
-&nbsp;&nbsp;&nbsp;//Multiple colours<br>
-&nbsp;&nbsp;&nbsp;attribute vec2 in_Position;<br>
-&nbsp;&nbsp;&nbsp;attribute vec4 in_Colour0;<br>
-&nbsp;&nbsp;&nbsp;attribute vec4 in_Colour1;<br>
-&nbsp;&nbsp;&nbsp;attribute vec2 in_TextureCoord;<br></p>
+<p class="code">&nbsp;&nbsp;&nbsp;//Single colour<br>&nbsp;&nbsp;&nbsp;attribute vec2 in_Position;<br>&nbsp;&nbsp;&nbsp;attribute vec4 in_Colour;<br>&nbsp;&nbsp;&nbsp;attribute vec2 in_TextureCoord;<br><br>&nbsp;&nbsp;&nbsp;//Multiple colours<br>&nbsp;&nbsp;&nbsp;attribute vec2 in_Position;<br>&nbsp;&nbsp;&nbsp;attribute vec4 in_Colour0;<br>&nbsp;&nbsp;&nbsp;attribute vec4 in_Colour1;<br>&nbsp;&nbsp;&nbsp;attribute vec2 in_TextureCoord;<br></p>
 
 <p>Note too that if you want to do compressed normals etc... using
 a 4 byte colour format, then you will also have to use the same
@@ -113,8 +104,7 @@ a 4 byte colour format, then you will also have to use the same
 "shader_set.html"><tt>shader_set()</tt></a>, and before calling
 <a href="shader_reset.html"><tt>shader_reset</tt></a>.</div>
 
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 </blockquote>
 
 <p><br>

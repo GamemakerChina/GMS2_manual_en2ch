@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -58,28 +58,15 @@ within the physics simulation.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A</p>
+<p><b>返回：</b> N/A（无返回值）</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can delete (remove) all the particles
-that fall within the bounds of the defined polygonal area from the
-physics simulation in the current room. The function takes a
-(previously created) <a href=
-"../../data_structures/ds%20lists/index.html"><tt>ds_list()</tt></a>
-containing the x/y position of each point of the polygon, with the
-even numbered positions in the list being the x coordinates, and
-odd numbered positions the y coordinates, ie: for a triangle, your
-list would have six entries, with entry 0, 2, and 4 being the x
-coordinates and 1, 3, and 5 being the y coordinates. The polygon
-will then be used to delete all the particles that fall within the
-defined area.<br>
-<br>
-Note that the polygon defined must have <i>at least</i> three
-points, and <i>at most</i> 8.<br>
+<p>With this function you can delete (remove) all the particles that fall within the bounds of the defined polygonal area from the physics simulation in the current room. The function takes a (previously created) <a href=
+"../../data_structures/ds%20lists/index.html"><tt>ds_list()</tt></a> containing the x/y position of each point of the polygon, with the even numbered positions in the list being the x coordinates, and odd numbered positions the y coordinates, ie: for a triangle, your list would have six entries, with entry 0, 2, and 4 being the x coordinates and 1, 3, and 5 being the y coordinates. The polygon will then be used to delete all the particles that fall within the defined area.<br><br>Note that the polygon defined must have <i>at least</i> three points, and <i>at most</i> 8.<br>
 <br></p>
 
 <p><br>
@@ -87,14 +74,7 @@ points, and <i>at most</i> 8.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">var list = ds_list_create(p_list);<br>
-for (var i = 0; i &lt; 5; i ++;)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;ds_list_add(p_list, mx[i]);<br>
-&nbsp;&nbsp;&nbsp;ds_list_add(p_list, my[i]);<br>
-&nbsp;&nbsp;&nbsp;}<br>
-physics_particle_delete_region_poly(p_list);<br>
-ds_list_destroy(p_list);<br></p>
+<p class="code">var list = ds_list_create(p_list);<br>for (var i = 0; i &lt; 5; i ++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;ds_list_add(p_list, mx[i]);<br>&nbsp;&nbsp;&nbsp;ds_list_add(p_list, my[i]);<br>&nbsp;&nbsp;&nbsp;}<br>physics_particle_delete_region_poly(p_list);<br>ds_list_destroy(p_list);<br></p>
 
 <p>The above code will delete all particles found in the polygonal
 area defined by the points added to the <tt>ds_list</tt>.</p>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_mathematics_randomise.png">  Randomise</h2>
+"images/i_mathematics_randomise.png">    Randomise</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,12 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action sets the "seed" for the random number generator to a
-random value. When using the random number functions in
-<i>GameMaker Studio 2</i> the initial seed is always the same, as
-this makes tracing errors and debugging far easier. Should you wish
-to test with true random, you should call this action once at the
-start of the game.</p>
+<p>此动作将随机数生成器的”种子“设为一个随机值。在 <i>GameMaker Studio 2</i> 中使用随机数函数时，初始种子总是一样的，这样追踪错误和调试更容易。. 但如果你尝试使用真正的随机数，那么你需要调用此动作来在游戏开始时设置种子</p>
 </blockquote>
 
 <p><br>
@@ -60,9 +55,7 @@ start of the game.</p>
 <h3>举例：</h3>
 <img class="center" src="images/e_mathematics_randomise.png" alt=
 "Randomise Example">
-<blockquote>The above action block code sets the random seed to a
-new value then generates a number from 0 to 9 and assigns it to a
-global scope variable.</blockquote>
+<blockquote>上述动作代码块将随机种子产生一个新的值，然后产生一个0到9之间的随机数并将它赋给一个全局变量。</blockquote>
 
 <p><br>
 </p>

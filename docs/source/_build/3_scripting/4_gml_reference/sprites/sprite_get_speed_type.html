@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the sprite to get the animation type of</td>
+<td>将要被获取动画种类的精灵的索引。</td>
 </tr>
 </table>
 </blockquote>
@@ -67,10 +67,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to retrieve the sprite animation type
-as defined for the sprite resource in the <a href=
-"../../../2_interface/1_editors/sprites.html">Sprite Editor</a>.
-The value returned will be one of the following constants:</p>
+<p>此函数可以用来找到<a href=
+"../../../2_interface/1_editors/sprites.html">Sprite Editor</a>中精灵资源的动画类型。返回值将会是以下几种常量。</p>
 
 <div class="compat">
 <table>
@@ -81,41 +79,29 @@ The value returned will be one of the following constants:</p>
 
 <tr>
 <td>spritespeed_framespersecond</td>
-<td>The sprite was defined with animation in <i>frames per
-second</i>.</td>
+<td>精灵的动画类型 <i>帧每秒</i>。</td>
 </tr>
 
 <tr class="alt">
 <td>spritespeed_framespergameframe</td>
-<td>The sprite was defined with in animation in <i>frames per game
-frame</i>.</td>
+<td>精灵的动画类型 <i>帧每游戏帧</i>。</td>
 </tr>
 </table>
 </div>
 
 <p><br>
-
-The following two examples illustrate the difference this can make
-when calculating animation speeds for the sprite:</p>
+请看如下例子</p>
 
 <ul>
-<li>If you have a sprite that draws 1 frame per <i>second</i> and
-set the image speed to 0.5 it will draw at 0.5 frames per second.
-If your game frame rate is 60 frames per second then the sprite
-will draw 1 frame for every 120 game frames.<br>
+<li>假如你的精灵每 <i>秒</i> 绘制一帧，而你设置图像速度为0.5，那么它将每秒绘制0。5帧。如果游戏帧速率是60帧每秒，那么精灵将在每120游戏帧绘制一帧，即两秒绘制一帧。.<br>
 <br></li>
 
-<li>If you have a sprite that draws 1 frame per <i>game frame</i>
-and set the image speed to 0.5 it will draw 0.5 frames per game
-frame. If your game frame rate is 60 frames per second then the
-sprite will draw 30 frames for every 60 game frames.</li>
+<li>假如你的精灵每 <i>游戏帧</i> 绘制一帧，而你设置图像速度为0.5，那么它将在每一个游戏帧绘制0。5帧。如果游戏帧速率是60帧每秒，那么精灵将在每60游戏帧绘制30帧，即一秒绘制30帧。.</li>
 </ul>
 
-<p>You can find out what the speed value used for the sprite
-animation was using the function <a href=
-"sprite_get_speed.html"><tt>sprite_get_speed</tt></a>, and you can
-set the animation speed <i>and</i> type using the function <a href=
-"sprite_set_speed.html"><tt>sprite_set_speed</tt></a>.</p>
+<p>你可以使用 <a href=
+"sprite_get_speed.html"><tt>sprite_get_speed_type</tt></a>函数来获取精灵动画速度类型，使用 <a href=
+"sprite_set_speed.html"><tt>sprite_set_speed</tt></a>函数来设置速度和速度类型</p>
 </blockquote>
 
 <p><br>
@@ -127,8 +113,7 @@ set the animation speed <i>and</i> type using the function <a href=
 s_type = sprite_get_speed_type(sprite_index);</p>
 
 <blockquote>
-<p>The above code gets the sprite speed and the sprite animation
-type and stores them in instance variables for future use.</p>
+<p>上述函数将会获得精灵的速度及动画速度类型以供日后使用。</p>
 </blockquote>
 
 <p><br>

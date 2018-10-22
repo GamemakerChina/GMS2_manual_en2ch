@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,17 +48,17 @@ if (window.name != "content")
 
 <tr>
 <td>ind</td>
-<td>The index of the sprite to save.</td>
+<td>需要保存的精灵的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>subimg</td>
-<td>The sub-image of the sprite to save.</td>
+<td>将要保存的精灵的次级图片。</td>
 </tr>
 
 <tr>
 <td>fname</td>
-<td>The filename for the saved sprite.</td>
+<td>用于保存精灵的文件名。</td>
 </tr>
 </table>
 </blockquote>
@@ -66,9 +66,9 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns</h3>
+<h3>返回</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -76,14 +76,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to save any sub-image of any sprite to
-disc, giving it the specified filename. This image <i>must</i> be a
-<tt>*.png</tt> file.</p>
+<p>此函数可以用来保存任何精灵的人和次级图像，并给它一个特定的文件名。图像 <i>必须</i> 是 <tt>*.png</tt> 文件。</p>
 
-<div class="note"><b>NOTE:</b> Depending on the target platform
-that is chosen you are limited as to where you can save and load
-files from. See <a href="../file%20handling/index.html">File
-Handling</a> for more information.</div>
+<div class="note"><b>注意：</b>如果目标平台不同，你保存和加载文件的地方也不同。更多信息请查看 <a href="../file%20handling/index.html">File Handling</a> 。</div>
 </blockquote>
 
 <p><br>
@@ -106,13 +101,7 @@ sprite_save(spr_custom, 0, "Player_Custom_Sprite.png");<br>
 sprite_delete(spr_Custom);<br></p>
 
 <blockquote>
-<p>The above code creates a surface and stores its index in the
-local variable "surf". It then targets that surface, clears it and
-draws several sprites on top of each other. It creates a new sprite
-from the composite image drawn on the surface and assigns its index
-to the local variable "spr_Custom" before freeing up the memory
-used by the surface. Finally, the resulting sprite is saved to a
-file and then removed from memory too.</p>
+<p>上述代码将会首先创建表面，并将表面的索引存储在本地变量"surf"中。然后再选中刚才创建的表面，并在表面上绘制图片。它将从表面上的混合图像中创建一个新精灵，并将它的索引赋予"spr_Custom" ，最后释放被表面占用的存储。最后，精灵将会被保存成为文件然后被从存储中移除。</p>
 </blockquote>
 
 <p><br>

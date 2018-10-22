@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -58,7 +58,7 @@ if (window.name != "content")
 
 <h3>返回：</h3>
 
-<p class="code">N/A</p>
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
@@ -66,20 +66,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>When you are working with surfaces, you should always use this
-function whenever you are finished using them. Surfaces take up
-space in memory and so need to be removed, normally at the end of a
-room, but it can be done at any time depending on the use you put
-them to. Failure to do so can cause memory leaks which will
-eventually slow down and crash your game.</p>
+<p>当你用到表面层时，不论是否结束使用，你应该一直使用这个函数。表面层会占据内存空间，通常需要在房间结束工作时清除它们，可以在任何时间执行这个过程，取决于你使用的方式。Failure to do so can cause memory leaks which will eventually slow down and crash your game.</p>
 
-<div class="note"><b>NOTE:</b> When working with surfaces there is
-the possibility that they can cease to exist at any time due to
-them being stored in texture memory. You should <b>ALWAYS</b> check
-that a surface exists using <a href=
-"surface_exists.html"><tt>surface_exists</tt></a> before
-referencing them directly. For further information see <a href=
-"index.html">Surfaces</a>.</div>
+<div class="note"><b>注：</b>由于储存在显存里，表面层运行时存在随时停止并退出的可能性。在直接引用它们之前，你需要 <b>一直</b>使用 <a href=
+"surface_exists.html"><tt>surface_exists</tt></a>检测表面层是否退出。更多信息请查阅 <a href=
+"index.html">表面层</a>。</div>
 </blockquote>
 
 <p><br>
@@ -87,16 +78,10 @@ referencing them directly. For further information see <a href=
 
 <h3>举例：</h3>
 
-<p class="code">if keyboard_check_pressed(vk_escape)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surface_free(surf);<br>
-&nbsp;&nbsp;&nbsp;room_goto(rm_Menu);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check_pressed(vk_escape)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surface_free(surf);<br>&nbsp;&nbsp;&nbsp;room_goto(rm_Menu);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks for a key press and if it detects one it
-frees the memory reserved for the surface indexed in the variable
-"surf" and then changes room.</p>
+<p>上述代码将检测一个键是否按下，如果检测到了，则对索引为变量surf的表面层所预留的那部分内存进行释放，然后切换一个房间。</p>
 </blockquote>
 
 <p><br>
@@ -106,10 +91,10 @@ frees the memory reserved for the surface indexed in the variable
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href=
-"index.html">Surfaces</a></div>
+<div style="float:left">返回: <a href=
+"index.html">表面层</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "surface_save.html">surface_save</a></div>
 </div>
 </div>
