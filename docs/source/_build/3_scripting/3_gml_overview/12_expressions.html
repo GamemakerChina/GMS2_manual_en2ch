@@ -36,46 +36,46 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>表达式是一个数学短语，可以包含普通数字、变量、字符串或GML函数以及一个或多个<i>运算符</i> （如加、减、乘等...）。表达式中使用的值可以是实数（例如3.4 * 6），以$符号开头的十六进制数字（例如 $00FFAA | $88FFAA），英文双引号之间的字符串（例如"hello" + "world"）以及更复杂表达式使用多个运算符和许多值。</p>
+<p>表达式是一个数学短语，可以包含普通数字、变量、字符串或 GML 函数以及一个或多个 <i>运算符</i> （如加、减、乘等...）。表达式中使用的值可以是实数（例如 3.4 * 6），以 $ 符号开头的十六进制数字（例如 $00FFAA | $88FFAA），英文双引号之间的字符串（例如 "hello" + "world"）以及更复杂表达式使用多个运算符和许多值。</p>
 
 <p>对于表达式，有下面这些运算符（以优先度排序）：</p>
 
 <blockquote><label class="collapse" for="one">赋值(=)</label>
 <input id="one" type="checkbox">
-<div class="index_list"><b>=</b> - 用来给一个变量赋值。请注意，在<i>GameMaker Studio 2</i>中，这<i>也</i>可以用于比较变量，你可以在例子里和其他人的代码中看到这一点。然而，这是 <i>GameMaker</i> 老版本遗留下来的，比较运算还是应该使用 <b>==</b> 运算符，然后赋值使用 <b>=</b> ，举例如下：<br>
+<div class="index_list"><b>=</b> - 用来给一个变量赋值。请注意，在 <i>GameMaker Studio 2</i> 中，这 <i>也</i> 可以用于比较变量，你可以在例子里和其他人的代码中看到这一点。然而，这是 <i>GameMaker</i> 老版本遗留下来的，比较运算还是应该使用 <b>==</b> 运算符，然后赋值使用 <b>=</b> ，举例如下：<br>
 <br>
 
 <p class="code">a = 12;<br>speed = 5;<br>val = (old_val + 5);<br></p></div>
 <br>
-<label class="collapse" for="two">组合逻辑(&amp;&amp;, ||, ^^)</label> <input id="two" type="checkbox">
-<div class="index_list"><b>&amp;&amp;, ||, ^^（与、或和异或）</b> - 将两个布尔值结合在一起判断是真还是否。如果下面的例子得出 <tt>true</tt> ，“{}”里面的代码将会执行。<br>
+<label class="collapse" for="two">组合逻辑(&amp;&amp;、||、^^)</label> <input id="two" type="checkbox">
+<div class="index_list"><b>&amp;&amp;、||、^^（与、或 和 异或）</b> - 将两个布尔值结合在一起判断是真还是否。如果下面的例子得出 <tt>true</tt> ，“{}” 里面的代码将会执行。<br>
 <br>
 
 <p class="code">if (a == b &amp;&amp; c == d) {do something...} //  与<br>if (a == b || c ==d) {do something...} // 或<br>if (a == b ^^ c == d) {do something...} // 异或<br></p></div>
 <br>
-<label class="collapse" for="three">比较(&lt;, &lt;=, ==, !=, &gt;, &gt;=)</label> <input id="three" type="checkbox">
-<div class="index_list"><b>&lt;, &lt;=, ==, !=, &gt;, &gt;=</b> - 这些都是比较运算，且只会得出 <tt>true</tt> 或者 <tt>false</tt> 的结果（true = 1，false = 0）。使用的例子：<br>
+<label class="collapse" for="three">比较(&lt;、&lt;=、==、!=、&gt;、&gt;=)</label> <input id="three" type="checkbox">
+<div class="index_list"><b>&lt;、&lt;=、==、!=、&gt;、&gt;=</b> - 这些都是比较运算，且只会得出、 <tt>true</tt> 或者 <tt>false</tt> 的结果（true = 1，false = 0）。使用的例子：<br>
 <br>
 
 <p class="code">if (a &lt; b) {做些什么...}<br>if (a != b) {做些什么...}<br></p></div>
 <br>
-<label class="collapse" for="four">位运算(|, &amp;, ^, &lt;&lt;, &gt;&gt;)</label> <input id="four" type="checkbox">
-<div class="index_list"><b>|, &amp;, ^, &lt;&lt;, &gt;&gt;</b>：你可以使用这些进行位运算， | = 位运算“或”，&amp; = 位运算“与”， ^ = 位运算“异或”， &lt;&lt; = 左移， &gt;&gt; = 右移。使用的例子：<br>
+<label class="collapse" for="four">位运算(|、&amp;、^、&lt;&lt;、&gt;&gt;)</label> <input id="four" type="checkbox">
+<div class="index_list"><b>|、&amp;、^、&lt;&lt;、&gt;&gt;</b>：你可以使用这些进行位运算， | = 位运算 “或”，&amp; = 位运算 “与”， ^ = 位运算 “异或”， &lt;&lt; = 左移， &gt;&gt; = 右移。使用的例子：<br>
 <br>
 
-<p class="code">x = (x &amp; $ffffffe0) + 32; // 括号中的运算会将变量偏移为32、64、128等2的倍数，详见 http://wiki.gamemake.org/index.php?doc-view-6  <br>if (y ^ $1f) &gt; 0 {做些什么...}; // <br></p>
+<p class="code">x = (x &amp; $ffffffe0) + 32; // 括号中的运算会将变量偏移为 32、64、128 等 2 的倍数，详见 http://wiki.gamemake.org/index.php?doc-view-6  <br>if (y ^ $1f) &gt; 0 {做些什么...}; // <br></p>
 <br>
 你可以在以下章节找到有关如何使用按位运算符以及它们能做什么的其他信息： <a href=
 "../../1_overview/3_additional_information/bitwise_operators.html">位运算符</a>。</div>
 <br>
-<label class="collapse" for="five">算术运算(+, -, *, /)</label> <input id="five" type="checkbox">
-<div class="index_list"><b>+, -, *, /</b> - 加，减，乘和除。使用的例子：<br>
+<label class="collapse" for="five">算术运算(+、-、*、/)</label> <input id="five" type="checkbox">
+<div class="index_list"><b>+、-、*、/</b> - 加，减，乘和除。使用的例子：<br>
 <br>
 
 <p class="code">c = a * b;<br>str = a + "world";<br></p></div>
 <br>
-<label class="collapse" for="six">递增/递减 (++, --)</label> <input id="six" type="checkbox">
-<div class="index_list"><b>++, --</b> - 递加或递减<i>一</i>。值得注意的是在值之前或之后使用这个运算符结果稍微有些不同。比如：<br>
+<label class="collapse" for="six">递增 / 递减 (++、--)</label> <input id="six" type="checkbox">
+<div class="index_list"><b>++、--</b> - 递增或递减 <i>一</i>。值得注意的是在值之前或之后使用这个运算符结果稍微有些不同。比如：<br>
 <br>
 
 <ul>
@@ -88,64 +88,64 @@ if (window.name != "content")
 
 <p class="code">var a = 1;<br>show_debug_message(string(a++));<br>show_debug_message(string(++a));<br></p>
 <br>
-调试输出将会有1和3。这里还有一些使用的例子：<br>
+调试输出将会有 1 和 3。这里还有一些使用的例子：<br>
 <br>
 
 <p class="code">for (var i = 0; i &lt; 10; i++;) {做些什么...};<br>if hit == true score--;<br></p>
 <br>
-<i><b>注意：</b> 在YYC目标平台（即标记YYC的目标平台），这些表达式是从左到右进行求值的，而在其它目标平台可能会是从右到左，这意味着：<br>
+<i><b>注意：</b> 在 YYC 目标平台（即标记 YYC 的目标平台），这些表达式是从左到右进行求值的，而在其它目标平台可能会是从右到左，这意味着：<br>
 <br></i>
 <p class="code"><i>val = max(num, ++num, num++);<br></i>
 </p>
 <br>
 根据平台不同可能会得出不同的结果。</div>
 <br>
-<label class="collapse" for="seven">整除和取模(div, %, mod)</label> <input id="seven" type="checkbox">
-<div class="index_list"><b>div, mod (%)</b> - 整除和取模（求余），“x div y” 的运算是给定两个值相除获取一个整数的商，而 mod 操作符返回其两个操作数相除的余数（GM文档：也就是说，x mod y = x - (x div y) * y ）。使用的例子：<br>
+<label class="collapse" for="seven">整除和取模 (div、%、mod)</label> <input id="seven" type="checkbox">
+<div class="index_list"><b>div、mod (%)</b> - 整除和取模（求余），“x div y” 的运算是给定两个值相除获取一个整数的商，而 mod 操作符返回其两个操作数相除的余数（GM文档：也就是说，x mod y = x - (x div y) * y ）。使用的例子：<br>
 <br>
 
 <p class="code">secs = time mod 60;<br>time_str = string(time div 60);<br></p></div>
 <br>
-<label class="collapse" for="eight">一元运算符(!, -, ~)</label>
+<label class="collapse" for="eight">一元运算符(!、-、~)</label>
 <input id="eight" type="checkbox">
 <div class="index_list">还存在以下一元运算符：
 
 <blockquote>
 <ul>
-<li><b>!</b> ：布尔操作（boolean）“not”，所以<tt>!true == false</tt></li>
+<li><b>!</b> ：布尔操作（boolean）“not”，所以 <tt>!true == false</tt></li>
 
-<li><b>-</b> ：否定下一个实数或整数值，即取“负”操作（对字符串或布尔值无效）</li>
+<li><b>-</b> ：否定下一个实数或整数值，即取 “负” 操作（对字符串或布尔值无效）</li>
 
 <li><b>~</b> ：位否定下一个值</li>
 </ul>
 </blockquote></div></blockquote>
 
-<p>表达式的值可以使用数字、变量，或者有返回值的函数，子表达式放在括号里面。所有运算符都适用于实数值，但比较也适用于字符串，“+”用于连接字符串。</p>
+<p>表达式的值可以使用数字、变量，或者有返回值的函数，子表达式放在括号里面。所有运算符都适用于实数值，但比较也适用于字符串，“+” 用于连接字符串。</p>
 
 <p><br>
 </p>
 
 <h2>运算符顺序</h2>
 
-<p>当一个表达式做多项运算时，使用括号“()”分离出运算顺序，这将<b>非常重要</b>，如果没有明确的用这种方法表明，不同的平台执行上可能会有所不同。比如说，考虑如下代码：</p>
+<p>当一个表达式做多项运算时，使用括号 “()” 分离出运算顺序，这将 <b>非常重要</b>，如果没有明确的用这种方法表明，不同的平台执行上可能会有所不同。比如说，考虑如下代码：</p>
 
 <p class="code">a = b == c || d;<br></p>
 
-<p>不同平台的编译器用不同的顺序执行运算，如果没有明确体现，可能会导致得出一个奇怪的结果，而影响游戏的体验。为避免这种情况，使用“()”括号隔开不同的部分，像这样：</p>
+<p>不同平台的编译器用不同的顺序执行运算，如果没有明确体现，可能会导致得出一个奇怪的结果，而影响游戏的体验。为避免这种情况，使用 “()” 括号隔开不同的部分，像这样：</p>
 
 <p class="code">a = (b == c || d); //这样更好<br>a = ((b == c) || d); //最好<br></p>
 
 <p>对于不同的表达式，最后还有一些例子以供参考：</p>
 
-<p class="code">{<br>x = 23; // x 将勇敢的等于23，不是233<br> colour = $FFAA00; // 十六进制经常用来表示颜色值，具体颜色用在线工具查看，ps当然也可以<br>str = "hello world";<br>y += 5; // 等同于 y = y + 5 <br>x *= y; // 等同于 x = x * y; <br>x = y &lt;&lt; 2; // 比如y = 100; 二进制数是 “1100100”，左移两位是“110010000”，转成十进制是400。每左移一位多乘一次2。 <br>x = 23 * ((2 + 4) / sin(y));<br>str = "hello" + "world";<br>b = (x &lt; 5) &amp;&amp; !(x==2 || x==4);<br>}<br></p>
+<p class="code">{<br>x = 23; // x 将勇敢的等于 23，不是 233<br> colour = $FFAA00; // 十六进制经常用来表示颜色值，具体颜色用在线工具查看，ps 当然也可以<br>str = "hello world";<br>y += 5; // 等同于 y = y + 5 <br>x *= y; // 等同于 x = x * y; <br>x = y &lt;&lt; 2; // 比如 y = 100; 二进制数是 “1100100”，左移两位是“110010000”，转成十进制是 400。每左移一位多乘一次 2。<br>x = 23 * ((2 + 4) / sin(y));<br>str = "hello" + "world";<br>b = (x &lt; 5) &amp;&amp; !(x==2 || x==4);<br>}<br></p>
 
 <p><br>
 </p>
 
 <h2>访问器</h2>
 
-<p>这些是表达式的“捷径”，叫做 <b>访问器</b> ，用于某些特定的<a href=
-"../4_gml_reference/data_structures/index.html">数据结构</a>和<a href="10_arrays.html">数组</a>，使你可以快速、轻松地添加、替换数据，无需使用函数调用。详情请见以下页面：</p>
+<p>这些是表达式的 “捷径”，叫做 <b>访问器</b> ，用于某些特定的 <a href=
+"../4_gml_reference/data_structures/index.html">数据结构</a> 和 <a href="10_arrays.html">数组</a>，使你可以快速、轻松地添加、替换数据，无需使用函数调用。详情请见以下页面：</p>
 
 <blockquote>
 <ol>

@@ -44,15 +44,15 @@ if (window.name != "content")
 <p>在 <i>GameMaker Studio 2</i> 中，你使用函数作为 <a href="1_code.html">代码结构</a> 的一部分，以使游戏中发生一些事情，并且有大量的 GML 函数可供使用，所有这些都可以在手册的 <a href=
 "../4_gml_reference/index.html">语言参考</a> 部分中找到解释。</p>
 
-<p>GML 函数结构是，一个函数名，后面是括号之内的输入的参数，参数用逗号分隔（如果没有参数，仅仅用括号就可以了）。下面是函数结构的概述：</p>
+<p>GML 函数结构是，一个函数名，后面跟着括号之内的输入参数，参数用逗号分隔（如果没有参数，仅仅用括号就可以了）。下面是函数结构的概述：</p>
 
 <p class="code">&lt;function&gt;(&lt;arg0&gt;, &lt;arg1&gt; ,...
 &lt;arg15&gt;);</p>
 
-<p>基本上有两类函数 - 首先是大量的内置函数，控制游戏的各个方面，其次是你在游戏中定义的<a href=
-"3_scripts.html">脚本</a>也可以当作函数使用（但不总是这样）。&lt;br1&gt;</p>
+<p>基本上有两类函数 - 首先是大量的内置函数，控制游戏的各个方面，其次是你在游戏中定义的 <a href=
+"3_scripts.html">脚本</a> 也可以当作函数使用（但不总是这样）。&lt;br1&gt;</p>
 
-<p>某些函数有返回值可以用在表达式中，而其它的只是简单的运行命令（注意不要将函数用在一个赋值的左手边），如以下两个示例：</p>
+<p>某些函数有返回值，所以可以用在表达式中，而其它的只是简单的运行命令（注意不要将函数用在一个赋值表达式的左边），如以下两个示例：</p>
 
 <p class="code">instance_destroy(); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 销毁正在调用的实例  - 它不需要参数且没有返回<br>dist = point_distance(x, y, mouse_x, mouse_y; &nbsp;&nbsp;&nbsp;// 获取从当前实例位置到鼠标位置的距离 - 接受四个参数并返回实数值</p>
 
@@ -60,13 +60,10 @@ if (window.name != "content")
 
 <p class="code">instance_nearest(x, y, obj).speed = 0;</p>
 
-<p>该代码示例中表达式的返回值是实数（距离最近实例的唯一ID值），因此必须将其括在括号中以便以这种方式使用并正确地处理所需的实例（请参阅<a href=
-"7_addressing_variables.html">访问其他实例中的变量&lt;/ a0&gt;以获取更多信息）。上述代码正确的写法是：</p>
+<p>该代码示例中表达式的返回值是实数（距离最近实例的唯一 ID 值），因此必须将其括在括号中以便以这种方式使用并正确地处理所需的实例（请参阅 <a href=
+"7_addressing_variables.html">访问其他实例中的变量 </a> 以获取更多信息）。上述代码正确的写法是：</p>
 
-<p class="code">(instance_nearest(x, y, obj)).speed = 0;<br>
-//or<br>
-var inst = instance_nearest(x, y, obj);<br>
-inst.speed = 0;</p>
+<p class="code">(instance_nearest(x, y, obj)).speed = 0;<br>//or<br>var inst = instance_nearest(x, y, obj);<br>inst.speed = 0;</p>
 
 <p><br>
 </p>

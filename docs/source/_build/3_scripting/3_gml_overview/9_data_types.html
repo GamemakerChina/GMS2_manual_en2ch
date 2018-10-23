@@ -36,47 +36,47 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>在上一部分中，我们讲到了<a href=
-"6_scope.html">变量以及它们的作用域规则</a>，但是对于变量所能存储的各种<b>数据类型（Data types）</b>所谈甚少。因此，本章将会解释各种不同的类型以及它们都可以被用于做什么。</p>
+<p>在上一部分中，我们讲到了 <a href=
+"6_scope.html">变量以及它们的作用域规则</a>，但是对于变量所能存储的各种 <b>数据类型（Data types）</b> 所谈甚少。因此，本章将会解释各种不同的类型以及它们都可以被用于做什么。</p>
 
-<p>在继续之前，我们先简单地解释一下“数据类型”是什么意思。当你创建一个变量的时候，变量会被用于承载某种信息，还有当你调用一个<i>GML</i>函数的时候，它也会返回一些信息。然而这些信息可能来得五花八门各具风味，比如它们可以是一个实数（Real）或者也可以是一段字符串（String）。这些值所使用的的不同类型就被称为<b>数据类型（Data Types）</b>并且当使用<i>GML</i>时候，它们可以是下述几种类型：</p>
+<p>在继续之前，我们先简单地解释一下 “数据类型” 是什么意思。当你创建一个变量的时候，变量会被用于承载某种信息，还有当你调用一个 <i>GML</i> 函数的时候，它也会返回一些信息。然而这些信息可能来得五花八门各具风味，比如它们可以是一个实数（Real）或者也可以是一段字符串（String）。这些值所使用的的不同类型就被称为 <b>数据类型（Data Types）</b> 并且当使用 <i>GML</i> 时候，它们可以是下述几种类型：</p>
 
 <blockquote><label class="collapse" for="one">字符串（String）</label>
 <input id="one" type="checkbox">
 <div class="index_list">
-<p>一个字符串就是简单地使用引号（可以是'...'也可以是"..."）括起来的任意一段文本。你可以对字符串执行某些操作，例如将它们叠加到一起形成一段更长的字符串（串接操作（Concatenation）），你也可以改变字符串的属性甚至从中抽取实数部分。字符串函数的更多信息参见：<a href=
+<p>一个字符串就是简单地使用引号（可以是 '...' 也可以是 "..."）括起来的任意一段文本。你可以对字符串执行某些操作，例如将它们叠加到一起形成一段更长的字符串（连接操作（Concatenation）），你也可以改变字符串的属性甚至从中抽取实数部分。字符串函数的更多信息参见：<a href=
 "../4_gml_reference/strings/index.html">GameMaker 语言参考 - 字符串</a></p>
 </div>
 <br>
 <label class="collapse" for="two">实数（Real Numbers）</label> <input id=
 "two" type="checkbox">
 <div class="index_list">
-<p>实数可以是任何一个既不是字符串也不是其他数据类型的值，它就是一个数值而已。因此，124, 45639.566546456, 0, -45.5 等……所有的这些都是实数。所有的实数都被存储为一个32位的浮点数（即使是个整数），因此在处理这些数据的时候你可能会遇到一些轻微的舍入误差（Rounding Errors）。关于这个及其他与实数相关的函数参见<a href=
+<p>实数可以是任何一个既不是字符串也不是其他数据类型的值，它就是一个数值而已。因此，124, 45639.566546456, 0, -45.5 等……所有的这些都是实数。所有的实数都被存储为一个 32 位的浮点数（即使是个整数），因此在处理这些数据的时候你可能会遇到一些轻微的舍入误差（Rounding Errors）。关于这个及其他与实数相关的函数参见 <a href=
 "../4_gml_reference/maths/real%20valued%20functions/index.html">GML参考 - 实数</a></p>
 
-<p>请注意，在<i>GameMaker Studio 2</i>中创建的变量都被存储为一个双精度浮点数，但是当使用扩展的时候你可以使用其他类型。这些其它类型的数值可以从一个扩展中传递到GameMaker Studio 2中，然后可以使用下面所列举的相应的<tt>is_</tt>函数来检测它们的类型。</p>
+<p>请注意，在 <i>GameMaker Studio 2</i> 中创建的变量都被存储为一个双精度浮点数，但是当使用扩展的时候你可以使用其他类型。这些其它类型的数值可以从一个扩展中传递到 GameMaker Studio 2 中，然后可以使用下面所列举的相应的 <tt>is_</tt> 函数来检测它们的类型。</p>
 </div>
 <br>
 <label class="collapse" for="three">数组（Arrays）</label> <input id=
 "three" type="checkbox">
 <div class="index_list">
-<p>数组是一个特殊的数据类型，它们可以用来存储多个值。你可以将数组赋予给一个变量，然后用值“填入”数组的各个索引元素中。通过传引用（Pass-by-reference）可以将这个数组传递给脚本或函数中，但是当你要修改所传递的数组的时候，它会变成原来数组的一个拷贝（Copy），因此你需要回到原来需要修改的数组中。关于数组的更多信息，参见<a href="10_arrays.html">GML概述 - 数组</a></p>
+<p>数组是一个特殊的数据类型，它们可以用来存储多个值。你可以将数组赋予给一个变量，然后用值 “填入” 数组的各个索引元素中。通过传递引用（Pass-by-reference）可以将这个数组传递给脚本或函数中，但是当你要修改所传递的数组的时候，它会变成原来数组的一个拷贝（Copy），因此你需要回到原来需要修改的数组中。关于数组的更多信息，参见 <a href="10_arrays.html">GML概述 - 数组</a></p>
 </div>
 <br>
 <label class="collapse" for="four">布尔值（Boolean）</label> <input id="four"
 type="checkbox">
 <div class="index_list">
-<p>布尔值可以是<tt>true</tt>或<tt>false</tt>。请注意，当前的<i>GameMaker Studio 2</i>还不支持“真正的”布尔值，并且实际上是视所有低于0.5的实数为假（false），所有大于等于0.5的值为真（true）。然而，这也<i>不</i>意味着你应该使用1或0（或者别的实数）来进行检测真假，为此还提供了<b>常量</b><tt>true</tt>和<tt>false</tt>，你应该总是使用它们以防止在未来的更新中引入真正的布尔数据类型时可能引发的问题。</p>
+<p>布尔值可以是 <tt>true</tt> 或 <tt>false</tt>。请注意，当前的 <i>GameMaker Studio 2</i> 还不支持 “真正的” 布尔值，并且实际上是视所有低于 0.5 的实数为假（false），所有大于等于 0.5 的值为真（true）。然而，这也 <i>不</i> 意味着你应该使用 1 或 0（或者别的实数）来进行检测真假，为此还提供了 <b>常量</b> <tt>true</tt> 和 <tt>false</tt>，你应该总是使用它们以防止在未来的更新中引入真正的布尔数据类型时可能引发的问题。</p>
 </div>
 <br>
 <label class="collapse" for="five">指针（Pointer）</label> <input id="five"
 type="checkbox">
 <div class="index_list">
-<p>指针是一个“指向”一个内存位置（Memory Location）的一种数据类型你不可以对指针进行操作，它们只是被用于某些极特殊的函数中的，像给其他函数取得纹理或缓冲区地址的函数中。能够返回指针的函数典型例子有<a href=
-"../4_gml_reference/buffers/buffer_get_address.html"><tt>buffer_get_address</tt></a>或<a href=
+<p>指针是一个 “指向” 一个内存位置（Memory Location）的一种数据类型你不可以对指针进行操作，它们只是被用于某些极特殊的函数中的，像给其他函数取得纹理或缓冲区地址的函数中。能够返回指针的函数典型例子有 <a href=
+"../4_gml_reference/buffers/buffer_get_address.html"><tt>buffer_get_address</tt></a> 或 <a href=
 "../4_gml_reference/sprites/sprite_get_texture.html"><tt>sprite_get_texture</tt></a>。</p>
 
-<p>还有一个用于检测一个值是否为指针的函数（参见下文的“<b>数据类型检测</b>”），以及一个能够将值转换为指针的函数</p>
+<p>还有一个用于检测一个值是否为指针的函数（参见下文的 “<b>数据类型检测</b>”），以及一个能够将值转换为指针的函数</p>
 
 <ul>
 <li><a href="ptr.html">ptr</a><br>
@@ -94,7 +94,7 @@ type="checkbox">
 
 <tr>
 <td>pointer_null</td>
-<td>该常量表示指针没有指向一个地址（空地址）（和C++中的<tt>NULL</tt>或C#中的null一样）</td>
+<td>该常量表示指针没有指向一个地址（空地址）（和 C++ 中的 <tt>NULL</tt> 或 C# 中的 null 一样）</td>
 </tr>
 
 <tr class="alt">
@@ -108,7 +108,7 @@ type="checkbox">
 <label class="collapse" for="six">枚举（Enum）</label> <input id="six"
 type="checkbox">
 <div class="index_list">
-<p>一个枚举也就是一个枚举器（Enumerator），它们允许你使用常量值列表创建自己的有限的数据类型。枚举具有<a href="6_scope.html">全局作用域</a>（这是隐式的，而且不需要<tt>global</tt>前缀）并且它们具有如下结构：</p>
+<p>一个枚举也就是一个枚举器（Enumerator），它们允许你使用常量值列表创建自己的有限的数据类型。枚举具有 <a href="6_scope.html">全局作用域</a>（这是隐式的，而且不需要 <tt>global</tt> 前缀）并且它们具有如下结构：</p>
 
 <p class="code">enum
 <i>&lt;variable&gt;</i>{<i>&lt;constant&gt;</i> [=
@@ -118,13 +118,13 @@ type="checkbox">
 
 <p class="code">enum rainbowcolors {<br>&nbsp;&nbsp;&nbsp;red,<br>&nbsp;&nbsp;&nbsp;orange,<br>&nbsp;&nbsp;&nbsp;yellow,<br>&nbsp;&nbsp;&nbsp;green,<br>&nbsp;&nbsp;&nbsp;blue,<br>&nbsp;&nbsp;&nbsp;indigo,<br>&nbsp;&nbsp;&nbsp;violet<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>枚举的项目只可以是<b>实数</b>或<b>包含前面枚举的表达式</b>，并且默认地数字从0开始向上走，因此我们上面所给的例子会默认<tt>red = 0</tt><tt>orange = 1</tt><tt>yellow = 2</tt>等……你也可以在制作过程中将值赋给枚举变量：</p>
+<p>枚举的项目只可以是 <b>实数</b> 或 <b>包含前面枚举的表达式</b>，并且默认地数字从 0 开始向上走，因此我们上面所给的例子会默认 <tt>red = 0</tt>、<tt>orange = 1</tt>、<tt>yellow = 2</tt>等……你也可以在制作过程中将值赋给枚举变量：</p>
 
 <p class="code">enum rainbowcolors {<br>&nbsp;&nbsp;&nbsp;red = 5,<br>&nbsp;&nbsp;&nbsp;orange = 5 * 2,<br>&nbsp;&nbsp;&nbsp;yellow = 15,<br>&nbsp;&nbsp;&nbsp;green = 20,<br>&nbsp;&nbsp;&nbsp;blue = 25,<br>&nbsp;&nbsp;&nbsp;indigo = 30,<br>&nbsp;&nbsp;&nbsp;violet = 35 * enum_test.entry<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>请注意，上面的例子中我们使用了另一个枚举为"violet"创建了一个表达式。这仅适用在，所引用的枚举在一个表达式中使用它<i>之前</i>创建的时候，但它不适用于变量或函数，因为枚举值必须能够在编译时作为常量进行求值。另请注意，所有枚举值都会评估为<b>整数</b>值，当你创造自己的枚举时，你应该意识到这一点：枚举生效<i>只允许整数值</i>。</p>
+<p>请注意，上面的例子中我们使用了另一个枚举为 "violet" 创建了一个表达式。这仅适用在，所引用的枚举在一个表达式中使用它 <i>之前</i> 创建的时候，但它不适用于变量或函数，因为枚举值必须能够在编译时作为常量进行求值。另请注意，所有枚举值都会评估为 <b>整数</b> 值，当你创造自己的枚举时，你应该意识到这一点：枚举生效 <i>只允许整数值</i>。</p>
 
-<p>要稍后访问给定枚举类型中的值，你可以使用<tt>“.”</tt>方法，像这样：</p>
+<p>要稍后访问给定枚举类型中的值，你可以使用 <tt>“.”</tt> 方法，像这样：</p>
 
 <p class="code">var value = rainbowcolours.green;</p>
 
@@ -134,7 +134,7 @@ type="checkbox">
 <label class="collapse" for="sevem">未定义（Undefined）</label> <input id=
 "sevem" type="checkbox">
 <div class="index_list">
-<p>未定义的值（也称为“null”值“）是指一个表达式没有正确值的情况，尽管它在语法上是正确的，因此必须返回<i>某些事物</i>。例如，假设你有一个<tt>ds_map</tt>并使用函数<tt>ds_map_find_value()</tt>。现在，当map（译者注：映射数据）没有找到值时会发生什么？好吧，函数格式正确，问题是没有这样的值存在，那么它将返回<b>常数</b><tt>undefined</tt>，你可以检查这个常数<tt>为真</tt>或任何其他值。</p>
+<p>未定义的值（也称为 “null” 值）是指一个表达式没有正确值的情况，尽管它在语法上是正确的，因此必须返回 <i>某些事物</i>。例如，假设你有一个 <tt>ds_map</tt> 并使用函数 <tt>ds_map_find_value()</tt>。现在，当 map（译者注：映射数据）没有找到值时会发生什么？好吧，函数格式正确，问题是没有这样的值存在，那么它将返回 <b>常数</b> <tt>undefined</tt>，你可以检查这个常数为 <tt>true</tt> 或任何其他值。</p>
 </div></blockquote>
 
 <p><br>
@@ -142,7 +142,7 @@ type="checkbox">
 
 <h2>检测数据类型</h2>
 
-<p><i>GameMaker Studio 2</i>允许你使用以下函数检查给定变量的数据类型：</p>
+<p><i>GameMaker Studio 2</i> 允许你使用以下函数检查给定变量的数据类型：</p>
 
 <ul>
 <li><a href="checking_data_types/is_string.html">is_string</a><br>

@@ -36,7 +36,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>在<i>GameMaker Studio 2</i>中，要让某些事情变得更容易，你可以在你的脚本和操作中使用一种<b>关键字（keywords）</b>。这些关键字主要用于标识实例，每个关键字都将在下面的文本中进行了解释。请注意，所有关键字在内部都是用负整数值表示，因此在为变量赋值时必须小心，因为你可能会在之后的使用中获得意外结果，<i>GameMaker Studio 2</i>可能会将这个值解释其它的一些东西。你还应该注意，<b>完全不推荐</b>使用值代替代码中的关键字，它可能会在以后引起问题。</p>
+<p>在 <i>GameMaker Studio 2</i> 中，要让某些事情变得更容易，你可以在你的脚本和动作中使用一种 <b>关键字（keywords）</b>。这些关键字主要用于标识实例，每个关键字都将在下面的文本中进行了解释。请注意，所有关键字在内部都是用负整数值表示，因此在为变量赋值时必须小心，因为你可能会在之后的使用中获得意外结果，<i>GameMaker Studio 2</i> 可能会将这个值解释其它的一些东西。你还应该注意，<b>完全不推荐</b> 使用值代替代码中的关键字，它可能会在以后引起问题。</p>
 
 <blockquote><label class="collapse" for="one"><tt>self</tt>（废弃）</label> <input id="one" type="checkbox">
 <div class="index_list">
@@ -56,7 +56,7 @@ if (window.name != "content")
 </table>
 </div>
 
-<p><tt>self</tt>可用于标识当前代码块的调用实例。它总是返回-1，在<i>GameMaker Studio 2</i>中解释为实例的唯一ID。通常，你永远不需要使用此关键字，因为你可以使用其他关键字或函数更有效和适当地执行相同的任务，并且它是由于传统支持原因而维护。</p>
+<p><tt>self</tt> 可用于标识当前代码块的调用实例。它总是返回 -1，在 <i>GameMaker Studio 2</i> 中解释为实例的唯一 ID。通常，你永远不需要使用此关键字，因为你可以使用其他关键字或函数更适当和有效地执行相同的任务，并且它是由于传统支持原因而维护。</p>
 </div>
 <br>
 <label class="collapse" for="two"><tt>other</tt></label> <input id=
@@ -72,27 +72,27 @@ if (window.name != "content")
 
 <tr>
 <td>other</td>
-<td>碰撞事件中涉及的另一个实例，或者来自<a href=
-"14_language_features.html#with"><tt>with</tt></a>函数的其它实例。</td>
+<td>碰撞事件中涉及的另一个实例，或者来自 <a href=
+"14_language_features.html#with"><tt>with</tt></a> 函数的其它实例。</td>
 <td>&nbsp;&nbsp;&nbsp;-2</td>
 </tr>
 </table>
 </div>
 
-<p>这个特别的<i>关键词</i><b>other</b>有两种不同的方式可用于引用特定的实例：在<tt><b>with</b></tt>函数使用（解释在<a href=
-"14_language_features.html#with">这里</a>）或者用在<a href="../../2_interface/1_editors/events/index.html">碰撞事件</a>中（这是本节要解释的内容）。</p>
+<p>这个特别的 <i>关键词</i> <b>other</b> 有两种不同的方式可用于引用特定的实例：在 <tt><b>with</b></tt> 函数使用（解释在 <a href=
+"14_language_features.html#with">这里</a>）或者用在 <a href="../../2_interface/1_editors/events/index.html">碰撞事件</a> 中（这是本节要解释的内容）。</p>
 
-<p>碰撞事件只能在两个实例之间发生。多个实例之间<i>可能会有</i>多个碰撞，但在<i>GameMaker Studio 2</i>中他们都是在1对1的基础上解决的，使用的是具有碰撞事件的实例和涉及的“other”实例。想象一下，你有一个玩家玩家（player object），多个敌人物体和多个子弹物体，敌人可以向你射击。你可以为每个敌人分配一个子弹实例，但在创建时会为其随机分配一个不同的伤害变量，例如：</p>
+<p>碰撞事件只能在两个实例之间发生。多个实例之间 <i>可能会有</i> 多个碰撞，但在 <i>GameMaker Studio 2</i> 中他们都是在 1 对 1 的基础上解决的，使用的是具有碰撞事件的实例和涉及的 “other” 实例。想象一下，你有一个玩家物体（player object），多个敌人物体和多个子弹物体，敌人可以向你射击。你可以为每个敌人分配一个子弹实例，但在创建时会为其随机分配一个不同的伤害变量，例如：</p>
 
 <p class="code">var nnn;<br>nnn = instance_create_layer(x, y, "Bullets", obj_Bullet);<br>nnn.damage = 5 + irandom(5);<br>nnn.speed = 8;<br>nnn.direction = point_direction(x, y, obj_Player.x, obj_Player.y);<br></p>
 
-<p>了解我们如何使用<a href="7_addressing_variables.html">访问变量</a>这部分中概述的点方法（如nnn.speed）设置它的变量？这将为子弹物体提供不同的伤害值。但玩家物体怎么样？它将如何检测它必须承受的损害？通过在碰撞事件中使用<b><tt>other</tt></b>：</p>
+<p>了解我们如何使用 <a href="7_addressing_variables.html">访问变量</a> 这部分中概述的点方法（如 nnn.speed）设置它的变量？这将为子弹物体提供不同的伤害值。但玩家物体怎么样？它将如何检测它必须承受的损害？通过在碰撞事件中使用 <b><tt>other</tt></b>：</p>
 
 <p class="code">hp -= other.damage;<br>if hp &lt;= 0 instance_destroy();<br></p>
 
-<p>上面的代码将从玩家的“hp”变量中减除存储在<i>other</i>实例的碰撞“damage”变量中的值，然后它将检查“hp”是否低于或等于0。如果是，那么它将破坏玩家物体。请注意，<b>other</b>以这种方式使用<i>仅适用于碰撞事件</i>，并且另一个实例必须检查变量（译者注：比如确认是否有这个变量），否则将抛出错误。但是，你可以赋值给变量，甚至创建一个新的（译者注：新的变量），在碰撞事件中使用<b>other</b>也是如此：</p>
+<p>上面的代码将从玩家的 “hp” 变量中减除存储在 <i>other</i> 实例的碰撞 “damage” 变量中的值，然后它将检查 “hp” 是否低于或等于 0。如果是，那么它将破坏玩家物体。请注意，<b>other</b> 以这种方式使用 <i>仅适用于碰撞事件</i>，并且另一个实例必须检查变量（译者注：比如确认是否有这个变量），否则将抛出错误。但是，你可以赋值给变量，甚至创建一个新的（译者注：新的变量），在碰撞事件中使用 <b>other</b> 也是如此：</p>
 
-<p class="code">other.mana + = 10; //将10添加到另一个实例的“mana”变量中<br>other.hit = true; //将另一个实例变量“hit”设置为true，如果该变量尚不存在则创建它<br></p>
+<p class="code">other.mana + = 10; //将 10 添加到另一个实例的 “mana” 变量中<br>other.hit = true; / /将另一个实例变量 “hit” 设置为 true，如果该变量尚不存在则创建它<br></p>
 </div>
 <br>
 <label class="collapse" for="three"><tt>all</tt></label> <input id=
@@ -114,18 +114,18 @@ if (window.name != "content")
 </table>
 </div>
 
-<p>此关键字用于告诉<i>GameMaker Studio 2</i>一个函数将被应用或检查，包括房间内的所有活动实例（不会检查或访问已停用的实例）。你<b>不能</b>使用<tt>all</tt>在其它实例中通过点方法访问或设置变量（请参阅<a href=
-"7_addressing_variables.html">这里</a>），但你可以在调用<a href=
-"14_language_features.html#with"><tt>with()</tt></a>时使用它， 例如：</p>
+<p>此关键字用于告诉 <i>GameMaker Studio 2</i> 一个函数将被应用或检查，包括房间内的所有活动实例（不会检查或访问已停用的实例）。你 <b>不能</b> 使用 <tt>all</tt> 在其它实例中通过点方法访问或设置变量（请参阅 <a href=
+"7_addressing_variables.html">这里</a>），但你可以在调用 <a href=
+"14_language_features.html#with"><tt>with()</tt></a> 时使用它， 例如：</p>
 
 <p class="code">with (all)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;speed = 0;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>上面的代码会将房间中所有实例的速度设置为0。你也可以在函数中使用<tt>all</tt>来定位或检查房间中的所有实例，例如：</p>
+<p>上面的代码会将房间中所有实例的速度设置为 0。你也可以在函数中使用 <tt>all</tt> 来定位或检查房间中的所有实例，例如：</p>
 
-<p class="code">inst = instance_position（mouse_x，mouse_y，all）; //检查房间中一个位置的任何活动实例<br><br>if collision_line(x, y, mouse_x, mouse_y, all, false, true) {}//检查沿线碰撞的所有实例<br><br>mp_grid_add_instances(grid, all, false); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//将房间中的所有实例添加到运动规划网格中<br>
+<p class="code">inst = instance_position（mouse_x，mouse_y，all）; //检查房间中一个位置的任何活动实例<br><br>if collision_line(x, y, mouse_x, mouse_y, all, false, true) {} //检查沿线碰撞的所有实例<br><br>mp_grid_add_instances(grid, all, false); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//将房间中的所有实例添加到运动规划网格中<br>
 <br></p>
 
-<p><tt>all</tt>是一个非常有用的关键字，可以在代码和动作（action）中的许多情况下使用，通常可以减少需要编写的代码量以实现所需的效果。</p>
+<p><tt>all</tt> 是一个非常有用的关键字，可以在代码和动作（action）中的许多情况下使用，通常可以减少需要编写的代码量以实现所需的效果。</p>
 </div>
 <br>
 <label class="collapse" for="four"><tt>noone</tt></label>
@@ -151,7 +151,7 @@ if (window.name != "content")
 
 <p class="code">if instance_nearest(x, y, obj_enemy) != noone<br>&nbsp;&nbsp;&nbsp;{<br>   //做一些事情，因为附近有敌人的实例<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>在这个例子中，函数<tt>instance_nearest()</tt>将返回<tt>noone</tt>或找到的距离最近的实例的唯一ID。基本上，只要你想要检查一个实例，你就可以得到任何一个<tt>noone</tt>或返回唯一的实例ID。</p>
+<p>在这个例子中，函数 <tt>instance_nearest()</tt> 将返回 <tt>noone</tt> 或找到的距离最近的实例的唯一 ID。基本上，只要你想要检查一个实例，你就可以得到任何一个 <tt>noone</tt> 或返回唯一的实例 ID。</p>
 </div></blockquote>
 
 <p><br>

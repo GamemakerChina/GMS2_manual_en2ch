@@ -36,15 +36,15 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>脚本本质上是你自己编写的函数，作为简短的代码片段，它们可以解析表达式、返回值或语言允许的任何其他内容。基本上, 如果你的代码块在多个位置或物体中使用，那写在在脚本中可能会更好，因为它意味着你可以在需要时更改它，并且每个调用脚本的物体都会 "拾取" 更改。从组织的角度来看，它们也非常方便，即使它们持有的代码只被一个物体调用一次，因为它允许你将大型代码块分解为更容易管理的逻辑点“块”。</p>
+<p>脚本本质上是你自己编写的函数，作为简短的代码片段，它们可以解析表达式、返回值或语言任何允许的其他内容。基本上，如果你的代码块在多个位置或物体中使用，那写在在脚本中可能会更好，因为它意味着你可以在需要时更改它，并且每个调用脚本的物体都会 "获得" 更改。从组织的角度来看，它们也非常方便，即使它们持有的代码只被一个物体调用一次，因为它允许你将大型代码块分解为更容易管理的逻辑点 “块”。</p>
 
-<p>创建脚本时，你选择传入其中的值叫做<b>参数</b>，并且你可以要访问这些参数 - 无论是使用脚本操作，还是从一个程序或其他脚本中，作为函数调用这个脚本都可以。这些参数存储在<i>内置的</i>变量：</p>
+<p>创建脚本时，你选择传入其中的值叫做 <b>参数</b>，并且你可以要访问这些参数 - 无论是使用脚本操作，还是从一个程序或其他脚本中，作为函数调用这个脚本都可以。这些参数存储在 <i>内置</i> 变量：</p>
 
-<p class="code"><tt>argument0</tt>， <tt>argument1</tt>， ...等等... 直至 <tt>argument15</tt></p>
+<p class="code"><tt>argument0</tt>， <tt>argument1</tt>，...等等... 直至 <tt>argument15</tt></p>
 
-<p>因此，当使用参数变量从代码调用时，使用时最多可以有16个参数传递给脚本，作为脚本的变量，分别是<tt>argument0 ... 15</tt>，你<b>必须确保脚本使用所有提供的参数</b>（译者注：括号中提供了多少参数，脚本中就必须使用多少参数）。比如你有一个脚本需要两个参数，而你只是提供了一个参数，这样就会报错。同时，提供的参数数量超过需要的也会报错。</p>
+<p>因此，当从代码调用时可以使用参数变量，使用时最多可以有 16 个参数传递给脚本，作为脚本的变量，分别是 <tt>argument0 ... 15</tt>，你 <b>必须确保脚本使用所有提供的参数</b>（译者注：括号中提供了多少参数，脚本中就必须使用多少参数）。比如你有一个脚本需要两个参数，而你只是提供了一个参数，这样就会报错。同时，提供的参数数量超过需要的也会报错。</p>
 
-<p>但是，你可以使用以下命令为脚本提供可变数量的参数<i>内置的</i>参数数组（argument array），在使用此数组时，<i>不</i>再最多限制为16个参数，可以根据需要使用多个参数（尽管如此，你必须确保在脚本中引用所有参数）：</p>
+<p>但是，你可以使用以下命令为脚本提供可变数量的参数：<i>内置</i>参数数组（argument array），在使用此数组时，<i>不</i> 再最多限制为 16 个参数，可以根据需要使用多个参数（尽管如此，你必须确保在脚本中引用所有参数）：</p>
 
 <p class="code"><tt>argument[0 ... max_num]</tt>
 </p>
@@ -60,23 +60,23 @@ if (window.name != "content")
 
 <p>这可用于找出已传递的参数数量，并使脚本仅使用提供的参数（译者注：一般在循环中使用）。</p>
 
-<div class="note"><b>注意：</b>调用脚本时，不能混合使用两种类型的参数变量。你必须使用<b>要么</b>是<tt>argument0 ... 15</tt>，<b>要么</b>是argument[N]。</div>
+<div class="note"><b>注意：</b> 调用脚本时，不能混合使用两种类型的参数变量。你必须使用 <b>要么</b> 是 <tt>argument0 ... 15</tt>，<b>要么</b> 是 argument[n]。</div>
 
-<p><a name="return" id="return"></a> 脚本还可以返回一个值，以便可以在表达式中使用它们。对于这个，你会使用<tt>return</tt>语句：</p>
+<p><a name="return" id="return"></a> 脚本还可以返回一个值，以便可以在表达式中使用它们。返回值使用 <tt>return</tt>语句：</p>
 
 <p class="code">return &lt;表达式&gt;</p>
 
-<p>应该指出的是<i>脚本的执行在return语句处结束</i>，它意味着在return之后的任何代码都<i>不会运行</i>。这是一个名为“scr_sqr”的简短示例脚本，它计算传递给它的任何值的平方，并且它包含错误捕获，以防它传递的参数不是实数：</p>
+<p>应该指出的是 <i>脚本的执行在 return 语句处结束</i>，它意味着在 return 之后的任何代码都 <i>不会运行</i>。这是一个名为 “scr_sqr” 的简短示例脚本，它计算传递给它的值的平方，并且它包含错误捕获，以防它传递的参数不是实数：</p>
 
-<p class="code">{<br>if !is_real(argument0) // 如果不是实数<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return 0; // 在这里跳出<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return (argument0 * argument0); // 正常的平方值<br>&nbsp;&nbsp;&nbsp;}<br>}</p>
+<p class="code">{<br>if !is_real(argument0) // 如果不是实数<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return 0; // 在这里跳出<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return (argument0 * argument0); // 返回正常的平方值<br>&nbsp;&nbsp;&nbsp;}<br>}</p>
 
 <p>在一个代码块中调用脚本就像调用函数一样 - 使用脚本的名字，括号内填写参数的值。所以，上面的脚本这样使用：</p>
 
-<p class="code">if keyboard_check_pressed(vk_enter) // 检测回车键<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;val = scr_sqr(amount);  // 传递变量amount，返回值赋值给val<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check_pressed(vk_enter) // 检测回车键<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;val = scr_sqr(amount);  // 传递变量 amount，返回值赋值给 val<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>值得注意的是，在编写自己的脚本时，可以添加特定的<b>JSDoc</b>样式注释，以便在代码中使用时，这些脚本会在自动补全时（auto-complete）显示它们的参数和其他详细信息。你可以从 <a href=
-"../../1_overview/3_additional_information/jsdoc.html">JSDoc 脚本注释</a> 部分获取更多信息。 另请注意，在代码编辑器中键入脚本时，可以在脚本名称上单击<img style="vertical-align:middle" src="../../images/icon_f1.png">或使用鼠标中键<img style="vertical-align:middle"
-src="../../images/icon_mmb.png">打开它直接进行编辑。</p>
+<p>值得注意的是，在编写自己的脚本时，可以添加特定的 <b>JSDoc</b> 样式注释，以便在代码中使用时，这些脚本会在自动补全时（auto-complete）显示它们的参数和其它详细信息。你可以从 <a href=
+"../../1_overview/3_additional_information/jsdoc.html">JSDoc 脚本注释</a> 部分获取更多信息。 另请注意，在代码编辑器中键入脚本时，可以在脚本名称上单击 <img style="vertical-align:middle" src="../../images/icon_f1.png"> 或使用鼠标中键 <img style="vertical-align:middle"
+src="../../images/icon_mmb.png"> 打开它直接进行编辑。</p>
 
 <p><br>
 </p>
