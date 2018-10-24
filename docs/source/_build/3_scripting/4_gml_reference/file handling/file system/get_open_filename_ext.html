@@ -49,22 +49,22 @@ caption);</p>
 
 <tr>
 <td>filter</td>
-<td>The file type filter and/or name.</td>
+<td>文件类型过滤器和 / 或名称。</td>
 </tr>
 
 <tr class="alt">
 <td>fname</td>
-<td>The suggested filename to use.</td>
+<td>建议使用的文件名。</td>
 </tr>
 
 <tr>
 <td>directory</td>
-<td>The directory to start the search from.</td>
+<td>开始搜索的目录。</td>
 </tr>
 
 <tr class="alt">
 <td>caption</td>
-<td>The caption for the window.</td>
+<td>窗口的标题。</td>
 </tr>
 </table>
 </div>
@@ -79,8 +79,8 @@ caption);</p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function opens a dialogue and asks the player for a filename to open with the given filter. The filter has the form "<i>name1|mask1|name2|mask2|...</i>", where the mask may contain the different options with a semicolon between them and you can also use a "*" to mean any string. For example: "<i>bitmaps|*.bmp;*.wmf</i>", would ask the user to select the name of a bitmap file from the system, but only those that have the two specified extensions (<tt>bmp</tt> and <tt>png</tt>). this function does <b>not</b> open the file itself!It only returns a string with the full name and path of the file. If the user presses "<b>Cancel</b>" an empty string "" is returned. You may also add in a directory to start the search from, and a caption to be shown at the top of the window instead of the default one.<br><br>An important thing to note when using this function is that it grants you certain permissions for that file, for the duration of your game. So, once you get the file path from the user, you can access it again and again without having to ask. However, since this function is for reading a file, the permissions granted are <i>only for reading</i> and saving will not be permitted by the OS. Should you need to read and write to the file, you can get permission using the function <a href=
-"get_save_filename.html"><tt>get_save_filename</tt></a>.<br><br><i><b>NOTE:</b> This is a Windows only function.</i><br>
+<p>此函数打开一个对话框，并要求玩家使用给定的过滤器打开文件。过滤器的格式为 “<i>name1|mask1|name2|mask2|...</i>”，其中掩码可能包含不同的选项，它们之间带有分隔符，你也可以使用 “*” 表示任意字符串。例如：“<i>bitmaps|*.bmp;*.wmf</i>” 会要求用户从系统中选择位图文件的名称，但只能选择那些具有两个指定扩展名的文件（<tt>bmp</tt> 和 <tt>png</tt>）。这个函数 <b>不</b> 打开文件本身！它只返回一个包含文件全名和路径的字符串。如果用户按下 “<b>取消</b>”，则返回空字符串 ""。你也可以添加一个目录来开始搜索，并在窗口顶部显示一个标题而不是默认标题。<br><br>使用此函数时需要注意的一点是，在游戏持续时间内，它会授予你对该文件的某些权限。因此，一旦你从用户获得文件路径，你可以一次又一次地访问它而无需询问。但是，由于此函数用于读取文件，因此授予的权限仅 <i>用于读取</i>，并且操作系统不允许保存。如果需要读取和写入文件，可以使用函数 <a href=
+"get_save_filename.html"><tt>get_save_filename</tt></a> 获得权限。<br><br><i><b>注意：</b>这是仅限 Windows 的函数。</i><br>
 <br></p>
 
 <p><br>
@@ -90,10 +90,7 @@ caption);</p>
 
 <p class="code">var file;<br>file = get_open_filename_ext("text file|*.txt", "", working_directory, "Open a saved level");<br>if file != ""<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;file_text_open_read(file);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will ask the user to select a text file for
-opening from the <tt>working_directory</tt> and then check the
-returned file name and path, and if it exists will open the file
-for reading.</p>
+<p>上面的代码将要求用户从 <tt>working_directory</tt> 中选择要打开的文本文件，然后检查返回的文件名和路径，如果存在，将打开文件进行读取。</p>
 
 <p><br>
 </p>
@@ -102,10 +99,9 @@ for reading.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">File System
-Functions</a></div>
+<div style="float:left">上一页: <a href="index.html">文件系统函数</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "get_save_filename.html">get_save_filename</a></div>
 </div>
 </div>

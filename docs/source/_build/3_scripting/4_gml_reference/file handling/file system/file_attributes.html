@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>fname</td>
-<td>The name of the file to check.</td>
+<td>要检查的文件的名称。</td>
 </tr>
 
 <tr>
 <td>attr</td>
-<td>The attributes to check for.</td>
+<td>要检查的属性。</td>
 </tr>
 </table>
 </div>
@@ -68,28 +68,26 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>You can use this function to check the attributes of a given
-file. You can add up the following constants to see the type of
-files you want:<br>
+<p>你可以使用此函数来检查给定文件的属性。你可以添加以下常量以查看所需的文件类型：<br>
 <br></p>
 
 <blockquote>
 <ul>
-<li><b>fa_readonly</b> - read-only files</li>
+<li><b>fa_readonly</b> - 只读文件</li>
 
-<li><b>fa_hidden</b> - hidden files</li>
+<li><b>fa_hidden</b> - 隐藏文件</li>
 
-<li><b>fa_sysfile</b> - system files</li>
+<li><b>fa_sysfile</b> - 系统文件</li>
 
-<li><b>fa_volumeid</b> - volume-id files</li>
+<li><b>fa_volumeid</b> - 卷标识文件</li>
 
-<li><b>fa_directory</b> - directories</li>
+<li><b>fa_directory</b> - 目录</li>
 
-<li><b>fa_archive</b> - archived files</li>
+<li><b>fa_archive</b> - 归档文件</li>
 </ul>
 </blockquote>
 
-<p><i><b>NOTE:</b> This is a Windows only function.</i><br>
+<p><i><b>注意：</b> 这是仅限 Windows 的函数。</i><br>
 <br>
 </p>
 
@@ -101,8 +99,7 @@ files you want:<br>
 <p class="code">if !file_attributes(file, fa_hidden)
 file_delete(file);</p>
 
-<p>This would check a file to see if it is hidden or not, and if
-not it is deleted.</p>
+<p>这将检查文件是否隐藏，如果不是，则将其删除。</p>
 
 <p><br>
 </p>
@@ -111,10 +108,9 @@ not it is deleted.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">File System
-Functions</a></div>
+<div style="float:left">上一页: <a href="index.html">文件系统函数</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "filename_name.html">filename_name</a></div>
 </div>
 </div>

@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>mask</td>
-<td>The mask to use for searching.</td>
+<td>用于搜索的掩码。</td>
 </tr>
 
 <tr>
 <td>attr</td>
-<td>The specific file attribute to look for.</td>
+<td>要查找的特定文件属性。</td>
 </tr>
 </table>
 </div>
@@ -68,35 +68,28 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function will return the name of the first file that
-satisfies the mask and the attributes. If no such file exists, then
-an empty string is returned. The mask can contain a path and can
-contain wildchars, for example 'C:\temp\*.doc'. The attributes give
-the additional files you want to see, so the normal files are
-always returned when they satisfy the mask. You can add up the
-following constants to see the type of files you want (if you do
-not wish to add any attributes, use 0):<br>
+<p>此函数将返回满足掩码和属性的第一个文件的名称。如果不存在这样的文件，则返回空字符串。掩码可以包含一个路径，并且可以包含通配符，例如 “c:\temp\*.doc”。这些属性提供了你想要查看的其他文件，因此在满足掩码时始终会返回普通文件。你可以添加以下常量来查看所需的文件类型（如果你不想添加任何属性，请使用 0）：<br>
 <br></p>
 
 <blockquote>
 <ul>
-<li><b>fa_readonly</b> - read-only files</li>
+<li><b>fa_readonly</b> - 只读文件</li>
 
-<li><b>fa_hidden</b> - hidden files</li>
+<li><b>fa_hidden</b> - 隐藏文件</li>
 
-<li><b>fa_sysfile</b> - system files</li>
+<li><b>fa_sysfile</b> - 系统文件</li>
 
-<li><b>fa_volumeid</b> - volume-id files</li>
+<li><b>fa_volumeid</b> - 卷标识文件</li>
 
-<li><b>fa_directory</b> - directories</li>
+<li><b>fa_directory</b> - 目录</li>
 
-<li><b>fa_archive</b> - archived files</li>
+<li><b>fa_archive</b> - 归档文件</li>
 </ul>
 </blockquote>
 
 <p><br>
-<i><b>WARNING!</b> This function may not work as you expect due to</i> GameMaker Studio 2 being sandboxed!Please see the section on <a href=
-"../../../../1_overview/3_additional_information/file_system.html">File System Limits</a> for more information.<br><br><i><b>NOTE:</b> This function will not work at all on the JS target platforms (Windows8, Tizen, and HTML5), and the filter flags will only work on Windows and WinPhone (use 0 for all other platforms).</i><br>
+<i><b>警告！</b> 此函数可能无法正常工作！</i> 因为 GameMaker Studio 2 被沙盒化。有关详细信息，请参阅 <a href=
+"../../../../1_overview/3_additional_information/file_system.html">文件系统限制</a> 部分。<br><br><i><b>注意：</b> 此函数在 JS 目标平台（Windows8、Tizen 和 HTML5）上根本不起作用，过滤器标志只能在 Windows 和 WinPhone 上使用（对所有其他平台使用 0）。</i><br>
 <br></p>
 
 <p><br>
@@ -115,10 +108,9 @@ not wish to add any attributes, use 0):<br>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">File System
-Functions</a></div>
+<div style="float:left">上一页: <a href="index.html">文件系统函数</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "file_find_next.html">file_find_next</a></div>
 </div>
 </div>
