@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>fileid</td>
-<td>The id of the file to edit.</td>
+<td>要编辑的文件的 ID。</td>
 </tr>
 
 <tr>
 <td>str</td>
-<td>The string to write to the file.</td>
+<td>要写入文件的字符串。</td>
 </tr>
 </table>
 </div>
@@ -68,18 +68,10 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can write a string to a previously opened
-text file. If the file already contains information, this
-information will be erased and the string will be written at the
-beginning of the file, unless you have opened the file with the
-<a href=
-"file_text_open_append.html"><tt>file_text_open_append</tt></a>.
-You can also avoid this by using the <a href=
-"file_text_readln.html"><tt>file_text_readln</tt></a> function
-along with the <a href=
-"file_text_eof.html"><tt>file_text_eof</tt></a> function to loop
-through the contents of the file until you get to the end and then
-start writing.<br>
+<p>使用此函数，你可以将字符串写入先前打开的文本文件。如果文件已包含信息，则将删除此信息，并将字符串写入文件的开头，除非你使用 <a href=
+"file_text_open_append.html"><tt>file_text_open_append</tt></a> 打开文件。你还可以通过使用 <a href=
+"file_text_readln.html"><tt>file_text_readln</tt></a> 函数以及 <a href=
+"file_text_eof.html"><tt>file_text_eof</tt></a> 函数来循环查看内容，直到结尾为止然后开始写入。<br>
 <br></p>
 
 <p><br>
@@ -89,9 +81,7 @@ start writing.<br>
 
 <p class="code">var i, file;<br>file = file_text_open_write(working_directory + "\hiscore.txt");<br>for (i = 0; i &lt; 10; i += 1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;file_text_write_real(file, scr[i]);<br>&nbsp;&nbsp;&nbsp;file_text_writeln(file);<br>&nbsp;&nbsp;&nbsp;file_text_write_string(file, scr_name[i]);<br>&nbsp;&nbsp;&nbsp;file_text_writeln(file);<br>&nbsp;&nbsp;&nbsp;}<br>file_text_close(file);<br></p>
 
-<p>The above code opens a file for writing and then loops through
-two arrays, writing each array value to a new line of the file. The
-file is then closed when the loop has finished.</p>
+<p>上面的代码打开一个文件进行写入，然后遍历两个数组，将每个数组值写入文件的新行。然后在循环结束时关闭该文件。</p>
 
 <p><br>
 </p>
@@ -100,10 +90,9 @@ file is then closed when the loop has finished.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Text
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">文本文件</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "file_text_writeln.html">file_text_writeln</a></div>
 </div>
 </div>

@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>fileid</td>
-<td>The id of the file to check.</td>
+<td>要检查的文件的 ID。</td>
 </tr>
 </table>
 </div>
@@ -63,8 +63,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns <tt>true</tt> when the end of a given
-opened text file has been reached or <tt>false</tt> if not.<br>
+<p>当达到给定打开文本文件的末尾时，此函数返回 <tt> true</tt>，否则返回 <tt>false</tt>。<br>
 <br></p>
 
 <p><br>
@@ -74,9 +73,7 @@ opened text file has been reached or <tt>false</tt> if not.<br>
 
 <p class="code">var num = 0;<br>file = file_text_open_read(working_directory + "\Game_Data.txt");<br>while (!file_text_eof(file))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;str[num++] = file_text_readln(file);<br>&nbsp;&nbsp;&nbsp;}<br>file_text_close(file);<br></p>
 
-<p>The above code opens a file for writing then loops through the
-lines of text already written to the file until it reaches the end,
-storing each line in the array "str".</p>
+<p>上面的代码打开一个用于写入的文件，然后循环遍历已经写入文件的文本行，直到它到达结尾，将每行存储在数组 “str” 中。</p>
 
 <p><br>
 </p>
@@ -85,10 +82,9 @@ storing each line in the array "str".</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Text
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">文本文件</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "file_text_close.html">file_text_close</a></div>
 </div>
 </div>

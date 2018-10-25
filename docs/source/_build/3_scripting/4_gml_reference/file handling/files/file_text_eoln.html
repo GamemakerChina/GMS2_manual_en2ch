@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>fileid</td>
-<td>The id of the file to check.</td>
+<td>要检查的文件的 ID。</td>
 </tr>
 </table>
 </div>
@@ -63,10 +63,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can get <i>GameMaker Studio 2</i> to
-check the currently opened file to see if the line being read has
-finished. The function returns <tt>true</tt> if the end of the line
-has been reached and <tt>false</tt> otherwise.<br>
+<p>使用此函数，你可以获取 <i>GameMaker Studio 2</i> 检查当前打开的文件，以查看正在读取的行是否已完成。如果已到达行的末尾，则函数返回 <tt>true</tt>，否则返回 <tt>false</tt>。<br>
 <br></p>
 
 <p><br>
@@ -76,8 +73,7 @@ has been reached and <tt>false</tt> otherwise.<br>
 
 <p class="code">file = file_text_open_read(working_directory + "\Game_Data.txt");<br>var num = 0; while (!file_text_eoln(file))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;score_array[num] = file_text_read_real(file);<br>&nbsp;&nbsp;&nbsp;num++;<br>&nbsp;&nbsp;&nbsp;}<br>file_text_close(file);<br></p>
 
-<p>The above code opens a file for reading then reads the values
-from a single line into an array.</p>
+<p>上面的代码打开一个文件进行读取，然后将值按行读入数组。</p>
 
 <p><br>
 </p>
@@ -86,10 +82,9 @@ from a single line into an array.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Text
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">文本文件</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "file_text_eof.html">file_text_eof</a></div>
 </div>
 </div>
