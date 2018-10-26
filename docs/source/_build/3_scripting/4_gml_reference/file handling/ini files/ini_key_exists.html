@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>section</td>
-<td>The section in the open .ini file to check a key in.</td>
+<td>要检查的键所在的节。</td>
 </tr>
 
 <tr>
 <td>key</td>
-<td>The key to check for.</td>
+<td>要检查的键</td>
 </tr>
 </table>
 </div>
@@ -68,11 +68,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function checks to see if a key exists in the currently
-open ini. This is not a necessary check to prevent errors as, when
-a key does not exist, reading from a non-existent key will just
-return a defaulted value. It can be useful to see if an ini file
-has saved specific data and a few other things, however.<br>
+<p>此函数检查当前打开的 ini 中是否存在指定键。这不是防止错误的必要检查，因为当不存在键时，从不存在的键读取将仅返回默认值。然而，查看 ini 文件是否已保存特定数据和其他一些内容会很有用。<br>
 <br></p>
 
 <p><br>
@@ -82,8 +78,7 @@ has saved specific data and a few other things, however.<br>
 
 <p class="code">ini_open('savedata.ini');<br>if !ini_key_exists('save1', 'name')<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.name = 'Player1';<br>&nbsp;&nbsp;&nbsp;}<br>ini_close();</p>
 
-<p>This will set variable global.name to 'Player1' if no such key
-as "name" exists.</p>
+<p>如果不存在 “name” 这样的键，就把变量 global.name 设置为 'Player1'。</p>
 
 <p><br>
 </p>
@@ -92,10 +87,9 @@ as "name" exists.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="../index.html">Ini
-Files</a></div>
+<div style="float:left">上一页: <a href="../index.html">Ini Files</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "ini_section_exists.html">ini_section_exists</a></div>
 </div>
 </div>

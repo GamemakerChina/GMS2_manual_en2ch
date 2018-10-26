@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>section</td>
-<td>The section in the open .ini file to check for.</td>
+<td>打开 .ini 文件中要检查的节。</td>
 </tr>
 </table>
 </div>
@@ -63,11 +63,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function checks to see if a section exists in the currently
-open ini. This is not a necessary check to prevent errors as, when
-a section does not exist, reading from a non-existent section will
-just return a default value, however it can be useful to see if an
-ini file has saved specific data.<br>
+<p>此函数检查当前打开的 ini 中是否存在某个节（section）。这不是防止错误的必要检查，因为当一个节不存在时，从不存在的节读取将只返回一个默认值，但是查看一个 ini 文件是否保存了特定数据会很有用。<br>
 <br></p>
 
 <p><br>
@@ -77,10 +73,7 @@ ini file has saved specific data.<br>
 
 <p class="code">ini_open("savedata.ini");<br>if !ini_section_exists("save1")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.savegame = '1';<br>&nbsp;&nbsp;&nbsp;}<br>ini_close();<br></p>
 
-<p>This will set variable global.savegame to '1' if 'save1' is NOT
-found. With a for loop, this could be used as a basic way of
-working out how many save games there are for a game (ie: creating
-a system for multiple simultaneous save games for one game).</p>
+<p>如果找不到 'save1'，这会将变量 global.savegame 设置为 '1'。使用 for 循环，这可以用作计算游戏有多少个游戏存档的基本方式（即：为一个游戏创建多个同时保存游戏存档的系统）。</p>
 
 <p><br>
 </p>
@@ -89,10 +82,9 @@ a system for multiple simultaneous save games for one game).</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Ini
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">Ini Files</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "ini_key_delete.html">ini_key_delete</a></div>
 </div>
 </div>

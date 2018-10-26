@@ -46,8 +46,8 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function should be called the moment you are finished reading or writing to any open ini file. If you do not use the function after you have used any of the ini write functions, then nothing will be written to disk, as the file information is held in memory until this function is called, which forces the write. If you try to open an ini without having previously closed another one (or the same one) you will get an error too.<br><br>The function will also return a string with the ini file encoded into it. This string can then be saved to a server and/or used again along with the function <a href=
-"ini_open_from_string.html"><tt>ini_open_from_string</tt></a> to re-create the ini.<br>
+<p>这个函数应该在完成对打开的 INI 文件的读取或写入时调用。如果在使用过任何 ini 写入函数之后不使用该函数，则不会将任何内容写入磁盘，因为文件信息保存在内存中，直到调用该函数，从而强制写入。如果你试图打开一个 ini 而不曾关闭另一个（或者同一个），你也会得到一个错误。<br><br>函数还将返回含有 ini 文件编码的字符串。然后可以将此字符串保存到服务器，或再次与函数 <a href=
+"ini_open_from_string.html"><tt>ini_open_from_string</tt></a> 一起使用，以重新创建 ini。<br>
 <br></p>
 
 <p><br>
@@ -55,15 +55,9 @@ if (window.name != "content")
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">ini_open("savedata.ini");<br>
-score = ini_read_real("save1", "score", 0);<br>
-ini_close();</p>
+<p class="code">ini_open("savedata.ini");<br>score = ini_read_real("save1", "score", 0);<br>ini_close();</p>
 
-<p>This will open 'savedata.ini' and set score to the value under
-the section "save1" with the key "score" in it, then close the .ini
-again. Should there be no value under "save1", "score" or there is
-no "savedata.ini" file present, score will be set to 0 and a new
-ini_file created.</p>
+<p>这将打开 'savedata.ini' 并将得分设置为 “save1” 节（section）里的 “score” 键值，然后再次关闭 .ini。如果 “save1” 节 “score” 键没有值，或者没有 “savedata.ini” 文件，则得分将设置为 0 并创建新的 ini_file。</p>
 
 <p><br>
 </p>
@@ -72,10 +66,9 @@ ini_file created.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Ini
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">Ini Files</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "ini_write_real.html">ini_write_real</a></div>
 </div>
 </div>

@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>string</td>
-<td>The string containing all the ini information.</td>
+<td>包含所有 ini 信息的字符串。</td>
 </tr>
 </table>
 </div>
@@ -63,15 +63,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function will create an ini file from a string and open it
-for reading/writing. The string should be correctly formatted as an
-ini file (ie: with sections, line breaks keys and values) otherwise
-the ini file will not be created correctly. Note that this ini file
-is temporary and will be removed from memory the moment it is
-closed, losing any information that was stored in it, however the
-<a href="ini_close.html"><tt>ini_close</tt></a> function returns a
-string of the full ini file which can then be saved to a server or
-to disk.<br>
+<p>此函数将从字符串创建一个 ini 文件并将其打开以进行读取 / 写入。字符串应正确格式化为 ini 文件（即：带有节、换行符和值），否则将无法正确创建 ini 文件。请注意，此 ini 文件是临时文件，将在关闭时从内存中删除，丢失存储在其中的任何信息，但 <a href="ini_close.html"><tt>ini_close</tt></a> 函数将返回一个完整的 ini 文件字符串 ，然后可以保存到服务器或磁盘。<br>
 <br></p>
 
 <p><br>
@@ -79,13 +71,9 @@ to disk.<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">ini_open_from_string(str)<br>
-global.sound = ini_read_string("Options", "Sound", true);<br>
-ini_close();</p>
+<p class="code">ini_open_from_string(str)<br>global.sound = ini_read_string("Options", "Sound", true);<br>ini_close();</p>
 
-<p>The above code sets a temporary ini to hold the information from
-the string "str", then reads from the ini before closing it
-again.</p>
+<p>上面的代码设置了一个临时 ini 来保存字符串 “str” 中的信息，然后在再次关闭它之前从 ini 读取。</p>
 
 <p><br>
 </p>
@@ -94,10 +82,9 @@ again.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Ini
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">Ini Files</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "ini_open.html">ini_open</a></div>
 </div>
 </div>

@@ -48,20 +48,17 @@ if (window.name != "content")
 
 <tr>
 <td>section</td>
-<td>The section of the .ini to read from.</td>
+<td>要读取值的键所在的 .ini 节。</td>
 </tr>
 
 <tr>
 <td>key</td>
-<td>The key within the relevant section of the .ini to read
-from.</td>
+<td>要读取值的键。</td>
 </tr>
 
 <tr>
 <td>default</td>
-<td>The value to return if a value is not found in the defined
-place (or the .ini file does not exist). Must be a real
-number.</td>
+<td>如果在定义的位置找不到值（或 .ini 文件不存在），则返回的默认值。必须是实数。</td>
 </tr>
 </table>
 </div>
@@ -76,10 +73,7 @@ number.</td>
 
 <h3 class="studio">描述</h3>
 
-<p>You can use this function to read a number from an ini data
-file. Ini Files are split into <b>sections</b> and then each
-section is subsequently split into <b>key</b> - <b>value</b> pairs.
-So a typical ini file would look something like this:<br>
+<p>你可以使用此函数从 ini 数据文件中读取数字。Ini 文件由 <b>节（sections）</b> 组成，然后每个节由 <b>键</b> - <b>值</b> 对（key - value pairs）组成。所以典型的 ini 文件看起来像这样：<br>
 <br>
 <img class="center" src="iniexample.png"></p>
 
@@ -88,14 +82,9 @@ So a typical ini file would look something like this:<br>
 
 <h3 class="studio">举例：</h3>
 
-<p class="code">ini_open( 'savedata.ini' );<br>
-score = ini_read_real( 'save1', 'score', 0 );<br>
-ini_close();</p>
+<p class="code">ini_open( 'savedata.ini' );<br>score = ini_read_real( 'save1', 'score', 0 );<br>ini_close();</p>
 
-<p>This will open 'savedata.ini' and set score to the value under
-'save1' &gt; 'score' in it, then close the .ini again. Should there
-be no value under 'save1' &gt; 'score', or there no 'savedata.ini'
-file present, score will be set to 0.</p>
+<p>这将打开 'savedata.ini' 并将得分设置为其中 'save1' &gt; 'score' 键的值，然后再次关闭 .ini。如果 'save1' &gt; 'score' 下没有值，或者没有 'savedata.ini' 文件，则得分将设置为 0。</p>
 
 <p><br>
 </p>
@@ -104,10 +93,9 @@ file present, score will be set to 0.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Ini
-Files</a></div>
+<div style="float:left">上一页: <a href="index.html">Ini Files</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "ini_read_string.html">ini_read_string</a></div>
 </div>
 </div>
