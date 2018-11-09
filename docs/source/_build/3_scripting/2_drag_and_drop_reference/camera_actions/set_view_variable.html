@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,14 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action permits you to set certain built in variables
-related to how the <b>view port</b> will display camera views of
-the room. You select the view port variable to edit, then give the
-view port to target (from 0 to 7) and finally the new value for the
-variable. The view port is the area of the screen that will be used
-to draw a given camera view (as set up in the room editor), and the
-different variables that you are able to set in this way are
-outlined in the table below:</p>
+<p>此动作允许你设置有关 <b>可视区域</b>的内置变量，以便让你控制房间中的相机。你先选择需要编辑的可视区域变量，然后选择需要编辑的可视区域 (0到7) ，最后，选择这个变量的新的值。可视区域是用于绘制给定摄像机视图的屏幕区域（在房间编辑器中设置），下表列出了您能够以这种方式设置的不同变量：</p>
 
 <div class="compat">
 <table>
@@ -58,76 +51,41 @@ outlined in the table below:</p>
 
 <tr>
 <td>摄像机</td>
-<td>This is for setting the viewport to show a different Camera
-View. You need to supply the unique ID value of the camera to
-change to (see <a href=
-"../../4_gml_reference/cameras%20and%20display/cameras/index.html">here</a>
-for more information).</td>
+<td>用来设置视口（视口是用来显示不同的摄像机视野）你需要提供所更改相机的唯一ID值。(点 <a href=
+"../../4_gml_reference/cameras%20and%20display/cameras/index.html">这里</a>了解更多)。</td>
 </tr>
 
 <tr class="alt">
 <td>可见性</td>
-<td>This is the visibility toggle for the view port and expects a
-value of <tt>true</tt> or <tt>false</tt> where setting it to
-<tt>true</tt> will make the view port visible (ie: it will draw to
-the screen), and a value of <tt>false</tt> will not draw anything
-to the screen.</td>
+<td>可视区域是否可见的开关，可以选择 <tt>真</tt> 或者 <tt>假</tt>。当设置为<tt>真</tt>时，可视区域可见（就是说会在屏幕绘制），当设置为<tt>假</tt>时，屏幕上不会绘制任何东西。</td>
 </tr>
 
 <tr>
-<td>View Port X Coordinate</td>
-<td>This is the X position of the view port within the game window.
-Note though that is is only really required when more than one view
-port is active - for example to create a split screen effect - and
-if used when only one port is active you get unexpected
-results.</td>
+<td>可视区域X坐标</td>
+<td>游戏窗口内的可视区域的X坐标。这是游戏窗口中视口的Y位置。请注意，只有当多个视图端口处于活动状态时才会真正需要 - 例如创建分屏效果 - 如果只有一个端口处于活动状态时使用，则会出现意外结果。</td>
 </tr>
 
 <tr class="alt">
-<td>View Port Y Coordinate</td>
-<td>This is the Y position of the view port within the game window.
-Note though that is is only really required when more than one view
-port is active - for example to create a split screen effect - and
-if used when only one port is active you get unexpected
-results.</td>
+<td>可视区域Y坐标</td>
+<td>游戏窗口内的可视区域的Y坐标。这是游戏窗口中视口的Y位置。请注意，只有当多个视图端口处于活动状态时才会真正需要 - 例如创建分屏效果 - 如果只有一个端口处于活动状态时使用，则会出现意外结果。</td>
 </tr>
 
 <tr>
-<td>View Port Width</td>
-<td>This is the width (in pixels) of the view port. The width of
-the view port (or combined view ports if more than one are active)
-define the width of the game window or background canvas at the
-start of the game, so changing this value after the game has
-started <i>will have no visible effect on the game window size</i>
-unless called along with the GML function <a href=
-"../../4_gml_reference/cameras%20and%20display/display/the%20game%20window/window_set_size.html">
-<tt>window_set_size</tt></a>. Also note that if you have a larger
-or smaller port size than that assigned to the camera, then the
-camera view will be scaled down - or up - to fit.</td>
+<td>可视区域宽度</td>
+<td>可视区域的宽度（单位像素）可视区域的宽度（或组合视图端口，如果有多个活动），定义游戏开始时游戏窗口或背景画布的宽度，因此在游戏开始后更改此值 <i>将不会改变窗口尺寸</i>，除非使用GML函数 <a href=
+"../../4_gml_reference/cameras%20and%20display/display/the%20game%20window/window_set_size.html"> <tt>window_set_size</tt></a>. 请注意，如果你将更大或者更小的视口尺寸赋予相机，相机会自动变小或变大去适应窗口尺寸。</td>
 </tr>
 
 <tr class="alt">
-<td>View Port Height</td>
-<td>This is the height (in pixels) of the view port. The height of
-the view port (or combined view ports if more than one are active)
-define the height of the game window or background canvas at the
-start of the game, so changing this value after the game has
-started <i>will have no visible effect on the game window size</i>
-unless called along with the GML function <a href=
-"../../4_gml_reference/cameras%20and%20display/display/the%20game%20window/window_set_size.html">
-<tt>window_set_size</tt></a>. Also note that if you have a larger
-or smaller port size than that assigned to the camera view, then
-the camera view will be scaled down - or up - to fit.</td>
+<td>可视区域高度</td>
+<td>可视区域的高度（单位像素）可视区域的高度（或组合视图端口，如果有多个活动），定义游戏开始时游戏窗口或背景画布的高度，因此在游戏开始后更改此值 <i>将不会改变窗口尺寸</i>，除非使用GML函数 <a href=
+"../../4_gml_reference/cameras%20and%20display/display/the%20game%20window/window_set_size.html"> <tt>window_set_size</tt></a>。请注意，如果你将更大或者更小的视口尺寸赋予相机，相机会自动变小或变大去适应窗口尺寸。</td>
 </tr>
 
 <tr>
-<td>View Port Surface ID</td>
-<td>With this variable you can set the contents of a given view
-port to draw to a surface, with the value you supply being that of
-the surface to use for drawing the view port to. For more
-information please see <a href=
-"../../4_gml_reference/cameras%20and%20display/cameras/view_set_surface_id.html">
-here</a>.</td>
+<td>可视区域ID</td>
+<td>使用此变量，您可以将给定视图端口的内容设置为绘制到曲面，您提供的值是用于绘制视图端口的曲面的值。更多信息点击<a href=
+"../../4_gml_reference/cameras%20and%20display/cameras/view_set_surface_id.html"> 这里</a>.</td>
 </tr>
 </table>
 </div>
@@ -138,7 +96,7 @@ here</a>.</td>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_cameras_set_view_variable.png"
-alt="Set View Variable Syntax">
+alt="设置视野变量语法">
 <p><br>
 </p>
 
@@ -153,17 +111,17 @@ alt="Set View Variable Syntax">
 
 <tr>
 <td>变量</td>
-<td>The built in view variable to set</td>
+<td>可以设置的内置视野变量</td>
 </tr>
 
 <tr class="alt">
-<td>视图</td>
-<td>The view port to target (from 0 - 7)</td>
+<td>视野</td>
+<td>目标可视范围T(0 - 7)</td>
 </tr>
 
 <tr>
 <td>值</td>
-<td>The new value for the built in variable</td>
+<td>内置变量的新值</td>
 </tr>
 </table>
 </blockquote>
@@ -173,10 +131,8 @@ alt="Set View Variable Syntax">
 
 <h3>举例：</h3>
 <img class="center" src="images/e_cameras_set_view_variable.png"
-alt="Set View Variable Example">
-<blockquote>The above action block code will check for a key press
-and if one is detected it will make the view port [0] visible,
-otherwise it will make it invisible.</blockquote>
+alt="设置视野变量举例">
+<blockquote>上述动作块检测，当特定键被按下时，它将使视口[0]可见，否则它将使其不可见。</blockquote>
 
 <p><br>
 </p>
@@ -185,11 +141,9 @@ otherwise it will make it invisible.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Camera
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Camera Actions</a></div>
 
-<div style="float:right">next: <a href="get_view_variable.html">Get
-View Variable</a></div>
+<div style="float:right">下一页：<a href="get_view_variable.html">获取视野变量</a></div>
 </div>
 </div>
 

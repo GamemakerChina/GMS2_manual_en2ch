@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,19 +48,15 @@ either <tt>true</tt> or <tt>false</tt> depending on the expressions
 and values used. The available expressions are:</p>
 
 <ul>
-<li><b>Equals to</b> - The variable and the value are both exactly
-equal</li>
+<li><b>Equals to</b> - 变量和值相等</li>
 
-<li><b>Less than</b> - The variable is less than the value</li>
+<li><b>Less than</b> - 变量小于值（不等于）</li>
 
-<li><b>Greater than</b> - The variable is greater than the
-value</li>
+<li><b>Greater than</b> - 变量大于值（不等于）</li>
 
-<li><b>Less than or Equal to</b> - The variable is less than
-<i>or</i> equal to the value</li>
+<li><b>Less than or Equal to</b> - 变量小于 <i>或</i> 等于值。</li>
 
-<li><b>Greater than or Equal to</b> - The variable is greater than
-<i>or</i> equal to the value</li>
+<li><b>Greater than or Equal to</b> - 变量大于 <i>或</i> 等于值。</li>
 </ul>
 
 <p>If you flag the <b>Not</b> argument, then the above will be
@@ -68,26 +64,17 @@ value</li>
 "<i>not</i> equals to", so you would be checking if the
 <tt>health</tt> value is not equals to the given value.</p>
 
-<div class="note"><b>IMPORTANT NOTE</b>: Due to <a href=
+<div class="note"><b>注意！</b>由于 <a href=
 "http://floating-point-gui.de/formats/fp/" target=
-"·_blank&quot;">floating point precision issues</a>, checking to
-see if two values are exactly equal may return <tt>false</tt>,
-since one may be exactly 1, while the other may be
-1.00000000000001. This can be avoided by using the <a href=
-"../Type_Actions/decimal_to_integer.html">Decimal to Integer</a>
-action before checking or using the "greater than" or "less than"
-expressions.</div>
+"·_blank&quot;">浮动指针精度问题</a>，检查两个相等的值可能会返回 <tt>false</tt>，因为前者是1，而后者事实上是1.00000000000001. 你可以事先使用 <a href=
+"../Type_Actions/decimal_to_integer.html">将小数变为整数</a> 动作来避免这样的错误。你也可以使用“大于”或“小于”表达式。</div>
 
 <p><br>
-
-Note that to add actions into the "if" block, they should be
-dropped to the side of the action, as shown in the image below:<br>
+如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br>
 <img class="center" src="Images/a_IV_Drop_If_Health.png" alt=
-"If Add Actions"></p>
+"如果添加动作"></p>
 
-<p>These actions will now be run if the "if" evaluates to
-<tt>true</tt>, while any actions dropped elsewhere will be
-performed after the "if" block.</p>
+<p>如果if的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。</p>
 </blockquote>
 
 <p><br>
@@ -110,8 +97,7 @@ performed after the "if" block.</p>
 
 <tr>
 <td>非</td>
-<td>Set to check if the expression does <i>not</i> evaluate to
-true.</td>
+<td>设置来使结果反向。例如本来是 <i>false</i> ，反向后就返回true。</td>
 </tr>
 
 <tr class="alt">
@@ -144,8 +130,7 @@ now greater than 100, and if it is it will be set to
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Instance
-Variable Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Instance Variable Actions</a></div>
 
 <div style="float:right">next: <a href="set_score.html">Set
 Score</a></div>

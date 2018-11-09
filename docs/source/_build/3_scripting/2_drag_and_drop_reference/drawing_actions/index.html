@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>DnD™ Draw Actions Library</title>
+<title>DnD™绘制动作库</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -30,35 +30,22 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Draw Actions Library</h2>
+<h2>绘制动作库</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
 <p><img class="center" src="images/lib_drawing.png" alt=
-"Drawing Actions">
+"绘制动作">
 </p>
 
-<p>The <b>Drawing</b> action library is where you can find the
-actions required to draw sprites, text or shapes as well as set
-certain draw properties. Most of these actions are <i>only for use
-in the various <a href=
-"../../../2_interface/1_editors/events/draw_events.html">Draw
-Events</a></i> of an object, and may not work if used outside of
-the Draw Event. The exceptions to this are the <i>Set</i> actions,
-which can be added to any event and will affect all drawing for all
-instances afterwards.</p>
+<p>在<b>绘制</b>动作库中你可以找到绘制精灵，文字，形状的动作，在这些动作中还可以设置绘制属性。 大部分动作 <i>只能被物体使用于各种 <a href=
+"../../../2_interface/1_editors/events/draw_events.html">绘制事件</a></i>中，如果放在绘制事件之外将不能生效。有一类动作是例外，是<i>设置</i>动作，它们可以在任何事件中调用，对之后绘制的所有实例生效。 </p>
 
-<p>It is important to note that if you add any actions into the
-main <b>Draw Event</b> of an object, then it will <i>not</i> draw
-the sprite that has been assigned to the instance unless you
-explicitly tell <i>GameMaker Studio 2</i> to draw it, using an
-action like <a href="draw_self.html">Draw Self</a>. Basically,
-<i>GameMaker Studio 2</i> will default draw any sprite assigned to
-an instance, only if there is nothing else in the Draw Event.</p>
+<p>请注意：如果你添加了任何动作到物体的主要 <b>绘制事件</b>中，这个物体产生的实例将 <i>不再</i>绘制它被赋予的精灵，除非你额外告诉 <i>GameMaker Studio 2</i> 去绘制精灵,使用<a href="draw_self.html">绘制自身</a>这个动作。一般来说，只要绘制事件中的动作为空，<i>GameMaker Studio 2</i> 会自动绘制赋予给实例的精灵。</p>
 
-<p>The Draw actions available are as follows:</p>
+<p>绘制动作有如下动作：</p>
 
 <table class="icons">
 <tr>
@@ -80,9 +67,9 @@ src="images/i_drawing_draw_value.png" alt="绘制值"></a>
 <tr>
 <td class="icons"><a href="draw_transformed_value.html"><img align=
 "middle" src="images/i_drawing_draw_transformed_value.png" alt=
-"带形变的绘制值"></a>
+"绘制变幻的值"></a>
 </td>
-<td class="text"><a href="draw_transformed_value.html">带形变的绘制值</a>
+<td class="text"><a href="draw_transformed_value.html">绘制变幻的值</a>
 </td>
 </tr>
 
@@ -125,7 +112,7 @@ src="images/i_drawing_draw_rectangle.png" alt="绘制矩形"></a>
 <td class="icons"><a href=
 "draw_gradient_rectangle.html"><img align="middle" src=
 "images/i_drawing_draw_rectangle_gradient.png" alt=
-"Draw Rectangle Gradient"></a>
+"绘制渐变矩形"></a>
 </td>
 <td class="text"><a href="draw_gradient_rectangle.html">绘制渐变矩形</a>
 </td>
@@ -250,10 +237,9 @@ src="images/i_drawing_get_draw_alpha.png" alt="获取绘制透明度"></a>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="../index.html">Drag And Drop
-Reference</a></div>
+<div style="float:left">上一页:  <a href="../index.html">拖拽按钮参考</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "../tile_actions/index.html">Tile Actions</a></div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,60 +40,34 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to check the state of a given variable
-against a given value using a specific expression. An "if"
-statement will always return either <tt>true</tt> or <tt>false</tt>
-and the expressions for checking can be any one of the
-following:</p>
+<p>此动作将用特定的表达式比较一个给出的变量和一个给出的值。 "if"将永远只返回 <tt>true</tt> 或者 <tt>false</tt>。用于检查的表达式可以是下面的任意一个：</p>
 
 <ul>
-<li><b>Equals to</b> - The variable and the value are both exactly
-equal</li>
+<li><b>Equals to</b> - 变量和值相等</li>
 
-<li><b>Less than</b> - The variable is less than the value</li>
+<li><b>Less than</b> - 变量小于值（不等于）</li>
 
-<li><b>Greater than</b> - The variable is greater than the
-value</li>
+<li><b>Greater than</b> - 变量大于值（不等于）</li>
 
-<li><b>Less than or Equal to</b> - The variable is less than
-<i>or</i> equal to the value</li>
+<li><b>Less than or Equal to</b> - 变量小于 <i>或</i> 等于值。</li>
 
-<li><b>Greater than or Equal to</b> - The variable is greater than
-<i>or</i> equal to the value</li>
+<li><b>Greater than or Equal to</b> - 变量大于 <i>或</i> 等于值。</li>
 </ul>
 
-<p>If you flag the "Not" argument, then the above will be negated
-expressions, for example "equals to" becomes "<i>not</i> equals
-to". Also note that neither the variable nor the value arguments
-are limited to numeric values and can be a string, a pointer, a
-resource ID or anything else that a function can return or use (see
-the section on <a href=
-"../../3_gml_overview/9_data_types.html">data types</a> for more
-information), but you cannot compare two different data types
-without getting an error - for example if the variable holds a
-string and you try to check if it is equal to a number then you
-will get a syntax error.</p>
+<p>如果你选中了“NOT”参数，那么结果将会反向。例如"等于"变为“<i>不</i>等于”。变量和值的类型并不只限于数值，你也可以使用字符串，指针，资源ID或其它有返回值的函数（请看 <a href=
+"../../3_gml_overview/9_data_types.html">数据类型</a> )， 但如果你尝试比较两个不同数据类型的值是否相等，比如将字符串”莫得感情“和数值1比较就会得到错误的结果。</p>
 
-<div class="note"><b>IMPORTANT NOTE</b>: Due to <a href=
+<div class="note"><b>注意！</b>由于 <a href=
 "http://floating-point-gui.de/formats/fp/" target=
-"·_blank&quot;">floating point precision issues</a>, checking to
-see if two values are exactly equal may return <tt>false</tt>,
-since one may be exactly 1, while the other may be
-1.00000000000001. This can be avoided by using the <a href=
-"../Type_Actions/decimal_to_integer.html">Decimal to Integer</a>
-action before checking or using the "greater than" or "less than"
-expressions.</div>
+"·_blank&quot;">浮动指针精度问题</a>，检查两个相等的值可能会返回 <tt>false</tt>，因为前者是1，而后者事实上是1.00000000000001. 你可以事先使用 <a href=
+"../Type_Actions/decimal_to_integer.html">将小数变为整数</a> 动作来避免这样的错误。你也可以使用“大于”或“小于”表达式。</div>
 
 <p><br>
-
-Note that to add actions into the "if" block, they should be
-dropped to the side of the action, as shown in the image below:<br>
+如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br>
 <img class="center" src="Images/a_Common_If_Drop.png" alt=
-"If Add Actions"></p>
+"如果添加动作"></p>
 
-<p>These actions will now be run if the "if" evaluates to
-<tt>true</tt>, while any actions dropped elsewhere will be
-performed after the "if" block.</p>
+<p>如果if的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。</p>
 </blockquote>
 
 <p><br>
@@ -116,13 +90,12 @@ performed after the "if" block.</p>
 
 <tr>
 <td>变量</td>
-<td>The name of the variable to check.</td>
+<td>需要检查的变量名。</td>
 </tr>
 
 <tr class="alt">
 <td>非</td>
-<td>Set to check if the expression does <i>not</i> evaluate to
-true.</td>
+<td>设置来使结果反向。例如本来是 <i>false</i> ，反向后就返回true。</td>
 </tr>
 
 <tr>
@@ -143,10 +116,7 @@ true.</td>
 <h3>举例：</h3>
 <img class="center" src="Images/e_Common_If_Variable.png" alt=
 "If Variable Example">
-<blockquote>The above action block code checks a variable "dir" to
-see if it is equal to 10, and if it is it creates an instance of
-"obj_Squirrel" and if it isn't then it destroys the
-instance.</blockquote>
+<blockquote>上述代码将检查 "dir" 是否等于10，如果是的话将会创建物体"obj_Squirrel"的一个实例， 否则将销毁这个实例。.</blockquote>
 
 <p><br>
 </p>
@@ -155,8 +125,7 @@ instance.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="if_expression.html">If
 Expression</a></div>

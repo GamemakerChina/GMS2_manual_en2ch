@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,14 +40,14 @@ if (window.name != "content")
 "市场的设置">
 </p>
 
-<p>The <b>市场偏好设置（Marketplace Preferences）</b>可以建立在市场上用于上传或购买资源的市场证书（Marketplace Certificate）。当你已经创建一个证书的时候，证书表单由下面的部分组成：</p>
+<p><b>市场偏好设置（Marketplace Preferences）</b>用于设置市场证书（Marketplace Certificate），以上传或购买资产。一个创建好的证书表单由下面的部分组成：</p>
 
 <blockquote>
 <ul>
-<li><b>证书文件（Certificate File）</b>：这个部分是你所指定给市场用于资源认证的<tt>*.pem</tt>文件。如果你之前创建了一个整数那么你可以点击此处的文件浏览按钮来将其添加到社区当中，但如果你<i>没有</i>证书文件而想要有一个，那么你应该忽略此处所有信息而去点击下文将要解释的<b>创建新证书（Create New Certificate）</b>按钮<br>
+<li><b>证书文件（Certificate File）</b>：这个部分指定用于市场资源认证的<tt>*.pem</tt>文件。如果你之前创建了一个证书，那么你可以点击此处的文件浏览按钮来将其添加到表单当中（译者注：原文为forum，应该是form），但如果你<i>没有</i>证书文件而想要有一个，那么你应该忽略此处所有信息而去点击下文将要解释的<b>创建新证书（Create New Certificate）</b>按钮。<br>
 <br></li>
 
-<li><b>证书密码（Certificate Password）</b>：在此处你必须输入上面所选文件的认证密码。密码是在你第一次创建<tt>*.pem</tt>文件的时候被创建的（见下文<b>创建一个新证书（Create A New Certificate）</b>）并且会不可逆地被关联到所创建的证书文件上。<br>
+<li><b>证书密码（Certificate Password）</b>：在此处你必须输入上面所选文件的证书密码。密码是在你第一次创建<tt>*.pem</tt>文件的时候被创建的（见下文<b>创建一个新证书（Create A New Certificate）</b>），并且会不可逆地被关联到所创建的证书文件上。<br>
 <br></li>
 
 <li><b>检查（Check）</b>：一旦你已经填入了上述字段，你应该点击这个按钮来确保密码和所选文件是否正确以及是否能够一起运作。<br>
@@ -63,11 +63,11 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>如果你之前没有为市场创建一个证书文件的话，那么你需要点击表单底部标有<b>创建新证书（Create New Certificate）</b>按钮。当你这样做的时候，一个新窗口会打开并要求你输入如下信息：</p>
+<p>如果你之前没有为市场创建一个证书文件的话，那么你需要点击表单底部标有<b>创建新证书（Create New Certificate）</b>的按钮。当你这样做的时候，一个新窗口会打开并要求你输入如下信息：</p>
 
 <blockquote>
 <ul>
-<li><b>发布者名称（Publisher Name）</b>：此处名称将用于资源发布者的名字。如果你需要，在市场面板里可以设置不同的开发者，每一个都应该拥有对应的<tt>*.pem</tt> 证书文件。<br>
+<li><b>发布者名称（Publisher Name）</b>：此处名称将用作资源发布者的名字。如果你需要，在市场面板里可以设置不同的开发者，每一个都应该拥有对应的<tt>*.pem</tt> 证书文件。<br>
 <br></li>
 
 <li><b>证书密码（Certificate Password）</b>：在这里，你必须为即将创建的证书设置一个独立的密码。小心你的选择，如果你上面的环节里没有给证书设置正确的密码，你以后再也不能更改，你将<i>不</i>能更新任何外部市场资源（也不能上传新的）。<br>
@@ -75,10 +75,10 @@ if (window.name != "content")
 </ul>
 </blockquote>
 <img class="center" src="images/marketplace_newcert_prefs.png" alt=
-"市场新证书窗口">
+"新建市场证书窗口">
 <p>鉴于那些给你的细节，你可以点击<b>创建证书</b> 按钮生成<tt>*.pem</tt> 文件。系统会提示你要保存的位置和文件的名称，你应该注意这个以备将来参考。一旦做完，新文件和密码将会自动添加上面列表的窗口字段中，然后你可以点击 <b>检测（Check）</b> 按钮测试是否已经正确的生成证书。</p>
 
-<div class="note"><b>注意</b>： 我们建议对具体设置屏幕截图，以及备份PEM文件。两个放在一起至安全的位置以备将来参考，以防将来某个时候需要重新安装<i>GameMaker Studio 2</i>的情况。<b>除非使用之前创建的相同的证书，你不能已经上传的资源。</b>.</div>
+<div class="note"><b>注意</b>： 我们建议对具体设置屏幕截图，以及备份PEM文件。两个放在一起至安全的位置以备将来参考，以防将来某个时候需要重新安装<i>GameMaker Studio 2</i>的情况。<b>除非使用之前创建的相同的证书，否则你不能更新已经上传的资源。</b>.</div>
 
 <p><br>
 </p>

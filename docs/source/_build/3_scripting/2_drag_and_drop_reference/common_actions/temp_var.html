@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,46 +40,16 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to declare and give an initial value to a
-<b>temporary variable</b> (also called a <b>local variable</b>),
-which is a variable that <i>only exists for the duration of the
-event or script that it was declared in</i>. Temporary variables
-are very useful for storing values that are only needed for a
-single operation and prevent your objects becoming "cluttered" with
-variables that may only be used once. They are also very useful for
-breaking own complex operations, or for setting values in other
-instances when you change the action scope. This is because
-variables declared as temporary are <i>not</i> scoped to any
-particular instance, but instead scoped to the event or script
-itself, so if you create a temporary variable and then change the
-action scope using the <a href="apply_to.html">Apply To...</a>
-action, you can still check the temporary variable without issues
-and without changing it's action scope.</p>
+<p>此动作是用来给 <b>临时变量</b> (也叫 <b>本地变量</b>)赋予初始值，临时变量就是 <i>仅仅存在于一个事件或脚本的变量</i>。临时变量用于那些只在一个事件或脚本中需要使用的值。否则脚本将因为大量只使用一次的值而变得混乱。这些临时变量对于分割复杂的步骤是非常有用的。当动作作用域被改变时，这个动作里的临时变量也是非常有用的。因为临时变量 的作用域<i>不是</i>任何一个实例，而只对临时变量自身所在的事件或脚本起作用。所以你如果创建了一个临时变量并使用 <a href="apply_to.html">Apply To...</a> 动作来改变此临时变量的作用域，你仍然可以检测此临时变量而不用改变它的作用域。</p>
 
-<p>It is worth noting that when we talk about "values", we don't
-just mean numeric values, as a variable can be a string, a pointer,
-a resource ID or anything else that a function can return or use,
-even <a href="../../3_gml_overview/12_expressions.html">an
-expression</a>. See the section on <a href=
-"../../3_gml_overview/9_data_types.html">data types</a> for more
-information.</p>
+<p>值得注意的是当我们谈论“值”时，我们不仅是说数学上的值，而是包括字符串，指针，资源ID，或其他任何函数可以使用或返回的值，甚至可以是一个 <a href="../../3_gml_overview/12_expressions.html">表达式</a>。更多信息请参考<a href=
+"../../3_gml_overview/9_data_types.html">数据类型</a> 。</p>
 
-<p>Note that many action have a "Temp" check-box which enables you
-to create a new temporary local variable to hold the return value
-of the action, and this variable can be accessed in the action
-script or event as you would any other variable thereafter. Also
-note that temporary local variables are scoped to the script or
-event in which they are created, and so they can be used by other
-instances in the same block when using <a href=
-"apply_to.html">Apply To</a>.</p>
+<p>许多动作都拥有“临时”选择框，这允许你创建一个新的临时变量来存储动作的返回值，此变量可以在此动作脚本或事件中被使用。但在其它动作脚本或事件中，你就需要其它的变量了。注意临时变量的作用域就是它们所在的脚本或事件，所以可以使用 <a href=
+"apply_to.html">Apply To</a>来将它们用在脚本或事件的其它实例中。</p>
 
-<p>You can also add additional variables in the same action by
-clicking the plus icon <img style="vertical-align:middle" src=
-"../icon_expand_arguments.png"> beside the action, and giving
-another temporary local variable name and value. For more advanced
-information on variables please see the section on <a href=
-"../../3_gml_overview/6_scope.html">Variables And Variable
-Scope</a>.</p>
+<p>你可以点击动作旁边“增加”图标，为其添加额外的变量，并给出需要添加的临时变量名称和值。有关详细信息，请看<a href=
+"../../3_gml_overview/6_scope.html">变量和全局变量</a>。</p>
 </blockquote>
 
 <p><br>
@@ -102,13 +72,12 @@ Scope</a>.</p>
 
 <tr>
 <td>名称</td>
-<td>The name of the new variable to assign, or the name of an
-existing variable to change.</td>
+<td>将要被赋值的变量</td>
 </tr>
 
 <tr class="alt">
 <td>值</td>
-<td>The value that the variable should hold.</td>
+<td>将要被赋给的值</td>
 </tr>
 </table>
 </blockquote>
@@ -120,10 +89,7 @@ existing variable to change.</td>
 <img class="center" src="images/e_common_declare_temp.png" alt=
 "Declare Temporary Variable Action Example">
 <blockquote>
-<p>The above action block code creates two temporary variables,
-"<tt>_dir</tt>" and "<tt>_spd</tt>" and sets them to random values.
-It then uses these values to set the instance moving in a random
-direction at a random speed.</p>
+<p>上述代码块将创建两个临时变量， "<tt>_dir</tt>" 和"<tt>_spd</tt>" 并将它们的值设为一个随机值。然后将使用这些值来为一个实例设置随机移动的方向和随机的速度。</p>
 </blockquote>
 
 <p><br>
@@ -133,8 +99,7 @@ direction at a random speed.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="set_global_var.html">Set
 Global Variable</a></div>

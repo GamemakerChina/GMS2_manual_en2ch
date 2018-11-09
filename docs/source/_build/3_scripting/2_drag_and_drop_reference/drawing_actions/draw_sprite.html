@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,23 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will draw a sprite somewhere in the room. You
-specify the sprite, the position (either an absolute position
-within the room, or a relative position to the instance doing the
-drawing) and the animation frame of the sprite, if it has mutliple
-frames (note that image frames are numbered from 0 upwards). If you
-have an animated sprite and you want it to draw the frames as if it
-was assigned to the object, then use -1 for the frame index or the
-built in instance variable <tt>image_index</tt>, but note that if
-the instance has no sprite assigned then it will not animate, and
-if the sprite assigned has a different number of frames to the one
-being drawn then the sprite will be drawn with extra frames or
-missed frames.</p>
+<p>此动作在房间内绘制精灵。你需要指定精灵的位置（位置可以是房间内的绝对位置，或者是调用这个动作的实例所在的位置。），需要绘制的精灵的帧，以及是否需要绘制多帧。（注意，帧数值应该是0以及0以上）如果是一个动态精灵，你希望像把它赋予物体一样绘制，使用-1作为帧索引。或者建造一个实例变量 <tt>image_index</tt>, 注意，如果实例没有被赋予精灵，将不会动。如果被赋予的精灵帧数和需要绘制的精灵不一致，绘制时会绘制额外的帧或者丢失一些帧。</p>
 
-<div class="note"><b>IMPORTANT:</b> This action will not draw the
-sprite transformed, even if you have changed the image blend or
-scale. For that see the action <a href=
-"draw_sprite_transformed.html">Draw Sprite Transformed</a>.</div>
+<div class="note"><b>重要</b>此动作无法将精灵变形绘制，即使你修改了图片的混合属性或比例. 如果需要在绘制时修改精灵，请使用动作<a href=
+"draw_sprite_transformed.html">绘制变形精灵</a>.</div>
 
 <div class="note"><b>注意</b>：这个动作只能用于各种 <a href=
 "../../../2_interface/1_editors/events/draw_events.html">绘制动作</a>，如果用在其它位置将不生效。</div>
@@ -67,7 +54,7 @@ scale. For that see the action <a href=
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_drawing_draw_sprite.png" alt=
-"Draw Sprite Syntax">
+"绘制精灵语法">
 <p><br>
 </p>
 
@@ -82,22 +69,22 @@ scale. For that see the action <a href=
 
 <tr>
 <td>精灵</td>
-<td>The sprite to draw</td>
+<td>待绘制的精灵</td>
 </tr>
 
 <tr class="alt">
 <td>x</td>
-<td>The x position to draw at</td>
+<td>绘制的x坐标</td>
 </tr>
 
 <tr>
 <td>y</td>
-<td>The y position to draw at</td>
+<td>绘制的y坐标</td>
 </tr>
 
 <tr class="alt">
-<td>Frame Index</td>
-<td>The frame index to draw</td>
+<td>帧索引</td>
+<td>待绘制的帧编号</td>
 </tr>
 </table>
 </blockquote>
@@ -107,9 +94,8 @@ scale. For that see the action <a href=
 
 <h3>举例：</h3>
 <img class="center" src="images/e_drawing_draw_sprite.png" alt=
-"Draw Sprite Example">
-<blockquote>The above action block code draws two sprites, one on
-top of the other.</blockquote>
+"绘制精灵举例">
+<blockquote>上述动作块代码绘制了2个精灵，其中一个在另一个上方。</blockquote>
 
 <p><br>
 </p>
@@ -120,8 +106,8 @@ top of the other.</blockquote>
 <div class="clear">
 <div style="float:left">上一页： <a href="index.html">绘制动作</a></div>
 
-<div style="float:right">next: <a href=
-"draw_sprite_transformed.html">Draw Sprite Transformed</a></div>
+<div style="float:right">下一页： <a href=
+"draw_sprite_transformed.html">绘制变形精灵</a></div>
 </div>
 </div>
 

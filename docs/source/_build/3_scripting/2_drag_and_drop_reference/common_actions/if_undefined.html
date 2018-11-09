@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,23 +40,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to check if a variable or expression returns
-a value of "undefined", and if it is then this action will return
-<tt>true</tt> and if it isn't it will return <tt>false</tt>.
-"Undefined" can be returned for a number of reasons, and an
-undefined value can cause a crash or serious error in your project,
-so you can use this to check for that and catch it before it
-happens. If you flag the "Not" argument, then you are checking to
-see if a value is <i>not</i> "undefined".</p>
+<p>此代码用来检测一个变量或表达式是否返回了一个未定义的值。如果此变量或表达式返回的值未定义，那么此动作返回 <tt>true</tt> 否则返回 <tt>false</tt>。. 有多种情况能使返回值为未定义，例如没有初始化变量。这些未定义的值可能会造成严重的错误甚至游戏崩溃。所以检查它们是很有必要的。如果你选中了“NOT”参数，那么结果将会反向。例如一个变量返回值&lt;i0&gt;不是&lt;/i0&gt;未定义时，将会返回true。</p>
 
-<p>Note that to add actions into the "if" block, they should be
-dropped to the side of the action, as shown in the image below:<br>
+<p>如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br>
 <img class="center" src="images/a_common_if_drop.png" alt=
-"If Add Actions"></p>
+"如果添加动作"></p>
 
-<p>These actions will now be run if the "if" evaluates to
-<tt>true</tt>, while any actions dropped elsewhere will be
-performed after the "if" block.</p>
+<p>如果if的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。</p>
 </blockquote>
 
 <p><br>
@@ -79,13 +69,12 @@ performed after the "if" block.</p>
 
 <tr>
 <td>变量</td>
-<td>The name of the variable to check.</td>
+<td>需要检查的变量名。</td>
 </tr>
 
 <tr class="alt">
 <td>非</td>
-<td>Set to check if undefined does <i>not</i> evaluate to
-true.</td>
+<td>设置来使结果反向。例如本来是 <i>false</i> ，反向后就返回true。</td>
 </tr>
 </table>
 </blockquote>
@@ -96,9 +85,7 @@ true.</td>
 <h3>举例：</h3>
 <img class="center" src="images/e_common_if_undefined.png" alt=
 "If Undefined Example">
-<blockquote>The above action block code checks a DS list to see if
-the initial value is "undefined" or not, and if it is then the list
-is destroyed.</blockquote>
+<blockquote>上述代码块将检查一个DS列表的初始值是否未定义。如果是的话这个列表将会被销毁。</blockquote>
 
 <p><br>
 </p>
@@ -107,8 +94,7 @@ is destroyed.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="else.html">Else</a></div>
 </div>

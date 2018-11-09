@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -76,12 +76,12 @@ break.</td>
 </tr>
 
 <tr>
-<td>xscale</td>
+<td>x轴缩放</td>
 <td>The horizontal scale.</td>
 </tr>
 
 <tr>
-<td>yscale</td>
+<td>y轴缩放</td>
 <td>The vertical scale.</td>
 </tr>
 
@@ -130,26 +130,7 @@ break.</td>
 <p>This function is a combination of the base <a href=
 "draw_text.html"><tt>draw_text</tt></a> function with the <a href=
 "draw_text_ext.html"><tt>draw_text_ext</tt></a>, <a href=
-"draw_text_transformed.html"><tt>draw_text_transformed</tt></a> and
-<a href="draw_text_colour.html"><tt>draw_text_colour</tt></a>
-functions. As such, this is the most general of all functions for
-drawing text and gives a large amount of flexibility when drawing.
-Note that the "width" argument is based on a scale of 1, so if the
-scale is different, this value should be changed proportionally.
-For example, if the base width for a line break is 300 and you set
-the scale to 2, then the text will appear wrong, over-running the
-given width. Instead you should have set the width to 150 to
-compensate the scaling.<br>
-<br>
-<i><b>NOTE:</b> Gradient blending is not available for the HTML5
-target unless WebGL is enabled, although you can still set the
-blending colours and it will blend the font with the first given
-colour. However all blending in this way creates a duplicate font
-which is then stored in the cache and used when required, which is
-far from optimal and if you use multiple colour changes it will
-slow down your games performance. You can set the font cache size
-to try and limit this should it be necessary using the function
-<a href=
+"draw_text_transformed.html"><tt>draw_text_transformed</tt></a> and <a href="draw_text_colour.html"><tt>draw_text_colour</tt></a> functions. As such, this is the most general of all functions for drawing text and gives a large amount of flexibility when drawing. Note that the "width" argument is based on a scale of 1, so if the scale is different, this value should be changed proportionally. For example, if the base width for a line break is 300 and you set the scale to 2, then the text will appear wrong, over-running the given width. Instead you should have set the width to 150 to compensate the scaling.<br><br><i><b>NOTE:</b> Gradient blending is not available for the HTML5 target unless WebGL is enabled, although you can still set the blending colours and it will blend the font with the first given colour. However all blending in this way creates a duplicate font which is then stored in the cache and used when required, which is far from optimal and if you use multiple colour changes it will slow down your games performance. You can set the font cache size to try and limit this should it be necessary using the function <a href=
 "../../fonts/font_set_cache_size.html"><tt>font_set_cache_size</tt></a>.</i><br>
 
 <br></p>
@@ -175,10 +156,9 @@ drawn and each line will have a maximum width of 200 pixels.</p>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Drawing
-Text</a></div>
+<div style="float:left">上一页:  <a href="index.html">Drawing Text</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "draw_set_font.html">draw_set_font</a></div>
 </div>
 

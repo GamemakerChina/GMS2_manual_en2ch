@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -54,10 +54,7 @@ if (window.name != "content")
 
 <blockquote><label class="collapse" for="a">使用扩展</label> <input id="a" type="checkbox">
 <div class="index_list">
-<p>Once you have added an extension you can start to use it in your
-projects, however you should ensure that the extension properties
-match up with the target platform, and edit the export targets for
-the extension files based on the following:</p>
+<p>你一旦添加了扩展，你就可以开始在你的项目中使用它们。但你应该确保你扩展的属性与目标平台匹配，你也可以根据以下要求为扩展文件编辑导出平台：</p>
 
 <ul>
 <li><b>所有平台</b>： GML 扩展。这些是使用 GameMaker 语言（GML）编写的扩展，与所有目标平台兼容。<br>
@@ -99,18 +96,13 @@ the extension files based on the following:</p>
 </li>
 </ul>
 
-<p>To change the target platform for a specific extension file or
-placeholder you must first open the extension properties (double
-click <img style="vertical-align:middle" src=
-"../../images/icon_lmb.png"> the extension i the Resource tree or
-use <img style="vertical-align:middle" src=
-"../../images/icon_rmb.png"> and select <i>Open Properties</i>),
-and then once in the extension properties select the resource file
-from the right that you want to edit: <img class="center" src=
+<p>要改变一个给定扩展文件或占位符的目标平台，你必须先打开它的扩展属性（双击<img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> 资源树中的扩展属性，或使用 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 并选择 <i>打开属性</i>)。一旦你进入了扩展属性对话框，你就可在右边的资源文件（图中resource-file)里选择你想编辑的：<img class="center" src=
 "images/editor_extensions_targets.png" alt=
 "Extension Target Platforms"></p>
 
-<p>一旦安装了扩展，就可以像使用 GameMaker 语言中使用的内置函数和常量一样使用函数和常量。If your game is cross-platform (for example, it is designed to run on both Windows and Android targets), then you should do an OS check before calling extension specific functions to prevent issues, for example:</p>
+<p>一旦安装了扩展，就可以像使用 GameMaker 语言中使用的内置函数和常量一样使用函数和常量。如果你的游戏是跨平台的（例如，可在windows和android上运行），那么你应该在调用扩展的指定函数前，先做一个对系统的检查来预防发生问题。例如：</p>
 
 <p class="code">switch(os_type)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -138,7 +130,7 @@ y, z);<br>
 "images/editor_extensions_files.png" alt=
 "Add Files To An Extension"></p>
 
-<p>“Generic” 占位符可以是任何类型的文件，除了特定平台所需的文件（例如，没有 DLL 或 SO 文件），除了作为 “链接器” 文件连接之外，它不会被使用。具有给定扩展名的函数或常量集（通常仅用于 iOS 和 Android 扩展，在下面的部分中针对这些平台进行了解释）。你还可以添加 “GML” 和 “JS” 占位符文件以供更具体的使用。</p>
+<p>“Generic” 占位符可以是任何类型的文件，除了特定平台所需的文件（例如，没有 DLL 或 SO 文件），除了作为“连接器”将一组函数或常量与给出的扩展连接起来外，它将不会被使用。（通常仅用于 iOS 和 Android 扩展，在下面的部分中针对这些平台进行了解释）。你还可以添加 “GML” 和 “JS” 占位符文件以供更具体的使用。</p>
 
 <p>通常，除非为 iOS 和 Android 构建，否则你不需要使用占位符，因此你可以选择 <i>添加文件</i> 选项以根据它们的目标平台添加以下任何一个文件：你会注意到</p>
 
@@ -174,8 +166,8 @@ y, z);<br>
 "center" src="images/editor_extensions_fileproperties.png" alt=
 "File Property Window"></p>
 
-<p>在这里，你将选择扩展的目标平台（对于 GM，你将全部选择它们），以及重命名扩展文件并设置其他一些细节，我们将在稍后介绍。首先，我们想要添加常量和函数，以便用户可以从他们的项目代码中调用扩展。For that you need to click the extensions menu button <img style=
-"vertical-align:middle" src="images/icon_extensionmenu.png"> and select what you require: <img class="center" src=
+<p>在这里，你将选择扩展的目标平台（对于 GM，你将全部选择它们），以及重命名扩展文件并设置其他一些细节，我们将在稍后介绍。首先，我们想要添加常量和函数，以便用户可以从他们的项目代码中调用扩展。这样你就得点击扩展目录按钮 <img style=
+"vertical-align:middle" src="images/icon_extensionmenu.png"> 并选择你所需要的： <img class="center" src=
 "images/editor_extensions_addfunctions.png" alt=
 "Add functions/Constants To An Extension"></p>
 
@@ -190,7 +182,7 @@ y, z);<br>
 
 <p>最后，添加函数可以使用的参数（如果有）。参数可以是 <b>doubles（双精度型）</b> 或 <b>strings（字符串）</b>，你可以通过单击添加按钮 <img style=
 "vertical-align:middle" src="images/icon_addargument.png"> 添加它们，然后单击删除按钮 <img style=
-"vertical-align:middle" src="images/icon_removeargument.png"> 将其删除。Note that if you are creating a Windows <tt>dll</tt> file and it has more than four arguments, <i>all arguments must be of the same type</i>.</p>
+"vertical-align:middle" src="images/icon_removeargument.png"> 将其删除。注意你如果创建了一个 Windows 平台的<tt>dll</tt>文件并且它的参数超过4个，那么<i>所有的参数类型必须一样</i>.</p>
 
 <p>完成所有操作后，就可以在项目中使用该函数，它将自动完成并进行颜色编码。定义的函数也可以设置为 <b>初始函数[Init Functions]</b> 或 <b>最终函数[Final Functions]</b>，这意味着它们将在游戏开始时（Init）和游戏结束时（Final）自动调用。</p>
 
@@ -198,7 +190,7 @@ y, z);<br>
 
 <p><br>
 你拥有的另一个选项是创建一个 <b>宏</b>。宏可以是 <b>常量</b> 值或单个代码段（有关宏的更多信息，请参见 <a href=
-"../../3_scripting/3_gml_overview/6_scope.html">此处</a>）。For example, we could remove the defined function from our example GML extension above for the colour <tt>c_alice_blue</tt> and make it a macro instead: <img class="center" src=
+"../../3_scripting/3_gml_overview/6_scope.html">此处</a>）。例如，我们可以将我们示例GML扩展上方的已定义的颜色为 <tt>c_alice_blue</tt> 的已定义的函数移除，并用宏代替它： <img class="center" src=
 "images/editor_extensions_macroeditor.png" alt="Macro Editor"></p>
 
 <p>这里的编辑器几乎是不言自明的 —— 你可以给出宏/常量的名称和值，或者一行简短的代码。请注意，如果宏是一行代码，则 <i>每次调用宏时都会对其进行求值</i>。</p>

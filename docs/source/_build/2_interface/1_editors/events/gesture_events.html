@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -46,7 +46,7 @@ if (window.name != "content")
 你可以选择检测 <b>实例</b> 手势或 <b>全局</b> 手势，其中实例手势事件仅在初始触摸 / 单击位于房间内的实例上时触发。请注意，实例 <i>必须</i> 具有有效的碰撞遮罩（有关详细信息，请参阅 <a href="../../1_editors/sprites.html">精灵编辑器 - 碰撞遮罩</a> 和 <a href="../../1_editors/objects.html">物体编辑器 - 碰撞遮罩</a> 部分）以触发此事件。但是，全局事件将通过触摸 / 点击游戏房间内的任何位置以及所有具有该事件的实例来触发。
 </p>
 
-<p>当识别出手势事件时，它将触发一个或多个可用子事件，并且触发的子事件将取决于已检测到的手势的类型。但是，在每种情况下，都会为你生成 <a href=
+<p>当识别出手势事件时，它将触发一个或多个可用子事件，触发的子事件将取决于已检测到的手势的类型。但是，在每种情况下，都会为你生成 <a href=
 "../../../3_scripting/4_gml_reference/data_structures/ds%20maps/index.html">数据结构映射（DS Map）</a> 并存储在内置变量 <tt><b>event_data</b></tt> 中。可用的密钥取决于它创建的事件类型，并显示在下面的每个子部分中。</p>
 
 <div class="note"><b>注意：</b> 变量 <tt>event_data</tt> <b>仅在这些事件中有效</b>，因为它指向的 <tt>ds_map</tt> 在事件开始时自动创建，然后在结束时再次销毁，此变量在所有其他事件中重置为 -1 倍。
@@ -221,7 +221,7 @@ move_towards_point(x_goto, y_goto, clamp(_pd, 0, 5);<br></p>
 <label class="collapse" for="b">双击</label> <input id="b"
 type="checkbox">
 <div class="index_list">
-<p>当一个实例被快速连续触摸或点击两次时（或者 - 如果它是全局事件 - 当游戏在房间的任何地方注册两次快速触摸或点击时）将触发 <b>双击</b> 事件。 双击被认为是两次快速触摸和释放，但如果任何触摸持续时间过长，则将其视为拖动（并触发拖动手势事件而不是双击事件）。此事件将生成 <tt>event_data</tt> 数据结构映射，你可以使用该地图获取有关该事件的信息。比如：比如：</p>
+<p>当一个实例被快速连续触摸或点击两次时（如果它是全局事件，也可以是玩家在在游戏中房间的任何地方两次快速触摸或点击时）将触发 <b>双击</b> 事件。 双击被认为是两次快速触摸和释放，但如果任何触摸持续时间过长，则将其视为拖动（并触发拖动手势事件而不是双击事件）。此事件将生成 <tt>event_data</tt> 数据结构映射，你可以使用该地图获取有关该事件的信息。比如：比如：</p>
 
 <h3>创建事件</h3>
 
@@ -307,7 +307,7 @@ flickVelX *= 0.7;<br>
 flickVelY *= 0.7;<br></p>
 
 <p><br>
-上面的代码简单地得到了最后一个 <b>拖动</b> 事件和当前 <b>拖动结束</b> 事件的 x 和 y 位置的差异，如果移动大于轻抚阈值，它设置了一些用于在步事件中移动实例的变量。</p>
+上面的代码简单地得到了最后一个 <b>拖动</b> 事件和当前 <b>拖动结束</b> 事件的 x 和 y 位置的差异，如果移动大于轻抚阈值，它将会设置一些用于在步事件中移动实例的变量。</p>
 </div>
 <br>
 <a name="gesture_flick" id="gesture_flick"></a> <label class=
@@ -546,7 +546,7 @@ pinch_x = event_data[? "midpointX"]; pinch_y = event_data[?
 "midpointY"];</p>
 
 <p><br>
-上面的代码将检测一个缩放，并存储该缩放的中点位置。</p>
+上面的代码将检测一个捏合，并存储该啮合的中点位置。</p>
 </div>
 <br>
 <a name="gesture_pinch_in_out" id="gesture_pinch_in_out"></a>
@@ -554,23 +554,11 @@ pinch_x = event_data[? "midpointX"]; pinch_y = event_data[?
 <input id="h" type="checkbox">
 <div class="index_list">
 <p>每个步骤都会触发 <b>捏入（Pinch In）</b> 和 <b>捏出（Pinch Out）</b> 事件，构成捏合的两个触摸之间的距离会在最小阈值上变化（默认设置为 +/- 0.1 英寸，但你可以使用函数 <a href=
-"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html"><tt>gesture_pinch_distance</tt></a> 更改它）。 If there is no movement of the pinch touches then these events will not trigger. 这些事件将生成一个 <tt>event_data</tt> 数据结构映射，你可以使用该映射获取有关该事件的信息。比如：</p>
+"../../../3_scripting/4_gml_reference/controls/gesture%20input/gesture_pinch_distance.html"><tt>gesture_pinch_distance</tt></a> 更改它）。 如果捏合的两个触摸没有移动，那么这些事件将不会触发。这些事件将生成一个 <tt>event_data</tt> 数据结构映射，你可以使用该映射获取有关该事件的信息。比如：</p>
 
 <h3>全局捏入 / 捏出事件</h3>
 
-<p class="code">var _scale = event_data[? "relativescale"];<br>
-var _w = camera_get_view_width(view_camera[0]);<br>
-var _h = camera_get_view_height(view_camera[0]);<br>
-var _x = camera_get_view_x(view_camera[0]) + (_w / 2);<br>
-var _y = camera_get_view_y(view_camera[0]) + (_h / 2);<br>
-<br>
-_w *= _scale;<br>
-_h = _w * (room_height / room_width);<br>
-_x -= _w / 2;<br>
-_y -= _h / 2;<br>
-<br>
-camera_set_view_pos(view_camera[0], _x, _y);<br>
-camera_set_view_size(view_camera[0], _w, _h);<br></p>
+<p class="code">var _scale = event_data[?"relativescale"];<br>var _w = camera_get_view_width(view_camera[0]);<br>var _h = camera_get_view_height(view_camera[0]);<br>var _x = camera_get_view_x(view_camera[0]) + (_w / 2);<br>var _y = camera_get_view_y(view_camera[0]) + (_h / 2);<br><br>_w *= _scale;<br>_h = _w * (room_height / room_width);<br>_x -= _w / 2;<br>_y -= _h / 2;<br><br>camera_set_view_pos(view_camera[0], _x, _y);<br>camera_set_view_size(view_camera[0], _w, _h);<br></p>
 
 <p><br>
 上面的代码将根据捏合触摸的相对比例缩放视图。</p>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_sprite.png">精灵</label>
 <input id="zero" type="checkbox">
-<div class="index_list">精灵通常是你创建的游戏中的物体的视觉表现。 因此，精灵使用  <i>GameMaker Studio 2</i> 图像编辑器来绘制图像，或使用外部绘图程序制作并导入到 <i>GameMaker Studio 2</i> 中。使用的图像不一定是单个静态图像，也可以是“条装”图像，即单个文件中含有多个图像，可用于制作一个动画精灵。 例如，以下10张图像就形成一个精灵，是一个跳伞时挥舞着双臂的角色。<br><br><img class="center" src="images/qs_spritestrip.png" alt=
+<div class="index_list">精灵通常是你创建的游戏中的物体的视觉表现。 因此，精灵使用  <i>GameMaker Studio 2</i> 图像编辑器来绘制图像，或使用外部绘图程序制作并导入到 <i>GameMaker Studio 2</i> 中。使用的图像不一定是单个静态图像，也可以是“长带”图像，即单个精灵中含有多个图像，可用于制作一个动画精灵。 例如，以下10张图像就形成一个精灵，是一个跳伞时挥舞着双臂的角色。<br><br><img class="center" src="images/qs_spritestrip.png" alt=
 "精灵长带图"><br>实际完成的动画放置在游戏中看起来是这样的：<br><br><img class="center" src="images/qs_spriteanim.gif" alt=
 "精灵动画"><br>像上图这样的精灵通常是一个 <tt>PNG</tt> 格式的文件，但是 <i> GameMaker Studio 2</i> 也兼容 <tt>SWF</tt> 格式的矢量精灵和 <tt>JSON</tt> 格式的 <b>Spine</b> 精灵（及其伴随的atlas条状图像）。<br><br>你可以从 <a href="../../2_interface/1_editors/sprites.html">精灵编辑器</a> 部分中了解更多关于添加和编辑精灵的信息。</div>
 <br>
@@ -56,10 +56,10 @@ if (window.name != "content")
 "one"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_tileset.png">图块集</label> <input id="one" type="checkbox">
-<div class="index_list">图块集从精灵资源中获取，但是由于 <i>GameMaker Studio 2</i> 在创建游戏时会以不同于精灵的方式编辑图块集，所以它们被单独分类出来。基本上，一个基础图块就是一个单一图像，<i>GameMaker Studio 2</i> 将根据你所设置的各种值将图像拆分成不同的基础图块。 然后，你可以在房间编辑器（或在程序中通过代码）使用这些图块在房间中生成图块地图。它们可以在房间中很方便地组合出各种静态物品，如地形，墙壁，背景等，并且它们不需要物体那么多的系统资源。<br><br><img class="center" src="images/qs_tileset.png" alt="图块集"><br>上图是一个示例精灵，被用作绘制墙壁的图块集。正如你所看到的，它被“分割”成 64x64 个像素块，然后将其放入房间编辑器组合。<br>
+<div class="index_list">图块集从精灵资源中获取，但是由于 <i>GameMaker Studio 2</i> 在创建游戏时会以不同于精灵的方式编辑图块集，所以它们被单独分类出来。基本上，一个基础图块就是一个单一图像，<i>GameMaker Studio 2</i> 将根据你所设置的各种值将图像拆分成不同的基础图块。 然后，你可以在房间编辑器（或在程序中通过代码）使用这些图块在房间中生成图块地图。它们可以在房间中很方便地组合出各种静态物品，如地形，墙壁，背景等，并且它们不需要像物体那么多的系统资源。<br><br><img class="center" src="images/qs_tileset.png" alt="图块集"><br>上图是一个示例精灵，被用作绘制墙壁的图块集。正如你所看到的，它被“分割”成 64x64 个像素块，然后将其放入房间编辑器组合。<br>
 <br>
 
-<div class="note"> <b>注意</b>：图块 <b>一般是正方形的</b>，所以如果你需要制作其他形状，那么应该在房间编辑器中使用其他形状实例组成的精灵或在资源层中制作。 </div>
+<div class="note"> <b>注意</b>：图块 <b>总是正方形的</b>，所以如果你需要制作其他形状，那么应该在房间编辑器中使用其他形状实例组成的精灵或在资源层中制作。 </div>
 <br>
 <br>
 你可以从 <a href="../../2_interface/1_editors/tilesets.html">图块集编辑器</a> 部分中找到有关添加图块集的更多信息。</div>
@@ -76,21 +76,21 @@ if (window.name != "content")
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_path.png">路径</label>
 <input id="three" type="checkbox">
-<div class="index_list">在你创建游戏过程中的某些时候，你可能需要物体中的实例沿着一定的路径来通过这一关。你可以先简单地在房间中创建一些简单的位置排列，接着让实例在他们之间移动。但这个工作很繁重而且不好修改，测试和适配。这时你需要创建一个路径资源。<br>&gt; <br>路径资源的基本思路很简单-你可以通过在路径编辑器中绘制路径来对路径资源进行定义，然后你可以通过在物体的事件中放置动作模块或者添加代码来使物体在房间中沿着特定路径（来行动）。你可以设置物体跟随路径的速度以及房间中其他一些关于路径的位置和方向的值。 <br><br>你可以在<a href="../../2_interface/1_editors/paths.html">路径编辑器</a>部分中找到其他相关信息。</div>
+<div class="index_list">在你创建游戏过程中的某些时候，你可能需要物体的某一实例沿着一定的路径来通过这一关。你可以先简单地在房间中创建一些简单的位置排列，接着让实例在他们之间移动。但这个工作很繁重而且不好修改，测试和适配。这时你需要创建一个路径资源。<br>&gt; <br>路径资源的基本思路很简单-你可以通过在路径编辑器中绘制路径来对路径资源进行定义，然后你可以通过在物体的事件中放置动作模块或者添加代码来使物体在房间中沿着特定路径（来行动）。你可以设置物体跟随路径的速度以及房间中其他一些关于路径的位置和方向的值。 <br><br>你可以在<a href="../../2_interface/1_editors/paths.html">路径编辑器</a>部分中找到其他相关信息。</div>
 <br>
 <a name="scripts" id="scripts"></a> <label class="collapse" for=
 "four"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_script.png">脚本（Scripts）</label>
 <input id="four" type="checkbox">
-<div class="index_list">脚本资源是一个你自己创建的功能函数的代码集合。例如，假设你想让一个敌人在死的时候创造一些实例，比如掉一些金子，产生爆炸或者流血效果，以及发出一些声音。为此你 <i>可以</i> 将实现这些效果的代码添加到每个物体的中，但是更好的方法是创建一个脚本资源，在其中输入实现上述功能的代码，然后在每个物体中调用它。这样的话，你只需在物体中添加一行调用代码即可调用此脚本实现预期的功能，如果你希望修改一些代码，你只需要在脚本中更改，所有调用的物体会自动运行新的代码，而不需要在所有物体中逐一修改，并且在多个地方改变修改同样的代码。 <br><br>你可以在 <a href="../../2_interface/1_editors/scripts.html">脚本编辑器</a> 部分找到更多相关信息。</div>
+<div class="index_list">脚本资源是一个你自己创建的功能函数的代码集合。例如，假设你想让一个敌人在死的时候创造一些实例，比如掉一些金子，产生爆炸或者流血效果，以及发出一些声音。为此你 <i>可以</i> 将实现这些效果的代码添加到每个物体的中，但是更好的方法是创建一个脚本资源，在其中输入实现上述功能的代码，然后在每个物体中调用它。这样的话，你只需在物体中添加一行调用代码即可调用此脚本实现预期的功能，如果你希望修改一些代码，你只需要在脚本中更改，所有调用的物体会自动运行新的代码。而不需要在所有物体中逐一修改，并且在多个地方修改同样的代码。 <br><br>你可以在 <a href="../../2_interface/1_editors/scripts.html">脚本编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="shaders" id="shaders"></a> <label class="collapse" for=
 "five"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_shader.png">着色器（Shaders）</label>
 <input id="five" type="checkbox">
-<div class="index_list">着色器是一个非常强大的工具，可用于操纵渲染到屏幕上的图像，其速度之快和范围之大都令人难以置信，例如，它可以给精灵添加细微的色调，直到产生全屏失真的效果。基本上它是由两个程序组成，直接运行在显卡上，所以在GPU运行所有工作以及为游戏代码释放CPU周期时速度非常快。完整的着色器由顶点着色器程序和片段着色器程序（也称为像素着色器）组成。这两个微程序一起工作，来操纵显卡在屏幕上显示图形。 这样就允许你实时操作渲染到显示缓冲区的位置，颜色和 alpha 信息。<br><br><i>GameMaker Studio 2</i> 支持以下着色器语言：
+<div class="index_list">着色器是一个非常强大的工具，可用于操纵渲染到屏幕上的图像，其速度之快和范围之大都令人难以置信，例如，它可以给精灵添加细微的色调，直到产生全屏失真的效果。从本质上说，它们是直接运行在显卡上的由两个部分组成的程序。因为GPU承担了所有工作，所以CPU能够干更多事来提高游戏性能。完整的着色器由顶点着色器程序和片段着色器程序（也称为像素着色器）组成。这两个微程序一起工作，来操纵显卡在屏幕上显示图形。 这样就允许你实时将位置，颜色和 alpha 信息渲染到显示缓冲器中。<br><br><i>GameMaker Studio 2</i> 支持以下着色器语言：
 
 <div class="compat">
 <table>
@@ -129,7 +129,7 @@ if (window.name != "content")
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_font.png">字体（Fonts）</label>
 <input id="six" type="checkbox">
-<div class="index_list">当你在游戏中绘制文本时，默认情况下该文本以标准 Arial 12 号字体绘制。但是为了使字体更独特有趣，你可能希望使用其他不同的字体，这里就要用到字体编辑器了。在字体编辑器中，你可以选择你的计算机中的一种字体，将其导入 <i>GameMaker Studio 2</i> 中，以便在创作游戏的过程中使用，并设置大小，轻重，或者风格等属性。导入并添加为字体资源后，你就可以使用代码或其他操作将其变为绘图了。<br>
+<div class="index_list">当你在游戏中绘制文本时，默认情况下该文本以标准 Arial 12 号字体绘制。但是为了使字体更独特有趣，你可能希望使用其他不同的字体，这里就要用到字体编辑器了。在字体编辑器中，你可以选择你的计算机中的一种字体，将其导入 <i>GameMaker Studio 2</i> 中，以便在创作游戏的过程中使用，并设置大小，粗细，或者样式等属性。导入并添加为字体资源后，你就可以使用代码或其他操作将其变为绘图了。<br>
 <br>
 
 <div class="note"><b>注意</b>：如果你在游戏中使用某字体，请确保你拥有该字体的使用许可证，公用或者免版税字体除外。 </div>
@@ -149,8 +149,8 @@ for="seven"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_object.png">物体（Objects）</label>
 <input id="eight" type="checkbox">
-<div class="index_list">物体是一个用来控制游戏各方面的具体事件的特殊资源。大多数时候这些物体都会关联一个精灵以便可以在房间中看见。但有时候它们也被用作“幕后”控制器来做与用户或时间相关的事情。它们可以给予行为和对某些事件以及彼此做出反应，你在游戏看到的大多数事情都是基于物体和它们的相互作用。请注意，我们说‘基于’是因为你并不能直接把物体放置在房间中，而是将这些物体的 <b>实例</b> （相当于物体资源的副本或拷贝）放置入其中。这是非常重要的事情，因为物体和实例不一样，各自有一组可设置的属性。<br><br>
-所有物体都有一组可在物体编辑器中被设置的属性，例如链接精灵，是否使用物理规则，或者设置为其他物体的子物体。他们还具有一系列内置变量，可以在动作模块，脚本以及代码中使用。这些内置变量用于定义实例放置在游戏室中的位置，动画速度，移动方向以及其他一些内容。为了更好地控制随时间推移中的物体，每帧游戏内容都会被分割成一系列 <b>事件</b>，所以你可以将代码或动作模块添加到某一个实践中，事件只有在被触发时才会运行，事件可以通过操作鼠标或者与其他实例碰撞来触发。<br><br>
+<div class="index_list">物体是一个用来控制游戏各方面的具体事件的特殊资源。大多数时候这些物体都会关联一个精灵以便可以在房间中看见。但有时候它们也被用作“幕后”控制器来做与用户或时间相关的事情。它们可以被给予行为，并能对事件和它们自己做出反应。你在游戏看到的大多数事情都是基于物体和它们的相互作用。请注意，我们说‘基于’是因为你并不能直接把物体放置在房间中，而是将这些物体的 <b>实例</b> （相当于物体资源的副本或拷贝）放置入其中。这是非常重要的事情，因为物体和实例不一样，各自有一组可设置的属性。<br><br>
+所有物体都有一组可在物体编辑器中被设置的属性，例如链接精灵，是否使用物理规则，或者设置为其他物体的子物体。他们还具有一系列内置变量，可以在动作模块，脚本以及代码中使用。这些内置变量用于定义实例放置在游戏室中的位置，动画速度，移动方向以及其他一些内容。为了更好地控制随时间推移中的物体，每帧游戏内容都会被分割成一系列 <b>事件</b>，所以你可以将代码或动作模块添加到某一个事件中。事件只有在被触发时才会运行，事件可以通过操作鼠标或者与其他实例碰撞等来触发。<br><br>
 物体实际上是游戏的构建模块，它与房间一起构成了所有游戏项目的核心。<br><br>你可以在 <a href="../../2_interface/1_editors/objects.html">物体编辑器</a> 部分找到更多相关信息。</div>
 <br>
 <a name="rooms" id="rooms"></a> <label class="collapse" for=
@@ -158,7 +158,7 @@ for="seven"><img style=
 "vertical-align:middle; position: relative; left:-26px;" src=
 "../../2_interface/1_editors/images/icon_room.png">房间</label>
 <input id="nine" type="checkbox">
-<div class="index_list">你在 <i>GameMaker Studio 2</i> 中所做的游戏至少需要一个空间来运行（当然可以不止一个），一个房间是一个基础空间，你可以在其中放置组成游戏的物体的实例，这里也是实例的事件触发和实现的场所。当然房间编辑器也是你可用的最强大的资源编辑器之一，因为它不仅允许你添加物体的实例，还可以添加图像，添加背景以及图块来绘制创建游戏世界，创建独立于物体/实例系统的额外特殊效果，以及独立于物体来运行代码。房间也可以设置从其他房间 <b>继承</b> 资源，这意味着你可以创建一个房间，然后在其中加载图块，然后再创建一个房间来继承这些图块，以便使你不必重复两次操作来加载图块。<br><br>你可以从 <a href="../../2_interface/1_editors/rooms.html">房间编辑器</a> 中找到更多相关的信息。</div>
+<div class="index_list">你在 <i>GameMaker Studio 2</i> 中所做的游戏至少需要一个房间来运行（当然可以不止一个），一个房间是一个基础空间，你可以在其中放置组成游戏的物体的实例，这里也是实例的事件触发和实现的场所。当然房间编辑器也是你可用的最强大的资源编辑器之一，因为它不仅允许你添加物体的实例，还可以添加图像，添加背景以及图块来绘制创建游戏世界，创建独立于物体/实例系统的额外特殊效果，以及独立于物体来运行代码。房间也可以设置从其他房间 <b>继承</b> 资源，这意味着你可以创建一个房间，然后在其中加载图块，然后再创建一个房间来继承这些图块，以便使你不必重复两次操作来加载图块。<br><br>你可以从 <a href="../../2_interface/1_editors/rooms.html">房间编辑器</a> 中找到更多相关的信息。</div>
 <br>
 <a name="Notes" id="Notes"></a> <label class="collapse" for=
 "thirteen"><img style=
@@ -255,7 +255,7 @@ alt="Resource Tree RMB Menu">：你可以使用的选项有：<br>
 <li><b>复制</b> - 创建所点击资源的副本。<br>
 <br></li>
 
-<li><b>在资源管理器中打开</b> - 打开文件资源管理器，该文件位于项目文件夹中资源文件的位置。</li>
+<li><b>在资源管理器中打开</b> - 打开该工程文件中用来存储资源的文件夹。</li>
 </ul>
 
 <p>请注意，并非所有选项都可用于所有资源类型，你可以使用哪些选项取决于资源类型或是否为文件夹。</p>
@@ -276,7 +276,7 @@ alt="Resource Tree RMB Menu">：你可以使用的选项有：<br>
 <table class="icons">
 <tr>
 <td class="icons"><img align="middle" src=
-"images/icon_cloneview.png" alt="Clone View">
+"images/icon_cloneview.png" alt="克隆视图">
 </td>
 <td class="text">这将创建从先前选择的视图克隆来的资源树新视图。 因此，如果你在默认视图中单击此选项，那么它将会为你准备一个精确复制的副本，然后基于此进行编辑。</td>
 </tr>
@@ -288,7 +288,7 @@ alt="Resource Tree RMB Menu">：你可以使用的选项有：<br>
 
 <tr>
 <td class="icons"><img align="middle" src="images/icon_addview.png"
-alt="Add View">
+alt="添加视图">
 </td>
 <td class="text">这将创建资源树的新视图，且不添加任何资源（即空白视图）。 然后，你可以使用鼠标右键菜单（见下文）来添加资源并根据需要进行组织。</td>
 </tr>
@@ -299,7 +299,7 @@ alt="Add View">
 <p>你也可以使用按钮 <img style=
 "vertical-align:middle" src="images/icon_deleteview.png"> 删除视图（不可用于默认视图），只需点击名称并输入所需的新名称即可重命名视图。 注意，不在默认视图中的资源其鼠标右键菜单 <img style="vertical-align:middle"
 src="../../images/icon_rmb.png"> 略有不同，具有以下选项：<img class="center" src="images/qs_rmb_projectmenu.png"
-alt="Project View RMB Menu"> 大多数选项都是显而易见的，但应该说明，  <b>创建</b> 将允许你在项目的自定义视图中的任意位置创建新的资源（它将被添加到资源树的默认视图中的对应资源文件夹中），并 且<b>从默认视图添加</b> 选项将允许你将资源从默认资源树传输到自定义视图中。如果你选择克隆默认视图，则所有这些操作都不是必需的，因为所有当前资源都将被复制在其中，但是如果你使用空白视图或使用鼠标右键的删除选项从新视图中 <b>删除</b> 该项目，那么当需要该资源时，你需要重新添加。请注意，使用 <b>删除</b>  <i>不会从项目中删除资源</i>，并且仍将在默认资源树中显示该资源，如果你希望完全删除资源，而不仅仅是从视图中删除资源，则该视图应该是你所使用的视图。</p>
+alt="工程视图鼠标右键菜单目录"> 大多数选项都是显而易见的，但应该说明，  <b>创建</b> 将允许你在项目的自定义视图中的任意位置创建新的资源（它将被添加到资源树的默认视图中的对应资源文件夹中），并 且<b>从默认视图添加</b> 选项将允许你将资源从默认资源树传输到自定义视图中。如果你选择克隆默认视图，则所有这些操作都不是必需的，因为所有当前资源都将被复制在其中，但是如果你使用空白视图或使用鼠标右键的删除选项从新视图中 <b>删除</b> 该项目，那么当需要该资源时，你需要重新添加。请注意，使用 <b>删除</b>  <i>不会从项目中删除资源</i>，并且仍将在默认资源树中显示该资源，如果你希望完全删除资源，而不仅仅是从视图中删除资源，则该视图应该是你所使用的视图。</p>
 
 <p>你现在应该了解了可用于制作游戏的基本资源，因此我们可以继续阅读并了解使用 <i>GameMaker Studio 2</i> 创建新项目的一般工作流程。</p>
 

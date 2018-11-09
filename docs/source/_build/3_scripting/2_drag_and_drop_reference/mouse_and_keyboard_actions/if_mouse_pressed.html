@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>如果鼠标按下</title>
+<title>如果鼠标按住</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_keyboardmouse_pressed.png"> 如果鼠标按下</h2>
+"images/i_keyboardmouse_pressed.png"> 如果鼠标按住</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,25 +40,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can poll the mouse to see if any button is
-currently being pressed. The action will return <tt>true</tt> every
-step that the mouse button is being pressed (and held) down, or
-<tt>false</tt> otherwise, although if you click the <tt>not</tt>
-modifier you can then check to see if the mouse button is
-<i>not</i> being pressed, ie: the action will return <tt>true</tt>
-while no button is pressed and <tt>false</tt> if there is. If you
-only need to check for a single mouse press then use the action
-<a href="if_mouse_down.html">if mouse_down</a>.</p>
+<p>使用此动作你可以检测当前鼠标按钮是否被按下。当鼠标按钮被按下（并且按住）时，此动作会在每一步（step，或者译为帧更贴切？）返回 <tt>真</tt>，除此之外的情况则返回  <tt>假</tt> 。此外，如果你勾选<tt>否</tt>选项，则可以检测鼠标按钮是否 <i>没有</i>被按住。在这种情况下，此动作会在鼠标按钮没有被按下时返回  <tt>真</tt>，在被按下时返回 <tt>假</tt> 。如果你只需要检测鼠标单击（而不是按住），请使用动作 <a href="if_mouse_down.html">如果鼠标点击</a>.</p>
 
-<p>Note that to add actions into the "if" block, they should be
-dropped to the side of the action, as shown in the image below:
-
+<p>如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：
 <img class="center" src="images/a_if_drop.png" alt=
-"If Add Actions"></p>
+"如果添加动作"></p>
 
-<p>These actions will now be run if the "if" evaluates to
-<tt>true</tt>, while any actions dropped elsewhere will be
-performed after the "if" block.</p>
+<p>如果if的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。</p>
 </blockquote>
 
 <p><br>
@@ -66,7 +54,7 @@ performed after the "if" block.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_keyboardmouse_pressed.png" alt=
-"Mouse Pressed Syntax">
+"鼠标按住语法">
 <p><br>
 </p>
 
@@ -80,14 +68,13 @@ performed after the "if" block.</p>
 </tr>
 
 <tr>
-<td>Mouse Button</td>
-<td>The name of the mouse button to check (left, middle,
-right).</td>
+<td>鼠标按键</td>
+<td>需要检测的鼠标按键的名称（左键，中键或右键）</td>
 </tr>
 
 <tr class="alt">
 <td>非</td>
-<td>Negate the check (true becomes false and vice versa)</td>
+<td>否定选项（true变为false，反之亦然)</td>
 </tr>
 </table>
 </blockquote>
@@ -97,14 +84,8 @@ right).</td>
 
 <h3>举例：</h3>
 <img class="center" src="images/e_keyboardmouse_down.png" alt=
-"Mouse Pressed Example">
-<blockquote>The above action block code polls the mouse button
-state every step and if it is being held down it checks for the
-initial mouse down press. If the check is on the initial down
-press, then a sound is played, then while the button is down, the
-sprite blending is changed to red. If the mouse is not being held
-down, a check is done on the mouse release to reset the blending
-colour to white.</blockquote>
+"鼠标按住举例">
+<blockquote>上述代码每一帧检查鼠标状态，如果按住左键，就检查是不是点击如果当前鼠标左键点击，则播放一个音效，并且让精灵 的混合颜色变为红色。如果鼠标左键没有被按住，则检查是不是释放，如果是，则把精灵的混合颜色变为白色。</blockquote>
 
 <p><br>
 </p>
@@ -113,11 +94,9 @@ colour to white.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Mouse And
-Keyboard Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">鼠标和键盘动作</a></div>
 
-<div style="float:right">next: <a href="if_mouse_down.html">If
-Mouse Down</a></div>
+<div style="float:right">下一页： <a href="if_mouse_down.html">如果鼠标点击</a></div>
 </div>
 </div>
 

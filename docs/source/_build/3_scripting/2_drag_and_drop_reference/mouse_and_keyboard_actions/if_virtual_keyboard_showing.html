@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>If Virtual Keyboard Is Showing</title>
+<title>如果虚拟键盘正在显示</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,8 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_virtualkeyboard_ifshowing.png">  If Virtual Keyboard Is
-Showing</h2>
+"images/i_virtualkeyboard_ifshowing.png"> 如果虚拟键盘正在显示</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -41,21 +40,9 @@ Showing</h2>
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to check if the OS virtual keyboard is
-being shown or not. The action will evaluate to <tt>true</tt> when
-the keyboard is open or opening, or <tt>false</tt> if the virtual
-keyboard is closed or closing. If you enable the <tt>not</tt>
-modifier, this action will be reversed and you can store the return
-<tt>true</tt> / <tt>false</tt> value in a target variable, which
-can be flagged as temp (local).</p>
+<p>此动作可以用来检测操作系统虚拟键盘是否正在被显示。如果虚拟键盘正在显示或正在打开，动作将会返回 <tt>真</tt> 如果虚拟键盘关闭或正在关闭，将返回<tt>假</tt>。如果激活 <tt>not</tt> 选项，此功能将会相反。你可以将返回的 <tt>真</tt> / <tt>假</tt> 值储存在一个目标变量中。（可以被指定为临时局部变量）</p>
 
-<p>Note that to add actions into the "if" block, they should be
-dropped to the side of the action, as shown in the image below:<br>
-<img class="center" src="images/a_if_virtualkeyboard_showdrop.png"
-alt="If Virtual Keyboard Is Showing Actions"> These actions will
-now be run if the "if" evaluates to <tt>true</tt>, while any
-actions dropped elsewhere will be performed after the "if"
-block.</p>
+<p>注意：如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br>如果if的判断结果是 &lt;t0&gt;真&lt;/t0&gt;。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。</p>
 </blockquote>
 
 <p><br>
@@ -63,19 +50,15 @@ block.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_virtualkeyboard_ifshowing.png"
-alt="If Virtual Keyboard Is Showing Syntax">
+alt="如果虚拟键盘正在显示语法">
 <p><br>
 </p>
 
 <h3>举例：</h3>
 <img class="center" src="images/e_virtualkeyboard_show.png" alt=
-"If Virtual Keyboard Is Showing Example">
+"如果虚拟键盘正在显示举例">
 <blockquote>
-<p>The above action block code checks for a mouse down action, and
-if one is detected, then a check is performed to see if the OS
-virtual keyboard is showing. If it isn't then it is set to show -
-using a numeric keypad type - and if is already showing then it is
-hidden.</p>
+<p>上述动作块检测鼠标点击动作，如果鼠标点击，就检测虚拟键盘是否正在显示。如果未显示，就显示-使用数字类型键盘。如果已经显示了，就隐藏。</p>
 </blockquote>
 
 <p><br>
@@ -85,11 +68,9 @@ hidden.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Mouse And
-Keyboard Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">鼠标和键盘动作</a></div>
 
-<div style="float:right">next: <a href="if_mouse_pressed.html">If
-Mouse Pressed</a></div>
+<div style="float:right">下一页：<a href="if_mouse_pressed.html">如果鼠标按住</a></div>
 </div>
 </div>
 

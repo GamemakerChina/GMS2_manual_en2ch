@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,40 +40,15 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to either assign a variable a value
-(creating it in the process) or for changing the value of an
-existing variable. You give the name of the variable and then the
-value, which can be added <i>relative</i> to the original value if
-required. If you give a new variable name (ie: a variable that has
-never been assigned previously in the instance) then this will
-create the new variable and assign it the value you give, while if
-you give the name of an existing variable, it will simply change
-the value to the new one. Note that checking <b>Is Relative</b>
-will add the value to the existing variable value (use a negative
-number to subtract) and you can also use <a href=
-"../../3_gml_overview/12_expressions.html">expressions</a> and
-variables created previously as the value.</p>
+<p>此动作用于将一个值赋给一个变量（此值在之前的程序创建过），或改变一个已经存在的变量的值。. 你需要给出变量的名称和值，此值可以和初始值<i>相关联</i> 。如果你给出的是一个新变量的名称（也就是说此实例中的这个变量在之前从未被赋值），那么这将创建一个新变量，并将你给出的值赋给它。如果你给出的是一个已存在的变量的名称，那么它将仅仅改变变量的值。注意当选中 <b>相关联</b> 将会为原来的数值型的值加上一个新值（使用负数来表示减去，也就是四则运算）。你也可以用 <a href=
+"../../3_gml_overview/12_expressions.html">表达式</a> 或之前创建的变量来作为值。不选中将会覆盖原来的值。</p>
 
-<p>It is worth noting that when we talk about "values", we don't
-just mean numeric values, as a variable can be a string, a pointer,
-a resource ID or anything else that a function can return or use.
-In the case of a string, checking <b>Is Relative</b> will
-concatenate the value with whatever the variable previously held,
-so if your variable was "Hello" and you assign " World" to it using
-the relative check, the final variable value will be "Hello World".
-Care must be taken, however, to ensure that the variable values are
-both of the same <a href=
-"../../3_gml_overview/9_data_types.html">data type</a>, as trying
-to add, for example, an integer and a string, will result in a
-compiler error.</p>
+<p>值得注意的是当我们谈论“值”时，我们不仅是说数学上的值，而是包括字符串，指针，资源ID，或其他任何函数可以使用或返回的值。如果值是字符串的形式，那么选中 <b>相关联</b>将会在之前的值后添加一个值。例如之前的变量是“我是刺客”，然后为这个变量增添一个新值“莫得感情”，并且选中了“相关联”.那么最终这个变量的值将会是“我是刺客莫得感情”。你必须注意新值和原来的值必须要有相同的 <a href=
+"../../3_gml_overview/9_data_types.html">数据类型</a>，如果你打算将一个字符串添加进一个整数型，那么会导致编译错误。</p>
 
-<p>Note that you can add additional variables in the same action by
-clicking the plus icon <img style="vertical-align:middle" src=
-"../icon_expand_arguments.png"> beside the action, and giving
-another variable name and value. For more advanced information on
-variables please see the section on <a href=
-"../../3_gml_overview/6_scope.html">Variables And Variable
-Scope</a>.</p>
+<p>注意你可以点击 <img style="vertical-align:middle" src=
+"../icon_expand_arguments.png"> 加号图标来多次执行此动作，你需要给出新的变量名和需要赋给的值。有关详细信息，请看<a href=
+"../../3_gml_overview/6_scope.html">变量和全局变量</a>。</p>
 </blockquote>
 
 <p><br>
@@ -96,18 +71,17 @@ Scope</a>.</p>
 
 <tr>
 <td>名称</td>
-<td>The name of the new variable to assign, or the name of an
-existing variable to change.</td>
+<td>将要被赋值的变量</td>
 </tr>
 
 <tr class="alt">
 <td>值</td>
-<td>The value that the variable should hold.</td>
+<td>将要被赋给的值</td>
 </tr>
 
 <tr>
-<td>是相对的</td>
-<td>Check to set the value relative to the previous one.</td>
+<td>相关联</td>
+<td>选中使新值和原来的值相关联。</td>
 </tr>
 </table>
 </blockquote>
@@ -119,10 +93,7 @@ existing variable to change.</td>
 <img class="center" src="images/e_common_assign_var.png" alt=
 "Assign Variable Action Example">
 <blockquote>
-<p>The above action block code checks two instance variables and if
-one is higher than another ( if "<tt>my_score</tt>" is greater than
-"<tt>level_score</tt>"), then it sets a number of instance
-variables to new values.</p>
+<p>上述动作代码块将会检查两个实例变量中是否是一个比另一个高( 如果 "<tt>my_score</tt>" 比 "<tt>level_score</tt>"大)，然后它将新值赋给实例变量。</p>
 </blockquote>
 
 <p><br>
@@ -132,8 +103,7 @@ variables to new values.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="temp_var.html">Declare
 Temporary Variable</a></div>

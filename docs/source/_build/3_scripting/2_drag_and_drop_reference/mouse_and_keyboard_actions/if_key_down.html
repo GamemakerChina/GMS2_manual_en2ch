@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>如果键位压住</title>
+<title>如果键位点击</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_keyboardmouse_keydown.png"> 如果键位压住</h2>
+"images/i_keyboardmouse_keydown.png"> 如果键位点击</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,19 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action checks for the initial down press on a keyboard key.
-It will return <tt>true</tt> on the single game tick that the key
-is pressed down and <tt>false</tt> at all other times. If you
-enable the <tt>not</tt> modifier, this action will be reversed, and
-check if the key has <i>not</i> been pressed down, returning
-<tt>false</tt> on the game tick that it has been pressed down and
-<tt>true</tt> at all other times.</p>
+<p>此动作检测键盘键被按下的最初状态（即键盘点击）在键位按钮点下的瞬间，它将返回 <tt>真</tt> ，其它时间返回<tt>假</tt>。如果你勾选了<tt>not</tt> 选项，此功能将会相反，也就是说，动作会检测键盘键是否 <i>没有</i>被点击，如果被点击了就返回<tt>假</tt>，其余情况返回<tt>真</tt>。 .</p>
 
-<p>Note that to add actions into the "if" block, they should be
-dropped to the side of the action, as shown in the image below:<br>
-<img class="center" src="images/a_if_drop.png" alt=
-"If Add Actions"> Any actions dropped elsewhere will be performed
-after the "if" block.</p>
+<p>注意：如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br><img class="center" src="images/a_if_drop.png" alt=
+"如果添加动作"> 在“if”块之后执行的任何其他操作都将执行。</p>
 </blockquote>
 
 <p><br>
@@ -60,7 +51,7 @@ after the "if" block.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_keyboardmouse_keydown.png" alt=
-"Key Down Syntax">
+"键位点击语法">
 <p><br>
 </p>
 
@@ -75,12 +66,12 @@ after the "if" block.</p>
 
 <tr>
 <td>键</td>
-<td>The name of the keyboard key to check.</td>
+<td>需要检测的键的名称</td>
 </tr>
 
 <tr class="alt">
 <td>非</td>
-<td>Negate the check (true becomes false and vice versa)</td>
+<td>否定选项（true变为false，反之亦然)</td>
 </tr>
 </table>
 </blockquote>
@@ -90,14 +81,8 @@ after the "if" block.</p>
 
 <h3>举例：</h3>
 <img class="center" src="images/e_keyboardmouse_keydown.png" alt=
-"Key Pressed Example">
-<blockquote>The above action block code polls the keyboard state
-every step and if a key is being held down it checks for the
-initial key down press. If the check is <tt>true</tt> on the
-initial down press, a sound is played, then, while the key is held
-down, the sprite blending is changed to red. If the key is not
-being held down, a check is done on the key release to reset the
-blending colour to white.</blockquote>
+"键按住动作举例">
+<blockquote>上述代码每一帧检查空格键状态，如果按住空格键，就检查是不是点击空格键如果检测到点击事件为 <tt>真</tt> 则播放一个音效，并且让精灵 的混合颜色变为红色。如果空格键没有被按住，则检查是不是释放，如果是，则把精灵的混合颜色变为白色。</blockquote>
 
 <p><br>
 </p>
@@ -106,11 +91,9 @@ blending colour to white.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Mouse And
-Keyboard Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">鼠标和键盘动作</a></div>
 
-<div style="float:right">next: <a href="if_key_released.html">If
-Key Released</a></div>
+<div style="float:right">下一页： <a href="if_key_released.html">如果键位松开</a></div>
 </div>
 </div>
 

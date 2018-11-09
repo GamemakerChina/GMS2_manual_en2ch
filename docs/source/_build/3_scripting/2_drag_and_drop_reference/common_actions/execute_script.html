@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,22 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to call a custom <a href=
-"../../1_drag_and_drop_overview/action_scripts.html">script</a>.
-You give the script resource to call and then supply any
-<i>arguments</i> that it requires, ie: any values (strings,
-integers, resource indices, etc...) that you wish to input into the
-script so that it can use them. You can add additional arguments as
-required for the script by clicking the plus icon <img style=
-"vertical-align:middle" src="../icon_expand_arguments.png"> beside
-the action.</p>
+<p>此动作可以用来调用自定义 <a href=
+"../../1_drag_and_drop_overview/action_scripts.html">脚本</a>。你需要给出需要调用的脚本资源，并提供它所需要的任何 <i>参数</i> 来确保此脚本能正确运行。你可以点击动作旁边“增加”图标，为其添加额外的参数。</p>
 
-<p>Some scripts can also return a value for later use in the action
-block list, and so you can also specify the <b>target variable</b>
-that should store this return value, which can have been created
-previously or can be a new temporary one (if you check the "Temp"
-check-box). Both the target and the argument fields can be left
-blank if they are not required.</p>
+<p>有些脚本有返回值，你可以设定 &lt;b3&gt;目标变量&lt;/b3&gt; t使此目标变量来存储此返回值（此目标变量需要之前被创建过），但你也可以选中“临时”复选框来创建一个临时变量来存储返回值。如果参数和目标不是必须的话，也可以不填。</p>
 </blockquote>
 
 <p><br>
@@ -63,7 +51,7 @@ blank if they are not required.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_common_execute_script.png" alt=
-"Execute Script Syntax">
+"执行脚本语法">
 <p><br>
 </p>
 
@@ -78,19 +66,17 @@ blank if they are not required.</p>
 
 <tr>
 <td>脚本</td>
-<td>The name of the script to call.</td>
+<td>需要调用脚本的名称：</td>
 </tr>
 
 <tr class="alt">
 <td>Argument0 ... Argument3</td>
-<td>The different arguments (values) that are to be passed to the
-script (unused arguments can be left blank)</td>
+<td>需要传递给此函数的参数。</td>
 </tr>
 
 <tr>
 <td>目标</td>
-<td>The name of the variable that is to be targeted for any
-returned values (can be left blank)</td>
+<td>储存返回值的目标变量，也可不填。</td>
 </tr>
 </table>
 </blockquote>
@@ -100,11 +86,9 @@ returned values (can be left blank)</td>
 
 <h3>举例：</h3>
 <img class="center" src="images/e_common_execute_script.png" alt=
-"Execute Script Example">
+"执行脚本的例子">
 <blockquote>
-<p>The above action block code calls a script, passing in two
-arguments for a random position within the room. It does not return
-anything.</p>
+<p>上述代码将调用一个脚本，将两个参数（最大值和最小值）传递进去，并得到房间中的一个随机位置。它不会返回任何东西。</p>
 </blockquote>
 
 <p><br>
@@ -114,8 +98,7 @@ anything.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href=
 "function_call.html">Function Call</a></div>

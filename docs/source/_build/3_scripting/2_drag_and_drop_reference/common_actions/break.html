@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,24 +37,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to "break out of" <a href=
-"../loops_actions/index.html">loops</a> or <a href="">switches</a>.
-In a loop, it is used to end the loop before the final conditions
-are met, for example if you have set something to repeat 10 times
-and then call <tt>break</tt> in the repeating code block, it will
-end the repeat loop before the full 10 repetitions are
-completed.With switches it is used to signify the end of a specific
-<tt>case</tt>, although it can be omitted in which instance the
-next <tt>case</tt> will be run and so on until either the switch is
-ended or a <tt>break</tt> is encountered.</p>
+<p>此动作用来跳出 <a href=
+"../loops_actions/index.html">循环</a> 或 <a href="">switch（switch是函数的一种）</a>。在循环中，只有当执行到最后一个语句时才会结束，但你可以调用 <tt>break</tt> 来使它提前结束。比如本来某事要重复10次，但你用此动作可以使它执行不满10次就结束。在switch中，语句将终止于最后一个 <tt>case</tt>，否则执行完当前case后将继续执行下一个<tt>case</tt>，但你可以调用 <tt>break</tt> 使其执行完特定的case后就结束。如果你学过编程中的循环语句将会更好的理解这一点。</p>
 
-<p>It's important to note that this does <i>not</i> exit the script
-or end the current event (for that use <a href=
-"exit.html"><tt>exit</tt></a>), but instead simply skips to the end
-of the current loop or switch code <i>block</i> and then continues
-running any code that comes afterwards until the end of the script
-or event. Also note that using a <tt>break</tt> outside of these
-contexts will cause an error.</p>
+<p>请注意它<i>不</i> 会退出脚本或结束当前事件（如果你要这样做请使用 <a href=
+"exit.html"><tt>exit</tt></a>语句）。 它只是简单跳过当前循环或switch代码块，并继续执行之后的代码或事件。注意在循环语句外使用 <tt>break</tt> 将会导致错误。</p>
 </blockquote>
 
 <p><br>
@@ -76,11 +63,7 @@ contexts will cause an error.</p>
 <h3>举例：</h3>
 <img class="center" src="images/e_common_break.png" alt=
 "break Example">
-<blockquote>The above action block code uses <tt>repeat</tt> to
-create instances of the object "obj_Squirrel". Within the
-<tt>repeat</tt> loop, the number of instances of the object is
-checked and if it is greater than 100 then the loop is broken so no
-further instances are created.</blockquote>
+<blockquote>上述代码块使用 <tt>重复</tt> 来创建物体"obj_Squirrel"的实例。在此 <tt>重复</tt> 循环中，如果此物体的实例数量超过100，那么此循环将会被跳出，实例也不会被创建了。</blockquote>
 
 <p><br>
 </p>
@@ -89,8 +72,7 @@ further instances are created.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="assign_var.html">Assign
 Variable</a></div>

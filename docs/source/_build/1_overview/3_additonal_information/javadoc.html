@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>JSDoc 脚本注释</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/1_overview/3_additonal_information/javadoc.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additonal_information%2Fjavadoc.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additonal_information%2Fjavadoc.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script><!-- !chm2web! -->
+
+
+<h2>JSDoc 脚本注释</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p>如果你希望你的自定义脚本有代码完成和显示所需的参数等，你需要在脚本编辑器中添加一些 <a href=
+"http://www.oracle.com/technetwork/articles/java/index-137868.html"
+target="_blank">JSDoc</a> 样式的注释。如果你已经导入了一个使用以前版本的 <i>GameMaker Studio</i> 创建的项目，那么你可能已经在该函数的 <a href="obsolete_functions.html">兼容脚本顶</a> 部看到了这样的注释：  <img class="center" src=
+"images/javadoc_import_example.png" alt="JSDoc导入范例"></p>
+
+<p>典型的脚本开头的格式是描述函数、函数名，然后是函数不同的参数列表，确保每一行以三重反斜杠“///”开始，告诉 <i>GameMaker Studio 2</i>  以 JSDoc 格式解析注释。这种注释本身需要一个标识符（以"@"打头）及其内容，其中可供使用的标识符如下所示：</p>
+
+<div class="compat">
+<table>
+<tr>
+<th>标识符</th>
+<th>内容</th>
+</tr>
+
+<tr>
+<td>@description / @desc</td>
+<td>关于脚本的总体描述</td>
+</tr>
+
+<tr class="alt">
+<td>@param / @arg / @argument</td>
+<td>由{}括起来的参数类型（可选）、参数名以及简短描述（之间用空格断开）</td>
+</tr>
+</table>
+</div>
+
+<p>为了了解其在你撰写自己脚本时候的工作机理，我们来看一下这个基本的例子：</p>
+
+<p class="code">// is_same_object(id, object)<br>if argument0.object_index == argument1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;}<br>else return false;<br></p>
+
+<p>该脚本所做的事情无非就是检测实例是否具有和所给定object一致的object_index，并且可以简化调用为：</p>
+
+<p class="code">if is_same_object(id, obj_Player)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_destroy()<br>&nbsp;&nbsp;&nbsp;}<br></p>
+
+<p>然而，在脚本编辑器中写入这些东西既不会向你显示参数也不会给你关于它用法的任何信息，因此，我们需要按照JSDoc注释的格式加入一个描述、一个函数名、以及参数如下：</p>
+
+<p class="code">/// @description Compare an instance object index with that of another.<br>/// @param {real} instance_id The unique instance ID value of the instance to check.<br>/// @param {real} object_index The object index to be checked against.<br><br>if argument0.object_index == argument1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;return true;<br>&nbsp;&nbsp;&nbsp;}<br>else return false;<br></p>
+
+<p>现在，在其他任意位置的代码中调用该脚本的时候，就会有自动补全以及参数提示等信息了。  <img class="center" src=
+"images/javadoc_example.png" alt="JSDoc 范例"></p>
+
+<p>在上图中，上方部分展示了函数的补全提示，而底部则展现了参数提示器在底部信息栏中如何运作。请务必注意，当你使用<tt>@function</tt>标识符的时候，在IDE中是显示<i>和资源树中一致的脚本名</i>。因此，你可以在资源树中把这个脚本命名成一个名字，而在<tt>@function</tt>中使用另一个名字，IDE会判别<i>两者</i>都是同一脚本资源的别名，但是只有<tt>@function</tt>所使用的名字具有自动补全等功能……</p>
+
+<p>注意，在<tt>@param</tt>中无论是可写可不写的"type"还是还是必须写的"description"，在IDE的代码补全当中默认是都不显示的，如果想查看它们你必须在<a href=
+"../1_getting_started/preferences/prefs_languages.html">GML 偏好设置(GML Preference)</a>中激活相应选项。</p>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">上一页：<a href="index.html">附加信息索引</a></div>
+
+<div style="float:right">下一页：<a href=
+"obsolete_functions.html">弃用函数</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

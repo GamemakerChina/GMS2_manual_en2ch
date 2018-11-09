@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Draw Stacked Sprite</title>
+<title>绘制堆叠的精灵Draw Stacked Sprite</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -40,7 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will draw a sprite a given number of sprites one after another at a given position within the room. You give the sprite to draw and the stack order, which can be either <b>Row</b> (horizontally, left to right), or <b>column</b> (vertically, top to bottom), as well as the number of sprites to draw and the position. 位置可以是房间内的绝对位置，或者是调用这个动作的实例所在的位置。绘制间距默认为精灵的宽度或高度。Note that this simply draws a static image - the initial single image (frame 0) of the given sprite - and any further frames will be ignored, as will any transforms that have been added through changing the instance variables (like <tt>image_xscale</tt> or <tt>image_blend</tt>).</p>
+<p>此动作将在房间内的给定位置一个接一个地绘制一个精灵给定数量的精灵你需要指定需要绘制的精灵，以及堆叠指令，指令可以是 <b>行</b> （水平，从左到右）, 或者<b>列</b> (垂直，从上到下),，以及需要绘制精灵的次数，和绘制的位置。位置可以是房间内的绝对位置，或者是调用这个动作的实例所在的位置。绘制间距默认为精灵的宽度或高度。注意，此动作只能绘制静态图像，如果是动态精灵的话，只会绘制第0帧，第0帧之后的帧数会被忽略，任何对精灵的变形也会被忽略（例如 <tt>x轴变形</tt>或者<tt>颜色混合</tt>).</p>
 
 <div class="note"><b>注意</b>：这个动作只能用于各种 <a href=
 "../../../2_interface/1_editors/events/draw_events.html">绘制动作</a>，如果用在其它位置将不生效。</div>
@@ -51,7 +51,7 @@ if (window.name != "content")
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_drawing_draw_stacked_sprites.png"
-alt="Draw Stacked Sprites Syntax">
+alt="绘制堆叠精灵语法">
 <p><br>
 </p>
 
@@ -66,7 +66,7 @@ alt="Draw Stacked Sprites Syntax">
 
 <tr>
 <td>精灵</td>
-<td>The sprite to draw</td>
+<td>待绘制的精灵</td>
 </tr>
 
 <tr class="alt">
@@ -76,17 +76,17 @@ alt="Draw Stacked Sprites Syntax">
 
 <tr>
 <td>数字</td>
-<td>The number of sprites to draw</td>
+<td>需要绘制精灵的个数The number of sprites to draw</td>
 </tr>
 
 <tr class="alt">
 <td>x</td>
-<td>The x position to draw at</td>
+<td>绘制的x坐标</td>
 </tr>
 
 <tr>
 <td>y</td>
-<td>The y position to draw at</td>
+<td>绘制的y坐标</td>
 </tr>
 </table>
 </blockquote>
@@ -96,10 +96,8 @@ alt="Draw Stacked Sprites Syntax">
 
 <h3>举例：</h3>
 <img class="center" src="images/e_drawing_draw_stacked_sprites.png"
-alt="Draw Stacked Sprites Example">
-<blockquote>The above action block code gets the number of
-instances of the object "obj_Player" and then uses this to draw a
-number of marker sprites to the screen.</blockquote>
+alt="绘制堆叠精灵举例">
+<blockquote>上述动作块从物体实例 "obj_Player"上获取数字，并绘制这个数量的精灵到屏幕上。 </blockquote>
 
 <p><br>
 </p>
@@ -110,8 +108,7 @@ number of marker sprites to the screen.</blockquote>
 <div class="clear">
 <div style="float:left">上一页： <a href="index.html">绘制动作</a></div>
 
-<div style="float:right">next: <a href="draw_rectangle.html">Draw
-Rectangle</a></div>
+<div style="float:right">下一页：: <a href="draw_rectangle.html">绘制矩形</a></div>
 </div>
 </div>
 

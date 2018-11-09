@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -42,11 +42,11 @@ if (window.name != "content")
 <blockquote>
 <p>此动作是用来检查是否有一个实例与给定的物体的给定区域或某条线有碰撞。你需要给出此物体需要检查碰撞区域的形状，例如方形，椭圆或线，你还要提供此形状左上角或右下角的坐标位置，如果形状是条线，那么你需要提供起点和终点的位置。位置可以是房间内的绝对位置，或者是与这个动作的实例所在的相对位置。你可以在下面的图片中看到这是如何工作的： <img class="center" src=
 "images/collision_shape_example.png" alt=
-"Collision Shape Example Image"></p>
+"是否与图像发生碰撞例子"></p>
 
 <p>正如你所看到的，此结果将取决于被检查的实例的碰撞遮罩，这意味着被检查的实例必须有一个被分配给<tt>sprite_index</tt>的精灵， 或被分配给 <tt>mask_index</tt>的精灵。如果不这样，它将不会被这些函数检测到，无论它是否绘制了精灵。值得注意的是如果某实例完全进入方形或椭圆的边界框，那么也将检测到碰撞。</p>
 
-<p>如果没有碰撞，此动作将会返回关键字 <tt>none（无）</tt> ，否则将会把碰撞的实例的独特ID返回。你也可以选中”反向“（NOT）标签，来检查这儿是不是没有碰撞。（即有碰撞将返回“没有”（none））。如果有多个实例碰撞，那么此动作将会返回这些实例中其中一个的独特ID（可能是其中任何一个）。如果你设置的目标变量是 &lt;b1&gt;临时&lt;/b1&gt; （局部）变量，那么此动作将创建变量来保存返回值，&lt;i2&gt;直到&lt;/i2&gt; 事件结束。</p>
+<p>如果没有碰撞，此动作将会返回关键字 <tt>none（无）</tt> ，否则将会把碰撞的实例的独特ID返回。你也可以选中”反向“（NOT）标签，来检查这儿是不是没有碰撞。（即有碰撞将返回“没有”（none））。如果有多个实例碰撞，那么此动作将会返回这些实例中其中一个的独特ID（可能是其中任何一个）。如果你设置的目标变量是 临时（局部）变量，那么此动作将创建变量来保存返回值，直到事件结束。</p>
 
 <p>注意如果需要添加此动作进”if"代码块，它们应该被放到动作的 <i>一边</i> ，如下图所示： <img class="center" src="images/if_collision_shape.png" alt=
 "如果发生形状碰撞的例子"></p>
@@ -57,7 +57,7 @@ if (window.name != "content")
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_collision_shape.png" alt=
-"If Collision Shape At Syntax">
+"如果与图形发生碰撞例子">
 <p><br>
 </p>
 
@@ -72,7 +72,7 @@ if (window.name != "content")
 
 <tr>
 <td>形状</td>
-<td>The shape to use</td>
+<td>需要用到的形状</td>
 </tr>
 
 <tr class="alt">
@@ -122,8 +122,7 @@ if (window.name != "content")
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Collision
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Collision Actions</a></div>
 
 <div style="float:right">next: <a href="if_any_object_at.html">If
 Any Object At</a></div>

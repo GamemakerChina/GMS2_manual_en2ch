@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,70 +40,60 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will set the font alignment for all subsequent draw
-text actions. You can set the horizontal alignment to be the left,
-center or right, and the vertical alignment to be top, middle or
-bottom and the text will be aligned relative to the x/y position of
-the draw action, as shown in the images below:</p>
+<p>使用这个动作，可以设置之后所有绘制文本动作的字体对齐方式。你可以设置水平对齐方式为居左，居中或居右。垂直对齐方式为居上，居中或居下。文字将根据绘制动作的坐标去对齐，如下图所示：</p>
 
 <table style=
 "padding-left:25px;border:0px;cellspacing:10px;cellmargin:10px;border-collapse:separate;border-spacing:10px;width:50%;margin-left: auto;margin-right: auto;background:#282828;box-shadow: 0px 0px 0px #282828;">
 <tr>
 <td style=
 "background:#282828;width:50px;border:0px;text-align: center; vertical-align: middle;">
-<img src="images/fa_left.png" alt="Left Align">
+<img src="images/fa_left.png" alt="左对齐">
 </td>
-<td class="text">Text is horizontally aligned to the left</td>
+<td class="text">文字水平排布，左对齐。</td>
 </tr>
 
 <tr>
 <td style=
 "background:#282828;width:50px;border:0px;text-align: center; vertical-align: middle;">
-<img src="images/fa_center.png" alt="Center Align">
+<img src="images/fa_center.png" alt="居中对齐">
 </td>
-<td class="text">Text is horizontally aligned to the center</td>
+<td class="text">文字水平排布，居中对齐。</td>
 </tr>
 
 <tr>
 <td style=
 "background:#282828;width:50px;border:0px;text-align: center; vertical-align: middle;">
-<img src="images/fa_right.png" alt="Right Align">
+<img src="images/fa_right.png" alt="右对齐">
 </td>
-<td class="text">Text is horizontally aligned to the right</td>
+<td class="text">文字水平排布，右对齐。</td>
 </tr>
 
 <tr>
 <td style=
 "background:#282828;width:50px;border:0px;text-align: center; vertical-align: middle;">
-<img src="images/fa_top.png" alt="Top Align">
+<img src="images/fa_top.png" alt="上对齐">
 </td>
-<td class="text">Text is vertically aligned to the top</td>
+<td class="text">文字竖直排布，上对齐。</td>
 </tr>
 
 <tr>
 <td style=
 "background:#282828;width:50px;border:0px;text-align: center; vertical-align: middle;">
-<img src="images/fa_middle.png" alt="Middle Align">
+<img src="images/fa_middle.png" alt="中对齐">
 </td>
-<td class="text">Text is vertically aligned to the middle</td>
+<td class="text">文字竖直排布，中对齐。</td>
 </tr>
 
 <tr>
 <td style=
 "background:#282828;width:50px;border:0px;text-align: center; vertical-align: middle;">
-<img src="images/fa_bottom.png" alt="Bottom Align">
+<img src="images/fa_bottom.png" alt="底对齐">
 </td>
-<td class="text">Text is vertically aligned to the bottom</td>
+<td class="text">文字竖直排布，底对齐。</td>
 </tr>
 </table>
 
-<p>Note that this will set the alignment to use for <i>all</i>
-subsequent draw text calls, and so can be called, for example, once
-at the beginning of the game - in any event, not just the Draw
-Event - and all draw text actions will use the set alignment.
-However if you require multiple draw text actions to align in
-different ways, then you will need to call this action before every
-draw text action you wish to align differently.</p>
+<p>注意：设置将对之后的<i>所有</i>绘制字体动作生效。所以，举例来说，你可以再游戏开始的任何事件中调用该动作（并不限制只能用绘制事件）调用后，之后所有的文字都会使用你设置的对齐方式。 不过，如果你需要在游戏中调用多种对齐方式，你需要在每次绘制不同的对齐方式之前调用这个动作。</p>
 </blockquote>
 
 <p><br>
@@ -111,7 +101,7 @@ draw text action you wish to align differently.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_drawing_set_text_alignment.png"
-alt="Set Text Alignment Syntax">
+alt="设置文本对齐语法">
 <p><br>
 </p>
 
@@ -125,13 +115,13 @@ alt="Set Text Alignment Syntax">
 </tr>
 
 <tr>
-<td>H.Align</td>
-<td>The horizontal alignment value (Left, Center, Right)</td>
+<td>水平对齐</td>
+<td>水平对齐的方式（左中右）</td>
 </tr>
 
 <tr class="alt">
-<td>V.Align</td>
-<td>The vertical alignment value (Top, Middle, Bottom)</td>
+<td>垂直对齐</td>
+<td>垂直对齐的方式（上中下）</td>
 </tr>
 </table>
 </blockquote>
@@ -141,7 +131,7 @@ alt="Set Text Alignment Syntax">
 
 <h3>举例：</h3>
 <img class="center" src="images/e_drawing_set_font.png" alt=
-"Set Text Alignment Example">
+"设置文本对齐举例">
 <blockquote>上述动作块代码设置了将要绘制的文字的颜色，字体和对齐方式。</blockquote>
 
 <p><br>
@@ -153,8 +143,7 @@ alt="Set Text Alignment Syntax">
 <div class="clear">
 <div style="float:left">上一页： <a href="index.html">绘制动作</a></div>
 
-<div style="float:right">next: <a href="draw_self.html">Draw
-Self</a></div>
+<div style="float:right">下一页： <a href="draw_self.html">绘制自身</a></div>
 </div>
 </div>
 

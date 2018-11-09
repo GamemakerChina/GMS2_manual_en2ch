@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,15 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action permits you to get the value of certain built in
-variables related to a given <b>view port</b>. You select the view
-port variable to retrieve, then give the view port to target (from
-0 to 7) and finally the target variable to hold the returned value
-(this can be flagged as being a temporary local variable). The view
-port is the area of the screen that will be used to draw a given
-camera view (as set up in the room editor), and the different
-variables that you are able to get in this way are outlined in the
-table below:</p>
+<p>此动作允许你获取 <b>可视区域</b>相关的某些内置变量的值。首先，你选择需要恢复的可视区域变量，然后把这个可视区域给目标（0-7），最后，目标变量记录了返回值（目标变量可以是一个临时局部变量）可视区域是用于绘制给定摄像机视图的屏幕区域（在房间编辑器中设置），下表列出了您能够以这种方式获得的不同变量：</p>
 
 <div class="compat">
 <table>
@@ -59,46 +51,38 @@ table below:</p>
 
 <tr>
 <td>摄像机</td>
-<td>The value returned will be the unique ID value of the camera to
-assigned to the port (see <a href=
-"../../4_gml_reference/cameras%20and%20display/cameras/index.html">here</a>
-for more information).</td>
+<td>返回值是分配给这个可视区域的摄像机的唯一ID。(点 <a href=
+"../../4_gml_reference/cameras%20and%20display/cameras/index.html">这里</a>了解更多 )。</td>
 </tr>
 
 <tr class="alt">
 <td>可见性</td>
-<td>This will return a value of <tt>true</tt> or <tt>false</tt>
-where <tt>true</tt> is that the view port is visible (ie: it being
-drawn to the screen), and <tt>false</tt> meaning that nothing is
-being drawn.</td>
+<td>会返回的值为 <tt>真</tt> 或者 <tt>假</tt>。如果返回 <tt>真</tt>表示可视区域可见 (ie:在屏幕上绘制)，如果返回<tt>假</tt>表示没有绘制任何东西。 </td>
 </tr>
 
 <tr>
-<td>View Port X Coordinate</td>
-<td>This is the X position of the view port within the game
-window.</td>
+<td>可视区域X坐标</td>
+<td>游戏窗口内的可视区域的X坐标。</td>
 </tr>
 
 <tr class="alt">
-<td>View Port Y Coordinate</td>
-<td>This is the Y position of the view port within the game
-window.</td>
+<td>可视区域Y坐标</td>
+<td>游戏窗口内的可视区域的Y坐标。</td>
 </tr>
 
 <tr>
-<td>View Port Width</td>
-<td>This is the width (in pixels) of the view port.</td>
+<td>可视区域宽度</td>
+<td>可视区域的宽度（单位像素）</td>
 </tr>
 
 <tr class="alt">
-<td>View Port Height</td>
-<td>This is the height (in pixels) of the view port.</td>
+<td>可视区域高度</td>
+<td>可视区域的高度（单位像素）</td>
 </tr>
 
 <tr>
-<td>View Port Surface ID</td>
-<td>This will return the unique ID value for the surface assigned
-to the view port or -1 if no surface has been assigned.</td>
+<td>可视区域ID</td>
+<td>返回赋给可视范围的唯一ID的值，如果没有分配曲面，返回-1。</td>
 </tr>
 </table>
 </div>
@@ -109,7 +93,7 @@ to the view port or -1 if no surface has been assigned.</td>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_cameras_get_view_variable.png"
-alt="Get View Variable Syntax">
+alt="获取视野变量语法">
 <p><br>
 </p>
 
@@ -124,18 +108,17 @@ alt="Get View Variable Syntax">
 
 <tr>
 <td>变量</td>
-<td>The built in view variable to get</td>
+<td>需要获得的内置视野变量</td>
 </tr>
 
 <tr class="alt">
-<td>视图</td>
-<td>The view port to target (from 0 - 7)</td>
+<td>视野</td>
+<td>目标可视范围T(0 - 7)</td>
 </tr>
 
 <tr>
 <td>目标</td>
-<td>The target variable to hold the returned value (can be flagged
-as a temporary local variable)</td>
+<td>用来储存返回值的目标变量 (可以标记为临时局部变量)</td>
 </tr>
 </table>
 </blockquote>
@@ -145,11 +128,8 @@ as a temporary local variable)</td>
 
 <h3>举例：</h3>
 <img class="center" src="images/e_cameras_get_view_variable.png"
-alt="Get View Variable Example">
-<blockquote>The above action block code gets the current camera ID
-assigned to view port [0] and then checks to see if it is the same
-as the one stored in a global variable. If it is not, the camera is
-set to the new one.</blockquote>
+alt="获取视野变量举例">
+<blockquote>上述代码获得了赋给可视区域[0]的镜头ID，然后检查它是否与之前存在全局变量中的值一致。如果不一致，镜头设置成之前存储的值</blockquote>
 
 <p><br>
 </p>
@@ -158,11 +138,9 @@ set to the new one.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Camera
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Camera Actions</a></div>
 
-<div style="float:right">next: <a href="set_view_variable.html">Set
-View Variable</a></div>
+<div style="float:right">下一页： <a href="set_view_variable.html">设置视野变量</a></div>
 </div>
 </div>
 

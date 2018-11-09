@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,7 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>此动作使用了检查是否有一个或更多实例与在房间给定的物体 的一个给定的点发生了碰撞。如果确有碰撞将返回<tt>true</tt> 否则将返回 <tt>false</tt> 。你需要给出需要检查的物体和需要检查的位置，此位置可以是绝对位置或与实例的相对位置。你也可以选中 <b>反向（NOT）</b> 标签，这样如果在给定位置 <i>没有</i> 没有碰撞，那么它将返回 <tt>true</tt> ，有碰撞将返回<tt>false</tt>。你也可以设置 <b>包括自己（Exclude Self）</b> 选项使碰撞检查的对象也包括调用的实例本身。</p>
+<p>此动作用于检查房间中特定的点是否与指定对象的一个或多个实例发生碰撞，如果确有碰撞将返回<tt>true</tt> 否则将返回 <tt>false</tt> 。你需要给出需要检查的物体和需要检查的位置，此位置可以是绝对位置或与实例的相对位置。你也可以选中 <b>反向（NOT）</b> 标签，这样如果在给定位置 <i>没有</i> 没有碰撞，那么它将返回 <tt>true</tt> ，有碰撞将返回<tt>false</tt>。你也可以设置 <b>包括自己（Exclude Self）</b> 选项使碰撞检查的对象也包括调用的实例本身。</p>
 
 <p>接下来你可以选中/不选中 <b>返回列表</b>的选项。选中意味着此函数将在有实例与给出的点发生碰撞时，此动作将会创建 <a href=
 "../data_structure_actions/index.html">一个列表</a> 数据结构并放入 <i>所有</i> 发生碰撞的实例，并将 <b>目标</b> 变量设为DS列表ID。要是你不选中，如果没有碰撞发生，<b>目标</b> 变量将被设为小于0的数，或者所有发生碰撞的实例中<i>一个</i> 实例的独特ID，也就是说如果有多个实例发生碰撞，你只能知道其中一个实例的ID而不知道其它的，除非你使用了列表（将return list选中）。</p>
@@ -78,7 +78,7 @@ if (window.name != "content")
 
 <tr>
 <td>形状</td>
-<td>The shape to use</td>
+<td>需要用到的形状</td>
 </tr>
 
 <tr class="alt">
@@ -133,8 +133,7 @@ if (window.name != "content")
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Collision
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Collision Actions</a></div>
 
 <div style="float:right">next: <a href="if_any_object_at.html">If
 Any Object At Place</a></div>

@@ -1,0 +1,362 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>使用缓冲区</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/1_overview/3_additonal_information/using_buffers.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additonal_information%2Fusing_buffers.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additonal_information%2Fusing_buffers.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script><!-- !chm2web! -->
+
+
+<h2>使用缓冲区</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p><i>GameMaker Studio 2</i> 在 GML 中有一系列功能来处理 <b>缓冲区</b>。大多数人应该熟悉这个术语，因为它在处理计算机和编程时一直被使用，但是知道这个词并不意味着你实际上知道它代表什么。所以这个页面的目的是解释缓冲区是什么以及如何在 <i>GameMaker Studio 2</i> 编程环境中使用它们，尽管它们的工作方式无论语言还是技术都是一样的，这也是它们如此重要的原因之一。</p>
+
+<blockquote><a name="buffers" id="buffers"></a> <label class=
+"collapse" for="one">什么是缓冲区？</label> <input id="one"
+type="checkbox">
+<div class="index_list">缓冲区（在编程中）基本上是系统内存中的一个空间，用于存储几乎任何东西（例如数据传输、碰撞、颜色数据等等）的小数据 <i>包</i>。由于它保存在系统内存中，访问速度非常快，而且缓冲区通常用于非常短期的存储，比如在处理之前接收网络信息，或者存储游戏中的检查点（在页面后面给出的示例中对此进行了解释）。<img class="center" src=
+"images/buffer_memory.png" alt="缓冲区内存"> 缓冲区是通过在系统内存中分配空间来创建的，以 <b>字节</b> 为单位计算，然后在游戏运行或使用适当的函数删除缓冲区之前为游戏保留空间。这意味着，即使你的游戏没有获得焦点（例如，在移动设备上，当你打电话时，游戏会被放到后台），缓冲区仍然存在，但是如果游戏关闭或重新启动，缓冲区就会丢失。<br>
+<br>
+
+<div class="note"><b>注意：</b> Restarting the game will not clear or delete the buffer!But it will prevent any further access to the previously created buffer as the id <b>handle</b> will have been lost, causing a memory leak which will crash your game eventually. 所以，当重新启动游戏时，记得先删除缓冲区。</div></div>
+<br>
+<a name="buffer_types" id="buffer_types"></a> <label class=
+"collapse" for="two">缓冲区类型</label> <input id="two" type=
+"checkbox">
+<div class="index_list"><i>GameMaker Studio 2</i> 允许创建四种不同的缓冲区类型原因是缓冲区被设计成一个高度优化临时存储介质，因此你应该创建一个适用于你所期望的数据类型的缓冲区，否则你可能会在代码中造成错误或遇到 <i>瓶颈</i>。在进一步解释这一点之前，让我们看看四种可用的缓冲区类型（在 GML 中定义为 <b>常量</b>）：<br>
+<br>
+
+<div class="compat">
+<table>
+<tr>
+<th>常量</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>buffer_fixed</td>
+<td><br>
+
+以字节为单位的固定大小的缓冲区。缓冲区的大小是在创建时设置的，不能再次更改。<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>buffer_grow</td>
+<td><br>
+
+在添加数据时将动态 <i>增长</i> 的缓冲区。你使用初始大小创建它（它应该是预期存储的数据的近似大小），然后它将扩展以接受溢出初始大小的更多数据。<br>
+<br></td>
+</tr>
+
+<tr>
+<td>buffer_wrap</td>
+<td><br>
+
+数据会被 <i>覆盖</i> 的缓冲区。当要添加的数据达到缓冲区大小的限制时，写入将回到缓冲区的开始位置，从那里将继续进行进一步的写入。<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>buffer_fast</td>
+<td><br>
+
+这是一个特殊的“剥离”缓冲区，读写速度非常快。然而，它只能与 <tt>buffer_u8</tt> 数据类型一起使用，并且必须是 1 字节对齐的。（关于 <b>数据类型</b> 和 <b>字节对齐</b> 的信息可以在本页下面找到）。<br>
+<br></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+
+这些是在使用 <i>GameMaker Studio 2</i> 时可用的缓冲区类型，你选择哪种类型将在很大程度上取决于你希望使用哪种类型。例如，<b>增长</b> 缓冲将用于存储数据的“快照”来创建一个保存游戏，因为你不知道实际所需的数据量；<b>快速</b> 缓冲在当你知道你正在使用的值都是 0 到 255 或 -128 到 127 之间时使用，例如在处理 RGB 图像数据。<img class="center" src="images/buffer_types.png" alt=
+"缓冲区类型"> 当创建一个缓冲区时，你应该总是试图创建一个大小合适的类型，一般规则是，它应该适应最大大小创建数据存储，如果不确定，请使用 <b>增长</b> 缓冲以防止错误覆盖数据。<br><br>创建缓冲区的实际代码是这样的：<br>
+<br>
+
+<p class="code">player_buffer = buffer_create(16384, buffer_fixed,
+2);</p>
+<br>
+
+这将创建一个 16384 字节和 2 <b>字节对齐</b> 的固定缓冲区，函数返回一个惟一的 <b>id</b> 值，该值存储在一个变量中，以便以后引用该缓冲区。现在我们已经了解了缓冲区的基本概念，你应该了解 <b>数据类型</b> 和前面提到的 <b>字节对齐</b> 方式。</div>
+<br>
+<a name="buffer_data_types" id="buffer_data_types"></a>
+<label class="collapse" for="three">缓冲区数据类型</label>
+<input id="three" type="checkbox">
+<div class="index_list">当你将数据读写到缓冲区时，你将在指定“数据类型”的“数据块”中执行此操作。“数据类型”设置了在缓冲区中为正在写入的值分配的字节数，并且必须正确，否则你的代码会得到一些非常奇怪的结果（甚至错误）。<br><br>缓冲区是 <i>按顺序</i> 写入（和读取）的，在这种情况下，数据块是一个接一个写入的，每个数据块都是一种类型。这意味着，理想情况下，你应该知道你一直在向缓冲区写入什么数据。这些 <b>数据类型</b> 在 GML 中由以下 <i>常量</i> 定义：
+
+
+
+<div class="compat">
+<table>
+<tr>
+<th>缓冲区类型常量</th>
+<th>字节数</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>buffer_u8</td>
+<td>1</td>
+<td><br>
+
+无符号 8 位整型。值域为 0 到 255。<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>buffer_s8</td>
+<td>1</td>
+<td><br>
+
+一个有符号的8位整数。值域为-128到127的正值和负值（0被归类为正值）。<br>
+<br></td>
+</tr>
+
+<tr>
+<td>buffer_u16</td>
+<td>2</td>
+<td><br>
+
+一个无符号的16位整数值域为0到65535的正值。<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>buffer_s16</td>
+<td>2</td>
+<td><br>
+
+有符号 16 位整型。值域为 -32768 到 32767（0为正数）。<br>
+<br></td>
+</tr>
+
+<tr>
+<td>buffer_u32</td>
+<td>4</td>
+<td><br>
+
+无符号 32 位整型。值域为 0 到 4,294,967,295。<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>buffer_s32</td>
+<td>4</td>
+<td><br>
+
+有符号 32 位整形。值域为 -2,147,483,648 到 2,147,483,647（0为正数）。<br>
+<br></td>
+</tr>
+
+<tr>
+<td>buffer_f16</td>
+<td>2</td>
+<td><br>
+
+16 位浮点型。值域为 -65504 到 +65504。<b>（目前不支持！）</b><br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>buffer_f32</td>
+<td>4</td>
+<td><br>
+
+32 位浮点型。值域为 -16777216 到 +16777216。<br>
+<br></td>
+</tr>
+
+<tr>
+<td>buffer_f64</td>
+<td>8</td>
+<td><br>
+
+64 位浮点型。This can be a positive or negative value from -(2<sup>52</sup>) to 2<sup>52</sup> - 1.<br>
+<br></td>
+</tr>
+
+<tr class="alt">
+<td>buffer_bool</td>
+<td>1</td>
+<td><br>
+
+布尔类型。只能为 1 或 0 (<tt>true</tt> 或 <tt>false</tt>)<br>
+<br></td>
+</tr>
+
+<tr>
+<td>buffer_string</td>
+<td>N/A（无返回值）</td>
+<td><br>
+
+这是一个以 UTF-8 null 结尾的字符串（0x00）。最基本的，一个 GameMaker 字符串被转储在缓冲区中时是以 0 结尾的。<br>
+<br></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+
+因此，假设你创建了一个缓冲区，你可以使用以下代码向它写入信息：<br>
+<br>
+
+<p class="code">buffer_write(buff, buffer_bool, global.Sound);<br>
+buffer_write(buff, buffer_bool, global.Music);<br>
+buffer_write(buff, buffer_s16, obj_Player.x);<br>
+buffer_write(buff, buffer_s16, obj_Player.y);<br>
+buffer_write(buff, buffer_string, global.Player_Name);<br></p>
+<br>
+
+从上面的例子可以看到，你可以编写不同数据类型的缓冲区（你在使用 <b>快速</b> 缓冲类型时限于一个特定的数据类型），这个数据将被添加到连续的缓冲区（尽管其实际位置在缓冲将取决于其 <b>字节对齐</b>，见下面的解释）。从缓冲区读取信息的顺序也是一样的，在上面给出的例子中，你将按照编写数据的顺序从缓冲区读取信息，检查相同的数据类型，例如：<br>
+<br>
+
+<p class="code">global.Sound = buffer_read(buff, buffer_bool);<br>
+global.Music = buffer_read(buff, buffer_bool);<br>
+obj_Player.x = buffer_read(buff, buffer_s16);<br>
+obj_Player.y = buffer_read(buff, buffer_s16);<br>
+global.Player_Name = buffer_read(buff, buffer_string);<br></p>
+<br>
+
+如你所见，你读取信息的顺序与读取缓冲区的顺序相同。有关如何从缓冲区中添加和删除数据的详细信息，请参阅下面的 <b>示例</b> 部分。</div>
+<br>
+<a name="buffer_alignment" id="buffer_alignment"></a> <label class=
+"collapse" for="four">缓冲区对齐</label> <input id="four"
+type="checkbox">
+<div class="index_list">如果你一直阅读此页，你将看到对缓冲区 <b>字节对齐</b>的引用。这基本上是指新数据将存储在给定缓冲区中的 <i>位置</i>。它是如何运作的？Well, for a single byte aligned buffer, each piece of data is written to the buffer sequentially, with each new data piece being added directly after the previous. 然而，一个 2 字节对齐的缓冲区会将每段数据以 2 字节为间隔写入，因此即使你的初始写入是 1 字节的数据，<i>下一个</i> 写入也会被移动，以对齐到两个字节。<img class="center" src=
+"images/buffer_byte_alignment.png" alt="缓冲区字节对齐"> 所以,如果你的字节对齐方式设置为，比如说，4个字节,你写一段 1 个字节大小的数据然后做一个 <i>缓冲告知</i>（<b>告知</b> 使得当前位置为读/写缓冲区），你会得到 1 字节的 <i>偏移量</i>（抵消在这种情况下从开始的缓冲区到当前读写位置的字节数）。<br><br>然而，如果你写入另一块数据，仍然是 1 个字节大小， <i>然后</i> 做一个缓冲告知，你会得到一个 5 字节的偏移量（即使你只写入 2 个字节的数据），因为对齐已经 <i>填充</i> 了数据，将它与 4 字节缓冲区对齐。<br><br>基本上，这意味着对齐只会影响到<i>写入对象的位置</i>，所以如果在写入内容后执行缓冲区告知，它将返回当前写入位置，该位置紧跟在先前写入的数据之后。但是，请注意，如果你随后编写另一个数据片段，那么在实际编写该数据片段之前，缓冲区会在内部将写入位置移动到对齐大小的下一个倍数。</div>
+<br>
+<a name="buffer_examples" id="buffer_examples"></a> <label class=
+"collapse" for="five">缓冲区范例</label> <input id="five"
+type="checkbox">
+<div class="index_list">下面是一些缓冲区的常用用法示例。<br>
+<br>
+<a name="buffer_checkpoint" id="buffer_checkpoint"></a>
+<label class="collapse" for="six">制作一个检查点</label>
+<input id="six" type="checkbox">
+<div class="index_list">A simple example of how a buffer can be used in any <i>GameMaker Studio 2</i> game for any platform, is the function <a href=
+"../../3_scripting/4_gml_reference/miscellaneous/game_save_buffer.html"> <tt>game_save_buffer</tt></a>. 此函数将获取当前游戏状态的“快照”，并将其保存到预定义的缓冲区中，然后可以从缓冲区中读取该缓冲区，以便在此时再次加载游戏。<br>
+<br>
+
+<div class="note"><b>注意：</b>这个函数是非常有限的，这是为初学者设计的一个快速启动并运行的检查点系统，但是更高级的用户可能更愿意使用 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/index.html">文件函数</a> 代码创建自己的系统，因为这个游戏不会保存任何的动态资源，你可以创建在运行时的数据结构、表面、添加背景和精灵等等……</div>
+<br>
+
+我们需要做的第一件事是创建一个新物体来控制保存和加载，你可以创建这样一个物体并给它添加 <b>创建事件</b>。在这种情况下，你可以编写以下代码：<br>
+<br>
+
+<p class="code">SaveBuffer = buffer_create(1024, buffer_grow,
+1);<br>
+StateSaved = false;<br></p>
+<br>
+
+第一行创建 1024 字节的 <b>增长缓冲区</b>（因为我们不知道保存数据的最终大小），并对齐到 1 字节。然后创建一个变量来检查是否保存了游戏（这将用于加载）。<br><br>接下来，我们将添加一个 <b>按键事件</b>（例如），其中我们将保存当前游戏状态到创建的缓冲区：<br>
+<br>
+
+<p class="code">StateSaved = true;<br>
+buffer_seek(SaveBuffer, buffer_seek_start, 0);<br>
+game_save_buffer(SaveBuffer);<br></p>
+<br>
+
+以上代码首先将控制变量设置为 true（以便在将游戏保存到缓冲区时保存），然后在将当前保存状态写入缓冲区之前 <i>查找</i> 缓冲区的开始位置。为什么要使用 <a href=
+"../../3_scripting/4_gml_reference/buffers/buffer_seek.html"><tt>buffer_seek</tt></a>？正如前面的 <b>缓冲区数据类型</b> 部分中提到的，读取和写入缓冲将从我们添加数据的最后位置开始。这意味着，如果不将缓冲区 <i>告知</i> 回到开始，那么在保存时，将在当前缓冲区的读/写位置向缓冲区添加数据，因此我们使用 <tt>buffer_seek</tt> 函数将 <i>告知</i> 移动到缓冲区起点。<br><br>我们现在已经将当前游戏状态保存到一个缓冲区中。下一步是编写代码如何加载它，可能在另一个 <b>按键事件</b>：<br>
+<br>
+
+<p class="code">if StateSaved<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;buffer_seek(SaveBuffer, buffer_seek_start, 0);<br>&nbsp;&nbsp;&nbsp;game_load_buffer(SaveBuffer);<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<br>
+
+然后，游戏将在你放置上述代码的事件结束时加载。<br>
+<br>
+
+<div class="note"><b>注意：</b> This is only for use in the same room, and not for generating complete saved games for after your game has been closed or restarted!</div>
+<br>
+
+最后一件事是向控制器物体添加“清理”代码。缓冲区存储在内存中，因此，如果在使用缓冲区时没有进行清理，就会出现内存泄漏，最终导致游戏延迟并崩溃。因此，你可能需要添加一个<b>房间结束事件</b>（来自 <b>其他</b> 事件类别）：<br>
+<br>
+
+<p class="code">buffer_delete(SaveBuffer);</p>
+<br>
+
+这个物体现在可以被放置到一个房间中，并且从缓冲区一键保存或加载房间状态。<br>
+<br></div>
+<br>
+<a name="buffer_networking" id="buffer_networking"></a>
+<label class="collapse" for="seven">网络缓冲区</label>
+<input id="seven" type="checkbox">
+<div class="index_list">在使用 <i>GameMaker Studio 2</i> 连网功能时，必须使用缓冲区创建通过网络连接发送的数据 <i>包</i>。本示例旨在展示如何完成此任务，但由于联网的领域非常大，因此仅设计此示例来展示如何使用缓冲区本身，而不是完整的联网系统。<br><br>我们将展示的第一件事是为网络连接的客户端创建和使用缓冲区。这个缓冲区将用于创建小的数据包，然后这些数据包可以被发送到服务器，所以在实例的 <b>创建事件</b> 中，我们将分配一个这样的缓冲区：<br>
+<br>
+
+<p class="code">send_buff = buffer_create(256, buffer_grow, 1);</p>
+<br>
+
+我们将缓冲区设置为较小（256 字节），因为它不是用来保存大量数据的，我们将它设置为一个 <i>增长</i> 缓冲区，以确保在任何时候需要添加更多发送数据时不会出现错误，并且为了方便起见，将对齐设置为 1 字节。<br><br>现在，假设我们希望客户机向服务器发送数据。为此，我们需要创建一个缓冲区“包”，在本例中，我们将发送一个 <b>按键按下事件</b>，比如当玩家按下 <b>左箭头</b> 在游戏中移动时。为此，我们先将必要的数据写入缓冲区，然后发送出去：<br>
+<br>
+
+<p class="code">buffer_seek(buff, buffer_seek_start, 0);<br>buffer_write(buff, buffer_u8, 1);<br>buffer_write(buff, buffer_s16, vk_left);<br>buffer_write(buff, buffer_bool, true);<br>network_send_packet(client, buff, buffer_tell(buff));<br></p>
+<br>
+
+在写入缓冲区之前，我们将“告知”设置为缓冲区的开始，因为网络 <i>总是</i> 从缓冲区的 <b>开始</b> 获取数据。然后写入 <i>检查</i> 值（服务器将使用该值来确定要处理的事件的类型）、使用的键以及键的状态（在本例中为 <tt>true</tt>）。然后，网络函数将该缓冲区作为数据包发送。注意，我们 <i>没有</i> 发送整个缓冲区！我们只发送了写入的数据，使用 <a href=
+"../../3_scripting/4_gml_reference/buffers/buffer_tell.html"><tt>buffer_tell</tt></a> 函数返回缓冲区的当前读/写位置（记住写入缓冲区会将“告知”移动到已写入的内容的末尾。）。<br><br>如何接收服务器上的数据？接收到的数据包必须写入服务器上的缓冲区，然后用来更新游戏。为此，我们将在服务器的网络控制器对象中使用 <a href=
+"../../2_interface/1_editors/events/async_events.html">网络异步事件</a>，如下面的简化代码所示：<br>
+<br>
+
+<p class="code">var buff = ds_map_find_value(async_load, "buffer");<br>if cmd == buffer_read(buff, buffer_u8);<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;key = buffer_read(buff, buffer_s16 );<br>&nbsp;&nbsp;&nbsp;key_state = buffer_read(buff, buffer_bool);<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<br>
+
+异步事件将包含一个特殊的临时 <tt>ds_map</tt>（它将在事件结束时自动删除），根据来自网络的传入数据的类型，它将包含不同的信息。在本例中，我们假设已经检查了映射，发现它是一个从客户机发送的缓冲区数据包。我们现在检查的第一条数据缓冲区，看看会发送什么样的事件——在这种情况下,值 “1” 代表了一个 <i>按键</i> 事件，然而当编码这些事情你应该定义 <b>常量</b> 保存这些值来简化，然后存储键被按下的状态（<tt>true</tt> = 按下，<tt>false</tt> = 松开）。然后，此信息将用于使用玩家发送客户端的新状态更新所有客户端。<br>
+<br>
+
+<div class="note"><b>注意：</b>从 ds_map 创建的缓冲区在网络异步事件结束时自动删除，因此这里不需要使用 <a href=
+"../../3_scripting/4_gml_reference/buffers/buffer_delete.html"><tt>buffer_delete</tt></a>。</div></div></div></blockquote>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">上一页：<a href="index.html">附加信息索引</a></div>
+
+<div style="float:right">下一页：<a href="texture_pages.html">纹理页</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

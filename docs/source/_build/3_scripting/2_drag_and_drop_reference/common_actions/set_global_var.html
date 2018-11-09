@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,48 +40,15 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to either assign a global variable a value
-(creating it in the process) or for changing the value of an
-existing global variable. Global variables are variables that
-"belong" to no specific instance, but rather the whole project, and
-as such can be accessed and changed by any instance, script or
-code. For more advanced information on global variables please see
-the section on <a href=
-"../../3_gml_overview/6_scope.html">Variables And Variable
-Scope</a>.</p>
+<p>此动作是用来给一个全局变量赋值的，此全局变量需要之前已被创建。你也可以改一个已经存在的变量的值。全局变量就是那些不“属于”任何一个特定的实例，但在整个项目中，全局变量就是那些可被其它任何实例，脚本或代码获取或改变的。有关详细信息，请看&lt;a1&gt;变量和全局变量&lt;/a1&gt;。</p>
 
-<p>You give the name of the global variable and then the value,
-which can be added <i>relative</i> to the original value if
-required. If you give a new variable name (ie: a variable that has
-never been assigned previously in the entire game) then this will
-create the new global variable and assign it the value you give,
-while if you give the name of an existing global variable, it will
-simply change the value to the new one. Note that checking <b>Is
-Relative</b> will add the value to the existing global variable
-value (use a negative number to subtract) and you can also use
-<a href="../../3_gml_overview/12_expressions.html">expressions</a>
-and variables created previously as the value.</p>
+<p>你需要给出拳皇变量的名称和需要赋给的值，你可以使此值与原来的值 <i>相关联</i> 。如果你给出的是一个新变量的名称（也就是说此实例中的这个变量在之前从未被赋值），那么这将创建一个新变量，并将你给出的值赋给它。如果你给出的是一个已存在的变量的名称，那么它将仅仅改变变量的值。注意如果你选中 <b>相联系</b>，动作将会为已存在的变量的值加上一个新值，而不会清除原来的值（可以用负数来表示减去）。你也可以用<a href="../../3_gml_overview/12_expressions.html">表达式</a> 和之前的变量作为值。</p>
 
-<p>It is worth noting that when we talk about "values", we don't
-just mean numeric values, as a variable can be a string, a pointer,
-a resource ID or anything else that a function can return or use.
-In the case of a string, checking <b>Is Relative</b> will
-concatenate the value with whatever the variable previously held,
-so if your variable was "Hello" and you assign " World" to it using
-the relative check, the final variable value will be "Hello World".
-Care must be taken, however, to ensure that the variable values are
-both of the same <a href=
-"../../3_gml_overview/9_data_types.html">data type</a>, as trying
-to add, for example, an integer and a string, will result in a
-compiler error.</p>
+<p>值得注意的是当我们谈论“值”时，我们不仅是说数学上的值，而是包括字符串，指针，资源ID，或其他任何函数可以使用或返回的值。如果值是字符串的形式，那么选中 <b>相关联</b>将会在之前的值后添加一个值。例如之前的变量是“我是刺客”，然后为这个变量增添一个新值“莫得感情”，并且选中了“相关联”.那么最终这个变量的值将会是“我是刺客莫得感情”。你必须注意新值和原来的值必须要有相同的 <a href=
+"../../3_gml_overview/9_data_types.html">数据类型</a>，如果你打算将一个字符串添加进一个整数型，那么会导致编译错误。</p>
 
-<p>You can also add additional variables in the same action by
-clicking the plus icon <img style="vertical-align:middle" src=
-"../icon_expand_arguments.png"> beside the action, and giving
-another global variable name and value. For more advanced
-information on variables please see the section on <a href=
-"../../3_gml_overview/6_scope.html">Variables And Variable
-Scope</a>.</p>
+<p>你可以点击动作旁边“增加”图标，为其添加额外的变量，并给出需要添加的全局变量名称和值。有关详细信息，请看<a href=
+"../../3_gml_overview/6_scope.html">变量和全局变量</a>。</p>
 </blockquote>
 
 <p><br>
@@ -114,7 +81,7 @@ an existing global variable to change.</td>
 </tr>
 
 <tr>
-<td>是相对的</td>
+<td>相关联</td>
 <td>Check this to set the value relative to the previous one.</td>
 </tr>
 </table>
@@ -127,10 +94,7 @@ an existing global variable to change.</td>
 <img class="center" src="images/e_common_set_global.png" alt=
 "Set Global Variable Action Example">
 <blockquote>
-<p>The above action block code checks for a collision between the
-calling instance and the object "obj_player", and if one is found 1
-is subtracted from the global variable "<tt>player_hp</tt>" and the
-global variable "<tt>player_score</tt>" is set to 0.</p>
+<p>上述代码块将检查被调用的实例和物体 "obj_player"是否有碰撞，如果有的话，则将<tt>player_hp</tt>" 的值减1，而 "<tt>player_score</tt>" 将被设为0。</p>
 </blockquote>
 
 <p><br>
@@ -140,8 +104,7 @@ global variable "<tt>player_score</tt>" is set to 0.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="get_global_var.html">Get
 Global Variable</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -71,40 +71,9 @@ instance id, an object id, <i>other</i>, or <i>all</i>)</td>
 
 <h3 class="studio">描述</h3>
 
-<p>Once we have defined our fixture it has to be bound to an
-instance. This means that its <i>properties</i> are transferred to
-the selected instance, <b>not the actual fixture itself</b>, so
-that one fixture can be bound to multiple instances if all are to
-have the same properties. You can specify an object index for the
-target and all instances present in the room at the time will
-receive that fixtures properties (but not any new instances of the
-object created later), or you can use the special keywords
-<i>other</i> and <i>all</i>. You can even specify a parent object
-and all children instances with that parent will also receive the
-fixture. Once the fixture has been bound to all the instances that
-you need, it can be deleted if no longer necessary and the
-instances with that fixtures properties will not be affected and
-maintain those properties.<br>
-<br>
-The fixture will be bound to the instance with the center of mass
-being positioned at the origin of the instance, and polygon
-fixtures are bound based on the position of the points
-<i>relative</i> to the origin. If you require your fixture to be
-bound to a point other than the origin then you should be using
-<a href=
-"physics_fixture_bind_ext.html"><tt>physics_fixture_bind_ext</tt></a>.
-<img class="center" src="images/physics_fixture_bind_image.png">
-The function will also return a unique "id" value for the
-<i>bound</i> fixture (<b>not the fixture itself</b>) which can then
-be used to remove ("un-bind") the physics properties from the
-instance using the function <a href=
-"physics_remove_fixture.html"><tt>physics_remove_fixture</tt></a>.
-This permits you to add and remove physical properties from an
-instance without destroying and re-creating objects.<br>
-<br>
-<i><b>Note:</b> Fixtures should be deleted when no longer needed as
-failure to do so may cause a memory leak which will slow down and
-eventually crash your game.</i><br>
+<p>Once we have defined our fixture it has to be bound to an instance. This means that its <i>properties</i> are transferred to the selected instance, <b>not the actual fixture itself</b>, so that one fixture can be bound to multiple instances if all are to have the same properties. You can specify an object index for the target and all instances present in the room at the time will receive that fixtures properties (but not any new instances of the object created later), or you can use the special keywords <i>other</i> and <i>all</i>. You can even specify a parent object and all children instances with that parent will also receive the fixture. Once the fixture has been bound to all the instances that you need, it can be deleted if no longer necessary and the instances with that fixtures properties will not be affected and maintain those properties.<br><br>The fixture will be bound to the instance with the center of mass being positioned at the origin of the instance, and polygon fixtures are bound based on the position of the points <i>relative</i> to the origin. If you require your fixture to be bound to a point other than the origin then you should be using <a href=
+"physics_fixture_bind_ext.html"><tt>physics_fixture_bind_ext</tt></a>. <img class="center" src="images/physics_fixture_bind_image.png"> The function will also return a unique "id" value for the <i>bound</i> fixture (<b>not the fixture itself</b>) which can then be used to remove ("un-bind") the physics properties from the instance using the function <a href=
+"physics_remove_fixture.html"><tt>physics_remove_fixture</tt></a>. This permits you to add and remove physical properties from an instance without destroying and re-creating objects.<br><br><i><b>Note:</b> Fixtures should be deleted when no longer needed as failure to do so may cause a memory leak which will slow down and eventually crash your game.</i><br>
 <br></p>
 
 <p><br>
@@ -132,10 +101,10 @@ longer needed.</p>
 </p>
 
 <div class="clear">
-<div style="float:left">Back: <a href=
+<div style="float:left">上一页:  <a href=
 "index.html">Fixtures</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "physics_fixture_bind_ext.html">physics_fixture_bind_ext</a></div>
 </div>
 

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,17 +40,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is will do one of two things depending on the
-context within which it is called. If it is called from within an
-event, then it will exit the event and move on to the next one,
-skipping any action block code that may be placed after it. However
-if it is used within an <a href=
-"../../1_drag_and_drop_overview/action_scripts.html">Action Block
-Script</a>, then it will exit the script only and return to the
-event that called the script, running any subsequent actions. Note
-that calling this in the middle of a script will <i>not</i> return
-any value from the script (for that use the <a href=
-"return.html">return</a> action).</p>
+<p>此动作将根据之前函数的执行情况来决定是否执行。（可用在if后，功能类似break）。如果它在一个事件中被调用，那么它将会直接退出此动作而执行此事件后的动作代码块。但如果它在一个 <a href=
+"../../1_drag_and_drop_overview/action_scripts.html">动作代码脚本</a>中被调用，那么它将只退出此脚本，而返回到使用此脚本的事件中，继续执行此脚本后面的语句。如果你的脚步原来有返回值，但你在此脚本中调用了此动作，那么它将 <i>不会</i> 有任何 <a href=
+"return.html">return</a> 。</p>
 </blockquote>
 
 <p><br>
@@ -72,10 +64,7 @@ any value from the script (for that use the <a href=
 <h3>举例：</h3>
 <img class="center" src="images/e_common_exit.png" alt=
 "exit Example">
-<blockquote>The above action block code checks a variable and if it
-is greater than or equal to 100, the event is exited, otherwise the
-variable is incremented by one and the instance sprite is given a
-random scale.</blockquote>
+<blockquote>上述代码将检查一个变量是否大于等于100，如果是的话，它将退出此事件。否则此变量的值将增加1并且此实例精灵将被给定一个随机的尺寸。.</blockquote>
 
 <p><br>
 </p>
@@ -84,8 +73,7 @@ random scale.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="assign_var.html">Assign
 Variable</a></div>

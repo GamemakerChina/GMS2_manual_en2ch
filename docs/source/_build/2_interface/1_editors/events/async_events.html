@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,7 +34,7 @@ if (window.name != "content")
 
 <div class="body-scroll">
 <p><img class="center" src="images/editor_objects_async.png" alt=
-"物体编辑器异步事件"> <b>异步事件</b> 是当 <i>GameMaker Studio 2</i> 从某些外部源（可以来自 Web 或运行游戏的设备）收到 “回调” 时触发的事件。你告诉 <i>GameMaker Studio 2</i> 做一些事情，比如加载一个图像，然后它就会开始这样做但是继续做其他事情，同时它的工作。 然后，当请求完成后，将向 <i>GameMaker Studio 2</i> 发送回调，并且将触发为该类型的回调定义的 <b>异步事件</b>。请注意，异步事件将针对具有它们的 <i>所有</i> 实例触发，就像按键事件一样，因此你可以在一个实例中执行 <tt>http_get</tt> 调用，但在另一个实例中使用异步 HTTP 事件来处理回调。<br></p>
+"物体编辑器异步事件"> <b>异步事件</b> 是当 <i>GameMaker Studio 2</i> 从某些外部源（可以来自 Web 或运行游戏的设备）收到 “回调” 时触发的事件。你告诉 <i>GameMaker Studio 2</i> 做一些事情，比如加载一个图像，然后它就会在加载图像时同时干其它事情。 然后，当请求（即加载图像）完成后，将向 <i>GameMaker Studio 2</i> 发送回调，并且将触发为该类型的回调定义的 <b>异步事件</b>。请注意，异步事件将针对具有它们的 <i>所有</i> 实例触发，就像按键事件一样，因此你可以在一个实例中执行 <tt>http_get</tt> 调用，但在另一个实例中使用异步 HTTP 事件来处理回调。<br></p>
 
 <div class="note"><b>注意</b>： 你应该知道，由于浏览器中的 XSS 保护，对来自跨域的请求和尝试加载资源的操作都被阻止，并且在使用以下任何事件时可能会返回空白结果</div>
 
@@ -598,13 +598,13 @@ type="checkbox">
 <br>
 
 <ul>
-<li>从操作系统仪表板 (?) 启动游戏时</li>
+<li>从操作系统常用工具栏启动游戏时</li>
 
 <li>当你完成挑战时</li>
 
 <li>当另一位玩家完成挑战时</li>
 
-<li>从操作系统仪表板启动游戏时选择挑战</li>
+<li>从操作系统常用工具栏启动游戏时选择挑战</li>
 </ul>
 
 <p>任何上述回调都将触发 <b>社交事件（Social Event）</b>，并且将生成带有以下详细信息的 <tt>async_load</tt> 映射（请注意，有一个不同的 “id” 键值来定义调用该事件的每个不同原因，但所有其他内容映射是一样的）：<br>
@@ -621,7 +621,7 @@ type="checkbox">
 
 <li><b><tt>achievement_challenge_completed_by_remote</tt></b> - 其他玩家已完成挑战。<br></li>
 
-<li><b><tt>achievement_challenge_launched</tt></b> - 游戏是从具有给定挑战的操作系统仪表板启动的。<br></li>
+<li><b><tt>achievement_challenge_launched</tt></b> - 游戏是从具有给定挑战的操作常用工具栏启动的。<br></li>
 </ul></li>
 
 <li>"<b>playerid</b>" - 挑战的玩家 id。<br>
@@ -800,7 +800,7 @@ for="seven">Steam</label> <input id="seven" type="checkbox">
 <p class="code">var async_id = ds_map_find_value(async_load, "id");<br>if async_id == score_get<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var entries = ds_map_find_value(async_load, "entries");<br>&nbsp;&nbsp;&nbsp;var map = json_decode(entries);<br>&nbsp;&nbsp;&nbsp;if ds_map_exists(map, "default")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_map_destroy(map);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var list = ds_map_find_value(map, "entries");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var len = ds_list_size(list);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var entry;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; len; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry = ds_list_find_value(list, i );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_name[i] = ds_map_find_value(entry, "name");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_score[i] = ds_map_find_value(entry, "score");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_rank[i] = ds_map_find_value(entry, "rank");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (ds_map_exists(entry, "data"))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var data = ds_map_find_value(entry, "data");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var buffId = buffer_base64_decode(data);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var message = buffer_read(buffId, buffer_string);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;show_debug_message( " -- attached message: " + string(message));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffer_delete(buffId);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_map_destroy(entry);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_list_destroy(list)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;ds_map_destroy(map)<br>&nbsp;&nbsp;&nbsp;}<br></p>
 <br>
 我们在这里做的是首先检查特殊 <tt>async_load</tt> 映射的 “id” 键。如果此值与原始回调函数的值（存储在 “score_get” 变量中）相同，则我们将继续处理数据。我们要做的第一件事就是为关键 “entries” 解析 <tt>async_load</tt> ds_map，它将包含一个包含排行榜数据的 JSON 对象。然后将此 JSON 对象解码（请参阅 <a href=
-"../../../3_scripting/4_gml_reference/file%20handling/json_decode.html"><tt>json_decode</tt></a>）作为另一个 ds_map，并将此新映射 ID 存储在变量 “map” 中。<br><br>检查该映射是否为 “default” 键，如果找到，则销毁该映射并退出该事件。如果未找到 “default” 键，则代码将解析映射以提取有关排行榜的必要信息，方法是首先从 ds_map 的 “entries” 键中提取 ds_list，然后循环遍历列表的每个条目以获取 <i>另一个</i> ds_map，其中包含每个条目的名称，分数和排名。然后将这些值存储在数组中，然后检查是否有其他 “数据” 键。如果有（即：分数是使用附加数据包上传的），那么我们也会解析它并将其发送到编译器控制台进行调试，然后再销毁缓冲区然后继续销毁映射。请注意，如果包含 “data” 键，则需要先使用 <a href=
+"../../../3_scripting/4_gml_reference/file%20handling/json_decode.html"><tt>json_decode</tt></a>）作为另一个 ds_map，并将此新映射 ID 存储在变量 “map” 中。<br><br>检查该映射是否有为 “default” 的键，如果有的话，则销毁该映射并退出该事件。如果未找到 “default” 键，则代码将解析映射以提取有关排行榜的必要信息，方法是首先从 ds_map 的 “entries” 键中提取 ds_list，然后循环遍历列表的每个条目以获取 <i>另一个</i> ds_map，其中包含每个条目的名称，分数和排名。然后将这些值存储在数组中，然后检查是否有其他 “数据” 键。如果有（即：分数是使用附加数据包上传的），那么我们也会解析它并将其发送到编译器控制台进行调试，然后再销毁缓冲区然后继续销毁映射。请注意，如果包含 “data” 键，则需要先使用 <a href=
 "../../../3_scripting/4_gml_reference/buffers/buffer_base64_decode.html"><tt>buffer_base64_decode()</tt></a> 对其进行解码，然后才能正确读取。<br><br>一旦循环完成，条目列表就会像从其获取的映射一样被销毁。无需销毁 <tt>async_load</tt> ds_map，因为这是由 <i>GameMaker Studio 2</i> 为你处理的。</div>
 <br>
 <a name="async_steam_downloadingugc" id=
@@ -828,7 +828,7 @@ for="seven">Steam</label> <input id="seven" type="checkbox">
 <li style="list-style: none"><br>
 </li>
 </ul>
-订阅研讨会项目时也可以触发 Steam 异步事件 - 从应用程序内部或从研讨会浏览器外部 - 并且在这些情况下，<tt>async_load</tt> 映射将包含以下键 / 值对：
+订阅创意工坊项目时也可以触发 Steam 异步事件 - 从应用程序内部或从创意工坊浏览器外部 - 并且在这些情况下，<tt>async_load</tt> 映射将包含以下键 / 值对：
 <br>
 <br>
 
@@ -883,7 +883,7 @@ for="seven">Steam</label> <input id="seven" type="checkbox">
 <li>"<b>gamepad lost</b>" - 当系统失去与游戏手柄的连接时发生</li>
 </ul></li>
 
-<li>"<b>pad_index</b>" - 已添加或删除的打击垫的索引</li>
+<li>"<b>pad_index</b>" - 已添加或删除的游戏手柄的索引</li>
 </ul>
 
 <p>此事件现在允许你将所有游戏手柄检查逻辑从步骤事件或警报事件移动到系统事件中，并仅在实际需要时运行它。

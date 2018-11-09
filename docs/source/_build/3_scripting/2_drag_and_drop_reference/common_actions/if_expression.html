@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,54 +40,26 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to check that an expression as either
-<tt>true</tt> or <tt>false</tt>, and you can check any logical
-expression here as long as it evaluates to one or the other value.
-For example, any of the following expressions could be used:</p>
+<p>上述代码是用来检查 表达式结果否为<tt>true</tt> 或 <tt>false</tt>，你也可以检查任何逻辑表达式只要它能被计算出值。你也可以检查其他的值。例如，你可以使用任何下述表达式</p>
 
 <p class="code">x &lt; (room_width / 2)<br>
 a == b<br>
 ++val &gt;= 100<br></p>
 
-<p>If you flag the "Not" argument, then the above will be negated
-expressions, for example "==" becomes "<i>not</i>=". Also note that
-the expression is not limited to numeric values and you can check
-strings, pointers, resource IDs or anything else that a function
-can return or use (see the section on <a href=
-"../../3_gml_overview/9_data_types.html">data types</a> for more
-information), but you cannot compare two different data types
-without getting an error - for example if you try to use a string
-and an integer in the expression you will get an error. For more
-information on expressions, see <a href=
-"../../3_gml_overview/12_expressions.html">here</a>.</p>
+<p>如果你选中了“NOT”参数，那么结果将会反向。例如"等于"(==)变为“<i>不</i>等于”（！=）。表达式并不只限于数值，你也可以使用字符串，指针，资源ID或其它有返回值的函数（请看 <a href=
+"../../3_gml_overview/9_data_types.html">数据类型</a> )， 但如果你尝试比较两个不同数据类型的值是否相等，比如将字符串”莫得感情“和数值1比较就会得到错误的结果。更多信息请查阅 &lt;a3&gt;这里&lt;/a3&gt;。</p>
 
-<div class="note"><b>IMPORTANT NOTE</b>: Due to <a href=
+<div class="note"><b>注意！</b>由于 <a href=
 "http://floating-point-gui.de/formats/fp/" target=
-"·_blank&quot;">floating point precision issues</a>, checking to
-see if two values are exactly equal may return <tt>false</tt>,
-since one may be exactly 1, while the other may be
-1.00000000000001. This can be avoided by using the <a href=
-"../Type_Actions/decimal_to_integer.html">Decimal to Integer</a>
-action before checking or using the "greater than (&gt;)" or "less
-than (&lt;)" expressions.</div>
+"·_blank&quot;">浮动指针精度问题</a>，检查两个相等的值可能会返回 <tt>false</tt>，因为前者是1，而后者事实上是1.00000000000001. 你可以事先使用 <a href=
+"../Type_Actions/decimal_to_integer.html">将小数变为整数</a> 动作来避免这样的错误。你也可以使用“大于”或“小于”表达式。</div>
 
 <p><br>
-
-Note that to add actions into the "if" block, they should be
-dropped to the side of the action, as shown in the image below:<br>
+如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br>
 <img class="center" src="Images/Drop_If_Expression.png" alt=
 "If Expression Add Actions"></p>
 
-<p>These actions will now be run if the "if" evaluates to
-<tt>true</tt>, while any actions dropped elsewhere will be
-performed after the "if" block. Note that you can "stack"
-expressions in the same action by clicking the plus icon
-<img style="vertical-align:middle" src=
-"../Icon_Expand_Arguments.png"> beside the action, and giving
-another expression to check. This will check if <i>all</i> the
-expressions given return <tt>true</tt> in one check and only
-perform the added action code if they do (see the example given
-below).</p>
+<p>如果if的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。注意你可以点击 &lt;i0&gt; 加号图标来多次执行此动作，你需要给出新的需要被检查的表达式。这将会在一次检查中检查 <i>所有</i> 给出的表达式是否返回<tt>true</tt>，如果是的话就只执行添加的动作代码。（请看下面的图片）。</p>
 </blockquote>
 
 <p><br>
@@ -110,13 +82,12 @@ below).</p>
 
 <tr>
 <td>表达式</td>
-<td>The expression to check.</td>
+<td>被检查的表达式</td>
 </tr>
 
 <tr class="alt">
 <td>非</td>
-<td>Set to check if the expression does <i>not</i> evaluate to
-true.</td>
+<td>设置来使结果反向。例如本来是 <i>false</i> ，反向后就返回true。</td>
 </tr>
 </table>
 </blockquote>
@@ -128,11 +99,7 @@ true.</td>
 <img class="center" src="Images/e_Common_If_Expression.png" alt=
 "If Expression Action Example">
 <blockquote>
-<p>The above action block code checks to see if the instance
-variable "<tt>player_score</tt>" is greater than 1000 <i>and</i>
-that the instance variable "<tt>player_level</tt>" is less than 10.
-if both checks return <tt>true</tt> then the action code goes on to
-assign new values to these variables.</p>
+<p>上述动作代码块将检查实例变量 "<tt>player_score</tt>"大于1000<i>并且</i> 另一个实例变量 "<tt>player_level</tt>"是否小于10. 如果它们都返回 <tt>true</tt> ，那么代码将为这两个变量赋予新值。</p>
 </blockquote>
 
 <p><br>
@@ -142,8 +109,7 @@ assign new values to these variables.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="if_undefined.html">If
 Undefined</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -111,7 +111,7 @@ in the <b>Steam Async Event</b> in the following way:</p>
 
 <p>What we do here is first check the "id" key of the special <a href=
 "../../../2_interface/1_editors/events/async_events.html"><tt>async_load</tt></a> ds_map. 如果此值与原始回调函数的值（存储在 “score_get” 变量中）相同，则我们将继续处理数据。The first thing we do is parse the <tt>async_load</tt> ds_map for the key "entries" which will contain a JSON object containing the leaderboard data. This JSON object is then decoded (see <a href=
-"../file%20handling/json_decode.html"><tt>json_decode</tt></a>) as another ds_map, and this new map id is stored in the variable "map".<br><br>检查该映射是否为 “default” 键，如果找到，则销毁该映射并退出该事件。If no "default" key is found, the code will then parse the map to extract the necessary information about the leaderboard, by first extracting a ds_list from the "entries" key of the ds_map, and then looping through each entry of the list to get <i>another</i> ds_map with the name, score and rank of each entry. These values are then stored to arrays and the map destroyed.<br><br>一旦循环完成，条目列表就会像从其获取的映射一样被销毁。There is no need to destroy the <tt>async_load</tt> ds_map as this is handled for you by <i>GameMaker Studio 2</i>.</p>
+"../file%20handling/json_decode.html"><tt>json_decode</tt></a>) as another ds_map, and this new map id is stored in the variable "map".<br><br>检查该映射是否有为 “default” 的键，如果有的话，则销毁该映射并退出该事件。If no "default" key is found, the code will then parse the map to extract the necessary information about the leaderboard, by first extracting a ds_list from the "entries" key of the ds_map, and then looping through each entry of the list to get <i>another</i> ds_map with the name, score and rank of each entry. These values are then stored to arrays and the map destroyed.<br><br>一旦循环完成，条目列表就会像从其获取的映射一样被销毁。There is no need to destroy the <tt>async_load</tt> ds_map as this is handled for you by <i>GameMaker Studio 2</i>.</p>
 
 <p><br>
 </p>
@@ -120,10 +120,9 @@ in the <b>Steam Async Event</b> in the following way:</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Steam
-API</a></div>
+<div style="float:left">上一页:  <a href="index.html">Steam API</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "steam_download_scores_around_user.html">steam_download_scores_around_user</a></div>
 </div>
 </div>

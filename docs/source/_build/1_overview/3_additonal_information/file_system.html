@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
+<title>文件系统</title>
+<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+<link rel="stylesheet" href="../../../../files/helpindex.css" type=
+"text/css">
+<link rel="stylesheet" href="../../../../default.css" type=
+"text/css">
+
+<script type="text/JavaScript" src="../../../../files/supply.js"></script>
+<script type="text/JavaScript">
+chmtop.c2wtopf.pageid = "_build/1_overview/3_additonal_information/file_system.html";
+</script>
+
+</head>
+<body><script type="text/JavaScript"> 
+if (window.name != "content") 
+  document.write(" <table width=\"100%\" bgcolor=\"#e1e1e1\"cellspacing=\"2\" cellpadding=\"0\" style=\"border-collapse: collapse; font-family: sans-serif; font-size: 14px; color: #000000; text-decoration: none;  \"> <tr> <td align=\"center\" style=\"border-bottom: 2px solid gray\" > <br>&nbsp;Click <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additonal_information%2Ffile_system.html\">here</a> to show toolbars of the Web Online Help System: <a href=\"../../../../index.html?page=source%2F_build%2F1_overview%2F3_additonal_information%2Ffile_system.html\">show toolbars</a><br>&nbsp;</td></tr></table><br> "); 
+</script><!-- !chm2web! -->
+
+
+<h2>文件系统</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p>在使用 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/index.html">文件系统函数</a> 或在 <i>GameMaker Studio 2</i> 中 <a href=
+"../../2_interface/1_editors/included_files.html">内含文件</a> 时，非常重要的一点是要确切了解所有的工作原理以及幕后发生的事情。为此目的，本节旨在解释和阐明东西是如何存储的，它们存储在哪里，以及这个系统可能存在的限制或变通方法。</p>
+
+<blockquote><a name="file_sandbox" id="file_sandbox"></a>
+<label class="collapse" for="one">文件沙箱</label> <input id=
+"one" type="checkbox">
+<div class="index_list">
+<p>关于文件函数，需要注意的第一点也是最重要的一点是，它们通常仅限于 <i>沙箱</i>。这意味着，如果没有用户 <i>明确</i> 的输入，<i>GameMaker Studio 2</i> 无法在游戏包或设备本地存储之外的任何地方保存或加载文件，即使这样，这种输入也 <b>仅</b> 限于 <i>Windows</i> 和 <i>Mac</i> 目标平台。</p>
+
+<p>要理解沙箱，首先你需要理解文件有两个不同的区域：</p>
+
+<ul>
+<li><b>文件包区（The File Bundle）</b> - 在这里存储所有与可执行游戏打包的文件，包括你从 <i>GameMaker Studio 2</i> IDE 中添加到 <a href=
+"../../2_interface/1_editors/included_files.html">内含文件</a> 资源列表中的文件（这些文件是你希望与游戏打包的外部文件）<br>
+<br></li>
+
+<li><b>保存区（The Save Area）</b> - 这是一个可以被游戏安全写入的设备存储区域，并且游戏保证这是一个可写的区域。</li>
+</ul>
+
+<p>下面的图表可以帮助你更好地理解这一点：
+
+<img class="center" src="images/files_saveareas.png" alt=
+"文件系统存储区域"></p>
+
+<div class="note"><b>注意：</b> <b>永远不</b> 能写入文件包目录。</div>
+</div>
+<br>
+<a name="file_functions" id="file_functions"></a> <label class=
+"collapse" for="two">使用文件函数</label> <input id=
+"two" type="checkbox">
+<div class="index_list">
+<p>这两个目标区域——文件包目录和本地存储区域——在每个目标平台上都可用，但在每个平台上它们的工作方式略有不同。然而，<i>GameMaker Studio 2</i> 抽象出了能做什么和不能做什么的主要本质，使其更容易将游戏重新定位到多个环境中。</p>
+
+<p>首先，你该理解我们讨论 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/working_directory.html"><tt>working_directory（工作目录）</tt></a> 时的含义。这是两个可能的保存位置的同义词（如上图所示），当你使用该目录时，它将根据你是否正在读取或写入，以及你正在读取的文件是否已更改，执行以下两种操作之一：</p>
+
+<ul>
+<li><b>读取操作</b> - <tt>working_directory</tt> 将首先检查保存区，以查看正在访问的文件是否存在，是否使用该区域。如果文件不存在于保存区域，它会检查文件包区并使用它（如果正在查找的文件是游戏的内含文件）。<br>
+<br></li>
+
+<li><b>写入操作</b> - 这只能在保存区发生。</li>
+</ul>
+
+<div class="note"><b>注意：</b> 一般情况下，<i>GameMaker Studio 2</i> 会为你处理所有这些问题，你很少需要使用内置在变量中的 <tt>working_directory</tt>。</div>
+
+<p>使用这两个简单的规则，我们现在可以看到下面的函数是如何工作的（这些示例帮助你看到可用的不同函数的过程）：</p>
+
+<ul>
+<li><a href=
+"../../3_scripting/4_gml_reference/file%20handling/directory_create.html"> <tt>directory_create</tt></a> (和其他目录函数)只在保存区工作。<br>
+<br></li>
+
+<li><a href=
+"../../3_scripting/4_gml_reference/file%20handling/index.html">文件系统</a> 函数将从文件包区和保存区 <i>均</i> 返回关于文件的信息，但只写入保存区。<br>
+<br></li>
+
+<li>写文本、二进制文件或 INI 文件函数将在保存区中创建一个新文件，如果不存在该文件，则从包含在游戏 文件包区中的 <i>原始</i> 文件中复制任何信息。注意，原始文件 <i>仍然保留在文件包区的只读部分</i>，但是只要保存区的读 / 写部分存在一个版本，它们就不会被引用。</li>
+</ul>
+</div>
+<br>
+<a name="file_outside" id="file_outside"></a> <label class=
+"collapse" for="three">在文件沙箱外保存和加载</label> <input id="three" type="checkbox">
+<div class="index_list">
+<p>在 <b>Windows</b> 和 <b>Mac OS</b> 平台上，有一种方法可以从沙箱外部保存和加载文件，即使用 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/file%20system/get_open_filename.html"><tt>get_open_filename</tt></a> 和 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/file%20system/get_save_filename.html"><tt>get_save_filename</tt></a>函数。这两个函数都要求用户选择要加载和保存的区域，然后可以在其他文件函数中使用返回字符串来绕过沙箱。有关详细信息，请参阅手册 <a href=
+"../../3_scripting/index.html">脚本章节</a> 中的函数描述。</p>
+</div>
+<br>
+<a name="file_platform_specific" id="file_platform_specific"></a>
+<label class="collapse" for="four">特定平台的存取</label> <input id="four" type="checkbox">
+<div class="index_list">
+<p>在使用 <i>GameMaker Studio 2</i> 时，你应该知道每个目标平台都有自己的保存区域，可以在其中写入和读取文件和目录。以下是每个目标涉及的领域：</p>
+
+<ul>
+<li><b>Windows</b> 和 <b>Windows UWP</b>- Windows 所有文件在 <tt>%localappdata%\&lt;游戏名&gt;</tt> 目录（Windows 7 系统在 <tt>/Users/&lt;User Name&gt;/AppData/Local/&lt;游戏名&gt;</tt> 目录）。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>HTML5</b> - 一切都是通过本地存储。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Mac OS</b> - Storage will depend on whether the application
+is sandboxed or not (following Apples rules).</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Ubuntu (Linux)</b> - 文件储存在 <tt>Home/.config/gamename</tt>，“Home” 是用户的 home 目录 - <tt>/home/&lt;username&gt;</tt></li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>iOS</b> - 存储在标准位置（通过iTunes查看）。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Android</b> - 文件在标准位置（不可见，除非设备 root 过）<tt>/data/&lt;package name&gt;</tt>。</li>
+
+<li style="list-style: none"><br>
+</li>
+</ul>
+
+<p>It is worth noting that the <b>HTML5</b> target modules have a
+limit on local storage (which can be between 1MB and 5MB depending
+on the browser) meaning that you will not be permitted to save
+large sprites, screenshots etc...</p>
+</div></blockquote>
+
+<p><br>
+</p>
+</div>
+
+<div class="footer">
+<div class="buttons">
+<div class="clear">
+<div style="float:left">上一页：<a href="index.html">附加信息索引</a></div>
+
+<div style="float:right">下一页：<a href="using_buffers.html">使用缓冲区</a></div>
+</div>
+</div>
+
+<h5>© Copyright YoYo Games Ltd. 2016 All Rights Reserved</h5>
+<script type="text/javascript">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
+</script>
+</div>
+
+<script type="text/JavaScript">
+var fe = FindFrame("toc", top);
+if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
+  if (chmtop.c2wtopf.FITEMS[chmtop.c2wtopf.pagenum] != chmtop.c2wtopf.pageid)
+    chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
+}
+</script>
+</body>
+</html>

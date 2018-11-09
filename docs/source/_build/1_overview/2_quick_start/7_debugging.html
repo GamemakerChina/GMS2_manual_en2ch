@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>正在调试</title>
+<title>调试</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../files/helpindex.css" type=
@@ -30,7 +30,7 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>正在调试</h2>
+<h2>调试</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -38,7 +38,7 @@ if (window.name != "content")
 
 <p>游戏的编程阶段，无论是使用代码还是拖放模块，都非常容易犯错误 - 使用错误的变量，传递错误的参数或使用错误的函数是我们所犯的一些最常见的错误 - 脚本/动作编辑器附带的语法检查器并不能没有遗漏地检测到这些错误。这意味着，这些错误只有在你实际运行或编译游戏时才会变得明显，即使这样，有时也难以准确地知道出现的问题是什么。因此，及时了解你的游戏在所选设备上的表现，以及房间中的实例，所创建的全局变量以及其他详细信息，是至关重要的。</p>
 
-<p>现在，你可以通过在游戏中添加所谓的“调试代码”，来在屏幕上显示所需的信息，或者你可以使它在出现错误时显示消息，这样可以自己检查这些信息，但是这通常会带来大量的工作，如果你不确定问题在哪里，那么你可能在尝试和错误的追踪错误上耗费大量时间。对此，<i>GameMaker Studio 2</i> 提供了一个被称为 <b>调试模式</b> 的特殊测试模式，它将启动 <i>调试模块</i> 以及一个全面的错误报告系统，可在运行时显示信息，以帮助你跟踪游戏中出现的问题。 </p>
+<p>现在，你可以通过在游戏中添加所谓的“调试代码”，来在屏幕上显示所需的信息，或者你可以使它在出现错误时显示消息，这样可以自己检查这些信息，但是这通常会极大地增加工作量，如果你不确定问题在哪里，那么你可能在尝试和错误的追踪错误上耗费大量时间。对此，<i>GameMaker Studio 2</i> 提供了一个被称为 <b>调试模式</b> 的特殊测试模式，它将启动 <i>调试模块</i> 以及一个全面的错误报告系统，可在运行时显示信息，以帮助你跟踪游戏中出现的问题。 </p>
 
 <p>以下内容为你可使用的调试游戏的不同方式：</p>
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <p>大多数编译器错误消息遵循相同的模式，其中包含一条消息，指示物体发生错误，然后是事件与行号，最后简要描述错误本身。 错误报告提供的信息非常重要，因为它会检测并报告导致游戏崩溃的语法和语言相关的错误，但不会报告更多的细微错误，也不会给出修复反馈。 对于此类型情况你应该使用 <b>调试模式</b>（下一点即为该模式的详细解释）。</p>
 
-<p>除了这些编译错误，你还可以获得语法错误。当你添加 DnD™ 操作或代码时，将会检测到这些操作，并显示在 <b>语法错误</b><a href=
+<p>除了这些编译错误，你的游戏还可能有语法错误。当你添加 DnD™ 操作或代码时，将会检测到这些操作，并显示在 <b>语法错误</b><a href=
 "../../2_interface/2_extras/output.html">输出窗口</a> 中，与下图所示相似： <img class="center" src=
 "images/qs_debug_syntaxerror.png" alt="语法错误"></p>
 
@@ -81,11 +81,11 @@ if (window.name != "content")
 <p>在这些情况下，作为分析器的补充，你可以在游戏中显示 <b>调试状态条</b>，这将显示游戏正在使用的内存量，CPU 功率和 GPU 功率。</p>
 
 <p><img class="center" src="images/qs_debug_bar.png" alt=
-"Debug Bar">
+"调试状态条">
 </p>
 
 <p>此调试条在实际的游戏窗口中显示了 CPU / GPU 使用情况的帮助图示，并且可以使用函数 <a href=
-"../../3_scripting/4_gml_reference/debugging/show_debug_overlay.html"><tt>show_debug_overlay()</tt></a> 在游戏中切换开关。这个显示栏被分成几个部分，每个部分代表 1/60 秒。从下面的图像可以看出，显示条由各种颜色组成，每一种颜色都代表游戏性能的一方面，显示条越长，则该方面需要的时间越多，其性能就越强大：</p>
+"../../3_scripting/4_gml_reference/debugging/show_debug_overlay.html"><tt>show_debug_overlay()</tt></a> 在游戏中切换开关。这个显示栏被分成几个部分，每个部分代表 1/60 秒。从下面的图像可以看出，显示条由各种颜色组成，每一种颜色都代表游戏性能的一方面，显示条越长，则该方面需要的时间越多，游戏性能受到的损失也更大：</p>
 
 <ul>
 <li><b style="color:lime;">绿色</b> - 输入/输出处理（即：键盘，鼠标，游戏手柄，网络等）<br>
@@ -103,7 +103,7 @@ if (window.name != "content")
 <li><b style="color:white;">白色</b> - GPU 剩余时间，这是 GPU 在下一个画面可以开始渲染之前完成当前画面渲染所花费的时间<br>
 <br></li>
 
-<li><b style="color:aqua;">青色</b> - 文字呈现时间<br>
+<li><b style="color:aqua;">青色</b> - 文字渲染时间<br>
 <br></li>
 
 <li><b style="color:silver;">灰色</b> - 清除屏幕每个绘制步骤所需的时间<br>
@@ -115,7 +115,7 @@ if (window.name != "content")
 <p>除了彩色的显示条，顶部还有几个值。这些值所表示内容如下：</p>
 
 <ul>
-<li><b>FPS</b> - 这是你的游戏的“每秒帧数”，基本上代表了你的游戏的运行速度。这个值 <i>不</i> 能完全决定游戏的游戏速度，而是显示当你游玩时还有多少性能剩余。与你的游戏速度相比，该值越大，你的游戏将可以运行越流畅，并有更多性能剩余来让你添加更多东西。请注意，该值在会话期间可能有很大的变化，但是当你关闭游戏时，<i>GameMaker Studio 2</i> 中的编译器输出窗口将显示最小值和最大值以及平均值（请注意，最小值 <i>可以</i> 为负数！这不是一个错误，而是由于启动时间和游戏在初始化时被处理的方式所导致的）。<br>
+<li><b>FPS</b> - 这是你的游戏的“每秒帧数”，基本上代表了你的游戏的运行速度。这个值 <i>不</i> 能完全决定游戏的游戏速度，而是显示当你游玩时还有多少性能剩余。与你的游戏速度相比，该值越大，你的游戏将可以运行越流畅，并有更多性能剩余来让你添加更多东西。请注意，该值在某一段时间可能有很大的变化，但是当你关闭游戏时，<i>GameMaker Studio 2</i> 中的编译器输出窗口将显示最小值和最大值以及平均值（请注意，最小值 <i>可以</i> 为负数！这不是一个错误，而是由于启动时间和游戏在初始化时被处理的方式所导致的）。<br>
 <br></li>
 
 <li><b>纹理交换</b> - 这个数字显示你的游戏每个游戏帧（该时间是 <i>GameMaker Studio 2</i> 运行所有事件的统一时间，每秒钟的游戏帧数由房间速度决定）交换纹理的次数。纹理（精灵和背景）存储在纹理页面上，如果你的游戏中有很多图像资源，那么 <i>GameMaker Studio 2</i> 必须在纹理页面之间进行交换以将其全部绘制，因此如果该值很高（例如超过20），那么你真的需要研究如何优化它，因为该值过高会影响你的游戏性能，特别是在移动端。<br>
@@ -144,7 +144,7 @@ if (window.name != "content")
 <div class="clear">
 <div style="float:left">上一页： <a href="index.html">快速入门指南</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "8_shortcuts.html">Shortcuts</a></div>
 </div>
 </div>

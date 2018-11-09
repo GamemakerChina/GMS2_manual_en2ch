@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,20 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to retrieve the value of a global variable
-and assign it to another instance or temporary (local) variable.
-The variable you assign the global value to can be one that was
-previously created, or you can check the "Temp" check-box and give
-a new variable name to have the action create a new temporary
-(local) variable specifically to hold the returned value.</p>
+<p>此动作用来从一个全局变量中得到一个值并将此值赋予一个临时（本地）变量。目标变量可以是之前就被创建过的，但你也可以选中“临时”来创建一个新的临时（本地）变量来存储返回值。</p>
 
-<p>Note that you can add additional variables in the same action by
-clicking the plus icon <img style="vertical-align:middle" src=
-"../icon_expand_arguments.png"> beside the action, and giving
-another global variable name and temporary local variable name. For
-more advanced information on variables please see the section on
-<a href="../../3_gml_overview/6_scope.html">Variables And Variable
-Scope</a>.</p>
+<p>你可点击 <img style="vertical-align:middle" src=
+"../icon_expand_arguments.png"> 加号图标来多次执行此动作，当然你需要给出额外的变量。有关详细信息，请看<a href="../../3_gml_overview/6_scope.html">变量和全局变量</a>。</p>
 </blockquote>
 
 <p><br>
@@ -76,19 +66,17 @@ Scope</a>.</p>
 
 <tr>
 <td>名称</td>
-<td>The name of the global variable to get the value of.</td>
+<td>待取得值的全局变量的名称</td>
 </tr>
 
 <tr class="alt">
 <td>目标</td>
-<td>The target variable to hold the returned value - it should have
-been created previously if "Temp" is not checked (see below).</td>
+<td>将要存储返回值的目标变量。</td>
 </tr>
 
 <tr>
 <td>临时</td>
-<td>Create a temporary (local) variable to hold the returned value
-(off by default)</td>
+<td>创建一个临时（本地）变量来存储返回值（默认情况下关闭）。</td>
 </tr>
 </table>
 </blockquote>
@@ -100,10 +88,7 @@ been created previously if "Temp" is not checked (see below).</td>
 <img class="center" src="images/e_common_get_global_var.png" alt=
 "Get Global Variable Action Example">
 <blockquote>
-<p>The above action block code retrieves two global variable values
-and assigns them to temporary (local) variables which are then used
-in an "<tt>if</tt>" comparison. If the result is <tt>true</tt>,
-three global variables are set to new values.</p>
+<p>上述代码将获得两个全局变量的值并将它们分别存储在两个临时（本地）变量，然后使用 "<tt>if</tt>" 来比较它们。如果结果是 <tt>true</tt>，那么三个变量将会被设为新值。</p>
 </blockquote>
 
 <p><br>
@@ -113,8 +98,7 @@ three global variables are set to new values.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="if_variable.html">If
 Variable</a></div>

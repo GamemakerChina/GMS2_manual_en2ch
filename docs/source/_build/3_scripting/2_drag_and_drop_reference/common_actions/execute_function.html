@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Execute Function</title>
+<title>执行函数</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_common_execute_function.png">    Execute Function</h2>
+"images/i_common_execute_function.png">  执行函数</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,22 +40,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to call any <a href=
-"../../3_gml_overview/index.html">GML Function</a>. You give the
-GML function to call and then supply any additional
-<i>arguments</i> that it requires, ie: any values (strings,
-integers, resource indices, etc...) that you wish to input into the
-function so that it can use them. You can add additional argument
-inputs by clicking the plus icon <img style="vertical-align:middle"
-src="../icon_expand_arguments.png"> beside the action, and you
-should ensure that your argument count matches that of the function
-being used (ie: if the function requires 3 arguments, you should
-supply 3 arguments). Some functions can also return a value for
-later use in the action block list, and so you can also specify the
-<b>target variable</b> that should store this return value, which
-can have been created previously or can be a new temporary one (if
-you check the "Temp" check-box). Both the target and the argument
-fields can be left blank if they are not required.</p>
+<p>此动作可用来调用任意的 <a href=
+"../../3_gml_overview/index.html">GML函数</a>. 你需要给出需要调用的GML函数，并提供此函数所需要的 <i>参数</i> 以确保函数能正确运行。你可以点击加号图标来添加 <img style="vertical-align:middle"
+src="../icon_expand_arguments.png"> 额外的参数。你需要确保你提供的参数与该函数需要的参数在数量和格式上是匹配的。有些函数有返回值，你可以设定 <b>目标变量</b> t使此目标变量来存储此返回值（此目标变量需要之前被创建过），但你也可以选中“临时”复选框来创建一个临时变量来存储返回值。如果参数和目标不是必须的话，也可以不填。</p>
 </blockquote>
 
 <p><br>
@@ -63,7 +50,7 @@ fields can be left blank if they are not required.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_common_execute_function.png" alt=
-"Execute Function Syntax">
+"执行函数语法">
 <p><br>
 </p>
 
@@ -78,19 +65,17 @@ fields can be left blank if they are not required.</p>
 
 <tr>
 <td>脚本</td>
-<td>The GML function to call.</td>
+<td>调用的GML函数。</td>
 </tr>
 
 <tr class="alt">
 <td>Argument0 ... ArgumentX</td>
-<td>The different arguments (values) that are to be passed to the
-function.</td>
+<td>需要传递给此函数的参数。</td>
 </tr>
 
 <tr>
 <td>目标</td>
-<td>The name of the variable that is to be targeted for any
-returned values (can be left blank).</td>
+<td>储存返回值的目标变量，也可不填。</td>
 </tr>
 </table>
 </blockquote>
@@ -100,14 +85,8 @@ returned values (can be left blank).</td>
 
 <h3>举例：</h3>
 <img class="center" src="images/e_common_execute_function.png" alt=
-"Execute Function Example">
-<blockquote>The above action block code checks to see if an
-instance of "obj_Player" exists and if it does it calls the
-<tt>point_distance</tt> function, passing in the current instances
-x and y position, as well as the obj_player x and y position. It
-will return the distance between the two points to the (previously
-created) <tt>dist</tt> instance variable, or set the variable to 0
-if there is no instance of "obj_Player" in the room.</blockquote>
+"执行函数例子">
+<blockquote>上述代码将检测物体 "obj_Player" 的是否存在一个实例，如果存在它将调用 <tt>point_distance</tt> 函数，传递当前实例和obj_player的X和Y的位置。它将两点的距离作为返回值赋给 <tt>dist</tt> 实例变量，如果此物体在此房间中没有实例，那么将会把此变量设为0。</blockquote>
 
 <p><br>
 </p>
@@ -116,8 +95,7 @@ if there is no instance of "obj_Player" in the room.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Common
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
 
 <div style="float:right">next: <a href="apply_to.html">Apply
 To...</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -42,7 +42,7 @@ if (window.name != "content")
 <blockquote>
 <p>此动作将加载一个之前已经保存的游戏，后者使用了<a href="save_game.html">Save Game</a> 动作。你需要提供需要加载文件的名称（字符串格式，包括扩展），然后游戏将会被加载并从保存点继续运行。此动作并不是一个全游戏的保存/加载系统，如果你尝试保存一个正在运行的游戏并加载他，他可能会报错，尤其是你使用了 <a href="../data_structure_actions/index.html">数据结构</a> 或 <a href=
 "../particle_actions/index.html">粒子</a>。所以，你不能随时随地保存或加载游戏，你只能从一个单独的游戏物体中加载和保存游戏（例如检查点）。请注意此动作被调用时不会立即生效，而要等到目前的事件或脚本结束后才能生效。所以所有在此动作之后的动作会继续执行，直到目前的事件或脚本结束。为了更容易理解加载存储游戏数据的方法，请看 <a href=
-"../file_actions/index.html">File Actions</a>。</p>
+"../file_actions/index.html">文件动作</a>。</p>
 </blockquote>
 
 <p><br>
@@ -76,7 +76,7 @@ if (window.name != "content")
 <h3>举例：</h3>
 <img class="center" src="images/e_game_load_game.png" alt=
 "Load Game Example">
-<blockquote>上述代码将会检查一个全局变量，如果它小于或等于，它将会加载之前保存的游戏。.</blockquote>
+<blockquote>上述代码将会检查一个全局变量，如果它小于或等于0，它将会加载之前保存的游戏。.</blockquote>
 
 <p><br>
 </p>
@@ -85,11 +85,9 @@ if (window.name != "content")
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Game
-Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏动作</a></div>
 
-<div style="float:right">next: <a href="restart_game.html">Restart
-Game</a></div>
+<div style="float:right">下一页： <a href="restart_game.html">重启游戏</a></div>
 </div>
 </div>
 

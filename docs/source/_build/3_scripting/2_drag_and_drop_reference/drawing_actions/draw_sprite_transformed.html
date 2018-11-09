@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,29 +40,12 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will draw the given sprite similar to the action
-<a href="draw_sprite.html"><tt>Draw Sprite</tt></a> but with
-additional options to change the scale, blending, rotation and
-frame of the sprite being drawn. Changing these values does
-<i>not</i> modify the resource in any way (only how it is drawn),
-and you can use any of the available <a href=
-"../../4_gml_reference/instances/instance_variables/index.html">sprite
-property variables</a> instead of direct values for all the
-arguments in the function. The image below illustrates how
-different values affect the drawing of the sprite:  <img class=
+<p>此函数类似动作<a href="draw_sprite.html"><tt>绘制精灵</tt></a>，但此动作有更多选项，可以改变精灵的比例，混合方式，旋转角度，待绘制的帧。修改这些值 <i>不会</i>修改到资源（只是修改绘制时的效果） ，你可以使用任何变量 <a href=
+"../../4_gml_reference/instances/instance_variables/index.html">精灵属性变量</a>而不是直接使用函数的参数的值。下图展示了不同的值如何对绘制精灵生效：The image below illustrates how different values affect the drawing of the sprite: <img class=
 "center" src="images/spr_ext.png"></p>
 
-<div class="note"><b>NOTE:</b> Colour blending is only recommended
-for the HTML5 target when WebGL is enabled, although you can still
-set the blending colour if it is not enabled and it will blend the
-sprite as normal. However all blending in this way creates a
-duplicate sprite which is then stored in the cache and used when
-required. This is far from optimal and if you use multiple colour
-changes it will slow down your games performance unless you
-activate WebGL. if you do not wish to use WebGL, then you can set
-the font cache size to try and limit this should it be necessary
-using the function <a href=
-"../../4_gml_reference/sprites/sprite_set_cache_size.html"><tt>sprite_set_cache_size</tt></a>.</div>
+<div class="note"><b>注意：</b>启用WebGL时，建议仅为HTML5目标使用颜色混合，但如果未启用混合颜色，则仍可设置混合颜色，并且它将正常混合精灵。任何形式的混合会创建一个副本精灵储存在缓存，当需要时可供使用。如果你混合多种颜色，并且没有启用WebGL，将会降低你的游戏性能。如果你不希望使用WebGL，可以设置字体缓存大小以尝试使用函数<a href=
+"../../4_gml_reference/sprites/sprite_set_cache_size.html"> <tt> sprite_set_cache_size &lt;/ t2&gt; &lt;/ a1&gt;来限制此值。</div>
 
 <div class="note"><b>注意</b>：这个动作只能用于各种 <a href=
 "../../../2_interface/1_editors/events/draw_events.html">绘制动作</a>，如果用在其它位置将不生效。</div>
@@ -74,7 +57,7 @@ using the function <a href=
 <h3>动作语法：</h3>
 <img class="center" src=
 "images/a_drawing_draw_sprite_transformed.png" alt=
-"Draw Sprite Transformed Syntax">
+"绘制变形精灵语法">
 <p><br>
 </p>
 
@@ -89,49 +72,42 @@ using the function <a href=
 
 <tr>
 <td>精灵</td>
-<td>The sprite to draw</td>
+<td>待绘制的精灵</td>
 </tr>
 
 <tr class="alt">
 <td>帧</td>
-<td>The sprite frame to draw (use the built in variable
-<tt>image_index</tt> for the current frame)</td>
+<td>待绘制的精灵的帧 (使用了内置变量 <tt>image_index</tt> 为当前帧)</td>
 </tr>
 
 <tr>
 <td>X</td>
-<td>The x position to draw at within the room</td>
+<td>绘制的x坐标</td>
 </tr>
 
 <tr class="alt">
 <td>Y</td>
-<td>The y position to draw at within the room</td>
+<td>绘制的y坐标The y position to draw at within the room</td>
 </tr>
 
 <tr>
 <td>X 缩放</td>
-<td>The scale factor for the X axis (use the built in variable
-<tt>image_xscale</tt> for the current X scale)</td>
+<td>x轴缩放比例因子（使用内置变量 <tt>image_xscale</tt> 作为当前x的比例）</td>
 </tr>
 
 <tr class="alt">
 <td>Y 缩放</td>
-<td>The scale factor for the Y axis (use the built in variable
-<tt>image_yscale</tt> for the current Y scale)</td>
+<td>y轴缩放比例因子（使用内置变量 <tt>image_yscale</tt> 作为当前y的比例）</td>
 </tr>
 
 <tr>
 <td>旋转</td>
-<td>The draw angle for the sprite (from 0 to 360, rotating
-anticlockwise where 0 is to the right - use the built in variable
-<tt>image_angle</tt> for the current rotation)</td>
+<td>绘制精灵时的旋转角度（0到360度，逆时针旋转，0度表示正右方。使用内置变量<tt>image_angle</tt> 进行当前旋转）</td>
 </tr>
 
 <tr class="alt">
 <td>颜色</td>
-<td>The colour to blend with the sprite (default is white, and you
-can use the built in variable <tt>image_blend</tt> for the current
-colour)</td>
+<td>需要与精灵混合的颜色（默认为白色，你可以使用内置变量 <tt>image_blend</tt> 用作当前颜色变换）</td>
 </tr>
 </table>
 </blockquote>
@@ -142,12 +118,8 @@ colour)</td>
 <h3>举例：</h3>
 <img class="center" src=
 "images/e_drawing_draw_sprite_transformed.png" alt=
-"Draw Sprite Transformed Example">
-<blockquote>The above action block code checks a variable and if it
-is set to <tt>true</tt> then the sprite is drawn with random
-scaling along the x and y axis and blended with the colour red,
-otherwise the spriteis drawn using the default
-transforms.</blockquote>
+"绘制变形精灵举例">
+<blockquote>上述代码检查了一个变量，如果它被设置为 <tt>真</tt>就绘制一个精灵（x和y轴的缩放比例为随机值，颜色语红色叠加），如果为假就绘制一个精灵使用默认参数。</blockquote>
 
 <p><br>
 </p>
@@ -158,8 +130,8 @@ transforms.</blockquote>
 <div class="clear">
 <div style="float:left">上一页： <a href="index.html">绘制动作</a></div>
 
-<div style="float:right">next: <a href=
-"draw_stacked_sprites.html">Draw Stacked Sprites</a></div>
+<div style="float:right">下一页： <a href=
+"draw_stacked_sprites.html">绘制堆叠的精灵</a></div>
 </div>
 </div>
 

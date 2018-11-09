@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2web" />
+<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -42,7 +42,7 @@ if (window.name != "content")
 <li><b>默认绘制</b>，当你在一个物体中定义了精灵，但没有在 <b>绘制</b> 事件中放置任何动作或代码时，<i>GameMaker Studio 2</i> 会绘制此精灵。请注意，只要绘制事件为空，你在其他事件中执行的例如更改图像比例，索引，混合等的任何变换都将被反映出来。<br>
 <br></li>
 
-<li><b>自定义绘制</b>，这是在绘制事件中放置代码或操作的时候。这告诉 <i>GameMaker Studio 2</i> “我想控制你为这个物体的实例绘制的内容”，它完全覆盖了默认的绘图。 这意味着，例如，你可以拥有一个分配了精灵的物体，然后将绘制事件设置为绘制文本，并且不会绘制精灵，因为你没有告诉 <i>GameMaker Studio 2</i> 将其与文本一起绘制。<br></li>
+<li><b>自定义绘制</b>，这是在绘制事件中放置代码或操作的时候。这告诉 <i>GameMaker Studio 2</i> “我想自定义你为这个物体实例所绘制的内容”，并且这完全不同于默认绘制。 这意味着，例如，你可以拥有一个分配了精灵的物体，然后将绘制事件设置为绘制文本，但它不会绘制精灵，因为你没有告诉 <i>GameMaker Studio 2</i> 将其与文本一起绘制。<br></li>
 </ul>
 
 <p>其余的绘制事件将在下面列出的部分中进行说明：</p>
@@ -50,14 +50,14 @@ if (window.name != "content")
 <blockquote><a name="draw_begin_end" id="draw_begin_end"></a>
 <label class="collapse" for="one">开始绘制与结束绘制</label>
 <input id="one" type="checkbox">
-<div class="index_list">除了主要的 <b>绘制</b> 子事件外，你还有一个 <b>开始绘制</b> 和 <b>绘制结束</b> 子事件。这些动作与标准 <b>绘制</b> 子事件完全相同（即：它们将绘制游戏的每一步和所有视图中的任何内容），但如果没有添加到物体，它们不会 “默认绘制” 任何内容，它们将始终在标准 <b>绘制</b> 子事件之前 / 之后运行。因此，你将拥有所有实例的 <b>开始绘制（Draw Begin）</b> 步骤，然后是所有实例的 <b>绘制（Draw）</b>，最后是所有实例的 <b>绘制结束（Draw End）</b>步骤。<br><br>通过这种方式，你可以在一个实例的开始绘制步骤中绘制内容或设置绘图属性，并确保具有标准绘制事件或绘制结束事件的所有实例都将使用这些属性或绘制第一个实例绘制的内容。基本上它是确保在特定时间绘制某些东西的确定方法，就像步开始（Begin Step）和步结束（End Step）事件一样。<br><br>在 <i>GameMaker Studio 2</i> 中绘制内容时，有几件事需要注意，无论是绘图的精灵还是着色器，还是 3D：<br>
+<div class="index_list">除了主要的 <b>绘制</b> 子事件外，你还有一个 <b>开始绘制</b> 和 <b>绘制结束</b> 子事件。这些动作与标准 <b>绘制</b> 子事件完全相同（即：它们将绘制游戏的每一步和所有视图中的任何内容），但如果没有添加到物体，它们不会 “默认绘制” 任何内容，它们将始终在标准 <b>绘制</b> 子事件之前 / 之后运行。因此，你将拥有所有实例的 <b>开始绘制（Draw Begin）</b> 步骤，然后是所有实例的 <b>绘制（Draw）</b>，最后是所有实例的 <b>绘制结束（Draw End）</b>步骤。<br><br>通过这种方式，你可以在一个实例的开始绘制步骤中绘制内容或设置绘图属性，并确保具有标准绘制事件或绘制结束事件的所有实例都将使用这些属性或绘制第一个实例绘制的内容。本质上来说它能确保你能在特定时间绘制特定东西，就像步开始（Begin Step）和步结束（End Step）事件一样。<br><br>在 <i>GameMaker Studio 2</i> 中绘制内容时，有几件事需要注意，无论是绘图的精灵还是着色器，还是 3D：<br>
 <br>
 
 <ul>
 <li>绘制事件是一个非常密集的事件，因为它是占用大部分时间和资源的事件之一......为此，除了绘图之外，在绘制事件中做任何事情都不是一个好主意。因此，在步事件或计时器或任何其他适合的事件保存大型代码或复杂操作，保留绘制事件用于绘图是很清晰的，因为它是最适合的。<br>
 <br></li>
 
-<li>如果你的物体将可见（visible）参数设置为否（off，以便不绘制物体的实例），则会跳过所有绘制事件（<b>窗口大小调整</b> 事件除外）。这意味着使实例不可见将 <i>阻止放置在任何这些事件中的所有代码运行</i>，因此如果它们不可见，则不要将基本代码放在绘制事件中。<br>
+<li>如果你的物体将可见（visible）参数设置为否（off，以便不绘制物体的实例），则会跳过所有绘制事件（<b>窗口大小调整</b> 事件除外）。这意味着使实例不可见将 <i>阻止放置在这些事件中的代码运行</i>，因此如果它们不可见，则不要将基本代码放在绘制事件中。<br>
 <br></li>
 
 <li>你绘制的内容与你选择的碰撞引擎（传统或物理）无关，因为它是由物体属性和给定物体的精灵（或遮罩）定义的。<br></li>
@@ -65,20 +65,20 @@ if (window.name != "content")
 <br>
 <a name="draw_GUI" id="draw_GUI"></a> <label class="collapse" for=
 "two">绘制 GUI</label> <input id="two" type="checkbox">
-<div class="index_list">The <b>Draw Gui</b> sub-event type falls under the <b>Draw Event</b> category and is specifically designed for drawing GUI (Graphical User Interface) elements that are not affected by the view scale or rotation. 这意味着你可以让实例绘制 HUD 的所有元素，而不必将元素的所有定位基于房间内的实例位置或当前视图的位置。<br><br>在这些事件中绘图时，重要的是要了解即使视图处于活动状态时绘制坐标也不会改变，并且 (0,0) <i>始终</i> 是应用程序表面或显示的左上角（请参阅本节的底部），应用程序表面的默认宽度和高度是 1:1。深度排序仍然保持在不同层上的不同实例之间（因此较低层上的实例将在较高层之后绘制）并且也在事件本身内，因为 <b>开始绘制 GUI（Draw GUI Begin）</b> 子事件将首先为所有实例绘制，然后标准的 <b>绘制 GUI（Draw GUI）</b> 将为其绘制所有实例，最后触发 <b>绘制 GUI 结束（Draw Gui End）</b> 子事件。<br><br>通过这种方式，你可以在一个实例中在 <b>开始绘制 GUI</b> 中绘制内容或设置绘图属性，并确保具有标准 <b>绘制 GUI</b> 或 <b>绘制 GUI 结束</b> 子事件的所有实例都将使用这些属性或绘制第一个实例具有的内容画。基本上它是确保在特定时间绘制某些东西的确定方法，就像 <b>步开始</b> 和 <b>步结束</b> 子事件一样。<br><br>这些事件也可以与普通的 <b>绘制</b> 子事件一起使用（它将受到视图位置、比例和正常旋转的影响）。如果你没有 <b>绘制事件</b>，但你确实有 <b>绘制 GUI 事件</b>，那么 <i>GameMaker Studio 2</i> 仍会默认为实例绘制精灵（如果它有一个）。<br><br>与其他绘制子事件相关，<b>绘制 GUI</b> 事件将始终绘制在正常绘制事件中绘制的任何内容。因此，如果你在较低层上有一个带有 <b>绘制 GUI</b> 事件的实例，它将使用常规绘制事件绘制更高层上的实例。如果两个实例都具有 <b>绘制 GUI</b> 子事件，则将遵循图层顺序。<br>
+<div class="index_list"><b>绘制 GUI（Draw GUI）</b> 子事件类型属于 <b>绘制事件</b>类别，专门用于绘制不受视图比例或旋转影响的 GUI（图形用户界面）元素。这意味着你可以让实例绘制 HUD 的所有元素，而不必将元素的所有定位基于房间内的实例位置或当前视图的位置。<br><br>在这些事件中绘图时，重要的是要了解即使视图处于活动状态时绘制坐标也不会改变，并且 (0,0) <i>始终</i> 是应用程序表面或所展示的东西（例如一个精灵）的左上角（请参阅本节的底部），应用程序表面的默认宽度和高度是 1:1。深度排序仍然保持在不同层上的不同实例之间（因此较低层上的实例将在较高层之后绘制）并且也在事件本身内，因为 <b>开始绘制 GUI（Draw GUI Begin）</b> 子事件将首先为所有实例绘制，然后标准的 <b>绘制 GUI（Draw GUI）</b> 将为其绘制所有实例，最后触发 <b>绘制 GUI 结束（Draw Gui End）</b> 子事件。<br><br>通过这种方式，你可以在一个实例中在 <b>开始绘制 GUI</b> 中绘制内容或设置绘图属性，并确保具有标准 <b>绘制 GUI</b> 或 <b>绘制 GUI 结束</b> 子事件的所有实例都将使用这些属性或绘制第一个实例具有的内容画。基本上它是确保在特定时间绘制某些东西的确定方法，就像 <b>步开始</b> 和 <b>步结束</b> 子事件一样。<br><br>这些事件也可以与普通的 <b>绘制</b> 子事件一起使用（它将受到视图位置、比例和正常旋转的影响）。如果你没有 <b>绘制事件</b>，但你确实有 <b>绘制 GUI 事件</b>，那么 <i>GameMaker Studio 2</i> 仍会默认为实例绘制精灵（如果它有一个）。<br><br>与其他绘制子事件相关，<b>绘制 GUI</b> 事件将始终绘制在正常绘制事件中绘制的任何内容。因此，如果你在较低层上有一个带有 <b>绘制 GUI</b> 事件的实例，它将使用常规绘制事件绘制更高层上的实例。如果两个实例都具有 <b>绘制 GUI</b> 子事件，则将遵循图层顺序。<br>
 <br>
 
 <div class="note"><b>注意</b>：默认情况下，此事件将使用应用程序表面大小绘制 1:1，通常是房间大小或视口。这意味着当你在 <a href=
-"../../3_settings/game_options/index.html">游戏选项</a> 中进行 <b>宽高比校正</b> 时，GUI 不会被绘制在游戏 “宽银幕” 的黑框上。This behaviour can be switched off using the <a href=
-"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_maximise.html"> <tt>display_set_gui_maximise</tt></a> function, and you can also lock the GUI event to a specific size which will then be scaled to fit the display or application surface dimensions automatically by using the function <a href=
-"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_size.html"> <tt>display_set_gui_size</tt></a>.</div></div>
+"../../3_settings/game_options/index.html">游戏选项</a> 中进行 <b>宽高比校正</b> 时，GUI 不会被绘制在游戏 “宽银幕” 的黑框上。可以使用 <a href=
+"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_maximise.html"><tt>display_set_gui_maximise</tt></a> 函数关闭此行为，还可以将 GUI 事件锁定为特定大小，然后使用函数 <a href=
+"../../../3_scripting/4_gml_reference/cameras%20and%20display/display/display_set_gui_size.html"><tt>display_set_gui_size</tt></a> 自动缩放以适应显示或应用程序表面尺寸。</div></div>
 <br>
 <a name="draw_pre_post" id="draw_pre_post"></a> <label class=
 "collapse" for="three">绘制预处理与绘制后处理</label> <input id="three"
 type="checkbox">
-<div class="index_list"><b>绘制预处理（Pre Draw）</b> 和 <b>绘制后处理（Post Draw）</b> 子事件是 <b>绘制事件</b> 类别的一部分。但是，与其他绘制事件不同，它们直接绘制到屏幕缓冲区，这将是当前可见的所有视图的组合屏幕空间的大小，或者如果仅使用一个视图或根本不显示窗口大小。 下图说明了这一点：<img class=
+<div class="index_list"><b>绘制预处理（Pre Draw）</b> 和 <b>绘制后处理（Post Draw）</b> 子事件是 <b>绘制事件</b> 类别的一部分。但是，与其他绘制事件不同，它们直接绘制到屏幕缓冲区，这将是当前可见的所有视图的组合屏幕空间的大小，或者是你当前唯一使用的窗口的大小。 下图说明了这一点：<img class=
 "center" src="images/editor_object_postdraw.png" alt=
-"Object Editor Post Draw"> 因此，如果你正在使用绘制 <b>预</b> 或 <b>后</b> 处理事件，则你将绘制到全屏渲染目标，该目标的大小与所有视图所适合的窗口大小相同。 如果你没有活动的视图，则将其设置为窗口本身的大小。<br><br><b>绘制预处理</b> 子事件在任何其他绘制事件之前触发，在其中你可以设置值，设置绘制属性甚至绘制内容而无需担心 GUI 层的视图或大小（GUI 层的大小可能与屏幕缓冲区相同，但可能不一样，因为你可以在代码中设置 GUI 分辨率）。<br><br>值得注意的是，此事件发生在清除屏幕缓冲区之前，这意味着如果你未在房间编辑器中关闭视图清除，则将看到 <b>绘制预处理</b> 事件中绘制的任何内容，因为第一个视图将清除它。如果你希望能够自己查看视图，或者根本没有使用视图，那么你还应该在 <a href="../rooms.html">房间编辑器</a> 中将背景颜色设置为透明度为 0。<br>
+"Object Editor Post Draw"> 因此，如果你正在使用绘制 <b>预</b> 或 <b>后</b> 处理事件，则你将绘制到全屏渲染目标，该目标的大小与所有视图所适合的窗口大小相同。 如果你没有活动的视图，则将其设置为窗口本身的大小。<br><br><b>绘制预处理</b> 子事件在任何其他绘制事件之前触发，在其中你可以设置值，设置绘制属性甚至绘制内容而无需担心 GUI 层的视图或大小（GUI 层的大小可能与屏幕缓冲区相同，但可能不一样，因为你可以在代码中设置 GUI 分辨率）。<br><br>值得注意的是，此事件发生在清除屏幕缓冲区之前，这意味着如果你未在房间编辑器中关闭视图清除，则将看到 <b>绘制预处理</b> 事件中绘制的任何内容，然后第一个视图将清除它。如果你希望能够自己查看视图，或者根本没有使用视图，那么你还应该在 <a href="../rooms.html">房间编辑器</a> 中将背景颜色设置为透明度为 0。<br>
 <br>
 
 <div class="note"><b>注意：</b> 如果你关闭这些选项，你可能会注意到在测试游戏时屏幕上绘制了不需要的假象（例如来自实例的 “踪迹”）。这是因为你直接绘制了绘制缓冲区的前一帧而不清除它。但是你可以使用 <a href=
@@ -88,7 +88,7 @@ type="checkbox">
 <br>
 <a name="draw_resize" id="draw_resize"></a> <label class="collapse"
 for="four">窗口大小调整</label> <input id="four" type="checkbox">
-<div class="index_list">This event type falls under the <b>Draw Event</b> category, and although it doesn't actually draw anything, it does react to changes in the draw canvas - specifically, it is designed for reacting to the change in the Windows 8/10 canvas size when the game window is "snapped".<br><br>On the Windows 8 target platform it is important that you catch any resizing of the game canvas from the "snapping" of the game window (when the user drags the window to the side of the display, for example). 此事件将执行此操作并在每次更改画布时触发，允许你在此处添加自定义代码，以调整视图大小或根据需要重新定位 HUD 元素。提供此函数是一种方便的方法，可以避免使用步事件代码来检查这些事情。<br>
+<div class="index_list">此事件类型属于 <b>绘制事件</b> 类别，虽然它实际上并未绘制任何内容，但它确实对绘制画布中的更改做出了反应 - 具体来说，它是为在游戏窗口 “snapped（突然变化）” 时响应 UWP 画布大小的变化而设计的。<br><br>在 UWP 目标平台上，重要的是从游戏窗口的 “snapping” 中捕获游戏画布的大小（例如，当用户将窗口拖动到显示器的侧面时）。 此事件将执行此操作并在每次更改画布时触发，允许你在此处添加自定义代码，以调整视图大小或根据需要重新定位 HUD 元素。提供此函数是一种方便的方法，可以避免使用步事件代码来检查这些事情。<br>
 <br>
 
 <div class="note"><b>注意</b>： 你无法在这个事件中绘制！它是通过调整画布大小来触发的，仅用于捕捉这个变化......任何应该完成的绘图仍然必须在其他一个绘制事件中。</div></div></blockquote>
