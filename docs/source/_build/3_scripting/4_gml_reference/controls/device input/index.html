@@ -35,12 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>When your game is being targeted at those platforms that permit
-multi-touch, you should be using these functions. They work the
-same way a PC would work if it had multiple mice attached and the
-constants that are being checked for are the same as those used for
-the <a href="../mouse%20input/index.html">standard mouse
-functions</a>:<br>
+<p>当你的游戏针对那些允许多点触控的平台时，你应该使用这些函数。如果它连接了多个鼠标并且正在检查的常量与用于 <a href="../mouse%20input/index.html">标准鼠标函数</a> 的常量相同，它们的工作方式与 PC 的工作方式相同：<br>
 <br></p>
 
 <div class="compat">
@@ -52,49 +47,36 @@ functions</a>:<br>
 
 <tr>
 <td>mb_left</td>
-<td>The left mouse button</td>
+<td>鼠标左键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_middle</td>
-<td>The middle mouse button (this may not be valid for all target
-platforms)</td>
+<td>鼠标中键（并不是所有平台都有效）</td>
 </tr>
 
 <tr>
 <td>mb_right</td>
-<td>The right mouse button</td>
+<td>鼠标右键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_none</td>
-<td>No mouse button</td>
+<td>无鼠标按钮</td>
 </tr>
 
 <tr>
 <td>mb_any</td>
-<td>Any of the mouse buttons</td>
+<td>任意鼠标按钮</td>
 </tr>
 </table>
 </div>
 
 <p><br>
+这些函数都可以采用与设备显示屏上的触摸相对应的 “触摸” 值，但是可以检测到的最大触控数将在很大程度上取决于设备和正在运行的系统。 例如，一些低端 Android 设备可能只能同时检测到 2 或 3 点触控，而 UWP 设备可能能够检测到多达 10 点触控。请注意，在触摸屏设备上，双击则返回为相当于 <b>鼠标右键</b> 事件。 因此，例如，如果你需要快速连续检测多次触摸，则需要检查 <tt>mb_left</tt> <b>和</b> <tt>mb_right</tt>。 可以使用 <a href=
+"device_mouse_dbclick_enable.html"><tt>device_mouse_dbclick_enable</tt></a> 打开或关闭此功能。</p>
 
-The functions can all take a "touch" value that corresponds to a
-touch on the device display, however the maximum number of touches
-that can be detected will depend very much on the device and the OS
-being run. For example, some low end Android devices may only be
-able to detect 2 or 3 touches at the same time, while a UWP device
-may be able to detect up to 10. Note too that on touch screen
-devices, a double tap is returned as the equivalent of a <b>right
-mouse button</b> event. So, if you need to detect multiple taps in
-quick succession, for example, you will need to check for
-<b>both</b> the <tt>mb_left</tt> and <tt>mb_right</tt>. This
-functionality can be toggled on or off using <a href=
-"device_mouse_dbclick_enable.html"><tt>device_mouse_dbclick_enable</tt></a>.</p>
-
-<p>Below you can find a list of all the device specific control
-functions:</p>
+<p>你可以在下面找到所有设备特定控制函数的列表：</p>
 
 <blockquote>
 <ol>
@@ -152,13 +134,7 @@ functions:</p>
 </ol>
 </blockquote>
 
-<p>Please note that on mobile devices (Android, iOS and Windows
-Phone), you can use the back button at any time, as it is mapped to
-the keyboard <b>backspace</b> which is the <i>GameMaker Studio
-2</i> <a href="../keyboard%20input/index.html">keyboard
-constant</a> <tt>vk_backspace</tt>, so you can do checks for that
-key and perform actions on those devices as if the back button had
-been used.</p>
+<p>请注意，在移动设备（Android、iOS 和 Windows Phone）上，你可以随时使用后退按钮，因为它映射到键盘 <b>退格键</b>，即 <i>GameMaker Studio 2</i> <a href="../keyboard%20input/index.html">键盘常量</a> <tt>vk_backspace</tt>，因此你可以检查 vk_backspace 的值以确定在那些设备上是否执行了后退按钮操作。</p>
 
 <p><br>
 </p>
@@ -168,10 +144,10 @@ been used.</p>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"../index.html">Controls</a></div>
+"../index.html">控制器</a></div>
 
 <div style="float:right">下一页: <a href=
-"../gesture%20input/index.html">Gesture Input</a></div>
+"../gesture%20input/index.html">手势输入</a></div>
 </div>
 </div>
 

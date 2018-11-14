@@ -7,7 +7,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>GamePad Input</title>
+<title>游戏手柄输入</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
@@ -29,42 +29,18 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>GamePad Input</h2>
+<h2>游戏手柄输入</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p><i>GameMaker Studio 2</i> has a number of dedicated functions
-that can be used to detect both analogue and digital controls from
-multiple connected game pads. These functions work similar to the
-<a href="../device%20input/index.html">Device Inputs</a>, in that
-you can detect up to four different XInput game pads that are
-connected (and up to 8 DirectInput gamepads) and deal with the
-input from each one using the same functions. Note that when a
-gamepad is plugged in to your device (or it is removed) then an
-asynchronous <a href=
-"../../../../2_interface/1_editors/events/async_events.html">System
-Event</a> is triggered where you can deal with the situation using
-the appropriate functions.</p>
+<p><i>GameMaker Studio 2</i> 具有许多用于从多个已连接的游戏手柄中检测模拟和数字控制信号的专用函数。这些函数类似于 <a href="../device%20input/index.html">设备输入</a>，因为你可以检测最多四个连接的 XInput 游戏手柄（以及最多 8 个 DirectInput 游戏手柄），并使用相同的函数处理每个输入。请注意，当游戏手柄插入你的设备（或被删除）时，会触发异步 <a href=
+"../../../../2_interface/1_editors/events/async_events.html">系统事件</a>，你可以使用适当的函数处理该情况。</p>
 
-<p>The gamepad "slots" are indexed from 0 with slots 0 - 3
-inclusive being <i>only for Xinput gamepads</i>, ie: Xbox360
-controllers and compatibles. However you can also check slots 4 -
-11 inclusive for DirectInput gamepads, which means you can detect
-many other models of controller when connected through these slots.
-It is worth noting that when using DirectInput gamepads, the
-constants given below may not match exactly the buttons that you
-expect when they are pressed, due to the fragmented and
-non-standardised way thet the API is implemented by controller
-manufacturers. It is recommend that you have some kind of game-pad
-setup screen in your games where people can redefine the gamepad
-buttons based on input from any connected to device to mitigate any
-issues.</p>
+<p>游戏手柄 “插槽” 从 0 开始索引，插槽 0 - 3 包含 <i>仅用于 Xinput 游戏手柄</i>，即：Xbox360 控制器和兼容机。但是，你也可以检查插槽 4 - 11（包括 DirectInput 游戏手柄），这意味着当通过这些插槽连接时，你可以检测到许多其他型号的控制器。值得注意的是，当使用 DirectInput 游戏手柄时，由于控制器制造商实施 API 的分散和非标准化方式，下面给出的常量可能与按下时所需的按钮完全不匹配。建议你在游戏中使用某种游戏手柄设置屏幕，人们可以根据任何连接到设备的输入重新定义游戏手柄按钮，以缓解任何问题。</p>
 
-<p>When working with the gamepad functions, there are a number of
-built-in constants that should be used for getting/defining buttons
-and stick axis etc...:</p>
+<p>使用游戏手柄函数时，有许多内置常量应该用于获取 / 定义按钮和摇杆等...：</p>
 
 <div class="compat">
 <table>
@@ -75,119 +51,110 @@ and stick axis etc...:</p>
 
 <tr>
 <td>gp_face1</td>
-<td>Top button 1 (this maps to the <i>"A"</i> on an Xbox 360
-controller and the <i>cross</i> on a PS controller)</td>
+<td>顶部按钮 1（这映射到 Xbox 360 控制器上的 <i>“A”</i> 和 PS 控制器上的 <i>×</i> 按钮）</td>
 </tr>
 
 <tr class="alt">
 <td>gp_face2</td>
-<td>Top button 2 (this maps to the <i>"B"</i> on an Xbox 360
-controller and the <i>circle</i> on a PS controller)</td>
+<td>顶部按钮 2（这映射到 Xbox 360 控制器上的 <i>“B”</i> 和 PS 控制器上的 <i>○</i> 按钮）</td>
 </tr>
 
 <tr>
 <td>gp_face3</td>
-<td>Top button 3 (this maps to the <i>"X"</i> on an Xbox 360
-controller and the <i>square</i> on a PS controller)</td>
+<td>顶部按钮 3（这映射到 Xbox 360 控制器上的 <i>“X”</i> 和 PS 控制器上的 <i>□</i> 按钮）</td>
 </tr>
 
 <tr class="alt">
 <td>gp_face4</td>
-<td>Top button 4 (this maps to the <i>"Y"</i> on an Xbox 360
-controller and the <i>triangle</i> on a PS controller)</td>
+<td>顶部按钮 4（这映射到 Xbox 360 控制器上的 <i>“Y”</i> 和 PS 控制器上的 <i>△</i> 按钮）</td>
 </tr>
 
 <tr>
 <td>gp_shoulderl</td>
-<td>Left shoulder button</td>
+<td>左肩按钮</td>
 </tr>
 
 <tr class="alt">
 <td>gp_shoulderlb</td>
-<td>Left shoulder trigger</td>
+<td>左肩扳机</td>
 </tr>
 
 <tr>
 <td>gp_shoulderr</td>
-<td>Right shoulder button</td>
+<td>右肩按钮</td>
 </tr>
 
 <tr class="alt">
 <td>gp_shoulderrb</td>
-<td>Right shoulder trigger</td>
+<td>右肩扳机</td>
 </tr>
 
 <tr>
 <td>gp_select</td>
-<td>The select button (this is a touch-pad press on a PS4
-controller)</td>
+<td>选择按钮（这是 PS4 控制器上的触摸板按下）</td>
 </tr>
 
 <tr class="alt">
 <td>gp_start</td>
-<td>The start button (this is the "options" button on a PS4
-controller)</td>
+<td>开始按钮（这是 PS4 控制器上的 “OPTIONS” 按钮）</td>
 </tr>
 
 <tr>
 <td>gp_stickl</td>
-<td>The left stick pressed (as a button)</td>
+<td>按下左摇杆（作为按钮）</td>
 </tr>
 
 <tr class="alt">
 <td>gp_stickr</td>
-<td>The right stick pressed (as a button)</td>
+<td>按下右摇杆（作为按钮）</td>
 </tr>
 
 <tr>
 <td>gp_padu</td>
-<td>D-pad up</td>
+<td>D-pad 上</td>
 </tr>
 
 <tr class="alt">
 <td>gp_padd</td>
-<td>D-pad down</td>
+<td>D-pad 下</td>
 </tr>
 
 <tr>
 <td>gp_padl</td>
-<td>D-pad left</td>
+<td>D-pad 左</td>
 </tr>
 
 <tr class="alt">
 <td>gp_padr</td>
-<td>D-pad right</td>
+<td>D-pad 右</td>
 </tr>
 
 <tr>
 <td>gp_axislh</td>
-<td>Left stick horizontal axis (analogue)</td>
+<td>左摇杆水平轴（模拟）</td>
 </tr>
 
 <tr class="alt">
 <td>gp_axislv</td>
-<td>Left stick vertical axis (analogue)</td>
+<td>左摇杆垂直轴（模拟）</td>
 </tr>
 
 <tr>
 <td>gp_axisrh</td>
-<td>Right stick horizontal axis (analogue)</td>
+<td>右摇杆水平轴（模拟）</td>
 </tr>
 
 <tr class="alt">
 <td>gp_axisrv</td>
-<td>Right stick vertical axis (analogue)</td>
+<td>右摇杆垂直轴（模拟）</td>
 </tr>
 </table>
 </div>
 
 <p><br>
+为了更好地理解每个常量所代表的控制器的哪个部分，你可以参考以下标准游戏手柄的图像： <img class="center" src="gamepad.png"></p>
 
-To better understand exactly what part of the controller each
-constant represents, you can refer to the following image of a
-standard gamepad:  <img class="center" src="gamepad.png"></p>
-
-<p>Below you can find a list of all the gamepad functions:</p>
+<p>你可以在下面找到所有游戏手柄函数的列表：</p>
 
 <blockquote>
 <ol>
@@ -258,82 +225,44 @@ standard gamepad:  <img class="center" src="gamepad.png"></p>
 </ol>
 </blockquote>
 
-<h2>Compatibility</h2>
+<h2>兼容性</h2>
 
-<p>The following list shows current compatibility across the
-platforms (note that this will change with future updates):<br>
+<p>以下列表显示了跨平台的当前兼容性（请注意，这将随着将来的更新而更改）：<br>
 <br></p>
 
 <ul>
-<li>Windows is fully supported with up to a maximum of 12 connected
-devices permitted at once (numbered from 0 to 11, with 0 - 3 being
-XInput devices and 4 - 11 being DirectInput).<br></li>
+<li>完全支持 Windows，一次最多允许 12 个连接设备（编号从 0 到 11，其中 0 - 3 是 XInput 设备，4 - 11 是 DirectInput）。<br></li>
 
-<li>Mac OS is supported with up to a maximum of 4 connected devices
-permitted at once, and these devices can ONLY be of the type
-Playstation3 or Xbox 360. Please note that the "<b>Build for Mac
-AppStore</b>" option in Mac Game Options needs to be OFF for pad
-support to work.<br>
+<li>Mac OS 支持最多同时连接 4 个设备，这些设备只能是 Playstation3 或 Xbox 360 类型。请注意，如果要支持手柄工作，则需要关闭 Mac 游戏选项中的 <b>为苹果应用商店构建（Build for Mac AppStore）</b> 选项。<br>
 <br></li>
 
-<li>Ubuntu does also support Gamepad input, but you may need to
-install additional libraries from the Ubuntu repository. You can do
-this easily by opening a command line terminal and typing the
-following:
+<li>Ubuntu 也支持 Gamepad 输入，但你可能需要从 Ubuntu 存储库（Ubuntu repository）安装其他库。 你可以通过打开命令行终端并键入以下内容来轻松完成此操作：
 
+<p class="code">sudo apt-get install jstest-gtk<br>sudo apt-get install joystick.<br></p>
 
-
-<p class="code">sudo apt-get install jstest-gtk<br>
-sudo apt-get install joystick.<br></p>
-
-<p>This will install GUI support for the joystick/gamepad as well
-as the joystick/gamepad API itself.<br>
+<p>这将为操纵杆（joystick） / 游戏手柄（gamepad） 以及操纵杆 / 游戏手柄 API 本身安装 GUI 支持。<br>
 <br></p></li>
 
-<li>HTML5 games using gamepads are supported by most major
-browsers, except <i>Safari</i>.<br>
+<li>除 <i>Safari</i> 之外，大多数主流浏览器都支持使用游戏手柄的 HTML5 游戏。<br>
 <br></li>
 
-<li>Gamepad support also extends to iOS with the <b>iCade</b>
-cabinet. The left axis maps to the stick controller (although the
-input is digital, not analogue), the four "face" buttons map to the
-cabinet front buttons, and the four shoulder buttons map to those
-at the back of the cabinet.<br>
+<li>游戏手柄支持也通过 <b>iCade</b> cabinet（机柜）扩展到 iOS。左侧轴映射到摇杆控制器（虽然输入是数字的，而不是模拟的），四个 “面部” 按钮映射到 cabinet 前部按钮，四个肩部按钮映射到 cabinet 后部的按钮。
+<br>
 <br></li>
 
-<li>Android export supports NYKO controllers and generic Bluetooth
-controllers (including the OUYA), but only when they are enabled,
-meaning that you will have to tick the iCade/Bluetooth option in
-the <a href=
-"../../../../2_interface/3_settings/game_options/options_android.html">
-General</a> section of the <b>Android Game Options</b>. They
-require API level 12 for them to work fully and it should be noted
-that <i>GameMaker Studio 2</i> will register as connected any
-Bluetooth devices that your device is paired with, whether or not
-it’s actually connected. Therefore this should be taken into
-account when assigning and checking "slots".<br>
+<li>Android 导出支持 NYKO 控制器和通用蓝牙控制器（包括 OUYA），但仅在它们可用时，这意味着你必须在 <b>Android 游戏选项</b> 的 <a href=
+"../../../../2_interface/3_settings/game_options/options_android.html">全局</a> 部分勾选 iCade / 蓝牙选项。它们需要 API level 12 才能完全正常工作，应注意 <i>GameMaker Studio 2</i> 将注册连接设备与之配对的任何蓝牙设备，无论它是否实际连接。 因此，在分配和检查 “插槽” 时应考虑到这一点。
+<br>
 <br></li>
 
-<li>On PS4, if you want to use the touch pad tracking you need to
-use the <a href=
-"../device%20input/index.html"><tt>device_mouse_*</tt></a>
-buttons.<br>
+<li>在 PS4 上，如果要使用触摸板跟踪，则需要使用 <a href=
+"../device%20input/index.html"><tt>device_mouse_*</tt></a> 按钮。<br>
 <br></li>
 </ul>
 
-<p>Ideally, on <i>all</i> target platforms, you want to enumerate a
-list of available gamepad "slots" and then check them to see if any
-devices are detected, something like this:</p>
+<p>理想情况下，在 <i>所有</i> 目标平台上，你希望枚举可用游戏手柄 “插槽” 的列表，然后检查它们以查看是否检测到任何设备，如下所示：</p>
 
-<p class="code">var maxpads = gamepad_get_device_count();<b>for
-(var i = 0; i &lt; maxpads; i++)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;if (gamepad_is_connected(i))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// do stuff with
-pad "i"<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></b></p>
+<p class="code">var maxpads = gamepad_get_device_count();<b>for (var i = 0; i &lt; maxpads; i++)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;if (gamepad_is_connected(i))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// 对手柄 “i” 做些什么<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></b></p>
 
 <p><br>
 </p>
@@ -343,10 +272,10 @@ pad "i"<br>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"../index.html">Controls</a></div>
+"../index.html">控制器</a></div>
 
 <div style="float:right">下一页: <a href=
-"../virtual%20keys/index.html">Virtual Keys</a></div>
+"../virtual%20keys/index.html">虚拟按键</a></div>
 </div>
 </div>
 

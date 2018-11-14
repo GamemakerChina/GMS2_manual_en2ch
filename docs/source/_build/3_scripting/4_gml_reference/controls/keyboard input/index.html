@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,255 +35,225 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>When dealing with the keyboard in <i>GameMaker Studio 2</i> you
-have a variety of functions that can be used to recognise different
-keyboard states like pressed or released. There are also some that
-store all the key-presses as a string or that can tell you what the
-last key pressed was, as well as others that allow you to clear the
-keyboard state completely.</p>
+<p>在 <i>GameMaker Studio 2</i> 中处理键盘时，你可以使用各种函数识别不同的键盘状态，如按下或释放。还有一些将所有按键存储为字符串或者可以告诉你按下的最后一个键是什么，以及其他允许你完全清除键盘状态的按键。</p>
 
-<div class="note"><b>NOTE:</b> These functions are designed for
-Windows/Mac/Ubuntu desktop platforms only. You may find some of the
-built-in variables and constants aren't valid on other platforms
-and many of the functions won't work on mobiles.</div>
+<div class="note"><b>注意：</b> 这些函数仅适用于 Windows / Mac / Ubuntu 桌面平台。你可能会发现某些内置变量和常量在其他平台上无效，并且许多函数无法在移动设备上运行。</div>
 
-<p>Now, each key is normally defined by a number, called the
-<i>ascii code</i>, and you can directly input this number into
-these functions and they will work fine... But, as it's a bit
-difficult to remember so many numbers and the relationship that
-they have with your keyboard, <i>GameMaker Studio 2</i> has a
-series of constants for the most used keyboard special keys and a
-special function <a href=
-"../../strings/ord.html"><tt>ord()</tt></a> to return the number
-from ordinary typed characters (either letters or numbers).</p>
+<p>现在，每个键通常由一个数字定义，称为 <i>ascii 码</i>，你可以直接将这个数字输入到这些函数中，它们将正常工作...... 但是，因为有点难以记住这么多数字和对应键盘按键的关系，<i>GameMaker Studio 2</i> 有一系列常用的键盘特殊键和一个特殊的函数 <a href=
+"../../strings/ord.html"><tt>ord()</tt></a> 来返回普通类型字符（字母或数字）的数字（ascii 码）。</p>
 
-<p>The following is a small example of how to use
-<tt>ord()</tt>:</p>
+<p>以下是如何使用 <tt>ord()</tt> 的一个小例子：</p>
 
 <p class="code">if keyboard_check(ord("A"))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;hspeed = -5;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>So, the above will check the "A" key and if it's being pressed
-then it'll set the horizontal speed of the object to -5. Note, that
-the "A" is a capital "A", and that when using <tt>ord()</tt> the
-keyboard key to check must <i>always</i> be written in quotes and
-as a capital. Now, what if you want to use the arrow keys? Or if
-you want to modify an action using the "shift" key? Well, for that
-<i>GameMaker Studio 2</i> has a series of <tt>vk_</tt> constants
-(<tt>vk_</tt> stands for <i>virtual keyboard</i>) that you can use
-in place of ord or the ascii code.</p>
+<p>因此，上面将检查 “A” 键，如果它被按下，那么它将把物体的水平速度设置为 -5。 注意，“A” 是大写字母 “A”，并且当使用 <tt>ord()</tt> 时，要检查的键盘键必须 <i>始终</i> 用引号和大写字母书写。 现在，如果你想使用箭头键怎么办？ 或者，如果要使用 “shift” 键修改操作？ 好吧，因为 <i>GameMaker Studio 2</i> 有一系列 <tt>vk_</tt> 常量（<tt>vk_</tt> 代表 <i>虚拟键盘</i>），你可以使用它们代替 ord 或 ascii 码。</p>
 
-<p>Here is a complete list of the <tt>vk_</tt> constants:</p>
+<p>以下是 <tt>vk_</tt> 常量的完整列表：</p>
 
 <div class="compat">
 <table>
 <tr>
-<th>常量</th>
+<th>Constant</th>
 <th>描述</th>
 </tr>
 
 <tr>
 <td>vk_nokey</td>
-<td>keycode representing that no key is pressed</td>
+<td>表示没有按下任何键的键代码</td>
 </tr>
 
 <tr class="alt">
 <td>vk_anykey</td>
-<td>keycode representing that any key is pressed</td>
+<td>表示按下任意键的键码</td>
 </tr>
 
 <tr>
 <td>vk_left</td>
-<td>keycode for left arrow key</td>
+<td>左箭头键的键码</td>
 </tr>
 
 <tr class="alt">
 <td>vk_right</td>
-<td>keycode for right arrow key</td>
+<td>右箭头键的键码</td>
 </tr>
 
 <tr>
 <td>vk_up</td>
-<td>keycode for up arrow key</td>
+<td>上箭头键的键码</td>
 </tr>
 
 <tr class="alt">
 <td>vk_down</td>
-<td>keycode for down arrow key</td>
+<td>下箭头键的键码</td>
 </tr>
 
 <tr>
 <td>vk_enter</td>
-<td>enter key</td>
+<td>enter 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_escape</td>
-<td>escape key</td>
+<td>esc 键</td>
 </tr>
 
 <tr>
 <td>vk_space</td>
-<td>space key</td>
+<td>space 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_shift</td>
-<td>either of the shift keys</td>
+<td>任何一个 shift 键</td>
 </tr>
 
 <tr>
 <td>vk_control</td>
-<td>either of the control keys</td>
+<td>任何一个 control 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_alt</td>
-<td>alt key</td>
+<td>alt 键</td>
 </tr>
 
 <tr>
 <td>vk_backspace</td>
-<td>backspace key</td>
+<td>backspace 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_tab</td>
-<td>tab key</td>
+<td>tab 键</td>
 </tr>
 
 <tr>
 <td>vk_home</td>
-<td>home key</td>
+<td>home 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_end</td>
-<td>end key</td>
+<td>end 键</td>
 </tr>
 
 <tr>
 <td>vk_delete</td>
-<td>delete key</td>
+<td>delete 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_insert</td>
-<td>insert key</td>
+<td>insert 键</td>
 </tr>
 
 <tr>
 <td>vk_pageup</td>
-<td>pageup key</td>
+<td>pageup 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_pagedown</td>
-<td>pagedown key</td>
+<td>pagedown 键</td>
 </tr>
 
 <tr>
 <td>vk_pause</td>
-<td>pause/break key</td>
+<td>pause/break 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_printscreen</td>
-<td>printscreen/sysrq key</td>
+<td>printscreen/sysrq 键</td>
 </tr>
 
 <tr>
 <td>vk_f1 ... vk_f12</td>
-<td>keycode for the function keys F1 to F12</td>
+<td>功能键 F1 至 F12 的键码</td>
 </tr>
 
 <tr class="alt">
 <td>vk_numpad0 ... vk_numpad9</td>
-<td>number keys on the numeric keypad</td>
+<td>数字键盘上的数字键</td>
 </tr>
 
 <tr>
 <td>vk_multiply</td>
-<td>multiply key on the numeric keypad</td>
+<td>数字键盘上的乘号键（*）</td>
 </tr>
 
 <tr class="alt">
 <td>vk_divide</td>
-<td>divide key on the numeric keypad</td>
+<td>数字键盘上的除号键（/）</td>
 </tr>
 
 <tr>
 <td>vk_add</td>
-<td>key on the numeric keypad</td>
+<td>数字键盘上的加号键（+）</td>
 </tr>
 
 <tr class="alt">
 <td>vk_subtract</td>
-<td>subtract key on the numeric keypad</td>
+<td>数字键盘上的减号键（-）</td>
 </tr>
 
 <tr>
 <td>vk_decimal</td>
-<td>decimal dot keys on the numeric keypad</td>
+<td>数字小键盘上的小数点键（.）</td>
 </tr>
 </table>
 </div>
 
-<p>The following constants can only be used with
-<tt>keyboard_check_direct()</tt>:<br></p>
+<p>以下常量只能与 <tt>keyboard_check_direct()</tt> 一起使用：<br></p>
 
 <div class="compat">
 <table>
 <tr>
-<th>常量</th>
+<th>Constant</th>
 <th>描述</th>
 </tr>
 
 <tr>
 <td>vk_lshift</td>
-<td>left shift key</td>
+<td>左 shift 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_lcontrol</td>
-<td>left control key</td>
+<td>左 control 键</td>
 </tr>
 
 <tr>
 <td>vk_lalt</td>
-<td>left alt key</td>
+<td>左 alt 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_rshift</td>
-<td>right shift key</td>
+<td>右 shift 键</td>
 </tr>
 
 <tr>
 <td>vk_rcontrol</td>
-<td>right control key</td>
+<td>右 control 键</td>
 </tr>
 
 <tr class="alt">
 <td>vk_ralt</td>
-<td>right alt key</td>
+<td>右 alt 键</td>
 </tr>
 </table>
 </div>
 
 <p><br>
 <br>
-
-The following is a small example of how to use the <tt>vk_</tt>
-constants:</p>
+以下是如何使用 <tt>vk_</tt> 常量的一个小示例：</p>
 
 <p class="code">if keyboard_check_pressed(vk_tab)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Controllers", obj_Menu);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will detect if the "Tab" key is <i>pressed</i>
-and create an instance of object "obj_Menu" if it is.</p>
+<p>上面的代码将检测是否 <i>按下</i> “Tab” 键并创建物体 “obj_Menu” 的实例（如果是）。</p>
 
-<p>For information on the available <i>GameMaker Studio 2</i>
-keyboard functions, please see the following sections of the
-manual:</p>
+<p>有关可用的 <i>GameMaker Studio 2</i> 键盘函数的信息，请参阅本手册的以下部分：</p>
 
 <blockquote>
 <ol>
@@ -354,10 +324,10 @@ manual:</p>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"../index.html">Controls</a></div>
+"../index.html">控制器</a></div>
 
 <div style="float:right">下一页: <a href=
-"../mouse%20input/index.html">Mouse Input</a></div>
+"../mouse%20input/index.html">鼠标输入</a></div>
 </div>
 </div>
 
