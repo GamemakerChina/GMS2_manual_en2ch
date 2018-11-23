@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,32 +40,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>The <b>While</b> action is used to perform loops that only
-terminate when a specific condition returns <tt>true</tt>. For
-example, you can use a variable and set it to <tt>false</tt> then
-run the While loop and have it checking this variable, then at some
-time in the loop you set the variable to <tt>true</tt> and the loop
-will terminate. Note that no matter where you set the condition
-within the while loop, <i>all</i> actions within the loop will be
-run to the end before the rest of the script or event continues,
-changing the condition does not instantly break out of the
-loop.</p>
+<p>此<b>While</b> 动作将会一直循环，只有在给定条件为<tt>true</tt>才终止循环。例如，你可以将一个变量设置为<tt>false</tt> 然后运行while循环检测此变量。你可以在此循环中某处将此变量设为<tt>true</tt>。当再次检测该变量时，将终止循环。请注意,，无论你在 while 循环的何处设置条件，此次循环中的<i>所有</i>剩余动作将继续执行，然后才会执行while循环之后的动作或脚本。也就是说这种情况不会立即跳出循环。</p>
 
-<p>When you add a While action into your code, you need to supply
-the variable to check, what kind of check to perform (less than,
-greater than, equals, etc...), and the value to check the variable
-against (you can also flag <i>not</i> to have the While loop check
-to see if the condition is <i>not</i> true). You then add the
-actions to be performed within the While loop, much as you would
-add an action to an "if", ie: dropping it to the side of the action
-rather than under it:  <img class="center" src=
+<p>当您将 while 动作添加到代码中时，您需要给出被检测的变量，要执行的检查类型 (小于、大于、等于等) 以及要检查变量的值 (您还可以标记<i>not（反向）</i>，那么在将在检测结果<i>不</i>为真时结束循环）。然后你需要将动作添加到While循环中，就像将动作添加到"if"中时。例子：把动作块放在动作的一侧而不是下方。 <img class="center" src=
 "images/while_drop.png" alt="Drop Actions Into A While Loop"></p>
 
-<p>All actions added to the side will be included in the While and
-will be performed before the event or script continues with the
-actions added under (as shown in the example below). Note that you
-can end any loop prematurely if you call the <a href=
-"break.html">Break</a> action.</p>
+<p>被添加到此While动作一侧的动作将被包含在此While动作中。当While动作全部执行完后，才会继续执行While之后的动作。（请看下面的例子）。如果你想在循环中任何时刻结束循环，你只需要调用 <a href=
+"break.html">Break</a> 动作。</p>
 </blockquote>
 
 <p><br>
@@ -88,18 +69,17 @@ can end any loop prematurely if you call the <a href=
 
 <tr>
 <td>变量</td>
-<td>The variable to use in the check</td>
+<td>用于检查的变量</td>
 </tr>
 
 <tr>
 <td>是</td>
-<td>The type of evaluation to perform (less than, greater than,
-equal to, greater than or equal to and less than or equal to)</td>
+<td>比较变量和给出值的条件（少于，多于，等于，少于等于，多于等于）</td>
 </tr>
 
 <tr>
 <td>值</td>
-<td>The value to check the variable against</td>
+<td>和变量比较的值</td>
 </tr>
 </table>
 </blockquote>
@@ -107,18 +87,10 @@ equal to, greater than or equal to and less than or equal to)</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_loops_while.png" alt=
 "While Example">
-<blockquote>The above action block code creates a temporary local
-variable and sets it to <tt>false</tt>. This variable is then
-checked in the While loop action and while it returns false the
-loop will run. In the loop we get two temporary local variables for
-a random x/y position in the room then we check that position for a
-collision. If no collision is found, the initial variable is set to
-<tt>true</tt>, ending the loop. After the loop has ended an new
-instance is created at the random position that we discovered to
-have no collisions.</blockquote>
+<blockquote>上述动作代码块将先创建一个临时局部变量并将它们设为 <tt>false</tt>。然后Whlie循环将会检查此变量，当此变量是false是将执行循环。在此循环中，我们将会随机获得两个临时变量，它们代表的是房间某处X和Y的坐标，然后在检查在这个坐标上是否有碰撞发生。如果没有碰撞，那么初始变量将被设置为 <tt>true</tt>来终止循环。当循环结束后，我们将在这个已经确认没有碰撞可发生的位置上，创建一个新实例。</blockquote>
 
 <p><br>
 </p>

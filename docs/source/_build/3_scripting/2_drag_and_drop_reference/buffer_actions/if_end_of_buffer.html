@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,18 +40,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to check if the read/write position has
-reached the end of the buffer. You supply the unique buffer ID
-value as returned by the action <a href="create_buffer.html">Create
-Buffer</a> and then the action will return <tt>true</tt> if the
-read/write position has reached the end of all the avaialble data
-in the buffer, or <tt>false</tt> if it has not. You can flag "not"
-to make the action check if the read/write position is <i>not</i>
-at the end of the buffer.</p>
+<p>此动作可用于检查读/写位置是否已到达缓冲区的末尾。提供<a href="create_buffer.html">创建缓冲区</a>动作返回的唯一缓冲区ID值，然后如果读/写位置已到达缓冲区中所有可用数据的末尾，动作将返回<tt>true（真）</tt>，如果还没有则返回<tt>false（假）</tt>。你可以标记“not”以使该动作检查读/写位置<i>不</i>在缓冲区的末尾的情况。</p>
 
-<p>如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：
+<p>请注意，如果要将动作添加进 "if" 动作块，应该将它们放置到动作的侧边，如下图所示：
 <img class="center" src="images/if_end_drop.png" alt=
-"If End Of Buffer Drop"></p>
+"如果是缓冲区的结束点 Drop"></p>
 </blockquote>
 
 <p><br>
@@ -59,7 +52,7 @@ at the end of the buffer.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_buffers_if_end_of_buffer.png"
-alt="If End Of Buffer Syntax">
+alt="如果是缓冲区结束点的语法">
 <p><br>
 </p>
 
@@ -74,7 +67,7 @@ alt="If End Of Buffer Syntax">
 
 <tr>
 <td>缓冲区</td>
-<td>The buffer index (stored in a variable)</td>
+<td>缓冲区索引（存储在变量中）</td>
 </tr>
 </table>
 </blockquote>
@@ -82,14 +75,10 @@ alt="If End Of Buffer Syntax">
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_buffers_if_end_of_buffer.png"
-alt="If End Of Buffer Example">
-<blockquote>The above action block code creates a DS list in the
-instance and then loops through the data within the given buffer
-reading out the data and adding it to the list. This continues
-until the end of the buffer is reached at which time the loop is
-broken.</blockquote>
+alt="如果的缓冲结束点的示例">
+<blockquote>上面的动作块代码先在实例中创建一个列表数据，然后遍历给定缓冲区内的数据，读取数据并将其添加到列表中。一直持续到缓冲区结束才停止循环。</blockquote>
 
 <p><br>
 </p>
@@ -98,10 +87,9 @@ broken.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Buffer Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">缓冲区动作</a></div>
 
-<div style="float:right">next: <a href="create_buffer.html">Create
-Buffer</a></div>
+<div style="float:right">下一页： <a href="create_buffer.html">创建缓冲区</a></div>
 </div>
 </div>
 

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>mp_grid_path</h2>
 
 <div class="body-scroll">
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">mp_grid_path(id, path, xstart, ystart, xgoal,
 ygoal, allowdiag);</p>
@@ -119,7 +119,7 @@ see how this all works together:<br>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">例如：</h3>
 
 <p class="code">global.grid = mp_grid_create(0, 0, room_width div 32, room_height div 32, 32, 32);<br>mp_grid_add_instances(global.grid, obj_wall, false);<br>with (obj_Enemy)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;path = path_add();<br>&nbsp;&nbsp;&nbsp;if mp_grid_path(global.grid, path, x, y, obj_Player.x, obj_Player.y, 1)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;path_start(path, 0, 3, 0);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 

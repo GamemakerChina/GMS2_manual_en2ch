@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">Get data on a group of particles in your physics
 simulation.</h2>
 
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">physics_particle_group_get_data(group, buffer,
 flags)</p>
@@ -141,7 +141,7 @@ which it belongs).</td>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">例如：</h3>
 
 <p class="code">var count = physics_particle_group_count(gp);<br>var flags = phy_particle_data_flag_position | phy_particle_data_flag_colour;<br>if (count &gt; 0)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var buffer = buffer_create(count * 12, buffer_grow, 4);<br>&nbsp;&nbsp;&nbsp;physics_particle_group_get_data(gp, buffer, flags);<br>&nbsp;&nbsp;&nbsp;for (var n = 0; n &lt; count; n++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var xx = buffer_read(buffer, buffer_f32);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var yy = buffer_read(buffer, buffer_f32);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var argb = buffer_read(buffer, buffer_u32);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var alpha = (argb &gt;&gt; 24) &amp; 255;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite_ext(sprBlob, 0, xx, yy, 1, 1, 0, c_green, alpha);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;buffer_delete(buffer);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 

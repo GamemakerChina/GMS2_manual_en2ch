@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,17 +40,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can create or set an instance variable for
-health. You supply the value to either set the health variable to
-or to add to the health variable (if you tick the <i>relative</i>
-checkbox then the value will be added to the current "health"
-value). Note that if you wish to use the <a href=
-"../drawing_actions/draw_healthbar.html">Draw Healthbar</a> action
-then this value should be between 0 and 100, otherwise it can be
-any amount you require. Also note that unlike regular instance
-variables the variable name for "health" is stored internally so to
-retrieve the score value you need to use the action <a href=
-"get_health.html">Get Health</a>.</p>
+<p>使用此动作你可以创建或设置一个“健康值”实例变量。你需要给出一个绝对值或一个原来的值需要加上的值。（对于后者，你需要选中 <i>相对</i> 按钮，来使给出的值能和原来的值相加再赋给此实例变量）。你可以将健康值设为任何你需要的值。但如果你要 <a href=
+"../drawing_actions/draw_healthbar.html">绘制健康条</a> ，这个值应该在0到100之间。此“健康值”是作为内部值存储的，因此如果你需要知道健康值是多少，你需要使用 <a href=
+"get_health.html">获得健康值</a>。</p>
 </blockquote>
 
 <p><br>
@@ -73,8 +65,7 @@ retrieve the score value you need to use the action <a href=
 
 <tr>
 <td>健康值</td>
-<td>The amount to set the health to (or to add on to the health if
-<i>relative</i> is checked)</td>
+<td>将要为健康设置的值（也可以选择 <i>相对</i>使这个值加上原来的值）。 </td>
 </tr>
 </table>
 </blockquote>
@@ -82,12 +73,10 @@ retrieve the score value you need to use the action <a href=
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_iv_set_score.png" alt=
 "Set Health Example">
-<blockquote>The above action block code will check to see if the
-room is the first in the game and if it is it sets up "score",
-"lives" and "health" variables for the instance.</blockquote>
+<blockquote>上述动作代码块将检查此房间是否是游戏第一个房间。如果是的话，它将设置“分数”“生命数”“健康值"。</blockquote>
 
 <p><br>
 </p>

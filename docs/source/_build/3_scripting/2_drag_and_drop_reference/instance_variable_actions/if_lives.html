@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,12 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to check the value of the instance variable
-<tt>lives</tt> using a specific expression. You give the type of
-expression to check with and the value to check the current
-<tt>lives</tt> against, and the "if" statement will always return
-either <tt>true</tt> or <tt>false</tt> depending on the expressions
-and values used. The available expressions are:</p>
+<p>此动作用将使用特定的表达式来检查实例变量 <tt>生命</tt> 的值。你需要给出需要检查的表达式使 <tt>生命数</tt> 和另一个给出的值做比较。此“如果”陈述将根据表达式返回<tt>true</tt>或<tt>false</tt> 。可用的表达式如下：</p>
 
 <ul>
 <li><b>Equals to</b> - 变量和值相等</li>
@@ -59,10 +54,7 @@ and values used. The available expressions are:</p>
 <li><b>Greater than or Equal to</b> - 变量大于 <i>或</i> 等于值。</li>
 </ul>
 
-<p>If you flag the <b>Not</b> argument, then the above will be
-<i>negated expressions</i>, for example "equals to" becomes
-"<i>not</i> equals to", so you would be checking if the
-<tt>lives</tt> value is not equals to the given value.</p>
+<p>如果你选中了“NOT”参数，那么结果将会反向。例如"等于"变为“&lt;i0&gt;不&lt;/i0&gt;等于”。</p>
 
 <div class="note"><b>注意！</b>由于 <a href=
 "http://floating-point-gui.de/formats/fp/" target=
@@ -70,11 +62,11 @@ and values used. The available expressions are:</p>
 "../Type_Actions/decimal_to_integer.html">将小数变为整数</a> 动作来避免这样的错误。你也可以使用“大于”或“小于”表达式。</div>
 
 <p><br>
-如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br>
+请注意，如果要将动作添加进 "if" 动作块，应该将它们放置到动作的侧边，如下图所示：<br>
 <img class="center" src="Images/a_IV_Drop_If_Lives.png" alt=
 "如果添加动作"></p>
 
-<p>如果if的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。</p>
+<p>如果 if 的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此 if 动作块后执行。</p>
 </blockquote>
 
 <p><br>
@@ -102,12 +94,12 @@ and values used. The available expressions are:</p>
 
 <tr class="alt">
 <td>表达式</td>
-<td>The type of expression to use for the check.</td>
+<td>用于检查的表达式</td>
 </tr>
 
 <tr>
 <td>值</td>
-<td>The value to check the <tt>lives</tt> against.</td>
+<td>用来和 <tt>生命</tt> 比较的值。</td>
 </tr>
 </table>
 </blockquote>
@@ -115,12 +107,10 @@ and values used. The available expressions are:</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="Images/e_IV_If_Lives.png" alt=
 "If Lives Example">
-<blockquote>The above action block code will check the value of
-<tt>lives</tt> to see if it is less than or equal to 0 and if it is
-then the room will be restarted.</blockquote>
+<blockquote>上述代码块将检查<tt>生命</tt> 值来看他是否小于等于0，如果是的，将重启房间。</blockquote>
 
 <p><br>
 </p>

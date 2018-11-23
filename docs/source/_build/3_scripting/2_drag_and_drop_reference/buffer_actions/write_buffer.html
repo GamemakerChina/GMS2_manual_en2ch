@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,18 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to write data to a buffer. You supply
-the unique buffer ID to write to (as returned by the action
-<a href="create_buffer.html">Create Buffer</a>) and then the value
-to write, which can be either a real or a string, but note that
-<b>all values are stored as strings</b> so when you read from the
-buffer (using <a href="read_buffer.html">Read Buffer</a>) you may
-need to use one of the <a href="../type_actions/index.html">Data
-Type Actions</a> to convert it from a string back to the original
-value. Keep in mind too that buffers are read and written to
-<i>sequentially</i> and so writing to a buffer will move the "seek"
-position along one, meaning that to write various pieces of data
-you simply call this action the number of times required.</p>
+<p>此动作可用于将数据写入缓冲区。提供要写入的唯一缓冲区ID（由 <a href="create_buffer.html">创建缓冲区</a>动作返回）然后写入值，可以是实数或字符串，但请注意<b>所有值都将存储为字符串</b>，所以当你从缓冲区读取时（使用<a href="read_buffer.html">读取缓冲区</a>）你可能需要使用<a href="../type_actions/index.html">数据类型动作</a>中的一个将它从字符串转换回原始值。请记住，读取和写入缓冲区是按照<i>顺序</i>进行的，因此，写入缓冲区会将“搜索（seek）”位置移动到一个位置，这意味着要写入各种数据，你只需将此动作调用所需的次数。</p>
 </blockquote>
 
 <p><br>
@@ -59,7 +48,7 @@ you simply call this action the number of times required.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_buffers_write_buffer.png" alt=
-"Write Buffer Syntax">
+"写入缓冲区的语法">
 <p><br>
 </p>
 
@@ -74,12 +63,12 @@ you simply call this action the number of times required.</p>
 
 <tr>
 <td>缓冲区</td>
-<td>The buffer index (stored in a variable)</td>
+<td>缓冲区索引（存储在变量中）</td>
 </tr>
 
 <tr class="alt">
 <td>值</td>
-<td>The value to add into the buffer</td>
+<td>要添加到缓冲区中的值</td>
 </tr>
 </table>
 </blockquote>
@@ -87,12 +76,10 @@ you simply call this action the number of times required.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_buffers_create_buffer.png" alt=
-"Write Buffer Example">
-<blockquote>The above action block code creates a global variable
-and then a buffer, assigning the unique buffer ID to the variable.
-This buffer than has two pieces of data written to it.</blockquote>
+"写入缓冲区的示例">
+<blockquote>上面的动作块代码创建一个全局变量，然后创建一个缓冲区，为变量赋值唯一的缓冲区ID。这个缓冲区写入了两条数据片段。</blockquote>
 
 <p><br>
 </p>
@@ -101,10 +88,9 @@ This buffer than has two pieces of data written to it.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Buffer Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">缓冲区动作</a></div>
 
-<div style="float:right">next: <a href="seek_buffer.html">Seek
-Buffer</a></div>
+<div style="float:right">下一页： <a href="seek_buffer.html">缓冲区中搜寻</a></div>
 </div>
 </div>
 

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,15 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action is used to get a tile index on a given layer. The
-layer is specified from the layer name given (a string, as used to
-name the layer in the Room Editor), and then you give an x and y
-position to find the tile to get the index of. The tile will be the
-one that the given position falls within in the room, and the index
-will be returned to the target variable. The x and y position can
-be flagged as being relative to the position of the calling
-instance, and the target variable can be flagged as a temporary
-(local) variable that can be used until the end of the event.</p>
+<p>此动作用来获得指定层上一个图块的索引。你需要通过给出层的名称来指定图层，名称在房间编辑器种命名层的一个字符串。然后你需要提供X和Y坐标来找到需要取得索引的图块。此图块是位于房间的指定位置上的图块，此图块的索引将返回到目标变量中。此X和Y位置可以被设置为和调用动作的实例位置相对，此目标变量也可以被标记为临时局部，那么此变量将在事件结束前生效。</p>
 </blockquote>
 
 <p><br>
@@ -94,13 +86,10 @@ instance, and the target variable can be flagged as a temporary
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_tiles_get_tile_at_pixel.png" alt=
 "Set Tile At Pixel Example">
-<blockquote>The above action block code checks for a mouse left
-button press and if one is detected it gets the index of the tile
-cell that the position of the mouse falls within. This tile index
-is then checked and if it is not 0, it is set to 0.</blockquote>
+<blockquote>上述动作代码块侦听鼠标左键是否按下，如果按下，将返回鼠标左键按下位置的图块的索引值。然后检查此索引值，如果它不是0，则将它设为0。</blockquote>
 
 <p><br>
 </p>

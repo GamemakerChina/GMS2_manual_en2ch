@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">Create a strong but flexible straight line joint
 connecting two instances along a given angle.</h2>
 
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">physics_joint_weld_create(inst1, inst2, anchor_x,
 anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
@@ -119,7 +119,7 @@ maintain at all times, as shown in the image below:<br>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">例如：</h3>
 
 <p class="code">var i, fix, o_id, p_id;<br>p_id = noone;<br>o_id = noone;<br>fix = physics_fixture_create();<br>physics_fixture_set_box_shape(fix, 64, 32);<br>for (i = 0; i &lt; 5; i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;o_id = instance_create_layer(x + (128 * i), y, "Instances", obj_BridgePart);<br>&nbsp;&nbsp;&nbsp;physics_fixture_bind(fix, o_id);<br>&nbsp;&nbsp;&nbsp;if i &gt; 0 &amp;&amp; i &lt; 4<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;physics_joint_weld_create(p_id, o_id, x + (128 * i) - 64, y, 0, 10, 12, true);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;p_id = o_id;<br>&nbsp;&nbsp;&nbsp;}<br>physics-fixture_delete(fix);<br></p>
 

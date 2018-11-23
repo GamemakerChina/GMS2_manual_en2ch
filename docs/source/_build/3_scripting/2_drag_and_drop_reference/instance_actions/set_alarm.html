@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,23 +40,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action block sets a given alarm to countdown, and when the
-alarm reaches zero the associated <a href=
-"../../../2_interface/1_editors/events/index.html">Alarm Event</a>
-will be triggered. You supply the alarm number from 0 to 11, and
-then the value to set the alarm to. The value used is the number of
-"game steps" that you want to pass before the alarm event is
-triggered, and you can set this to be relative to the current alarm
-value (adding or subtracting to the current value). Note that the
-value must be an integer value, and you can set it to -1 to stop
-the alarm. Note that when an alarm counts down, the event is run
-when it reaches 0, but the alarm then counts down to -1 to show
-that it has finished. Setting an alarm to 0 will <i>not</i> run the
-event, since it will then count down to -1 next step, so to run an
-alarm immediately it should be set to 1. Note that you can set
-additional alarms in the same action by clicking the plus icon
-<img style="vertical-align:middle" src=
-"../icon_expand_arguments.png"> beside the action.</p>
+<p>上述动作块将使一个计时器开始倒计时，当这个计时器到0时，将触发关联的<a href=
+"../../../2_interface/1_editors/events/index.html">Alarm Event</a>。你需要提供计时器的编号，从0到11，然后为计时器设置一个值。此值就是在你想触发相应事件前经过的"游戏步数”。你也可以将这个值设为于之前的值相联系（相加或相减）。请注意, 该值必须是一个整数值, 您可以将其设置为-1 以停止计时。注意当计时器的数值到达0时就会触发相应事件。但计时器仍然会继续变为-1，作为它完成计时的标志。将一个计时器设为0将 <i>不会</i> 运行相应事件，尽管它会在下一步变为-1。如果你想某事立即发生，应该将计时器设为1。注意你可以点击 &lt;i0&gt; 加号图标来多次设置额外的计时器。</p>
 </blockquote>
 
 <p><br>
@@ -79,13 +64,12 @@ additional alarms in the same action by clicking the plus icon
 
 <tr>
 <td>计时器</td>
-<td>The alarm to set (the corresponding Alarm Event will be
-triggered when it reaches 0).</td>
+<td>需要设置的计时器。（对应的计时器将在值变为0时触发相应事件）</td>
 </tr>
 
 <tr class="alt">
 <td>倒计时</td>
-<td>The count down value in game steps.</td>
+<td>计时器的计时数，单位是游戏步。（game steps）。</td>
 </tr>
 </table>
 </blockquote>
@@ -93,13 +77,11 @@ triggered when it reaches 0).</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_instance_get_alarm.png" alt=
 "Set Alarm Example">
 <blockquote>
-<p>The above action block code creates a local (temporary) variable
-and stores the current value of the alarm[0]. This is then checked
-and if it is less than 0, the alarm is set to 60.</p>
+<p>上述动作块代码创建一个本地（临时）变量并存储计时器[0]的当前值。然后检查这个值，如果这个值小于0，那么将它设为60。</p>
 </blockquote>
 
 <p><br>
@@ -109,7 +91,7 @@ and if it is less than 0, the alarm is set to 60.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
 <div style="float:right">next: <a href="get_alarm.html">Get Alarm
 Countdown</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -47,32 +47,23 @@ game is not currently in trial mode.</p>
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">uwp_license_trial_user();</p>
 
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">指针</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
-<p class="code">if gamepad_button_check_pressed(0, gp_start)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;if uwp_license_trial_version()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var _uid =
-uwp_license_trial_user;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uwp_show_help(_uid);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if gamepad_button_check_pressed(0, gp_start)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;if uwp_license_trial_version()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var _uid = uwp_license_trial_user;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uwp_show_help(_uid);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code checks to see if a button is pressed and then

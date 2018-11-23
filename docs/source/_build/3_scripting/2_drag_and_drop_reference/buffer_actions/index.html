@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Buffer Action Library</title>
+<title>缓冲区动作库</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -30,58 +30,34 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Buffer Library</h2>
+<h2>缓冲区库</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
 <p><img class="center" src="images/lib_buffers.png" alt=
-"Buffer Actions">
+"缓冲区操作">
 </p>
 
-<p>A <b>buffer</b> is a region of physical memory used to
-temporarily hold data while it is being moved from one place to
-another or manipulated in some way, for example you can use a
-buffer to hold game state data. GameMaker Studio 2 has a number of
-specific actions related to creating, modifying and loading/saving
-buffers, but before using them please note the following
-points:</p>
+<p><b>缓冲区</b>是一个物理内存区域，用于在数据从一个地方移动到另一个地方时临时保存数据，或以某种方式进行操作它们，例如，你可以使用缓冲区来保存游戏状态数据。GameMaker Studio 2 有许多特定的缓冲区动作，比如创建，修改和加载/保存等等，但在使用它们之前，请注意以下几点：</p>
 
 <ul>
-<li>When a buffer is created, it is automatically cleared and
-filled to 0.</li>
+<li>一个缓冲区创建后，会自动清除并填充为0。</li>
 
-<li>The "size" argument of the buffer functions always refers to
-the size <i>in bytes</i> of the buffer.<br>
+<li>缓冲区函数的“size”参数始终指的是<i>以字节为单位</i>的缓冲区的大小。<br>
 <br></li>
 
-<li>DnD™ buffers are always <i>1 byte aligned</i>. The "alignment"
-refers to how data is stored within a buffer and is used when using
-the GML <a href="../../4_gml_reference/buffers/index.html">buffer
-Functions</a>, but for Drag And Drop, it's not relevant.<br>
+<li>DnD™ 缓冲区总是以<i>1字节对齐</i>。“对齐”指的是在使用GML的<a href="../../4_gml_reference/buffers/index.html">缓冲区函数</a>的时候数据如何存储在缓冲区中，但与DnD无关。<br>
 <br></li>
 
-<li>Data in buffers is read and written in a <i>sequential</i>
-manner (ie: you call the <a href="write_buffer.html">Write
-Buffer</a> action three times, then it will write the first data,
-move forward, right the second data, move forward and then write
-the last data), with something called the "seek" value to tell you
-where in the buffer the next read/write will take place.<br>
+<li>缓冲区中数据的读取和写入是按照<i>顺序</i>来的（即：你调用<a href="write_buffer.html">写入缓冲区</a>动作三次，然后它将写入第一个数据，向前移动，写入第二个数据，再向前移动然后写入最后一个数据），有的时候可以调用“seek”的值来告诉你缓冲区中下一个读/写的位置。<br>
 <br></li>
 
-<li>All data is written to the buffer and returned from the buffer
-as a <b>string</b> so if you have stored any real numbers you will
-have to use one of the <a href="../type_actions/index.html">Data
-Type Actions</a> to convert it from the string to the value.</li>
+<li>所有数据写入缓冲区以及从缓冲区返回都是以<b>字符串</b>的形式，因此，如果你存储了任何实数值，你将不得不使用<a href="../type_actions/index.html">数据类型动作</a>的一个将它从字符串转换为对应的值。</li>
 </ul>
 
-<p>The memory used for creating buffers is system memory so even
-when the game doesn't have focus, any data stored in a buffer
-should be safe, however if the app is closed or re-started then it
-will be lost. The following page explains how buffers work within
-the context of GameMaker Studio 2 and contain a couple of GML code
-examples:</p>
+<p>用于创建缓冲区的内存是系统内存，因此即使游戏失去了焦点，存储在缓冲区中的任何数据都应该是安全的，但是如果应用程序关闭或重新启动，那么它将会丢失。下面的页面解释了缓冲区如何在GameMaker Studio 2的情境中工作，并包含了几个GML的代码示例：</p>
 
 <blockquote>
 <ol>
@@ -91,7 +67,7 @@ examples:</p>
 </ol>
 </blockquote>
 
-<p>The <b>Buffer</b> library has the following actions:</p>
+<p><b>缓冲区</b>库有以下动作：</p>
 
 <table class="icons">
 <tr>
@@ -189,7 +165,7 @@ src="images/i_buffers_seek_buffer.png" alt="搜寻缓冲区"></a>
 <div style="float:left">上一页:  <a href="../index.html">拖拽按钮参考</a></div>
 
 <div style="float:right">下一页: <a href=
-"../file_actions/index.html">File Actions</a></div>
+"../file_actions/index.html">文件动作</a></div>
 </div>
 </div>
 

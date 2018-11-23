@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Destroy Object Instance</title>
+<title>销毁物体实例</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_instance_destroy.png">  Destroy Object Instance</h2>
+"images/i_instance_destroy.png"> 销毁物体实例</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,19 +40,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>You can call this action whenever you wish to "destroy" an
-instance, which will remove it from the room. You should note that
-when you destroy an instance, its <a href=
-"../../../2_interface/1_editors/events/index.html">Destroy
-Event</a> is called <i>immediately after the action that calls the
-destroy</i>. Also note that although the Destroy Event is performed
-the instant that the action is called, the instance is <i>not</i>
-immediately removed from the game, and it will continue to perform
-the code contained in the current event until the end, and only
-when the current event is over will the instance be removed from
-the game, at which time the <a href=
-"../../../2_interface/1_editors/events/index.html">Clean Up
-Event</a> will be called.</p>
+<p>你可以调用这个动作来“销毁”某个实例。这个实例将会被从游戏中移除。注意当你销毁某个实例时， <a href=
+"../../../2_interface/1_editors/events/index.html">销毁事件</a> 同样会在 <i>此动作后</i>立即被调用。还要注意尽管销毁事件将在此动作后调用，但这个实例 <i>不会</i> 立即被从房间中移除。当前事件剩余的代码仍会继续执行。当前事件执行完后，才会调用<a href=
+"../../../2_interface/1_editors/events/index.html">清除事件</a> 。</p>
 </blockquote>
 
 <p><br>
@@ -64,12 +54,10 @@ Event</a> will be called.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_instance_destroy.png" alt=
 "Destroy Instance Example">
-<blockquote>The above action block code checks for a collision with
-any other instance at the position of the calling instance, and if
-one is found, it destroys itself.</blockquote>
+<blockquote>上面的动作块代码将检查在调用实例的位置上是否有其他实例的碰撞。如果有，它将销毁自己。</blockquote>
 
 <p><br>
 </p>
@@ -78,7 +66,7 @@ one is found, it destroys itself.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
 <div style="float:right">next: <a href=
 "destroy_at_position.html">Destroy At Position</a></div>

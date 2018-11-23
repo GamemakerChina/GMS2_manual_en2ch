@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">Add purchase details of a single product to a
 ds_map.</h2>
 
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">iap_purchase_details(product_id, ds_map);</p>
 
@@ -191,7 +191,7 @@ function.</i><br>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">例如：</h3>
 
 <p class="code">var p_map = ds_map_create();<br>var p_index = ds_map_find_value(iap_data, "index");<br>iap_purchase_details(p_index, p_map);<br>if ds_map_find_value(p_map, "status") == iap_purchased<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Gold += 100000;<br>&nbsp;&nbsp;&nbsp;}<br>ds_map_destroy(p_map);<br></p>
 

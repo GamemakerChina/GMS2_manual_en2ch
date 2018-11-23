@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Change Object Instance</title>
+<title>更改物体实例</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_instance_change.png">  Change Object Instance</h2>
+"images/i_instance_change.png"> 更改物体实例</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,26 +40,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can change one instance into another
-instance. You need to specify the object that the instance it
-change into another instance of, and the action will change the
-instance, performing the Destroy Event and the Clean Up Event of
-the initial instance and the Create Event of the new instance. Note
-that if you do not specify a direction or a speed etc... then the
-new instance will "inherit" these values. For example, if the
-initial instance has an <tt>image_angle</tt> (rotation) of 180,
-travels at 2px per game tick and has an <tt>image_speed</tt>
-(animation speed) of 0.5, then the instance it changes into will
-maintain these values unless explicitly set in the Create event of
-the new instance.</p>
+<p>通过此动作，你可以将一个实例更改为另一个实例。你需要给出新的实例的物体，然后此动作将把原有实例改为新实例，并且为原有实例执行销毁事件和清除事件，并为新实例执行创建事件。. 注意如果你没有为新实例指定”方向“或”速度“等参数（如果有的话），那么新实例将从原有实例”继承“这些参数。例如，如果原有实例的 <tt>image_angle</tt> (旋转) 是180，每个游戏tick移动2像素，并且它的 <tt>image_speed</tt> (动画速度) of 是0.5，那么新实例的这些值将继续保持原样，除非你为新实例指定了新值。.</p>
 
-<p>It is worth noting that changing the instance means that you
-<i>can perform no further actions with that instance until the next
-game tick</i>, in particular trying to access variables etc... as
-that will cause an error. Basically, you change the instance but it
-is not actually available until the end of the current step, so to
-access any of the variables it contains directly (for example,
-calling <tt>inst_changed.x</tt>) will not work.</p>
+<p>值得注意的是，更改实例意味着你<i>在下一个游戏tick之前，不能对该实例执行任何进一步操作</i>，特别是尝试访问变量等......因为这会导致错误。但是你虽然更改了实例，但实际上直到当前步骤结束时才生效，因此要直接访问它包含的任何变量（例如，调用<tt>inst_changed.x</tt>） 将不起作用。</p>
 </blockquote>
 
 <p><br>
@@ -82,7 +65,7 @@ calling <tt>inst_changed.x</tt>) will not work.</p>
 
 <tr>
 <td>物体</td>
-<td>The name of the object to change to an instance of.</td>
+<td>新实例的物体的名称。</td>
 </tr>
 </table>
 </blockquote>
@@ -90,12 +73,10 @@ calling <tt>inst_changed.x</tt>) will not work.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_instance_change.png" alt=
 "Change Instance Example">
-<blockquote>The above action block code checks for a mouse press
-and if one is detected then it changes the instance into different
-one.</blockquote>
+<blockquote>上述动作块将检查是否有鼠标按下，如果有，那么它将把目前实例更改为一个不同的实例。</blockquote>
 
 <p><br>
 </p>
@@ -104,10 +85,9 @@ one.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
-<div style="float:right">next: <a href="set_alarm.html">Set
-Alarm</a></div>
+<div style="float:right">下一页： <a href="set_alarm.html">设置闹钟</a></div>
 </div>
 </div>
 

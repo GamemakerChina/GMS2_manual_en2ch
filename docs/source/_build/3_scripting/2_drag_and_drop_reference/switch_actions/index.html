@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,36 +40,21 @@ if (window.name != "content")
 "Switch Actions">
 </p>
 
-<p>The <b>Switches</b> action library contains those actions that
-are required for creating switch statements in your game action
-code. In a number of situations you want to let your instances
-complete an action depending on a particular value, and while you
-can do this using a number of consecutive "if" statements, this can
-get messy when the possible choices gets above two or three. In
-these cases it is better to use the "switch" action. A switch
-action works as follows:</p>
+<p>此 <b>Switches</b>动作库包含了用来创建switch代码块的动作。某些情况下你可能会让实例根据某个特定的值执行相应的动作，你会想到用if。但如果情况多的时候，这会变得很麻烦。这时你最好用“switch”动作。switch动作是按如下流程工作的：</p>
 
 <ul>
-<li>You supply value a (usually from some kind of expression or
-variable)</li>
+<li>你需要给出一个值，通常是某种表达式或变量。</li>
 
-<li>The value is compared with the value assigned to the various
-"case" statements</li>
+<li>此值将会和之后不同case的值作比较。</li>
 
-<li>If the value is the same as the case value, the contents of the
-case are performed otherwise the next case is evaluated,
-etc...</li>
+<li>如果在某个case中它们是相等的，那么将会运行此case中的内容，否则将继续比较最开始输入值和下一个case的值..</li>
 
-<li>Once a case has been performed <i>or</i> all cases have been
-evaluated and failed, the code will continue from the end of the
-switch</li>
+<li>当某个case中的内容被运行 <i>或</i> 所有case中的情况都不符合，将会结束switch，并运行switch之后的代码。</li>
 
-<li>If all cases failed and you have a default case, then that will
-be performed before the code continues from the end of the
-switch</li>
+<li>但如果所有case都不符合，而你设置了一个default情况，那么将会先运行default中的内容，然后再结束switch，并运行switch之后的代码。</li>
 </ul>
 
-<p>The <b>Switches</b> library has the following actions:</p>
+<p>此 <b>Switches</b> 库有如下动作：</p>
 
 <table class="icons">
 <tr>

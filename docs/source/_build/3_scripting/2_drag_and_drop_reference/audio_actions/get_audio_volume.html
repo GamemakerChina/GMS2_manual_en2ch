@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,11 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action returns the volume of the given sound. You pick the
-sound from the asset explorer and give a target variable to return
-the volume value to (you can flag this as being a temporary local
-variable). The returned value will be between 0 and 1, where 0 is
-silent and 1 is full volume.</p>
+<p>此动作返回给定声音的音量。从资源浏览器中选择声音，并提供目标变量，动作将返回音量值到变量中（你可以将其标记为临时的局部变量）。返回值将介于0和1之间，其中0表示静音，1表示最大音量。</p>
 </blockquote>
 
 <p><br>
@@ -67,12 +63,12 @@ silent and 1 is full volume.</p>
 
 <tr>
 <td>声音</td>
-<td>The sound resource to get the volume of</td>
+<td>获得音量的声音资源</td>
 </tr>
 
 <tr class="alt">
 <td>目标</td>
-<td>The target variable to store the returned volume</td>
+<td>用于存储返回的音量的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -80,10 +76,10 @@ silent and 1 is full volume.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_audio_get_audio_volume.png" alt=
 "获取音频音量举例">
-<blockquote>The above action block code checks a global variable to see if it is <tt>true</tt> or false. If it is <tt>true</tt> then the volume of the given sound is retrieved and stored in a temporary local variable. The value is then checked to see if it is not equal to 0.5, and if it is not, then the volume of the sound is set to 0.5. 若该全局变量求值为<tt>false</tt>，则该声音的音量会被设置为1, then the sound has its volume set to 1.</blockquote>
+<blockquote>上面的动作块代码将检查全局变量并查看它是<tt>true（真）</tt>还是false（假）。如果是<tt>真</tt>，然后会检索给定声音的音量并将其存储在临时局部变量中。然后检查这个值以查看它是否不等于0.5，如果不是，则将声音的音量设置为0.5。若该全局变量求值为<tt>false</tt>，则该声音的音量会被设置为1。</blockquote>
 
 <p><br>
 </p>

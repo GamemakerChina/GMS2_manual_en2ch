@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,21 +40,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to read data from a previously created
-buffer. You supply the unique buffer ID value (as returned by the
-action <a href="create_buffer.html">Create Buffer</a>) and give a
-variable to store the returned value. If you flag the variable as a
-temporary local variable then it will be created for you and
-discarded again at the end of the event or action script. All data
-is returned as a <b>string</b> so if you have stored any real
-numbers you will have to use one of the <a href=
-"../type_actions/index.html">Data Type Actions</a> to convert it
-from the string to the value. Keep in mind too that buffers are
-read and written to <i>sequentially</i> and so reading from a
-buffer will move the "seek" position to the next entry, meaning
-that to read various pieces of data you simply call this action the
-number of times required and store each returned piece of data to a
-variable.</p>
+<p>此动作可用于从之前创建的缓冲区中读取数据。提供唯一的缓冲区ID值（由<a href="create_buffer.html">创建缓冲区</a>动作返回） 并给定一个变量来存储返回的值。如果将变量标记为临时局部变量，则将为你创建该变量，并在事件或动脚本结束时再次将其丢弃。所有数据都以<b>字符串</b>的形式返回，因此，如果你存储了任何实数，你将不得不使用<a href=
+"../type_actions/index.html">数据类型操作</a>的一个将它从字符串转换为相应的值。请记住，读取和写入缓冲区是按照<i>顺序</i>进行的，因此，从缓冲区读取会将“搜索（seek）”位置移动到下一个条目，这意味着要读取各种数据，你只需将此动作调用所需的次数，并将每个返回的数据存储到变量中。</p>
 </blockquote>
 
 <p><br>
@@ -62,7 +49,7 @@ variable.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_buffers_read_buffer.png" alt=
-"Read Buffer Syntax">
+"读取缓冲区数据的语法">
 <p><br>
 </p>
 
@@ -77,12 +64,12 @@ variable.</p>
 
 <tr>
 <td>缓冲区</td>
-<td>The buffer index (stored in a variable)</td>
+<td>缓冲区索引（存储在变量中）</td>
 </tr>
 
 <tr class="alt">
 <td>目标</td>
-<td>The target variable to hold the returned data</td>
+<td>用于保存返回数据的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -90,14 +77,10 @@ variable.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_buffers_read_buffer.png" alt=
-"Read Buffer Example">
-<blockquote>The above action block code sets the buffer read/write
-position to the start of the buffer and then reads back two peices
-of data, storing them (as strings) in temporary local variables.
-These variables are then used to draw the data to the
-screen.</blockquote>
+"读取缓冲区的示例">
+<blockquote>上面的动作块代码将缓冲区读/写位置设置为缓冲区的起始位置，然后读取两个数据，将它们（字符串）存储在临时局部变量中。然后绘制这些变量的数据到屏幕上。</blockquote>
 
 <p><br>
 </p>
@@ -106,10 +89,9 @@ screen.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Buffer Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">缓冲区动作</a></div>
 
-<div style="float:right">next: <a href="write_buffer.html">Write
-Buffer</a></div>
+<div style="float:right">下一页： <a href="write_buffer.html">写入缓冲区</a></div>
 </div>
 </div>
 

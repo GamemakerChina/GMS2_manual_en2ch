@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,18 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to allocate a portion of memory as a
-buffer in your game, with the function returning the unique
-<i>buffer id</i> value that should be stored in a variable and used
-for all further function calls to the buffer. You can supply a
-global variable, an instance variable or have the action create a
-temporary local variable for storing the buffer ID. Note that you
-can create additional buffers by clicking the plus icon <img style=
-"vertical-align:middle" src="../icon_expand_arguments.png"> beside
-the action, and selecting another variable to hold the buffer
-ID.</p>
+<p>此动作可用于在游戏中分配置一部分内存作为缓冲区，函数返回唯一的<i>缓冲区ID</i>，并且应该存储在变量中，用于其它函数调用这个缓冲区。你可以提供全局变量，实例变量，或者让这个动作创建用于存储缓冲区ID的临时局部变量。请注意，你可以通过单击动作旁边的加号图标<img style=
+"vertical-align:middle" src="../icon_expand_arguments.png">来创建额外的缓冲区，并选择另一个变量来保存缓冲区ID。</p>
 
-<div class="note"><b>注意</b>： It's important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again using <a href="delete_buffer.html">Delete Buffer</a> action (in the <a href="../../../2_interface/1_editors/events/index.html">Other - Clean Up</a> event, for example). This is especially important to remember when using a temporary local variable, as if you do not remove the buffer again before the end of the event or action script then you will no longer be able access it and can have issues later.</div>
+<div class="note"><b>注意</b>：当你不再需要这些动态创建的资源，要记得从内存中删除它们，以防止内存泄露，因此当你用完这些创建的缓存区，应该再次使用<a href="delete_buffer.html">删除缓冲区</a>动作来释放它们（比如在<a href="../../../2_interface/1_editors/events/index.html">其他 - 清理</a>事件中使用）。要记住，在使用临时局部变量时这一点尤为重要，因为如果你不在事件或动作脚本结束前移除这个缓冲区，你将无法再访问它并且以后可能会遇到问题。</div>
 </blockquote>
 
 <p><br>
@@ -59,7 +51,7 @@ ID.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_buffers_create_buffer.png" alt=
-"Create Buffer Syntax">
+"创建缓冲区的语法">
 <p><br>
 </p>
 
@@ -74,12 +66,12 @@ ID.</p>
 
 <tr>
 <td>缓冲区</td>
-<td>The buffer index (stored in a variable)</td>
+<td>缓冲区索引（存储在变量中）</td>
 </tr>
 
 <tr class="alt">
 <td>值</td>
-<td>The value to add into the list</td>
+<td>要添加到列表中的值</td>
 </tr>
 </table>
 </blockquote>
@@ -87,12 +79,10 @@ ID.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_buffers_create_buffer.png" alt=
-"Create Buffer Example">
-<blockquote>The above action block code creates a global variable
-and then a buffer, assigning the unique buffer ID to the variable.
-This buffer than has two pieces of data written to it.</blockquote>
+"创建缓冲区的示例">
+<blockquote>上面的动作块代码创建一个全局变量，然后创建一个缓冲区，为变量赋值唯一的缓冲区ID。这个缓冲区写入了两条数据片段。</blockquote>
 
 <p><br>
 </p>
@@ -101,10 +91,9 @@ This buffer than has two pieces of data written to it.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Buffer Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">缓冲区动作</a></div>
 
-<div style="float:right">next: <a href="copy_buffer.html">Copy
-Buffer</a></div>
+<div style="float:right">下一页：<a href="copy_buffer.html">复制缓冲区</a></div>
 </div>
 </div>
 

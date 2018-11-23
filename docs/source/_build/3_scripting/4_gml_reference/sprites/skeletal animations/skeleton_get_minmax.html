@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,14 +35,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">skeleton_get_minmax();</p>
 
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">Array (4 elements: xMin, yMin, xMax, yMax)</p>
 
@@ -72,17 +72,9 @@ animation sprite. The returned array will have 4 elements:</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
-<p class="code">var frame = skeleton_animation_get_frame(0);<br>
-if frame &gt; 0 &amp;&amp; frame &lt; 2<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;var box = skeleton_get_minmax();<br>
-&nbsp;&nbsp;&nbsp;&nbsp;var ww = (box[2] - box[0]) / 2;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;var hh = (box[3] - box[1]) / 2;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;part_particles_create(global.p_sys, box[0]
-+ ww, box[1] + hh, global.Stars, 10);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var frame = skeleton_animation_get_frame(0);<br>if frame &gt; 0 &amp;&amp; frame &lt; 2<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;var box = skeleton_get_minmax();<br>&nbsp;&nbsp;&nbsp;&nbsp;var ww = (box[2] - box[0]) / 2;<br>&nbsp;&nbsp;&nbsp;&nbsp;var hh = (box[3] - box[1]) / 2;<br>&nbsp;&nbsp;&nbsp;&nbsp;part_particles_create(global.p_sys, box[0] + ww, box[1] + hh, global.Stars, 10);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code will check the current frame of the animation

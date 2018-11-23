@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>steam_ugc_get_item_update_info</h2>
 
 <div class="body-scroll">
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">steam_ugc_get_item_update_info(published_file_id,
 info_map);</p>
@@ -113,7 +113,7 @@ the map will remain empty.<br>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">例如：</h3>
 
 <p class="code">var info_map = ds_map_create();<br>var info = steam_ugc_get_item_update_info(global.fileID, info_map);<br>if info<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_text(32, 15, "needs_update: " + string(info_map[?"needs_update"]));<br>&nbsp;&nbsp;&nbsp;draw_text(32, 30, "is_downloading: " + string(info_map[?"is_downloading"]));<br>&nbsp;&nbsp;&nbsp;draw_text(32, 45, "bytes_downloaded: " + string(info_map[?"bytes_downloaded"]));<br>&nbsp;&nbsp;&nbsp;draw_text(32, 60, "bytes_total: " + string(info_map[?"bytes_total"]));<br>&nbsp;&nbsp;&nbsp;}<br></p>
 

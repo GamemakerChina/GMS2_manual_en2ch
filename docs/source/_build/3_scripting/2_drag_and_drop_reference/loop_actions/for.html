@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,42 +40,22 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>The <b>For</b> action is used to perform loops that only
-terminate when a value reaches the given condition. You give an
-initial value as a variable (which can be flagged as a temporary
-local variable - this is usually what you want), then you give the
-condition to check the variable against (for example if it is less
-than a certain value), and then finally the amount to increment the
-variable by each iteration of the loop. So, the general flow is as
-follows:</p>
+<p>该<b>For</b> 动作用于执行仅在值达到给定条件时终止的循环。您需要给出一个初始值作为变量 (可以标记为临时局部变量-这通常是您想要的)，然后给出检查变量的条件 (例如，如果它小于某个值)，然后给出变量在每次迭代结束后需要增加的数值。基本流程如下：</p>
 
 <ul>
-<li>You initialise a variable to a value</li>
+<li>你需要使用一个值初始化一个变量</li>
 
-<li>You set the condition to check this variable against</li>
+<li>然后设置条件以检查此变量</li>
 
-<li>You set how much the variable should be incremented by each
-iteration of the loop</li>
+<li>然后设置每次迭代结束后变量应该增加的数值</li>
 
-<li>You then add actions into the loop, and these will be run for
-each iteration until the condition returns <tt>false</tt> or a
-Break action is encountered.</li>
+<li>当你将“break”添加到循环中，这些循环将在每次迭代时运行，直到条件返回<tt>假</tt>或遇到“break”动作。</li>
 </ul>
 
-<p>When adding actions to be performedf within the loop, these are
-added much as you would add an action to an "if", ie: dropping it
-to the side of the action rather than under it:  <img class="center"
+<p>如果需要在一个循环种添加此动作，就像将动作添加到”if“中那样。例如：把动作块放在动作的一侧而不是下面。 <img class="center"
 src="images/for_drop.png" alt="Drop Actions Into A For Loop"></p>
 
-<p>All actions added to the side will be included in the For and
-will be performed before the event or script continues with the
-actions added under. Note that you can end any loop prematurely if
-you call the <a href="break.html">Break</a> action, and when using
-For loops you don't <i>have</i> to increment and you can make it
-decrement too, as long as the condition you use is appropriate. For
-example, set the initial variable to 10, set the condition to check
-for less than 0 and then set the increment value to -1 and the loop
-will iterate 10 times, counting backwards from 10 to 0.</p>
+<p>添加到此for循环动作的一侧的动作将按添加顺序依次执行。如果你想特定时候结束任何循环，则需要<a href="break.html">Break</a> 动作。并且在使用for循环（For loop）时，每次迭代结束不一定<i>必须</i>增加变量，减少也可以，只要你给出的比较条件是适当的。例如，将初始变量设置为10，将条件设置为检查小于0，然后将增量值设置为-1，循环将迭代10次，从10倒数到0。</p>
 </blockquote>
 
 <p><br>
@@ -97,19 +77,17 @@ will iterate 10 times, counting backwards from 10 to 0.</p>
 
 <tr>
 <td>初值</td>
-<td>Initialise the variable that will be used for counting to a
-value (can be flagged as a temporary local variable)</td>
+<td>初始化用于计数的变量（可以标记为临时局部变量）。</td>
 </tr>
 
 <tr>
 <td>条件</td>
-<td>The condition to check to break the loop</td>
+<td>用于检查是否需要终止循环的条件</td>
 </tr>
 
 <tr>
 <td>增量</td>
-<td>The amount to increment (or decrement) the initial count
-variable by each iteration of the loop</td>
+<td>每次迭代时变量的增量（或减量）。</td>
 </tr>
 </table>
 </blockquote>
@@ -117,12 +95,9 @@ variable by each iteration of the loop</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_loops_for.png" alt="For Example">
-<blockquote>The above action block code runs a <tt>for</tt> loop to
-check and see if a gamepad is connected to any of the 12 available
-"slots". If a gamepad is discovered, a global variable is set to
-the current slot number and the loop is broken.</blockquote>
+<blockquote>上述动作块代码执行了一个 <tt>for</tt> 循环来检查游戏手柄是否连接到了12个可用插槽中的任何一个。. 如果发现检测到了游戏手柄，则会将全局变量设置为当前插槽号，并且终止循环。</blockquote>
 
 <p><br>
 </p>

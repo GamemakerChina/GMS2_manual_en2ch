@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3><b>语法：</b>
+<h3><b>Syntax:</b>
 </h3>
 
 <p class="code">facebook_check_permission(permission)</p>
@@ -57,7 +57,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">实数</p>
 
@@ -77,7 +77,7 @@ user <i>must</i> be logged in for the check to function.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
 <p class="code">var permissions = ds_list_create();<br>if !facebook_check_permission("user_likes")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;ds_list_add(permissions, "user_likes");<br>&nbsp;&nbsp;&nbsp;}<br>if !facebook_check_permission("user_interests")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;ds_list_add(permissions, "user_interests");<br>&nbsp;&nbsp;&nbsp;}<br>if !ds_list_empty(permissions)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;request_ID = facebook_request_read_permissions(permissions);<br>&nbsp;&nbsp;&nbsp;}<br>ds_list_destroy(permissions);<br></p>
 

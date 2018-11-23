@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -51,12 +51,7 @@ asynchronous <a href=
 Event</a> is triggered (however to deal with this you may need to
 use code).</p>
 
-<p>The gamepad "slots" are indexed from 0 with slots 0 - 3
-inclusive being <i>only for Xinput gamepads</i>, ie: Xbox360
-controllers and compatibles. However you can also check slots 4 -
-ii inclusive for DirectInput gamepads, which means you can detect
-many other models of controller when connected through these
-slots.</p>
+<p>游戏手柄 “插槽” 从 0 开始索引，插槽 0 - 3 包含 <i>仅用于 Xinput 游戏手柄</i>，即：Xbox360 控制器和兼容机。However you can also check slots 4 - ii inclusive for DirectInput gamepads, which means you can detect many other models of controller when connected through these slots.</p>
 
 <p>The available gamepad actions are all listed below:</p>
 
@@ -144,13 +139,12 @@ Set Axis Deadzone</a>
 <p><br>
 </p>
 
-<h2>Compatibility</h2>
+<h2>兼容性</h2>
 
 <p><br>
 </p>
 
-<p>The following list shows current compatibility across the
-platforms (note that this will change with future updates):<br>
+<p>以下列表显示了跨平台的当前兼容性（请注意，这将随着将来的更新而更改）：<br>
 <br></p>
 
 <ul>
@@ -162,22 +156,12 @@ other controller types you should check the rest of the gamepad
 slots (4 - 11).<br>
 <br></li>
 
-<li>Mac OS is supported with up to a maximum of 4 connected devices
-permitted at once, and these devices can ONLY be of the type
-Playstation3 or Xbox 360. Please note that the "<b>Build for Mac
-AppStore</b>" option in Mac Game Options needs to be OFF for pad
-support to work.<br>
+<li>Mac OS 支持最多同时连接 4 个设备，这些设备只能是 Playstation3 或 Xbox 360 类型。请注意，如果要支持手柄工作，则需要关闭 Mac 游戏选项中的 <b>为苹果应用商店构建（Build for Mac AppStore）</b> 选项。<br>
 <br></li>
 
-<li>Ubuntu does also support GamePad input, but you may need to
-install additional libraries from the Ubuntu repository. You can do
-this easily by opening a command line terminal and typing the
-following:
+<li>Ubuntu does also support GamePad input, but you may need to install additional libraries from the Ubuntu repository. 你可以通过打开命令行终端并键入以下内容来轻松完成此操作：
 
-
-
-<p class="code">sudo apt-get install jstest-gtk<br>
-sudo apt-get install joystick.<br></p>
+<p class="code">sudo apt-get install jstest-gtk<br>sudo apt-get install joystick.<br></p>
 
 <p>This will install GUI support for the joystick as well as the
 joystick itself.<br>
@@ -187,24 +171,13 @@ joystick itself.<br>
 <i>Safari</i>.<br>
 <br></li>
 
-<li>Gamepad support also extends to iOS with the <b>iCade</b>
-cabinet. The left axis maps to the stick controller (although the
-input is digital, not analogue), the four "face" buttons map to the
-cabinet front buttons, and the four shoulder buttons map to those
-at the back of the cabinet.<br>
+<li>游戏手柄支持也通过 <b>iCade</b> cabinet（机柜）扩展到 iOS。左侧轴映射到摇杆控制器（虽然输入是数字的，而不是模拟的），四个 “面部” 按钮映射到 cabinet 前部按钮，四个肩部按钮映射到 cabinet 后部的按钮。
+<br>
 <br></li>
 
-<li>Android export supports NYKO controllers and generic Bluetooth
-controllers (including the OUYA), but only when they are enabled,
-meaning that you will have to tick the iCade/Bluetooth option in
-the <a href=
-"../../../2_interface/3_settings/game_options/options_android.html">
-General</a> section of the <b>Android Game Options</b>. They
-require API level 12 for them to work fully and it should be noted
-that <i>GameMaker Studio 2</i> will register as connected any
-Bluetooth devices that your device is paired with, whether or not
-it’s actually connected. Therefore this should be taken into
-account when assigning and checking "slots".<br>
+<li>Android 导出支持 NYKO 控制器和通用蓝牙控制器（包括 OUYA），但仅在它们可用时，这意味着你必须在 <b>Android 游戏选项</b> 的 <a href=
+"../../../2_interface/3_settings/game_options/options_android.html">全局</a> 部分勾选 iCade / 蓝牙选项。它们需要 API level 12 才能完全正常工作，应注意 <i>GameMaker Studio 2</i> 将注册连接设备与之配对的任何蓝牙设备，无论它是否实际连接。 因此，在分配和检查 “插槽” 时应考虑到这一点。
+<br>
 <br></li>
 
 <li>On PS4, if you want to use the touch pad tracking you need to

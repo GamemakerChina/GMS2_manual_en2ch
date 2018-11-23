@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -42,11 +42,11 @@ if (window.name != "content")
 <blockquote>
 <p>使用此动作你可以检测当前鼠标按钮是否被按下。当鼠标按钮被按下（并且按住）时，此动作会在每一步（step，或者译为帧更贴切？）返回 <tt>真</tt>，除此之外的情况则返回  <tt>假</tt> 。此外，如果你勾选<tt>否</tt>选项，则可以检测鼠标按钮是否 <i>没有</i>被按住。在这种情况下，此动作会在鼠标按钮没有被按下时返回  <tt>真</tt>，在被按下时返回 <tt>假</tt> 。如果你只需要检测鼠标单击（而不是按住），请使用动作 <a href="if_mouse_down.html">如果鼠标点击</a>.</p>
 
-<p>如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：
+<p>请注意，如果要将动作添加进 "if" 动作块，应该将它们放置到动作的侧边，如下图所示：
 <img class="center" src="images/a_if_drop.png" alt=
 "如果添加动作"></p>
 
-<p>如果if的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。</p>
+<p>如果 if 的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此 if 动作块后执行。</p>
 </blockquote>
 
 <p><br>
@@ -82,7 +82,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_keyboardmouse_down.png" alt=
 "鼠标按住举例">
 <blockquote>上述代码每一帧检查鼠标状态，如果按住左键，就检查是不是点击如果当前鼠标左键点击，则播放一个音效，并且让精灵 的混合颜色变为红色。如果鼠标左键没有被按住，则检查是不是释放，如果是，则把精灵的混合颜色变为白色。</blockquote>

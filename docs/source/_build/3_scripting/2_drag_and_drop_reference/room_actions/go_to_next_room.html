@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,12 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will make your game go to the next room as listed in
-the resource tree at the time the game was compiled. If this room
-does not exist, an error will be thrown and the game will be forced
-to close. Note that the room will not change until the end of the
-event or script where the action was called, so any code after this
-action will still run.</p>
+<p>此动作将会使你的游戏前往游戏编译时的资源树列表上的下一个房间. 如果将要前往的下一个房间不存在，那么将会抛出错误并强制请注意此动作被调用时不会立即生效，而要等到目前的事件或脚本结束后才能生效。所以所有在此动作之后的动作会继续执行，直到目前的事件或脚本结束。</p>
 </blockquote>
 
 <p><br>
@@ -57,13 +52,10 @@ action will still run.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_rooms_go_to_next_room.png" alt=
 "Go To Next Room Example">
-<blockquote>The above action block code checks for a collision with
-another object and if one is detected a variable in the instance is
-checked and the game will either go to the next room or the
-previous room as listed in the resource tree order.</blockquote>
+<blockquote>上述动作代码块将在物体是否在给定位置有碰撞。如果有的话，将根据一个实例变量与给出值的比较结果来决定究竟是到资源树上的前一个还是后一个房间。</blockquote>
 
 <p><br>
 </p>

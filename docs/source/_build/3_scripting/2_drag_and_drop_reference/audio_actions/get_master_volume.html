@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,10 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action returns the master volume for the sound system. You
-give a target variable to return the volume value to (you can flag
-this as being a temporary local variable). The returned value will
-be between 0 and 1, where 0 is silent and 1 is full volume.</p>
+<p>此操作返回声音系统的主音量。你给定一个目标变量获取返回的音量值（你可以将其标记为临时局部变量）。返回值将介于0和1之间，其中0表示静音，1表示最大音量。</p>
 </blockquote>
 
 <p><br>
@@ -51,7 +48,7 @@ be between 0 and 1, where 0 is silent and 1 is full volume.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_audio_get_master_volume.png" alt=
-"Get Master Volume Syntax">
+"获取主音量语法">
 <p><br>
 </p>
 
@@ -66,7 +63,7 @@ be between 0 and 1, where 0 is silent and 1 is full volume.</p>
 
 <tr>
 <td>目标</td>
-<td>The target variable to store the returned volume</td>
+<td>用于存储返回的音量的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -74,16 +71,10 @@ be between 0 and 1, where 0 is silent and 1 is full volume.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_audio_set_master_volume.png" alt=
-"Get Master Volume Example">
-<blockquote>The above action block code checks a global variable to
-see if it is <tt>true</tt> or false. If it is <tt>true</tt> then
-the master volume for the sound system is retrieved and stored in a
-temporary local variable. The value is then checked to see if it is
-not equal to 0.5, and if it is not, then the master volume of the
-sound system is set to 0.5. If the global variable evaluates to
-<tt>false</tt>, then the master volume is set to 1.</blockquote>
+"获取主音量示例">
+<blockquote>上面的动作块代码将检查全局变量并查看它是<tt>true（真）</tt>还是false（假）。如果是<tt>真</tt>，然后检索声音系统的主音量，并将其存储在临时局部变量中。再然后检查该值以查看它是否不等于0.5，如果不是，则将声音系统的主音量设置为0.5。如果全局变量的计算结果为<tt>假</tt>，则将主音量设置为1。</blockquote>
 
 <p><br>
 </p>

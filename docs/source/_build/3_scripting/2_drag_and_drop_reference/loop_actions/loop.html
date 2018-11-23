@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,15 +40,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>The <b>Loop</b> action will loop infinitely until a <a href=
-"break.html">Break</a> action is called. Care should be taken with
-this action to ensure that regardless of the actions placed within
-the loop, a Break will <i>always</i> be called, otherwise the game
-will cause a "not responding" error on the target OS and stop
-working. You add this action into the action code workspace and
-then add the actions to be performed within the loop, much as you
-would add an action to an "if", ie: dropping it to the side of the
-action rather than under it:  <img class="center" src=
+<p>此 <b>Loop</b> 动作将无限循环，直到调用了 <a href=
+"break.html">Break</a>动作。特别应当注意的时，你需要在循环中某处<i>总是</i> 有break能够被调用。若循环中没有break动作，那么可能陷入死循环，然后导致目标平台无响应并停止工作。如果需要在一个循环中添加此break动作，就像将动作添加到“if"中那样。例如：把动作块放在动作的一侧而不是下面。 <img class="center" src=
 "images/loop_drop.png" alt="Drop Actions Into A Loop"></p>
 </blockquote>
 
@@ -61,13 +54,10 @@ action rather than under it:  <img class="center" src=
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_loops_loop.png" alt=
 "Loop Example">
-<blockquote>The above action block code will loop until the
-instance variable <tt>count</tt> is greater than or equal to 10, at
-which point it will break and then continue with any further
-actions outside the loop.</blockquote>
+<blockquote>上述动作块将一直循环，直到实例变量 <tt>算起来</tt> 大于或等于0。一旦符合此条件，此循环将终止，然后执行循环后的动作。</blockquote>
 
 <p><br>
 </p>

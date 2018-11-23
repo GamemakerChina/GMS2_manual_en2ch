@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,28 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action block sets the <tt>image_xscale</tt> and
-<tt>image_yscale</tt> values for the instance. The input values
-here are modifiers which will be applied to the sprite assigned to
-the instance, where a scale of 1 (the default value) indicates no
-scaling (1:1), smaller values will scale down (0.5, for example,
-will half the width of the sprite), and larger values will scale
-up. You can use negative values to flip the sprite and scale it
-unless the value used is exactly -1 (in which case the sprite is
-just flipped or mirrored about its origin with no scaling). You can
-choose to set the horizontal or vertical scale relative to the
-current values, in which case you will be adding or subtracting the
-new value from the current scale values.</p>
+<p>上述动作块将为 实例设置<tt>图像X轴比例</tt> 和 <tt>图像Y轴比例</tt> 。此输入值将修改实例上精灵的缩放比，默认是1，即没有缩放的原比例（1：1），更小的值意味着图像将被缩小（例如0.5意味着只有原来一半），大一点的值意味着图像将扩大。你也可以将其设为负数来翻转精灵。将其设为-1将只翻转精灵而不缩放。你也可以将水平比例和垂直比例设为与当前值相关联，例如加上或减去新值。</p>
 
-<p>Note that changing these values will also change how the
-instance detects collisions, unless you have supplied a separate
-<tt>mask_index</tt> (collision mask) in the <a href=
-"../../../2_interface/1_editors/objects.html">Object Editor</a>.
-Please note that for changes in this variable to be visible, the
-instance should have either <i>no</i> draw event (and so
-<i>GameMaker Studio 2</i> will default draw the sprite) or be drawn
-using <a href="../drawing_actions/draw_self.html">Draw Self</a>
-action.  <img class="center" src="images/sprite_scale.png" alt=
+<p>注意此值的改变也将影响检查碰撞的方式，除非你提供独立的 <tt>mask_index</tt> （碰撞遮罩）。这需要在 <a href=
+"../../../2_interface/1_editors/objects.html">物体编辑器</a>种设置。请注意，要使此更改可见，实例必须 &lt;i0&gt;没有&lt;/i0&gt; 绘制事件(这样 &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; 将默认绘制精灵) 或使用 &lt;a2&gt;自我绘制&lt;/a2&gt; 动作。 <img class="center" src="images/sprite_scale.png" alt=
 "Sprite Scaling"></p>
 </blockquote>
 
@@ -85,12 +67,12 @@ action.  <img class="center" src="images/sprite_scale.png" alt=
 
 <tr>
 <td>水平</td>
-<td>The vertical scaling factor to use (default is 1).</td>
+<td>y轴（垂直方向）的缩放比例，默认为1</td>
 </tr>
 
 <tr class="alt">
 <td>垂直</td>
-<td>The horizontal scaling factor to use (default is 1).</td>
+<td>x轴（水平方向）的缩放比例，默认为1</td>
 </tr>
 </table>
 </blockquote>
@@ -98,13 +80,10 @@ action.  <img class="center" src="images/sprite_scale.png" alt=
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_instance_set_sprite.png" alt=
 "Set Sprite Scale Example">
-<blockquote>The above action block code sets a new sprite as well
-as a number of other properties for how that sprite is to be
-displayed, including setting it to scale to three quarters of its
-base size along both axis.</blockquote>
+<blockquote>上述动作代码块创建了一个新精灵，并设置它的很多属性，包括设置它在X和Y轴的比例为原来的四分之三。</blockquote>
 
 <p><br>
 </p>
@@ -113,7 +92,7 @@ base size along both axis.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
 <div style="float:right">next: <a href=
 "set_instance_alpha.html">Set Instance Alpha</a></div>

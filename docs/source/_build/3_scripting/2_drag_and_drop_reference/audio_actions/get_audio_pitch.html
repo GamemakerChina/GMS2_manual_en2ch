@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,11 +40,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will retrieve the pitch of the sound resource you
-supply. The return value will be a <i>multiplier</i> for the actual
-recorded pitch of the sample, where a value of 1 is no change. For
-more information on pitch see the action <a href=
-"set_audio_pitch.html"><tt>Set Audio Pitch</tt></a>.</p>
+<p>此动作将检索你提供的声音资源的音调。返回值为一个 <i>倍数</i>，它实际记录样本的音调，如果返回1则表示没有变化。有关音调的更多信息，请参阅这个动作<a href=
+"set_audio_pitch.html"><tt>设置音频音调</tt></a>。</p>
 </blockquote>
 
 <p><br>
@@ -52,7 +49,7 @@ more information on pitch see the action <a href=
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_audio_get_audio_pitch.png" alt=
-"Get Audio Pitch Syntax">
+"获取音频音调的语法">
 <p><br>
 </p>
 
@@ -67,12 +64,12 @@ more information on pitch see the action <a href=
 
 <tr>
 <td>声音</td>
-<td>The sound resource to get the pitch of</td>
+<td>获得音调的声音资源</td>
 </tr>
 
 <tr class="alt">
 <td>目标</td>
-<td>The target variable to store the returned pitch</td>
+<td>用于存储返回音调值的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -80,16 +77,10 @@ more information on pitch see the action <a href=
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_audio_get_audio_pitch.png" alt=
-"Get Audio Pitch Example">
-<blockquote>The above action block code first gets the pitch for
-the given sound and stores it in a temporary local variable. It
-then checks for a key press, and if one is detected, the value of
-the pitch is checked to see if it is less than 2. If it is, then
-the sound is stopped, the pitch variable has 0.1 added to it, and
-then this variable is used to set the pitch of the sound again
-before it is played.</blockquote>
+"获取音频音调的示例">
+<blockquote>上述动作块代码首先获取给定声音的音调，并将其存储在临时的局部变量中。然后检测按键，如果检测到，则检查音调值是否小于2。如果是，则停止声音，音调变量加0.1，然后该变量用于在播放之前再次设置声音的音调。</blockquote>
 
 <p><br>
 </p>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,241 +40,187 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to show the virtual keyboard on the
-device running the game. When you call this action you will be
-asked to provide one of the following constants for each of the
-first three arguments:</p>
+<p>此动作用于在运行的游戏上显示虚拟键盘。调用此动作时，你需要为3个参数提供以下常量：</p>
 
 <ul>
-<li><b>Keyboard type</b>: This constant is used to set which keyset
-will be available on the virtual keyboard. The available keyboard
-types are:
-
-
+<li><b>键盘类型</b>: 此常量用于设置虚拟键盘上可用的键集。可用的键盘类型有：
 
 <div class="compat">
 <table>
 <tr>
-<th>Keyboard Type</th>
+<th>键盘类型</th>
 <th>描述</th>
 </tr>
 
 <tr>
 <td>kbv_type_default</td>
-<td>The default keyboard type for the current system.</td>
+<td>当前系统的默认键盘类型。</td>
 </tr>
 
 <tr class="alt">
 <td>kbv_type_ascii</td>
-<td>An ASCII-only keyboard.</td>
+<td>仅限ASCII的键盘。</td>
 </tr>
 
 <tr>
 <td>kbv_type_url</td>
-<td>A normal keyboard optimized for URL entry. Usually features a
-".com" or other domain keys, as well as "/" and "." keys.</td>
+<td>为URL输入优化的普通键盘。通常具有“.com”或其他域密钥，以及“/”和“。”。键。</td>
 </tr>
 
 <tr class="alt">
 <td>kbv_type_email</td>
-<td>A normal keyboard optimized for e-mail entry. Usually features
-"@" and "." characters.</td>
+<td>为电子邮件输入优化的普通键盘。通常以“@”和“.”为特色字符。</td>
 </tr>
 
 <tr>
 <td>kbv_type_numbers</td>
-<td>A numbers-only keyboard, usually displayed as a number
-pad.</td>
+<td>仅限数字的键盘，通常显示为数字键盘。</td>
 </tr>
 
 <tr class="alt">
 <td>kbv_type_phone</td>
-<td>A phone pad keyboard. Usually numbers-only with the "*" and "#"
-keys.</td>
+<td>电话键盘。通常只有数字和 "*" "#" 键。</td>
 </tr>
 
 <tr>
 <td>kbv_type_phone_name</td>
-<td>A keyboard optimized for entering both a phone number and a
-name. Usually similar to an ASCII keyboard, but with a limited
-special characters selection.</td>
+<td>专为输入电话号码和姓名而优化的键盘。通常类似于ASCII键盘，但具有有限的特殊字符选择。</td>
 </tr>
 </table>
 </div>
 <br></li>
 
-<li><b>Return type</b>: This constant is used to set what is shown
-on the return/action key of the virtual keyboard. The available
-return types are:
-
-
+<li><b>返回类型</b>: 此常量用于设置虚拟键盘的返回/操作键上显示的内容。可用的返回类型有：
 
 <div class="compat">
 <table>
 <tr>
-<th>Return Type</th>
+<th>返回类型</th>
 <th>描述</th>
 </tr>
 
 <tr>
 <td>kbv_returnkey_default</td>
-<td>The default return key title for the current system.</td>
+<td>当前系统的默认返回键标题。</td>
 </tr>
 
 <tr class="alt">
 <td>kbv_returnkey_go</td>
-<td>Sets the return key title to "Go".</td>
+<td>将返回键标题设置为“Go”。</td>
 </tr>
 
 <tr>
 <td>kbv_returnkey_google</td>
-<td>Sets the return key title to "Google", or to a generic search
-icon in some cases.</td>
+<td>将返回键标题设置为“Google”，或在某些情况下设置为通用搜索图标。</td>
 </tr>
 
 <tr class="alt">
 <td>kbv_returnkey_join</td>
-<td>Sets the return key title to "Go".</td>
+<td>将返回键标题设置为“Go”。</td>
 </tr>
 
 <tr>
 <td>kbv_returnkey_next</td>
-<td>Sets the return key title to "Next".</td>
+<td>将返回键标题设置为“Next”</td>
 </tr>
 
 <tr>
 <td>kbv_returnkey_route</td>
-<td>Sets the return key title to "Route".</td>
+<td>将返回键标题设置为"Route".</td>
 </tr>
 
 <tr>
 <td>kbv_returnkey_search</td>
-<td>Sets the return key title to "Search", or to a generic search
-icon in some cases.</td>
+<td>将返回键标题设置为"Search"，或在某些情况下设置为通用搜索图标。</td>
 </tr>
 
 <tr>
 <td>kbv_returnkey_send</td>
-<td>Sets the return key title to "Send".</td>
+<td>将返回键标题设置为 "Send".</td>
 </tr>
 
 <tr>
 <td>kbv_returnkey_yahoo</td>
-<td>Sets the return key title to "Yahoo", or to a generic search
-icon in some cases.</td>
+<td>将返回键标题设置为 "Yahoo",或在某些情况下设置为通用搜索图标。</td>
 </tr>
 
 <tr>
 <td>kbv_returnkey_done</td>
-<td>Sets the return key title to "Done".</td>
+<td>将返回键标题设置为 "Done".</td>
 </tr>
 
 <tr class="alt">
 <td>kbv_returnkey_continue</td>
-<td>Sets the return key title to "Continue".</td>
+<td>将返回键标题设置为 "Continue".</td>
 </tr>
 
 <tr>
 <td>kbv_returnkey_emergency</td>
-<td>Sets the return key title to "Emergency Call".</td>
+<td>将返回键标题设置为 "Emergency Call".</td>
 </tr>
 </table>
 </div>
 <br></li>
 
-<li><b>Autocapitalization type</b>: This constant is used to
-determine how the words typed via the virtual keyboard should be
-autocapitalized. The available autocapitalization types are:
-
-
+<li><b>自动大写类型</b>: 此常量用于定义虚拟键盘上的字母大写类型。可用的自动大写类型有：
 
 <div class="compat">
 <table>
 <tr>
-<th>Autocapitalization Type</th>
+<th>自动大写类型</th>
 <th>描述</th>
 </tr>
 
 <tr>
 <td>kbv_autocapitalize_none</td>
-<td>Autocapitalization is disabled.</td>
+<td>禁用大写</td>
 </tr>
 
 <tr class="alt">
 <td>kbv_autocapitalize_words</td>
-<td>Words will be auto-capitalized.</td>
+<td>单词将自动大写</td>
 </tr>
 
 <tr>
 <td>kbv_autocapitalize_sentences</td>
-<td>Sentences will be auto-capitalized.</td>
+<td>句子被自动大写。</td>
 </tr>
 
 <tr class="alt">
 <td>kbv_autocapitalize_characters</td>
-<td>All characters will be capitalized.</td>
+<td>所有字母都被大写。</td>
 </tr>
 </table>
 </div>
 <br></li>
 </ul>
 
-<p>The last argument is to enable/disable predictive text, and this
-would be set to <tt>true</tt> to permit it, and <tt>false</tt>
-otherwise, but note that just because it is permitted doesn't mean
-that it will be used as that will depend on the preferences of the
-user on the device. When in predictive text mode, the virtual
-keyboard will not generate normal <i>GameMaker Studio 2</i>
-keypress events. Instead, it will only update the <i>last</i>
-character pressed and keyboard string variables. This is due to the
-inability to detect whether a change in the internal text field
-used for detecting key presses came from an actual virtual keyboard
-key, or a text suggestion. In these cases you would want to read
-the <tt>keyboard_string</tt> input as opposed to reading any kind
-of raw key input.</p>
+<p>最后一个参数是用于启用/禁用文本预测，如果需要启用，则设置为 <tt>true</tt> ，如果要禁用则设置为 <tt>false</tt> 。请注意：启用并不意味着就能被使用，因为它还取决于用户是否允许了文本预测。在文本预测模式下，虚拟键盘不会生成正常的<i>GameMaker Studio 2</i> 虚拟按键事件。相反的，它只会更新 <i>最后的</i>字符，以及键盘字符串变量。这是由于无法检测用于检测按键的内部文本字段的变化是来自实际的虚拟键盘键还是文本建议。在这种情况下，你需要读取<tt>keyboard_string</tt> 输入，而不是读取任何类型的原始键输入。</p>
 
-<p>It is important to note too that the user will get different
-keyboards with different capabilities depending on the platform OS,
-with the following caveats for use per target:</p>
+<p>请注意：用户获得具有不同功能的不同键盘，具体取决于平台操作系统，以下对每个操作系统进行说明：</p>
 
 <ul>
-<li><b>UWP</b>: The UWP implementation does not support
-<tt>return_key_type</tt>, <tt>autocapitalization_type</tt> or
-<tt>predictive_text_enabled</tt>. Passing in these parameters into
-a function will not cause any errors, they just won't have any
-effect on the keyboard.</li>
+<li><b>UWP</b>: UWP系统不支持 <tt>return_key_type</tt>, <tt>autocapitalization_type</tt> 和 <tt>predictive_text_enabled</tt>. 将这些参数传递给函数不会导致任何错误，它们只会对键盘没有任何影响。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>Android / Amazon Fire</b>: On Android, the keyboard type
-<tt>kbv_type_phone_name</tt> is not supported and will display an
-ASCII keyboard instead, and the return key type can only be
-<tt>kbv_returnkey_go</tt>, <tt>kbv_returnkey_search</tt>,
-<tt>kbv_returnkey_next</tt>, <tt>kbv_returnkey_send</tt> or
-<tt>kbv_returnkey_done</tt>. If other return key types are used on
-that platform, the system will default to the replacement return
-keys listed below:
-
-
+<li><b>Android / Amazon Fire</b>: 在Android系统，不支持键盘类型<tt>kbv_type_phone_name</tt>，如果调用此类型将会使用ASCII 键盘替代，返回键盘类型只能是<tt>kbv_returnkey_go</tt>, <tt>kbv_returnkey_search</tt>, <tt>kbv_returnkey_next</tt>, <tt>kbv_returnkey_send</tt> 和 <tt>kbv_returnkey_done</tt>. 如果在该平台上使用其他返回键类型，系统将默认使用下面列出的替换返回键：
 
 <div class="compat">
 <table>
 <tr>
-<th>Unavailable return key</th>
-<th>Replacement key</th>
+<th>不可用的返回键</th>
+<th>替换的返回键</th>
 </tr>
 
 <tr>
-<td>kbv_returnkey_google<br>
-kbv_returnkey_yahoo</td>
+<td>kbv_returnkey_google<br>kbv_returnkey_yahoo</td>
 <td>kbv_returnkey_search</td>
 </tr>
 
 <tr class="alt">
-<td>kbv_returnkey_join<br>
-kbv_returnkey_route<br>
-kbv_returnkey_emergency</td>
+<td>kbv_returnkey_join<br>kbv_returnkey_route<br>kbv_returnkey_emergency</td>
 <td>kbv_returnkey_go</td>
 </tr>
 
@@ -289,42 +235,37 @@ kbv_returnkey_emergency</td>
 <br>
 </li>
 
-<li><b>AndroidTV / FireTV</b>: Custom return key types are
-<i>not</i> supported on ASCII keyboards - the default return key
-will always be displayed.</li>
+<li><b>AndroidTV / FireTV</b>: 用户返回键类型 <i>不</i>支持ASCII键盘，- 将始终显示默认返回键。</li>
 
 <li style="list-style: none"><br>
 </li>
 </ul>
 
-<p>Calling this function will generate a <a href=
-"../../2_interface/1_editors/events/async_events.html">System
-Asynchronous Event</a>, in which the <tt>async_load</tt> DS map
-will be populated with the following key/value pairs:</p>
+<p>调用此函数将生成 <a href=
+"../../2_interface/1_editors/events/async_events.html">系统异步事件</a>,这个事件 <tt>异步加载</tt> DS 映射将会被以下的键/值填充：</p>
 
 <ul>
-<li>"<b>event_type</b>" - this will be "<b>virtual keyboard
-status</b>" when triggered by virtual keyboard actions.</li>
+<li>"<b>事件类型</b>" - 由虚拟键盘动作触发的事件为 "<b>虚拟键盘状态</b>"。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>screen_height</b>" - 虚拟键盘的高度（以像素为单位）。 如果键盘不可见，则该值为 0。</li>
+<li>"<b>虚拟键盘高度</b>" - 虚拟键盘的高度（以像素为单位）。 如果键盘不可见，则该值为 0。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>keyboard_status</b>" - 键盘的当前状态，作为以下字符串之一返回：<br>
+<li>"<b>键盘状态</b>" - 键盘的当前状态，作为以下字符串之一返回：<br>
 <br>
 
 <ul>
-<li>"hiding"</li>
+<li>"正在执行隐藏动作"</li>
 
-<li>"hidden"</li>
+<li>"隐藏"</li>
 
-<li>"showing"</li>
+<li>"正在执行显示动作"</li>
 
-<li>"visible"</li>
+<li>"可见"</li>
 </ul></li>
 </ul>
 </blockquote>
@@ -334,7 +275,7 @@ status</b>" when triggered by virtual keyboard actions.</li>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_virtualkeyboard_show.png" alt=
-"Show Virtual Keyboard Syntax">
+"显示虚拟键盘语法">
 <p><br>
 </p>
 
@@ -348,26 +289,23 @@ status</b>" when triggered by virtual keyboard actions.</li>
 </tr>
 
 <tr>
-<td>keyboard_type</td>
-<td>Determines the keyset available on the virtual keyboard.</td>
+<td>键盘类型</td>
+<td>确定虚拟键盘上可用的键集</td>
 </tr>
 
 <tr class="alt">
 <td>return_key_type</td>
-<td>Determines what is shown on the return/action key of the
-virtual keyboard.</td>
+<td>确定虚拟键盘的返回/操作键上显示的内容。</td>
 </tr>
 
 <tr>
 <td>autocapitalization_type</td>
-<td>Determines how/if the words typed via the virtual keyboard will
-be autocapitalized.</td>
+<td>确定通过虚拟键盘输入的字母大小写规则。</td>
 </tr>
 
 <tr class="alt">
 <td>predictive_text_enabled</td>
-<td>Set to <tt>true</tt>/<tt>false</tt> to enable/disable
-predictive text input.</td>
+<td>设置<tt>true</tt>/<tt>false</tt>去允许/关闭联想输入。</td>
 </tr>
 </table>
 </blockquote>
@@ -375,9 +313,9 @@ predictive text input.</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_virtualkeyboard_show.png" alt=
-"Show Virtual Keyboard Example">
+"显示虚拟键盘举例">
 <blockquote>
 <p>上述动作块检测鼠标点击动作，如果鼠标点击，就检测虚拟键盘是否正在显示。如果未显示，就显示-使用数字类型键盘。如果已经显示了，就隐藏。</p>
 </blockquote>
@@ -391,8 +329,8 @@ predictive text input.</td>
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">鼠标和键盘动作</a></div>
 
-<div style="float:right">next: <a href=
-"hide_virtual_keyboard.html">Hide Virtual Keyboard</a></div>
+<div style="float:right">下一页：<a href=
+"hide_virtual_keyboard.html">隐藏虚拟键盘</a></div>
 </div>
 </div>
 

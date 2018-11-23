@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -54,7 +54,7 @@ if (window.name != "content")
 "collapse" for="three">片段着色器</label> <input id="three"
 type="checkbox">
 <div class="index_list">
-<p><b>片段着色器</b> 是渲染管道中处理 “片段” 的可编程着色器阶段，- “片段” 是用于给定多边形纹理的插值像素 - 并且它们负责输出每个渲染三角形像素的最终像素颜色。基本上它的工作方式如下：片段着色器接收所有那些由顶点着色器沿管道传递的片段（正在渲染的三角形的各个像素）作为其输入。 然后，你可以处理这些片段以更改将绘制到屏幕的最终目标像素的颜色和 alpha 值。</p>
+<p><b>片段着色器</b> 是渲染管道中处理 “片段” 的可编程着色器阶段，- “片段” 是用于给定多边形纹理的插值像素 - 并且它们负责输出每个渲染三角形像素的最终像素颜色。它的工作方式如下：片段着色器接收所有那些由顶点着色器沿管道传递的片段（正在渲染的三角形的各个像素）作为其输入。 然后，你可以处理这些片段以更改将绘制到屏幕的最终目标像素的颜色和 alpha 值。</p>
 </div></blockquote>
 
 <p>有关着色器如何工作以及它们在图形管道中的位置的完整概述超出了本手册的范围，但是 YoYo Games 已经制作了许多技术博客文章，这些文章提供了一个很好的基础：</p>
@@ -120,10 +120,10 @@ type="checkbox">
 "images/editor_shader_rmbmenu.png" alt=
 "Shader Editor RMB Menu"> 菜单选择着色器类型，然后再继续编辑代码：<img style="vertical-align:middle" src="../../images/icon_rmb.png"></p>
 
-<p>在创建新着色器时，代码编辑器本身会分成两个程序，每个着色器都可以从顶部的选项卡中获得。这是因为 <i>如果没有这两个部分，则无法创建着色器</i>。 即使你只想使用片段着色器，你也必须先创建一个 “通过” 顶点着色器，这就是为什么默认情况下创建的已为你编码的新着色器都会有一个通过顶点和片段着色器（在页面顶部的屏幕截图中，你可以看到我们已经使用 <a href="scripts.html#script_edition">代码编辑器窗格视图</a> 来显示并排两个着色器...在同时处理两个着色器程序时很有用）。</p>
+<p>在创建新着色器时，代码编辑器本身会分成两个程序，每个着色器都可以从顶部的选项卡中获得。这是因为 <i>如果没有这两个部分，则无法创建着色器</i>。 即使你只想使用片段着色器，你也必须先创建一个 “通过”（pass through） 顶点着色器，这就是为什么默认情况下创建的新着色器都会有已经编码的一个通过顶点和片段着色器（在页面顶部的屏幕截图中，你可以看到我们已经使用 <a href="scripts.html#script_edition">代码编辑器窗格视图</a> 来显示并排两个着色器...在同时处理两个着色器程序时很有用）。</p>
 
-<p>值得注意的是，你可以在所有目标平台上使用 GLSL ES 着色器，但对于 <b>HTML5</b> 目标平台，你  <a href=
-"../3_settings/game_options/options_html5.html">HTML5 游戏选项</a> 中 <i>必须启用 WebGL</i>，否则它将无法工作。
+<p>值得注意的是，你可以在所有目标平台上使用 GLSL ES 着色器，但对于 <b>HTML5</b> 目标平台，  你必须在<a href=
+"../3_settings/game_options/options_html5.html">HTML5 游戏选项</a> 中 <i>启用 WebGL</i>，否则它将无法工作。
 </p>
 
 <p>有关着色器功能以及如何在 <i>GameMaker Studio 2</i> 中使用它们的更多详细信息，请参阅以下页面：</p>

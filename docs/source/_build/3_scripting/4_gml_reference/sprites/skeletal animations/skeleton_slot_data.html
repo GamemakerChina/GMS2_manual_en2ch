@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">skeleton_slot_data(sprite, list);</p>
 
@@ -62,7 +62,7 @@ data from.</td>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">N/A（无返回值）</p>
 
@@ -105,7 +105,7 @@ of the created maps yourself.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
 <p class="code">var list = ds_list_create();<br>var open = true;<br>slot_name = "";<br>skeleton_slot_data(sprite_index, list);<br>for (var i = 0; i &lt; ds_list_size(list); i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var map = list[| i];<br>&nbsp;&nbsp;&nbsp;if open<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if map[?"attachment"] == "(none)"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open = false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slot_name = map[?"name"];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;ds_map_destroy(map);<br>&nbsp;&nbsp;&nbsp;}<br>ds_list_destroy(list);<br></p>
 

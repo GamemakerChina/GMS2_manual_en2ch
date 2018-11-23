@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">This function sets the shape of the fixture to
 that of a chain.</h2>
 
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">physics_fixture_set_chain_shape(fixture, loop)</p>
 
@@ -78,7 +78,7 @@ that of a chain.</h2>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">例如：</h3>
 
 <p class="code">var xx = -100;<br>var yy = room_height / 2;<br>var fix = physics_fixture_create(); physics_fixture_set_chain_shape(fix, false);<br>for (var i = 0; i &lt; 10; i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;physics_fixture_add_point(fix, xx, yy);<br>&nbsp;&nbsp;&nbsp;xx += 50 + random(150);<br>&nbsp;&nbsp;&nbsp;yy = (room_height / 2) - 250 + irandom(500);<br>&nbsp;&nbsp;&nbsp;}<br>physics_fixture_bind(fix, id);<br></p>
 

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -108,7 +108,7 @@ type="checkbox">
 "images/editor_objects_step.png" alt=
 "Object Editor Step Events"></p>
 
-<p>对于大多数事情，标准步事件可以很好地使用，但有时你需要更多地控制运行什么代码以及在什么时间运行，因此为你提供了 <b>步开始（Begin step）</b> 和 <b>步结束（End step）</b> 事件。这三个事件都在每一步都被检查，但是即使未来对 <i>GameMaker Studio 2</i> 引擎的更新，它们的顺序也永远不会改变，这意味着这是确保某些东西总是在其他东西之前发生的唯一可靠方法。</p>
+<p>对于大多数事情，标准步事件可以很好地使用，但有时你需要更多地控制运行什么代码以及在什么时间运行，因此为你提供了 <b>步开始（Begin step）</b> 和 <b>步结束（End step）</b> 事件。这三个事件都在每一步都被检查，但是即使未来有对 <i>GameMaker Studio 2</i> 引擎的更新，它们的顺序也永远不会改变，这意味着这是确保某些东西总是在其他东西之前发生的唯一可靠方法。</p>
 
 <p>步事件可以用于什么？好吧，它可以用于需要连续执行的动作或代码。例如，如果一个物体应该跟随另一个物体，在这里你可以调整运动方向朝向我们所遵循的物体，以保持它在后面顺利移动。但要小心这个事件，并且不要在物体的步事件中放置许多复杂的动作，特别是如果你计划在游戏房间中有大量的物体实例，因为这可能会减慢游戏速度。可以将许多内容放入计时器中，或设置为使用某些 <b>其他</b> 事件触发，而不是一直发生。</p>
 </div>
@@ -415,7 +415,7 @@ type="checkbox">
 <li><b>房间创建代码（Room Creation Code）</b> - 这是在 <a href="../rooms.html">房间编辑器</a> 中为首次进入房间时编写的一次性代码<br>
 <br></li>
 
-<li>所有实例的 <b>房间开始事件（Room Start Event）</b> - “其他”类的事件之一，将对所有实例（保持或其他）触发</li>
+<li>所有实例的 <b>房间开始事件（Room Start Event）</b> - “其他”类的事件之一，将对所有实例（持续或其他）触发</li>
 </ul>
 
 <p><br>

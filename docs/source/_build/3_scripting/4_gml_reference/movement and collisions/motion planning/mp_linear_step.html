@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>mp_linear_step</h2>
 
 <div class="body-scroll">
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">mp_linear_step(xgoal, ygoal, stepsize,
 checkall);</p>
@@ -84,7 +84,7 @@ checkall);</p>
 "../movement/move_towards_point.html"><tt>move_towards_point</tt></a>. The stepsize is also the distance "ahead" that the object will check each step for a collision, and you can choose whether the instance stops at a collision with <i>any</i> instance or only those that are flagged as solid.<br><br><i><b>Note:</b> This function does not try to make detours if it meets an obstacle, it simply fails and stops moving. The function will return whether it has reached the goal position (true) or if it has failed (false).</i><br>
 <br></p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">例如：</h3>
 
 <p class="code">if mp_linear_step(mouse_x, mouse_y, 5, 0)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Effects", obj_Explosion);<br>&nbsp;&nbsp;&nbsp;instance_destroy();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 

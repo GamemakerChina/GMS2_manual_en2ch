@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -51,7 +51,7 @@ entry value will be the unique ID value for a layer.</p>
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">layer_get_id_at_depth(depth)</p>
 
@@ -77,25 +77,16 @@ entry value will be the unique ID value for a layer.</p>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">Array</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
-<p class="code">var a = layer_get_id_at_depth(0);<br>
-if a[0] != -1<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i &lt; array_length_1d(a);
-i++;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer_destroy(a[i]);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var a = layer_get_id_at_depth(0);<br>if a[0] != -1<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i &lt; array_length_1d(a); i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;layer_destroy(a[i]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>The above code retrieves data about the layers with a
 depth of 0. A check is done to see if any layers exist at that

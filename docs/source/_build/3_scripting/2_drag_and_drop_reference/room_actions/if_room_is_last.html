@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,17 +40,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will check to see if the current room is the last
-room as listed in the resource tree. The action will return
-<tt>true</tt> if the current room is the last in the resource tree
-and <tt>false</tt> if it is not. You can flag the <i>not</i>
-checkbox to turn this into "If Room Is NOT Last".</p>
+<p>此动作将会判断当前房间是否是资源树列表上的最后一个房间。如果是的话，此动作将返回 <tt>true</tt> ，否则返回 <tt>false</tt> 。你也可以标记 <i>not</i> ，将条件改为“如果房间不是最后一个房间”。</p>
 
-<p>如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br>
+<p>请注意，如果要将动作添加进 "if" 动作块，应该将它们放置到动作的侧边，如下图所示：<br>
 <img class="center" src="images/room_is_last_drop.png" alt=
 "If Last Drop Actions"></p>
 
-<p>如果if的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。</p>
+<p>如果 if 的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此 if 动作块后执行。</p>
 </blockquote>
 
 <p><br>
@@ -62,14 +58,10 @@ checkbox to turn this into "If Room Is NOT Last".</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_rooms_if_room_is_last.png" alt=
 "If Room Is Last Example">
-<blockquote>The above action block code checks to see if the
-current room is <i>not</i> the last one as listed in the resource
-tree. If it is not then the game will go to the next room in the
-resource tree, otherwise it will go to a specific
-room.</blockquote>
+<blockquote>上述代码块将会检查当前房间是否 <i>不是</i> 资源树列表上的最后一个房间。如果不是的话，游戏将进入资源树上的下一个房间，否则将会进入一个特定的房间。</blockquote>
 
 <p><br>
 </p>

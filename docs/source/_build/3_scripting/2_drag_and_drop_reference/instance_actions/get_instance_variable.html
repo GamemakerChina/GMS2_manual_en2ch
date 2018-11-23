@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,200 +40,113 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can get any one of the listed <b>built
-in</b> variables. All instances of all objects have a number of
-variables already created within them to hold essential information
-like the current x/y position, the speed, the direction, visibility
-and many other things. The instance variables that you can get the
-values of are:</p>
+<p>使用此动作你可以获得实例中任何 <b>内置</b> 变量。所有对象的所有实例都有许多变量，以保存基本信息，如当前x / y位置，速度，方向，可见性和许多其他内容。你可以取得值的实例变量：</p>
 
 <ul>
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/x.html">X
-Coordinate</a> - The position along the x axis in the room.<br>
+"../../4_gml_reference/instances/instance_variables/x.html">X坐标</a> - X轴上的位置。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/y.html">Y
-Coordinate</a> - The position along the y axis in the room.<br>
+"../../4_gml_reference/instances/instance_variables/y.html">Y 坐标</a> - Y轴上的位置。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/direction.html">
-Direction</a> - The direction of movement for the instance (default
-is 0, where right is 0°, up is 90°, left is 180° and down is
-270°).<br>
+"../../4_gml_reference/instances/instance_variables/direction.html"> 方向</a> - 实例移动的方向，默认是0，向右是0度，向下是90度，向左是180度，向下是270度。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/speed.html">Speed</a>
-- The speed (in pixels per game frame) that the instance is moving
-at.<br>
+"../../4_gml_reference/instances/instance_variables/speed.html">速度</a> - 实例的速度，单位是像素每游戏帧。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/hspeed.html">Horizontal
-Speed</a> - The horizontal speed (in pixels per game frame) that
-the instance is moving at. A negative speed means it is moving
-left, a positive speed is right and the default is 0.<br>
+"../../4_gml_reference/instances/instance_variables/hspeed.html">水平速度</a> - 实例的水平速度，单位是像素每游戏帧。负数说明它在向左移动，正数说明它在向右移动，0说明它在水平方向上不移动。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/vspeed.html">Vertical
-Speed</a> - The vertical speed (in pixels per game frame) that the
-instance is moving at. A negative speed means it is moving up, a
-positive speed is down and the default is 0.<br>
+"../../4_gml_reference/instances/instance_variables/vspeed.html">垂直速度</a> - 实例的垂直速度，单位是像素每游戏帧。负数说明它在向上移动，正数说明它在向下移动，0说明它在垂直方向上不移动。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/visible.html">Visible</a>
-- The visibility toggle variable (default is <tt>true</tt> unless
-set otherwise in the <a href=
-"../../../2_interface/1_editors/objects.html">Object Editor</a>,
-set to <tt>false</tt> to make invisible). Note that an invisible
-instance still runs all its events <i>except</i> the Draw
-Event.<br>
+"../../4_gml_reference/instances/instance_variables/visible.html">可见性</a> - 用于启用可见的变量。默认是 <tt>true</tt> ，你也可以在 <a href=
+"../../../2_interface/1_editors/objects.html">物体编辑器</a>设置它。设置为 <tt>false</tt>将不可见。 <i>除了</i> 绘制事件外，这个不可见的实例仍会运行其它事件。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/persistent.html">
-Persistent</a> - The persistence toggle variable (default is
-<tt>false</tt> unless set otherwise in the <a href=
-"../../../2_interface/1_editors/objects.html">Object Editor</a>,
-set to <tt>true</tt> to make persistent). This will make an
-instance "persist" from room to room, ie: the instance will not be
-cleaned up on room end but instead will be carried over to the next
-room. Note that when an instance is persisted it will <i>not</i>
-call its Create nor Destroy event, but will call the Clean Up, Room
-End, and Room Start events.<br>
+"../../4_gml_reference/instances/instance_variables/persistent.html"> 持久</a> -控制是否持久的变量。默认情况下是 <tt>false</tt> ，你也可以在 <a href=
+"../../../2_interface/1_editors/objects.html">物体编辑器</a>中将它设为 <tt>true</tt>以使它可见。如果一个实例是“持久"的，那么它不会随房间结束而消失，而是继续存在于下一个房间中。如果一个实例是持久的，那么它 <i>不会</i> 调用创建或销毁事件，而是调用清除，房间终止和房间开始事件。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/layer.html">Layer</a>
-- The layer that the instance has been assigned to.<br>
+"../../4_gml_reference/instances/instance_variables/layer.html">层</a> - 此实例所在的层<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/depth.html">Depth</a>
-- The depth value assigned to the layer.<br>
+"../../4_gml_reference/instances/instance_variables/depth.html">深度</a> - 此层所在的视野。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/sprite_index.html">
-Sprite</a> - The sprite resource assigned to the instance.<br>
+"../../4_gml_reference/instances/instance_variables/sprite_index.html"> 精灵</a> - 被分配给此实例的精灵资源。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/image_index.html">
-Image Index</a> - The image index of the sprite assigned. This
-value gets the frame of the sprite assigned to the instance. The
-returned value will be between 0 and the number of images for the
-sprite, and note that if the image speed is not exactly one then
-the returned value can be a decimal.<br>
+"../../4_gml_reference/instances/instance_variables/image_index.html"> 图像索引</a> - 被分配的精灵的图像索引。此值是指被分配的精灵的当前帧的图像的索引。返回值将在0和精灵中次级图像的数量之间。如果图像速度并不是精确值，那么返回值可能会是个小数。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/image_angle.html">
-Image Angle</a> - The angle that the instance is currently set to
-(default is 0, where right is 0°, up is 90°, left is 180° and down
-is 270°).<br>
+"../../4_gml_reference/instances/instance_variables/image_angle.html"> 图像旋转的角度</a> - 实例目前的旋转角，默认是0，向右是0度，向下是90度，向左是180度，向下是270度。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/image_alpha.html">
-Image Alpha</a> - The current alpha value for the instance (default
-is 1) from 0 to 1, where 0 is full transparent and 1 is fully
-opaque.<br>
+"../../4_gml_reference/instances/instance_variables/image_alpha.html"> 图像阿尔法</a> - 实例的阿尔法值，值为0到1之间，默认是1，即完全不透明。0为完全透明。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/image_blend.html">
-Image Blend</a> - The current colour being blended with the
-instance sprite (default is white).<br>
+"../../4_gml_reference/instances/instance_variables/image_blend.html"> 图像混合</a> - 当前和实例精灵混合的颜色，默认为白色。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/image_speed.html">
-Image Speed</a> - The current animation speed for the sprite.<br>
+"../../4_gml_reference/instances/instance_variables/image_speed.html"> 图像速度</a> - 当前精灵的动画速度。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/image_xscale.html">
-Horizontal Scale</a> - The horizontal scale at which the instance
-sprite is being drawn (this also affects the instance bounding box
-and collisions). A scale of 1 indicates no scaling (1:1), smaller
-values are scaled down (0.5, for example, will half the width of
-the sprite), larger values are scaled up and negative values are
-mirroring the sprite <i>and</i> scaling it unless the value
-returned is exactly -1 (in which case the sprite is just being
-mirrored along the y-axis with no scaling).<br>
+"../../4_gml_reference/instances/instance_variables/image_xscale.html"> 水平比例</a> - 此实例精灵的水平比例。这对此实例的边界框和碰撞遮罩同样产生影响。1 代表比例为1：1，0.5代表将被绘制得更小，2代表绘制为原来的两倍。负数将会绘制精灵的镜像<i>并</i> 按照比例绘制，除非返回值为1，这样这个精灵只在y轴上有镜像，并且按原比例绘制。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/image_yscale.html">
-Vertical Scale</a> - The vertical scale at which the instance
-sprite is being drawn (this also affects the instance bounding box
-and collisions). A scale of 1 indicates no scaling (1:1), smaller
-values are scaled down (0.5, for example, will half the height of
-the sprite), larger values are scaled up and negative values are
-flipping the sprite <i>and</i> scaling it unless the value returned
-is exactly -1 (in which case the sprite is just being flipped along
-the y-axis with no scaling).<br>
+"../../4_gml_reference/instances/instance_variables/image_yscale.html"> 垂直比例</a> - 此实例精灵的垂直比例。这对此实例的边界框和碰撞遮罩同样产生影响。1 代表比例为1：1，0.5代表将被绘制得更小，2代表绘制为原来的两倍。负数将会绘制精灵的镜像<i>并</i> 按照比例绘制，除非返回值为1，这样这个精灵只在y轴上有镜像，并且按原比例绘制。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/mask_index.html">
-Mask</a> - The mask index for the instance. The default returned
-value is -1 (which means the instance is using the collision mask
-for the currently assigned sprite index), but if set to any other
-sprite resource the returned value will be the sprite index for the
-resource used.<br>
+"../../4_gml_reference/instances/instance_variables/mask_index.html"> 遮罩</a> - 此实例的遮罩索引。默认返回值是-1，这意味着此实例使用的是当前精灵的碰撞遮罩。但如果你将碰撞遮罩设为其它精灵的，那么将返回那个精灵的索引。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/friction.html">Friction</a>
-- The friction being used each game frame to slow down the
-instance. Default is 0.<br>
+"../../4_gml_reference/instances/instance_variables/friction.html">摩擦力</a> - 此实例移动时所受到的摩擦力。默认为0.<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/gravity.html">Gravity</a>
-- The returned value is constant gravity force being applied to the
-instance. Default is 0.<br>
+"../../4_gml_reference/instances/instance_variables/gravity.html">重力</a> - 此实例受到的重力。默认为0.<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/instances/instance_variables/gravity_direction.html">
-Gravity Direction</a> - The direction in which gravity is "pulling"
-the instance. The returned value will be between 0 and 360 where
-right is 0°, up is 90°, left is 180° and down is 270°. Default
-value is 270.<br>
+"../../4_gml_reference/instances/instance_variables/gravity_direction.html"> 重力方向</a> - 此实例受到的重力方向。返回值将在0到360之间。默认是0，向右是0度，向下是90度，向左是180度，向下是270度。默认值是270。<br>
 <br></li>
 
-<li><a href="../instance_variable_actions/get_score.html">Score</a>
-- Get the <tt>score</tt> variable.<br>
+<li><a href="../instance_variable_actions/get_score.html">分数</a> - 获得 <tt>分数</tt> 变量<br>
 <br></li>
 
-<li><a href="../instance_variable_actions/get_lives.html">Lives</a>
-- Get the <tt>lives</tt> variable.<br>
+<li><a href="../instance_variable_actions/get_lives.html">生命</a> - 获得 <tt>生命</tt> 变量<br>
 <br></li>
 
 <li><a href=
-"../instance_variable_actions/get_health.html">Health</a> - Get the
-<tt>health</tt> variable.<br>
+"../instance_variable_actions/get_health.html">健康</a> - 获得<tt>健康</tt> 变量<br>
 <br></li>
 </ul>
 </blockquote>
 
-<p>Once you select the built in variable to get, you then set the
-target variable to hold the returned value. If you flag this
-variable as a temporary variable then it will be created for you in
-the action and will be available only until the end of the event or
-action script. You can also retrieve the values of additional
-variables in the same action by clicking the plus icon <img style=
-"vertical-align:middle" src="../icon_expand_arguments.png"> beside
-the action, and selecting another instance variable and giving an
-accompanying variable to store the returned value.</p>
+<p>你选择了需要取得的内置变量值后，你就要设置保存此返回值的目标变量。如果你设置的目标变量是 临时（局部）变量，那么此动作将创建变量来保存返回值，直到事件结束。你可以多次执行这个动作，你需要点击动作旁的加号 <img style=
+"vertical-align:middle" src="../icon_expand_arguments.png"> ，你需要给出实例的变量和一个存储此返回值的的变量。</p>
 
 <p><br>
 </p>
@@ -256,12 +169,12 @@ accompanying variable to store the returned value.</p>
 
 <tr>
 <td>变量</td>
-<td>The built in variable to get</td>
+<td>需要取得的内置变量</td>
 </tr>
 
 <tr class="alt">
 <td>目标</td>
-<td>The target variable to use to hold the returned value</td>
+<td>将要存储返回值的目标变量。</td>
 </tr>
 </table>
 </blockquote>
@@ -269,15 +182,12 @@ accompanying variable to store the returned value.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src=
 "images/e_instance_set_instance_variable.png" alt=
 "Set Instance Variable Example">
 <blockquote>
-<p>The above action block code gets the values for the previous x/y
-position and then comapres them to the current x/y position. If
-they are not the same, then the sprite index for the instance is
-changed and it's image index is set to 0.</p>
+<p>上述的代码将会取得之前的X/Y坐标值并将它们和当前X/Y值比较。. 如果它们不相同，那么将更改此实例的精灵索引，并将它的图像索引设为0.</p>
 </blockquote>
 
 <p><br>
@@ -287,7 +197,7 @@ changed and it's image index is set to 0.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
 <div style="float:right">next: <a href="set_sprite.html">Set
 Sprite</a></div>

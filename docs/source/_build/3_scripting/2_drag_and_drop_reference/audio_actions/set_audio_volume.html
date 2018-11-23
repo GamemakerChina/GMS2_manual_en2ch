@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,13 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can set the volume of a given sound. You
-select the sound from the asset explorer and then set the volume
-value. The volume can be between 0 (silent) and 1 (full volume) and
-the scale is linear, such that a value of 0.5 would be half volume.
-Note that this action will affect all instances of the sound that
-are playing currently in the room, and will affect all future
-instances of the sound played.</p>
+<p>通过此动作，你可以设置给定声音的音量。从资源浏览器中选择声音，然后设置音量值。音量可以在0（静音）和1（全音量）之间，并且音阶是线性的，这使得0.5的值是半音量。请注意，此动作将影响当前在房间中播放的这个声音的所有实例，并将影响所播放声音的所有未来的实例。</p>
 </blockquote>
 
 <p><br>
@@ -54,7 +48,7 @@ instances of the sound played.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_audio_set_audio_volume.png" alt=
-"Set Audio Volume Syntax">
+"设置音量的语法">
 <p><br>
 </p>
 
@@ -69,12 +63,12 @@ instances of the sound played.</p>
 
 <tr>
 <td>声音</td>
-<td>The sound resource to set the volume of</td>
+<td>设置音量的声音资源</td>
 </tr>
 
 <tr class="alt">
 <td>音量</td>
-<td>The new volume for the sound (from 0 to 1, default 1)</td>
+<td>声音新的音量（从0到1，默认为1）</td>
 </tr>
 </table>
 </blockquote>
@@ -82,10 +76,10 @@ instances of the sound played.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_audio_get_audio_volume.png" alt=
-"Set Audio Volume Example">
-<blockquote>The above action block code checks a global variable to see if it is <tt>true</tt> or false. If it is <tt>true</tt> then the volume of the given sound is retrieved and stored in a temporary local variable. The value is then checked to see if it is not equal to 0.5, and if it is not, then the volume of the sound is set to 0.5. 若该全局变量求值为<tt>false</tt>，则该声音的音量会被设置为1, then the sound has its volume set to 1.</blockquote>
+"设置音频音量的示例">
+<blockquote>上面的动作块代码将检查全局变量并查看它是<tt>true（真）</tt>还是false（假）。如果是<tt>真</tt>，然后会检索给定声音的音量并将其存储在临时局部变量中。然后检查这个值以查看它是否不等于0.5，如果不是，则将声音的音量设置为0.5。若该全局变量求值为<tt>false</tt>，则该声音的音量会被设置为1。</blockquote>
 
 <p><br>
 </p>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,21 +40,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action block sets the <tt>image_alpha</tt> value for the
-instance. The image alpha is the "transparency" value for drawing
-any sprite assigned to the instance and has a value between 0 and
-1, where 0 would be fully transparent and 1 would be fully opaque.
-Note that if the sprite has transparent or semi-transparent pixels,
-then their transparency will be scaled by the amount, so if you
-have some 50% transparent pixels in the sprite and set the instance
-alpha to 0.5, the final alpha for the transparent pixels would be
-25%. You can set this value to be a relative amount</p>
+<p>上述代码块将为实例设置 <tt>图像alpha</tt> 。图像 alpha 是用于绘制分配给实例的任何精灵的 "透明度" 值, 其值介于0和1之间, 其中0将是完全透明的, 1 将是完全不透明的。请注意, 如果 sprite 具有透明或半透明像素，则其透明度将按此值缩放。 因此， 如果 sprite 中有大约50% 的透明像素，并将实例 alpha 设置为 0.5, 则透明像素的最终 alpha 将为25%。. 你可以设置此值为和原来的值相关联。</p>
 
-<p>Please note that for changes in this variable to be visible, the
-instance should have either <i>no</i> draw event (and so
-<i>GameMaker Studio 2</i> will default draw the sprite) or be drawn
-using <a href="../drawing_actions/draw_self.html">Draw Self</a>
-action.</p>
+<p>请注意，要使此更改可见，实例必须 <i>没有</i> 绘制事件(这样 <i>GameMaker Studio 2</i> 将默认绘制精灵) 或使用 <a href="../drawing_actions/draw_self.html">自我绘制</a> 动作</p>
 </blockquote>
 
 <p><br>
@@ -77,7 +65,7 @@ action.</p>
 
 <tr>
 <td>alpha</td>
-<td>The alpha value to set (from 0 to 1, default is 1).</td>
+<td>透明度，从0（透明）到1（完全不透明）。</td>
 </tr>
 </table>
 </blockquote>
@@ -85,13 +73,10 @@ action.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_instance_set_sprite.png" alt=
 "Set Instance Alpha Example">
-<blockquote>The above action block code sets a new sprite as well
-as a number of other properties for how that sprite is to be
-displayed, including setting the image alpha to be
-0.5.</blockquote>
+<blockquote>上述动作代码块创建了一个新精灵，并设置它的很多属性，包括设置它的alpha值为0.5。</blockquote>
 
 <p><br>
 </p>
@@ -100,7 +85,7 @@ displayed, including setting the image alpha to be
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
 <div style="float:right">next: <a href=
 "set_instance_colour.html">Set Instance Colour</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <h2 class="studio">This function returns a different value
 depending on the browser or device language region.</h2>
 
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">os_get_region()</p>
 
@@ -64,7 +64,7 @@ returned, but the regional language code of the OS.</i><br>
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">例如：</h3>
 
 <p class="code">switch (os_get_language())<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case "zh":<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var region = os_get_region();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (region == "hk" || region == "mo" || region == "tw")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ini_open("chinese_traditional.ini");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ini_open("chinese_simplified.ini");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;case "fr":<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ini_open("french.ini");<br>&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;case "it":<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ini_open("italian.ini");<br>&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;default:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ini_open("english.ini");<br>&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 

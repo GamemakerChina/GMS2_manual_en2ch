@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>中断</title>
+<title>Break</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_loops_break.png"> 中断</h2>
+"images/i_loops_break.png">  Break</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,13 +40,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can only be used within a loop action (either
-<a href="repeat.html">Repeat</a> or <a href=
-"while.html">While</a>), and calling it will break out of the loop
-in that moment. Normally a loop will run either a fixed number of
-times or until a specific condition is met, but you can use the
-Break action to prematurely end a loop at any moment (action within
-the loop <i>after</i> the Break will not be run).</p>
+<p>此动作只能在循环动作种使用 (例如 <a href="repeat.html">Repeat</a> 或 <a href=
+"while.html">While</a>)，并且一旦执行到此“break”动作，将跳出当前循环。. 通常情况下, 循环将运行固定次数直到满足特定条件, 但您可以使用 "中断" 操作在任何时候结束循环 ("中断<i>" 后</i>循环中的操作将不会运行)。.</p>
 </blockquote>
 
 <p><br>
@@ -58,13 +53,10 @@ the loop <i>after</i> the Break will not be run).</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_loops_break.png" alt=
 "Break Example">
-<blockquote>The above action block code performs a Repeat loop 1000
-times. In the loop it checks to see if a List data structure is
-empty and if it is <i>not</i> it removes an item from the list, and
-if it <i>is</i> it breaks the loop.</blockquote>
+<blockquote>上述动作块代码执行重复循环1000次。在循环中, 它检查一个列表数据结构是否为空，如果<i>不是</i>，它将从中删除一个项目。如果<i>是</i>，则会中断循环。</blockquote>
 
 <p><br>
 </p>

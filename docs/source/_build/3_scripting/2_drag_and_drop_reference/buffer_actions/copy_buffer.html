@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,13 +40,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to copy all of the data stored in one
-buffer to another. When using two buffers and copying from one to
-the other, both buffers must have previously been created using the
-<a href="create_buffer.html">Create Buffer</a> action, and you
-supply the unique buffer ID returned as the from/to arguments.</p>
+<p>此动作可用于将存储在一个缓冲区中的所有数据复制到另一个缓冲区。当使用两个缓冲区并从一个缓冲区复制到另一个缓冲区时，必须使用<a href="create_buffer.html">创建缓冲区</a>动作提前创建好它们，并提供返回的唯一缓冲区ID作为from/to的参数。</p>
 
-<div class="note"><b>注意</b>： You cannot copy to the same buffer.</div>
+<div class="note"><b>注意</b>：无法复制到同一缓冲区。</div>
 </blockquote>
 
 <p><br>
@@ -54,7 +50,7 @@ supply the unique buffer ID returned as the from/to arguments.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_buffers_copy_buffer.png" alt=
-"Copy Buffer Syntax">
+"复制缓冲区的语法">
 <p><br>
 </p>
 
@@ -69,13 +65,12 @@ supply the unique buffer ID returned as the from/to arguments.</p>
 
 <tr>
 <td>缓冲区</td>
-<td>The buffer index (stored in a variable) to copy
-<i>from</i></td>
+<td> <i>将要</i>复制的缓冲区的索引id（存储在变量中）</td>
 </tr>
 
 <tr class="alt">
 <td>复制到</td>
-<td>The buffer index (stored in a variable) to copy <i>to</i></td>
+<td>复制 <i>至</i>的缓冲区索引（存储在变量中）</td>
 </tr>
 </table>
 </blockquote>
@@ -83,15 +78,10 @@ supply the unique buffer ID returned as the from/to arguments.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_buffers_copy_buffer.png" alt=
-"Copy Buffer Example">
-<blockquote>The above action block code will create a new buffer
-and store its ID in a temporary variable. It then checks to see if
-the buffer indexed in the given global variable exists, and if it
-does then it is copied to the temporary buffer and the read/write
-position reset back to the start, and if it doesn't exists then it
-is created.</blockquote>
+"复制缓冲区的示例">
+<blockquote>上面的操作块代码将创建一个新缓冲区并将其ID存储在临时变量中。然后它检查在给定的全局变量中索引的缓冲区是否存在，如果存在，则将其复制到临时缓冲区，并将读/写位置重置回到起始，如果它不存在，那么创建它。</blockquote>
 
 <p><br>
 </p>
@@ -100,10 +90,9 @@ is created.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Buffer Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">缓冲区动作</a></div>
 
-<div style="float:right">next: <a href="delete_buffer.html">Delete
-Buffer</a></div>
+<div style="float:right">下一页：<a href="delete_buffer.html">删除缓冲区</a></div>
 </div>
 </div>
 

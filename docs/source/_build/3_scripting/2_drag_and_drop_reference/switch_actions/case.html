@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,20 +40,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will create a new Case within a <a href=
-"switch.html">Switch</a>. You give the value for the case and it
-will be compared with the input value for the Switch, and if they
-match the actions added under the Case will be performed. Actions
-that are added to a Case to be performed <i>only</i> in that Case
-should be dropped to the side of the action, much as you would add
-an action to an "if":  <img class="center" src=
+<p>此动作将会在 <a href=
+"switch.html">Switch</a>创建一个新Case（情况）。你需要给出此case的值，它将被用来和switch给出的变量作比较。如果变量和此case的值一样，那么将会运行此case中的动作。要把动作添加到一个case中后<i>只能</i>在那个case中运行。 你应该将要添加的动作放在case的一边，就像你把动作添加到”if"中那样。 <img class="center" src=
 "images/case_drop.png" alt="Drop Actions Into A Case"></p>
 
-<p>Note that a Case value <i>must be a constant</i>, which can be
-any data type (real, string, etc...), as long as it evaluates to a
-single value on compile - so you can't use expressions that depend
-on variables. Also note that Case cannot be used outside of a
-Switch and trying to do so will give you an error.</p>
+<p>注意case的值 <i>必须是一个常量</i>，但可以是任何数据类型（数值，字符串，只有常量的表达式，等等），只要它在编译时是一个单独的值就行。因此你不能使用带有变量的表达式。如果你在swtich外尝试运行case，那么将会给出错误。</p>
 </blockquote>
 
 <p><br>
@@ -76,8 +67,7 @@ Switch and trying to do so will give you an error.</p>
 
 <tr>
 <td>常量</td>
-<td>The constant value to be evaluated against the Switch input
-value</td>
+<td>用于和switch中输入值比较的常量</td>
 </tr>
 </table>
 </blockquote>
@@ -85,14 +75,9 @@ value</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_switches.png" alt="Case Example">
-<blockquote>The above action block code gets the value stored in a
-variable and then compares it to the different possible cases. If
-any one of the cases is the same as the value, then the action
-under that case will be performed, otherwise the next case will be
-evaluated. After the switch has run, an alarm is set to
-30.</blockquote>
+<blockquote>上述动作代码块将取得一个变量的值，然后将它和不同的可能的case做比较。如果它符合之中某个case，将会执行此case中的动作。否则将继续让变量和下一个值作比较看它是否符合。在运行完一个switch后，将一个计时器设为30。</blockquote>
 
 <p><br>
 </p>

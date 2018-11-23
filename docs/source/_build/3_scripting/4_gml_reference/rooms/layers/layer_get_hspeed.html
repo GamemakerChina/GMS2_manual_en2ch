@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -52,7 +52,7 @@ Default is 0 (unless set in the room editor).</p>
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">layer_get_hspeed(layer_id)</p>
 
@@ -79,22 +79,16 @@ from</td>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
-<p class="code">var lay_id = layer_get_id("Sprites");<br>
-if layer_get_hspeed(lay_id) != 0 || layer_get_vspeed(lay_id) !=
-0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;layer_hspeed(lay_id, 0);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;layer_vspeed(lay_id, 0);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var lay_id = layer_get_id("Sprites");<br>if layer_get_hspeed(lay_id) != 0 || layer_get_vspeed(lay_id) != 0<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;layer_hspeed(lay_id, 0);<br>&nbsp;&nbsp;&nbsp;&nbsp;layer_vspeed(lay_id, 0);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>The above code checks the given layer horizontal and
 vertical speeds and if they are not both set to 0 then it is sets

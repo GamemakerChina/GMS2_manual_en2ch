@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -44,14 +44,14 @@ information on global tilemap bit masks, see the function <a href=
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">tilemap_get_global_mask();</p>
 
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">Real (0 for no mask, -1 for an error, mask value
 otherwise)</p>
@@ -59,7 +59,7 @@ otherwise)</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
 <p class="code">var mask = tilemap_get_global_mask(map_id);<br>var new_mask = tile_mirror | tile_flip | tile_rotate | 255;<br>if mask != new_mask<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;tilemap_set_global_mask(new_mask);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -181,7 +181,7 @@ requested in the case of multiple checks.</li>
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">uwp_check_privilege(user_id, privilege,
 attempt_resolution);</p>
@@ -214,21 +214,16 @@ ignore if set to <tt>false</tt>.</td>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">实数</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
-<p class="code">var user_one = xboxlive_get_user(0);<br>
-if (xboxlive_user_is_signed_in(user_one))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;uwp_check_privilege(user_one,
-xboxlive_privilege_multiplayer_sessions, true);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var user_one = xboxlive_get_user(0);<br>if (xboxlive_user_is_signed_in(user_one))<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;uwp_check_privilege(user_one, xboxlive_privilege_multiplayer_sessions, true);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above checks to see if the user is signed in and if they are

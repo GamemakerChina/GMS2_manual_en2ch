@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Create Object Instance</title>
+<title>创建物体实例</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_instance_create.png">  Create Object Instance</h2>
+"images/i_instance_create.png"> 创建物体实例</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,17 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can create an instance of any object from
-the resource tree. You give the name of the object and an x/y
-position within the room where it is to be created. You can tick
-the "relative" flags to position the instance relative to the
-instance running the action code blocks. Whenever you create an
-instance in the game, it is given a unique ID value with which you
-can then identify the instance in further actions, therefore this
-action permits you to define a "target" variable to hold this ID
-value (as shown in the example below). Note that the target can be
-flagged as a temporary (local) variable, which will be created for
-the action and can be used in all subsequent actions.</p>
+<p>通过此动作，你可以从资源树创建任何对象的实例。你需要给出对象的名称，和要创建对象的房间内的 xy 位置。你可以勾选 "相对" 标志，这样设置的坐标位置将是相对于执行此动作块的实例的。无论什么时候你在游戏中创建了一个实例，它将被赋予一个独特的ID，这样你就能方便地在以后动作中调用此实例。因此你可以定义”目标“变量来存储此ID值。你可以在下面的例子中看到这个演示。注意这个目标变量可以是一个临时（本地）变量，这样这个变量将在此动作中被创建（译者注：这样你就不用在此动作前特意定义一个变量），这个变量可以用于之后的动作。</p>
 </blockquote>
 
 <p><br>
@@ -73,24 +63,22 @@ the action and can be used in all subsequent actions.</p>
 
 <tr>
 <td>物体</td>
-<td>The name of the object to create an instance of.</td>
+<td>要创建的实例的对象的名称。</td>
 </tr>
 
 <tr class="alt">
 <td>x</td>
-<td>The x position in the room to create the instance (can be
-relative to the calling instance).</td>
+<td>创建实例的房间中的 x 位置 (可以相对于调用实例)。</td>
 </tr>
 
 <tr>
 <td>y</td>
-<td>The y position in the room to create the instance (can be
-relative to the calling instance)</td>
+<td>创建实例的房间中的 Y位置 (可以相对于调用实例)。</td>
 </tr>
 
 <tr class="alt">
 <td>目标</td>
-<td>The variable to target for the return value.</td>
+<td>用来存储返回值的目标变量。</td>
 </tr>
 </table>
 </blockquote>
@@ -98,14 +86,11 @@ relative to the calling instance)</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_instance_create.png" alt=
 "Create Instance Example">
-<blockquote>The above action block code creates a new instance and
-stores its unique ID value in a temporary variable. This variable
-is then used in the <a href=
-"../common_actions/apply_to.html">Applies To...</a> action to set
-some properties of the instance created.</blockquote>
+<blockquote>上面的动作块代码会创建一个新实例, 并将其唯一的 id 值存储在一个临时变量中。此变量将被用在 <a href=
+"../common_actions/apply_to.html">Applies To...</a> 中，来为此实例设置更多的属性。</blockquote>
 
 <p><br>
 </p>
@@ -114,10 +99,10 @@ some properties of the instance created.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
-<div style="float:right">next: <a href=
-"destroy_object_instance.html">Destroy Object Instance</a></div>
+<div style="float:right">下一页: <a href=
+"destroy_object_instance.html">销毁物体实例</a></div>
 </div>
 </div>
 

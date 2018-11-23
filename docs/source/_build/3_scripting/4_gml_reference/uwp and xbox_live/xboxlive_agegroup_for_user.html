@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -53,7 +53,7 @@ UWP Game Options</a>.</div>
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">xboxlive_agegroup_for_user(user_id);</p>
 
@@ -74,7 +74,7 @@ UWP Game Options</a>.</div>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">常量</p>
 
@@ -112,15 +112,9 @@ Korea</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
-<p class="code">var _age =
-xboxlive_agegroup_for_user(xboxlive_get_activating_user());<br>
-if _age != xboxlive_agegroup_adult<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;global.ContentControl = true;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-else global.ContentControl = false;<br></p>
+<p class="code">var _age = xboxlive_agegroup_for_user(xboxlive_get_activating_user());<br>if _age != xboxlive_agegroup_adult<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;global.ContentControl = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>else global.ContentControl = false;<br></p>
 
 <blockquote>
 <p>The above code checks the age group of the activating user and

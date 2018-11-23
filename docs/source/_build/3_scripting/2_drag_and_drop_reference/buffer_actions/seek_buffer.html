@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,17 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to move (seek) to a position within a
-buffer. You supply the unique buffer ID value as returned by the
-action <a href="create_buffer.html">Create Buffer</a> and then the
-offset value in bytes to move to. The offset value will be applied
-from the <i>start</i> of the buffer, so calling this function will
-move the read/write position to the start of the the buffer then
-move the number of bytes given along and position the new
-read/write position there. However, if you flag the offset as
-relative, it will move the read/write position forward (or
-backwards if the offset is a negative value) from the current
-position.</p>
+<p>此动作可用于移动（搜索）缓冲区内的位置。你提供<a href="create_buffer.html">创建缓冲区</a>动作返回的唯一缓冲区ID值，然后是要移动到的以字节为单位的偏移值。偏移值将应用在缓冲区的<i>开始</i>位置，所以调用此函数会将读/写位置移动到缓冲区的开头，然后移动给定的字节数并在那里定位新的读/写位置。但是，如果将偏移标记为相对，则它将从当前位置向前移动读取/写入位置（译者注：偏标标记的相对是指relative，最新版本里“寻找”标签的下拉列表有三项，即开始，相对，结束；向前移动是指move forward，向前进；如果偏移为负值，则向后移动，也就是向后退的意思）。</p>
 </blockquote>
 
 <p><br>
@@ -58,7 +48,7 @@ position.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_buffers_seek_buffer.png" alt=
-"Seek Buffer Syntax">
+"缓冲区中搜寻的（Seek Buffer）语法">
 <p><br>
 </p>
 
@@ -73,13 +63,12 @@ position.</p>
 
 <tr>
 <td>缓冲区</td>
-<td>The buffer index (stored in a variable)</td>
+<td>缓冲区索引（存储在变量中）</td>
 </tr>
 
 <tr class="alt">
-<td>offset</td>
-<td>The offset (in bytes) relative to the current seek
-position</td>
+<td>偏移</td>
+<td>相对于当前搜索位置的偏移量（以字节为单位）</td>
 </tr>
 </table>
 </blockquote>
@@ -87,12 +76,10 @@ position</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_buffers_seek_buffer.png" alt=
-"Seek Buffer Example">
-<blockquote>The above action block code gets the size of the buffer
-and then uses that value to set the read/write position to the end
-of the currently stored data.</blockquote>
+"缓冲区内搜寻的示例">
+<blockquote>上述动作块代码获取缓冲区的大小，然后使用该值将读/写位置设置为当前存储数据的末尾。</blockquote>
 
 <p><br>
 </p>
@@ -101,10 +88,9 @@ of the currently stored data.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Buffer Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">缓冲区动作</a></div>
 
-<div style="float:right">next: <a href="get_buffer_size.html">Get
-Buffer Size</a></div>
+<div style="float:right">下一页： <a href="get_buffer_size.html">获取缓冲区大小</a></div>
 </div>
 </div>
 

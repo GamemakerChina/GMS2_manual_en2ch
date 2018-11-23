@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,16 +40,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action block will destroy <i>all</i> instances found at the
-point given, calling the <a href=
-"../../../2_interface/1_editors/events/index.html">Destroy
-Event</a> and then the <a href=
-"../../../2_interface/1_editors/events/index.html">Clean Up
-Event</a> for all instances found. Note that this action is based
-on the collision mask of the instances, and if any part of the mask
-over-laps with the target point it then the function will destroy
-that instance (if the instances have no sprite or mask applied,
-then they will not be destroyed).</p>
+<p>此动作块将会销毁 <i>所有</i> 在给出点的实例，并为这些实例执行 <a href=
+"../../../2_interface/1_editors/events/index.html">销毁实例</a> 和 <a href=
+"../../../2_interface/1_editors/events/index.html">清除实例</a>。请注意, 此操作基于实例的碰撞掩码, 如果掩码的任何部分与目标点重叠, 则该函数将销毁该实例 (如果实例没有应用精灵或掩码, 则不会销毁这些实例)。.</p>
 </blockquote>
 
 <p><br>
@@ -72,12 +65,12 @@ alt="Destroy At Position Syntax">
 
 <tr>
 <td>x</td>
-<td>The x position in the room to use.</td>
+<td>需要使用的房间的X坐标.</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y position in the room to use.</td>
+<td>需要使用的房间的Y坐标</td>
 </tr>
 </table>
 </blockquote>
@@ -85,12 +78,10 @@ alt="Destroy At Position Syntax">
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_instance_destroy_position.png"
 alt="Destroy At Position Example">
-<blockquote>The above action block code checks for a keypress (the
-space key) and if one is detected it will destroy all the instances
-found at the instances relative position.</blockquote>
+<blockquote>上面的动作块代码将检查空格键是否按下。如果有的话，它将销毁在实例相对位置找到的所有实例。</blockquote>
 
 <p><br>
 </p>
@@ -99,7 +90,7 @@ found at the instances relative position.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
 <div style="float:right">next: <a href=
 "change_object_instance.html">Change Object Instance</a></div>

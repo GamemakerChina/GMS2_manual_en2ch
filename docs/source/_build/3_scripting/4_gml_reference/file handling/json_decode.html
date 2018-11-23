@@ -1,5 +1,5 @@
 <html><head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w">
+<meta name="keywords" content="online documentation, web online help, web help, chm">
 <meta http-equiv="Content-Style-Type" content="text/css">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -71,7 +71,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">json_decode(string)</p>
 
@@ -95,14 +95,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">ds_map id，如果失败则返回 -1 </p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
 <p class="code">var resultMap = json_decode(requestResult);<br>var list = ds_map_find_value(resultMap, "default");<br>var size = ds_list_size(list);<br>for (var n = 0; n &lt; ds_list_size(list); n++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var map = ds_list_find_value(list, n);<br>&nbsp;&nbsp;&nbsp;var curr = ds_map_find_first(map);<br>&nbsp;&nbsp;&nbsp;while (is_string(curr))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Name[n] = ds_map_find_value(map, "name");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;curr = ds_map_find_next(map, curr);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br>ds_map_destroy(resultMap);<br></p>
 

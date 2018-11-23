@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>alarm_set</h2>
 
 <div class="body-scroll">
-<h3 class="studio">语法：</h3>
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">alarm_set(index, value);</p>
 
@@ -68,18 +68,14 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to set an alarm. You supply the alarm
-number from 0 to 11, and then the value to set the alarm to. The
-value must be an integer value, and you can set it to -1 to stop
-the alarm. This is an alternative method to setting the <a href=
-"../instances/instance_variables/alarm.html">alarm array</a>
-directly.<br>
+<p>This function can be used to set an alarm. 你需要提供计时器的编号，从0到11，然后为计时器设置一个值。The value must be an integer value, and you can set it to -1 to stop the alarm. This is an alternative method to setting the <a href=
+"../instances/instance_variables/alarm.html">alarm array</a> directly.<br>
 <br></p>
 
 <p><br>
 </p>
 
-<h3 class="studio">举例：</h3>
+<h3 class="studio">例如：</h3>
 
 <p class="code">for (var i = 0; i &lt; 12; i++)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if alarm_get(i) &gt; 0 alarm_set(i, -1);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 

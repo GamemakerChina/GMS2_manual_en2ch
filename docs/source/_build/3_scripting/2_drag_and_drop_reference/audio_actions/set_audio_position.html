@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>设置音频位置</title>
+<title>设置音频的播放位置</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_audio_set_audio_position.png"> 设置音频位置</h2>
+"images/i_audio_set_audio_position.png"> 设置音频的播放位置</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,21 +40,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can set a sound to play at a specific time.
-You give the sound to play, and the time to start it from, but this
-action will <i>not</i> play the sound for you, it will simply set
-the play position for the sound. To use this action you must
-<i>first</i> set the position <i>then</i> play the sound using the
-action <a href="play_audio.html">Play Audio</a>, otherwise you will
-here no change in position until the next time you play the same
-sound resource (which will start at the new position). The position
-is set in seconds - you can use decimal values - and you can get
-the total sound length using the action <a href=
-"get_audio_length.html">Get Audio Length</a>, although if you
-provide a value greater than the length of the desired sound this
-will be wrapped so if the sound is 10 seconds long and you give 12
-seconds as the start position, the sound will start at 2 second
-in.</p>
+<p>通过此动作，你可以设置一个声音开始播放的特定时间点。给定要播放的声音，以及开始播放的位置，但这个动作<i>不</i>会为你播放声音，它只是设置声音的播放位置。要使用此动作，你必须<i>首先</i>设定位置<i>然后</i>使用<a href="play_audio.html">播放音频</a>动作播放声音，否则在下次播放相同的声音资源（将从新位置开始）之前，你的播放位置不会改变。位置设置以秒为单位 - 你可以使用小数值 - 你可以使用<a href=
+"get_audio_length.html">获取音频长度</a>动作获得总声音长度，并且如果你提供的值大于声音的长度，这将会覆盖前面的位置，所以如果声音是10秒长，你给12秒作为开始位置，声音将从2秒开始。</p>
 </blockquote>
 
 <p><br>
@@ -62,7 +49,7 @@ in.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_audio_set_audio_position.png"
-alt="Set Audio Position Syntax">
+alt="设置音频位置的语法">
 <p><br>
 </p>
 
@@ -77,12 +64,12 @@ alt="Set Audio Position Syntax">
 
 <tr>
 <td>声音</td>
-<td>The sound resource to set the play position of</td>
+<td>设置播放位置的声音资源</td>
 </tr>
 
 <tr class="alt">
-<td>Time</td>
-<td>The time to set (in seconds)</td>
+<td>时间</td>
+<td>设定的时间（以秒为单位）</td>
 </tr>
 </table>
 </blockquote>
@@ -90,16 +77,10 @@ alt="Set Audio Position Syntax">
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_audio_get_audio_length.png" alt=
-"Set Audio Position Example">
-<blockquote>The above action block code gets the playing length of
-the given sound resource and stores it in a temporary local
-variable. This is then used to generate a random value between 0
-and the length of the sound, which is then stored in a different
-temporary local variable. This new random value is then used to set
-the start position for the sound and the sound is then
-played.</blockquote>
+"设置音频位置的示例">
+<blockquote>上述动作块代码获取给定声音资源的播放长度并将其存储在临时局部变量中。然后生成0和声音长度之间的随机值，并将其存储在另外一个临时局部变量中。之后使用该新的随机值来设置声音的开始位置，再播放声音。</blockquote>
 
 <p><br>
 </p>

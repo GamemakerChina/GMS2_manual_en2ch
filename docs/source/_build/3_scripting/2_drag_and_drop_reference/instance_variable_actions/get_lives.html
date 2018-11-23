@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,14 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>You can use this action to retrieve the value of the instance
-variable created for the "lives". You supply the target variable to
-store the returned "lives" value (which can be flagged as a
-temporary local variable), but note that if the variable has not
-been set previously (using <a href="set_lives.html">Set Lives</a>)
-then the variable will be created for you and the action will
-return 0 (unlike regular instance variables which will give an
-error if you try to access them without having set them first).</p>
+<p>你可以使用此动作来获得物体的“生命数”变量。你还需要给出目标变量来存储“生命”值，此变量可以是临时局部变量。如果此变量在之前未被创建（使用 <a href="set_lives.html">设置生命值</a>） 那么此变量将被创建，但动作返回值将是0。这不像其它实例变量，如果它们未被创建而想获取返回值，那么将给出错误。</p>
 </blockquote>
 
 <p><br>
@@ -70,8 +63,7 @@ error if you try to access them without having set them first).</p>
 
 <tr>
 <td>目标</td>
-<td>The target variable to store the returned "lives" value (can be
-flagged as a temporary local variable)</td>
+<td>用来储存“生命数”值的目标变量 (可以标记为临时局部变量)</td>
 </tr>
 </table>
 </blockquote>
@@ -79,13 +71,10 @@ flagged as a temporary local variable)</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_iv_get_lives.png" alt=
 "Get Lives Example">
-<blockquote>The above action block code will retrieve the value for
-"lives" and store it in a temporary local variable. This variable
-is then used to decide how many stacked sprites should be
-drawn.</blockquote>
+<blockquote>上述动作块代码将获取"生命数"并将它存储在临时局部变量中。此变量将在之后用来决定绘制多少个精灵。</blockquote>
 
 <p><br>
 </p>

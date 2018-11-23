@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,27 +40,16 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to check if an instance of a specific
-object exists in the game room, or if a specific instance itself
-exists. You give the object from the asset explorer, and if any
-instance exists in the room then the action will return
-<tt>true</tt> otherwise it will return <tt>false</tt>. Note that
-you can use a variable here with the unique ID for specific
-instance (for example as returned by the action <a href=
-"create_object_instance.html">Create Object Instance</a>) or even
-the instance ID value as returned by the room editor when you added
-the instance.</p>
+<p>此动作可用于检查游戏房间中是否存在特定物体的实例，或者是否存在特定实例。. 你需要提供资源浏览器中的物体，如果它的任何实例存在于房间中，那么将返回 <tt>true</tt> 否则返回 <tt>false</tt>。请注意，你可以在此处使用存储了特定实例的独特ID的变量（例如，由 <a href=
+"create_object_instance.html">创建对象实例</a>返回的值）或者甚至是添加实例时房间编辑器返回的实例ID值。</p>
 
-<p>If you flag the "Not" argument, then the action will check to
-see if <i>no</i> instance exists and if none are found it will
-return <tt>true</tt> and if even one exists it will return
-<tt>false</tt>.</p>
+<p>如果你标记了“NOT”参数，那么此动作将在 <i>没有</i> 实例存在时返回<tt>true</tt> ，否则返回<tt>false</tt>。</p>
 
-<p>如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br>
+<p>请注意，如果要将动作添加进 "if" 动作块，应该将它们放置到动作的侧边，如下图所示：<br>
 <img class="center" src="images/a_instance_exists_drop.png" alt=
 "If Instance Exists Drop"></p>
 
-<p>如果if的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此if动作块后执行。</p>
+<p>如果 if 的判断结果是 <tt>真</tt>。那么此动作将会马上执行。放在别处的动作将会在此 if 动作块后执行。</p>
 </blockquote>
 
 <p><br>
@@ -83,8 +72,7 @@ return <tt>true</tt> and if even one exists it will return
 
 <tr>
 <td>物体</td>
-<td>The name of the object to check for an instance of (or an
-instance ID).</td>
+<td>需要检查实例的物体（或实例的ID）。</td>
 </tr>
 </table>
 </blockquote>
@@ -92,16 +80,10 @@ instance ID).</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_instance_exists.png" alt=
 "If Instance Exists Example">
-<blockquote>The above action block code checks for a collision and
-returns the unique ID value of the instance that is being collided
-with. This value is stored in a temporary variable and then checked
-to see if the value corresponds to an instance that is currently
-within the room (if no collision is found then the variable will
-hold the keyword "<tt>noone</tt>"), and if it does, then a variable
-is set in the instance being collided with.</blockquote>
+<blockquote>上述代码将检查一个碰撞，并返回被碰撞实例的ID值。此值存储在一个临时变量中， 然后检查该值是否对应于当前在房间内的实例 (如果没有碰撞， 则该变量将保留关键字 "<tt>noone</tt>")。 如果有的话，那么就会去设置被碰撞的实例中的一个变量。</blockquote>
 
 <p><br>
 </p>
@@ -110,7 +92,7 @@ is set in the instance being collided with.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
 <div style="float:right">next: <a href=
 "call_parent_event.html">Call Parent Event</a></div>

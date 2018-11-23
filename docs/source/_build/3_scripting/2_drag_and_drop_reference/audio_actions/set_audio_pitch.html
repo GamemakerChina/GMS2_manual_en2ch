@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,24 +40,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can be used to set the pitch of a sound. You supply
-the sound asset from the resource tree, and then give the desired
-pitch to change it to, and all further instances of that sound
-which you play will have their pitch changed. This action will not
-change the pitch of any sound currently playing, however, and
-should be used before you use the <a href="play_audio.html">Play
-Audio</a> action for the sound.</p>
+<p>此动作可用于设置声音的音调。从资源树提供声音资源，然后提供所需的音调，这个声音所有之后的实例将使用新的音调播放但是，此动作不会改变当前播放的任何声音的音调，这个动作应该在<a href="play_audio.html">播放音频</a>动作之前使用。</p>
 
-<p>The pitch value is a pitch <i>multiplier</i>, in that the input
-value multiplies the current pitch by that amount, so the default
-value of 1 is no pitch change, while a value of less than 1 will
-lower the pitch and greater than 1 will raise the pitch. It is best
-to use small increments for this function as any value under 0 or
-over 5 may not be audible anyway. It is worth noting that the total
-pitch change permitted is clamped to (1/256) - 256 octaves, so any
-value over or under this will not be registered.</p>
+<p>这个音调值是一个<i>乘数</i>，输入值将以当前音调乘以该数值，因此默认值1没有音调变化，而小于1的值将降低音调，大于1将提高音调。最好对此函数使用小增量，因为任何低于0或大于5的值都可能无法听到。值得注意的是，允许的总音调的变化被钳制到（1/256） -  256个八度音程，因此任何高于或低于此值的变化都不会被记录。</p>
 
-<div class="note"><b>注意</b>： The clamped value given above is what <i>GameMaker Studio 2</i> attempts to clamp the range to, but this value is not guaranteed on all target platforms. iOS, for example, clamps to (1/256) - 8, so you may need to experiment on each target platform and have different versions of a sound resource, each one pre-shifted, should you require higher or lower octave values.</div>
+<div class="note"><b>注意</b>：上面给出的钳位值是<i>GameMaker Studio 2</i>尝试限制的范围，但并非所有目标平台都保证是这个值。例如，iOS会钳制到（1/256） -  8，因此你可能需要在每个目标平台上进行试验并拥有不同版本的声音资源，如果你需要更高或更低的八度音程值，每个版本都需要预先移位。</div>
 </blockquote>
 
 <p><br>
@@ -65,7 +52,7 @@ value over or under this will not be registered.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_audio_set_audio_pitch.png" alt=
-"Set Audio Pitch Syntax">
+"设置音频音调的语法">
 <p><br>
 </p>
 
@@ -80,12 +67,12 @@ value over or under this will not be registered.</p>
 
 <tr>
 <td>声音</td>
-<td>The sound resource to set the pitch of</td>
+<td>设置音调的声音资源</td>
 </tr>
 
 <tr class="alt">
-<td>pitch</td>
-<td>The pitch to set the sound to (default is 1)</td>
+<td>音调值</td>
+<td>设置声音的音调（默认为1）</td>
 </tr>
 </table>
 </blockquote>
@@ -93,16 +80,10 @@ value over or under this will not be registered.</p>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_audio_get_audio_pitch.png" alt=
-"Set Audio Pitch Example">
-<blockquote>The above action block code first gets the pitch for
-the given sound and stores it in a temporary local variable. It
-then checks for a key press, and if one is detected, the value of
-the pitch is checked to see if it is less than 2. If it is, then
-the sound is stopped, the pitch variable has 0.1 added to it, and
-then this variable is used to set the pitch of the sound again
-before it is played.</blockquote>
+"设置音频音调的示例">
+<blockquote>上述动作块代码首先获取给定声音的音调，并将其存储在临时的局部变量中。然后检测按键，如果检测到，则检查音调值是否小于2。如果是，则停止声音，音调变量加0.1，然后该变量用于在播放之前再次设置声音的音调。</blockquote>
 
 <p><br>
 </p>

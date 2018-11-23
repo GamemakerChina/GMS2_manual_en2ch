@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,19 +38,14 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>You can use this function to retrieve the y position of the
-layer within the currently scoped room. You supply the layer ID
-(which you get when you create the layer using <a href=
-"layer_create.html"><tt>layer_create()</tt></a>) or the layer name
-(as a string - this will have a performance impact) and the
-function returns a real number for the x position of the layer,
-relative to the (0,0) position of the room. Default is 0.</p>
+<p>You can use this function to retrieve the y position of the layer within the currently scoped room. You supply the layer ID (which you get when you create the layer using <a href=
+"layer_create.html"><tt>layer_create()</tt></a>) or the layer name (as a string - this will have a performance impact) and the function returns a real number for the x position of the layer, relative to the (0,0) position of the room. 默认为0.</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">layer_get_y(layer_id)</p>
 
@@ -76,21 +71,16 @@ relative to the (0,0) position of the room. Default is 0.</p>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">实数</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
-<p class="code">var lay_id = layer_get_id("Sprites");<br>
-if layer_get_x(lay_id) != 0 || layer_get_x(lay_id) != 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;layer_x(lay_id, 0);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;layer_y(lay_id, 0);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var lay_id = layer_get_id("Sprites");<br>if layer_get_x(lay_id) != 0 || layer_get_x(lay_id) != 0<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;layer_x(lay_id, 0);<br>&nbsp;&nbsp;&nbsp;&nbsp;layer_y(lay_id, 0);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>The above code checks the given layer position and if
 it is not set to (0, 0) then it is set to that

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -52,7 +52,7 @@ and anything greater may introduce audio clipping.</p>
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">audio_get_master_gain(listenerIndex);</p>
 
@@ -76,14 +76,14 @@ and anything greater may introduce audio clipping.</p>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">实数</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
 <p class="code">var num = audio_get_listener_count();<br>for( var i = 0; i &lt; num; ++i;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var info = audio_get_listener_info(i);<br>&nbsp;&nbsp;&nbsp;var ind = info[?"index"];<br>&nbsp;&nbsp;&nbsp;if audio_get_master_gain(ind) != 1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio_set_master_gain(info[?"index"], 1);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;ds_map_destroy(info);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 

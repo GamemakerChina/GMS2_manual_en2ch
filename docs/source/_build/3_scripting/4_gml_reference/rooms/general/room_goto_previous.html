@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,32 +37,26 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<blockquote>With this function you can make your game go to the
-previous one as listed in the resource tree at the time the game
-was compiled. If this room does not exist, an error will be thrown
-and the game will be forced to close. Note that the room will not
-change until the end of the event where the function was called, so
-any code after this has been called will still run if in the same
-event.</blockquote>
+<blockquote>With this function you can make your game go to the previous one as listed in the resource tree at the time the game was compiled. 如果将要前往的下一个房间不存在，那么将会抛出错误并强制Note that the room will not change until the end of the event where the function was called, so any code after this has been called will still run if in the same event.</blockquote>
 
 <p><br>
 </p>
 
-<h3>语法：</h3>
+<h3>Syntax:</h3>
 
 <p class="code">room_goto_previous();</p>
 
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
 <p class="code">if room_exists(room_previous(room))
 room_goto_previous();</p>

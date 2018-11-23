@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,25 +40,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action block sets the <tt>sprite_index</tt> of the instance
-to another sprite from the resource tree. You select the sprite to
-change to, and then give the image (animation frame) to show. Note
-that if you don't want the sprite to animate after setting the
-frame, you'll need to use the <a href=
-"set_animation_speed.html">Set Animation Speed</a> action and set
-it to 0, or if you want the sprite to continue animating then set
-the value to use the <tt>image_index</tt> built-in variable
-variable instead.</p>
+<p>此动作用来设置实例的 <tt>精灵索引</tt> ，这样你就能将实例的精灵改为资源树上的另一个精灵。你需要选择新精灵，并选择显示此精灵的哪一张次级图像。（动画里的一帧）。注意如果你不想在设置后使精灵播放动画，那么你需要用 <a href=
+"set_animation_speed.html">设置动画速度</a> 动作将它动画速度设为0。如果你想精灵持续播放动画，那么你需要使用 <tt>图像索引</tt> 内置变量来设置这个值。</p>
 
-<p>Changing the sprite will also change the collision mask of the
-instance, unless you have also specified a separate
-<tt>mask_index</tt> in the <a href=
-"../../../2_interface/1_editors/objects.html">Object Editor</a>.
-Please note that for changes in this action to be visible, the
-instance should have either <i>no</i> draw event (and so
-<i>GameMaker Studio 2</i> will default draw the sprite) or be drawn
-using <a href="../drawing_actions/draw_self.html">Draw Self</a>
-action.</p>
+<p>注意此值的改变也将影响检查碰撞的方式，除非你提供独立的 <tt>mask_index</tt> （碰撞遮罩）。这需要在 <a href=
+"../../../2_interface/1_editors/objects.html">物体编辑器</a>种设置。请注意，要使此更改可见，实例必须 &lt;i0&gt;没有&lt;/i0&gt; 绘制事件(这样 &lt;i1&gt;GameMaker Studio 2&lt;/i1&gt; 将默认绘制精灵) 或使用 &lt;a2&gt;自我绘制&lt;/a2&gt; 动作。</p>
 </blockquote>
 
 <p><br>
@@ -81,14 +67,12 @@ action.</p>
 
 <tr>
 <td>精灵</td>
-<td>The new sprite to use (-1 if you want to remove the
-sprite).</td>
+<td>将要使用的新精灵（-1意味着移除精灵）。</td>
 </tr>
 
 <tr class="alt">
 <td>帧</td>
-<td>The animation frame to show initially (if no extra frames are
-used, then use 0).</td>
+<td>初始显示的动画帧。如果没有多余的帧可供使用，那么将使用0。</td>
 </tr>
 </table>
 </blockquote>
@@ -96,12 +80,10 @@ used, then use 0).</td>
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 <img class="center" src="images/e_instance_set_sprite.png" alt=
 "Set Sprite Example">
-<blockquote>The above action block code sets a new sprite as well
-as a number of other properties for how that sprite is to be
-displayed.</blockquote>
+<blockquote>上述动作代码块创建了一个新精灵，并设置它的很多属性。</blockquote>
 
 <p><br>
 </p>
@@ -110,7 +92,7 @@ displayed.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Common Actions</a></div>
+<div style="float:left">上一页:<a href="index.html">常见操作</a></div>
 
 <div style="float:right">next: <a href=
 "set_instance_rotation.html">Set Instance Rotation</a></div>

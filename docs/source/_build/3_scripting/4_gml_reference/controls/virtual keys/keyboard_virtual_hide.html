@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="在线文档、网络联机帮助、web 帮助、chm2w" />
+<meta name="keywords" content="online documentation, web online help, web help, chm" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,12 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to hide the virtual keyboard on the
-device running the game. Calling this function will generate a
-<a href=
-"../../2_interface/1_editors/events/async_events.html">System
-Asynchronous Event</a>, in which the <tt>async_load</tt> DS map
-will be populated with the following key/value pairs:</p>
+<p>This function can be used to hide the virtual keyboard on the device running the game. 调用此函数将生成 <a href=
+"../../2_interface/1_editors/events/async_events.html">系统异步事件</a>,这个事件 <tt>异步加载</tt> DS 映射将会被以下的键/值填充：</p>
 
 <ul>
 <li>"<b>event_type</b>" - this will be "<b>virtual keyboard
@@ -52,22 +48,22 @@ status</b>" when triggered by virtual keyboard functions.</li>
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>screen_height</b>" - 虚拟键盘的高度（以像素为单位）。 如果键盘不可见，则该值为 0。</li>
+<li>"<b>虚拟键盘高度</b>" - 虚拟键盘的高度（以像素为单位）。 如果键盘不可见，则该值为 0。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>keyboard_status</b>" - 键盘的当前状态，作为以下字符串之一返回：<br>
+<li>"<b>键盘状态</b>" - 键盘的当前状态，作为以下字符串之一返回：<br>
 <br>
 
 <ul>
-<li>"hiding"</li>
+<li>"正在执行隐藏动作"</li>
 
-<li>"hidden"</li>
+<li>"隐藏"</li>
 
-<li>"showing"</li>
+<li>"正在执行显示动作"</li>
 
-<li>"visible"</li>
+<li>"可见"</li>
 </ul></li>
 </ul>
 </blockquote>
@@ -82,14 +78,14 @@ status</b>" when triggered by virtual keyboard functions.</li>
 <p><br>
 </p>
 
-<h3>返回：</h3>
+<h3>Returns:</h3>
 
 <p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3>举例：</h3>
+<h3>例如：</h3>
 
 <p class="code">if input == true<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
