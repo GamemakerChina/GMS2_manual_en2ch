@@ -54,38 +54,41 @@ ds_map</a> for the following values:</p>
 
 <blockquote>
 <ul>
-<li><b>"status":</b> This holds the status code, where a negative
-value denotes an error, a description of which will be contained in
-the “errorString”. A value of 0 (or a positive value) indicates a
-success(see below for exact values), and the “resultString” will
-contain the returned data or a success message.</li>
+<li><b>"<span class="notranslate">status</span>":</b> This holds
+the status code, where a negative value denotes an error, a
+description of which will be contained in the "<span class=
+"notranslate">errorString</span>". A value of 0 (or a positive
+value) indicates a success(see below for exact values), and the
+"<span class="notranslate">resultString</span>" will contain the
+returned data or a success message.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"id":</b> The id which was returned from the called
-function. If you fire off a series of <tt>cloud_</tt> requests then
-you need to know which one you are getting the reply to, and so you
-would use this value to compare to the value you stored when you
-originally sent the request to find the right one.</li>
+<li><b>"<span class="notranslate">id</span>":</b> The id which was
+returned from the called function. If you fire off a series of
+<tt>cloud_</tt> requests then you need to know which one you are
+getting the reply to, and so you would use this value to compare to
+the value you stored when you originally sent the request to find
+the right one.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"description":</b> The description of the last uploaded
-file.</li>
+<li><b>"<span class="notranslate">description</span>":</b> The
+description of the last uploaded file.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"resultString":</b> This holds a string which is the data
-blob returned from the cloud.</li>
+<li><b>"<span class="notranslate">resultString</span>":</b> This
+holds a string which is the data blob returned from the cloud.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"errorString":</b> returns an Error String for any
-error.</li>
+<li><b>"<span class="notranslate">errorString</span>":</b> returns
+an Error String for any error.</li>
 </ul>
 </blockquote>
 
@@ -102,34 +105,42 @@ explained in the following table:</p>
 
 <tr>
 <td>-1</td>
-<td>errorString = "Not logged in to &lt;SERVICE&gt;"</td>
+<td><span class="notranslate">errorString = "Not logged in
+to</span> &lt;SERVICE&gt;"</td>
 <td>You have not successfully logged in to the given Cloud
 Service</td>
 </tr>
 
 <tr class="alt">
 <td>0</td>
-<td>resultString = recovered data</td>
+<td><span class="notranslate">resultString</span> = recovered
+data</td>
 <td>New game data downloaded from the cloud (following a
 cloud_synchronise call)</td>
 </tr>
 
 <tr>
 <td>1</td>
-<td>resultString = "AlreadySynchronized"</td>
+<td><span class="notranslate">resultString =
+"AlreadySynchronized"</span>
+</td>
 <td>No new data since you last called cloud_synchronise</td>
 </tr>
 
 <tr class="alt">
 <td>2</td>
-<td>resultString = "ConflictDeferral"</td>
+<td><span class="notranslate">resultString =
+"ConflictDeferral"</span>
+</td>
 <td>A conflict was encountered, but the gamer chose to ignore
 it</td>
 </tr>
 
 <tr>
 <td>3</td>
-<td>resultString = "GameUploadSuccess"</td>
+<td><span class="notranslate">resultString =
+"GameUploadSuccess"</span>
+</td>
 <td>data from <a href=
 "cloud_string_save.html"><tt>cloud_string_save</tt></a> or <a href=
 "cloud_file_save.html"><tt>cloud_file_save</tt></a> was
@@ -137,8 +148,10 @@ successfully uploaded to the cloud</td>
 </tr>
 
 <tr class="alt">
-<td>-n</td>
-<td>errorString = Description of error</td>
+<td><span class="notranslate">-n</span>
+</td>
+<td><span class="notranslate">errorString</span> = Description of
+error</td>
 <td>Any other negative number means a synchronisation failure</td>
 </tr>
 </table>
@@ -229,7 +242,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -70,14 +70,22 @@ ds_list_size(id)-1.</td>
 <h3 class="studio">Description</h3>
 
 <p>With this function you can check the given list position and the
-value held within the list for that position will be returned.<br>
-<br>
-<i><b>NOTE:</b> If you give a position that is outside of the given
-list size (ie: position 11 in a 10 value list) then the function
-will return <tt>&lt;undefined&gt;</tt>. You should always check
-this using the <a href=
+value held within the list for that position will be returned. Note
+that if you give a position that is outside of the given list size
+(ie: position 11 in a 10 value list) then the function may return
+<tt>undefined</tt> <i>or</i> 0. This is because when you create the
+list, internally the first few entries in the list are set to 0 to
+minimize performance issues when initially adding items to the list
+(although the <a href=
+"ds_list_size.html"><tt>ds_list_size()</tt></a> function will still
+return 0 on a newly created list). If you wish to ensure that the
+list is "truly" empty on create, then you should call <a href=
+"ds_list_clear.html"><tt>ds_list_clear()</tt></a> after creating
+the list, which will then mean that any values returned for
+unpopulated list slots will be <tt>undefined</tt>, which you can
+then check consistently using the <a href=
 "../../../3_gml_overview/checking_data_types/is_undefined.html"><tt>
-is_undefined()</tt></a> function.</i><br>
+is_undefined()</tt></a> function.<br>
 <br></p>
 
 <p><br>
@@ -103,7 +111,7 @@ Lists</a></div>
 "ds_list_insert.html">ds_list_insert</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

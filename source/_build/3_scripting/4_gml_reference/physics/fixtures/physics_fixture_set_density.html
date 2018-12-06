@@ -29,17 +29,48 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">physics_fixture_set_density</h1>
+<h2>physics_fixture_set_density</h2>
 
-<h2 class="studio">This function sets the density of a
-fixture.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
 
-<p class="code">physics_fixture_set_density(fixture, density)</p>
+<blockquote>
+<p>The density of something is defined as its mass per unit volume,
+which basically means <i>how much mass is crammed into the space it
+takes up in the world</i>. So, a balloon would have a low density
+as it has little mass that occupies a large space, while a lead bar
+would have a high density as it has a great mass, yet occupies
+little space.</p>
+
+<p><img class="center" src=
+"images/physics_fixture_set_density_image.png">
+</p>
+
+<p>In the <i>GameMaker Studio 2</i> 2D physics world mass is
+calculated automatically for you from the values you input for the
+<b>density</b> and by the <b>surface area</b> of the shape you
+define for the fixture. This will have a direct impact on how much
+inertia a fixture has as well as how it reacts to collisions and
+forces, so if you make a small shape with a high density it will
+have a very large mass (like a bar of lead), but if you define a
+large shape with a low density it will have a much smaller mass
+(like a balloon).</p>
+
+<div class="note"><b>NOTE</b>: If you wish the instance that is
+going to receive the fixture to be static (ie: immobile in the game
+world) then the density should be set to 0, essentially giving it
+an infinite density.</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">physics_fixture_set_density(fixture, density)</p>
 
 <div class="param">
 <table>
@@ -63,52 +94,29 @@ fixture.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Example:</h3>
 
-<p>The density of something is defined as its mass per unit volume,
-which basically means <i>how much mass is crammed into the space it
-takes up in the world</i>. So, a balloon would have a low density
-as it has little mass that occupies a large space, while a lead bar
-would have a high density as it has a great mass, yet occupies
-little space.<br>
-<br>
-<img class="center" src=
-"images/physics_fixture_set_density_image.png"></p>
+<p class="code">physics_fixture_set_density(fix_Balloon,
+0.1);<br></p>
 
-<p>In the <i>GameMaker Studio 2</i> 2D physics world mass is
-calculated automatically for you from the values you input for the
-<b>density</b> and by the <b>surface area</b> of the shape you
-define for the fixture. This will have a direct impact on how much
-inertia a fixture has as well as how it reacts to collisions and
-forces, so if you make a small shape with a high density it will
-have a very large mass (like a bar of lead), but if you define a
-large shape with a low density it will have a much smaller mass
-(like a balloon).<br>
-<br>
-<i><b>Note:</b> If you wish the instance that is going to receive
-the fixture to be static (ie: immobile in the game world) then the
-density should be set to 0, essentially giving it an infinite
-density.</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
-
-<p class="code">physics_fixture_set_density(fix_Balloon, 0.1);</p>
-
+<blockquote>
 <p>The code above will set the density of the fixture indexed in
 "fix_Ballon" to 0.1.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href=
 "index.html">Fixtures</a></div>
@@ -116,11 +124,13 @@ density.</i><br>
 <div style="float:right">Next: <a href=
 "physics_fixture_set_friction.html">physics_fixture_set_friction</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

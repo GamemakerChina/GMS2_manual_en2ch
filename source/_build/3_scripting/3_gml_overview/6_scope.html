@@ -482,7 +482,37 @@ example:</p>
 <p class="code">image_blend = col;</p>
 
 <p>Using this code will make the image blend a different colour
-every time the macro is used.</p>
+every time the macro is used. It is worth noting that you can also
+split macros over multiple lines using the <i>forward slash</i>
+<tt>\</tt> to show where the line breaks. An example would be
+something like:</p>
+
+<p class="code">#macro hello show_debug_message("Hello" + \<br>
+string(player_name) + \<br>
+", how are you today?");</p>
+
+<p>This is purely cosmetic, in that splitting a macro like this
+will have no effect over the result of the final macro, and is
+simply to provide support for multiline text on macros that have
+longer lines of code.</p>
+
+<p>One very important feature of macros is that they can be defined
+for use with specific <a href=
+"../../2_interface/3_settings/configurations.html">Configurations</a>
+(configs), meaning you can have the same macro name but give it
+different values based on the currently selected config. For
+example, say you have a configuration for Android Ads and another
+for iOS Ads, then you could define a single macro to hold the
+required app ID value:</p>
+
+<p class="code">#macro ad_id "";<br>
+#macro Android:ad_id "com.yoyogames.googlegame"<br>
+#macro iOS:ad_id "com.yoyogames.appstoregame"</p>
+
+<p>As you can see, you give the config name first then a colon :
+and then the macro name and value. Note that you cannot have any
+whitespace between the colon : and either the config name nor the
+macro name otherwise you will get an error.</p>
 </div></blockquote>
 
 <p><br>
@@ -501,7 +531,7 @@ Instances</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -1535,6 +1535,49 @@ logic from the Step Event or an Alarm event into the System Event
 and only run it when it's actually required.</p>
 </div>
 <br>
+<a name="async_system_gamepads" id="async_system_gamepads"></a>
+<label class="collapse" for="thirtythree">Virtual Keyboards</label>
+<input id="thirtythree" type="checkbox">
+<div class="index_list">
+<p>When this event is triggered for a virtual keyboard being opened
+or closed it will return the following key/value pairs in the
+<tt>async_load</tt> map:<br>
+<br></p>
+
+<ul>
+<li>"<b>event_type</b>" - the type of system event received, which
+will be "<b>virtual keyboard status</b>" for virtual
+keyboards.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>screen_height</b>" - the height of the virtual keyboard (in
+pixels). This will be 0 if the keyboard is invisible.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>keyboard_status</b>" - the current status of the keyboard,
+returned as one of the following strings:<br>
+<br>
+
+<ul>
+<li>"hiding"</li>
+
+<li>"hidden"</li>
+
+<li>"showing"</li>
+
+<li>"visible"</li>
+</ul></li>
+</ul>
+
+<p>See <a href=
+"../../../3_scripting/4_gml_reference/controls/virtual%20keys/index.html">
+here</a> for more information on the virtual keyboard.</p>
+</div>
+<br>
 <a name="async_system_xboxlive" id="async_system_xboxlive"></a>
 <label class="collapse" for="thirtytwo">XBox Live</label>
 <input id="thirtytwo" type="checkbox">
@@ -1571,6 +1614,58 @@ choose an account to sign in with)</li>
 <p>For more information on the specific functions available for
 XBox Live, please see <a href=
 "../../../3_scripting/4_gml_reference/xbox_live/index.html">here</a>.</p>
+</div>
+<br>
+<a name="async_system_audio" id="async_system_audio"></a>
+<label class="collapse" for="thirtyfour">Audio System
+Status</label> <input id="thirtyfour" type="checkbox">
+<div class="index_list">
+<p>This event type is specifically for use when working with the
+HTML5 target, as it will be triggered every time the Web Audio
+context status changes. This means that if you have, for example, a
+piece of looping background music, then you can pause it or stop
+and restart it, based on this event triggering. This can be checked
+by looking for the following key/value pair in the
+<tt>async_load</tt> map:</p>
+
+<ul>
+<li>"<b>event_type</b>" - the type of system event received, which
+will be the following string for an audio event:<br>
+<br>
+
+<ul>
+<li>"<b>audio_system_status</b>" - The audio system has initialised
+or the context has changed.</li>
+</ul></li>
+</ul>
+
+<p>If this event type is triggered, then there will be an
+additional key in the <tt>async_load</tt> map:</p>
+
+<ul>
+<li>"<b>status</b>" - The status of the audio system, which will be
+one of the following two strings<br>
+<br>
+
+<ul>
+<li>"<b>available</b>" - The audio system is initialised and
+available to play sounds</li>
+
+<li>"<b>unavailable</b>" - The audio system is not initialised, or
+the context is not currently running, and so can't play sounds (all
+sound playing functions will return -1)</li>
+</ul></li>
+</ul>
+
+<p>For more information on the specific functions available for
+Audio, please see <a href=
+"../../../3_scripting/4_gml_reference/audio/index.html">here</a>.</p>
+
+<div class="note"><b>NOTE</b>: While this event is designed for use
+with the HTML5 target, it will also be triggered on <i>all</i>
+other platforms, but on everything (except HTML5) it will only be
+triggered once on Game Start when the audio engine is first
+initialised.</div>
 </div></blockquote>
 </div></blockquote>
 
@@ -1589,7 +1684,7 @@ Events</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

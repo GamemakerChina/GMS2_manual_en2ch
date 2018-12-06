@@ -795,13 +795,30 @@ let you modify aspects of that single unique instance: <img class=
 "center" src="images/editor_room_instanceproperties.png" alt=
 "Room Instance properties"></p>
 
-<p>From here you can give the instance a unique name, set whether
-it is to inherit from the parent room, or change the object that
-you want it to be an instance of. You can also change the
-characteristics of this instance too, setting a colour to blend it
-with (white by default), or rotating and flipping it, as well as
-scale the instance along either or both the axis, and set its
-position within the room.</p>
+<p>By default the instance will have a name like "inst_38B0BFF",
+but this can be changed to anything you want as long as the name
+uses only alpha-numeric characters and the under-bar "_" (and no
+spaces). However it's worth noting that the name given here
+(whether one you give, or the default one that the IDE gives) is
+considered a <tt>constant</tt> and so <b>must be unique to the
+instance</b>. This also means that it can be used in code n your
+game to identify the instance, but only if you are in the same room
+as the instance.</p>
+
+<p><a name="room_instance_variables" id=
+"room_instance_variables"></a> Below the instance name you can set
+whether the instance it is to inherit from the parent room, change
+the object that you want it to be an instance of or even open up
+the <a href="objects.html">Object Editor</a> to change the
+properties there. You can also open up in a new window the object
+editor for the instance should you wish to change anything there,
+and also check and edit variables through the <b>Object
+Variable</b> window (for more information on Object Variables,
+please see the section <a href="objects.html">here</a>). You can
+change the characteristics of this instance too, setting a colour
+to blend it with (white by default), or rotating and flipping it,
+as well as scale the instance along either or both the axis, and
+set its position within the room.</p>
 
 <p>Finally you can give the instance some <b>creation code</b>
 which will run directly after the object creation event code, and
@@ -1356,7 +1373,7 @@ Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

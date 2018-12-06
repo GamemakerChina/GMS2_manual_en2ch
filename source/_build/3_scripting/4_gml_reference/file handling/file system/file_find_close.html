@@ -41,7 +41,13 @@ if (window.name != "content")
 
 <h3 class="studio">Description</h3>
 
-<p>Must be called after handling all files to free memory.<br>
+<p>Must be called after handling files opened using
+<tt>file_find_first()</tt> and <tt>file_find_next()</tt> functions
+to free memory. The file find functions open handles into the file
+directory and these take up a minimal amount of memory, which (over
+time) mounts up. Therefore you should always call this function
+after you have found the files you require to "close" these
+handles.<br>
 <br></p>
 
 <p><br>
@@ -52,7 +58,7 @@ if (window.name != "content")
 <p class="code">file_find_close();</p>
 
 <p>This will close and free the memory associated with the file
-functions.</p>
+find function handles.</p>
 
 <p><br>
 </p>
@@ -69,7 +75,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

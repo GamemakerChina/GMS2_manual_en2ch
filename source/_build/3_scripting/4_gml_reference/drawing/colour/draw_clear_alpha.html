@@ -29,12 +29,46 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">draw_clear_alpha</h1>
+<h2>draw_clear_alpha</h2>
 
-<h2 class="studio">Clears the entire screen with an alpha-blended
-given colour.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>This function can be used to clear the entire screen with a
+given colour and the alpha component of the destination is set to
+the value you have set - this function does <i>not</i> do any
+blending as it works but any subsequent blend operations can be set
+up to use the destination alpha that you have set. This is only for
+use in the draw event of an instance (it will not show if used in
+any other event), and it can also be very useful for clearing
+<a href="../surfaces/index.html">surfaces</a> when they are newly
+created.</p>
+
+<p>It is worth noting that when using the HTML5 module, you can use
+this function to make the canvas background transparent, which will
+then permit any images being used in the host HTML to be seen with
+the game running over them. To achieve this effect you must first
+go into the room editor and remove any <b>Background Layers</b>
+from the <a href=
+"../../../../2_interface/1_editors/rooms.html">Room Editor</a>,
+then untick the option <b>Clear View Background</b> found on the
+<a href=
+"../../../../2_interface/1_editors/rooms.html#room_properties">View
+Properties</a>. Finally, you will need to make a new object, place
+it in the first room of the game, and assign it a very high depth
+(for example, 10000). Then in the <b>Pre Draw</b> event use this
+function to set the canvas alpha to the colour and transparency
+that you wish it to have.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">draw_clear_alpha(col, alpha);</p>
 
@@ -64,53 +98,28 @@ cleared</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function can be used to clear the entire screen with a
-given colour and the alpha component of the destination is set to
-the value you have set - this function does <i>not</i> do any
-blending as it works but any subsequent blend operations can be set
-up to use the destination alpha that you have set. This is only for
-use in the draw event of an instance (it will not show if used in
-any other event), and it can also be very useful for clearing
-<a href="../surfaces/index.html">surfaces</a> when they are newly
-created.<br>
-<br>
-It is worth noting that when using the HTML5 module, you can use
-this function to make the canvas background transparent, which will
-then permit any images being used in the host HTML to be seen with
-the game running over them. To achieve this effect you must first
-go into the room editor and remove any <b>Background Layers</b>
-from the <a href=
-"../../../../2_interface/1_editors/rooms.html">Room Editor</a>,
-then untick the option <b>Clear View Background</b> found on the
-<a href=
-"../../../../2_interface/1_editors/rooms.html#room_properties">View
-Properties</a>. Finally, you will need to make a new object, place
-it in the first room of the game, and assign it a very low depth
-(for example, -1000000). Then in the <b>Pre Draw</b> event use this
-function to set the canvas alpha to the colour and transparency
-that you wish it to have.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">draw_clear_alpha(c_red, 0.5);</p>
 
+<blockquote>
 <p>This will clear the screen with 50% (0.5) transparency with the
 colour red.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Colour And
 blending</a></div>
@@ -118,11 +127,13 @@ blending</a></div>
 <div style="float:right">Next: <a href=
 "draw_set_alpha.html">draw_set_alpha</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

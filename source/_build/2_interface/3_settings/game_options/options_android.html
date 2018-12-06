@@ -57,32 +57,54 @@ other special characters at all, nor should it have uppercase
 characters. These details will then be used to generate a Package
 ID with the format "<tt>com.company.myappname</tt>".</p>
 
-<p>You then need to set the <b>Target</b>, <b>Minimum</b> and
-<b>Compile</b> SDK versions. The Compile SDK version is the version
-of the API that the project is compiled against. This means you can
-use Android API features included in that version of the API. If
-you try and use API 16 features - for example - but set Compile SDK
-15, then you will get a compilation error. If you set the Compile
-SDK to 16 then you can still run the app on an API 15 device (as
-well as all other previous versions too).</p>
+<div class="note"><b>NOTE</b>: If you have already set up the
+<b>Amazon Fire</b> Game Options, you can click the "Sync from
+Amazon Fire" button at the top to transfer the relevant information
+from the Fire options to the Android options.</div>
 
-<p>The Target SDK, however, has nothing to do with how your app is
-compiled or what APIs you can utilize. The Target SDK indicates
-that you have tested your app on (up to and including) the version
-you specify. This is simply to give the Android OS an idea of how
-it should handle your app in terms of OS features. For all
-practical purposes, most apps are going to want to set Target SDK
-to the latest released version of the API (as used by the Compile
-SDK setting). This will ensure your app looks as good as possible
-on the most recent Android devices.</p>
+<p><br>
+You then need to set the <b>Build Tools</b> and <b>Support
+Library</b> versions, as well as the <b>Target</b>, <b>Minimum</b>
+and <b>Compile</b> SDK versions. The <b>Build Tools</b> and
+<b>Support Library</b> are used when <i>GameMaker Studio 2</i>
+builds your game for the Android target and should be set to
+appropriate values based on the tools you have installed using the
+Android SDK Manager or Android Studio.</p>
 
-<p>The Minimum SDK version is the minimum API level that will run
-your project. This is set to 9 by default, and in general this will
-be fine, but if you add extensions then they may require a higher
-minimum API level. <img class="center" src=
-"images/android_general2_options.png" alt=
-"Android General Options Part 2"></p>
+<p>The <b>Target SDK</b> indicates that you have tested your app on
+(up to and including) the version you specify here. This is simply
+to give the Android OS an idea of how it should handle your app in
+terms of OS features. For all practical purposes, most apps are
+going to want to set Target SDK to the latest released version of
+the API (as used by the Compile SDK setting). This will ensure your
+app looks as good as possible on the most recent Android
+devices.</p>
 
+<p>The <b>Minimum SDK</b> version is the minimum API level that
+will run your project. From August 2018 Google has made API level
+26 the required minimum, but if you add extensions then they may
+require a higher minimum API level.</p>
+
+<p>The <b>Compile SDK</b> version is the version of the API that
+the project is compiled against. This means you can use Android API
+features included in that version of the API. If you try and use
+API 16 features - for example - but set Compile SDK 15, then you
+will get a compilation error. However, if you set the Compile SDK
+to 28 then you can still run the app on an API 23 device (as well
+as all other previous versions too).</p>
+
+<p>You can select from one of the predefined target settings by
+clicking on the <b>Pre-populate SDK values to chosen API level</b>
+button, which will open a list of different APIs to choose from.
+Selecting any one of them will populate all the SDK files with
+appropriate values which you can then use or edit as required.</p>
+
+<div class="note"><b>NOTE</b>: You must have installed the
+appropriate APIs in the Android SDK Manager or through Android
+Studio for your projects to compile correctly.</div>
+<br>
+<img class="center" src="images/android_general2_options.png" alt=
+"Android General Options Part 2">
 <p>The second part of the <b>General</b> section covers the CPU
 <i>Architectures</i> to build for, with the following options
 available (you can select all of them or only those that you
@@ -94,9 +116,13 @@ compiled <tt>apk</tt>):</p>
 
 <li>Build for ARMV7 (Checked by default)</li>
 
-<li>Build for x86</li>
+<li>Build for x86 (checked by default)</li>
 
-<li>Build for Mips</li>
+<li>Build for Mips (checked by default)</li>
+
+<li>Build for ARM64</li>
+
+<li>Build for x86_64</li>
 </ul>
 
 <p>After setting that up you can select the different
@@ -169,6 +195,57 @@ what works on your build device may not be appropriate for another
 user, and as such if in doubt leave it set to 4.</p>
 </div>
 <br>
+<label class="collapse" for="g">Adaptive Icons</label> <input id=
+"g" type="checkbox">
+<div class="index_list">
+<p><img class="center" src=
+"images/android_adaptiveicons_options.png" alt=
+"Android Adaptive Icons Options">
+</p>
+
+<p>Android 8.0 (API level 26) introduced <b>adaptive launcher
+icons</b> for your games, and these icons can display a variety of
+shapes across different device models. To deal with this, you are
+required to supply a number of foreground and background images for
+your icons to be displayed at different sizes. These icon sizes
+are:</p>
+
+<ul>
+<li>81x81 pixels (LDPI)</li>
+
+<li>108x108 pixels MDPI)</li>
+
+<li>162x162 pixels (HDPI)</li>
+
+<li>216x216 pixels (XHDPI)</li>
+
+<li>324x324 pixels (XXHDPI)</li>
+
+<li>432x432 pixels (XXXHDPI)</li>
+</ul>
+
+<p>You can supply each forground and background image individually,
+or you can choose to <b>Generate Icons From File</b>. This means
+that <i>GameMaker Studio 2</i> will generate the required icon
+images from a base (XXXHDPI) file. You need to supply one image
+each for the foreground and background and then click the button
+labeled <b>Generate</b>, and the Icons will be created for you.</p>
+
+<p>Note that your adaptive icons may be <i>masked</i> on any given
+device and so you also have the option to see how they'll look
+along with these masks from the <b>Preview Adaptive Icons</b>
+menu:</p>
+
+<p><img class="center" src="images/android_adaptiveicons_masks.gif"
+alt="Android Adaptive Mask Preview">
+</p>
+
+<p>Note that this is simply a preview of how the icon could look
+with the selected mask, and the setting will <i>not</i> affect how
+the icons are exported and displayed, as that is up to the device
+and OS the game will be run on.</p>
+</div>
+<br>
 <label class="collapse" for="b">Graphics</label> <input id="b"
 type="checkbox">
 <div class="index_list">
@@ -202,12 +279,10 @@ getting negative comments and poor rating for your game due to
 graphical errors or crashes on older devices.<br>
 <br></li>
 
-<li><b>Scaling</b>: Your game can be configured to scale the draw
-canvas automatically to maintain the aspect ratio within the
-browser, or you can select to have it stretch to fit. The stretch
-to fit option will not full screen the game in the browser, but
-rather stretch what is drawn to fit the canvas size, as defined by
-the first room of the game.</li>
+<li><b>Scaling</b>: Here you can select to scale the draw canvas
+maintaining the aspect ratio within the device screen - adding
+"padding" around the edges to fit the screen - or you can select to
+have the draw canvas stretched stretch to fit.</li>
 </ul>
 
 <p>Finally there is the option to set the size of the <b>Texture
@@ -259,7 +334,12 @@ specific time then you can also set it here from 0 to 10 seconds
 (the default time of 0 means that it will only show for the
 duration of the asset loading).</p>
 
-<p>It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
+<div class="note"><b>IMPORTANT!</b> On very old and very low end
+devices, a splash screen greater than 1024x768 may cause an out of
+memory error.</div>
+
+<p><br>
+It is worth noting that <i>GameMaker Studio 2</i> has a <a href=
 "../../2_extras/project_image_generator.html">Project Image
 Generator</a> tool which can be used to automatically create all
 the images required for all the different target platforms your
@@ -307,6 +387,12 @@ your game, the zip will be downloaded and unpacked. You can find
 further details of this option <a href=
 "http://help.yoyogames.com/entries/28291426" target=
 "_blank">here</a>.</p>
+
+<p>Finally, you have the option to prepare the final app package as
+an <b>Android TV</b> game (you should only tick this if your game
+conforms to the <a href=
+"https://developer.android.com/training/tv/games/" target=
+"_blank">Android TV guidelines</a>).</p>
 </div>
 <br>
 <label class="collapse" for="e">Permissions</label> <input id="e"
@@ -351,8 +437,8 @@ input from the microphone.<br>
 
 <div class="note"><b>NOTE</b>: If you are not sure that you need
 these, you should probably just leave them un-checked by default
-and let GameMaker: Studio deal with the permissions for your
-game.</div>
+and let <i>GameMaker Studio 2</i> deal with the permissions for
+your game.</div>
 </div>
 <br>
 <label class="collapse" for="f">Social</label> <input id="f" type=
@@ -396,15 +482,11 @@ Google Play Developers dashboard).<br>
 
 <li><b>Google - Enable Cloud Saving</b>: Checking this will enable
 Google Cloud Saving, and (as above) will prompt you to download and
-install the relevant extension from the Marketplace.<br>
+install the relevant extension from the Marketplace. See the
+section on Cloud Saving from the <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html">
+Asynchronous Functions</a> page.<br>
 <br></li>
-
-<li><b>Amazon - Enable Amazon IAPs</b>: If you are using any
-<b>Amazon Services</b>, you need to select this checkbox. Once you
-have selected this, you will be prompted to download and install
-the corresponding extension from the Marketplace, and all the
-required functions are included as part of the extension
-package.</li>
 </ul>
 </div></blockquote>
 
@@ -423,7 +505,7 @@ Options</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

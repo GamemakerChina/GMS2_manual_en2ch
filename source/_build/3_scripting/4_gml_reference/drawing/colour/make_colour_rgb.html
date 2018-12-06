@@ -29,18 +29,36 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">make_colour_rgb</h1>
+<h2>make_colour_rgb</h2>
 
-<h2 class="studio">Returns a colour based on the mix of red, green
-and blue component values.</h2>
-
-<p><b>Syntax:</b>
+<div class="body-scroll">
+<p><br>
 </p>
 
-<p class="code">make_colour_rgb(red, green, blue);</p>
+<h3>Description</h3>
+
+<blockquote>
+<p><i>GameMaker Studio 2</i> provides this function (as well as
+others) to permit the user to make their own colours. This
+particular function takes three component parts, the <i>red</i>,
+the <i>green</i> and the <i>blue</i> components of the colour that
+you wish to make. These values are taken as being between 0 and 255
+so you can make 16,777,216 (256*256*256) colours with this! Below
+you can see an image of how these components look when separated:
+<img class="center" src="images/rgb.png"></p>
+
+<p>The image on the left is a break-down of the individual
+components of the function, and then on the right is an
+illustration of how changing these components affects the end
+colour.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">make_colour_rgb(red, green, blue);</p>
 
 <div>
 <table>
@@ -69,39 +87,28 @@ and blue component values.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> value</p>
+<h3>Returns:</h3>
+
+<p class="code">Int</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p><i>GameMaker Studio 2</i> provides this function (as well as
-others) to permit the user to make their own colours. This
-particular function takes three component parts, the <i>red</i>,
-the <i>green</i> and the <i>blue</i> components of the colour that
-you wish to make. These values are taken as being between 0 and 255
-so you can make 16,777,216 (256*256*256) colours with this! Below
-you can see an image of how these components look when separated:
-<img class="center" src="images/rgb.png"> The image on the left is
-a break-down of the individual components of the function, and then
-on the right is an illustration of how changing these components
-affects the end colour.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">col = make_colour_rgb(100, 145, 255);</p>
 
+<blockquote>
 <p>The above code uses the function to create a colour and store
 its value in the variable "col" for later use.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">colour and
 Blending</a></div>
@@ -109,11 +116,13 @@ Blending</a></div>
 <div style="float:right">Next: <a href=
 "merge_colour.html">merge_colour</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

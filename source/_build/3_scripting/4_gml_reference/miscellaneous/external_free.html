@@ -35,12 +35,24 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>Description</h3>
 
-<p class="code">external_free(id);</p>
+<blockquote>
+<p>This function frees the memory associated with the <tt>dll</tt>
+or <tt>dylib</tt> with the given name. This should be done whenever
+the file in question is no longer needed in the game, normally (for
+example) in a Game End event.</p>
+
+<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
+available with the Trial Licence of the product.</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">external_free(id);</p>
 
 <div class="param">
 <table>
@@ -63,21 +75,6 @@ free</td>
 <h3>Returns:</h3>
 
 <p class="code">N/A</p>
-
-<p><br>
-</p>
-
-<h3>Description</h3>
-
-<blockquote>
-<p>This function frees the memory associated with the <tt>dll</tt>
-or <tt>dylib</tt> with the given name. This should be done whenever
-the file in question is no longer needed in the game, normally (for
-example) in a Game End event.</p>
-
-<div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
-available with the Trial Licence of the product.</div>
-</blockquote>
 
 <p><br>
 </p>
@@ -106,7 +103,7 @@ given dll.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

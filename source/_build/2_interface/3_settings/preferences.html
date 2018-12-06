@@ -61,17 +61,25 @@ same SDK requirements. <img class="center" src=
 "images/amazonfire_prefs_1.png" alt=
 "Amazon Fire Preferences Packaging And Debug"></p>
 
-<p>At the top of the preferences you can set the size of the Memory
-Heap for the Android JDK. Next you have to set up the various
-different <b>Paths</b> so that <i>GameMaker Studio 2</i> knows
-where to look for the various tools required to build the final
-executable package and test your game. This is split into three
-sections for the <b>Android SDK</b>, <b>Android NDK</b> and <b>Java
-JDK</b>. These paths should have been filled in automatically for
-you, but should you have any issues you can click the button to the
-right to open the file explorer and manually select the locations
-for each element. You can find details of what versions are
-required for each of the SDK elements <a href=
+<p>At the top of the preferences you have the option to synchronise
+the settings from the Android export. This is for those people that
+have the Mobile Licence and have already set up and used the
+Android export, since Amazon Fire uses almost the exact same build
+tools as Android. Just click this to import all the appropriate
+settings from Android, then check through them to make sure that
+they are correct.</p>
+
+<p>Under the Synch button you can set the size of the Memory Heap
+for the Android JDK. Next you have to set up the various different
+<b>Paths</b> so that <i>GameMaker Studio 2</i> knows where to look
+for the various tools required to build the final executable
+package and test your game. This is split into three sections for
+the <b>Android SDK</b>, <b>Android NDK</b> and <b>Java JDK</b>.
+These paths should have been filled in automatically for you, but
+should you have any issues you can click the button to the right to
+open the file explorer and manually select the locations for each
+element. You can find details of what versions are required for
+each of the SDK elements <a href=
 "http://help.yoyogames.com/hc/en-us/articles/227860547" target=
 "_blank">here</a>. Paths should be validated as you apply them and
 a message will show "Found" or tell you of any errors (in which
@@ -91,10 +99,10 @@ of the game.<br>
 
 <li><b>Install on package</b>: When this option is flagged,
 compiling a final executable <tt>*.apk</tt> package will also
-install it automatically on any devices that are connected.</li>
+install it automatically on the currently selected target
+device.</li>
 </ul>
-<img class="center" src="images/amazonfire_prefs_2.png" alt=
-"Amazon Fire Preferences Keystore">
+
 <p>Finally we come to the <b>KeyStore</b>. This is a file that will
 be used to "sign" all your Amazon Fire apps so please fill in all
 the details correctly and keep in mind that this file will be
@@ -110,7 +118,7 @@ both the Android and Amazon Fire targets.</div>
 
 <p><br>
 To create a new keystore file the following details are required:
-<img class="center" src="images/amazonfire_prefs_3.png" alt=
+<img class="center" src="images/amazonfire_prefs_2.png" alt=
 "Amazon Fire Preferences Keystore"></p>
 
 <ul>
@@ -136,6 +144,10 @@ which must be at least six characters long.<br>
 <li><b>Alias</b>: This is another name that can be used for the
 KeyStore file and should be different to the name entered
 above.<br>
+<br></li>
+
+<li><b>Alias Password</b>: Your alias security password for the
+KeyStore file which must be at least six characters long.<br>
 <br></li>
 
 <li><b>Organisational Unit</b>: The department within the company
@@ -181,17 +193,25 @@ Base</a>.</p>
 listed below. <img class="center" src="images/android_prefs_1.png"
 alt="Android Preferences Packaging And Debug"></p>
 
-<p>At the top of the preferences you can set the size of the Memory
-Heap for the Android JDK. Next you have to set up the various
-different <b>Paths</b> so that <i>GameMaker Studio 2</i> knows
-where to look for the various tools required to build the final
-executable package and test your game. This is split into three
-sections for the <b>Android SDK</b>, <b>Android NDK</b> and <b>Java
-JDK</b>. These paths should have been filled in automatically for
-you, but should you have any issues you can click the button to the
-right to open the file explorer and manually select the locations
-for each element. You can find details of what versions are
-required for each of the SDK elements <a href=
+<p>At the top of the preferences you have the option to synchronise
+the settings from the Amazon Fire export. This is for those people
+that have the Mobile Licence and have already set up and used the
+Amazon Fire export, since Android uses almost the exact same build
+tools as Amazon Fire. Just click this to import all the appropriate
+settings from Amazon Fire, then check through them to make sure
+that they are correct.</p>
+
+<p>Beneath the Sync button you have the option to set the size of
+the Memory Heap for the Android JDK. Next you have to set up the
+various different <b>Paths</b> so that <i>GameMaker Studio 2</i>
+knows where to look for the various tools required to build the
+final executable package and test your game. This is split into
+three sections for the <b>Android SDK</b>, <b>Android NDK</b> and
+<b>Java JDK</b>. These paths should have been filled in
+automatically for you, but should you have any issues you can click
+the button to the right to open the file explorer and manually
+select the locations for each element. You can find details of what
+versions are required for each of the SDK elements <a href=
 "http://help.yoyogames.com/hc/en-us/articles/227860547" target=
 "_blank">here</a>. Paths should be validated as you apply them and
 a message will show "Found" or tell you of any errors (in which
@@ -211,10 +231,10 @@ of the game.<br>
 
 <li><b>Install on package</b>: When this option is flagged,
 compiling a final executable <tt>*.apk</tt> package will also
-install it automatically on any devices that are connected.</li>
+install it automatically on the currently selected target
+device.</li>
 </ul>
-<img class="center" src="images/android_prefs_2.png" alt=
-"Android Preferences Keystore">
+
 <p>Finally we come to the <b>KeyStore</b>. This is a file that will
 be used to "sign" all your Android apps so please fill in all the
 details correctly and keep in mind that this file will be required
@@ -230,7 +250,7 @@ both the Android and Amazon Fire targets.</div>
 
 <p><br>
 To create a new keystore file the following details are required:
-<img class="center" src="images/android_prefs_3.png" alt=
+<img class="center" src="images/android_prefs_2.png" alt=
 "Android Preferences Keystore"></p>
 
 <ul>
@@ -256,6 +276,10 @@ which must be at least six characters long.<br>
 <li><b>Alias</b>: This is another name that can be used for the
 KeyStore file and should be different to the name entered
 above.<br>
+<br></li>
+
+<li><b>Alias Password</b>: Your alias security password for the
+KeyStore file which must be at least six characters long.<br>
 <br></li>
 
 <li><b>Organisational Unit</b>: The department within the company
@@ -292,6 +316,29 @@ please see <a href=
 "http://help.yoyogames.com/hc/en-us/articles/216753498-GameMaker-Studio-Android-SDK-and-NDK-setup-"
 target="_blank">this article on the YoYo Games Knowledge
 Base</a>.</p>
+</div>
+<br>
+<label class="collapse" for="i">HTML5</label> <input id="i" type=
+"checkbox">
+<div class="index_list">
+<p>The <b>HTML5</b> preferences have the following options:
+<img class="center" src="images/html5_prefs.png" alt=
+"HTML5 Preferences"></p>
+
+<ul>
+<li><b>Default packaging type</b>: When building a final
+<span class="notranslate">HTML5</span> executable package, you can
+choose between <i>Package as loose files</i> - which will simply
+generate all the required files in a folder - or <i>Package as
+Zip</i> - which will create a compressed ZIP file that will have
+the game and any additional files within. By default you will be
+given a choice of which of these two options you wish to choose on
+compile, but you can set this preference to always use one or the
+other. Note that when this option is set to <i>Show Dialogue</i>,
+in the actual dialogue window that pops up on compile, choosing
+"Remember Packaging Option" will set this preference to the option
+you select.</li>
+</ul>
 </div>
 <br>
 <label class="collapse" for="b">iOS</label> <input id="b" type=
@@ -353,11 +400,11 @@ Options</a>.<br>
 <label class="collapse" for="d">Steam</label> <input id="d" type=
 "checkbox">
 <div class="index_list">
-<p>The Steam SDK is used for Windows, Mac OS and Ubuntu (Linux)
-builds that are to be distributed through the <a target=
-"_blank">Steam</a> platform. This section contains the setup
-options required to get it working within your projects:
-<img class="center" src="images/steam_prefs.png" alt=
+<p>The Steam SDK is used for <span class="notranslate">Windows, Mac
+OS and Ubuntu (Linux)</span> builds that are to be distributed
+through the <a target="_blank">Steam</a> platform. This section
+contains the setup options required to get it working within your
+projects: <img class="center" src="images/steam_prefs.png" alt=
 "Steam Preferences"></p>
 
 <ul>
@@ -370,12 +417,12 @@ platform add the <b>App ID</b>.<br>
 </ul>
 </div>
 <br>
-<label class="collapse" for="e">Windows</label> <input id="e" type=
-"checkbox">
+<label class="collapse" for="e"><span class=
+"notranslate">Windows</span></label> <input id="e" type="checkbox">
 <div class="index_list">
-<p>The <b>Windows</b> preferences have the following options:
-<img class="center" src="images/windows_prefs.png" alt=
-"Windows Preferences"></p>
+<p>The <b><span class="notranslate">Windows</span></b> preferences
+have the following options: <img class="center" src=
+"images/windows_prefs.png" alt="Windows Preferences"></p>
 
 <ul>
 <li><b>Visual Studio Path</b>: This option is for pointing
@@ -383,17 +430,18 @@ platform add the <b>App ID</b>.<br>
 the build PC.<br>
 <br></li>
 
-<li><b>Default Packaging Type</b>: When building a final Windows
-executable package, you can choose between creating either an
-<i>installer</i> (using <a href=
-"https://sourceforge.net/projects/nsis/" target="_blank">NSIS</a>)
-or a compressed ZIP file that will have the game and any additional
-files within. By default you will be given a choice of which of
-these two options you wish to choose on compile, but you can set
-this preference to always use one or the other. Note that when this
-option is set to <i>Show Dialogue</i>, in the actual dialogue
-window that pops up on compile, choosing "Remember Packaging
-Option" will set this preference to the option you select.<br>
+<li><b>Default Packaging Type</b>: When building a final
+<span class="notranslate">Windows</span> executable package, you
+can choose between creating either an <i>installer</i> (using
+<a href="https://sourceforge.net/projects/nsis/" target=
+"_blank">NSIS</a>) or a compressed ZIP file that will have the game
+and any additional files within. By default you will be given a
+choice of which of these two options you wish to choose on compile,
+but you can set this preference to always use one or the other.
+Note that when this option is set to <i>Show Dialogue</i>, in the
+actual dialogue window that pops up on compile, choosing "Remember
+Packaging Option" will set this preference to the option you
+select.<br>
 <br></li>
 </ul>
 </div>
@@ -406,12 +454,12 @@ type="checkbox">
 "Windows UWP Preferences"></p>
 
 <ul>
-<li><b>Visual Studio Path</b>: This option is for pointing
+<li><b>Visual Studio location</b>: This option is for pointing
 <i>GameMaker Studio 2</i> to the MS Visual Studio installation on
 the build PC.<br>
 <br></li>
 
-<li><b>Default Package Architecture</b>: When building a final
+<li><b>Default package architecture</b>: When building a final
 Windows UWP executable package, you can choose between creating
 either an <i>x86</i>, <i>x64</i> or <i>ARM</i> package that will
 have the game and any additional files within. Here you can set a
@@ -420,6 +468,19 @@ to have a window pop up when you hit the compile button asking
 which to choose. In general you want to target <i>x86</i> for
 Windows 10 computers, <i>x64</i> for Xbox One and <i>ARM</i> for
 Windows 10 devices.<br>
+<br></li>
+
+<li><b>Win UWP Tools location</b>: This option is for pointing
+<i>GameMaker Studio 2</i> to the UWP tools installation path on the
+build PC.<br>
+<br></li>
+
+<li><b>Automatic response to creating store package</b>: When
+building a final Windows UWP executable package, you will be asked
+if you want to create a store package or not. You can set this
+option to automatically skip this pop-up using either <i>Yes</i> or
+<i>No</i> by default, or you can set <i>Show Dialogue</i> to have
+the window always pop up when you hit the compile button.<br>
 <br></li>
 </ul>
 </div></blockquote>
@@ -431,6 +492,15 @@ See the section on <a href=
 "../../1_overview/2_quick_start/6_compiling.html">Compiling</a> and
 the section on the <a href="../2_extras/device_manager.html">Device
 Manager</a> for more information.</p>
+
+<p>The manual does not show the various <b>Console</b> preferences
+due to the different legal restrictions maintained by the different
+companies. If you have a <b>Console Licence</b>, then you can get
+this information form the <a href=
+"https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support"
+target="_blank">YoYo Games Helpdesk</a>, but you must first contact
+YoYo Games with your console ID email and request permission to
+view the different sections.</p>
 
 <p><br>
 </p>
@@ -447,7 +517,7 @@ Index</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

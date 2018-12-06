@@ -117,6 +117,13 @@ settings</td>
 </tr>
 
 <tr>
+<td>CTRL + N</td>
+<td>CMD + N</td>
+<td>General</td>
+<td>Open the Start Page</td>
+</tr>
+
+<tr>
 <td>CTRL + Z</td>
 <td>CMD + Z</td>
 <td>General</td>
@@ -187,29 +194,8 @@ settings</td>
 </tr>
 
 <tr>
-<td>CTRL + SHIFT + K</td>
-<td>CMD + SHIFT + K</td>
-<td>General</td>
-<td>Redefine Keys</td>
-</tr>
-
-<tr>
-<td>CTRL + SHIFT + Q</td>
-<td>CMD + SHIFT + Q</td>
-<td>General</td>
-<td>Perform data file scan</td>
-</tr>
-
-<tr>
-<td>CTRL + SHIFT + E</td>
-<td>CMD + SHIFT + E</td>
-<td>General</td>
-<td>Open dialogue editor</td>
-</tr>
-
-<tr>
 <td>CTRL + SHIFT + [Num0 ... Num9]</td>
-<td>CMD + SHIFT + [Num0 ... Num9]</td>
+<td>CMD + CTRL + [Num0 ... Num9]</td>
 <td>General</td>
 <td>Set or remove a bookmark from 0 to 9</td>
 </tr>
@@ -292,13 +278,6 @@ settings</td>
 </tr>
 
 <tr>
-<td>ALT + L</td>
-<td>ALT + L</td>
-<td>General</td>
-<td>Select the language to use for the IDE</td>
-</tr>
-
-<tr>
 <td>ALT + SHIFT + S</td>
 <td>ALT + SHIFT + S</td>
 <td>General</td>
@@ -315,7 +294,8 @@ settings</td>
 <td>f12</td>
 <td>f12</td>
 <td>Docks</td>
-<td>Expand / Collapse all docks in the workspace</td>
+<td>Expand / Collapse all active docks in the workspace (manually
+contracted docks will not expand)</td>
 </tr>
 
 <tr>
@@ -370,7 +350,7 @@ settings</td>
 <td>CTRL + Enter / Numpad Enter</td>
 <td>CMD + Enter / Numpad Enter</td>
 <td>Workspace</td>
-<td>Reset workspace zoom</td>
+<td>Reset workspace zoom (with no animated transition)</td>
 </tr>
 
 <tr>
@@ -1403,13 +1383,6 @@ whole path</td>
 </tr>
 
 <tr>
-<td>Z</td>
-<td>Z</td>
-<td>Tile Layer Editor</td>
-<td>Rotate the tile or brush</td>
-</tr>
-
-<tr>
 <td>X</td>
 <td>X</td>
 <td>Tile Layer Editor</td>
@@ -1657,6 +1630,14 @@ text</td>
 </tr>
 
 <tr>
+<td>CTRL + D</td>
+<td>CMD + D</td>
+<td>General</td>
+<td>Duplicate the current line (or multiple lines if they have been
+selected)</td>
+</tr>
+
+<tr>
 <td>CTRL + K</td>
 <td>CMD + K</td>
 <td>General</td>
@@ -1840,35 +1821,6 @@ text</td>
 </div>
 </div>
 <br>
-<label class="collapse" for="eleven">To-Do Editor</label>
-<input id="eleven" type="checkbox">
-<div class="index_list">
-<div class="compat">
-<table>
-<tr>
-<th style="width:200px;">Windows Key Binding</th>
-<th style="width:200px;">macOS Key Binding</th>
-<th style="width:150px;">Scope</th>
-<th style="width:400px;">Description</th>
-</tr>
-
-<tr>
-<td>Backspace</td>
-<td>Backspace</td>
-<td>General</td>
-<td>Delete currently selected list item</td>
-</tr>
-
-<tr>
-<td>f2</td>
-<td>f2</td>
-<td>General</td>
-<td>Edit currently selected list item</td>
-</tr>
-</table>
-</div>
-</div>
-<br>
 <label class="collapse" for="ten">Debug Module</label> <input id=
 "ten" type="checkbox">
 <div class="index_list">
@@ -1889,13 +1841,6 @@ text</td>
 </tr>
 
 <tr>
-<td>ESCAPE</td>
-<td>ESCAPE</td>
-<td>General</td>
-<td>Pauses the game</td>
-</tr>
-
-<tr>
 <td>f9</td>
 <td>f9</td>
 <td>General</td>
@@ -1904,21 +1849,21 @@ text</td>
 
 <tr>
 <td>f10</td>
-<td>f10</td>
+<td>CMD + Shift + I</td>
 <td>General</td>
 <td>Step over a code block or script</td>
 </tr>
 
 <tr>
 <td>f11</td>
-<td>f11</td>
+<td>CMD + Shift + O</td>
 <td>General</td>
 <td>Step into a code block or script</td>
 </tr>
 
 <tr>
 <td>SHIFT + f11</td>
-<td>SHIFT + f11</td>
+<td>CMD + Shift + U</td>
 <td>General</td>
 <td>Step out of a code block or script</td>
 </tr>
@@ -1941,7 +1886,7 @@ Index</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

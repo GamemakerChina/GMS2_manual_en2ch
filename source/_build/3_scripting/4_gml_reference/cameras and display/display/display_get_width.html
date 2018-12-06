@@ -29,55 +29,66 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">display_get_width</h1>
+<h2>display_get_width</h2>
 
-<h2 class="studio">Returns the width of the display.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3><b>Syntax:</b>
-</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will return the width of the display (in pixels).
+Note that on the HTML5 target, this value is the width of the
+<i>browser window</i>, rather than the physical display size.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">display_get_width();</p>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function will return the width of the display (in pixels).
-Note that on the HTML5 target, this value is the width of the
-<i>browser window</i>, rather than the physical display size.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">mywidth = display_get_width();</p>
 
+<blockquote>
 <p>This would set the variable "mywidth" to the display's
 width.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Windows And
-Views</a></div>
+<div style="float:left">Back: <a href="index.html">The
+Display</a></div>
 
 <div style="float:right">Next: <a href=
 "display_get_orientation.html">display_get_orientation</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

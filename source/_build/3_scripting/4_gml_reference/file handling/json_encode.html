@@ -9,6 +9,7 @@
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>json_encode</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../default.css" type=
@@ -32,7 +33,46 @@ if (window.name != "content")
 <h2>json_encode</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>JSON (JavaScript Object Notation) is a lightweight
+data-interchange format which is easy for to read and write, for
+both people and machines. It is built on two basic structures:</p>
+
+<ul>
+<li>A collection of name/value pairs, called a <a href=
+"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> in
+<i>GameMaker Studio 2</i> but also known as a "dictionary" or
+"object".</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>An ordered list of values, called a <a href=
+"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a> in
+<i>GameMaker Studio 2</i> but this can also be called an "array" or
+"sequence".</li>
+</ul>
+
+<p><tt>json_encode</tt> takes a ds_map that you have previously
+created and encoded as a JSON string which you can then use as (for
+example) part of an <a href=
+"../asynchronous%20functions/http_post_string.html"><tt>http_post_string()</tt></a>
+call, or so it can be stored externally, written to a file.</p>
+
+<div class="note"><b>NOTE</b>: The hierarchal functionality of JSON
+is available through special ds_map and ds_list functions, so you
+are able to encode sub-lists and maps.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">json_encode(map)</p>
 
@@ -56,46 +96,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> string</p>
+<h3>Returns:</h3>
+
+<p class="code">string</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>JSON (JavaScript Object Notation) is a lightweight
-data-interchange format which is easy for to read and write, for
-both people and machines. It is built on two basic structures:</p>
-
-<blockquote>
-<ul>
-<li>A collection of name/value pairs, called a <a href=
-"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a> in
-<i>GameMaker Studio 2</i> but also known as a "dictionary" or
-"object".</li>
-
-<li>An ordered list of values, called a <a href=
-"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a> in
-<i>GameMaker Studio 2</i> but this can also be called an "array" or
-"sequence".</li>
-</ul>
-</blockquote>
-
-<p><tt>json_encode</tt> takes a ds_map that you have previously
-created and encoded as a JSON string which you can then use as (for
-example) part of an <a href=
-"../asynchronous%20functions/http_post_string.html"><tt>http_post_string()</tt></a>
-call, or so it can be stored externally, written to a file.<br>
-<br>
-<i><b>NOTE:</b> The hierarchal functionality of JSON is available
-through special ds_map and ds_list functions, so you are able to
-encode sub-lists and maps.</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var hiscore_map, i, str;<br>
 hiscore_map = ds_map_create();<br>
@@ -108,12 +116,14 @@ get[0] = http_post_string("http://www.angusgames.com/game?game_id="
 + string(global.game_id), str)<br>
 ds_map_destroy(hiscore_map);</p>
 
+<blockquote>
 <p>The above code creates a ds_map and then loops through the name
 and score arrays, adding each key/value pair to the new map. Next,
 this map is encoded using <tt>json_encode</tt> and stored as a
 string in the variable "str". This string is then sent to a web
 server using <tt>http_post_string</tt> and the ds_map is destroyed
 to prevent a memory leak as it is no-longer needed.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -126,11 +136,11 @@ to prevent a memory leak as it is no-longer needed.</p>
 Handling</a></div>
 
 <div style="float:right">Next: <a href=
-"json_decode.html">json_decode()</a></div>
+"json_decode.html">json_decode</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

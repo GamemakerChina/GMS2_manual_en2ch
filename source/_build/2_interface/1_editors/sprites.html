@@ -228,6 +228,13 @@ down menu:<br>
 the fastest to resolve when used in your project.<br>
 <br></li>
 
+<li><b>Rotated Rectangle</b>: This is a simple rectangular
+collision mask which will rotate along with the
+<tt>image_angle</tt> value of the instance with the sprite
+assigned. This is slower to resolve than the regular rectangular
+collision mask, but faster than a precise collision mask.<br>
+<br></li>
+
 <li><b>Ellipse</b>: Creates an elliptical collision mask. This is
 slower to resolve.<br>
 <br></li>
@@ -239,15 +246,19 @@ slower to resolve and generates more CPU overhead.<br>
 <li><b>Precise</b>: This creates a precise collision mask based on
 the outline of the sprite. If the sprite has multiple sub-images,
 then this will be a composite of the edges of all the sub-images
-placed over each other. This is very slow and generates a lot of
-CPU overhead.<br>
+placed over each other. Note that the precise mask will be clipped
+to the bounding box if the <b>Mode</b> is set to <i>Manual</i> and
+you change the default values. This is very slow and generates a
+lot of CPU overhead.<br>
 <br></li>
 
 <li><b>Precise</b> (per frame): This creates a precise collision
 mask on a per-frame basis (ie: the mask will change to conform to
-the outline of each different frame). This is by far the slowest
-type of collision mask to resolve and should be avoided except in
-very, very specific and infrequent cases.</li>
+the outline of each different frame). Note that the precise mask
+will be clipped to the bounding box if the <b>Mode</b> is set to
+<i>Manual</i> and you change the default values.This is by far the
+slowest type of collision mask to resolve and should be avoided
+except in very, very specific and infrequent cases.</li>
 </ul>
 The following image illustrates the different mask options:
 
@@ -281,10 +292,10 @@ The bounding box is the name given to the rectangular area that the
 sprite mask fits in. Only pixels inside this bounding box are used
 for the mask and will be involved in collision checking, and by
 default this is automatically computed, taking the alpha tolerance
-into account. If you have precise checked then this will be
-separate for each sub-image too. When setting it yourself, you can
-input the values in the boxes for left, right top and bottom, or
-you can click <img style="vertical-align:middle" src=
+into account. If you have "precise (per frame)" checked then this
+will be separate for each sub-image too. When setting it yourself,
+you can input the values in the boxes for left, right top and
+bottom, or you can click <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> in the sprite view and drag to "draw"
 it over the sprite. Note that when "drawing" the bounding box, the
 mask is automatically generated to fit within the end values.</p>
@@ -402,7 +413,7 @@ Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

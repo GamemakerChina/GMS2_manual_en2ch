@@ -87,8 +87,8 @@ image, 2 = user defined.</td>
 
 <tr class="alt">
 <td>kind</td>
-<td>The kind of mask (0 = precise, 1=bounding box, 2 = disk, 3 =
-diamond).</td>
+<td>The kind of mask, a constant (see the table in the
+description).</td>
 </tr>
 
 <tr>
@@ -113,12 +113,12 @@ tolerance, 255=full tolerance).</td>
 <h3>Description</h3>
 
 <blockquote>
-<p>With this function you can set the type of collision mask that a
-sprite should have. If you select either automatic (0) or full
-image (1) as the bounding box mode then the individual bounding box
-values can be set to 0. However for a user defined mask (2) you
-will have to set these values. The different bounding box values
-are always relative to the top left corner of the sprite
+<p>With this function you can set the properties of the collision
+mask that a sprite should have. If you select either automatic (0)
+or full image (1) as the bounding box mode then the individual
+bounding box values can be set to 0. However for a user defined
+mask (2) you will have to set these values. The different bounding
+box values are always relative to the top left corner of the sprite
 (irrespective of the x and y origin) which is considered position
 (0, 0).</p>
 
@@ -127,6 +127,49 @@ itself, but note that anything other than a rectangular mask will
 require more processing power when resolving collisions, with a
 subsequent drop in performance. In general, you should only use
 mask types other than rectangular when absolutely necessary.</p>
+
+<div class="note"><b>NOTE</b>: This function does not permit the
+<b>rotated rectangle</b> collision mask kind.</div>
+
+<p><br>
+The kind of mask that can be set will be one of the following
+constants:</p>
+
+<div class="compat">
+<table>
+<tr>
+<th>Constant</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td><tt>bboxkind_rectangular</tt>
+</td>
+<td>A rectangular (non-rotating) rectangle collision mask
+shape</td>
+</tr>
+
+<tr class="alt">
+<td><tt>bboxkind_ellipse</tt>
+</td>
+<td>An elliptical collision mask shape</td>
+</tr>
+
+<tr>
+<td><tt>bboxkind_diamond</tt>
+</td>
+<td>A diamond collision mask shape</td>
+</tr>
+
+<tr>
+<td><tt>bboxkind_precise</tt>
+</td>
+<td>A precise collision mask, where the mask will conform to the
+non-transparent pixels of the sprite, based on the tolerance value
+given (see below))</td>
+</tr>
+</table>
+</div>
 
 <p>Finally, tolerance is used to define how precise the precise the
 mask is (when used with a "full image" mask, this will have no
@@ -176,7 +219,7 @@ sub-images.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

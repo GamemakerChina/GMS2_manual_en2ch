@@ -55,8 +55,15 @@ completely.</p>
 
 <p>The <b>Options</b> section of this window permits you to choose
 where the game package is to be installed to, either the
-"<tt>%localappdata%</tt>" or "<tt>%appdata%</tt>" folders. You can
-also set the <b>Windows Sleep Margin</b> here. This option is
+"<tt>%localappdata%</tt>" or "<tt>%appdata%</tt>" folders, as well
+as whether to set <b>Copy exe to output folder</b>. In general you
+should never need this option, but it is supplied for those users
+that have various DLL's that communicate with each other and your
+game, and when enabled it will maintain the game EXE in the
+<i>output</i> folder when testing, rather than place it in the
+<i>Temp</i> folder.</p>
+
+<p>Next you can set the <b>Windows Sleep Margin</b>. This option is
 related to reducing stuttering when running your game on specific
 systems. Basically, if your game is running faster than your room
 speed <i>GameMaker Studio 2</i> will "sleep" for the remaining
@@ -76,10 +83,10 @@ system specific configuration and what works on your build machine
 may not be appropriate for another user, and as such if in doubt
 leave it set to 10.</p>
 
-<p>The final option is for enabling Steam in your game. If you
+<p>The final option is to <b>Enable Steam</b> for your game. If you
 enable this option, make sure you have the Steamworks SDK installed
 (see <a href="../preferences.html">here</a>), and that you have
-added the Steam app ID into the <a href="index.html">General
+added the <i>Steam App ID</i> into the <a href="index.html">General
 Options</a> for the game.</p>
 </div>
 <br>
@@ -127,10 +134,10 @@ refresh rate of 60, turning this option on will lock your game
 speed to 60 too. This is off by default.<br>
 <br></li>
 
-<li><b>Allow the player to resize the game window</b>: Checking
-this permits the user to change the size of the game window (the
-<b>Borderless Window</b> option needs to be <i>off</i> for this to
-work). This option is off by default.<br>
+<li><b>Allow window resize</b>: Checking this permits the user to
+change the size of the game window (the <b>Borderless Window</b>
+option needs to be <i>off</i> for this to work). This option is off
+by default.<br>
 <br></li>
 
 <li><b>Borderless Window</b>: Checking this will make your game run
@@ -209,10 +216,12 @@ page of the installer. Must be in *.bmp format and measure
 running. Must be in *.bmp format and measure 150x57px.</li>
 </ul>
 
-<p>You can also point to a specific License Agreement (an example
-is supplied with <i>GameMaker Studio 2</i>) and a custom NSI script
-(details <a href="http://nsis.sourceforge.net/Main_Page">here</a>)
-should you need one.</p>
+<p>You can also point to a specific License Agreement file (an
+example is supplied with <i>GameMaker Studio 2</i>) and a custom
+NSI script file (details <a href=
+"http://nsis.sourceforge.net/Main_Page">here</a>) should you need
+one, or click the appropriate buttons to return to the default
+files supplied with <i>GameMaker Studio 2</i>.</p>
 </div></blockquote>
 
 <p><br>
@@ -230,7 +239,7 @@ Options</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

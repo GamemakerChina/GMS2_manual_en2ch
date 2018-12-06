@@ -32,20 +32,12 @@ if (window.name != "content")
 <h2>cursor_sprite</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">cursor_sprite;</p>
-
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Description</h3>
 
-<p><br>
-</p>
-
-<h3 class="studio">Description</h3>
-
+<blockquote>
 <p>Setting this variable will instruct <i>GameMaker Studio 2</i> to
 use the designated sprite as a cursor (basically setting it to the
 current mouse x/y position every step). The default value is -1
@@ -54,25 +46,41 @@ index from the game assets or that has been imported from an
 external resource. Please note that there is no way to control the
 animation speed or image_index, so if the sprite has sub-images,
 these will be cycled at the same speed as the room speed. To remove
-the cursor sprite, you can set this variable to -1 again.<br>
-<br>
-It is also worth noting that this variable does <i>not</i> replace
-the game window cursor, and that it will still be drawn as normal.
-To avoid this you can use the function <a href=
+the cursor sprite, you can set this variable to -1 again.</p>
+
+<p>It is also worth noting that this variable does <i>not</i>
+replace the game window cursor, and that it will still be drawn as
+normal. To avoid this you can use the function <a href=
 "../cameras%20and%20display/display/the%20game%20window/window_set_cursor.html">
 <tt>window_set_cursor</tt></a> and set it to the constant
-<tt>cr_none</tt> which will make the standard cursor invisible.<br>
-<br></p>
+<tt>cr_none</tt> which will make the standard cursor invisible.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Syntax:</h3>
 
-<p class="code">cursor_sprite = spr_CustomCursor;</p>
+<p class="code">cursor_sprite;</p>
 
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
+
+<p><br>
+</p>
+
+<h3>Example:</h3>
+
+<p class="code">cursor_sprite = spr_CustomCursor;<br></p>
+
+<blockquote>
 <p>The above code will set the sprite indexed in the variable
 "spr_CustomCursor" to be the cursor sprite for the game.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -89,7 +97,7 @@ To avoid this you can use the function <a href=
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -29,16 +29,42 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">draw_text</h1>
+<h2>draw_text</h2>
 
-<h2 class="studio">Draw a string at a given position.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
 
-<p class="code">draw_text(x, y, string);</p>
+<blockquote>
+<p>With this function you can draw any string at any position
+within the room (for drawing real numbers you should use the
+<a href="../../strings/string.html"><tt>string</tt></a> function to
+convert them into text). To combine strings you can use <b>+</b>
+(see example below) and you can also use <b>\n</b> within a string
+to add a line break so it is drawn over multiple lines (for
+information on how to properly format a string and what escape
+characters you can use, please see <a href=
+"../../strings/index.html">here</a>). The colour of the text and
+the alpha are governed by the current base alpha and colour values
+as set by <a href=
+"../colour/draw_set_alpha.html"><tt>draw_set_alpha</tt></a> and
+<a href=
+"../colour/draw_set_colour.html"><tt>draw_set_colour</tt></a>.</p>
+
+<div class="note"><b>NOTE:</b> The actual position of the text will
+be influenced by the alignment values set by <a href=
+"draw_set_halign.html"><tt>draw_set_halign</tt></a> and <a href=
+"draw_set_valign.html"><tt>draw_set_valign</tt></a>.</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">draw_text(x, y, string);</p>
 
 <div>
 <table>
@@ -67,49 +93,30 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Example:</h3>
 
-<p>With this function you can draw any string at any position
-within the room (for drawing real numbers you should use the
-<a href="../../strings/string.html"><tt>string</tt></a> function to
-convert them into text). To combine strings you can use <b>+</b>
-(see example below) and you can also use <b>/n</b> within a string
-to add a line break so it is drawn over multiple lines (for
-information on how to properly format a string and what escape
-characters you can use, please see <a href=
-"../../strings/index.html">here</a>). The colour of the text and
-the alpha are governed by the current base alpha and colour values
-as set by <a href=
-"../colour/draw_set_alpha.html"><tt>draw_set_alpha</tt></a> and
-<a href=
-"../colour/draw_set_colour.html"><tt>draw_set_colour</tt></a><br>
-<br>
-<i><b>NOTE:</b> The actual position of the text will be influenced
-by the alignment values set by <a href=
-"draw_set_halign.html"><tt>draw_set_halign</tt></a> and <a href=
-"draw_set_valign.html"><tt>draw_set_valign</tt></a>.</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
-
-<p class="code">draw_text(x, y, "Hello, " + global.Name + "!/nI
+<p class="code">draw_text(x, y, "Hello, " + global.Name + "!\nI
 hope you are well!");</p>
 
+<blockquote>
 <p>The above code will draw a string at the instance x/y position,
 which will use the string stored in the global variable "Name" and
 split it over two lines.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Drawing
 Text</a></div>
@@ -117,11 +124,13 @@ Text</a></div>
 <div style="float:right">Next: <a href=
 "draw_text_ext.html">draw_text_ext</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

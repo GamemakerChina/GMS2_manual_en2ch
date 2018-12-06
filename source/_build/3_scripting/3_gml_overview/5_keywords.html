@@ -47,8 +47,8 @@ have used as something else. You should also note that using the
 values instead of the keywords in your code is <b>not at all
 recommended</b> and could cause issues later on.</p>
 
-<blockquote><label class="collapse" for="one"><tt>self</tt>
-(deprecated)</label> <input id="one" type="checkbox">
+<blockquote><label class="collapse" for="one"><tt>self</tt></label>
+<input id="one" type="checkbox">
 <div class="index_list">
 <div class="compat">
 <table>
@@ -67,12 +67,30 @@ recommended</b> and could cause issues later on.</p>
 </div>
 
 <p><tt>self</tt> can be used to identify the calling instance of
-the current block of code. It always returns the value of -1 which
-<i>GameMaker Studio 2</i> interprets as the unique ID for the
-instance. In general you should never need to use this keyword, as
-you can do the same task more efficiently and appropriately using
-other keywords or functions, and is maintained for legacy support
-reasons.</p>
+the current block of code, as it always the unique ID for the
+instance currently in scope. For example:</p>
+
+<p class="code">var val = 100;<br>
+with (instance_create_layer(x, y, "Instances", obj_Fire))<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;self.val = val;<br>
+&nbsp;&nbsp;}<br></p>
+
+<p>In this example you can see that we have a <i>local</i> variable
+called <tt>val</tt> and we want it to set the <i>instance</i>
+variable with the same name in the newly created object instance.
+To identify the instance variable correctly and tell <i>GameMaker
+Studio 2</i> to set it in the instance calling the code block, we
+use the <tt>self</tt> keyword. In most cases you can also use the
+<tt>id</tt> keyword instead of <tt>self</tt>, but <tt>self</tt>
+offers certain benefits. To start with, it is faster for the
+compiler to retrieve the instance ID value using <tt>self</tt>
+rather than <tt>id</tt>, as the <tt>id</tt> value goes through the
+instance lookup table. Secondly, for those people making
+extensions, it is very useful to ensure the correct scoping of
+variables, since it is possible that a project which uses an
+extension may have a global scope variable with the same name as a
+variable in the extension.</p>
 </div>
 <br>
 <label class="collapse" for="two"><tt>other</tt></label> <input id=
@@ -238,6 +256,11 @@ instance, you can expect to get either <tt>noone</tt> or a unique
 instance ID returned.</p>
 </div></blockquote>
 
+<p>It is worth noting that the keyword <tt><b>struct</b></tt> is a
+reserved keyword for possible future additions to GML and as such
+it cannot be used as a variable or script name, and it won't be
+colour coded in the IDE either.</p>
+
 <p><br>
 </p>
 </div>
@@ -253,7 +276,7 @@ Variable Scope</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

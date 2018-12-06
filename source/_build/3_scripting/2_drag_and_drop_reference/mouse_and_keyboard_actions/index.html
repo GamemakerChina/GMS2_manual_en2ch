@@ -103,6 +103,101 @@ Released</a>
 </tr>
 </table>
 
+<p>The other three actions here refer to the <b>virtual
+keyboard</b>. If you require text or numeric input in your game on
+a touchscreen device, then you can use the virtual keyboard actions
+provided to use the device OS keyboard. These actions will call up
+or hide the OS keyboard and accept input from it just the same as a
+physical keyboard, so the regular <i>GameMaker Studio 2</i>
+keyboard actions should all work with virtual keyboards (for
+example, the "If Key Released" action), and any input from the
+virtual keyboard will be stored in the different keyboard
+variables, like <a href=
+"../../4_gml_reference/controls/keyboard%20input/keyboard_string.html">
+<tt>keyboard_string</tt></a>, or <a href=
+"../../4_gml_reference/controls/keyboard%20input/keyboard_lastchar.html">
+<tt>keyboard_last_char</tt></a>, etc...).</p>
+
+<p>Opening or closing the virtual keyboard will generate <a href=
+"../../../2_interface/1_editors/events/async_events.html">System
+Asynchronous Events</a>, in which the <tt>async_load</tt> DS map
+will be populated with the following key/value pairs:</p>
+
+<ul>
+<li>"<b>event_type</b>" - the type of system event received, which
+will be "<b>virtual keyboard status</b>" for virtual
+keyboards.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>screen_height</b>" - the height of the virtual keyboard (in
+pixels). This will be 0 if the keyboard is invisible.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>keyboard_status</b>" - the current status of the keyboard,
+returned as one of the following strings:<br>
+<br>
+
+<ul>
+<li>"hiding"</li>
+
+<li>"hidden"</li>
+
+<li>"showing"</li>
+
+<li>"visible"</li>
+</ul></li>
+</ul>
+
+<p>The available virtual keyboard actions are:</p>
+
+<table class="icons">
+<tr>
+<td class="icons"><a href="show_virtual_keyboard.html"><img align=
+"middle" src="images/i_virtualkeyboard_show.png" alt=
+"Show Virtual Keyboard"></a>
+</td>
+<td class="text"><a href="show_virtual_keyboard.html">Show Virtual
+Keyboard</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="hide_virtual_keyboard.html"><img align=
+"middle" src="images/i_virtualkeyboard_hide.png" alt=
+"Hide Virtual Keyboard"></a>
+</td>
+<td class="text"><a href="hide_virtual_keyboard.html">Hide Virtual
+Keyboard</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href=
+"get_virtual_keyboard_height.html"><img align="middle" src=
+"images/i_virtualkeyboard_getheight.png" alt=
+"Get Virtual Keyboard Height"></a>
+</td>
+<td class="text"><a href="get_virtual_keyboard_height.html">Get
+Virtual Keyboard Height</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href=
+"if_virtual_keyboard_showing.html"><img align="middle" src=
+"images/i_virtualkeyboard_ifshowing.png" alt=
+"If Virtual Keyboard Is Showing"></a>
+</td>
+<td class="text"><a href="if_virtual_keyboard_showing.html">If
+Virtual Keyboard Is Showing</a>
+</td>
+</tr>
+</table>
+
 <p><br>
 </p>
 </div>
@@ -118,7 +213,7 @@ Reference</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

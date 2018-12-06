@@ -217,14 +217,23 @@ defined within the sprite properties, or can be assigned
 independently in the object properties) and whether they overlap or
 not. Note, that if one or the other instances in the collision does
 not have a mask assigned (or the sprite mask is set to nothing),
-even if it is drawing something no collisions will be detected. If
-you have <a href="../objects.html">Physics</a> on, then the
+even if it is drawing something no collisions will be detected.</p>
+
+<p>If you have <a href="../objects.html">Physics</a> on, then the
 collision will be based on the type of <b>collision shape</b>
 (<b>Fixture</b>) that you have defined for the object in its
 physics properties, as will its reaction to the collision. This
 means you may not need any code to deal with the collision, but
 this event will <i>still need to have at least a comment in it for
 the collisions to be detected</i>.</p>
+
+<p>Finally, it should be noted that all collisions will be
+calculated <i>once per game step</i> before the collision event is
+triggered, such that when the collision event runs, all collisions
+will have been calculated already and pre-assigned. This means that
+if you create an instance in this event and then try to check for a
+collision with it, the collision wont be detected or resolved until
+the <i>next</i> iteration of the game loop.</p>
 </div>
 <br>
 <a name="object_event_keyboard" id="object_event_keyboard"></a>
@@ -728,7 +737,8 @@ different events will fire is:</p>
 variables attached then they will be created before anything else
 and then any instances that have variables attached will be defined
 after so you can overwrite object variables with instance specific
-ones in the room editor.</li>
+ones in the room editor.<br>
+<br></li>
 
 <li><b>Create Event</b> followed by the <b>Instance Creation
 Code</b> of each instance - so <i>as each instance is created</i>,
@@ -833,7 +843,7 @@ Events</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

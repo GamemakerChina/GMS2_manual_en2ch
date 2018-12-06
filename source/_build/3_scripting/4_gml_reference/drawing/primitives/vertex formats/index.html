@@ -30,6 +30,10 @@ if (window.name != "content")
 </script>
 <h2>Vertex Formats</h2>
 
+<div class="body-scroll">
+<p><br>
+</p>
+
 <p>In general when you start working with 3D, special effects,
 complex drawing processes or shaders you don't need not worry too
 much about the vertex format being used, since <i>GameMaker Studio
@@ -60,13 +64,164 @@ my_format = vertex_format_end();<br></p>
 the order in which you have defined the vertex properties <i>must
 be honoured</i> when building your primitives. So, if you have
 defined a vertex format as position, colour, texture coordinate,
-then you <i>must</i> add these properties to the primitive in the
-same order otherwise you will get an error. Also note that like any
-other dynamic resource, a vertex format requires memory and
-therefore should be removed when not needed using the function
+then <b>you <i>must</i> add these properties to the primitive in
+the same order otherwise you will get an error</b>. Also note that
+like any other dynamic resource, a vertex format requires memory
+and therefore should be removed when not needed using the function
 <tt>vertex_format_delete()</tt>.</p>
 
-<p>The following functions are available for drawing shaders:</p>
+<p>The section below deals with how the defined vertex formats are
+mapped within the shader to the correct attributes:</p>
+
+<blockquote><a name="mapping_shaders" id="mapping_shaders"></a>
+<label class="collapse" for="one">Mapping Formats In The
+Shader</label> <input id="one" type="checkbox">
+<div class="index_list">
+<p>As we have already mentioned above, vertex formats are built up
+by using together the following 5 attribute types (added via the
+appropriate <tt>vertex_format_add_*</tt> function):</p>
+
+<ul>
+<li>Colour</li>
+
+<li>Normal</li>
+
+<li>Position</li>
+
+<li>3D Position</li>
+
+<li>Texture coordinate</li>
+</ul>
+
+<p>Within the GLSL ES shader, these kinds are recognised using the
+following 4 attributes:</p>
+
+<ul>
+<li>Colour</li>
+
+<li>Normal</li>
+
+<li>Position</li>
+
+<li>Texture coordinate</li>
+</ul>
+
+<p>Now, this might look odd as it seems that we can specify more
+attribute kinds in our vertex format than we can in the vertex
+shader. However, in the shader <i>Position</i> and <i>3D
+Position</i> are treated as the same attribute, except that
+<i>Position</i> is expected to have only "x" and "y" coordinates
+whereas <i>3D Position</i> has â€œxâ€, â€œyâ€ and â€œzâ€
+coordinates. So how do you map what's in your vertex format to how
+you define attributes in your shader? Let's start by looking at a
+typical set of attributes from the default shader:</p>
+
+<p class="code">attribute vec3
+in_Position;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+(x,y,z)<br>
+//attribute vec3
+in_Normal;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+(x,y,z) unused in this shader.<br>
+attribute vec4
+in_Colour;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+(r,g,b,a)<br>
+attribute vec2 in_TextureCoord;&nbsp;&nbsp;&nbsp;&nbsp;//
+(u,v)<br></p>
+
+<p>And here's a chunk of code which sets up a vertex format
+compatible with this shader:</p>
+
+<p class="code">vertex_format_begin();<br>
+vertex_format_add_position_3d();<br>
+vertex_format_add_colour();<br>
+vertex_format_add_textcoord();<br>
+my_format = vertex_format_end();<br></p>
+
+<p>Now, how does the shader attribute get matched to the vertex
+format kind? It's just based on naming convention:</p>
+
+<ul>
+<li>"in_Position" maps to <tt>vertex_format_add_position /
+_3d()</tt><br></li>
+
+<li>"in_Colour" maps to
+<tt>vertex_format_add_colour()</tt><br></li>
+
+<li>"in_TextureCoord" maps to
+<tt>vertex_format_add_textcoord()</tt></li>
+</ul>
+
+<p>Now, things get trickier when you have multiple attributes of
+the same kind, but things are still based on the same naming
+convention. We'll look at supplying additional <b>colour</b> and
+<b>texture coordinates</b> now, as there can only be <b>one</b>
+Position and <b>one</b> Normal attribute in the shader or vertex
+format.</p>
+
+<p>When adding additional colour attributes to your shader, a
+number needs to be added to the end of the shader attribute to
+indicate which particular entry in the vertex format the attribute
+maps to. Here's an example - first the vertex format:</p>
+
+<p class="code">vertex_format_begin();<br>
+vertex_format_add_position_3d();<br>
+vertex_format_add_colour();<br>
+vertex_format_add_colour();<br>
+vertex_format_add_textcoord();<br>
+my_format = vertex_format_end();<br></p>
+
+<p>And now the associated shader attributes:</p>
+
+<p class="code">attribute vec3
+in_Position;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// (x,y,z)<br>
+attribute vec4
+in_Colour0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+(r,g,b,a)<br>
+attribute vec4
+in_Colour1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+(r,g,b,a)<br>
+attribute vec2 in_TextureCoord;&nbsp;&nbsp;// (u,v)<br></p>
+
+<p>In this case <tt>in_Colour0</tt> maps to the first
+<tt>vertex_format_add_colour()</tt> and <tt>in_Colour1</tt> maps to
+the second.</p>
+
+<p>Texture coordinates are handled slightly differently to colour.
+Basically, anything which isn't called <tt>in_Position</tt>,
+<tt>in_Normal</tt> or one of the <tt>in_Colour[0 ... ]</tt>
+attributes is treated as a texture coordinate. The order they are
+defined in, in the list of attributes in the shader, is what
+denotes which attribute in the vertex format they map to. See the
+following GML example:</p>
+
+<p class="code">vertex_format_begin();<br>
+vertex_format_add_position_3d();<br>
+vertex_format_add_colour();<br>
+vertex_format_add_textcoord();<br>
+vertex_format_add_textcoord();<br>
+vertex_format_add_textcoord();<br>
+my_format = vertex_format_end();<br></p>
+
+<p>And the shader code would look something like this:</p>
+
+<p class="code">attribute vec3
+in_Position;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// (x,y,z)<br>
+attribute vec4
+in_Colour;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+(r,g,b,a)<br>
+attribute vec2 in_myTexcoord;&nbsp;&nbsp;&nbsp;&nbsp;// (u,v)<br>
+attribute vec2 in_TextureCoord;&nbsp;&nbsp;// (u,v)<br>
+attribute vec2 in_Something;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//
+(u,v)<br></p>
+
+<p>In this example, <tt>in_myTexcoord</tt>,
+<tt>in_TextureCoord</tt> and <tt>in_Something</tt> map to the three
+successive texture coordinate attributes defined in the vertex
+format.</p>
+</div></blockquote>
+
+<p>The following functions are available for defining vertex
+formats:</p>
 
 <blockquote>
 <ul>
@@ -139,7 +294,10 @@ Primitives</a><br>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="../index.html">Drawing And
 Creating Primitives</a></div>
@@ -148,11 +306,13 @@ Creating Primitives</a></div>
 "../primitive%20building/index.html">Building
 Primitives</a><br></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

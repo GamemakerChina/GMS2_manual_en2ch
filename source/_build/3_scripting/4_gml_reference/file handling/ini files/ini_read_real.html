@@ -9,6 +9,7 @@
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>ini_read_real</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../../default.css" type=
@@ -32,7 +33,23 @@ if (window.name != "content")
 <h2>ini_read_real</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>You can use this function to read a number from an ini data
+file. Ini Files are split into <b>sections</b> and then each
+section is subsequently split into <b>key</b> - <b>value</b> pairs.
+So a typical ini file would look something like this: <img class=
+"center" src="iniexample.png"></p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">ini_read_real(section, key, default);</p>
 
@@ -69,33 +86,25 @@ number.</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Example:</h3>
 
-<p>You can use this function to read a number from an ini data
-file. Ini Files are split into <b>sections</b> and then each
-section is subsequently split into <b>key</b> - <b>value</b> pairs.
-So a typical ini file would look something like this:<br>
-<br>
-<img class="center" src="iniexample.png"></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
-
-<p class="code">ini_open( 'savedata.ini' );<br>
-score = ini_read_real( 'save1', 'score', 0 );<br>
+<p class="code">ini_open("savedata.ini");<br>
+score = ini_read_real("save1", "score", 0 );<br>
 ini_close();</p>
 
-<p>This will open 'savedata.ini' and set score to the value under
-'save1' &gt; 'score' in it, then close the .ini again. Should there
-be no value under 'save1' &gt; 'score', or there no 'savedata.ini'
+<blockquote>
+<p>This will open "savedata.ini" and set score to the value under
+"save1" &gt; "score" in it, then close the .ini again. Should there
+be no value under "save1" &gt; "score", or there no "savedata.ini"
 file present, score will be set to 0.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -112,7 +121,7 @@ Files</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

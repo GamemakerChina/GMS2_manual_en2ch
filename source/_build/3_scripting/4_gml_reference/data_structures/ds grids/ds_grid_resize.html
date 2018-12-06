@@ -29,16 +29,29 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">ds_grid_resize</h1>
+<h2>ds_grid_resize</h2>
 
-<h2 class="studio">Resizes the grid to a new width and height.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
 
-<p class="code">ds_grid_resize(index, w, h);</p>
+<blockquote>
+<p>With this function you can resize the given ds_grid to have a
+different width and/or height. If the grid size is larger than the
+current grid, the new cells will have a base value of 0, and if the
+size is smaller then the values held in the cells that are no
+longer within the new size will be lost. All other cells will be
+left untouched.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">ds_grid_resize(index, w, h);</p>
 
 <div class="param">
 <table>
@@ -67,37 +80,31 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>With this function you can resize the given ds_grid to have a
-different width and/or height. If the grid size is larger than the
-current grid, the new cells will have a base value of 0, and if the
-size is smaller then the values held in the cells that are no
-longer within the new size will be lost. All other cells will be
-left untouched.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">ds_grid_resize(global.Grid, room_width / 32,
 room_height / 32);<br>
-ds_grid_clear(global.Grid, -1);<br></p>
+ds_grid_clear(global.Grid, -1)<br></p>
 
+<blockquote>
 <p>The above code will resize the ds_grid indexed in the global
 variable "Grid" and then clear it so that each cell holds the value
 -1.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">DS
 Grids</a></div>
@@ -105,11 +112,13 @@ Grids</a></div>
 <div style="float:right">Next: <a href=
 "ds_grid_clear.html">ds_grid_clear</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

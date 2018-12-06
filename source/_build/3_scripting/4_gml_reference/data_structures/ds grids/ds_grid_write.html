@@ -29,17 +29,32 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">ds_grid_write</h1>
+<h2>ds_grid_write</h2>
 
-<h2 class="studio">Turns a data structure into a string and returns
-this string.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
 
-<p class="code">ds_grid_write(index);</p>
+<blockquote>
+<p>This function can be used to convert the given ds_grid into a
+string, which can then be stored in an external file (for example).
+You can read the returned string from this function back into a
+ds_grid using the function <a href=
+"ds_grid_read.html"><tt>ds_grid_read()</tt></a>.</p>
+
+<div class="note"><b>NOTE:</b> The returned string is not a human
+readable string, but rather a dump of the contents of the
+data-structure.</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">ds_grid_write(index);</p>
 
 <div class="param">
 <table>
@@ -58,39 +73,31 @@ this string.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<h3>Returns:</h3>
+
+<p class="code">String</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function can be used to convert the given ds_grid into a
-string, which can then be stored in an external file (for example).
-You can read the returned string from this function back into a
-ds_grid using the function <a href=
-"ds_grid_read.html"><tt>ds_grid_read()</tt></a>.<br>
-<br>
-<i><b>NOTE:</b> The returned string is not a human readable string,
-but rather a dump of the contents of the data-structure</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">ini_open("Save.ini");<br>
 ini_write_string("Save", "0", ds_grid_write(mygrid));<br>
-ini_close();<br></p>
+ini_close()<br></p>
 
+<blockquote>
 <p>The above code will open an ini file (creating it if it doesn't
 already exist) and then write the given ds_grid as a string to that
 file.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">DS
 Grids</a></div>
@@ -98,11 +105,13 @@ Grids</a></div>
 <div style="float:right">Next: <a href=
 "ds_grid_create.html">ds_grid_create</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

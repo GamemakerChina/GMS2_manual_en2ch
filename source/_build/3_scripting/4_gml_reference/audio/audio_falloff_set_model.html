@@ -109,7 +109,7 @@ gain = (distance / reference_distance) ^ (-falloff_factor)<br>
 <td>audio_falloff_inverse_distance</td>
 <td><br>
 gain = reference_distance / (reference_distance + falloff_factor *
-(listener_distance – reference_distance))<br>
+(listener_distance ï¿½ reference_distance))<br>
 <br></td>
 </tr>
 
@@ -119,7 +119,7 @@ gain = reference_distance / (reference_distance + falloff_factor *
 distance = clamp(listener_distance, reference_distance,
 maximum_distance)<br>
 gain = reference_distance / (reference_distance + falloff_factor *
-(distance – reference_distance))<br>
+(distance ï¿½ reference_distance))<br>
 <br></td>
 </tr>
 
@@ -127,8 +127,8 @@ gain = reference_distance / (reference_distance + falloff_factor *
 <td>audio_falloff_linear_distance</td>
 <td><br>
 distance = min(distance, maximum_distance)<br>
-gain = (1 – falloff_factor * (distance – reference_distance) /
-(maximum_distance – reference_distance))<br>
+gain = (1 ï¿½ falloff_factor * (distance ï¿½ reference_distance) /
+(maximum_distance ï¿½ reference_distance))<br>
 <br></td>
 </tr>
 
@@ -137,8 +137,8 @@ gain = (1 – falloff_factor * (distance – reference_distance) /
 <td><br>
 distance = clamp(listener_distance, reference_distance,
 maximum_distance)<br>
-gain = (1 – falloff_factor * (distance – reference_distance) /
-(maximum_distance – reference_distance))<br>
+gain = (1 ï¿½ falloff_factor * (distance ï¿½ reference_distance) /
+(maximum_distance ï¿½ reference_distance))<br>
 <br></td>
 </tr>
 
@@ -220,7 +220,7 @@ distance of 300, a falloff factor of 1 and a low priority.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

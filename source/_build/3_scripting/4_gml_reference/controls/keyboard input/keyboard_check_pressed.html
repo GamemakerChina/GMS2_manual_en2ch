@@ -29,17 +29,35 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">keyboard_check_pressed</h1>
+<h2>keyboard_check_pressed</h2>
 
-<h2 class="studio">Returns whether the given key on the keyboard
-has just been pressed.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3><b>Description</b>
+</h3>
 
-<p class="code">keyboard_check_pressed(key);</p>
+<blockquote>
+<p>With this function you can check to see if a key has been
+pressed or not. Unlike the <a href=
+"keyboard_check.html"><tt>keyboard_check</tt></a> function, this
+function will only run once for every time the key is pressed down,
+so for it to trigger again, the key must be first released and then
+pressed again. The function will take a keycode value as returned
+by the function <a href="ord.html"><tt>ord()</tt></a> (only
+<i>capital</i> letters from A-Z or numbers from 0-9), or any of the
+<tt>vk_*</tt> constants listed on the main <a href=
+"index.html">Keyboard Input</a> page.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3><b>Syntax:</b>
+</h3>
+
+<p class="code">keyboard_check_pressed(key);</p>
 
 <div class="param">
 <table>
@@ -58,38 +76,34 @@ has just been pressed.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<h3><b>Returns:</b>
+</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>With this function you can check to see if a key has been
-pressed or not. Unlike the <a href=
-"keyboard_check.html"><tt>keyboard_check</tt></a> function, this
-function will only run once for every time the key is pressed down,
-so for it to trigger again, the key must be first released and then
-pressed again.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3><b>Example:</b>
+</h3>
 
 <p class="code">if keyboard_check_pressed(vk_anykey)<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;room_goto_next();<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will advance to the next room if the player
 presses any of the keyboard's keys (working like a 'Press Any Key
 to Continue' prompt).</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Keyboard
 Input</a></div>
@@ -97,11 +111,13 @@ Input</a></div>
 <div style="float:right">Next: <a href=
 "keyboard_check_released.html">keyboard_check_released</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

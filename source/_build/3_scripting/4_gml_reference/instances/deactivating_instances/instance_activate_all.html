@@ -64,12 +64,14 @@ room.<br>
 <p class="code">instance_activate_all();<br>
 var _vx = camera_get_view_x(view_camera[0]);<br>
 var _vy = camera_get_view_y(view_camera[0]);<br>
-instance_deactivate_region(view_xview[0] - 64, _vx - 64, _vy + 128,
-view_hview + 128, false, false);<br></p>
+var _vw = camera_get_view_width(view_camera[0]);<br>
+var _vh = camera_get_view_height(view_camera[0]);<br>
+instance_deactivate_region(_vx - 64, _vy - 64, _vw + 128, _vh +
+128, false, false);<br></p>
 
 <p>The above code activates all instances within the room and then
-deactivates those that are outside of the limits of the current
-camera view.</p>
+deactivates those that are 64px outside of the limits of the
+current camera view.</p>
 
 <p><br>
 </p>
@@ -86,7 +88,7 @@ Instances</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

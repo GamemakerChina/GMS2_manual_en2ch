@@ -38,26 +38,18 @@ if (window.name != "content")
 
 <h3>Description</h3>
 
-<blockquote>This variable is used to get or to set the alpha value
-for the sprite. Alpha is always calculated as a value between 0 and
-1 where 0 is completely transparent and 1 is completely opaque.
-Please note that for changes in this variable to be visible, the
-instance should have either <i>no</i> draw event (and so
-<i>GameMaker Studio 2</i> will default draw the sprite) or be drawn
-using one of the extended drawing functions like <a href=
+<blockquote>
+<p>This variable is used to get or to set the alpha value for the
+sprite. Alpha is always calculated as a value between 0 and 1 where
+0 is completely transparent and 1 is completely opaque. Please note
+that for changes in this variable to be visible, the instance
+should have either <i>no</i> draw event (and so <i>GameMaker Studio
+2</i> will default draw the sprite) or be drawn using one of the
+extended drawing functions like <a href=
 "../../drawing/sprites_and_tiles/draw_self.html"><tt>draw_self()</tt></a>
 or <a href=
-"../../drawing/sprites_and_tiles/draw_sprite_ext.html"><tt>draw_sprite_ext()</tt></a>.<br>
-
-<br>
-
-<div class="note"><b>NOTE:</b> On the HTML5 and Windows8
-(JavaScript) platforms, this variable is not clamped. Therefore if
-you have a value greater than one, it will "wrap" back to 0 again,
-giving flickering results. Likewise if you go below 0, the alpha
-will "wrap" back to 1. You can use the function <a href=
-"../../maths/real%20valued%20functions/clamp.html"><tt>clamp</tt></a>
-for this.</div></blockquote>
+"../../drawing/sprites_and_tiles/draw_sprite_ext.html"><tt>draw_sprite_ext()</tt></a>.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -80,8 +72,10 @@ for this.</div></blockquote>
 
 <p class="code">image_alpha = clamp(image_alpha - 0.01, 0, 1);</p>
 
-<blockquote>The above code will slowly reduce the image_alpha until
-it reaches 0.</blockquote>
+<blockquote>
+<p>The above code will slowly reduce the image_alpha until it
+reaches 0.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -98,7 +92,7 @@ Variables</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

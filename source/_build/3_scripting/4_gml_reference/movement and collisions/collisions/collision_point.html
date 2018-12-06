@@ -32,12 +32,37 @@ if (window.name != "content")
 <h2>collision_point</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">collision_point( x, y, obj, prec, notme );</p>
+<h3>Description</h3>
+
+<blockquote>
+<p>Collision point checks the point specified by the arguments
+x1,y1 for a collision with <b>any</b> instance of the object
+specified by the argument "obj". this check can be either precise
+or not, but for precise collisions to be enabled, the object or
+instance that you are checking for <i>must</i> also have precise
+collisions enabled for their sprite. If not, the default check is
+based on bounding boxes. The following image illustrates how this
+works: <img class="center" src=
+"images/collision_point_illustration.png"></p>
+
+<p>Remember, for precise collisions to be considered <i>both</i>
+the object sprite and the collision function must have precise
+marked as on. It should also be noted that the return value of the
+function can be the id of <i>any one</i> of the instances
+considered to be in collision, so if three instance overlap at that
+point, any one of their ids could be the return value of the
+function.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">collision_point(x, y, obj, prec, notme);</p>
 
 <div class="param">
 <table>
@@ -63,14 +88,15 @@ if (window.name != "content")
 
 <tr class="alt">
 <td>prec</td>
-<td>Whether the check is based on pixel-perfect collisions (true =
-slow) or its bounding box in general (false = fast).</td>
+<td>Whether the check is based on precise collisions
+(<tt>true</tt>, which is slower) or its bounding box in general
+(<tt>false</tt>, faster).</td>
 </tr>
 
 <tr>
 <td>notme</td>
 <td>Whether the calling instance, if relevant, should be excluded
-(true) or not (false).</td>
+(<tt>true</tt>) or not (<tt>false</tt>).</td>
 </tr>
 </table>
 </div>
@@ -78,38 +104,14 @@ slow) or its bounding box in general (false = fast).</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Instance id or <b>noone</b></p>
+<h3>Returns:</h3>
+
+<p class="code">Instance id or noone</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>Collision point checks the point specified by the arguments
-x1,y1 for a collision with <b>any</b> instance of the object
-specified by the argument "obj". this check can be either precise
-or not, but for precise collisions to be enabled, the object or
-instance that you are checking for <i>must</i> also have precise
-collisions enabled for their sprite. If not, the default check is
-based on bounding boxes. The following image illustrates how this
-works:<br>
-<br>
-<img class="center" src=
-"images/collision_point_illustration.png"></p>
-
-<p>Remember, for precise collisions to be considered <i>both</i>
-the object sprite and the collision function must have precise
-marked as on. It should also be noted that the return value of the
-function can be the id of <i>any one</i> of the instances
-considered to be in collision, so if three instance overlap at that
-point, any one of their ids could be the return value of the
-function.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if collision_point(x, y, obj_Cursor, false,
 true)<br>
@@ -117,9 +119,11 @@ true)<br>
 &nbsp;&nbsp;&nbsp;Score += 10S;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>Here we are checking the point at the position of the object
 that has the code for the object "obj_Cursor". If there is one,
 then we add 10 onto the score variable.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -132,11 +136,11 @@ then we add 10 onto the score variable.</p>
 Checking</a></div>
 
 <div style="float:right">Next: <a href=
-"collision_rectangle.html">collision_rectangle</a></div>
+"collision_point_list.html">collision_point_list</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

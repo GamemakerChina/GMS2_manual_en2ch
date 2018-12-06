@@ -47,29 +47,10 @@ different sections are:</p>
 "iOS General Options">
 </p>
 
-<p>The first thing to do is fill in the <b>Product Information</b>
-about your game, including its <i>Display Name</i>, its <i>Bundle
-ID</i> and the <i>Version info</i>. Note that the <i>Bundle ID</i>
-must be in the correct reverse URL format for the final build of
-the game to work correctly, EG:
-<tt>com.[Company].[GameName]</tt></p>
-
-<p>The second part of the General section covers the <b>Build
-Settings</b>, with the following options available for setting what
-type of device to target:</p>
-
-<ul>
-<li><b>iPhone or iPod Touch</b>: iPhone 4 and above or iPod Touch
-devices</li>
-
-<li><b>iPad</b>: iPad devices</li>
-
-<li><b>Both</b>: Both iPhone/iPod and iPad</li>
-</ul>
-
-<p>You can then select the <b>App Output</b> folder for the game,
-and then the different <i>Orientations</i> that your game can be
-run on for the best user experience. The available options are:</p>
+<p>The first part of the General section covers <b>Build
+Settings</b> for your game. To start with you set the
+<i>Orientations</i> that your game can be run on for the best user
+experience. The available options are:</p>
 
 <ul>
 <li>Portrait</li>
@@ -80,6 +61,30 @@ run on for the best user experience. The available options are:</p>
 
 <li>Flipped Landscape</li>
 </ul>
+
+<p>You can then go to the <b>Device Support</b> section, with the
+following options available for setting what type of device to
+target:</p>
+
+<ul>
+<li><b>iPhone or iPod Touch</b>: iPhone 4 and above or iPod Touch
+devices</li>
+
+<li><b>iPad</b>: iPad devices</li>
+
+<li><b>Both</b>: Both iPhone/iPod and iPad</li>
+</ul>
+
+<p>The second thing to do is fill in the <b>Product Information</b>
+about your game, including its <i>Display Name</i>, its <i>Bundle
+ID</i> and the <i>Version info</i>. Note that the <i>Bundle ID</i>
+must be in the correct reverse URL format for the final build of
+the game to work correctly, EG: <tt>com.[Company].[GameName]</tt>.
+Here you also need to give the <b>Team Identifier</b> that you wish
+to use for signing the final application that <i>GameMaker Studio
+2</i> creates for you. Setting it here will overide the Team ID
+that you have supplied in the <a href="../preferences.html">iOS
+Preferences</a>.</p>
 </div>
 <br>
 <label class="collapse" for="b">Graphics</label> <input id="b"
@@ -105,12 +110,10 @@ reduce the size of textures by half if you want to target this
 device or get maximum compatibility.<br>
 <br></li>
 
-<li><b>Scaling</b>: Your game can be configured to scale the draw
-canvas automatically to maintain the aspect ratio within the
-browser, or you can select to have it stretch to fit. The stretch
-to fit option will not full screen the game in the browser, but
-rather stretch what is drawn to fit the canvas size, as defined by
-the first room of the game.</li>
+<li><b>Scaling</b>: Here you can select to scale the draw canvas
+maintaining the aspect ratio within the device screen - adding
+"padding" around the edges to fit the screen - or you can select to
+have the draw canvas stretched stretch to fit.</li>
 </ul>
 
 <p>Finally there is the option to set the size of the <b>Texture
@@ -144,6 +147,16 @@ Image Generator</a> tool which can be used to automatically create
 all the Icons required for all the different target platforms your
 game is being compiled to. If you use this tool, you should revise
 the images created to ensure that they are what you require.</p>
+
+<div class="note"><b>NOTE</b>: On importing an older project you
+may be presented with the following warning: <img class="center"
+src="images/ios_icon_warning.png" alt="iOS Icon Warning"> This
+comes up because the current iOS target version has changed the
+format of the required icons since the project was previously
+loaded. You will be required to re-create all the icons, as they
+will have been replaced with the generic GameMaker Studio 2 icons
+(you can use the above mentioned <b>Project Image Generator</b>
+tool to do this quickly).</div>
 </div>
 <br>
 <label class="collapse" for="c">Images</label> <input id="c" type=
@@ -214,7 +227,7 @@ Options</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

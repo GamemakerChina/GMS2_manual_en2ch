@@ -32,12 +32,25 @@ if (window.name != "content")
 <h2>script_get_name</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">script_get_name(scr);</p>
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will return the name <i>as a string</i> of the
+specified script. This name is the one that has been specified for
+the script in the resource tree of the main <i>GameMaker Studio
+2</i> window. For more information about scripts, see <a href=
+"../../3_gml_overview/3_scripts.html">Scripts</a>.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">script_get_name(scr);</p>
 
 <div class="param">
 <table>
@@ -56,29 +69,21 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<h3>Returns:</h3>
+
+<p class="code">String</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Example:</h3>
 
-<p>This function will return the name <i>as a string</i> of the
-specified script. This name is the one that has been specified for
-the script in the resource tree of the main <i>GameMaker Studio
-2</i> window. For more information about scripts, see <a href=
-"../../3_gml_overview/3_scripts.html">Scripts</a>.<br>
-<br></p>
+<p class="code">scr_name = script_get_name(scr_Help_File);<br></p>
 
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
-
-<p class="code">scr_name = script_get_name(scr_Help_File);</p>
-
+<blockquote>
 <p>The above example code will store the name of the indicated
 script index in the variable "scr_name".</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -95,7 +100,7 @@ script index in the variable "scr_name".</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

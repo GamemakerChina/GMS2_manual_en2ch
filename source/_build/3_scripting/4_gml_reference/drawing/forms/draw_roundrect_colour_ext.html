@@ -118,9 +118,17 @@ where colour 1 is the centre colour and colour 2 the edge colour.
 You must also supply radius values for the x and y axis (in pixels)
 and the corners will be rounded by these amounts. You can define
 how precise the drawing of the corners is with the function
-<a href="draw_set_circle_precision.html"><tt>draw_set_circle_precision</tt></a>.<br>
+<a href="draw_set_circle_precision.html"><tt>draw_set_circle_precision</tt></a>.</p>
 
-<br></p>
+<div class="note"><b>NOTE</b>: If you are wanting to draw a shape
+using a shader, you should be aware that most shaders expect the
+following inputs: vertex, texture, Colour. However, when using this
+function, only vertex and colour data are being passed in, and so
+the shader may not draw anything (or draw something but not
+correctly). If you need to draw shapes in this way then the shader
+should be customised with this in mind.</div>
+<br>
+<br>
 
 <p><br>
 </p>
@@ -149,7 +157,7 @@ Forms</a></div>
 "draw_triangle.html">draw_triangle</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -32,7 +32,20 @@ if (window.name != "content")
 <h2>load_csv</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will load a CSV format file and convert it into a
+DS grid, returning the unique ID value for the grid created.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">load_csv(filename)</p>
 
@@ -56,24 +69,18 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> DS Grid Index (real)</p>
+<h3>Returns:</h3>
+
+<p class="code">DS Grid Index (real)</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function will load a CSV format file and convert it into a
-DS grid, returning the unique ID value for the grid created.</p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">file_grid = load_csv("spreadsheet.csv");<br>
-var ww = ds_grid_get_width(file_grid);<br>
-var hh = ds_grid_get_height(file_grid);<br>
+var ww = ds_grid_width(file_grid);<br>
+var hh = ds_grid_height(file_grid);<br>
 var xx = 32;<br>
 var yy = 32;<br>
 for (var i = 0; i &lt; ww; i++;)<br>
@@ -88,10 +95,12 @@ string(file_grid[# i, j]));<br>
 &nbsp;&nbsp;&nbsp;&nbsp;xx += 32;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will open the given CSV file and store the
 returned DS grid in the variable "file_grid". This grid is then
 parsed in a couple of <tt>for</tt> lops and the contents drawn to
 the screen.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -108,7 +117,7 @@ Handling</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

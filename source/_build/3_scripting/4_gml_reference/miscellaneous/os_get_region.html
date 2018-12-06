@@ -32,47 +32,49 @@ if (window.name != "content")
 <h2>os_get_region</h2>
 
 <div class="body-scroll">
-<h2 class="studio">This function returns a different value
-depending on the browser or device language region.</h2>
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>This function returns a string with the two or three letter
+Regional Code for the OS that is running the game, as set by the
+<a href="http://en.wikipedia.org/wiki/ISO_3166-1" target=
+"_blank">ISO3166-1</a> standard. If the information is not
+available, it will hold simply an empty string "".</p>
+
+<div class="note"><b>NOTE</b>: This is not the location regional
+code that is returned, but the regional language code of the
+OS.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">os_get_region()</p>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<h3>Returns:</h3>
+
+<p class="code">String</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function returns a string with the two or three letter
-Regional Code for the OS that is running the game, as set by the
-<a href="http://en.wikipedia.org/wiki/ISO_3166-1" target=
-"_blank">ISO3166-1</a> standard. If the information is not
-available, it will hold simply an empty string "".<br>
-<br></p>
-
-<p><i><b>NOTE:</b> This is not the location regional code that is
-returned, but the regional language code of the OS.</i><br>
-<br>
-</p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">switch (os_get_language())<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;case "zh":<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var region =
 os_get_region();<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (region == "hk" || region ==
-"mo" || region == "tw")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (region == "HK" || region ==
+"MO" || region == "TW")<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ini_open("chinese_traditional.ini");<br>
 
@@ -94,9 +96,11 @@ os_get_region();<br>
 &nbsp;&nbsp;&nbsp;break;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the OS language and if it is Chinese, it
 then checks the OS region, opening a different <tt>*.ini</tt> file
 depending on the returned values.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -113,7 +117,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -129,14 +129,14 @@ referencing them directly. For further information see <a href=
 <h3>Example:</h3>
 
 <p class="code">if view_current == 0<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;surface_copy_part(surf, 0, 0, temp_surf, 0, 0,
-view_xview[1] - mouse_x, view_yview[1] - mouse_y);<br>
-&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;surface_copy_part(surf, 0, 0, temp_surf, 0,
+0, view_xview[1] - mouse_x, view_yview[1] - mouse_y);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 else<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code will check the current view being drawn and if it
@@ -159,11 +159,11 @@ surface "surf" is drawn to the screen.</p>
 "index.html">Surfaces</a></div>
 
 <div style="float:right">Next: <a href=
-"surface_get_height.html">surface_get_height</a></div>
+"surface_depth_disable.html">surface_depth_disable</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -75,10 +75,14 @@ Packages</b> please see the following sections:</p>
 <blockquote><label class="collapse" for="a">Using
 Extensions</label> <input id="a" type="checkbox">
 <div class="index_list">
-<p>Once you have added an extension you can start to use it in your
-projects, however you should ensure that the extension properties
-match up with the target platform, and edit the export targets for
-the extension files based on the following:</p>
+<p>Once you have added an extension to the resource tree, you
+should give it a name and a version number and also set which
+platforms you want to export it to. By un-ticking selected
+platforms, you can tell <i>GameMaker Studio 2</i> not to export the
+extension as part of the executable for those platforms. You should
+also ensure that the extension properties match up with the target
+platform(s), and edit the export targets for the extension files
+based on the following:</p>
 
 <ul>
 <li><b>All targets</b>: GML extensions. These are extensions made
@@ -132,7 +136,13 @@ working on a PSVita, the extension should be SUPRX instead.</li>
 </li>
 </ul>
 
-<p>To change the target platform for a specific extension file or
+<p>Since a single extension can have various associated files, it's
+possible to create a single extension for multiple platforms, in
+which case you want to specify <i>all</i> the compatible platforms
+in the main extension editor (ie: tick the checkbox beside them)
+and then in the individual file properties for each part of the
+extension, set the platform that those files should be exported to.
+To change the target platform for a specific extension file or
 placeholder you must first open the extension properties (double
 click <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> the extension i the Resource tree or
@@ -143,13 +153,19 @@ from the right that you want to edit: <img class="center" src=
 "images/editor_extensions_targets.png" alt=
 "Extension Target Platforms"></p>
 
-<p>Once you have installed your extension, you can use the
-functions and constants for it just as you would the built in
-functions and constants used in the GameMaker Language. If your
-game is cross-platform (for example, it is designed to run on both
-Windows and Android targets), then you should do an OS check before
-calling extension specific functions to prevent issues, for
-example:</p>
+<div class="note"><b>NOTE</b>: If you are exporting to the macOS or
+Ubuntu target, then you can set the "Uncompress as zip file" option
+to preserve file permissions for the extension.</div>
+
+<p><br>
+Once you have installed your extension, you can use the functions
+and constants for it just as you would the built in functions and
+constants used in the GameMaker Language. If your game is
+cross-platform (for example, it is designed to run on both Windows
+and Android targets), then you should use the <a href=
+"../3_scripting/4_gml_reference/miscellaneous/index.html">OS
+constants and functions</a> to check the platform before calling
+extension specific functions to prevent issues, for example:</p>
 
 <p class="code">switch(os_type)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;{<br>
@@ -277,7 +293,7 @@ GM you would select them all), as well as rename the extension file
 and set a few other details, which we'll cover in a moment. First
 of all though we want to add in our constants and functions so that
 the user can call the extension from within their project code. For
-that you need to click the extensions menu button <img style=
+that you need to click the functions menu button <img style=
 "vertical-align:middle" src="images/icon_extensionmenu.png"> and
 select what you require: <img class="center" src=
 "images/editor_extensions_addfunctions.png" alt=
@@ -316,10 +332,14 @@ take. Arguments can be either <b>doubles</b> or <b>strings</b>, and
 you can add them by clicking the add button <img style=
 "vertical-align:middle" src="images/icon_addargument.png"> and
 remove them by clicking the remove button <img style=
-"vertical-align:middle" src="images/icon_removeargument.png">. Note
-that if you are creating a Windows <tt>dll</tt> file and it has
-more than four arguments, <i>all arguments must be of the same
-type</i>.</p>
+"vertical-align:middle" src="images/icon_removeargument.png">. If
+your function can take variable arguments, you should also make
+sure to check the <b>Variable Length Arguments</b> checkbox at the
+bottom.</p>
+
+<div class="note"><b>NOTE</b>: If you are creating a Windows
+<tt>dll</tt> file and it has more than four arguments, <i>all
+arguments must be of the same type</i>.</div>
 
 <p>Once you have done all that then function is ready to be used in
 a project and it will show up in auto complete and be colour coded
@@ -343,7 +363,8 @@ information on macros, please see <a href=
 "../../3_scripting/3_gml_overview/6_scope.html">here</a>). For
 example, we could remove the defined function from our example GML
 extension above for the colour <tt>c_alice_blue</tt> and make it a
-macro instead: <img class="center" src=
+macro instead. To make a macro, simply click the <b>Macros</b>
+button in the Extension Properties window: <img class="center" src=
 "images/editor_extensions_macroeditor.png" alt="Macro Editor"></p>
 
 <p>The editor here is pretty much self explanatory - you give the
@@ -552,10 +573,56 @@ documentation that accompanies the SDK or framework in question for
 details).<br>
 <br></li>
 
-<li><b>ClassName</b>: Your extension can have multiple classes,
+<li><b>Class Name</b>: Your extension can have multiple classes,
 with each class having its own functions and constants, so you
 should give it a name that reflects its purpose<br>
 <br></li>
+
+<li><b>App Delegate Class Name</b>: The name of your custom app
+delegate class. Setting this allows the extension to
+override/extend core app functionality. To use this feature you
+need to do the following:<br>
+<br>
+
+<ul>
+<li>Ensure that the delegate source files have the same name as the
+delegate class (e.g. <tt>@interface MyCustomAppDelegate</tt> should
+be defined in "<tt>MyCustomAppDelegate.h</tt>")</li>
+
+<li>Add the <tt>${YYExtAppDelegateIncludes}</tt> environment
+variable at the top of your app delegate header file. This will be
+replaced at compile-time with the relevant include files for the
+parent delegate class.</li>
+
+<li>Use the <tt>${YYExtAppDelegateBaseClass}</tt> environment
+variable as the base class for your custom app delegate. This will
+be replaced at compile-time with the correct base delegate
+class.</li>
+</ul>
+To ensure your extension works with any other extensions that use
+custom app delegates, you should call any base class methods from
+overridden methods in your child class. Before calling the
+superclass method, you need to make sure it is implemented in the
+class hierarchy to avoid errors, for e.g.:<br>
+<br>
+
+<p class="code">- (BOOL)application:(UIApplication *)application
+willFinishLaunchingWithOptions:(NSDictionary *)launchOptions<br>
+{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;// Check if any superclasses implement this
+method and call it<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if([[self superclass]
+instancesRespondToSelector:@selector(application:willFinishLaunchingWithOptions:)])<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return [super
+application:application
+willFinishLaunchingWithOptions:launchOptions];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return TRUE;<br>
+}</p></li>
+
+<li style="list-style: none"><br>
+</li>
 
 <li><b>System Frameworks</b>: Here you can add in any iOS system
 frameworks to your extension. These are added by clicking the
@@ -666,7 +733,7 @@ Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

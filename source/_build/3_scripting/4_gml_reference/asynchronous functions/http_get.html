@@ -73,35 +73,39 @@ general structure for the ds_map will be as follows:</p>
 
 <blockquote>
 <ol>
-<li><b>id:</b> The ID which was returned from the command. If you
-fire off a series of <tt>http_</tt> requests then you need to know
-which one you are getting the reply to, and so you would use this
-value to compare to the value you stored when you originally sent
-the request to find the right one.</li>
+<li><b><span class="notranslate">id</span>:</b> The ID which was
+returned from the command. If you fire off a series of
+<tt>http_</tt> requests then you need to know which one you are
+getting the reply to, and so you would use this value to compare to
+the value you stored when you originally sent the request to find
+the right one.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>status:</b> Returns a value of less than 0 for an error, 0
-for complete and 1 for receiving packets (see below for more
-details).</li>
+<li><b><span class="notranslate">status</span>:</b> Returns a value
+of less than 0 for an error, 0 for complete and 1 for receiving
+packets (see below for more details).</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>result:</b> The data received (string only).</li>
+<li><b><span class="notranslate">result</span>:</b> The data
+received (string only).</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>url:</b> The complete URL you requested.</li>
+<li><b><span class="notranslate">url</span>:</b> The complete URL
+you requested.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>http_status:</b> The raw http status code (if available).
-This returns the standard web status code for most browsers, eg:
-304 for "Not Modified" or 204 for "No Content", etc...</li>
+<li><b><span class="notranslate">http_status</span>:</b> The raw
+http status code (if available). This returns the standard web
+status code for most browsers, eg: 304 for "Not Modified" or 204
+for "No Content", etc...</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -114,15 +118,16 @@ have the following additional keys:</p>
 
 <blockquote>
 <ol>
-<li><b>"contentLength":</b> This is the size of file that the web
-server has said you should expect to receive (may be -1 if the
-server does not return this data).</li>
+<li><b>"<span class="notranslate">contentLength</span>":</b> This
+is the size of file that the web server has said you should expect
+to receive (may be -1 if the server does not return this
+data).</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"sizeDownloaded":</b> The size of the data that has already
-been downloaded.</li>
+<li><b>"<span class="notranslate">sizeDownloaded</span>":</b> The
+size of the data that has already been downloaded.</li>
 </ol>
 </blockquote>
 
@@ -179,10 +184,11 @@ http_get("http://www.MacSweeneyGames.com/logon?username=" +
 name);</p>
 
 <blockquote>
-<p>The above code will pass the string held in the variable "name"
-to the given server as well as retrieve the data from that URL,
-triggering an Async Event which will contain the async_load ds_map
-(the async_load map index will be stored in the variable "get" so
+<p>The above code will pass the string held in the variable
+"<span class="notranslate">name</span>" to the given server as well
+as retrieve the data from that URL, triggering an Async Event which
+will contain the async_load ds_map (the async_load map index will
+be stored in the variable "<span class="notranslate">get</span>" so
 you can check for the correct callback). The Async Event triggered
 would be the <b>HTTP</b> sub-event, and in that event you would
 have the following:</p>
@@ -204,10 +210,11 @@ ds_map_find_value(async_load, "result");<br>
 
 <blockquote>
 <p>The above code will first check the id of the ds_map that has
-been created, then check the status of the callback. If the value
-is equal to 0 (signalling success) the result from the callback
-will then be stored in a variable for future use, otherwise the
-variable will be set to a default value (in this case "null").</p>
+been created, then check the "<span class=
+"notranslate">status</span>" of the callback. If the value is equal
+to 0 (signalling success) the result from the callback will then be
+stored in a variable for future use, otherwise the variable will be
+set to a default value (in this case "null").</p>
 </blockquote>
 
 <p><br>
@@ -225,7 +232,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -32,6 +32,9 @@ if (window.name != "content")
 <h2>File Handling</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <p>At some point while creating your game it will be necessary to
 store information externally and be able to retrieve this
 information. For example, you may wish to store login details, or
@@ -51,8 +54,8 @@ section:</p>
 <blockquote>
 <ol>
 <li><a href=
-"../../../1_overview/3_additional_information/file_system.html">File
-System Limits</a><br>
+"../../../1_overview/3_additional_information/file_system.html">The
+File System</a><br>
 </li>
 </ol>
 </blockquote>
@@ -63,10 +66,39 @@ new set of file functions available to you. These are explained in
 the <a href="../steam%20api/index.html">Steam API</a> section of
 this manual.</p>
 
-<div class="note"><b>IMPORTANT!</b> All <i>GameMaker Studio 2</i>
-projects have a file called "<tt>opions.ini</tt>", so you
-<b>cannot</b> name any file with that name (you will get a uild
-failure when you try to compile your game project).</div>
+<p>Finally, you should also note that there are some distinct
+differences between certain target platforms which whould be taken
+into account when using the file functions. These are:</p>
+
+<blockquote>
+<ul>
+<li><b>iOS</b>: On iOS, if you are loading an included file from a
+folder, ie: with a path something like
+"<tt>Backgrounds/background1.png</tt>", you do NOT need to include
+the folder as part of the path and simply supplying the file name
+is sufficient. On all other platforms you must supply the folder(s)
+as part of the path to the file.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>macOS and Ubuntu (Linux)</b>: On the macOS and Ubunutu,
+filenames and paths are case sensitive on these platforms, and so
+to prevent any potential issues, <i>GameMaker Studio 2</i> will
+automatically make all names/paths use lower case by default.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>HTML5</b>: On HTML5, saving and loading to and from <b>local
+storage</b> will work as explained within the different function
+pages, however if you are loading a file from a server, you <b>must
+only use the function <a href=
+"../buffers/buffer_load_async.html"><tt>buffer_load_async()</tt></a></b>
+as loading synchronously has been deprecated on most browsers and
+will eventually be obsoleted.</li>
+</ul>
+</blockquote>
 
 <p><br>
 The following sections all deal with different types of file
@@ -186,6 +218,11 @@ scripts are available on the internet).</div>
 </div>
 <br></blockquote>
 
+<div class="note"><b>IMPORTANT!</b> All <i>GameMaker Studio 2</i>
+projects have a file called "<tt>opions.ini</tt>", so you
+<b>cannot</b> name any file with that name (you will get a uid
+failure when you try to compile your game project).</div>
+
 <p><br>
 </p>
 </div>
@@ -201,7 +238,7 @@ Studio 2</i> Language Reference</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

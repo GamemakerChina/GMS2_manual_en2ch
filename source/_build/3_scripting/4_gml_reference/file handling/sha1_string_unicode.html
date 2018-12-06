@@ -32,7 +32,39 @@ if (window.name != "content")
 <h2>sha1_string_unicode</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>In cryptography, SHA-1 is a cryptographic hash function designed
+by the United States <i>National Security Agency</i> and is
+employed in several widely used applications and protocols like the
+popular <b>Git</b> where it is used to check for file changes. This
+function will take an input unicode string and returns a 160 bit
+message digest in ASCII format, for example:</p>
+
+<p class="code">sha1 input string = "The quick brown fox jumps over
+the lazy dog"<br>
+sha1 output hash = "2fd4e1c6 7a2d28fc ed849ee1 bb76e739
+1b93eb12"</p>
+
+<p><br>
+In this way you can generate a secure key which can be stored and
+used to check the integrity of the information being sent to (or
+received from) an external server (for example).</p>
+
+<div class="note"><b>NOTE</b>: There are two formats for the sha1
+encoding, UTF-8 and unicode. Both are provided to facilitate
+communication with different server setups, but the most common to
+use is unicode.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">sha1_string_unicode(string)</p>
 
@@ -56,41 +88,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<h3>Returns:</h3>
+
+<p class="code">String</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>In cryptography, SHA-1 is a cryptographic hash function designed
-by the United States <i>National Security Agency</i> and is
-employed in several widely used applications and protocols like the
-popular <b>Git</b> where it is used to check for file changes. This
-function will take an input unicode string and returns a 160 bit
-message digest in ASCII format, for example:<br>
-<br></p>
-
-<p class="code">sha1 input string = "The quick brown fox jumps over
-the lazy dog"<br>
-sha1 output hash = "2fd4e1c6 7a2d28fc ed849ee1 bb76e739
-1b93eb12"</p>
-
-<p><br>
-In this way you can generate a secure key which can be stored and
-used to check the integrity of the information being sent to (or
-received from) an external server (for example).<br>
-<br>
-<i><b>NOTE:</b> There are two formats for the sha1 encoding, UTF-8
-and unicode. Both are provided to facilitate communication with
-different server setups, but the most common to use is
-unicode.</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var hash, str;<br>
 str = base64_encode(game_data);<br>
@@ -100,9 +105,11 @@ http_get("http://www.MacSweeneyGames.com/CatchTheHaggis/gamedata?hash="
 http_get("http://www.MacSweeneyGames.com/CatchTheHaggis/gamedata?data="
 + str);</p>
 
+<blockquote>
 <p>The above code will base64 encode a string and then generate a
 sha1 hash. Finally, both the hash and the encoded string are sent
 to a server.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -119,7 +126,7 @@ Handling</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

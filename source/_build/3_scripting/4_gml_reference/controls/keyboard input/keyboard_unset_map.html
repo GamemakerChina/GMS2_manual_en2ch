@@ -29,44 +29,57 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">keyboard_unset_map</h1>
+<h2>keyboard_unset_map</h2>
 
-<h2 class="studio">Resets the keyboard mapping to its default
-state.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3><b>Description</b>
+</h3>
+
+<blockquote>
+<p>With this function you can clear all re-mapped keys so that they
+return to their default state, ie: all keys to map to
+themselves.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3><b>Syntax:</b>
+</h3>
 
 <p class="code">keyboard_get_map(key);</p>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3><b>Returns:</b>
+</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>With this function you can clear all re-mapped keys so that they
-return to their default state, ie: all keys to map to
-themselves.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3><b>Example:</b>
+</h3>
 
 <p class="code">if keyboard_check_pressed(vk_escape)
-keyboard_unset_map();<br></p>
+keyboard_unset_map();</p>
 
+<blockquote>
 <p>The above example code will reset all mapped keys to their
 default settings if the user presses the "escape" key.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Keyboard
 Input</a></div>
@@ -74,11 +87,13 @@ Input</a></div>
 <div style="float:right">Next: <a href=
 "keyboard_get_numlock.html">keyboard_get_numlock</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

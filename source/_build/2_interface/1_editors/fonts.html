@@ -173,6 +173,19 @@ The range values are shown on the left and the range glyphs are
 shown on the right.</p>
 </div></blockquote>
 
+<p>Note that when you create a font resource, the glyphs in the
+font are used to generate bitmap (PNG format) image, which is what
+is used to render any text to the screen in your games. This PNG
+image is stored along with the YYP and YYZ files, and may need
+regenerated if you have imported the project on a machine where the
+original font is missing or has been renamed or there is a font
+with the same name but different characteristics. If you run your
+project after import and you see issues with the font rendering,
+then you can either delete the font resource from the resource tree
+and then re-create it, or you can open the font resource, change
+the font being used, then change it back again to the original font
+(if available or required).</p>
+
 <p><br>
 </p>
 </div>
@@ -188,7 +201,7 @@ Timeline Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

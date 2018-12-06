@@ -29,17 +29,41 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">virtual_key_add</h1>
+<h2>virtual_key_add</h2>
 
-<h2 class="studio">Creates a virtual key with a set area and
-keycode, returning its id.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
 
-<p class="code">virtual_key_add(x, y, w, h, keycode);</p>
+<blockquote>
+<p>This function enables you to map "touches" of a screen area to
+keyboard events. This means that once you have assigned an area to
+a virtual key, all touches on that area will trigger the keyboard
+event corresponding to the key you have mapped to the area. You can
+assign each virtual key you define to a variable too, which can
+then be used in the further virtual key functions to show, hide and
+delete them. These keys are assigned on a <i>per room</i> basis and
+will be automatically removed by <i>GameMaker Studio 2</i> when
+changing rooms.</p>
+
+<p>The actual position of the virtual key is based on the
+<i>screen</i> position rather than room position and so the x/y
+values are absolute on the screen. This means that you don't need
+to worry about the use of views or the relative room coordinates,
+and can simply draw your key sprites and define your virtual keys
+in the <a href=
+"../../../../2_interface/1_editors/events/draw_events.html">Draw
+GUI Event</a> of an object.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax</h3>
+
+<p class="code">virtual_key_add(x, y, w, h, keycode);</p>
 
 <div class="param">
 <table>
@@ -81,60 +105,45 @@ area</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> index of virtual key</p>
+<h3>Returns:</h3>
+
+<p class="code">index of virtual key</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function enables you to map "touches" of a screen area to
-keyboard events. This means that once you have assigned an area to
-a virtual key, all touches on that area will trigger the keyboard
-event corresponding to the key you have mapped to the area. You can
-assign each virtual key you define to a variable too, which can
-then be used in the further virtual key functions to show, hide and
-delete them. These keys are assigned on a <i>per room</i> basis and
-will be automatically removed by <i>GameMaker Studio 2</i> when
-changing rooms.<br>
-<br>
-The actual position of the virtual key is based on the
-<i>screen</i> position rather than room position and so the x/y
-values are absolute on the screen. This means that you don't need
-to worry about the use of views or the relative room coordinates,
-and can simply draw your key sprites and define your virtual keys
-in the <a href=
-"../../../../2_interface/1_editors/events/draw_events.html">Draw
-GUI Event</a> of an object.</p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">global.Left = virtual_key_add(32, 32, 64, 64,
 vk_left);</p>
 
+<blockquote>
 <p>The above code creates a virtual key 64x64 pixels square,
 positioned on the screen at (32, 32) which will trigger the vk_left
 event when touched and assigns the index of this virtual key to a
 global variable.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Virtual
-Keys</a></div>
+<div style="float:left">Back: <a href="index.html">Virtual Keys And
+Virtual Keyboards</a></div>
 
 <div style="float:right">Next: <a href=
 "virtual_key_show.html">virtual_key_show</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

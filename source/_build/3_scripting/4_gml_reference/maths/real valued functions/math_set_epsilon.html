@@ -29,13 +29,58 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">math_set_epsilon</h1>
+<h2>math_set_epsilon</h2>
 
-<h2 class="studio">Set the "machine epsilon" for floating point
-calculations.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3><b>Syntax:</b>
-</h3>
+<h3>Description</h3>
+
+<blockquote>
+<p>Epsilon is a value used to determine whether two numbers subject
+to rounding error are close enough to be considered "equal". It is
+useful when dealing with floating point maths as it can reduce the
+"rounding errors" that make certain operations return values that
+appear incorrect or contrary to what we expect. For example, we may
+have added a value to the image index of a sprite and expect the
+result to be a single integer, but due to the nature of floating
+point maths, the actual final value ends up being something like
+5.0000002, so when we have the following check:</p>
+
+<p class="code">if image_index == 5 {do something}</p>
+
+<p>The code does not behave as expected and returns <tt>false</tt>.
+However, if we set the epsilon value to 0.000001, the image_index
+value will be rounded to the nearest real number that is +/-
+0.000001 of the original value, making the above comparison return
+true.</p>
+
+<p>The epsilon value will be used for all the following integer
+operators:</p>
+
+<ul>
+<li>&lt;: Less than</li>
+
+<li>&gt;: Greater than</li>
+
+<li>==: Equal to</li>
+
+<li>&lt;=: Less than or equal to</li>
+
+<li>&gt;=: Greater than or equal to</li>
+
+<li>!=: Not equal to</li>
+</ul>
+
+<p>Note that setting an epsilon value of 0 will disable all
+rounding, and using a value of 1 will give an error.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">math_set_epsilon(epsilon);</p>
 
@@ -59,79 +104,41 @@ calculations.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>Epsilon is a value used to determine whether two numbers subject
-to rounding error are close enough to be considered "equal". It is
-useful when dealing with floating point maths as it can reduce the
-"rounding errors" that make certain operations return values that
-appear incorrect or contrary to what we expect. For example, we may
-have added a value to the image index of a sprite and expect the
-result to be a single integer, but due to the nature of floating
-point maths, the actual final value ends up being something like
-5.0000002, so when we have the following check:</p>
-
-<p class="code">if image_index == 5 {do something}</p>
-
-<p>The code does not behave as expected and returns <tt>false</tt>.
-However, if we set the epsilon value to 0.000001, the image_index
-value will be rounded to the nearest real number that is +/-
-0.000001 of the original value, making the above comparison return
-true.<br>
-<br>
-The epsilon value will be used for all the following integer
-operators:</p>
-
-<blockquote>
-<ul>
-<li>&lt;: Less than</li>
-
-<li>&gt;: Greater than</li>
-
-<li>==: Equal to</li>
-
-<li>&lt;=: Less than or equal to</li>
-
-<li>&gt;=: Greater than or equal to</li>
-
-<li>!=: Not equal to</li>
-</ul>
-</blockquote>
-
-<p>Note that setting an epsilon value of 0 will disable all
-rounding, and using a value of 1 will give an error.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3><b>Example:</b>
-</h3>
+<h3>Example:</h3>
 
 <p class="code">math_set_epsilon(0.0001);</p>
 
+<blockquote>
 <p>This will set the epsilon value for all further floating point
 operations.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Maths</a></div>
 
 <div style="float:right">Next: <a href=
 "math_get_epsilon.html">math_get_epsilon</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

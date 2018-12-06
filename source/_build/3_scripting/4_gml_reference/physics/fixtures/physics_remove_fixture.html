@@ -29,17 +29,31 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">physics_remove_fixture</h1>
+<h2>physics_remove_fixture</h2>
 
-<h2 class="studio">This function removes a fixture from an
-instance.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Description</h3>
 
-<p class="code">physics_remove_fixture(id, fixture)</p>
+<blockquote>
+<p>This function removes (or "un-binds") a fixture from an instance
+or instances. It requires the unique "id" of the bound fixture (as
+returned by the function <a href=
+"physics_fixture_bind.html"><tt>physics_fixture_bind</tt></a> and
+it will remove all the currently defined physics properties for the
+instance, permitting you to redefine a new fixture and bind that to
+the instance. In this way you can change the instances physical
+properties without having to destroy and re-create it.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">physics_remove_fixture(id, fixture)</p>
 
 <div class="param">
 <table>
@@ -64,36 +78,28 @@ instance</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Example:</h3>
 
-<p>This function removes (or "un-binds") a fixture from an instance
-or instances. It requires the unique "id" of the bound fixture (as
-returned by the function <a href=
-"physics_fixture_bind.html"><tt>physics_fixture_bind</tt></a> and
-it will remove all the currently defined physics properties for the
-instance, permitting you to redefine a new fixture and bind that to
-the instance. In this way you can change the instances physical
-properties without having to destroy and re-create it.<br>
-<br></p>
+<p class="code">physics_remove_fixture(id, my_fix);<br></p>
 
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
-
-<p class="code">physics_remove_fixture(id, my_fix);</p>
-
+<blockquote>
 <p>The code above will remove the fixture with the "id" stored in
 the variable "my_fix" from the instance.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href=
 "index.html">Fixtures</a></div>
@@ -101,11 +107,13 @@ the variable "my_fix" from the instance.</p>
 <div style="float:right">Next: <a href=
 "physics_fixture_set_box_shape.html">physics_fixture_set_box_shape</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

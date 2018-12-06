@@ -422,39 +422,77 @@ Call Parent Event</a>. <img class="center" src=
 "Inheriting Events"></p>
 
 <p>On the left above is the parent object with 5 events in it, and
-on the right you can see the "child" object. This child only has 2
-events defined, but it will inherit the events of the parent and so
-have 5, exactly the same. The difference now is that the events
-that the child has added (<b>step</b> and <b>draw</b>) will
-override the ones in the parent event.</p>
+on the right you can see the "child" object. The child object also
+has 5 events in it, but two of them <i>override</i> the inherited
+events from the parent (the <b>Step</b> and <b>Draw</b> events) and
+the other three are greyed out as they are the events inherited
+from the parent. Inherited events will also have the "parent
+override" icon beside them in the Event Editor: <img class="center"
+src="images/editor_object_parentoverride.png" alt=
+"Parent Override"></p>
 
-<p>As indicated, wherever you use a parent object, this also
-applies to the descendants (or "children"). This happens when, in
-an action, you indicate that the action must be applied to
-instances of a certain object. It also happens when you use the
-<tt>with()</tt> statement in code (see the manual for further
-details), and it works when you call code functions like <a href=
+<p>When you click <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> on an event that has been inherited,
+it will open the code editor to show the inherited parent code, but
+you will <i>not</i> be able to edit this code as you can only edit
+it in the parent object itself. You can click the right mouse
+button <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> on any of the parent events to open
+the following menu of options: <img class="center" src=
+"images/editor_object_parent_menu.png" alt=
+"Parent Event RMB Menu"></p>
+
+<p>Here you can choose two <b>Open</b> the parent event to inspect
+the code, or you can choose to <b>Inherit</b> the event or
+<b>Override</b> the event. If you choose <b>Inherit</b> then the
+code editor will open with the funtion <a href=
+"../../3_scripting/4_gml_reference/objects/generating%20events/event_inherited.html">
+<tt>event_inherited()</tt></a> already added to it (or the <a href=
+"../../3_scripting/2_drag_and_drop_reference/instance_actions/call_parent_event.html">
+Call Parent Event</a> action if using DnD™). Any further code you
+place in this event will now be run <i>as well as</i> the code that
+the parent object has. If you choose to <b>Override</b> the event,
+then the code window will also open, only now the
+<tt>event_inherited()</tt> function won't be called, so anything
+you add here will be run <i>instead of</i> the code in the parent
+object.</p>
+
+<div class="note"><b>NOTE</b>: From the code editor you can quickly
+navigate to the parent object by clicking the right mouse button
+<img style="vertical-align:middle" src="../../images/icon_rmb.png">
+and selecting <b>Go To Object</b> from the pop-up menu, or (if the
+event has been overridden) you can select <b>Open Inherited
+Event</b> to go directly to a code editor with the parent event
+code in it.</div>
+
+<p><br>
+Whenever you target a parent object in code, the code will also
+apply to the "children" of the parent object too. This happens
+when, in an action, you indicate that the action must be applied to
+instances of a certain object, and in code it happens when you use
+the <tt>with()</tt> statement. It will work like this too when you
+call code functions, like <a href=
 "../../3_scripting/4_gml_reference/instances/instance_functions/instance_position.html">
 <tt>instance_position</tt></a>, <a href=
 "../../3_scripting/4_gml_reference/instances/instance_functions/instance_number.html">
 <tt>instance_number</tt></a>, etc... where if you supply a parent
-object then it and all child instances will be included in the
-checks. Finally, parenting works when you refer to variables in
-other objects too, like in the above monster example if I set the
-enemy 1 speed to 10, then the enemy 2 speed will also go to ten as
-it is a child object of enemy 1.</p>
+object then all instances of the parent <i>and</i> child instances
+will be included in the checks. Finally, parenting works when you
+refer to variables in other objects too, like in the above monster
+example if I set the enemy 1 speed to 10, then the enemy 2 speed
+will also go to ten as it is a child object of enemy 1.</p>
 
 <p>It is generally considered good practice in most cases to create
 one base parent object and have this base object contain all the
 default behaviour but never use an instance of it in the game.
-Rather use all the children objects and only use the parent in
-situations like those I have outlined above, for collision, for
-referencing variables, etc... You should also realise that parents
-can have parents too! Obviously you can't create a cycle of "parent
-1 is child of parent 2 is child of parent 1" but you can create
-what is called "object hierarchy" where "parent1 is child of
-parent2 is child of parent3". This is extremely useful to keep your
-game structured and you are strongly advised to learn to use this
+Rather use all child objects and only use the parent in situations
+like those I have outlined above, for collisions, for referencing
+variables, etc... You should also realise that parents can have
+parents too! Obviously you can't create a cycle of "parent 1 is
+child of parent 2 is child of parent 1" but you can create what is
+called "object hierarchy" where "parent3 is child of parent2 is
+child of parent1". This is extremely useful to keep your game
+structured and you are strongly advised to learn to use this
 mechanism.</p>
 </div>
 <br>
@@ -668,11 +706,248 @@ still be moved around or rotated using the appropriate
 variables.</p>
 </div></blockquote>
 </div>
-<br></blockquote>
+<br>
+<a name="object_variables" id="object_variables"></a> <label class=
+"collapse" for="twenty">Variables</label> <input id="twenty" type=
+"checkbox">
+<div class="index_list">
+<p>When you click on the <b>Variables</b> button it will open up
+the <b>Object Variables</b> window, which you can then use to
+generate any number of variables <i>before</i> the <b>Create
+Event</b>: <img class="center" src=
+"images/editor_object_variables.png" alt=
+"Object Editor Variables Window"></p>
+
+<p>In this window you can click on the <b>Add a new variable</b>
+<img style="vertical-align:middle" src=
+"images/icon_addvariable.png"> button to add a new variable to the
+list. You can then name the variable as well as set the <b>type</b>
+of variable it has to use and adjust its properties: <img class=
+"center" src="images/editor_object_newvariable.png" alt=
+"Object Editor New Variable"></p>
+
+<p>The variable name must start with a letter and can contain
+<i>only letters, numbers, and the underscore symbol '_'</i> with a
+maximum length of 64 symbols. So, valid variables are things like
+<tt>fish</tt>, <tt>foo_bar</tt>, <tt>num1</tt>, and invalid
+variables would be <tt>6fish</tt>, <tt>foo bar</tt>, or
+<tt>*num</tt>. Once you have given the name of the variable you
+need to set its type, which can be any of the following:
+<img class="center" src="images/editor_object_variabletypes.png"
+alt="Object Editor Variable Types"></p>
+
+<p>It is worth noting that this feature is particularly useful when
+working with parent/child instances - since you can have a parent
+object with a set of defined variables and then simply modify them
+in child object (see the section <b>Object Variables And Child
+Objects</b> below for more details) - and for when you add
+instances into the <a href="rooms.html">Room Editor</a> (see the
+section on <b>Layers &gt; Instance Layer</b>), since you can also
+modify these variables for individual instances that have been
+placed in the room.</p>
+
+<blockquote><a name="object_variables_types" id=
+"object_variables_types"></a> <label class="collapse" for=
+"d">Variable Types</label> <input id="d" type="checkbox">
+<div class="index_list">
+<p>The different types of variable that you can create are listed
+below:</p>
+
+<ul>
+<li><b>Real</b>: A real number is any number that is not a whole
+integer and can be positive or negative. So, 124.5,
+45639.566546456, 0.9, -45.5 etc... are all examples of real
+numbers. All real numbers are stored as 64bit floating point values
+(doubles). Note that you can set a range of values for the output
+real from the <b>Variable Options</b> (see below for more
+details).</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Integer</b>: An integer is a whole number and can be
+positive or negative, for example 30004, 19, 0, -300. Note that you
+can set a range of values for the output integer from the
+<b>Variable Options</b> (see below for more details).</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>String</b>: A string is anything that has been placed within
+double quotation marks, for example "fish", "Hello World", or
+"12345".</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Boolean</b>: A boolean is a value that is either
+<tt>true</tt> or <tt>false</tt>. In the Object Editor Variables
+window, this is simply shown as a box that you check for
+<tt>true</tt> and uncheck for <tt>false</tt>.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Expression</b>: An expression is a mathematical phrase that
+can contain ordinary numbers, variables, strings, or GML functions
+as well as one or more <i>operators</i>. For example <tt>sqrt(85 *
+6) + 5.5</tt> is an expression.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Resource</b>: A resource is simply any one of the resources
+that you have defined in the resource tree. When you select this
+resource type, you can then click on the <b>Open Asset Explorer</b>
+<img style="vertical-align:middle" src=
+"images/icon_openassetexplorer.png"> button to open the Asset
+Explorer and select the resource you require. Note that you can set
+filters for the assets shown in the Asset Explorer from the
+<b>Variable Options</b> (see below for more details).</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>List</b>: Selecting a list type of input means that you can
+then create a selection of values (these can be strings, reals,
+expressions etc...) of which you can then choose one or more for
+the variable to return. To define the items that go in the list you
+need to add them into the <b>Variable Options</b> first (see below
+for more details) and then you will be able to choose the item as
+the default value for the variable in the main window from the drop
+down menu: <img class="center" src=
+"images/editor_object_listtype.png" alt="Object Editor List Menu">
+Note that if you have <b>Multi-select</b> ticked in the List
+Options (see below) then the variable will become an array of all
+the selected options.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Colour</b>: The colour type is for you to define a colour
+value to be stored in the variable. You can input a real number
+(from 0 to 16777216, this will have an alpha value of 255), or a
+hex value (in the format of $RRGGBBAA), or you can double click
+<img style="vertical-align:middle" src="../../images/icon_lmb.png">
+on the colour swatch to open the <b>Colour Picker</b> and define
+the colour there.</li>
+
+<li style="list-style: none"><br>
+</li>
+</ul>
 </div>
+<br>
+<a name="object_variables_options" id=
+"object_variables_options"></a> <label class="collapse" for=
+"b">Variable Options</label> <input id="b" type="checkbox">
+<div class="index_list">
+<p>Some of the different types of variable will give you options
+for defining the output value, and you can open these options by
+clicking <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> on the <img style=
+"vertical-align:middle" src="images/icon_variableoptions.png">
+button:</p>
+
+<ul>
+<li><b>Real / Integer Options</b>: <img class="center" src=
+"images/editor_object_realoptions.png" alt=
+"Object Editor Real Variable Options"> The real and integer data
+types have an option for setting a <i>range</i> of values. When you
+check this you can then input a start value and an end value and
+instead of having a fixed value shown for the variable in the
+Object Variables window, you will have a slider that is clamped to
+these values: <img class="center" src=
+"images/editor_object_variablerange.png" alt=
+"Object Editor Variable Range"></li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Resource Options</b>: <img class="center" src=
+"images/editor_object_resourceoptions.png" alt=
+"Object Editor Real Variable Options"> The resource options will
+open with a list of all the available resource types, and by
+default they will all be selected. However, you can click
+<img style="vertical-align:middle" src="../../images/icon_lmb.png">
+on any of them to only select that type, or you can use <img style=
+"vertical-align:middle" src="../../images/icon_ctrl.png"> /
+<img style="vertical-align:middle" src="../../images/icon_cmd.png">
++ <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> or <img style="vertical-align:middle"
+src="../../images/icon_shift.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> to select
+multiple resource types. Once you have set this, only the selected
+resource type will be visible in the asset explorer for the
+variable.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>List Options</b>: <img class="center" src=
+"images/editor_object_listoptions.png" alt=
+"Object Editor List Variable Options"> Here you can add the
+different values that you want to be included as possible return
+values for the list type variable. You simply click the <img style=
+"vertical-align:middle" src="images/icon_addvariable.png"> <b>Add
+List Item</b> button to add the new value (which can be a string,
+real, integer, resource name) and then in the object editor
+Variables window it will appear in the dropdown list for the
+default value and you can select whichever one is required:
+<img class="center" src="images/editor_object_listvalues.png" alt=
+"Object Editor List Variable Values"> If you have checked the
+option <b>Multi-Select</b>, then the drop down will have checkboxes
+beside each of the values that you want to have returned by the
+list variable (and the variable will become an array to hold each
+of them): <img class="center" src=
+"images/editor_object_listarray.png" alt=
+"Object Editor List Variable Multiple Values"></li>
+</ul>
+</div>
+<br>
+<a name="object_variables_parenting" id=
+"object_variables_parenting"></a> <label class="collapse" for=
+"c">Object Variables And Child Objects</label> <input id="c" type=
+"checkbox">
+<div class="index_list">
+<p>An important feature of the Object Variables is that they are
+<i>inherited</i> by any child objects that you have in the resource
+tree (see the section on <b>Parents</b> above), which means that
+you can then choose to override or change any or all of them if you
+wish. When you create a child object of another object resource
+that has Variables defined for it, these will show up in the Object
+Variables window like this: <img class="center" src=
+"images/editor_object_childvariables.png" alt=
+"Object Editor Variable In A Child Object"></p>
+
+<p>You can see in the top image that the Parent object has four
+Object Variables and in the bottom image these are also shown, only
+"greyed out" and have the <b>Inherited From Parent</b> <img style=
+"vertical-align:middle" src="images/icon_inheritedvariable.png">
+icon to indicate that they have been inherited. These inherited
+variables can then be edited if you click the <b>Override
+Variable</b> <img style="vertical-align:middle" src=
+"images/icon_overridevariable.png"> button, so you can then adjust
+the range slider or values, or select different items from lists,
+etc... Note that when you edit a parent variable you can only
+change the defined value but not the name, nor can you change the
+variable options. Also note that you can add in new Object
+Variables to child objects as well (and in the example image above
+you can see that "Character Type" is new Object Variable only for
+the child object).</p>
+
+<p>If you have edited an inherited Object Variable, then you can
+click the <b>Delete</b> <img style="vertical-align:middle" src=
+"images/icon_deletevariable.png"> button to remove the edit, <i>but
+not the variable</i>. The variable will still be inherited from the
+parent, but will use the parent default value again. If you need to
+completely remove the variable, then you must do this from the
+parent object.</p>
+</div></blockquote>
+</div></blockquote>
 
 <p><br>
 </p>
+</div>
 
 <div class="footer">
 <div class="buttons">
@@ -685,7 +960,7 @@ Editor</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

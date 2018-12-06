@@ -55,11 +55,11 @@ following:</p>
 <input id="one" type="checkbox">
 <div class="index_list">
 <p>A string is simply any text that has been placed in quotation
-marks (either '...' or "..."). You can perform certain operations
-on strings, like add two strings together to create a longer string
-(concatenation) and you can also change the string properties and
-even extract real numbers from it. For more information on the
-string functions see: <a href=
+marks "...". You can perform certain operations on strings, like
+add two strings together to create a longer string (concatenation)
+and you can also change the string properties and even extract real
+numbers from it. For more information on strings and the string
+functions see: <a href=
 "../4_gml_reference/strings/index.html">GameMaker Language
 Reference - Strings</a>.</p>
 </div>
@@ -70,19 +70,19 @@ Reference - Strings</a>.</p>
 <p>Real numbers are any value that is not a string, nor any of the
 other possible data types. So, 124, 45639.566546456, 0, -45.5
 etc... are all examples of real numbers. All real numbers are
-stored as 32bit floating point values (even integer values), so you
-may experience slight rounding errors when dealing with these. For
-more information on this and other number related functions, please
-see: <a href=
+stored as double-precision floating point values (even seemingly
+integer values), so you may experience slight rounding errors when
+dealing with these. For more information on this and other number
+related functions, please see: <a href=
 "../4_gml_reference/maths/real%20valued%20functions/index.html">GML
 Reference - Real Numbers</a>.</p>
 
-<p>Note that created variables in <i>GameMaker Studio 2</i> are all
-stored as double-precision floating point numbers, but you can use
-other formats when dealing with extensions. These can be passed
-into GameMaker Studio 2 from an extension and then checked using
-the appropriate <tt>is_</tt> function, listed at the bottom of this
-page.</p>
+<p>Note that while created variables in <i>GameMaker Studio 2</i>
+are all stored as double-precision floating point numbers, you can
+still use other formats when dealing with extensions. These can be
+passed into GameMaker Studio 2 from an extension and then checked
+using the appropriate <tt>is_</tt> function, listed at the bottom
+of this page.</p>
 </div>
 <br>
 <label class="collapse" for="three">Arrays</label> <input id=
@@ -99,19 +99,46 @@ information on arrays, please see: <a href="10_arrays.html">GML
 Overview - Arrays</a>.</p>
 </div>
 <br>
+<label class="collapse" for="eight">Hexadecimal</label> <input id=
+"eight" type="checkbox">
+<div class="index_list">
+<p><i>GameMaker Studio 2</i> will also accept <b>hexadecimal
+literals</b> as legitimate values. Hexadecimal values are
+especially common when working with colours, but can be used
+anywhere a positive integer value is required. Note that
+hexadecimal values can be formatted in either of the following two
+ways:</p>
+
+<p class="code">$abcd<br>
+0xabcd<br></p>
+
+<p>For example, the following values can be expressed as
+hexadecimal as shown:</p>
+
+<p class="code">11406 = $2c8e = 0x2c8e<br>
+16777215 = $ffffff = 0xffffff<br></p>
+</div>
+<br>
 <label class="collapse" for="four">Boolean</label> <input id="four"
 type="checkbox">
 <div class="index_list">
 <p>A boolean is simply a value that can either be <tt>true</tt> or
-<tt>false</tt>. Note that currently <i>GameMaker Studio 2</i> does
-not support "true" boolean values, and actually accepts any real
-number below 0.5 as a false value, and any real number equal to (or
-greater than) 0.5 as being true. This does <i>not</i> mean however
-that you should be checking 1 and 0 (or any other real number) for
-true and false, as you are also provided with the <b>constants</b>
-<tt>true</tt> and <tt>false</tt> which should always be used in
-your code to prevent any issues should real boolean data types be
-added in a future update.</p>
+<tt>false</tt>. Note that currently <i>GameMaker Studio 2</i> will
+interpret a real number equal to or below 0.5 as a <tt>false</tt>
+value, and any real number greater than 0.5 as being <tt>true</tt>.
+This does <i>not</i> mean however that you should be checking 1 and
+0 (or any other real number) for true and false, as you are also
+provided with the <b>constants</b> <tt>true</tt> and <tt>false</tt>
+which should always be used in your code to prevent any issues
+should real boolean data types be added in a future update.</p>
+
+<p>You can convert any real number into an implicitly boolean value
+using the following function:</p>
+
+<ul>
+<li><a href="bool.html">bool</a><br>
+</li>
+</ul>
 </div>
 <br>
 <label class="collapse" for="five">Pointer</label> <input id="five"
@@ -167,7 +194,7 @@ type="checkbox">
 <p>An enum is an "enumerator", and it essentially permits you to
 create your own limited data type with a list of constant values.
 Enums are <a href="6_scope.html">global scope</a> variables (this
-is implicit, and they require no "<tt>global</tt>" suffix) and they
+is implicit, and they require no "<tt>global</tt>" prefix) and they
 have the following structure:</p>
 
 <p class="code">enum
@@ -187,11 +214,13 @@ the rainbow and assign it various constants and default values:</p>
 &nbsp;&nbsp;&nbsp;violet<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The enum entries can only be <b>real numbers</b> or
-<b>expressions with previous enums</b>, and by default are numbered
-from 0 upwards, so our example given above would default to <tt>red
-= 0</tt>, <tt>orange = 1</tt>, <tt>yellow = 2</tt>, etc... You can
-also assign values to the enum variables at the time of
+<p>The enum entries can only be <b>integer numbers</b> or
+<b>expressions with previous enums that evaluate to an integer
+number</b>, and by default are numbered from 0 upwards, so our
+example given above would default to <tt>red = 0</tt>, <tt>orange =
+1</tt>, <tt>yellow = 2</tt>, etc...</p>
+
+<p>You can also assign values to the enum variables at the time of
 creation:</p>
 
 <p class="code">enum rainbowcolors {<br>
@@ -209,9 +238,11 @@ expression for "violet". This only works if the enum being
 referenced was created <i>before</i> the enum that is using it in
 an expression, but it will not work for variables or functions,
 since the enum value must be able to be evaluated as a constant on
-compile. Also note that all enum values evaluate to<b>integer</b>
+compile. Also note that all enum values evaluate to <b>integer</b>
 values, and when you create your own you should be aware that
-<i>only integer values are permitted</i> for enums to work.</p>
+<i>only integer values are permitted</i> for enums to work. This
+value can be any integer number that a floating point double
+precision number can represent.</p>
 
 <p>To later access the value within a given enum type, you can use
 the point <tt>"."</tt> method, like this:</p>
@@ -222,8 +253,8 @@ the point <tt>"."</tt> method, like this:</p>
 after it has been created.</p>
 </div>
 <br>
-<label class="collapse" for="sevem">Undefined</label> <input id=
-"sevem" type="checkbox">
+<label class="collapse" for="seven">Undefined</label> <input id=
+"seven" type="checkbox">
 <div class="index_list">
 <p>An undefined value (also known as a "null" value") is one where
 an expression doesn't have a correct value, although it is
@@ -299,7 +330,7 @@ Overview</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

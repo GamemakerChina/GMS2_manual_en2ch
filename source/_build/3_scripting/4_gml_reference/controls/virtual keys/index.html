@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Virtual Keys</title>
+<title>Virtual Keys And Virtual Keyboards</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
@@ -29,12 +29,33 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Virtual Keys</h2>
+<h2>Virtual Keys And Virtual Keyboards</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
+<p>When developing games for touchscreen devices, it's often
+important to get keyboard input from the user. When using
+<i>GameMaker Studio 2</i> this can be done in one of two ways:</p>
+
+<ul>
+<li>Create your own on-screen <b>virtual keys</b> to get input</li>
+
+<li>Pop up the OS <b>virtual keyboard</b> and get input from
+that</li>
+</ul>
+
+<p>What you use will depend very much on the game and what you
+need, but in general you would use virtual keys when you want to
+have onscreen buttons for player control or for menus, while you'd
+use the virtual keyboard when you need player input, like getting a
+name or setting a value. The sections below outline the uses and
+functions associated with each of these input options.</p>
+
+<blockquote><label class="collapse" for="a">Virtual Keys</label>
+<input id="a" type="checkbox">
+<div class="index_list">
 <p>In order for your games to work properly on mobile devices with
 a touch screen, you may need to be able to assign areas of the
 screen to respond to certain things when they are touched by the
@@ -50,25 +71,102 @@ draw your key sprites and define your virtual keys in the <a href=
 GUI Event</a> of an object.</p>
 
 <div class="note"><b>NOTE:</b> These functions will not work on the
-Windows, Ubuntu (Linux), nor the MacOS, target platforms!</div>
+Windows, Ubuntu (Linux), nor the MacOS, target platforms using a
+touch screen, although they will recieve mouse clicks as
+"touches".</div>
 
 <p>The available virtual key functions are:</p>
 
 <blockquote>
+<ul>
+<li><a href="virtual_key_add.html">virtual_key_add</a>
+</li>
+
+<li><a href="virtual_key_show.html">virtual_key_show</a>
+</li>
+
+<li><a href="virtual_key_hide.html">virtual_key_hide</a>
+</li>
+
+<li><a href="virtual_key_delete.html">virtual_key_delete</a>
+</li>
+</ul>
+</blockquote>
+</div>
+<br>
+<label class="collapse" for="b">Virtual Keyboards</label>
+<input id="b" type="checkbox">
+<div class="index_list">
+<p>If you require text or numeric input in your game on a
+touchscreen device, then you can use the <b>virtual keyboard</b>
+functions provided to use the device OS keyboard. These functions
+will call up or hide the OS keyboard and accept input from it,
+however it will <i>not</i> trigger the regular keyboard events, but
+rather update the <a href=
+"../keyboard%20input/keyboard_string.html"><tt>keyboard_string</tt></a>
+variable with the user input (this is due to the fact that the
+virtual keyboard can input whole words and not just single
+characters).</p>
+
+<p>Opening or closing the virtual keyboard will generate <a href=
+"../../../../2_interface/1_editors/events/async_events.html">System
+Asynchronous Events</a>, in which the <tt>async_load</tt> DS map
+will be populated with the following key/value pairs:</p>
+
+<ul>
+<li>"<b>event_type</b>" - the type of system event received, which
+will be "<b>virtual keyboard status</b>" for virtual
+keyboards.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>screen_height</b>" - the height of the virtual keyboard (in
+pixels). This will be 0 if the keyboard is invisible.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>keyboard_status</b>" - the current status of the keyboard,
+returned as one of the following strings:<br>
+<br>
+
+<ul>
+<li>"hiding"</li>
+
+<li>"hidden"</li>
+
+<li>"showing"</li>
+
+<li>"visible"</li>
+</ul></li>
+</ul>
+
+<p>The available virtual keyboard functions are:</p>
+
+<blockquote>
 <ol>
-<li><a href="virtual_key_add.html">virtual_key_add</a><br>
+<li><a href="keyboard_virtual_show.html">keyboard_virtual_show</a>
 </li>
 
-<li><a href="virtual_key_show.html">virtual_key_show</a><br>
+<li><a href="keyboard_virtual_hide.html">keyboard_virtual_hide</a>
 </li>
 
-<li><a href="virtual_key_hide.html">virtual_key_hide</a><br>
+<li><a href=
+"keyboard_virtual_status.html">keyboard_virtual_status</a>
 </li>
 
-<li><a href="virtual_key_delete.html">virtual_key_delete</a><br>
+<li><a href=
+"keyboard_virtual_height.html">keyboard_virtual_height</a>
 </li>
 </ol>
 </blockquote>
+
+<div class="note"><b>NOTE:</b> These functions are only valid for
+the Android (including Amazon Fire, FireTV, and AndroidTV), iOS,
+and UWP target platforms.</div>
+</div>
+<br></blockquote>
 
 <p><br>
 </p>
@@ -85,7 +183,7 @@ Windows, Ubuntu (Linux), nor the MacOS, target platforms!</div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

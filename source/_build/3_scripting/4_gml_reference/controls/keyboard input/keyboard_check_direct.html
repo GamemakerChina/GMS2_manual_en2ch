@@ -29,17 +29,40 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">keyboard_check_direct</h1>
+<h2>keyboard_check_direct</h2>
 
-<h2 class="studio">Returns whether the key with the particular
-keycode is pressed by checking the hardware directly.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3><b>Description</b>
+</h3>
 
-<p class="code">keyboard_check_direct(key);</p>
+<blockquote>
+<p>This function will return <tt>true</tt> if the key with the
+particular keycode is pressed, or <tt>false</tt> if it is not, by
+checking the hardware directly. It allows for a few more checks, in
+particular you can use keycodes <b>vk_lshift</b>,
+<b>vk_lcontrol</b>, <b>vk_lalt</b>, <b>vk_rshift</b>,
+<b>vk_rcontrol</b> and <b>vk_ralt</b> to check whether the left or
+right shift, control or alt key is pressed. The function will take
+a keycode value as returned by the function <a href=
+"ord.html"><tt>ord()</tt></a> (only <i>capital</i> letters from A-Z
+or numbers from 0-9), or any of the <tt>vk_*</tt> constants listed
+on the main <a href="index.html">Keyboard Input</a> page.</p>
+
+<div class="note"><b>NOTE:</b> This function is only available for
+the standard Windows target and the result is independent of which
+application has focus.</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3><b>Syntax:</b>
+</h3>
+
+<p class="code">keyboard_check_direct(key);</p>
 
 <div class="param">
 <table>
@@ -58,30 +81,16 @@ keycode is pressed by checking the hardware directly.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<h3><b>Returns:</b>
+</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function will return <tt>true</tt> if the key with the
-particular keycode is pressed, or <tt>false</tt> if it is not, by
-checking the hardware directly. It allows for a few more checks, in
-particular you can use keycodes <b>vk_lshift</b>,
-<b>vk_lcontrol</b>, <b>vk_lalt</b>, <b>vk_rshift</b>,
-<b>vk_rcontrol</b> and <b>vk_ralt</b> to check whether the left or
-right shift, control or alt key is pressed.<br>
-<br>
-<i><b>NOTE:</b> This function is only available for the standard
-Windows target and the result is independent of which application
-has focus.</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3><b>Example:</b>
+</h3>
 
 <p class="code">if keyboard_check_direct(vk_ralt) ||
 keyboard_check_direct(vk_lalt)<br>
@@ -89,13 +98,18 @@ keyboard_check_direct(vk_lalt)<br>
 &nbsp;&nbsp;&nbsp;crouch = true;<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will check to see if either the left or right alt
 keys have been pressed, and if they have it sets the variable
 "crouch" to true.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Keyboard
 Input</a></div>
@@ -103,11 +117,13 @@ Input</a></div>
 <div style="float:right">Next: <a href=
 "keyboard_clear.html">keyboard_clear</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

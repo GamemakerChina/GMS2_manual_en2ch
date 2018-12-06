@@ -71,28 +71,27 @@ builds your game for the Android target and should be set to
 appropriate values based on the tools you have installed using the
 Android SDK Manager or Android Studio.</p>
 
+<p>The <b>Target SDK</b> indicates that you have tested your app on
+(up to and including) the version you specify here. This is simply
+to give the Android OS an idea of how it should handle your app in
+terms of OS features. For all practical purposes, most apps are
+going to want to set Target SDK to the latest released version of
+the API (as used by the Compile SDK setting). This will ensure your
+app looks as good as possible on the most recent Android
+devices.</p>
+
+<p>The <b>Minimum SDK</b> version is the minimum API level that
+will run your project. From August 2018 Google has made API level
+26 the required minimum, but if you add extensions then they may
+require a higher minimum API level.</p>
+
 <p>The <b>Compile SDK</b> version is the version of the API that
 the project is compiled against. This means you can use Android API
 features included in that version of the API. If you try and use
 API 16 features - for example - but set Compile SDK 15, then you
-will get a compilation error. If you set the Compile SDK to 16 then
-you can still run the app on an API 15 device (as well as all other
-previous versions too).</p>
-
-<p>The <b>Target SDK</b>, however, has nothing to do with how your
-app is compiled or what APIs you can utilize. The Target SDK
-indicates that you have tested your app on (up to and including)
-the version you specify. This is simply to give the Amazon Fire OS
-an idea of how it should handle your app in terms of OS features.
-For all practical purposes, most apps are going to want to set
-Target SDK to the latest released version of the API (as used by
-the Compile SDK setting). This will ensure your app looks as good
-as possible on the most recent Amazon Fire devices.</p>
-
-<p>The <b>Minimum SDK</b> version is the minimum API level that
-will run your project. This is set to 9 by default, and in general
-this will be fine, but if you add extensions then they may require
-a higher minimum API level.</p>
+will get a compilation error. However, if you set the Compile SDK
+to 28 then you can still run the app on an API 23 device (as well
+as all other previous versions too).</p>
 
 <p>You can select from one of the predefined target settings by
 clicking on the <b>Pre-populate SDK values to chosen API level</b>

@@ -80,6 +80,14 @@ default.<br>
 6000.<br>
 <br></li>
 
+<li><b>Logout on exit</b>: If this option is checked then the IDE
+will automatically log out the user session when <i>GameMaker
+Studio 2</i> is closed. This is primarily aimed at Education users,
+as - when checked - this means that whenever the program shuts down
+the user would be logged out and so free up the session seat for
+other users to use. This is off by default.<br>
+<br></li>
+
 <li><b>Automatically reload changed files</b>: If this is checked
 then the IDE will automatically scan and check files to see if any
 of them have been changed outside of <i>GameMaker Studio 2</i> and
@@ -192,17 +200,23 @@ are:<br>
 <br>
 
 <ul>
-<li>Stretch - The image will be stretched to fit the workspace,
-changing scale depending on the visible docks</li>
+<li><i>Stretch</i> - The image will be stretched to fit the
+workspace, changing scale depending on the visible docks</li>
 
-<li>Tile - The image will be tiled to cover the workspace</li>
+<li><i>Tile</i> - The image will be tiled to cover the
+workspace</li>
 
-<li>Best Fit - The image will be scaled to fit the workspace
+<li><i>Best Fit</i> - The image will be scaled to fit the workspace
 proportionally, with bars being added around the edge if it is not
 a 1:1 fit</li>
 
-<li>Desktop Stretch - The background will cover the whole
-workspace, regardless of any visible docks</li>
+<li><i>Desktop Stretch</i> - The background will cover the whole
+workspace, and will move rather than change scale when docks are
+opened/closed</li>
+
+<li><i>Screen Stretch</i> - The background will cover an area the
+size of the window and will be cropped/extended to show more or
+less of the image as docks are opened/closed.</li>
 </ul></li>
 
 <li><b>Show background images on workspaces</b>: This option
@@ -593,8 +607,15 @@ for="eleven">Power Saving</label> <input id="eleven" type=
 <p>The Power Saving preferences here will affect how much CPU power
 and GPU power will be used to generate the <i>GameMaker Studio
 2</i> IDE (essentially this will lower the base framerate at which
-the program runs and so lower power consumption). The options
-are:<br>
+the program runs and so lower power consumption). Note that some of
+these are specific to the <b>File Watcher</b> background process.
+The File Watcher scans the project folders for external changes -
+for example if you change a gml script in Notepad++ then the file
+watcher will detect this change and ask you if you want to reload
+it or discard it - and as such the frequency that this scan happens
+can severely impact performance and power consumption.</p>
+
+<p>The options here are:<br>
 <br></p>
 
 <ul>
@@ -681,8 +702,8 @@ will be drawn in your projects:<br>
 <li><b>Initial default draw colour for new projects</b>: When you
 use a font or draw a shape using the <i>GameMaker Studio 2</i>
 functions or DnD™ actions without specifying a colour, the colour
-set here is the one that will be used. The default colour is white
-($FFFFFFFF).</li>
+set here is the one that will be used. The default colour is black
+($00000000).</li>
 </ul>
 </div>
 <br>
@@ -772,7 +793,7 @@ default.<br>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

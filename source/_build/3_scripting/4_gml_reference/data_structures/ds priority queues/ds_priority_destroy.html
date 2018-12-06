@@ -69,8 +69,17 @@ from memory.</h2>
 data-structure from memory, freeing up the resources it was using
 and removing all values that it contained. This function should
 always be used when you are finished using the ds_priority queue to
-prevent memory leaks that can slow down and crash your game.<br>
-<br></p>
+prevent memory leaks that can slow down and crash your game.</p>
+
+<div class="note"><b>IMPORTANT!</b> When you create a data
+structure, the index value to identify it is an integer value
+starting at 0. This means that data structures of different types
+can have the <b>same</b> index value, so if in doubt you should be
+using the <a href="../ds_exists.html"><tt>ds_exists</tt></a>
+function before accessing them. Also note that indices are re-used,
+so a destroyed data structure index value may be used by a newly
+created one afterwards so we recomend always setting the variable
+that held the DS index to -1 after destroying.</div>
 
 <p><br>
 </p>
@@ -80,6 +89,7 @@ prevent memory leaks that can slow down and crash your game.<br>
 <p class="code">if lives = 0<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;ds_priority_destroy(AI_queue);<br>
+&nbsp;&nbsp;&nbsp;AI_queue = -1;<br>
 &nbsp;&nbsp;&nbsp;room_goto(rm_Menu);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
@@ -98,7 +108,7 @@ Queues</a></div>
 "ds_priority_clear.html">ds_priority_clear</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -31,11 +31,17 @@ if (window.name != "content")
 </script>
 <h2>Textures</h2>
 
-<p>There are also a few special functions relating to the way that
-<i>GameMaker Studio 2</i> draws the textures pages that it uses.
-Please realise that a sprite is actually a textured quad (a four
-point primitive made of two triangles) and as such some of the
-following functions will also affect how they are drawn:</p>
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p>The following functions are all related to "textures", ie:
+images that are stored in VRAM to be used as sprites or other
+things within your game. The first set of functions available are
+used to retrieve information about specific images and their
+position or size on the <a href=
+"../../../2_interface/3_settings/textures.html">Texture Page</a>,
+as well as set certain texture features:</p>
 
 <ul>
 <li><a href="texture_get_height.html">texture_get_height</a>
@@ -58,14 +64,18 @@ following functions will also affect how they are drawn:</p>
 <li><a href="texture_set_stage.html">texture_set_stage</a>
 </li>
 
-<li><a href="draw_texture_flush.html">draw_texture_flush</a>
+<li><a href="texture_global_scale.html">texture_global_scale</a>
 </li>
 </ul>
 
-<p>There are also a few sprite functions related to how you deal
-with their textures too:</p>
+<p><i>GameMaker Studio 2</i> also has a number of functions related
+to the managing the VRAM associated with individual textures as
+well as whole texture groups:</p>
 
 <ul>
+<li><a href="draw_texture_flush.html">draw_texture_flush</a>
+</li>
+
 <li><a href="../../sprites/sprite_flush.html">sprite_flush</a>
 </li>
 
@@ -80,11 +90,49 @@ with their textures too:</p>
 <li><a href=
 "../../sprites/sprite_prefetch_multi.html">sprite_prefetch_multi</a>
 </li>
+
+<li><a href="texture_prefetch.html">texture_prefetch</a>
+</li>
+
+<li><a href="texture_flush.html">texture_flush</a>
+</li>
+</ul>
+
+<p>Finally, we have the following functions which are primarily for
+use to debug the project and ensure efficient use of texture
+memory:</p>
+
+<ul>
+<li><a href=
+"texture_debug_messages.html">texture_debug_messages</a>
+</li>
+
+<li><a href="texture_is_ready.html">texture_is_ready</a>
+</li>
+
+<li><a href=
+"texturegroup_get_textures.html">texturegroup_get_textures</a>
+</li>
+
+<li><a href=
+"texturegroup_get_sprites.html">texturegroup_get_sprites</a>
+</li>
+
+<li><a href=
+"texturegroup_get_fonts.html">texturegroup_get_fonts</a>
+</li>
+
+<li><a href=
+"texturegroup_get_tilesets.html">texturegroup_get_tilesets</a>
+</li>
 </ul>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href=
 "../index.html">Drawing</a></div>
@@ -92,11 +140,13 @@ with their textures too:</p>
 <div style="float:right">Next: <a href=
 "../colour/index.html">Colour</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

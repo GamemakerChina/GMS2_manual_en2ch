@@ -47,35 +47,35 @@ Windows/Mac/Ubuntu desktop platforms only. You may find some of the
 built-in variables and constants aren't valid on other platforms
 and many of the functions won't work on mobiles.</div>
 
-<p>Now, each key is normally defined by a number, called the
-<i>ascii code</i>, and you can directly input this number into
-these functions and they will work fine... But, as it's a bit
-difficult to remember so many numbers and the relationship that
-they have with your keyboard, <i>GameMaker Studio 2</i> has a
-series of constants for the most used keyboard special keys and a
-special function <a href=
-"../../strings/ord.html"><tt>ord()</tt></a> to return the number
-from ordinary typed characters (either letters or numbers).</p>
-
-<p>The following is a small example of how to use
-<tt>ord()</tt>:</p>
+<p><br>
+Each input character from a key (or multiple keys) is defined by
+its <a href="https://en.wikipedia.org/wiki/UTF-8" target=
+"_blank">UTF8</a> code, which is a numerical value. This value can
+be retrieved for any character using the <a href=
+"ord.html"><tt>ord()</tt></a> function but, <i>GameMaker Studio
+2</i> also has a series of <tt>constants</tt> for the most used
+keyboard special keys and a special functions. Typically you'd use
+a combination of <tt>ord()</tt> with the <tt>keyboard_check*()</tt>
+functions, something like this:</p>
 
 <p class="code">if keyboard_check(ord("A"))<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;hspeed = -5;<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;hspeed = -5;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>So, the above will check the "A" key and if it's being pressed
-then it'll set the horizontal speed of the object to -5. Note, that
-the "A" is a capital "A", and that when using <tt>ord()</tt> the
-keyboard key to check must <i>always</i> be written in quotes and
-as a capital. Now, what if you want to use the arrow keys? Or if
-you want to modify an action using the "shift" key? Well, for that
+<p><br>
+So, the above will check the "A" key and if it's being pressed then
+it'll set the horizontal speed of the object to -5. Note, that
+using <tt>ord()</tt> in this way will only function correctly if
+the input string is only one character in length and is a number
+from 0 to 9 or a <i>capitalised</i> Roman character from A to Z.
+The function <tt>ord()</tt> will return a full UTF8 value, but the
+<tt>keyboard_check*()</tt> functions will <i>only detect A - Z and
+0 - 9</i>. But what if you want to use the arrow keys? Or if you
+want to modify an action using the "shift" key? Well, for that
 <i>GameMaker Studio 2</i> has a series of <tt>vk_</tt> constants
 (<tt>vk_</tt> stands for <i>virtual keyboard</i>) that you can use
-in place of ord or the ascii code.</p>
-
-<p>Here is a complete list of the <tt>vk_</tt> constants:</p>
+in place of <tt>ord()</tt>:</p>
 
 <div class="compat">
 <table>
@@ -216,7 +216,7 @@ in place of ord or the ascii code.</p>
 
 <tr>
 <td>vk_add</td>
-<td>key on the numeric keypad</td>
+<td>add key on the numeric keypad</td>
 </tr>
 
 <tr class="alt">
@@ -272,26 +272,44 @@ in place of ord or the ascii code.</p>
 </tr>
 </table>
 </div>
-
-<p><br>
-<br>
 The following is a small example of how to use the <tt>vk_</tt>
-constants:</p>
+constants:
 
 <p class="code">if keyboard_check_pressed(vk_tab)<br>
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Controllers",
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Controllers",
 obj_Menu);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will detect if the "Tab" key is <i>pressed</i>
-and create an instance of object "obj_Menu" if it is.</p>
+<p><br>
+The above code will detect if the "Tab" key is <i>pressed</i> and
+create an instance of object "obj_Menu" if it is.</p>
 
-<p>For information on the available <i>GameMaker Studio 2</i>
-keyboard functions, please see the following sections of the
-manual:</p>
+<p>If you need to check for a key character that is not 0 - 9, A -
+Z or one of the VK constants, then you should be checking one of
+the <tt>keyboard_*</tt> variables, like <tt>keyboard_lastchar</tt>
+for example:</p>
 
-<blockquote>
+<p class="code">var _key = keyboard_lastchar;<br>
+if ord(_key) == ord("Ã§")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;show_debug_message("Ã§ key pressed");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+
+<p><br>
+For information on the available <i>GameMaker Studio 2</i> keyboard
+functions, please see the following sections of the manual:</p>
+
+<blockquote><label class="collapse" for="one">Functions</label>
+<input id="one" type="checkbox">
+<div class="index_list">
+<p>The following functions are available for use when working with
+a keyboard:</p>
+
+<div class="note"><b>NOTE</b>: These functions will <i>not</i> work
+when using an on-screen <a href=
+"../virtual%20keys/index.html">Virtual Keyboard</a>.</div>
+
 <ol>
 <li><a href="io_clear.html">io_clear</a><br>
 </li>
@@ -314,6 +332,38 @@ manual:</p>
 <li><a href="keyboard_clear.html">keyboard_clear</a><br>
 </li>
 
+<li><a href="keyboard_set_map.html">keyboard_set_map</a><br>
+</li>
+
+<li><a href="keyboard_get_map.html">keyboard_get_map</a><br>
+</li>
+
+<li><a href="keyboard_unset_map.html">keyboard_unset_map</a><br>
+</li>
+
+<li><a href=
+"keyboard_get_numlock.html">keyboard_get_numlock</a><br>
+</li>
+
+<li><a href=
+"keyboard_set_numlock.html">keyboard_set_numlock</a><br>
+</li>
+</ol>
+</div>
+<br>
+<label class="collapse" for="two">Variables</label> <input id="two"
+type="checkbox">
+<div class="index_list">
+<p>The following variables are built-in to <i>GameMaker Studio
+2</i> and can be accessed to get information about the keyboard
+state and input:</p>
+
+<div class="note"><b>NOTE</b>: When using the <a href=
+"../virtual%20keys/index.html">Virtual Keyboard</a>, <i>only</i>
+the <tt>keyboard_string</tt> variable will be updated with the
+keyboard input.</div>
+
+<ol>
 <li><a href="keyboard_key_press.html">keyboard_key_press</a><br>
 </li>
 
@@ -332,29 +382,12 @@ manual:</p>
 
 <li><a href="keyboard_string.html">keyboard_string</a><br>
 </li>
-
-<li><a href="keyboard_set_map.html">keyboard_set_map</a><br>
-</li>
-
-<li><a href="keyboard_get_map.html">keyboard_get_map</a><br>
-</li>
-
-<li><a href="keyboard_unset_map.html">keyboard_unset_map</a><br>
-</li>
-
-<li><a href=
-"keyboard_get_numlock.html">keyboard_get_numlock</a><br>
-</li>
-
-<li><a href=
-"keyboard_set_numlock.html">keyboard_set_numlock</a><br>
-</li>
 </ol>
-</blockquote>
+</div>
+<br></blockquote>
 
 <p><br>
-</p>
-</div>
+</p></div>
 
 <div class="footer">
 <div class="buttons">
@@ -367,7 +400,7 @@ manual:</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

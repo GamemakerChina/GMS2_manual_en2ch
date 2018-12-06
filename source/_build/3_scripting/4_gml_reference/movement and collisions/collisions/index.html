@@ -33,6 +33,9 @@ if (window.name != "content")
 <h2>Collision Checking</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <p>When planning motions or deciding on certain actions, it is
 often important to see whether there are collisions with other
 objects at certain places within the game world, and often choosing
@@ -40,6 +43,13 @@ the right collision for the job is the most important task of all.
 <i>GameMaker Studio 2</i> has a number of built in functions to
 help you deal with collisions correctly and in accordance with the
 needs of your project.</p>
+
+<div class="note"><b>IMPORTANT!</b> All collision functions work
+using integer positions, regardless of the input values. Any
+non-integer values will be rounded to the nearest integer.</div>
+
+<p><br>
+</p>
 
 <blockquote><label class="collapse" for="one">Simple Collision
 Checking</label> <input id="one" type="checkbox">
@@ -75,7 +85,15 @@ instance:</p>
 </li>
 
 <li><a href=
+"../../instances/instance_functions/instance_place_list.html">instance_place_list</a>
+</li>
+
+<li><a href=
 "../../instances/instance_functions/instance_position.html">instance_position</a>
+</li>
+
+<li><a href=
+"../../instances/instance_functions/instance_position_list.html">instance_position_list</a>
 </li>
 </ul>
 </div>
@@ -122,12 +140,14 @@ instance of the object running the code, or it's not important, it
 can be left as <tt>false</tt>.</li>
 </ul>
 
-<p>All these functions return either the id of an instance found to
-be colliding, or the special keyword <b>noone</b> when there is no
-collision. Note that if there are multiple collisions with the
-areas defined by these functions and instances of the given object,
-only <i>one</i> instance ID is returned, and it can be <i>any one
-of the instances in the collision</i>.</p>
+<p>The basic functions will return either the ID of an instance
+found to be colliding, or the special keyword <tt>noone</tt> when
+there is no collision, while the <i>list</i> functions will return
+the number of instances that are in collision and populate a
+pre-made DS list with their IDs. Note that if there are multiple
+collisions with the areas defined by these functions and instances
+of the given object, only <i>one</i> instance ID is returned, and
+it can be <i>any one of the instances in the collision</i>.</p>
 
 <p>The following functions exist that deal with advanced
 collisions.</p>
@@ -136,16 +156,35 @@ collisions.</p>
 <li><a href="collision_circle.html">collision_circle</a><br>
 </li>
 
+<li><a href=
+"collision_circle_list.html">collision_circle_list</a><br>
+</li>
+
 <li><a href="collision_ellipse.html">collision_ellipse</a><br>
+</li>
+
+<li><a href=
+"collision_ellipse_list.html">collision_ellipse_list</a><br>
 </li>
 
 <li><a href="collision_line.html">collision_line</a><br>
 </li>
 
+<li><a href="collision_line_list.html">collision_line_list</a><br>
+</li>
+
 <li><a href="collision_point.html">collision_point</a><br>
 </li>
 
+<li><a href=
+"collision_point_list.html">collision_point_list</a><br>
+</li>
+
 <li><a href="collision_rectangle.html">collision_rectangle</a><br>
+</li>
+
+<li><a href=
+"collision_rectangle_list.html">collision_rectangle_list</a><br>
 </li>
 </ul>
 </div>
@@ -223,7 +262,7 @@ Collisions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

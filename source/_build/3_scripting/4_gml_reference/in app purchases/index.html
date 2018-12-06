@@ -58,45 +58,28 @@ the different stores for each target platform are set up.</p>
 have set up the purchase details on the target store for each
 platform that you wish to support, taking careful note of each of
 the <b>Product IDs</b> that you define, as these ID strings are how
-<i>GameMaker Studio 2</i> identifies each product and purchase.<br>
-<br></p>
-
-<p>To help those of you that have never worked with any type if IAP
-services and to explain the different ways that IAP can be tested
-on different devices, please see the following pages:</p>
-
-<blockquote>
-<ol>
-<li><a href="http://help.yoyogames.com/entries/29734673.html"
-target="_blank">IAP Example</a><br>
-</li>
-
-<li><a href="http://help.yoyogames.com/entries/29736883" target=
-"_blank">IAP Testing</a><br>
-</li>
-</ol>
-</blockquote>
+<i>GameMaker Studio 2</i> identifies each product and purchase.
+Most of the stores will require you to have uploaded a base file
+too, even if the game doesn't have in-app purchases included
+yet.</p>
 
 <div class="note"><b>NOTE</b>: <i>GameMaker Studio 2</i> currently
 permits up to 128 distinct purchase options per title, except if
 you are using the Amazon Store (for Android) where it is limited to
-100.
+100.</div>
 
-<p><b>WARNING:</b> You will not be able to make purchases when
-debugging titles using the <i>GameMaker Studio 2</i> IDE. Instead
-you will need to create final executables to ensure the title can
-correctly communicate with the respective store servers.</p></div>
-
-<p>Below are listed the functions that are integrated in
-<i>GameMaker Studio 2</i> to enable in app purchases on iOS and
-Android target devices (this is the ability to buy extra credits,
-items, levels and other things from within the game itself). Many
-of these functions will trigger an <a href=
+<p><br>
+Below are listed the functions that are integrated in <i>GameMaker
+Studio 2</i> to enable in app purchases on the different target
+platforms (these give the ability to buy extra credits, items,
+levels and other things from within the game itself). Many of these
+functions will trigger an <a href=
 "../../../2_interface/1_editors/events/async_events.html">IAP
 Asynchronous Event</a>, which contains a special <tt>ds_map</tt>
-with an initial key "type". This can then be queried to get the
-type of IAP event that has been triggered, which will then permit
-you to get further data from the map.</p>
+called <tt>iap_data</tt> which will have an initial key "type" that
+can be queried to get the type of IAP event that has been
+triggered. Once you know which type of IAP event it is, you can
+then get further data from the map relevant to the event.</p>
 
 <p>The available in app purchase functions are:</p>
 
@@ -164,7 +147,38 @@ which users can use to verify a purchase, although Google Play uses
 <p><i>GameMaker Studio 2</i> requires the <b>Google Play Public
 Key</b> for simple local purchase verification and you may check
 that the "payload" data returned with a purchase result matches
-that used with the matching call to <tt>iap_acquire()</tt>.</p>
+that used with the matching call to <tt>iap_acquire()</tt> (see the
+section on <b>Packaging</b> in the <a href=
+"../../../2_interface/3_settings/game_options/options_android.html">
+Android Game Options</a> for more information on the Google Public
+Key) .</p>
+
+<p>In-app purchases are available for Android, Amazon Fire, iOS and
+macOS targets, and there are articles available on the YoYo Games
+helpdesk (and a tutorial for Amazon Fire) to help you get each one
+set up correctly:</p>
+
+<ul>
+<li><a href=
+"https://help.yoyogames.com/hc/en-us/articles/360001971951" target=
+"_blank">Android: Setting Up IAPs</a>
+</li>
+
+<li><a href=
+"https://help.yoyogames.com/hc/en-us/articles/360002368731" target=
+"_blank">iOS: Setting Up IAPs</a>
+</li>
+
+<li><a href=
+"https://help.yoyogames.com/hc/en-us/articles/360002085712" target=
+"_blank">macOS: Setting Up IAPs</a>
+</li>
+
+<li><a href=
+"https://marketplace.yoyogames.com/assets/5884/amazon-fire-and-gamecircle"
+target="_blank">Amazon Fire And GameCircle Tutorial</a>
+</li>
+</ul>
 
 <p><br>
 </p>
@@ -182,7 +196,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

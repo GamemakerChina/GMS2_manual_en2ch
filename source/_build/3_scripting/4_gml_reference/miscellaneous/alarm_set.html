@@ -32,12 +32,26 @@ if (window.name != "content")
 <h2>alarm_set</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">alarm_set(index, value);</p>
+<h3>Description</h3>
+
+<blockquote>
+<p>This function can be used to set an alarm. You supply the alarm
+number from 0 to 11, and then the value to set the alarm to. The
+value must be an integer value, and you can set it to -1 to stop
+the alarm. This is an alternative method to setting the <a href=
+"../instances/instance_variables/alarm.html">alarm array</a>
+directly.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">alarm_set(index, value);</p>
 
 <div class="param">
 <table>
@@ -61,34 +75,25 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function can be used to set an alarm. You supply the alarm
-number from 0 to 11, and then the value to set the alarm to. The
-value must be an integer value, and you can set it to -1 to stop
-the alarm. This is an alternative method to setting the <a href=
-"../instances/instance_variables/alarm.html">alarm array</a>
-directly.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">for (var i = 0; i &lt; 12; i++)<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;if alarm_get(i) &gt; 0 alarm_set(i, -1);<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks all the alarms in the calling instance and
 if they are greater than 0 it sets them to -1, stopping them from
 counting down any further.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -105,7 +110,7 @@ counting down any further.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -32,13 +32,26 @@ if (window.name != "content")
 <h2>point_in_triangle</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">point_in_triangle(px, py, x1, y1, x2, y2, x3,
-y3);</p>
+<h3>Description</h3>
+
+<blockquote>
+<p>When using this function, you define a triangular area and
+<i>GameMaker Studio 2</i> will work out whether the given point
+falls within its bounds or not. If the point falls within the
+defined triangle the function will return <tt>true</tt> otherwise
+the function will return <tt>false</tt>.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>Syntax:</h3>
+
+<p class="code">point_in_triangle(px, py, x1, y1, x2, y2, x3,
+y3);</p>
 
 <div class="param">
 <table>
@@ -98,23 +111,14 @@ check.</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Boolean</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>When using this function, you define a triangular area and
-<i>GameMaker Studio 2</i> will work out whether the given point
-falls within its bounds or not. If the point falls within the
-defined triangle the function will return <tt>true</tt> otherwise
-the function will return <tt>false</tt>.<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var inst = instance_nearest(x, y, obj_Player);<br>
 if instance_exists(inst)<br>
@@ -134,10 +138,12 @@ y1, x2, y2)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code uses the <tt>point_in_triangle</tt> function as a
 "cone of vision" to check for an instance of "obj_player", setting
 a variable to <tt>true</tt> should the objects x/y position fall
 within the defined triangle.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -154,7 +160,7 @@ Checking</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

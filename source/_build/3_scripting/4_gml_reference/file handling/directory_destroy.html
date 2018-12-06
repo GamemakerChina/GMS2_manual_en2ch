@@ -32,7 +32,26 @@ if (window.name != "content")
 <h2>directory_destroy</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will remove a directory with the given name in the
+sandboxed local save area.</p>
+
+<div class="note"><b>WARNING!</b> This function may not work as you
+expect due to <i>GameMaker Studio 2</i> being sandboxed! Please see
+the section on <a href=
+"../../../1_overview/3_additional_information/file_system.html">File
+System Limits</a> for more information.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">directory_destroy(dname)</p>
 
@@ -56,36 +75,24 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function will remove a directory with the given name in the
-sandboxed local save area.<br>
-<br>
-<br>
-<i><b>WARNING!</b> This function may not work as you expect due
-to</i> GameMaker Studio 2 being sandboxed! Please see the section
-on <a href=
-"../../../1_overview/3_additional_information/file_system.html">File
-System Limits</a> for more information.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">if directory_exists("DLC")<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;directory_destroy("DLC");<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>This will check to see if the specified directory exists in the
 local data folder and, if it does, it is removed.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -102,7 +109,7 @@ Handling</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

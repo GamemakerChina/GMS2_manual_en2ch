@@ -54,13 +54,15 @@ function to continue through it.</p>
 <p>The ds_map will hold the following key/value pairs:</p>
 
 <ul>
-<li>"<b>title</b>" - The title of the notification (this will only
-be available on the <i>Android</i> platform as iOS does not store
-the title information)<br></li>
+<li>"<b><span class="notranslate">title</span></b>" - The title of
+the notification (this will only be available on the <i>Android</i>
+platform as iOS does not store the title information)<br></li>
 
-<li>"<b>message</b>" - The message body text<br></li>
+<li>"<b><span class="notranslate">message</span></b>" - The message
+body text<br></li>
 
-<li>"<b>data</b>" - The data package string<br></li>
+<li>"<b><span class="notranslate">data</span></b>" - The data
+package string<br></li>
 </ul>
 
 <div class="note"><b>NOTE</b>: This function is limited to the
@@ -118,9 +120,10 @@ ds_map_destroy(map);<br></p>
 <p>The above code creates a <tt>ds_map</tt> and then requests data
 for the first available notification in the queue. If a
 notification exists, the map is populated and the code then checks
-the "data" key for a specific string. If the string is found, the
-notification is cancelled and moves on to check the next
-notification until all in the queue have been checked.</p>
+the "<span class="notranslate">data</span>" key for a specific
+string. If the string is found, the notification is cancelled and
+moves on to check the next notification until all in the queue have
+been checked.</p>
 </blockquote>
 
 <p><br>
@@ -138,7 +141,7 @@ Functions</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

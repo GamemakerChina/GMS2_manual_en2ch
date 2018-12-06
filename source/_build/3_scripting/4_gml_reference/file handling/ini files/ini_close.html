@@ -9,6 +9,7 @@
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>ini_close</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../../default.css" type=
@@ -32,49 +33,57 @@ if (window.name != "content")
 <h2>ini_close</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">ini_close();</p>
-
 <p><br>
 </p>
 
-<p><b>Returns:</b> String</p>
+<h3>Description</h3>
 
-<p><br>
-</p>
-
-<h3 class="studio">Description</h3>
-
+<blockquote>
 <p>This function should be called the moment you are finished
 reading or writing to any open ini file. If you do not use the
 function after you have used any of the ini write functions, then
 nothing will be written to disk, as the file information is held in
 memory until this function is called, which forces the write. If
 you try to open an ini without having previously closed another one
-(or the same one) you will get an error too.<br>
-<br>
-The function will also return a string with the ini file encoded
+(or the same one) you will get an error too.</p>
+
+<p>The function will also return a string with the ini file encoded
 into it. This string can then be saved to a server and/or used
 again along with the function <a href=
 "ini_open_from_string.html"><tt>ini_open_from_string</tt></a> to
-re-create the ini.<br>
-<br></p>
+re-create the ini.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Syntax:</h3>
+
+<p class="code">ini_close();</p>
+
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">String</p>
+
+<p><br>
+</p>
+
+<h3>Example:</h3>
 
 <p class="code">ini_open("savedata.ini");<br>
 score = ini_read_real("save1", "score", 0);<br>
 ini_close();</p>
 
+<blockquote>
 <p>This will open 'savedata.ini' and set score to the value under
 the section "save1" with the key "score" in it, then close the .ini
 again. Should there be no value under "save1", "score" or there is
 no "savedata.ini" file present, score will be set to 0 and a new
 ini_file created.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -91,7 +100,7 @@ Files</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -29,45 +29,55 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">vertex_format_add_position</h1>
+<h2>vertex_format_add_position</h2>
 
-<h2 class="studio">Add 2D position data to the vertex format.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>Syntax:</h3>
 
 <p class="code">vertex_format_add_position();</p>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
+<h3>Description</h3>
 
+<blockquote>
 <p>Tell <i>GameMaker Studio 2</i> to accept 2D positional data (x
-and y) as part of the new vertex format being created.<br>
-<br></p>
+and y) as part of the new vertex format being created.</p>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">vertex_format_begin();<br>
 vertex_format_add_colour();<br>
 vertex_format_add_position();<br>
 my_format = vertex_format_end();<br></p>
 
+<blockquote>
 <p>The above code will create a new vertex format with just colour
 and position values and then store the format id in the variable
 "my_format".</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Vertex
 Formats</a></div>
@@ -75,11 +85,13 @@ Formats</a></div>
 <div style="float:right">Next: <a href=
 "vertex_format_add_position_3d.html">vertex_format_add_position_3d</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

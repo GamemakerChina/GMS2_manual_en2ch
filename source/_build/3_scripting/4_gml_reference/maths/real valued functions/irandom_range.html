@@ -29,12 +29,40 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">irandom_range</h1>
+<h2>irandom_range</h2>
 
-<h2 class="studio">Returns a random integer between n1 and n2.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio"><b>Syntax:</b>
-</h3>
+<h3 class="studio">Description</h3>
+
+<blockquote>
+<p>This function is similar to <a href=
+"random_range.html"><tt>random_range()</tt></a> only with integer
+values as the input. You supply the low value for the range as well
+as the high value, and the function will return a random integer
+value within (and including) the given range. For example,
+<tt>irandom_range(10, 35)</tt> will return an integer between 10
+and 35 <i>inclusive</i>.</p>
+
+<p>As with the <a href="irandom.html"><tt>irandom()</tt></a>
+function, real numbers can be used, in which case they will be
+rounded down to the nearest integer EG: irandom_range(6.2,9.9) will
+give a value between 6 and 9.</p>
+
+<div class="note"><b>NOTE:</b> This function will return the same
+value every time the game is run afresh due to the fact that
+GameMaker: Studio generates the same initial random seed every time
+to make debugging code a far easier task. To avoid this behaviour
+use <a href="randomize.html"><tt>randomize</tt></a> at the start of
+your game.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3 class="studio">Syntax:</h3>
 
 <p class="code">irandom_range(n1, n2);</p>
 
@@ -65,44 +93,28 @@ selected.</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Integer</p>
+<h3>Returns:</h3>
+
+<p class="code">Integer</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function is similar to <a href=
-"random_range.html"><tt>random_range()</tt></a> only with integer
-values as the input. So <tt>irandom_range(10, 35)</tt> will return
-an integer between 10 and 35. As with the <a href=
-"irandom.html"><tt>irandom()</tt></a> function, real numbers can be
-used, in which case they will be rounded down to the nearest
-integer EG: irandom_range(6.2,9.9) will give a value between 6 and
-9.<br>
-<br>
-<i><b>NOTE:</b> This function will return the same value every time
-the game is run afresh due to the fact that GameMaker Studio 2
-generates the same initial random seed every time to make debugging
-code a far easier task. To avoid this behaviour use <a href=
-"randomise.html"><tt>randomise</tt></a> at the start of your
-game.</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3><b>Example:</b>
-</h3>
+<h3>Example:</h3>
 
 <p class="code">score += irandom_range(500, 600);</p>
 
-<p>This will add anywhere between 500 and 600, an integer value, to
-the total score.</p>
+<blockquote>
+<p>This will add an integer value anywhere between 500 and 600
+(inclusive) to the total score.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">Back: <a href="index.html">Real Number
 Functions</a></div>
@@ -110,11 +122,13 @@ Functions</a></div>
 <div style="float:right">Next: <a href=
 "random_set_seed.html">random_set_seed</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

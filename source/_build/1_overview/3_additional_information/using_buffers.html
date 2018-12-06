@@ -228,6 +228,16 @@ from -32,768 to 32,767 (0 is classed as positive).<br>
 </tr>
 
 <tr>
+<td>buffer_f16</td>
+<td>2</td>
+<td><br>
+A 16bit floating point number. This can be a positive or negative
+value within the range of +/- 65504. <b>(Not currently
+supported!)</b><br>
+<br></td>
+</tr>
+
+<tr>
 <td>buffer_u32</td>
 <td>4</td>
 <td><br>
@@ -247,16 +257,6 @@ positive).<br>
 </tr>
 
 <tr>
-<td>buffer_f16</td>
-<td>2</td>
-<td><br>
-A 16bit floating point number. This can be a positive or negative
-value within the range of +/- 65504. <b>(Not currently
-supported!)</b><br>
-<br></td>
-</tr>
-
-<tr class="alt">
 <td>buffer_f32</td>
 <td>4</td>
 <td><br>
@@ -265,12 +265,20 @@ value within the range of +/-16777216.<br>
 <br></td>
 </tr>
 
+<tr class="alt">
+<td>buffer_u64</td>
+<td>8</td>
+<td><br>
+A 64bit unsigned integer value.<b>(Not currently supported by all
+buffer functions!)</b><br>
+<br></td>
+</tr>
+
 <tr>
 <td>buffer_f64</td>
 <td>8</td>
 <td><br>
-A 64bit floating point number. This can be a positive or negative
-value from -(2<sup>52</sup>) to 2<sup>52</sup> - 1.<br>
+A 64bit floating point number.<br>
 <br></td>
 </tr>
 
@@ -563,7 +571,7 @@ Pages</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

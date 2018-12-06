@@ -32,38 +32,46 @@ if (window.name != "content")
 <h2>GM_build_date</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>This constant holds the date and time on which the executable
+being run was built by <i>GameMaker Studio 2</i>. The value can be
+parsed using the <a href=
+"../maths/date%20and%20time/index.html">Date and Time</a> functions
+and is taken from the system UTC value at compile time.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">GM_build_date;</p>
 
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This constant holds the date and time on which the executable
-being run was built by <i>GameMaker Studio 2</i>. The value can be
-parsed using the <a href=
-"../maths/date%20and%20time/index.html">Date and Time</a> functions
-and is taken from the system UTC value at compile time.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">draw_text(32, 32,
 date_time_string(GM_build_date));<br>
 draw_text(32, 64, "v" + GM_version);<br></p>
 
+<blockquote>
 <p>The above code will draw the version number for the game and the
 date and time it was compiled on.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -80,7 +88,7 @@ date and time it was compiled on.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

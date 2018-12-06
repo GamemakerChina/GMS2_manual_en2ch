@@ -102,10 +102,10 @@ from an external source where the image file to be loaded should
 <tt>*.jpg/jpeg</tt> format. The function returns the new sprite
 index which must then be used in all further codes that relate to
 the sprite. If you use this function with HTML5 or are getting an
-image from an URL, this function will also generate an asynchronous
-event. See <a href=
+image from an URL, this function will also generate an <b>Image
+Loaded</b> asynchronous event. See <a href=
 "../../../2_interface/1_editors/events/async_events.html">The
-Asynchronous Event</a> for more information.</p>
+Asynchronous Event</a> page for more information.</p>
 
 <p>All images that are to be turned into animated sprites - except
 for <tt>*.gif</tt> (see below) - should have a "strip" format (see
@@ -153,6 +153,26 @@ this, in which case you should also use the function <a href=
 no longer needed, otherwise there is risk of a memory leak which
 will slow down and eventually crash your game.</div>
 
+<div class="note"><b>NOTE:</b> On <b>iOS</b>, if you are loading an
+included file from a folder, ie: with a path something like
+"<tt>Backgrounds/background1.png</tt>", you do NOT need to include
+the folder as part of the path and simply supplying the file name
+is sufficient. On all other platforms you must supply the folder(s)
+as part of the path to the file.</div>
+
+<div class="note"><b>NOTE:</b> On <b>HTML5</b>, if you are loading
+a sprite from a secure server you may need to set the cross-origin
+type and use a relative path instead of an absolute path. See
+<a href=
+"../asynchronous%20functions/http_set_request_crossorigin.html"><tt>
+http_set_request_crossorigin</tt></a> for more details.</div>
+
+<div class="note"><b>NOTE</b>: If you are loading the sprite from a
+URL, then loading will be done <b>asynchronously</b> and trigger an
+asynchronous <a href=
+"../../../2_interface/1_editors/events/async_events.html">Image
+Loaded</a> event.</div>
+
 <div class="note"><b>IMPORTANT!</b> This function is <b>not</b>
 available with the Trial Licence of the product.</div>
 </blockquote>
@@ -185,7 +205,7 @@ in the variable "spr".</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

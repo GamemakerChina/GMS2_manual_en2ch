@@ -114,20 +114,20 @@ root of the animation (this is a <i>read only</i> value).<br>
 root of the animation (this is a <i>read only</i> value).<br>
 <br></li>
 
-<li><b>"worldScaleX":</b> The horizontal scale of the bone in
-"global" space (ignoring any transforms by <i>GameMaker Studio
-2</i>), as opposed to the scale with reference to its parent bone
-(this is a <i>read only</i> value).<br>
+<li><b>"worldSignX":</b> This indicates whether a bone has been
+scaled along the X axis and will return either 1 (positive scaling)
+or -1 (negative scaling). Note that this is a <i>read only</i>
+value.<br>
 <br></li>
 
-<li><b>"worldScaleY":</b> The vertical scale of the bone in
-"global" space (ignoring any transforms by <i>GameMaker Studio
-2</i>: Studio as opposed to the scale with reference to its parent
-bone (this is a <i>read only</i> value).<br>
+<li><b>"worldSignY":</b> This indicates whether a bone has been
+scaled along the Y axis and will return either 1 (positive scaling)
+or -1 (negative scaling). Note that this is a <i>read only</i>
+value.<br>
 <br></li>
 
-<li><b>"worldAngle":</b> The rotation of the bone relative to the
-root of the animation (this is a <i>read only</i> value).<br>
+<li><b>"appliedAngle":</b> This is the local rotation used to pose
+the skeleton bones.<br>
 <br></li>
 
 <li><b>"parent":</b> The name (a string) of the parent bone.<br>
@@ -195,7 +195,7 @@ Animations</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

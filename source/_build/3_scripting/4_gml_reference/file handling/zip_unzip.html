@@ -32,7 +32,34 @@ if (window.name != "content")
 <h2>zip_unzip</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>Description</h3>
+
+<blockquote>
+<p>This function will open a stored zip file and extract its
+contents to the given directory. Note that if you do not supply a
+full path to the ZIP directory then the current drive <i>root</i>
+will be used, and if you want to place it in a relative path to the
+game bundle working directory then you should use the <a href=
+"working_directory.html"><tt>working_directory</tt></a> variable as
+part of the path (relative paths using "." or ".." will not work as
+expected so should be avoided). Note too that the zip must be
+either part of the game bundle (ie: an <a href=
+"../../../2_interface/1_editors/included_files.html">Included
+File</a>) or have been downloaded to the storage area using
+<a href="../asynchronous%20functions/http_get_file.html">http_get_file</a>.</p>
+
+<p>The function will return a value indicating the number of files
+extracted, or it will return 0 or less if the extraction has
+failed.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>Syntax:</h3>
 
 <p class="code">zip_unzip(zip_file, target_directory)</p>
 
@@ -61,36 +88,14 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real</p>
+<h3>Returns:</h3>
+
+<p class="code">Real</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">Description</h3>
-
-<p>This function will open a stored zip file and extract its
-contents to the given directory. Note that if you do not supply a
-full path to the ZIP directory then the current drive <i>root</i>
-will be used, and if you want to place it in a relative path to the
-game bundle working directory then you should use the <a href=
-"working_directory.html"><tt>working_directory</tt></a> variable as
-part of the path (relative paths using "." or ".." will not work as
-expected so should be avoided). Note too that the zip must be
-either part of the game bundle (ie: an <a href=
-"../../../2_interface/1_editors/included_files.html">Included
-File</a>) or have been downloaded to the storage area using
-<a href="../asynchronous%20functions/http_get_file.html">http_get_file</a>.<br>
-
-<br>
-The function will return a value indicating the number of files
-extracted, or it will return 0 or less if the extraction has
-failed.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">Example:</h3>
+<h3>Example:</h3>
 
 <p class="code">var num = zip_unzip("/downloads/level_data.zip",
 working_directory + "extracted/");<br>
@@ -99,11 +104,13 @@ if num &lt;= 0<br>
 &nbsp;&nbsp;&nbsp;show_debug_message("Extraction Failed!");<br>
 &nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will open the zip file stored in the directory
 "downloads" and extract its contents to the directory "extracted"
 (creating that directory if it doesn't already exist) and then
 check to see that the extraction has been correct, showing a debug
 message should it fail.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -120,7 +127,7 @@ Handling</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

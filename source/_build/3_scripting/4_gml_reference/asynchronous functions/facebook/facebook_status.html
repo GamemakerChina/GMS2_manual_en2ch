@@ -54,24 +54,32 @@ if (window.name != "content")
 
 <blockquote>
 <p>With this function you can poll Facebook for the current status
-of the connection. One of the following strings is returned (note
+of the user login. One of the following strings is returned (note
 that they are always returned in capital letters):</p>
 
 <blockquote>
 <ul>
-<li><b>AUTHORISED:</b> This means that the user has logged in
-correctly, but not all permissions may have been granted.</li>
+<li><b><span class="notranslate">AUTHORISED:</span></b> This means
+that the user has logged in correctly, but not all permissions may
+have been granted.</li>
 
-<li><b>PROCESSING:</b> This is returned when the login process is
-currently un-resolved.</li>
+<li><b><span class="notranslate">PROCESSING:</span></b> This is
+returned when the login process is currently un-resolved.</li>
 
-<li><b>IDLE:</b> This is returned when the connection has been
-initialised but no further action has been taken.</li>
+<li><b><span class="notranslate">IDLE:</span></b> This is returned
+when the connection to the Facebook API has been initialised but no
+further action has been taken (ie: no user is logged in).</li>
 
-<li><b>FAILED:</b> This means that the user has not logged in
-correctly, usually due to a connection error.</li>
+<li><b><span class="notranslate">FAILED:</span></b> This means that
+the user has not logged in correctly, usually due to a connection
+error.</li>
 </ul>
 </blockquote>
+
+<p>Note that this function does not continuously check the Facebook
+API and will only be updated after a Facebook action has been
+resolved (like logging in, logging out or requesting
+permissions).</p>
 </blockquote>
 
 <p><br>
@@ -91,8 +99,9 @@ alarm[0] = 30; break;<br>
 <blockquote>
 <p>The above code would be run in an alarm and checks the status of
 Facebook to see if the user has logged in correctly. If the return
-string is "AUTHORISED", a global variable is set to true and the
-game continues, if the return string is "FAILED" the game will
+string is <span class="notranslate">"AUTHORISED"</span>, a global
+variable is set to true and the game continues, if the return
+string is <span class="notranslate">"FAILED"</span> the game will
 request that the user logs in again and then repeat the alarm to
 check the status once more.</p>
 </blockquote>
@@ -112,7 +121,7 @@ check the status once more.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
