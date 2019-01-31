@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,12 +32,26 @@ if (window.name != "content")
 <h2>script_exists</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">script_exists(scr);</p>
+<h3>描述</h3>
+
+<blockquote>
+<p>This function will return <tt>true</tt> or <tt>false</tt>
+depending on whether the script with the given index exists. Note,
+that this is <i>not</i> a string, but rather the asset name which
+holds the unique index for each script (as it would appear in the
+IDE). For more information on scripts, see <a href=
+"../../3_gml_overview/3_scripts.html">Scripts</a>.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">script_exists(scr);</p>
 
 <div class="param">
 <table>
@@ -56,32 +70,23 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回:</b> 布尔值</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3>例如：</h3>
 
-<p>This function will return <tt>true</tt> or <tt>false</tt>
-depending on whether the script with the given index exists. Note,
-that this is <i>not</i> a string, but rather the asset name which
-holds the unique index for each script (as it would appear in the
-IDE). For more information on scripts, see <a href=
-"../../3_gml_overview/3_scripts.html">Scripts</a>.<br>
-<br></p>
+<p class="code">script[0] = -1;<br>script[1] = scr_AI_Left;<br>script[2] = scr_AI_Right;<br>var script_num = choose(0, 1, 2);<br>if script_exists(script[script_num])<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;script_execute(script[script_num]);<br>&nbsp;&nbsp;&nbsp;;<br></p>
 
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
-
-<p class="code">script[0] = -1;<br>script[1] = scr_AI_Left;<br>script[2] = scr_AI_Right;<br>var script_num = choose(0, 1, 2);<br>if script_exists(script[script_num])<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;script_execute(script[script_num]);<br>&nbsp;&nbsp;&nbsp;}<br></p>
-
+<blockquote>
 <p>The above example adds two scripts and a value into an array,
 then proceeds to get a random number and use that to choose a
 script to run, unless the real is chosen in which case nothing will
 happen.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -98,7 +103,7 @@ happen.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

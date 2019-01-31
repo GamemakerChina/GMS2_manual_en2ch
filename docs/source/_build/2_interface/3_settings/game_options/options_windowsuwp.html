@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -179,6 +179,11 @@ type="checkbox">
 <div class="note"><b>注意</b>： 在将应用程序上传到商店时，你需要为你的作品获得正确的 <tt>*.pfx</tt>。这是通过将你的应用程序与 Visual Studio 中的 Windows 应用商店相关联来完成的，这会导致 Visual Studio 专门为该应用生成新的 <tt>*.pfx</tt>。还值得注意的是，你可以将任何应用程序与 Visual Studio 中的 Windows 应用商店相关联，这意味着你可以将空白项目与 Windows 应用商店应用相关联，只需将生成的 <tt>pfx</tt> 复制到安全位置，然后可以在 UWP 游戏选项中使用。你可以从 <a href=
 "http://help.yoyogames.com/hc/en-us/articles/115001349488" target=
 "_blank">YoYo 游戏知识库</a> 中找到有关如何完成此操作的说明。</div>
+
+<p>In this section you also need to specify the <b>Publisher
+name</b> that was used to generate the signing certificate. The
+input should always be preceeded by "CN=", eg:
+<tt>CN=YoYoGames</tt>.</p>
 </div>
 <br>
 <label class="collapse" for="e">Xbox Live</label> <input id="e"
@@ -224,7 +229,7 @@ target="_blank">Xbox Live 服务配置</a> 找到有关这些的更多信息）�
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

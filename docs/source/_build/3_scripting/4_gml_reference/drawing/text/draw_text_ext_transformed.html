@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,18 +29,36 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">draw_text_ext_transformed</h1>
+<h2>draw_text_ext_transformed</h2>
 
-<h2 class="studio">Draws a string with custom spacing and
-scaling.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>描述</h3>
 
-<p class="code">draw_text_ext_transformed(x, y, string, sep, w,
-xscale, yscale, angle);</p>
+<blockquote>
+<p>This function is a combination of the base <a href=
+"draw_text.html"><tt>draw_text</tt></a> function with the <a href=
+"draw_text_ext.html"><tt>draw_text_ext</tt></a> and <a href=
+"draw_text_transformed.html"><tt>draw_text_transformed</tt></a>
+functions, permitting you to scale and rotate text while
+maintaining a specific line spacing and maximum width per line.
+Note that the "width" argument is based on a scale of 1, so if the
+scale is different, this value should be changed proportionally.
+For example, if the base width for a line break is 300 and you set
+the scale to 2, then the text will appear wrong, over-running the
+given width. Instead you should have set the width to 150 to
+compensate the scaling.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">draw_text_ext_transformed(x, y, string, sep, w,
+xscale, yscale, angle);</p>
 
 <div>
 <table>
@@ -86,7 +104,7 @@ break.</td>
 </tr>
 
 <tr>
-<td>angle</td>
+<td>角度</td>
 <td>The angle of the text.</td>
 </tr>
 </table>
@@ -95,31 +113,14 @@ break.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>This function is a combination of the base <a href=
-"draw_text.html"><tt>draw_text</tt></a> function with the <a href=
-"draw_text_ext.html"><tt>draw_text_ext</tt></a> and <a href=
-"draw_text_transformed.html"><tt>draw_text_transformed</tt></a>
-functions, permitting you to scale and rotate text while
-maintaining a specific line spacing and maximum width per line.
-Note that the "width" argument is based on a scale of 1, so if the
-scale is different, this value should be changed proportionally.
-For example, if the base width for a line break is 300 and you set
-the scale to 2, then the text will appear wrong, over-running the
-given width. Instead you should have set the width to 150 to
-compensate the scaling.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">draw_set_halign(fa_center);<br>
 draw_set_valign(fa_middle);<br>
@@ -127,25 +128,32 @@ image_angle += 1;<br>
 draw_text_ext_transformed(room_width / 2, room_height / 2,
 keyboard_string, 10, 300, 2, 2, image_angle);<br></p>
 
+<blockquote>
 <p>The above code will draw the given text in the middle of the
 room, with a maximum string length of 300 pixels, a spacing between
 each line of 10 pixels, spinning round and scaled to twice its
 original size.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Drawing Text</a></div>
 
 <div style="float:right">下一页: <a href=
 "draw_text_transformed_colour.html">draw_text_transformed_colour</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

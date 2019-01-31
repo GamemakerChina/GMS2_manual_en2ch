@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">application_surface_enable(enable);</p>
 
@@ -66,11 +66,15 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>可以用这个函数启用或禁用应用表面层。默认是启用应用表面层，所有绘制事件中的绘制将会在应用表面层中结束，然后将这个表面层绘制到屏幕上。然而在一些旧设备或特定的芯片组上，这可能会导致很差的性能。In those cases you can switch off drawing to the application surface and all Draw event drawing will the be done directly to the screen buffer.</p>
+<p>可以用这个函数启用或禁用应用表面层。默认是启用应用表面层，所有绘制事件中的绘制将会在应用表面层中结束，然后将这个表面层绘制到屏幕上。然而在一些旧设备或特定的芯片组上，这可能会导致很差的性能。In those cases you can switch off drawing to the application surface and all Draw event drawing will then be done directly to the screen buffer.</p>
 
 <p>你可以游戏中的任何时间使用这个函数启用或禁用应用表面层，但应该注意更改生效至少需要一帧（一步）。Switching it off <i><b>will switch off all aspect ratio correction</b></i>, as set in the <i>Game Options</i> for the target platform. 这意味着，你需要额外的方法设置缩放到设备、窗口或屏幕相应的尺寸上。If you switch it back on again, then the <i>Game Options</i> will take effect again the next step.</p>
 
-<p>建议小心的使用这个函数，它会影响一切事物绘制到屏幕的过程。In general you would want to have it as an option in a menu of your game, or call it only once at the start of your game and write your code around whether you have it enabled or disabled.</p>
+<p>It is recommended that you use this function carefully as it
+will impact on how everything is drawn to the screen. In general
+you would want to have it as an option in a menu of your game, or
+call it only once at the start of your game and write your code
+around whether you have it enabled or disabled.</p>
 </blockquote>
 
 <p><br>
@@ -99,7 +103,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

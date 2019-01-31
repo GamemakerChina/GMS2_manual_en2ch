@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,9 +38,13 @@ if (window.name != "content")
 <p><i>GameMaker Studio 2</i> 具有许多用于从多个已连接的游戏手柄中检测模拟和数字控制信号的专用函数。这些函数类似于 <a href="../device%20input/index.html">设备输入</a>，因为你可以检测最多四个连接的 XInput 游戏手柄（以及最多 8 个 DirectInput 游戏手柄），并使用相同的函数处理每个输入。请注意，当游戏手柄插入你的设备（或被删除）时，会触发异步 <a href=
 "../../../../2_interface/1_editors/events/async_events.html">系统事件</a>，你可以使用适当的函数处理该情况。</p>
 
-<p>游戏手柄 “插槽” 从 0 开始索引，插槽 0 - 3 包含 <i>仅用于 Xinput 游戏手柄</i>，即：Xbox360 控制器和兼容机。但是，你也可以检查插槽 4 - 11（包括 DirectInput 游戏手柄），这意味着当通过这些插槽连接时，你可以检测到许多其他型号的控制器。值得注意的是，当使用 DirectInput 游戏手柄时，由于控制器制造商实施 API 的分散和非标准化方式，下面给出的常量可能与按下时所需的按钮完全不匹配。建议你在游戏中使用某种游戏手柄设置屏幕，人们可以根据任何连接到设备的输入重新定义游戏手柄按钮，以缓解任何问题。</p>
+<p>游戏手柄 “插槽” 从 0 开始索引，插槽 0 - 3 包含 <i>仅用于 Xinput 游戏手柄</i>，即：Xbox360 控制器和兼容机。However you can also check slots 4 - 11 inclusive for <i>DirectInput</i> gamepads, which means you can detect many other models of controller when connected through these slots. It is worth noting that when using DirectInput gamepads, the constants given below may not match exactly the buttons that you expect when they are pressed, due to the fragmented and non-standardised way that the API is implemented by controller manufacturers. Because of this, it is recommend that you have some kind of gamepad setup screen in your games where people can redefine the gamepad buttons based on input from any connected to device to mitigate any issues (there are gamepad "mapping" functions that can help with this on Windows Desktop, Ubuntu, macOS, and Android targets, while on all others you would need to do this yourself using code). Also note that Direct Input gamepads are run in <i>cooperative mode</i> which means that your game only has access to them when it is the foreground application, which in turn will cause Direct Input controllers to be "lost" if the game loses focus and then "found" again when it comes back into focus (this can be detected in the System Event and dealt with).</p>
 
-<p>使用游戏手柄函数时，有许多内置常量应该用于获取 / 定义按钮和摇杆等...：</p>
+<p>When working with the gamepad functions, input can come from
+<b>axis</b>, <b>buttons</b> and/or <b>hats</b>, which <i>GameMaker
+Studio 2</i> will assign to some or all of the following built-in
+constants (note that "hats" are generally only detected on
+non-standard controllers):</p>
 
 <div class="compat">
 <table>
@@ -91,7 +95,8 @@ if (window.name != "content")
 
 <tr>
 <td>gp_select</td>
-<td>选择按钮（这是 PS4 控制器上的触摸板按下）</td>
+<td>The select button (this is the <i>PS</i> button on a DS4
+controller)</td>
 </tr>
 
 <tr class="alt">
@@ -152,14 +157,19 @@ if (window.name != "content")
 </div>
 
 <p><br>
-为了更好地理解每个常量所代表的控制器的哪个部分，你可以参考以下标准游戏手柄的图像： <img class="center" src="gamepad.png"></p>
 
-<p>你可以在下面找到所有游戏手柄函数的列表：</p>
+To better understand exactly what part of the controller each
+constant represents, you can refer to the following image of a
+standard Xinput gamepad: <img class="center" src="gamepad.png">
+Below you can find a list of all the gamepad functions:</p>
 
 <blockquote>
 <ol>
 <li><a href=
 "gamepad_is_supported.html">gamepad_is_supported</a><br>
+</li>
+
+<li><a href="gamepad_get_guid.html">gamepad_iget_guid</a><br>
 </li>
 
 <li><a href=
@@ -212,6 +222,12 @@ if (window.name != "content")
 "gamepad_button_value.html">gamepad_button_value</a><br>
 </li>
 
+<li><a href="gamepad_hat_count.html">gamepad_hat_count</a><br>
+</li>
+
+<li><a href="gamepad_hat_value.html">gamepad_hat_value</a><br>
+</li>
+
 <li><a href=
 "gamepad_set_vibration.html">gamepad_set_vibration</a><br>
 </li>
@@ -225,25 +241,57 @@ if (window.name != "content")
 </ol>
 </blockquote>
 
+<p>The following gamepad functions also exist and are used for
+remapping the built in constants to the direct physical inputs of a
+given gamepad. These functions are <b>only for the Windows Desktop,
+Ubuntu, macOS, and Android target platforms</b> and on Windows,
+they will <b>only be valid for Direct input devices</b>. While
+<i>GameMaker Studio 2</i> comes with mappings for a number of
+different gamepads based on <a href=
+"https://github.com/gabomdq/SDL_GameControllerDB" target=
+"_blank">SDL Gamepad Controller DB</a>, however due to the huge
+number of controller types and brands out there, it is impossible
+to map the GML constants to the correct inputs for every make and
+model, so with these functions you have the possibility to create
+your own custom mappings.</p>
+
+<blockquote>
+<ol>
+<li><a href="gamepad_get_mapping.html">gamepad_get_mapping</a><br>
+</li>
+
+<li><a href=
+"gamepad_test_mapping.html">gamepad_test_mapping</a><br>
+</li>
+
+<li><a href=
+"gamepad_remove_mapping.html">gamepad_remove_mapping</a><br>
+</li>
+</ol>
+</blockquote>
+
+<p><br>
+</p>
+
 <h2>兼容性</h2>
 
 <p>以下列表显示了跨平台的当前兼容性（请注意，这将随着将来的更新而更改）：<br>
 <br></p>
 
 <ul>
-<li>完全支持 Windows，一次最多允许 12 个连接设备（编号从 0 到 11，其中 0 - 3 是 XInput 设备，4 - 11 是 DirectInput）。<br></li>
+<li>完全支持 Windows，一次最多允许 12 个连接设备（编号从 0 到 11，其中 0 - 3 是 XInput 设备，4 - 11 是 DirectInput）。Remapping of controller constants is also permitted.<br></li>
 
-<li>Mac OS 支持最多同时连接 4 个设备，这些设备只能是 Playstation3 或 Xbox 360 类型。请注意，如果要支持手柄工作，则需要关闭 Mac 游戏选项中的 <b>为苹果应用商店构建（Build for Mac AppStore）</b> 选项。<br>
+<li>Mac OS 支持最多同时连接 4 个设备，这些设备只能是 Playstation3 或 Xbox 360 类型。请注意，如果要支持手柄工作，则需要关闭 Mac 游戏选项中的 <b>为苹果应用商店构建（Build for Mac AppStore）</b> 选项。Remapping of controller constants is also permitted.<br>
 <br></li>
 
 <li>Ubuntu 也支持 Gamepad 输入，但你可能需要从 Ubuntu 存储库（Ubuntu repository）安装其他库。 你可以通过打开命令行终端并键入以下内容来轻松完成此操作：
 
 <p class="code">sudo apt-get install jstest-gtk<br>sudo apt-get install joystick.<br></p>
 
-<p>这将为操纵杆（joystick） / 游戏手柄（gamepad） 以及操纵杆 / 游戏手柄 API 本身安装 GUI 支持。<br>
+<p>这将为操纵杆（joystick） / 游戏手柄（gamepad） 以及操纵杆 / 游戏手柄 API 本身安装 GUI 支持。Remapping of controller constants is <i>not</i> permitted.<br>
 <br></p></li>
 
-<li>除 <i>Safari</i> 之外，大多数主流浏览器都支持使用游戏手柄的 HTML5 游戏。<br>
+<li>除 <i>Safari</i> 之外，大多数主流浏览器都支持使用游戏手柄的 HTML5 游戏。Remapping of controller constants is <i>not</i> permitted.<br>
 <br></li>
 
 <li>游戏手柄支持也通过 <b>iCade</b> cabinet（机柜）扩展到 iOS。左侧轴映射到摇杆控制器（虽然输入是数字的，而不是模拟的），四个 “面部” 按钮映射到 cabinet 前部按钮，四个肩部按钮映射到 cabinet 后部的按钮。
@@ -251,13 +299,17 @@ if (window.name != "content")
 <br></li>
 
 <li>Android 导出支持 NYKO 控制器和通用蓝牙控制器（包括 OUYA），但仅在它们可用时，这意味着你必须在 <b>Android 游戏选项</b> 的 <a href=
-"../../../../2_interface/3_settings/game_options/options_android.html">全局</a> 部分勾选 iCade / 蓝牙选项。它们需要 API level 12 才能完全正常工作，应注意 <i>GameMaker Studio 2</i> 将注册连接设备与之配对的任何蓝牙设备，无论它是否实际连接。 因此，在分配和检查 “插槽” 时应考虑到这一点。
-<br>
+"../../../../2_interface/3_settings/game_options/options_android.html">全局</a> 部分勾选 iCade / 蓝牙选项。They require API level 12 for them to work fully and it should be noted that <i>GameMaker Studio 2</i> will register as connected any Bluetooth devices that your device is paired with, whether or not itï¿½s actually connected. 因此，在分配和检查 “插槽” 时应考虑到这一点。
+Note that the remapping of controller constants is also permitted.<br>
 <br></li>
 
 <li>在 PS4 上，如果要使用触摸板跟踪，则需要使用 <a href=
-"../device%20input/index.html"><tt>device_mouse_*</tt></a> 按钮。<br>
+"../device%20input/index.html"><tt>device_mouse_*</tt></a> 按钮。Remapping of controller constants is <i>not</i> permitted.<br>
 <br></li>
+
+<li>On Windows UWP, XBoxOne and Nintendo Switch targets, gamepads
+are fully supported, but remapping of controller constants is
+<i>not</i> permitted.</li>
 </ul>
 
 <p>理想情况下，在 <i>所有</i> 目标平台上，你希望枚举可用游戏手柄 “插槽” 的列表，然后检查它们以查看是否检测到任何设备，如下所示：</p>
@@ -279,7 +331,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -97,7 +97,7 @@ manipulate it in any other way afterwards.</p>
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">audio_create_buffer_sound(bufferId, bufferFormat,
 bufferRate, bufferOffset, bufferLength, bufferChannels);</p>
@@ -136,8 +136,8 @@ bytes).</td>
 
 <tr>
 <td>bufferLength</td>
-<td>The length of the buffer (the number of the samples in the
-buffer).</td>
+<td>The length of the buffer (the number of bytes of audio data,
+excluding the header).</td>
 </tr>
 
 <tr class="alt">
@@ -160,13 +160,14 @@ below.</td>
 
 <h3>例如：</h3>
 
-<p class="code">rate = 44100;<br>
-hertz = irandom_range(220, 880);<br>
-samples = 44100;<br>
-bufferId = buffer_create(rate, buffer_fast, 1);<br>
-buffer_seek(bufferId, buffer_seek_start, 0);<br>
-num_to_write = rate / hertz;<br>
-val_to_write = 1;<br>
+<p class="code">var rate = 44100;<br>
+var hertz = irandom_range(220, 880);<br>
+var samples = 44100;<br>
+var bufferId = buffer_create(rate, buffer_fast, 1);<br>
+var buffer_seek(bufferId, buffer_seek_start, 0);<br>
+var num_to_write = rate / hertz;<br>
+var length = buffer_get_size(bufferId) ;<br>
+var val_to_write = 1;<br>
 for (var i = 0; i &lt; (samples / num_to_write) + 1; i++;)<br>
 &nbsp;&nbsp;&nbsp;{<br>
 &nbsp;&nbsp;&nbsp;for (var j = 0; j &lt; num_to_write; j++;)<br>
@@ -177,11 +178,11 @@ buffer_u8, val_to_write * 255);<br>
 &nbsp;&nbsp;&nbsp;val_to_write = (1 - val_to_write);<br>
 &nbsp;&nbsp;&nbsp;}<br>
 soundId = audio_create_buffer_sound(bufferId, buffer_u8, rate, 0,
-44100, audio_mono);<br></p>
+length, audio_stereo);<br></p>
 
 <p>The above creates a buffer and then procedurally fills it with
 data. This data is then used to create a new sound, which is stored
-in the variable "soundID".</p>
+in the variable "soundId".</p>
 
 <p><br>
 </p>
@@ -197,7 +198,7 @@ in the variable "soundID".</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

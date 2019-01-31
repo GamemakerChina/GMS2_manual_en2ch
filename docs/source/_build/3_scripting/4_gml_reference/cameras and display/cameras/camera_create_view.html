@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,35 +37,17 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will create a new camera and the set its view into
-a room, then return its unique ID value. The camera will be created
-using the values that you set in this function for position, size
-and other details which correlate to the values you set in the Room
-Editor (see <a href=
-"../../../../2_interface/1_editors/rooms.html">here</a>). Note that
-this function can take a <i>variable number of arguments</i> with
-only the x/y position and width/height arguments being obligatory.
-Any arguments not supplied will use their default arguments.</p>
+<p>This function will create a new camera and then set its view into the room, before return the unique ID value to identify the camera in future function calls. 此相机创建时所使用的值有位置，大小或其它细节，这些是在房间编辑器中设置好了的。 请参阅<a href=
+"../../../../2_interface/1_editors/rooms.html">这里</a>。请注意此函数可以使用<i>有数字变量的参数</i> ，只有X/Y位置和宽高参数是必须的。未提供自定义参数的将使用默认参数。</p>
 
-<p>Note that cameras are like all dynamic resources and will occupy
-memory when created. This means that you need to take care not to
-create cameras unnecessarily and to destroy those that you don't
-need by calling the function <a href=
-"camera_destroy.html"><tt>camera_destroy()</tt></a>. This also
-means that cameras will persist from room to room if assigned to a
-<tt>global</tt> variable (they will persist when assigned to
-instance or local variables too, but you can't access them after
-changing room, hence the memory leak), so that you can - for
-example - create a new camera, assign it to a global variable, and
-then at the start of each room use the <tt>camera_set_*</tt>
-functions to set the properties before assigning it to a view
-port.</p>
+<p>注意相机像所有动态资源一样，在创建时会占用一定的内存。这意味着你不能创建那些不必要的相机，而且需要通过 <a href=
+"camera_destroy.html"><tt>camera_destroy()</tt></a>函数来销毁那些不再需要的相机。这意味着如果你将相机赋给一个 <tt>全局</tt> 变量，那么它将会在不同的房间中持续存在。如果它被分配给一个临时局部变量，那么它将只会在指定的那个房间存在。因此你可以利用这个特性来创建一个新相机，将它分配给一个全局变量，在每个房间开始时使用<tt>camera_set_ *</tt>函数来设置属性，最后再将它分配给某个可视区域。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_create_view(room_x, room_y, width, height,
 [angle, object, x_speed, y_speed, x_border, y_border])</p>
@@ -84,62 +66,52 @@ port.</p>
 
 <tr>
 <td>room_x</td>
-<td>The x position (within the room) of the left side of the area
-the camera view captures.</td>
+<td>相机视图捕获的区域的左侧的x位置（在房间内）。</td>
 </tr>
 
 <tr class="alt">
 <td>room_y</td>
-<td>The y position (within the room) of the top of the area the
-camera view captures.</td>
+<td>相机视图捕获的区域的顶部的Y位置（在房间内）。</td>
 </tr>
 
 <tr>
-<td>width</td>
-<td>The width of the area the view captures.</td>
+<td>宽度</td>
+<td>视野捕捉区域的宽度。</td>
 </tr>
 
 <tr class="alt">
-<td>height</td>
-<td>The height of the area the view captures.</td>
+<td>高度</td>
+<td>视野捕捉区域的高度。</td>
 </tr>
 
 <tr>
-<td>angle</td>
-<td>The angle to set the for the camera view(from 0° - 360°,
-default is 0).</td>
+<td>角度</td>
+<td>设置摄像机视野的角度（从0° -  360°，默认为0）。</td>
 </tr>
 
 <tr class="alt">
-<td>object</td>
-<td>The object ID (or instance ID) for the camera view to follow
-(default is -1, no object).</td>
+<td>物体</td>
+<td>需要跟随的物体的ID（或实例ID），默认是-1，即不跟随任何物体。</td>
 </tr>
 
 <tr>
 <td>x_speed</td>
-<td>The maximum horizontal speed the view can move at (set to -1
-for "instant" following, default is -1).</td>
+<td>视野移动的最大水平速度 ("同步" 跟随时设置为-1, 默认值为-1)。</td>
 </tr>
 
 <tr class="alt">
 <td>y_speed</td>
-<td>The maximum vertical speed the view can move at (set to -1 for
-"instant" following, default is -1).</td>
+<td>视野移动的最大垂直速度 ("同步" 跟随时设置为-1, 默认值为-1)。</td>
 </tr>
 
 <tr>
 <td>x_border</td>
-<td>The minimum horizontal space between the edge of the view area
-and the instance it is set to follow (before the view begins moving
-and if it is set to follow an instance, default is 0).</td>
+<td>视野区域边缘与其跟随的实例之间的水平最小值（在视野移动之前，默认是0）。</td>
 </tr>
 
 <tr class="alt">
 <td>y_border</td>
-<td>The minimum vertical space between the edge of the view area
-and the instance it is set to follow (before the view begins moving
-and if it is set to follow an instance, default is 0).</td>
+<td>视野区域边缘与其跟随的实例之间的垂直最小值（在视野移动之前，默认是0）。</td>
 </tr>
 </table>
 </blockquote>
@@ -149,7 +121,7 @@ and if it is set to follow an instance, default is 0).</td>
 
 <h3>Returns:</h3>
 
-<p class="code">Real (unique camera ID value)</p>
+<p class="code">实数（相机的独特ID值）</p>
 
 <p><br>
 </p>
@@ -159,8 +131,7 @@ and if it is set to follow an instance, default is 0).</td>
 <p class="code">view_camera[0] = camera_create_view(0, 0, 640, 480,
 0, obj_Player, 5, 5, -1, -1);<br></p>
 
-<p>The above code creates a new camera, defines its view porperties
-and then assigns its ID to view port[0].</p>
+<p>上面的代码创建了一个新相机，定义了它的视野属性，然后将其ID赋给给view port[0]。</p>
 
 <p><br>
 </p>
@@ -173,7 +144,7 @@ and then assigns its ID to view port[0].</p>
 "camera_destroy.html">camera_destroy</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

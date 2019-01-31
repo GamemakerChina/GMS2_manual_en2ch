@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,19 +37,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to set the default camera to use a
-custom camera that you have previously created using one of the
-<tt>camera_create</tt> functions. When you create a room with
-<i>no</i> active view ports or view cameras, <i>GameMaker Studio
-2</i> still uses a camera to show the action in the game. This
-camera is called the <b>default</b> camera and can be set and
-manipulated (and even destroyed) just like any other camera.</p>
+<p>此函数可以用将你之前使用 <tt>camera_create</tt> 函数创建出来的摄像机设为默认摄像机。如果你 <i>没有</i> 为游戏创建可用的视野摄像机，<i>GameMaker Studio 2</i> 仍将使用一个摄像机来显示游戏中的动作。这个摄像机就是 <b>默认</b> 摄像机，可以进行和其它摄像机一样的操作（包括销毁）。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_set_default(camera_id)</p>
 
@@ -67,8 +61,7 @@ manipulated (and even destroyed) just like any other camera.</p>
 
 <tr>
 <td>camera_id</td>
-<td>The unique camera ID value returned when you created the
-camera</td>
+<td>创建相机时返回的唯一相机 id 值</td>
 </tr>
 </table>
 </blockquote>
@@ -88,8 +81,7 @@ camera</td>
 <p class="code">var new_cam = camera_create_view(0, 0, 640, 480, 0,
 obj_Player, 5, 5, -1, -1); camera_set_default(new_cam);</p>
 
-<p>The above code creates a new camera and then assigns it as the
-default camera to use.</p>
+<p>上述代码创建一个新摄像机，并将它设为默认摄像机。</p>
 
 <p><br>
 </p>
@@ -102,7 +94,7 @@ default camera to use.</p>
 "camera_get_view_mat.html">camera_get_view_mat</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

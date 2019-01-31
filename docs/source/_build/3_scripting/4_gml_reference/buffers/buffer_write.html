@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>buffer_write</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">buffer_write(buffer, type, value)</p>
 
@@ -67,7 +67,41 @@ list of constants below).</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<p><b>Returns:</b> 0 if success, or one of the following constants
+if it fails:</p>
+
+<div class="compat">
+<table>
+<tr>
+<th>常量</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>buffer_generalerror</td>
+<td>is given when writing to a buffer with a string and the string
+is empty or the value is not a string</td>
+</tr>
+
+<tr class="alt">
+<td>buffer_outofspace</td>
+<td>is returned when reading / writing to a buffer beyond its
+capacity</td>
+</tr>
+
+<tr>
+<td>buffer_outofbounds</td>
+<td>is when an explicit operation is outside of the buffer capacity
+(i.e. index is &lt; 0 or &gt; capacity)</td>
+</tr>
+
+<tr class="alt">
+<td>buffer_invalidtype</td>
+<td>is when a non <tt>u8</tt> type is used for writing to a fast
+buffer type.</td>
+</tr>
+</table>
+</div>
 
 <p><br>
 </p>
@@ -120,15 +154,13 @@ constants can be used to define the data type:<br>
 
 <tr>
 <td>buffer_u64</td>
-<td>An unsigned 64bit integer. This can be a positive or negative
-value from -(2<sup>63</sup>) to 2<sup>63</sup> - 1.</td>
+<td>An unsigned 64bit integer.</td>
 </tr>
 
 <tr class="alt">
 <td>buffer_f16</td>
 <td>A 16bit float. This can be a positive or negative value within
-the same range as a 16 bit signed integer. <i>(Not currently
-supported!)</i></td>
+the same range as a 16 bit signed integer.</td>
 </tr>
 
 <tr>
@@ -139,8 +171,7 @@ the same range as a 32 bit signed integer.</td>
 
 <tr class="alt">
 <td>buffer_f64</td>
-<td>A 64bit float. This can be a positive or negative value from
--(2<sup>63</sup>) to 2<sup>63</sup> - 1.</td>
+<td>A 64bit float.</td>
 </tr>
 
 <tr>
@@ -188,7 +219,7 @@ values to it.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

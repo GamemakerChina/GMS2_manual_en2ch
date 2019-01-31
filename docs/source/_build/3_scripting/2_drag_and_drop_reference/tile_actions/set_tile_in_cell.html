@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,14 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can set a tile on a given layer to a new
-index. The layer is specified from the layer name given (a string,
-as used to name the layer in the Room Editor), and then you give
-the row and column of the cell within the layer to get the tile to
-set. Finally you supply the tile index to set the tile to (tiles
-are indexed from left to right from top to bottom, with 0 at the
-top left). Note you can always set the tile index to 0 to clear the
-tile.</p>
+<p>使用此动作，你可以在给定层上给一个图块设置新索引。在此动作中你首先需要提供目标图块所在层的名字（字符串），这在房间编辑器中是已经定义好了。然后提供层上此图块单元格所在的行以及列。最后你需要提供图块的索引来设置图块（图块索引将按从左上到右下的顺序排序，0将是最左上）。注意你可以将图块索引设为0来清除此图块。</p>
 </blockquote>
 
 <p><br>
@@ -70,17 +63,17 @@ tile.</p>
 
 <tr>
 <td>层</td>
-<td>The layer to set the tile on</td>
+<td>需要被设置的图块的层</td>
 </tr>
 
 <tr class="alt">
 <td>列</td>
-<td>The column (from left to right) of the cell</td>
+<td>此单元格所在列数（从左到右）</td>
 </tr>
 
 <tr>
 <td>行</td>
-<td>The row (from top to bottom) of the cell</td>
+<td>此单元格所在行数（从上到下）</td>
 </tr>
 
 <tr class="alt">
@@ -96,12 +89,7 @@ tile.</p>
 <h3>例如：</h3>
 <img class="center" src="images/e_tiles_set_tile_in_cell.png" alt=
 "Set Tile In Cell Example">
-<blockquote>The above action block code creates a loop to go
-through the top row of the given room layer, and as it does it
-checks to see if the tile indexed at the cell for the column is set
-to 0. If it is not the tile index for that cell is set to 0 and the
-temporary (local) variable is incremented before the loop does
-another set of checks.</blockquote>
+<blockquote>上述动作块代码将遍历给出的房间层上最顶行，同时检查图块索引是否为0。如果不是的话，则将那个图块索引设为0，并且一个局部临时变量将增加1。遍历完此图块集后，将遍历另一个图块集。</blockquote>
 
 <p><br>
 </p>
@@ -117,7 +105,7 @@ Tile In Cell</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

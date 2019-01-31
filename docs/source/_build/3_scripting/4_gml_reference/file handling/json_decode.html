@@ -1,15 +1,20 @@
-<html><head>
-<meta name="keywords" content="online documentation, web online help, web help, chm">
-<meta http-equiv="Content-Style-Type" content="text/css">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
-<meta name="generator" content="chm2web Pro 2.85 (unicode)">
+<meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>json_decode</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
-<link rel="stylesheet" href="../../../../../files/helpindex.css" type="text/css">
-<link rel="stylesheet" href="../../../../../default.css" type="text/css">
+<link rel="stylesheet" href="../../../../../files/helpindex.css"
+type="text/css">
+<link rel="stylesheet" href="../../../../../default.css" type=
+"text/css">
 
-<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script type="text/JavaScript" src="../../../../../files/supply.js"></script>
 <script type="text/JavaScript">
 chmtop.c2wtopf.pageid = "_build/3_scripting/4_gml_reference/file handling/json_decode.html";
 </script>
@@ -36,12 +41,14 @@ if (window.name != "content")
 <p>SON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于读取和写入，适用于人和机器。它建立在两个基本结构上：</p>
 
 <ul>
-<li>一组 “名称 / 值” 对，在 <i>GameMaker Studio 2</i> 中称为 <a href="../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，但也称为 “字典” 或 “对象”。</li>
+<li>一组 “名称 / 值” 对，在 <i>GameMaker Studio 2</i> 中称为 <a href=
+"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，但也称为 “字典” 或 “对象”。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>一个有序的值列表，在 <i>GameMaker Studio 2</i> 中称为 <a href="../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>，但这也可以称为 “数组” 或 “队列”。</li>
+<li>一个有序的值列表，在 <i>GameMaker Studio 2</i> 中称为 <a href=
+"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>，但这也可以称为 “数组” 或 “队列”。</li>
 </ul>
 
 <p>使用此函数，你可以解码一段 JSON 并将其转换为 <tt>ds_map</tt>，准备在 <i>GameMaker Studio 2</i> 中使用。如果要解码的 JSON 需要在中心 ds_map 中使用列表和映射的层次结构，那么也会使用以下规则（注意，这些规则仅适用于顶级结构）对其进行解码并为你创建：</p>
@@ -63,7 +70,10 @@ if (window.name != "content")
 <div class="note"><b>注意</b>：解码数组时，只有当数组是顶级结构时，才会有一个带 “default” 键的映射，并且仅适用于该顶级数组。 内部列表直接解码为 ds_lists，而不包含在 ds_map 中。</div>
 
 <p><br>
-通常你会知道 JSON 解码的键，但如果没有，那么你可以使用 <a href="../data_structures/ds%20maps/ds_map_size.html"><tt>ds_map_size</tt></a>、<a href="../data_structures/ds%20maps/ds_map_find_first.html"><tt>ds_map_find_first</tt></a> 和 <a href="../data_structures/ds%20maps/ds_map_find_next.html"><tt>ds_map_find_next</tt></a> 函数来解析映射并获取必要的信息。</p>
+通常你会知道 JSON 解码的键，但如果没有，那么你可以使用 <a href=
+"../data_structures/ds%20maps/ds_map_size.html"><tt>ds_map_size</tt></a>、<a href=
+"../data_structures/ds%20maps/ds_map_find_first.html"><tt>ds_map_find_first</tt></a> 和 <a href=
+"../data_structures/ds%20maps/ds_map_find_next.html"><tt>ds_map_find_next</tt></a> 函数来解析映射并获取必要的信息。</p>
 
 <div class="note"><b>注意</b>：<i>GameMaker Studio 2</i> 从 JSON 创建必要的 ds_maps 和列表，并且为了清理你只需要删除 <b>顶级</b> 映射或列表，<i>GameMaker Studio 2</i> 将自动从内存中删除其下所有映射和列表。</div>
 </blockquote>
@@ -71,7 +81,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">json_decode(string)</p>
 
@@ -80,7 +90,7 @@ if (window.name != "content")
 
 <div class="param">
 <table>
-<tbody><tr>
+<tr>
 <th>参数</th>
 <th>描述</th>
 </tr>
@@ -89,7 +99,7 @@ if (window.name != "content")
 <td>string</td>
 <td>要传递给函数进行解码的 JSON 格式字符串</td>
 </tr>
-</tbody></table>
+</table>
 </div>
 
 <p><br>
@@ -119,7 +129,8 @@ if (window.name != "content")
 <div class="clear">
 <div style="float:left">上一页: <a href="index.html">文件处理</a></div>
 
-<div style="float:right">下一页: <a href="md5_string_utf8.html">md5_string_utf8</a></div>
+<div style="float:right">下一页: <a href=
+"md5_string_utf8.html">md5_string_utf8</a></div>
 </div>
 </div>
 
@@ -136,6 +147,5 @@ if ((fe != null) && (chmtop.c2wtopf.jstree != null)) {
     chmtop.c2wtopf.jstree.OpenTreeNode("source/" + chmtop.c2wtopf.pageid);
 }
 </script>
-
-
-</body></html>
+</body>
+</html>

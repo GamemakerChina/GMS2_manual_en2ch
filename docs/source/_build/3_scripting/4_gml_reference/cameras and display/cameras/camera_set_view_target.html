@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,20 +37,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>You can use this function to set the follow target of the view
-camera within the room. You give the unique camera ID value (as
-returned by the different <tt>camera_create</tt> functions) and
-then give the target instance or object ID that you wish to set the
-camera view to. Note that if you choose an object ID and there is
-more than one instance of that object in the room, there is no way
-for <i>GameMaker Studio 2</i> to know which instance you wish to
-follow and so it could be any of them.</p>
+<p>你可以使用此函数来设置摄像机在房间内需要跟随的物体。你需要提供摄像机的独特ID（由另外的<tt>camera_create</tt>返回 ），并给出需要你希望摄像机所跟随的实例或对象的ID。. 如果你选择的物体在房间中有多个实例，那么<i>GameMaker Studio 2</i> 就不知道到底是选那个实例了。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_set_view_target(camera_id,
 instance_id/object_id)</p>
@@ -69,13 +62,12 @@ instance_id/object_id)</p>
 
 <tr>
 <td>camera_id</td>
-<td>The unique camera ID value returned when you created the
-camera</td>
+<td>创建相机时返回的唯一相机 id 值</td>
 </tr>
 
 <tr class="alt">
 <td>instance_id/object_id</td>
-<td>Instance or object to have the camera target for following</td>
+<td>此摄像机跟随的实例或物体。</td>
 </tr>
 </table>
 </blockquote>
@@ -94,9 +86,7 @@ camera</td>
 
 <p class="code">camera_set_view_target(view_camera[0], id);</p>
 
-<p>The above code will set the view camera target for the camera
-assigned to view port[0] to that of the instance running the
-code.</p>
+<p>上述代码将会把被分配给view port[0]的视野摄像机的的跟随目标，设置为执行这段程序的实例。</p>
 
 <p><br>
 </p>
@@ -109,7 +99,7 @@ code.</p>
 "camera_set_default.html">camera_set_default</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

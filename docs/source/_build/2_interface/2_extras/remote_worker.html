@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,9 +36,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>编译游戏时，通常使用 “本地” 工作程序，即安装了 <i>GameMaker Studio 2</i> 的计算机。但是，在某些情况下，你可能需要使用另一台计算机来构建项目。例如，如果你正在使用 Mac 并且想要构建 Windows 项目，那么你可能希望配置 <b>远程工作者</b> 并让 Windows PC 执行构建。基本上，当你使用远程工作者时，<i>GameMaker Studio 2</i> 会将其运行的（本地）计算机上的所有必需文件发送到远程工作计算机，然后使用该计算机为项目构建最终可执行文件（保存它在远程机器上，或之后将其返回到本地机器上）。但是，在使用此功能之前，你必须在构建计算机上安装某些工具并执行一些设置，我们将在此处解释。</p>
+<p>编译游戏时，通常使用 “本地” 工作程序，即安装了 <i>GameMaker Studio 2</i> 的计算机。但是，在某些情况下，你可能需要使用另一台计算机来构建项目。For example, if you are working on a Mac and you want to build a <span class=
+"notranslate">Windows</span> project, then you would want to configure a <b>Remote Worker</b> and have a <span class=
+"notranslate">Windows PC</span> do the build. Essentially, when you use a remote worker, <i>GameMaker Studio 2</i> will send all the required files from the (local) machine it is running on to the remote worker machine, and then use that machine to build the final executable for the project (either saving it on the remote machine, or returning it to the local machine afterwards). 但是，在使用此功能之前，你必须在构建计算机上安装某些工具并执行一些设置，我们将在此处解释。</p>
 
-<div class="note"><b>重要！</b> 你可以使用本地 Windows PC 和远程 Windows PC，或本地 Mac PC 和远程 Windows PC 之间设置远程工作者，但目前你 <b>无法</b> 设置本地 Windows（或 Mac）PC 和 远程 Mac PC，即：你不能拥有 Mac 远程工作者，只能拥有 Windows 远程工作者。</div>
+<div class="note"><b>IMPORTANT!</b> You can set up a remote worker
+using a local <span class="notranslate">Windows PC</span> and
+remote <span class="notranslate">Windows PC</span>, or between a
+local Mac <span class="notranslate">PC</span> and a remote
+<span class="notranslate">Windows PC</span>, but currently you
+<b>cannot</b> set up a local <span class=
+"notranslate">Windows</span> (or Mac) <span class=
+"notranslate">PC</span> and a remote <span class="notranslate">Mac
+PC</span>, ie: you cannot have a Mac remote worker, only a
+<span class="notranslate">Windows</span> one.</div>
 
 <p><br>
 </p>
@@ -110,15 +121,24 @@ type="checkbox">
 <p>你现在可以继续为远程工作者可以为其构建的平台设置不同的选项：</p>
 
 <ul>
-<li><b>Windows</b> <img class="center" src=
-"images/remote_worker_local_windows.png" alt=
+<li><b><span class="notranslate">Windows</span></b> <img class=
+"center" src="images/remote_worker_local_windows.png" alt=
 "Local Windows Settings">
-<p>如果你可以访问 Windows 目标平台，则应该能够使用 <b>VM</b> 选项立即使用 Windows PC 上的远程工作者进行构建。但是，如果你希望使用 <b>YYC</b>，则还需要在构建 PC 上设置 <b>Visual Studio</b> 的路径。 有关如何设置 Windows PC 以编译项目的完整详细信息，请参阅以下帮助台文章：</p>
+<p>If you have access to the <span class=
+"notranslate">Windows</span> target platform, you should be able to
+build using the remote worker on the <span class=
+"notranslate">Windows PC</span> immediately using the <b>VM</b>
+option. However if you wish to use the <b>YYC</b> then you will
+also need to set the path to <b>Visual Studio</b> on the build PC.
+For full details of how to set up a <span class=
+"notranslate">Windows PC</span> to compile your projects, please
+see the following helpdesk article:</p>
 
 <ul>
 <li><a href=
 "https://help.yoyogames.com/hc/en-us/articles/235186048-Setting-Up-For-Windows"
-target="_blank">设置 Windows</a>
+target="_blank">Setting Up For <span class=
+"notranslate">Windows</span></a>
 </li>
 
 <li style="list-style: none"><br>
@@ -177,7 +197,7 @@ target="_blank">CIDR 样式</a> 过滤器或允许的机器主机名。你应该
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

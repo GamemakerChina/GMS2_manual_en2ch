@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,25 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will free the data structure from memory and should
-be called whenever a data structure is no longer required, for
-example in the Destroy even of an instance or the Room End event,
-etc... Freeing a data structure means that no further actions can
-be used to reference it as it will no longer exist, although you
-can also check for this using the action <a href=
-"if_data_structure_exists.html">If Data Structure Exists</a>.</p>
+<p>此动作将从内存中释放数据结构，并且应该在每次不再需要一个数据结构时调用，例如在一个实例的销毁（Destroy）事件中或房间结束事件（Room End）中... 释放数据结构意味着不能再使用其他动作来引用它，因为它将不再存在，尽管如此，你也可以使用<a href=
+"if_data_structure_exists.html">如果数据结构存在（If Data Structure Exists）</a>动作来检查是否存在。</p>
 
-<p>Note that unless the data structure has an index assigned to a
-global scope variable, it will not be carried across from one room
-to another. For example, if you create a player instance and a list
-data structure is assigned to a variable in that instance, the list
-will need to be freed if the player is destroyed <i>or</i> if the
-room changes with the player instance in it (unless the player
-instance is flagged as persistent), so the player instance would
-have two Free Data Structure actions in it for both those events.
-It is important that all created data structures are destroyed in
-this way when no longer required to prevent memory leaks which can
-cause performance issues or even crash your game.</p>
+<p>请注意，除非数据结构的索引赋值给了一个全局变量，否则它将不会从一个房间跨跃到另一个房间。例如，如果你创建一个玩家实例，并且将列表数据赋值给该实例中的变量，那么如果玩家被销毁则需要释放该列表，<i>或者</i>玩家实例所在的房间变了（除非玩家实例被标记为保持），那么玩家实例的两个事件（译者注：销毁和房间结束事件，或者只在清理事件中写也可以）都需要有释放数据结构的动作。重要的是，所有创建的数据结构不再需要的时候通过这种方式销毁掉，防止可能会导致性能问题或甚至导致游戏崩溃的内存泄漏。</p>
 </blockquote>
 
 <p><br>
@@ -66,7 +51,7 @@ cause performance issues or even crash your game.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_ds_free_data_structure.png" alt=
-"Free Data Structure Syntax">
+"释放数据结构的语法">
 <p><br>
 </p>
 
@@ -81,14 +66,12 @@ cause performance issues or even crash your game.</p>
 
 <tr>
 <td>类型</td>
-<td>The type of data structure you are freeing (List, Map, Grid or
-Stack)</td>
+<td>正在释放的数据结构类型（列表，映射，网格或堆栈）</td>
 </tr>
 
 <tr class="alt">
 <td>变量</td>
-<td>The variable holding the index of the data structure to
-free</td>
+<td>保存要释放的数据结构索引的变量</td>
 </tr>
 </table>
 </blockquote>
@@ -98,12 +81,8 @@ free</td>
 
 <h3>例如：</h3>
 <img class="center" src="images/e_ds_free_data_structure.png" alt=
-"Free Data Structure Example">
-<blockquote>The above action block code gets the size of the list
-referenced in the global variable and then uses a repeat loop to
-loop through it and destroy the instances with the IDs stored in
-the list. After the repeat loop is finished, the list is freed from
-memory.</blockquote>
+"释放数据结构示例">
+<blockquote>上面的动作块代码获取全局变量中引用的列表的大小，然后使用重复循环来遍历并销毁存储在列表中ID对应的实例。重复循环完成后，从内存中释放这个列表数据。</blockquote>
 
 <p><br>
 </p>
@@ -112,14 +91,13 @@ memory.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Data Structure Actions</a></div>
+<div style="float:left">返回： <a href="index.html">数据结构动作</a></div>
 
-<div style="float:right">next: <a href="add_to_list.html">Add To
-List</a></div>
+<div style="float:right">下一页： <a href="add_to_list.html">添加到列表中</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

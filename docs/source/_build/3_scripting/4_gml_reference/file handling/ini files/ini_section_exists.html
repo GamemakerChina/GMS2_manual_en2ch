@@ -2,13 +2,14 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>ini_section_exists</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../../default.css" type=
@@ -32,7 +33,19 @@ if (window.name != "content")
 <h2>ini_section_exists</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>此函数检查当前打开的 ini 中是否存在某个节（section）。这不是防止错误的必要检查，因为当一个节不存在时，从不存在的节读取将只返回一个默认值，但是查看一个 ini 文件是否保存了特定数据会很有用。</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">ini_section_exists(section);</p>
 
@@ -56,24 +69,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回:</b> 布尔值</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3>例如：</h3>
 
-<p>此函数检查当前打开的 ini 中是否存在某个节（section）。这不是防止错误的必要检查，因为当一个节不存在时，从不存在的节读取将只返回一个默认值，但是查看一个 ini 文件是否保存了特定数据会很有用。<br>
-<br></p>
+<p class="code">ini_open("savedata.ini");<br>if !ini_section_exists("save1")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.savegame = "1";<br>&nbsp;&nbsp;&nbsp;}<br>ini_close();<br></p>
 
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
-
-<p class="code">ini_open("savedata.ini");<br>if !ini_section_exists("save1")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.savegame = '1';<br>&nbsp;&nbsp;&nbsp;}<br>ini_close();<br></p>
-
-<p>如果找不到 'save1'，这会将变量 global.savegame 设置为 '1'。使用 for 循环，这可以用作计算游戏有多少个游戏存档的基本方式（即：为一个游戏创建多个同时保存游戏存档的系统）。</p>
+<blockquote>
+<p>This will set variable global.savegame to "1" if "save1" is NOT found. 使用 for 循环，这可以用作计算游戏有多少个游戏存档的基本方式（即：为一个游戏创建多个同时保存游戏存档的系统）。</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -89,7 +98,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

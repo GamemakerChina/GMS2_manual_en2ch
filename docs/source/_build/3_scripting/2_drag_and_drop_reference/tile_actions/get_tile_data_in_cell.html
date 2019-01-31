@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,22 +40,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can get the tiledata for a tile cell on a
-tilemap layer. The tiledata is simply a value that reflects the
-index of the tile along with the flip, mirror, and rotate values,
-as well as any custom tile masks that you have used. With this
-action you first supply the layer to target using the name of the
-layer (a string) as defined in the room editor, and then the column
-and row of the tilemap layer to get the tiledata for. The "cell" is
-the area on the tilemap grid that holds the tile you want to get
-the data from, so if your tiles are 16x16, for example, and the
-room is 1024x768 the tilemap will have 64 columns and 48 rows.</p>
+<p>使用此动作你可以取得一个图块地图层上的一个图块单元格的图块数据。此图块数据是一个值，它反应了此图块的索引，翻转，镜像和旋转值，以及任何自定义的图块遮罩。在此动作中你首先需要提供目标图块所在层的名字（字符串），这在房间编辑器中是已经定义好了，然后提供图块地图层所在的行和列来获得相应位置的图块数据。此“单元格”是指图块地图上的一个网格，每个网格都有一个图块，你可以依据单元格找到指定的图块。例如你的图块大小是16X16，而房间是1024X768，那么图块地图将有64列48行。</p>
 
-<div class="note"><b>注意</b>： The layer selected <i>must</i> have been defined as a Tilemap Layer in the room editor, otherwise you may get errors.</div>
+<div class="note">1<b>注意</b>： 你选择的层 <i>必须</i> 被定义为图块地图层，否则将会出错。</div>
 
 <p><br>
-返回值将被存储在目标变量中，此变量需要之前就被创建了，或你选中临时(temp)按钮来创建的新临时变量。For more information on tiledata, please see the GML section on <a href=
-"../../4_gml_reference/rooms/tilemaps/index.html">Tilemaps - Tile Functions</a>.</p>
+返回值将被存储在目标变量中，此变量需要之前就被创建了，或你选中临时(temp)按钮来创建的新临时变量。如果你需要更多关于图块数据的信息，参阅 <a href=
+"../../4_gml_reference/rooms/tilemaps/index.html">图块地图-图块函数</a>.</p>
 </blockquote>
 
 <p><br>
@@ -78,12 +69,12 @@ alt="Get Tile Data In Cell Syntax">
 
 <tr>
 <td>层</td>
-<td>The layer to get the tile from</td>
+<td>需要取得图块所在的层</td>
 </tr>
 
 <tr class="alt">
 <td>列</td>
-<td>The column (from left to right) of the cell</td>
+<td>此单元格所在列数（从左到右）</td>
 </tr>
 </table>
 </blockquote>
@@ -94,9 +85,7 @@ alt="Get Tile Data In Cell Syntax">
 <h3>例如：</h3>
 <img class="center" src="images/e_tiles_set_tile_data_in_cell.png"
 alt="Set Tile Data In Cell Example">
-<blockquote>The above action block code loops through every tile
-cell in the room, retrieves the tiledata for the cell, flips it,
-then sets the cell again.</blockquote>
+<blockquote>上述动作代码块将遍历房间中所有图块单元格。每次返回一个单元格的图块数据，然后翻转此图块，然后应用此翻转变换。</blockquote>
 
 <p><br>
 </p>
@@ -112,7 +101,7 @@ then sets the cell again.</blockquote>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

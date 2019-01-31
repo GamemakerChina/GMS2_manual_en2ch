@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,18 +29,34 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">physics_fixture_set_linear_damping</h1>
+<h2>physics_fixture_set_linear_damping</h2>
 
-<h2 class="studio">This function sets the linear damping value of a
-fixture.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>描述</h3>
 
-<p class="code">physics_fixture_set_linear_damping(fixture,
-damping)</p>
+<blockquote>
+<p>Damping is used to reduce the physics world velocity of instances, and differs from friction in that friction only occurs when two instances with fixtures are in contact. 模拟阻尼比摩擦要容易得多，但请注意，阻尼不是摩擦的替代品；这两个效果可以而且应该一起使用。Here is an image to illustrate damping:</p>
+
+<p><img class="center" src=
+"images/physics_fixture_set_linear_damping_image.png">
+</p>
+
+<p>Damping parameters should be between 0 and infinity, with 0
+meaning no damping, and infinity meaning full damping. Normally you
+will use a damping value between 0 and 1, but you can use any
+non-negative value if required.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">physics_fixture_set_linear_damping(fixture,
+damping)</p>
 
 <div class="param">
 <table>
@@ -64,37 +80,29 @@ damping)</p>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>Damping is used to reduce the physics world velocity of instances, and differs from friction in that friction only occurs when two instances with fixtures are in contact. 模拟阻尼比摩擦要容易得多，但请注意，阻尼不是摩擦的替代品；这两个效果可以而且应该一起使用。Here is an image to illustrate damping:<br>
-<br>
-<img class="center" src=
-"images/physics_fixture_set_linear_damping_image.png"></p>
-
-<p>Damping parameters should be between 0 and infinity, with 0
-meaning no damping, and infinity meaning full damping. Normally you
-will use a damping value between 0 and 1.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">physics_fixture_set_linear_damping(fix_Ball,
-0.1);</p>
+0.1);<br></p>
 
+<blockquote>
 <p>The code above will set the linear damping of the fixture
 indexed in "fix_ball" to 0.1.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
 "index.html">Fixtures</a></div>
@@ -102,11 +110,13 @@ indexed in "fix_ball" to 0.1.</p>
 <div style="float:right">下一页: <a href=
 "physics_fixture_set_angular_damping.html">physics_fixture_set_angular_damping</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

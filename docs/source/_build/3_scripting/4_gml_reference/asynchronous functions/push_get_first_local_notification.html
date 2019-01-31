@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -45,11 +45,15 @@ if (window.name != "content")
 <p> ds_map 将包含以下的键值对儿（key/value pairs）：</p>
 
 <ul>
-<li>"<b>title</b>" － 通知的标题 ( 仅在<i>Android</i> 平台可用 ，  iOS 平台不保存标题信息)<br></li>
+<li>"<b><span class="notranslate">title</span></b>" - The title of
+the notification (this will only be available on the <i>Android</i>
+platform as iOS does not store the title information)<br></li>
 
-<li>"<b>message</b>" － 消息正文<br></li>
+<li>"<b><span class="notranslate">message</span></b>" - The message
+body text<br></li>
 
-<li>"<b>data</b>" － 字符串格式的数据包<br></li>
+<li>"<b><span class="notranslate">data</span></b>" - The data
+package string<br></li>
 </ul>
 
 <div class="note"><b>注意</b>： This function is limited to the <b>iOS</b> and <b>Android</b> target modules.</div>
@@ -58,7 +62,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">push_get_first_local_notification(map);</p>
 
@@ -91,7 +95,7 @@ if (window.name != "content")
 <p class="code">var map = ds_map_create();<br>var ntf = push_get_first_local_notification(map);<br>while(ntf &gt;= 0)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var data = ds_map_find_value(map, "data");<br>&nbsp;&nbsp;&nbsp;if data == "Daily_Reward"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;push_cancel_local_notification(ntf);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;ntf = push_get_next_local_notification(map);<br>&nbsp;&nbsp;&nbsp;}<br>ds_map_destroy(map);<br></p>
 
 <blockquote>
-<p>上面的代码创建了一个 <tt>ds_map</tt> ，然后请求数据队列中第一个可用的通知。如果通知存在， map 将被赋值，通过代码查找key为 "data"的特定字符串。如果找到该字符串,则通知取消,继续检查队列中的下一个通知,直到所有通知都被检查。</p>
+<p>上面的代码创建了一个 <tt>ds_map</tt> ，然后请求数据队列中第一个可用的通知。If a notification exists, the map is populated and the code then checks the "<span class="notranslate">data</span>" key for a specific string. 如果找到该字符串,则通知取消,继续检查队列中的下一个通知,直到所有通知都被检查。</p>
 </blockquote>
 
 <p><br>
@@ -108,7 +112,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

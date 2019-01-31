@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,12 +35,27 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>描述</h3>
 
-<p class="code">external_call(id, args[0...15]);</p>
+<blockquote>
+<p>If you have created an external function call to a <tt>dll</tt>
+or <tt>dylib</tt> using <a href=
+"external_define.html"><tt>external_define</tt></a>, you can use
+this function to then call it. You supply the name of the
+previously defined function as well as each of the arguments it
+requires (each argument must be of the correct type, either real or
+string) and the function returns the result of the external
+call.</p>
+
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">external_call(id, args[0...15]);</p>
 
 <div class="param">
 <table>
@@ -73,24 +88,6 @@ the defined function)</p>
 <p><br>
 </p>
 
-<h3>描述</h3>
-
-<blockquote>
-<p>If you have created an external function call to a <tt>dll</tt>
-or <tt>dylib</tt> using <a href=
-"external_define.html"><tt>external_define</tt></a>, you can use
-this function to then call it. You supply the name of the
-previously defined function as well as each of the arguments it
-requires (each argument must be of the correct type, either real or
-string) and the function returns the result of the external
-call.</p>
-
-<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
-</blockquote>
-
-<p><br>
-</p>
-
 <h3>例如：</h3>
 
 <p class="code">my_function = external_define("MyDLL.dll", "MyMin",
@@ -117,7 +114,7 @@ function and stores the returned value in a local variable.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

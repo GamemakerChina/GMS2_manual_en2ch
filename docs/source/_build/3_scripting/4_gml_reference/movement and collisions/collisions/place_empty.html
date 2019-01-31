@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,12 +32,37 @@ if (window.name != "content")
 <h2>place_empty</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">place_empty(x, y);</p>
+<h3>描述</h3>
+
+<blockquote>
+<p>You can use this function to check and see if the calling
+instance would collide with <i>any other instance</i> in your game.
+Now, it should be noted that for this to work, the instance running
+the code must have a valid collision mask (either for the sprite
+itself, or through the <a href=
+"../../instances/instance_variables/mask_index.html"><tt>mask_index</tt></a>)
+and it will only register collisions with those instances that also
+have a valid mask.</p>
+
+<p>The function itself basically works by taking the instance and
+testing for collisions when placed at the position specified by the
+x/y arguments. The collision checking can be either precise or
+based on the bounding box of the instance, depending on what kind
+of collision mask has been selected.</p>
+
+<p>Note that the given x/y coordinates will be floored to the
+nearest integer before the check is performed.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">place_empty(x, y);</p>
 
 <div class="param">
 <table>
@@ -61,28 +86,23 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回:</b> Boolean（布尔值）</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>You can use this function to check and see if the calling instance would collide with <i>any other instance</i> in your game. Now, it should be noted that for this to work, the instance running the code must have a valid collision mask (either for the sprite itself, or through the <a href=
-"../../instances/instance_variables/mask_index.html"><tt>mask_index</tt></a>) and it will only register collisions with those instances that also have a valid mask.<br><br>The function itself basically works by taking the instance and testing for collisions when placed at the position specified by the x/y arguments. The collision checking can be either precise or based on the bounding box of the instance, depending on what kind of collision mask has been selected.<br><br>Note that the given x/y coordinates will be floored to the nearest integer before the check is performed.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">if place_empty(mouse_x, mouse_y)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x = mouse_x;<br>&nbsp;&nbsp;&nbsp;y = mouse_y;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code will check for a collision with any other
 instance if the calling instance were to be placed at the same
 position as the mouse. If there is no collision detected, then the
 instance has its x/y coordinates set to those of the mouse.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -98,7 +118,7 @@ instance has its x/y coordinates set to those of the mouse.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

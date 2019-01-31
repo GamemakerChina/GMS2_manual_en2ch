@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -222,12 +222,28 @@ src="../../images/icon_cmd.png"> + <tt>V</tt>。<br>
 "images/editor_object_inheritevents.png" alt=
 "继承事件"></p>
 
-<p>在左上方是其中有 5 个事件的父物体，右边可以看到“子”物体。这个孩子只定义了2个事件，但它会继承父进程的事件，所以有5个完全一样。现在的区别是，孩子添加的事件（<b>步骤</b>和<b>绘制</b>）将覆盖父事件中的事件。</p>
+<p>在左上方是其中有 5 个事件的父物体，右边可以看到“子”物体。子物体中还有 5 个事件，但其中两个 <i>覆盖</i> 父物体中的继承事件（<b>步</b> 和 <b>回执</b> 事件），其他三个灰显，因为它们是从父物体继承的事件。在事件编辑器中，继承的事件旁边还会有“父覆盖”图标： <img class="center"
+src="images/editor_object_parentoverride.png" alt=
+"Parent Override"></p>
 
-<p>如所示，无论何处使用父对象，这也适用于后代（或“子”）。当在一个动作中，你指出该操作必须应用于某个对象的实例时，会发生这种情况。当你在代码中使用<tt> with（）</tt>语句时也会发生这种情况（有关更多详细信息，请参阅手册），当你调用代码函数（如&lt;a​​1&gt; <tt> instance_position </tt> </a>，<a href=
-"../../3_scripting/4_gml_reference/instances/instance_functions/instance_number.html"> <tt> instance_number </tt> </a>，etc ...如果你提供一个父对象，那么它将会被包含在检查中。最后，如果将敌人 1 的速度设置为 10，敌人 2 的速度也将变为 10，因为它是敌人 1 的子物体，所以在你参考其他物体中的变量时，父物体也可以工作。</p>
+<p>当你单击 <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> 已继承的事件时，它将打开代码编辑器以显示继承的父代码，但你将 <i>无法</i> 编辑此代码，因为你只能在父物体本身中编辑它。 你可以在任何父事件上单击鼠标右键 <img style="vertical-align:middle" src=
+"../../images/icon_rmb.png"> 以打开以下选项菜单：<img class="center" src=
+"images/editor_object_parent_menu.png" alt=
+"Parent Event RMB Menu"></p>
 
-<p>在大多数情况下，通常认为创建一个基本父物体是良好做法，并且该基础物体包含所有默认行为，但不要在游戏中使用它的一个实例。相反使用所有的孩子对象，只能在上面列出的情况下使用父类，用于碰撞，引用变量等。你也应该意识到，父物体也可以有父物体！显然，你不能创建一个循环“父1是父2的孩子是父1的子”，但是你可以创建一个所谓的“对象层次结构”，其中“parent1是parent2的子代是parent3的子代”。这对于保持游戏结构非常有用，并且强烈建议你学习使用此机制。</p>
+<p>在这里，你可以选择两个 <b>打开</b> 父事件来检查代码，或者你可以选择 <b>继承</b> 事件或 <b>覆盖</b> 事件。 如果选择 <b>继承</b>，则代码编辑器将打开，其中已添加了函数 <a href=
+"../../3_scripting/4_gml_reference/objects/generating%20events/event_inherited.html"><tt>event_inherited()</tt></a>（如果使用 DnD™，则为 <a href=
+"../../3_scripting/2_drag_and_drop_reference/instance_actions/call_parent_event.html">调用父事件</a> 动作）。现在将运行你在此事件中放置的任何其他代码 <i>以及</i> 父物体具有的代码。如果你选择 <b>覆盖</b> 事件，那么代码窗口也将打开，只是现在不会调用 <tt>event_inherited()</tt> 函数，因此将运行你在此处添加的任何内容 <i>而不是</i> 父物体中的代码。</p>
+
+<div class="note"><b>注意</b>：在代码编辑器中，你可以通过单击鼠标右键 <img style="vertical-align:middle" src="../../images/icon_rmb.png"> 并从弹出菜单中选择  <b>转到物体</b> 快速导航到父物体，或者（如果事件已被覆盖），你可以选择 <b>打开继承事件</b> 直接进入到包含父事件代码的代码编辑器。</div>
+
+<p><br>
+每当你在代码中定位父物体时，代码也将应用于父物体的“子物体”。如果在操作中指示操作必须应用于某个物体的实例，并且在代码中使用 <tt>with()</tt> 语句时会发生这种情况，则会发生这种情况。 当你调用代码函数时，它也会像这样工作，比如 <a href=
+"../../3_scripting/4_gml_reference/instances/instance_functions/instance_position.html"><tt>instance_position</tt></a>、<a href=
+"../../3_scripting/4_gml_reference/instances/instance_functions/instance_number.html"><tt>instance_number</tt></a> 等......如果你提供父物体，那么父 <i>和</i> 子实例的所有实例都将包含在检测中。最后，如果将敌人 1 的速度设置为 10，敌人 2 的速度也将变为 10，因为它是敌人 1 的子物体，所以在你参考其他物体中的变量时，父物体也可以工作。</p>
+
+<p>在大多数情况下，通常认为创建一个基本父物体是良好做法，并且该基础物体包含所有默认行为，但不要在游戏中使用它的一个实例。而是使用所有子物体，仅在我上面概述的情况下使用父物体，用于冲突，引用变量等... 你也应该意识到，父物体也可以有父物体！显然你不能创建一个循环 “父物体 1 是父物体 2 的孩子，而父物体 2 又是父物体 1 的孩子”，但是你可以创建所谓的“物体层次结构”，其中 “父物体 3 是父物体 2 的孩子，父物体 2 是 父物体 1 的孩子”。这对于保持游戏结构非常有用，并且强烈建议你学习使用此机制。</p>
 </div>
 <br>
 <a name="object_physics" id="object_physics"></a> <label class=
@@ -325,11 +341,137 @@ alt="对象编辑器物理形状类型">
 <p>基于物理的游戏将会有一些你想要移动的实例，但不希望被诸如重力等力和与动态物体碰撞所产生的力量所影响（例如，在平台游戏中考虑移动平台）。对于这样的物体，简单地将固定装置的密度设置为 0 将意味着，在物理学上将假定该物体不会对任何事情产生反应。但是，勾选此框将使静态物体能够运动，这样你可以可以使用适当的变量去移动或旋转它，尽管它不会受到重力和碰撞的影响。</p>
 </div></blockquote>
 </div>
-<br></blockquote>
+<br>
+<a name="object_variables" id="object_variables"></a> <label class=
+"collapse" for="twenty">变量</label> <input id="twenty" type=
+"checkbox">
+<div class="index_list">
+<p>当你单击 <b>变量</b> 按钮时，它将打开 <b>物体变量</b> 窗口，然后你可以在 <b>创建事件</b> <i>之前</i> 使用该窗口生成任意数量的变量： <img class="center" src=
+"images/editor_object_variables.png" alt=
+"Object Editor Variables Window"></p>
+
+<p>在此窗口中，你可以单击 <b>添加新变量</b> 按钮 <img style="vertical-align:middle" src=
+"images/icon_addvariable.png"> 将新变量添加到列表中。然后，你可以命名变量，并设置它必须使用的变量 <b>类型</b> 并调整其属性：<img class=
+"center" src="images/editor_object_newvariable.png" alt=
+"Object Editor New Variable"></p>
+
+<p>变量名必须以字母开头，并且 <i>只能包含字母，数字和下划线符号 “_”</i>，最大长度为 64 个字符。因此，有效变量是诸如 <tt>fish</tt>、<tt>foo_bar</tt> 和 <tt>num1</tt> 之类的东西，无效变量将是 <tt>6fish</tt>、<tt>foo bar</tt> 或 <tt>*num</tt>。一旦给出了变量的名称，就需要设置其类型，可以是以下任何一种：
+<img class="center" src="images/editor_object_variabletypes.png"
+alt="Object Editor Variable Types"></p>
+
+<p>值得注意的是，在使用父/子实例时，此功能特别有用 - 因为你可以拥有一组带有一组已定义变量的父物体，然后只需在子物体中修改它们（更多细节请参阅下面的 <b>物体变量和子物体</b>） - 以及何时将实例添加到 <a href="rooms.html">房间编辑器</a> 中（请参阅<b>层 &gt; 实例层</b> 部分），因为你还可以为放置在房间中的各个实例修改这些变量。</p>
+
+<blockquote><a name="object_variables_types" id=
+"object_variables_types"></a> <label class="collapse" for=
+"d">变量类型</label> <input id="d" type="checkbox">
+<div class="index_list">
+<p>你可以创建的不同类型的变量如下所示：</p>
+
+<ul>
+<li><b>实数型（Real）</b>： 实数是任何非整数的数字，可以是正数或负数。所以，124.5、45639.566546456、0.9、-45.5等......都是实数的例子。所有实数都存储为 64 位双精度浮点型。 请注意，你可以从 <b>变量选项</b> 中设置输出实数型的值范围（有关详细信息，请参见下文）。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>整型（Integer）</b>： 整型是整数，可以是正数或负数，例如 30004、19、0、-300。请注意，你可以从 <b>变量选项</b> 中设置输出整型的值范围（有关详细信息，请参见下文）。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>字符串型（String）</b>： 字符串是放在双引号内的内容，例如“fish”、“Hello World” 或 “12345”。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>布尔型（Boolean）</b>： 布尔值是 <tt>true</tt> 或 <tt>false</tt> 的值。 在“对象编辑器变量”窗口中，这只显示为一个框，你勾选时为 <tt>true</tt>，取消勾选时为 <tt>false</tt>。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>表达式（Expression）</b>： 表达式是一个数学短语，可以包含普通数字、变量、字符串或 GML 函数以及一个或多个 <i>运算符</i>。 例如，<tt>sqrt(85 * 6) + 5.5</tt> 是表达式。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>资源（Resource）</b>： 资源是你在资源树中定义的任何一种资源。选择资源类型后，可以单击 <b>打开资源浏览器</b> 按钮 <img style="vertical-align:middle" src=
+"images/icon_openassetexplorer.png"> 以打开 “资源浏览器” 并选择所需的资源。 请注意，你可以从 <b>变量选项</b> 中为资源浏览器中显示的资源设置过滤器（有关详细信息，请参见下文）。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>列表（List）</b>： 选择输入的列表类型意味着你可以创建一个可选值（这些可以是字符串、实数、表达式等...），然后你可以为要返回的变量选择一个或多个值。要定义列表中的项目，你需要先将它们添加到 <b>变量选项</b> 中（有关详细信息，请参见下文），然后你能够从主窗口下方菜单中选择一项作为变量的默认值：<img class="center" src=
+"images/editor_object_listtype.png" alt="Object Editor List Menu"> 请注意，如果在列表选项中 <b>多选</b>（见下文），则变量将成为所有选定选项的数组。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>颜色（Colour）</b>： 颜色类型用于定义要存储在变量中的颜色值。你可以输入实数（从 0 到 16777216，这将具有 255 的透明度），或十六进制值（格式为 $RRGGBBAA），或者你可以双击 <img style="vertical-align:middle" src="../../images/icon_lmb.png"> 颜色样本以打开 <b>颜色选择器</b> 并在那里定义颜色。</li>
+
+<li style="list-style: none"><br>
+</li>
+</ul>
 </div>
+<br>
+<a name="object_variables_options" id=
+"object_variables_options"></a> <label class="collapse" for=
+"b">变量选项</label> <input id="b" type="checkbox">
+<div class="index_list">
+<p>一些不同类型的变量将为你提供定义输出值的选项，你可以通过 <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> 单击 <img style=
+"vertical-align:middle" src="images/icon_variableoptions.png"> 按钮打开这些选项：</p>
+
+<ul>
+<li><b>实数型 / 整型选项（Real / Integer Options）</b>： <img class="center" src=
+"images/editor_object_realoptions.png" alt=
+"Object Editor Real Variable Options"> 实数和整数数据类型可以选择设置值 <i>范围</i>。 检查时，你可以输入起始值和结束值，而不是在“对象变量”窗口中显示变量的固定值，你将有一个限制这些值的滑块：<img class="center" src=
+"images/editor_object_variablerange.png" alt=
+"Object Editor Variable Range"></li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>资源选项（Resource Options）</b>： <img class="center" src=
+"images/editor_object_resourceoptions.png" alt=
+"Object Editor Real Variable Options"> 将打开资源选项，其中包含所有可用资源类型的列表，默认情况下将全部选中。但是，你可以单击 <img style="vertical-align:middle" src="../../images/icon_lmb.png"> 其中任何一个以仅选择该类型，也可以使用 <img style=
+"vertical-align:middle" src="../../images/icon_ctrl.png"> / <img style="vertical-align:middle" src="../../images/icon_cmd.png"> + <img style="vertical-align:middle" src=
+"../../images/icon_lmb.png"> 或 <img style="vertical-align:middle"
+src="../../images/icon_shift.png"> + <img style=
+"vertical-align:middle" src="../../images/icon_lmb.png"> 选择多种资源类型。 设置此选项后，资源浏览器中只会显示所选资源类型的变量。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>列表选项（List Options）</b>： <img class="center" src=
+"images/editor_object_listoptions.png" alt=
+"Object Editor List Variable Options"> 在这里，你可以添加要包含的不同值作为列表类型变量的可能返回值。 你只需单击 <img style=
+"vertical-align:middle" src="images/icon_addvariable.png"> <b>添加列表项</b> 按钮即可添加新值（可以是字符串、实数型、整型或资源名称），然后在物体编辑器 “变量” 窗口中，它将显示在默认值的下拉列表中，无论需要哪个你都可以选择：<img class="center" src="images/editor_object_listvalues.png" alt=
+"Object Editor List Variable Values"> 如果你已选中 <b>多选</b> 选项，则下拉列表将在列表变量返回的每个值旁边都有复选框（变量将成为保存每个值的数组）：<img class="center" src=
+"images/editor_object_listarray.png" alt=
+"Object Editor List Variable Multiple Values"></li>
+</ul>
+</div>
+<br>
+<a name="object_variables_parenting" id=
+"object_variables_parenting"></a> <label class="collapse" for=
+"c">物体变量和子物体</label> <input id="c" type=
+"checkbox">
+<div class="index_list">
+<p>物体变量的一个重要特性是它们由资源树中的任何子物体 <i>继承</i>（请参阅上面的 <b>父物体</b> 部分），这意味着你可以选择覆盖或更改它们中的任何一个或全部。当你创建另一个为其定义了变量的物体资源的子物体时，它们将显示在 “物体变量” 窗口中，如下所示： <img class="center" src=
+"images/editor_object_childvariables.png" alt=
+"Object Editor Variable In A Child Object"></p>
+
+<p>你可以在顶部图像中看到父物体具有四个物体变量，在底部图像中也显示这些物体变量，仅显示 “灰色” 并具有 <b>从父物体继承</b> 图标 <img style=
+"vertical-align:middle" src="images/icon_inheritedvariable.png"> 以指示它们已被继承。如果单击 <b>覆盖变量</b> 按钮 <img style="vertical-align:middle" src=
+"images/icon_overridevariable.png">，则可以编辑这些继承的变量，这样你就可以调整范围滑块或值，或者从列表中选择不同的项目等等。请注意，编辑父变量时只能更改定义的值而不能更改名称，也不能更改变量选项。另请注意，你也可以向子物体添加新的物体变量（在上面的示例图像中，你可以看到 “字符类型” 仅是子物体的新物体变量）。</p>
+
+<p>如果已编辑了继承的物体变量，则可以单击 <b>删除</b> 按钮 <img style="vertical-align:middle" src=
+"images/icon_deletevariable.png"> 以删除编辑过的内容，<i>但不删除变量</i>。该变量仍将从父物体继承，但将再次使用父物体默认值。 如果需要完全删除变量，则必须从父物体执行此操作。</p>
+</div></blockquote>
+</div></blockquote>
 
 <p><br>
 </p>
+</div>
 
 <div class="footer">
 <div class="buttons">
@@ -340,7 +482,7 @@ alt="对象编辑器物理形状类型">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

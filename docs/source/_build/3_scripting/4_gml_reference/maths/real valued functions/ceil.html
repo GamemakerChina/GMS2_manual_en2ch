@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,13 +29,26 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">ceil</h1>
+<h2>ceil</h2>
 
-<h2 class="studio">Returns the given number rounded up to the
-nearest integer.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3><b>Syntax:</b>
-</h3>
+<h3>描述</h3>
+
+<blockquote>
+<p>此函数将任何实数向上取整。应该注意这个函数，因为一个常见的错误是使用它来舍入随机值并期望它总是大于1，即：</p>
+
+<p class="code">int = ceil(random(5));</p>
+
+<p>你可能会认为这段代码 <i>总能</i> 给出一个介于1到5之间的整数，但情况并非总是如此，因为随机函数可能返回0，而0向上取整仍然为0。这种情况的可能性很小，但在使用此函数应考虑到。</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">ceil(val);</p>
 
@@ -51,7 +64,7 @@ nearest integer.</h2>
 
 <tr>
 <td>x</td>
-<td>The number to change.</td>
+<td>需要转换的数。</td>
 </tr>
 </table>
 </div>
@@ -59,53 +72,39 @@ nearest integer.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Integer</p>
+<h3>Returns:</h3>
+
+<p class="code">整数</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>This function takes any real number and rounds it up to the
-nearest integer. Care should be taken with this function as one
-common mistake is to use it round up a random value and expect it
-always to be greater than 1, ie:<br>
-<br></p>
-
-<p class="code">int = ceil(random(5));</p>
-
-<p><br>
-
-Now, you would expect this code to <i>always</i> give an integer
-between 1 and 5, but this may not always be the case as there is a
-very small possibility that the random function will return 0, and
-rounding up 0 still gives you 0. This is a remote possibility but
-should be taken into account when using this function.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3><b>例如：</b>
-</h3>
+<h3>例如：</h3>
 
 <p class="code">val = ceil( 3.4 );</p>
 
-<p>This will set val to 4.</p>
+<blockquote>
+<p>这将val设为4。</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Real Number Functions</a></div>
 
 <div style="float:right">下一页: <a href="max.html">max</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

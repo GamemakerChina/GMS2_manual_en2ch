@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -129,16 +129,19 @@ for="two">碰撞遮罩</label> <input id="two" type="checkbox">
 <li><b>矩形</b>： 一个简单的矩形碰撞遮罩。在项目中使用时，这是最快解决问题的选项。<br>
 <br></li>
 
+<li><b>旋转矩形</b>： 这是一个简单的矩形碰撞遮罩，它将与指定了精灵的实例的 <tt>image_angle</tt> 值一起旋转。这比常规矩形碰撞遮罩要慢，但比精确的碰撞遮罩更快。<br>
+<br></li>
+
 <li><b>椭圆</b>： 创建椭圆形碰撞遮罩。解析起来比较慢。<br>
 <br></li>
 
 <li><b>菱形</b>： 创建 “菱形” 碰撞遮罩。解析起来速度较慢，并产生更多的 CPU 开销。<br>
 <br></li>
 
-<li><b>精确</b>： 这将根据精灵的轮廓创建精确的碰撞遮罩。 如果精灵具有多个子图像，则这将是放置在彼此之上的所有子图像的边缘的合成。这非常慢并且会产生大量的 CPU 开销。<br>
+<li><b>精确</b>： 这将根据精灵的轮廓创建精确的碰撞遮罩。 如果精灵具有多个子图像，则这将是放置在彼此之上的所有子图像的边缘的合成。请注意，如果将 <b>模式</b> 设置为 <i>手动</i> 并更改默认值，则精确遮罩将被剪切到边界框。这非常慢并且会产生大量的 CPU 开销。<br>
 <br></li>
 
-<li><b>精确</b> （每帧）： 这会在每帧的基础上创建一个精确的碰撞遮罩（即：遮罩将改变以符合每个不同帧的轮廓）。这是迄今为止要解决的最慢类型的碰撞遮罩，应该避免，除非是非常非常具体且不常见案例。</li>
+<li><b>精确</b> （每帧）： 这会在每帧的基础上创建一个精确的碰撞遮罩（即：遮罩将改变以符合每个不同帧的轮廓）。请注意，如果将 <b>模式</b> 设置为 <i>手动</i> 并且你更改默认值，则精确遮罩将被剪切到边界框。这是迄今为止要解决的最慢类型的碰撞遮罩，应该避免，除非是非常非常具体且不常见案例。</li>
 </ul>
 下图说明了不同的遮罩选项：
 
@@ -154,7 +157,7 @@ for="two">碰撞遮罩</label> <input id="two" type="checkbox">
 
 <p>在此下方，你有 <i>alpha 容差</i> 滑块，它指示相对于精灵像素的透明度创建遮罩的容差 - 具有较高容差的部分透明的公差像素留在遮罩外部，而具有较低容差的遮罩将考虑这些像素。这会影响边界框（未设置为手动时）和用于精确碰撞检查的遮罩。</p>
 
-<p>最后，你可以为遮罩设置 <b>边界框</b> 限制。边界框是精灵面具所适合的矩形区域的名称。只有这个边界框内的像素用于遮罩，并且将参与碰撞检查，默认情况下会自动计算，并考虑 alpha 容差。如果你选中了“精确”，那么每个次级图像将拥有自己的碰撞遮罩。自己设置时，可以在左侧，右上方和下方的框中输入值，也可以在精灵视图中单击 <img style="vertical-align:middle" src=
+<p>最后，你可以为遮罩设置 <b>边界框</b> 限制。边界框是精灵面具所适合的矩形区域的名称。只有这个边界框内的像素用于遮罩，并且将参与碰撞检查，默认情况下会自动计算，并考虑 alpha 容差。如果你检查了 “精确（每帧）”，则每个子图像也将分开。自己设置时，可以在左侧，右上方和下方的框中输入值，也可以在精灵视图中单击 <img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"> 并拖动以在精灵上 “绘制” 它。请注意，在 “绘制” 边界框时，会自动生成遮罩以适合最终值。</p>
 
 <p>值得注意的是，如果你转到 “预览” 窗口，则可以使用每个角落中的 “手柄” 调整碰撞遮罩。单击并拖动这些将调整碰撞遮罩，就像输入边界框的值一样。</p></div>
@@ -220,7 +223,7 @@ src="../../images/icon_cmd.png"> + <img style=
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

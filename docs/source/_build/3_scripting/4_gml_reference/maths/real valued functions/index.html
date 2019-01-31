@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,66 +31,39 @@ if (window.name != "content")
 </script>
 <h2>实数函数</h2>
 
-<p>Real numbers in <i>GameMaker Studio 2</i> are considered
-<i>double-precision floating-point numbers</i>, that is to say that
-they have a decimal point in them with no fixed number of digits
-either before or after the point. 2, for example, is a binary
-integer but 2.0 is a floating point real. This distinction between
-integers and floats is very important when dealing with cross
-platform development as the precision of calculations made on a
-Windows PC is <i>not</i> the same as the precision of those same
-calculations when made on a mobile device. This means that you
-should pay particular attention when making comparisons, for
-example:</p>
+<div class="body-scroll">
+<p><br>
+</p>
+
+<p><i>GameMaker Studio 2</i>中的实数是指被<i>双精度浮点数</i>，也就是说它们中有一个小数点，但在小数点之前或之后没有固定的位数。例如，2是二进制整数，但2.0是浮点实数。在处理跨平台开发时，整数和浮点数之间的这种区别非常重要，因为在Windows PC上进行计算的精度和在移动设备上的精度是<i>不</i>相同的。这意味着在进行比较时应特别注意，例如：</p>
 
 <p class="code">if image_index == 1 {do something...}</p>
 
-<p>Now that <i>may</i> appear to work, but due to the way that
-floating point maths works, it may mean that image_index actually
-equals 1.00000000001, in which case the comparison will never
-result in a <tt>true</tt> result and the code running. These types
-of errors can be quite hard to debug and so it is always good to be
-aware of them and to plan ahead and use other means of checking
-values or to use the appropriate flooring or rounding functions
-(listed below) to convert the number to check into an integer. For
-example the above code could be written as:</p>
+<p>这样可能看起来没什么错，但是由于浮点运算的工作方式，这可能意味着image_index实际上等于1.00000000001，在这种情况下，比较永远不会产生 <tt>true</tt> ，并且代码将继续运行. 这些类型的错误很难调试，所以最好多留意它们，并提前计划使用其他方式的检查值或使用适当的floor或舍入函数(如下所示)将数值转化为一个整数。例如实例代码可以被改写成：</p>
 
 <p class="code">if floor(image_index) == 1 {do something...}</p>
 
-<p>It is also worth noting that when using the <b>YoYo Compiler</b>
-targets, all expressions and functions are <i>evaluated from left
-to right</i>, while on all other target platforms they are
-evaluated <i>from right to left</i>, meaning that this - for
-example - will give different results depending on the
-platform:</p>
+<p>同样值得注意的是，在使用 <b>YoYo Compiler</b> targets时，所有的表达式和函数都是从左到右求值，而在其他所有目标平台上，它们都是从右到左求值 ，这意味着，例如，根据平台的不同，这将产生不同的结果：</p>
 
 <p class="code">val = max(num, ++num, num++);<br></p>
 
-<p>You can also use a special function available in <i>GameMaker
-Studio 2</i> to set the <b>epsilon</b> value for floating point
-maths. When a real number is rounded to the nearest floating point
-number, the epsilon (also know as "machine epsilon") forms an upper
-bound on the relative error, and you can set the epsilon value
-using this special function:</p>
+<p>您还可以使用GameMaker Studio 2中提供的特殊函数来为浮点数的数学运算设置<b>epsilon</b> 值。当一个实数四舍五入到最近的浮点数时，epsilon(也称为"machine epsilon")是相对误差的上界，可以通过以下函数得到并设置epsilon的值:</p>
 
 <ul>
-<li><a href="math_set_epsilon.html">math_set_epsilon</a><br>
+<li><a href="math_set_epsilon.html">math_set_epsilon</a>
 </li>
 
-<li><a href="math_get_epsilon.html">math_get_epsilon</a><br>
+<li><a href="math_get_epsilon.html">math_get_epsilon</a>
 </li>
 </ul>
 
-<p>We can split the functions that <i>GameMaker Studio 2</i> has
-for dealing with real numbers into the following
-categories:<br></p>
+<p>我们可以将GameMaker Studio 2处理实数的函数分为以下几类：<br></p>
 
 <blockquote><a name="random_functions" id="random_functions"></a>
-<label class="collapse" for="one">Random Functions</label>
+<label class="collapse" for="one">随机函数</label>
 <input id="one" type="checkbox">
 <div class="index_list">
-<p>These functions all deal with using random numbers and
-values:</p>
+<p>这些函数都处理使用随机数和值：</p>
 
 <ul>
 <li><a href="choose.html">choose</a><br>
@@ -118,21 +91,14 @@ values:</p>
 </li>
 </ul>
 
-<div class="note"><b>NOTE:</b> When using the random functions,
-GameMaker Studio 2 maintains the same random seed every time you
-start the game. This makes debugging much easier as you are
-guaranteed that the random functions will always return the same
-value, however should you not wish this to happen, you must first
-set a new random seed at the very start of the game, either using
-<a href="randomise.html"><tt>randomise</tt></a> or <a href=
-"random_set_seed.html"><tt>random_set_seed</tt></a>.</div>
+<div class="note"><b>注意：</b> 在使用随机函数时，GameMaker Studio 2在每次启动游戏时都会使用相同的随机种子。这会让调试更加容易，因为可以保证随机函数总是返回相同的值，但是如果您不希望这样，您必须在游戏一开始就设置一个新的随机种子，要么使用randomise，要么使用random_set_seed。</div>
 </div>
 <br>
 <a name="trigonometric_functions" id="trigonometric_functions"></a>
-<label class="collapse" for="two">Trigonometric Functions</label>
+<label class="collapse" for="two">三角函数</label>
 <input id="two" type="checkbox">
 <div class="index_list">
-<p>These are all trigonometric functions:</p>
+<p>这些是所有的三角函数：</p>
 
 <ul>
 <li><a href="arccos.html">arccos</a><br>
@@ -192,10 +158,10 @@ set a new random seed at the very start of the game, either using
 </div>
 <br>
 <a name="rounding_functions" id="rounding_functions"></a>
-<label class="collapse" for="three">Rounding Functions</label>
+<label class="collapse" for="three">舍入函数</label>
 <input id="three" type="checkbox">
 <div class="index_list">
-<p>These are all functions that round or select values:</p>
+<p>这是所有的舍入或选择函数：</p>
 
 <ul>
 <li><a href="round.html">round</a><br>
@@ -237,11 +203,10 @@ set a new random seed at the very start of the game, either using
 </div>
 <br>
 <a name="miscellaneous_functions" id="miscellaneous_functions"></a>
-<label class="collapse" for="four">Miscellaneous Functions</label>
+<label class="collapse" for="four">杂项函数</label>
 <input id="four" type="checkbox">
 <div class="index_list">
-<p>A miscellaneous collection of important mathematical
-functions:</p>
+<p>不容易分类但同样重要的函数：</p>
 
 <ul>
 <li><a href="exp.html">exp</a><br>
@@ -275,7 +240,10 @@ functions:</p>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页: <a href=
 "../index.html">数学</a></div>
@@ -283,11 +251,13 @@ functions:</p>
 <div style="float:right">下一页: <a href=
 "../vector%20functions/index.html">Vector Functions</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

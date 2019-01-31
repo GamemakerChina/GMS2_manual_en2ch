@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">Draws a sprite stretched between four given
 points and with an alpha blend.</h2>
 
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">draw_sprite_pos(sprite, subimg, x1, y1, x2, y2, x3,
 y3, x4, y4, alpha);</p>
@@ -137,7 +137,14 @@ you will get different results and may experience texture
 "shearing" due to the way that a sprite is constructed from a quad
 of primitives.</div>
 
-<div class="note"><b>注意</b>此函数只对 <b>位图</b> 精灵有用，并且对SWF或JSON（骨骼）精灵不起作用。</div>
+<div class="note"><b>NOTE</b>: This function is only useful for
+<b>bitmap</b> sprites and will not work with SWF or JSON (Spine)
+sprites.</div>
+
+<div class="note"><b>NOTE</b>: When using this function, you should
+have the <a href=
+"../../../../2_interface/3_settings/textures.html">Automatically
+Crop</a> setting disabled for texture pages.</div>
 
 <p><br>
 </p>
@@ -161,7 +168,7 @@ instance and with a fully opaque alpha.</p>
 "draw_sprite_stretched.html">draw_sprite_stretched</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

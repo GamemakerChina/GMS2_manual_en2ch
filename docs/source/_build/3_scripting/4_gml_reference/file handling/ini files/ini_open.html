@@ -2,13 +2,14 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>ini_open</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../../default.css" type=
@@ -32,14 +33,36 @@ if (window.name != "content")
 <h2>ini_open</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>这将打开一个用于读取和 / 或写入的 ini_file。如果你正在检查的位置不存在 ini_file，<i>GameMaker Studio 2</i>可能会创建一个，但前提是你向其写入数据。If you have only read information from the ini file, then the default values for the read function will be returned, but the ini file will <i>not</i> actually be created.</p>
+
+<p>Please note that you can only have <b>one</b> ini file open at
+any one time and remember to use <a href=
+"ini_close.html"><tt>ini_close</tt></a> once you're finished
+reading/writing from the .ini file as the information is not
+actually stored to disk until then (it is also stored in memory
+until the file is closed).</p>
+
+<div class="note"><b>警告！</b> 由于 <i>GameMaker Studio 2</i> 被沙箱化，这些函数可能无法正常工作！有关详细信息，请参阅 <a href=
+"../../../../1_overview/3_additional_information/file_system.html">文件系统限制</a> 部分。</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">ini_open(name);</p>
 
 <p><br>
 </p>
 
-<div class="param">
+<blockquote>
 <table>
 <tr>
 <th>参数</th>
@@ -51,31 +74,25 @@ if (window.name != "content")
 <td>ini 文件的文件名</td>
 </tr>
 </table>
-</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3>例如：</h3>
 
-<p>这将打开一个用于读取和 / 或写入的 ini_file。如果你正在检查的位置不存在 ini_file，<i>GameMaker Studio 2</i>可能会创建一个，但前提是你向其写入数据。如果你只读取了 ini 文件中的信息，那么将返回读取函数的默认值，但实际上 <i>并没有</i> 实际创建 ini 文件。<br><br>请注意，你一次只能打开 <b>一个</b> ini 文件，并且在完成读取 / 写入后，请记得使用 <a href=
-"ini_close.html"><tt>ini_close</tt></a> .ini 文件，因为信息在此之前实际上并未存储到磁盘（它也存储在内存中，直到文件关闭）。<br><br><br><i><b>警告！</b> 此函数可能无法正常工作！</i> 因为 GameMaker Studio 2 被沙盒化。有关更多信息，请参阅 <a href=
-"../../../../1_overview/3_additional_information/file_system.html">文件系统限制</a> 一节。<br>
-<br></p>
+<p class="code">ini_open("Settings/savedata.ini");<br>score = ini_read_real("save1", "score", 0);<br>ini_close();</p>
 
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
-
-<p class="code">ini_open("savedata.ini");<br>score = ini_read_real("save1", "score", 0);<br>ini_close();</p>
-
-<p>这将打开 'savedata.ini' 并读取 “save1” 节中的 “score” 键代表的分数值，然后再次关闭 .ini。如果 “save1” 节 “score” 键没有值，或者没有 “savedata.ini” 文件，则得分将设置为 0（默认值）。</p>
+<blockquote>
+<p>这将打开 'savedata.ini' 并读取 “save1” 节中的 “score” 键代表的分数值，然后再次关闭 .ini。如果 “save1” 节 “score” 键没有值，或者没有 “savedata.ini” 文件，则得分将设置为 0（默认值）。Note that the ini file has been placed in the subdirectory "Settings", which is the folder that holds the INI file in the resource tree included files.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -91,7 +108,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

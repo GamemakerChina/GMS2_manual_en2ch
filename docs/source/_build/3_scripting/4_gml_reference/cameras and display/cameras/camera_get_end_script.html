@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,15 +37,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to retrieve the ID of the script
-assigned as the end script for the given camera. If no script is
-assigned then the function will return -1.</p>
+<p>此函数可用于检索分配给给定相机的结束脚本，并返回此脚本的ID。如果没有摄像机没有分配脚本，那么此函数将返回-1。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_get_end_script(camera_id)</p>
 
@@ -63,8 +61,7 @@ assigned then the function will return -1.</p>
 
 <tr>
 <td>camera_id</td>
-<td>The unique camera ID value returned when you created the
-camera</td>
+<td>创建相机时返回的唯一相机 id 值</td>
 </tr>
 </table>
 </blockquote>
@@ -74,7 +71,7 @@ camera</td>
 
 <h3>Returns:</h3>
 
-<p class="code">Script ID or -1 if no script assigned</p>
+<p class="code">脚本ID，如果未分配脚本，则为-1</p>
 
 <p><br>
 </p>
@@ -83,9 +80,7 @@ camera</td>
 
 <p class="code">var scr = camera_get_end_script(camera_view[0]);<br>if scr != scr_cutscene<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;camera_set_update_script(camera_view[0], scr_cutscene);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks the script assigned as the begin script
-for the camera assigned to view port[0] and if it is not
-"scr_cutscene" it is set to that script.</p>
+<p>上述代码检查作为相机view port[0]的开始脚本的脚本，如果此脚本不是"scr_cutscene"，则将其设为后者。</p>
 
 <p><br>
 </p>
@@ -98,7 +93,7 @@ for the camera assigned to view port[0] and if it is not
 "camera_get_view_x.html">camera_get_view_x</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

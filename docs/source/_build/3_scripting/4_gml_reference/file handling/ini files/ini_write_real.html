@@ -2,13 +2,14 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>ini_write_real</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../../default.css" type=
@@ -32,7 +33,20 @@ if (window.name != "content")
 <h2>ini_write_real</h2>
 
 <div class="body-scroll">
-<h3><b>Syntax:</b>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>你可以使用此函数将值（数字）写入 ini 数据文件。Ini 文件由 <b>节（sections）</b> 组成，然后每个节由 <b>键</b> - <b>值</b> 对（key - value pairs）组成。所以典型的 ini 文件看起来像这样： <img class=
+"center" src="iniexample.png"></p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3><b>语法：</b>
 </h3>
 
 <p class="code">ini_write_real(section, key, value);</p>
@@ -67,25 +81,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3>例如：</h3>
 
-<p>你可以使用此函数将值（数字）写入 ini 数据文件。Ini 文件由 <b>节（sections）</b> 组成，然后每个节由 <b>键</b> - <b>值</b> 对（key - value pairs）组成。所以典型的 ini 文件看起来像这样：<br>
-<br>
-<img class="center" src="iniexample.png"></p>
+<p class="code">score = 1000;<br>ini_open("savedata.ini");<br>ini_write_real("save1", "Score", score );<br>score2 = ini_read_real("save1", "Score", 0 );<br>ini_close();</p>
 
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
-
-<p class="code">score = 1000;<br>ini_open( 'savedata.ini' );<br>ini_write_real( 'save1', 'Score', score );<br>score2 = ini_read_real( 'save1', 'Score', 0 );<br>ini_close();</p>
-
-<p>这会将得分设置为 1000，然后打开 'savedata.ini' 并将此值写入 'save1' &gt; 'Score'。然后，它将 score2 设置为其中的 'save1' &gt; 'score' 键的实数值 1000，并再次关闭 .ini。如果没有找到此值，则 score2 最终会设置为 0。</p>
+<blockquote>
+<p>This will set score to 1000, then open "savedata.ini" and write this value to "save1" &gt; "Score". Then, it will set score2 to the real value under "save1" &gt; "score" in it, 1000, and close the .ini again. 如果没有找到此值，则 score2 最终会设置为 0。</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -101,7 +110,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

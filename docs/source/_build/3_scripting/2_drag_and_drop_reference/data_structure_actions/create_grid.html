@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>创建栅格</title>
+<title>创建栅格数据（译者注：即网格数据）</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_ds_create_grid.png"> 创建栅格</h2>
+"images/i_ds_create_grid.png"> 创建栅格数据（译者注：即网格数据）</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,39 +40,12 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will create a new <b>grid</b> data-structure and
-return the index value so you can later access the grid through the
-other Data Structure actions. The grid index will be returned to
-the Target Variable that you supply, which can have been created
-earlier using either <a href=
-"../common_actions/assign_var.html">Assign Variable</a> or <a href=
-"../common_actions/temp_var.html">Declare Temp</a>, or you can flag
-the "Temp" checkbox to name and create a temporary local variable
-to store the value until the end of the script or event. Note that
-unlike other data structures, grids are <i>not</i> created "empty",
-and each cell of a newly created grid will have the value 0. It's
-up to you to change the cell data or clear the grid yourself to
-another value using the action <a href="clear_grid.html">Clear
-Grid</a>. Note that you can create additional DS grids by clicking
-the plus icon <img style="vertical-align:middle" src=
-"../icon_expand_arguments.png"> beside the action, and selecting
-another variable to hold the grid ID and and giving the width and
-height values again.</p>
+<p>这个动作将创造一个新的<b>网格</b>数据结构并返回索引值，以便稍后通过其他数据结构动作访问网格。网格索引将返回到你提供的目标变量中，该变量可以在使用前者创建，或者<a href=
+"../common_actions/assign_var.html">赋值一个变量</a>或者<a href=
+"../common_actions/temp_var.html">声明一个临时的</a>，或者你可以标记“临时（Temp）”复选框以命名并创建临时的局部变量以存储值，直到脚本或事件结束。请注意，与其他数据结构不同，创建的网格<i>不</i>是“空”的，新创建的网格的每个单元格的值都为0。你可以使用<a href="clear_grid.html">清除网格</a>动作更改单元格数据或将网格清除为其他值。请注意，你可以通过单击在动作旁边加号图标<img style="vertical-align:middle" src=
+"../icon_expand_arguments.png">来创建其他网格数据，选择另一个变量来保存网格数据ID，然后给出宽度和高度值。</p>
 
-<div class="note"><b>Important!</b> Creating any data structure
-uses up memory on the target platform, and as such all data
-structures should be free when no longer needed using the action
-<a href="free_data_structure.html">Free Data Structure</a>
-otherwise you get a memory leak which can impair your games
-performance or even cause it to crash. This is particularly
-relevant when using temporary local variables to store data
-structure indices, as these variables are removed at the end of the
-code or event, but that does not mean the data structure is removed
-too! The data structure will still exist, only you will have no way
-to reference it, so either use an instance variable and free the
-structure at a later time, or free the structure before the end of
-the event or script if its index is stored in a temporary
-variable.</div>
+<div class="note"><b>重要！</b>创建任何数据结构都会占用目标平台上的内存，因此当不再需要它们时，都应该使用<a href="free_data_structure.html">释放数据结构（Free Data Structure）</a>动作释放掉，否则会导致内存泄漏，从而影响游戏性能，甚至导致游戏崩溃。这在使用临时的局部变量来存储数据结构索引时尤为重要，因为这些变量在代码或事件结束时会被删除，但并不意味着数据结构也被删除了！数据结构仍然存在，只是你无法引用它，所以要么使用实例变量并在之后释放数据结构，要么在事件或脚本结束之前释放数据（如果它的索引存储在一个临时变量中）。</div>
 </blockquote>
 
 <p><br>
@@ -80,7 +53,7 @@ variable.</div>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_ds_create_grid.png" alt=
-"Create Grid Syntax">
+"创建网格数据语法">
 <p><br>
 </p>
 
@@ -95,7 +68,7 @@ variable.</div>
 
 <tr>
 <td>目标</td>
-<td>The target variable to store the grid index in</td>
+<td>用于存储网格索引的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -105,12 +78,8 @@ variable.</div>
 
 <h3>例如：</h3>
 <img class="center" src="images/e_ds_create_grid.png" alt=
-"Create Grid Example">
-<blockquote>The above action block code creates two temporary
-variables to hold the number of 32px cells along the width and
-height of the room, and then creates a new global scope variable to
-hold the index of a newly created grid data structure. The grid is
-then cleared using the keyword <tt>noone</tt>.</blockquote>
+"创建网格数据的示例">
+<blockquote>上面的动作块代码创建了两个临时变量来保存沿着房间宽高的32px单元的格数，然后创建一个新的全局变量来保存新创建的网格数据结构的索引。然后使用关键字<tt>noone</tt>清除网格。</blockquote>
 
 <p><br>
 </p>
@@ -119,14 +88,13 @@ then cleared using the keyword <tt>noone</tt>.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Data Structure Actions</a></div>
+<div style="float:left">返回： <a href="index.html">数据结构动作</a></div>
 
-<div style="float:right">next: <a href="create_stack.html">Create
-Stack</a></div>
+<div style="float:right">下一页：<a href="create_stack.html">创建堆栈数据</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

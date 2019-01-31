@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,26 +32,18 @@ if (window.name != "content")
 <h2>os_version</h2>
 
 <div class="body-scroll">
-<h2 class="studio">This variable holds the version number of the OS
-that is running the game.</h2>
-
-<h3><b>Syntax:</b>
-</h3>
-
-<p class="code">os_version</p>
-
 <p><br>
 </p>
 
-<p><b>返回：</b> Real（实数）</p>
+<h3>描述</h3>
 
-<p><br>
-</p>
+<blockquote>
+<p>This variable will tell you the version number for the OS that
+is running your game. For example, if you are running it on an iPad
+with iOS 4 installed, <tt>os_version</tt> will be equal to
+83890177.</p>
 
-<h3 class="studio">描述</h3>
-
-<p>This variable will tell you the version number for the OS that is running your game. For example, if you are running it on an iPad with iOS 4 installed, <tt>os_version</tt> will be equal to 83890177.<br><br>The following table outlines the values that are returned:<br>
-<br></p>
+<p>The following table outlines the values that are returned:</p>
 
 <div class="compat">
 <table class="compat">
@@ -63,26 +55,31 @@ that is running the game.</h2>
 
 <tr>
 <td>Android</td>
-<td>Cupcake (1.5)<br>
-Donut (1.6)<br>
-Eclair (2.0)<br>
-Eclair (2.0.1)<br>
-Eclair (2.1)<br>
-Froyo (2.2.x)<br>
-Gingerbread (2.3 - 2.3.2)<br>
-Gingerbread (2.3.3 - 2.3.7)<br>
-Honeycomb (3.0)<br>
-Honeycomb (3.1)<br>
-Honeycomb (3.2.x)<br>
-Ice Cream Sandwich (4.0.1 - 4.0.2)<br>
-Ice Cream Sandwich (4.0.3 - 4.0.4)<br>
-Jelly Bean (4.1.x)<br>
-Jelly Bean (4.2.x)<br>
-Jelly Bean (4.3.x)<br>
-KitKat (4.4.x)<br>
-Lollipop (5.0 - 5.1.1)<br>
-Marshmallow (6.0 - 6.0.1)<br>
-Nougat (7.0 - 7.11)</td>
+<td><span class="notranslate">Cupcake (1.5)</span><br>
+<span class="notranslate">Donut (1.6)</span><br>
+<span class="notranslate">Eclair (2.0)</span><br>
+<span class="notranslate">Eclair (2.0.1)</span><br>
+<span class="notranslate">Eclair (2.1)</span><br>
+<span class="notranslate">Froyo (2.2.x)</span><br>
+<span class="notranslate">Gingerbread (2.3 - 2.3.2)</span><br>
+<span class="notranslate">Gingerbread (2.3.3 - 2.3.7)</span><br>
+<span class="notranslate">Honeycomb (3.0)</span><br>
+<span class="notranslate">Honeycomb (3.1)</span><br>
+<span class="notranslate">Honeycomb (3.2.x)</span><br>
+<span class="notranslate">Ice Cream Sandwich (4.0.1 -
+4.0.2)</span><br>
+<span class="notranslate">Ice Cream Sandwich (4.0.3 -
+4.0.4)</span><br>
+<span class="notranslate">Jelly Bean (4.1.x)</span><br>
+<span class="notranslate">Jelly Bean (4.2.x)</span><br>
+<span class="notranslate">Jelly Bean (4.3.x)</span><br>
+<span class="notranslate">KitKat (4.4.x)</span><br>
+<span class="notranslate">Lollipop (5.0 - 5.1.1)</span><br>
+<span class="notranslate">Marshmallow (6.0 - 6.0.1)</span><br>
+<span class="notranslate">Nougat (7.0 - 7.11)</span><br>
+<span class="notranslate">Oreo (8.0 - 8.11)</span><br>
+<span class="notranslate">Pie (9.0)</span>
+</td>
 <td>3<br>
 4<br>
 5<br>
@@ -102,7 +99,9 @@ Nougat (7.0 - 7.11)</td>
 19<br>
 21 - 22<br>
 23<br>
-24 - 25</td>
+24 - 25<br>
+26 - 27<br>
+28</td>
 </tr>
 
 <tr class="alt">
@@ -133,7 +132,14 @@ iOS 9 (9.2.1)<br>
 iOS 9 (9.3)<br>
 iOS 10 (10.0)<br>
 iOS 10 (10.1)<br>
-iOS 10 (10.2)</td>
+iOS 10 (10.2)<br>
+iOS 10 (10.3)<br>
+iOS 11 (11.0)<br>
+iOS 11 (11.1)<br>
+iOS 11 (11.2)<br>
+iOS 11 (11.3)<br>
+iOS 11 (11.4)<br>
+iOS 12 (12.0)</td>
 <td>50335747<br>
 67117057<br>
 83890177<br>
@@ -157,27 +163,37 @@ iOS 10 (10.2)</td>
 151007232<br>
 167772160<br>
 167776256<br>
-167780352<br></td>
+167780352<br>
+167784448<br>
+184549376<br>
+184553472<br>
+184557568<br>
+184561664<br>
+184565760<br>
+201326592<br></td>
 </tr>
 
 <tr>
-<td>Mac OS X<br>
+<td><span class="notranslate">Mac OS X</span><br>
 The return value is calculated as:<br>
 (major_version * 16777216) + (minor_version * 4096) +
 build_number</td>
-<td>Cheetah (10.0.4)<br>
-Puma (10.1.5)<br>
-Jaguar (10.2.8)<br>
-Panther (10.3.9)<br>
-Tiger (10.4.11)<br>
-Leopard (10.5.8)<br>
-Snow Leopard (10.6.8)<br>
-Lion (10.7.5)<br>
-Mountain Lion (10.8.2)<br>
-Mavericks (10.9.1)<br>
-Yosemite (10.10)<br>
-El Capitan (10.11)<br>
-Sierra (10.12)<br></td>
+<td><span class="notranslate">Cheetah (10.0.4)</span><br>
+<span class="notranslate">Puma (10.1.5)</span><br>
+<span class="notranslate">Jaguar (10.2.8)</span><br>
+<span class="notranslate">Panther (10.3.9)</span><br>
+<span class="notranslate">Tiger (10.4.11)</span><br>
+<span class="notranslate">Leopard (10.5.8)</span><br>
+<span class="notranslate">Snow Leopard (10.6.8)</span><br>
+<span class="notranslate">Lion (10.7.5)</span><br>
+<span class="notranslate">Mountain Lion (10.8.2)</span><br>
+<span class="notranslate">Mavericks (10.9.1)</span><br>
+<span class="notranslate">Yosemite (10.10)</span><br>
+<span class="notranslate">El Capitan (10.11)</span><br>
+<span class="notranslate">Sierra (10.12)</span><br>
+<span class="notranslate">High Sierra (10.13)</span><br>
+<span class="notranslate">Mojave (10.14)</span><br>
+</td>
 <td>167772164<br>
 167776261<br>
 167780360<br>
@@ -190,26 +206,30 @@ Sierra (10.12)<br></td>
 167809025<br>
 167813120<br>
 167817216<br>
-167821312<br></td>
+167821312<br>
+167825408<br>
+167829504<br></td>
 </tr>
 
 <tr class="alt">
-<td>Windows<br>
+<td><span class="notranslate">Windows</span><br>
 (the return value is calculated as:<br>
 majorVersion * 65536 + minorVersion)</td>
-<td>Windows 2000 (5.0)<br>
-Windows XP (5.1)<br>
-Windows XP 64-Bit Edition (5.2)<br>
-Windows Server 2003 (5.2)<br>
-Windows Server 2003 R2 (5.2)<br>
-Windows Vista (6.0)<br>
-Windows Server 2008 (6.0)<br>
-Windows Server 2008 R2 (6.1)<br>
-Windows 7 (6.1)<br>
-Windows Server 2012 (6.2)<br>
-Windows 8 (6.2)<br>
-Windows 8.1 (6.3)<br>
-Windows 10 (10.0)<br></td>
+<td><span class="notranslate">Windows 2000 (5.0)</span><br>
+<span class="notranslate">Windows XP (5.1)</span><br>
+<span class="notranslate">Windows XP 64-Bit Edition
+(5.2)</span><br>
+<span class="notranslate">Windows Server 2003 (5.2)</span><br>
+<span class="notranslate">Windows Server 2003 R2 (5.2)</span><br>
+<span class="notranslate">Windows Vista (6.0)</span><br>
+<span class="notranslate">Windows Server 2008 (6.0)</span><br>
+<span class="notranslate">Windows Server 2008 R2 (6.1)</span><br>
+<span class="notranslate">Windows 7 (6.1)</span><br>
+<span class="notranslate">Windows Server 2012 (6.2)</span><br>
+<span class="notranslate">Windows 8 (6.2)</span><br>
+<span class="notranslate">Windows 8.1 (6.3)</span><br>
+<span class="notranslate">Windows 10 (10.0)&lt;.nt&gt;<br></span>
+</td>
 <td>327680<br>
 327681<br>
 327682<br>
@@ -224,40 +244,44 @@ Windows 10 (10.0)<br></td>
 393219<br>
 655360<br></td>
 </tr>
-
-<tr>
-<td>Windows Phone<br>
-The return value is calculated as:<br>
-majorVersion * 65536 + minorVersion</td>
-<td>Windows Phone 7 (7.0)<br>
-Windows Phone 7.5 (7.1)<br>
-Windows Phone 8 (8.0)<br></td>
-<td>458752<br>
-458753<br>
-524288<br></td>
-</tr>
 </table>
 </div>
 
-<p><br>
-<br>
-<i><b>NOTE:</b> Should you require further information about the
-Windows OS you can use the <a href=
-"../miscellaneous/environment_get_variable.html"><tt>environment_get_variable</tt></a>.</i><br>
-
-<br>
-</p>
+<div class="note"><b>NOTE</b>: Should you require further
+information about the <span class="notranslate">Windows OS</span>
+you can use the <a href=
+"../miscellaneous/environment_get_variable.html"><tt>environment_get_variable</tt></a>.</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">例如：</h3>
+<h3>语法：</h3>
 
-<p class="code">if os_type = os_android &amp;&amp; os_version
-&gt;10 global.GFX = 1;</p>
+<p class="code">os_version</p>
 
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">实数</p>
+
+<p><br>
+</p>
+
+<h3>例如：</h3>
+
+<p class="code">if os_type == os_android &amp;&amp; os_version &gt;
+10<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;global.GFX = 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+
+<blockquote>
 <p>The above code checks the os type and version number and they
 are both correct then the global variable is set to 1.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -273,7 +297,7 @@ are both correct then the global variable is set to 1.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

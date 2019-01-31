@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,25 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can change one of three tile transforms in
-the tiledata. You supply the variable that holds the tiledata for
-the tile, then select the transform to change. Clicking the "Apply"
-check-box will apply that transform and un-checking it will remove
-it. The tiledata is simply a value that reflects the index of the
-tile along with the transforms applied as well as any custom tile
-masks that you have used, and this action permits you to change
-three of those values: Flip, mirror and rotate. Note that you will
-normally want to get the tiledata first using either <a href=
-"get_tile_data_in_cell.html">Get Tile Data In Cell</a> or <a href=
-"get_tile_data_at_pixel.html">Get Tile Data At Pixel</a>, then
-apply the requred transform(s) and then set the tile in the tilemap
-again using <a href="set_tile_data_in_cell.html">Set Tile Data In
-Cell</a> or <a href="set_tile_data_at_pixel.html">Set Tile Data At
-Pixel</a>, since this action <i>only sets a value but does not
-apply it to the tile it was taken from</i>. For more information on
-tiledata, please see the GML section on <a href=
-"../../4_gml_reference/rooms/tilemaps/index.html">Tilemaps - Tile
-Functions</a>.</p>
+<p>使用此动作，你可以为图块数据进行三种变换中任何一种你需要提供存储着图块数据的变量，然后选择需要变换的方式。点击“apply”复选框将会应用此变换，取消选择将移除此变换。此图块数据是一个值，它反应了此图块的索引，翻转，镜像和旋转值，以及任何自定义的图块遮罩。此动作允许你改变翻转/镜像和选择值。通常情况下你首先要用 <a href=
+"get_tile_data_in_cell.html">获得格子中的图块数据</a> 或<a href=
+"get_tile_data_at_pixel.html">通过像素获得图块</a>，然后你可以通过<a href="set_tile_data_in_cell.html">设置格子中的图块数据</a> 或 <a href="set_tile_data_at_pixel.html">Set Tile Data At Pixel</a>来应用变换，因为此动作 <i>只是设置了一个值而并非将它应用于图块</i>。如果你需要更多关于图块数据的信息，参阅 <a href=
+"get_tile_data_in_cell.html">图块地图-图块函数</a>.</p>
 </blockquote>
 
 <p><br>
@@ -82,12 +67,12 @@ Functions</a>.</p>
 
 <tr>
 <td>图块</td>
-<td>The tiledata for the tile to change</td>
+<td>需要变换的图块的图块数据</td>
 </tr>
 
 <tr class="alt">
-<td>Transform</td>
-<td>The the transform to apply/remove</td>
+<td>变换</td>
+<td>需要应用或移除的变换</td>
 </tr>
 </table>
 </blockquote>
@@ -99,11 +84,7 @@ Functions</a>.</p>
 <img class="center" src=
 "images/e_tiles_set_tile_data_transform.png" alt=
 "Set Tile Data Transform Example">
-<blockquote>The above action block code gets the tiledata at the
-mouse position and then checks to see if the tile has had a
-rotation transform applied to it. If it has then the transform is
-reset and the tiledata sets the tile at the position
-again.</blockquote>
+<blockquote>上述动作代码块将在鼠标按下位置获得图块数据，再检测它是否经过旋转变换。如果有的话，将重置变换（即旋转回来），并更新图块数据。</blockquote>
 
 <p><br>
 </p>
@@ -119,7 +100,7 @@ again.</blockquote>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -68,7 +68,7 @@ obj_Enemy)</tt>.</p>
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">instance_place(x, y, obj);</p>
 
@@ -114,7 +114,7 @@ obj_Enemy)</tt>.</p>
 
 <h3>例如：</h3>
 
-<p class="code">var inst;<br>inst = instance_place(x, y, obj_Enemy);<br>if inst != noone<br>&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;&nbsp;hp -= inst.dmg;<br>&nbsp;&nbsp;&nbsp;with (inst) instance_destroy();<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var _inst = instance_place(x, y, obj_Enemy);<br>if _inst != noone<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;hp -= _inst.dmg;<br>&nbsp;&nbsp;&nbsp;instance_destroy(_inst);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>The above code will check for a collision with instances of
@@ -132,12 +132,12 @@ then destroy the colliding instance.</p>
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
 
-<div style="float:right">下一页: <a href=
-"instance_position.html">instance_position</a></div>
+<div style="float:right">Next: <a href=
+"instance_place_list.html">instance_place_list</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

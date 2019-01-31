@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -53,11 +53,11 @@ alt="Amazon Fire General Options Part 1">
 <p><br>
 然后，你需要设置 <b>构建工具</b> 和 <b>支持库</b>版本，以及<b>目标平台 SDK</b>、<b>最小 SDK</b> 和 <b>编译 SDK</b> 版本。当 <i>GameMaker Studio 2</i> 为 Android 目标构建游戏时，将使用 <b>构建工具</b> 和 <b>支持库</b>，并且应根据你使用 Android SDK Manager 或 Android Studio 安装的工具将其设置为适当的值。</p>
 
-<p><b>编译 SDK</b> 版本是针对项目编译的 API 的版本。这意味着你可以使用该 API 版本中包含的 Android API 功能。如果你尝试使用 API​​ 16 功能（例如）但设置了编译 SDK 15，那么你将收到编译错误。如果你将编译 SDK 设置为16，那么你仍然可以在 API 15 设备（以及所有其他早期版本）上运行该应用程序。</p>
+<p>The <b>Target SDK</b> indicates that you have tested your app on (up to and including) the version you specify here. 这只是为了让 Android 操作系统了解它应该如何在操作系统功能方面处理你的应用程序。出于所有实际目的，大多数应用程序都希望将目标平台 SDK 设置为最新发布的 API 版本（由编译 SDK 设置使用）。这将确保你的应用在最新的 Android 设备上看起来尽可能好。</p>
 
-<p>但是，<b>目标平台 SDK</b> 与你的应用程序编译方式或可以使用的 API 无关。目标平台 SDK表示你已经测试了你的应用程序（包括你指定的版本）。这只是为了让 Amazon Fire OS 了解它应该如何在操作系统功能方面处理你的应用程序。出于所有实际目的，大多数应用程序都希望将目标平台 SDK 设置为最新发布的 API 版本（由编译 SDK 设置使用）。这将确保你的应用在最新的 Amazon Fire 设备上看起来尽可能好。</p>
+<p><b>最小 SDK</b> 版本是运行项目的最低 API 级别。From August 2018 Google has made API level 26 the required minimum, but if you add extensions then they may require a higher minimum API level.</p>
 
-<p><b>最小 SDK</b> 版本是运行项目的最低 API 级别。默认情况下，此值设置为 9，一般情况下这很好，但如果要添加扩展，则可能需要更高的最低 API 级别。</p>
+<p><b>编译 SDK</b> 版本是针对项目编译的 API 的版本。这意味着你可以使用该 API 版本中包含的 Android API 功能。如果你尝试使用 API​​ 16 功能（例如）但设置了编译 SDK 15，那么你将收到编译错误。However, if you set the Compile SDK to 28 then you can still run the app on an API 23 device (as well as all other previous versions too).</p>
 
 <p>你可以通过单击 <b>将 SDK 值预填写到所选的 API 级别</b> 按钮来选择其中一个预定义目标设置，该按钮将打开一个可供选择的不同 API 列表。选择其中任何一个将使用适当的值填充所有 SDK 文件，然后你可以根据需要使用或编辑这些值。</p>
 

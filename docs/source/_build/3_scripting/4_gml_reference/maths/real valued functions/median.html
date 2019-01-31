@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,13 +29,29 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">median</h1>
+<h2>median</h2>
 
-<h2 class="studio">Returns the median (middle number) of a set of
-real value arguments.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3><b>Syntax:</b>
-</h3>
+<h3>描述</h3>
+
+<blockquote>
+<p>This function returns the median of the input values, that is,
+the middle value. When the number of arguments is even, the smaller
+of the two middle values is returned and the function can have as
+many arguments as required (note that more arguments will mean that
+the function will be slower to parse) which must all be real
+values. This means that, for example, <tt>median(43, 12, 25, 19,
+6)</tt> would return 19 as it is the middle value between all the
+rest.</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">median(val1, val2, ... max_val);</p>
 
@@ -59,51 +75,44 @@ real value arguments.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> Real（实数）</p>
+<h3>Returns:</h3>
+
+<p class="code">实数</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>This function returns the median of the input values, that is,
-the middle value. When the number of arguments is even, the smaller
-of the two middle values is returned and the function can have as
-many arguments as required (note that more arguments will mean that
-the function will be slower to parse) which must all be real
-values. This means that, for example, <tt>median(43, 12, 25, 19,
-6)</tt> would return 19 as it is the middle value between all the
-rest.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3><b>例如：</b>
-</h3>
+<h3>例如：</h3>
 
 <p class="code">x = median( 0, x, room_width );<br>
 y = median( 0, y, room_height );</p>
 
+<blockquote>
 <p>This will stop the player from exiting any side of the room, by
 using median as a clamp. If the player, for instance, moves to the
 left of the room boundary, its x will be smaller than 0. This will
 mean the middle number of the first of the medians will be 0, so
 the player will be jumped to (0,y).</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Real Number Functions</a></div>
 
 <div style="float:right">下一页: <a href="min.html">min</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

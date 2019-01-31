@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <div class="body-scroll">
 <h3>描述</h3>
 
-<blockquote>This function can be used to set the <b>tile bit mask</b> for a all tilemaps in the game. The idea is that if you have, for example, pretty small tilesets of 16 x 16 tiles will have a total of 256 different tiles in each tile set, which only uses up 8 bits of your index in the tile data "blob" (from an available 19 bits of data). These bits can be "masked" and then the rest of the tile data can be used to store additional values.<br><br>An easy way to get the initial index mask value is to take the number of tiles in the tile set and subtract 1, so a 64x64 tile set has 256 tiles and a mask value of 255 (or $ff in hexadecimal), and if the tile set has a number of tiles that are <i>not</i> a power of two, then round up to the nearest power of two to get the mask, for example a tile set that is 20x20 has 400 tiles, which you would round up to 512, and so get a mask index value of 511 ($1ff in hexadecimal). Apart from the index mask, normally you would want to preserve the flip, rotate and mirror values that are assigned to a tile too, so to help with that there are a few <b>constants</b> that can be used. These can be "or"-ed together with the index mask value to preserve those bits of data. The following constants can be used (see the example code below for usage):
+<blockquote>This function can be used to set the <b>tile bit mask</b> for a all tilemaps in the game. The idea is that if you have, for example, pretty small tilesets of 16 x 16 tiles will have a total of 256 different tiles in each tile set, which only uses up 8 bits of your index in the tile data "blob" (from an available 19 bits of data). These bits can be "masked" and then the rest of the tile data can be used to store additional values.<br><br>An easy way to get the initial index mask value is to take the number of tiles in the tile set and subtract 1, so a 16x16 tile set has 256 tiles and a mask value of 255 (or $ff in hexadecimal), and if the tile set has a number of tiles that are <i>not</i> a power of two, then round up to the nearest power of two to get the mask, for example a tile set that is 20x20 has 400 tiles, which you would round up to 512, and so get a mask index value of 511 ($1ff in hexadecimal). Apart from the index mask, normally you would want to preserve the flip, rotate and mirror values that are assigned to a tile too, so to help with that there are a few <b>constants</b> that can be used. These can be "or"-ed together with the index mask value to preserve those bits of data. The following constants can be used (see the example code below for usage):
 
 <div class="compat">
 <table>
@@ -85,7 +85,7 @@ drawing.</blockquote>
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">tilemap_set_global_mask(mask)</p>
 
@@ -138,11 +138,11 @@ in the map.</blockquote>
 <div style="float:left">上一页:  <a href="index.html">Tilemap Layer Functions</a></div>
 
 <div style="float:right">next: <a href=
-"tilemap_get_mask.html">tilemap_get_mask</a></div>
+"tilemap_set_width.html">tilemap_set_width</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

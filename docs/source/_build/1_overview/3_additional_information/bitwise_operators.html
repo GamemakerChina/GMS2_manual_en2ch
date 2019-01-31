@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -266,7 +266,7 @@ var X_Index = floor(x/32);<br></p>
 <div class="index_list"><i>GameMaker Studio 2</i> 的开发者们经常使用 <tt>place_free()</tt> 函数，当发生碰撞时，尝试通过在 x 或 y位置(或其他位置)上循环缓慢移动物体，同时继续执行该函数，或者使用更为方便的  <tt>move_outside_all()</tt> 函数。<br><br>所以，我们要如何更快地做到这一点？如果我们使用了合适的 2 次方图块，那么我们就有一个非常简单、快速的方法。如果我们正在向右移动，然后我们已经移动到了一个碰撞块，并且我们知道一切都是对齐到 32 的，所以我们也需要使精灵对齐到 32 像素的边界——最好是左边的，然后精灵就会移出碰撞块。这很简单，使用上面我们知道的规则就可以得到余数，也知道如何得到位反数，我们可以简单地这样做：<br>
 <br>
 
-<p class="code">X = x&amp;~31;<br></p>
+<p class="code">x = x&amp;~31;<br></p>
 <br>
 对，这就是对齐到 32 像素边界所需要的运算。通过与 31 进行与非运算，我们可以对齐到任何我们喜欢的地方——只要它是 2 的倍数。（这相当于除以 32，然后乘以 32，从而去掉较低的位。）<br><br>如果我们想对齐到右边，那么我们会做上面的操作，然后加上 32 将其移动到下一个图块中。简单。所有这些都使得整个碰撞代码非常快，并且允许你在真正需要的地方花费 CPU 时间。</div>
 <br>
@@ -283,7 +283,7 @@ var X_Index = floor(x/32);<br></p>
 <div class="index_list">假设我们需要一个简单的动画计数器，从 0 到 15(因为我们有 16 帧的动画)，现在我们可以做一个递增，然后做一个 IF 判断，或者我们可以使用我们的二进制知识并完全不需要 IF 语句。IF 语句很慢，如果我们不需要它，我们应该移除它。<br>
 <br>
 
-<p class="code">counter = (counter+1)&amp;31;<br></p>
+<p class="code">counter = (counter+1)&amp;15;<br></p>
 <br>
 因为 16 帧是 2 的平方数，并且计数器中包含 0，所以我们可以将 2 的次方数减 1 作为掩码使用，这样我们就可以用它来包装计数器。如果计数器从 15 移动到 16，我们得到的是按位显示的 10000，如果我们将其与得 15(位模式 01111)进行与运算，就会得到 0。这意味着上面的代码对于包装计数器是非常有用的——只要你使用的是 2 的次方数帧。</div>
 <br>
@@ -318,7 +318,7 @@ var X_Index = floor(x/32);<br></p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

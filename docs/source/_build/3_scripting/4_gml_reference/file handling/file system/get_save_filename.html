@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>get_save_filename</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">get_save_filename(filter, fname);</p>
 
@@ -68,7 +68,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>此函数打开一个对话框，并要求玩家提供要使用给定过滤器保存的文件名。过滤器的格式为 “<i>name1|mask1|name2|mask2|...</i>”，其中掩码可能包含不同的选项，它们之间带有分隔符，你也可以使用 “*” 表示任意字符串。例如：“<i>bitmaps|*.bmp;*.wmf</i>” 会要求用户从系统中选择位图文件的名称，但只能选择那些具有两个指定扩展名的文件（<tt>bmp</tt> 和 <tt>png</tt>）。此函数 <b>不</b> 保存文件本身！它只返回一个包含文件全名和路径的字符串。如果用户按下 “<b>取消</b>”，则返回空字符串 ""。<br><br>使用此函数时需要注意的一点是，在游戏持续时间内，它会授予你对该文件的某些权限。因此，一旦你从用户那里获得文件路径，你就可以一次又一次地访问它而无需询问，并且该权限同时适用于读取 <i>和</i> 写入。<br><br><i><b>注意：</b> 这是仅限 Windows 的函数。</i><br>
+<p>此函数打开一个对话框，并要求玩家提供要使用给定过滤器保存的文件名。过滤器的格式为 “<i>name1|mask1|name2|mask2|...</i>”，其中掩码可能包含不同的选项，它们之间带有分隔符，你也可以使用 “*” 表示任意字符串。例如：“<i>bitmaps|*.bmp;*.wmf</i>” 会要求用户从系统中选择位图文件的名称，但只能选择那些具有两个指定扩展名的文件（<tt>bmp</tt> 和 <tt>png</tt>）。此函数 <b>不</b> 保存文件本身！它只返回一个包含文件全名和路径的字符串。如果用户按下 “<b>取消</b>”，则返回空字符串 ""。<br><br>使用此函数时需要注意的一点是，在游戏持续时间内，它会授予你对该文件的某些权限。因此，一旦你从用户那里获得文件路径，你就可以一次又一次地访问它而无需询问，并且该权限同时适用于读取 <i>和</i> 写入。<br><br><i><b>NOTE:</b> This function is only valid on the Windows and macOS targets.</i><br>
 <br></p>
 
 <p><br>
@@ -94,7 +94,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

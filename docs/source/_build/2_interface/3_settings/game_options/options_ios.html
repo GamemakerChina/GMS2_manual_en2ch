@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -45,19 +45,7 @@ if (window.name != "content")
 "iOS General Options">
 </p>
 
-<p>首先要做的是填写有关游戏的 <b>产品信息</b>，包括其 <i>显示名称</i>、<i>捆绑包 ID</i> 和 <i>版本信息</i>。请注意，<i>捆绑包 ID</i> 必须采用正确的反向 URL 格式才能使游戏的最终版本正常工作，例如：<tt>com.[公司].[游戏名]</tt></p>
-
-<p>“全局” 部分的第二部分介绍了 <b>构建设置</b>，其中提供了以下选项，用于设置要定位的设备类型：</p>
-
-<ul>
-<li><b>iPhone 或 iPod Touch</b>： iPhone 4 及更高版本或 iPod Touch 设备</li>
-
-<li><b>iPad</b>： iPad 设备</li>
-
-<li><b>两者都选</b>: iPhone / iPod 和 iPad</li>
-</ul>
-
-<p>然后，你可以为游戏选择 <b>应用输出</b> 文件夹，然后选择可以运行游戏的不同 <i>朝向</i> 以获得最佳用户体验。可用的选项有：</p>
+<p>The first part of the General section covers <b>Build Settings</b> for your game. To start with you set the <i>Orientations</i> that your game can be run on for the best user experience. 可用的选项有：</p>
 
 <ul>
 <li>纵向</li>
@@ -68,6 +56,20 @@ if (window.name != "content")
 
 <li>翻转横向</li>
 </ul>
+
+<p>You can then go to the <b>Device Support</b> section, with the
+following options available for setting what type of device to
+target:</p>
+
+<ul>
+<li><b>iPhone 或 iPod Touch</b>： iPhone 4 及更高版本或 iPod Touch 设备</li>
+
+<li><b>iPad</b>： iPad 设备</li>
+
+<li><b>两者都选</b>: iPhone / iPod 和 iPad</li>
+</ul>
+
+<p>The second thing to do is fill in the <b>Product Information</b> about your game, including its <i>Display Name</i>, its <i>Bundle ID</i> and the <i>Version info</i>. 请注意，<i>捆绑包 ID</i> 必须采用正确的反向 URL 格式才能使游戏的最终版本正常工作，例如：<tt>com.[公司].[游戏名]</tt>。在这里，你还需要提供你希望用于签署 <i>GameMaker Studio 2</i> 为你创建的最终应用程序的 <b>团队标识符</b>。Setting it here will overide the Team ID that you have supplied in the <a href="../preferences.html">iOS Preferences</a>.</p>
 </div>
 <br>
 <label class="collapse" for="b">图形</label> <input id="b"
@@ -86,7 +88,7 @@ type="checkbox">
 <li><b>一半 iPad 1纹理</b>：iPad 1 的纹理内存比最近的设备少得多，因此如果你想要定位此设备或获得最大兼容性，你可以启用此选项以将纹理大小减半。<br>
 <br></li>
 
-<li><b>缩放</b>： 你的游戏可以配置为自动缩放绘制画布以在浏览器中保持纵横比，或者你可以选择将其拉伸以适应。拉伸到适合选项不会在浏览器中全屏显示游戏，而是按照游戏的第一个房间的定义，拉伸贴图以适应画布大小。</li>
+<li><b>缩放</b>： 在这里，你可以选择缩放绘制画布，在设备屏幕中保持纵横比 - 在边缘周围添加 “填充（padding）” 以适合屏幕 - 或者你可以选择让绘制画布拉伸拉伸以适合。</li>
 </ul>
 
 <p>最后，可以选择设置 <b>纹理页</b> 的大小。默认（和最兼容）大小为 2048 x 2048，但你可以选择 256 x 256 到 4096 x 4096之间的任何位置。还有一个 <i>预览</i> 的按钮，它将为该平台生成纹理页面，然后打开一个窗口，以便你可以看到它们的外观。如果你希望查看纹理页面的结构并防止纹理页面比必要的更大（或更小），这可能非常有用。</p>
@@ -106,6 +108,16 @@ type="checkbox">
 
 <p>值得注意的是，<i>GameMaker Studio 2</i> 有一个 <a href=
 "../../../2_interface/2_extras/project_image_generator.html">项目图像生成器</a> 工具，可用于自动创建游戏编译到不同目标平台所需的所有图标。 如果使用此工具，则应修改创建的图像以确保它们符合你的要求。</p>
+
+<div class="note"><b>NOTE</b>: On importing an older project you
+may be presented with the following warning: <img class="center"
+src="images/ios_icon_warning.png" alt="iOS Icon Warning"> This
+comes up because the current iOS target version has changed the
+format of the required icons since the project was previously
+loaded. You will be required to re-create all the icons, as they
+will have been replaced with the generic GameMaker Studio 2 icons
+(you can use the above mentioned <b>Project Image Generator</b>
+tool to do this quickly).</div>
 </div>
 <br>
 <label class="collapse" for="c">图像</label> <input id="c" type=
@@ -153,7 +165,7 @@ type="checkbox">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

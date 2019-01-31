@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,7 +38,8 @@ if (window.name != "content")
 
 <p>在 <i>GameMaker Studio 2</i> 中，要让某些事情变得更容易，你可以在你的脚本和动作中使用一种 <b>关键字（keywords）</b>。这些关键字主要用于标识实例，每个关键字都将在下面的文本中进行了解释。请注意，所有关键字在内部都是用负整数值表示，因此在为变量赋值时必须小心，因为你可能会在之后的使用中获得意外结果，<i>GameMaker Studio 2</i> 可能会将这个值解释其它的一些东西。你还应该注意，<b>完全不推荐</b> 使用值代替代码中的关键字，它可能会在以后引起问题。</p>
 
-<blockquote><label class="collapse" for="one"><tt>self</tt>（废弃）</label> <input id="one" type="checkbox">
+<blockquote><label class="collapse" for="one"><tt>self</tt></label>
+<input id="one" type="checkbox">
 <div class="index_list">
 <div class="compat">
 <table>
@@ -56,7 +57,29 @@ if (window.name != "content")
 </table>
 </div>
 
-<p><tt>self</tt> 可用于标识当前代码块的调用实例。它总是返回 -1，在 <i>GameMaker Studio 2</i> 中解释为实例的唯一 ID。通常，你永远不需要使用此关键字，因为你可以使用其他关键字或函数更适当和有效地执行相同的任务，并且它是由于传统支持原因而维护。</p>
+<p><tt>self</tt> can be used to identify the calling instance of the current block of code, as it always the unique ID for the instance currently in scope. 比如：</p>
+
+<p class="code">var val = 100;<br>
+with (instance_create_layer(x, y, "Instances", obj_Fire))<br>
+&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;self.val = val;<br>
+&nbsp;&nbsp;}<br></p>
+
+<p>In this example you can see that we have a <i>local</i> variable
+called <tt>val</tt> and we want it to set the <i>instance</i>
+variable with the same name in the newly created object instance.
+To identify the instance variable correctly and tell <i>GameMaker
+Studio 2</i> to set it in the instance calling the code block, we
+use the <tt>self</tt> keyword. In most cases you can also use the
+<tt>id</tt> keyword instead of <tt>self</tt>, but <tt>self</tt>
+offers certain benefits. To start with, it is faster for the
+compiler to retrieve the instance ID value using <tt>self</tt>
+rather than <tt>id</tt>, as the <tt>id</tt> value goes through the
+instance lookup table. Secondly, for those people making
+extensions, it is very useful to ensure the correct scoping of
+variables, since it is possible that a project which uses an
+extension may have a global scope variable with the same name as a
+variable in the extension.</p>
 </div>
 <br>
 <label class="collapse" for="two"><tt>other</tt></label> <input id=
@@ -154,6 +177,11 @@ if (window.name != "content")
 <p>在这个例子中，函数 <tt>instance_nearest()</tt> 将返回 <tt>noone</tt> 或找到的距离最近的实例的唯一 ID。基本上，只要你想要检查一个实例，你就可以得到任何一个 <tt>noone</tt> 或返回唯一的实例 ID。</p>
 </div></blockquote>
 
+<p>It is worth noting that the keyword <tt><b>struct</b></tt> is a
+reserved keyword for possible future additions to GML and as such
+it cannot be used as a variable or script name, and it won't be
+colour coded in the IDE either.</p>
+
 <p><br>
 </p>
 </div>
@@ -167,7 +195,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

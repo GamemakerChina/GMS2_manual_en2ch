@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">sprite_add(fname, imgnumb, removeback, smooth,
 xorig, yorig);</p>
@@ -94,8 +94,8 @@ xorig, yorig);</p>
 <h3>描述</h3>
 
 <blockquote>
-<p>你可以使用此函数来将一张图片作为精灵添加进来，此函数将从外部资源（即图片文件的位置）加载这张图片。这张图片的个格式 <b>一定</b> 需要是 <tt>*.png</tt>, <tt>*.gif</tt> or <tt>*.jpg/jpeg</tt>此函数将会返回一个新的精灵索引，将来与此精灵有关的代码会用到此索引。If you use this function with HTML5 or are getting an image from an URL, this function will also generate an asynchronous event. See <a href=
-"../../../2_interface/1_editors/events/async_events.html">The Asynchronous Event</a> for more information.</p>
+<p>你可以使用此函数来将一张图片作为精灵添加进来，此函数将从外部资源（即图片文件的位置）加载这张图片。这张图片的个格式 <b>一定</b> 需要是 <tt>*.png</tt>, <tt>*.gif</tt> or <tt>*.jpg/jpeg</tt>此函数将会返回一个新的精灵索引，将来与此精灵有关的代码会用到此索引。如果你在HTML5上使用此函数，或是从一个URL得到的图片，此函数也会产生一个 <b>Image Loaded</b>异步事件。更多信息请查看 <a href=
+"../../../2_interface/1_editors/events/async_events.html">The Asynchronous Event</a>。</p>
 
 <p>所有被转变成动态精灵（即动画）的图片 - 除了 <tt>*.gif</tt> (请看下面) - 会变成长带状，(看下面的图片) ，每帧图片依次分布在这条长带上。并且 <b>精灵的宽度与长带的宽度一直。（次级图片也是一样的）</b>. <img class="center" src="spr_strip.png"></p>
 
@@ -111,6 +111,14 @@ xorig, yorig);</p>
 "sprite_collision_mask.html"><tt>sprite_collision_mask</tt></a>函数。</p>
 
 <div class="note"><b>注意:</b> 当你将一张精灵导入 <i>GameMaker Studio 2</i> 而之后又不再需要时，你必须使用 <a href="sprite_delete.html"><tt>sprite_delete</tt></a>函数将其删除，否则可能会使存储泄露。</div>
+
+<div class="note"><b>注意:</b> 在 <b>iOS</b>系统中，如果你正在从一个文件夹中加载文件，例如使用这样的路径： "<tt>Backgrounds/background1.png</tt>", 你不需要在这个路径中包含文件夹，只需提供文件的名字就行了。但在其它的平台中你必须在路径中包括文件夹。</div>
+
+<div class="note"><b>注意:</b> 在 <b>HTML5</b>中，如果你从一个可靠的服务器上加载图片，你可能需要设置跨域（cross-origin)类型，并且使用相对路径来代替绝对路径。See <a href=
+"../asynchronous%20functions/http_set_request_crossorigin.html"><tt> http_set_request_crossorigin</tt></a> for more details.</div>
+
+<div class="note"><b>注意</b>: 如果你从一个URL上加载精灵，那么它会被 <b>异步地</b> 加载并触发异步的 <a href=
+"../../../2_interface/1_editors/events/async_events.html">Image Loaded</a> 事件。</div>
 
 <div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 </blockquote>
@@ -142,7 +150,7 @@ xorig, yorig);</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

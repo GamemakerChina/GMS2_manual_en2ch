@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -33,7 +33,7 @@ if (window.name != "content")
 
 <h2 class="studio">Restores all purchases for the game.</h2>
 
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">iap_restore_all();</p>
 
@@ -50,9 +50,11 @@ if (window.name != "content")
 <p>Restores all purchases to their default status for the game and
 user. This would be applicable if (for example) the user has
 changed device or removed the title from their current device and
-has re-installed the title. This will trigger an <a href=
+has re-installed the title. This will trigger two <a href=
 "../../../2_interface/1_editors/events/async_events.html"><b>IAP
-Event</b></a>, of the type <tt>iap_ev_restore</tt>, and the ds_map
+Events</b></a>, with the first being of the type
+<tt>iap_ev_restore</tt>, and the second of the type
+<tt>iap_ev_purchase</tt>. For the restore event, the ds_map
 <tt>iap_data</tt> will have the following extra key which can then
 be checked to make sure that the products and purchases have been
 successfully restored:</p>
@@ -65,10 +67,9 @@ some kind of error.</li>
 </ul>
 </blockquote>
 
-<p><i><b>NOTE:</b> Only the Mac and iOS stores currently provide
-restore functionality.</i><br>
-<br>
-</p>
+<p>For the Purchase event, the <tt>iap_data</tt> map will contain
+the same information as that which is returned when you call
+<a href="iap_acquire.html"><tt>iap_acquire</tt></a>.</p>
 
 <p><br>
 </p>
@@ -92,7 +93,7 @@ for the game on the device running it, and it will trigger an
 "iap_acquire.html">iap_acquire</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

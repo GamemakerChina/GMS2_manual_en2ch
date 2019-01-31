@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,18 +29,40 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">display_set_gui_maximise</h1>
+<h2>display_set_gui_maximise</h2>
 
-<h2 class="studio">缩放GUI为指定的长宽。</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio"><b>Syntax:</b>
-</h3>
+<h3>描述</h3>
 
-<p class="code">display_set_gui_maximise(<i>xscale, yscale,
-xoffset, yoffset</i>);</p>
+<blockquote>
+<p>这个函数最大化GUI层，相对于屏幕尺寸进行缩放和偏移设置，而不是相对于默认的应用表面层的位置和尺寸。默认情况下，GUI层与应用表面层分辨率比例是1:1，绘制位置也是在表面层的(0,0)。然而你不想总是这种情况，所以可以设置为相对于屏幕和窗口的绝对位置(0,0)。函数提供什么参数，决定于想要在GUI层表达什么样的效果。简单的无参数调用这个函数，GUI层将被绘制在屏幕或窗口的(0,0)位置，宽度和高度将被拉伸适应整个区域：</p>
+
+<p class="code">display_set_gui_maximise();</p>
+
+<p>然而，也可以为GUI层设置 <i>缩放因数</i> ，缩放的宽度取决于这个值的大小。记住，GUI层一向是主动适应显示器或游戏窗口的大小，或者应用表面层，所以设置这个为除1之外的任何其它值，基本是根据它们的宽高缩放像素值。如果显示器是1024x768 ，设置缩放因数为 0.5，GUI层将是显示器大小的一半，这会增加一倍的像素。</p>
+
+<p class="code">display_set_gui_maximise(0.5, 0.5);</p>
+
+<p>用这种方式设置的值也包括在显示器或游戏窗口中GUI绘制的位置，可以通过提供一对偏移值去“移动或改变”这个(0,0)位置。</p>
+
+<p class="code">var pos = application_get_position();<br>
+display_set_gui_maximise(0.5, 0.5, pos[0], pos[1]);</p>
+
+<p>最后，你可以尝试将将缩放因数设置为-1，重置GUI层。这个操作会再次设置以1:1的比例，(0,0)的位置，相对于应用表面层作出改变，而不是显示器或窗口。</p>
+
+<p class="code">display_set_gui_maximise(-1, -1);</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">display_set_gui_maximise(<i>xscale, yscale,
+xoffset, yoffset</i>);</p>
 
 <div>
 <table>
@@ -74,62 +96,42 @@ xoffset, yoffset</i>);</p>
 <p><br>
 </p>
 
-<p><b>返回：</b>N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio"><b>描述</b>
-</h3>
-
-<p>这个函数最大化GUI层，相对于屏幕尺寸进行缩放和偏移设置，而不是相对于默认的应用表面层的位置和尺寸。默认情况下，GUI层与应用表面层分辨率比例是1:1，绘制位置也是在表面层的(0,0)。然而你不想总是这种情况，所以可以设置为相对于屏幕和窗口的绝对位置(0,0)。<br><br>函数提供什么参数，决定于想要在GUI层表达什么样的效果。简单的无参数调用这个函数，GUI层将被绘制在屏幕或窗口的(0,0)位置，宽度和高度将被拉伸适应整个区域。</p>
-
-<p class="code">display_set_gui_maximise();</p>
-
-<p><br>
-<br>
-然而，也可以为GUI层设置 <i>缩放因数</i> ，缩放的宽度取决于这个值的大小。记住，GUI层一向是主动适应显示器或游戏窗口的大小，或者应用表面层，所以设置这个为除1之外的任何其它值，基本是根据它们的宽高缩放像素值。如果显示器是1024x768 ，设置缩放因数为 0.5，GUI层将是显示器大小的一半，有效的增加了一倍的像素（翻译修改建议 @断水）。</p>
-
-<p class="code">display_set_gui_maximise(0.5, 0.5);</p>
-
-<p><br>
-<br>
-用这种方式设置的值也包括在显示器或游戏窗口中GUI绘制的位置，可以通过提供一对偏移值去“移动或改变”这个(0,0)位置。</p>
-
-<p class="code">var pos = application_get_position();<br>
-display_set_gui_maximise(0.5, 0.5, pos[0], pos[1]);</p>
-
-<p><br>
-<br>
-最后，你可以尝试将将缩放因数设置为-1，重置GUI层。这个操作会再次设置以1:1的比例，(0,0)的位置，相对于应用表面层作出改变，而不是显示器或窗口。</p>
-
-<p class="code">display_set_gui_maximise(-1, -1);</p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">display_set_gui_size(display_get_width() / 2,
-display_get_height() / 2;<br>
-display_set_gui_maximise(2, 2, 0, 0);<br></p>
+display_get_height() / 2);<br>
+display_set_gui_maximise(2, 2, 0, 0);</p>
 
+<blockquote>
 <p>上述代码将锁定GUI绘制事件，以指定的宽度，使用那个比例缩放所有的分量以适应显示器。</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
-<div style="float:left">返回: <a href="index.html">Windows and Views</a></div>
+<div style="float:left">上一页:  <a href="index.html">The Display</a></div>
 
 <div style="float:right">下一页t: <a href=
 "display_get_gui_width.html">display_get_gui_width</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,7 +36,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><i>GameMaker Studio 2</i>有许多不同的许可信息类型，选择哪一个很大程度上决定于定位的受众。下面是每一种许可信息的详细说明。</p>
+<p>你可以获取 <i>GameMaker Studio 2</i> 的各种不同的许可类型，其选择方式在很大程度上取决于你的输出目标、你只是想做一些有趣的游戏又或者是希望出售游戏。下面是每一种许可信息的详细说明。</p>
 
 <blockquote><a name="trial" id="trial"></a> <label class="collapse"
 for="a">试用版（Trial）</label> <input id="a" type="checkbox">
@@ -93,6 +93,10 @@ for="a">试用版（Trial）</label> <input id="a" type="checkbox">
 <li>你不可以导入旧版<i>GameMaker Studio</i>的工程</li>
 
 <li>你不可以从YYZ工程包进行导入</li>
+
+<li>你不可以更改 YOYO Games 启动界面</li>
+
+<li>你不可以禁用IDE匿名分析</li>
 </ul>
 </blockquote>
 
@@ -302,6 +306,8 @@ for="a">试用版（Trial）</label> <input id="a" type="checkbox">
 <td>draw_skeleton_collision</td>
 <td>
 </td>
+<td>
+</td>
 </tr>
 
 <tr>
@@ -365,19 +371,36 @@ for="a">试用版（Trial）</label> <input id="a" type="checkbox">
 </tr>
 </table>
 </div></blockquote>
+</div>
+<br>
+<a name="creator" id="creator"></a> <label class="collapse" for=
+"b">创造者（Creator）</label> <input id="b" type="checkbox">
+<div class="index_list">
+<p>使用 <b>创造者（Creator）</b> 版本的 <i>GameMaker Studio 2</i>，除了启动界面、禁用匿名IDE统计和使用YYC编译之外，大多数试用版许可的限制 (参见上文)将被移除。只要购买你就可以编译项目到下列目标平台 <i>之一</i> ：</p>
 
-<div class="note"><b>重要！</b> 如果你已经使用一个 <i>GameMaker Studio 2</i> 的试用版许可证，然后买了另一个许可证（桌面版、移动版、UWP、网页版或者控制台），然后你<b>可能</b>需要登出 IDE，接着重启 <i>GameMaker Studio 2</i> 之后再次登录以确保新的许可证正确应用（尽管这应该自动生效）。你可以从 <a href=
-"../2_quick_start/menus/file_menu.html">文件菜单</a> 中登出。</div>
+<blockquote>
+<ul>
+<li><span class="notranslate">Windows</span>
+</li>
+
+<li>Mac OS</li>
+</ul>
+</blockquote>
+
+<p>可用的目标平台将取决于你购买的IDE版本 (<i>Creator for macOS</i> 或 <i>Creator for Windows</i>) 并使用 VM (运行器+解释代码) 运行你的游戏。有关安装信息请参阅 <a href="5_required_sdks.html">必须的SDK</a> 或 <a href=
+"http://help.yoyogames.com/hc/en-us/sections/207157668" target=
+"_blank">桌面目标平台</a>。</p>
 </div>
 <br>
 <a name="desktop" id="desktop"></a> <label class="collapse" for=
-"b">桌面端</label> <input id="b" type="checkbox">
+"c">桌面端</label> <input id="c" type="checkbox">
 <div class="index_list">
 <p>对于GMS2的<b>桌面版</b><i></i>，试用版的所有限制（如上）都被解除了，你可以编译到如下的桌面目标平台：</p>
 
 <blockquote>
 <ul>
-<li>Windows</li>
+<li><span class="notranslate">Windows</span>
+</li>
 
 <li>Mac OS</li>
 
@@ -391,21 +414,32 @@ target="_blank">桌面目标平台</a>的技术支持部分。</p>
 </div>
 <br>
 <a name="web" id="web"></a> <label class="collapse" for=
-"c">Web（网页端）</label> <input id="c" type="checkbox">
+"d">Web（网页端）</label> <input id="d" type="checkbox">
 <div class="index_list">
 <p>对于<i>GameMaker Studio 2</i>的 <b>网页（Web，译者注：这里是指针对移动端目标平台的版本，而非安装到移动端的GMS2软件，后面也一样，都是针对的都是目标平台，而非对应平台上的gms2软件）</b>版本，所用试用版的限制将会解除（如上），你可以编译到<b>HTML5</b>目标平台。游戏使用 JavaScript 编译。你可以从YoYo游戏知识库找到更多的信息：<a href=
 "https://help.yoyogames.com/hc/en-us/articles/115000992307" target=
 "_blank">Web（HTML5）设置</a>。</p>
 </div>
 <br>
+<a name="fire" id="fire"></a> <label class="collapse" for=
+"e">Amazon Fire</label> <input id="e" type="checkbox">
+<div class="index_list">
+<p>对于 <b>Amazon Fire</b> 版本 <i>GameMaker Studio 2</i>，所有试用版的限制将会解除（如上），你可以编译到 <b>Amazon Fire</b> 目标平台。游戏使用 <i>Android</i> SDK 编译，可以使用 <b>VM</b> (使用一个运行器来解释代码) 或者 <b>YYC</b> (YoYo Compiler 创建本地代码). 更多信息请参阅 <a href=
+"5_required_sdks.html">必需的SDK</a> 或 helpdesk 上关于 <a href=
+"https://help.yoyogames.com/hc/en-us/sections/115000381071" target=
+"_blank">Amazon Fire</a> 的许可。</p>
+</div>
+<br>
 <a name="mobile" id="mobile"></a> <label class="collapse" for=
-"d">Mobile（移动端）</label> <input id="d" type="checkbox">
+"f">Mobile（移动端）</label> <input id="f" type="checkbox">
 <div class="index_list">
 <p>对于 <i>GameMaker Studio 2</i> 的<b>移动端</b>版本，所有试用版的限制都将解除（如上），你可以编译项目到下面的目标平台：</p>
 
 <blockquote>
 <ul>
 <li>Android</li>
+
+<li>Amazon Fire</li>
 
 <li>iOS</li>
 </ul>
@@ -417,7 +451,7 @@ target="_blank">移动平台</a> 的知识库部分。</p>
 </div>
 <br>
 <a name="uwp" id="uwp"></a> <label class="collapse" for=
-"e">UWP</label> <input id="e" type="checkbox">
+"g">UWP</label> <input id="g" type="checkbox">
 <div class="index_list">
 <p>对于<i>GameMaker Studio 2</i>  的<b>UWP</b>版本，所有试用版的限制（如上）将被解除，你可以将项目编译为UWP兼容的可执行文件。可以将这些可执行文件配置在三个UWP平台之一运行：</p>
 
@@ -427,7 +461,7 @@ target="_blank">移动平台</a> 的知识库部分。</p>
 
 <li>Windows 10 移动版</li>
 
-<li>Xbox One</li>
+<li>XBox One</li>
 </ul>
 </blockquote>
 
@@ -437,29 +471,36 @@ target="_blank">移动平台</a> 的知识库部分。</p>
 </div>
 <br>
 <a name="console" id="console"></a> <label class="collapse" for=
-"f">控制台</label> <input id="f" type="checkbox">
+"h">控制台</label> <input id="h" type="checkbox">
 <div class="index_list">
 <p>对于 <i>GameMaker Studio 2</i> 的 <b>控制台</b> 版本，所有试用版的限制（如上）都将解除，你可以为以下目标平台编译项目：</p>
 
 <blockquote>
 <ul>
-<li>Xbox One</li>
+<li>XBox One</li>
 
 <li>PlayStation 4</li>
+
+<li>Nintendo Switch</li>
 </ul>
 </blockquote>
 
-<p>每个控制台目标平台都有两个编译选项，一个是使用运行器和解释代码的<b>VM（虚拟机）</b>，另一个是创建本机代码和编译可执行文件的<b>YYC</b>（YoYo编译器）。请注意，YYC选项需要额外安装。有关设置的详细信息，请参阅 <a href="5_required_sdks.html">所需 SDK</a> 部分或 者 <a href=
-"https://help.yoyogames.com/hc/en-us/sections/115000309048" target=
-"_blank">控制台平台</a> 的知识库。</p>
+<p>每个控制台目标平台都有两个编译选项，一个是使用运行器和解释代码的<b>VM（虚拟机）</b>，另一个是创建本机代码和编译可执行文件的<b>YYC</b>（YoYo编译器）。请注意，YYC选项需要额外安装。更多信息请参阅  <a href="5_required_sdks.html">必需的SDK</a>。</p>
+
+<div class="note"><b>重要!</b> 由于与控制台导出相关的各种保密协议的限制，在 <i>GameMaker Studio 2</i> 手册中没有关于为这些目标平台设置或编程的信息. 一旦你注册成为所选平台的开发者，请使用你的 <a href=
+"https://account.yoyogames.com/report-bug" target="_blank">YoYo Account</a> 账户登录 Helpdesk 获取相关文档.</div>
 </div>
+<br>
 <a name="education" id="education"></a> <label class="collapse"
-for="h">教育</label> <input id="h" type="checkbox">
+for="i">教育</label> <input id="i" type="checkbox">
 <div class="index_list">
 <p><i>GameMaker Studio 2</i> 也可以使用于大学教育。有关这方面的更多信息，请通过<a href="https://www.yoyogames.com/education"
 target="_blank">YoYo 教育门户</a>联系YoYo游戏。</p>
 </div>
 <br></blockquote>
+
+<div class="note"><b>重要!</b> 如果你为 <i>GameMaker Studio 2</i> 使用了试用许可，并且购买了其他许可之一 (Creator, 桌面端, Amazon Fire, 移动端, UWP, 网页端或控制台)  那么你 <b>需要在 <i>GameMaker Studio 2</i> IDE 登出账号并重启</b>. 当你重启程序并重新登录时，新的许可将会被应用. 你可以从 <a href=
+"../2_quick_start/menus/file_menu.html">文件菜单</a> 中登出。</div>
 
 <p><br>
 </p>
@@ -475,7 +516,7 @@ target="_blank">YoYo 教育门户</a>联系YoYo游戏。</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

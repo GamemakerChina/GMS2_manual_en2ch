@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,19 +38,16 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to retrieve the timing method to be
-used for rendering your game. The method can be one of the
-constants listed below.</p>
+<p>此函数可被用来返回渲染你的游戏的计时方法。此方法可能是下列的常量之一。</p>
 
-<p>For more information on the different timing methods, please see
-<a href=
-"display_set_timing_method.html"><tt>display_set_timing_method()</tt></a>.</p>
+<p>有关更多不同的计时方法，请参阅 <a href=
+"display_set_timing_method.html"><tt>display_set_timing_method()</tt></a>。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">display_get_timing_method();</p>
 
@@ -70,13 +67,12 @@ constants listed below.</p>
 
 <tr>
 <td>tm_sleep</td>
-<td>The sleep margin value is the main timing method</td>
+<td>休眠时长的值是主要的计时方法</td>
 </tr>
 
 <tr class="alt">
 <td>tm_countvsyncs</td>
-<td>Vsync timing is the main timing method (default for all
-supported platforms)</td>
+<td>垂直同步计时是主要的计时方法（所有支持的平台的默认选项）</td>
 </tr>
 </table>
 </div>
@@ -89,9 +85,7 @@ supported platforms)</td>
 <p class="code">if display_get_timing_method() != tm_sleep<br>{<br>display_set_timing_method(tm_sleep);<br>if display_get_sleep_margin() != 20<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;display_set_sleep_margin(20);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 
 <blockquote>
-<p>The above code will check the timing method and then if it's not
-set to <tt>tm_sleep</tt> it will be set to that and the sleep argin
-set to 20.</p>
+<p>上述代码将检查计时方法，如果它不是<tt>tm_sleep</tt> ，那么它将被设置为后者，并将休眠时长设为20。</p>
 </blockquote>
 
 <p><br>

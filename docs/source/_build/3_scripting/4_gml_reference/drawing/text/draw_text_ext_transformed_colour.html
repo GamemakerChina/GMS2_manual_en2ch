@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,18 +29,48 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">draw_text_ext_transformed_colour</h1>
+<h2>draw_text_ext_transformed_colour</h2>
 
-<h2 class="studio">Draws a string with any given colour, scale,
-angle or spacing attributes that you define.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>描述</h3>
 
-<p class="code">draw_text_ext_transformed_colour(x, y, string, sep,
-w, xscale, yscale, angle, c1, c2, c3, c4, alpha);</p>
+<blockquote>
+<p>This function is a combination of the base <a href=
+"draw_text.html"><tt>draw_text</tt></a> function with the <a href=
+"draw_text_ext.html"><tt>draw_text_ext</tt></a>, <a href=
+"draw_text_transformed.html"><tt>draw_text_transformed</tt></a> and
+<a href="draw_text_colour.html"><tt>draw_text_colour</tt></a>
+functions. As such, this is the most general of all functions for
+drawing text and gives a large amount of flexibility when drawing.
+Note that the "width" argument is based on a scale of 1, so if the
+scale is different, this value should be changed proportionally.
+For example, if the base width for a line break is 300 and you set
+the scale to 2, then the text will appear wrong, over-running the
+given width. Instead you should have set the width to 150 to
+compensate the scaling.</p>
+
+<div class="note"><b>NOTE:</b> Gradient blending is not available
+for the HTML5 target unless WebGL is enabled, although you can
+still set the blending colours and it will blend the font with the
+first given colour. However all blending in this way creates a
+duplicate font which is then stored in the cache and used when
+required, which is far from optimal and if you use multiple colour
+changes it will slow down your games performance. You can set the
+font cache size to try and limit this should it be necessary using
+the function <a href=
+"../../fonts/font_set_cache_size.html"><tt>font_set_cache_size</tt></a>.</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">draw_text_ext_transformed_colour(x, y, string, sep,
+w, xscale, yscale, angle, c1, c2, c3, c4, alpha);</p>
 
 <div>
 <table>
@@ -86,7 +116,7 @@ break.</td>
 </tr>
 
 <tr>
-<td>angle</td>
+<td>角度</td>
 <td>The angle of the text.</td>
 </tr>
 
@@ -120,25 +150,14 @@ break.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>This function is a combination of the base <a href=
-"draw_text.html"><tt>draw_text</tt></a> function with the <a href=
-"draw_text_ext.html"><tt>draw_text_ext</tt></a>, <a href=
-"draw_text_transformed.html"><tt>draw_text_transformed</tt></a> and <a href="draw_text_colour.html"><tt>draw_text_colour</tt></a> functions. As such, this is the most general of all functions for drawing text and gives a large amount of flexibility when drawing. Note that the "width" argument is based on a scale of 1, so if the scale is different, this value should be changed proportionally. For example, if the base width for a line break is 300 and you set the scale to 2, then the text will appear wrong, over-running the given width. Instead you should have set the width to 150 to compensate the scaling.<br><br><i><b>NOTE:</b> Gradient blending is not available for the HTML5 target unless WebGL is enabled, although you can still set the blending colours and it will blend the font with the first given colour. However all blending in this way creates a duplicate font which is then stored in the cache and used when required, which is far from optimal and if you use multiple colour changes it will slow down your games performance. You can set the font cache size to try and limit this should it be necessary using the function <a href=
-"../../fonts/font_set_cache_size.html"><tt>font_set_cache_size</tt></a>.</i><br>
-
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">draw_set_halign(fa_center);<br>
 draw_set_valign(fa_middle);<br>
@@ -146,26 +165,33 @@ draw_text_ext_transformed_colour(200, 200, "My name is" +
 global.name +".", 20, 200, 0.5, 0.5, 180, c_blue, c_blue, c_navy,
 c_navy, 1);<br></p>
 
+<blockquote>
 <p>This will draw the given text with a blue to dark blue downward
 gradient, at position (200,200) in the room, rotated to be upside
 down and at half the normal point size of the font. There will be
 20 pixels between each line should there be more than one line
 drawn and each line will have a maximum width of 200 pixels.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Drawing Text</a></div>
 
 <div style="float:right">下一页: <a href=
 "draw_set_font.html">draw_set_font</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

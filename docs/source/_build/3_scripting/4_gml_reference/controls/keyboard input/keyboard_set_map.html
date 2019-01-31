@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,16 +29,39 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">keyboard_set_map</h1>
+<h2>keyboard_set_map</h2>
 
-<h2 class="studio">Maps one key on the keyboard to another.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3><b>描述</b>
+</h3>
 
-<p class="code">keyboard_set_map(key1, key2);</p>
+<blockquote>
+<p>Sometimes when making a game you may wish one key to do the same
+as another. For example many people use the keys WASD for movement,
+but then many people <i>also</i> use the arrow keys! So, what to
+do? Well, you <i>could</i> code the movement system twice, but that
+is a bit complicated and thankfully redundant as this function
+permits you to "map" one key to another and so any input from
+either key will be interpreted as the same. To do this you choose a
+key that you want to map (key2 - this will be the key that you
+write the code for) and a key that you want it to be mapped
+<i>to</i> (key1). After that, keypresses to either key will be
+interpreted by <i>GameMaker Studio 2</i> as coming from key2. You
+can also use this function to design a system where the user can
+define their own keys for playing by simply mapping the user input
+key to the key that you have coded into the game.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3><b>语法：</b>
+</h3>
+
+<p class="code">keyboard_set_map(key1, key2);</p>
 
 <div class="param">
 <table>
@@ -62,55 +85,45 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回:</b> 布尔值</p>
+<h3><b>Returns:</b>
+</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3><b>例如：</b>
+</h3>
 
-<p>Sometimes when making a game you may wish one key to do the same
-as another. For example many people use the keys WASD for movement,
-but then many people <i>also</i> use the arrow keys! So, what to
-do? Well, you <i>could</i> code the movement system twice, but that
-is a bit complicated and thankfully redundant as this function
-permits you to "map" one key to another and so any input from
-either key will be interpreted as the same. To do this you choose a
-key that you want to map (key2 - this will be the key that you
-write the code for) and a key that you want it to be mapped
-<i>to</i> (key1). After that, keypresses to either key will be
-interpreted by <i>GameMaker Studio 2</i> as coming from key2. You
-can also use this function to design a system where the user can
-define their own keys for playing by simply mapping the user input
-key to the key that you have coded into the game.<br>
-<br></p>
+<p class="code">keyboard_set_map(ord("A"), vk_left);</p>
 
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
-
-<p class="code">keyboard_set_map(ord("A"), vk_left);<br></p>
-
+<blockquote>
 <p>The above example code will map the "A" key to the left arrow
 key. This means that the player can use either the "A" <i>or</i>
 the left arrow key, and that all code written for the left arrow
 will also respond to the "A" key being used instead.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Keyboard Input</a></div>
 
 <div style="float:right">下一页: <a href=
 "keyboard_get_map.html">keyboard_get_map</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

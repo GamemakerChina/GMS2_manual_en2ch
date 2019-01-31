@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>buffer_save_async</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">buffer_save_async(buffer, filename, offset,
 size);</p>
@@ -79,11 +79,32 @@ size);</p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can save part of the contents of a buffer to a file, ready to be read back into memory using the <a href=
-"buffer_load.html"><tt>buffer_load</tt></a> function (or any of the other functions for loading buffers). The "offset" defines the start position within the buffer for saving (in bytes), and the "size" is the size of the buffer area to be saved from that offset onwards (also in bytes). This function works asynchronously, and so the game will continue running while being saved. This function will trigger an <a href=
-"../../../2_interface/1_editors/events/async_events.html">Asynchronous Load/Save Event</a> where you can check to ensure that the save has occurred correctly.<br><br>Note that you can save out multiple buffers in one by calling this function multiple times between calls to <a href=
-"buffer_async_group_begin.html"><tt>buffer_async_group_begin()</tt></a> and <a href=
-"buffer_async_group_end.html"><tt>buffer_async_group_end()</tt></a> (see those functions for further information on this).<br><br>The function returns a unique ID value which can then be used to check the asynchronous event <tt>async_load</tt> ID value, as shown in the extended example below. The <tt>async_load</tt> map in the event will have the following two key/value pairs:</p>
+<p>With this function you can save part of the contents of a buffer
+to a file, ready to be read back into memory using the <a href=
+"buffer_load.html"><tt>buffer_load</tt></a> function (or any of the
+other functions for loading buffers). The "offset" defines the
+start position within the buffer for saving (in bytes), and the
+"size" is the size of the buffer area to be saved from that offset
+onwards (also in bytes). This function works asynchronously, and so
+the game will continue running while being saved, and all files
+saved using this function will be placed in a "default" folder.
+This folder does <i>not</i> need to be included in the filename as
+it is added automatically by GameMaker. For example the filename
+path "<tt>Data\Player_Save.sav</tt>" would actually be saved to
+"<tt>default\Data\Player_Save.sav</tt>". However, if you then load
+the file using the function <a href=
+"buffer_load_async.html"><tt>buffer_load_async()</tt></a>, you do
+not need to supply the "default" part of the path either (but any
+other file function <i>will</i> require it, except on consoles Xbox
+One, PS4 and Nintendo Switch).</p>
+
+<p>The function will return a unique ID value and trigger an
+<a href=
+"../../../2_interface/1_editors/events/async_events.html">Asynchronous
+Load/Save Event</a> where you can use the returned ID to check the
+<tt>async_load</tt> ID value, as shown in the extended example
+below. The <tt>async_load</tt> map in the event will have the
+following two key/value pairs:</p>
 
 <blockquote>
 <ul>
@@ -93,6 +114,13 @@ save function.</li>
 <li><b>"status":</b> 如果正确保存/加载数据，则返回 <tt>true</tt>，否则返回 <tt>false</tt>。</li>
 </ul>
 </blockquote>
+
+<p>Note that you can save out multiple buffers in one by calling
+this function multiple times between calls to <a href=
+"buffer_async_group_begin.html"><tt>buffer_async_group_begin()</tt></a>
+and <a href=
+"buffer_async_group_end.html"><tt>buffer_async_group_end()</tt></a>
+(see those functions for further information on this).</p>
 
 <p><br>
 <br>
@@ -139,7 +167,7 @@ debug message if there has been any issues.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

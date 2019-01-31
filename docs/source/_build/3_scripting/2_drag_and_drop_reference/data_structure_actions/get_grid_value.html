@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,16 +40,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can set a specific cell within the grid
-data structure to a value. You supply the variable that holds the
-grid index (as returned by the action <a href=
-"create_grid.html">Create Grid</a>) and then give the x and y
-position (the column and row) for the cell to set, and then finally
-the value for that cell. You must also set a target variable (which
-can be flagged as a temporary local variable) to store the returned
-cell value, and the value can be any valid data type. Note that the
-x and y position for the cell must be whole integers within the
-bounds of the grid.</p>
+<p>通过此动作，你可以获取网格数据结构中特定单元格的值。提供保存网格索引的变量（由<a href=
+"create_grid.html">创建网格</a>动作返回） ，然后给出要获取的单元格的x和y位置（列和行）。你还必须设置一个目标变量（可以标记为临时的局部变量）来存储返回的单元格值，该值可以是任何有效的数据类型。请注意，单元格的x和y位置必须是网格边界内的整数。</p>
 </blockquote>
 
 <p><br>
@@ -57,7 +49,7 @@ bounds of the grid.</p>
 
 <h3>动作语法：</h3>
 <img class="center" src="images/a_ds_get_grid_value.png" alt=
-"Get Grid Value Syntax">
+"获取网格值的语法">
 <p><br>
 </p>
 
@@ -72,22 +64,22 @@ bounds of the grid.</p>
 
 <tr>
 <td>网格</td>
-<td>The index (stored in a variable) of the grid to get</td>
+<td>用于获取值的网格索引（存储在变量中）</td>
 </tr>
 
 <tr class="alt">
 <td>x</td>
-<td>The cell position along the x axis to get (the column)</td>
+<td>沿x轴的单元格位置（列）</td>
 </tr>
 
 <tr>
 <td>y</td>
-<td>The cell position along the y axis to get (the row)</td>
+<td>沿y轴的单元格位置（行）</td>
 </tr>
 
 <tr class="alt">
 <td>目标</td>
-<td>The target variable to use to store the returned value</td>
+<td>用于存储返回值的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -97,12 +89,8 @@ bounds of the grid.</p>
 
 <h3>例如：</h3>
 <img class="center" src="images/e_ds_get_grid_value.png" alt=
-"Get Grid Value Example">
-<blockquote>The above action block code gets the value in the grid
-stored in a global variable that corresponds to the instances
-position within the room. This value is then checked and if it is
-an instance ID value, the calling instance is
-destroyed.</blockquote>
+"获取网格值的示例">
+<blockquote>上述动作块代码获取存储在全局变量中的网格中的值，坐标对应着房间内的实例的位置。然后检查该值，如果它是实例ID，则销毁这个实例。</blockquote>
 
 <p><br>
 </p>
@@ -111,14 +99,13 @@ destroyed.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Data Structure Actions</a></div>
+<div style="float:left">返回： <a href="index.html">数据结构动作</a></div>
 
-<div style="float:right">next: <a href="clear_grid.html">Clear
-Grid</a></div>
+<div style="float:right">下一页： <a href="clear_grid.html">清除网格</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,13 +2,14 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>json_encode</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../default.css" type=
@@ -32,7 +33,40 @@ if (window.name != "content")
 <h2>json_encode</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>SON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于读取和写入，适用于人和机器。它建立在两个基本结构上：</p>
+
+<ul>
+<li>一组 “名称 / 值” 对，在 <i>GameMaker Studio 2</i> 中称为 <a href=
+"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，但也称为 “字典” 或 “对象”。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>一个有序的值列表，在 <i>GameMaker Studio 2</i> 中称为 <a href=
+"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>，但这也可以称为 “数组” 或 “队列”。</li>
+</ul>
+
+<p><tt>json_encode</tt> takes a ds_map that you have previously
+created and encoded as a JSON string which you can then use as (for
+example) part of an <a href=
+"../asynchronous%20functions/http_post_string.html"><tt>http_post_string()</tt></a>
+call, or so it can be stored externally, written to a file.</p>
+
+<div class="note"><b>NOTE</b>: The hierarchal functionality of JSON
+is available through special ds_map and ds_list functions, so you
+are able to encode sub-lists and maps.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">json_encode(map)</p>
 
@@ -56,37 +90,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回:</b> string（字符串）</p>
+<h3>Returns:</h3>
+
+<p class="code">string</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>SON（JavaScript Object Notation）是一种轻量级的数据交换格式，易于读取和写入，适用于人和机器。它建立在两个基本结构上：</p>
-
-<blockquote>
-<ul>
-<li>一组 “名称 / 值” 对，在 <i>GameMaker Studio 2</i> 中称为 <a href=
-"../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>，但也称为 “字典” 或 “对象”。</li>
-
-<li>一个有序的值列表，在 <i>GameMaker Studio 2</i> 中称为 <a href=
-"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>，但这也可以称为 “数组” 或 “队列”。</li>
-</ul>
-</blockquote>
-
-<p><tt>json_encode</tt> 采用你之前创建的 ds_map 并编码为 JSON 字符串，然后你可以将其用作（例如） <a href=
-"../asynchronous%20functions/http_post_string.html"><tt>http_post_string()</tt></a> 调用的一部分，或者可以将其存储在外部，写入文件。<br><br><i><b>注意：</b> JSON 的层级函数可通过特殊的 ds_map 和 ds_list 函数获得，因此你可以对子列表和映射进行编码。</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">var hiscore_map, i, str;<br>hiscore_map = ds_map_create();<br>for (i = 0; i &lt; 10; i ++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;ds_map_add(name[i], score[i]);<br>&nbsp;&nbsp;&nbsp;}<br>str = json_encode(hiscore_map);<br>get[0] = http_post_string("http://www.angusgames.com/game?game_id=" + string(global.game_id), str)<br>ds_map_destroy(hiscore_map);</p>
 
+<blockquote>
 <p>上面的代码创建了一个 ds_map，然后循环遍历 name 和 score 数组，将每个键 / 值对添加到新映射中。 接下来，使用 <tt>json_encode</tt> 对此映射进行编码，并将其作为字符串存储在变量 “str” 中。 然后使用 <tt>http_post_string</tt> 将此字符串发送到 Web 服务器，并销毁 ds_map 以防止内存泄漏，因为不再需要它。</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -97,12 +114,12 @@ if (window.name != "content")
 <div class="clear">
 <div style="float:left">上一页: <a href="index.html">文件处理</a></div>
 
-<div style="float:right">下一页: <a href=
-"json_decode.html">json_decode()</a></div>
+<div style="float:right">Next: <a href=
+"json_decode.html">json_decode</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,13 +32,23 @@ if (window.name != "content")
 <h2>rectangle_in_triangle</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">rectangle_in_triangle(sx1, sy1, sx2, sy2, dx1, dy1,
-dx2, dy2, dx3, dy3);</p>
+<h3>描述</h3>
+
+<blockquote>
+<p>This function will check a rectangular area that you define to see if it is either not in collision, completely within the destination bounds, or if it is simply touching, a defined triangular area. If they are not touching at all the function will return 0, if the source is completely within the destination it will return 1, and if they are simply overlapping then it will return 2. 你可以在下图看到： <img class="center"
+src="images/rectangle_in_triangle.png"></p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">rectangle_in_triangle(sx1, sy1, sx2, sy2, dx1, dy1,
+dx2, dy2, dx3, dy3);</p>
 
 <div class="param">
 <table>
@@ -110,33 +120,23 @@ check.</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real.</p>
+<h3>Returns:</h3>
+
+<p class="code">实数</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>This function will check a rectangular area that you define to
-see if it is either not in collision, completely within the
-destination bounds, or if it is simply touching, a defined
-triangular area. If they are not touching at all the function will
-return 0, if the source is completely within the destination it
-will return 1, and if they are simply overlapping then it will
-return 2. The image below illustrates this:<br>
-<img class="center" src="images/rectangle_in_triangle.png"></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">var inst = instance_nearest(x, y, obj_Player);<br>if instance_exists(inst)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var x1 = x + lengthdir_x(100, image_angle - 45);<br>&nbsp;&nbsp;&nbsp;var y1 = y + lengthdir_y(100, image_angle - 45);<br>&nbsp;&nbsp;&nbsp;var x2 = x + lengthdir_x(100, image_angle + 45);<br>&nbsp;&nbsp;&nbsp;var y2 = y + lengthdir_y(100, image_angle + 45);<br>&nbsp;&nbsp;&nbsp;if rectangle_in_triangle(inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom, x, y, x1, y1, x2, y2) == 1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can_see = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code uses the <tt>rectangle_in_triangle</tt> function
 as a "cone of vision" to check for an instance of "obj_player". If
 the full bounding box is within the given triangular area, it will
 set a variable to <tt>true</tt>.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -152,7 +152,7 @@ set a variable to <tt>true</tt>.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

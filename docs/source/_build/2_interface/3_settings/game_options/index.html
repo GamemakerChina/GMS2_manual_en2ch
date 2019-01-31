@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -53,7 +53,7 @@ if (window.name != "content")
 <li style="list-style: none"><br>
 </li>
 
-<li><b>每秒游戏帧数(FPS)</b>： 此值设置 <i>GameMaker Studio 2</i> 在运行时应尝试保持游戏的每秒帧数限制。此值表示游戏循环将在一秒钟内运行的次数（单个游戏循环被视为单个 “帧”）并设置为默认值 30，尽管通常也使用 60。关于哪个房间速度是理想的，有很多争论，但实际的答案取决于你正在制作什么类型的游戏、房间的大小、实例的数量以及代码的密集程度。例如，如果你有一个大房间和 30 的房间速度，游戏可能会显得 “波涛汹涌”，因为你正在看的区域越大，眼睛就越容易感知低房间速度，但是如果游戏密集然后将房间速度设置为 100 可能导致游戏 “滞后”，因为 fps 由于处理量的增加而下降。所以要注意这个值，并尝试始终根据游戏需要调整它。</li>
+<li><b>每秒游戏帧数(FPS)</b>： 此值设置 <i>GameMaker Studio 2</i> 在运行时应尝试保持游戏的每秒帧数限制。This value represents the number of times that the game loop will run in one second (a single game loop is considered a single "frame") and is set to a default value of 60, although 30 is often used too. 关于哪个房间速度是理想的，有很多争论，但实际的答案取决于你正在制作什么类型的游戏、房间的大小、实例的数量以及代码的密集程度。For example, if you have a large room and a room speed of 30, the game may appear "choppy" as the larger the area you are looking at, the easier it is for the eye to perceive low room speeds, but if the game is intensive then setting the room speed to 120 may cause the game to "lag" as the fps drops due to the amount of processing being done. 所以要注意这个值，并尝试始终根据游戏需要调整它。</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -117,6 +117,15 @@ if (window.name != "content")
 </li>
 
 <li><b>项目最后更改</b>： 此部分仅显示上次更改项目的日期 / 时间戳（这是 <i>不可</i> 编辑的）。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>Accept Spine Licence</b>: Here you can check the box to be
+shown the Spine Runtime Licence and accept it. This will permit you
+to use Spine sprites in your game (this licence will also be shown
+the first time you try to add a Spine sprite to your project and
+haven't checked the licence here beforehand).</li>
 </ul>
 </div>
 <br>
@@ -156,6 +165,10 @@ OS</span></a>
 "list_link">HTML5</span></a>
 </li>
 
+<li><a href="options_amazonfire.html"><span class=
+"list_link">Amazon Fire</span></a>
+</li>
+
 <li><a href="options_android.html"><span class=
 "list_link">Android</span></a>
 </li>
@@ -165,11 +178,19 @@ OS</span></a>
 </li>
 </ol>
 </div>
-<br>
+</blockquote>
+
+<div class="note"><b>NOTE</b>: The various <b>Console</b> Game
+Options are not listed here due to the different legal restrictions
+maintained by the different companies. If you have a <b>Console
+Licence</b>, then you can get this information form the <a href=
+"https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support"
+target="_blank">YoYo Games Helpdesk</a>, but you must first contact
+YoYo Games with your console ID email and request permission to
+view the different sections.</div>
 
 <p><br>
 </p>
-</blockquote>
 </div>
 
 <div class="footer">
@@ -182,7 +203,7 @@ OS</span></a>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

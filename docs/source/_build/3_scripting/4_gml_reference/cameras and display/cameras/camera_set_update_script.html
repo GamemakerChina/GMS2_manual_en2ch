@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,40 +37,30 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to set a script that will be called
-every game frame that the camera is assigned to a visible and
-active view port. You give the unique camera ID value (as returned
-by the different <tt>camera_create</tt> functions) and the script
-ID of the script to be called. The order in which scripts attached
-to cameras and the actual rendering of the camera view is as
-follows:</p>
+<p>当摄像机被分配给一个可见可用的可视区域时，可用此函数来设置每帧要调用的脚本。你需要提供摄像机的独特ID（被另外的<tt>camera_create</tt> 函数所创建）以及被调用的脚本的ID。和摄像机及其视图有关的脚本的实际执行顺序如下所示：</p>
 
 <ul>
-<li>The cameras for all visible and active view ports have their
-<b>update script</b> called<br>
+<li>所有可见的活动可视区域的摄像机都会调用自己的 <b>更新脚本（update script）</b> 。<br>
 <br></li>
 
-<li>Then for each view:
-
-
+<li>然后是每个视野：
 
 <ul>
-<li>The <b>begin script</b> for the camera for that view is
-called</li>
+<li>用于此视野的摄像机的 <b>开始脚本（begin script）</b>。 </li>
 
-<li>The draw events are executed for that view</li>
+<li>然后此视野将执行绘制事件。</li>
 
-<li>The <b>end script</b> for the camera is called</li>
+<li>用于此视野的摄像机的 <b>结束脚本（end script）</b>。 </li>
 </ul></li>
 
-<li>Move to the next active visible view and repeat...</li>
+<li>继续执行下一个可视区域的脚本并再次重复.....</li>
 </ul>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_set_update_script(camera_id, script)</p>
 
@@ -88,13 +78,12 @@ called</li>
 
 <tr>
 <td>camera_id</td>
-<td>The unique camera ID value returned when you created the
-camera.</td>
+<td>当你创建摄像机时的独特ID值</td>
 </tr>
 
 <tr class="alt">
 <td>script</td>
-<td>The script to run each game frame</td>
+<td>每游戏帧执行的脚本</td>
 </tr>
 </table>
 </blockquote>
@@ -114,8 +103,7 @@ camera.</td>
 <p class="code">camera_set_update_script(view_camera[0],
 updateCamera);</p>
 
-<p>The above code sets the update script for the camera assigned to
-view port [0].</p>
+<p>上述代码为被赋给view port[0]的摄像机设置了它的更新脚本。</p>
 
 <p><br>
 </p>
@@ -128,7 +116,7 @@ view port [0].</p>
 "camera_set_begin_script.html">camera_set_begin_script</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

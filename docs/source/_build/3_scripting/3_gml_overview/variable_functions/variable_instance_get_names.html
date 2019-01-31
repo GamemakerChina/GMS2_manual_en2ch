@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -39,7 +39,15 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>使用这个函数，你可以检索一个填充了实例的实例变量名的数组。数组中的每个条目都是变量名称的字符串，对应于在实例中创建的 <a href="../6_scope.html">实例作用域</a> 变量。</p>
+<p>With this function you can retrieve an array populated with the
+<b>instance</b> variable names for an instance, or the
+<b>global</b> variables for a game. When you pass in an instance ID
+value, each entry in the array will be a string of the variable
+name that corresponds to an <a href="../6_scope.html">instance
+scope</a> variable that has been created in the instance. However
+if you pass in the keyword <tt>global</tt>, each entry in the array
+will be a string of the variable name that corresponds to an
+<a href="../6_scope.html">global scope</a> variable.</p>
 
 <div class="note"><b>注意</b>： 该函数基本上是用于所导入工程的 <a href=
 "../../../1_overview/3_additional_information/obsolete_functions.html">兼容性脚本（Compatibility）</a> 及拖拽按钮（Drag and Drop）动作转换而成的代码中的。</div>
@@ -48,9 +56,11 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
-<p class="code">variable_instance_get_names(instance_id);</p>
+<p class="code">
+
+variable_instance_get_names(instance_id/global);</p>
 
 <p><br>
 </p>
@@ -65,8 +75,9 @@ if (window.name != "content")
 </tr>
 
 <tr>
-<td>instance_id</td>
-<td>要检查的实例的唯一 ID 值</td>
+<td>instance_id/global</td>
+<td>The unique ID value of the instance to check or the keyword
+<tt>global</tt></td>
 </tr>
 </table>
 </blockquote>
@@ -100,7 +111,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

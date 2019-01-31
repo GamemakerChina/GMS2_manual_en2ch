@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>network_set_config</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">network_set_config(config_value, setting);</p>
 
@@ -70,7 +70,7 @@ if (window.name != "content")
 
 <p>With this function you can set different network configurations.
 These configurations are given as <b>constants</b> and the setting
-will depend on the constant that you have choosen. The table below
+will depend on the constant that you have chosen. The table below
 lists the available constants and their settings:<br>
 <br></p>
 
@@ -93,16 +93,63 @@ lists the available constants and their settings:<br>
 <td>告知GameMaker Studio 2不要阻止连接</td>
 <td>0 = 阻止, 1 = 不阻止</td>
 </tr>
+
+<tr>
+<td>network_config_enable_reliable_udp</td>
+<td>Enables the "reliable UDP" protocol for an existing UDP
+socket</td>
+<td>以毫秒为单位</td>
+</tr>
+
+<tr class="alt">
+<td>network_config_disable_reliable_udp</td>
+<td>Disables the "reliable UDP" protocol for an existing UDP
+socked.</td>
+<td>0 = 阻止, 1 = 不阻止</td>
+</tr>
 </table>
 </div>
 
 <p><br>
 <br>
-The first option (<tt>network_config_connect_timeout</tt>) simply sets the timeout for connecting to a server but doesn't change connection behaviour apart from the time you have to wait. It is recommended that you don't set this too low and keep it at about 1000 for a LAN only game or 4000 or so for internet, or the game may fail to connect randomly. If you wish to set a timeout value for sending/receiving packets then use the function <a href=
-"network_set_timeout.html"><tt>network_set_timeout()</tt></a>.<br><br>The second option (<tt>network_config_use_non_blocking_socket</tt>) means that the network connect functions will all return a <tt>socket_id</tt> instantly, <i>but you can't send or receive on that socket until you've received an async network event</i>. The event triggered will have the "type" key set to <tt>network_type_non_blocking_connect</tt> (you can find further details from the page on the <a href=
-"../../../2_interface/1_editors/events/async_events.html">Networking Asynchronous Event</a>). This is a <b>global</b> setting as <i>GameMaker Studio 2 does not support a mixture of blocking and non-blocking in one application.<br><br></i></p>
 
-<p><i><br></i>
+The first option (<tt>network_config_connect_timeout</tt>) simply
+sets the timeout for connecting to a server but doesn't change
+connection behaviour apart from the time you have to wait. It is
+recommended that you don't set this too low and keep it at about
+1000 for a LAN only game or 4000 or so for internet, or the game
+may fail to connect randomly. If you wish to set a timeout value
+for sending/receiving packets then use the function <a href=
+"network_set_timeout.html"><tt>network_set_timeout()</tt></a>.</p>
+
+<p>The second option
+(<tt>network_config_use_non_blocking_socket</tt>) means that the
+network connect functions will all return a <tt>socket_id</tt>
+instantly, <i>but you can't send or receive on that socket until
+you've received an async network event</i>. The event triggered
+will have the "type" key set to
+<tt>network_type_non_blocking_connect</tt> (you can find further
+details from the page on the <a href=
+"../../../2_interface/1_editors/events/async_events.html">Networking
+Asynchronous Event</a>). This is a <b>global</b> setting as
+<i>GameMaker Studio 2</i> does not support a mixture of blocking
+and non-blocking in one application.</p>
+
+<p>The third and fourth options
+(<tt>network_config_enable_reliable_udp</tt>,
+<tt>network_config_disable_reliable_udp</tt>) are for enabling or
+disabling the <i>GameMaker Studio 2</i> reliable UDP protocol and
+as such, should <b>only be used with UDP connections</b>. What
+"reliable" in this case this means is that, when enabled on
+<i>both</i> ends of a connection, <i>GameMaker Studio 2</i> will
+attempt to check your packets have arrived correctly and re-send
+any that don't arrive (note, we do not guarantee in your packets
+will arrive in order of transmission). When using a reliable socket
+type, there will be a 12-byte header added to all udp packets which
+contains information needed by <i>GameMaker Studio 2</i> to check
+the packet for errors and re-send missing packets.</p>
+
+<p><br>
 </p>
 
 <h3 class="studio">例如：</h3>
@@ -129,7 +176,7 @@ network_set_config(network_config_use_non_blocking_socket,
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

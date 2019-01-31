@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,50 +40,20 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will take a decimal number and convert it into an
-integer. You give the value to convert and then select the type of
-rounding that should be done to turn it into an integr value. The
-types of rounding available are:</p>
+<p>此动作将会把一个小数转换为整数。你需要给出被转换的值，并选取将其转换为整数的舍入类型。可用的舍入类型是：</p>
 
 <ul>
-<li><b>Round</b>: This takes a decimal number and rounds it up
-<i>or</i> down to the nearest integer number. In the special case
-where the number supplied is exactly half an integer (for example,
-1.5, 17.5, -2.5, etc...) the number will be rounded to the nearest
-<b>even</b> value, for example, 2.5 would be rounded to 2, while
-3.5 would be rounded to 4. This type of rounding is called
-<i>bankers rounding</i> and over large numbers of iterations or
-when using floating point maths, it gives a statistically better
-rounding than the more traditional "round up if over .5 and round
-down otherwise" approach.<br>
+<li><b>取偶数</b>：将一个小数向上 <i>或</i> 向下转换到最近的偶数。在这种情况下，如果提供的数字正好是整数的一半（例如，1.5,17.5，-2.5等等）数字将取得<b>偶数</b>，例如，2.5将取最近的偶数为2，而3.5将取最近的偶数为4。这种舍入叫<i>四舍五入取偶（bankers rounding）</i> 。在需要大量迭代或使用浮点数计算时，这种四舍五入取偶比传统的四舍五入（即大于等于5则向上，小于5则向下）在统计上更加好用。<br>
 <br></li>
 
-<li><b>Ceil</b>: This will take a decimal value and round it
-<i>up</i> to the nearest integer. Unlike round (above) this does
-not take into consideration the decimal part of the value, so a
-number like 5.0000001 would still be rounded up to 6. It is worth
-noting that if you are using the Random action <a href=
-"../random_actions/get_random_number.html">Get Random Number</a> to
-generate a random decimal value and then calling this action to
-round it up, then you <i>may</i> get unexpected results. The random
-action could potentially return 0, and using "Ceil" on that will
-not give 1 but 0, so if you get a random decimal from 0 to 9 and
-use this function you may expect to get integers from 1 to 10, but
-in reality you could get integers from 0 to 10. This is a remote
-possibility but should be taken into account when using this
-action.<br>
+<li><b>向上取整（Ceil）</b>这将会把一个小数<i>向上</i>取整。与“四舍五入取偶”不同，此向上取整不考虑数字的小数部分，因此像5.00001 这样的数字仍将取到6。值得注意的是，如果你使用了随机动作 <a href=
+"../random_actions/get_random_number.html">获得随机数字</a> 来产生一个随机小数，然后用此“向上取整”，那么 <i>可能</i> 导致错误。因为随机动作可能返回0，但再使用此“向上取整”不会返回1而是0。如果你得到了0到9之间的一个小数，并使用此函数，你本来的意愿是获得一个从1到10的整数，但事实上你会获得从0到10的整数。这种可能性很小,，但在使用此动作时应考虑到这一点。<br>
 <br></li>
 
-<li><b>Floor</b>: This will take a decimal value and round it
-<i>down</i> to the nearest integer value. Unlike round (above) this
-does not take into consideration the decimal part of the value, so
-a number like 5.9999999 would still be floored down to 5.</li>
+<li><b>向下取整（Floor）</b>这将会把一个小数<i>向下</i>取整。与“四舍五入取偶”不同，此向下取整不考虑数字的小数部分，因此像5.9999999这样的数字仍将取到5。</li>
 </ul>
 
-<p>Once you have selected the rounding type, you must supply the
-number to round (this can be a variable), and then give a target
-variable to return the new integer value to (which can be flagged
-as a temporary local variable).</p>
+<p>在选择一个舍入类型后，你需要提供需要被舍入的数字（可以是个变量），然后给出目标变量来存储新整数（此目标变量可以被标记为临时局部变量）。</p>
 </blockquote>
 
 <p><br>
@@ -106,18 +76,17 @@ alt="Decimal To Integer Syntax">
 
 <tr>
 <td>取整</td>
-<td>The type of rounding to use to get the integer (see description
-above)</td>
+<td>舍入类型</td>
 </tr>
 
 <tr class="alt">
 <td>数字</td>
-<td>The decimal number to round to an integer</td>
+<td>被舍入的小数</td>
 </tr>
 
 <tr>
 <td>目标</td>
-<td>The target variable to store the returned integer</td>
+<td>存储新整数的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -128,10 +97,7 @@ above)</td>
 <h3>例如：</h3>
 <img class="center" src="images/e_types_decimal_to_integer.png"
 alt="Decimal To Integer Example">
-<blockquote>The above action block code takes a decimal value and
-converts it to an integer, storing the returned value in a
-temporary local variable. This value is then turned into a string
-and drawn to the screen.</blockquote>
+<blockquote>上述动作块代码将把一个小数转换成一个整数，然后把它存储在一个临时局部变量中。此值将会被转换成字符串，然后绘制到屏幕上。</blockquote>
 
 <p><br>
 </p>
@@ -147,7 +113,7 @@ and drawn to the screen.</blockquote>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

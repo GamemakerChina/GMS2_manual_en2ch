@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -103,6 +103,11 @@ if (window.name != "content")
 "../../3_scripting/4_gml_reference/file%20handling/file%20system/get_open_filename.html"><tt>get_open_filename</tt></a> 和 <a href=
 "../../3_scripting/4_gml_reference/file%20handling/file%20system/get_save_filename.html"><tt>get_save_filename</tt></a>函数。这两个函数都要求用户选择要加载和保存的区域，然后可以在其他文件函数中使用返回字符串来绕过沙箱。有关详细信息，请参阅手册 <a href=
 "../../3_scripting/index.html">脚本章节</a> 中的函数描述。</p>
+
+<p>在 <b>HTML5</b> 上，也可以从服务器的沙箱外部加载文件，但是这只能使用 <a href=
+"../../3_scripting/4_gml_reference/buffers/buffer_load_async.html"><tt> buffer_load_async()</tt></a> 函数来完成，因为在大多数浏览器上同步加载已经被弃用，最终会被废弃。这意味着以这种方式加载的文件应该保存为二进制文件 —— 例如，你可以保存一个 <tt>*.ini</tt> 作为一个字符串（有关详细信息，请参阅 <a href=
+"../../3_scripting/4_gml_reference/file%20handling/ini%20files/ini_close.html"> <tt>ini_close</tt></a>），然后将其写入一个缓冲区，然后可以使用异步函数保存和加载该缓冲区。注意，如果你使用 <a href=
+"../../3_scripting/4_gml_reference/sprites/sprite_add.html"><tt>sprite_add</tt></a> 加载图像，那么这些已经异步处理了。</p>
 </div>
 <br>
 <a name="file_platform_specific" id="file_platform_specific"></a>
@@ -145,10 +150,7 @@ if (window.name != "content")
 </li>
 </ul>
 
-<p>It is worth noting that the <b>HTML5</b> target modules have a
-limit on local storage (which can be between 1MB and 5MB depending
-on the browser) meaning that you will not be permitted to save
-large sprites, screenshots etc...</p>
+<p>值得注意的是，<b>HTML5</b> 目标模块对本地存储有限制（根据浏览器的不同，可以在 1 MB 到 5 MB 之间），这意味着你将不允许保存大精灵、截图等……</p>
 </div></blockquote>
 
 <p><br>
@@ -164,7 +166,7 @@ large sprites, screenshots etc...</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

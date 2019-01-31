@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -120,6 +120,26 @@ that are not included in the PHP allow list).</p>
 this:</p>
 
 <p class="code">$http_origin = $_SERVER['HTTP_ORIGIN'];<br>if ($http_origin == "http://127.0.0.1:51268")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;header('Access-Control-Allow-Origin: *');<br>&nbsp;&nbsp;&nbsp;}<br></p>
+
+<p>For image load requests where determining or setting their
+cross-origin type is important, the following functions exist:</p>
+
+<ul>
+<li><a href=
+"http_get_request_crossorigin.html">http_get_request_crossorigin</a>
+</li>
+
+<li><a href=
+"http_set_request_crossorigin.html">http_set_request_crossorigin</a>
+</li>
+</ul>
+
+<p>In most cases these functions should not need to be used, but if
+the game is stored on a secured server - where certain assets may
+require basic authentication to be accessed and are generating
+security errors when loading - setting the cross-origin type for
+image requests to "use-credentials" may be necessary (as opposed to
+the default "anonymous" setting).</p>
 </div>
 <br>
 <a name="async_dialogue" id="async_dialogue"></a> <label class=
@@ -161,7 +181,7 @@ functions:</p>
 </div>
 <br>
 <a name="async_http" id="async_http"></a> <label class="collapse"
-for="three">云</label> <input id="three" type="checkbox">
+for="three">Cloud Saving</label> <input id="three" type="checkbox">
 <div class="index_list">
 <p>在游戏开发过程中，常常需要将游戏的状态信息保存在特定类型的文件中，但是把这些信息保存在本地设备上在大多数时候并不是一个好的选择，因为当玩家在卸载游戏之后重新安装时，这些数据可能会丢失。为了防止这种情况的出现你可以使用各种不同的<b>云服务 </b>，用来提供可以修改和检索数据的云端据存储服务。You should note that this function is limited to <b>one</b> single data "blob" per game, so every time you send a new save to the cloud service, whether it is a string or a file, it will overwrite any previously stored data.</p>
 
@@ -179,11 +199,24 @@ for="three">云</label> <input id="three" type="checkbox">
 </li>
 </ul>
 
-<div class="note"><b>NOTE:</b> Currently only the <a href=
+<div class="note"><b>NOTE:</b> Currently only the <b>Android</b>
+target uses these functions, and you need to tick the <b>Enable
+Google Cloud Saving</b> checkbox in the <b>Social</b> section of
+the Android <a href=
+"../../../2_interface/3_settings/game_options/options_android.html">
+Game Options</a>. This will prompt you to download the <a href=
 "https://marketplace.yoyogames.com/assets/2008/google-play-services"
-target="_blank">Google Services</a> extension on <b>Android</b>
-uses these functions, and this extension must be present before you
-can call them.</div>
+target="_blank">Google Services</a> extension, which is required
+for cloud saving on Android to function. For more information on
+Cloud Saving please see the following helpdesk article:<br>
+<br>
+
+<ul>
+<li><a href=
+"https://help.yoyogames.com/hc/en-us/articles/360003087452">Android
+and iOS: Google Cloud Saving</a>
+</li>
+</ul></div>
 </div>
 <br>
 <a name="async_push" id="async_push"></a> <label class="collapse"
@@ -269,18 +302,12 @@ Push Event</a>, as you would a local notification.</p>
 <div class="note"><b>注意</b>： Android requires that you add the <b>GCM Sender ID</b> into the <a href=
 "../../../2_interface/3_settings/game_options/options_android.html"> Android Game Options</a>.  <b>Project Number</b> 在你创建安卓工程时被创建。</div>
 
-<p>如何搭建一个可用的服务器，或者可用的信息平台,请查看以下页面 <a href=
-"http://help.yoyogames.com/forums" target="_blank">YoYo Games 知识库</a>:</p>
+<p><br>
 
-<ul>
-<li><a href="http://help.yoyogames.com/entries/28184776" target=
-"_blank"><span class="list_link">推送通知 - Android</span></a>
-</li>
-
-<li><a href="http://help.yoyogames.com/entries/27695268" target=
-"_blank"><span class="list_link">推送通知 - iOS</span></a>
-</li>
-</ul>
+For further details on how to go about setting up a server, as well
+as information specific to the available platforms, please see
+<a href="https://help.yoyogames.com/hc/en-us/articles/360006732572"
+target="_blank">this article</a> on the YoYo Games Helpdesk.</p>
 
 <div class="note"><b>注意</b>： Implementing the server-side is entirely up to the end user, and YoYo Games do not provide any support for that side of things, other than basic set-up information available from their Knowledge Base.</div>
 </div></blockquote>
@@ -339,7 +366,7 @@ or rating on a specific web page:</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,13 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will get the speed, in pixels per game frame, that
-an instance is set to follow a path (note that you must have called
-the <a href="start_following_path.html">Start Following Path</a>
-action to assign a path to the instance for this to to return a
-value other than 0). The returned value will be stored in the
-target variable you give, or you can flag the variable as a
-temporary local variable to create it and assign the value.</p>
+<p>此动作允许你得到某个正在跟随路径移动的物体的速度，单位是每游戏帧像素。注意你必须先用 <a href="start_following_path.html">开始沿路径移动</a> 动作使此实例跟随路径，否则将会返回0。这个值将会被返回给目标变量，此目标变量可以是一个临时局部变量。.</p>
 </blockquote>
 
 <p><br>
@@ -69,7 +63,7 @@ alt="Get Path Follow Speed Syntax">
 
 <tr>
 <td>目标</td>
-<td>The target variable to hold the returned path follow speed</td>
+<td>用来存储跟随路径移动的速度值的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -80,9 +74,7 @@ alt="Get Path Follow Speed Syntax">
 <h3>例如：</h3>
 <img class="center" src="images/e_paths_get_path_follow_speed.png"
 alt="Get Path Follow Speed Example">
-<blockquote>The above action block code gets the current speed of
-the instance along the assigned path and if it is greater than 4 it
-is set to 4.</blockquote>
+<blockquote>上面的动作块代码获取实例沿指定路径的当前速度，如果大于4，则设置为4。</blockquote>
 
 <p><br>
 </p>
@@ -98,7 +90,7 @@ is set to 4.</blockquote>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

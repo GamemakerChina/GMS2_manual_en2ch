@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -146,6 +146,14 @@ type="checkbox">
 </tr>
 
 <tr>
+<td>buffer_f16</td>
+<td>2</td>
+<td><br>
+16 位浮点型。值域为 -65504 到 +65504。<b>（目前不支持！）</b><br>
+<br></td>
+</tr>
+
+<tr>
 <td>buffer_u32</td>
 <td>4</td>
 <td><br>
@@ -162,14 +170,6 @@ type="checkbox">
 </tr>
 
 <tr>
-<td>buffer_f16</td>
-<td>2</td>
-<td><br>
-16 位浮点型。值域为 -65504 到 +65504。<b>（目前不支持！）</b><br>
-<br></td>
-</tr>
-
-<tr class="alt">
 <td>buffer_f32</td>
 <td>4</td>
 <td><br>
@@ -177,11 +177,19 @@ type="checkbox">
 <br></td>
 </tr>
 
+<tr class="alt">
+<td>buffer_u64</td>
+<td>8</td>
+<td><br>
+无符号 64 位整型。<b>（当前不支持所有缓冲函数！）</b><br>
+<br></td>
+</tr>
+
 <tr>
 <td>buffer_f64</td>
 <td>8</td>
 <td><br>
-64 位浮点型。This can be a positive or negative value from -(2<sup>52</sup>) to 2<sup>52</sup> - 1.<br>
+64 位浮点型。<br>
 <br></td>
 </tr>
 
@@ -317,7 +325,7 @@ game_save_buffer(SaveBuffer);<br></p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

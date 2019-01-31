@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,19 +37,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will set a camera to a specific view port. You
-give the view port to set (from 0 to 7), and supply the unique
-camera ID value (as returned by the <tt>camera_create</tt>
-functions or when you use <tt>view_get_camera()</tt>). If you give
-a value of -1 as the camera ID then you are removing a camera from
-the view port and note that if that view port is enabled and
-visible you may get some unpredictable results.</p>
+<p>此函数用来将摄像机分配给一个特定的可视区域。你需要提供可视区域的编号（从0到7），并提供摄像机的唯一ID，（由另外的 <tt>camera_create</tt>函数所返回，或是<tt>view_get_camera()</tt>也可以）。如果你将分配给可视区域的摄像机ID的值设为-1，并尝试移除此启用的可见的可视区域的摄像机，你会得到不可预测的结果。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">view_set_camera(view_port, camera_id)</p>
 
@@ -72,8 +66,7 @@ visible you may get some unpredictable results.</p>
 
 <tr>
 <td>camera_id</td>
-<td>The unique camera ID value returned when you created the
-camera</td>
+<td>创建相机时返回的唯一相机 id 值</td>
 </tr>
 </table>
 </blockquote>
@@ -94,8 +87,7 @@ camera</td>
 obj_Player, 5, 5, -1, -1);<br>
 view_set_camera(0, cam);<br></p>
 
-<p>The above code will create a new camera and then assign it view
-port[0].</p>
+<p>上述代码创建了一个新相机，并将它赋给view port[0]。</p>
 
 <p><br>
 </p>
@@ -108,7 +100,7 @@ port[0].</p>
 "view_get_camera.html">view_get_camera</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

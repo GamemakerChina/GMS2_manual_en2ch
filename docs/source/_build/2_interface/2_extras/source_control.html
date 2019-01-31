@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -50,8 +50,11 @@ if (window.name != "content")
 <blockquote><a name="scm_setup_git" id="scm_setup_git"></a>
 <label class="collapse" for="one">设置源代码管理 Git 插件</label> <input id="one" type="checkbox">
 <div class="index_list">
-<p>首先，我们需要为 Git 设置一个提交身份，这意味着我们需要转到首选项的 <a href=
-"../../1_overview/1_getting_started/preferences/prefs_plugins.html">插件 - 源代码管理（Git）</a> 部分并添加你的身份验证详细信息。 <img class="center" src=
+<p>First of all, we need to setup an identity for Git to commit as,
+which means we need to go to the <a href=
+"../../1_overview/1_getting_started/preferences/prefs_plugins.html">
+Plugins - Source Control (Git)</a> section of the Preferences and
+add your authentication details.  <img class="center" src=
 "images/scm_identityprefs.png" alt="SCM Identity Preferences"></p>
 
 <p>此身份验证标识将用于所有未来的项目，<i>GameMaker Studio 2</i> 为你提供了两种不同的设置方式：
@@ -140,6 +143,30 @@ type="checkbox">
 
 <p>现在，单击 <i>提交所有</i> 按钮，因为我们要提交所有更改，并在提交消息内输入类似 “首次提交！” 的内容并单击 <i>提交</i>。 我们所有的资源现在都应该有绿色勾号 <img style="vertical-align:middle" src=
 "images/icon_scm_committed.png">，这意味着没有找到任何修改。</p>
+
+<p>It is worth noting that as you work within this window, the
+various Staged and Unstaged messages will be prefixed by a symbol.
+The symbol being used will vary depending on the operation and
+file, with the following being used:</p>
+
+<blockquote>
+<ul>
+<li><tt>[...]</tt> - Staged Change (was previously
+<tt>[A]</tt>)</li>
+
+<li><tt>[+]</tt> - Newly Added</li>
+
+<li><tt>[-&gt;]</tt> - Renamed/Moved</li>
+
+<li><tt>[-]</tt> - Removed</li>
+
+<li><tt>[M]</tt> - Unstaged Changes</li>
+
+<li><tt>[?]</tt> - Untracked File</li>
+
+<li><tt>[!]</tt> - Missing File</li>
+</ul>
+</blockquote>
 
 <p>我们的工作流程现在可以开始，我们可以开始构建我们的项目并保存和提交更改，就像我们在上面的段落中所做的那样。</p>
 
@@ -468,7 +495,7 @@ alt="Source Control Merge In Progress"></p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

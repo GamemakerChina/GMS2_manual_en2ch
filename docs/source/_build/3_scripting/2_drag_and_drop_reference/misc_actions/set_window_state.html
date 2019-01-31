@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,32 +40,18 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can set the state of the game window to
-either fullscreen or windowed. There are three options here:</p>
+<p>使用此动作你可以将游戏窗口设为全屏或窗口化。这儿有三个选项：</p>
 
 <ul>
-<li><b>Toggle</b> - When this option is selected, each time you
-call the action it will toggle the window between fullscreen and
-windowed states</li>
+<li><b>切换</b> - 当选中了这个选项，每次你调用此动作时，游戏窗口将在全屏和窗口化之间切换</li>
 
-<li><b>Fullscreen</b> - This will make the window go fullscreen
-from a windowed state</li>
+<li><b>全屏</b> - 游戏窗口将全屏化</li>
 
-<li><b>Windowed</b> - This will make the window return to a
-windowed state if in fullscreen</li>
+<li><b>窗口化</b> - 这将使游戏窗口状态为窗口化</li>
 </ul>
 
-<p>Note that how the game looks while in a fullscreen state will
-depend on the <a href=
-"../../../2_interface/3_settings/game_options/index.html">Game
-Options - Graphics</a> settings for you target platforms, since if
-the game does not have some mechanism for adjusting to different
-aspect ratios and resolutions you can get stretching (if the game
-option is set to <b>Full Scale</b>), or you can get black bars
-added (if the game option is set to <b>Keep Aspect Ratio</b>). In
-general if you have nothing in place to deal with different
-resolutions, you should be using <b>Keep Aspect Ratio</b> for the
-target platforms you want to compile to.</p>
+<p>游戏全屏时实际画面将取决于目标平台上的<a href=
+"../../../2_interface/3_settings/game_options/index.html">游戏选项-图像</a> 设置。当你的游戏没有适应不同窗口分辨率的机制，如果游戏选项使用 <b>全尺寸</b>那么画面看起来将会被不正常地拉伸。但如果游戏选项是 <b>保持区域分辨率</b>，那么游戏画面侧边可能有黑边。通常情况下，如果你的游戏已经有了适应不同分辨率的机制，那么你应该在你想编译的目标平台上选择<b>保持区域分辨率</b> 。</p>
 </blockquote>
 
 <p><br>
@@ -99,9 +85,7 @@ target platforms you want to compile to.</p>
 <h3>例如：</h3>
 <img class="center" src="images/e_misc_set_window_state.png" alt=
 "Set Window State Example">
-<blockquote>The above action block code will toggle the window
-state between fullscreen and windowed every time the F4 key is
-pressed.</blockquote>
+<blockquote>上述动作块代码将会在F4键按下时，使游戏画面在窗口和全屏之间切换。</blockquote>
 
 <p><br>
 </p>
@@ -110,14 +94,14 @@ pressed.</blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Miscellaneous Actions</a></div>
+<div style="float:left">上一页:  <a href="index.html">杂项动作</a></div>
 
 <div style="float:right">next: <a href=
 "show_debug_message.html">Show Debug Message</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

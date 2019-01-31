@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>buffer_peek</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">buffer_peek(buffer, offset, type);</p>
 
@@ -68,7 +68,35 @@ list of constants <a href="buffer_read.html">here</a>).</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real/String</p>
+<p><b>Returns:</b> Real/String or one of the following constants if
+it fails:</p>
+
+<div class="compat">
+<table>
+<tr>
+<th>常量</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>buffer_outofspace</td>
+<td>is returned when peeking / poking to a buffer beyond its
+capacity</td>
+</tr>
+
+<tr class="alt">
+<td>buffer_outofbounds</td>
+<td>is when an explicit operation is outside of the buffer capacity
+(i.e. index is &lt; 0 or &gt; capacity)</td>
+</tr>
+
+<tr>
+<td>buffer_invalidtype</td>
+<td>is when a non <tt>u8</tt> type is used for peeking from a fast
+buffer type.</td>
+</tr>
+</table>
+</div>
 
 <p><br>
 </p>
@@ -107,7 +135,7 @@ use those values to set the image blend of the instance.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,17 +29,28 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">ds_grid_get_mean</h1>
+<h2>ds_grid_get_mean</h2>
 
-<h2 class="studio">Returns the mean value of all the cells within a
-region on a grid.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>描述</h3>
 
-<p class="code">ds_grid_get_mean(index, x1, y1, x2, y2);</p>
+<blockquote>
+<p>This function can be used to find the mean value for all the
+cells found within the defined region of a grid (all cell values
+are added together and then divided by the total number of cells
+that make the region), as shown in the image below:  <img class=
+"center" src="ds_grid_get_mean.png"></p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">ds_grid_get_mean(index, x1, y1, x2, y2);</p>
 
 <div class="param">
 <table>
@@ -78,45 +89,42 @@ region on a grid.</h2>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real or String</p>
+<h3>Returns:</h3>
+
+<p class="code">Real or String</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3>例如：</h3>
 
-<p>This function can be used to find the mean value for all the
-cells found within the defined region of a grid (all cell values
-are added together and then divided by the total number of cells
-that make the region), as shown in the image below:  <img class=
-"center" src="ds_grid_get_mean.png"><br>
-<br></p>
+<p class="code">val = ds_grid_get_mean(grid, 0, 0, 5, 5)<br></p>
 
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
-
-<p class="code">val = ds_grid_get_mean(grid, 0, 0, 5, 5);</p>
-
+<blockquote>
 <p>The above code will set the variable "val" to the mean value
 contained within the given region of the ds_grid indexed in the
 variable "grid".</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页： <a href="index.html">数据结构</a></div>
 
 <div style="float:right">下一页: <a href=
 "ds_grid_get_min.html">ds_grid_get_min</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

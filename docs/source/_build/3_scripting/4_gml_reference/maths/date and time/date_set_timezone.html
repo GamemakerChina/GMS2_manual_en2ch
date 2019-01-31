@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,10 +31,9 @@ if (window.name != "content")
 </script>
 <h1 class="studio">date_set_timezone</h1>
 
-<h2 class="studio">Sets the base timezone to use for all the date
-and time functions.</h2>
+<h2 class="studio">设置用于所有日期和时间函数的系统时区。</h2>
 
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">date_set_timezone(timezone);</p>
 
@@ -81,12 +80,12 @@ is local time):<br>
 
 <tr>
 <td>timezone_local</td>
-<td>use the local time zone as set by the system</td>
+<td>使用系统设置的本地时区</td>
 </tr>
 
 <tr class="alt">
 <td>timezone_utc</td>
-<td>use Coordinated Universal Time</td>
+<td>使用世界标准时（UTC）</td>
 </tr>
 </table>
 </div>
@@ -98,8 +97,7 @@ is local time):<br>
 
 <p class="code">if date_get_timezone() != timezone_utc<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;date_set_timezone(timezone_utc);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>This code checks the base time zone setting for the game and if
-it is not UTC it then changes it.</p>
+<p>此代码将会检查游戏的时区设置，如果不是UTC就将它改为UTC。</p>
 
 <p><br>
 </p>
@@ -111,7 +109,7 @@ it is not UTC it then changes it.</p>
 "date_get_timezone.html">date_get_timezone</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

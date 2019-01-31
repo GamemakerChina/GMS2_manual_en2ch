@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_collision_shape.png"> 如果物体在...</h2>
+"images/i_collision_shape.png"> 如果形状发生碰撞</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -44,11 +44,21 @@ if (window.name != "content")
 "images/collision_shape_example.png" alt=
 "是否与图像发生碰撞例子"></p>
 
-<p>正如你所看到的，此结果将取决于被检查的实例的碰撞遮罩，这意味着被检查的实例必须有一个被分配给<tt>sprite_index</tt>的精灵， 或被分配给 <tt>mask_index</tt>的精灵。如果不这样，它将不会被这些函数检测到，无论它是否绘制了精灵。值得注意的是如果某实例完全进入方形或椭圆的边界框，那么也将检测到碰撞。</p>
+<p>正如你所看到的，此结果将取决于被检查的实例的碰撞遮罩，这意味着被检查的实例必须有一个被分配给<tt>sprite_index</tt>的精灵， 或被分配给 <tt>mask_index</tt>的精灵。如果不这样，它将不会被这些函数检测到，无论它是否绘制了精灵。值得注意的是如果某实例完全进入方形或椭圆的边界框，那么也将检测到碰撞。The action will evaluate to <tt>true</tt> if a collision is detected, or <tt>false</tt> otherwise, although you can also check the <b>Not</b> flag to check if there is <i>not</i> a collision with the given shaped area, and the action will then only evaluate as <tt>true</tt> if <i>no</i> collisions are found, otherwise it will evaluate as <tt>false</tt>. You can also set the <b>Exclude Self</b> option to exclude the calling instance from the collision check.</p>
 
-<p>如果没有碰撞，此动作将会返回关键字 <tt>none（无）</tt> ，否则将会把碰撞的实例的独特ID返回。你也可以选中”反向“（NOT）标签，来检查这儿是不是没有碰撞。（即有碰撞将返回“没有”（none））。如果有多个实例碰撞，那么此动作将会返回这些实例中其中一个的独特ID（可能是其中任何一个）。如果你设置的目标变量是 临时（局部）变量，那么此动作将创建变量来保存返回值，直到事件结束。</p>
+<p>接下来你可以选中/不选中 <b>返回列表</b>的选项。Checking this means the action will create and populate a <a href=
+"../data_structure_actions/index.html">list</a> data structure with <i>all</i>instances in collision with the shape and set the <b>Target</b> variable to the DS list ID. 要是你不选中，如果没有碰撞发生，<b>目标</b> 变量将被设为小于0的数，或者所有发生碰撞的实例中<i>一个</i> 实例的独特ID，也就是说如果有多个实例发生碰撞，你只能知道其中一个实例的ID而不知道其它的，除非你使用了列表（将return list选中）。</p>
 
-<p>注意如果需要添加此动作进”if"代码块，它们应该被放到动作的 <i>一边</i> ，如下图所示： <img class="center" src="images/if_collision_shape.png" alt=
+<p>如果你选择返回列表，并且目标变量<i>没有</i> 被设置为 <b>临时</b> 那么你也可以选择 <b>释放目标</b> 选项。当你将释放标签选项设为 <tt>true</tt>，那么每次调用此动作时，目标变量包含的列表将被清除并创建一个新列表，并将新列表返回给目标变量。这样 你就能反复使用此变量而不需要担心存储溢出。但如果你<i>没有</i> 选中 <b>释放目标</b> 选项，你可能会因为为原列表加入新实例而使原来的列表出错。注意 <i>无论</i> 你是否选中了释放标签标签，只要你为此动作设置了<b>返回列表</b>，则目标变量将<i>始终包含列表ID &lt; / i8&gt;，因此，当实例被摧毁或房间结束时，需要释放此列表（例如，你可以使用<b>清理&lt;/ b9&gt;事件，以及<a href=
+"../data_structure_actions/free_data_structure.html"> 释放数据结构&lt;/ a10&gt;动作）。值得注意的是你可将 <b>释放目标</b> 选项设为使用预定义的变量或表达式，因此你可以通过预先设定好的变量（或使用具有不同结果的表达式）来控制到底何时释放目标，只要它的值为 <tt>true</tt>/<tt>false</tt>。</p>
+
+<p>最后，你需要提供 <b>目标</b>变量来存储返回值或ID列表。如果你设置的目标变量是<b> 临时 &lt;/ b1&gt;（局部）变量，那么此动作创建的变量<i> 只 &lt;/ i2&gt;保存返回值到事件结束。在这种情况下，如果已选中该选项，释放目标 选项不会生效，需要您来负责销毁DS列表。如果没提供目标变量而选中了 <b>返回列表</b> 选项，那么将不会创建列表。</p>
+
+<div class="note"><b>重要！</b> 碰撞检测只对那些有碰撞遮罩的实例有效 （碰撞双方都要有）。例子：它们有一个被分配给<tt>sprite_index</tt>的精灵， 或被分配给 <tt>mask_index</tt>的精灵。如果接触双方的任何一方没有碰撞遮罩，那么将不会发生碰撞，而不管在此时绘制了什么实例。</div>
+
+<p><br>
+注意如果需要添加此动作进”if"代码块，它们应该被放到动作的 <i>一边</i> ，如下图所示：
+<img class="center" src="images/if_collision_shape.png" alt=
 "如果发生形状碰撞的例子"></p>
 </blockquote>
 
@@ -101,6 +111,11 @@ if (window.name != "content")
 </tr>
 
 <tr>
+<td>释放目标列表</td>
+<td>可以被设置为一个变量或表达式或 <tt>true</tt>/<tt>false</tt> 来在重新使用列表变量控制列表存储的释放。</td>
+</tr>
+
+<tr class="alt">
 <td>目标</td>
 <td>此动作返回值的目标变量</td>
 </tr>
@@ -113,7 +128,14 @@ if (window.name != "content")
 <h3>例如：</h3>
 <img class="center" src="images/e_collision_shape.png" alt=
 "如果发生形状碰撞的例子">
-<blockquote>上述动作代码块检查被调用的物体“obj_player_parent"上的一条200像素的线是否被其它实例碰撞。此动作的返回值将被存储在一个临时（局部）变量中，此返回值将被检查——返回值是不是代表一个存在于房间中的例子。如果是的话，此返回值代表的实例将被从实例变量中移除。</blockquote>
+<blockquote>The above action block code checks for a collision with
+any instances of the object "obj_Enemy" within a 100px circle
+around the calling instances position. The action generates a list
+of all instances found to be in collision and stores the list ID in
+the Target variable. If the action evaluates to <tt>true</tt> then
+the list is looped through and each instance with its ID stored in
+the list has its "hp" variable reduced by 1. The DS list is then
+freed.</blockquote>
 
 <p><br>
 </p>
@@ -124,12 +146,12 @@ if (window.name != "content")
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Collision Actions</a></div>
 
-<div style="float:right">next: <a href="if_any_object_at.html">If
-Any Object At</a></div>
+<div style="float:right">next: <a href="if_collision_point.html">If
+Collision Point</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

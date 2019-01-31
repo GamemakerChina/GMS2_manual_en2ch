@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -157,12 +157,12 @@ for="eighteen">房间视图</label> <input id="eighteen" type=
 <ul>
 <li><b>摄像机（The Camera）</b>: 房间内的一个点，用于设置房间在屏幕上的显示方式（这是房间编辑器中的抽象点，其位置根据视图和视口设置自动设置）<br></li>
 
-<li><b>视图（The View）</b>: 摄像机看到的内容，基于摄像机的位置、投影和旋转<br></li>
+<li><b>视野（The View）</b>: 摄像机看到的内容，基于摄像机的位置、投影和旋转<br></li>
 
 <li><b>视口（The View Port）</b>: 将显示摄像机视图的物理屏幕区域<br></li>
 </ul>
 <img class="center" src="images/camera_example.png" alt=
-"Camera View">
+"摄像机视野">
 <p>因此，例如，这意味着你可以将 640 x 480 摄像头视图放入你的房间，然后将端口设置为 320 x 240，这将显示缩小到屏幕上该大小端口的视图，你也可以执行相同的操作将视图设置为较小的值，将端口设置为较大，使图像按比例缩放以适合端口大小，并在屏幕上显示大于它的值。通过这种方式，你可以在更改摄像机视图的同时保持屏幕（端口）大小，以在屏幕的同一区域中显示房间更多或更少的一部分。</p>
 
 <p>摄像机视图始终定义为房间中的矩形区域，你可以在其中指定左上角的位置、此区域的宽度和高度。然后，你必须通过定义视口来指定此区域在屏幕窗口中显示的位置，你还可以指定左上角的位置和大小（请注意超过左上角的 0,0 以外的值会给出奇怪的结果）。你可以有多个端口，它们可以重叠，在这种情况下，它们以指示的顺序一个在另一个上面绘制。请注意，整个屏幕区域始终定义为矩形区域，因此即使在平移时，你的端口也会形成一个矩形，窗口颜色会填充任何空白区域，这意味着在这些情况下你应该始终清除选中的显示缓冲区，否则你将在端口之间的空间中绘制奇怪的人造复制图景。</p>
@@ -379,7 +379,10 @@ src="../../images/icon_cmd.png"> +<img style=
 "Room Instance properties"> 任何实例 - 无论是在房间编辑器本身还是在属性列表中 - 都会打开一个新窗口，让你修改该唯一实例的各个方面：<img style="vertical-align:middle" src=
 "../../images/icon_lmb.png"></p>
 
-<p>在这里你可以给一个实例独特的名字，并设置它是否从父房间中继承，你甚至可以改变这个实例所属的物体。你也可以更改这个实例的特性，设置它的混合颜色（默认白色），或旋转或翻转它，或设置它的X轴或Y轴大小，或设置它在房间中的位置。</p>
+<p>默认情况下，实例将具有类似 “inst_38B0BFF” 的名称，但只要名称仅使用字母数字字符和下划线“_”（并且没有空格），就可以将其更改为你想要的名称。但值得注意的是，此处给出的名称（无论你提供的名称，还是 IDE 提供的名称）都被视为 <tt>常量</tt>，因此 <b>必须对实例唯一</b>。这也意味着它可以在游戏的代码中用于识别实例，但前提是你与实例位于同一个房间。</p>
+
+<p><a name="room_instance_variables" id=
+"room_instance_variables"></a> 在实例名称下面，你可以设置是否要从父房间继承实例，更改你希望它成为实例的物体，甚至打开 <a href="objects.html">物体编辑器</a> 以更改其中的属性。你还可以在新窗口中打开实例的物体编辑器，如果你希望更改其中的任何内容，还可以通过 <b>物体变量</b> 窗口检查和编辑变量（有关物体变量的更多信息，请参阅 <a href="objects.html">此处</a>）。你也可以更改此实例的特征，设置颜色以将其与（默认为白色）混合，或者旋转和翻转它，以及沿着轴中的任一个或两个缩放实例，并在房间内设置其位置。</p>
 
 <p>最后，你可以为实例提供一些 <b>创建代码</b>，这些代码将直接在物体创建事件代码之后运行，并且对于此实例是唯一的（因此，你可以在物体中设置一个变量，所有实例都将在创建代码中修改它，使其成为一个实例的唯一值）。单击此按钮可将 <a href="scripts.html">代码窗口</a> 链接到可添加函数或修改变量的实例。请注意，你可以独立于实例继承来打开或关闭创建代码的继承。
 </p>
@@ -675,7 +678,7 @@ alt="Convert Image To Tilemap Example Tileset"></p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

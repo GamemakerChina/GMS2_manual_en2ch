@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,25 +40,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can get the tiledata for a tile cell on a
-tilemap layer from a position. The tiledata is simply a value that
-reflects the index of the tile along with the flip, mirror, and
-rotate values, as well as any custom tile masks that you have used.
-With this action you first supply the layer to target using the
-name of the layer (a string) as defined in the room editor, and
-then the x and y axis in the room to get the tiledata for. The
-tiledata value returned will coincide with whatever tilemap cell
-happens to be at that point. For example, if your tileset tiles are
-16x16, then the tilemap layer will hold tiles in cells of 16x16
-pixels, so if you use this action to target the room position (8,
-8), you will be getting the tiledata for the cell (0, 0) of the
-tilemap.</p>
+<p>你可以用此动作来此图块数据是一个值，它反应了此图块的索引，翻转，镜像和旋转值，以及任何自定义的图块遮罩。在此动作中你首先需要提供目标图块所在层的名字（字符串），这在房间编辑器中是已经定义好了，然后提供房间中的x,y轴坐标来取得图块的图块数据。此图块数据值将于相应图块地图单元格上的数据保持一致。例如，如果你的图块集图块每个都是16X16，那么此图块地图层将会拥有16X16的图块单元格。如果你将目标位置设为（0，0），那么你将会更改位于（0，0）单元格位置上的图块地图。</p>
 
-<div class="note"><b>注意</b>： The layer selected <i>must</i> have been defined as a Tilemap Layer in the room editor, otherwise you may get errors.</div>
+<div class="note">1<b>注意</b>： 你选择的层 <i>必须</i> 被定义为图块地图层，否则将会出错。</div>
 
 <p><br>
-返回值将被存储在目标变量中，此变量需要之前就被创建了，或你选中临时(temp)按钮来创建的新临时变量。For more information on tiledata, please see the GML section on <a href=
-"../../4_gml_reference/rooms/tilemaps/index.html">Tilemaps - Tile Functions</a>.</p>
+返回值将被存储在目标变量中，此变量需要之前就被创建了，或你选中临时(temp)按钮来创建的新临时变量。如果你需要更多关于图块数据的信息，参阅 <a href=
+"../../4_gml_reference/rooms/tilemaps/index.html">图块地图-图块函数</a>.</p>
 </blockquote>
 
 <p><br>
@@ -81,19 +69,17 @@ alt="Get Tile Data At Pixel Syntax">
 
 <tr>
 <td>层</td>
-<td>The layer with the tilemap to target</td>
+<td>目标图块地图所在层</td>
 </tr>
 
 <tr class="alt">
 <td>X</td>
-<td>The position along the horizontal (X) axis to set the tiledata
-for</td>
+<td>取得图块数据的X坐标</td>
 </tr>
 
 <tr>
 <td>Y</td>
-<td>The position along the vertical (Y) axis to set the
-tiledata</td>
+<td>取得图块数据的Y坐标</td>
 </tr>
 </table>
 </blockquote>
@@ -105,10 +91,7 @@ tiledata</td>
 <img class="center" src="images/e_tiles_set_tile_data_at_pixel.png"
 alt="Set Tile Data At Pixel Example">
 <blockquote>
-<p>The above action block code tests for a mouse click and when one
-is recieved it retrieves the tiledata for the cell that coincides
-with the mouse position. This data is then modified and returned to
-the tilemap layer, rotating the tile in that cell.</p>
+<p>上述动作代码块检查是否有鼠标点击，如果有的话，它将返回鼠标点击除的图块数据。此数据然后将被修改，然后返回到此图块地图层，并将旋转此处的图块。</p>
 </blockquote>
 
 <p><br>
@@ -125,7 +108,7 @@ the tilemap layer, rotating the tile in that cell.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

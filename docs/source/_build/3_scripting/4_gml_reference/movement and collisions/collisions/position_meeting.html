@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,12 +32,30 @@ if (window.name != "content")
 <h2>position_meeting</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">position_meeting(x, y, obj);</p>
+<h3>描述</h3>
+
+<blockquote>
+<p>With this function you can check a position for a collision with
+another instance or all instances of an object. When you use this
+you are checking a single point in the room for an instance or an
+object. This check will be done against the bounding box of the
+instance or against the mask of the instance if that instance has
+precise collisions checked. If you need to get the unique instance
+<b>id</b> if the object being collided with you should use <a href=
+"../../instances/instance_functions/instance_position.html"><tt>instance_position</tt></a>.
+This function also accepts the special keywords <b>all</b> and
+<b>other</b>.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">position_meeting(x, y, obj);</p>
 
 <div class="param">
 <table>
@@ -67,37 +85,23 @@ to check for a collision with.</td>
 <p><br>
 </p>
 
-<p><b>返回:</b> 布尔值</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>With this function you can check a position for a collision with
-another instance or all instances of an object. When you use this
-you are checking a single point in the room for an instance or an
-object. This check will be done against the bounding box of the
-instance or against the mask of the instance if that instance has
-precise collisions checked. If you need to know get the unique
-instance <b>id</b> if the object being collided with you should use
-<a href=
-"../../instances/instance_functions/instance_position.html"><tt>instance_position</tt></a>.
-This function also accepts the special keywords <b>all</b> and
-<b>other</b>.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">if mouse_check_button(mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if !position_meeting(mouse_x, mouse_y, all) instance_create_layer(mouse_x, mouse_y, "Walls", obj_Wall);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks for the left mouse button, and if it is
 pressed it checks the mouse x/y position for a collision with any
 instance. If there is none, then an instance of "obj_Wall" is
 created.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -113,7 +117,7 @@ created.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

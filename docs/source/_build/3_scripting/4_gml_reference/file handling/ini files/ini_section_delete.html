@@ -2,13 +2,14 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>ini_section_delete</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../../default.css" type=
@@ -32,7 +33,19 @@ if (window.name != "content")
 <h2>ini_section_delete</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>使用此函数，你可以删除 ini 文件的整个部分，这也将删除与其关联的所有键值对。</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">ini_section_delete(section);</p>
 
@@ -56,24 +69,22 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3>例如：</h3>
 
-<p>使用此函数，你可以删除 ini 文件的整个部分，这也将删除与其关联的所有键值对。<br>
-<br></p>
+<p class="code">ini_open("savedata.ini");<br>ini_write_real("save1", "Score", score );<br>ini_section_delete("save1");<br>ini_close();</p>
 
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
-
-<p class="code">ini_open( 'savedata.ini' );<br>ini_write_real( 'save1', 'Score', score );<br>ini_section_delete( 'save1' );<br>ini_close();</p>
-
-<p>此示例将打开 'savedata.ini' 并将值写入 'save1' &gt; 'Score'。然后它将删除 “save1” 节并关闭 .ini 文件。</p>
+<blockquote>
+<p>This example will open "savedata.ini" and write a value to
+"save1" &gt; "Score". It will then delete the "save1" section and
+close the .ini file.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -89,7 +100,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

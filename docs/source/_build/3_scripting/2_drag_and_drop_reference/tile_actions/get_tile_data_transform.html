@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,22 +40,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can find out if the tiledata for a tile has
-been transformed in one of three ways: flipped, mirrored or
-rotated. The tiledata is simply a value that reflects the index of
-the tile along with the transforms applied, and you will normally
-want to get the tiledata first using either <a href=
-"get_tile_data_in_cell.html">Get Tile Data In Cell</a> or <a href=
-"get_tile_data_at_pixel.html">Get Tile Data At Pixel</a> before
-using this action. The action will return <tt>true</tt> if the
-chosen transform has been applied to the tiledata, or
-<tt>false</tt> otherwise, and the returned value will then be
-stored in the target variable which can have been created
-previously or can be a new temporary one (if you check the "Temp"
-check-box). For more information on tiledata, please see the GML
-section on <a href=
-"../../4_gml_reference/rooms/tilemaps/index.html">Tilemaps - Tile
-Functions</a>.</p>
+<p>使用此动作，你可以确认某图块的图块数据是否经过翻转，镜像或旋转。. 此图块数据是一个值，它反应了此图块的索引，翻转，镜像和旋转值，以及任何自定义的图块遮罩。你在使用此动作之前需要首先使用<a href=
+"get_tile_data_in_cell.html">获取单元格内的图块数据l</a> 或 <a href=
+"get_tile_data_at_pixel.html">在指定像素获得图块数据</a>如果图块数据确实经过变换，那么将返回 <tt>true</tt> 否则返回 <tt>false</tt> 。返回值将被存储在目标变量中，此变量需要之前就被创建了，或你选中临时(temp)按钮来创建的新临时变量。如果你需要更多关于图块数据的信息，参阅 <a href=
+"get_tile_data_in_cell.html">图块地图-图块函数</a>.</p>
 </blockquote>
 
 <p><br>
@@ -79,12 +67,12 @@ Functions</a>.</p>
 
 <tr>
 <td>图块</td>
-<td>The tiledata for the tile to get the transform from</td>
+<td>需要检测图块数据是否经过变换的图块</td>
 </tr>
 
 <tr class="alt">
-<td>Transform</td>
-<td>The the transform to check</td>
+<td>变换</td>
+<td>需要检测的变换形式</td>
 </tr>
 </table>
 </blockquote>
@@ -96,11 +84,7 @@ Functions</a>.</p>
 <img class="center" src=
 "images/e_tiles_set_tile_data_transform.png" alt=
 "Set Tile Data Transform Example">
-<blockquote>The above action block code gets the tiledata at the
-mouse position and then checks to see if the tile has had a
-rotation transform applied to it. If it has then the transform is
-reset and the tiledata sets the tile at the position
-again.</blockquote>
+<blockquote>上述动作代码块将在鼠标按下位置获得图块数据，再检测它是否经过旋转变换。如果有的话，将重置变换（即旋转回来），并更新图块数据。</blockquote>
 
 <p><br>
 </p>
@@ -116,7 +100,7 @@ Tile At Pixel</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

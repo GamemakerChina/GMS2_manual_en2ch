@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>开始跟随路径</title>
+<title>开始沿路径移动</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
@@ -31,7 +31,7 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2><img style="vertical-align:middle" src=
-"images/i_paths_start_following_path.png"> 开始跟随路径</h2>
+"images/i_paths_start_following_path.png"> 开始沿路径移动</h2>
 
 <div class="body-scroll">
 <p><br>
@@ -40,63 +40,31 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will start an instance following along a path that
-has been created in the resource tree. You would then use this
-action to tell your instance which path to follow, what speed to
-follow the path (measured in pixels per game frame), how to behave
-when it reaches the end of the path, and whether to follow the
-absolute or relative path position. When setting the speed you can
-use negative values to signify that the instance should follow the
-path in reverse and it's worth noting that the speed you set here
-can be modified by the speed modifier set in the path editor for
-each path point, so if you set a path speed to 2 and in the path
-one of the points has a speed modifier of 200% the actual pixels
-per game frame speed at that point will be 4.</p>
+<p>此动作将会使实例开始沿路径移动，此路径需要被在资源树中创建出来。你使用这个动作来告诉实例沿着哪个路径移动，应该用什么样的速度（单位是像素每游戏帧），当到达终点时该干什么，和是沿着绝对路径还是相对路径移动。你可以将此实例的速度设为负值，那么此实例将反向移动。你可以在路径编辑器中的速度修改器为每个路径点调整速度。例如你的路径速度是2，但你在速度修改器中把路径点一的修改调整为200%，那么实际上实例在路径点一的速度将会是4像素每游戏帧。</p>
 
-<p>Once you've set the initial path speed you can set how the
-instance should behave when it reaches the end of the path from the
-following options (note that when an instance reaches the end of a
-path this will also trigger an <a href=
-"../../../2_interface/1_editors/events/index.html">Other - Path
-Ended Event</a>):</p>
+<p>在你设置了初始速度后，你就可以设置实例到达终点的行为。注意当实例到达终点时也会除非 <a href=
+"../../../2_interface/1_editors/events/index.html">其它-路径结束事件</a>。</p>
 
 <ul>
-<li><b>Stop</b>: End the path, stopping the instance on the last
-path point.<br>
+<li><b>停止</b>：结束路径，让实例停留在最后一个路径点。<br>
 <br></li>
 
-<li><b>Restart</b>: Continue the path from the start, jumping to
-the start position again if the path is not marked as closed in the
-Path Editor.<br>
+<li><b>重新开始</b>：让实例从终点回到起点，再沿着路径移动一次。这需要这个路径在路径编辑器被没有被标记关闭。<br>
 <br></li>
 
-<li><b>Loop</b>: Continue from the current position to run the path
-again.<br>
+<li><b>循环</b>：从当前点再次沿路径移动。<br>
 <br></li>
 
-<li><b>Reverse</b>: Go backwards along the path again (achieved by
-reversing the path follow speed), and when it reaches the start of
-the path, it will reverse again, etc...</li>
+<li><b>反向</b>：让实例沿着路径反向走（也就是把速度设为负值）。当他达到起点后，将再次反向...</li>
 </ul>
 
-<p>Finally, you can flag the path as being <i>Relative</i> or not.
-By default the instance will start to follows the path exactly as
-you designed and placed it in the Path Editor (the absolute
-position), but if you flag the <i>Relative</i> checkbox then it
-will start to follow the path from the position at which the
-instance was created (the relative position). The image below
-illustrates this:</p>
+<p>最后，你也可以将此路径标记为 <i>相对</i>。默认情况下，此实例将沿着你在路径编辑器中创建好的路径行走，这是绝对路径。当你标记 <i>相对</i> 后，此实例将会把创建自身的位置当成起点，但方向和真实路径是一样的，这是相对路径你可以在下图看到：</p>
 
 <p><img class="center" src="images/path_relative_image.png" alt=
 "Relative Vs. Absolute Paths">
 </p>
 
-<p>As you can see in this image, the two instances are following
-the <i>same</i> path started with this action, but one of the
-instances is following the <i>absolute</i> path while the other is
-following the <i>relative</i> path. It should be noted that when
-Relative is not flagged the instance will "jump" to the start of
-the path no matter where in the room it is placed.</p>
+<p>正如你所看到的，两个实例沿着 <i>相同的</i> 路径移动，但其中一个是沿着 <i>绝对</i> 路径，另一个沿着 <i>相对</i> 路径值得注意的是如果未标记相对，那么在一开始实例将会“跳到”绝对路径的起点，无论绝对路径在哪里。这看起来有些不自然。</p>
 </blockquote>
 
 <p><br>
@@ -119,17 +87,17 @@ alt="Start Following Path Syntax">
 
 <tr>
 <td>路径</td>
-<td>The path resource to start following</td>
+<td>沿着移动的路径资源</td>
 </tr>
 
 <tr class="alt">
 <td>速度</td>
-<td>The speed (in pixels per game frame) to follow the path</td>
+<td>跟随路径移动的速度，单位是像素每游戏帧</td>
 </tr>
 
 <tr>
 <td>在终点处</td>
-<td>The response to reaching the end of the path</td>
+<td>到达终点后的行为</td>
 </tr>
 </table>
 </blockquote>
@@ -140,8 +108,7 @@ alt="Start Following Path Syntax">
 <h3>例如：</h3>
 <img class="center" src="images/e_paths_start_following_path.png"
 alt="Start Following Path Example">
-<blockquote>The above action block code will start the calling
-instance following a path when a key is pressed.</blockquote>
+<blockquote>上述动作代码块将在某个键按下时使调用的实例沿着路径移动。</blockquote>
 
 <p><br>
 </p>
@@ -157,7 +124,7 @@ instance following a path when a key is pressed.</blockquote>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

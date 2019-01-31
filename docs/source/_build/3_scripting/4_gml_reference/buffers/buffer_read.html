@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>buffer_read</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">buffer_read(buffer, type)</p>
 
@@ -62,7 +62,34 @@ list of constants below).</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Real/String</p>
+<p><b>Returns:</b> Real/String or one of the following constants if
+the function fails:</p>
+
+<div class="compat">
+<table>
+<tr>
+<th>常量</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>buffer_outofspace</td>
+<td>is returned when reading from a buffer beyond its capacity</td>
+</tr>
+
+<tr class="alt">
+<td>buffer_outofbounds</td>
+<td>is when an explicit operation is outside of the buffer capacity
+(i.e. index is &lt; 0 or &gt; capacity)</td>
+</tr>
+
+<tr>
+<td>buffer_invalidtype</td>
+<td>is when a you try to read a non <tt>u8</tt> value from a fast
+buffer type.</td>
+</tr>
+</table>
+</div>
 
 <p><br>
 </p>
@@ -114,8 +141,7 @@ constants:<br>
 
 <tr>
 <td>buffer_u64</td>
-<td>An unsigned 64bit integer. This can be a positive or negative
-value from -(2<sup>63</sup>) to 2<sup>63</sup> - 1.</td>
+<td>An unsigned 64bit integer.</td>
 </tr>
 
 <tr class="alt">
@@ -130,8 +156,7 @@ value from -(2<sup>63</sup>) to 2<sup>63</sup> - 1.</td>
 
 <tr class="alt">
 <td>buffer_f64</td>
-<td>A 64bit float. This can be a positive or negative value from
--(2<sup>52</sup>) to 2<sup>52</sup> - 1.</td>
+<td>A 64bit float.</td>
 </tr>
 
 <tr>
@@ -162,7 +187,7 @@ read will result in erroneous values!</i><br>
 
 <h3 class="studio">例如：</h3>
 
-<p class="code">var cmd = buffer_read(buff, buffer_S16 );</p>
+<p class="code">var cmd = buffer_read(buff, buffer_s16);</p>
 
 <p>The above code reads from the buffer with the id stored in the
 variable "buff" a signed 16bit value into the local variable
@@ -183,7 +208,7 @@ variable "buff" a signed 16bit value into the local variable
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

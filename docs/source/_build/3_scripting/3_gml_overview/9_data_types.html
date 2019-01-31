@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -44,17 +44,17 @@ if (window.name != "content")
 <blockquote><label class="collapse" for="one">字符串（String）</label>
 <input id="one" type="checkbox">
 <div class="index_list">
-<p>一个字符串就是简单地使用引号（可以是 '...' 也可以是 "..."）括起来的任意一段文本。你可以对字符串执行某些操作，例如将它们叠加到一起形成一段更长的字符串（连接操作（Concatenation）），你也可以改变字符串的属性甚至从中抽取实数部分。字符串函数的更多信息参见：<a href=
-"../4_gml_reference/strings/index.html">GameMaker 语言参考 - 字符串</a></p>
+<p>A string is simply any text that has been placed in quotation marks "...". 你可以对字符串执行某些操作，例如将它们叠加到一起形成一段更长的字符串（连接操作（Concatenation）），你也可以改变字符串的属性甚至从中抽取实数部分。For more information on strings and the string functions see: <a href=
+"../4_gml_reference/strings/index.html">GameMaker Language Reference - Strings</a>.</p>
 </div>
 <br>
-<label class="collapse" for="two">实数（Real Numbers）</label> <input id=
+<label class="collapse" for="two">Real Numbers</label> <input id=
 "two" type="checkbox">
 <div class="index_list">
-<p>实数可以是任何一个既不是字符串也不是其他数据类型的值，它就是一个数值而已。因此，124, 45639.566546456, 0, -45.5 等……所有的这些都是实数。所有的实数都被存储为一个 32 位的浮点数（即使是个整数），因此在处理这些数据的时候你可能会遇到一些轻微的舍入误差（Rounding Errors）。关于这个及其他与实数相关的函数参见 <a href=
+<p>实数可以是任何一个既不是字符串也不是其他数据类型的值，它就是一个数值而已。因此，124, 45639.566546456, 0, -45.5 等……所有的这些都是实数。All real numbers are stored as double-precision floating point values (even seemingly integer values), so you may experience slight rounding errors when dealing with these. 关于这个及其他与实数相关的函数参见 <a href=
 "../4_gml_reference/maths/real%20valued%20functions/index.html">GML参考 - 实数</a></p>
 
-<p>请注意，在 <i>GameMaker Studio 2</i> 中创建的变量都被存储为一个双精度浮点数，但是当使用扩展的时候你可以使用其他类型。这些其它类型的数值可以从一个扩展中传递到 GameMaker Studio 2 中，然后可以使用下面所列举的相应的 <tt>is_</tt> 函数来检测它们的类型。</p>
+<p>Note that while created variables in <i>GameMaker Studio 2</i> are all stored as double-precision floating point numbers, you can still use other formats when dealing with extensions. 这些其它类型的数值可以从一个扩展中传递到 GameMaker Studio 2 中，然后可以使用下面所列举的相应的 <tt>is_</tt> 函数来检测它们的类型。</p>
 </div>
 <br>
 <label class="collapse" for="three">数组（Arrays）</label> <input id=
@@ -63,13 +63,41 @@ if (window.name != "content")
 <p>数组是一个特殊的数据类型，它们可以用来存储多个值。你可以将数组赋予给一个变量，然后用值 “填入” 数组的各个索引元素中。通过传递引用（Pass-by-reference）可以将这个数组传递给脚本或函数中，但是当你要修改所传递的数组的时候，它会变成原来数组的一个拷贝（Copy），因此你需要回到原来需要修改的数组中。关于数组的更多信息，参见 <a href="10_arrays.html">GML概述 - 数组</a></p>
 </div>
 <br>
-<label class="collapse" for="four">布尔值（Boolean）</label> <input id="four"
-type="checkbox">
+<label class="collapse" for="eight">Hexadecimal</label> <input id=
+"eight" type="checkbox">
 <div class="index_list">
-<p>布尔值可以是 <tt>true</tt> 或 <tt>false</tt>。请注意，当前的 <i>GameMaker Studio 2</i> 还不支持 “真正的” 布尔值，并且实际上是视所有低于 0.5 的实数为假（false），所有大于等于 0.5 的值为真（true）。然而，这也 <i>不</i> 意味着你应该使用 1 或 0（或者别的实数）来进行检测真假，为此还提供了 <b>常量</b> <tt>true</tt> 和 <tt>false</tt>，你应该总是使用它们以防止在未来的更新中引入真正的布尔数据类型时可能引发的问题。</p>
+<p><i>GameMaker Studio 2</i> will also accept <b>hexadecimal
+literals</b> as legitimate values. Hexadecimal values are
+especially common when working with colours, but can be used
+anywhere a positive integer value is required. Note that
+hexadecimal values can be formatted in either of the following two
+ways:</p>
+
+<p class="code">$abcd<br>
+0xabcd<br></p>
+
+<p>For example, the following values can be expressed as
+hexadecimal as shown:</p>
+
+<p class="code">11406 = $2c8e = 0x2c8e<br>
+16777215 = $ffffff = 0xffffff<br></p>
 </div>
 <br>
-<label class="collapse" for="five">指针（Pointer）</label> <input id="five"
+<label class="collapse" for="four">Boolean</label> <input id="four"
+type="checkbox">
+<div class="index_list">
+<p>布尔值可以是 <tt>true</tt> 或 <tt>false</tt>。Note that currently <i>GameMaker Studio 2</i> will interpret a real number equal to or below 0.5 as a <tt>false</tt> value, and any real number greater than 0.5 as being <tt>true</tt>. This does <i>not</i> mean however that you should be checking 1 and 0 (or any other real number) for true and false, as you are also provided with the <b>constants</b> <tt>true</tt> and <tt>false</tt> which should always be used in your code to prevent any issues should real boolean data types be added in a future update.</p>
+
+<p>You can convert any real number into an implicitly boolean value
+using the following function:</p>
+
+<ul>
+<li><a href="bool.html">bool</a><br>
+</li>
+</ul>
+</div>
+<br>
+<label class="collapse" for="five">指针</label> <input id="five"
 type="checkbox">
 <div class="index_list">
 <p>指针是一个 “指向” 一个内存位置（Memory Location）的一种数据类型你不可以对指针进行操作，它们只是被用于某些极特殊的函数中的，像给其他函数取得纹理或缓冲区地址的函数中。能够返回指针的函数典型例子有 <a href=
@@ -108,7 +136,7 @@ type="checkbox">
 <label class="collapse" for="six">枚举（Enum）</label> <input id="six"
 type="checkbox">
 <div class="index_list">
-<p>一个枚举也就是一个枚举器（Enumerator），它们允许你使用常量值列表创建自己的有限的数据类型。枚举具有 <a href="6_scope.html">全局作用域</a>（这是隐式的，而且不需要 <tt>global</tt> 前缀）并且它们具有如下结构：</p>
+<p>一个枚举也就是一个枚举器（Enumerator），它们允许你使用常量值列表创建自己的有限的数据类型。Enums are <a href="6_scope.html">global scope</a> variables (this is implicit, and they require no "<tt>global</tt>" prefix) and they have the following structure:</p>
 
 <p class="code">enum
 <i>&lt;variable&gt;</i>{<i>&lt;constant&gt;</i> [=
@@ -118,11 +146,17 @@ type="checkbox">
 
 <p class="code">enum rainbowcolors {<br>&nbsp;&nbsp;&nbsp;red,<br>&nbsp;&nbsp;&nbsp;orange,<br>&nbsp;&nbsp;&nbsp;yellow,<br>&nbsp;&nbsp;&nbsp;green,<br>&nbsp;&nbsp;&nbsp;blue,<br>&nbsp;&nbsp;&nbsp;indigo,<br>&nbsp;&nbsp;&nbsp;violet<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>枚举的项目只可以是 <b>实数</b> 或 <b>包含前面枚举的表达式</b>，并且默认地数字从 0 开始向上走，因此我们上面所给的例子会默认 <tt>red = 0</tt>、<tt>orange = 1</tt>、<tt>yellow = 2</tt>等……你也可以在制作过程中将值赋给枚举变量：</p>
+<p>The enum entries can only be <b>integer numbers</b> or
+<b>expressions with previous enums that evaluate to an integer
+number</b>, and by default are numbered from 0 upwards, so our
+example given above would default to <tt>red = 0</tt>, <tt>orange =
+1</tt>, <tt>yellow = 2</tt>, etc...</p>
+
+<p>你也可以在制作过程中将值赋给枚举变量：</p>
 
 <p class="code">enum rainbowcolors {<br>&nbsp;&nbsp;&nbsp;red = 5,<br>&nbsp;&nbsp;&nbsp;orange = 5 * 2,<br>&nbsp;&nbsp;&nbsp;yellow = 15,<br>&nbsp;&nbsp;&nbsp;green = 20,<br>&nbsp;&nbsp;&nbsp;blue = 25,<br>&nbsp;&nbsp;&nbsp;indigo = 30,<br>&nbsp;&nbsp;&nbsp;violet = 35 * enum_test.entry<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>请注意，上面的例子中我们使用了另一个枚举为 "violet" 创建了一个表达式。这仅适用在，所引用的枚举在一个表达式中使用它 <i>之前</i> 创建的时候，但它不适用于变量或函数，因为枚举值必须能够在编译时作为常量进行求值。另请注意，所有枚举值都会评估为 <b>整数</b> 值，当你创造自己的枚举时，你应该意识到这一点：枚举生效 <i>只允许整数值</i>。</p>
+<p>请注意，上面的例子中我们使用了另一个枚举为 "violet" 创建了一个表达式。这仅适用在，所引用的枚举在一个表达式中使用它 <i>之前</i> 创建的时候，但它不适用于变量或函数，因为枚举值必须能够在编译时作为常量进行求值。Also note that all enum values evaluate to <b>integer</b> values, and when you create your own you should be aware that <i>only integer values are permitted</i> for enums to work. This value can be any integer number that a floating point double precision number can represent.</p>
 
 <p>要稍后访问给定枚举类型中的值，你可以使用 <tt>“.”</tt> 方法，像这样：</p>
 
@@ -131,8 +165,8 @@ type="checkbox">
 <p>请注意，在任何枚举常量创建后，你无法修改它们的值。</p>
 </div>
 <br>
-<label class="collapse" for="sevem">未定义（Undefined）</label> <input id=
-"sevem" type="checkbox">
+<label class="collapse" for="seven">未定义（Undefined）</label> <input id=
+"seven" type="checkbox">
 <div class="index_list">
 <p>未定义的值（也称为 “null” 值）是指一个表达式没有正确值的情况，尽管它在语法上是正确的，因此必须返回 <i>某些事物</i>。例如，假设你有一个 <tt>ds_map</tt> 并使用函数 <tt>ds_map_find_value()</tt>。现在，当 map（译者注：映射数据）没有找到值时会发生什么？好吧，函数格式正确，问题是没有这样的值存在，那么它将返回 <b>常数</b> <tt>undefined</tt>，你可以检查这个常数为 <tt>true</tt> 或任何其他值。</p>
 </div></blockquote>
@@ -197,7 +231,7 @@ type="checkbox">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

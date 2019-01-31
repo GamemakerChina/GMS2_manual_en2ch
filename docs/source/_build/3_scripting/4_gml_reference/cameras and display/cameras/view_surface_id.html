@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,7 +37,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this variable you can set the contents of a given view port to draw to a surface, or get the current surface id if one has been assigned to a view port. When working with surfaces, it is often required that you capture the <i>whole</i> visible region of the screen to the surface, and so you would assign it to a view port using this variable. 这意味着所选视野内的所有显示的画面将被绘制到指定的表面。The view will now <i>not</i> be drawn to the screen, meaning that you will need to either:</p>
+<p>使用此变量可将给定可视区域的内容设为绘制曲面，或者得到目前被分配给这个可视区域的表面。在处理曲面时，通常需要把<i>整个</i> 屏幕上的可视区域捕获到表面，所以你需要使用此变量来将表面分配给一个可视区域。这意味着所选视野内的所有显示的画面将被绘制到指定的表面。此视野现在<i>不会</i>被绘制到屏幕上，这意味着你需要做下列操作：</p>
 
 <blockquote>
 <ul>
@@ -50,24 +50,17 @@ if (window.name != "content")
 </ul>
 </blockquote>
 
-<p>You can also read this variable to get the index of the surface
-that has been assigned to the chosen view or it will return -1 if
-no surface has been assigned, and generally the surface used for
-this function should be the size of the view camera itself (not the
-view port). The extended example below shows a basic setup for
-capturing a view and drawing it in the <b>Draw GUI</b> event, and
-for more information on surfaces see the section <a href=
-"../../drawing/surfaces/index.html">Surfaces</a>.</p>
+<p>你可以读取这个变量以获取选择的表面的已经指定的表面的索引，如果没有指定表面则返回-1，并且一般用于这个函数的表面应该和视野一样大小（不是可视区域）。下面的扩展例子展示了在 <b>Draw GUI</b> 事件中捕获视野的基本设置，更多表面的信息查看章节 <a href=
+"../../drawing/surfaces/index.html">Reference - Surfaces</a>。</p>
 
-<p>Note that you can also set a view port to a surface using the
-function <a href=
-"view_set_surface_id.html"><tt>view_set_surface_id()</tt></a>.</p>
+<p>注意，你也可以用函数 <a href=
+"view_set_surface_id.html"><tt>view_set_surface_id()</tt></a>来为可视区域设置表面。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">view_surface_id[0...7];</p>
 
@@ -76,8 +69,7 @@ function <a href=
 
 <h3>Returns:</h3>
 
-<p class="code">Real (surface index or -1 if no surface has been
-assigned)</p>
+<p class="code">实数（表面的索引，如果没有索引，就返回-1）</p>
 
 <p><br>
 </p>
@@ -85,7 +77,7 @@ assigned)</p>
 <h3>Extended 举例：</h3>
 
 <blockquote>
-<p>In this extended example, we will create a surface and assign it to view port[0] so it captures the camera view assigned to that port, then draw that to the screen in the Draw GUI event. 首先我们需要在<b>创建事件（Create Event）</b>中初始化表面变量。</p>
+<p>在这个扩展例子里，我们将创建一个表面并且指定给 view port[0]，然后在 Draw GUI 事件中绘制到屏幕上。首先我们需要在<b>创建事件（Create Event）</b>中初始化表面变量。</p>
 </blockquote>
 
 <p class="code">surf = -1;</p>
@@ -103,8 +95,7 @@ assigned)</p>
 <p class="code">if surface_exists(surf)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_surface_stretched(surf, 0, 0, display_get_gui_width(), display_get_gui_height());<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>This code will now draw the surface that we have created from
-the view camera stretched to fill the entire GUI layer.</p>
+<p>此代码将拉伸我们从视野摄像机绘制的表面，以填满整个GUI层。</p>
 </blockquote>
 
 <p><br>
@@ -118,7 +109,7 @@ the view camera stretched to fill the entire GUI layer.</p>
 "view_set_camera.html">view_set_camera</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

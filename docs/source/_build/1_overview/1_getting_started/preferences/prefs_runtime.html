@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -44,15 +44,17 @@ if (window.name != "content")
 
 <p>这个偏好设置的初始部分是关于在哪里拉取运行库工具，需要你将网址输入到RSS订阅源。这个下载源将扫描更新运行库，然后可以下载并安装。默认此部分将显示主要的运行库下载源地址，但是你可以点击<i>添加</i>按钮创建一个新的运行库下载源，你可以在其它给出RSS源的名称和网址，然后点击<i>应用</i>告知<i>GameMaker Studio 2</i> 访问它。你将需要关闭并重新打开偏好设置窗口，以显示新的下载源。</p>
 
-<p>一旦创建了一个运行库下载源，它将作为子类别在这个部分列出，你应该始终至少列出一个下载源（默认是主下载源）。以下给出了主要的运行库下载源选项，对于其它的来说也是一样的：</p>
+<div class="note"><b>NOTE</b>: if you opt into the <a href=
+"prefs_betachannel.html">Beta Channel</a>, then the Beta Channel
+runtimes will be shown in a "Beta" feed along with "Master" and you
+can change between the two at any time.</div>
 
-<blockquote><a name="prefs_runtime_master" id=
-"prefs_runtime_master"></a> <label class="collapse" for=
-"one">主干</label> <input id="one" type="checkbox">
-<div class="index_list"><img class="center" src=
-"images/runtime_master_prefs.png" alt=
-"运行库主下载源偏好设置">
-<p><b>主</b>运行库下载源偏好设置用于选择、安装或者卸载不同的运行库工具（此页对于你添加的任何其它的运行库下载源也都是一样的）。在顶部，你可以看到当前正在使用的运行库工具，创建的时间，硬盘上存放的位置。在这些信息之下，你可以找到所有可用的运行库的列表，你可以从此列表中选择任何一个更改为正在编译项目的运行库工具。</p>
+<p><br>
+一旦创建了一个运行库下载源，它将作为子类别在这个部分列出，你应该始终至少列出一个下载源（默认是主下载源）。Regardless of the runtime being used, they will all have the same features, outlined below using the <i>Master</i> feed as an example:
+<img class="center" src="images/runtime_master_prefs.png" alt=
+"运行库主下载源偏好设置"></p>
+
+<p>The <b>Runtime Feed</b> preferences are used to select, install and un-install the different runtime tools. 在顶部，你可以看到当前正在使用的运行库工具，创建的时间，硬盘上存放的位置。在这些信息之下，你可以找到所有可用的运行库的列表，你可以从此列表中选择任何一个更改为正在编译项目的运行库工具。</p>
 
 <p>要选择不同的运行库使用，只需在列表中找到它，然后在它上面双击 <img align="middle" src=
 "../../../images/icon_lmb.png"> 。如果尚未下载安装，系统则会提示你，安装完毕后，系统将提示你关闭并重新启动 IDE，以便初始化新的运行库。</p>
@@ -94,10 +96,6 @@ alt="删除状态">
 
 <p>你随时可以点击刷新按钮 <img style="vertical-align:middle"
 src="images/icon_refresh.png"> 从给定RSS源更新运行库列表。</p>
-</div></blockquote>
-
-<p><br>
-</p>
 
 <p><br>
 </p>
@@ -109,11 +107,12 @@ src="images/icon_refresh.png"> 从给定RSS源更新运行库列表。</p>
 <div style="float:left">上一页：<a href=
 "../7_preferences.html">偏好设置索引</a></div>
 
-<div style="float:right">下一页：<a href="prefs_general.html">常规设定</a></div>
+<div style="float:right">Next: <a href=
+"prefs_betachannel.html">Beta Channel Preferences</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

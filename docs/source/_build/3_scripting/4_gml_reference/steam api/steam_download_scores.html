@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>steam_download_scores</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">steam_download_scores(lb_name, start_idx,
 end_idx);</p>
@@ -86,7 +86,16 @@ leaderboard using the function <a href=
 and the function will return a value which can then be used to
 identify the call-back in the <a href=
 "../../../2_interface/1_editors/events/async_events.html">Steam
-Async Event</a>, or it will return -1 if it has failed.<br>
+Async Event</a>, or it will return -1 if it has failed. Note that
+when downloading a leaderboard, the "entries" key of the
+<tt>async_load</tt> map may have an additional "data" key if any
+additional buffer data was uploaded along with the score(see
+<a href=
+"steam_upload_score_buffer.html"><tt>steam_upload_score_buffer()</tt></a>).
+This data buffer will be <b>Base 64 encoded</b> and so you will
+need to use the function <a href=
+"../buffers/buffer_base64_decode.html"><tt>buffer_base64_decode()</tt></a>
+on the buffer before reading the data.<br>
 <br></p>
 
 <p><br>
@@ -107,11 +116,11 @@ from the leaderboard "Game Scores", storing the <b>async id</b> of
 the request in the variable "score_get". this will then be handled
 in the <b>Steam Async Event</b> in the following way:</p>
 
-<p class="code">var async_id = ds_map_find_value(async_load, "id");<br>if async_id == score_get<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var entries = ds_map_find_value(async_load, "entries");<br>&nbsp;&nbsp;&nbsp;var map = json_decode(entries);<br>&nbsp;&nbsp;&nbsp;if ds_map_exists(map, "default")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_map_destroy(map);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var list = ds_map_find_value(map, "entries");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var len = ds_list_size(list);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var entry;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; len; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry = ds_list_find_value(list, i );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_name[i] = ds_map_find_value(entry, "name");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_score[i] = ds_map_find_value(entry, "score");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_rank[i] = ds_map_find_value(entry, "rank");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_map_destroy(entry);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_list_destroy(list)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;ds_map_destroy(map)<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var async_id = ds_map_find_value(async_load, "id");<br>if async_id == score_get<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var entries = ds_map_find_value(async_load, "entries");<br>&nbsp;&nbsp;&nbsp;var map = json_decode(entries);<br>&nbsp;&nbsp;&nbsp;if ds_map_exists(map, "default")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ds_map_destroy(map);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var list = ds_map_find_value(map, "entries");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var len = ds_list_size(list);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var entry;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(var i = 0; i &lt; len; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry = ds_list_find_value(list, i );<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_name[i] = ds_map_find_value(entry, "name");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_score[i] = ds_map_find_value(entry, "score");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;steam_rank[i] = ds_map_find_value(entry, "rank");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;ds_map_destroy(map)<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p>What we do here is first check the "id" key of the special <a href=
 "../../../2_interface/1_editors/events/async_events.html"><tt>async_load</tt></a> ds_map. 如果此值与原始回调函数的值（存储在 “score_get” 变量中）相同，则我们将继续处理数据。The first thing we do is parse the <tt>async_load</tt> ds_map for the key "entries" which will contain a JSON object containing the leaderboard data. This JSON object is then decoded (see <a href=
-"../file%20handling/json_decode.html"><tt>json_decode</tt></a>) as another ds_map, and this new map id is stored in the variable "map".<br><br>检查该映射是否有为 “default” 的键，如果有的话，则销毁该映射并退出该事件。If no "default" key is found, the code will then parse the map to extract the necessary information about the leaderboard, by first extracting a ds_list from the "entries" key of the ds_map, and then looping through each entry of the list to get <i>another</i> ds_map with the name, score and rank of each entry. These values are then stored to arrays and the map destroyed.<br><br>一旦循环完成，条目列表就会像从其获取的映射一样被销毁。There is no need to destroy the <tt>async_load</tt> ds_map as this is handled for you by <i>GameMaker Studio 2</i>.</p>
+"../file%20handling/json_decode.html"><tt>json_decode</tt></a>) as another ds_map, and this new map id is stored in the variable "map".<br><br>检查该映射是否有为 “default” 的键，如果有的话，则销毁该映射并退出该事件。If no "default" key is found, the code will then parse the map to extract the necessary information about the leaderboard, by first extracting a ds_list from the "entries" key of the ds_map, and then looping through each entry of the list to get <i>another</i> ds_map with the name, score and rank of each entry. These values are then stored to arrays.<br><br>Once the loop has finished, the JSON ds_map is destroyed (which in turn destroys all the internal maps and lists). There is no need to destroy the <tt>async_load</tt> ds_map as this is handled for you by <i>GameMaker Studio 2</i>.</p>
 
 <p><br>
 </p>
@@ -127,7 +136,7 @@ in the <b>Steam Async Event</b> in the following way:</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

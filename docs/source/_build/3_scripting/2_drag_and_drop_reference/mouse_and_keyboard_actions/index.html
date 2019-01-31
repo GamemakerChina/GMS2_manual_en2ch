@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -96,6 +96,93 @@ src="images/i_keyboardmouse_keydown.png" alt="检测键盘点击"></a>
 </tr>
 </table>
 
+<p>The other three actions here refer to the <b>virtual
+keyboard</b>. If you require text or numeric input in your game on
+a touchscreen device, then you can use the virtual keyboard actions
+provided to use the device OS keyboard. These actions will call up
+or hide the OS keyboard and accept input from it just the same as a
+physical keyboard, so the regular <i>GameMaker Studio 2</i>
+keyboard actions should all work with virtual keyboards (for
+example, the "If Key Released" action), and any input from the
+virtual keyboard will be stored in the different keyboard
+variables, like <a href=
+"../../4_gml_reference/controls/keyboard%20input/keyboard_string.html">
+<tt>keyboard_string</tt></a>, or <a href=
+"../../4_gml_reference/controls/keyboard%20input/keyboard_lastchar.html">
+<tt>keyboard_last_char</tt></a>, etc...).</p>
+
+<p>Opening or closing the virtual keyboard will generate <a href=
+"../../../2_interface/1_editors/events/async_events.html">System
+Asynchronous Events</a>, in which the <tt>async_load</tt> DS map
+will be populated with the following key/value pairs:</p>
+
+<ul>
+<li>"<b>event_type</b>" - 收到的系统事件的类型，它将是虚拟键盘的 “<b>虚拟键盘状态</b>”。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>虚拟键盘高度</b>" - 虚拟键盘的高度（以像素为单位）。 如果键盘不可见，则该值为 0。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>键盘状态</b>" - 键盘的当前状态，作为以下字符串之一返回：<br>
+<br>
+
+<ul>
+<li>"正在执行隐藏动作"</li>
+
+<li>"隐藏"</li>
+
+<li>"正在执行显示动作"</li>
+
+<li>"可见"</li>
+</ul></li>
+</ul>
+
+<p>The available virtual keyboard actions are:</p>
+
+<table class="icons">
+<tr>
+<td class="icons"><a href="show_virtual_keyboard.html"><img align=
+"middle" src="images/i_virtualkeyboard_show.png" alt=
+"显示虚拟键盘"></a>
+</td>
+<td class="text"><a href="show_virtual_keyboard.html">显示虚拟键盘</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href="hide_virtual_keyboard.html"><img align=
+"middle" src="images/i_virtualkeyboard_hide.png" alt=
+"隐藏虚拟键盘"></a>
+</td>
+<td class="text"><a href="hide_virtual_keyboard.html">隐藏虚拟键盘</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href=
+"get_virtual_keyboard_height.html"><img align="middle" src=
+"images/i_virtualkeyboard_getheight.png" alt=
+"获取虚拟键盘高度"></a>
+</td>
+<td class="text"><a href="get_virtual_keyboard_height.html">获取虚拟键盘高度</a>
+</td>
+</tr>
+
+<tr>
+<td class="icons"><a href=
+"if_virtual_keyboard_showing.html"><img align="middle" src=
+"images/i_virtualkeyboard_ifshowing.png" alt=
+"如果虚拟键盘正在显示"></a>
+</td>
+<td class="text"><a href="if_virtual_keyboard_showing.html">如果虚拟键盘正在显示</a>
+</td>
+</tr>
+</table>
+
 <p><br>
 </p>
 </div>
@@ -110,7 +197,7 @@ src="images/i_keyboardmouse_keydown.png" alt="检测键盘点击"></a>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

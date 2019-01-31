@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,13 +32,42 @@ if (window.name != "content")
 <h2>collision_rectangle</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">collision_rectangle( x1, y1, x2, y2, obj, prec,
-notme );</p>
+<h3>描述</h3>
+
+<blockquote>
+<p>Collision_rectangle uses the first four arguments (x1,y1,x2,y2)
+to define an area within the current room and then checks to see if
+<b>any</b> object that is defined by the "obj" argument is in
+collision with that area. This collision can be checked as precise
+or not, and you may also choose to check for the instance running
+the code itself or not. Consider this image:  <img class="center"
+src="images/collision_rectangle_illustration.png"></p>
+
+<p>Here, the instance in the middle is using a collision rectangle
+to check for ball objects. Now, the blue ones do <i>not</i> have a
+precise bounding box and as you can see, even if the sprite is not
+actually touching the rectangle, the collision will still happen
+(even if you set the precise option in the function to true) as the
+bounding box of that sprite over-laps the collision_rectangle. On
+the other hand, the green balls will only be considered in
+collision if the actual sprite over-laps the rectangle. Remember,
+for precise collisions to be considered <i>both</i> the object
+sprite and the collision function must have precise marked as on.
+It should also be noted that the return value of the function can
+be the id of <i>any one</i> of the instances considered to be in
+collision.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">collision_rectangle(x1, y1, x2, y2, obj, prec,
+notme);</p>
 
 <div class="param">
 <table>
@@ -78,14 +107,15 @@ check.</td>
 
 <tr class="alt">
 <td>prec</td>
-<td>Whether the check is based on pixel-perfect collisions (true =
-slow) or its bounding box in general (false = fast).</td>
+<td>Whether the check is based on precise collisions
+(<tt>true</tt>, which is slower) or its bounding box in general
+(<tt>false</tt>, faster).</td>
 </tr>
 
 <tr>
 <td>notme</td>
 <td>Whether the calling instance, if relevant, should be excluded
-(true) or not (false).</td>
+(<tt>true</tt>) or not (<tt>false</tt>).</td>
 </tr>
 </table>
 </div>
@@ -93,44 +123,18 @@ slow) or its bounding box in general (false = fast).</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Instance id or <b>noone</b></p>
+<h3>Returns:</h3>
+
+<p class="code">Instance id or noone</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>Collision_rectangle uses the first four arguments (x1,y1,x2,y2)
-to define an area within the current room and then checks to see if
-<b>any</b> object that is defined by the "obj" argument is in
-collision with that area. This collision can be checked as precise
-or not, and you may also choose to check for the instance running
-the code itself or not. Consider this image:<br>
-<br>
-<img class="center" src=
-"images/collision_rectangle_illustration.png"></p>
-
-<p>Here, the instance in the middle is using a collision rectangle
-to check for ball objects. Now, the blue ones do <i>not</i> have a
-precise bounding box and as you can see, even if the sprite is not
-actually touching the rectangle, the collision will still happen
-(even if you set the precise option in the function to true) as the
-bounding box of that sprite over-laps the collision_rectangle. On
-the other hand, the green balls will only be considered in
-collision if the actual sprite over-laps the rectangle. Remember,
-for precise collisions to be considered <i>both</i> the object
-sprite and the collision function must have precise marked as on.
-It should also be noted that the return value of the function can
-be the id of <i>any one</i> of the instances considered to be in
-collision.<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">var inst;<br>inst = collision_rectangle(50, 50, 200, 100, obj_Ball, false, true);<br>if inst != noone<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;with (inst) instance_destroy();<br>&nbsp;&nbsp;&nbsp;}</p>
 
+<blockquote>
 <p>This short code uses collision_rectangle check an area in the
 room from 50x, 50y (top left of the rectangle) to 200x, 200y
 (bottom right of the rectangle) for an instance of an object called
@@ -138,6 +142,7 @@ room from 50x, 50y (top left of the rectangle) to 200x, 200y
 which is then checked to see if that value is an instance id, or
 the keyword <b>noone</b>. If it is <i>not</i> <b>noone</b> then it
 uses the stored instance id to destroy the object.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -148,12 +153,12 @@ uses the stored instance id to destroy the object.</p>
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Collision Checking</a></div>
 
-<div style="float:right">下一页: <a href=
-"point_in_rectangle.html">point_in_rectangle</a></div>
+<div style="float:right">Next: <a href=
+"collision_rectangle_list.html">collision_rectangle_list</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

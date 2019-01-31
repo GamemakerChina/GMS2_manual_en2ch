@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,15 +37,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to retrieve the follow target of the
-given camera. The return value can be an object index, an instance
-ID or -1 if no follow target has been set.</p>
+<p>此功能可用于返回给定摄像机的跟随目标。返回值可以是对象索引，实例ID。如果没有设置跟随目标，则返回—1。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_get_view_target(camera_id)</p>
 
@@ -63,8 +61,7 @@ ID or -1 if no follow target has been set.</p>
 
 <tr>
 <td>camera_id</td>
-<td>The unique camera ID value returned when you created the
-camera</td>
+<td>创建相机时返回的唯一相机 id 值</td>
 </tr>
 </table>
 </blockquote>
@@ -74,8 +71,7 @@ camera</td>
 
 <h3>Returns:</h3>
 
-<p class="code">Object Index, Instance ID, or -1 if no target is
-set.</p>
+<p class="code">对象索引，实例ID，如没有目标则返回-1。</p>
 
 <p><br>
 </p>
@@ -84,10 +80,7 @@ set.</p>
 
 <p class="code">var target = camera_get_view_target(view_camera[0]);<br>if target != obj_Player<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;camera_set_view_target(view_camera[0], obj_Player);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code retrieves the follow target of the camera
-assigned to view port[0] and then checks this to see if it matches
-the object index "obj_Player". If it does not then the view camera
-is set to follow an instance of that object.</p>
+<p>上述代码检查被分配给view port[0]的相机所跟随的目标，然后检查它是否是“obj_target"。如果不是的话，那就让此视野摄像机跟随那个对象的一个实例。</p>
 
 <p><br>
 </p>
@@ -100,7 +93,7 @@ is set to follow an instance of that object.</p>
 "camera_get_default.html">camera_get_default</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

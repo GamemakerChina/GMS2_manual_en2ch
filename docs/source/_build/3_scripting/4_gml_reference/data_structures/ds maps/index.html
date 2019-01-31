@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,12 +29,39 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">映射数据结构</h1>
+<h2>映射数据结构</h2>
 
-<h2 class="studio">A ds_map is a data structure that stores data in
-linked pairs consisting of a key and a corresponding value.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<p>The ds_map data structure is an exceptionally useful one as it lets you store <b>key</b> and <b>value</b> pairs. For example, a character in your game can have a quantity of different items (<i>keys</i>) and for each individual item he can have a number of them (<i>values</i>), like in an RPG where you can have 10 health potions, 5 mana potions and 100 gold. Maps maintain such pairs all together in the one place and you can add pairs to the map and search for the value corresponding to certain keys as well using some simple functions. There are a couple of things you should know about maps before you use them, however!Maps are <i>not</i> sorted in any (recognisable) way, meaning that to find a certain key you may have to iterate through the whole thing (which is <b>very</b> slow). There is also no way to hold two keys that are the same, nor can you assign one key two values.<br><br><i><b>NOTE:</b> The ds_map functions have changed since previous versions of</i> GameMaker so imported games may not work or behave as you expect.<br><br><i><b>NOTE:</b> As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</i><br><br>The following functions exist that deal with DS maps.</p>
+<p>The ds_map data structure is an exceptionally useful one as it
+lets you store <b>key</b> and <b>value</b> pairs. For example, a
+character in your game can have a quantity of different items
+(<i>keys</i>) and for each individual item he can have a number of
+them (<i>values</i>), like in an RPG where you can have 10 health
+potions, 5 mana potions and 100 gold. Maps maintain such pairs all
+together in the one place and you can add pairs to the map and
+search for the value corresponding to certain keys as well using
+some simple functions. There are a couple of things you should know
+about maps before you use them, however! Maps are <i>not</i> sorted
+in any (recognisable) way, meaning that to find a certain key you
+may have to iterate through the whole thing (which is <b>very</b>
+slow). There is also no way to hold two keys that are the same, nor
+can you assign one key two values.</p>
+
+<div class="note"><b>NOTE:</b> The ds_map functions have changed
+since previous versions of <i>GameMaker</i> so imported games may
+not work or behave as you expect.</div>
+
+<div class="note"><b>NOTE:</b> As with all dynamic resources, data
+structures take up memory and so should <b>always</b> be destroyed
+when no longer needed to prevent memory leaks which will slow down
+and eventually crash your game.</div>
+
+<p><br>
+
+The following functions exist that deal with DS maps.</p>
 
 <blockquote>
 <ol>
@@ -81,6 +108,9 @@ linked pairs consisting of a key and a corresponding value.</h2>
 <li><a href="ds_map_find_value.html">ds_map_find_value</a><br>
 </li>
 
+<li><a href="ds_map_set.html">ds_map_set</a><br>
+</li>
+
 <li><a href="ds_map_read.html">ds_map_read</a><br>
 </li>
 
@@ -93,10 +123,10 @@ linked pairs consisting of a key and a corresponding value.</h2>
 </blockquote>
 
 <p>There are four further functions available for saving and
-loading a ds_map. These functions will encrypt the map and store it
-in a secure location on the target platform, so you can use this to
-save In App Purchase details, passwords, sensitive game
-information, etc...</p>
+loading a ds_map. These functions will obfuscate the map and store
+it in a secure location on the target platform using a file format
+that means that the final file is not able to be transfered between
+devices:</p>
 
 <blockquote>
 <ol>
@@ -125,10 +155,12 @@ contents of your <tt>ds_map</tt>. This accessor looks similar to a
 
 <p>You can find more information, plus examples, from from the GML
 Overview page on <a href=
-"../../../3_gml_overview/13_accessors.html">Accessors</a>.<br>
-<br></p>
+"../../../3_gml_overview/13_accessors.html">Accessors</a>.</p>
 
-<h3 class="studio">JSON And Ds_maps</h3>
+<p><br>
+</p>
+
+<h2>JSON And DS Maps</h2>
 
 <p>One of the uses that ds_maps have is when working with JSON, and
 so there are a few special functions that are specific to that:</p>
@@ -166,32 +198,34 @@ ds_lists:</p>
 </ol>
 </blockquote>
 
-<p><i><b>NOTE:</b> While these functions permit you to add lists
-and maps within a map, they are useless for anything other than
-JSON, and nested maps and lists will not be read correctly if
-written to disk or accessed in any other way.</i><br>
-<br>
-</p>
+<div class="note"><b>NOTE:</b> While these functions permit you to
+add lists and maps within a map, they are useless for anything
+other than JSON, and nested maps and lists will not be read
+correctly if written to disk or accessed in any other way.</div>
 
-<blockquote><i><b>NOTE:</b> if you need to check if a data
+<div class="note"><b>NOTE:</b> if you need to check if a data
 structure exists, you can use the <a href=
-"../ds_exists.html"><tt>ds_exists()</tt></a> function.</i>
-</blockquote>
+"../ds_exists.html"><tt>ds_exists()</tt></a> function.</div>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="../index.html">Data Structures</a></div>
 
 <div style="float:right">下一页: <a href=
 "../ds%20priority%20queues/index.html">DS Priority Queues</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

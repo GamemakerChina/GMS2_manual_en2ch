@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,25 +32,23 @@ if (window.name != "content")
 <h2>os_get_language</h2>
 
 <div class="body-scroll">
-<h2 class="studio">This function returns a different value
-depending on the browser or device language.</h2>
-
-<h3 class="studio">Syntax:</h3>
-
-<p class="code">os_get_language()</p>
-
 <p><br>
 </p>
 
-<p><b>返回：</b> String（字符串）</p>
+<h3>描述</h3>
 
-<p><br>
-</p>
+<blockquote>
+<p>This function returns a string with the two letter Language Code
+for the OS that is running the game, as set by the <a href=
+"http://en.wikipedia.org/wiki/ISO_639" target="_blank">ISO639</a>
+standard. If the information is not available, it will hold simply
+an empty string "", or "en" for "English" language. Note that some
+languages also have a relevant Regional Code too, so to distinguish
+between different regions of the same country use the function
+<a href="os_get_region.html"><tt>os_get_region()</tt></a>.</p>
 
-<h3 class="studio">描述</h3>
-
-<p>This function returns a string with the two letter Language Code for the OS that is running the game, as set by the <a href=
-"http://en.wikipedia.org/wiki/ISO_639" target="_blank">ISO639</a> standard. If the information is not available, it will hold simply an empty string "", or "en" for "English" language. Note that some languages also have a relevant Regional Code too, so to distinguish between different regions of the same country use the function <a href="os_get_region.html"><tt>os_get_region()</tt></a>.<br><br>The following table shows some of the main two letter language codes as defined by ISO 639:</p>
+<p>The following table shows some of the main two letter language
+codes as defined by ISO 639:</p>
 
 <div class="compat">
 <table>
@@ -136,22 +134,35 @@ depending on the browser or device language.</h2>
 </table>
 </div>
 
-<p><br>
-<br>
-<i><b>NOTE:</b> This is not the location country code that is
-returned, but the language code of the OS!</i><br>
-<br>
-</p>
+<div class="note"><b>NOTE</b>: This is not the location country
+code that is returned, but the language code of the OS!</div>
+</blockquote>
 
 <p><br>
 </p>
 
-<h3 class="studio">例如：</h3>
+<h3>语法：</h3>
 
-<p class="code">switch (os_get_language())<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case "es": ini_open("spanish.ini"); break;<br>&nbsp;&nbsp;&nbsp;case "fr": ini_open("french.ini"); break;<br>&nbsp;&nbsp;&nbsp;case "it": ini_open("italian.ini"); break;<br>&nbsp;&nbsp;&nbsp;default: ini_open("english.ini"); break;<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">os_get_language()</p>
 
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">字符串</p>
+
+<p><br>
+</p>
+
+<h3>例如：</h3>
+
+<p class="code">switch (os_get_language())<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case "es": ini_open("spanish.ini"); break;<br>&nbsp;&nbsp;&nbsp;case "fr": ini_open("french.ini"); break;<br>&nbsp;&nbsp;&nbsp;case "it": ini_open("italian.ini"); break;<br>&nbsp;&nbsp;&nbsp;default: ini_open("english.ini"); break;<br>&nbsp;&nbsp;&nbsp;;<br></p>
+
+<blockquote>
 <p>The above code checks the OS language and opens a different
 <tt>*.ini</tt> file depending on the returned value.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -167,7 +178,7 @@ returned, but the language code of the OS!</i><br>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

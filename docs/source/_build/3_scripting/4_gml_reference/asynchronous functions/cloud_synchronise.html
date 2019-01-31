@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -46,28 +46,41 @@ if (window.name != "content")
 
 <blockquote>
 <ul>
-<li><b>"status":</b> 这是状态码，其中负值表示错误，错误详情包含在 “errorstring” 中。
-0 （或者大于 0 的值）代表成功（见下文）的返回, “resultString” 中包含返回的消息数据。</li>
+<li><b>"<span class="notranslate">status</span>":</b> This holds
+the status code, where a negative value denotes an error, a
+description of which will be contained in the "<span class=
+"notranslate">errorString</span>". A value of 0 (or a positive
+value) indicates a success(see below for exact values), and the
+"<span class="notranslate">resultString</span>" will contain the
+returned data or a success message.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"id":</b> 返回被调用的函数的 id，如果你发送了一系列的 <tt>cloud_</tt> 请求，你需要知道被回应的是哪一个，所以你要用这个值来和发送时存储的值进行比较来找到你需要的请求。</li>
+<li><b>"<span class="notranslate">id</span>":</b> The id which was
+returned from the called function. If you fire off a series of
+<tt>cloud_</tt> requests then you need to know which one you are
+getting the reply to, and so you would use this value to compare to
+the value you stored when you originally sent the request to find
+the right one.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"description":</b> 上传的最后一个文件的描述。</li>
+<li><b>"<span class="notranslate">description</span>":</b> The
+description of the last uploaded file.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"resultString":</b> 从云端返回的二进制数据。</li>
+<li><b>"<span class="notranslate">resultString</span>":</b> This
+holds a string which is the data blob returned from the cloud.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>"errorString":</b> 返回的错误消息。</li>
+<li><b>"<span class="notranslate">errorString</span>":</b> returns
+an Error String for any error.</li>
 </ul>
 </blockquote>
 
@@ -83,39 +96,49 @@ if (window.name != "content")
 
 <tr>
 <td>-1</td>
-<td>errorString = "Not logged in to &lt;SERVICE&gt;"</td>
+<td><span class="notranslate">errorString = "Not logged in
+to</span> &lt;SERVICE&gt;"</td>
 <td>未能成功登陆到给定的云服务。</td>
 </tr>
 
 <tr class="alt">
 <td>0</td>
-<td>resultString = recovered data</td>
+<td><span class="notranslate">resultString</span> = recovered
+data</td>
 <td>从云端下载新的游戏数据（在 cloud_synchronise 后调用）。</td>
 </tr>
 
 <tr>
 <td>1</td>
-<td>resultString = "AlreadySynchronized"</td>
+<td><span class="notranslate">resultString =
+"AlreadySynchronized"</span>
+</td>
 <td>自从上次调用以来 cloud_synchronise 没有新的数据。</td>
 </tr>
 
 <tr class="alt">
 <td>2</td>
-<td>resultString = "ConflictDeferral"</td>
+<td><span class="notranslate">resultString =
+"ConflictDeferral"</span>
+</td>
 <td>遇到冲突,但玩家选择忽略它。</td>
 </tr>
 
 <tr>
 <td>3</td>
-<td>resultString = "GameUploadSuccess"</td>
+<td><span class="notranslate">resultString =
+"GameUploadSuccess"</span>
+</td>
 <td>来自 <a href=
 "cloud_string_save.html"><tt>cloud_string_save</tt></a> 或 <a href=
 "cloud_file_save.html"><tt>cloud_file_save</tt></a>的数据被成功的上传到云端。</td>
 </tr>
 
 <tr class="alt">
-<td>-n</td>
-<td>errorString = Description of error</td>
+<td><span class="notranslate">-n</span>
+</td>
+<td><span class="notranslate">errorString</span> = Description of
+error</td>
 <td>负数意味着同步失败。</td>
 </tr>
 </table>
@@ -125,7 +148,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">cloud_synchronise();</p>
 
@@ -172,7 +195,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

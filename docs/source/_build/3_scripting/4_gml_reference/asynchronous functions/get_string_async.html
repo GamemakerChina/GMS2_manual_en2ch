@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -50,20 +50,24 @@ Dialog event</a> is triggered which, for the duration of that event
 <i>only</i>, will have a ds_map stored in the variable
 <tt>async_load</tt>.</p>
 
-<p>This map will contain the three keys, "id", "status", and
-"result". "id" is the value that was returned by the function when
-called, the "status" will be either <tt>true</tt> for the "Okay"
-button being pressed, or <tt>false</tt> if the message was
-cancelled (where applicable as not all target platforms permit the
-message to be cancelled). Finally "result" will return the string
-that the user input (or an empty string "" if none was
+<p>This map will contain the three keys, "<span class=
+"notranslate">id</span>", "<span class=
+"notranslate">status</span>", and "<span class=
+"notranslate">result</span>". "<span class="notranslate">id</span>"
+is the value that was returned by the function when called, the
+"<span class="notranslate">status</span>" will be either
+<tt>true</tt> for the "Okay" button being pressed, or
+<tt>false</tt> if the message was cancelled (where applicable as
+not all target platforms permit the message to be cancelled).
+Finally "<span class="notranslate">result</span>" will return the
+string that the user input (or an empty string "" if none was
 supplied).</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">get_string_async(string, default);</p>
 
@@ -117,13 +121,13 @@ Dialogs event</a> as shown below:</p>
 <p class="code">var i_d = ds_map_find_value(async_load, "id");<br>if i_d == msg<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if ds_map_find_value(async_load, "status")<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ds_map_find_value(async_load, "result") != ""<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;global.Name = ds_map_find_value(async_load, "result");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks the "id" key of the returned
-<tt>ds_map</tt> against the value stored in the variable "msg". If
-they are the same, it then checks to see if "Okay" was pressed
-(rather than the window being closed/cancelled) and if it returns
-<tt>true</tt> it then checks the "result" of a string to make sure
-that no empty strings were returned before setting a global
-variable.</p>
+<p>The above code checks the "<span class="notranslate">id</span>"
+key of the returned <tt>ds_map</tt> against the value stored in the
+variable "<span class="notranslate">msg</span>". If they are the
+same, it then checks to see if "Okay" was pressed (rather than the
+window being closed/cancelled) and if it returns <tt>true</tt> it
+then checks the "result" of a string to make sure that no empty
+strings were returned before setting a global variable.</p>
 </blockquote>
 
 <p><br>
@@ -140,7 +144,7 @@ variable.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

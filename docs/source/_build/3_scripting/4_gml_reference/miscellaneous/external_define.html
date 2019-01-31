@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,13 +35,67 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>描述</h3>
 
-<p class="code">external_define(dll, name, calltype, restype,
-argnumb, argtype[0], argtype[1], ...argtype[10]) ;</p>
+<blockquote>
+<p>This function can be used to define an external function call to
+a specific dll (for Windows) or dylib (for Mac). This file can be
+either an included file or part of an extension. You supply the
+name (and path) of the file, then the name of the function that you
+wish to define. Next you need to define the calling convention to
+be used (see the constants list below) as well as the type of
+result to be expected (also a constant, as listed below). Finally
+you must give the number arguments that the function can take (from
+0 to 15) and for each of the arguments you must specify its type
+too. Please note that for functions with 4 or more arguments, all
+of them <i>must</i> be of type <tt>ty_real</tt>.</p>
+
+<div class="note"><b>NOTE</b>: This is only for dll or dylib that
+have been added as "Included Files" to the <i>GameMaker Studio
+2</i> IDE. It will not work with those files added as extensions,
+since those require that you define the functions in the extension
+package itself.</div>
+
+<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
+
+<div class="compat">
+<table>
+<tr>
+<th>常量</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>dll_cdecl</td>
+<td>This is the default C, C++ call</td>
+</tr>
+
+<tr class="alt">
+<td>dll_stdcall</td>
+<td>This is the standard WinAPI call (Windows <tt>dll</tt>
+only)</td>
+</tr>
+
+<tr>
+<td>ty_real</td>
+<td>A real number argument</td>
+</tr>
+
+<tr class="alt">
+<td>ty_string</td>
+<td>a null-terminated string argument</td>
+</tr>
+</table>
+</div>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">external_define(dll, name, calltype, restype,
+argnumb, argtype[0], argtype[1], ...argtype[10]) ;</p>
 
 <div class="param">
 <table>
@@ -92,73 +146,18 @@ argnumb, argtype[0], argtype[1], ...argtype[10]) ;</p>
 <p><br>
 </p>
 
-<h3>描述</h3>
-
-<blockquote>
-<p>This function can be used to define an external function call to
-a specific dll (for Windows) or dylib (for Mac). This file can be
-either an included file or part of an extension. You supply the
-name (and path) of the file, then the name of the function that you
-wish to define. Next you need to define the calling convention to
-be used (see the constants list below) as well as the type of
-result to be expected (also a constant, as listed below). Finally
-you must give the number arguments that the function can take (from
-0 to 15) and for each of the arguments you must specify its type
-too. Please note that for functions with 4 or more arguments, all
-of them <i>must</i> be of type <tt>ty_real</tt>.</p>
-
-<div class="note"><b>NOTE:</b> This is only for dll or dylib that
-have been added as "Included Files" to the <i>GameMaker Studio
-2</i> IDE. It will not work with those files added as extensions,
-since those require that you define the functions in the extension
-package itself.</div>
-
-<div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
-
-<div class="compat">
-<table>
-<tr>
-<th>常量</th>
-<th>描述</th>
-</tr>
-
-<tr>
-<td>dll_cdecl</td>
-<td>This is the default C, C++ call</td>
-</tr>
-
-<tr class="alt">
-<td>dll_stdcall</td>
-<td>This is the standard WinAPI call (Windows <tt>dll</tt>
-only)</td>
-</tr>
-
-<tr>
-<td>ty_real</td>
-<td>A real number argument</td>
-</tr>
-
-<tr class="alt">
-<td>ty_string</td>
-<td>a null-terminated string argument</td>
-</tr>
-</table>
-</div>
-
-<p><br>
-</p>
-
 <h3>例如：</h3>
 
 <p class="code">my_funcion = external_define("MyDLL.dll", "MyMin",
 dll_cdecl, ty_real, 2, ty_real, ty_real);</p>
 
+<blockquote>
 <p>The above example code will define an external function called
 "MyMin" with two arguments.</p>
+</blockquote>
 
 <p><br>
 </p>
-</blockquote>
 </div>
 
 <div class="footer">
@@ -172,7 +171,7 @@ dll_cdecl, ty_real, 2, ty_real, ty_real);</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

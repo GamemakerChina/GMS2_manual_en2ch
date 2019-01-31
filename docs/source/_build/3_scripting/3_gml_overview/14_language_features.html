@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,13 +38,18 @@ if (window.name != "content")
 
 <p>GameMaker 语言（GML）有许多功能特性，这些功能是使用该语言编写的所有代码的基本结构的组成部分。它们之中的每一个在你编写任何代码时都会多次使用，因此在开始编写项目之前，你应该知道它们是什么以及它们是如何工作的。</p>
 
-<blockquote><label class="collapse" for="one">if / 条件运算符</label> <input id="one" type="checkbox">
-<div class="index_list">一个简单的 "if" 语句具有这种形式结构<br>
+<blockquote><label class="collapse" for="one"><span class=
+"notranslate">if</span> /Conditional Operator</label> <input id=
+"one" type="checkbox">
+<div class="index_list">A simple <tt>"if"</tt> statement takes this
+form:<br>
 <br>
 
 <p class="code">if (&lt;表达式&gt;) &lt;语句&gt;</p>
 <br>
-或者它也可以有略微复杂的 "if... else..." 结构：<br>
+
+or it can have the slightly more complex <tt>"if... else..."</tt>
+form:<br>
 <br>
 
 <p class="code">if (&lt;表达式&gt;) &lt;语句1&gt; else &lt;语句2&gt;</p>
@@ -84,9 +89,11 @@ if (window.name != "content")
 
 <p class="code">var c = a ?"foo" : (b ?"bar" : "wii"); // 正确的方式<br>var c = a ?"foo" : b ?"bar" : "wii";&nbsp;&nbsp; // 会出错</p></div>
 <br>
-<label class="collapse" for="two">repeat</label> <input id="two"
-type="checkbox">
-<div class="index_list">“repeat” 语句的结构：<br>
+<label class="collapse" for="two"><span class=
+"notranslate">repeat</span></label> <input id="two" type=
+"checkbox">
+<div class="index_list">A <tt>"repeat"</tt> statement has the
+form<br>
 <br>
 
 <p class="code">repeat (&lt;表达式&gt;) &lt;语句&gt;</p>
@@ -102,9 +109,11 @@ type="checkbox">
 
 <p class="code">{<br>var i, total;<br>i = 0;<br>total = 0;<br>repeat (10)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;total += array[i];<br>&nbsp;&nbsp;&nbsp;i += 1<br>&nbsp;&nbsp;&nbsp;}<br>draw_text(32, 32, total);<br>}<br></p></div>
 <br>
-<label class="collapse" for="three">while</label> <input id="three"
-type="checkbox">
-<div class="index_list">一个 “while” 循环语句具有这种形式：<br>
+<label class="collapse" for="three"><span class=
+"notranslate">while</span></label> <input id="three" type=
+"checkbox">
+<div class="index_list">A <tt>"while"</tt> statement has the
+form<br>
 <br>
 
 <p class="code">while (&lt;表达式&gt;) &lt;语句</p>
@@ -116,28 +125,30 @@ type="checkbox">
 <br>
 上面的程序试图将当前物体放置在空闲位置（这与将物体移动到随机位置的操作大致相同）。</div>
 <br>
-<label class="collapse" for="four">do / until</label> <input id=
-"four" type="checkbox">
-<div class="index_list">“do” 实际上也就是 “do... until”，缺一不可。结构如下：<br>
+<label class="collapse" for="four"><span class="notranslate">do /
+until</span></label> <input id="four" type="checkbox">
+<div class="index_list">A "do" is really the <tt>"do... until"</tt> statement as you cannot have one without the other. 结构如下：<br>
 <br>
 
 <p class="code">do &lt;语句&gt; until (&lt;表达式&gt;)</p>
 <br>
-语句（也可以是代码块）会一直运行直到表达式为真，至少会运行一次。注意这是一个循环，可能会出现死循环，游戏将会挂起不响应输入。下面是 “do... until” 的一个经典例子：<br>
+语句（也可以是代码块）会一直运行直到表达式为真，至少会运行一次。注意这是一个循环，可能会出现死循环，游戏将会挂起不响应输入。Below you can find an example of a typical way to use <tt>"do... until"</tt>:<br>
 <br>
 
 <p class="code">{<br>do<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x = random(room_width);<br>&nbsp;&nbsp;&nbsp;y = random(room_height);<br>&nbsp;&nbsp;&nbsp;}<br>until (place_free(x, y)); }<br></p>
 <br>
 上面的程序试图将当前物体放置在空闲位置（这与将物体移动到随机位置的操作大致相同）。</div>
 <br>
-<label class="collapse" for="five">for</label> <input id="five"
-type="checkbox">
-<div class="index_list">“For” 语句的结构：<br>
+<label class="collapse" for="five"><span class=
+"notranslate">for</span></label> <input id="five" type="checkbox">
+<div class="index_list">A <tt>"for"</tt> statement has this
+form:<br>
 <br>
 
-<p class="code">for (&lt;statement1&gt; ; &lt;表达式&gt; ;&lt;statement2&gt;) &lt;statement3&gt;</p>
+<p class="code">for (&lt;assigment1&gt; ; &lt;expression&gt;
+;&lt;statement1&gt;) &lt;statement2&gt;</p>
 <br>
-工作原理 - 首先执行语句 1，然后判断表达式，表达式为真则执行语句 3。然后语句 2，并再次判断表达式。如此循环，直到表达式为假。<br><br>现在，这样写的可能听起来很复杂，但你应该把它解释为：<br>
+This works as follows - First assigment1 is executed, then the expression is evaluated and, if it is true, statement2 is executed. Then statement1 is performed and then the expression is evaluated again. 如此循环，直到表达式为假。<br><br>现在，这样写的可能听起来很复杂，但你应该把它解释为：<br>
 <br>
 
 <ul>
@@ -152,11 +163,21 @@ type="checkbox">
 
 <p class="code">{<br>for (var i = 0; i &lt; 10; i += 1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), string(i) + ". "+ string(scr[i]));<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 <br>
-上述代码初始化 “i” 用于循环，始于 0 累计至 9，使用循环变量 “i” 的值在屏幕上绘制数组的值。注意 “for” 循环变量 “i” 如何不仅用于循环遍历数组，还有绘制数字以及告诉 <i>GameMaker Studio 2</i> 在房间里绘制值的位置。这种灵活性也是 “for” 循环在编程中如此重要的原因。</div>
+
+The above code initialises a for loop, starting at 0 and counting
+up until 9, and then uses the loop value of <span class=
+"notranslate">"i"</span> to draw the values stored in an array down
+the screen. Note how the <tt>"for"</tt> loop variable <span class=
+"notranslate">"i"</span> is used to not only loop through the
+array, but to draw a number as well as tell <i>GameMaker Studio
+2</i> where to draw the values to in the room. This flexibility is
+one of the main reasons why <tt>"for"</tt> loops are so important
+in programming.</div>
 <br>
-<label class="collapse" for="six">switch</label> <input id="six"
-type="checkbox">
-<div class="index_list">很多情况下，你想要实例根据一个特定值完成一个动作。你可以连续多次使用 “<tt>如果</tt>” 语句，但是当可能的选择超过两个或三个时，通常使用 “switch” 语句更容易。switch 语句结构如下：<br>
+<label class="collapse" for="six"><span class=
+"notranslate">switch</span></label> <input id="six" type=
+"checkbox">
+<div class="index_list">很多情况下，你想要实例根据一个特定值完成一个动作。You can do this using a number of consecutive "<tt>if</tt>" statements but when the possible choices gets above two or three it is usually easier to use the <tt>"switch"</tt> statement. A <tt>switch</tt> statement has the following form:<br>
 <br>
 
 <p class="code">switch (&lt;表达式&gt;)<br>{<br>case &lt;expression1&gt;: &lt;statement1&gt;; ... ; break;<br>case &lt;expression2&gt;: &lt;statement2&gt;; ... ; break;<br>...<br>default: &lt;statement&gt;;<br>}<br></p>
@@ -173,16 +194,17 @@ type="checkbox">
 
 <li>如果没有一个 case 表达式正确，将会在 “default” 语句后继续（default 并非必须，那时没有动作执行）。</li>
 </ul>
-注意，同一个语句前可以出现多个 case。同样，“break” 也不是必须的，没有它时，简单的继续到下一个 case 语句。这意味着你可以创建一个分层的 “开关”，根据输入值运行不同部分的代码。下面是游戏中的 “switch” 典型用法：<br>
+注意，同一个语句前可以出现多个 case。同样，“break” 也不是必须的，没有它时，简单的继续到下一个 case 语句。这意味着你可以创建一个分层的 “开关”，根据输入值运行不同部分的代码。here is an example of a typical <tt>"switch"</tt> from a game:<br>
 <br>
 
 <p class="code">{<br>switch (keyboard_key)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case vk_left:<br>&nbsp;&nbsp;&nbsp;case ord("A"):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x -= 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;case vk_right:<br>&nbsp;&nbsp;&nbsp;case ord("D"):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x += 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;case vk_up:<br>&nbsp;&nbsp;&nbsp;case ord("W"):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y -= 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;case vk_down:<br>&nbsp;&nbsp;&nbsp;case ord("S"):<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y += 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 <br>
-上述代码使用 “switch” 检测键盘事件，然后和一系列的 case（条件）比较。遇到了适当的条件后运行相应的代码。请注意我们在代码中是怎么用的，“switch” 可以检测多个条件，如果没有 “break” 就会一直继续，以允许使用多个按键得到相同的结果。这仅是允许多种设置处理移动的一种方法。</div>
+The above code uses <tt>"switch"</tt> to check for a keyboard event and then compares that to the cases listed. 遇到了适当的条件后运行相应的代码。Note how in the code we have used the way that <tt>"switch"</tt> can check multiple cases and continue if no break is encountered to permit various keys to be used to get the same result. 这仅是允许多种设置处理移动的一种方法。</div>
 <br>
-<label class="collapse" for="seven">break</label> <input id="seven"
-type="checkbox">
-<div class="index_list">“break” 语句用于提前结束 <tt>for</tt>、<tt>repeat</tt>、<tt>while</tt>、<tt>do...until</tt> 这些类型的循环，或告诉一个 <tt>switch</tt> 声明在那里结束，或者提前结束一个 <tt>with</tt> 调用。下面可以看到一些用法的例子，语法挺简单的：<br>
+<label class="collapse" for="seven"><span class=
+"notranslate">break</span></label> <input id="seven" type=
+"checkbox">
+<div class="index_list">The <tt>"break"</tt> statement is used to end prematurely a <tt>for</tt>, <tt>repeat</tt>, <tt>while</tt>, <tt>do... until</tt> loop of some kind, or to tell a <tt>switch</tt> statement to end at that point, or to prematurely end a <tt>with</tt> call. 下面可以看到一些用法的例子，语法挺简单的：<br>
 <br>
 
 <p class="code">break;</p>
@@ -209,23 +231,27 @@ type="checkbox">
 
 <p class="code">{<br>var count = 0;<br>with (obj_Enemy)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;count++;<br>&nbsp;&nbsp;&nbsp;if count &gt; 10 break;<br>&nbsp;&nbsp;&nbsp;hp = 100;<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p></div>
 <br>
-<label class="collapse" for="eight">continue</label> <input id=
-"eight" type="checkbox">
-<div class="index_list">The continue statement has the form:<br>
+<label class="collapse" for="eight"><span class=
+"notranslate">continue</span></label> <input id="eight" type=
+"checkbox">
+<div class="index_list">The <tt>"continue"</tt> statement has the
+form:<br>
 <br>
 
 <p class="code">continue</p>
 <br>
-如果在一个循环语句内使用（<tt>repeat</tt>、 <tt>while</tt>、<tt>do...until</tt> 或者 <tt>for</tt>），它会立即跳回到循环的开头，就好像循环已经通过并再循环回来（如果在循环之外使用，行为如同 <tt>exit</tt> 的退出事件）。它在 <tt>with</tt> 函数中也是一样的，它将导致代码跳到下一个实例并再次运行。<br><br>下面是它在 “for” 循环中使用的一个例子：<br>
+If used inside of a statement that forms a loop (<tt>repeat</tt>, <tt>while</tt>, <tt>do... until</tt> or <tt>for</tt>), it will immediately jump back to the beginning of the loop as if the loop had run through and looped back. It will also do the same when using the <tt>with</tt> function, where it will cause the code to skip to the next instance and run again, but if used outside of context it will give an error.<br><br>Below is an example of its use in a "for" loop:<br>
 <br>
 
 <p class="code">{<br>var i;<br>for (i = 0; i &lt; 10; i += 1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if array[i] = "" continue;<br>&nbsp;&nbsp;&nbsp;array[i] = "";<br>&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 <br>
 上述代码将判断 array[i] 的值，如果是一个空字符，它将跳回到循环的开始。</div>
 <br>
-<label class="collapse" for="eleven">exit</label> <input id=
-"eleven" type="checkbox">
-<div class="index_list">“exit” 语句的结构：<br>
+<label class="collapse" for="eleven"><span class=
+"notranslate">exit</span></label> <input id="eleven" type=
+"checkbox">
+<div class="index_list">The <tt>"exit"</tt> statement has the
+form:<br>
 <br>
 
 <p class="code">exit;</p>
@@ -240,8 +266,8 @@ type="checkbox">
 <div class="note"><b>注意：</b>它不是结束游戏的运行。如果要那样，你需要使用 <a href=
 "../4_gml_reference/game/game_end.html"><tt>game_end</tt></a> 函数。</div></div>
 <br>
-<label class="collapse" for="nine">with</label> <input id="nine"
-type="checkbox">
+<label class="collapse" for="nine"><span class=
+"notranslate">with</span></label> <input id="nine" type="checkbox">
 <div class="index_list">如<a hreff=
 "7_Addressing_Variables.html">访问其它实例的变量</a>这一节所说，可以在其他实例中读取和更改变量的值。但在许多情况下，你希望能做更多，而不仅仅更改其它实例的一个变量。例如，假设你想要将游戏中的所有球物体（ball objects）移动 8 个像素。你可能认为只需通过以下代码即可实现：<br>
 <br>
@@ -253,12 +279,12 @@ type="checkbox">
 
 <p class="code">obj_ball.y += 8;</p>
 <br>
-它具有完全相同的效果，因为它只是第一个语句的简写。所以怎样 <i>做</i> 才能实现呢？GML 中 <b>with</b> 语句就是为了这个目的而存在的。它的整体结构是：<br>
+它具有完全相同的效果，因为它只是第一个语句的简写。所以怎样 <i>做</i> 才能实现呢？For this purpose there exists the <b><tt>with</tt></b> statement in GML. 它的整体结构是：<br>
 <br>
 
 <p class="code">with (&lt;表达式&gt;) &lt;语句&gt;</p>
 <br>
-&lt;表达式&gt;表示一个或多个实例，对于这个你可以使用实例id、物体的名称（表示这个物体的 <i>所有实例</i> 都运行代码块），或一个特殊的 <i>关键词</i> （<b>all</b>、<b>self</b>、<b>other</b>）。&lt;语句&gt; 现在让指定实例的每一个运行一次代码，就像这个实例是当前（self）的实例一样。因此，要将球物体的所有实例向下移动 8 个像素，你可以键入：<br>
+&lt;Expression&gt; indicates one or more instances, and for this you can use an instance id, the name of an object (which indicates <i>all instances</i> of this object are to run the code block) or one of the special <i>keywords</i> (<b><tt>all</tt></b>, <b><tt>self</tt></b>, <b><tt>other</tt></b>). &lt;语句&gt; 现在让指定实例的每一个运行一次代码，就像这个实例是当前（self）的实例一样。因此，要将球物体的所有实例向下移动 8 个像素，你可以键入：<br>
 <br>
 
 <p class="code">with (obj_ball) y += 8;</p>
@@ -268,7 +294,7 @@ type="checkbox">
 
 <p class="code">with (obj_ball)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x = random(room_width); // 获取房间的随机位置<br>&nbsp;&nbsp;&nbsp;y = random(room_height);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 <br>
-请注意，在语句中，指示的实例已成为运行代码块的目标实例（self），这意味着原始实例（包含 “with” 和代码块的实例）的语句已成为 <b>other</b> 实例。例如，要将所有球移动到当前实例的位置，你可以键入：<br>
+Note that, within the statement(s), the indicated instance has become the target (self) instance that runs the code block, which means that the statements the original instance (that contains the <tt>"with"</tt> and the code block) has become the <b><tt>other</tt></b> instance. 例如，要将所有球移动到当前实例的位置，你可以键入：<br>
 <br>
 
 <p class="code">with (obj_ball) { x = other.x; y = other.y; }</p>
@@ -288,11 +314,14 @@ with 语句是一个非常强大的工具，在很多很多情况下都很有用
 
 <p class="code">var inst;<br>inst = noone;<br>with (obj_ball)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if str &gt; other.str inst = id; // 比较两个值，获取这个实例的 id<br>&nbsp;&nbsp;&nbsp;}<br>if inst != noone target = inst; // 对于符合条件的实例，赋值给 target 变量<br></p>
 <br>
-上面的代码比之前的代码稍微复杂了一些，因为使用了局部变量。这个变量相对于 <i>脚本</i> 是本地的，而不是相对于实例，因此可以被代码块中引用的所有实例使用和访问。所以，在代码中我们将它设置为特殊的 <i>关键字</i> <b>noone</b> 然后使用 “with” 结构让 obj_Ball 物体的每个实例检查它们的 “str” 变量，与运行代码块的实例的变量进行比较。如果变量的值较大，那么将它们的唯一 id 存储在 “inst” 局部变量中，这意味着在代码的末尾，只有值大于调用实例的情况（或者如果没有更大的话，将是这个 <i>关键字</i> <b>noone</b>），它的 id 将存储在局部变量 inst 中。有关局部变量（译者注：或者说本地变量）的更多信息，请参阅章节 <a href="6_scope.html">变量和变量的作用域</a>。</div>
+上面的代码比之前的代码稍微复杂了一些，因为使用了局部变量。这个变量相对于 <i>脚本</i> 是本地的，而不是相对于实例，因此可以被代码块中引用的所有实例使用和访问。So, in the code we have set it to the special <i>keyword</i> <tt><b>noone</b></tt>tt&gt; and then use the "with" construction to have every instance of obj_Ball check their <span class=
+"notranslate">"str"</span> variable against that of the instance running the code block. If the value of the variable is larger, then they store their unique id in the "inst" local variable, meaning that at the end of the code, only the instance with a value greater than the calling instance (or the <i>keyword</i> <b><tt>noone</tt></b> if none are larger) will be stored in the local variable inst. For more information on local variables see the section <a href="6_scope.html">Variables And variable Scope</a>.</div>
 <br>
-<label class="collapse" for="ten">return</label> <input id="ten"
-type="checkbox">
-<div class="index_list">return 语句具有以下形式：<br>
+<label class="collapse" for="ten"><span class=
+"notranslate">return</span></label> <input id="ten" type=
+"checkbox">
+<div class="index_list">The <tt>"return"</tt> statement has the
+form:<br>
 <br>
 
 <p class="code">return (&lt;表达式&gt;)<br></p>
@@ -322,7 +351,7 @@ type="checkbox">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

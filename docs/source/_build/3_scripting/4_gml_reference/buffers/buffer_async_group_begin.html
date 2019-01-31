@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,7 @@ if (window.name != "content")
 <h2>buffer_async_group_begin</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">buffer_async_group_begin(groupname);</p>
 
@@ -63,7 +63,8 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function is called when you want to begin the saving out of multiple buffers to multiple files. The "groupname" is a string and will be used as the directory name for where the files will be saved, and should be used as part of the file path when loading the files back into the IDE later (using any of the <a href=
+<p>This function is called when you want to begin the saving out of multiple buffers to multiple files. The "<span class=
+"notranslate">groupname</span>" is a string and will be used as the directory name for where the files will be saved, and should be used as part of the file path when loading the files back into the IDE later (using any of the <a href=
 "buffer_load.html"><tt>buffer_load</tt></a> functions). This function is <i>only</i> for use with the <a href=
 "buffer_save_async.html"><tt>buffer_save_async()</tt></a> function and you must also finish the save definition by calling <a href=
 "buffer_async_group_end.html"><tt>buffer_async_group_end()</tt></a> function otherwise the files will not be saved out.<br><br>Note that for the console platforms (like PS4 for example), the "groupname" will be used as the save slot description, and using this function can help you avoid having the UI show for every file that is being saved out.<br>
@@ -100,7 +101,7 @@ point saving will begin).</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

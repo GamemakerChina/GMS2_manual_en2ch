@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,7 +34,7 @@ if (window.name != "content")
 <h2 class="studio">Returns which of two times on specific dates is
 the latest.</h2>
 
-<h3 class="studio">Syntax:</h3>
+<h3 class="studio">语法：</h3>
 
 <p class="code">date_compare_datetime(date1, date2);</p>
 
@@ -50,12 +50,12 @@ the latest.</h2>
 
 <tr>
 <td>date1</td>
-<td>The first datetime.</td>
+<td>第一个日期时间。</td>
 </tr>
 
 <tr>
 <td>date2</td>
-<td>The datetime to compare it to.</td>
+<td>第二个日期时间。</td>
 </tr>
 </table>
 </div>
@@ -70,13 +70,7 @@ the latest.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can check two dates and times to see
-which one is the earlier or later than the other. The function
-returns -1 if date1 is earlier, 1 if date1 is later and 0 if they
-are the same, although since this takes time into account as well,
-a 0 for matching is very rare (it literally has to be the same
-second of the same day of the same month of the same year to return
-a 0).<br>
+<p>使用此函数来检查两个日期和时间，看哪个更早，哪个更晚。如果日期时间1更早，返回-1，如果两者相同，返回0，如果日期时间2更早，返回1。返回0的情况是非常少见的，因为必须是同年同月同日同时同分同秒。<br>
 <br></p>
 
 <p><br>
@@ -87,9 +81,7 @@ a 0).<br>
 <p class="code">d = date_compare_datetime(date_create_datetime(
 2011, 9, 15, 11, 4, 0 ), date_current_datetime());</p>
 
-<p>This would set d to the corresponding value depending on which
-of the datetimes was the earliest, likely -1 since the current date
-would be further ahead than 15th September 2011.</p>
+<p>此代码将会根据两个日期的早晚来为"d"赋值，很显然将会赋1，因为当前日期时间要比2011年9月15日晚很多。</p>
 
 <p><br>
 </p>
@@ -101,7 +93,7 @@ would be further ahead than 15th September 2011.</p>
 "date_compare_time.html">date_compare_time</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

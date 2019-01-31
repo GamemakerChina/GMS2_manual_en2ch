@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,6 +32,9 @@ if (window.name != "content")
 <h2>文件处理</h2>
 
 <div class="body-scroll">
+<p><br>
+</p>
+
 <p>在创建游戏的某个时刻，有必要在外部存储信息并能够检索此信息。例如，你可能希望存储有关登录或高分的详细信息，或者可能存储玩家在你的关卡中的进度。 无论是什么原因，你都需要知道在使用 <i>GameMaker Studio 2</i> 时如何使用文件函数。</p>
 
 <p>认识到 <i>GameMaker Studio 2</i> 是 <b>沙盒型</b> 的非常重要，这意味着在使用可用的文件系统函数时存在许多限制和微小的复杂性，值得注意的是文件系统的工作方式在不同的目标平台上略有不同。有关详细信息，请参阅以下部分：</p>
@@ -39,14 +42,41 @@ if (window.name != "content")
 <blockquote>
 <ol>
 <li><a href=
-"../../../1_overview/3_additional_information/file_system.html">文件系统限制</a><br>
+"../../../1_overview/3_additional_information/file_system.html">文件系统</a><br>
 </li>
 </ol>
 </blockquote>
 
 <p>如果你已获得 Steam 的许可，可以在游戏中使用专用 API，你会发现还有一组新的文件函数可供你使用。 这些在本手册的 <a href="../steam%20api/index.html">Steam API</a> 部分中有说明。</p>
 
-<div class="note"><b>重要！ </b> 所有 <i>GameMaker Studio 2</i> 项目都有一个名为 “<tt>options.ini</tt>” 的文件(?)，因此你 <b>无法</b> 使用该名称命名任何文件（当你尝试编译游戏项目时，你将构建失败）。</div>
+<p>Finally, you should also note that there are some distinct
+differences between certain target platforms which whould be taken
+into account when using the file functions. These are:</p>
+
+<blockquote>
+<ul>
+<li><b>iOS</b>: On iOS, if you are loading an included file from a folder, ie: with a path something like "<tt>Backgrounds/background1.png</tt>", you do NOT need to include the folder as part of the path and simply supplying the file name is sufficient. 但在其它的平台中你必须在路径中包括文件夹。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>macOS and Ubuntu (Linux)</b>: On the macOS and Ubunutu,
+filenames and paths are case sensitive on these platforms, and so
+to prevent any potential issues, <i>GameMaker Studio 2</i> will
+automatically make all names/paths use lower case by default.</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li><b>HTML5</b>: On HTML5, saving and loading to and from <b>local
+storage</b> will work as explained within the different function
+pages, however if you are loading a file from a server, you <b>must
+only use the function <a href=
+"../buffers/buffer_load_async.html"><tt>buffer_load_async()</tt></a></b>
+as loading synchronously has been deprecated on most browsers and
+will eventually be obsoleted.</li>
+</ul>
+</blockquote>
 
 <p><br>
 以下部分都涉及不同类型的文件处理：</p>
@@ -146,6 +176,11 @@ if (window.name != "content")
 </div>
 <br></blockquote>
 
+<div class="note"><b>IMPORTANT!</b> All <i>GameMaker Studio 2</i>
+projects have a file called "<tt>opions.ini</tt>", so you
+<b>cannot</b> name any file with that name (you will get a uid
+failure when you try to compile your game project).</div>
+
 <p><br>
 </p>
 </div>
@@ -160,7 +195,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

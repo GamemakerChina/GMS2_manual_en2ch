@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -34,12 +34,12 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<blockquote>With this built in array you can get or set the y position of the given view port. The view port is the area on the screen where the view is drawn, and you can have up to 8 active at any one time (the array is values from 0 to 7 inclusive to give 8 ports). Now, the default for <i>GameMaker Studio 2</i> is that the game window (or background canvas) is the same size as the room, however when you activate view ports and cameras, this behaviour changes and the <i>total size of the bounding box for all view ports</i> is used. 所以，如果有两个不同的视口在两个不同的位置，覆盖的总面积定义游戏窗口的大小。如下图说明：<br><img class="center" src="images/viewport_canvas.png"><br>If you only have <i>one</i> view port setting the x or y value of the port can have some interesting effects but is not normally practical (see the image below) and so it is better to maintain the x and y position as (0,0).<br><br><img class="center" src="images/view_xyport.png"><br></blockquote>
+<blockquote>通过此内置数组，你可以获取或设置给定可视区域的 y 位置。可视区域是屏幕上视野被绘制的区域，你最多能同时拥有八个活动的可视区域（数组内的编号是0到7）。现在， <i>GameMaker: Studio</i>默认游戏窗口（或者背景画布）和房间一样大，然而当你激活可视区域和摄像机时，游戏窗口的大小将是<i>所有可视区域的覆盖的总和</i> 。所以，如果在两个位置由两个不同的可视区域，覆盖的总面积定义游戏窗口的大小。如下图说明：<br><img class="center" src="images/viewport_canvas.png"><br>如果你只有<i>一个</i>可视区域，并设置它的x或y值，会产生一些有趣的效果，但通常不实用（见下图），因此最好将x和y位置保持为（0,0）。<br><br><img class="center" src="images/view_xyport.png"><br></blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">view_yport[0 .. 7];</p>
 
@@ -58,7 +58,7 @@ if (window.name != "content")
 <p class="code">view_xport[0] = 0;<br>
 view_yport[0] = 0;<br></p>
 
-<blockquote>上述代码将重设view port[0]（视口）的位置为 显示器的(0,0)位置 (左上角)。</blockquote>
+<blockquote>上述代码将重设view port[0]（可视区域）的位置为 显示器的(0,0)位置 (左上角)。</blockquote>
 
 <p><br>
 </p>
@@ -71,7 +71,7 @@ view_yport[0] = 0;<br></p>
 "view_wport.html">view_wport</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

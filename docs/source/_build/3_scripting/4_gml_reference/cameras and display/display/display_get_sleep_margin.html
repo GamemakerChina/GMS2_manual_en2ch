@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,17 +38,14 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to get the current sleep margin value
-used for the render timing of your game, and will return a
-millisecond value. For more information on display timing, please
-see <a href=
-"display_set_timing_method.html"><tt>display_set_timing_method()</tt></a>.</p>
+<p>此函数将用来获取游戏中渲染计时的休眠时长（ sleep margin ），返回值的单位是毫秒值。有关更多显示器计时（display timing）的信息，请参阅<a href=
+"display_set_timing_method.html"><tt>display_set_timing_method()</tt></a>。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">display_get_sleep_margin();</p>
 
@@ -67,9 +64,7 @@ see <a href=
 <p class="code">if display_get_timing_method() != tm_sleep<br>{<br>display_set_timing_method(tm_sleep);<br>if display_get_sleep_margin() != 20<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;display_set_sleep_margin(20);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}<br></p>
 
 <blockquote>
-<p>The above code will check the timing method and then if it's not
-set to <tt>tm_sleep</tt> it will be set to that and the sleep argin
-set to 20.</p>
+<p>上述代码将检查计时方法，如果它不是<tt>tm_sleep</tt> ，那么它将被设置为后者，并将休眠时长设为20。</p>
 </blockquote>
 
 <p><br>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,17 +29,29 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">gamepad_get_button_threshold</h1>
+<h2>gamepad_get_button_threshold</h2>
 
-<h2 class="studio">Returns the current threshold setting of the
-analogue buttons.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>描述</h3>
 
-<p class="code">gamepad_get_button_threshold(device);</p>
+<blockquote>
+<p>This function can be used to detect the current threshold
+setting of the analogue buttons for a given device. The default
+threshold for all analogue buttons is 0.5, with the range being
+from 0 to 1. The threshold defines at what point the button is
+considered as being "pressed" for games that require them to act as
+a digital button.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">gamepad_get_button_threshold(device);</p>
 
 <div class="param">
 <table>
@@ -58,46 +70,42 @@ analogue buttons.</h2>
 <p><br>
 </p>
 
-<p><b>返回：</b> Real（实数）</p>
+<h3>Returns:</h3>
+
+<p class="code">实数</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>This function can be used to detect the current threshold
-setting of the analogue buttons for a given device. The default
-threshold for all analogue buttons is 0.5, with the range being
-from 0 to 1. The threshold defines at what point the button is
-considered as being "pressed" for games that require them to act as
-a digital button.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">if gamepad_get_button_threshold(0) != 0.5<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;gamepad_set_button_threshold(0, 0.5);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the analogue button threshold of the
 gamepad connected to device "slot" 0 and if it is not the default
 value of 0.5, it is set to that value.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_set_button_threshold.html">gamepad_set_button_threshold</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

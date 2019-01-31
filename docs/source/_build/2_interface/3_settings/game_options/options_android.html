@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -47,14 +47,26 @@ alt="Android General Options Part 1">
 
 <p><b>全局</b> 部分的第一部分专用于 <i>产品信息</i> 和 <i>构建设置</i>。你应该填写产品信息，其中包括项目 <i>显示名称</i>及它的<i>程序包信息</i>，其中包括域、公司和产品。程序包信息只能由小写字母 a - z 和数字 0 - 9 组成，不能包含符号或其他特殊字符，也不应该包含大写字符。然后，这些详细信息将用于生成格式为 “<tt>com.company.myappname</tt>” 的程序包 ID。</p>
 
-<p>然后，你需要设置 <b>目标平台 SDK</b>、<b>最小 SDK</b> 和 <b>编译 SDK</b> 版本。编译 SDK 版本是针对项目编译的 API 的版本。这意味着你可以使用该 API 版本中包含的 Android API 功能。如果你尝试使用 API​​ 16 功能（例如）但设置了编译 SDK 15，那么你将收到编译错误。如果你将编译 SDK 设置为16，那么你仍然可以在 API 15 设备（以及所有其他早期版本）上运行该应用程序。</p>
+<div class="note"><b>NOTE</b>: If you have already set up the
+<b>Amazon Fire</b> Game Options, you can click the "Sync from
+Amazon Fire" button at the top to transfer the relevant information
+from the Fire options to the Android options.</div>
 
-<p>但是，目标平台 SDK 与你的应用程序编译方式或可以使用的 API 无关。目标平台 SDK表示你已经测试了你的应用程序（包括你指定的版本）。这只是为了让 Android 操作系统了解它应该如何在操作系统功能方面处理你的应用程序。出于所有实际目的，大多数应用程序都希望将目标平台 SDK 设置为最新发布的 API 版本（由编译 SDK 设置使用）。这将确保你的应用在最新的 Android 设备上看起来尽可能好。</p>
+<p><br>
+然后，你需要设置 <b>构建工具</b> 和 <b>支持库</b>版本，以及<b>目标平台 SDK</b>、<b>最小 SDK</b> 和 <b>编译 SDK</b> 版本。当 <i>GameMaker Studio 2</i> 为 Android 目标构建游戏时，将使用 <b>构建工具</b> 和 <b>支持库</b>，并且应根据你使用 Android SDK Manager 或 Android Studio 安装的工具将其设置为适当的值。</p>
 
-<p>最小 SDK 版本是运行项目的最低 API 级别。默认情况下，此值设置为 9，一般情况下这很好，但如果要添加扩展，则可能需要更高的最低 API 级别。 <img class="center" src=
-"images/android_general2_options.png" alt=
-"Android General Options Part 2"></p>
+<p>The <b>Target SDK</b> indicates that you have tested your app on (up to and including) the version you specify here. 这只是为了让 Android 操作系统了解它应该如何在操作系统功能方面处理你的应用程序。出于所有实际目的，大多数应用程序都希望将目标平台 SDK 设置为最新发布的 API 版本（由编译 SDK 设置使用）。这将确保你的应用在最新的 Android 设备上看起来尽可能好。</p>
 
+<p><b>最小 SDK</b> 版本是运行项目的最低 API 级别。From August 2018 Google has made API level 26 the required minimum, but if you add extensions then they may require a higher minimum API level.</p>
+
+<p><b>编译 SDK</b> 版本是针对项目编译的 API 的版本。这意味着你可以使用该 API 版本中包含的 Android API 功能。如果你尝试使用 API​​ 16 功能（例如）但设置了编译 SDK 15，那么你将收到编译错误。However, if you set the Compile SDK to 28 then you can still run the app on an API 23 device (as well as all other previous versions too).</p>
+
+<p>你可以通过单击 <b>将 SDK 值预填写到所选的 API 级别</b> 按钮来选择其中一个预定义目标设置，该按钮将打开一个可供选择的不同 API 列表。选择其中任何一个将使用适当的值填充所有 SDK 文件，然后你可以根据需要使用或编辑这些值。</p>
+
+<div class="note"><b>注意</b>：你必须已在 Android SDK Manager 或 Android Studio 中安装了相应的 API，才能使项目正确编译。</div>
+<br>
+<img class="center" src="images/android_general2_options.png" alt=
+"Android General Options Part 2">
 <p><b>全局</b> 的第二部分介绍了要构建的 CPU <i>体系结构</i>，并提供了以下选项（你可以选择所有这些选项或仅选择你需要的选项，但请注意每个选项将添加到已编译的 <tt>apk</tt> 的最终大小）：</p>
 
 <ul>
@@ -62,9 +74,13 @@ alt="Android General Options Part 1">
 
 <li>为 ARMV7 构建（此选项默认勾选）</li>
 
-<li>为 x86 构建</li>
+<li>Build for x86 (checked by default)</li>
 
-<li>为 Mips 构建</li>
+<li>Build for Mips (checked by default)</li>
+
+<li>Build for ARM64</li>
+
+<li>为 x86_64 构建</li>
 </ul>
 
 <p>设置完成后，你可以选择可以运行游戏的不同 <i>朝向</i>，以获得最佳用户体验。可用的选项有：</p>
@@ -97,6 +113,57 @@ alt="Android General Options Part 1">
 <p>你也可以在此处设置 Android <b>睡眠余量（Sleep Margin）</b>。此选项与在特定系统上运行游戏时减少停顿（stutter）有关。基本上，如果你的游戏运行速度超过你的房间速度，<i>GameMaker Studio 2</i> 将在剩余时间内 “休眠”，但此睡眠可能非常不准确，你可能经常睡眠时间超过必要时间，导致你的框架需要更长的时间引起停顿。为了解决这个问题，我们可以在更短的时间内休眠，然后在其余的时间内进行紧密循环以使其更准确 - 尽管进行循环的问题是它会导致 CPU 使用率增加，这反过来可以导致 CPU 温度升高，设备使用更多电量。默认情况下，此值设置为 4，在 99.99％ 的情况下，你可以使用它，但对于低端设备或运行大量后台进程的设备，这可能不是理想的解决方案和值，你可能需要将其设置为 5 到 10。请注意，这是一个特定于设备的配置，并且在你的构建设备上有效但可能不适合其他用户，因此如果有疑问则将其设置为 4。</p>
 </div>
 <br>
+<label class="collapse" for="g">Adaptive Icons</label> <input id=
+"g" type="checkbox">
+<div class="index_list">
+<p><img class="center" src=
+"images/android_adaptiveicons_options.png" alt=
+"Android Adaptive Icons Options">
+</p>
+
+<p>Android 8.0 (API level 26) introduced <b>adaptive launcher
+icons</b> for your games, and these icons can display a variety of
+shapes across different device models. To deal with this, you are
+required to supply a number of foreground and background images for
+your icons to be displayed at different sizes. These icon sizes
+are:</p>
+
+<ul>
+<li>81x81 pixels (LDPI)</li>
+
+<li>108x108 pixels MDPI)</li>
+
+<li>162x162 pixels (HDPI)</li>
+
+<li>216x216 pixels (XHDPI)</li>
+
+<li>324x324 pixels (XXHDPI)</li>
+
+<li>432x432 pixels (XXXHDPI)</li>
+</ul>
+
+<p>You can supply each forground and background image individually,
+or you can choose to <b>Generate Icons From File</b>. This means
+that <i>GameMaker Studio 2</i> will generate the required icon
+images from a base (XXXHDPI) file. You need to supply one image
+each for the foreground and background and then click the button
+labeled <b>Generate</b>, and the Icons will be created for you.</p>
+
+<p>Note that your adaptive icons may be <i>masked</i> on any given
+device and so you also have the option to see how they'll look
+along with these masks from the <b>Preview Adaptive Icons</b>
+menu:</p>
+
+<p><img class="center" src="images/android_adaptiveicons_masks.gif"
+alt="Android Adaptive Mask Preview">
+</p>
+
+<p>Note that this is simply a preview of how the icon could look
+with the selected mask, and the setting will <i>not</i> affect how
+the icons are exported and displayed, as that is up to the device
+and OS the game will be run on.</p>
+</div>
+<br>
 <label class="collapse" for="b">图形</label> <input id="b"
 type="checkbox">
 <div class="index_list">
@@ -116,7 +183,7 @@ alt="Android Graphics Options">
 <li><b>设备支持</b>： 此选项将设置是仅支持具有专用 GPU 的设备，还是支持所有设备。 基本上，如果你的游戏有任何高级绘图功能，如透明混合、加性混合、曲面等等，你应该将它限制在那些拥有 GPU 的设备上，否则你可能会面临负面评论和评分不佳的风险，因为旧设备上的图形显示会错误或崩溃。<br>
 <br></li>
 
-<li><b>缩放</b>： 你的游戏可以配置为自动缩放绘制画布以在浏览器中保持纵横比，或者你可以选择将其拉伸以适应。拉伸到适合选项不会在浏览器中全屏显示游戏，而是按照游戏的第一个房间的定义，拉伸贴图以适应画布大小。</li>
+<li><b>缩放</b>： 在这里，你可以选择缩放绘制画布，在设备屏幕中保持纵横比 - 在边缘周围添加 “填充（padding）” 以适合屏幕 - 或者你可以选择让绘制画布拉伸拉伸以适合。</li>
 </ul>
 
 <p>最后，可以选择设置 <b>纹理页</b> 的大小。默认（和最兼容）大小为 2048 x 2048，但你可以选择 256 x 256 到 4096 x 4096之间的任何位置。还有一个 <i>预览</i> 的按钮，它将为该平台生成纹理页面，然后打开一个窗口，以便你可以看到它们的外观。如果你希望查看纹理页面的结构并防止纹理页面比必要的更大（或更小），这可能非常有用。</p>
@@ -148,7 +215,12 @@ alt="Android Graphics Options">
 <p>在这里，你可以为最终游戏文件添加启动画面，包括横向和纵向模式，这些模式将在游戏加载到设备上时显示。 此画面应为 24 位 PNG 文件，建议与游戏的第一个房间（或视图）大小相同。 如果你要求在特定时间显示启动画面，则还可以在此处将其设置为 0 到 10 秒（默认时间为 0 表示它仅在资源加载期间显示）。
 </p>
 
-<p>值得注意的是，<i>GameMaker Studio 2</i> 有一个叫做 <a href=
+<div class="note"><b>IMPORTANT!</b> On very old and very low end
+devices, a splash screen greater than 1024x768 may cause an out of
+memory error.</div>
+
+<p><br>
+值得注意的是，<i>GameMaker Studio 2</i> 有一个叫做 <a href=
 "../../2_extras/project_image_generator.html">项目图像生成器</a> 的工具，可用于自动创建游戏编译到不同目标平台所需的所有图像。 如果使用此工具，则应修改创建的图像以确保它们符合你的要求。</p>
 </div>
 <br>
@@ -169,6 +241,12 @@ alt="Android Packaging Options">
 <p>授权的另一个功能是你的游戏可以使用 <b>APK 扩展</b>。这是一种绕过 Google Play（仅限 oogle Play）规定的 50 MB 最大应用程序大小的方法。它将分为两部分创建你的游戏：一个小 <tt>*.apk</tt> 文件和一个更大的 <tt>*.zip</tt> 文件，它将保存你的所有游戏资产，这两个资产都会上传到商店。当用户首次运行游戏时，将下载并解压缩 zip。你可以在 <a href=
 "http://help.yoyogames.com/entries/28291426" target=
 "_blank">此处</a> 找到此选项的更多详细信息。</p>
+
+<p>Finally, you have the option to prepare the final app package as
+an <b>Android TV</b> game (you should only tick this if your game
+conforms to the <a href=
+"https://developer.android.com/training/tv/games/" target=
+"_blank">Android TV guidelines</a>).</p>
 </div>
 <br>
 <label class="collapse" for="e">权限</label> <input id="e"
@@ -200,7 +278,7 @@ alt="Android Permissions Options">
 <br></li>
 </ul>
 
-<div class="note"><b>注意</b>： 如果你不确定是否需要这些，你可能应该在默认情况下取消选中它们，让 GameMaker Studio 2 处理你游戏的权限。</div>
+<div class="note"><b>注意</b>： 如果你不确定是否需要这些，你可能应该在默认情况下取消选中它们，让 <i>GameMaker Studio 2</i> 处理你游戏的权限。</div>
 </div>
 <br>
 <label class="collapse" for="f">社交</label> <input id="f" type=
@@ -223,10 +301,9 @@ alt="Android Permissions Options">
 <li><b>Google - 启用谷歌服务</b>： 如果你要为 Google 应用商店启用成就和排行榜，则需要选中 <b>启用 Google 服务</b> 复选框。选择此选项后，系统将提示你从市场下载并安装相应的扩展程序，然后使用扩展板功能将功能编码到游戏中。请注意，如果你使用 Google Play，则需要将此应用 ID 添加到此标签中才能使服务正常工作（可以从 Google Play 开发者信息中心找到）。<br>
 <br></li>
 
-<li><b>Google - 启用谷歌云保存</b>: 选中此选项将启用谷歌云保存，并且（如上所述）将提示你从市场下载并安装相关扩展程序。<br>
+<li><b>Google - 启用谷歌云保存</b>: 选中此选项将启用谷歌云保存，并且（如上所述）将提示你从市场下载并安装相关扩展程序。See the section on Cloud Saving from the <a href=
+"../../../3_scripting/4_gml_reference/asynchronous%20functions/index.html"> Asynchronous Functions</a> page.<br>
 <br></li>
-
-<li><b>Amazon - 启用亚马逊 APIs</b>： 如果你使用的是 <b>Amazon 服务</b>，则需要选中此复选框。选择此选项后，系统将提示你从市场下载并安装相应的扩展程序，并且所有必需的功能都包含在扩展程序包中。</li>
 </ul>
 </div></blockquote>
 
@@ -243,7 +320,7 @@ alt="Android Permissions Options">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,17 +29,28 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">display_set_gui_size</h1>
+<h2>display_set_gui_size</h2>
 
-<h2 class="studio">缩放GUI为指定的长宽。</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio"><b>Syntax:</b>
-</h3>
+<h3>描述</h3>
 
-<p class="code">display_set_gui_size(width, height);</p>
+<blockquote>
+<p>此函数只会影响 <a href=
+"../../../../2_interface/1_editors/events/draw_events.html">Draw GUI Event</a> 中的绘制的内容，并可以用来给那个事件中所有GUI组件设定特定的宽度和高度， 不管显示器或窗口之前是怎样显示GUI，都会缩放到适当的效果。GUI放置的位置 (比如 (0,0)位置)取决于你是否使用这个函数 <a href=
+"display_set_gui_maximise.html"><tt>display_set_gui_maximise()</tt></a> 。如果你没有使用这个函数 (默认设置)， GUI层将被放置在同应用表面（游戏绘制的区域）一样的 (0,0)位置，宽度和高度将被拉伸以适合这个表面层，使用这个函数这样设置时宽度为256px的 GUI，当应用表面层是512px时，将会拉伸256像素为表面层的大小，使得像素放大两倍。这是已经在全局游戏设置中开启长宽比校正的理想选择。</p>
+
+<p>如果你已经使用 &lt;t5&gt;display_set_gui_maximise()&lt;/t5&gt; 函数，然后GUI层的 (0,0)位置将默认为游戏窗口或显示器的左上角（全屏或者在移动设备上），用那个函数设置缩放因数，这个函数设置宽度和高度。通过调用这个函数，设置宽和高为-1，你可以在任何时间重置GUI层为默认设置。这个操作将设置GUI层至应用表面左上角的(0,0)坐标，宽和高重置应用表面相同的大小。</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">display_set_gui_size(width, height);</p>
 
 <div>
 <table>
@@ -49,13 +60,13 @@ if (window.name != "content")
 </tr>
 
 <tr>
-<td>width</td>
-<td>GUI的宽度(-1 表示 与显示器或应用表面1:1的比例 ).</td>
+<td>宽度</td>
+<td>The width of the GUI</td>
 </tr>
 
 <tr class="alt">
-<td>height</td>
-<td>GUI的高度 (-1 表面  与显示器或应用表面1:1的比例).</td>
+<td>高度</td>
+<td>The height of the GUI</td>
 </tr>
 </table>
 </div>
@@ -63,51 +74,40 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b>N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio"><b>描述</b>
-</h3>
-
-<p>此函数只会影响 <a href=
-"../../../../2_interface/1_editors/events/draw_events.html">Draw GUI Event</a> 中的绘制的内容，并可以用来给那个事件中所有GUI组件设定特定的宽度和高度， 不管显示器或窗口之前是怎样显示GUI，都会缩放到适当的效果。GUI放置的位置 (比如 (0,0)位置)取决于你是否使用这个函数 <a href=
-"display_set_gui_maximise.html"><tt>display_set_gui_maximise()</tt></a> 。如果你没有使用这个函数 (默认设置)， GUI层将被放置在同应用表面（游戏绘制的区域）一样的 (0,0)位置，宽度和高度将被拉伸以适合这个表面层，使用这个函数这样设置时宽度为256px的 GUI，当应用表面层是512px时，将会拉伸256像素为表面层的大小，使得像素放大两倍。This is ideal for those games that have aspect ratio correction set in the global Game Settings.</p>
-
-<p>If you have used the <tt>display_set_gui_maximise()</tt>
-function then the (0,0) position for the GUI layer will default to
-the top left corner of the game window, or display (when in
-fullscreen or on devices), with the scaling factor set by that
-function, and the width and height set by this one. You can reset
-the GUI layer at any time to the default configuration by calling
-this function using -1 as both the width and height - this will set
-the (0, 0) position to the application surface and the width and
-height will be reset to 1:1 with the surface too.</p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">display_set_gui_size(768, 1024);</p>
 
+<blockquote>
 <p>上述代码将锁定GUI绘制事件，以指定的宽度和高度，使用那个比例缩放所有的分量以适应应用表面或者显示器。</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
-<div style="float:left">返回: <a href="index.html">Windows and Views</a></div>
+<div style="float:left">上一页:  <a href="index.html">The Display</a></div>
 
 <div style="float:right">下一页: <a href=
 "display_set_gui_maximise.html">display_set_gui_maximise</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

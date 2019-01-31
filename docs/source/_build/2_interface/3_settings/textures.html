@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -67,12 +67,11 @@ src="../../images/icon_ctrl.png"> / <img style=
 <br></li>
 
 <li><b>生成多级渐进纹理（mipmap）</b> - 标记此选项（默认情况下处于关闭状态）将告诉 <i>GameMaker Studio 2</i> 原始纹理页将被缩放并在纹理文件中过滤为多个分辨率。这通常是关闭的，但是如果你使用视图放大或缩小游戏房间的大部分区域，或者你正在编写 3D 游戏，那么你可能想要启用此功能，然后使用 <a href=
-"../../3_scripting/4_gml_reference/drawing/mipmapping/index.html">多级渐进纹理函数</a> 来调整游戏处理不同的多级渐进纹理级别。标记此复选框时，“边框大小” 值将设置为 8（如果设置为最初小于 8）。这是因为，当使用多级渐进纹理时，纹理页面上的图像之间需要更大的边框，否则它们会在更高的 mip（拉丁文 multum in parvo）级别开始散开(?)。默认值 8 将允许图像在子图像开始散开之前减少到其原始大小的八分之一，但你可以将其更改为满足你需要的任何值。请注意，如果你使用精灵的 <b>独立的纹理页</b> 选项，则不需要在此处勾选每个纹理并将其标记为生成多级渐进纹理，而是可以转到 <a href=
-"game_options/index.html">全局游戏选项</a> 并勾选 <b>为单独的纹理页生成多级渐进纹理（mipmap）</b>。<br>
-<br></li>
+"../../3_scripting/4_gml_reference/drawing/mipmapping/index.html">多级渐进纹理函数</a> 来调整游戏处理不同的多级渐进纹理级别。标记此复选框时，“边框大小” 值将设置为 8（如果设置为最初小于 8）。这是因为，当使用多级渐进纹理时，纹理页面上的图像之间需要更大的边框，否则它们会在更高的 mip（拉丁文 multum in parvo）级别开始散开(?)。默认值 8 将允许图像在子图像开始散开之前减少到其原始大小的八分之一，但你可以将其更改为满足你需要的任何值。请注意，如果你使用精灵的 <b>独立的纹理页</b> 选项，则不需要在此处检查每个纹理并将其标记为生成多级渐进纹理，而是可以转到 <a href=
+"game_options/index.html">常规游戏选项</a> 并勾选 <b>为单独的纹理页生成多级渐进纹理（mipmap）。<br><br></b></li>
 
-<li><b>边框大小</b> - 边框大小将更改为纹理组生成的页面上所有资源边缘周围的重叠（或 “像素倍增”）量，以便在缩放图像时，它们之间没有可见的间隙（或接缝）。默认值为 2 像素，但在极端情况下，你要放大或缩小视图，则可能需要增加此值。请注意，<a href="../1_editors/tilesets.html">图块集编辑器</a> 有一个选项可以设置图块的输出边框，这与此处的边框设置是分开的 - 基本上，为临时纹理上的每个图块生成具有输出边框的图块，然后将其添加到围绕外边缘给出边框的纹理页。另请注意，启用多级渐进纹理会自动将纹理页的默认边框大小设置为 8，以帮助防止在较高 mip 级别的纹理之间 “散开”，但这可以更改。<br>
-<br>
+<li><b>边框大小 - 边框大小将更改为纹理组生成的页面上所有资源边缘周围的重叠（或 “像素倍增”）量，以便在缩放图像时，它们之间没有可见的间隙（或接缝）。默认值为 2 像素，但在极端情况下，你要放大或缩小视图，则可能需要增加此值。请注意，<a href="../1_editors/tilesets.html">图块集编辑器</a> 有一个选项可以设置图块的输出边框，这与此处的边框设置是分开的 - 基本上，为临时纹理上的每个图块生成具有输出边框的图块，然后将其添加到围绕外边缘给出边框的纹理页。另请注意，启用多级渐进纹理会自动将纹理页的默认边框大小设置为 8，以帮助防止在较高 mip 级别的纹理之间 “散开”，但这可以更改。<br>
+<br></b>
 </li>
 
 <li><b>父纹理组</b> - 你可以在此处选择任何现有组作为当前所选组的 “父” 组。 “子” 组将继承对父纹理组所做的任何更改，主要用于处理跨平台游戏时的资源管理。具有父级的纹理组本身仍然是纹理组，并且将生成与任何其他组相同的纹理页，但是将它们指定为父级允许你为不同平台排除大量数据。例如，你可以将一整套 Android 玩家精灵添加到 “玩家” 组，并将 Android 敌人精灵添加到 “敌人” 组，然后让他们都使用 “android” 父组。如果你从 Windows 或其他平台构建中排除 “android” 父组，则子组也将被排除。<br>
@@ -104,7 +103,7 @@ src="../../images/icon_ctrl.png"> / <img style=
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

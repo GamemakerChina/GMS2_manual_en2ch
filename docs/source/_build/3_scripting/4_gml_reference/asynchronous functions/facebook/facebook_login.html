@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3><b>Syntax:</b>
+<h3><b>语法：</b>
 </h3>
 
 <p class="code">facebook_login(permissions, ios_login_type)</p>
@@ -97,9 +97,9 @@ several seconds before this authorisation is received, and all the
 while the game will still be running.</p>
 
 <div class="note">
-<p><b>NOTE:</b> You can now only in <b>read</b> permissions to this
-function. If you require write permissions, you need to call
-<a href=
+<p><b>NOTE:</b> You can now only use the default <b>read</b>
+permissions to this function. If you require any write permissions
+or extended read permissions, then you need to call <a href=
 "facebook_request_publish_permissions.html"><tt>facebook_request_publish_permissions()</tt></a>
 after logging in. Also note that if your game requests for more
 than than the <b>public_profile</b>, <b>email</b> and
@@ -178,7 +178,7 @@ ds_list_destroy(permissions);<br></p>
 
 <blockquote>
 <p>The above code will initialize Facebook and then log the current
-user in, asking for the extended read permissions given.</p>
+user in, asking for the read permissions given.</p>
 </blockquote>
 
 <p><br>
@@ -196,7 +196,7 @@ user in, asking for the extended read permissions given.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

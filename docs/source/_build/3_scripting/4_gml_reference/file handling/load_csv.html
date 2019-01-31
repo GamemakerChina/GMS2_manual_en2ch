@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,19 @@ if (window.name != "content")
 <h2>load_csv</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>此函数将加载 CSV 格式文件并将其转换为栅格数据，返回创建的栅格的唯一 ID 值。</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">load_csv(filename)</p>
 
@@ -56,23 +68,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回:</b> DS Grid Index (real)（栅格数据索引，实数）</p>
+<h3>Returns:</h3>
+
+<p class="code">DS Grid Index (real)</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3>例如：</h3>
 
-<p>此函数将加载 CSV 格式文件并将其转换为栅格数据，返回创建的栅格的唯一 ID 值。</p>
+<p class="code">file_grid = load_csv("spreadsheet.csv");<br>var ww = ds_grid_width(file_grid);<br>var hh = ds_grid_height(file_grid);<br>var xx = 32;<br>var yy = 32;<br>for (var i = 0; i &lt; ww; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;for (var j = 0; j &lt; hh; j++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(xx, yy, string(file_grid[# i, j]));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yy += 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;yy = 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;xx += 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
-
-<p class="code">file_grid = load_csv("spreadsheet.csv");<br>var ww = ds_grid_get_width(file_grid);<br>var hh = ds_grid_get_height(file_grid);<br>var xx = 32;<br>var yy = 32;<br>for (var i = 0; i &lt; ww; i++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;for (var j = 0; j &lt; hh; j++;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(xx, yy, string(file_grid[# i, j]));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yy += 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;yy = 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;xx += 32;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
-
+<blockquote>
 <p>上面的代码将打开给定的 CSV 文件，并将返回的栅格数据存储在变量 “file_grid” 中。 然后，这个栅格被两个 <tt>for</tt> 循环解析并且将内容绘制到屏幕上。</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -88,7 +97,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

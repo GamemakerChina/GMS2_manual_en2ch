@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,37 +32,48 @@ if (window.name != "content")
 <h2>working_directory</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p><tt>Working_directory</tt> 实际上可以返回两个不同的值，具体取决于你使用它的目的。如果你正在将文件写入磁盘，则 <tt>working_directory</tt> 指向在目标设备上为你的游戏保留的本地存储区域（在 Windows中为 “%LOCALAPPDATA%/gamedir/”，其中 “gamedir” 是你的游戏名称）。但是，从磁盘读取时，<tt>working_directory</tt> <i>可以</i> 是本地存储，<i>也</i> 可以是存储内含文件的区域。</p>
+
+<div class="note"><b>NOTE</b>: The <tt>working_directory</tt>
+variable wiil return the path <b>including</b> the final
+backslash.</div>
+
+<p>例如，如果游戏中包含默认的 <tt>*.txt</tt> 文件并使用 <tt>working_directory</tt> 将其读入内存，则该文件将从存储所包含文件的区域中获取。If you then choose to write that information to a text file using <tt>working_directory</tt>, this will write the file to the target platforms local storage, where it will be read from the next time unless you instruct <i>GameMaker Studio 2</i> to delete the file, in which case <tt>working_directory</tt> will once more point to the area where the included files are stored.</p>
+
+<div class="note&quot;"><b>警告！</b> 由于 <i>GameMaker Studio 2</i> 被沙箱化，这些函数可能无法正常工作！有关详细信息，请参阅 <a href=
+"../../../1_Overview/3_Additional_Information/File_System.html">文件系统限制</a> 部分。</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">working_directory</p>
 
 <p><br>
 </p>
 
-<p><b>返回:</b> String（字符串）。</p>
+<h3>Returns:</h3>
+
+<p class="code">字符串</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p><tt>Working_directory</tt> 实际上可以返回两个不同的值，具体取决于你使用它的目的。如果你正在将文件写入磁盘，则 <tt>working_directory</tt> 指向在目标设备上为你的游戏保留的本地存储区域（在 Windows中为 “%LOCALAPPDATA%/gamedir/”，其中 “gamedir” 是你的游戏名称）。但是，从磁盘读取时，<tt>working_directory</tt> <i>可以</i> 是本地存储，<i>也</i> 可以是存储内含文件的区域。</p>
-
-<blockquote><i><b>注意：</b> <tt>working_directory</tt> 变量将返回 <b>包含</b> 最终反斜杠的路径。</i>
-</blockquote>
-
-<p>例如，如果游戏中包含默认的 <tt>*.txt</tt> 文件并使用 <tt>working_directory</tt> 将其读入内存，则该文件将从存储所包含文件的区域中获取。如果你随后选择使用 <tt>working_directory</tt> 将信息写入文本文件，则会将该文件写入目标平台本地存储，除非你指示 <i>GameMaker Studio 2</i> 删除该文件，否则下次将会读取该文件，在这种情况下 <tt>working_directory</tt> 将再次指向存储内含文件的区域。<br><br><br><i><b>警告！</b> 此函数可能无法正常工作！</i> 因为 GameMaker Studio 2 被沙盒化。有关更多信息，请参阅 <a href=
-"../../../1_overview/3_additional_information/file_system.html">文件系统限制</a> 一节。<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">ini_open(working_directory + "temp_ini.ini");</p>
 
+<blockquote>
 <p>这将从游戏的工作目录中打开一个 ini 文件（如果它尚不存在则创建它）。 这可以是本地存储，也可以是内含文件所在的区域，具体取决于所查找的文件是否存在于其中一个位置。</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -78,7 +89,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

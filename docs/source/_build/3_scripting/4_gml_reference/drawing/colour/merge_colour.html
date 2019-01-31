@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,16 +29,32 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">merge_colour</h1>
+<h2>merge_colour</h2>
 
-<h2 class="studio">Merges two colours by a given amount.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3 class="studio">Syntax:</h3>
+<h3>描述</h3>
 
-<p class="code">merge_colour(col1, col2, amount);</p>
+<blockquote>
+<p>With this function you can take two colours and then merge them
+together to make a new colour. The amount of each of the component
+colours can be defined by changing the "amount" argument, where a
+value of 0 will return the first colour (col1), a value of 1 will
+return the second colour (col2) and a value in between will return
+the corresponding mix. For example, a value of 0.5 will mix the two
+colours equally. The following image illustrates how this works by
+merging the colours red and blue together:  <img class="center" src=
+"images/merge_colour.png"></p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">merge_colour(col1, col2, amount);</p>
 
 <div>
 <table>
@@ -69,48 +85,42 @@ both colours equally</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> value</p>
+<h3>Returns:</h3>
+
+<p class="code">Int</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>With this function you can take two colours and then merge them
-together to make a new colour. The amount of each of the component
-colours can be defined by changing the "amount" argument, where a
-value of 0 will return the first colour (col1), a value of 1 will
-return the second colour (col2) and a value in between will return
-the corresponding mix. For example, a value of 0.5 will mix the two
-colours equally. The following image illustrates how this works by
-merging the colours red and blue together:  <img class="center" src=
-"images/merge_colour.png"></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">col = merge_colour(c_lime, c_orange, 0.5);</p>
 
+<blockquote>
 <p>The above code uses the function to create a colour by merging
 lime and orange 50/50 and then stores its value in the variable
 "col" for later use.</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">colour and Blending</a></div>
 
 <div style="float:right">下一页: <a href=
 "make_colour_hsv.html">make_colour_hsv</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

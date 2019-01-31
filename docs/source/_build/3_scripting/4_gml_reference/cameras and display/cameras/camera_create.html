@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,37 +37,17 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will create an "empty" camera, ie: a camera with
-no view or projection settings defined. Once you have created the
-camera you can then use the different <a href=
-"../../matrices/index.html">matrix functions</a> to set the view
-and projection matrices. You can also use this function to create
-the camera and then use the different <tt>camera_set_*</tt>
-functions to set up the view, however note that you <i>must</i>
-provide at least a position and view size, otherwise the resulting
-camera will not be valid and give odd results if applied to a view
-port (if you do not set the object following, borders or move speed
-these will be set to the default values for a view camera in the
-Room Editor).</p>
+<p>此函数将创建一个“空”相机，即：未定义视图或投影设置的相机。你创建了相机后，你就可以用不同的 <a href=
+"../../matrices/index.html">矩阵函数</a> 来设置视野和投影矩阵。你也可以用此函数创建相机，然后使用不同的 <tt>camera_set_*</tt> 函数来设置视野。注意你 <i>必须</i> 提供至少一个位置和视野大小，否则将会导致相机不可用，并在应用可视区域时，给出奇怪的结果。但如果你没有设置物体跟随，边界和移动速度，这些将被在房间编辑器中的相机设为默认值。</p>
 
-<p>Note that cameras are like all dynamic resources and will occupy
-memory when created. This means that you need to take care not to
-create cameras unnecessarily and to destroy those that you don't
-need by calling the function <a href=
-"camera_destroy.html"><tt>camera_destroy()</tt></a>. This also
-means that cameras will persist from room to room if assigned to a
-<tt>global</tt> variable (they will persist when assigned to
-instance or local variables too, but you can't access them after
-changing room, hence the memory leak), so that you can - for
-example - create a new camera, assign it to a global variable, and
-then at the start of each room set the required view and projection
-matrices and the view port you need to use.</p>
+<p>注意相机像所有动态资源一样，在创建时会占用一定的内存。这意味着你不能创建那些不必要的相机，而且需要通过 <a href=
+"camera_destroy.html"><tt>camera_destroy()</tt></a>函数来销毁那些不再需要的相机。这意味着如果你将相机赋给一个 <tt>全局</tt> 变量，那么它将会在不同的房间中持续存在。如果它被分配给一个临时局部变量，那么它将只会在指定的那个房间存在。因此你可以利用这个特性来创建一个新相机，将它分配给一个全局变量，然后在每个房间的开始设置所需的视野和投影矩阵，以及需要的可视区域。.</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_create();</p>
 
@@ -76,7 +56,7 @@ matrices and the view port you need to use.</p>
 
 <h3>Returns:</h3>
 
-<p class="code">Real (unique camera ID value)</p>
+<p class="code">实数（相机的独特ID值）</p>
 
 <p><br>
 </p>
@@ -91,9 +71,7 @@ var projmat = matrix_build_projection_ortho(640, 480, 1.0,
 camera_set_view_mat(view_camera[0], viewmat);<br>
 camera_set_proj_mat(view_camera[0], projmat);<br></p>
 
-<p>The above code creates a new camera and assigns its ID to
-view[0]. The view and projection matrices are then created and
-stored in local variables before being used to set the camera.</p>
+<p>上述代码创建一个相机并将它的ID值赋给view[0]。然后创建视野投影矩阵并将它们存储在局部变量中，然后将这些设置应用于相机。</p>
 
 <p><br>
 </p>
@@ -106,7 +84,7 @@ stored in local variables before being used to set the camera.</p>
 "camera_create_view.html">camera_create_view</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

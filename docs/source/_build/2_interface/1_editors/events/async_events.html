@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -890,6 +890,42 @@ for="seven">Steam</label> <input id="seven" type="checkbox">
 </p>
 </div>
 <br>
+<a name="async_system_gamepads" id="async_system_gamepads"></a>
+<label class="collapse" for="thirtythree">虚拟键盘</label>
+<input id="thirtythree" type="checkbox">
+<div class="index_list">
+<p>当为打开或关闭的虚拟键盘触发此事件时，它将在 <tt>async_load</tt> 映射中返回以下键 / 值对：<br>
+<br></p>
+
+<ul>
+<li>"<b>event_type</b>" - 收到的系统事件的类型，它将是虚拟键盘的 “<b>虚拟键盘状态</b>”。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>虚拟键盘高度</b>" - 虚拟键盘的高度（以像素为单位）。 如果键盘不可见，则该值为 0。</li>
+
+<li style="list-style: none"><br>
+</li>
+
+<li>"<b>键盘状态</b>" - 键盘的当前状态，作为以下字符串之一返回：<br>
+<br>
+
+<ul>
+<li>"正在执行隐藏动作"</li>
+
+<li>"隐藏"</li>
+
+<li>"正在执行显示动作"</li>
+
+<li>"可见"</li>
+</ul></li>
+</ul>
+
+<p>有关虚拟键盘的更多信息，请参阅 <a href=
+"../../../3_scripting/4_gml_reference/controls/virtual%20keys/index.html">此处</a>。</p>
+</div>
+<br>
 <a name="async_system_xboxlive" id="async_system_xboxlive"></a>
 <label class="collapse" for="thirtytwo">XBox Live</label>
 <input id="thirtytwo" type="checkbox">
@@ -913,6 +949,58 @@ for="seven">Steam</label> <input id="seven" type="checkbox">
 
 <p>有关 XBox Live 可用特定函数的更多信息，请参阅 <a href=
 "../../../3_scripting/4_gml_reference/xbox_live/index.html">此处</a>。</p>
+</div>
+<br>
+<a name="async_system_audio" id="async_system_audio"></a>
+<label class="collapse" for="thirtyfour">Audio System
+Status</label> <input id="thirtyfour" type="checkbox">
+<div class="index_list">
+<p>This event type is specifically for use when working with the
+HTML5 target, as it will be triggered every time the Web Audio
+context status changes. This means that if you have, for example, a
+piece of looping background music, then you can pause it or stop
+and restart it, based on this event triggering. This can be checked
+by looking for the following key/value pair in the
+<tt>async_load</tt> map:</p>
+
+<ul>
+<li>"<b>event_type</b>" - the type of system event received, which
+will be the following string for an audio event:<br>
+<br>
+
+<ul>
+<li>"<b>audio_system_status</b>" - The audio system has initialised
+or the context has changed.</li>
+</ul></li>
+</ul>
+
+<p>If this event type is triggered, then there will be an
+additional key in the <tt>async_load</tt> map:</p>
+
+<ul>
+<li>"<b>status</b>" - The status of the audio system, which will be
+one of the following two strings<br>
+<br>
+
+<ul>
+<li>"<b>available</b>" - The audio system is initialised and
+available to play sounds</li>
+
+<li>"<b>unavailable</b>" - The audio system is not initialised, or
+the context is not currently running, and so can't play sounds (all
+sound playing functions will return -1)</li>
+</ul></li>
+</ul>
+
+<p>For more information on the specific functions available for
+Audio, please see <a href=
+"../../../3_scripting/4_gml_reference/audio/index.html">here</a>.</p>
+
+<div class="note"><b>NOTE</b>: While this event is designed for use
+with the HTML5 target, it will also be triggered on <i>all</i>
+other platforms, but on everything (except HTML5) it will only be
+triggered once on Game Start when the audio engine is first
+initialised.</div>
 </div></blockquote>
 </div></blockquote>
 
@@ -929,7 +1017,7 @@ for="seven">Steam</label> <input id="seven" type="checkbox">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

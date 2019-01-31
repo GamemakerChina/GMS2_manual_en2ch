@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,16 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action will set the speed, in pixels per game frame, that
-an instance should follow a path (note that you must have called
-the <a href="start_following_path.html">Start Following Path</a>
-action to assign a path to the instance for this to have any
-effect). You can use negative values to signify that the instance
-should follow the path in reverse and it's worth noting that the
-speed you set here can be modified by the speed modifier set in the
-path editor for each path point, so if you set a path speed to 2
-and in the path one of the points has a speed modifier of 200% the
-actual pixels per game frame speed at that point will be 4.</p>
+<p>此动作允许你设置某个正在跟随路径移动的物体的速度，单位是像素每游戏帧。注意你必须先用 <a href="start_following_path.html">开始跟随路径</a> 动作使此实例跟随路径，否则将此动作将不会产生任何影响。你可以将此实例的速度设为负值，那么此实例将反向移动。你可以在路径编辑器中的速度修改器为每个路径点调整速度。例如你的路径速度是2，但你在速度修改器中把路径点一的修改调整为200%，那么实际上实例在路径点一的速度将会是4像素每游戏帧</p>
 </blockquote>
 
 <p><br>
@@ -72,8 +63,7 @@ alt="Set Path Follow Speed Syntax">
 
 <tr>
 <td>速度</td>
-<td>The speed (in pixels per game frame) that the instance should
-follow the path</td>
+<td>此实例跟随路径移动的速度，单位是像素每游戏帧</td>
 </tr>
 </table>
 </blockquote>
@@ -84,7 +74,7 @@ follow the path</td>
 <h3>例如：</h3>
 <img class="center" src="images/e_paths_set_path_follow_speed.png"
 alt="Set Path Follow Speed Example">
-<blockquote>The above action block code</blockquote>
+<blockquote>上述动作代码块一开始让实例跟随路径的移动速度为2，之后产生一个2到4之间的随机值，并使用此随机值作设置为实例的移动速度。（译者注：英文版这儿没写全）</blockquote>
 
 <p><br>
 </p>
@@ -100,7 +90,7 @@ alt="Set Path Follow Speed Example">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

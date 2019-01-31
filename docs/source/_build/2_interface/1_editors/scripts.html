@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -233,8 +233,7 @@ alt="Script Editor Code Regions">
 <li>每个片段都以片段名称（菜单中显示的名称）开头，后跟冒号（:），然后是实际的代码片段。
 </li>
 
-<li>Use # for a newline and put the text that needs to be selected
-first between | symbols.</li>
+<li>使用 $ 作为换行符，并将需要首先选择的文本放在 | 符号之间。</li>
 </ul>
 
 <p>请参阅文件中已有的示例，了解如何按照上述规则进行设置，强烈建议你在开始更改任何内容之前对其进行备份，并备份你对文件所做的任何编辑，更新或重新安装程序还原你所做的更改，你可以使用备份再次重做它们。</p>
@@ -247,6 +246,13 @@ first between | symbols.</li>
 <p>IDE底部的信息栏显示你当前的行号以及该行的位置。 它也是你可以看到代码帮助器的地方，代码帮助器是一行文本，显示你当前正在编辑的函数及其所需的参数。当你在编辑器中填写函数时，参数将突出显示以显示你当前正在编辑的那个。如果你在自定义脚本中使用了 <a href=
 "../../1_overview/3_additional_information/jsdoc.html">JSDoc 脚本注释</a>，那么你提供的信息也将显示在此处。</p>
 </div></blockquote>
+
+<p>请注意，如果你正在为 Web 开发（即：<b>HTML5</b> 平台），那么你可以使用其他脚本协议，即使用 <b>gmcallback_</b> 作为脚本名称的 <i>前缀</i>，例如：</p>
+
+<p class="code">gmcallback_create_button</p>
+
+<p>使用上面的脚本名称意味着脚本 <tt>gmcallback_create_button</tt> <i>不会</i> 被混淆，因此可以在 JavaScript 扩展和游戏的其他区域中使用，例如，在使用 <a href=
+"../../3_scripting/4_gml_reference/web/index.html"><tt>clickable_*</tt></a> 函数时。</p>
 
 <p><br>
 </p>
@@ -261,7 +267,7 @@ first between | symbols.</li>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

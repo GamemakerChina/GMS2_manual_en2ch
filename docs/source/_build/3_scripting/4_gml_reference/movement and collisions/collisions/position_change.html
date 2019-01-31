@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,12 +32,31 @@ if (window.name != "content")
 <h2>position_change</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">position_change(x, y, obj, perf);</p>
+<h3>描述</h3>
+
+<blockquote>
+<p>This function will check a position for a collision with <i>any
+instances</i> at the given point, and if there is one, it will
+change <b>all</b> instances in collision to be instances of the
+chosen object. You can set the "perf" argument to <tt>true</tt>
+which will force <i>GameMaker Studio 2</i> to perform the Destroy
+and Clean Up events of the found instance and the Create event of
+the new instance, or <tt>false</tt> to not perform any of these
+events. Please note, that if you choose not to perform the Destroy,
+Clean Up and Create events, any instance created that uses a
+variable normally defined in the create event will crash the game
+as that variable will no longer exist.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">position_change(x, y, obj, perf);</p>
 
 <div class="param">
 <table>
@@ -72,36 +91,22 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>This function will check a position for a collision with <i>any
-instances</i> at the given point, and if there is one, it will
-change <b>all</b> instances in collision to be instances of the
-chosen object. You can set the "perf" argument to <tt>true</tt>
-which will force <i>GameMaker Studio 2</i> to perform the Destroy
-and Clean Up events of the found instance and the Create event of
-the new instance, or <tt>false</tt> to not perform any of these
-events. Please note, that if you choose not to perform the Destroy,
-Clean Up and Create events, any instance created that uses a
-variable normally defined in the create event will crash the game
-as that variable will no longer exist.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">position_change(200, 200, obj_Bird, true);</p>
 
+<blockquote>
 <p>This will change all instances colliding at point (200,200) into
 an instance of "obj_Bird", performing "obj_Bird"s Create event for
 each of them in the process.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -117,7 +122,7 @@ each of them in the process.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

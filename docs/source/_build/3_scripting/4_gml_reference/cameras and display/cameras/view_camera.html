@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,21 +36,14 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<blockquote>This array holds the unique camera ID assigned to the
-given view port, and can be set to a new camera or read to get the
-current camera, returning -1 if no camera is assigned. You can have
-up to 8 view ports active in a room (array values 0 through 7), and
-can assign a camera to any of them by simply setting this variable
-to the camera ID value (as returned by the functions <a href=
-"camera_create.html"><tt>camera_create()</tt></a> or <a href=
-"camera_create_view.html"><tt>camera_create_view()</tt></a>). If
-you have set the camera to a view port through the Room Editor,
-this variable will hold the camera ID for that port.</blockquote>
+<blockquote>此数组用来保存已被分配给给定可视区域的摄像机的唯一ID值，可被设为新摄像机，或读取来获得当前摄像机。如果没有摄像机被分配，则返回-1。您最多可以在一个房间中激活8个可视区域 （编号0到 7），并且只需将此变量设置为某个摄像机的ID值 （此ID值由<a href=
+"camera_create.html"><tt>相机 _ create</tt></a> () 或<a href=
+"camera_create_view.html"><tt>camera_ create _ view ()</tt></a> 函数返回），即可将摄像机分配给其中任何一个可视区域。如果已通过房间编辑器将摄像机分配给可视区域， 则此变量将保存该可视区域的摄像机的ID。</blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">view_camera[0 ... 7];</p>
 
@@ -59,7 +52,7 @@ this variable will hold the camera ID for that port.</blockquote>
 
 <h3>Returns:</h3>
 
-<p class="code">Camera index or -1 if no camera is assigned</p>
+<p class="code">摄像机索引，如果没有被分配给摄像机，就返回-1。</p>
 
 <p><br>
 </p>
@@ -68,9 +61,7 @@ this variable will hold the camera ID for that port.</blockquote>
 
 <p class="code">if view_camera[0] == -1<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;view_camera[0] = camera_create_view(0, 0, room_width, room_height);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks to see if the view port [0] has a camera
-attached to it and if it doesn't then one is created and set to
-it.</p>
+<p>上述代码检查view port[0]是否连接到了一个摄像机，如果没有的话，就新建一个并让此摄像机连接到前者。</p>
 
 <p><br>
 </p>
@@ -83,7 +74,7 @@ it.</p>
 "view_current.html">view_current</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

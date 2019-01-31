@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,17 +37,14 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to retrieve the view matrix. The
-function returns the matrix ID value which can then be used in
-other <a href="../../matrices/index.html">matrix functions</a> or
-to set the view matrix of another camera (using <a href=
-"camera_set_view_mat.html"><tt>camera_set_view_mat</tt></a>).</p>
+<p>此函数用来获得视野矩阵。此函数所返回的矩阵ID可用在其它的 <a href="../../matrices/index.html">矩阵函数</a> ，或用来设置其它摄像机的投影矩阵。（使用 <a href=
+"camera_set_view_mat.html"><tt>camera_set_proj_mat</tt></a>)。注意，此函数通常用于那些使用<a href="camera_create.html"><tt>camera_create()</tt></a>创建出来的摄像机，但也可用于那些在房间编辑器中（或使用 <a href="camera_create_view.html"><tt>camera_create_view</tt></a>）创建出来的摄像机——在这种情况下，只有在给定摄像机在首次被用于可视区域时，函数返回的矩阵才可用。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_get_view_mat(camera_id)</p>
 
@@ -65,8 +62,7 @@ to set the view matrix of another camera (using <a href=
 
 <tr>
 <td>camera_id</td>
-<td>The unique camera ID value returned when you created the
-camera</td>
+<td>创建相机时返回的唯一相机 id 值</td>
 </tr>
 </table>
 </blockquote>
@@ -99,7 +95,7 @@ view port[0].</p>
 "camera_get_proj_mat.html">camera_get_proj_mat</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

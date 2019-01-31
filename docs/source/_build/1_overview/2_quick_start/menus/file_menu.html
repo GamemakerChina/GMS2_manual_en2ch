@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -54,15 +54,27 @@ if (window.name != "content")
 <li style="list-style: none"><br>
 </li>
 
-<li><b>导入项目（Import Project）</b> - 如果你有使用来自YoYo Games的<b><i>GameMaker Studio</i> 1.4</b>软件制作的项目，你可以选择该选项来导入<tt>*.gmx</tt>或<tt>*.gmz</tt>文件。<br>
+<li><b>导入项目</b> - 如果你有使用来自 YoYo Games 的 <b><i>GameMaker: Studio</i> 1.4</b> 软件制作的项目，你可以选择该选项来导入 <tt>*.gmx</tt> 或 <tt>*.gmz</tt> 文件。<br>
 <br>
 
-<div class="note"><b>注意：</b> 欲导入之前版本的GameMaker项目到GameMaker Studio 2中，你必须保证这个项目是使用1.4版本创建的，而且即便如此也不能保证导入后直接就能正常运作。<i>GameMaker Studio 2</i>和 <i>GameMaker Studio 1.4</i>之间存在很多差异，因此你的旧版项目可能需要一些调整之后才能运作。请阅读YoYo Games知识库（Knowledge Base）上的文章<a href=
-"http://help.yoyogames.com/entries/97227137" target=
-"_blank">Porting A GMS Game To GameMaker Studio 2</a>以及本手册上讲述<a href=
-"../../3_additional_information/obsolete_functions.html">弃用函数（Obsolete Functions）及兼容性脚本（Compatibility Scripts）</a>的章节。</div>
+<div class="note"><b>注意：</b> 欲导入之前版本的 GameMaker 项目到 GameMaker Studio 2 中，你必须保证这个项目是使用1.4版本创建的，而且即便如此也<b>不能保证导入后直接就能正常运作</b>。GameMaker Studio 2 和 GameMaker Studio 1.4 之间存在很多差异，因此你的旧版项目可能需要一些调整之后才能运作。请阅读YoYo Games知识库（Knowledge Base）上的文章 <a href="https://help.yoyogames.com/hc/en-us/articles/231719468"
+target="_blank">Porting A GM:S 1.4 Game To GameMaker Studio 2</a> 以及本手册上讲述 <a href=
+"../../3_additional_information/obsolete_functions.html">弃用函数（Obsolete Functions）及兼容性脚本（Compatibility Scripts）</a> 的章节。</div>
 
-<div class="note"><b>重要！</b> 导入旧版项目和YYZ项目在试用版（Trial License）产品中 <b>不</b> 可用。</div></li>
+<div class="note"><b>重要！</b> 导入旧版项目和YYZ项目在试用版（Trial License）产品中 <b>不</b> 可用。</div>
+
+<div class="note"><b>IMPORTANT!</b> Importing a YYZ project that
+contains font resources may require you to "regenerate" the fonts
+by removing/re-adding them, or by changing the font in the font
+editor and then setting it back again. This is because the existing
+font information is retained by the YYZ when it is exported, and,
+on import later or on another machine, the project may not have the
+required fonts installed already (or may have a different font of
+the same name). This should only be done if you are seeing issues
+with how the font renders after import.</div>
+
+<p><br>
+</p></li>
 
 <li><b>最近项目（Recent Projects）</b> - 你可以使用该选项来查看近期使用过的项目。选择该选项将会重新打开 <a href=
 "../2_start.html">起始页（Start Page）</a>（你应该已经关掉了）然后你可以从这里的列表中选择一个最近使用过的项目。</li>
@@ -122,7 +134,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

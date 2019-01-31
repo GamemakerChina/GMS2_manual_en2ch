@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,7 +35,7 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">surface_copy_part(destination, x, y, source, xs,
 ys, ws, hs);</p>
@@ -114,7 +114,7 @@ ys, ws, hs);</p>
 
 <h3>例如：</h3>
 
-<p class="code">if view_current == 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;surface_copy_part(surf, 0, 0, temp_surf, 0, 0, view_xview[1] - mouse_x, view_yview[1] - mouse_y);<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if view_current == 0<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;surface_copy_part(surf, 0, 0, temp_surf, 0, 0, view_xview[1] - mouse_x, view_yview[1] - mouse_y);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;draw_surface(surf, 0, 0);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
 <p>上述代码将检测当前绘制的视野，如果视野是 view[0]，则复制变量为 "temp_surf" 的表面到变量为 "surf"的表面。The area copied corresponds to a rectangle formed by the relative position of the mouse within the surface as it would be drawn in view[1]. 如果当前视野不是view[0]，则绘制 "surf"这个表面到屏幕上。</p>
@@ -130,12 +130,12 @@ ys, ws, hs);</p>
 <div style="float:left">返回: <a href=
 "index.html">表面层</a></div>
 
-<div style="float:right">下一页: <a href=
-"surface_get_height.html">surface_get_height</a></div>
+<div style="float:right">Next: <a href=
+"surface_depth_disable.html">surface_depth_disable</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,14 +37,14 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to retrieve the height (in pixels) of
-the given camera.</p>
+<p>此函数用来获取给定摄像机的高度，单位是像素。此函数 <i>只</i> 能用于那些用 <a href=
+"camera_create_view.html"><tt>camera_create_view()</tt></a>创建的摄像机或那些在房间编辑器中添加的摄像机。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_get_view_height(camera_id)</p>
 
@@ -62,8 +62,7 @@ the given camera.</p>
 
 <tr>
 <td>camera_id</td>
-<td>The unique camera ID value returned when you created the
-camera</td>
+<td>创建相机时返回的唯一相机 id 值</td>
 </tr>
 </table>
 </blockquote>
@@ -85,9 +84,7 @@ camera</td>
 var vh = camera_get_view_height(view_camera[0]) / 2;<br>
 camera_set_view_pos(view_camera[0], x - vw, y - vh);<br></p>
 
-<p>The above code retrieves the width and height of the camera
-assigned to view port[0] and then sets its position relative to the
-center.</p>
+<p>上述代码将返回被分配给view port[0]的摄像机的高度和宽度，并将它的位置设为与中心相关。</p>
 
 <p><br>
 </p>
@@ -100,7 +97,7 @@ center.</p>
 "camera_get_view_speed_x.html">camera_get_view_speed_x</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,14 +29,41 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">数据结构（Data structures）</h1>
+<h2>数据结构（Data structures）</h2>
 
-<h2 class="studio">这一节包含了各种专门用于存储不同种类数据的函数</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<p>在游戏中，你经常需要精确且有序地存储信息。比如，你可能需要保存一个人携带的刀具列表或你希望存储一组需要访问的地区。那么，你 <i>可以</i>使用数组来操作，但是如果你想进行更复杂的操作，比如对数据进行排序或者搜索指定道具，你需要编写大量的GML代码，这些代码可能执行速度慢，难以调试，写起来十分痛苦<br>为了解决这个问题， <i>GameMaker Studio 2</i>有许多内置的 <b>数据结构(Data Struactures)</b> ，它们可以通过指定的函数进行访问调用。一共有六种不同类型的数据结构可供使用，每种数据结构都有其自身的优点，具体使用则取决于你希望存储的信息类型以及之后你需要对数据进行何种操作：堆栈、队列、列表、映射、优先队列以及栅格<br>基本上，所有的数据结构都以相同的方式工作——你创建数据结构并将其 <i>索引值</i>保存在一个变量中。然后，你可以使用这个索引值在其他函数中进行调用操作。最后，一旦你用完记得要销毁这个数据结构以将其从内存中移除。你可以根据需求来同事是使用多个数据结构，并且所有结构都可以存储字符串和数值<br><br><i><b>注意：</b>与所有动态资源一样，数据结构会占用你的内存，因此在不再使用时 <b>应当</b>进行销毁，以防止内存泄漏导致游戏发生crash</i><br>
-<br></p>
+<p>在游戏中，你经常需要精确且有序地存储信息。比如，你可能需要保存一个人携带的刀具列表或你希望存储一组需要访问的地区。Now, you <i>can</i> use the arrays for this, but if you want to do more complicated operations, like sorting the data or searching for a particular item, you need to write large pieces of GML code which can be slow to execute, difficult to debug and a real pain to write!</p>
 
-<p>关于不同数据结构的具体信息可以在以下章节找到：</p>
+<p>To remedy this, <i>GameMaker Studio 2</i> has a number of
+built-in <b>data structures</b> that can be accessed through
+specialist functions. There are six different types of data
+structure available, each one having its own benefits depending on
+the type of information that you are looking to store and how you
+wish to manipulate it later: stacks, queues, lists, maps, priority
+queues, and grids.</p>
+
+<p>Essentially, all data structures work in the same way - You create a data structure and store its <i>index value</i> in a variable. 然后，你可以使用这个索引值在其他函数中进行调用操作。最后，一旦你用完记得要销毁这个数据结构以将其从内存中移除。You can use as many of the structures at the same time as you need, and all structures can store both strings and real values.</p>
+
+<div class="note"><b>NOTE:</b> As with all dynamic resources, data
+structures take up memory and so should <b>always</b> be destroyed
+when no longer needed to prevent memory leaks which will slow down
+and eventually crash your game.</div>
+
+<div class="note"><b>IMPORTANT!</b> When you create a data
+structure, the index value to identify it is an integer value
+starting at 0. This means that different data structures can have
+the <b>same</b> index value, so if in doubt you should be using the
+<tt>ds_exists</tt> function before accessing them. Also note that
+indices are re-used, so a destroyed data structure index value may
+be used by a newly created one afterwards, and we recommend that
+you set any variable that holds a DS index to -1 after having
+destroyed the data structure.</div>
+
+<p><br>
+关于不同数据结构的具体信息可以在以下章节找到：</p>
 
 <blockquote>
 <ol>
@@ -92,7 +119,10 @@ if (window.name != "content")
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">返回: <a href=
 "../index.html">GML参考</a></div>
@@ -100,11 +130,13 @@ if (window.name != "content")
 <div style="float:right">下一页: <a href=
 "../strings/index.html">Strings</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

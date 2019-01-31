@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,7 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>此动作允许你获取 <b>可视区域</b>相关的某些内置变量的值。首先，你选择需要恢复的可视区域变量，然后把这个可视区域给目标（0-7），最后，目标变量记录了返回值（目标变量可以是一个临时局部变量）可视区域是用于绘制给定摄像机视图的屏幕区域（在房间编辑器中设置），下表列出了你能够以这种方式获得的不同变量：</p>
+<p>此动作允许你获取指定的 <b>可视区域</b>相关的某些内置变量的值。您选择要检索的视图端口变量，然后将视图端口指定为目标（从0到7），最后将目标变量保存为返回值（目标变量可以是一个临时局部变量）。 可视区域是用于绘制给定摄像机视图的屏幕区域（在房间编辑器中设置），下表列出了你能够以这种方式获得的不同变量：</p>
 
 <div class="compat">
 <table>
@@ -57,7 +57,7 @@ if (window.name != "content")
 
 <tr class="alt">
 <td>可见性</td>
-<td>会返回的值为 <tt>真</tt> 或者 <tt>假</tt>。如果返回 <tt>真</tt>表示可视区域可见 (ie:在屏幕上绘制)，如果返回<tt>假</tt>表示没有绘制任何东西。 </td>
+<td>会返回的值为 <tt>真</tt> 或者 <tt>假</tt>。如果返回 <tt>真</tt>表示可视区域可见 (ie:在屏幕上绘制)，如果返回<tt>假</tt>表示不会绘制任何东西。 </td>
 </tr>
 
 <tr>
@@ -129,7 +129,7 @@ alt="获取视野变量语法">
 <h3>例如：</h3>
 <img class="center" src="images/e_cameras_get_view_variable.png"
 alt="获取视野变量举例">
-<blockquote>上述代码获得了赋给可视区域[0]的镜头ID，然后检查它是否与之前存在全局变量中的值一致。如果不一致，镜头设置成之前存储的值</blockquote>
+<blockquote>上述代码获得了赋给可视区域[0]的镜头ID，然后检查它是否与之前存在全局变量中的值一致。如果不一致，相机设置成之前存储的值</blockquote>
 
 <p><br>
 </p>
@@ -144,7 +144,7 @@ alt="获取视野变量举例">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

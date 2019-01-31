@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,32 @@ if (window.name != "content")
 <h2>sha1_string_unicode</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>在密码学中，SHA-1 是由美国 <i>国家安全局</i> 设计的加密散列函数，用于几种广泛使用的流行 <b>Git</b> 应用程序中检查文件更改。此函数将获取输入的 unicode 格式字符串并以 ASCII 格式返回 160 位消息摘要，例如：</p>
+
+<p class="code">sha1 input string = "The quick brown fox jumps over the lazy dog"<br>sha1 output hash = "2fd4e1c6 7a2d28fc ed849ee1 bb76e739 1b93eb12"</p>
+
+<p><br>
+
+In this way you can generate a secure key which can be stored and
+used to check the integrity of the information being sent to (or
+received from) an external server (for example).</p>
+
+<div class="note"><b>NOTE</b>: There are two formats for the sha1
+encoding, UTF-8 and unicode. Both are provided to facilitate
+communication with different server setups, but the most common to
+use is unicode.</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">sha1_string_unicode(string)</p>
 
@@ -56,30 +81,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> String（字符串）</p>
+<h3>Returns:</h3>
+
+<p class="code">字符串</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>在密码学中，SHA-1 是由美国 <i>国家安全局</i> 设计的加密散列函数，用于几种广泛使用的流行 <b>Git</b> 应用程序中检查文件更改。此函数将获取输入的 unicode 格式字符串并以 ASCII 格式返回 160 位消息摘要，例如：<br>
-<br></p>
-
-<p class="code">sha1 input string = "The quick brown fox jumps over the lazy dog"<br>sha1 output hash = "2fd4e1c6 7a2d28fc ed849ee1 bb76e739 1b93eb12"</p>
-
-<p><br>
-一个使用它的例子是，通过这种方式生成一个安全密钥，该密钥可以存储并用于检查发送到外部服务器（或从外部服务器接收的信息）的完整性。<br><br><i><b>注意：</b> sha1 编码有两种格式，UTF-8 和 unicode。两者都是为了便于与不同的服务器设置进行通信，但最常用的是 unicode。</i><br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">var hash, str;<br>str = base64_encode(game_data);<br>hash = sha1_string_unicode(str);<br>http_get("http://www.MacSweeneyGames.com/CatchTheHaggis/gamedata?hash=" + hash); http_get("http://www.MacSweeneyGames.com/CatchTheHaggis/gamedata?data=" + str);</p>
 
+<blockquote>
 <p>上面的代码将以 base64 格式编码一个字符串，然后生成一个 sha1 散列。 最后，散列和编码的字符串都被发送到服务器。</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -95,7 +110,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

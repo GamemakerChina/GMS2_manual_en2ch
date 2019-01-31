@@ -2,13 +2,14 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>ini_open_from_string</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../../default.css" type=
@@ -32,7 +33,19 @@ if (window.name != "content")
 <h2>ini_open_from_string</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>此函数将从字符串创建一个 ini 文件并将其打开以进行读取 / 写入。字符串应正确格式化为 ini 文件（即：带有节、换行符和值），否则将无法正确创建 ini 文件。请注意，此 ini 文件是临时文件，将在关闭时从内存中删除，丢失存储在其中的任何信息，但 <a href="ini_close.html"><tt>ini_close</tt></a> 函数将返回一个完整的 ini 文件字符串 ，然后可以保存到服务器或磁盘。</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">ini_open_from_string(string);</p>
 
@@ -56,24 +69,20 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>此函数将从字符串创建一个 ini 文件并将其打开以进行读取 / 写入。字符串应正确格式化为 ini 文件（即：带有节、换行符和值），否则将无法正确创建 ini 文件。请注意，此 ini 文件是临时文件，将在关闭时从内存中删除，丢失存储在其中的任何信息，但 <a href="ini_close.html"><tt>ini_close</tt></a> 函数将返回一个完整的 ini 文件字符串 ，然后可以保存到服务器或磁盘。<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">ini_open_from_string(str)<br>global.sound = ini_read_string("Options", "Sound", true);<br>ini_close();</p>
 
+<blockquote>
 <p>上面的代码设置了一个临时 ini 来保存字符串 “str” 中的信息，然后在再次关闭它之前从 ini 读取。</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -89,7 +98,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

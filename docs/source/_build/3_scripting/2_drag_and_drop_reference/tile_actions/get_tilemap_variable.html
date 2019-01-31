@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,72 +40,50 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can retrieve any one of a given number of
-variables for the tilemap element on a layer. When you create a
-tile layer in the room editor, this layer holds a <b>tilemap
-element</b> which is then populated with tiles from a tileset. This
-tilemap element has certain values associated with it, like an
-offset position, the tileset being used, the width, height, etc...
-The complete list of values that you can get is:</p>
+<p>使用此动作你可以取得层上的图块地图元素的任何变量。当你在房间编辑器中创建图块层时，此层将会拥有一个 <b>图块地图元素</b> ，此元素将用于放置图块集中的图块。此图块地图元素有一些变量，例如起点坐标，使用的图块集，高度，宽度，等等... 你可以取得值的完整列表如下：</p>
 
 <ul>
-<li><a href="../../4_gml_reference/rooms/tilemaps/tilemap_x.html">X
-Coordinate</a> - The position along the x axis on the layer where
-the tilemap element has been placed.<br>
+<li><a href="../../4_gml_reference/rooms/tilemaps/tilemap_x.html">X坐标</a> - 层上图块地图元素被放置的X坐标。<br>
 <br></li>
 
-<li><a href="../../4_gml_reference/rooms/tilemaps/tilemap_y.html">Y
-Coordinate</a> - The position along the y axis on the layer where
-the tilemap element has been placed.<br>
+<li><a href="../../4_gml_reference/rooms/tilemaps/tilemap_y.html">Y坐标</a> - 层上图块地图元素被放置的Y坐标。<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/rooms/tilemaps/tilemap_get_width.html">Columns</a>
-- The width (defined as the number of columns of tile cells) of the
-tilemap element.<br>
+"../../4_gml_reference/rooms/tilemaps/tilemap_get_width.html">列</a> - 图块地图元素的高度（即图块单元格所在的列数）<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/rooms/tilemaps/tilemap_get_height.html">Rows</a>
-- The height (defined as the number of rows of tile cells) of the
-tilemap element.<br>
+"../../4_gml_reference/rooms/tilemaps/tilemap_get_height.html">行</a> - 图块地图元素的宽度（即图块单元格所在的行数）<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/rooms/tilemaps/tilemap_get_tile_width.html">Tile
-Width</a> - The width of a single tile cell.<br>
+"../../4_gml_reference/rooms/tilemaps/tilemap_get_tile_width.html">图块宽度</a> - 单个图块单元格的宽度<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/rooms/tilemaps/tilemap_get_tile_height.html">
-Tile Height</a> - The height of a single tile cell.<br>
+"../../4_gml_reference/rooms/tilemaps/tilemap_get_tile_height.html">图块高度</a> - 单个图块单元格的高度<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/rooms/tilemaps/tilemap_tileset.html">Tile
-Set Resource</a> - The tileset resource that has been assigned to
-the tilemap element for drawing.<br>
+"../../4_gml_reference/rooms/tilemaps/tilemap_tileset.html">图块集资源</a> - 此图块地图所使用的图块集<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/rooms/tilemaps/tilemap_get_frame.html">Current
-Frame</a> - The current frame being drawn for animated tiles.<br>
+"../../4_gml_reference/rooms/tilemaps/tilemap_get_frame.html">当前帧</a> - 动画图块当前被绘制的帧<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/rooms/tilemaps/tilemap_get_mask.html">Mask</a>
-- The mask data for the tilemap element.<br>
+"../../4_gml_reference/rooms/tilemaps/tilemap_get_mask.html">遮罩</a> -此图块地图元素的遮罩数据.<br>
 <br></li>
 
 <li><a href=
-"../../4_gml_reference/rooms/tilemaps/tilemap_get_global_mask.html">
-Global Mask</a> - The global mask data for all tilemap
-elements.<br>
+"../../4_gml_reference/rooms/tilemaps/tilemap_get_global_mask.html"> 全局遮罩</a> - 所有图块地图元素所使用的全局遮罩<br>
 <br></li>
 </ul>
 
-<p>When using this action you supply the layer name (a string, as defined in the Room Editor) to get the tilemap element data from, then the type of data that you want to retrieve (as shown in the list above). 返回值将被存储在目标变量中，此变量需要之前就被创建了，或你选中临时(temp)按钮来创建的新临时变量。Note that you can retrieve additional values by clicking the plus icon <img style="vertical-align:middle" src=
-"../icon_expand_arguments.png"> beside the action, and selecting another variable and giving another variable to store the returned value.</p>
+<p>在此动作中你首先需要提供目标图块所在层的名字（字符串），这在房间编辑器中是已经定义好了，然后设置你想返回的图块数据类型（在上面的列表已列出来）。返回值将被存储在目标变量中，此变量需要之前就被创建了，或你选中临时(temp)按钮来创建的新临时变量。你可以多次执行这个动作，你需要点击动作旁的加号 <img style="vertical-align:middle" src=
+"../icon_expand_arguments.png"> ，你需要选择另一个变量和一个存储此返回值的的变量。</p>
 </blockquote>
 
 <p><br>
@@ -128,12 +106,12 @@ alt="Get Tilemap Variable Syntax">
 
 <tr>
 <td>层</td>
-<td>The layer to get data from</td>
+<td>需要取得数据的层</td>
 </tr>
 
 <tr class="alt">
 <td>变量</td>
-<td>The variable to retrieve the value of (as listed above)</td>
+<td>需要取得返回值的变量（已在上方列出）</td>
 </tr>
 </table>
 </blockquote>
@@ -145,9 +123,7 @@ alt="Get Tilemap Variable Syntax">
 <img class="center" src="images/e_tiles_set_tile_set.png" alt=
 "Set Tile Set Example">
 <blockquote>
-<p>The above action block code checks to see if the tiles on the
-layer "Floor_Tiles" is using the tileset "tl_Palace", and if they
-not, then they are set to use it.</p>
+<p>上述动作块代码检查在 "Floor_Tiles"层上的图块是否在使用图块集"tl_Palace"，如果不是的话，则让它使用此图块集。</p>
 </blockquote>
 
 <p><br>
@@ -164,7 +140,7 @@ not, then they are set to use it.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

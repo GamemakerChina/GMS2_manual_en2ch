@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,11 +29,22 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">abs</h1>
+<h2>abs</h2>
 
-<h2 class="studio">Returns the absolute value of a value.</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3><b>Syntax:</b>
+<h3>描述</h3>
+
+<blockquote>
+<p>此函数返回输入参数的绝对值，因此如果它是正值，则它将保持不变，但如果它为负，则将其乘以-1以使其为正。</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3><b>语法：</b>
 </h3>
 
 <p class="code">abs(val)</p>
@@ -50,7 +61,7 @@ if (window.name != "content")
 
 <tr>
 <td>val</td>
-<td>The number to turn absolute.</td>
+<td>需要取绝对值的值。</td>
 </tr>
 </table>
 </div>
@@ -58,42 +69,39 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> Real（实数）</p>
+<h3>Returns:</h3>
+
+<p class="code">实数</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>This function returns the absolute value of the input argument,
-so if it's a positive value then it will remain the same, but if
-it's negative it will be multiplied by -1 to make it positive.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3><b>例如：</b>
-</h3>
+<h3>例如：</h3>
 
 <p class="code">x += abs (x - mouse_x)</p>
 
-<p>This will add an amount equal to the absolute value of the
-current x position of the instance and the mouse x position.</p>
+<blockquote>
+<p>这将添加等于实例的当前x位置和鼠标x位置的绝对值的量。</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Real Number Functions</a></div>
 
 <div style="float:right">下一页: <a href="sign.html">sign</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,22 +40,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This action can convert a string into a number. You provide the
-string to change and then give a target variable to return the real
-number back to (this variable can be flagged as a temporary local
-variable). Note that if the string has any characters other than
-numbers and a decimal point, it will <i>not</i> be converted,
-although if the string <i>starts</i> with a number then those will
-be converted and the rest of the string excluded. It is important
-to note that when passing decimals into this action, the returned
-string will be rounded to <i>two</i> decimal places only. Below is
-a table of input values and what you'd expect returned</p>
+<p>此动作将一个字符串转化为一个数字。你需要提供一个字符串，然后提供用来储存返回实数的目标变量 (可以标记为临时局部变量)。如果字符串中有字母或小数点，那么将<i>不会</i> 被转换。如果字符串以实数<i>开头</i> 而之后是字母，那么将会把开头的所有数字转换为实数，而忽略之后的字母。. 注意如果你需要转换的数字中有小数点， 那么他将保留小数点后<i>两</i> 位。你可以在以下看到这是怎样运作的：</p>
 
 <div class="compat">
 <table>
 <tr>
 <th>字符串</th>
-<th>Returned Value</th>
+<th>返回值</th>
 </tr>
 
 <tr>
@@ -70,8 +61,7 @@ a table of input values and what you'd expect returned</p>
 
 <tr>
 <td>"Hello World"</td>
-<td>0 (by default if the string can't be converted, 0 will be
-returned)</td>
+<td>0（默认情况下，如果字符串不能被转换，将返回0）。</td>
 </tr>
 
 <tr class="alt">
@@ -123,11 +113,7 @@ returned)</td>
 <h3>例如：</h3>
 <img class="center" src="images/e_types_string_to_number.png" alt=
 "String To Number Example">
-<blockquote>The above action block code initialises a global
-variable and then opens an <tt>ini</tt> file. A string is read from
-the file and stored in a temporary variable before being converted
-into a real number and assigned to the global variable. The
-<tt>ini</tt> is then closed.</blockquote>
+<blockquote>上述动作块代码将会初始化一个全局变量，并打开一个<tt>ini</tt> 文件。然后从此文件中读取一个字符串，并将它存储在一个临时变量中，然后把它转变为一个实数，然后将此实数赋给这个全局变量。然后关闭此<tt>ini</tt> 文件。</blockquote>
 
 <p><br>
 </p>
@@ -143,7 +129,7 @@ into a real number and assigned to the global variable. The
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

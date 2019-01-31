@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,22 +29,29 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">ds_map_replace_map</h1>
+<h2>ds_map_replace_map</h2>
 
-list
+<div class="body-scroll">
+<p><br>
+</p>
 
+<h3>描述</h3>
 
-
-<h2 class="studio">Replace a ds_map that has been previously added
-into a distinct ds_map, with another ds_map.</h2>
-
-<h3><b>Syntax:</b>
-</h3>
-
-<p class="code">ds_map_replace_map(id, key, value)</p>
+<blockquote>
+<p>With this function you can replace a <tt>ds_map</tt> that has
+been stored in the given "key" with another map that has been
+created previously. This function is designed for creating JSON
+compatible maps which you would then encode using <a href=
+"../../file%20handling/json_encode.html"><tt>json_encode</tt></a>
+and should only be used in conjunction with that functionality.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">ds_map_replace_map(id, key, value)</p>
 
 <div class="param">
 <table>
@@ -74,25 +81,14 @@ stored in the given key.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>With this function you can replace a <tt>ds_map</tt> that has
-been stored in the given "key" with another map that has been
-created previously. This function is designed for creating JSON
-compatible maps which you would then encode using <a href=
-"../../file%20handling/json_encode.html"><tt>json_encode</tt></a>
-and should only be used in conjunction with that functionality.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">var temp_map = ds_map_create();<br>
 ds_map_add_list(temp_map, "list", j_list);<br>
@@ -101,24 +97,31 @@ ds_map_replace_map(j_map, "maps", temp_map);<br>
 var j = json_encode(j_map);<br>
 ds_map_destroy(temp_map);<br></p>
 
+<blockquote>
 <p>The above code will create a <tt>ds_map</tt> and populate it
 with an array and a <tt>ds_list</tt> before replacing a previously
-stored map in the <tt>ds_map</tt> "j_map".<br></p>
+stored map in the <tt>ds_map</tt> "j_map".</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">DS Maps</a></div>
 
 <div style="float:right">下一页: <a href=
 "ds_map_exists.html">ds_map_exists</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

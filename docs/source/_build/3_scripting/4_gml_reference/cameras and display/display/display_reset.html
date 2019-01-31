@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -29,17 +29,30 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h1 class="studio">display_reset</h1>
+<h2>display_reset</h2>
 
-<h2 class="studio">重置显示器，更改抗锯齿滤镜和垂直同步。</h2>
+<div class="body-scroll">
+<p><br>
+</p>
 
-<h3><b>Syntax:</b>
-</h3>
+<h3>描述</h3>
 
-<p class="code">display_reset(aa, vsync);</p>
+<blockquote>
+<p>这个函数将游戏开始时显示器的一些设置重置为某些值，也允许更改全屏抗锯齿的等级以及是否使用垂直同步。可用的抗锯齿等级包括0、2、4和8，默认起动时设置为0，默认的 v-sync（垂直同步）设置为关闭 (假)。开启 v-sync （垂直同步）画面上可以得到更平滑的游戏体验，但是也需要更多的计算资源，因些使用前仔细考虑它的影响，同理，抗锯齿等级越高，需要的处理资源也更多</p>
+
+<p>目标设备各有不同，比如一些可能不支持8x 或者 4x抗锯齿， 因此有一个 &lt;b2&gt;只读&lt;/b2&gt;变量可用来获取设备运行游戏时可以使用的AA（抗锯齿）等级。 </p>
+
+<p class="code">display_aa</p>
+
+<p>这个变量基于不同等级设置的比特值返回一个值。所以只支持 2xAA（2倍的AA）会输出2，对于 2x 和 4x（2倍或4倍） 的可用性将输出6。对于 8 和 4 的支持它会输出12。支持所有三个等级时 （2、4 和 8）将出输出14。</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">display_reset(aa, vsync);</p>
 
 <div>
 <table>
@@ -63,48 +76,40 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b> Real（实数）</p>
+<h3>Returns:</h3>
+
+<p class="code">实数</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>这个函数将游戏开始时显示器的一些设置重置为某些值，也允许更改全屏抗锯齿的等级以及是否使用垂直同步。可用的抗锯齿等级包括0、2、4和8，默认起动时设置为0，默认的 v-sync（垂直同步）设置为关闭 (假)。Switching v-sync on may give a smoother gaming experience but it will also need more processing power and so its impact must be considered careful before use, and the same goes for the anti-aliasing where the higher the number the more processing that is required.</p>
-
-<p>Since not all target devices are the same, some may not support
-8x or 4x anti-aliasing for example, and so there is a <b>read
-only</b> variable available for getting the different levels of AA
-that the device running the game can display:</p>
-
-<blockquote><b>display_aa</b>
-</blockquote>
-
-<p>这个变量基于不同等级设置的比特值返回一个值。所以只支持 2xAA（2倍的AA）会输出2，对于 2x 和 4x（2倍或4倍） 的可用性将输出6。对于 8 和 4 的支持它会输出12。支持所有三个等级时 （2、4 和 8）将出输出14。</p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">if display_aa &gt; 12 display_reset(8, true);</p>
 
+<blockquote>
 <p>上述代码将设置抗锯齿等级为8，并开启垂直同步。</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
-<div style="float:left">返回: <a href="index.html">窗口和视野</a></div>
+<div style="float:left">上一页:  <a href="index.html">The Display</a></div>
 
 <div style="float:right">下一页: <a href=
 "display_get_height.html">display_get_height</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

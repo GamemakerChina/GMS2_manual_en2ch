@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,14 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this action you can get a tile index on a given layer. The
-layer is specified from the layer name given (a string, as used to
-name the layer in the Room Editor), and then you give the row and
-column of the cell within the layer to get the tile index from.
-Finally you supply the target variable to store the returned tile
-index in. Note that the target variable can be flagged as a
-temporary (local) variable that can be used until the end of the
-event.</p>
+<p>使用此动作你可以在一个指定层上的一个图块索引。在此动作中你首先需要提供目标图块所在层的名字（字符串），这在房间编辑器中是已经定义好了。然后提供层上此图块单元格的行以及列。最后你要提供将要存储返回的索引的目标变量。如果你设置的目标变量是 临时（局部）变量，那么此动作将创建变量来保存返回值，直到事件结束。</p>
 </blockquote>
 
 <p><br>
@@ -70,22 +63,22 @@ event.</p>
 
 <tr>
 <td>层</td>
-<td>The layer to get the tile from</td>
+<td>需要取得图块所在的层</td>
 </tr>
 
 <tr class="alt">
 <td>列</td>
-<td>The column (from left to right) of the cell</td>
+<td>此单元格所在列数（从左到右）</td>
 </tr>
 
 <tr>
 <td>行</td>
-<td>The row (from top to bottom) of the cell</td>
+<td>此单元格所在行数（从上到下）</td>
 </tr>
 
 <tr class="alt">
 <td>目标</td>
-<td>The target variable for the return value</td>
+<td>用来存储返回值的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -96,12 +89,7 @@ event.</p>
 <h3>例如：</h3>
 <img class="center" src="images/e_tiles_set_tile_in_cell.png" alt=
 "Set Tile In Cell Example">
-<blockquote>The above action block code creates a loop to go
-through the top row of the given room layer, and as it does it
-checks to see if the tile indexed at the cell for the column is set
-to 0. If it is not the tile index for that cell is set to 0 and the
-temporary (local) variable is incremented before the loop does
-another set of checks.</blockquote>
+<blockquote>上述动作块代码将遍历给出的房间层上最顶行，同时检查图块索引是否为0。如果不是的话，则将那个图块索引设为0，并且一个局部临时变量将增加1。遍历完此图块集后，将遍历另一个图块集。</blockquote>
 
 <p><br>
 </p>
@@ -117,7 +105,7 @@ Set</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

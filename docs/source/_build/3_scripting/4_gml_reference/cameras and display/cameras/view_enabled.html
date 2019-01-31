@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,16 +36,12 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<blockquote>This variable controls whether any view ports that are
-visible within the room are enabled or not. If you have view ports
-set to visible and then disable this option, the whole room will be
-drawn to the screen scaled to the window size instead of the
-different cameras being drawn through the view ports.</blockquote>
+<blockquote>此函数用来控制房间里的可见的可视区域是否启用。如果将可视区域设为可见，然后禁用此选项，那么整个游戏房间将按窗口大小绘制到屏幕上，而不是通过不同摄像机绘制不同的可视区域。</blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">view_enabled;</p>
 
@@ -64,9 +60,7 @@ disabled)</p>
 
 <p class="code">if !view_enabled<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;view_visible[0] = true;<br>&nbsp;&nbsp;&nbsp;view_enabled = true;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks to see if views are enabled for the room,
-and if they are not, it makes sure that view port[0] is visible and
-then enables views for the room.</p>
+<p>上述代码检查房间视野是否可用，如果不是，它将会让view port[0]可见并在房间里启用视野。</p>
 
 <p><br>
 </p>
@@ -79,7 +73,7 @@ then enables views for the room.</p>
 "view_visible.html">view_visible</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

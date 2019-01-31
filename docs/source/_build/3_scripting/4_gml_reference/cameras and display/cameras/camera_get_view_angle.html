@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,14 +37,14 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to retrieve the angle of the given
-camera. The return value will be between 0 and 360.</p>
+<p>此函数用来获得给定摄像机的角度。返回值将在0和360之间。此函数 <i>只</i> 能用于那些用 <a href=
+"camera_create_view.html"><tt>camera_create_view()</tt></a>创建的摄像机或那些在房间编辑器中添加的摄像机。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">camera_get_view_angle(camera_id)</p>
 
@@ -62,8 +62,7 @@ camera. The return value will be between 0 and 360.</p>
 
 <tr>
 <td>camera_id</td>
-<td>The unique camera ID value returned when you created the
-camera</td>
+<td>创建相机时返回的唯一相机 id 值</td>
 </tr>
 </table>
 </blockquote>
@@ -82,10 +81,7 @@ camera</td>
 
 <p class="code">var ang = camera_get_view_angle(view_camera[0]);<br>if ang != 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;camera_set_view_angle(view_camera[0], 0);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code retrieves the angle of the camera assigned to
-view port[0] and then checks this to see if it matches the given
-value. If it does not then the view camera is set to that
-angle.</p>
+<p>上述代码获得了赋给可视区域[0]的摄像机的角度，然后检查它是否与给定值一样。如果角度不是0，则将角度设为0。</p>
 
 <p><br>
 </p>
@@ -98,7 +94,7 @@ angle.</p>
 "camera_get_view_target.html">camera_get_view_target</a></div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

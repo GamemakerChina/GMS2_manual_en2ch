@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,16 +31,24 @@ if (window.name != "content")
 </script>
 <h2>display_set_ui_visibility</h2>
 
+<div class="body-scroll">
 <p><br>
 </p>
 
-<h3 class="studio"><b>Syntax:</b>
-</h3>
+<h3>描述</h3>
+
+<blockquote>
+<p>此函数用来显示或隐藏<b>安卓</b>的系统UI。此函数需要你将一些系统<i>旗标</i> 作为整数提供。当使用两个及以上的旗标时，你需要使用按位“或”来合并它们，如下图所示。你可以在 <a href=
+"https://developer.android.com/reference/android/view/View.html#SYSTEM_UI_FLAG_FULLSCREEN"
+target="_blank">此处</a>看到Android系统旗标。</p>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">display_set_ui_visibility(flags);</p>
-
-<p><br>
-</p>
 
 <div>
 <table>
@@ -51,7 +59,7 @@ if (window.name != "content")
 
 <tr>
 <td>flags</td>
-<td>The Android SYSTEM flags to use (as an integer value).</td>
+<td>要使用的Android 系统旗标（整数值）。</td>
 </tr>
 </table>
 </div>
@@ -59,51 +67,41 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回：</b>N/A</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3>描述</h3>
-
-<blockquote>
-<p>This function can be used to show or hide the system UI on
-<b>Android</b> <i>only</i>. The function requires you to supply one
-or more system <i>flags</i> as an integer value. When using more
-than a single flag, these need to be merged using the bitwise "or",
-as shown in the example below. You can find a list of Android
-system flags <a href=
-"https://developer.android.com/reference/android/view/View.html#SYSTEM_UI_FLAG_FULLSCREEN"
-target="_blank">here</a>.</p>
-</blockquote>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">var flags = 1024|4096;<br>
 display_set_ui_visibility(flags);<br></p>
 
-<p>The above code will use the Android system flags
-"SYSTEM_UI_FLAG_IMMERSIVE_STICKY" and
-"SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN" to set the visibility of the
-display.</p>
+<blockquote>
+<p>上述代码使用Android系统旗标"SYSTEM_UI_FLAG_IMMERSIVE_STICKY" 和 "SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN"来设置显示器的可见性。</p>
+</blockquote>
 
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
-<div style="float:left">返回: <a href="index.html">Windows and Views</a></div>
+<div style="float:left">上一页:  <a href="index.html">The Display</a></div>
 
 <div style="float:right">下一页: <a href=
 "display_mouse_get_x.html">display_mouse_get_x</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

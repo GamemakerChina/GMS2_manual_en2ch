@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,7 +32,22 @@ if (window.name != "content")
 <h2>directory_exists</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
+
+<h3>描述</h3>
+
+<blockquote>
+<p>如果指定的目录存在，则此函数将返回 <tt>true</tt>，否则返回 <tt>false</tt>。The specified name must include the full path, not a relative path and you cannot access any directories from out-with the game bundle as all games are sandboxed.</p>
+
+<div class="note"><b>警告！</b> 由于 <i>GameMaker Studio 2</i> 被沙箱化，这些函数可能无法正常工作！有关详细信息，请参阅 <a href=
+"../../../1_overview/3_additional_information/file_system.html">文件系统限制</a> 部分。</div>
+</blockquote>
+
+<p><br>
+</p>
+
+<h3>语法：</h3>
 
 <p class="code">directory_exists(dname)</p>
 
@@ -56,29 +71,23 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回:</b> Boolean（布尔值）</p>
+<h3>Returns:</h3>
+
+<p class="code">Boolean</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
+<h3>例如：</h3>
 
-<p>如果指定的目录存在，则此函数将返回 <tt>true</tt>，否则返回 <tt>false</tt>。指定的名称必须包含完整路径，而不是相对路径，并且你无法访问游戏包中的任何目录，因为所有游戏都沙盒化了。
-<br><br><i><b>警告！</b> 此函数可能无法正常工作！</i> 因为 GameMaker Studio 2 被沙盒化。有关更多信息，请参阅 <a href=
-"../../../1_overview/3_additional_information/file_system.html">文件系统限制</a> 一节。<br>
-<br></p>
+<p class="code">if directory_exists(working_directory + "Saves\")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;file = file_find_first(working_directory + "Saves\*.doc", fa_readonly);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
-
-<p class="code">if directory_exists(working_directory + "\Saves\")<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;file = file_find_first(working_directory + "\Saves\*.doc", fa_readonly);<br>&nbsp;&nbsp;&nbsp;}<br></p>
-
+<blockquote>
 <p>这将检查指定的目录是否存在，如果存在，则去那里并返回找到的第一个 “只读” <tt>doc</tt> 文件。</p>
 
 <p><br>
 </p>
+</blockquote>
 </div>
 
 <div class="footer">
@@ -91,7 +100,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

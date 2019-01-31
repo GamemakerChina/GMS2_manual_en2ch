@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,16 +32,26 @@ if (window.name != "content")
 <h2>os_lock_orientation</h2>
 
 <div class="body-scroll">
-<h2 class="studio">This function locks the game orientation to the
-device's current orientation.</h2>
+<p><br>
+</p>
 
-<h3><b>Syntax:</b>
-</h3>
+<h3>描述</h3>
 
-<p class="code">os_lock_orientation(flag)</p>
+<blockquote>
+<p>With this function you can "lock" your device to the current
+orientation until such time as you "free" it to allow all <a href=
+"../../../2_interface/3_settings/game_options/index.html">Game
+Options</a> enabled orientations again for that target platform.
+Note that you likely want to confirm the orientation is as desired
+before locking.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">os_lock_orientation(flag)</p>
 
 <div class="param">
 <table>
@@ -61,30 +71,22 @@ orientation locking.</td>
 <p><br>
 </p>
 
-<p><b>返回：</b> N/A（无返回值）</p>
+<h3>Returns:</h3>
+
+<p class="code">N/A（无返回值）</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>With this function you can "lock" your device to the current
-orientation until such time as you "free" it to allow all <a href=
-"../../../2_interface/3_settings/game_options/index.html">Game
-Options</a> enabled orientations again for that target platform.
-Note that you likely want to confirm the orientation is as desired
-before locking.<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">if os_type == os_android || os_type == os_ios<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;os_lock_orientation(true);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>The above code checks the OS type and if it is either Android or
 an iOS then the orientation locking is flagged as
 <tt>true</tt>.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -100,7 +102,7 @@ an iOS then the orientation locking is flagged as
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

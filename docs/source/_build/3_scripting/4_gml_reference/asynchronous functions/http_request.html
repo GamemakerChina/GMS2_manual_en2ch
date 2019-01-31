@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -43,9 +43,10 @@ define the operating parameters of an HTTP transaction, which can
 be used for many things like (for example) authentication via HTTP
 headers if you use RESTful APIs. The function requires the full IP
 address of the server to request from as well as the type of
-request to make (as a string, see the note below): "GET", "HEAD",
-"POST", "PUT", "DELETE", "TRACE", "OPTIONS", or "CONNECT". You will
-also need to supply a <tt><a href=
+request to make (as a string, see the note below): <span class=
+"notranslate">"GET", "HEAD", "POST", "PUT", "DELETE", "TRACE",
+"OPTIONS",</span> or <span class="notranslate">"CONNECT"</span>.
+You will also need to supply a <tt><a href=
 "../data_structures/ds%20maps/index.html">ds_map</a></tt> of
 key/value pairs (as strings, where the key is the header field and
 the value is the required data for the header), and the final
@@ -68,14 +69,20 @@ function:</p>
 
 <blockquote>
 <ul>
-<li><b>id:</b> The ID which was returned from the command. 如果你发出一系列 <tt>http_</tt> 请求，那么你需要知道你得到了哪一个回复，因此你可以使用这个值来比较你最初发送请求时存储的值，以找到正确的请求。</li>
+<li><b><span class="notranslate">id</span>:</b> The ID which was
+returned from the command. If you fire off a series of
+<tt>http_</tt> requests then you need to know which one you are
+getting the reply to, and so you would use this value to compare to
+the value you stored when you originally sent the request to find
+the right one.</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><b>response_headers:</b> If this has a value greater than or
-equal to 0, it holds a ds_map that contains the HTTP headers
-returned with the response to the HTTP request.</li>
+<li><b><span class="notranslate">response_headers</span>:</b> If
+this has a value greater than or equal to 0, it holds a ds_map that
+contains the HTTP headers returned with the response to the HTTP
+request.</li>
 
 <li style="list-style: none"><br>
 </li>
@@ -87,6 +94,12 @@ format "key:value", but since GMS creates these pairs for you from
 the ds_map, there is no need to include the colon ":" in your map
 key or value strings.</div>
 
+<div class="note"><b>NOTE:</b> When using a buffer for the body
+argument, if the buffer seek position is at the start (0) then no
+body is sent and the buffer is filled with the response from the
+http call, but if the buffer seek position is non-zero, then the
+buffer string content is sent as the body.</div>
+
 <div class="note"><b>NOTE:</b> You should be aware that due to XSS
 protection in browsers, requests to and attempts to load resources
 from across domains are blocked and may appear to return blank
@@ -97,7 +110,7 @@ Domain Issues</a> for further details.</div>
 <p><br>
 </p>
 
-<h3>Syntax:</h3>
+<h3>语法：</h3>
 
 <p class="code">http_request(url, method, header_map, body);</p>
 
@@ -193,7 +206,7 @@ asynchronous event.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

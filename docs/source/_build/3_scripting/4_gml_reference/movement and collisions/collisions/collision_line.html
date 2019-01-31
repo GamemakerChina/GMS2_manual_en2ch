@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,13 +32,31 @@ if (window.name != "content")
 <h2>collision_line</h2>
 
 <div class="body-scroll">
-<h3 class="studio">Syntax:</h3>
+<p><br>
+</p>
 
-<p class="code">collision_line( x1, y1, x2, y2, obj, prec, notme
-);</p>
+<h3>描述</h3>
+
+<blockquote>
+<p>Collision line checks along a line from point x1,y1 to point x2,y2 for a collision with <b>any</b> instance of the object specified by the argument "obj". this check can be either precise or not, but for precise collisions to be enabled, the object or instance that you are checking for <i>must</i> also have precise collisions enabled for their sprite. If not, the default check is based on bounding boxes. 下面的图片说明了工作原理。 <img class="center" src=
+"images/collision_line_illustration.png"></p>
+
+<p>Remember, for precise collisions to be considered <i>both</i>
+the object sprite and the collision function must have precise
+marked as on. It should also be noted that the return value of the
+function can be the id of <i>any one</i> of the instances
+considered to be in collision along the line, so if three instance
+overlap the defined line, any one of their ids could be the return
+value of the function.</p>
+</blockquote>
 
 <p><br>
 </p>
+
+<h3>语法：</h3>
+
+<p class="code">collision_line(x1, y1, x2, y2, obj, prec,
+notme);</p>
 
 <div class="param">
 <table>
@@ -74,14 +92,15 @@ if (window.name != "content")
 
 <tr class="alt">
 <td>prec</td>
-<td>Whether the check is based on pixel-perfect collisions (true =
-slow) or its bounding box in general (false = fast).</td>
+<td>Whether the check is based on precise collisions
+(<tt>true</tt>, which is slower) or its bounding box in general
+(<tt>false</tt>, faster).</td>
 </tr>
 
 <tr>
 <td>notme</td>
 <td>Whether the calling instance, if relevant, should be excluded
-(true) or not (false).</td>
+(<tt>true</tt>) or not (<tt>false</tt>).</td>
 </tr>
 </table>
 </div>
@@ -89,37 +108,22 @@ slow) or its bounding box in general (false = fast).</td>
 <p><br>
 </p>
 
-<p><b>Returns:</b> Instance id or <b>noone</b></p>
+<h3>Returns:</h3>
+
+<p class="code">Instance id or noone</p>
 
 <p><br>
 </p>
 
-<h3 class="studio">描述</h3>
-
-<p>Collision line checks along a line from point x1,y1 to point x2,y2 for a collision with <b>any</b> instance of the object specified by the argument "obj". this check can be either precise or not, but for precise collisions to be enabled, the object or instance that you are checking for <i>must</i> also have precise collisions enabled for their sprite. If not, the default check is based on bounding boxes. 下面的图片说明了工作原理。<br>
-<br>
-<img class="center" src=
-"images/collision_line_illustration.png"></p>
-
-<p>Remember, for precise collisions to be considered <i>both</i>
-the object sprite and the collision function must have precise
-marked as on. It should also be noted that the return value of the
-function can be the id of <i>any one</i> of the instances
-considered to be in collision along the line, so if three instance
-overlap the defined line, any one of their ids could be the return
-value of the function.<br>
-<br></p>
-
-<p><br>
-</p>
-
-<h3 class="studio">例如：</h3>
+<h3>例如：</h3>
 
 <p class="code">with (obj_Enemy)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if collision_line(100, 400, 100, 600, id, false, false) instance_destroy();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
+<blockquote>
 <p>This code gets all instances of "obj_Enemy" to check along a
 line from 100x, 400y to 100x, 600y for a collision with themselves,
 and if there is one then they are destroyed.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -130,12 +134,12 @@ and if there is one then they are destroyed.</p>
 <div class="clear">
 <div style="float:left">上一页:  <a href="index.html">Collision Checking</a></div>
 
-<div style="float:right">下一页: <a href=
-"collision_point.html">collision_point</a></div>
+<div style="float:right">Next: <a href=
+"collision_line_list.html">collision_line_list</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

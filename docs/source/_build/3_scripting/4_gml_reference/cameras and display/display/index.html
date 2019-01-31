@@ -2,13 +2,14 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
 <title>The Display</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
+
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
 <link rel="stylesheet" href="../../../../../../default.css" type=
@@ -30,6 +31,10 @@ if (window.name != "content")
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
 <h2>The Display</h2>
+
+<div class="body-scroll">
+<p><br>
+</p>
 
 <p>The "window" is where <i>GameMaker Studio 2</i> displays your game, and, depending on the target device, there are different things that can be done with it, like set it to fullscreen or not (for example). 而视野，给出窗口能看到<i>什么</i>， 所以有另外一个系列专用的函数。以下各节处理显示游戏的两个方面：</p>
 
@@ -84,8 +89,8 @@ if (window.name != "content")
 "list_link">display_get_gui_height</span></a>
 </li>
 
-<li><a href=
-"display_set_ui_visibility.html">display_set_ui_visibility</a>
+<li><a href="display_set_ui_visibility.html"><span class=
+"list_link">display_set_ui_visibility</span></a>
 </li>
 
 <li><a href="display_mouse_get_x.html"><span class=
@@ -99,10 +104,26 @@ if (window.name != "content")
 <li><a href="display_mouse_set.html"><span class=
 "list_link">display_mouse_set</span></a>
 </li>
+
+<li><a href="display_set_timing_method.html"><span class=
+"list_link">display_set_timing_method</span></a>
+</li>
+
+<li><a href="display_get_timing_method.html"><span class=
+"list_link">display_get_timing_method</span></a>
+</li>
+
+<li><a href="display_set_sleep_margin.html"><span class=
+"list_link">display_set_sleep_margin</span></a>
+</li>
+
+<li><a href="display_get_sleep_margin.html"><span class=
+"list_link">display_get_sleep_margin</span></a>
+</li>
 </ol>
 </blockquote>
 
-<p>也有多个特别的函数用来全屏或部分截图，保存为图片文件：</p>
+<p>还有一些函数也可用来截图，把全屏或部分的图像保存为<tt>*.png</tt> 或 <tt>*.gif</tt>的图像文件。</p>
 
 <blockquote>
 <ol>
@@ -116,24 +137,25 @@ if (window.name != "content")
 </ol>
 </blockquote>
 
-<p><i><b>注：</b> Windows8 SurfaceRT 设备限制了画布大小为 2048 x 2048，这意味着绘制的画布不能超过这个尺寸（视野或者直接设置游戏窗口都不可以），否则游戏画面将无法承受或降级。</i><br>
-<br>
-</p>
-
 <p><br>
 </p>
+</div>
 
+<div class="footer">
+<div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href="../index.html">Cameras And The Display</a></div>
 
 <div style="float:right">下一页: <a href=
 "../cameras/index.html">Cameras</a></div>
 </div>
+</div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
+</div>
 
 <script type="text/JavaScript">
 var fe = FindFrame("toc", top);

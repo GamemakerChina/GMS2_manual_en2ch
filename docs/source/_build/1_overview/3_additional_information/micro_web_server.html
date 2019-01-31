@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -43,8 +43,14 @@ if (window.name != "content")
 <div class="note"><b>注意</b>：当你首次通过 MWS 在目标平台上运行游戏时可能会得到防火墙警报。如果发生这种情况，你应该允许网络服务器穿过防火墙进行通信。</div>
 
 <p><br>
-这个网络服务器会显示一定量的与所伺服文件相关的调试信息，以及底部的一个用来清空这些信息的按钮。你<i>不</i>可以编辑此处的大部分信息（因为它们是通过<a href=
-"../2_quick_start/6_compiling.html">目标管理器设备（Target Manager Devices）</a>被设定好的，但是你可以修改<b>网络速度（Network Speed）</b>值）。Setting it to anything other than the maximum value will effectively throttle the nework transfer speed and permit you to test games in a low bandwidth environment.</p>
+这个网络服务器会显示一定量的与所伺服文件相关的调试信息，以及底部的一个用来清空这些信息的按钮。在“清除”按钮旁边是项目 JS 文件根目录的路径，而在它下面有 <b>网络速度（Network Speed）</b> 选项。默认设置为“没有限制”，但点击它将打开一个不同的网络选项列表： <img class="center" src=
+"images/micro_web_server_bandwidths.png" alt=
+"Micro Web Server Window Bandwidths"></p>
+
+<p>更改此设置还会更改右侧的包 <b>大小</b> 选项。你还可以手动编辑它，在这种情况下，网络速度将被设置为“Custom”。将其设置为除最大值之外的任何值，将有效地控制网络传输速度，并允许你在低带宽环境中测试游戏。</p>
+
+<p>你还可以看到允许的 IP 列表以及正在使用的端口号，但是这些不能在微型网络服务器中进行编辑，应该在给定设备目标的 <a href=
+"../2_quick_start/6_compiling.html">目标管理器设备</a> 设置中进行设置。</p>
 
 <p><br>
 </p>
@@ -60,7 +66,7 @@ if (window.name != "content")
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

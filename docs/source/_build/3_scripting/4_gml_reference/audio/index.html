@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,6 +37,16 @@ if (window.name != "content")
 </p>
 
 <p><i>GameMaker Studio 2</i> has a complete audio engine that is based on the <tt>*.ogg</tt>, <tt>*.mp3</tt> and <tt>*.wav</tt> sound formats. 添加到IDE的这些类别的声音可以通过下面的函数使用。对于比基本的音效更复杂的事物或者播放单个音乐片段，你可以参考高级的音频函数，你可以用它们修改声音的播放方式。此外，还有一系列专用函数，专门用于流式传输的音频和定位音频（ 3D声音效果以及分组音频）。</p>
+
+<div class="note"><b>IMPORTANT!</b> When using audio on the HTML5
+target, you should be aware that not all browsers support Web Audio
+and so may not play any sound for your project when run. You can
+get a general idea of Web Audio support from the following link:
+<a href="https://caniuse.com/#search=WebAudio" target="_blank">Can
+I Use Web Audio?</a>.</div>
+
+<p><br>
+</p>
 
 <blockquote><label class="collapse" for="one">Basic Audio
 Functions</label> <input id="one" type="checkbox">
@@ -178,6 +188,58 @@ can all be found from the sub-sections listed below:</p>
 
 <p><br>
 </p>
+
+<h2>Web Audio</h2>
+
+<p><br>
+</p>
+
+<p>When creating games for the HTML5 target platform, the audio
+engine requires <b>Web Audio</b> support, and this in turn mans
+that sometimes your audio won't play when or how you expect it.
+This is because the Web Audio context may not be running or may
+stop running when your game is being played. What causes this
+varies greatly between browsers, and even between different
+versions of the same browser, and so detecting when the web audio
+context status changes is very important, eg: to detect when the
+context changes and pause/start looping audio like background
+music.</p>
+
+<p>To help with this issue, <i>GameMaker Studio 2</i> has two
+separate ways to detect the change in Web Audio context status,
+either using the following function:</p>
+
+<blockquote>
+<ul>
+<li><a href=
+"audio_system_is_available.html">audio_system_is_available</a>
+</li>
+</ul>
+</blockquote>
+
+<p>Or using the <b>Asynchronous System Event</b>, which will be
+triggered whenever the Web Audio status changes. In this event you
+will get the built in <tt>async_load</tt> <a href=
+"../data_structures/ds%20maps/index.html">DS map</a> populated with
+the key "<tt>event_type</tt>" which in turn will hold the string
+"<tt>audio_system_status</tt>" if it is an audio event. When this
+key exists, there will also be a further "<tt>status</tt>" key
+which will be either "<tt>available</tt>" or
+"<tt>unavailable</tt>". Note that this event will be triggered on
+<i>all</i> platforms, but on everything except HTML5 it will only
+be triggered once on Game Start when the audio engine is first
+initialised. For more information please see the section:</p>
+
+<blockquote>
+<ol>
+<li><a href=
+"../../../2_interface/1_editors/events/async_events.html">异步事件</a>
+</li>
+</ol>
+</blockquote>
+
+<p><br>
+</p>
 </div>
 
 <div class="footer">
@@ -190,7 +252,7 @@ can all be found from the sub-sections listed below:</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,27 +32,15 @@ if (window.name != "content")
 <h2>os_device</h2>
 
 <div class="body-scroll">
-<h2 class="studio">This variable holds a different constant
-depending on the device the game is currently being run in.</h2>
-
-<h3><b>Syntax:</b>
-</h3>
-
-<p class="code">os_device</p>
-
 <p><br>
 </p>
 
-<p><b>返回：</b> 常量</p>
+<h3>描述</h3>
 
-<p><br>
-</p>
-
-<h3 class="studio">描述</h3>
-
-<p>This variable holds one of various constant <i>GameMaker:
-Studio</i> has to tell you which device you are currently running
-the game on. The following constants can be returned:</p>
+<blockquote>
+<p>This variable holds one of various constant <i>GameMaker Studio
+2</i> has to tell you which device you are currently running the
+game on. The following constants can be returned:</p>
 
 <div class="compat">
 <table>
@@ -114,14 +102,51 @@ Android)</td>
 </tr>
 </table>
 </div>
+</blockquote>
 
-<h3 class="studio">例如：</h3>
+<p><br>
+</p>
 
-<p class="code">if os_browser = browser_not_a_browser<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;switch (os_device)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case device_ios_ipad: global.Config = 2; break;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case device_ios_iphone: global.Config = 3; break;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case device_ios_iphone_retina: global.Config = 4; break;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case device_ios_unknown: global.Config = 5; break;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Config = 1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<h3>语法：</h3>
 
+<p class="code">os_device</p>
+
+<p><br>
+</p>
+
+<h3>Returns:</h3>
+
+<p class="code">常量</p>
+
+<p><br>
+</p>
+
+<h3>例如：</h3>
+
+<p class="code">if os_browser = browser_not_a_browser<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;switch (os_device)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case
+device_ios_ipad: global.Config = 2; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case
+device_ios_iphone: global.Config = 3; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case
+device_ios_iphone_retina: global.Config = 4; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;case
+device_ios_unknown: global.Config = 5; break;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;global.Config = 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+
+<blockquote>
 <p>The above code checks to see if the game is running in a browser
 or not and sets a global variable to a value depending on the
 result of the check.</p>
+</blockquote>
 
 <p><br>
 </p>
@@ -137,7 +162,7 @@ result of the check.</p>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

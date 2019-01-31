@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,7 +40,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>此动作用来获得指定层上一个图块的索引。你需要通过给出层的名称来指定图层，名称在房间编辑器种命名层的一个字符串。然后你需要提供X和Y坐标来找到需要取得索引的图块。此图块是位于房间的指定位置上的图块，此图块的索引将返回到目标变量中。此X和Y位置可以被设置为和调用动作的实例位置相对，此目标变量也可以被标记为临时局部，那么此变量将在事件结束前生效。</p>
+<p>此动作用来获得指定层上一个图块的索引。在此动作中你首先需要提供目标图块所在层的名字（字符串），这在房间编辑器中是已经定义好了，然后提供房间中的x,y轴坐标来取得图块的图块数据。此图块是位于房间的指定位置上的图块，此图块的索引将返回到目标变量中。此X和Y位置可以被设置为和调用动作的实例位置相对，此目标变量也可以被标记为临时局部，那么此变量将在事件结束前生效。</p>
 </blockquote>
 
 <p><br>
@@ -63,7 +63,7 @@ if (window.name != "content")
 
 <tr>
 <td>层</td>
-<td>The layer to set the tile on</td>
+<td>需要被设置的图块的层</td>
 </tr>
 
 <tr class="alt">
@@ -78,7 +78,7 @@ if (window.name != "content")
 
 <tr class="alt">
 <td>目标</td>
-<td>The target variable to store the tile index</td>
+<td>用来存储图块索引的目标变量</td>
 </tr>
 </table>
 </blockquote>
@@ -105,7 +105,7 @@ Tile In Cell</a></div>
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

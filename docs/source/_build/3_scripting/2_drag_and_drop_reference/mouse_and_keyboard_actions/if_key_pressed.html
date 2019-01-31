@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,10 +40,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>使用此动作你可以检测当前键盘按钮是否被按住。当键盘被按住时，此动作在每一步会返回<tt>真</tt>，除此之外的情况返回<tt>假</tt>，此外，如果你勾选<tt>否</tt>选项，则可以检测键盘按钮是否 <i>没有</i>被按住。在这种情况下，此动作会在键盘按钮没有被按下时返回  <tt>真</tt>，在被按下时返回 <tt>假</tt> 。如果你只需要检测按键单击（而不是按住），请使用动作 <a href=
-"if_key_down.html">如果键位点击</a>.</p>
+<p>This action checks for the initial press on a keyboard key. It will return <tt>true</tt> on the single game tick that the key is initially pressed down and <tt>false</tt> at all other times. 如果你勾选了<tt>not</tt> 选项，此功能将会相反，也就是说，动作会检测键盘键是否 <i>没有</i>被点击，如果被点击了就返回<tt>假</tt>，其余情况返回<tt>真</tt>。 .</p>
 
-<p>注意：如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br><img class="center" src="images/a_if_keydrop.png" alt=
+<p>注意：如果要将动作添加进 "if" 动作块，它们应该被放置到动作的一边，如下图所示：<br><img class="center" src="images/a_if_drop.png" alt=
 "如果添加动作"> 在“if”块之后执行的任何其他操作都将执行。</p>
 </blockquote>
 
@@ -98,7 +97,7 @@ alt="键位按住语法">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>

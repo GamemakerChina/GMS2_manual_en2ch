@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, chm" />
+<meta name="keywords" content="online documentation, web online help, web help, c" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -47,7 +47,15 @@ if (window.name != "content")
 "images/amazonfire_prefs_1.png" alt=
 "Amazon Fire Preferences Packaging And Debug"></p>
 
-<p>在首选项的顶部，你可以设置 Android JDK 的内存堆大小。接下来，你必须设置各种不同的 <b>路径</b>，以便 <i>GameMaker Studio 2</i> 知道在哪里查找构建最终可执行程序包和测试游戏所需的各种工具。这分为 <b>Android SDK</b>、<b>Android NDK</b> 和 <b>Java JDK</b> 三个部分。这些路径应该已经自动填写，但如果你遇到任何问题，可以单击右侧的按钮打开文件资源管理器并手动选择每一项的位置。你可以在 <a href=
+<p>At the top of the preferences you have the option to synchronise
+the settings from the Android export. This is for those people that
+have the Mobile Licence and have already set up and used the
+Android export, since Amazon Fire uses almost the exact same build
+tools as Android. Just click this to import all the appropriate
+settings from Android, then check through them to make sure that
+they are correct.</p>
+
+<p>Under the Synch button you can set the size of the Memory Heap for the Android JDK. 接下来，你必须设置各种不同的 <b>路径</b>，以便 <i>GameMaker Studio 2</i> 知道在哪里查找构建最终可执行程序包和测试游戏所需的各种工具。这分为 <b>Android SDK</b>、<b>Android NDK</b> 和 <b>Java JDK</b> 三个部分。这些路径应该已经自动填写，但如果你遇到任何问题，可以单击右侧的按钮打开文件资源管理器并手动选择每一项的位置。你可以在 <a href=
 "http://help.yoyogames.com/hc/en-us/articles/227860547" target=
 "_blank">此处</a> 找到每个 SDK 所需的版本的详细信息。路径应该在你应用它们时进行验证，并且消息将显示 “已找到” 或告诉你错误（在这种情况下，你应该修改所有信息以确保它是正确的）。</p>
 
@@ -57,17 +65,19 @@ if (window.name != "content")
 <li><b>始终完全安装 APK</b>：标记此选项将使 <i>GameMaker Studio 2</i> 从你的设备中删除任何以前运行的游戏，以及从你的测试设备中删除所有相关文件（例如，*.ini 文件），然后再安装新版本的游戏。<br>
 <br></li>
 
-<li><b>在程序包上安装</b>：标记此选项时，编译最终的可执行文件 <tt>*.apk</tt> 程序包会自动在任何已连接的设备上（覆盖）安装它。</li>
+<li><b>Install on package</b>: When this option is flagged,
+compiling a final executable <tt>*.apk</tt> package will also
+install it automatically on the currently selected target
+device.</li>
 </ul>
-<img class="center" src="images/amazonfire_prefs_2.png" alt=
-"Amazon Fire Preferences Keystore">
+
 <p>最后我们来到 <b>秘钥库（KeyStore）</b>。 这是一个用于 “签署” 所有 Amazon Fire 应用程序的文件，因此请正确填写所有详细信息，请记住，将来创建和更新所有 Amazon Fire 应用程序需要此文件，这意味着设置完成后，建议 <i><b>截取所用设置的屏幕截图，并对最终文件进行备份</b></i>。 如果你丢失了此文件，则 <i>无法</i> 更新已上传到 Google Play 商店的任何现有游戏。</p>
 
 <div class="note"><b>注意</b>：相同的密钥库可用于 Android 和 Amazon Fire 目标。</div>
 
 <p><br>
 要创建新的密钥库文件，需要以下详细信息：
-<img class="center" src="images/amazonfire_prefs_3.png" alt=
+<img class="center" src="images/amazonfire_prefs_2.png" alt=
 "Amazon Fire Preferences Keystore"></p>
 
 <ul>
@@ -81,6 +91,10 @@ if (window.name != "content")
 <br></li>
 
 <li><b>别名</b>: 这是另一个可用于秘钥库文件的名称，应与上面输入的名称不同。<br>
+<br></li>
+
+<li><b>Alias Password</b>: Your alias security password for the
+KeyStore file which must be at least six characters long.<br>
 <br></li>
 
 <li><b>组织单位</b>: 你所属公司的内部部门。<br>
@@ -108,7 +122,15 @@ target="_blank">YoYo游戏知识库中的这篇文章</a>。</p>
 <p><b>Android</b> 偏好设置分为以下各个部分。 <img class="center" src="images/android_prefs_1.png"
 alt="Android Preferences Packaging And Debug"></p>
 
-<p>在首选项的顶部，你可以设置 Android JDK 的内存堆大小。接下来，你必须设置各种不同的 <b>路径</b>，以便 <i>GameMaker Studio 2</i> 知道在哪里查找构建最终可执行程序包和测试游戏所需的各种工具。这分为 <b>Android SDK</b>、<b>Android NDK</b> 和 <b>Java JDK</b> 三个部分。这些路径应该已经自动填写，但如果你遇到任何问题，可以单击右侧的按钮打开文件资源管理器并手动选择每一项的位置。你可以在 <a href=
+<p>At the top of the preferences you have the option to synchronise
+the settings from the Amazon Fire export. This is for those people
+that have the Mobile Licence and have already set up and used the
+Amazon Fire export, since Android uses almost the exact same build
+tools as Amazon Fire. Just click this to import all the appropriate
+settings from Amazon Fire, then check through them to make sure
+that they are correct.</p>
+
+<p>Beneath the Sync button you have the option to set the size of the Memory Heap for the Android JDK. 接下来，你必须设置各种不同的 <b>路径</b>，以便 <i>GameMaker Studio 2</i> 知道在哪里查找构建最终可执行程序包和测试游戏所需的各种工具。这分为 <b>Android SDK</b>、<b>Android NDK</b> 和 <b>Java JDK</b> 三个部分。这些路径应该已经自动填写，但如果你遇到任何问题，可以单击右侧的按钮打开文件资源管理器并手动选择每一项的位置。你可以在 <a href=
 "http://help.yoyogames.com/hc/en-us/articles/227860547" target=
 "_blank">此处</a> 找到每个 SDK 所需的版本的详细信息。路径应该在你应用它们时进行验证，并且消息将显示 “已找到” 或告诉你错误（在这种情况下，你应该修改所有信息以确保它是正确的）。</p>
 
@@ -118,17 +140,19 @@ alt="Android Preferences Packaging And Debug"></p>
 <li><b>始终完全安装 APK</b>：标记此选项将使 <i>GameMaker Studio 2</i> 从你的设备中删除任何以前运行的游戏，以及从你的测试设备中删除所有相关文件（例如，*.ini 文件），然后再安装新版本的游戏。<br>
 <br></li>
 
-<li><b>在程序包上安装</b>：标记此选项时，编译最终的可执行文件 <tt>*.apk</tt> 程序包会自动在任何已连接的设备上（覆盖）安装它。</li>
+<li><b>Install on package</b>: When this option is flagged,
+compiling a final executable <tt>*.apk</tt> package will also
+install it automatically on the currently selected target
+device.</li>
 </ul>
-<img class="center" src="images/android_prefs_2.png" alt=
-"Android Preferences Keystore">
+
 <p>最后我们来到 <b>秘钥库（KeyStore）</b>。这是一个用于 “签署” 所有 Android 应用程序的文件，因此请正确填写所有详细信息，请记住，将来需要创建和更新所有 Android 应用程序，这意味着设置完成后，<i><b>建议使用所用设置的屏幕截图并对最终文件进行备份</b></i>。如果你丢失了此文件，则 <i>无法</i> 更新已上传到 Google Play 商店的任何现有游戏。</p>
 
 <div class="note"><b>注意</b>：相同的密钥库可用于 Android 和 Amazon Fire 目标。</div>
 
 <p><br>
 要创建新的密钥库文件，需要以下详细信息：
-<img class="center" src="images/android_prefs_3.png" alt=
+<img class="center" src="images/android_prefs_2.png" alt=
 "Android Preferences Keystore"></p>
 
 <ul>
@@ -142,6 +166,10 @@ alt="Android Preferences Packaging And Debug"></p>
 <br></li>
 
 <li><b>别名</b>: 这是另一个可用于秘钥库文件的名称，应与上面输入的名称不同。<br>
+<br></li>
+
+<li><b>Alias Password</b>: Your alias security password for the
+KeyStore file which must be at least six characters long.<br>
 <br></li>
 
 <li><b>组织单位</b>: 你所属公司的内部部门。<br>
@@ -161,6 +189,19 @@ alt="Android Preferences Packaging And Debug"></p>
 <p>有关如何设置所需 Android SDK 的更多详细信息，请参阅 <a href=
 "http://help.yoyogames.com/hc/en-us/articles/216753498-GameMaker-Studio-Android-SDK-and-NDK-setup-"
 target="_blank">YoYo 游戏知识库中的这篇文章</a>。</p>
+</div>
+<br>
+<label class="collapse" for="i">HTML5</label> <input id="i" type=
+"checkbox">
+<div class="index_list">
+<p>The <b>HTML5</b> preferences have the following options:
+
+<img class="center" src="images/html5_prefs.png" alt=
+"HTML5 Preferences"></p>
+
+<ul>
+<li><b>Default packaging type</b>: When building a final <span class="notranslate">HTML5</span> executable package, you can choose between <i>Package as loose files</i> - which will simply generate all the required files in a folder - or <i>Package as Zip</i> - which will create a compressed ZIP file that will have the game and any additional files within. 默认情况下，你可以选择在编译时选择这两个选项中的哪一个，但你可以将此首选项设置为始终使用其中一个。Note that when this option is set to <i>Show Dialogue</i>, in the actual dialogue window that pops up on compile, choosing "Remember Packaging Option" will set this preference to the option you select.</li>
+</ul>
 </div>
 <br>
 <label class="collapse" for="b">iOS</label> <input id="b" type=
@@ -202,9 +243,7 @@ target="_balnk">Apple 为你分配的</a> 默认团队标识符。当你的游�
 <label class="collapse" for="d">Steam</label> <input id="d" type=
 "checkbox">
 <div class="index_list">
-<p>Steam SDK 用于通过 <a target=
-"_blank">Steam</a> 平台分发的 Windows、Mac OS 和 Ubuntu（Linux）版本。本节包含使其在你的项目中工作所需的设置选项：
-<img class="center" src="images/steam_prefs.png" alt=
+<p>The Steam SDK is used for <span class="notranslate">Windows, Mac OS and Ubuntu (Linux)</span> builds that are to be distributed through the <a target="_blank">Steam</a> platform. 本节包含使其在你的项目中工作所需的设置选项： <img class="center" src="images/steam_prefs.png" alt=
 "Steam Preferences"></p>
 
 <ul>
@@ -214,19 +253,19 @@ target="_balnk">Apple 为你分配的</a> 默认团队标识符。当你的游�
 </ul>
 </div>
 <br>
-<label class="collapse" for="e">Windows</label> <input id="e" type=
-"checkbox">
+<label class="collapse" for="e"><span class=
+"notranslate">Windows</span></label> <input id="e" type="checkbox">
 <div class="index_list">
-<p><b>Windows</b> 首选项具有以下选项：
-<img class="center" src="images/windows_prefs.png" alt=
-"Windows Preferences"></p>
+<p>The <b><span class="notranslate">Windows</span></b> preferences
+have the following options:  <img class="center" src=
+"images/windows_prefs.png" alt="Windows Preferences"></p>
 
 <ul>
 <li><b>Visual Studio 路径</b>：此选项用于将 <i>GameMaker Studio 2</i> 指向构建 PC 上安装的微软 Visual Studio。<br>
 <br></li>
 
-<li><b>默认程序包类型</b>: 在构建最终的 Windows 可执行程序包时，你可以选择创建 <i>安装程序</i>（使用 <a href=
-"https://sourceforge.net/projects/nsis/" target="_blank">NSIS</a>）还是创建游戏及其中任何其他文件的 ZIP 压缩文件。默认情况下，你可以选择在编译时选择这两个选项中的哪一个，但你可以将此首选项设置为始终使用其中一个。请注意，当此选项设置为 <i>显示对话框</i> 时，在编译时弹出的实际对话窗口中，选择 “记住打包选项” 会将此首选项设置为你选择的选项。<br>
+<li><b>Default Packaging Type</b>: When building a final <span class="notranslate">Windows</span> executable package, you can choose between creating either an <i>installer</i> (using <a href="https://sourceforge.net/projects/nsis/" target=
+"_blank">NSIS</a>) or a compressed ZIP file that will have the game and any additional files within. 默认情况下，你可以选择在编译时选择这两个选项中的哪一个，但你可以将此首选项设置为始终使用其中一个。Note that when this option is set to <i>Show Dialogue</i>, in the actual dialogue window that pops up on compile, choosing "Remember Packaging Option" will set this preference to the option you select.<br>
 <br></li>
 </ul>
 </div>
@@ -239,16 +278,40 @@ type="checkbox">
 "Windows UWP Preferences"></p>
 
 <ul>
-<li><b>Visual Studio 路径</b>：此选项用于将 <i>GameMaker Studio 2</i> 指向构建 PC 上安装的微软 Visual Studio。<br>
+<li><b>Visual Studio location</b>: This option is for pointing
+<i>GameMaker Studio 2</i> to the MS Visual Studio installation on
+the build PC.<br>
 <br></li>
 
-<li><b>默认包体系架构</b>：在构建最终的 Windows UWP 可执行包时，你可以选择创建将包含游戏以及其中的任何其他文件的 <i>x86</i>、<i>x64</i> 或 <i>ARM</i> 包。在这里，你可以设置要使用的包的默认值，或者选择 <i>显示对话框</i> 以在你点击编译按钮询问选择哪个时弹出一个窗口。 通常，你希望将 <i>x86</i> 用于 Windows 10 计算机，<i>x64</i> 用于 Xbox One，<i>ARM </i> 用于 Windows 10 设备。<br>
+<li><b>Default package architecture</b>: When building a final Windows UWP executable package, you can choose between creating either an <i>x86</i>, <i>x64</i> or <i>ARM</i> package that will have the game and any additional files within. 在这里，你可以设置要使用的包的默认值，或者选择 <i>显示对话框</i> 以在你点击编译按钮询问选择哪个时弹出一个窗口。 通常，你希望将 <i>x86</i> 用于 Windows 10 计算机，<i>x64</i> 用于 Xbox One，<i>ARM </i> 用于 Windows 10 设备。<br>
+<br></li>
+
+<li><b>Win UWP Tools location</b>: This option is for pointing
+<i>GameMaker Studio 2</i> to the UWP tools installation path on the
+build PC.<br>
+<br></li>
+
+<li><b>Automatic response to creating store package</b>: When
+building a final Windows UWP executable package, you will be asked
+if you want to create a store package or not. You can set this
+option to automatically skip this pop-up using either <i>Yes</i> or
+<i>No</i> by default, or you can set <i>Show Dialogue</i> to have
+the window always pop up when you hit the compile button.<br>
 <br></li>
 </ul>
 </div></blockquote>
 
 <p>请注意，除了设置这些首选项之外，你还需要设置其中某些平台所针对的设备，否则你可能无法编译或测试项目。 有关详细信息，请参阅 <a href=
 "../../1_overview/2_quick_start/6_compiling.html">编译</a> 章节和 <a href="../2_extras/device_manager.html">设备管理器</a> 章节。</p>
+
+<p>The manual does not show the various <b>Console</b> preferences
+due to the different legal restrictions maintained by the different
+companies. If you have a <b>Console Licence</b>, then you can get
+this information form the <a href=
+"https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support"
+target="_blank">YoYo Games Helpdesk</a>, but you must first contact
+YoYo Games with your console ID email and request permission to
+view the different sections.</p>
 
 <p><br>
 </p>
@@ -264,7 +327,7 @@ type="checkbox">
 </div>
 </div>
 
-<h5>© Copyright YoYo Games Ltd. 2017 All Rights Reserved</h5>
+<h5>© Copyright YoYo Games Ltd. 2018 All Rights Reserved</h5>
 <script type="text/javascript">
    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');   ga('create', 'UA-2711665-14', 'auto');   ga('send', 'pageview'); 
 </script>
