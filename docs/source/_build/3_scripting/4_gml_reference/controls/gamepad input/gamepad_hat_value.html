@@ -38,9 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can get the current value of a gamepad
-"hat". Each hat value is a bit-mask for the different directions
-where:</p>
+<p>使用此函数，你可以获得游戏手柄 “帽子” 的当前值。每个帽子值都是不同方向的位掩码，其中：</p>
 
 <ul>
 <li>Up = 1</li>
@@ -52,12 +50,7 @@ where:</p>
 <li>Left = 8</li>
 </ul>
 
-<p>Note that these can be combined (for example, supplying a hat
-index of 3 would be checking up and right) but only at most 2 bits
-can be pressed at once. The function will return a real value
-between 0 and 1, where 0 is not pressed and 1 is fully pressed (and
-there may be values in between depending on whether the gamepad
-supports analog input for hats).</p>
+<p>请注意，这些可以组合（例如，提供 3 的帽子索引将检查向上和向右）但是一次只能按下最多 2 位。该函数将返回 0 到 1 之间的实数值，其中 0 未被按下，1 被完全按下（并且根据游戏手柄是否支持帽子的模拟输入，可能存在值。</p>
 </blockquote>
 
 <p><br>
@@ -76,12 +69,12 @@ supports analog input for hats).</p>
 
 <tr>
 <td>device</td>
-<td>Which gamepad device "slot" to check.</td>
+<td>要检查哪个游戏手柄设备 “插槽” 。</td>
 </tr>
 
 <tr class="alt">
 <td>hatindex</td>
-<td>Which gamepad hat (or hats) to check for.</td>
+<td>要检查哪个游戏手柄帽（或帽子）。</td>
 </tr>
 </table>
 </div>
@@ -102,8 +95,7 @@ supports analog input for hats).</p>
 1);</p>
 
 <blockquote>
-<p>The above code stores the state of the hat corresponding to "up"
-in a local variable.</p>
+<p>上面的代码将对应于 “up” 的帽子的状态存储在局部变量中。</p>
 </blockquote>
 
 <p><br>
@@ -113,7 +105,7 @@ in a local variable.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_set_vibration.html">gamepad_set_vibration</a></div>

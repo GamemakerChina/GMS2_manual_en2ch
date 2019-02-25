@@ -38,9 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> or <tt>false</tt>
-depending on whether the given gamepad button is detected as being
-held down or not.</p>
+<p>此函数将返回 <tt>true</tt> 或 <tt>false</tt>，具体取决于是否检测到给定的游戏手柄按钮被按下。</p>
 </blockquote>
 
 <p><br>
@@ -59,13 +57,12 @@ held down or not.</p>
 
 <tr>
 <td>device</td>
-<td>Which gamepad device "slot" to check.</td>
+<td>要检查哪个游戏手柄设备 “插槽” 。</td>
 </tr>
 
 <tr class="alt">
 <td>button</td>
-<td>Which gamepad button <a href="index.html">constant</a> to check
-for.</td>
+<td>要检查哪个游戏手柄按钮 <a href="index.html">常量</a>。</td>
 </tr>
 </table>
 </div>
@@ -85,9 +82,7 @@ for.</td>
 <p class="code">if gamepad_button_check(0, gp_face1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if canshoot = true<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;audio_play_sound(snd_Shoot, 0, false);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance_create_layer(x, y, "Bullets", obj_Bullet)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canshoot = false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alarm[0] = room_speed / 2;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will detect whether the bottom button of the top
-face (the "X" on a ps3 controller) is being held down and if so, it
-will shoot a "bullet" instance and set an alarm.</p>
+<p>上面的代码将检测顶面的底部按钮（ps3控制器上的“X”）是否被按下，如果是，它将射出 “子弹” 实例并设置计时器。</p>
 </blockquote>
 
 <p><br>
@@ -97,7 +92,7 @@ will shoot a "bullet" instance and set an alarm.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_button_check_pressed.html">gamepad_button_check_pressed</a></div>

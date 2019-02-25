@@ -38,13 +38,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>You can use this function to get the value of the different axes
-from a given gamepad slot. You supply the gamepad slot index to
-check, along with either an axis index constant (as listed <a href=
-"here">here</a>), or an integer value between 0 and <a href=
-"gamepad_axis_count.html"><tt>gamepad_axis_count()</tt></a> -1. The
-return value will be between -1 and 1 for each of the available
-horizontal and vertical axes.</p>
+<p>你可以使用此函数从给定的游戏手柄插槽中获取不同轴的值。你提供要检查的游戏手柄插槽索引以及轴索引常量（如 <a href=
+"here">此处</a> 列出的 ），或者介于 0 和 <a href=
+"gamepad_axis_count.html"><tt>gamepad_axis_count()</tt></a> -1 之间的整数值。对于每个可用的水平轴和垂直轴，返回值将介于 -1 和 1 之间。</p>
 </blockquote>
 
 <p><br>
@@ -63,13 +59,12 @@ horizontal and vertical axes.</p>
 
 <tr>
 <td>device</td>
-<td>Which gamepad device "slot" to check.</td>
+<td>要检查哪个游戏手柄设备 “插槽” 。</td>
 </tr>
 
 <tr class="alt">
 <td>axisIndex</td>
-<td>The axis index to check (see the <a href="index.html">constants
-list</a>).</td>
+<td>要检查的轴索引（参见 <a href="index.html">常量列表</a>）。</td>
 </tr>
 </table>
 </div>
@@ -79,22 +74,17 @@ list</a>).</td>
 
 <h3>Returns:</h3>
 
-<p class="code">real</p>
+<p class="code">实数</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">var haxis = gamepad_axis_value(0, gp_axislh);<br>
-var vaxis = gamepad_axis_value(0, gp_axislv);<br>
-direction = point_direction(0, 0, haxis, vaxis);<br>
-speed = point_distance(0 ,0, haxis, vaxis) * 5;<br></p>
+<p class="code">var haxis = gamepad_axis_value(0, gp_axislh);<br>var vaxis = gamepad_axis_value(0, gp_axislv);<br>direction = point_direction(0, 0, haxis, vaxis);<br>speed = point_distance(0 ,0, haxis, vaxis) * 5;<br></p>
 
 <blockquote>
-<p>The above code sets the speed and direction of the instance
-based on the returned values of the left analogue controller of the
-gamepad plugged into device "slot" 0.</p>
+<p>上述代码根据插入设备 “slot” 0 的游戏手柄的左模拟控制器的返回值设置实例的速度和方向。</p>
 </blockquote>
 
 <p><br>
@@ -104,7 +94,7 @@ gamepad plugged into device "slot" 0.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_button_check.html">gamepad_button_check</a></div>

@@ -38,14 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> or <tt>false</tt>
-depending on whether the given gamepad button is detected as having
-been pressed or not. Note that this function will only trigger
-<i>once</i> for the button the first time it is pressed. For it to
-trigger again the button must first be released and then
-re-pressed. If you need to check a continuous press of the button
-you should be using the function <a href=
-"gamepad_button_check.html"><tt>gamepad_button_check</tt></a>.</p>
+<p>此函数将返回 <tt>true</tt> 或 <tt>false</tt>，具体取决于是否检测到给定的游戏手柄按钮已被按下。请注意，此函数仅在第一次按下按钮时触发 <i>一次</i>。要再次触发，必须首先释放按钮，然后重新按下。如果你需要连续按下按钮，则应使用 <a href=
+"gamepad_button_check.html"><tt>gamepad_button_check</tt></a>函数。</p>
 </blockquote>
 
 <p><br>
@@ -64,13 +58,12 @@ you should be using the function <a href=
 
 <tr>
 <td>device</td>
-<td>Which gamepad device "slot" to check.</td>
+<td>要检查哪个游戏手柄设备 “插槽” 。</td>
 </tr>
 
 <tr class="alt">
 <td>button</td>
-<td>Which gamepad button <a href="index.html">constant</a> to check
-for.</td>
+<td>要检查哪个游戏手柄按钮 <a href="index.html">常量</a>。</td>
 </tr>
 </table>
 </div>
@@ -90,9 +83,7 @@ for.</td>
 <p class="code">if gamepad_button_check_pressed(0, gp_start)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;audio_play_sound(snd_Start, 0, false);<br>&nbsp;&nbsp;&nbsp;room_goto(rm_Level_1);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will detect whether the "start" button of the
-gamepad connected to device "slot" 0 has been pressed or not and
-change room if it has.</p>
+<p>上面的代码将检测连接到设备 “插槽” 0 的游戏手柄的 “start” 按钮是否已按下，如果是，则更改房间。</p>
 </blockquote>
 
 <p><br>
@@ -102,7 +93,7 @@ change room if it has.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_button_check_released.html">gamepad_button_check_released</a></div>

@@ -38,27 +38,18 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can retrieve the GUID for the gamepad
-connected to the given slot index. You supply the gamepad slot to
-check (from 0 - 11), and the function will return one of the
-following strings:</p>
+<p>使用此函数，你可以检索连接到给定插槽索引的游戏手柄的 GUID。你提供要检查的游戏手柄槽（从 0 到 11），该函数将返回以下字符串之一：</p>
 
 <ul>
-<li>"<b>none</b>" if no GUID is available or no gamepad is
-connected</li>
+<li>如果没有可用的 GUID 或没有连接游戏手柄，则返回 “<b>无</b>”</li>
 
-<li>"<b>device index out of range</b>" if the gamepad slot index is
-out of range</li>
+<li>如果游戏手柄插槽索引超出范围，则返回 “<b>设备索引超出范围</b>”</li>
 
-<li>The GUID string, something like
-"050000005e040000fd020000ffff3f00", if the slot has a gamepad
-assigned and can get the GUID for it</li>
+<li>GUID 字符串，类似于 “050000005e040000fd020000ffff3f00”，如果插槽已分配游戏手柄并且可以获取它的 GUID</li>
 </ul>
 
-<p>This function would usually be used in conjunction with <a href=
-"gamepad_get_description.html"><tt>gamepad_get_description()</tt></a>
-to generate part of the SDL string required for remapping
-controllers on Windows, Android and macOS.</p>
+<p>此函数通常与 <a href=
+"gamepad_get_description.html"><tt>gamepad_get_description()</tt></a> 一起使用，以生成在 Windows、Android 和 macOS 上重新映射控制器所需的部分 SDL 字符串。</p>
 </blockquote>
 
 <p><br>
@@ -77,7 +68,7 @@ controllers on Windows, Android and macOS.</p>
 
 <tr>
 <td>index</td>
-<td>Which gamepad "slot" index to check</td>
+<td>要检查哪个游戏手柄 “插槽” 索引</td>
 </tr>
 </table>
 </div>
@@ -94,14 +85,10 @@ controllers on Windows, Android and macOS.</p>
 
 <h3>例如：</h3>
 
-<p class="code">var _guid = gamepad_get_guid(global.PadIndex);<br>
-var _desc = gamepad_get_description(global.PadIndex);<br>
-global.GamepadID = _guid + "," + _desc;</p>
+<p class="code">var _guid = gamepad_get_guid(global.PadIndex);<br>var _desc = gamepad_get_description(global.PadIndex);<br>global.GamepadID = _guid + "," + _desc;</p>
 
 <blockquote>
-<p>The above code gets the GUID and name description strings, then
-concatenates them and stores the final string in a global variable
-for suture reference.</p>
+<p>上面的代码获取 GUID 和名称描述字符串，然后连接它们并将最终字符串存储在全局变量中以用于缝合引用。</p>
 </blockquote>
 
 <p><br>
@@ -111,7 +98,7 @@ for suture reference.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_get_device_count.html">gamepad_get_device_count</a></div>

@@ -38,12 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> or <tt>false</tt>
-depending on whether the given gamepad button is detected as having
-been released or not. Note that this function will only trigger
-<i>once</i> for the button the moment it has been released. For it
-to trigger again the button must first be pressed and then released
-once more.</p>
+<p>此函数将返回 <tt>true</tt> 或 <tt>false</tt>，具体取决于是否检测到给定的游戏手柄按钮已被释放。请注意，此函数仅在按钮释放时触发 <i>一次</i>。要再次触发，必须首先按下按钮，然后再次释放按钮。</p>
 </blockquote>
 
 <p><br>
@@ -62,13 +57,12 @@ once more.</p>
 
 <tr>
 <td>device</td>
-<td>Which gamepad device "slot" to check.</td>
+<td>要检查哪个游戏手柄设备 “插槽” 。</td>
 </tr>
 
 <tr class="alt">
 <td>button</td>
-<td>Which gamepad button <a href="index.html">constant</a> to check
-for.</td>
+<td>要检查哪个游戏手柄按钮 <a href="index.html">常量</a>。</td>
 </tr>
 </table>
 </div>
@@ -88,9 +82,7 @@ for.</td>
 <p class="code">if gamepad_button_check_released(0, gp_select)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;audio_play_sound(snd_Button, 0, false);<br>&nbsp;&nbsp;&nbsp;global.Pause = !global.Pause;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will detect whether the "select" button of the
-gamepad connected to device "slot" 0 has been pressed or not and
-toggle the global "Pause" variable.</p>
+<p>上面的代码将检测连接到设备 “slot” 0 的游戏手柄的 “select” 按钮是否被按下并切换全局 “暂停” 变量。</p>
 </blockquote>
 
 <p><br>
@@ -100,7 +92,7 @@ toggle the global "Pause" variable.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_button_count.html">gamepad_button_count</a></div>

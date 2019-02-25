@@ -49,17 +49,17 @@ right_motor);</p>
 
 <tr>
 <td>device</td>
-<td>Which gamepad device "slot" to check.</td>
+<td>要检查哪个游戏手柄设备 “插槽” 。</td>
 </tr>
 
 <tr class="alt">
 <td>left_motor</td>
-<td>The amount of vibration from the left motor from 0 to 1.</td>
+<td>左电机的振动量从 0 到 1。</td>
 </tr>
 
 <tr>
 <td>right_motor</td>
-<td>The amount of vibration from the right motor from 0 to 1.</td>
+<td>右电机的振动量从 0 到 1。</td>
 </tr>
 </table>
 </div>
@@ -77,16 +77,9 @@ right_motor);</p>
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can set the vibration of the gamepad
-motors, with either motor using a value from 0 (no vibration) to 1
-(full vibration). Note that there is no time limit on this
-function, so you will need to use a variable or an alarm to switch
-off the vibration (set motors to 0) after a given time has passed
-otherwise the gamepad will continue to vibrate indefinitely.</p>
+<p>使用此函数，你可以设置游戏手柄电机的振动，其中任一电机使用 0（无振动）到 1（完全振动）的值。请注意，此函数没有时间限制，因此在给定时间过后，你需要使用变量或警报来关闭振动（将电机设置为 0），否则游戏手柄将继续无限振动。</p>
 
-<div class="note"><b>NOTE</b>: This function is currently only
-available for the standard <b>Windows</b>, <b>PS4</b> and <b>Xbox
-One</b> target modules.</div>
+<div class="note"><b>注意</b>：此函数目前仅适用于标准 <b>Windows</b>、<b>PS4</b> 和 <b>Xbox One</b>目标模块。</div>
 </blockquote>
 
 <p><br>
@@ -96,10 +89,7 @@ One</b> target modules.</div>
 
 <p class="code">if lives = 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;gamepad_set_vibration(0, 1, 1);<br>&nbsp;&nbsp;&nbsp;alarm[0] = room_speed / 2;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code would be used (for example) in a collision event
-to make the gamepad plugged into "slot" 0 vibrate for half a
-second, with the alarm that is set being used to switch it off
-again once that time has passed.</p>
+<p>上面的代码将用于（例如）碰撞事件中，以使游戏手柄插入 “插槽” 0 振动半秒，设置的计时器用于在该时间过后再次关闭它。</p>
 
 <p><br>
 </p>
@@ -108,7 +98,7 @@ again once that time has passed.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_set_axis_deadzone.html">gamepad_set_axis_deadzone</a></div>

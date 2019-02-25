@@ -38,12 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to set the "dead zone" of the joystick
-axis. You specify the device slot to set, and then set a value from
-0 to 1 and if the input amount is lower than the given value, the
-joystick axis is considered to be at 0. Note that this is a global
-setting that will affect <i>all</i> axis of all joysticks connected
-to the device slot specified.</p>
+<p>此功能可用于设置操纵杆轴的 “死区”。指定要设置的设备插槽，然后将值设置为 0 到 1，如果输入量低于给定值，则操纵杆轴被视为 0。请注意，这是一个全局设置，它将影响连接到指定设备插槽的所有操纵杆的 <i>所有</i> 轴。</p>
 </blockquote>
 
 <p><br>
@@ -62,12 +57,12 @@ to the device slot specified.</p>
 
 <tr>
 <td>device</td>
-<td>Which gamepad device "slot" to check.</td>
+<td>要检查哪个游戏手柄设备 “插槽” 。</td>
 </tr>
 
 <tr class="alt">
 <td>deadzone</td>
-<td>The dead zone value from 0 to 1.</td>
+<td>死区值从 0 到 1。</td>
 </tr>
 </table>
 </div>
@@ -84,15 +79,9 @@ to the device slot specified.</p>
 
 <h3>例如：</h3>
 
-<p class="code">if gamepad_is_connected(0)
-gamepad_set_axis_deadzone(0, 0.05);<br>
-if gamepad_is_connected(1) gamepad_set_axis_deadzone(1, 0.05);<br>
-if gamepad_is_connected(2) gamepad_set_axis_deadzone(2, 0.05);<br>
-if gamepad_is_connected(3) gamepad_set_axis_deadzone(3,
-0.05);<br></p>
+<p class="code">if gamepad_is_connected(0) gamepad_set_axis_deadzone(0, 0.05);<br>if gamepad_is_connected(1) gamepad_set_axis_deadzone(1, 0.05);<br>if gamepad_is_connected(2) gamepad_set_axis_deadzone(2, 0.05);<br>if gamepad_is_connected(3) gamepad_set_axis_deadzone(3, 0.05);<br></p>
 
-<p>The above code will set the dead zone of the joystick axis on
-any of 4 connected devices to 0.05.</p>
+<p>上面的代码会将 4 个连接设备中任意一个的操纵杆轴的死区设置为 0.05。</p>
 
 <p><br>
 </p>
@@ -101,7 +90,7 @@ any of 4 connected devices to 0.05.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_set_colour.html">gamepad_set_colour</a></div>

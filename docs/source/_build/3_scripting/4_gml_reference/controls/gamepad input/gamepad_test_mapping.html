@@ -38,80 +38,56 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to set the gamepad mapping on those
-targets that permit it. You supply the "slot" index for the gamepad
-to set, and then the map string, which should have been created
-using the SDL format with the following fields:</p>
+<p>此函数可用于在允许它的目标上设置游戏手柄映射。你提供要设置的游戏手柄的 “插槽” 索引，然后提供应使用 SDL 格式创建的映射字符串，其中包含以下字段：</p>
 
 <p class="code">
 
 &lt;guid&gt;,&lt;description&gt;,platform:&lt;platform-name&gt;,&lt;bindings&gt;</p>
 
-<p>The details that should be included in each of these fields
-are:</p>
+<p>应包含在每个字段中的详细信息包括：</p>
 
 <ul>
-<li><tt>guid</tt> - a string of digits and letters that uniquely
-identifies a device type (this can be retrieved using the <a href=
-"gamepad_get_guid.html"><tt>gamepad_get_guid()</tt></a>
-function)</li>
+<li><tt>guid</tt> - 一串数字和字母，用于唯一标识设备类型（可以使用 <a href=
+"gamepad_get_guid.html"><tt>gamepad_get_guid()</tt></a> 函数检索</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><tt>description</tt> - an Ascii description of the device (this
-can be retrieved using the <a href=
-"gamepad_get_description.html"><tt>gamepad_get_description()</tt></a>
-function)</li>
+<li><tt>description</tt>  - 设备的 Ascii 描述（可以使用 <a href=
+"gamepad_get_description.html"><tt>gamepad_get_description()</tt></a> 函数检索</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><tt>platform-name</tt> - will be either "platform:android",
-"platform:windows", "linux", or "mac" (note that <b>this will be
-appended automatically onto the string when you call this
-function</b>, and so you do not need to supply it when constructing
-your own mapping strings)</li>
+<li><tt>platform-name</tt>  - 将是 “platform:android”、“platform:windows”、“linux” 或 “mac”（注意 <b>当你调用此函数这将自动附加到字符串上</b>，因此在构造自己的映射字符串时不需要提供它）</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li><tt>bindings</tt> - a set of entries separated by a ',' to bind
-actual input to specific GML constants</li>
+<li><tt>bindings</tt>  - 由 ',' 分隔的一组条目，用于将实际输入绑定到特定的 GML 常量</li>
 
 <li style="list-style: none"><br>
 </li>
 </ul>
 
-<p>The comma separated list of entries follows a specific format
-for each entry:</p>
+<p>逗号分隔的条目列表遵循每个条目的特定格式：</p>
 
 <p class="code">&lt;abstract-gp-name&gt;:&lt;value-binding&gt;</p>
 
-<p>Here <tt>&lt;value-binding&gt;</tt> (ie: the direct gamepad
-input) can be any one of the following:</p>
+<p>这里 <tt>&lt;value-binding&gt;</tt>（即：直接 direct 手柄输入）可以是以下任何一种：</p>
 
 <ul>
-<li><tt>a&lt;N&gt;</tt> - This represents an axis of the gamepad,
-where the &lt;N&gt; is one of the axis from 0 to <a href=
-"gamepad_axis_count.html"><tt>gamepad_axis_count()</tt></a> -1</li>
+<li><tt>a&lt;N&gt;</tt>  - 这表示游戏手柄的轴，其中 &lt;N&gt; 是从 0 到<a href=
+"gamepad_axis_count.html"><tt> gamepad_axis_count()</tt></a> -1 的一个轴</li>
 
-<li><tt>b&lt;N&gt;</tt> - This represents a button of the gamepad,
-where the &lt;N&gt; is one of the buttons from 0 to <a href=
-"gamepad_button_count.html"><tt>gamepad_button_count()</tt></a>
--1</li>
+<li><tt>b&lt;N&gt;</tt>  - 这表示游戏手柄的一个按钮，其中 &lt;N&gt; 是从 0 到 <a href=
+"gamepad_button_count.html"><tt>gamepad_button_count()</tt></a> -1 的按钮之一</li>
 
-<li><tt>h&lt;N&gt;.&lt;mask&gt;</tt> - This represents a hat of the
-gamepad, where the &lt;N&gt; represents a hat from 0 to <a href=
-"gamepad_hat_count.html"><tt>gamepad_hat_count()</tt></a> -1, and
-the <tt>&lt;mask&gt;</tt> will be either 1, 2, 4, or 8.</li>
+<li><tt>h&lt;N&gt;.&lt;mask&gt;</tt>  - 这表示游戏手柄的帽子，其中 &lt;N&gt; 代表从 0 到 <a href=
+"gamepad_hat_count.html"> <tt>gamepad_hat_count()</tt></a> -1的游戏帽，<tt>&lt;mask&gt;</tt> 将为 1、2、4 或 8。</li>
 </ul>
 
-<p>Each input value should be bound to an SDL name, which is
-expressed as <tt>&lt;&gt;abstract-gp-name&gt;</tt>, which in turn
-is bound to a GML constant. The table below shows the equivalence
-between the SDL name and the <i>GameMaker Studio 2</i>
-constant:</p>
+<p>每个输入值都应绑定到 SDL 名称，该名称表示为 <tt>&lt; abstract-gp-name&gt;</tt>，后者又绑定到 GML 常量。下表显示了 SDL 名称与 <i>GameMaker Studio 2</i> 常量之间的等效性：</p>
 
 <div class="compat">
 <table>
@@ -145,25 +121,25 @@ constant:</p>
 </tr>
 
 <tr>
-<td><tt>leftshoulder</tt>
+<td><tt>左肩</tt>
 </td>
 <td>gp_shoulderl</td>
 </tr>
 
 <tr class="alt">
-<td><tt>lefttrigger</tt>
+<td><tt>左触发器</tt>
 </td>
 <td>gp_shoulderlb</td>
 </tr>
 
 <tr>
-<td><tt>rightshoulder</tt>
+<td><tt>右肩</tt>
 </td>
 <td>gp_shoulderr</td>
 </tr>
 
 <tr class="alt">
-<td><tt>righttrigger</tt>
+<td><tt>右触发器</tt>
 </td>
 <td>gp_shoulderrb</td>
 </tr>
@@ -243,9 +219,7 @@ constant:</p>
 </div>
 
 <p><br>
-
-When you have constructed your mapping string it should look
-something like this:</p>
+构建映射字符串后，它应如下所示：</p>
 
 <p class="code" style="width:auto; word-wrap:break-word;">
 
@@ -269,13 +243,12 @@ Controller,a:b0,b:b1,start:b4,dpdown:h0.4,dpleft:h0.8,dpright:h0.2,dpup:h0.1,gui
 
 <tr>
 <td>index</td>
-<td>Which gamepad index "slot" to set.</td>
+<td>设置哪个游戏手柄 “插槽” 索引。</td>
 </tr>
 
 <tr class="alt">
 <td>colour</td>
-<td>The map string to use (see the description for more
-information).</td>
+<td>要使用的映射字符串（有关详细信息，请参阅说明）。</td>
 </tr>
 </table>
 </div>
@@ -295,10 +268,7 @@ information).</td>
 <p class="code">var mapping = gamepad_get_guid(global.padIndex) + "," + gamepad_get_description(global.padIndex);<br>var len = array_length_1d(global.PadInstances);<br>for( i = 0; i &lt; len; i += 2)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;var left = global.PadInstances[i];<br>&nbsp;&nbsp;&nbsp;&nbsp;var right = global.PadInstances[i+1];<br>&nbsp;&nbsp;&nbsp;&nbsp;mapping += "," + left.sdlLabel + ":" + right.binding;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>gamepad_test_mapping(global.padIndex, mapping);<br></p>
 
 <blockquote>
-<p>The above code will loop through a number of instances and use
-the values of different variables that they contain to create a
-mapping string, which is then set for use on the gamepad in the
-given slot index.</p>
+<p>上面的代码将循环遍历许多实例，并使用它们包含的不同变量的值来创建映射字符串，然后将其设置为在给定插槽索引中的游戏手柄上使用。</p>
 </blockquote>
 
 <p><br>
@@ -308,7 +278,7 @@ given slot index.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">Next: <a href=
 "gamepad_remove_mapping.html">gamepad_remove_mapping</a></div>

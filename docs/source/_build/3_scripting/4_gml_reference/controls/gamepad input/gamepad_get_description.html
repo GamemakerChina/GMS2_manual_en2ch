@@ -38,13 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return a string with the description of the
-given gamepad, for example, a PS3 controller may return a string
-similar to "PLAYSTATION(R)3 Controller", or an XBox360 controller
-could return "Xbox 360 Controller (XInput STANDARD GAMEPAD)". This
-string is hardware dependant and the returned value will depend on
-the gamepad plugged into the device "slot" that is being
-checked.</p>
+<p>此函数将返回带有给定游戏手柄描述的字符串，例如，PS3 控制器可能返回类似于 “PLAYSTATION（R）3 Controller” 的字符串，或者 XBox360 控制器可能返回 “Xbox 360 Controller（XInput STANDARD GAMEPAD）”。此字符串取决于硬件，返回值取决于插入正在检查的设备 “插槽” 中的游戏手柄。</p>
 </blockquote>
 
 <p><br>
@@ -63,7 +57,7 @@ checked.</p>
 
 <tr>
 <td>device</td>
-<td>Which gamepad "slot" to get the name of.</td>
+<td>哪个游戏手柄 “插槽” 得到的名称。</td>
 </tr>
 </table>
 </div>
@@ -82,9 +76,7 @@ checked.</p>
 
 <p class="code">var gp_num = gamepad_get_device_count();<br>for (var i = 0; i &lt; gp_num; i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if gamepad_is_connected(i)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), gamepad_get_description(i));<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_text(32, 32 + (i * 32), "No Gamepad Connected");<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will loop through all the gamepad slots to check
-for connected devices and then draw some text to the screen based
-on whether a gamepad is connected to the slot or not.</p>
+<p>上面的代码将遍历所有游戏手柄插槽以检查连接的设备，然后根据游戏手柄是否连接到插槽将一些文本绘制到屏幕上。</p>
 
 <p><br>
 </p>
@@ -93,7 +85,7 @@ on whether a gamepad is connected to the slot or not.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_get_button_threshold.html">gamepad_get_button_threshold</a></div>

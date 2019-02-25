@@ -38,16 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return whether a gamepad is connected to the
-given "slot" (returns <tt>true</tt>) or not (returns
-<tt>false</tt>). You would normally use this function in
-conjunction with the <a href=
-"gamepad_get_device_count.html"><tt>gamepad_get_device_count</tt></a>
-function to get the correct number of available game pads and/or
-gamepad "slots". Note that there may be a slight delay between the
-user connecting the gamepad and <i>GameMaker Studio 2</i> detecting
-it as being connected (this is especially the case when dealing
-with bluetooth connected controllers).</p>
+<p>此函数将返回游戏手柄是否连接到给定的 “slot”（返回 <tt>true </tt>）或不返回（返回 <tt>false</tt>）。你通常会将此函数与 <a href=
+"gamepad_get_device_count.html"><tt>gamepad_get_device_count</tt></a> 函数结合使用，以获得正确数量的可用游戏手柄和 / 或游戏手柄 “slots”。请注意，在连接游戏手柄的用户与检测到其连接的 <i> GameMaker Studio 2</i> 之间可能会有轻微的延迟（在处理蓝牙连接的控制器时尤其如此）。</p>
 </blockquote>
 
 <p><br>
@@ -66,7 +58,7 @@ with bluetooth connected controllers).</p>
 
 <tr>
 <td>device</td>
-<td>Which gamepad "slot" to check.</td>
+<td>哪个游戏手柄 “slot” 要检查。</td>
 </tr>
 </table>
 </div>
@@ -85,10 +77,7 @@ with bluetooth connected controllers).</p>
 
 <p class="code">var gp_num = gamepad_get_device_count();<br>for (var i = 0; i &lt; gp_num; i++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code loops through the available game pads (or gamepad
-slots) and then checks each one for a connected gamepad. the
-returned value is then used to set a global array to <tt>true</tt>
-or <tt>false</tt> for use in future checks.</p>
+<p>上面的代码循环通过可用的游戏手柄（或游戏手柄插槽），然后检查每个游戏手柄的连接游戏手柄。然后，返回值用于将全局数组设置为 <tt>true</tt> 或 <tt>false</tt>，以便在将来的检查中使用。</p>
 
 <p><br>
 </p>
@@ -97,7 +86,7 @@ or <tt>false</tt> for use in future checks.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_get_description.html">gamepad_get_description</a></div>

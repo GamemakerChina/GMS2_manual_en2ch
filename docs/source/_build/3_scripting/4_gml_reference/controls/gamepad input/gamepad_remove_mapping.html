@@ -38,14 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to remove the current device mapping
-from the given gamepad slot index. Once called, the slot index will
-need to be remapped using the <a href=
-"gamepad_test_mapping.html"><tt>gamepad_test_mapping()</tt></a>
-function if you want to be able to be able to use the gamepad
-constants to detect input correctly (direct input can always be
-retrieved using the <tt>gamepad_axis/button/hat_count()</tt> and
-<tt>gamepad_axis/button/hat_value()</tt> functions together).</p>
+<p>此函数可用于从给定的游戏手柄插槽索引中删除当前设备映射。一旦调用，如果你希望能够使用游戏手柄常量来正确检测输入，则需要使用 <a href=
+"gamepad_test_mapping.html"><tt>gamepad_test_mapping()</tt></a> 函数重新映射插槽索引（ 可以使用 <tt>gamepad_axis/button/hat_count()</tt> 和 <tt> gamepad_axis/button/hat_value()</tt> 函数一起检索直接输入。</p>
 </blockquote>
 
 <p><br>
@@ -64,7 +58,7 @@ retrieved using the <tt>gamepad_axis/button/hat_count()</tt> and
 
 <tr>
 <td>index</td>
-<td>Which gamepad index "slot" to remove the mapping from.</td>
+<td>需要删除映射的游戏手柄 “插槽” 索引。</td>
 </tr>
 </table>
 </div>
@@ -81,15 +75,10 @@ retrieved using the <tt>gamepad_axis/button/hat_count()</tt> and
 
 <h3>例如：</h3>
 
-<p class="code">if remap == true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;gamepad_remove_mapping(global.PadIndex);<br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if remap == true<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;gamepad_remove_mapping(global.PadIndex);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will remove the mapping from the given gamepad
-index slot based on the value of a variable.</p>
+<p>上面的代码将根据变量的值从给定的游戏手柄索引槽中删除映射。</p>
 </blockquote>
 
 <p><br>
@@ -99,7 +88,7 @@ index slot based on the value of a variable.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">GamePad Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">游戏手柄输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "gamepad_is_supported.html">gamepad_is_supported</a></div>
