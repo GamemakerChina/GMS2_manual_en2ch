@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">device_mouse_check_button_released</h1>
 
-<h2 class="studio">Returns whether a given device button has been
-released.</h2>
+<h2 class="studio">返回是否已释放给定设备按钮。</h2>
 
 <h3><b>语法：</b>
 </h3>
@@ -52,12 +51,12 @@ button);</p>
 
 <tr>
 <td>device</td>
-<td>The device (from 0 - <i>n</i>) that is being checked.</td>
+<td>正在检查的设备（从 0 -  <i>n</i>）。</td>
 </tr>
 
 <tr class="alt">
 <td>button</td>
-<td>The button of the device that is being checked.</td>
+<td>正在检查的设备的按钮。</td>
 </tr>
 </table>
 </div>
@@ -72,29 +71,20 @@ button);</p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns <tt>true</tt> or <tt>false</tt> depending
-on whether the device touch that you specify has been released or
-not. The <i>device</i> argument refers to the device touch number,
-which can be from 0 to <i>n</i> and note that the maximum number of
-touches that can be detected will depend very much on the device
-being used and the OS it runs. This function is only triggered
-<i>once</i> by the actual releasing action, and the standard
-constants of <tt>mb_left</tt> and <tt>mb_right</tt> can be used to
-check for either button.<br>
+<p>此函数返回 <tt>true</tt> 或 <tt>false</tt>，具体取决于你指定的设备触摸是否已释放。<i>device</i> 参数是指设备触摸号，可以是 0 到 <i>n</i> 并注意可以检测到的最大触摸次数将在很大程度上取决于设备正在使用它和它运行的操作系统。该函数仅通过实际释放动作触发 <i>一次</i>，并且 <tt>mb_left</tt> 和 <tt>mb_right</tt> 的标准常量可用于检查任一按钮。<br>
 <br></p>
 
 <h3 class="studio">例如：</h3>
 
 <p class="code">if device_mouse_check_button_released(0, mb_left)<br>{<br>press=false;<br>}<br></p>
 
-<p>The above code checks to see if the device has been pressed and
-sets a variable to false if it has.</p>
+<p>上面的代码检查是否已按下设备并将变量设置为 false（如果有）。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Device Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">设备输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "device_mouse_dbclick_enable.html">device_mouse_dbclick_enable</a></div>

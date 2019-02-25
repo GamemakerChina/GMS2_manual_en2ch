@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>Virtual Keys And Virtual Keyboards</title>
+<title>虚拟按键及虚拟键盘</title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../../files/helpindex.css"
 type="text/css">
@@ -29,29 +29,21 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>Virtual Keys And Virtual Keyboards</h2>
+<h2>虚拟按键及虚拟键盘</h2>
 
 <div class="body-scroll">
 <p><br>
 </p>
 
-<p>When developing games for touchscreen devices, it's often
-important to get keyboard input from the user. When using
-<i>GameMaker Studio 2</i> this can be done in one of two ways:</p>
+<p>在为触摸屏设备开发游戏时，从用户那里获得键盘输入通常很重要。使用 <i>GameMaker Studio 2</i> 时，可以通过以下两种方式之一完成：</p>
 
 <ul>
-<li>Create your own on-screen <b>virtual keys</b> to get input</li>
+<li>创建您自己的屏幕 <b>虚拟键</b> 以获取输入</li>
 
-<li>Pop up the OS <b>virtual keyboard</b> and get input from
-that</li>
+<li>弹出操作系统 <b>虚拟键盘</b> 并从中获取输入</li>
 </ul>
 
-<p>What you use will depend very much on the game and what you
-need, but in general you would use virtual keys when you want to
-have onscreen buttons for player control or for menus, while you'd
-use the virtual keyboard when you need player input, like getting a
-name or setting a value. The sections below outline the uses and
-functions associated with each of these input options.</p>
+<p>您使用哪种方式在很大程度上取决于游戏和您需要的内容，但一般情况下，当您想拥有用于玩家控制或菜单的屏幕按钮时，您将使用虚拟键，而当您需要玩家输入时则使用虚拟键盘 ，比如获取名字或设置一个值。以下部分概述了与每个输入选项相关的用途和函数。</p>
 
 <blockquote><label class="collapse" for="a">虚拟按键</label>
 <input id="a" type="checkbox">
@@ -59,10 +51,7 @@ functions associated with each of these input options.</p>
 <p>为了使你的游戏能够在具有触摸屏的移动设备上正常工作，你可能需要能够分配屏幕区域以在用户触摸时响应某些事物。这是通过为内部映射的标准键盘键分配 “虚拟键”，然后使用它们生成的键盘事件来控制应用程序来完成的。值得注意的是，这些 “虚拟键” 被映射到 <i>屏幕</i> 位置而不是房间位置，因此 x / y 值是绝对的，基于显示尺寸。 这意味着你无需担心视图的使用或相对房间坐标，并且可以简单地绘制你的按键精灵并在物体的 <a href=
 "../../../../2_interface/1_editors/events/draw_events.html">绘制 GUI 事件</a> 中定义虚拟键。</p>
 
-<div class="note"><b>NOTE:</b> These functions will not work on the
-Windows, Ubuntu (Linux), nor the MacOS, target platforms using a
-touch screen, although they will recieve mouse clicks as
-"touches".</div>
+<div class="note"><b>注意：</b> 这些函数不适用于 Windows、Ubuntu（Linux），也不适用于使用触摸屏的目标平台 MacOS，尽管它们会将鼠标点击称为 “触摸”。</div>
 
 <p>可用的虚拟键函数是：</p>
 
@@ -86,21 +75,11 @@ touch screen, although they will recieve mouse clicks as
 <label class="collapse" for="b">虚拟键盘</label>
 <input id="b" type="checkbox">
 <div class="index_list">
-<p>If you require text or numeric input in your game on a
-touchscreen device, then you can use the <b>virtual keyboard</b>
-functions provided to use the device OS keyboard. These functions
-will call up or hide the OS keyboard and accept input from it,
-however it will <i>not</i> trigger the regular keyboard events, but
-rather update the <a href=
-"../keyboard%20input/keyboard_string.html"><tt>keyboard_string</tt></a>
-variable with the user input (this is due to the fact that the
-virtual keyboard can input whole words and not just single
-characters).</p>
+<p>如果您需要在触摸屏设备上对你的游戏进行文本或数字输入，则可以使用提供的 <b>虚拟键盘</b> 函数来使用设备操作系统键盘。这些函数将调用或隐藏 OS 键盘并接受来自它的输入，但是 <i>不会</i> 触发常规键盘事件，而是更新带有用户输入的变量 <a href=
+"../keyboard%20input/keyboard_string.html"><tt> keyboard_string</tt></a> （这是因为虚拟键盘可以输入整个单词而不仅仅是单个字符）。</p>
 
-<p>Opening or closing the virtual keyboard will generate <a href=
-"../../../../2_interface/1_editors/events/async_events.html">System
-Asynchronous Events</a>, in which the <tt>async_load</tt> DS map
-will be populated with the following key/value pairs:</p>
+<p>打开或关闭虚拟键盘将生成 <a href=
+"../../../../2_interface/1_editors/events/async_events.html">系统异步事件</a>，其中<tt>async_load</tt> 数据结构（DS）映射将填充以下键 / 值对：</p>
 
 <ul>
 <li>"<b>event_type</b>" - 收到的系统事件的类型，它将是虚拟键盘的 “<b>虚拟键盘状态</b>”。</li>
@@ -127,7 +106,7 @@ will be populated with the following key/value pairs:</p>
 </ul></li>
 </ul>
 
-<p>The available virtual keyboard functions are:</p>
+<p>可用的虚拟键盘函数是：</p>
 
 <blockquote>
 <ol>
@@ -147,9 +126,7 @@ will be populated with the following key/value pairs:</p>
 </ol>
 </blockquote>
 
-<div class="note"><b>NOTE:</b> These functions are only valid for
-the Android (including Amazon Fire, FireTV, and AndroidTV), iOS,
-and UWP target platforms.</div>
+<div class="note"><b>注意：</b>这些函数仅适用于 Android（包括 Amazon Fire、FireTV 和 AndroidTV），iOS 和 UWP 目标平台。</div>
 </div>
 <br></blockquote>
 

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">device_mouse_y_to_gui</h1>
 
-<h2 class="studio">Returns the x position of the mouse relative to
-the GUI layer when pressed.</h2>
+<h2 class="studio">按下时，返回鼠标相对于 GUI 图层的 x 位置。</h2>
 
 <h3><b>语法：</b>
 </h3>
@@ -51,7 +50,7 @@ the GUI layer when pressed.</h2>
 
 <tr>
 <td>device</td>
-<td>The device (from 0 - <i>n</i>) that is being checked.</td>
+<td>正在检查的设备（从 0 -  <i>n</i>）。</td>
 </tr>
 </table>
 </div>
@@ -66,36 +65,20 @@ the GUI layer when pressed.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns the y position of the touch on the device
-in relation to the GUI layer. Since the GUI layer can be set to be
-a different size independently of the screen resolution <i>and</i>
-the room size, it can sometimes be complicated to get the exact
-point on the GUI layer that a user has touched the screen. With
-this function you can get that position based on the actual GUI
-size, making GUI buttons and HUD elements easier to create and
-interact with. If you are running this on a the HTML5 or PC and Mac
-modules then this value is updated constantly, as long as the
-device (usually a mouse) is plugged in, however for mobile devices,
-this will only be updated while the screen is being touched, and
-note that the maximum number of touches that can be detected will
-depend very much on the device being used and the OS it runs.<br>
+<p>此函数返回设备上与 GUI 层相关的触摸的 y 位置。由于 GUI 层可以设置为与屏幕分辨率 <i>和</i> 房间大小无关的不同大小，因此有时在 GUI 层上获得用户触摸屏幕的确切点是很复杂的。使用此函数，你可以根据实际的 GUI 大小获得该位置，从而使 GUI 按钮和 HUD 元素更易于创建和交互。如果你在 HTML5 或 PC 和 Mac 模块上运行此项，那么只要设备（通常是鼠标）插入，该值就会不断更新，但是对于移动设备，这只会在屏幕被触摸时更新，可以检测到的最大触摸次数将在很大程度上取决于所使用的设备及其运行的操作系统。<br>
 <br></p>
 
 <h3 class="studio">例如：</h3>
 
 <p class="code">if device_mouse_check_button(0, mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;if device_mouse_y_to_gui(0) &gt; 0 &amp;&amp; device_mouse_y_to_gui(0) &lt; 32<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pressed = true;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pressed = false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks to see if the device mouse is being
-pressed and if so it then polls the device x position on the GUI
-layer to see if it is within the parameters. If it is it sets the
-variable "pressed" to <tt>true</tt>, other wise it sets it to
-<tt>false</tt>.</p>
+<p>上面的代码检查设备鼠标是否被按下，如果是，则轮询 GUI 层上的设备 y 位置以查看它是否在参数范围内。如果是，则将变量 “pressed” 设置为 <tt>true</tt>，否则将其设置为 <tt>false</tt>。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Device Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">设备输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "device_is_keypad_open.html">device_is_keypad_open</a></div>

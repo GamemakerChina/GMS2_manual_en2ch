@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">device_mouse_check_button</h1>
 
-<h2 class="studio">Returns whether a given device button is
-currently down.</h2>
+<h2 class="studio">返回给定设备按钮当前是否已经按下。</h2>
 
 <h3><b>语法：</b>
 </h3>
@@ -51,12 +50,12 @@ currently down.</h2>
 
 <tr>
 <td>device</td>
-<td>The device (from 0 - <i>n</i>) that is being checked.</td>
+<td>正在检查的设备（从 0 -  <i>n</i>）。</td>
 </tr>
 
 <tr class="alt">
 <td>button</td>
-<td>The button of the device that is being checked.</td>
+<td>正在检查的设备的按钮。</td>
 </tr>
 </table>
 </div>
@@ -71,30 +70,20 @@ currently down.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns <tt>true</tt> (1) or <tt>false</tt> (0)
-depending on whether the device that you specify is being used or
-not. Now, the <i>device</i> refers to the mouse number, which can
-be from 0 to 4 and this event is triggered when the touch screen of
-a mobile device is touched, so in this way you can test for up to
-<i>n</i> different screen touches (the maximum number of touches
-that can be detected will depend very much on the device being used
-and the OS it runs). This function constantly updates every step,
-and the standard constants of <tt>mb_left</tt> and
-<tt>mb_right</tt> can be used to check for either button.<br>
+<p>此函数返回 <tt>true</tt>（1）或 <tt>false</tt>（0），具体取决于你指定的设备是否正在使用。现在，<i>device</i> 指的是鼠标编号，可以是 0 到 4，当触摸移动设备的触摸屏时会触发此事件，因此这样你可以测试最多 <i>n</i> 个不同的屏幕触摸（可以检测到的最大触摸次数将在很大程度上取决于所使用的设备及其运行的操作系统）。此函数每步不断更新，<tt>mb_left</tt> 和 <tt>mb_right</tt> 的标准常量可用于检查任一按钮。<br>
 <br></p>
 
 <h3 class="studio">例如：</h3>
 
 <p class="code">if device_mouse_check_button(0, mb_left) &amp;&amp; device_mouse_check_button(1, mb_left)<br>{<br>room_goto(rm_Menu);<br>}<br></p>
 
-<p>The above code checks to see if the two touches are being held
-down at the same time and if they then it goes to another room.</p>
+<p>上面的代码检查是否同时按住两个触摸键，如果同时按住两个触摸键，则会转到另一个房间。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Device Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">设备输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "device_mouse_check_button_pressed.html">device_mouse_check_button_pressed</a></div>

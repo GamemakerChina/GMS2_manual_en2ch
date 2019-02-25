@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">device_mouse_dbclick_enable</h1>
 
-<h2 class="studio">Sets whether a double left-click should be
-detected as mb_right or not.</h2>
+<h2 class="studio">设置是否应将双击左键检测为 mb_right。</h2>
 
 <h3><b>语法：</b>
 </h3>
@@ -51,8 +50,7 @@ detected as mb_right or not.</h2>
 
 <tr>
 <td>bool</td>
-<td>Set double-click detection on (<tt>true</tt>) or off
-(<tt>false</tt>).</td>
+<td>设置打开双击检测（<tt>true</tt>）或关闭（<tt>false</tt>）。</td>
 </tr>
 </table>
 </div>
@@ -67,15 +65,7 @@ detected as mb_right or not.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to set the device to detect a double
-tap of the <tt>mb_left</tt> (left mouse button) as an
-<tt>mb_right</tt> (right mouse button) tap or not. By default this
-is set to <tt>true</tt>, meaning that every time the user taps the
-device screen twice quickly and consecutively, the return value is
-the same as if the right mouse button had been clicked. When this
-is on, the first tap will be detected as <tt>mb_left</tt>, and the
-second as <tt>mb_right</tt>, so make sure that any code you use
-takes this into account.<br>
+<p>此函数可用于将设备设置为检测 <tt>mb_left</tt>（鼠标左键）的双击是否为 <tt>mb_right</tt>（鼠标右键）的单击。默认设置为 <tt>true</tt>，这意味着每次用户快速连续点击设备屏幕两次时，返回值与单击鼠标右键相同。启用此选项后，第一次点击将被检测为 <tt>mb_left</tt>，第二次点击将被检测为 <tt>mb_right</tt>，因此请确保你使用的任何代码都将此考虑在内。<br>
 <br></p>
 
 <p><br>
@@ -85,15 +75,13 @@ takes this into account.<br>
 
 <p class="code">if os_type == os_windows || os_type == os_mac<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;device_mouse_dbclick_enable(false);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks to see if the device running the game is a
-Windows PC or a Mac and if it is either of them, it disables the
-double tap function.</p>
+<p>上面的代码检查运行游戏的设备是 Windows PC 还是 Mac，如果它们是其中之一，它会禁用双击功能。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Device Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">设备输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "device_mouse_x.html">device_mouse_x</a></div>

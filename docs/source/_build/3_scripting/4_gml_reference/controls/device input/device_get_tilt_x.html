@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">device_get_tilt_x</h1>
 
-<h2 class="studio">This function returns the amount of tilt on the
-x axis of your device.</h2>
+<h2 class="studio">此函数返回设备 x 轴上的倾斜量。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -48,12 +47,7 @@ x axis of your device.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns a value between -1 and 1 depending upon
-the angle of "tilt" of the device. The actual correlation between
-degrees of tilt and the value returned depends on the device and OS
-that it uses, but generally a value of 1 or -1 is the same as
-+/-90ï¿½. The image below shows how each if the available functions
-relates to the device:  <img class="center" src=
+<p>此函数返回介于 -1 和 1 之间的值，具体取决于设备的 “倾斜” 角度。倾斜度和返回值之间的实际相关性取决于它使用的设备和操作系统，但一般情况下值 1 或 -1 与 +/- 90°相同。下图显示了每个可用函数与设备的关系： <img class="center" src=
 "tilt_image.png"></p>
 
 <p><br>
@@ -61,17 +55,15 @@ relates to the device:  <img class="center" src=
 
 <h3 class="studio">例如：</h3>
 
-<p class="code">if display_get_orientation() = display_landscape<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x += sign(device_get_tilt_y());<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x += sign(device_get_tilt_x());<br>&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if display_get_orientation() = display_landscape<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;y += sign(device_get_tilt_y());<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;y += sign(device_get_tilt_x());<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks the orientation of the display and then
-uses the corresponding tilt value to move the player along the x
-axis.</p>
+<p>上面的代码检查显示器的方向，然后使用相应的倾斜值沿 y 轴移动玩家。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Device Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">设备输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "device_get_tilt_y.html">device_get_tilt_y</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -40,21 +40,14 @@ if (window.name != "content")
 <div class="note"><b>注意：</b> 这些函数仅适用于 Windows / Mac / Ubuntu 桌面平台。你可能会发现某些内置变量和常量在其他平台上无效，并且许多函数无法在移动设备上运行。</div>
 
 <p><br>
-
-Each input character from a key (or multiple keys) is defined by
-its <a href="https://en.wikipedia.org/wiki/UTF-8" target=
-"_blank">UTF8</a> code, which is a numerical value. This value can
-be retrieved for any character using the <a href=
-"ord.html"><tt>ord()</tt></a> function but, <i>GameMaker Studio
-2</i> also has a series of <tt>constants</tt> for the most used
-keyboard special keys and a special functions. Typically you'd use
-a combination of <tt>ord()</tt> with the <tt>keyboard_check*()</tt>
-functions, something like this:</p>
+来自一个（或多个）键的每个输入字符由其 <a href="https://en.wikipedia.org/wiki/UTF-8" target=
+"_blank">UTF8</a> 码（一个数值）定义的。可以使用 <a href=
+"ord.html"><tt>ord()</tt></a> 函数检索任何字符的值，<i>GameMaker Studio 2</i> 也有一系列 <tt>常量</tt> 用于最常用的键盘特殊键和特殊函数。通常，你将 <tt>ord()</tt> 与 <tt>keyboard_check *()</tt> 函数结合使用，如下所示：</p>
 
 <p class="code">if keyboard_check(ord("A"))<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;hspeed = -5;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <p><br>
-因此，上面将检查 “A” 键，如果它被按下，那么它将把物体的水平速度设置为 -5。 Note, that using <tt>ord()</tt> in this way will only function correctly if the input string is only one character in length and is a number from 0 to 9 or a <i>capitalised</i> Roman character from A to Z. The function <tt>ord()</tt> will return a full UTF8 value, but the <tt>keyboard_check*()</tt> functions will <i>only detect A - Z and 0 - 9</i>. But what if you want to use the arrow keys?或者，如果要使用 “shift” 键修改操作？ Well, for that <i>GameMaker Studio 2</i> has a series of <tt>vk_</tt> constants (<tt>vk_</tt> stands for <i>virtual keyboard</i>) that you can use in place of <tt>ord()</tt>:</p>
+因此，上面将检查 “A” 键，如果它被按下，那么它将把物体的水平速度设置为 -5。 注意，以这种方式使用 <tt>ord()</tt> 只有在输入字符串长度仅有一个字符并且是 0 到 9 之间的数字或 <i>大写</i> 的 A 到 Z 的罗马字符时函数才能正常工作。函数 <tt>ord()</tt> 将返回完整的 UTF8 值，但 <tt>keyboard_check *()</tt> 函数将 <i> 仅检测 A - Z 和 0 - 9</i>。但是如果你想使用方向键怎么办？或者，如果要使用 “shift” 键修改操作？ 好吧，为此 <i>GameMaker Studio 2</i> 有一系列 <tt> vk_</tt>常量（<tt>vk_</tt> 代表 <i>虚拟键盘</i>）使得你可以用来代替 <tt>ord()</tt>：</p>
 
 <div class="compat">
 <table>
@@ -195,7 +188,7 @@ functions, something like this:</p>
 
 <tr>
 <td>vk_add</td>
-<td>add key on the numeric keypad</td>
+<td>数字键盘上的加号键（+）</td>
 </tr>
 
 <tr class="alt">
@@ -257,10 +250,7 @@ functions, something like this:</p>
 <p><br>
 上面的代码将检测是否 <i>按下</i> “Tab” 键并创建物体 “obj_Menu” 的实例（如果是）。</p>
 
-<p>If you need to check for a key character that is not 0 - 9, A -
-Z or one of the VK constants, then you should be checking one of
-the <tt>keyboard_*</tt> variables, like <tt>keyboard_lastchar</tt>
-for example:</p>
+<p>如果你需要检查一个不是 0 - 9，A - Z 或其中一个 VK 常量的关键字符，那么你应该检查一个 <tt>keyboard_*</tt> 变量，比如<tt>keyboard_lastchar</tt>：</p>
 
 <p class="code">var _key = keyboard_lastchar;<br>if ord(_key) == ord("Ã§")<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;show_debug_message("Ã§ key pressed");<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
@@ -270,12 +260,10 @@ for example:</p>
 <blockquote><label class="collapse" for="one">函数</label>
 <input id="one" type="checkbox">
 <div class="index_list">
-<p>The following functions are available for use when working with
-a keyboard:</p>
+<p>使用键盘时可以使用以下函数：</p>
 
-<div class="note"><b>NOTE</b>: These functions will <i>not</i> work
-when using an on-screen <a href=
-"../virtual%20keys/index.html">Virtual Keyboard</a>.</div>
+<div class="note"><b>注意</b>：使用屏幕 <a href=
+"../virtual%20keys/index.html">虚拟键盘</a> 时，这些函数将 <i>无法</i> 工作。</div>
 
 <ol>
 <li><a href="io_clear.html">io_clear</a><br>
@@ -321,14 +309,10 @@ when using an on-screen <a href=
 <label class="collapse" for="two">变量</label> <input id="two"
 type="checkbox">
 <div class="index_list">
-<p>The following variables are built-in to <i>GameMaker Studio
-2</i> and can be accessed to get information about the keyboard
-state and input:</p>
+<p>以下变量内置于 <i>GameMaker Studio 2</i>，可以访问并获取有关键盘状态和输入的信息：</p>
 
-<div class="note"><b>NOTE</b>: When using the <a href=
-"../virtual%20keys/index.html">Virtual Keyboard</a>, <i>only</i>
-the <tt>keyboard_string</tt> variable will be updated with the
-keyboard input.</div>
+<div class="note"><b>注意</b>：当使用 <a href=
+"../virtual%20keys/index.html">虚拟键盘</a> 时，<i>仅有</i> <tt>keyboard_string</tt>变量将在使用键盘输入时更新。</div>
 
 <ol>
 <li><a href="keyboard_key_press.html">keyboard_key_press</a><br>

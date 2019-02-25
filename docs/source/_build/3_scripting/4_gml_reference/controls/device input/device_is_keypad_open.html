@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">device_is_keypad_open</h1>
 
-<h2 class="studio">Checks the device to see if a keypad is open or
-not.</h2>
+<h2 class="studio">检查设备以查看键盘是否打开。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -48,7 +47,7 @@ not.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This does a check of the device for a keypad and if one is available it returns <tt>true</tt> otherwise it returns <tt>false</tt>. Please note that this function is mainly for use with Android devices.<br><br>For those users with a <i>Sony Xperia Play</i>, there is a set button/key map setup within <i>GameMaker Studio 2</i>, so you can use the <a href="../keyboard%20input/index.html">keyboard constants</a> <b>vk_up</b>, <b>vk_down</b>, <b>vk_left</b>, <b>vk_right</b> for the joypad keys and <i>Triangle</i> is <tt>ord("T")</tt>, <i>Square</i> is <tt>ord("S")</tt>, <i>Circle</i> is <b>vk_alt</b> + <b>vk_backspace</b> while the <i>back</i> button is simply <tt>vk_backspace</tt>, <i>Cross</i> is <b>vk_space</b>, <i>Select</i> is <b>vk_return</b> and <i>Start</i> is <b>vk_rshift</b>, the <i>L Trigger</i> is <tt>ord("L")</tt> and <i>R Trigger</i> is <tt>ord("R")</tt>.<br>
+<p>这会检查键盘的设备，如果有可用，则返回 <tt>true</tt>，否则返回 <tt>false</tt>。请注意，此功能主要用于 Android 设备。<br><br>对于那些使用 <i>Sony Xperia Play</i> 的用户，在 <i>GameMaker Studio 2</i> 中有一个设置按钮/按键映射设置，因此对于游戏手柄键你可以使用以下 <a href="../keyboard%20input/index.html">键盘常量</a> ：<b>vk_up</b>，<b>vk_down</b>，<b>vk_left</b>，<b>vk_right</b>，而 <i>Triangle</i> 是 <tt>ord("T")</tt>，<i>Square</i> 是 <tt>ord("S")</tt>，<i>Circle</i> 是 <b>vk_alt</b> + <b>vk_backspace</b>，而 <i>back</i> 按钮只是 <tt>vk_backspace</tt>，<i>Cross</i> 是 <b>vk_space</b>，<i>Select</i> 是 <b>vk_return</b> 且 <i>Start</i> 是 <b>vk_rshift</b>，<i>L Trigger</i> 是  <tt>ord("L")</tt> 和 <i>R Trigger</i> 是 <tt>ord("R")&lt;/ t29&gt;。<br>
 <br></p>
 
 <p><br>
@@ -58,14 +57,13 @@ not.</h2>
 
 <p class="code">if device_is_keypad_open()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Setting = 2;<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Setting = 1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks for a keypad then changes a global
-variable depending on the returned value.</p>
+<p>上面的代码检查键盘然后根据返回的值更改全局变量。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Device Input</a></div>
+<div style="float:left">上一页:  <a href="index.html">设备输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "device_get_tilt_x.html">device_get_tilt_x</a></div>

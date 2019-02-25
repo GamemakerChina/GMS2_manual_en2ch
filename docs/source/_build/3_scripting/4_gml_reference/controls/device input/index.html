@@ -47,33 +47,33 @@ if (window.name != "content")
 
 <tr>
 <td>mb_left</td>
-<td>The left mouse button</td>
+<td>鼠标左键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_middle</td>
-<td>The middle mouse button (this may not be valid for all target
-platforms)</td>
+<td>鼠标中键（这并非对所有目标平台都有效）</td>
 </tr>
 
 <tr>
 <td>mb_right</td>
-<td>The right mouse button</td>
+<td>鼠标右键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_none</td>
-<td>No mouse button</td>
+<td>无鼠标键</td>
 </tr>
 
 <tr>
 <td>mb_any</td>
-<td>Any of the mouse buttons</td>
+<td>任意鼠标键</td>
 </tr>
 </table>
 </div>
 
 <p><br>
+
 这些函数都可以采用与设备显示屏上的触摸相对应的 “触摸” 值，但是可以检测到的最大触控数将在很大程度上取决于设备和正在运行的系统。 例如，一些低端 Android 设备可能只能同时检测到 2 或 3 点触控，而 UWP 设备可能能够检测到多达 10 点触控。请注意，在触摸屏设备上，双击则返回为相当于 <b>鼠标右键</b> 事件。 因此，例如，如果你需要快速连续检测多次触摸，则需要检查 <tt>mb_left</tt> <b>和</b> <tt>mb_right</tt>。 可以使用 <a href=
 "device_mouse_dbclick_enable.html"><tt>device_mouse_dbclick_enable</tt></a> 打开或关闭此功能。</p>
 
