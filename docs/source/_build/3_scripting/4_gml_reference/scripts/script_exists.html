@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>scr</td>
-<td>The name of the script that you want to check.</td>
+<td>要检查的脚本的名称。</td>
 </tr>
 </table>
 </blockquote>
@@ -56,9 +56,9 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -66,13 +66,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> or <tt>false</tt>
-depending on whether the script with the given index exists. Note,
-that this is <i>not</i> a string, but rather the asset name which
-holds the unique index for each script (as it would appear in the
-IDE). For more information on scripts, see <a href=
-"../../../2_interface/1_editors/scripts.html">The Script
-Editor</a>.</p>
+<p>此函数将返回 <tt>true</tt> 或 <tt>false</tt>，具体取决于具有给定索引的脚本是否存在。注意，这 <i>不是</i> 一个字符串，而是包含每个脚本的唯一索引的资产名称（就像它在 IDE 中出现的那样）。有关脚本的更多信息，请参阅 <a href=
+"../../../2_interface/1_editors/scripts.html">脚本编辑器</a>。</p>
 </blockquote>
 
 <p><br>
@@ -83,10 +78,7 @@ Editor</a>.</p>
 <p class="code">script[0] = -1;<br>script[1] = scr_AI_Left;<br>script[2] = scr_AI_Right;<br>var script_num = choose(0, 1, 2);<br>if script_exists(script[script_num])<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;script_execute(script[script_num]);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above example adds two scripts and a value into an array,
-then proceeds to get a random number and use that to choose a
-script to run, unless the real is chosen in which case nothing will
-happen.</p>
+<p>上面的示例将两个脚本和一个值添加到一个数组中，然后继续获取一个随机数并使用它来选择要运行的脚本，除非选择了实数值（示例中的 -1），在这种情况下什么都不会发生。</p>
 </blockquote>
 
 <p><br>

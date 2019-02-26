@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,13 +49,12 @@ etc...);</p>
 
 <tr>
 <td>scr</td>
-<td>the name of the script that you want to call</td>
+<td>要调用的脚本的名称</td>
 </tr>
 
 <tr class="alt">
 <td>arg0, arg1, arg2..., etc...</td>
-<td>The different arguments that you want to pass through to the
-script</td>
+<td>要传递给脚本的不同参数</td>
 </tr>
 </table>
 </blockquote>
@@ -63,10 +62,9 @@ script</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Will depend on the return value from the script
-being called</p>
+<p class="code">将取决于被调用脚本的返回值</p>
 
 <p><br>
 </p>
@@ -74,14 +72,8 @@ being called</p>
 <h3>描述</h3>
 
 <blockquote>
-<p>There are times that you may want to pass a script to an
-instance in a dynamic way, and for these cases we provide the
-<tt>script_execute</tt> function. It will run a user created script
-resource and pass the given arguments into it. For more information
-about scripts, see <a href=
-"../../../2_interface/1_editors/scripts.html">The Script
-Editor</a>. If the script has a return value, then this function
-will also return that value when called.</p>
+<p>有时你可能希望以动态方式将脚本传递给实例，对于这些情况，我们提供 <tt>script_execute</tt>函数。它将运行用户创建的脚本资源并将给定的参数传递给它。有关脚本的更多信息，请参阅 <a href=
+"../../../2_interface/1_editors/scripts.html">脚本编辑器</a>。如果脚本具有返回值，则此函数在调用时也将返回该值。</p>
 </blockquote>
 
 <p><br>
@@ -93,10 +85,7 @@ will also return that value when called.</p>
 scr_Right), irandom(5));<br></p>
 
 <blockquote>
-<p>The above example code will use <tt>script_execute</tt> to
-choose one of four user created script resources (in this case
-related to movement) and pass a random integer to it as
-argument0.</p>
+<p>上面的示例代码将使用 <tt>script_execute</tt> 来选择四个用户创建的脚本资源之一（在这种情况下与移动相关），并将随机整数作为 argument0 传递给它。</p>
 </blockquote>
 
 <p><br>
