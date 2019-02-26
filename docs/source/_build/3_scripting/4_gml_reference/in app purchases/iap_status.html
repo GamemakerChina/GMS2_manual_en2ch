@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">iap_status</h1>
 
-<h2 class="studio">Allows you to track the status of the in app
-purchasing system.</h2>
+<h2 class="studio">允许你跟踪应用内购买系统的状态。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -48,9 +47,7 @@ purchasing system.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function allows you to track the status of the <i>GameMaker
-Studio 2</i> in app purchasing system and returns one of the
-following constants:<br>
+<p>此函数允许你跟踪 <i>GameMaker Studio 2</i> 应用内购系统的状态，并返回以下常量之一：<br>
 <br></p>
 
 <div class="compat">
@@ -62,37 +59,32 @@ following constants:<br>
 
 <tr>
 <td>iap_status_uninitialised</td>
-<td>in app purchases have not been activated for your game.</td>
+<td>应用内购尚未激活你的游戏。</td>
 </tr>
 
 <tr class="alt">
 <td>iap_status_unavailable</td>
-<td>There is no connection available to the target store.</td>
+<td>目标商店没有可用的连接。</td>
 </tr>
 
 <tr>
 <td>iap_status_loading</td>
-<td>A connection to the target store exits and is being
-activated.</td>
+<td>与目标商店的连接退出并正在激活。</td>
 </tr>
 
 <tr class="alt">
 <td>iap_status_available</td>
-<td>Purchases have been activated and the target store is
-available.</td>
+<td>购买已激活且目标商店可用。</td>
 </tr>
 
 <tr>
 <td>iap_status_processing</td>
-<td>There is currently communication between the game and the
-target store, like when (for example) making a purchase or when
-restoring a purchase, etc...</td>
+<td>目前游戏与目标商店之间存在通信，例如进行购买或恢复购买等……</td>
 </tr>
 
 <tr class="alt">
 <td>iap_status_restoring</td>
-<td>On the <b>iOS</b> target, this can be returned while your game
-is attempting to restore purchases.</td>
+<td>在 <b>iOS</b> 目标上，当你的游戏试图恢复购买时，可以返回该值。</td>
 </tr>
 </table>
 </div>
@@ -104,14 +96,13 @@ is attempting to restore purchases.</td>
 
 <p class="code">status = iap_status();</p>
 
-<p>The above code requests the store status for the current game,
-and stores it in a variable for checking.</p>
+<p>上述代码请求当前游戏的商店状态，并将其存储在变量中以供检查。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">In App Purchases</a></div>
+<div style="float:left">上一页:  <a href="index.html">应用内购</a></div>
 
 <div style="float:right">下一页: <a href=
 "iap_enumerate_products.html">iap_enumerate_products</a></div>

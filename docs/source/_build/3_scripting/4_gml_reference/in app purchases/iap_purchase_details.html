@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">iap_purchase_details</h1>
 
-<h2 class="studio">Add purchase details of a single product to a
-ds_map.</h2>
+<h2 class="studio">将单个产品的购买详细信息添加到 ds_map。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,12 +49,12 @@ ds_map.</h2>
 
 <tr>
 <td>product_id</td>
-<td>The product ID string for the purchase.</td>
+<td>购买的产品 ID 字符串。</td>
 </tr>
 
 <tr class="alt">
 <td>ds_map</td>
-<td>The ds_map that will store the purchase information.</td>
+<td>将存储购买信息的 ds_map。</td>
 </tr>
 </table>
 </div>
@@ -70,45 +69,32 @@ ds_map.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can populate a previously created
-<a href="../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>
-with a number of key/value pairs that describe the purchase details
-of the given product. The following data is returned within the
-map:</p>
+<p>使用此函数，你可以使用描述给定产品的购买详细信息的多个键 / 值对填充先前创建的 <a href="../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>。映射中返回以下数据：</p>
 
 <blockquote>
 <ul>
-<li>"<b>product</b>" - The product ID string.<br>
+<li>"<b>product</b>" - 产品 ID 字符串。<br>
 <br></li>
 
-<li>"<b>order</b>" - The unique order ID, where available (not all
-stores support this).<br>
+<li>"<b>order</b>" - 可用的唯一订单 ID（并非所有商店都支持）。<br>
 <br></li>
 
-<li>"<b>token</b>" - The purchase token string, where available
-(not all stores support this).<br>
+<li>"<b>token</b>" - 购买标记字符串（如果可用）（并非所有商店都支持此标记）。<br>
 <br></li>
 
-<li>"<b>payload</b>" - The payload returned by the target store,
-where available (not all purchases require this, and not all stores
-support this).<br>
+<li>"<b>payload</b>" - 目标商店返回的 payload（如果可用）（并非所有购买都需要此功能，并非所有商店都支持此功能）。<br>
 <br></li>
 
-<li>"<b>receipt</b>" - The receipt string, where available (not all
-stores support this).<br>
+<li>"<b>receipt</b>" - 收据字符串，如果可用（并非所有商店都支持）。<br>
 <br></li>
 
-<li>"<b>response</b>" - A response value (as a real number), where
-available, based on the response values from Google Play (see
-<a href=
+<li>"<b>response</b>" - （实数）响应值（如果可用），基于 Google Play 的响应值（有关详细信息，请参阅 <a href=
 "http://developer.android.com/google/play/billing/billing_reference.html"
-target="_blank">here</a> for details).</li>
+target="_blank">此处</a>）。</li>
 </ul>
 </blockquote>
 
-<p>The map will also contain one further key, "<b>status</b>",
-which can be use to check the current status of the purchase. This
-key will have one of the following constants as it's value:<br>
+<p>映射还将包含另一个键 “<b>status</b>”，可用于检查购买的当前状态。此键将具有以下常量之一作为其值：<br>
 <br></p>
 
 <div class="compat">
@@ -120,70 +106,53 @@ key will have one of the following constants as it's value:<br>
 
 <tr>
 <td>iap_available</td>
-<td>Product is available or the game is waiting for the result of a
-purchase.</td>
+<td>产品可用或游戏正在等待购买结果。</td>
 </tr>
 
 <tr class="alt">
 <td>iap_failed</td>
-<td>The purchase attempt failed.</td>
+<td>购买尝试失败。</td>
 </tr>
 
 <tr>
 <td>iap_purchased</td>
-<td>The product was successfully purchased.</td>
+<td>该产品已成功购买。</td>
 </tr>
 
 <tr class="alt">
 <td>iap_canceled</td>
-<td>The user cancelled the purchase.</td>
+<td>用户取消了购买。</td>
 </tr>
 
 <tr>
 <td>iap_refunded</td>
-<td>The purchase has been rescinded.</td>
+<td>购买已被取消。</td>
 </tr>
 </table>
 </div>
 
 <p><br>
 <br>
-
-The following notes are related to the "token" and "receipt" keys
-of the map returned in reference to the target store being
-used:</p>
+以下注释与参考目标商店返回的映射的 “token（令牌）” 和 “receipt（收据）” 键有关：</p>
 
 <blockquote>
 <ol>
-<li>For the <b>Amazon Store</b> the purchase "token" and "receipt"
-entries are treated as one and the same.<br>
+<li>对于<b>Amazon Store</b>，购买 “token” 和 “receip” 条目被视为同一个。<br>
 <br></li>
 
-<li>For <b>Google Play</b> there is no "receipt" data and you are
-expected to verify purchases via the returned "payload" (should you
-be verifying via a payload it is recommended that you do not use
-hard coded values). <i>GameMaker Studio 2</i> will still verify the
-data signature returned with a purchase by Google Play against the
-public key provided in the <b>IAP</b> tab of the <b>Game
-Options</b>.<br>
+<li>对于<b>Google Play</b>，没有 “receipt” 数据，你需要通过返回的 “payload” 验证购买（如果你通过 payload 进行验证，建议你不要使用硬编码值）。<i>GameMaker Studio 2</i> 仍会根据 <b>游戏选项</b> 的 <b>IAP</b> 标签中提供的公钥，验证 Google Play 购买时返回的数据签名。<br>
 <br></li>
 
-<li>For <b>Google Play</b> the "token" provided with a purchase is
-intended for use with consuming purchases.<br>
+<li>对于<b>Google Play</b>，购买时提供的 “token” 旨在用于消费购买。<br>
 <br></li>
 
-<li>For <b>iOS</b> and <b>MacOS</b> target stores there is
-"receipt" data available for purchases but the associated "token"
-is generated <i>internally</i> for developer purposes.</li>
+<li>对于 <b>iOS</b> 和 <b>MacOS</b> 目标商店，存在可用于购买的 “receipt” 数据，但出于开发目的，在 <i>内部</i> 生成相关联的 “token”。</li>
 </ol>
 </blockquote>
 
 <p><br>
 <br>
-<i><b>NOTE:</b> The <tt>ds_map</tt> used is <b>not</b> created by
-the function, meaning that you must create it previously and remove
-it again from memory when not in use using the appropriate
-function.</i><br>
+<i><b>注意：</b>使用的 <tt>ds_map</tt>  <b>并不是</b> iap_product_details 函数创建的，这意味着你必须使用适当的函数先创建它并在不使用时再从内存中删除它。</i><br>
 <br>
 </p>
 
@@ -194,18 +163,13 @@ function.</i><br>
 
 <p class="code">var p_map = ds_map_create();<br>var p_index = ds_map_find_value(iap_data, "index");<br>iap_purchase_details(p_index, p_map);<br>if ds_map_find_value(p_map, "status") == iap_purchased<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Gold += 100000;<br>&nbsp;&nbsp;&nbsp;}<br>ds_map_destroy(p_map);<br></p>
 
-<p>The above code will create a ds_map and then populate it with
-the key/value pairs for the purchase with the product ID stored in
-the variable "p_index", which we get from the special
-<tt>iap_data</tt> ds_map which is created exclusively in the <b>IAP
-Event</b>. If the "status" key returns the constant
-<tt>iap_purchased</tt>, it will then set a global variable.</p>
+<p>上面的代码将创建一个 ds_map，然后用存储在变量 “p_index” 中的产品 ID 填充用于购买的键 / 值对，该变量是我们从专门在 <b>IAP 事件</b> 中创建的 <tt>iap_data</tt> ds_map 中获得的。如果 “status” 键返回常量 <tt>iap_purchasing</tt>，那么它将设置一个全局变量。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">In App Purchases</a></div>
+<div style="float:left">上一页:  <a href="index.html">应用内购</a></div>
 
 <div style="float:right">下一页: <a href=
 "iap_activate.html">iap_activate</a></div>

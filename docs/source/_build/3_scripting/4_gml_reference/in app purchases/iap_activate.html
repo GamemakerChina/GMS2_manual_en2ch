@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">iap_activate</h1>
 
-<h2 class="studio">Enables support for making in app
-purchases.</h2>
+<h2 class="studio">支持进行应用内购买。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,8 +49,7 @@ purchases.</h2>
 
 <tr>
 <td>product_index</td>
-<td>The index of the <tt>ds_list</tt> that contains the available
-purchases.</td>
+<td>包含可用购买的 <tt>ds_list</tt> 的索引。</td>
 </tr>
 </table>
 </div>
@@ -66,39 +64,36 @@ purchases.</td>
 
 <h3 class="studio">描述</h3>
 
-<p>This function enables support for making in-app purchases and prepares <i>GameMaker Studio 2</i> by supplying the product <a href="../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a> that holds a series of <a href=
-"../data_structures/ds%20maps/index.html"><tt>ds_maps</tt></a> with the information on each available purchase. This means that you will need to tell <i>GameMaker Studio 2</i> all the available purchase options by setting them in individual <tt>ds_maps</tt> (one for each available purchase), which are then stored within a <tt>ds_list</tt>, which is then "activated" with this function.<br><br>The individual purchase maps that are to be stored in the <tt>ds_list</tt> should have the following format of key-value pairs:<br>
+<p>此函数支持应用内购买，并通过提供包含一系列 <a href=
+"../data_structures/ds%20maps/index.html"><tt>ds_maps</tt></a> 的产品 <a href="../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a> 来准备 <i>GameMaker Studio 2</i>。这意味着你需要告诉 <i>GameMaker Studio 2</i> 所有可用的购买选项，方法是在单独的 <tt>ds_maps</tt>（每个可用的购买一个）中设置它们，然后将它们存储在 <tt>ds_list</tt> 中，然后使用这个函数“激活”这些选项。<br><br>存储在 <tt>ds_list</tt> 中的各个购买映射应该具有以下格式键值对：<br>
 <br></p>
 
 <blockquote>
 <ul>
-<li>"<b>id</b>" - The product ID for the purchase, eg:
-"LevelPack".<br>
+<li>"<b>id</b>" - 购买的产品 ID，例如：“LevelPack”。<br>
 <br></li>
 
-<li>"<b>title</b>" - The name of the purchase, eg: "Level Pack
-1".<br>
+<li>"<b>title</b>" - 购买的名称，例如：“Level Pack 1”。<br>
 <br></li>
 
-<li>"<b>description</b>" - The description of the purchase, eg:
-"Level Pack 1 for Catch The Clown".<br>
+<li>"<b>description</b>" - 购买说明，例如：“Level Pack 1 for Catch The Clown”。<br>
 <br></li>
 
-<li>"<b>price</b>" - The price of the purchase, eg: "$1.00".<br>
+<li>"<b>price</b>" - 购买的价格，例如：“$1.00”。<br>
 <br></li>
 </ul>
 </blockquote>
 
-<p>It is worth noting that the only essential keys for any target store setup (per product ID) is the "id".<br><br>Activating purchases will also trigger an <a href=
-"../../../2_interface/1_editors/events/async_events.html"><b>IAP Event</b></a>, which creates a special <tt>iap_data</tt> ds_map of the event type <tt>iap_ev_product</tt>. This ds_map will have the following additional key:</p>
+<p>值得注意的是，对于任何目标商店设置（每个产品 ID），唯一必要的键是 “ID”。<br><br>激活购买还将触发一个 <a href=
+"../../../2_interface/1_editors/events/async_events.html"><b>IAP 事件</b></a>，创建一个特殊的 <tt>iap_data</tt> ds_map 的事件类型 <tt>iap_ev_product</tt>。这个 ds_map 将具有以下附加键:</p>
 
 <blockquote>
 <ul>
-<li>"<b>index</b>" - The product ID for the activated product.</li>
+<li>"<b>index</b>" - 激活产品的产品 ID。</li>
 </ul>
 </blockquote>
 
-<p>If you are activating multiple products, then each product will trigger its own <b>IAP Event</b> of the type <tt>iap_ev_product</tt> where you can then get the product ID. It is worth noting that the Google Play store (for Android) can only process details for products 20 at a time which can lead to quite long load times for applications with a significant number of products.<br><br><br><br><i><b>NOTE:</b> All the key/value pairs that comprise a purchase map are strings!</i><br>
+<p>如果你正在激活多个产品，那么每个产品将触发其类型为 <tt>iap_ev_product</tt> 的自己的 <b>IAP 事件</b>，然后你可以在其中获得产品 ID。值得注意的是，Google Play store（适用于 Android）一次只能处理 20 个产品的详细信息，对于产品数量较多的应用程序，这可能会导致加载时间较长。<br><br><br><br><i><b>注意：</b>构成购买映射的所有键 / 值对都是字符串！</i><br>
 <br></p>
 
 <p><br>
@@ -106,31 +101,15 @@ purchases.</td>
 
 <h3 class="studio">例如：</h3>
 
-<p class="code">var purchaseList, purchase1;<br>
-purchaseList = ds_list_create();<br>
-purchase1 = ds_map_create();<br>
-ds_map_add(purchase1, "id", "LevelPack");<br>
-ds_map_add(purchase1, "title", "ExtraLevels1");<br>
-ds_map_add(purchase1, "description", "Level Pack 1 for Catch The
-Clown");<br>
-ds_map_add(purchase1, "price", "$1.00");<br>
-ds_list_add(purchaseList, purchase1);<br>
-iap_activate(purchaseList);<br>
-ds_map_destroy(purchase1);<br>
-ds_list_destroy(purchaseList);<br></p>
+<p class="code">var purchaseList, purchase1;<br>purchaseList = ds_list_create();<br>purchase1 = ds_map_create();<br>ds_map_add(purchase1, "id", "LevelPack");<br>ds_map_add(purchase1, "title", "ExtraLevels1");<br>ds_map_add(purchase1, "description", "Level Pack 1 for Catch The Clown");<br>ds_map_add(purchase1, "price", "$1.00");<br>ds_list_add(purchaseList, purchase1);<br>iap_activate(purchaseList);<br>ds_map_destroy(purchase1);<br>ds_list_destroy(purchaseList);<br></p>
 
-<p>The above code will create a <tt>ds_list</tt> and a
-<tt>ds_map</tt>, which is then populated by the information for
-making a purchase. This map is added to the list and then activated
-as an available purchase for the game. Finally the <tt>ds_list</tt>
-and <tt>ds_map</tt> are removed to prevent memory leaks as they are
-no longer needed.</p>
+<p>上面的代码将创建一个 <tt>ds_list</tt> 和一个 <tt>ds_map</tt>，然后由购买信息填充。此映射已添加到列表中，然后作为游戏的可用购买激活。最后删除 <tt>ds_list</tt> 和 <tt>ds_map</tt> 以防止内存泄漏，因为它们不再需要。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">In App Purchases</a></div>
+<div style="float:left">上一页:  <a href="index.html">应用内购</a></div>
 
 <div style="float:right">下一页: <a href=
 "iap_status.html">iap_status</a></div>

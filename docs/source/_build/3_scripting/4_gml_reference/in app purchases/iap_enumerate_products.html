@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">iap_enumerate_products</h1>
 
-<h2 class="studio">Populate a ds_list with all the currently
-available IAP products from the target store.</h2>
+<h2 class="studio">使用目标存储中当前可用的所有 IAP 产品填充 ds_list。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -48,20 +47,9 @@ available IAP products from the target store.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function retrieves the list of in app purchase product ids
-encountered. On most platforms this will simply return the set of
-product ids provided through <a href=
-"iap_activate.html"><tt>iap_activate()</tt></a>, but on platforms
-where the store provides the facility to retrieve a complete list
-of available products for a title then this set of product ids will
-include any and all available product ids for the game. The
-function requires that you supply a previously made <a href=
-"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>
-(which you should clear first if it has been used for other
-purposes) which will be populated by the function call. Regardless
-of platform, if the target store is not available then it will get
-the product IDs from those supplied when you activated purchases
-using <a href="iap_activate.html"><tt>iap_activate</tt></a>.<br>
+<p>此函数检索遇到的应用内购产品 ID 列表。在大多数平台上这只会返回通过 <a href=
+"iap_activate.html"><tt>iap_activate()</tt></a> 提供的一套产品 id，但在存储平台上提供了设施检索可用产品的完整列表标题那么这组产品 id 将包括任何和所有可用的产品 id。该函数要求你提供一个以前创建的<a href=
+"../data_structures/ds%20lists/index.html"><tt>ds_list</tt></a>（如果它被用于其他目的，你应该首先清除它），该列表将由函数调用填充。无论使用何种平台，如果目标商店不可用，那么当你使用 <a href="iap_activate.html"><tt>iap_activate</tt></a> 激活购买时，它将从提供的商店获得产品 id。<br>
 <br></p>
 
 <p><br>
@@ -71,15 +59,13 @@ using <a href="iap_activate.html"><tt>iap_activate</tt></a>.<br>
 
 <p class="code">var status = iap_status();<br>var iap_list = ds_list_create();<br>if status == iap_status_available<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;iap_enumerate_products(iap_list);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks the status of the target IAP store, and if
-it is available it will populate the created list with the
-available product IDs for future use.</p>
+<p>上面的代码检查目标 IAP 存储的状态，如果可用，它将用可用的产品 id 填充创建的列表，以备将来使用。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">In App Purchases</a></div>
+<div style="float:left">上一页:  <a href="index.html">应用内购</a></div>
 
 <div style="float:right">下一页: <a href=
 "iap_restore_all.html">iap_restore_all</a></div>

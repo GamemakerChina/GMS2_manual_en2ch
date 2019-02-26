@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">iap_restore_all</h1>
 
-<h2 class="studio">Restores all purchases for the game.</h2>
+<h2 class="studio">恢复游戏的所有购买。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -47,29 +47,16 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>Restores all purchases to their default status for the game and
-user. This would be applicable if (for example) the user has
-changed device or removed the title from their current device and
-has re-installed the title. This will trigger two <a href=
-"../../../2_interface/1_editors/events/async_events.html"><b>IAP
-Events</b></a>, with the first being of the type
-<tt>iap_ev_restore</tt>, and the second of the type
-<tt>iap_ev_purchase</tt>. For the restore event, the ds_map
-<tt>iap_data</tt> will have the following extra key which can then
-be checked to make sure that the products and purchases have been
-successfully restored:</p>
+<p>将所有购买恢复为游戏和用户的默认状态。如果（例如）用户更改了设备或从当前设备中删除了标题（title）并重新安装了标题（title），则这将适用。这将触发两个 <a href=
+"../../../2_interface/1_editors/events/async_events.html"><b>IAP 事件</b></a>，第一个类型为 <tt>iap_ev_restore</tt>，第二个类型为 <tt>iap_ev_purchase</tt>。对于还原事件，<tt>iap_data</tt> ds_map 将会有以下额外的键，可以检查这些键以确保产品和购买的物品已经成功还原：</p>
 
 <blockquote>
 <ul>
-<li>"<b>result</b>" - The result as a boolean value, where
-<tt>true</tt> indicates a successful restore and <tt>false</tt>
-some kind of error.</li>
+<li>"<b>result</b>" - 结果作为布尔值，其中 <tt>true</tt> 表示成功恢复，<tt>false</tt>某种错误。</li>
 </ul>
 </blockquote>
 
-<p>For the Purchase event, the <tt>iap_data</tt> map will contain
-the same information as that which is returned when you call
-<a href="iap_acquire.html"><tt>iap_acquire</tt></a>.</p>
+<p>对于购买事件（Purchase event），<tt>iap_data</tt> 映射将包含与调用 <a href="iap_acquire.html"><tt>iap_acquire</tt></a> 时返回的信息相同的信息。</p>
 
 <p><br>
 </p>
@@ -78,16 +65,13 @@ the same information as that which is returned when you call
 
 <p class="code">iap_restore_all();</p>
 
-<p>This would request that the target store restores all purchases
-for the game on the device running it, and it will trigger an
-<b>IAP Event</b> with the result of the call stored in the special
-<tt>iap_data</tt> ds_map.</p>
+<p>这将要求目标商店在运行它的设备上恢复游戏的所有购买，并且它将触发 <b>IAP 事件</b>，并将调用结果存储在特殊 <tt>iap_data</tt> ds_map 中。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">In App Purchases</a></div>
+<div style="float:left">上一页:  <a href="index.html">应用内购</a></div>
 
 <div style="float:right">下一页: <a href=
 "iap_acquire.html">iap_acquire</a></div>

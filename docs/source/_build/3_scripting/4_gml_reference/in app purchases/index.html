@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -35,51 +35,19 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p>In App Purchases are an important part of modern, cross platform
-games, permitting you to have "freemium" content where your game is
-free, but certain content is only available through a purchase from
-within the game itself. For example, your puzzle game is free, but
-the extra levels are going to cost the user 0.99$. This app model
-is very common and can be set up with a minimum amount of work from
-within <i>GameMaker Studio 2</i> , and this section of the manual
-has details of all the available functions that enable you to do
-just that, as well as some advice for setting up and information on
-how to test on the different platforms.</p>
+<p>在App中，购买是现代跨平台游戏的重要组成部分，允许你在游戏免费的情况下获得 “免费增值” 内容，但某些内容只能通过游戏内部的购买获得。例如，你的益智游戏是免费的，但额外的关卡将花费用户 0.99$。此应用程序模型非常常见，可以使用 <i>GameMaker Studio 2</i> 中的最少工作量进行设置，本手册的这一部分详细介绍了所有可用的函数，以及有关如何在不同平台上进行测试的设置和信息的一些建议。</p>
 
-<p>Setting up in app purchases within your game is relatively
-simple with <i>GameMaker Studio 2</i>, but it still requires some
-amount of knowledge of the target platform setup as well as careful
-planning before starting to create your game, so it is not
-recommended that you use this functionality if you are just
-starting with <i>GameMaker Studio 2</i> or if you are not sure how
-the different stores for each target platform are set up.</p>
+<p>使用 <i>GameMaker Studio 2</i> 在游戏中设置应用程序内购相对简单，但在开始创建游戏之前，它仍然需要一些目标平台设置知识以及仔细规划，因此如果你刚刚开始使用 <i>GameMaker Studio 2</i>，或者你不确定如何设置每个目标平台的不同商店，则不建议你使用此函数。</p>
 
-<p>Before doing anything else you will have to make sure that you
-have set up the purchase details on the target store for each
-platform that you wish to support, taking careful note of each of
-the <b>Product IDs</b> that you define, as these ID strings are how
-<i>GameMaker Studio 2</i> identifies each product and purchase.
-Most of the stores will require you to have uploaded a base file
-too, even if the game doesn't have in-app purchases included
-yet.</p>
+<p>在做任何其他事情之前，你必须确保已在目标商店中为你希望支持的每个平台设置购买详细信息，并仔细记下你定义的每个 <b>产品 ID（Product IDs） </b> ，因为这些 ID 字符串是 <i>GameMaker Studio 2</i> 识别每个产品和购买的方式。即使游戏尚未包含应用内购买，大多数商店也会要求你上传基本文件。</p>
 
-<div class="note"><b>注意</b>： <i>GameMaker Studio 2</i> currently permits up to 128 distinct purchase options per title, except if you are using the Amazon Store (for Android) where it is limited to 100.</div>
+<div class="note"><b>注意</b>：<i> GameMaker Studio 2</i> 目前允许每个标题最多 128 个不同的购买选项，除非你使用的是亚马逊商店（适用于Android），它限制购买选项数量为 100。</div>
 
 <p><br>
+下面列出了集成在 <i>GameMaker Studio 2</i> 中的函数，以便在不同的目标平台上进行应用程序购买（这些函数可以从游戏内部购买额外的积分、物品、等级和其他内容）。其中许多函数将触发 <a href=
+"../../../2_interface/1_editors/events/async_events.html">IAP 异步事件</a>，其中包含一个名为 <tt>iap_data</tt> 的特殊 <tt>ds_map</tt>，它将具有一个初始键 “type”，可以查询它以获取已触发的 IAP 事件的类型。一旦你知道它是哪种类型的 IAP 事件，你就可以从映射（map）中获取与事件相关的更多数据。</p>
 
-Below are listed the functions that are integrated in <i>GameMaker
-Studio 2</i> to enable in app purchases on the different target
-platforms (these give the ability to buy extra credits, items,
-levels and other things from within the game itself). Many of these
-functions will trigger an <a href=
-"../../../2_interface/1_editors/events/async_events.html">IAP
-Asynchronous Event</a>, which contains a special <tt>ds_map</tt>
-called <tt>iap_data</tt> which will have an initial key "type" that
-can be queried to get the type of IAP event that has been
-triggered. Once you know which type of IAP event it is, you can
-then get further data from the map relevant to the event.</p>
-
-<p>The available in app purchase functions are:</p>
+<p>应用内购函数包括：</p>
 
 <ul>
 <li><a href="iap_activate.html">iap_activate</a><br>
@@ -110,14 +78,7 @@ then get further data from the map relevant to the event.</p>
 </ul>
 <br>
 
-<p>You should also be aware that <i>GameMaker Studio 2</i> does
-<i><b>not</b></i> persist active purchase state across multiple
-plays of the game (and thus <tt>iap_is_purchased()</tt> is
-unreliable if a store has not successfully loaded). This means that
-you will have to store this information yourself and retrieve it
-again on each start-up of your game. You can use the special
-"secure" save and load functions provided for ds_maps for this
-purpose:</p>
+<p>你还应该知道 <i>GameMaker Studio 2</i> <i><b>不会</b></i> 在多次游戏中保持活动购买状态（因此如果商店没有成功加载，<tt>iap_is_purchase()</tt> 是不可靠的）。这意味着你必须自己存储此信息，并在每次启动游戏时再次检索。为此，你可以使用为ds_maps提供的特殊 “安全” 保存和加载函数：</p>
 
 <ul>
 <li><a href=
@@ -132,49 +93,33 @@ purpose:</p>
 </ul>
 <br>
 
-<p><i>GameMaker Studio 2</i> does not persist purchase state across
-multiple plays of the game because it is not appropriate for us to
-provide a secure method of verifying whether or not an individual
-purchase is valid and therefore any automatically stored purchase
-state would be presumptuous. On most platforms "receipt" data will
-be available through <a href=
-"iap_purchase_details.html"><tt>iap_purchase_details()</tt></a>
-which users can use to verify a purchase, although Google Play uses
-"token" data instead.</p>
+<p><i>GameMaker Studio 2</i> 不会在多次游戏中保持购买状态，因为我们不适合提供一种安全的方法来验证单个购买是否有效，因此任何自动存储的购买状态都是冒昧的。在大多数平台上，“收据” 数据将通过 <a href=
+"iap_purchase_details.html"><tt>iap_purchase_details()</tt></a> 提供，用户可以使用它来验证购买，尽管谷歌 Play 使用的是 “token” 数据。</p>
 
-<p><i>GameMaker Studio 2</i> requires the <b>Google Play Public
-Key</b> for simple local purchase verification and you may check
-that the "payload" data returned with a purchase result matches
-that used with the matching call to <tt>iap_acquire()</tt> (see the
-section on <b>Packaging</b> in the <a href=
-"../../../2_interface/3_settings/game_options/options_android.html">
-Android Game Options</a> for more information on the Google Public
-Key) .</p>
+<p><i>GameMaker Studio 2</i> 需要 <b>Google Play 公共秘钥</b>进行简单的本地购买验证，你可以检查购买结果返回的 “payload” 数据是否与调用 <tt> iap_acquire()</tt> 获取的数据相匹配（有关Google 公共秘钥的更多信息，请参阅 <a href=
+"../../../2_interface/3_settings/game_options/options_android.html">Android 游戏选项</a> 中的 <b>打包（Packaging）</b> 部分）。</p>
 
-<p>In-app purchases are available for Android, Amazon Fire, iOS and
-macOS targets, and there are articles available on the YoYo Games
-helpdesk (and a tutorial for Amazon Fire) to help you get each one
-set up correctly:</p>
+<p>应用内购可用于 Android、Amazon Fire、iOS 和 macOS 目标平台，YoYo Games 帮助台（以及 Amazon Fire 教程）上有文章可帮助你正确设置每个设置：</p>
 
 <ul>
 <li><a href=
 "https://help.yoyogames.com/hc/en-us/articles/360001971951" target=
-"_blank">Android: Setting Up IAPs</a>
+"_blank">Android: Setting Up IAPs（Android：设置 IAP）</a>
 </li>
 
 <li><a href=
 "https://help.yoyogames.com/hc/en-us/articles/360002368731" target=
-"_blank">iOS: Setting Up IAPs</a>
+"_blank">iOS: Setting Up IAPs（iOS：设置 IAP）</a>
 </li>
 
 <li><a href=
 "https://help.yoyogames.com/hc/en-us/articles/360002085712" target=
-"_blank">macOS: Setting Up IAPs</a>
+"_blank">macOS: Setting Up IAPs（macOS：设置 IAP）</a>
 </li>
 
 <li><a href=
 "https://marketplace.yoyogames.com/assets/5884/amazon-fire-and-gamecircle"
-target="_blank">Amazon Fire And GameCircle Tutorial</a>
+target="_blank">Amazon Fire And GameCircle Tutorial（Amazon Fire 和 GameCircle 教程）</a>
 </li>
 </ul>
 
@@ -185,10 +130,10 @@ target="_blank">Amazon Fire And GameCircle Tutorial</a>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="../index.html"><i>GameMaker Studio 2</i>语言参考</a></div>
+<div style="float:left">上一页：<a href="../index.html"><i>GameMaker Studio 2</i> 语言参考</a></div>
 
 <div style="float:right">下一页: <a href=
-"../asynchronous%20functions/index.html">Asynchronous Functions</a></div>
+"../asynchronous%20functions/index.html">异步函数</a></div>
 </div>
 </div>
 

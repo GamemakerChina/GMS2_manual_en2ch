@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">iap_acquire</h1>
 
-<h2 class="studio">This requests acquisition of the given
-product.</h2>
+<h2 class="studio">请求获得指定的产品。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,13 +49,12 @@ product.</h2>
 
 <tr>
 <td>purchase_id</td>
-<td>The product ID string for the purchase.</td>
+<td>购买的产品 ID 字符串。</td>
 </tr>
 
 <tr class="alt">
 <td>payload</td>
-<td>This is a string that can be used for purchase verification on
-Google Play (use an empty string, "", on all other platforms).</td>
+<td>这是一个字符串，可用于在 Google Play 上进行购买验证（在所有其他平台上使用空字符串 “”）。</td>
 </tr>
 </table>
 </div>
@@ -71,35 +69,16 @@ Google Play (use an empty string, "", on all other platforms).</td>
 
 <h3 class="studio">描述</h3>
 
-<p>This function is the one that you use to acquire a purchase
-through the target store for the device running your game. This
-product ID string is that which you specify when activating the IAP
-using <a href="iap_activate.html"><tt>iap_activate</tt></a>, and
-should be the same as that which you used to identify the product
-on the target store. This function will return an value as it's
-"index" so that it can be identified when the purchase data comes
-through and calling the function will trigger an <a href=
-"../../../2_interface/1_editors/events/async_events.html"><b>IAP
-Event</b></a> of the "type" <tt><tt>iap_ev_purchase</tt></tt>,
-which will contain the following additional key:</p>
+<p>此函数用于在运行你的游戏的平台的目标商店发出购买请求。此产品 ID 字符串是你在使用 <a href="iap_activate.html"><tt>iap_activate</tt></a> 激活 IAP 时指定的字符串，应与用于在目标存储上标识产品的字符串相同。此函数将返回一个值作为 “index（索引）”，以便在购买数据到达时识别它并调用该函数将触发的 <tt> <tt> iap_ev_purchase</tt></tt> “type（类型）” 的 <a href=
+"../../../2_interface/1_editors/events/async_events.html"><b>IAP 事件</b></a> ，其中包含以下附加键：</p>
 
 <blockquote>
 <ul>
-<li>"<b>index</b>" - The purchase ID for the activated
-product.</li>
+<li>"<b>index</b>" - 已激活产品的购买 ID。</li>
 </ul>
 </blockquote>
 
-<p>This purchase ID can then be used to check which purchase has
-triggered the event (comparing it to the returned index value that
-you stored), so you can deal with it accordingly. If you are
-developing for Google Play (on the Android target), then you can
-also set the "Payload" string. This is used by Google to verify the
-product and is sent along with the purchase request to Google Play.
-When a purchase is successfully completed the game will receive the
-payload used as part of the purchase information. By generating a
-payload with each purchase you can therefore provide a simple form
-of purchase verification.<br>
+<p>然后，可以使用此购买 ID 来检查哪个购买触发了事件（将其与你存储的返回索引值进行比较），因此你可以相应地处理它。如果你正在开发 Google Play（在 Android 目标平台上），那么你还可以设置 “Payload” 字符串。Google 会使用此函数验证产品，并将其与购买请求一起发送至 Google Play。购买成功完成后，游戏将收到用作购买信息一部分的 payload。通过每次购买生成 payload，你可以提供简单的购买验证形式。<br>
 <br></p>
 
 <p><br>
@@ -109,14 +88,13 @@ of purchase verification.<br>
 
 <p class="code">if mouse_check_button_pressed(mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;iap_acquire("noads", "")<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will send a purchase request when the mouse
-button is pressed.</p>
+<p>上面的代码将在按下鼠标按钮时发送购买请求。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">In App Purchases</a></div>
+<div style="float:left">上一页:  <a href="index.html">应用内购</a></div>
 
 <div style="float:right">下一页: <a href=
 "iap_consume.html">iap_consume</a></div>

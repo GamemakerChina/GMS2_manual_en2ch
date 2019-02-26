@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">iap_consume</h1>
 
-<h2 class="studio">Clears the purchase status of unmanaged
-purchases.</h2>
+<h2 class="studio">清除非托管购买的购买状态。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,7 +49,7 @@ purchases.</h2>
 
 <tr>
 <td>purchase_id</td>
-<td>The product ID string for the purchase.</td>
+<td>购买的产品 ID 字符串。</td>
 </tr>
 </table>
 </div>
@@ -65,24 +64,16 @@ purchases.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used for clearing the purchase status of
-any unmanaged (consumable) purchases. The "purchase_id" is the
-product ID string which you specified when activating the IAP using
-<a href="iap_activate.html"><tt>iap_activate</tt></a>, and should
-be the same as that which you used to identify the product on the
-target store. This function will trigger an <a href=
-"../../../2_interface/1_editors/events/async_events.html"><b>IAP
-Event</b></a> of the "type" <tt><tt>iap_ev_consume</tt></tt>, which
-will contain the following additional keys:</p>
+<p>此函数可用于清除任何非托管（消耗品）购买的购买状态。“purchase_id” 是你在使用 <a href="iap_activate.html"><tt>iap_activate</tt></a> 激活 IAP 时指定的产品 ID 字符串，应与你在目标商店上识别产品时使用的字符串相同。此函数将触发 “type（类型）” <tt><tt>iap_ev_consume</tt></tt> 的 <a href=
+"../../../2_interface/1_editors/events/async_events.html"><b>IAP 事件</b></a>，其中包含以下附加键：</p>
 
 <blockquote>
 <ul>
-<li>"<b>product</b>" - The product ID for the consumed
-product.</li>
+<li>"<b>product</b>" - 消耗品的产品 ID。</li>
 </ul>
 </blockquote>
 
-<p>This product ID can then be used to check which purchase has triggered the event, and you can deal with it accordingly.<br><br><i><b>WARNING:</b> You cannot purchase a consumable product multiple times in a row without consumption - you <b>must</b> perform a consume operation between subsequent purchases.</i><br>
+<p>然后，此产品 ID 可用于检查哪个购买已触发事件，你可以相应地处理它。<br><br><i><b>警告：</b>你不能连续多次购买消费品而不消费 - 你 <b>必须</b> 在后续购买之间执行消费操作。</i> <br>
 <br></p>
 
 <p><br>
@@ -92,14 +83,13 @@ product.</li>
 
 <p class="code">if mouse_check_button_pressed(mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;iap_consume("noads")<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will clear the purchase status when the mouse
-button is pressed.</p>
+<p>按下鼠标按钮时，上面的代码将清除购买状态。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">In App Purchases</a></div>
+<div style="float:left">上一页:  <a href="index.html">应用内购</a></div>
 
 <div style="float:right">下一页: <a href=
 "iap_product_details.html">iap_product_details</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">iap_product_details</h1>
 
-<h2 class="studio">Add details of a single product to a
-ds_map.</h2>
+<h2 class="studio">将单个产品的详细信息添加到 ds_map。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,12 +49,12 @@ ds_map.</h2>
 
 <tr>
 <td>purchase_id</td>
-<td>The product ID string for the purchase.</td>
+<td>购买的产品 ID 字符串。</td>
 </tr>
 
 <tr class="alt">
 <td>ds_map</td>
-<td>The ds_map that will store the product information.</td>
+<td>将存储产品信息的 ds_map。</td>
 </tr>
 </table>
 </div>
@@ -70,42 +69,30 @@ ds_map.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can populate a previously created
-<a href="../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>
-with a number of key/value pairs that describe the given purchase.
-The following data is returned within the map:</p>
+<p>使用此函数，你可以使用描述给定购买的多个键 / 值对填充先前创建的 <a href="../data_structures/ds%20maps/index.html"><tt>ds_map</tt></a>。映射中返回以下数据：</p>
 
 <blockquote>
 <ul>
-<li>"<b>id</b>" - The product ID string.<br>
+<li>"<b>id</b>" - 产品 ID 字符串。<br>
 <br></li>
 
-<li>"<b>title</b>" - The title of the product.<br>
+<li>"<b>title</b>" - 产品的标题。<br>
 <br></li>
 
-<li>"<b>description</b>" - The description of the product.<br>
+<li>"<b>description</b>" - 产品的描述<br>
 <br></li>
 
-<li>"<b>price</b>" - The price of the product, where available (not
-all stores support this).<br>
+<li>"<b>price</b>" - 产品的价格，如果可用（并非所有商店都支持这个）。<br>
 <br></li>
 
-<li>"<b>type</b>" - The type of product, which will be either
-"Consumable" or "Durable", where available (not all stores support
-this).<br>
+<li>"<b>type</b>" - 产品类型，如果可用，将是 “Consumable（消耗品）” 或 “Durable（耐用品）”（并非所有商店都支持此产品）。<br>
 <br></li>
 
-<li>"<b>verified</b>" - Will be either <tt>true</tt> or
-<tt>false</tt> (ie: real numbers 0 or 1) depending on whether or
-not your game has received details of this product from the store
-and thus believes this product to be available for purchase.</li>
+<li>"<b>verified</b>" - 将是 <tt>true</tt> 或 <tt>false</tt>（即：实数0 或 1），具体取决于你的游戏是否已从商店收到此产品的详细信息，因此相信此产品可以购买。</li>
 </ul>
 </blockquote>
 
-<p><i><b>NOTE:</b> The <tt>ds_map</tt> used is <b>not</b> created
-by the function, meaning that you must create it previously and
-remove it again from memory when not in use using the appropriate
-function.</i><br>
+<p><i><b>注意：</b>使用的 <tt>ds_map</tt>  <b>并不是</b> iap_product_details 函数创建的，这意味着你必须使用适当的函数先创建它并在不使用时再从内存中删除它。</i><br>
 <br>
 </p>
 
@@ -114,25 +101,15 @@ function.</i><br>
 
 <h3 class="studio">例如：</h3>
 
-<p class="code">var p_map = ds_map_create();<br>
-iap_product_details(ds_map_find_value(iap_data, "index"),
-p_map);<br>
-p_title = " + string(ds_map_find_value(p_map, "title")));<br>
-p_description = " + string(ds_map_find_value(p_map,
-"description")));<br>
-ds_map_destroy(p_map);<br></p>
+<p class="code">var p_map = ds_map_create();<br>iap_product_details(ds_map_find_value(iap_data, "index"), p_map);<br>p_title = " + string(ds_map_find_value(p_map, "title")));<br>p_description = " + string(ds_map_find_value(p_map, "description")));<br>ds_map_destroy(p_map);<br></p>
 
-<p>The above code will create a <tt>ds_map</tt> and then populate
-it with the product details for the product taken from the special
-<tt>iap_data</tt> ds_map which is created exclusively in the <b>IAP
-Event</b>. The "title" and "description" are then added to
-variables so that they can later be drawn on the screen.</p>
+<p>上面的代码将创建一个 <tt>ds_map</tt>，然后使用从 <b>IAP 事件</b> 中专门创建的特殊 <tt>iap_data</tt> ds_map 获取的产品的产品详细信息填充它。然后将 “title（标题）” 和 “description（描述）” 添加到变量中，以便稍后可以在屏幕上绘制它们。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">In App Purchases</a></div>
+<div style="float:left">上一页:  <a href="index.html">应用内购</a></div>
 
 <div style="float:right">下一页: <a href=
 "iap_purchase_details.html">iap_purchase_details</a></div>
