@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,16 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to get the game speed as either the
-number of game frames to run per second or as the number of micro
-seconds per game frame. Note that this is <b>not</b> the actual
-running speed FPS value (for that use the <a href=
-"../debugging/fps_real.html"><tt>fps_real</tt></a> variable) but
-rather the number of game frames (FPS) that the game will attempt
-to maintain each second, or the length of each game frame in
-microseconds that the game will try to maintain (MPF). When you use
-this function you need to give one of the following constants which
-will determine the type of the return value:</p>
+<p>此函数可用于将游戏速度作为每秒运行的游戏帧数或每个游戏帧的微秒数。请注意，这是 <b>不是</b> 实际运行速度 FPS 值（对于实际 FPS 请使用 <a href=
+"../debugging/fps_real.html"><tt>fps_real</tt></a> 变量）而是游戏每秒将尝试维持的游戏帧数（FPS），或游戏将试图维持的每个游戏帧的长度（MPF）。使用此函数时，需要提供以下常量之一，以确定返回值的类型：</p>
 
 <div class="compat">
 <table>
@@ -58,21 +50,18 @@ will determine the type of the return value:</p>
 
 <tr>
 <td>gamespeed_fps</td>
-<td>Gets the game speed using frames per second.</td>
+<td>使用帧数 / 秒获取游戏速度。</td>
 </tr>
 
 <tr class="alt">
 <td>gamespeed_microseconds</td>
-<td>Gets the game speed using microseconds per frame.</td>
+<td>使用微秒 / 帧获取游戏速度。</td>
 </tr>
 </table>
 </div>
 
 <p><br>
-
-So, for example, if the game speed is set at 30 in the Game Options
-and you use the FPS type, then the function will return 30, but if
-you use the MPF then the function will return 33333.</p>
+因此，例如，如果游戏选项中的游戏速度设置为 30 并且你使用 FPS 类型，则该函数将返回 30，但如果你使用 MPF，则该函数将返回 33333。</p>
 </blockquote>
 
 <p><br>
@@ -91,8 +80,7 @@ you use the MPF then the function will return 33333.</p>
 
 <tr>
 <td>type</td>
-<td>The type of method used to get the game speed (see the
-constants above).</td>
+<td>用于获得游戏速度的方法类型（参见上面的常量）。</td>
 </tr>
 </table>
 </blockquote>
@@ -100,23 +88,19 @@ constants above).</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">if game_get_speed(gamespeed_fps) != 60<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;game_set_speed(60, gamespeed_fps);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if game_get_speed(gamespeed_fps) != 60<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;game_set_speed(60, gamespeed_fps);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks to see if the game is running with a game
-speed of 60 FPS and if not it is set to 60 FPS.</p>
+<p>上面的代码检查游戏是否以 60 FPS 的游戏速度运行，如果不是，则设置为 60 FPS。</p>
 </blockquote>
 
 <p><br>
@@ -127,7 +111,7 @@ speed of 60 FPS and if not it is set to 60 FPS.</p>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Miscellaneous</a></div>
+"index.html">杂项</a></div>
 
 <div style="float:right">下一页: <a href=
 "game_id.html">game_id</a></div>

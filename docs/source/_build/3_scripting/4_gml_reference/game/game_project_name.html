@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -46,16 +46,9 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This <b>read only</b> variable returns the display name of your
-game for the target platform in a "save-friendly" format for the
-target platform. If the display name contains any characters that
-are not permitted for a file name, they will be replaced
-automatically with "_". The display name can be set in the <a href=
-"../../../2_interface/3_settings/game_options/index.html">Game
-Options</a>. Note that since there are no restrictions on file
-names for HTML5, this string will probably be the same as that
-returned by <a href=
-"game_display_name.html"><tt>game_display_name</tt></a>.<br>
+<p>此 <b>只读</b> 变量以目标平台的 “保存友好（save-friendly）” 格式返回目标平台的游戏显示名称。如果显示名称包含任何不允许用于文件名的字符，则它们将自动替换为 “_”。可以在 <a href=
+"../../../2_interface/3_settings/game_options/index.html">游戏选项</a> 中设置显示名称。请注意，由于 HTML5 的文件名没有限制，因此该字符串可能与 <a href=
+"game_display_name.html"><tt>game_display_name</tt></a> 返回的字符串相同。<br>
 <br></p>
 
 <p><br>
@@ -64,13 +57,9 @@ returned by <a href=
 <h3 class="studio"><b>例如：</b>
 </h3>
 
-<p class="code">var file = game_project_name + ".ini";<br>
-ini_open(file);<br>
-ini_write_real("Scores", "Highscore", score);<br>
-ini_close();<br></p>
+<p class="code">var file = game_project_name + ".ini";<br>ini_open(file);<br>ini_write_real("Scores", "Highscore", score);<br>ini_close();<br></p>
 
-<p>The above code gets the project name and uses this to open (or
-create) an ini file which is then written to.<br>
+<p>上面的代码获取项目名称并使用它来打开（或创建）随后写入的 ini 文件。<br>
 <br></p>
 
 <p><br>
@@ -81,7 +70,7 @@ create) an ini file which is then written to.<br>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Miscellaneous</a></div>
+"index.html">杂项</a></div>
 
 <div style="float:right">下一页: <a href=
 "game_end.html">game_end</a></div>

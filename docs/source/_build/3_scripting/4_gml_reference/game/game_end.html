@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,44 +49,33 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can end the game (and the <a href=
-"../../../2_interface/1_editors/events/index.html">Game End
-Event</a> will be triggered). This will not happen instantaneously,
-but rather at the end of the current step, so any code you have in
-the same step after this function has been called will still run.
-Please note that this function has the following restrictions:</p>
+<p>使用此函数，你可以结束游戏（并且将触发 <a href=
+"../../../2_interface/1_editors/events/index.html">游戏结束事件</a>）。这不会立即发生，而是在当前步结束时发生，因此调用此函数后在同一步中的任何代码仍将运行。请注意，此函数具有以下限制：</p>
 
 <blockquote>
 <ul>
-<li>On Android (and Amazon Fire) devices, calling
-<tt>game_end()</tt> will push the app into the background, but it
-will <i>not</i> close the app. This must be done by the user.</li>
+<li>在 Android（和 Amazon Fire）设备上，调用 <tt>game_end()</tt> 会将应用程序推送到后台，但 <i>不</i> 关闭应用程序。这必须由用户完成。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>On iOS it will do nothing and silently fail.</li>
+<li>在 iOS 上，它什么都不做，然后默默地失败。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>On UWP, XBoxOne, PS4 and Nintendo Switch it will crash the game
-and so <i>must not be used</i>.</li>
+<li>在 UWP，XBoxOne，PS4 和 Nintendo Switch 上，它会使游戏崩溃，因此 <i>不得使用</i>。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>On HTML5 it will end the game, but leave the user staring at a
-blank draw canvas on the web page, and as such it isn't recommended
-that it be used on that target platform.</li>
+<li>在 HTML5 上，它将结束游戏，但让用户盯着网页上的空白绘制画布，因此不建议在目标平台上使用它。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>On Windows, Linux and Mac the function simply ends the game and
-closes the game window ( a <a href=
-"../../2_interface/1_editors/events/index.html">Game End Event</a>
-will be triggered).</li>
+<li>在 Windows，Linux 和 Mac 上，该函数只是结束游戏并关闭游戏窗口（将触发 <a href=
+"../../2_interface/1_editors/events/index.html">游戏结束事件</a>）。</li>
 </ul>
 </blockquote>
 
@@ -99,8 +88,7 @@ will be triggered).</li>
 <p class="code">if keyboard_check_pressed(vk_escape)
 game_end();</p>
 
-<p>This would end the game if the player presses the "escape"
-key.</p>
+<p>如果玩家按下 “Escape（退格）” 键，这将结束游戏。</p>
 
 <p><br>
 </p>
@@ -110,7 +98,7 @@ key.</p>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Miscellaneous</a></div>
+"index.html">杂项</a></div>
 
 <div style="float:right">下一页: <a href=
 "game_restart.html">game_restart</a></div>

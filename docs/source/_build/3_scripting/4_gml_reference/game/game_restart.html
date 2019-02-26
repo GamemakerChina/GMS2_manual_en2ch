@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -46,22 +46,9 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can restart the game. This is essentially
-the same as running the game for the first time and so the <a href=
-"../../../2_interface/1_editors/events/index.html">Game Start
-Event</a> will be triggered, <i>as well as</i> the <a href=
-"../../../2_interface/1_editors/events/index.html">Game End
-Event</a>. However it should be noted that global variables will
-<i>not</i> be re-initialised unless explicitly coded as such - for
-example, the built-in global variable <tt>score</tt> will not start
-at zero after a game restart if it has been modified in the game
-already. This is also the case for GPU state (so if you have set
-the draw colour or alpha, for example, it will remain at the
-changed value) and for the game speed. Also note that if any
-resource from the resource tree has been changed at run time within
-the game - for example if you change the origin for a sprite
-resource or shift the position of a path resource - then these will
-<i>not</i> be reset either.<br>
+<p>使用此函数，你可以重新开始游戏。这与第一次运行游戏基本相同，因此 <a href=
+"../../../2_interface/1_editors/events/index.html">游戏开始事件</a> <i>以及</i> <a href=
+"../../../2_interface/1_editors/events/index.html">游戏结束事件</a> 将被触发。然而，应该注意的是，除非明确地编码，否则全局变量将 <i>不会</i> 重新初始化 - 例如，内置全局变量 <tt>score</tt> 将不会在游戏已经开始并且修改了该变量的情况下在重新启动游戏后从零开始。GPU 状态的情况（因此，如果你设置了绘制颜色或 alpha 等，它将保持更改的值）和游戏速度也是如此。另请注意，如果资源树中的任何资源在游戏运行时已被更改 - 例如，如果更改精灵资源的原点或移动路径资源的位置 - 那么这些更改 <i>不会</i> 重置。<br>
 <br></p>
 
 <p><br>
@@ -73,8 +60,7 @@ resource or shift the position of a path resource - then these will
 <p class="code">if keyboard_check_pressed(ord("R"))
 game_restart();</p>
 
-<p>This would restart the game when the player presses the "R"
-key.</p>
+<p>当玩家按下 “R” 键时，将重新开始游戏。</p>
 
 <p><br>
 </p>
@@ -84,7 +70,7 @@ key.</p>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Miscellaneous</a></div>
+"index.html">杂项</a></div>
 
 <div style="float:right">下一页: <a href=
 "game_load.html">game_load</a></div>

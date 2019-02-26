@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,10 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to set the game speed. You can set
-this in one of two ways - as either game frames per second (FPS) or
-as microseconds per game frame (MPF) - using one of the following
-two constants:</p>
+<p>此函数可用于设置游戏速度。以两种方式之一设置 - 每秒游戏帧数（FPS）或每游戏帧微秒数（MPF）- 你可以使用以下两种方式之一：</p>
 
 <div class="compat">
 <table>
@@ -52,25 +49,22 @@ two constants:</p>
 
 <tr>
 <td>gamespeed_fps</td>
-<td>Sets the game speed using frames per second.</td>
+<td>使用帧数 / 秒设置游戏速度。</td>
 </tr>
 
 <tr class="alt">
 <td>gamespeed_microseconds</td>
-<td>Sets the game speed using microseconds per frame.</td>
+<td>使用微秒 / 帧设置游戏速度。</td>
 </tr>
 </table>
 </div>
 
 <p><br>
-
-So, for example, a game speed of 30 frames per second would be
-33333 microseconds per game game frame, which would then be
-expressed by this function as either:</p>
+因此，例如，30 帧 / 秒的游戏速度与 33333 微秒 / 帧的游戏速度相同，用函数表示为：</p>
 
 <p class="code">game_set_speed(30, gamespeed_fps);</p>
 
-<p>要么：</p>
+<p>或：</p>
 
 <p class="code">game_set_speed(33333, gamespeed_microseconds);</p>
 </blockquote>
@@ -91,13 +85,12 @@ expressed by this function as either:</p>
 
 <tr>
 <td>speed</td>
-<td>The new game speed (as either FPS or MPF).</td>
+<td>新的游戏速度（FPS 或 MPF）。</td>
 </tr>
 
 <tr class="alt">
 <td>type</td>
-<td>The type of method used to set the game speed (see the
-constants above).</td>
+<td>用于设置游戏速度的方法类型（参见上面的常量）。</td>
 </tr>
 </table>
 </blockquote>
@@ -105,7 +98,7 @@ constants above).</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
 <p class="code">N/A（无返回值）</p>
 
@@ -117,8 +110,7 @@ constants above).</td>
 <p class="code">if os_browser == browser_not_a_browser<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;game_set_speed(60, gamespeed_fps);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;game_set_speed(30, gamespeed_fps);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks to see if the game is running in a browser
-and sets the game speed accordingly as an FPS value.</p>
+<p>上面的代码检查游戏是否在浏览器中运行，并将游戏速度相应地设置为 FPS 值。</p>
 </blockquote>
 
 <p><br>
@@ -129,7 +121,7 @@ and sets the game speed accordingly as an FPS value.</p>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Miscellaneous</a></div>
+"index.html">杂项</a></div>
 
 <div style="float:right">下一页: <a href=
 "game_get_speed.html">game_get_speed</a></div>

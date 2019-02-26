@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>filename</td>
-<td>The name of the file to save the game to.</td>
+<td>要保存游戏的文件的名称。</td>
 </tr>
 </table>
 </div>
@@ -63,7 +63,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can do a basic save of the game to a given file.<br><br><i><b>NOTE:</b> This function is</i> very limited and it is designed for the beginner to get a save system up and running quickly, but more advanced users may prefer to code their own system using the <a href="../file%20handling/index.html">File</a> functions, due to the fact that the game will <i>not</i> save any of the dynamic resources like data structures, surfaces, added backgrounds and sprites etc..<br>
+<p>使用此函数，你可以将游戏最基本地保存到给定文件。<br><br><i><b>注意：</b></i>此函数非常有限，专为初学者设计，可以快速启动并运行保存系统，但更高级的用户可能更喜欢在自己的系统使用 <a href="../file%20handling/index.html">文件</a> 函数进行编码，因为游戏将 <i>不</i> 保存任何动态资源，如数据结构、曲面、添加的背景和精灵等。<br>
 <br></p>
 
 <p><br>
@@ -74,9 +74,7 @@ if (window.name != "content")
 
 <p class="code">if keyboard_check_pressed(ord("S"))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;global.Saved = true;<br>&nbsp;&nbsp;&nbsp;game_save("Save.dat");<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will set a global variable to <tt>true</tt> and
-then saves the game to the file "Save.dat" when the key "S" is
-pressed.</p>
+<p>上面的代码将全局变量设置为 <tt>true</tt>，然后在按下键 “S” 时将游戏保存到文件 “Save.dat”。</p>
 
 <p><br>
 </p>
@@ -86,7 +84,7 @@ pressed.</p>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Miscellaneous</a></div>
+"index.html">杂项</a></div>
 
 <div style="float:right">下一页: <a href=
 "game_save_buffer.html">game_save_buffer</a></div>

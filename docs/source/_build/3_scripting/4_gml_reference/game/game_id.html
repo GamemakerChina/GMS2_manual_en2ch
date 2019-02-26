@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -46,12 +46,8 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This <b>read only</b> variable returns the unique identifier for
-the game you have created. You can use this if you need a unique
-file name, or anything else that needs something to identify your
-game only. This can be set in the <a href=
-"../../../2_interface/3_settings/game_options/index.html">Game
-Options</a>.<br>
+<p>此 <b>只读</b> 变量返回你创建的游戏的唯一标识符。如果你需要唯一的文件名，或者只需要识别你的游戏的任何其他内容，你可以使用此选项。这可以在 <a href=
+"../../../2_interface/3_settings/game_options/index.html">游戏选项</a> 中设置。<br>
 <br></p>
 
 <p><br>
@@ -62,10 +58,7 @@ Options</a>.<br>
 
 <p class="code">ini_open("Score.ini");<br>ini_write_real("Scores","0",score + game_id);<br>ini_close();<br></p>
 
-<p>The above code performs a very basic encryption on the score by
-adding the game_id to it before saving. On reading it back into the
-game you would deduct the game_id to get the correct value
-again.</p>
+<p>上面的代码通过在保存之前将 game_id 与分数相加来对分数执行最基本的加密。在回到游戏中读取它时，你将用读取到的值减去 game_id 以再次获得正确的值。</p>
 
 <p><br>
 </p>
@@ -75,7 +68,7 @@ again.</p>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Miscellaneous</a></div>
+"index.html">杂项</a></div>
 
 <div style="float:right">下一页: <a href=
 "game_save_id.html">game_save_id</a></div>
