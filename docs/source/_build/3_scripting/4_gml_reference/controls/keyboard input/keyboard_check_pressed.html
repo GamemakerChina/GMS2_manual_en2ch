@@ -39,16 +39,9 @@ if (window.name != "content")
 </h3>
 
 <blockquote>
-<p>With this function you can check to see if a key has been
-pressed or not. Unlike the <a href=
-"keyboard_check.html"><tt>keyboard_check</tt></a> function, this
-function will only run once for every time the key is pressed down,
-so for it to trigger again, the key must be first released and then
-pressed again. The function will take a keycode value as returned
-by the function <a href="ord.html"><tt>ord()</tt></a> (only
-<i>capital</i> letters from A-Z or numbers from 0-9), or any of the
-<tt>vk_*</tt> constants listed on the main <a href=
-"index.html">Keyboard Input</a> page.</p>
+<p>使用此函数，你可以检查是否按下了某个键。与 <a href=
+"keyboard_check.html"><tt>keyboard_check</tt></a> 函数不同，此函数仅在每按一次键时运行一次，因此要再次触发，必须首先释放该键然后再次按下 。该函数将获取函数 <a href="ord.html"><tt>ord()</tt></a>（仅来自 A - Z 的 <i>大写</i> 字母或 0 - 9 中的数字）返回的键码值， 或主 <a href=
+"index.html">键盘输入</a> 页面上列出的任何 <tt>vk_*</tt> 常量。</p>
 </blockquote>
 
 <p><br>
@@ -68,7 +61,7 @@ by the function <a href="ord.html"><tt>ord()</tt></a> (only
 
 <tr>
 <td>key</td>
-<td>The key to check the pressed state of.</td>
+<td>检查按下状态的键。</td>
 </tr>
 </table>
 </div>
@@ -90,9 +83,7 @@ by the function <a href="ord.html"><tt>ord()</tt></a> (only
 <p class="code">if keyboard_check_pressed(vk_anykey)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;room_goto_next();<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will advance to the next room if the player
-presses any of the keyboard's keys (working like a 'Press Any Key
-to Continue' prompt).</p>
+<p>如果玩家按下任何键盘的键（如 “按任意键继续” 提示），上面的代码将前进到下一个房间。</p>
 </blockquote>
 
 <p><br>

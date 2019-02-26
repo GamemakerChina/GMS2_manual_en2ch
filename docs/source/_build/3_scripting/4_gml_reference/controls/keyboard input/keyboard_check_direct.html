@@ -39,21 +39,10 @@ if (window.name != "content")
 </h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> if the key with the
-particular keycode is pressed, or <tt>false</tt> if it is not, by
-checking the hardware directly. It allows for a few more checks, in
-particular you can use keycodes <b>vk_lshift</b>,
-<b>vk_lcontrol</b>, <b>vk_lalt</b>, <b>vk_rshift</b>,
-<b>vk_rcontrol</b> and <b>vk_ralt</b> to check whether the left or
-right shift, control or alt key is pressed. The function will take
-a keycode value as returned by the function <a href=
-"ord.html"><tt>ord()</tt></a> (only <i>capital</i> letters from A-Z
-or numbers from 0-9), or any of the <tt>vk_*</tt> constants listed
-on the main <a href="index.html">Keyboard Input</a> page.</p>
+<p>如果按下具有特定键码的键，则此函数将返回 <tt>true</tt>，如果不是，则返回 <tt>false</tt>，该函数直接检查硬件。它允许更多的检查，特别是你可以使用键码 <b>vk_lshift</b>、<b>vk_lcontrol</b>、<b>vk_lalt</b>、<b>vk_rshift</b>、<b>vk_rcontrol</b> 和 <b>vk_ralt</b> 检查左右 Shift、Control 或 Alt 键是否被按下。该函数将采用函数 <a href=
+"ord.html"><tt>ord()</tt></a>（仅来自 A - Z的 <i>大写</i> 字母或 0 - 9 中的数字）返回的键码值， 或主 <a href="index.html">键盘输入</a> 页面上列出的任何 <tt>vk_*</tt> 常量。</p>
 
-<div class="note"><b>NOTE:</b> This function is only available for
-the standard Windows target and the result is independent of which
-application has focus.</div>
+<div class="note"><b>注意：</b>此函数仅适用于标准 Windows 目标，结果与哪个应用程序具有焦点无关。</div>
 </blockquote>
 
 <p><br>
@@ -73,7 +62,7 @@ application has focus.</div>
 
 <tr>
 <td>key</td>
-<td>The key to check the down state of.</td>
+<td>要检查的按下状态的键。</td>
 </tr>
 </table>
 </div>
@@ -95,9 +84,7 @@ application has focus.</div>
 <p class="code">if keyboard_check_direct(vk_ralt) || keyboard_check_direct(vk_lalt)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;crouch = true;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check to see if either the left or right alt
-keys have been pressed, and if they have it sets the variable
-"crouch" to true.</p>
+<p>上面的代码将检查是否按下了左或右 Alt 键，如果有，则将变量 “crouch” 设置为 true。</p>
 </blockquote>
 
 <p><br>

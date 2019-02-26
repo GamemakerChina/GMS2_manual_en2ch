@@ -38,11 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will clear the state of any mouse buttons
-currently being used. This means that checks for their being held
-down/released will not return <tt>true</tt> until the player
-releases the buttons and represses them. You supply the mouse
-button to check from one of the following constants:</p>
+<p>此函数将清除当前正在使用的任何鼠标按钮的状态。这意味着在玩家释放按钮并对其进行按下之前，对其按下 / 释放的检查不会返回 <tt>true</tt>。你提供鼠标按钮以检查以下常量之一：</p>
 
 <div class="compat">
 <table>
@@ -53,28 +49,27 @@ button to check from one of the following constants:</p>
 
 <tr>
 <td>mb_left</td>
-<td>The left mouse button</td>
+<td>鼠标左键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_middle</td>
-<td>The middle mouse button (this may not be valid for all target
-platforms)</td>
+<td>鼠标中键（这并非对所有目标平台都有效）</td>
 </tr>
 
 <tr>
 <td>mb_right</td>
-<td>The right mouse button</td>
+<td>鼠标右键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_none</td>
-<td>No mouse button</td>
+<td>无鼠标键</td>
 </tr>
 
 <tr>
 <td>mb_any</td>
-<td>Any of the mouse buttons</td>
+<td>任意鼠标键</td>
 </tr>
 </table>
 </div>
@@ -99,7 +94,7 @@ platforms)</td>
 
 <tr>
 <td>button</td>
-<td>Which mouse button constant to check for.</td>
+<td>要检查的鼠标按键常量</td>
 </tr>
 </table>
 </blockquote>
@@ -107,9 +102,9 @@ platforms)</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -118,8 +113,7 @@ platforms)</td>
 
 <p class="code">mouse_clear(mb_any);</p>
 
-<p>The above code will clear the down state of all the mouse
-buttons.</p>
+<p>上面的代码将清除所有鼠标按钮的按下状态。</p>
 
 <p><br>
 </p>
@@ -128,8 +122,7 @@ buttons.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Mouse
-Input</a></div>
+<div style="float:left">上一页: <a href="index.html">鼠标输入</a></div>
 
 <div style="float:right">下一页: <a href=
 "mouse_last_button.html">mouse_last_button</a></div>

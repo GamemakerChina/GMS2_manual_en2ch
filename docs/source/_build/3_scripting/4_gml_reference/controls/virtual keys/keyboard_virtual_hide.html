@@ -38,32 +38,31 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to hide the virtual keyboard on the device running the game. 调用此函数将生成 <a href=
-"../../2_interface/1_editors/events/async_events.html">系统异步事件</a>,这个事件 <tt>异步加载</tt> DS 映射将会被以下的键/值填充：</p>
+<p>此函数可用于隐藏运行游戏的设备上的虚拟键盘。调用此函数将生成 <a href=
+"../../2_interface/1_editors/events/async_events.html">系统异步事件</a>,这个事件 <tt>异步加载</tt> 数据结构映射（ds map）将会被以下的键 / 值填充：</p>
 
 <ul>
-<li>"<b>event_type</b>" - this will be "<b>virtual keyboard
-status</b>" when triggered by virtual keyboard functions.</li>
+<li>“<b>event_type</b>” - 当由虚拟键盘函数触发时，这将是“<b>虚拟键盘状态</b>”。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>虚拟键盘高度</b>" - 虚拟键盘的高度（以像素为单位）。 如果键盘不可见，则该值为 0。</li>
+<li>"<b>screen_height</b>" - 虚拟键盘的高度（以像素为单位）。如果键盘不可见，则该值为 0。</li>
 
 <li style="list-style: none"><br>
 </li>
 
-<li>"<b>键盘状态</b>" - 键盘的当前状态，作为以下字符串之一返回：<br>
+<li>"<b>keyboard_status</b>" - 键盘的当前状态，作为以下字符串之一返回：<br>
 <br>
 
 <ul>
-<li>"正在执行隐藏动作"</li>
+<li>"hiding"（正在执行隐藏动作）</li>
 
-<li>"隐藏"</li>
+<li>“hidden”（隐藏）</li>
 
-<li>"正在执行显示动作"</li>
+<li>"showing"（正在执行显示动作）</li>
 
-<li>"可见"</li>
+<li>"visible"（可见）</li>
 </ul></li>
 </ul>
 </blockquote>
@@ -71,14 +70,14 @@ status</b>" when triggered by virtual keyboard functions.</li>
 <p><br>
 </p>
 
-<h3>Syntax</h3>
+<h3>语法：</h3>
 
 <p class="code">keyboard_virtual_hide();</p>
 
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
 <p class="code">N/A（无返回值）</p>
 
@@ -87,15 +86,10 @@ status</b>" when triggered by virtual keyboard functions.</li>
 
 <h3>例如：</h3>
 
-<p class="code">if input == true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;input = false;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;keyboard_virtual_hide();<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if input == true<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;input = false;<br>&nbsp;&nbsp;&nbsp;&nbsp;keyboard_virtual_hide();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will hide the OS virtual keyboard if the given
-variable is not set to <tt>false</tt>.</p>
+<p>如果给定变量未设置为 <tt>false</tt>，则上述代码将隐藏 OS 虚拟键盘。</p>
 </blockquote>
 
 <p><br>

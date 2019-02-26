@@ -38,10 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> if the mouse button
-being checked is held down or <tt>false</tt> if it is not. You
-supply the mouse button to check from one of the following
-constants:</p>
+<p>如果按下被检查的鼠标按钮，则此函数将返回 <tt>true</tt>，如果不是，则返回 <tt>false</tt>。你提供鼠标按钮以检查以下常量之一：</p>
 
 <div class="compat">
 <table>
@@ -52,28 +49,27 @@ constants:</p>
 
 <tr>
 <td>mb_left</td>
-<td>The left mouse button</td>
+<td>鼠标左键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_middle</td>
-<td>The middle mouse button (this may not be valid for all target
-platforms)</td>
+<td>鼠标中键（这并非对所有目标平台都有效）</td>
 </tr>
 
 <tr>
 <td>mb_right</td>
-<td>The right mouse button</td>
+<td>鼠标右键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_none</td>
-<td>No mouse button</td>
+<td>无鼠标键</td>
 </tr>
 
 <tr>
 <td>mb_any</td>
-<td>Any of the mouse buttons</td>
+<td>任意鼠标键</td>
 </tr>
 </table>
 </div>
@@ -98,7 +94,7 @@ platforms)</td>
 
 <tr>
 <td>numb</td>
-<td>Which mouse button constant to check for.</td>
+<td>要检查的鼠标按键常量</td>
 </tr>
 </table>
 </blockquote>
@@ -106,9 +102,9 @@ platforms)</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -117,9 +113,7 @@ platforms)</td>
 
 <p class="code">if mouse_check_button(mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_create_layer(mouse_x, mouse_y, "Effects", obj_Star);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will check for the left mouse button and every
-step that it is held down will create an instance of the object
-indexed in "obj_Star".</p>
+<p>上面的代码将检查鼠标左键，并且按下它的每步都将创建一个在 “obj_Star” 中索引的物体的实例。</p>
 
 <p><br>
 </p>
@@ -128,10 +122,9 @@ indexed in "obj_Star".</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Mouse
-Input</a></div>
+<div style="float:left">上一页: <a href="index.html">鼠标输入</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "mouse_check_button_pressed.html">mouse_check_button_pressed</a></div>
 </div>
 </div>

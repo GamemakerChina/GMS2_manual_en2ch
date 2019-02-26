@@ -38,13 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function is used to get the time it takes for a <a href=
-"../../../../2_interface/1_editors/events/gesture_events.html">Drag
-Start Gesture</a> event to be triggered by a touch or click. This
-time will also affect how the <b>Tap Event</b> is triggered as a
-touch/click and release before this time is up will be considered a
-Tap. The time is measured in seconds and has a default value of
-0.16.</p>
+<p>此函数用于获取触摸或单击触发 <a href=
+"../../../../2_interface/1_editors/events/gesture_events.html">拖拽开始</a> 事件所需的时间。此时间也将影响触发/点击触发 <b>点击事件</b> 的方式，并且在此时间结束前释放将被视为点击。时间以秒为单位，默认值为 0.16。</p>
 </blockquote>
 
 <p><br>
@@ -60,21 +55,17 @@ Tap. The time is measured in seconds and has a default value of
 
 <h3>Returns:</h3>
 
-<p class="code">Real (time in seconds)</p>
+<p class="code">实数（以秒为时间单位）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">if gesture_get_drag_time() != 0.16<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;gesture_drag_time(0.16);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if gesture_get_drag_time() != 0.16<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;gesture_drag_time(0.16);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks to see if the drag time for gestures is
-set to 0.16 seconds and if it is not it sets it to that value.</p>
+<p>上面的代码检查手势的拖拽时间是否设置为 0.16 秒，如果不是，则将其设置为该值。</p>
 </blockquote>
 
 <p><br>

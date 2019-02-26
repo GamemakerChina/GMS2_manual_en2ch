@@ -38,22 +38,15 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>Once you have created your virtual key for your devices, you may
-need to debug and test that it is correctly positioned and working
-properly and for that you would call the function <a href=
-"virtual_key_show.html"><tt>virtual_key_show</tt></a>. However, you
-may need to toggle this view on and off, so you can also hide the
-virtual key with this function, using the index of the virtual key
-that you want to hide (previously created and stored using <a href=
-"virtual_key_add.html"><tt>virtual_key_add</tt></a>). Once you are
-happy with things it is recommended that you create and place your
-own graphic in its area.</p>
+<p>为设备创建虚拟键后，可能需要调试并测试它是否正确定位并正常工作，为此你可以调用函数 <a href=
+"virtual_key_show.html"><tt>virtual_key_show</tt></a>。但是，你可能需要打开和关闭此视图，因此你还可以使用此函数隐藏虚拟键，使用要隐藏的虚拟键的索引（之前使用 <a href=
+"virtual_key_add.html"><tt>virtual_key_add</tt></a> 创建和存储的索引）。一旦你对（虚拟键的位置和其正常工作）这件事感到满意，建议你在其区域中创建并放置自己的图形。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax</h3>
+<h3>语法：</h3>
 
 <p class="code">virtual_key_hide(index);</p>
 
@@ -66,7 +59,7 @@ own graphic in its area.</p>
 
 <tr>
 <td>index</td>
-<td>The index of the virtual key to hide.</td>
+<td>要隐藏的虚拟键索引。</td>
 </tr>
 </table>
 </div>
@@ -74,7 +67,7 @@ own graphic in its area.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
 <p class="code">N/A（无返回值）</p>
 
@@ -86,10 +79,7 @@ own graphic in its area.</p>
 <p class="code">if global.Debug<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;virtual_key_show(global.Left);<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;virtual_key_hide(global.Left);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks the global variable "global.Debug" and if
-it tests true then the virtual key indexed in the variable
-"global.Left" will be drawn on the screen, and if it is false then
-the key will be hidden.</p>
+<p>上面的代码检查全局变量 “global.Debug”，如果它测试为 true，那么在变量 “global.Left” 中索引的虚拟键将在屏幕上绘制，如果为 false，则按键将被隐藏。</p>
 </blockquote>
 
 <p><br>

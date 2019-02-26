@@ -38,24 +38,16 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function enables you to map "touches" of a screen area to
-keyboard events. This means that once you have assigned an area to
-a virtual key, all touches on that area will trigger the keyboard
-event corresponding to the key you have mapped to the area. You can
-assign each virtual key you define to a variable too, which can
-then be used in the further virtual key functions to show, hide and
-delete them. These keys are assigned on a <i>per room</i> basis and
-will be automatically removed by <i>GameMaker Studio 2</i> when
-changing rooms.</p>
+<p>此函数使你可以将屏幕区域的 “触摸” 映射到键盘事件。这意味着，一旦你为虚拟键指定了区域，该区域上的所有触摸都将触发与你映射到该区域的键对应的键盘事件。你也可以将定义的每个虚拟键分配给变量，然后可以在其他虚拟键函数中使用它们来显示、隐藏和删除它们。这些键在 <i>每个房间</i> 的基础上分配，并且在更换房间时将由 <i>GameMaker Studio 2</i> 自动删除。</p>
 
-<p>The actual position of the virtual key is based on the <i>screen</i> position rather than room position and so the x/y values are absolute on the screen. 这意味着你无需担心视图的使用或相对房间坐标，并且可以简单地绘制你的按键精灵并在物体的 <a href=
+<p>虚拟键的实际位置基于 <i>屏幕</i> 位置而不是房间位置，因此 x / y 值在屏幕上是绝对的。这意味着你无需担心视图的使用或相对房间坐标，并且可以简单地绘制你的按键精灵并在物体的 <a href=
 "../../../../2_interface/1_editors/events/draw_events.html">绘制 GUI 事件</a> 中定义虚拟键。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax</h3>
+<h3>语法：</h3>
 
 <p class="code">virtual_key_add(x, y, w, h, keycode);</p>
 
@@ -68,30 +60,27 @@ changing rooms.</p>
 
 <tr>
 <td>x</td>
-<td>The x coordinate (left side) of the virtual key <i>on the
-screen</i></td>
+<td><i>屏幕上</i> 虚拟键的 x 坐标（左侧）</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y coordinate (top side) of the virtual key <i>on the
-screen</i></td>
+<td><i>屏幕上</i> 虚拟键的 y 坐标（左侧）</td>
 </tr>
 
 <tr>
 <td>w</td>
-<td>The width of the virtual key</td>
+<td>虚拟键的宽度</td>
 </tr>
 
 <tr class="alt">
 <td>h</td>
-<td>The height of the virtual key</td>
+<td>虚拟键的高度</td>
 </tr>
 
 <tr>
 <td>keycode</td>
-<td>Which keyboard key event should be triggered by touching this
-area</td>
+<td>触摸此区域应触发哪个键盘按键事件</td>
 </tr>
 </table>
 </div>
@@ -99,9 +88,9 @@ area</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">index of virtual key</p>
+<p class="code">index of virtual key（虚拟键索引）</p>
 
 <p><br>
 </p>
@@ -112,10 +101,7 @@ area</td>
 vk_left);</p>
 
 <blockquote>
-<p>The above code creates a virtual key 64x64 pixels square,
-positioned on the screen at (32, 32) which will trigger the vk_left
-event when touched and assigns the index of this virtual key to a
-global variable.</p>
+<p>上面的代码创建了一个 64 x 64 像素的虚拟键，位于屏幕上 (32,32)，触摸时会触发 vk_left 事件，并将该虚拟键的索引分配给全局变量。</p>
 </blockquote>
 
 <p><br>

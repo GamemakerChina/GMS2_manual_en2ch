@@ -38,37 +38,32 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return the current height in pixels of the virtual keyboard, based on the size of the <i>display</i>. 如果虚拟键盘不可见，则返回0。</p>
+<p>此函数将根据 <i>display</i> 的大小返回虚拟键盘的当前高度（以像素为单位）。如果虚拟键盘不可见，则返回 0。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax</h3>
+<h3>语法：</h3>
 
 <p class="code">keyboard_virtual_height();</p>
 
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Int</p>
+<p class="code">Int（整数值）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">if keyboard_virtual_status() == true<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;key_h = keyboard_virtual_height();<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_virtual_status() == true<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;key_h = keyboard_virtual_height();<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check the status of the OS virtual keyboard,
-and if it's visible set a variable to the height of the
-keyboard.</p>
+<p>上面的代码将检查 OS 虚拟键盘的状态，如果可见则将变量设置为键盘的高度。</p>
 </blockquote>
 
 <p><br>

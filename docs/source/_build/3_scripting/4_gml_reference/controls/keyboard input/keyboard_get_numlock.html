@@ -39,13 +39,9 @@ if (window.name != "content")
 </h3>
 
 <blockquote>
-<p>You can use this function to find the status of the keypad
-number lock with <b>true</b> being returned for on, and
-<b>false</b> returned for off.</p>
+<p>你可以使用此函数查找键盘数字键（Number Lock）锁定的状态，其中 <b>true</b> 返回打开，<b>false</b> 返回关闭。</p>
 
-<div class="note"><b>NOTE:</b> This functionality is only available
-in the Windows exe builds and will not function on any other
-device.</div>
+<div class="note"><b>注意：</b>此函数仅在 Windows exe 版本中可用，不能在任何其他设备上运行。</div>
 </blockquote>
 
 <p><br>
@@ -62,7 +58,7 @@ device.</div>
 <h3><b>Returns:</b>
 </h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -73,9 +69,7 @@ device.</div>
 <p class="code">if keyboard_get_numlock()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;keyboard_set_numlock(false);<br>&nbsp;&nbsp;&nbsp;}<br>else<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;keyboard_set_numlock(true);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above example code will get the state of the numberlock key
-and if it is on (true) it will set it to off (false) and
-vice-versa.</p>
+<p>上面的示例代码将获得数字锁定键的状态，如果它处于打开状态（true），则将其设置为 off（false），反之亦然。</p>
 </blockquote>
 
 <p><br>

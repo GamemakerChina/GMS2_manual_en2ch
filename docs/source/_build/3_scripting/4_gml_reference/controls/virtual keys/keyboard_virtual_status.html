@@ -38,41 +38,32 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to get the status of the virtual
-keyboard on the device running the game. The function will return
-<tt>true</tt> if the OS virtual keyboard is visible/being shown or
-<tt>false</tt> if it is hidden/hiding.</p>
+<p>此函数可用于获取运行游戏的设备上虚拟键盘的状态。如果 OS 虚拟键盘可见 / 正在显示，则该函数将返回 <tt>true</tt>；如果隐藏 / 正在隐藏，则该函数将返回 <tt>false</tt>。</p>
 </blockquote>
 
 <p><br>
 </p>
 
-<h3>Syntax</h3>
+<h3>语法：</h3>
 
 <p class="code">keyboard_virtual_status();</p>
 
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">var _status = keyboard_virtual_status();<br>
-if _status == false<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{
-&nbsp;&nbsp;&nbsp;&nbsp;keyboard_virtual_show(kbv_type_numbers,
-kbv_returnkey_default, kbv_autocapitalize_none, false);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">var _status = keyboard_virtual_status();<br>if _status == false<br>&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;keyboard_virtual_show(kbv_type_numbers, kbv_returnkey_default, kbv_autocapitalize_none, false);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will show the OS virtual keyboard if the current
-status is <tt>false</tt>.</p>
+<p>如果当前状态为 <tt>false</tt>，上面的代码将显示 OS 虚拟键盘。</p>
 </blockquote>
 
 <p><br>

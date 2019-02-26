@@ -38,23 +38,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function is used to set whether tap counting is enabled or
-disabled. When set to <tt>true</tt> tap counting is enabled, and
-when set to <tt>false</tt> it is disabled, although you can check
-which state it is in using the function <a href=
-"gesture_get_tap_count.html"><tt>gesture_get_tap_count</tt></a>.
-When enabled, each tap event will have an additional "tapcount" DS
-map entry which will have registered the number of taps, and when
-enabled it means that <i>all</i> tap events will be triggered, ie:
-two taps will trigger both the single tap event and the double tap
-event, with the single tap event tap count being 1 and the double
-tap event tap count being 2. The tap count value will be reset to 0
-after the time set for a double-tap detection has passed (see the
-function <a href=
-"gesture_double_tap_time.html"><tt>gesture_double_tap_time</tt></a>).
-If tap counting is disabled, then the initial tap won't be
-registered until the double-tap time has passed and no second tap
-has been detected. Note that this is <b>enabled</b> by default.</p>
+<p>此函数用于设置是启用还是禁用点击计数。当设置为 <tt>true</tt> 则点击计数启用，当设置为 <tt>false</tt>时，它将被禁用，尽管你可以使用函数 <a href=
+"gesture_get_tap_count.html"><tt>gesture_get_tap_count</tt></a> 检查它处于哪种状态。启用后，每个点击事件都会有一个额外的 "tapcount" 数据结构映射（ds map）条目，该条目会记录点击次数，启用后表示将触发 <i>所有</i> 点击事件，即：两次点击触发单击事件和双击事件，单击事件点击计数为 1，双击事件点击计数为 2。在为双击检测设置的时间过后，点击计数值将重置为 0（参见函数 <a href=
+"gesture_double_tap_time.html"><tt>gesture_double_tap_time</tt></a>）。如果禁用了点击计数，则在双击时间过去且未检测到第二次点击之前，不会注册初始点击。请注意，默认情况下，点击次数 <b>已启用</b>。</p>
 </blockquote>
 
 <p><br>
@@ -73,8 +59,7 @@ has been detected. Note that this is <b>enabled</b> by default.</p>
 
 <tr>
 <td>enable</td>
-<td>Enable (set to <tt>true</tt>) or disable (set to
-<tt>false</tt>) tap counting.</td>
+<td>启用（设置为 <tt>true</tt>）或禁用（设置为 <tt>false</tt>）点击计数。</td>
 </tr>
 </table>
 </div>
@@ -91,14 +76,10 @@ has been detected. Note that this is <b>enabled</b> by default.</p>
 
 <h3>例如：</h3>
 
-<p class="code">if !gesture_get_tap_count()<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;getsure_tap_count(true);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if !gesture_get_tap_count()<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;getsure_tap_count(true);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks to see if tap counting is enabled and if
-it is not then it is switched on.</p>
+<p>上面的代码检查是否启用了点击计数，如果没有，则启用它。</p>
 </blockquote>
 
 <p><br>

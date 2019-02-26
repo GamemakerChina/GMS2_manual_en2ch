@@ -39,17 +39,7 @@ if (window.name != "content")
 </h3>
 
 <blockquote>
-<p>This variable holds a string containing the last (at most) 1024
-characters typed on the keyboard. This string will only contain
-printable characters typed, but it <i>will</i> correctly respond to
-pressing the backspace key by erasing the last character. This
-variable is <i>not</i> read only and you can change it, for example
-to set it to "" (an empty string) if you handled it already, and
-you can use the <a href="../../strings/index.html">String
-Functions</a> to manipulate it. Note that when using the on-screen
-<a href="../virtual%20keys/index.html">Virtual Keyboard</a>,
-<i>only</i> this variable will be updated with the keyboard
-input.</p>
+<p>此变量包含一个字符串，其中包含键盘上键入的最后（最多） 1024 个字符。此字符串仅包含键入的可打印字符，但 <i>将</i> 正确响应通过按退格键删除最后一个字符。这个变量 <i>并不是</i> 只读的，你可以改变它，例如如果你已经处理它就把它设置为 “”（空字符串），你可以使用 <a href="../../strings/index.html">字符串函数</a> 操作它。请注意，使用屏幕 <a href="../virtual%20keys/index.html">虚拟键盘</a> 时，<i>仅</i> 此变量将使用键盘输入进行更新。</p>
 </blockquote>
 
 <p><br>
@@ -66,7 +56,7 @@ input.</p>
 <h3><b>Returns:</b>
 </h3>
 
-<p class="code">字符串</p>
+<p class="code">String（字符串）</p>
 
 <p><br>
 </p>
@@ -77,9 +67,7 @@ input.</p>
 <p class="code">if string_length(keyboard_string) &gt; 15<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;keyboard_string = string_copy(keyboard_string, 1, 15);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will limit the length of the keyboard string to
-15 characters, removing those that are over that limit by copying
-the first fifteen characters back into the variable.</p>
+<p>上面的代码将键盘字符串的长度限制为 15 个字符，通过将前 15 个字符复制回变量来删除超过该限制的字符串。</p>
 </blockquote>
 
 <p><br>

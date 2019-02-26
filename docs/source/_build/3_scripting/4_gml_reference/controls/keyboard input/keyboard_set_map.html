@@ -39,20 +39,7 @@ if (window.name != "content")
 </h3>
 
 <blockquote>
-<p>Sometimes when making a game you may wish one key to do the same
-as another. For example many people use the keys WASD for movement,
-but then many people <i>also</i> use the arrow keys! So, what to
-do? Well, you <i>could</i> code the movement system twice, but that
-is a bit complicated and thankfully redundant as this function
-permits you to "map" one key to another and so any input from
-either key will be interpreted as the same. To do this you choose a
-key that you want to map (key2 - this will be the key that you
-write the code for) and a key that you want it to be mapped
-<i>to</i> (key1). After that, keypresses to either key will be
-interpreted by <i>GameMaker Studio 2</i> as coming from key2. You
-can also use this function to design a system where the user can
-define their own keys for playing by simply mapping the user input
-key to the key that you have coded into the game.</p>
+<p>有时在制作游戏时，你可能希望一个键与另一个键相同。例如，很多人使用按键 WASD 进行移动，但是很多人 <i>也</i>使用方向键！那么该怎么办？好吧，你 <i>可以</i> 对移动系统进行两次编码，但这有点复杂，幸好多余，因为这个函数允许你将一个键 “映射” 到另一个键，因此来自任一键的任何输入都将被解释为相同的。要执行此操作，请选择要映射的键（key2  - 这将是你为其编写代码的键）以及要将其映射到 <i>到</i>（key1）的键。在此之后，<i>GameMaker Studio 2</i> 将解释任一键的按键来自 key2。你还可以使用此函数设计一个系统，用户可以通过简单地将用户输入键映射到你已编码到游戏中的键来定义自己的键。</p>
 </blockquote>
 
 <p><br>
@@ -72,12 +59,12 @@ key to the key that you have coded into the game.</p>
 
 <tr>
 <td>key1</td>
-<td>This is the key that key1 is to be mapped to</td>
+<td>这是 key1 要映射到的键</td>
 </tr>
 
 <tr class="alt">
 <td>key2</td>
-<td>This is the key that is to be mapped</td>
+<td>这是要映射的键（原始键）</td>
 </tr>
 </table>
 </div>
@@ -88,7 +75,7 @@ key to the key that you have coded into the game.</p>
 <h3><b>Returns:</b>
 </h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -99,10 +86,7 @@ key to the key that you have coded into the game.</p>
 <p class="code">keyboard_set_map(ord("A"), vk_left);</p>
 
 <blockquote>
-<p>The above example code will map the "A" key to the left arrow
-key. This means that the player can use either the "A" <i>or</i>
-the left arrow key, and that all code written for the left arrow
-will also respond to the "A" key being used instead.</p>
+<p>上面的示例代码将 “A” 键映射到左方向键。这意味着玩家可以使用左方向键 <i>或</i> “A” ，并且为左方向写入的所有代码也将响应正在使用的 “A” 键。</p>
 </blockquote>
 
 <p><br>

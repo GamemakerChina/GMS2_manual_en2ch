@@ -38,17 +38,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> if the mouse button
-being checked has been pressed or <tt>false</tt> if it has not.
-This function will only be triggered <i>once</i> for any mouse
-button when it is first pressed and to trigger it again the button
-will need to have been released and pressed again. Note that it
-will be considered triggered for the duration of the step, and for
-all instances that have any mouse events or that use this same
-function.</p>
+<p>如果已按下正在检查的鼠标按钮，则此函数将返回 <tt>true</tt>；如果没有，则返回 <tt>false</tt>。对于任何鼠标按钮，只有在第一次按下时，该函数才会被触发<i>一次</i>，再次触发该按钮需要释放按钮并再次按下。请注意，它将被视为在步持续时间内触发，并且对于具有任何鼠标事件或使用此相同函数的所有实例。</p>
 
-<p>You supply the mouse button to check from one of the following
-constants:</p>
+<p>你提供鼠标按钮以检查以下常量之一：</p>
 
 <div class="compat">
 <table>
@@ -59,28 +51,27 @@ constants:</p>
 
 <tr>
 <td>mb_left</td>
-<td>The left mouse button</td>
+<td>鼠标左键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_middle</td>
-<td>The middle mouse button (this may not be valid for all target
-platforms)</td>
+<td>鼠标中键（这并非对所有目标平台都有效）</td>
 </tr>
 
 <tr>
 <td>mb_right</td>
-<td>The right mouse button</td>
+<td>鼠标右键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_none</td>
-<td>No mouse button</td>
+<td>无鼠标键</td>
 </tr>
 
 <tr>
 <td>mb_any</td>
-<td>Any of the mouse buttons</td>
+<td>任意鼠标键</td>
 </tr>
 </table>
 </div>
@@ -105,7 +96,7 @@ platforms)</td>
 
 <tr>
 <td>numb</td>
-<td>Which mouse button constant to check for.</td>
+<td>要检查的鼠标按键常量</td>
 </tr>
 </table>
 </blockquote>
@@ -113,9 +104,9 @@ platforms)</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -124,8 +115,7 @@ platforms)</td>
 
 <p class="code">if mouse_check_button_pressed(mb_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;score += 50;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will check to see if the left mouse button has
-been pressed and if it has it will add 50 to the score.</p>
+<p>上面的代码将检查是否按下了鼠标左键，如果有，它将增加 50 分。</p>
 
 <p><br>
 </p>
@@ -134,10 +124,9 @@ been pressed and if it has it will add 50 to the score.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Mouse
-Input</a></div>
+<div style="float:left">上一页: <a href="index.html">鼠标输入</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "mouse_check_button_released.html">mouse_check_button_released</a></div>
 </div>
 </div>

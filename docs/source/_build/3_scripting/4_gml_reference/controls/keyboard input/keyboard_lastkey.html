@@ -39,11 +39,7 @@ if (window.name != "content")
 </h3>
 
 <blockquote>
-<p>This variable refers to the value that <tt>keyboard_key</tt> was
-in the previous frame, returning the keycode of that key (all
-standard keycode constants are returned). This variable is
-<i>not</i> read only and you can change it, for example to set it
-to -1 if you handled it already.</p>
+<p>此变量引用 <tt>keyboard_key</tt> 在前一帧中的值，返回该键的键代码（返回所有标准键码常量）。此变量 <i>不</i> 只读，你可以更改它，例如，如果你已经处理它，则将其设置为 -1。</p>
 </blockquote>
 
 <p><br>
@@ -60,7 +56,7 @@ to -1 if you handled it already.</p>
 <h3><b>Returns:</b>
 </h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
@@ -71,10 +67,7 @@ to -1 if you handled it already.</p>
 <p class="code">if (keyboard_lastkey != -1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;str += keyboard_lastchar;<br>&nbsp;&nbsp;&nbsp;keyboard_lastkey = -1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks to see if the lastkey variable is not
-equal to -1, and if it is it adds whatever the last key was as a
-string to the variable "str", then it resets the
-<tt>keyboard_lastkey</tt> variable to accept further input.</p>
+<p>上面的代码检查 lastkey 变量是否不等于 -1，如果是，它将最后一个键作为字符串添加到变量 “str”，然后重置 <tt>keyboard_lastkey</tt> 变量接受进一步输入。</p>
 </blockquote>
 
 <p><br>

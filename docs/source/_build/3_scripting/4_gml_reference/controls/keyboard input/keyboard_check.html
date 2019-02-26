@@ -39,18 +39,10 @@ if (window.name != "content")
 </h3>
 
 <blockquote>
-<p>With this function you can check to see if a key is held down or
-not. Unlike the <a href=
-"keyboard_check_pressed.html"><tt>keyboard_check_pressed</tt></a>
-or <a href=
-"keyboard_check_released.html"><tt>keyboard_check_released</tt></a>
-functions which are only triggered once when the key is pressed or
-released, this function is triggered every step that the key is
-held down for. The function will take a keycode value as returned
-by the function <a href="ord.html"><tt>ord()</tt></a> (only
-<i>capital</i> letters from A-Z or numbers from 0-9), or any of the
-<tt>vk_*</tt> constants listed on the main <a href=
-"index.html">Keyboard Input</a> page.</p>
+<p>使用此函数，你可以检查是否按下了按键。与 <a href=
+"keyboard_check_pressed.html"><tt>keyboard_check_pressed</tt></a> 或 <a href=
+"keyboard_check_released.html"><tt>keyboard_check_released</tt></a> 函数不同，这些函数仅在按下或释放按键时触发一次，此函数在按下的每一步都将触发。该函数将采用函数 <a href="ord.html"><tt>ord()</tt></a>（仅来自 A - Z的 <i>大写</i> 字母或 0 - 9 中的数字）返回的键码值， 或主 <a href=
+"index.html">键盘输入</a> 页面上列出的任何 <tt>vk_*</tt> 常量。</p>
 </blockquote>
 
 <p><br>
@@ -70,7 +62,7 @@ by the function <a href="ord.html"><tt>ord()</tt></a> (only
 
 <tr>
 <td>key</td>
-<td>The key to check the down state of.</td>
+<td>要检查的按下状态的键。</td>
 </tr>
 </table>
 </div>
@@ -92,9 +84,7 @@ by the function <a href="ord.html"><tt>ord()</tt></a> (only
 <p class="code">if keyboard_check(vk_left)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;x -= 5;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check to see if the arrow key is being
-pressed and move the instance 5 pixels left every step that it
-returns true.</p>
+<p>上面的代码将检查左方向键是否被按下并将实例向左移动 5 个像素，使其返回 true。</p>
 </blockquote>
 
 <p><br>

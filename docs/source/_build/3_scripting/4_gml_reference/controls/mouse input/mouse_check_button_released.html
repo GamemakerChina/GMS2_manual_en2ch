@@ -38,12 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> if the mouse button
-being checked has been released or <tt>false</tt> if it has not.
-This function will only be triggered <i>once</i> for any mouse
-button when it is released and to trigger it again the button will
-need to have been pressed and released again. You supply the mouse
-button to check from one of the following constants:</p>
+<p>如果正在检查鼠标按钮，则此函数将返回 <tt>true</tt>，如果没有，则返回 <tt>false</tt>。对于任何鼠标按钮释放时，此函数只会被触发 <i>一次</i>，再次触发该按钮需要再次按下并释放该按钮。你提供鼠标按钮以检查以下常量之一：</p>
 
 <div class="compat">
 <table>
@@ -54,28 +49,27 @@ button to check from one of the following constants:</p>
 
 <tr>
 <td>mb_left</td>
-<td>The left mouse button</td>
+<td>鼠标左键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_middle</td>
-<td>The middle mouse button (this may not be valid for all target
-platforms)</td>
+<td>鼠标中键（这并非对所有目标平台都有效）</td>
 </tr>
 
 <tr>
 <td>mb_right</td>
-<td>The right mouse button</td>
+<td>鼠标右键</td>
 </tr>
 
 <tr class="alt">
 <td>mb_none</td>
-<td>No mouse button</td>
+<td>无鼠标键</td>
 </tr>
 
 <tr>
 <td>mb_any</td>
-<td>Any of the mouse buttons</td>
+<td>任意鼠标键</td>
 </tr>
 </table>
 </div>
@@ -100,7 +94,7 @@ platforms)</td>
 
 <tr>
 <td>numb</td>
-<td>Which mouse button constant to check for.</td>
+<td>要检查的鼠标按键常量</td>
 </tr>
 </table>
 </blockquote>
@@ -108,9 +102,9 @@ platforms)</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -119,10 +113,7 @@ platforms)</td>
 
 <p class="code">if mouse_check_button_released(mb_right)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;speed = point_distance(x, y, mouse_x, mouse_y) / 10;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will check to see if the right mouse button has
-been released and if it has it will set the speed of the instance
-to a tenth of the distance between the current x/y position and the
-mouse x/y position.</p>
+<p>上面的代码将检查鼠标右键是否已被释放，如果有，它将实例的速度设置为当前 x / y 位置和鼠标 x / y 位置之间距离的十分之一。</p>
 
 <p><br>
 </p>
@@ -131,10 +122,9 @@ mouse x/y position.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">Back: <a href="index.html">Mouse
-Input</a></div>
+<div style="float:left">上一页: <a href="index.html">鼠标输入</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "mouse_clear.html">mouse_clear</a></div>
 </div>
 </div>
