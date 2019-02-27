@@ -2,12 +2,12 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 <meta name="generator" content="chm2web Pro 2.85 (unicode)" />
-<title>real</title>
+<title>real </title>
 <meta http-equiv="X-UA-Compatible" content="IE=9">
 <link rel="stylesheet" href="../../../../../files/helpindex.css"
 type="text/css">
@@ -29,7 +29,7 @@ if (window.name != "content")
 <script type="text/JavaScript">
  if( typeof(chmtop.helpStyle) != 'undefined' ) { var linkNodes = document.getElementsByTagName("link");  for( var i=0; i < linkNodes.length; ++i ) { var link = linkNodes[i];    if( link.href.endsWith("default.css")) {    var style = link.href.replace("default.css", chmtop.helpStyle); document.write('<link id="newstyleLink" rel="stylesheet" href=' + style + ' type="text/css">');    break; } } } 
 </script>
-<h2>real</h2>
+<h2>real </h2>
 
 <div class="body-scroll">
 <p><br>
@@ -38,15 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used to turn a given string into a real
-number. When using this function, numbers, minus signs, decimal
-points and exponential parts in the string are taken into account,
-while other characters (such as letters) will cause an error to be
-thrown. If you know, or suspect, that a string may have other
-characters then you can use <a href=
-"string_digits.html"><tt>string_digits()</tt></a> to remove all
-non-numeric characters, before using this function to turn the
-resulting string into a real number.</p>
+<p>此函数可用于将给定字符串转换为实数。使用此函数时，会考虑字符串中的数字、减号、小数点和指数部分，而其他字符（如字母）将导致抛出错误。如果你知道或怀疑某个字符串可能包含其他字符，那么你可以使用 <a href=
+"string_digits.html"><tt>string_digits()</tt></a> 删除所有非数字字符，然后再使用此函数将字符串转换为实数。</p>
 </blockquote>
 
 <p><br>
@@ -65,7 +58,7 @@ resulting string into a real number.</p>
 
 <tr>
 <td>string</td>
-<td>The string to be converted to a real value.</td>
+<td>要转换为实际值的字符串。</td>
 </tr>
 </table>
 </blockquote>
@@ -73,23 +66,19 @@ resulting string into a real number.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">var t_str;<br>
-t_str = string_digits(input_str);<br>
-age = real(t_str);<br></p>
+<p class="code">var t_str;<br>t_str = string_digits(input_str);<br>age = real(t_str);<br></p>
 
 <blockquote>
-<p>The above code will take the input string, strip it of all
-characters other than numbers and then set the variable "age" to
-hold the real number value of the return string.</p>
+<p>上面的代码将获取输入字符串，除去数字以外的所有字符，然后设置变量 “age” 以保存返回字符串的实数值。</p>
 </blockquote>
 
 <p><br>

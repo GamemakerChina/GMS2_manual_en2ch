@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,11 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return the character position of an instance
-of a sub-string within a string, or 0 if it's not found at all. One
-use for this is for filtering words that may be considered
-offensive, or for finding the correct place to insert some text
-into another string.</p>
+<p>这个函数将返回子字符串实例在字符串中的字符位置，如果没有找到，则返回 0。这样做的一个用途是过滤可能被认为具有冒犯性的单词，或者找到将一些文本插入另一个字符串的正确位置。</p>
 </blockquote>
 
 <p><br>
@@ -61,12 +57,12 @@ into another string.</p>
 
 <tr>
 <td>substr</td>
-<td>The substring to look for in the string.</td>
+<td>要在字符串中查找的子字符串。</td>
 </tr>
 
 <tr class="alt">
 <td>str</td>
-<td>The string.</td>
+<td>被查找的字符串</td>
 </tr>
 </table>
 </blockquote>
@@ -74,9 +70,9 @@ into another string.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
@@ -86,8 +82,7 @@ into another string.</p>
 <p class="code">if string_pos(",", text) != 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;string_insert(name, text, string_pos(",", text));<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code searches the string "text" for a comma, and if it
-finds one it inserts the substring "name" at that position.</p>
+<p>上面的代码在字符串 “text” 中搜索一个逗号，如果找到一个逗号，就在那个位置插入子字符串 “name”。</p>
 </blockquote>
 
 <p><br>

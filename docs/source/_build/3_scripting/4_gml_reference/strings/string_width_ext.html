@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,16 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return the maximum width (in pixels) of the
-input string, taking into account the line separation and
-line-break width (which is defined as the number of pixels that the
-string can occupy before a line break is inserted). It is very
-handy for calculating distances between text elements based on the
-maximum width of a string that is split over several lines as it
-would be drawn with <a href=
-"../drawing/text/draw_text_ext.html"><tt>draw_text_ext</tt></a>
-using the currently defined font. Separation and width can be set
-to -1 to get the default spacing.</p>
+<p>这个函数将返回输入字符串的最大宽度（以像素为单位），同时考虑到行间隔和换行宽度（换行宽度定义为插入换行之前字符串可以占用的像素数）。当使用当前定义的字体使用 <a href=
+"../drawing/text/draw_text_ext.html"><tt>draw_text_ext</tt></a> 函数绘制时，根据分割为几行的字符串的最大宽度计算文本元素之间的距离非常方便。间隔和宽度可以设置为 -1 以获得默认间距。</p>
 </blockquote>
 
 <p><br>
@@ -66,19 +58,17 @@ to -1 to get the default spacing.</p>
 
 <tr>
 <td>string</td>
-<td>The string to measure the width of.</td>
+<td>用来测量宽度的字符串。</td>
 </tr>
 
 <tr class="alt">
 <td>sep</td>
-<td>The distance in pixels between lines of text as if the string
-was being drawn.</td>
+<td>文本行之间的距离，以像素为单位，就像正在绘制字符串一样。</td>
 </tr>
 
 <tr>
 <td>w</td>
-<td>The maximum width (in pixels) of the string before a line break
-as if the string was bring drawn.</td>
+<td>换行前字符串的最大宽度（以像素为单位），就像绘制字符串一样。</td>
 </tr>
 </table>
 </blockquote>
@@ -86,25 +76,19 @@ as if the string was bring drawn.</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">var ww;<br>
-ww = string_width_ext(str_Story_Text[1], -1, 100);<br>
-draw_text_ext(32, 32, str_Story_Text[1], -1, 100);<br>
-draw_text_ext(32 + ww, 32, str_Story_Text[2], -1, 100);<br></p>
+<p class="code">var ww;<br>ww = string_width_ext(str_Story_Text[1], -1, 100);<br>draw_text_ext(32, 32, str_Story_Text[1], -1, 100);<br>draw_text_ext(32 + ww, 32, str_Story_Text[2], -1, 100);<br></p>
 
 <blockquote>
-<p>The above code will get the width of the given string, taking
-into account the line separation and line-break width, and then
-draw two lines of text, using the returned total string width as a
-separator.</p>
+<p>上面的代码将得到给定字符串的宽度，同时考虑行间隔和断行宽度，然后绘制两行文本，使用返回的总字符串宽度作为间隔。</p>
 </blockquote>
 
 <p><br>

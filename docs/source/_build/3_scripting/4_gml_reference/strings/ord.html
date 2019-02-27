@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,12 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function takes a single character input string and returns
-the Unicode (<a href="https://en.wikipedia.org/wiki/UTF-8" target=
-"_blank">UTF8</a>) value for that character. Note that when used
-with the <tt>keyboard_check*</tt> functions, the input string can
-only be one character in length and can only be a number from 0 to
-9 or a <i>capitalised</i> Roman character from A to Z.</p>
+<p>此函数接受输入字符串的单个字符，并返回该字符的 Unicode（<a href="https://en.wikipedia.org/wiki/UTF-8" target=
+"_blank">UTF8</a>）值。请注意，当与 <tt>keyboard_check*</tt> 函数一起使用时，输入字符串的长度只能是一个字符，并且只能是 0 到 9 之间的数字或从 A 到 Z 的 <i>大写</i>罗马字符。</p>
 </blockquote>
 
 <p><br>
@@ -62,7 +58,7 @@ only be one character in length and can only be a number from 0 to
 
 <tr>
 <td>string</td>
-<td>The string with which to find the Unicode code.</td>
+<td>用于查找 Unicode 代码的字符串。</td>
 </tr>
 </table>
 </blockquote>
@@ -70,23 +66,19 @@ only be one character in length and can only be a number from 0 to
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">if keyboard_check(ord("W"))<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;y -= 4;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if keyboard_check(ord("W"))<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;y -= 4;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>This will move the calling instance four pixels upwards if the
-key W is held down.</p>
+<p>如果按住键 W，这将使调用代码的实例向上移动四个像素。</p>
 </blockquote>
 
 <p><br>

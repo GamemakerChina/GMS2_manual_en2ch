@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,9 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function returns a string containing the character with raw
-BYTE value set. This will not, <i>and should not</i>, be displayed,
-but it will save correctly to disk for use in encoding.</p>
+<p>此函数返回一个字符串，其中包含具有原始 BYTE（字节） 值集的字符。这不会，<i>也不应该</i> 显示，但它会正确保存到磁盘以用于编码。</p>
 </blockquote>
 
 <p><br>
@@ -59,7 +57,7 @@ but it will save correctly to disk for use in encoding.</p>
 
 <tr>
 <td>val</td>
-<td>The raw byte value.</td>
+<td>原始字节值。</td>
 </tr>
 </table>
 </blockquote>
@@ -67,24 +65,19 @@ but it will save correctly to disk for use in encoding.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">String (Single character)</p>
+<p class="code">String (Single character)（字符串，单字符）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">var str1 = ansi_char($EF);<br>
-var str2 = ansi_char($BB);<br>
-var str3 = ansi_char($BF);<br>
-file_text_write_string(global.saveFile, str1 + str2 +
-str3);<br></p>
+<p class="code">var str1 = ansi_char($EF);<br>var str2 = ansi_char($BB);<br>var str3 = ansi_char($BF);<br>file_text_write_string(global.saveFile, str1 + str2 + str3);<br></p>
 
 <blockquote>
-<p>The above code creates a string from raw byte data and writes it
-to a file.</p>
+<p>上面的代码从原始字节数据创建一个字符串并将其写入文件。</p>
 </blockquote>
 
 <p><br>

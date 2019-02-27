@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,14 +38,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return a copy of a given string with
-everything but its letters and digits removed, which means it can
-be used to remove any unwanted characters (like "#" or "?") from,
-for example, a login name or a password.</p>
+<p>这个函数将返回一个给定字符串的副本，其中除字母和数字之外的所有内容都被删除，这意味着它可以用于从登录名或密码中删除任何不需要的字符（如 “#” 或 “?”）。</p>
 
-<div class="note">NOTE: This function only returns the 26 letter
-English alphabet from A - Z (upper or lower case) and the numbers 0
-- 9.</div>
+<div class="note">注意:这个函数只返回 A - Z（大写或小写）的 26 个字母和数字 0 - 9。</div>
 </blockquote>
 
 <p><br>
@@ -64,7 +59,7 @@ English alphabet from A - Z (upper or lower case) and the numbers 0
 
 <tr>
 <td>string</td>
-<td>The string to convert to letters and digits.</td>
+<td>要转换成字母和数字的字符串。</td>
 </tr>
 </table>
 </blockquote>
@@ -72,9 +67,9 @@ English alphabet from A - Z (upper or lower case) and the numbers 0
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">字符串</p>
+<p class="code">String（字符串）</p>
 
 <p><br>
 </p>
@@ -84,9 +79,7 @@ English alphabet from A - Z (upper or lower case) and the numbers 0
 <p class="code">if string_length(password) &gt; string_length(string_lettersdigits(password))<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_text(32,32,"Invalid Password!Only Letters and numbers please!");<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check the length of a string against the
-length of the same string, but with all symbols removed. If they
-are not the same a message is drawn on the screen.</p>
+<p>上面的代码将检查字符串的长度与相同字符串的长度，但删除所有符号。如果它们不相同，屏幕上会显示一条消息。</p>
 </blockquote>
 
 <p><br>

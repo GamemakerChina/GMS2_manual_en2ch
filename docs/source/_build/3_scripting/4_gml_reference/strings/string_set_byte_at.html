@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,12 +38,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function sets a byte directly in a string (based on the
-UTF8 format) and returns a copy of the string with the changes.</p>
+<p>这个函数直接在字符串中设置一个字节（基于 UTF8 格式），并返回字符串的一个副本。</p>
 
-<div class="note">NOTE: This function is incredibly slow so
-consider carefully whether it is necessary and where you use
-it.</div>
+<div class="note">注意：这个函数非常慢，所以要仔细考虑是否有必要以及在哪里使用它。</div>
 </blockquote>
 
 <p><br>
@@ -62,18 +59,17 @@ it.</div>
 
 <tr>
 <td>str</td>
-<td>The string to change the byte of.</td>
+<td>要更改的字节的字符串。</td>
 </tr>
 
 <tr class="alt">
 <td>pos</td>
-<td>The position within the string (starting at 1) to change the
-byte of.</td>
+<td>字符串中的位置（从 1 开始）改变字节。</td>
 </tr>
 
 <tr>
 <td>byte</td>
-<td>The new byte value.</td>
+<td>新的字节值。</td>
 </tr>
 </table>
 </blockquote>
@@ -81,9 +77,9 @@ byte of.</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">字符串</p>
+<p class="code">String（字符串）</p>
 
 <p><br>
 </p>
@@ -93,9 +89,7 @@ byte of.</td>
 <p class="code">str = string_set_byte_at("hello", 2, 97);<br></p>
 
 <blockquote>
-<p>The above code would change the byte value of the second letter
-in the string, and so set the variable <tt>str</tt> to hold
-"hallo".</p>
+<p>上面的代码将改变字符串中第二个字母的字节值，因此将变量 <tt>str</tt> 设置为 “hallo”。</p>
 </blockquote>
 
 <p><br>

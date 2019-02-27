@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,11 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function returns a string containing the character which
-relates to the input Unicode code for displaying. This character
-depends on the current drawing fonts character set codepage and if
-no font is set, it will use the default code page for the
-machine.</p>
+<p>此函数返回一个字符串，其中包含与用于显示的输入 Unicode 代码相关的字符。此字符取决于当前的绘图字体字符集内码表，如果未设置字体，它将使用该机器的默认内码表。</p>
 </blockquote>
 
 <p><br>
@@ -61,7 +57,7 @@ machine.</p>
 
 <tr>
 <td>val</td>
-<td>The Unicode code value to get the string from</td>
+<td>用于获取字符串的 Unicode 代码值</td>
 </tr>
 </table>
 </blockquote>
@@ -69,9 +65,9 @@ machine.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">字符串</p>
+<p class="code">String（字符串）</p>
 
 <p><br>
 </p>
@@ -81,8 +77,7 @@ machine.</p>
 <p class="code">mystring = chr(53) + chr(48);</p>
 
 <blockquote>
-<p>This would set mystring to "50" (a string, not an integer) as
-chr(53) is "5" and chr(48) is "0".</p>
+<p>这将mystring设置为 “50”（字符串，而不是整数），因为 chr(53) 是 “5” 而 chr(48) 是 “0”。</p>
 </blockquote>
 
 <p><br>

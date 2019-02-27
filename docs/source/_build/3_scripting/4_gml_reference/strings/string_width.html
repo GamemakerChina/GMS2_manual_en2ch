@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,12 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return the width (in pixels) of the input
-string. It is very handy for calculating distances between text
-elements based on the total width of the letters that make up the
-string as it would be drawn with <a href=
-"../drawing/text/draw_text.html"><tt>draw_text</tt></a> using the
-currently defined font.</p>
+<p>这个函数将返回输入字符串的宽度（以像素为单位）。根据组成字符串的字母的总宽度计算文本元素之间的距离非常方便，因为它将使用当前定义的字体使用 <a href=
+"../drawing/text/draw_text.html"><tt>draw_text</tt></a> 函数绘制。</p>
 </blockquote>
 
 <p><br>
@@ -62,7 +58,7 @@ currently defined font.</p>
 
 <tr>
 <td>string</td>
-<td>The string to measure the width of.</td>
+<td>用来测量宽度的字符串。</td>
 </tr>
 </table>
 </blockquote>
@@ -70,24 +66,19 @@ currently defined font.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">var ww;<br>
-ww = string_width(str_Name + " ");<br>
-draw_text(32, 32, str_Name));<br>
-draw_text(32 + ww, 32, "has won the game!");<br></p>
+<p class="code">var ww;<br>ww = string_width(str_Name + " ");<br>draw_text(32, 32, str_Name));<br>draw_text(32 + ww, 32, "has won the game!");<br></p>
 
 <blockquote>
-<p>The above code will get the width of the given string and then
-draw two lines of text, using the returned string width as a
-separator.</p>
+<p>上面的代码将获得给定字符串的宽度，然后使用返回的字符串宽度作为间隔绘制两行文本。</p>
 </blockquote>
 
 <p><br>

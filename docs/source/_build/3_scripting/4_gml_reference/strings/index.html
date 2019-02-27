@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -33,35 +33,13 @@ if (window.name != "content")
 
 <div class="body-scroll">
 <p><br>
+在制作游戏的某个时候，你需要使用文字。游戏中的文字通过使用 <b>字符串</b> 函数来处理（字符串只是一行文字的另一种说法），<i>GameMaker Studio 2</i> 有一套完整的函数， 允许你以多种方式操作字符串，包括在另一个字符串中插入一个字符串，复制字符串以及解析数字或其包含的字母的字符串的能力。通常，<i>只能</i> 通过在双引号 "" 中添加文本来创建字符串，并且不接受单引号字符串，也不能在代码里以换行符换行的方式将字符串拆分为多行并期望 <i> GameMaker Studio 2</i> 渲染它（除非使用字符串文字 @ identifier，如下所述）。</p>
 
-At some time when making your game you will need to use text. Text
-in games is dealt with by using the <b>string</b> functions (a
-string is just another way of saying a line of text) and
-<i>GameMaker Studio 2</i> has a complete set of functions that
-permit you to manipulate strings in many ways, including the
-insertion of one string in another, the copying of strings and the
-ability to parse strings for the digits or the letters that they
-contain. In general a string can <i>only</i> be created by adding
-text within double quotes " " and single quote strings are not
-accepted, nor can you split the string over multiple lines and
-expect <i>GameMaker Studio 2</i> to render it as if the line breaks
-were newlines (unless a string literal @ identifier is used, as
-explained below).</p>
-
-<p>It is worth noting that there are certain conventions that you
-can use when creating strings, mostly concerned with using
-<i>escape characters</i>. These are characters that are preceded by
-a "\" symbol. So, for example, if you wanted to put quotation marks
-within a string you would have something like this:</p>
+<p>值得注意的是，在创建字符串时可以使用某些约定，主要涉及使用 <i>转义字符</i>。转义字符是以 “\” 符号开头的字符。因此，例如，如果你想在字符串中加上引号，你可能会遇到以下情况：</p>
 
 <p class="code">str = "Hello\"World\"";<br></p>
 
-<p>You can use the "\" to precede any Unicode literal - 4 digits of
-hex following a "u", for example "\u0000", where the 4 digits are
-the number of the Unicode character - or any hexadecimal literal -
-2 digits of hex following a "0x", for example "\xff", where the 2
-digits are the number of the character to use. These and other
-predefined escape characters are listed in the table below:</p>
+<p>你可以在任何 Unicode 文字之前使用 “\” - 在 “u” 之后的十六进制的 4 位数，例如 “\u0000”，其中 4 位数字是 Unicode 字符的编号 - 或任何十六进制文字 -  2 位数字 “0x” 后面的十六进制，例如 “\xff”，其中 2 位是要使用的字符的编号。这些和其他预定义的转义字符列在下表中：</p>
 
 <div class="compat">
 <table>
@@ -72,57 +50,57 @@ predefined escape characters are listed in the table below:</p>
 
 <tr>
 <td>\n</td>
-<td>Newline</td>
+<td>换行（LF）</td>
 </tr>
 
 <tr class="alt">
 <td>\r</td>
-<td>Carriage return</td>
+<td>回车（CR）</td>
 </tr>
 
 <tr>
 <td>\b</td>
-<td>Backspace (0x08)</td>
+<td>退格（Backspace，0x08）</td>
 </tr>
 
 <tr class="alt">
 <td>\f</td>
-<td>Form Feed (0x0c)</td>
+<td>换页（0x0c）</td>
 </tr>
 
 <tr>
 <td>\t</td>
-<td>Horizontal Tab (0x09)</td>
+<td>水平制表符（0x09）</td>
 </tr>
 
 <tr class="alt">
 <td>\v</td>
-<td>Vertical Tab (0x0b)</td>
+<td>垂直制表符（0x0b）</td>
 </tr>
 
 <tr>
 <td>\\</td>
-<td>Backslash itself (0x5c)</td>
+<td>反斜杠（0x5c）</td>
 </tr>
 
 <tr class="alt">
 <td>\a</td>
-<td>Alert (0x07)</td>
+<td>响铃（0x07）</td>
 </tr>
 
 <tr>
-<td>\u[Hex Digits]</td>
-<td>Insert hex unicode character (note max 4 digits)</td>
+<td>\u[十六进制数字]</td>
+<td>插入十六进制 unicode 字符（注意最多 4 位数）</td>
 </tr>
 
 <tr class="alt">
-<td>\x[Hex Digits]</td>
-<td>Insert hex unicode character</td>
+<td>\x[十六进制数字]</td>
+<td>插入十六进制 unicode 字符</td>
 </tr>
 
 <tr>
-<td>\[Octal Digits]</td>
-<td>Insert octal unicode character</td>
+<td>\[八进制数字]</td>
+<td>插入八进制 unicode 字符</td>
 </tr>
 </table>
 </div>
@@ -130,47 +108,24 @@ predefined escape characters are listed in the table below:</p>
 <p><br>
 </p>
 
-<div class="note"><b>NOTE</b>: if you need characters right up
-against each other when using the octal or hex unicode values (ie.
-"\x1234567" and you only wanted the character 0x123 and the 4567 to
-be the actual digits) then end it with "\" and it will literally
-quote the next character (i.e. "\x123\4567")</div>
+<div class="note"><b>注意</b>：如果在使用八进制或十六进制 Unicode 值时需要接上数字（例如："\x1234567" 并且你希望使用字符 0x123 和数字 4567），那么用 “\” 作为字符结尾时它将逐字引述下一个字符（例如："\x123\4567"）</div>
 
 <p><br>
 </p>
 
-<div class="note"><b>注意</b>： Strings support form feed, vertical tab etc... but this does not mean to say that <b>rendering</b> does, and when drawing strings these characters may be ignored.</div>
+<div class="note"><b>注意</b>： 字符串支持换页、垂直制表符等...但这并不意味着它们将会 <b>呈现</b>，在绘制字符串时，这些字符可能会被忽略。</div>
 
-<p>You can also create verbatim <i>string literals</i> by preceding
-the whole string with the @ character:</p>
+<p>你还可以通过在整个字符串前加上 @ 字符来创建逐字 <i>字符串文本</i>：</p>
 
-<p class="code">var test = @"<br>
-Line breaks<br>
-over multiple<br>
-lines<br>
-";<br></p>
+<p class="code">var test = @"<br>Line breaks<br>over multiple<br>lines<br>";<br></p>
 
-<p>The above code will render the string over multiple lines as if
-there was a line break escape character included. A verbatim string
-literal is similar to previous GameMaker version string literals
-but they also use double or single quotes and must be prefixed by
-an @ symbol, they can be broken over multiple lines in the code
-file and they DO NOT support escaped characters i.e. @"Hello\World"
-will NOT try to escape the W on World and will be stored verbatim.
-Note though that when using string literals like this, you will
-need to break the string if you wish to include quotation marks as
-part of the string, ie:</p>
+<p>上面的代码将在多行上呈现字符串，就像包含换行符转义字符一样。逐字字符串文字类似于之前的 GameMaker 版本的字符串文字，但它们要使用双引号或单引号，并且必须以 @ 符号为前缀，它们可以在代码文件中分为多行，并且它们不支持转义字符，即 @"Hello\World" 不会试图转义 World 中的 W 而是逐字存储。请注意，当使用这样的字符串文字时，如果你希望在字符串中包含引号，则需要断开字符串，即：</p>
 
 <p class="code">var test = @"Hello " + "\"" + @"World" + "\""</p>
 
-<p>Another thing to note is that the unicode character 9647 (▯) is
-used to substitute any missing glyphs that you may have in your
-designated font when rendering it in the draw event. So if your
-font doesn't have, for example, the ° symbol, then writing 90° will
-actually produce 90▯.</p>
+<p>另外需要注意的是，unicode 字符 9647（▯）用于替换在绘制事件中渲染时指定字体中可能包含的任何缺少的字形。因此，如果你的字体没有例如 ° 符号，那么写 90° 实际上会产生90▯。</p>
 
-<p>The following list of functions are all for dealing with
-strings:</p>
+<p>以下函数列表都用于处理字符串：</p>
 
 <ul>
 <li><a href="ansi_char.html">ansi_char</a><br>
@@ -182,7 +137,7 @@ strings:</p>
 <li><a href="ord.html">ord</a><br>
 </li>
 
-<li><a href="real.html">real</a><br>
+<li><a href="real.html">real </a><br>
 </li>
 
 <li><a href="string.html">string</a><br>
@@ -271,9 +226,7 @@ strings:</p>
 </li>
 </ul>
 
-<p>Other than those functions that relate specifically to strings,
-the <b>Windows</b> target also permits you to use access the
-clipboard to get and set text information:</p>
+<p>除了那些专门与字符串相关的函数之外，<b>Windows</b> 目标平台还允许你使用访问剪贴板来获取和设置文本信息：</p>
 
 <ul>
 <li><a href="clipboard_has_text.html">clipboard_has_text</a><br>
@@ -293,9 +246,9 @@ clipboard to get and set text information:</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="../index.html"><i>GameMaker Studio 2</i>语言参考</a></div>
+<div style="float:left">上一页：<a href="../index.html"><i>GameMaker Studio 2</i> 语言参考</a></div>
 
-<div style="float:right">下一页: <a href="../maths/index.html">Maths And Numbers</a></div>
+<div style="float:right">下一页: <a href="../maths/index.html">数学和数字</a></div>
 </div>
 </div>
 

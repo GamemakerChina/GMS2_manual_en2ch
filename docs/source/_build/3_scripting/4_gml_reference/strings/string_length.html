@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,13 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function returns the number of characters comprising a
-given string. It can be useful for things like working out when to
-limit a custom text entry's character length (eg: capping a
-player's name to 10 characters). Remember that this is different to
-<a href="string_width.html"><tt>string_width</tt></a> in that it
-measures the number of <i>characters</i> in the string, not its
-width as drawn on the screen in pixels.</p>
+<p>这个函数返回包含给定字符串的字符数。它可以用于解决什么时候限制自定义文本条目的字符长度（例如：将玩家的名字限制为 10 个字符）等问题。请记住，这与 <a href="string_width.html"><tt>string_width</tt></a> 不同，它度量的是字符串中 <i>字符</i> 的数量，而不是屏幕上以像素为单位绘制的宽度。</p>
 </blockquote>
 
 <p><br>
@@ -63,7 +57,7 @@ width as drawn on the screen in pixels.</p>
 
 <tr>
 <td>string</td>
-<td>The string to measure the number of characters of.</td>
+<td>用于测量字符数的字符串。</td>
 </tr>
 </table>
 </blockquote>
@@ -71,9 +65,9 @@ width as drawn on the screen in pixels.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
@@ -83,9 +77,7 @@ width as drawn on the screen in pixels.</p>
 <p class="code">if string_length(name) &gt; 10<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;name = string_copy(name, 1, 10);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>This will check if the string of name is greater than ten
-characters and if it is, it will copy and use the first ten
-characters only.</p>
+<p>这将检查 name 字符串是否大于 10 个字符，如果大于 10 个字符，则只复制并使用前 10 个字符。</p>
 </blockquote>
 
 <p><br>

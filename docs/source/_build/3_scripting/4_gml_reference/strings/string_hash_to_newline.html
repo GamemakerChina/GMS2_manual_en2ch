@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,25 +38,16 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function returns a string where the "#" symbol has been
-converted into a new line. So a string formatted as:</p>
+<p>此函数返回一个字符串，其中 “#” 符号将转换为新行。所以字符串格式化后为：</p>
 
 <p class="code">"Hello#World"</p>
 
-<p>Would be printed to the screen as:</p>
+<p>打印到屏幕上为：</p>
 
-<p class="code">Hello<br>
-World</p>
+<p class="code">Hello<br>World</p>
 
-<div class="note"><b>IMPORTANT!</b> This function is provided for
-import compatibility between <i>GameMaker Studio 2</i> and previous
-versions of the software and as such this function should not be
-used except when necessary to replicate obsolete functionality.
-Instead you should be using the <a href="index.html">escape
-characters</a> to mark a new line. For more information on import
-compatibility see <a href=
-"../../../1_overview/3_additional_information/obsolete_functions.html">
-here</a>.</div>
+<div class="note"><b>重要！</b>这个函数是为了在 <i>GameMaker Studio 2</i> 和之前版本的软件之间导入兼容性而提供的，因此除非有必要复制过时的函数，否则不应该使用这个函数。相反，你应该使用 <a href="index.html">转义字符</a> 来标记新行。有关导入兼容性的更多信息，请参阅 <a href=
+"../../../1_overview/3_additional_information/obsolete_functions.html">此处</a>。</div>
 </blockquote>
 
 <p><br>
@@ -75,7 +66,7 @@ here</a>.</div>
 
 <tr>
 <td>string</td>
-<td>The string to convert over multiple lines</td>
+<td>要转换为多行的字符串</td>
 </tr>
 </table>
 </blockquote>
@@ -83,22 +74,19 @@ here</a>.</div>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">字符串</p>
+<p class="code">String（字符串）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">var str =
-string_hash_to_newline("Hello#World");<br>
-draw_text(32, 32, str);<br></p>
+<p class="code">var str = string_hash_to_newline("Hello#World");<br>draw_text(32, 32, str);<br></p>
 
 <blockquote>
-<p>The above code converts the string with the hash symbol into a
-string split over two lines then prints it to the screen.</p>
+<p>上面的代码将带有 # 符号的字符串转换为分成两行的字符串，然后将其打印到屏幕上。</p>
 </blockquote>
 
 <p><br>

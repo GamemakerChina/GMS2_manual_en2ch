@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,9 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>You can use this function to parse a string looking for specific
-parts, which can then be replaced by the new string that you have
-specified in all places that they occur.</p>
+<p>你可以使用此函数来解析字符串，查找特定的部分，然后可以用在出现这些部分的所有位置指定的新字符串替换这些部分。</p>
 </blockquote>
 
 <p><br>
@@ -59,18 +57,17 @@ specified in all places that they occur.</p>
 
 <tr>
 <td>str</td>
-<td>The string to be copied.</td>
+<td>要复制的字符串。</td>
 </tr>
 
 <tr class="alt">
 <td>substr</td>
-<td>The substring within the string to be replaced in all
-instances.</td>
+<td>要在所有实例中替换的字符串中的子字符串。</td>
 </tr>
 
 <tr>
 <td>newstr</td>
-<td>The new substring to replace the previous one(s).</td>
+<td>替换前一个子字符串的新子字符串。</td>
 </tr>
 </table>
 </blockquote>
@@ -78,22 +75,19 @@ instances.</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">字符串</p>
+<p class="code">String（字符串）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">str1 = "Hexxo Worxd";<br>
-str2 = string_replace_all(str1, "x", "l");<br></p>
+<p class="code">str1 = "Hexxo Worxd";<br>str2 = string_replace_all(str1, "x", "l");<br></p>
 
 <blockquote>
-<p>This will set <tt>str2</tt> to <tt>str1</tt>, but with its
-instances of "x" replaced with "l", resulting in <tt>str2</tt>
-being "Hello World".</p>
+<p>这将设置 <tt>str2</tt> 为 <tt>str1</tt>，但将其实例 “x” 替换为 “l”，导致 <tt>str2</tt> 为 “Hello World”。</p>
 </blockquote>
 
 <p><br>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,10 +38,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will return <tt>true</tt> if the clipboard
-contains text or <tt>false</tt> if it does not.</p>
+<p>如果剪贴板包含文本，则此函数将返回 <tt>true</tt>，如果不包含，则返回 <tt>false</tt>。</p>
 
-<div class="note"><b>注意</b>： This function is only valid for the <b>Windows</b> target.</div>
+<div class="note"><b>注意</b>： 此函数仅对 <b>Windows</b> 目标有效。</div>
 </blockquote>
 
 <p><br>
@@ -54,9 +53,9 @@ contains text or <tt>false</tt> if it does not.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -66,9 +65,7 @@ contains text or <tt>false</tt> if it does not.</p>
 <p class="code">if clipboard_has_text()<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;str = clipboard_get_text();<br>&nbsp;&nbsp;&nbsp;clipboard_set_text("");<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks the clipboard for text and if it contains
-any, it is read as a string into the variable "str". Finally the
-clipboard is cleared by setting it to an empty string.</p>
+<p>上面的代码检查剪贴板中的文本，如果它包含任意字符串，则将其作为字符串读入变量 “str”。最后，通过将剪贴板设置为空字符串来清除剪贴板。</p>
 </blockquote>
 
 <p><br>

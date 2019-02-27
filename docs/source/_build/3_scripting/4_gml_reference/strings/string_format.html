@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,19 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>Turns a real number into a string using your own formatting,
-where you can choose how many "places" are saved to the string and
-how many decimal places are saved also. Both can be very handy,
-some games prefer to display a score as a set number of digits,
-while control over decimal places can be good for a high accuracy
-the two decimal places of <a href=
-"string.html"><tt>string()</tt></a> cannot provide. If the number
-of places specified is greater than the value to be shown and/or
-the number plus the decimal places that have been specified is less
-than the total places, then spaces will be added before the value
-to make up the difference (see the example below). Zeros will be
-added to the right of the decimal point if the value given is less
-than the total and the number of decimal places to include.</p>
+<p>使用你自己的格式将实数转换为字符串，你可以选择保存到字符串的 “位置” 数量以及保存的小数位数。两者都非常方便，有些游戏更喜欢将分数显示为一组数字，而对小数点位置的控制对于 <a href=
+"string.html"><tt>string()</tt></a> 的两位小数所不能提供的高精度来说是很好的。如果指定的位数大于要显示的值和 / 或数字加上已指定的小数位数小于总位数，则将在值之前添加空格以弥补差异（请参阅如下例子）。如果给定的值小于要包括的小数位数的总数，则零将添加到小数点的右侧。</p>
 </blockquote>
 
 <p><br>
@@ -69,18 +58,17 @@ than the total and the number of decimal places to include.</p>
 
 <tr>
 <td>val</td>
-<td>The real number to be turned into a string.</td>
+<td>要转换为字符串的实数。</td>
 </tr>
 
 <tr class="alt">
 <td>tot</td>
-<td>The total number of places of the main number to be shown.
-Zeroes or spaces will be inserted to match this.</td>
+<td>要显示的主数字的总位置数。将插入与此匹配的零或空格。</td>
 </tr>
 
 <tr>
 <td>dec</td>
-<td>The number of decimal places to be included.</td>
+<td>要包含的小数位数。</td>
 </tr>
 </table>
 </blockquote>
@@ -88,23 +76,19 @@ Zeroes or spaces will be inserted to match this.</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">字符串</p>
+<p class="code">String（字符串）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">str1 = string_format(1234, 8, 0);<br>
-str2 = string_format(pi, 1, 10);<br>
-str3 = string_format(pi, 5, 5);<br></p>
+<p class="code">str1 = string_format(1234, 8, 0);<br>str2 = string_format(pi, 1, 10);<br>str3 = string_format(pi, 5, 5);<br></p>
 
 <blockquote>
-<p>This will set <tt>str1</tt> to "&nbsp;&nbsp;&nbsp;&nbsp;1234",
-<tt>str2</tt> to "3.1415926535" and <tt>str3</tt> to
-"&nbsp;&nbsp;&nbsp;&nbsp;3.14159".</p>
+<p>这将把 <tt>str1</tt> 设置为 “1234”，将 <tt>str2</tt> 设置为 “3.1415926535” 并将 <tt>str3</tt> 设置为 “3.14159”。</p>
 </blockquote>
 
 <p><br>
