@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">object_set_mask</h1>
 
-<h2 class="studio">Sets the mask index of the given object.</h2>
+<h2 class="studio">设置给定物体的遮罩索引。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,12 +49,12 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the object to change.</td>
+<td>要更改的物体的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>spr</td>
-<td>The new sprite to use as the object's mask.</td>
+<td>用作物体遮罩的新精灵。</td>
 </tr>
 </table>
 </div>
@@ -69,9 +69,9 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can set the mask_index of a specific object (for more information on masks see <a href=
-"../../../2_interface/1_editors/objects.html">The Object Editor</a>). This means that all instances of this object that are created <i>after the mask has been changed</i> will be created with this new mask, while instances that are already in the room may not be affected. You can set this to -1 to remove a mask sprite and so default to the mask defined for the sprite of the object (or no masks if no sprite has been chosen).<br><br>Please note that this is not an instance function!You can set the mask index of individual instances using the <a href=
-"../instances/instance_variables/mask_index.html"><tt>mask_index</tt></a> variable and so have ten instances all with a different mask to the object they are created from, and even if you change the mask index of the object using this function, all instances that are currently in the room will remain as they were, and only instances created after calling the function will start with the new mask.<br>
+<p>使用此函数，你可以设置特定物体的 mask_index（有关遮罩的更多信息，请参阅 <a href=
+"../../../2_interface/1_editors/objects.html">物体编辑器</a>）。这意味着在 <i>遮罩更改后</i> 创建的物体的所有实例都将使用这个新遮罩创建，而房间中已经存在的实例可能不会受到影响。你可以将其设置为 -1 以删除遮罩精灵，因此默认为物体的遮罩所定义的遮罩（如果没有选择遮罩，则为无遮罩）<br><br>请注意，这不是实例函数！你可以使用 <a href=
+"../instances/instance_variables/mask_index.html"><tt>mask_index</tt></a> 变量设置各个实例的遮罩索引，因此有 10 个实例都具有与创建它们的物体不同的遮罩，即使你使用此函数更改了物体的遮罩索引，当前在房间中的所有实例将保持原样，并且只有在调用该函数后创建的实例才会拥有新遮罩。<br>
 <br></p>
 
 <p><br>
@@ -82,9 +82,7 @@ if (window.name != "content")
 <p class="code">if global.level=10 object_set_mask(obj_Platform,
 spr_mask_10);</p>
 
-<p>The above code checks the value of global variable and then
-changes the mask index of the object "obj_Platform" if it is equal
-to ten.</p>
+<p>上面的代码检查全局变量的值，然后更改物体 “obj_Platform” 的遮罩索引，如果它等于 10。</p>
 
 <p><br>
 </p>

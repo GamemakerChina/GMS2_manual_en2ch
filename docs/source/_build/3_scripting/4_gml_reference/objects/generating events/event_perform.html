@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">event_perform</h1>
 
-<h2 class="studio">Performs a given event of the calling
-instance.</h2>
+<h2 class="studio">执行调用实例的给定事件。</h2>
 
 <h3 class="studio"><b>语法：</b>
 </h3>
@@ -71,28 +70,14 @@ instance.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will perform the specified event, with the
-designated argument, for the instance running the code. There are
-many options here which allow complete simulation of all possible
-events, but note that this literally just performs all the code in
-the event and the game will not modify anything to make it trigger
-itself manually, for example if you choose to perform a keyboard
-press event, the event will be triggered but relevant key will not
-be recognised as having been pressed. Or if you perform an alarm
-event, the alarm counter will not be set to -1 but rather continue
-to count down.<br>
+<p>对于运行代码的实例，此函数将使用指定的参数执行指定的事件。这里有很多选项可以完全模拟所有可能的事件，但请注意，这只是执行事件中的所有代码，游戏不会修改任何东西以使其手动触发，例如，如果你选择执行键盘按下事件（keyboard press event），将触发事件，但相关键不会被识别为已被按下。或者，如果执行计时器事件（alarm event），计时器计数器将不会设置为 -1，而是继续倒计时。<br>
 <br></p>
 
 <h3 class="studio">常量</h3>
 
-<p>The table below outlines all the constants that are included in
-<i>GameMaker Studio 2</i> for referencing event types, as well as
-their number value. The events themselves are marked in <b>bold
-text</b> and are the same as the return values of the <a href=
-"event_type.html"><tt>event_type</tt></a> variable, while their
-number values are marked with <i>italic text</i> and these are the
-same as the return values for the <a href=
-"event_number.html"><tt>event_number</tt></a> variable:</p>
+<p>下表概述了 <i>GameMaker Studio 2</i> 中包含的用于引用事件类型的所有常量，以及它们的数值。事件本身以 <b>粗体文本</b> 标记，并且与 <a href=
+"event_type.html"><tt>event_type</tt></a> 变量的返回值相同，而它们的数值标记为 <i>斜体文本</i>，这些与 <a href=
+"event_number.html"><tt>event_number</tt></a> 变量的返回值相同：</p>
 
 <div class="compat">
 <table>
@@ -104,62 +89,61 @@ same as the return values for the <a href=
 <tr>
 <td><b>ev_create</b>
 </td>
-<td>创建事件</td>
+<td>创建事件（Create event）</td>
 </tr>
 
 <tr>
 <td><b>ev_destroy</b>
 </td>
-<td>销毁事件</td>
+<td>销毁事件（Destroy event）</td>
 </tr>
 
 <tr>
 <td><b>ev_cleanup</b>
 </td>
-<td>Clean Up Event</td>
+<td>清理事件（Clean Up Event）</td>
 </tr>
 
 <tr>
 <td><b>ev_step</b>
 </td>
-<td>步事件</td>
+<td>步事件（Step event）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_step_normal</i>
 </td>
-<td>步</td>
+<td>步（Step）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_step_begin</i>
 </td>
-<td>步开始</td>
+<td>步开始（Begin Step）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_step_end</i>
 </td>
-<td>步结束</td>
+<td>步结束（End Step）</td>
 </tr>
 
 <tr>
 <td><b>ev_alarm</b>
 </td>
-<td>计时器事件</td>
+<td>计时器事件（Alarm event）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- 0 ... 11</i>
 </td>
-<td>The number relevant to which of the 12 alarms you wish to
-trigger the event of</td>
+<td>你希望触发的 12 个计时器中的哪一个的相关编号</td>
 </tr>
 
 <tr>
 <td><b>ev_keyboard, ev_keypress, ev_keyrelease</b>
 </td>
-<td>键盘/键盘按下/键盘放开事件</td>
+<td>键盘（Keyboard）/ 键盘按下（Keyboard Pressed）/ 键盘放开事件（Keyboard Released）</td>
 </tr>
 
 <tr>
@@ -171,145 +155,145 @@ trigger the event of</td>
 <tr>
 <td><b>ev_mouse</b>
 </td>
-<td>鼠标事件</td>
+<td>鼠标事件（Mouse event）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_left_button</i>
 </td>
-<td>Left button held down on object</td>
+<td>左键在物体上按住</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_right_button</i>
 </td>
-<td>Right button held down on object</td>
+<td>右键在物体上按住</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_middle_button</i>
 </td>
-<td>Middle button (or clickable wheel) held down on object</td>
+<td>中键（或可点击滚轮）在物体上按住</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_no_button</i>
 </td>
-<td>No buttons held down</td>
+<td>无按键按住</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_left_press</i>
 </td>
-<td>Left button just pressed on object</td>
+<td>左键在物体上按下</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_right_press</i>
 </td>
-<td>Right button just pressed on object</td>
+<td>右键在物体上按下</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_middle_press</i>
 </td>
-<td>Middle button (or clickable wheel) just pressed on object</td>
+<td>中键（或可点击滚轮）在物体上按下</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_left_release</i>
 </td>
-<td>Left button just released on object</td>
+<td>左键在物体上释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_right_release</i>
 </td>
-<td>Right button just released on object</td>
+<td>右键在物体上释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_middle_release</i>
 </td>
-<td>Middle button just released on object</td>
+<td>中键在物体上释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_mouse_enter</i>
 </td>
-<td>Mouse just entered object's bounding box</td>
+<td>鼠标进入物体碰撞盒</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_mouse_leave</i>
 </td>
-<td>Mouse just left object's bounding box</td>
+<td>鼠标离开物体碰撞盒</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_mouse_wheel_up</i>
 </td>
-<td>Mouse wheel scrolled upwards</td>
+<td>鼠标滚轮向上滚动</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_mouse_wheel_down</i>
 </td>
-<td>Mouse wheel scrolled downwards</td>
+<td>鼠标滚轮向下滚动</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_left_button</i>
 </td>
-<td>Left button held down anywhere</td>
+<td>左键在任意位置按住</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_right_button</i>
 </td>
-<td>Right button held down anywhere</td>
+<td>右键在任意位置按住</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_middle_button</i>
 </td>
-<td>Middle button (or clickable wheel) held down anywhere</td>
+<td>中键（或可点击滚轮）在任意位置按住</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_left_press</i>
 </td>
-<td>Left button just pressed anywhere</td>
+<td>左键在任意位置按下</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_right_press</i>
 </td>
-<td>Right button just pressed anywhere</td>
+<td>右键在任意位置按下</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_middle_press</i>
 </td>
-<td>Middle button (or clickable wheel) just pressed anywhere</td>
+<td>中键（或可点击滚轮）在任意位置按下</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_left_release</i>
 </td>
-<td>Left button just released anywhere</td>
+<td>左键在任意位置释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_right_release</i>
 </td>
-<td>Right button just released anywhere</td>
+<td>右键在任意位置释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_middle_release</i>
 </td>
-<td>Middle button just released anywhere</td>
+<td>中键在任意位置释放</td>
 </tr>
 
 <tr>
@@ -321,325 +305,295 @@ trigger the event of</td>
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_tap</i>
 </td>
-<td>A single click/touch and release has been detected for an
-<i>instance</i></td>
+<td>已检测到 <i>实例</i> 的单击 / 触摸和释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_double_tap</i>
 </td>
-<td>Two quick touches/clicks and releases have been detected for an
-<i>instance</i></td>
+<td>已检测到 <i>实例</i> 的两次快速触摸 / 单击和释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_drag_start</i>
 </td>
-<td>The beginning of a drag gesture has been detected for an
-<i>instance</i></td>
+<td>已为 <i>实例</i> 检测到拖拽手势的开始</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_dragging</i>
 </td>
-<td>A touch/click has been held and moved for an
-<i>instance</i></td>
+<td>触摸 / 单击已保持并移动 <i>实例</i></td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_drag_end</i>
 </td>
-<td>The release of the touch/click from a drag has been detected
-for an <i>instance</i></td>
+<td>已检测到 <i>实例</i> 从拖拽中释放触摸 / 单击</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_flick</i>
 </td>
-<td>The release of a touch/click from a drag had enough movement
-for a flick event to be detected for the <i>instance</i></td>
+<td>从拖拽中释放触摸 / 单击有足够的移动，可以检测 <i>实例</i> 的轻抚事件</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_pinch_start</i>
 </td>
-<td>Two touches and a straight movement have been detected for an
-<i>instance</i></td>
+<td>已经为 <i>实例</i> 检测到两次触摸和直线运动</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_pinch_in</i>
 </td>
-<td>The movement between two touches for an <i>instance</i> has
-been detected as inwards</td>
+<td>已经检测到 <i>实例</i> 的两次触摸之间的移动</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_pinch_out</i>
 </td>
-<td>The movement between two touches for an <i>instance</i> has
-been detected as outwards</td>
+<td><i>实例</i> 的两次触摸之间的移动已被检测为向外</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_pinch_end</i>
 </td>
-<td>The release of one (or both) touches for a pinch has been
-detected for an <i>instance</i></td>
+<td>已经针对 <i>实例</i> 检测到针对捏合的一个（或两个）触摸的释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_rotate_start</i>
 </td>
-<td>The movement between two touches for an <i>instance</i> has
-been detected as a rotation</td>
+<td>已经将 <i>实例</i> 的两次触摸之间的移动检测为旋转</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_rotating</i>
 </td>
-<td>The movement between two touches for an <i>instance</i> has
-been detected as rotating</td>
+<td><i>实例</i> 的两次触摸之间的移动被检测为旋转</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gesture_rotate_end</i>
 </td>
-<td>The release of one (or both) touches for a rotation has been
-detected for an <i>instance</i></td>
+<td>已针对 <i>实例</i> 检测到旋转的一个（或两个）触摸的释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_tap</i>
 </td>
-<td>A single click/touch and release has been detected
-<i>anywhere</i> in the room</td>
+<td>在房间内 <i>任何地方</i> 检测到单击 / 触摸和释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_double_tap</i>
 </td>
-<td>Two quick touches/clicks and releases have been detected
-<i>anywhere</i> in the room</td>
+<td>在房间里 <i>任何地方</i> 检测到两次快速触摸 / 点击和释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_drag_start</i>
 </td>
-<td>The beginning of a drag gesture has been detected
-<i>anywhere</i> in the room</td>
+<td>已经在房间中 <i>任何地方</i> 检测到拖拽手势的开始</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_dragging</i>
 </td>
-<td>A touch/click has been held and moved <i>anywhere</i> in the
-room</td>
+<td>保持触摸 / 点击并在房间内 <i>移动</i></td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_drag_end</i>
 </td>
-<td>The release of the touch/click from a drag has been detected
-<i>anywhere</i> in the room</td>
+<td>在房间中已经检测到 <i>任何位置</i> 从拖拽中释放触摸 / 点击</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_flick</i>
 </td>
-<td>The release of a touch/click from a drag had enough movement
-for a flick event to be detected <i>anywhere</i> in the room</td>
+<td>从拖动中释放触摸 / 点击有足够的移动，可以在房间的任何地方 <i>检测到轻弹事件</i></td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_pinch_start</i>
 </td>
-<td>Two touches and a straight movement have been detected
-<i>anywhere</i> in the room</td>
+<td>在房间里的 <i>任何地方</i> 都检测到两次触摸和直线移动</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_pinch_in</i>
 </td>
-<td>The movement between two touches <i>anywhere</i> in the room
-has been detected as inwards</td>
+<td>房间内 <i>任何地方</i> 两个触摸之间的移动已被检测为向内</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_pinch_out</i>
 </td>
-<td>The movement between two touches <i>anywhere</i> in the room
-has been detected as outwards</td>
+<td>房间内 <i>任何地方</i> 两个触摸之间的移动已被检测为向外</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_pinch_end</i>
 </td>
-<td>The release of one (or both) touches for a pinch has been
-detected <i>anywhere</i> in the room</td>
+<td>在房间里 <i>任何地方</i> 检测到一次（或两次）触发释放</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_rotate_start</i>
 </td>
-<td>The movement between two touches <i>anywhere</i> in the room
-has been detected as a rotation</td>
+<td>房间中 <i>任何地方</i> 两个触摸之间的移动被检测为旋转开始</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_rotating</i>
 </td>
-<td>The movement between two touches <i>anywhere</i> in the room
-has been detected as rotating</td>
+<td>房间中 <i>任何地方</i> 两个触摸之间的移动被检测为旋转</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_global_gesture_rotate_end</i>
 </td>
-<td>The release of one (or both) touches for a rotation has been
-detected <i>anywhere</i> in the room</td>
+<td>房间中 <i>任何地方</i> 两个触摸之间的移动被检测为旋转结束</td>
 </tr>
 
 <tr>
 <td><b>ev_collision</b>
 </td>
-<td>Collision with an object</td>
+<td>与物体碰撞</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- The index of the object to check.</i>
 </td>
-<td>object1 for example.</td>
+<td>例如 object1</td>
 </tr>
 
 <tr>
 <td><b>ev_other</b>
 </td>
-<td>One of the actions listed under 'Other'</td>
+<td>“其他” 下列出的一项行动</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_outside</i>
 </td>
-<td>Whether the instance is outside of the room</td>
+<td>实例是否在房间外面</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_boundary</i>
 </td>
-<td>Whether the instance is intersecting the boundary</td>
+<td>实例是否与边界相交</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_game_start</i>
 </td>
-<td>Only triggered at the start of the game</td>
+<td>仅在游戏开始时触发</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_game_end</i>
 </td>
-<td>Only triggered at the end of the game</td>
+<td>仅在游戏结束时触发</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_room_start</i>
 </td>
-<td>Only triggered at the start of a room</td>
+<td>仅在房间开始时触发</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_room_end</i>
 </td>
-<td>Only triggered at the end of a room</td>
+<td>仅在房间结束时触发</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_no_more_lives</i>
 </td>
-<td>If all lives are depleted (if lives==0)</td>
+<td>如果所有生命都耗尽了（如果 lives==0）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_no_more_health</i>
 </td>
-<td>If all health is depleted (if health==0)</td>
+<td>如果所有健康都耗尽了（如果 health==0）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_animation_end</i>
 </td>
-<td>If the object's sprite has reached the end of its
-animation</td>
+<td>如果物体的精灵已到达其动画的结尾</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_end_of_path</i>
 </td>
-<td>If the object has reached the end of a path it is
-following</td>
+<td>如果物体已到达跟随路径的末尾</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_close_button</i>
 </td>
-<td>If the window's Close button has been pushed</td>
+<td>如果已按下窗口的 “关闭” 按钮</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_user0... ev_user15</i>
 </td>
-<td>One of the 16 available user events.</td>
+<td>16 个可用用户事件之一。</td>
 </tr>
 
 <tr>
 <td><b>ev_draw</b>
 </td>
-<td>Draw event. <i><b>NOTE:</b> This event cannot be forced outside
-of a draw event and the constants and the constants are only for
-identifying the event when performed in these cases.</i></td>
+<td>绘制事件。<i> <b>注意：</b> 此事件不能强制在绘制事件之外，常量仅用于在这些情况下执行时识别事件。</i></td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_draw_begin</i>
 </td>
-<td>The draw begin event.</td>
+<td>绘制开始事件（The draw begin event）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_draw_end</i>
 </td>
-<td>The draw end event.</td>
+<td>绘制结束事件（The draw end event）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_draw_pre</i>
 </td>
-<td>The pre draw event.</td>
+<td>绘制预处理事件（The pre draw event）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_draw_post</i>
 </td>
-<td>The post draw event.</td>
+<td>绘制后处理事件（The post draw event）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gui</i>
 </td>
-<td>绘制GUI事件</td>
+<td>绘制 GUI 事件（The draw gui event）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gui_begin</i>
 </td>
-<td>绘制GUI开始事件</td>
+<td>绘制 GUI 开始事件（The draw gui begin event）</td>
 </tr>
 
 <tr>
 <td><i>&nbsp;&nbsp;&nbsp;---- ev_gui_end</i>
 </td>
-<td>绘制GUI结束事件</td>
+<td>绘制 GUI 结束事件（The draw gui end event）</td>
 </tr>
 </table>
 </div>
@@ -654,18 +608,15 @@ identifying the event when performed in these cases.</i></td>
 
 <p class="code">event_perform(ev_keypress, ord("W"));</p>
 
-<p>This would perform the event associated with Keyboard Check
-Pressed "W" key (without actually generating a keyboard press).</p>
+<p>这将执行与键盘检查按下 “W” 键相关联的事件（不实际生成键盘按压）。</p>
 
 <p class="code">event_perform(ev_step, ev_step_begin);</p>
 
-<p>This would perform the <i>Begin Step</i> event (if called from
-any of the step events it would cause the begin step event code to
-be run twice).</p>
+<p>这将执行 <i>步开始（Begin Step）</i> 事件（如果从任何步事件调用它将导致步开始事件代码运行两次）。</p>
 
 <p class="code">event_perform(ev_create, 0);</p>
 
-<p>This would perform the <i>Create</i> event of the instance.</p>
+<p>这将执行实例的 <i>创建（Create）</i> 事件。</p>
 
 <p><br>
 </p>

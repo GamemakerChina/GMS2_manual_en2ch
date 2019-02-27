@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">object_get_mask</h1>
 
-<h2 class="studio">Returns the mask_index of the specified
-object.</h2>
+<h2 class="studio">返回指定物体的 mask_index。</h2>
 
 <h3><b>语法：</b>
 </h3>
@@ -51,7 +50,7 @@ object.</h2>
 
 <tr>
 <td>obj</td>
-<td>The index of the object to check</td>
+<td>要检查的物体的索引</td>
 </tr>
 </table>
 </div>
@@ -66,15 +65,8 @@ object.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will tell you whether the object you are checking
-has a mask index or not, and if it does then it will return the
-index of that mask, or -1 if it does not. Please note that this is
-not an instance function! You can have an object with no mask while
-an instance of that same object can have one and vice-versa, or
-they can even have different masks. You can set an individual
-instances mask index using the <a href=
-"../instances/instance_variables/mask_index.html"><tt>mask_index</tt></a>
-instance variable.<br></p>
+<p>此函数将告诉你正在检查的物体是否具有遮罩索引，如果是，则返回该遮罩的索引，如果不是则返回 -1。请注意，这不是实例函数！你可以拥有一个没有遮罩的物体，而同一个物体的实例可以有一个，反之亦然，或者它们甚至可以有不同的遮罩。你可以使用 <a href=
+"../instances/instance_variables/mask_index.html"><tt>mask_index</tt></a> 实例变量设置单个实例遮罩索引。<br></p>
 
 <p><br>
 </p>
@@ -85,10 +77,7 @@ instance variable.<br></p>
 <p class="code">if mask_index != object_get_mask(object_index)
 mask_index = object_get_mask(object_index);</p>
 
-<p>The above example will check the mask index of the instance
-against the mask of the object_index of the instance. If they are
-not the same, then it will assign the same mask as the one the
-object index has to the instance.</p>
+<p>上面的示例将针对实例的 object_index 的遮罩检查实例的遮罩索引。如果它们不相同，那么它将分配与物体索引对实例相同的遮罩。</p>
 
 <p><br>
 </p>

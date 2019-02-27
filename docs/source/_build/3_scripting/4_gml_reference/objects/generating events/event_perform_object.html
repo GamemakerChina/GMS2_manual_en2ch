@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">event_perform_object</h1>
 
-<h2 class="studio">Performs a given event of the specified
-object.</h2>
+<h2 class="studio">执行指定物体的给定事件。</h2>
 
 <h3 class="studio"><b>语法：</b>
 </h3>
@@ -76,23 +75,10 @@ object.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This functions works the same as <tt>event_perform()</tt> except
-that this time you can specify events from another object. There
-are many options here which allow complete simulation of all
-possible events, but note that this literally just performs all the
-code in the event and the game will not modify anything to make it
-trigger itself manually, for example if you choose to perform a
-keyboard press event, the event will be triggered but the relevant
-key will not be recognised as having been pressed. Or if you
-perform an alarm event, the alarm counter will not be set to -1 but
-rather continue to count down. You can find a complete list of the
-available constants this function requires from the the page for
-the function <a href=
-"event_perform.html"><tt>event_perform</tt></a>.</p>
+<p>此函数与 <tt>event_perform()</tt> 的作用相同，只是这次你可以指定来自另一个物体的事件。这里有很多选项可以完全模拟所有可能的事件，但请注意，这只是执行事件中的所有代码，游戏不会修改任何东西以使其手动触发，例如，如果你选择执行键盘按下事件（keyboard press event），事件将被触发，但相关的键不会被识别为已被按下。或者，如果执行计时器事件（alarm event），计时器计数器将不会设置为 -1，而是继续倒计时。你可以从函数 <a href=
+"event_perform.html"><tt>event_perform</tt></a> 的页面中找到此函数所需的可用常量的完整列表。</p>
 
-<blockquote><i><b>NOTE:</b> Actions in the event called with this
-function are applied to the <b>current instance</b>, and not to
-instances of the given object.</i>
+<blockquote><i><b>注意：</b> 使用此函数调用的事件中的动作将应用于 <b>当前实例</b>，而不应用于给定物体的实例。</i>
 </blockquote>
 
 <p><br>
@@ -104,9 +90,7 @@ instances of the given object.</i>
 <p class="code">event_perform_object(obj_Player, ev_keypress,
 ord("W"));</p>
 
-<p>This would perform the event associated with Keyboard Check
-Pressed &gt; W key from the object "obj_Player" in the current
-instance.</p>
+<p>这将执行与当前实例中的物体 “obj_Player” 的键盘按下 W 键（Keyboard Check Pressed &gt; W）相关联的事件。</p>
 
 <p><br>
 </p>

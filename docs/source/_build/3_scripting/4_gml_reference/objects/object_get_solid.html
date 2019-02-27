@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -58,22 +58,15 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><b>返回:</b> 布尔值</p>
+<p><b>返回：</b> 布尔值</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will tell you whether the object you are checking
-has been flagged as "solid" or not. A solid object generates a
-special collision event when using the traditional collision system
-(ie: the physics world is off). Please note that this is not an
-instance function! So, you can have a solid object and a normal
-instance of the same object and vice-versa. You can set an
-individual instances solid flag using the <a href=
-"../instances/instance_variables/solid.html"><tt>solid</tt></a>
-instance variable.<br></p>
+<p>此函数将告诉你正在检查的物体是否已标记为 “固体”。使用传统碰撞系统时，固体物体会生成特殊碰撞事件（例如：物理世界是关闭的）。请注意，这不是实例函数！因此，你可以拥有一个固体物体和同一物体的普通实例，反之亦然。你可以使用 <a href=
+"../instances/instance_variables/solid.html"><tt>solid（固体）</tt></a> 实例变量设置单个实例固体标志。<br></p>
 
 <p><br>
 </p>
@@ -84,11 +77,7 @@ instance variable.<br></p>
 <p class="code">if !solid &amp;&amp; object_get_solid(object_index)
 solid=true;</p>
 
-<p>The above code will check the instance running it to see if it
-is solid or not as well as check the object index of the instance
-to see if it is flagged as solid or not. If the instance is
-<i>not</i> solid yet the object index is flagged as solid, it will
-set "solid" to true for that instance.</p>
+<p>上面的代码将检查运行它的实例以查看它是否为固体，以及检查实例的物体索引以查看它是否标记为固体。如果实例 <i>不</i> 为固体但物体索引标记为固体，则会将该实例的 “solid（固体）” 设置为 true。</p>
 
 <p><br>
 </p>

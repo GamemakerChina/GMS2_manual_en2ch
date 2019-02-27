@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -47,15 +47,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This <b>read-only</b> variable returns the number of the event
-currently being called, where the number is actually referring to
-the "sub event" of the event, ie: for the step event the event
-number could be any one of the constants <b>ev_step_normal</b>,
-<b>ev_step_begin</b>, or <b>ev_step_end</b>. For a full list of
-constants that are available for the specific sub-events see
-<a href="event_perform.html"><tt>event_perform</tt></a>, and if you
-should need to know the main event itself, you should be checking
-the <a href="event_type.html"><tt>event_type</tt></a>.<br>
+<p>此 <b>只读</b> 变量返回当前正在调用的事件的编号，其中该编号实际上是指事件的 “子事件”，即：对于步事件，事件编号可以是 <b>ev_step_normal</b>、<b>ev_step_begin</b> 或 <b>ev_step_end</b> 中的任何一个常数。有关特定子事件可用的常量的完整列表，请参阅 <a href="event_perform.html"><tt>event_perform</tt></a>，如果你需要知道主事件本身，则应该检查 <a href="event_type.html"><tt>event_type</tt></a>。<br>
 <br></p>
 
 <p><br>
@@ -65,9 +57,7 @@ the <a href="event_type.html"><tt>event_type</tt></a>.<br>
 
 <p class="code">switch (event_number)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case ev_step_normal: show_debug_message("Step event!"); break;<br>&nbsp;&nbsp;&nbsp;case ev_game_start: show_debug_message("Game Start""); break;<br>&nbsp;&nbsp;&nbsp;case ev_room_start: show_debug_message("Room Start!"); break;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code could be called form a script and used to show
-debug messages informing you which event is being currently
-triggered.</p>
+<p>上面的代码可以通过脚本调用，用于显示调试消息，通知你当前正在触发哪个事件。</p>
 
 <p><br>
 </p>

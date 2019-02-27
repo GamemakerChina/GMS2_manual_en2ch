@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,27 +31,15 @@ if (window.name != "content")
 </script>
 <h2>物体</h2>
 
-<p>在<i>GameMaker Studio 2</i>中你会拥有物体以及实例。Objects are essentially the base template for an instance, and as such are <i>never</i> present in a room directly... only <i>instances</i> of the object are placed in the room. This means that if you want to change something for all instances you are going to create, then you can do it by changing the <i>object</i>.</p>
+<p>在<i>GameMaker Studio 2</i>中你会拥有物体以及实例。物体本质上是实例的基本模板，因此 <i>永远不会</i> 直接存在于房间中......只有物体的 <i>实例</i> 被放置在房间中。这意味着如果要为要创建的所有实例更改某些内容，则可以通过更改 <i>物体</i> 来实现。</p>
 
-<div class="note"><b>IMPORTANT!</b> Changing anything about an o
-bject will <b>not</b> change any instances currently present in the
-room, only those that are created after the change</div>
+<div class="note"><b>重要！</b> 更改有关物体的任何内容将 <b>不</b> 更改房间中当前存在的任何实例，仅更改更改后创建的实例</div>
 
-<p>You can also access information about a base object and use it
-to dictate behaviours or changes in the game. For example, you can
-do a check for a parent object ID, and in the following code if an
-instance with that parent is found you can then check its
-<tt>object_index</tt> to decide what should be done.</p>
+<p>你还可以访问有关基础物体的信息，并使用它来指示游戏中的行为或更改。例如，你可以检查父物体 ID，如果找到具有该父物体的实例，则可以在以下代码中检查其 <tt>object_index</tt> 以确定应该执行的操作。</p>
 
 <blockquote><label class="collapse" for="one">获取物体属性</label> <input id="one" type="checkbox">
 <div class="index_list">
-<p><i>GameMaker Studio 2</i> gives you a number of functions that
-permit you to get various details about an object. Note, an object
-is <i>not</i> an instance (an in-game entity), it is purely a
-resource from which all instances are created. This means that the
-return values of these functions may be different to the actual
-values shown by instances in the room, as once an instance is
-created it can be changed through code and DnD™ actions.<br></p>
+<p><i>GameMaker Studio 2</i> 为你提供了许多函数，允许你获取有关物体的各种详细信息。注意，一个物体 <i>不是</i> 一个实例（一个游戏内实体），它纯粹是一个创建所有实例的资源。这意味着这些函数的返回值可能与房间中的实例所显示的实际值不同，因为一旦创建实例，它就可以通过代码和 DnD™ 动作进行更改。<br></p>
 
 <ul>
 <li><a href="object_exists.html">object_exists</a><br>
@@ -92,16 +80,10 @@ created it can be changed through code and DnD™ actions.<br></p>
 </ul>
 </div>
 <br>
-<label class="collapse" for="two">Set Object Properties</label>
+<label class="collapse" for="two">设置物体属性</label>
 <input id="two" type="checkbox">
 <div class="index_list">
-<p>There are also a number of functions that permit you set the
-properties for an object. It should be noted that any instances of
-this object that already exist in the room <i>may not be affected
-by these functions</i>, but all new instances of this object
-created in the room will be, so it is recommend that you never
-change an objects properties when instances of that object are
-present in the current room.</p>
+<p>还有许多函数允许你设置物体的属性。应该注意的是，房间中已存在的此物体的任何实例 <i>可能不受这些函数的影响</i>，但是在房间中创建的此物体的所有新实例都将受影响，因此建议，当当前房间中存在该物体的实例时，你永远不会更改物体属性。</p>
 
 <ul>
 <li><a href="object_set_mask.html">object_set_mask<br></a>
@@ -122,11 +104,8 @@ present in the current room.</p>
 </ul>
 </div></blockquote>
 
-<p>You can also use certain functions to generate events from code
-from within a specific instance or object. These functions can be
-very useful, especially when dealing with <a href=
-"../../../2_interface/1_editors/objects.html#object_parent">Parents
-and Children</a>, and are outlined in the following section:</p>
+<p>你还可以使用某些函数从特定实例或物体中的代码生成事件。这些函数非常有用，尤其是在处理 <a href=
+"../../../2_interface/1_editors/objects.html#object_parent">父物体与子物体</a> 时，以下部分概述了这些函数：</p>
 
 <blockquote>
 <ol>
@@ -139,7 +118,7 @@ and Children</a>, and are outlined in the following section:</p>
 </p>
 
 <div class="clear">
-<div style="float:left">上一页：<a href="../index.html"><i>GameMaker Studio 2</i>语言参考</a></div>
+<div style="float:left">上一页：<a href="../index.html"><i>GameMaker Studio 2</i> 语言参考</a></div>
 
 <div style="float:right">下一页：<a href=
 "../instances/index.html">实例</a></div>

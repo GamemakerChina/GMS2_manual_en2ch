@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">object_is_ancestor</h1>
 
-<h2 class="studio">Returns whether an object is the parent of
-another.</h2>
+<h2 class="studio">返回物体是否是另一个物体的父物体。</h2>
 
 <h3><b>语法：</b>
 </h3>
@@ -51,12 +50,12 @@ another.</h2>
 
 <tr>
 <td>obj</td>
-<td>The object that is being checked as the child.</td>
+<td>作为被检查物体的子物体。</td>
 </tr>
 
 <tr class="alt">
 <td>par</td>
-<td>The object that is being checked as the ancestor (parent).</td>
+<td>作为被检查物体的父物体。</td>
 </tr>
 </table>
 </div>
@@ -64,19 +63,14 @@ another.</h2>
 <p><br>
 </p>
 
-<p><b>返回:</b> 布尔值</p>
+<p><b>返回：</b> 布尔值</p>
 
 <p><br>
 </p>
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to check an object and see if it is an
-ancestor or not of another object. So, both arguments need to be
-object indices and <i>not</i> the instance ids, and the first one
-is always the object that you want to find out if it is a child of
-the second argument, which is always the object that want to check
-as the ancestor (parent).<br></p>
+<p>此函数可用于检查物体并查看它是否是另一个物体的父物体。因此，两个参数都需要是物体索引和而 <i>不是</i> 实例 id，第一个参数始终是你想要查明它是否是第二个参数的子参数的物体，第二个参数始终是要作为祖先（父物体）进行检查的物体。<br></p>
 
 <p><br>
 </p>
@@ -86,8 +80,7 @@ as the ancestor (parent).<br></p>
 
 <p class="code">if object_is_ancestor(object_index, obj_Enemy)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_destroy(); // 销毁实例<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks to see if the instance running the code is
-a child of the object "obj_Enemy", and if so it is destroyed.</p>
+<p>上面的代码检查运行代码的实例是否是物体 “obj_Enemy” 的子代，如果是，则将其销毁。</p>
 
 <p><br>
 </p>

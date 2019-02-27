@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">object_set_sprite</h1>
 
-<h2 class="studio">Sets the sprite of the given object.</h2>
+<h2 class="studio">设置给定物体的精灵。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,12 +49,12 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the object to change.</td>
+<td>要更改的物体的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>spr</td>
-<td>The sprite to assign to the object.</td>
+<td>要分配给物体的精灵。</td>
 </tr>
 </table>
 </div>
@@ -69,8 +69,8 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can set the sprite index of a specific object. This means that all instances of this object that are created <i>after the sprite_index has been changed</i> will be created with this new sprite_index, while instances that are already in the room may not be affected.<br><br>Please note that this is not an instance function!You can set the sprite index of individual instances using the <a href=
-"../instances/instance_variables/sprite_index.html"><tt>sprite_index</tt></a> variable and so have ten instances all with a different sprite to the object they are created from, and even if you change the sprite index of the object using this function, all instances that are currently in the room will remain as they were, and only instances created after calling the function will start with the new sprite.<br>
+<p>使用此函数，你可以设置特定物体的精灵索引。这意味着在 <i>精灵更改后</i> 创建的物体的所有实例都将使用这个新精灵创建，而房间中已经存在的实例可能不会受到影响。<br><br>请注意，这不是实例函数！你可以使用 <a href=
+"../instances/instance_variables/sprite_index.html"><tt>sprite_index</tt></a> 变量设置各个实例的精灵索引，因此有 10 个实例都具有与创建它们的物体不同的精灵，即使你使用此函数更改了物体的精灵索引，当前在房间中的所有实例将保持原样，并且只有在调用该函数后创建的实例才会拥有新精灵。<br>
 <br></p>
 
 <p><br>
@@ -80,10 +80,7 @@ if (window.name != "content")
 
 <p class="code">switch (room)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case rm_start: object_set_sprite(obj_Player, spr_uniform); break;<br>&nbsp;&nbsp;&nbsp;case rm_middle: object_set_sprite(obj_Player, spr_swimsuit); break;<br>&nbsp;&nbsp;&nbsp;case rm_end: object_set_sprite(obj_Player, spr_casual); break;<br>&nbsp;&nbsp;&nbsp;}<br>instance_create_layer(32, 32, "Instances", obj_Player);<br></p>
 
-<p>The above code will set the object "obj_Player" sprite index to
-different values depending on the room that the instance running
-the code is currently in. It then creates an instance of
-"obj_Player".</p>
+<p>上面的代码将物体 “obj_Player” 精灵索引设置为不同的值，具体取决于运行代码的实例当前所在的房间。然后它创建一个 “obj_Player” 的实例。</p>
 
 <p><br>
 </p>

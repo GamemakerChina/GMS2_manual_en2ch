@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">object_set_visible</h1>
 
-<h2 class="studio">Sets the visibility of the given object.</h2>
+<h2 class="studio">设置给定物体的可见。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,13 +49,12 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the object to change.</td>
+<td>要更改的物体的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>vis</td>
-<td>The new visibility of the object (true=visible,
-false=invisible).</td>
+<td>物体的新的可见值（true = 可见，false = 不可见）。</td>
 </tr>
 </table>
 </div>
@@ -70,8 +69,8 @@ false=invisible).</td>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can flag a specific object as being visible or not (for more information on the "visible" flag see <a href="../../../2_interface/1_editors/objects.html">Defining Objects</a>). This means that all instances of this object that are created <i>after visible has been changed</i> will be created with this new state, while instances that are already in the room may not be affected.<br><br>Please note that this is not an instance function!You can set the visible flag of individual instances using the <a href=
-"../instances/instance_variables/visible.html"><tt>visible</tt></a> variable and so have ten instances all flagged as visible even though the object in question has the flag set to false in the IDE, and even if you change the visible flag of the object to true using this function, all instances that currently in the room will remain as they were, and only instances created after calling the function will start with visible flagged as true.<br>
+<p>使用此函数，你可以将特定物体标记为可见或不是（有关 “可见” 标志的更多信息，请参阅 <a href="../../../2_interface/1_editors/objects.html">定义物体（Defining Objects）</a>）。这意味着 <i>在可见更改后</i> 创建的物体的所有实例都将使用这个新状态创建，而已经在房间中的实例可能不会受到影响。<br><br>请注意，这不是实例函数！你可以使用 <a href=
+"../instances/instance_variables/visible.html"><tt>persistent</tt></a> 变量设置各个实例的可见标志，因此有十个实例都标记为可见，即使在 IDE 里相关物体的标志设置为false，即使使用此函数将物体的可见标志更改为 true，当前房间中的所有实例都将可见原样，并且只有在调用该函数后创建的实例才会以可见标记为 true 开始。<br>
 <br></p>
 
 <p><br>
@@ -82,8 +81,7 @@ false=invisible).</td>
 <p class="code">if !object_get_visible(obj_Block)
 object_set_visible(obj_Block, true);</p>
 
-<p>The above code checks the visible flag of the object "obj_Block"
-and if it is false then it is changed to be flagged as true.</p>
+<p>上面的代码检查物体 “obj_Block” 的可见标志，如果为 false，则将其更改为 true。</p>
 
 <p><br>
 </p>

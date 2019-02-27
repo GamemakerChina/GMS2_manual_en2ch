@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">object_get_sprite</h1>
 
-<h2 class="studio">Returns the sprite_index of the specified
-object.</h2>
+<h2 class="studio">返回指定物体的 sprite_index。</h2>
 
 <h3><b>语法：</b>
 </h3>
@@ -51,7 +50,7 @@ object.</h2>
 
 <tr>
 <td>obj</td>
-<td>The index of the object to check</td>
+<td>要检查的物体的索引</td>
 </tr>
 </table>
 </div>
@@ -66,15 +65,8 @@ object.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will tell you whether the object you are checking
-has a sprite or not, and if it does then it will return the index
-of that sprite, or -1 if it does not. Please note that this is not
-an instance function! You can have an object with no sprite while
-an instance of that same object can have one and vice-versa, or
-they can even have different sprites. You can set an individual
-instances sprite using the <a href=
-"../instances/instance_variables/sprite_index.html"><tt>sprite_index</tt></a>
-instance variable.<br></p>
+<p>此函数将告诉你正在检查的物体是否具有精灵，如果是，则它将返回该精灵的索引，如果不是则返回 -1。请注意，这不是实例函数！你可以拥有一个没有精灵的物体，而同一个物体的实例可以有一个，反之亦然，或者它们甚至可以有不同的精灵。你可以使用 <a href=
+"../instances/instance_variables/sprite_index.html"><tt>sprite_index</tt></a> 实例变量设置单个实例精灵。<br></p>
 
 <p><br>
 </p>
@@ -85,10 +77,7 @@ instance variable.<br></p>
 <p class="code">if sprite_index != object_get_sprite(object_index)
 sprite_index = object_get_sprite(object_index);</p>
 
-<p>The above example will check the sprite index of the instance
-against the sprite of the object_index of the instance. If they are
-not the same, then it will assign the same sprite as that of the
-object index to the instance.</p>
+<p>上面的示例将针对实例的 object_index 的精灵检查实例的精灵索引。如果它们不相同，那么它将为实例分配与物体索引相同的精灵。</p>
 
 <p><br>
 </p>
