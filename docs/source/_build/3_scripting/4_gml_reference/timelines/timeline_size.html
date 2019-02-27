@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">timeline_size</h1>
 
-<h2 class="studio">Returns the number of active moments from a
-given timeline.</h2>
+<h2 class="studio">返回给定时间轴中的活动时刻数。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,7 +49,7 @@ given timeline.</h2>
 
 <tr>
 <td>ind</td>
-<td>The index of the timeline get the information from.</td>
+<td>时间轴的索引从中获取信息。</td>
 </tr>
 </table>
 </div>
@@ -65,15 +64,9 @@ given timeline.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can get the total number of active
-moments for a timeline (an "active" moment is one which has code or
-DnD™ added to it). This can be handy when creating dynamic
-timelines using the <a href=
-"timeline_moment_add_script.html"><tt>timeline_moment_add_script()</tt></a>
-and <a href=
-"timeline_moment_clear.html"><tt>timeline_moment_clear()</tt></a>
-functions, as you can check to see if a given timeline has the
-correct number of active moments or none at all.<br></p>
+<p>使用此功能，你可以获得时间轴的活动时刻总数（“活动” 时刻是添加了代码或 DnD™ 的时刻）。使用 <a href=
+"timeline_moment_add_script.html"><tt>timeline_moment_add_script()</tt></a> 和 <a href=
+"timeline_moment_clear.html"><tt>timeline_moment_clear()</tt></a> 函数创建动态时间轴时，这非常方便，你可以检查给定时间轴是否具有正确的活动时刻数或根本没有活动时刻。<br></p>
 
 <p><br>
 </p>
@@ -82,17 +75,14 @@ correct number of active moments or none at all.<br></p>
 
 <p class="code">if timeline_size(global.tl) == 0<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;timeline_moment_add_script(global.tl, room_speed + irandom(room_speed), scr_spawn_enemy);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code check the given timeline size, and if it returns
-0 (ie: the timeline has no active moments) it will add a script to
-be used at a random moment within the timeline indexed in the
-global variable "tl".</p>
+<p>上面的代码检查给定的时间轴大小，如果它返回 0（即：时间轴没有活动时刻），它将添加一个脚本，用于在全局变量 “tl” 中索引的时间轴内的随机时刻。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Timelines</a></div>
+"index.html">时间轴</a></div>
 
 <div style="float:right">下一页: <a href=
 "timeline_max_moment.html">timeline_max_moment</a></div>

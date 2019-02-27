@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">timeline_get_name</h1>
 
-<h2 class="studio">Gets the name of a given time line.</h2>
+<h2 class="studio">获取给定时间轴的名称。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <tr>
 <td>ind</td>
-<td>The index of the time line to check the name of.</td>
+<td>要检查的时间轴索引的名称。</td>
 </tr>
 </table>
 </div>
@@ -64,17 +64,8 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function can be used to get the name of a time line as a
-string. if the time line has been created dynamically using the
-<a href="timeline_add.html"><tt>timeline_add</tt></a> function, the
-name returned will have the format "__newtimeline<i>N</i>" where
-"<i>N</i>" is the number of the time line (starting from 0). Please
-note that this is <i>only</i> a string and cannot be used to
-reference the timeline directly - for that you would need the
-<i>timeline index</i>. You can, however, use this string to get the
-<i>timeline index</i> using the returned string along with the
-function <a href=
-"../asset_get_index.html"><tt>asset_get_index()</tt></a>.<br></p>
+<p>此函数可用于以字符串形式获取时间轴的名称。如果使用 <a href="timeline_add.html"><tt>timeline_add</tt></a> 函数动态创建了时间轴，则返回的名称的格式为 “__newtimeline<i>N</i>”，其中 “<i>N</i>” 是时间轴的编号（从 0 开始）。请注意，这是 <i>仅</i> 一个字符串，不能用于直接引用时间轴 - 为此，你将需要 <i>时间轴索引</i>。但是，可以使用这个字符串和函数 <a href=
+"../asset_get_index.html"><tt>asset_get_index()</tt></a> 一起使用返回的字符串获得 <i>时间轴索引</i>。<br></p>
 
 <p><br>
 </p>
@@ -83,15 +74,14 @@ function <a href=
 
 <p class="code">str = timeline_get_name(global.tl);</p>
 
-<p>The above code will store the name of the time line indexed in
-the variable "global.tl".</p>
+<p>上面的代码将存储索引在变量 “global.tl” 中的时间轴的名称。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Timelines</a></div>
+"index.html">时间轴</a></div>
 
 <div style="float:right">下一页: <a href=
 "timeline_add.html">timeline_add</a></div>

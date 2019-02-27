@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">timeline_moment_add_script</h1>
 
-<h2 class="studio">Adds a script to the time line at the given
-step.</h2>
+<h2 class="studio">在给定步的时间轴上添加脚本。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,17 +49,17 @@ step.</h2>
 
 <tr>
 <td>ind</td>
-<td>The index of the time line to add a moment to.</td>
+<td>添加时刻的时间轴索引。</td>
 </tr>
 
 <tr class="alt">
 <td>step</td>
-<td>The moment (step) to add to.</td>
+<td>添加到的时刻（步）。</td>
 </tr>
 
 <tr>
 <td>script</td>
-<td>The index of the script to add into the moment.</td>
+<td>要添加到时刻的脚本的索引。</td>
 </tr>
 </table>
 </div>
@@ -75,16 +74,8 @@ step.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can dynamically add scripts to Timelines
-(the scripts must already exist in the game resources) at any given
-"moment" within that time line, where a "moment" is the equivalent
-of one game tick (or step). In this way you can create a new time
-line using the <a href=
-"timeline_add.html"><tt>timeline_add</tt></a> function and add
-different behaviours at any point, or simply modify a previously
-created time line resource with new behaviours. Note that the
-script cannot require any additional arguments when using this
-function.<br></p>
+<p>使用此函数，你可以在该时间轴内的任何给定 “时刻” 动态地将脚本添加到时间轴（脚本必须已存在于游戏资源中），其中 “时刻” 相当于一个游戏刻度（或步）。通过这种方式，你可以使用 <a href=
+"timeline_add.html"><tt>timeline_add</tt></a> 函数创建新的时间轴，并在任何位置添加不同的行为，或者只是使用新行为修改以前创建的时间轴资源。请注意，使用此函数时，脚本不需要任何其他参数。<br></p>
 
 <p><br>
 </p>
@@ -93,16 +84,14 @@ function.<br></p>
 
 <p class="code">global.tl = timeline_add();<br>var i = room_speed * 60;<br>repeat(3)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;timeline_moment_add_script(global.tl, i, choose(scr_AlienAttack_1, scr_AlienAttack_2, scr_AlienAttack_3);<br>&nbsp;&nbsp;&nbsp;i += room_speed * 60;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will create a new time line and store its index
-in the variable "global.tl". It will then add three scripts to the
-time line, chosen at random, at one minute intervals.</p>
+<p>上面的代码将创建一个新的时间轴并将其索引存储在变量 “global.tl” 中。然后它会每隔一分钟在时间轴上添加随机选择的三个脚本中的一个。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Timelines</a></div>
+"index.html">时间轴</a></div>
 
 <div style="float:right">下一页: <a href=
 "timeline_moment_clear.html">timeline_moment_clear</a></div>

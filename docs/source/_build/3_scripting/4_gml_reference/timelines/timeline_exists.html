@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">timeline_exists</h1>
 
-<h2 class="studio">Checks if a given time line exists.</h2>
+<h2 class="studio">检查给定的时间轴是否存在。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <tr>
 <td>ind</td>
-<td>The index of the time line to check for.</td>
+<td>要检查的时间轴的索引。</td>
 </tr>
 </table>
 </div>
@@ -64,13 +64,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can check and see whether a time line
-exists (returns <tt>true</tt>) or not (returns <tt>false</tt>).
-This is particularly useful when creating Timelines dynamically
-using the <a href="timeline_add.html"><tt>timeline_add</tt></a>
-function, but you should note that if you search for an
-uninitialised variable (that would otherwise be assigned to a time
-line's index) an error will be thrown.<br>
+<p>通过这个函数，你可以检查时间轴存在（返回 <tt>true</tt>）与否（返回 <tt>false</tt>）。当使用 <a href="timeline_add.html"><tt>timeline_add</tt></a> 函数动态创建时间轴时，这尤其有用，但是你应该注意，如果搜索未初始化的变量（否则将分配给时间轴的索引），将引发错误。<br>
 <br></p>
 
 <p><br>
@@ -81,16 +75,14 @@ line's index) an error will be thrown.<br>
 <p class="code">if timeline_exists(global.tl)
 timeline_delete(global.tl);</p>
 
-<p>The above code checks to see if a time line exists and is
-indexed in the global variable "tl" and if so it then deletes that
-time line.</p>
+<p>上面的代码检查时间轴是否存在，并在全局变量 “tl” 中建立索引，如果存在，则删除该时间轴。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Timelines</a></div>
+"index.html">时间轴</a></div>
 
 <div style="float:right">下一页: <a href=
 "timeline_get_name.html">timeline_get_name</a></div>

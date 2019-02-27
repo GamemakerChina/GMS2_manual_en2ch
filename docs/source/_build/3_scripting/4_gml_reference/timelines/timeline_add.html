@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">timeline_add</h1>
 
-<h2 class="studio">Adds a new time line.</h2>
+<h2 class="studio">添加新的时间轴。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -47,15 +47,8 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can add a new (empty) time line into your
-game. the function returns the index of this new time line which
-should be stored in a variable for use in all further function
-calls that involve this new time line. You should also be sure to
-use the function <a href=
-"timeline_delete.html"><tt>timeline_delete</tt></a> whenever you no
-longer wish to use the time line (like at the end of the room) so
-as to prevent any possible memory leaks that could slow down or
-crash your game.</p>
+<p>使用此函数，你可以在游戏中添加新的（空）时间轴。该函数返回此新时间轴的索引，该索引应存储在变量中，以便在涉及此新时间轴的所有其他函数调用中使用。每当你不再希望使用时间轴（如在房间结束）时，你还应确保使用函数 <a href=
+"timeline_delete.html"><tt>timeline_delete</tt></a>，以防止任何可能的内存泄漏使你的游戏变慢或崩溃。</p>
 
 <div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 
@@ -66,15 +59,14 @@ crash your game.</p>
 
 <p class="code">global.tl = timeline_add();</p>
 
-<p>The above code creates a new time line and stores its index in
-the variable "global.tl".</p>
+<p>上面的代码创建了一个新的时间轴，并将其索引存储在变量 “global.tl” 中。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Timelines</a></div>
+"index.html">时间轴</a></div>
 
 <div style="float:right">下一页: <a href=
 "timeline_delete.html">timeline_delete</a></div>

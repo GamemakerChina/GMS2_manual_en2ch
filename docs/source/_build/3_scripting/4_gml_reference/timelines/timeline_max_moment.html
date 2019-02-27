@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,8 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">timeline_max_moment</h1>
 
-<h2 class="studio">Gives you the maximum moment placed in a given
-timeline.</h2>
+<h2 class="studio">为你提供给定时间轴中的最大时刻。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -50,7 +49,7 @@ timeline.</h2>
 
 <tr>
 <td>ind</td>
-<td>The index of the timeline to get the last moment of.</td>
+<td>获取最后一刻的时间轴索引。</td>
 </tr>
 </table>
 </div>
@@ -65,14 +64,7 @@ timeline.</h2>
 
 <h3 class="studio">描述</h3>
 
-<p>This function will return the value of the moment in which the
-timeline performs its final action. So, if you have a timeline with
-8 different actions placed 20 moments apart, this function would
-return the moment value of the last action in that timeline, which
-would be 160. This function is a good way to test whether a
-timeline has passed the last active moment when running, since the
-timeline position will continue incrementing every step of the game
-whether there are further actions or not.<br></p>
+<p>此函数将返回时间轴执行其最终操作的时刻的值。因此，如果你有一个时间轴，其中 8 个不同的动作相隔 20 个时刻，则此函数将返回该时间轴中最后一个动作的时刻值，即 160。此函数是测试时间轴在运行时是否已经过最后一个活动时刻的好方法，因为时间轴位置将在游戏的每步继续递增，无论是否有进一步的操作。<br></p>
 
 <p><br>
 </p>
@@ -81,16 +73,14 @@ whether there are further actions or not.<br></p>
 
 <p class="code">if timeline_position &gt; timeline_max_moment(timeline_index)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;timeline_running = false;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will check the current timeline position against
-the maximum active moment, and if it is greater the timeline will
-be stopped.</p>
+<p>上面的代码将根据最大活动时刻检查当前时间轴位置，如果它更大，则将停止时间轴。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Timelines</a></div>
+"index.html">时间轴</a></div>
 
 <div style="float:right">下一页: <a href=
 "timeline_exists.html">timeline_exists</a></div>

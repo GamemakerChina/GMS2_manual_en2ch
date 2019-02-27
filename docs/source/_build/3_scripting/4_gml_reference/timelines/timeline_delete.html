@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -31,7 +31,7 @@ if (window.name != "content")
 </script>
 <h1 class="studio">timeline_delete</h1>
 
-<h2 class="studio">Deletes a given time line.</h2>
+<h2 class="studio">删除给定的时间轴。</h2>
 
 <h3 class="studio">语法：</h3>
 
@@ -49,7 +49,7 @@ if (window.name != "content")
 
 <tr>
 <td>ind</td>
-<td>The index of the time line to delete.</td>
+<td>要删除的时间轴索引。</td>
 </tr>
 </table>
 </div>
@@ -64,16 +64,8 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can delete any time line from your game.
-if this time line was created in the <i>GameMaker Studio 2</i>
-resource tree, please note that it is removed completely from the
-game and trying to call the indexed time line again after using
-this function will cause an error. If the time line was created
-dynamically using the <a href=
-"timeline_add.html"><tt>timeline_add</tt></a> function, then this
-function should be used the moment that the time line is no longer
-needed to prevent any memory leaks that could slow down (and
-eventually crash) your game.</p>
+<p>有了这个函数，你可以从你的游戏删除任何时间轴。如果这条时间轴是在 <i>GameMaker Studio 2</i> 资源树中创建的，请注意它已被完全从游戏中删除，使用此函数后试图再次调用索引时间轴将导致错误。如果时间轴是使用 <a href=
+"timeline_add.html"><tt>timeline_add</tt></a> 函数动态创建的，那么应该在不再需要时间轴的时候使用该函数，以防止任何可能会减慢（并最终导致游戏崩溃）的内存泄漏。</p>
 
 <div class="note"><b>重要！</b>该函数在试用版（Trial License）产品中<b>不</b>可用。</div>
 
@@ -85,16 +77,14 @@ eventually crash) your game.</p>
 <p class="code">if timeline_exists(global.tl)
 timeline_delete(global.tl);</p>
 
-<p>The above code checks to see if a time line exists and is
-indexed in the global variable "tl" and if so it then deletes that
-time line.</p>
+<p>上面的代码检查时间轴是否存在，并在全局变量 “tl” 中建立索引，如果存在，则删除该时间轴。</p>
 
 <p><br>
 </p>
 
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Timelines</a></div>
+"index.html">时间轴</a></div>
 
 <div style="float:right">下一页: <a href=
 "timeline_moment_add_script.html">timeline_moment_add_script</a></div>
