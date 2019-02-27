@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -49,33 +49,33 @@ scale)</p>
 
 <tr>
 <td>index</td>
-<td>The index of the clickable icon to change.</td>
+<td>要更改的可点击图标的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>tpe</td>
-<td>The texture page entry for the sprite to be used (use <a href=
-"../sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>).</td>
+<td>要使用的精灵的纹理页条目（使用 <a href=
+"../sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>）。</td>
 </tr>
 
 <tr>
 <td>x</td>
-<td>The new x position within the <i>window</i>.</td>
+<td><i>窗口</i> 中的新 x 位置。</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The new y position within the <i>window</i>.</td>
+<td><i>窗口</i> 中的新 y 位置。</td>
 </tr>
 
 <tr>
 <td>scale</td>
-<td>The scale of the icon (default 1).</td>
+<td>图标的比例（默认为 1）。</td>
 </tr>
 
 <tr class="alt">
 <td>alpha</td>
-<td>The image alpha of the icon (default 1).</td>
+<td>图标的图像 alpha（透明度） 值（默认值为 1）。</td>
 </tr>
 </table>
 </div>
@@ -90,17 +90,10 @@ scale)</p>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can change the sprite and position of a
-clickable icon previously created with <a href=
-"clickable_add.html"><tt>clickable_add</tt></a>. Bear in mind that
-the position is based on the window, <i>not</i> the canvas, (0,0)
-position and that the sprite must be referenced directly from the
-texture page (see: <a href=
-"../sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>). This
-function also permits you to change the scale of the sprite used
-(as a multiplier so that 1 is the default, 0.5 would be half and 2
-would be double) and the alpha value from 0 (fully transparent) to
-1 (fully opaque) for the final icon on the screen.<br>
+<p>使用此函数，你可以更改先前使用 <a href=
+"clickable_add.html"><tt>clickable_add</tt></a> 创建的可点击图标的精灵和位置。请记住，位置基于窗口而 <i>不是</i> 画布的 (0, 0) 位置，并且必须直接从纹理页面引用精灵（请参阅：<a href=
+"../sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>）。
+&lt;76/89/94% &gt;此函数还允许你为屏幕上的最终图标更改所用精灵的比例（作为倍数，1 为默认值，0.5 为一半，2 为两倍），alpha 值为 0（完全透明）和为1（完全不透明）。<br>
 <br></p>
 
 <p><br>
@@ -110,9 +103,7 @@ would be double) and the alpha value from 0 (fully transparent) to
 
 <p class="code">switch (room)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;case rm_Menu: clickable_change_ext(global.Help_Icon, sprite_get_tpe(spr_MS_Help, 1), 32, 32, 2, 1); break;<br>&nbsp;&nbsp;&nbsp;case rm_Game: clickable_change_ext(global.Help_Icon, sprite_get_tpe(spr_MS_Help, 0), 200, 32, 1, 0.5); break;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code will change the image index and position of the
-clickable icon indexed in the variable "global.Help" depending on
-the current room, changing the icon scale and alpha too.</p>
+<p>上面的代码将根据当前房间，更改图标比例和 alpha 来更改变量 “global.Help” 中索引的可点击图标的图像索引和位置。</p>
 
 <p><br>
 </p>
@@ -121,7 +112,7 @@ the current room, changing the icon scale and alpha too.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Web</a></div>
+<div style="float:left">上一页:  <a href="index.html">网络</a></div>
 
 <div style="float:right">下一页: <a href=
 "clickable_set_style.html">clickable_set_style</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,7 +48,7 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the clickable to check.</td>
+<td>要检查的可点击的索引。</td>
 </tr>
 </table>
 </div>
@@ -63,11 +63,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function returns whether a clickable DOM icon has been
-created with the specified index exists or not. Please note, that
-the value used for checking <i>must have been initialised
-previously</i> or else you will get an error causing <i>GameMaker
-Studio 2</i> to close.<br>
+<p>此函数返回是否已创建具有指定索引的可单击 DOM 图标。请注意，用于检查 <i>的值必须先前已初始化</i>，否则你将得到导致 <i>GameMaker Studio 2</i> 关闭的错误。<br>
 <br></p>
 
 <p><br>
@@ -77,13 +73,7 @@ Studio 2</i> to close.<br>
 
 <p class="code">if !clickable_exists(home_but)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;home_but = clickable_add(32, 32, sprite_get_tpe(spr_MS_Home, 0), "http://macsweeney_games.com", "_blank", "width=700, height=500, menubar=0, toolbar=0, scrollbars=0");<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<p>The above code checks the variable "home_but" to see if it
-already exists, and if it does not it creates a clickable DOM icon
-at the position (32, 32) of the page that the game canvas is
-running on. The icon uses the sprite referenced from the texture
-page as "spr_MS_Home" and when clicked the icon will open a new
-window for the specified URL and with the defined properties for
-that window.</p>
+<p>上面的代码检查变量 “home_but” 以查看它是否已经存在，如果不存在，它会在运行游戏画布的页面的位置 (32, 32) 处创建可点击的 DOM 图标。该图标使用的精灵为纹理页面中引用的 “spr_MS_Home”，当单击该图标时，它将为指定的 URL 打开一个新窗口，并带有该窗口的已定义属性。</p>
 
 <p><br>
 </p>

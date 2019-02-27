@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,18 +48,17 @@ if (window.name != "content")
 
 <tr>
 <td>url</td>
-<td>The URL (website address) to link to.</td>
+<td>要链接的 URL（网站地址）。</td>
 </tr>
 
 <tr class="alt">
 <td>target</td>
-<td>This is the target area to open the URL in (see
-description).</td>
+<td>这是打开 URL 的目标区域（请参阅说明）。</td>
 </tr>
 
 <tr>
 <td>options</td>
-<td>Standard browser options (see description).</td>
+<td>标准浏览器选项（参见说明）。</td>
 </tr>
 </table>
 </div>
@@ -74,43 +73,14 @@ description).</td>
 
 <h3 class="studio">描述</h3>
 
-<p>This will open the specified URL on the browser of the chosen target device, or, if you are using the HTML5 module, in the currently open browser. The "target" parameter that you specify is the same as the standard JavaScript "name" value when you use the <tt>open()</tt> method (be aware that all but '_self' may result in the browser blocking, or asking the user if they wish to allow it) and the "options" is the same as the JavaScript "specs" parameter for controlling what properties the new window/tab should display (not all browsers may support all features).<br><br>Valid targets are:<br></p>
+<p>这将在所选目标设备的浏览器上打开指定的 URL，或者，如果你使用的是 HTML5 模块，则在当前打开的浏览器中打开。你所指定的 “目标” 参数与你使用标准的 JavaScript 的 <tt>open()</tt> 方法的 “name” 值是一样的（请注意，除了 “_self” 可能导致浏览器阻塞，或询问用户是否希望允许），而 “options” 参数与 javascript 控制应显示新窗口 / 选项卡的 “specs” 属性的参数相同。（并非所有浏览器都支持所有功能）。<br><br>有效的 target 是：<br></p>
 
-<blockquote><b>"_self"</b>: Opens the linked document in the same
-frame as it was clicked (this is default).<br>
-<b>"_blank"</b>: Opens the linked document in a new window or tab
-(this will not work if pop-ups are being blocked by the user, in
-which case you can use the <a href=
-"clickable_add.html"><tt>clickable_*</tt></a> functions
-instead).<br>
-<b>"_parent"</b>: Opens the linked document in the parent
-frame.<br>
-<b>"_top"</b>: Opens the linked document in the full body of the
-window.<br></blockquote>
+<blockquote><b>"_self"</b>：在单击的框架中打开链接的文档（这是默认设置）。<br><b>"_blank"</b>：在新窗口或选项卡中打开链接的文档。（如果用户正在阻止弹出窗口，则此方法无效，此时可以使用 <a href=
+"clickable_add.html"><tt>clickable_*</tt></a> 函数)。<br><b>"_parent"</b>：在父框架中打开链接的文档。<br><b>"_top"</b>：在窗口的整个主体中打开链接的文档。<br></blockquote>
 
-<p>Valid options are:<br></p>
+<p>有效的 options 是:<br></p>
 
-<blockquote><b>"height=[px]"</b>: The height of the window, with
-the minimum value being 100.<br>
-<b>"width=[px]"</b>: The width of the window, with the minimum
-value being 100.<br>
-<b>"left=[px]"</b>: The left position of the window.<br>
-<b>"top=[px]"</b>: The top position of the window (IE only).<br>
-<b>"location=[boolean]"</b>: Whether or not to display the address
-field (default is 1).<br>
-<b>"menubar=[boolean]"</b>: Whether or not to display the menu bar
-(default is 1).<br>
-<b>"resizable=[boolean]"</b>: Whether or not the window is
-resizeable (default is 1).<br>
-<b>"scrollbars=[boolean]"</b>: Whether or not to display scroll
-bars (default is 1).<br>
-<b>"status=[boolean]"</b>: Whether or not to add a status bar
-(default is 1).<br>
-<b>"titlebar=[boolean]"</b>: Whether or not to display the title
-bar. This is ignored unless the calling application is an HTML
-Application or a trusted dialog box (default is 1);<br>
-<b>"toolbar=[boolean]"</b>: Whether or not to display the browser
-tool-bar (default is yes).<br></blockquote>
+<blockquote><b>"height=[px]"</b>：窗口的高度，最小值为 100。<br><b>"width=[px]"</b>：窗口的高度，最小值为 100。<br><b>"left=[px]"</b>：窗口的左侧位置。<br><b>"top=[px]"</b>：窗口的顶部位置（仅限 IE）。<br><b>"location=[boolean]"</b>：是否显示地址字段（默认为 1）。<br><b>"menubar=[boolean]"</b>：是否显示菜单栏（默认为 1）。<br><b>"resizable=[boolean]"</b>：窗口是否可调整大小（默认值为 1）。<br><b>"scrollbars=[boolean]"</b>：是否显示滚动条（默认为 1）。<br><b>"status=[boolean]"</b>：是否添加状态栏（默认为 1）。<br><b>"titlebar=[boolean]"</b>：是否显示标题栏。除非调用的应用程序是 HTML 应用程序或受信任对话框（默认值为 1），否则将忽略此设置；<br><b>"toolbar=[boolean]"</b>：是否显示浏览器工具栏(默认为 yes)。<br></blockquote>
 
 <p><br>
 </p>
@@ -120,8 +90,7 @@ tool-bar (default is yes).<br></blockquote>
 <p class="code">url_open_full( 'http://yoyogames.com', '_blank',
 'resizable=0, height=200, scrollbars=0');</p>
 
-<p>This would open the YoYo Games homepage in a new window that
-can't be resized, has a height of 200 pixels and no scrollbars.</p>
+<p>这将在一个无法调整大小的新窗口中打开 YoYo Games 主页，该窗口的高度为 200 像素，没有滚动条。</p>
 
 <p><br>
 </p>
@@ -130,7 +99,7 @@ can't be resized, has a height of 200 pixels and no scrollbars.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Web</a></div>
+<div style="float:left">上一页:  <a href="index.html">网络</a></div>
 
 <div style="float:right">下一页: <a href=
 "url_get_domain.html">url_get_domain</a></div>

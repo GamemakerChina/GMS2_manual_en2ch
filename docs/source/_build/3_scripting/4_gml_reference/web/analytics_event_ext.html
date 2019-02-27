@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -37,15 +37,8 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<blockquote>This function will send the specified text to the
-analytics provider that you have set up through the <a href=
-"../../../2_interface/3_settings/game_options/options_html5.html">HTML5
-Game Options</a>. This function can be used to create a custom
-analytic to track something outside of the scope of the provider
-being used, and will also accept custom parameter/value pairs,
-where the parameter is a string and the value a real number. For
-Google Analytics, you can only add in one extra pair while Flurry
-will accept up to 7.</blockquote>
+<blockquote>此函数将指定的文本发送到你通过 <a href=
+"../../../2_interface/3_settings/game_options/options_html5.html">HTML5 游戏选项</a> 设置的分析提供程序。此函数可用于创建自定义分析以跟踪正在使用的提供程序范围之外的内容，并且还将接受自定义参数 / 值对，其中参数是字符串，值是实数。对于 Google Analytics，你只能添加一个额外的对，而 Flurry 最多可以接受 7 个。</blockquote>
 
 <p><br>
 </p>
@@ -67,17 +60,17 @@ value);</p>
 
 <tr>
 <td>string</td>
-<td>A string to send to the provider.</td>
+<td>要发送给提供程序的字符串。</td>
 </tr>
 
 <tr class="alt">
 <td>string_param[0 -9]</td>
-<td>The parameter to send (a string).</td>
+<td>要发送的参数（字符串）。</td>
 </tr>
 
 <tr>
 <td>value[0 - 9]</td>
-<td>The value of the parameter (a real number).</td>
+<td>参数的值（实数）。</td>
 </tr>
 </table>
 </div>
@@ -85,7 +78,7 @@ value);</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
 <p class="code">N/A（无返回值）</p>
 
@@ -94,18 +87,9 @@ value);</p>
 
 <h3>例如：</h3>
 
-<p class="code">var num, time;<br>
-ini_open("Options.ini");<br>
-num = ini_read_real("Data", "Plays", 0);<br>
-num += 1;<br>
-time = current_time;<br>
-analytics_event_ext(GAME_NAME, "Plays", num, "Time", time);<br>
-ini_write_real("Data", "Plays", num);<br>
-ini_close();<br></p>
+<p class="code">var num, time;<br>ini_open("Options.ini");<br>num = ini_read_real("Data", "Plays", 0);<br>num += 1;<br>time = current_time;<br>analytics_event_ext(GAME_NAME, "Plays", num, "Time", time);<br>ini_write_real("Data", "Plays", num);<br>ini_close();<br></p>
 
-<p>The above code will get play information from an ini file as
-well as the current time and then send those details to the
-analytics provider.</p>
+<p>上面的代码将从 ini 文件中获取播放信息以及当前时间，然后将这些详细信息发送给分析提供商。</p>
 
 <p><br>
 </p>
@@ -114,7 +98,7 @@ analytics provider.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Web</a></div>
+<div style="float:left">上一页:  <a href="index.html">网络</a></div>
 
 <div style="float:right">下一页: <a href=
 "url_open.html">url_open</a></div>

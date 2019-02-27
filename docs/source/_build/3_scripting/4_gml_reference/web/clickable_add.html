@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -51,35 +51,33 @@ if (window.name != "content")
 
 <tr>
 <td>x</td>
-<td>The x position within the <i>window</i>.</td>
+<td><i>窗口中的 x 位置</i>。</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y position within the <i>window</i>.</td>
+<td><i>窗口中的 y 位置</i>。</td>
 </tr>
 
 <tr>
 <td>tpe</td>
-<td>The texture page entry for the sprite to be used (use <a href=
-"../sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>).</td>
+<td>要使用的精灵的纹理页条目（使用 <a href=
+"../sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>）。</td>
 </tr>
 
 <tr class="alt">
 <td>url</td>
-<td>The URL (website address) to link to, or the script to be
-run.</td>
+<td>要链接的 URL（网站地址）或要运行的脚本。</td>
 </tr>
 
 <tr>
 <td>target</td>
-<td>This is the target area to open the URL in (see
-description).</td>
+<td>这是打开 URL 的目标区域（请参阅说明）。</td>
 </tr>
 
 <tr class="alt">
 <td>params</td>
-<td>The various parameters for the icon (see description).</td>
+<td>图标的各种参数（参见说明）。</td>
 </tr>
 </table>
 </div>
@@ -94,7 +92,7 @@ description).</td>
 
 <h3>描述</h3>
 
-<p>With this function you can create a custom, clickable, icon that acts as a "button" outside of the game canvas, but within the browser window itself. The function will return an id value which must be stored in a variable to be used in all further button functions that reference the new icon. This function is very useful to prevent the browser creating a pop-up window when clicking on the button as it is all done through <i>GameMaker Studio 2</i> itself.<br><br>You must first set the position, which is relative to the (0,0) of the browser window (top left corner) and then give the texture page entry for the sprite you wish the button icon to have (see: <a href="../sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>). You can then specify either a URL to open or a script (from the resource tree of <i>GameMaker Studio 2</i>) to be opened or run. The "target" parameter that you specify is the same as the standard JavaScript "name" value when you use the <tt>open()</tt> method (be aware that all but '_self' may result in the browser blocking, or asking the user if they wish to allow it) and the "params" argument is the same as the JavaScript "specs" parameter for controlling what properties the new window/tab should display (not all browsers may support all features). If you are using the icon to run an internal script, these last two arguments can be left as empty strings "".<br><br>Valid targets are:</p>
+<p>使用此功函数，你可以创建一个自定义的可单击图标，该图标充当游戏画布外部的 “按钮”，但在浏览器窗口内。该函数将返回一个 id 值，该值必须存储在一个变量中，以便在引用新图标的所有其他按钮函数中使用。此函数对于防止浏览器在单击按钮时创建弹出窗口非常有用，因为它通过 <i>GameMaker Studio 2</i> 本身完成。<br><br>你必须首先设置相对于浏览器窗口（左上角）的（0, 0）的位置，然后为希望按钮图标具有的精灵提供纹理页条目（请参阅：<a href="../sprites/sprite_get_tpe.html"><tt>sprite_get_tpe</tt></a>）。然后，你可以指定要打开的 URL 或要打开或运行的脚本（来自 <i>GameMaker Studio 2</i> 的资源树）。你所指定的 “目标” 参数与你使用标准的 JavaScript 的 <tt>open()</tt> 方法的 “name” 值是一样的（请注意，除了 “_self” 可能导致浏览器阻塞，或询问用户是否希望允许），而 “params” 参数与 javascript 控制应显示新窗口 / 选项卡的 “specs” 属性的参数相同。（并非所有浏览器都支持所有功能）。如果使用图标运行内部脚本，则最后两个参数可以保留为空字符串 ""。<br><br>有效目标是：</p>
 
 <div class="compat">
 <table>
@@ -105,104 +103,93 @@ description).</td>
 
 <tr>
 <td>_blank</td>
-<td>Opens the linked document in a new window or tab.</td>
+<td>在新窗口或选项卡中打开链接的文档。</td>
 </tr>
 
 <tr class="alt">
 <td>_self</td>
-<td>Opens the linked document in the same frame as it was clicked
-(this is default).</td>
+<td>在单击的框架中打开链接的文档（这是默认设置）。</td>
 </tr>
 
 <tr>
 <td>_parent</td>
-<td>Opens the linked document in the parent frame.</td>
+<td>在父框架中打开链接的文档。</td>
 </tr>
 
 <tr class="alt">
 <td>_top</td>
-<td>Opens the linked document in the full body of the window.</td>
+<td>在窗口的整个主体中打开链接的文档。</td>
 </tr>
 </table>
 </div>
 
-<p>Valid parameters are:<br></p>
+<p>有效的参数是:<br></p>
 
 <div class="compat">
 <table>
 <tr>
-<th>Parameters</th>
+<th>参数</th>
 <th>描述</th>
 </tr>
 
 <tr>
 <td><b>'height=[</b>px<b>]'</b></td>
-<td>The height of the window, with the minimum value being
-100.</td>
+<td>窗口的高度，最小值为 100。</td>
 </tr>
 
 <tr class="alt">
 <td><b>'width=[</b>px<b>]'</b></td>
-<td>The width of the window, with the minimum value being 100.</td>
+<td>窗口的宽度，最小值为 100。</td>
 </tr>
 
 <tr>
 <td><b>'left=[</b>px<b>]'</b></td>
-<td>The left position of the window.</td>
+<td>窗口的左侧位置。</td>
 </tr>
 
 <tr class="alt">
 <td><b>'top=[</b>px<b>]'</b></td>
-<td>The top position of the window (IE only).</td>
+<td>窗口的顶部位置（仅限 IE）。</td>
 </tr>
 
 <tr>
 <td><b>'location=[</b>boolean<b>]'</b></td>
-<td>Whether or not to display the address field (default is
-1).</td>
+<td>是否显示地址字段（默认为 1）。</td>
 </tr>
 
 <tr class="alt">
 <td><b>'menubar=[</b>boolean<b>]'</b></td>
-<td>Whether or not to display the menu bar (default is 1).</td>
+<td>是否显示菜单栏（默认为 1）。</td>
 </tr>
 
 <tr>
 <td><b>'resizable=[</b>boolean<b>]'</b></td>
-<td>Whether or not the window is resizable (default is 1).</td>
+<td>窗口是否可调整大小（默认值为 1）。</td>
 </tr>
 
 <tr class="alt">
 <td><b>'scrollbars=[</b>boolean<b>]'</b></td>
-<td>Whether or not to display scroll bars (default is 1).</td>
+<td>是否显示滚动条（默认为 1）。</td>
 </tr>
 
 <tr>
 <td><b>'status=[</b>boolean<b>]'</b></td>
-<td>Whether or not to add a status bar (default is 1).</td>
+<td>是否添加状态栏（默认为 1）。</td>
 </tr>
 
 <tr class="alt">
 <td><b>'titlebar=[</b>boolean<b>]'</b></td>
-<td>Whether or not to display the title bar. This is ignored unless
-the calling application is an HTML Application or a trusted dialog
-box (default is 1);</td>
+<td>是否显示标题栏。除非调用的应用程序是 HTML 应用程序或受信任对话框（默认值为 1），否则将忽略此设置；</td>
 </tr>
 
 <tr>
 <td><b>'toolbar=[</b>boolean<b>]'</b></td>
-<td>Whether or not to display the browser toolbar (default is
-yes).</td>
+<td>是否显示浏览器工具栏（默认为 yes）。</td>
 </tr>
 </table>
 </div>
 
-<p>It is also worth noting that if the URL argument you pass in is
-the name of a script (ie: it doesn't start with "http://") AND the
-script is called <tt><b>gmcallback_*</b></tt> then you can get
-direct feeds into an html5 event. <i>GameMaker Studio 2</i>
-function names are <i>not</i> obfuscated if they begin with
-<tt>gmcallback_</tt>.<br>
+<p>同样值得注意的是，如果你传入的 URL 参数是脚本的名称（即：它不是以 “http://” 开头），并且脚本名为 <tt><b>gmcallback_*</b></tt>，那么你可以直接输入 html5 事件。如果 <i>GameMaker Studio 2</i> 函数名称以 <tt>gmcallback_</tt> 开头，则 <i>不</i> 进行模糊处理。<br>
 <br></p>
 
 <p><br>
@@ -215,11 +202,7 @@ sprite_get_tpe(spr_MS_Home, 0), "http://macsweeney_games.com",
 "_blank", "width=700, height=500, menubar=0, toolbar=0,
 scrollbars=0");</p>
 
-<p>The above code creates a clickable DOM icon at the position (32,
-32) of the page that the game canvas is running on. The icon uses
-the sprite referenced from the texture page as "spr_MS_Home" and
-when clicked the icon will open a new window for the specified URL
-and with the defined properties for that window.</p>
+<p>上面的代码在游戏画布所在页面的 (32, 32) 位置创建了一个可单击的 DOM 图标。该图标使用的精灵为纹理页面中引用的 “spr_MS_Home”，当单击该图标时，它将为指定的 URL 打开一个新窗口，并带有该窗口的已定义属性。</p>
 
 <p><br>
 </p>
@@ -228,7 +211,7 @@ and with the defined properties for that window.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Web</a></div>
+<div style="float:left">上一页:  <a href="index.html">网络</a></div>
 
 <div style="float:right">下一页: <a href=
 "clickable_add_ext.html">clickable_add_ext</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>index</td>
-<td>The index of the clickable icon to style.</td>
+<td>可点击图标的样式的索引。</td>
 </tr>
 
 <tr class="alt">
 <td>map</td>
-<td>The index of the <tt>ds_map</tt> to set the style from.</td>
+<td>用于设置样式的 <tt>ds_map</tt> 的索引。</td>
 </tr>
 </table>
 </div>
@@ -68,13 +68,8 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This function lets you set the CSS style properties for the
-given button via the key/value pairs in the provided
-<tt>ds_map</tt>. You need to have previously created the both the
-button element (using <a href=
-"clickable_add.html"><tt>clickable_add()</tt></a>) and the
-<tt>ds_map</tt> previously and supply the stored indices as
-arguments.<br>
+<p>此函数允许你通过提供的 <tt>ds_map</tt> 中的键 / 值对设置给定按钮的 CSS 样式属性。你需要在之前创建按钮元素（使用 <a href=
+"clickable_add.html"><tt>clickable_add()</tt></a>）和 <tt>ds_map</tt>，并将存储的索引作为参数提供。<br>
 <br></p>
 
 <p><br>
@@ -82,13 +77,9 @@ arguments.<br>
 
 <h3 class="studio">例如：</h3>
 
-<p class="code">var map = ds_map_create();<br>
-ds_map_add(map, "opacity", "0.5");<br>
-clickable_set_style(button, map);<br>
-ds_map_destroy();<br></p>
+<p class="code">var map = ds_map_create();<br>ds_map_add(map, "opacity", "0.5");<br>clickable_set_style(button, map);<br>ds_map_destroy();<br></p>
 
-<p>The above code will change the style of the clickable button
-with the index stored in the variable "button".</p>
+<p>上面的代码将改变可点击按钮的样式，索引存储在变量 “button” 中。</p>
 
 <p><br>
 </p>
@@ -97,7 +88,7 @@ with the index stored in the variable "button".</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Web</a></div>
+<div style="float:left">上一页:  <a href="index.html">网络</a></div>
 
 <div style="float:right">下一页: <a href=
 "clickable_delete.html">clickable_delete</a></div>

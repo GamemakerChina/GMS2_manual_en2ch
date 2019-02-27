@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -48,12 +48,12 @@ if (window.name != "content")
 
 <tr>
 <td>url</td>
-<td>The URL (website address) to link to.</td>
+<td>要链接的 URL（网站地址）。</td>
 </tr>
 
 <tr class="alt">
 <td>target</td>
-<td>This is the target area to open the URL in.</td>
+<td>这是打开 URL 的目标区域。</td>
 </tr>
 </table>
 </div>
@@ -68,19 +68,10 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>This will open the specified URL on the browser of the chosen target device, or, if you are using the HTML5 module, in the currently open browser. The "target" parameter that you specify is the same as the standard JavaScript "name" value when you use the <tt>open()</tt> method, and you should be aware that all but '_self' may result in the browser blocking, or asking the user if they wish to allow it.<br><br>Valid targets are:<br></p>
+<p>这将在所选目标设备的浏览器上打开指定的 URL，或者，如果你使用的是 HTML5 模块，则在当前打开的浏览器中打开。你指定的 “target” 参数与当你使用标准 JavaScript  的 <tt>open()</tt> 方法时的 “name” 值相同，并且你应该知道除了 “_self” 之外的所有参数都可能导致浏览器阻塞，或询问用户是否允许它。<br><br>有效的 target 是：<br></p>
 
-<blockquote><b>"_self"</b>: Opens the linked document in the same
-frame as it was clicked (this is default).<br>
-<b>"_blank"</b>: Opens the linked document in a new window or tab
-(this will not work if pop-ups are being blocked by the user, in
-which case you can use the <a href=
-"clickable_add.html"><tt>clickable_*</tt></a> functions
-instead).<br>
-<b>"_parent"</b>: Opens the linked document in the parent
-frame.<br>
-<b>"_top"</b>: Opens the linked document in the full body of the
-window.<br></blockquote>
+<blockquote><b>"_self"</b>：在单击的框架中打开链接的文档（这是默认设置）。<br><b>"_blank"</b>：在新窗口或选项卡中打开链接的文档。（如果用户正在阻止弹出窗口，则此方法无效，此时可以使用 <a href=
+"clickable_add.html"><tt>clickable_*</tt></a> 函数)。<br><b>"_parent"</b>：在父框架中打开链接的文档。<br><b>"_top"</b>：在窗口的整个主体中打开链接的文档。<br></blockquote>
 
 <p><br>
 </p>
@@ -90,7 +81,7 @@ window.<br></blockquote>
 <p class="code">url_open_ext( 'http://yoyogames.com',
 '_blank');</p>
 
-<p>This would open the YoYo Games homepage in a new window.</p>
+<p>这将在一个新窗口中打开 YoYo Games 的主页。</p>
 
 <p><br>
 </p>
@@ -99,7 +90,7 @@ window.<br></blockquote>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Web</a></div>
+<div style="float:left">上一页:  <a href="index.html">网络</a></div>
 
 <div style="float:right">下一页: <a href=
 "url_open_full.html">url_open_full</a></div>
