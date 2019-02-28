@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,31 +38,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can check a position for a collision with
-another instance or all instances of an object using the collision
-mask of the instance that runs the code for the check. When you use
-this you are effectively asking <i>GameMaker Studio 2</i> to move
-the instance to the new position, check for a collision, move back
-and tell you if a collision was found or not. This will work for
-precise collisions, but only if both the instance and the object
-being checked for have precise collision masks selected otherwise
-only bounding box collisions are applied. this function will return
-the unique instance <a href=
-"../instance_variables/id.html"><tt>id</tt></a> of the object being
-collided, but if that is not needed it is slightly faster to use
-the function <a href=
-"../../movement%20and%20collisions/collisions/place_meeting.html"><tt>
-place_meeting</tt></a>. This function also accepts the special
-keywords <b>all</b> and <b>other</b> and will return the keyword
-<b>noone</b> if no collision occurs, or the unique instance ID
-value of the instance found if a collision does occur.</p>
+<p>使用此函数，你可以使用运行检查代码的实例的碰撞遮罩检查与另一个实例或物体的所有实例的碰撞位置。当你使用它时，你实际上要求 <i>GameMaker Studio 2</i> 将实例移动到新位置，检查碰撞，然后向后移动并告诉你是否检测到了碰撞。这将适用于精确碰撞，但前提是选中的实例和物体都选择了精确碰撞遮罩，否则仅应用边界框碰撞。此函数将返回正在碰撞的物体的唯一实例 <a href=
+"../instance_variables/id.html"><tt>id</tt></a>，但是如果不需要这样做，那么使用 <a href=
+"../../movement%20and%20collisions/collisions/place_meeting.html"><tt>place_meeting</tt></a> 函数会稍微快一些。该函数还接受特殊关键字 <b>all</b> 和 <b>other</b>，如果没有发生碰撞，则返回关键字 <b>noone</b>，如果发生碰撞，则返回实例的唯一实例 ID 值。</p>
 
-<p>Note that the given x/y coordinates will be rounded to the
-nearest integer before the check is performed, so if this is
-<i>not</i> what you require (or you have been using a legacy
-GameMaker product), you should <tt>floor</tt> the coordinates in
-the check: <tt>instance_place(floor(x), floor(y),
-obj_Enemy)</tt>.</p>
+<p>请注意，在执行检查之前，给定的 x / y 坐标将被四舍五入为最接近的整数，因此如果这 <i>不是</i> 你需要的（或你一直在使用传统的 GameMaker 产品），你应该使用 <tt>floor</tt> 坐标进行检查：<tt>instance_place(floor(x), floor(y), obj_Enemy)</tt>。</p>
 </blockquote>
 
 <p><br>
@@ -86,17 +66,17 @@ obj_Enemy)</tt>.</p>
 
 <tr>
 <td>x</td>
-<td>The x position to check for instances.</td>
+<td>用于检查实例的 x 位置。</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y position to check for instances.</td>
+<td>用于检查实例的 y 位置。</td>
 </tr>
 
 <tr>
 <td>obj</td>
-<td>The object to check for instances of.</td>
+<td>要检查的实例的物体。</td>
 </tr>
 </table>
 </blockquote>
@@ -104,10 +84,9 @@ obj_Enemy)</tt>.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Real (either an instance ID value or the keyword
-<tt>noone</tt>)</p>
+<p class="code">Real（实数，可能是实例 ID 值或关键字 <tt>noone</tt>）</p>
 
 <p><br>
 </p>
@@ -117,10 +96,7 @@ obj_Enemy)</tt>.</p>
 <p class="code">var _inst = instance_place(x, y, obj_Enemy);<br>if _inst != noone<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;hp -= _inst.dmg;<br>&nbsp;&nbsp;&nbsp;instance_destroy(_inst);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check for a collision with instances of
-"obj_Enemy" and if there is one, it will reduce the "hp" variable
-by the amount stored in the colliding instance's "dmg" variable and
-then destroy the colliding instance.</p>
+<p>上面的代码将检查与 “obj_Enemy” 实例的碰撞，如果有，它会将 “hp” 变量减少存储在碰撞实例的 “dmg” 变量中的数量，然后销毁碰撞实例。</p>
 </blockquote>
 
 <p><br>
@@ -130,9 +106,9 @@ then destroy the colliding instance.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
-<div style="float:right">Next: <a href=
+<div style="float:right">下一页: <a href=
 "instance_place_list.html">instance_place_list</a></div>
 </div>
 </div>

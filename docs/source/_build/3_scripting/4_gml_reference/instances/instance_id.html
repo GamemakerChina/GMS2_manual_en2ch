@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,14 +38,8 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<blockquote>This <b>read only</b> array holds all the <a href=
-"instance_variables/id.html"><tt>id</tt>s</a> of every active
-instance within the room. This means that if you have used any of
-the <a href="deactivating_instances/index.html"><tt>Instance
-Deactivate</tt></a> functions those instances that have been
-deactivated will not be included in this array (if you have used a
-value from this array previously, it will now return the keyword
-<i>noone</i>).<br></blockquote>
+<blockquote>此 <b>只读</b> 数组保存房间中每个活动实例的所有 <a href=
+"instance_variables/id.html"><tt>id</tt></a>。这意味着如果你使用过任何 <a href="deactivating_instances/index.html"><tt>冻结实例</tt></a> 函数，那么这些已冻结的实例将不会包含在这个数组中（如果你以前使用过这个数组中的值，那么它现在将返回关键字 <i>noone</i>）。<br></blockquote>
 
 <p><br>
 </p>
@@ -57,9 +51,9 @@ value from this array previously, it will now return the keyword
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Real (instance ID value)</p>
+<p class="code">Real (instance ID value)（实数，实例 id 值）</p>
 
 <p><br>
 </p>
@@ -68,8 +62,7 @@ value from this array previously, it will now return the keyword
 
 <p class="code">for (var i = 0; i &lt; instance_count; i ++;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;with (instance_id[i]) speed += 0.1;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<blockquote>The above code will loop through all instances within
-the room and add 0.1 to their speed.</blockquote>
+<blockquote>上面的代码将遍历房间内的所有实例，并增加 0.1 的速度。</blockquote>
 
 <p><br>
 </p>
@@ -79,7 +72,7 @@ the room and add 0.1 to their speed.</blockquote>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Instances</a></div>
+"index.html">实例</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_count.html">instance_count</a></div>

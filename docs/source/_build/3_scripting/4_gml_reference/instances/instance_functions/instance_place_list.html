@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,33 +38,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can check a position for a collision with
-all instances of an object using the collision mask of the instance
-that runs the code for the check. When you use this you are
-effectively asking <i>GameMaker Studio 2</i> to move the instance
-to the new position, check for a collision, then move back and tell
-you if a collision was found or not. This will work for precise
-collisions, but only if both the instance and the instances of the
-object being checked for have precise collision masks selected
-otherwise only bounding box collisions are applied. The function
-will populate a (previously created) <a href=
-"../../data_structures/ds%20lists/index.html">DS list</a> with the
-unique <a href="../instance_variables/id.html"><tt>id</tt></a>
-values of all instances of the object that are considered to be in
-collision with the calling instance, and you have the option to
-order the list based on the distance from the origin of the
-instance doing the checking to the origin of the instances found to
-be in collision. Note that the function also accepts the special
-keyword <b><tt>all</tt></b>, in which case all instances found to
-be in collision will be listed. The function returns the number of
-instances found, or 0 if none are found.</p>
+<p>使用此函数，你可以使用运行检查代码的实例的碰撞遮罩来检查物体的所有实例发生碰撞的位置。当你使用它时，你实际上要求 <i>GameMaker Studio 2</i> 将实例移动到新位置，检查碰撞，然后向后移动并告诉你是否检测到了碰撞。这将适用于精确碰撞，但前提是选中的实例和物体都选择了精确碰撞遮罩，否则仅应用边界框碰撞。函数将用被认为与调用实例碰撞的物体的所有实例的唯一 <a href="../instance_variables/id.html"><tt>ID</tt></a> 值填充（以前创建的）<a href=
+"../../data_structures/ds%20lists/index.html">数据结构列表（DS list）</a>，你可以选择根据从执行检查的实例的原点到发现碰撞的实例的原点的距离来排序列表。请注意，该函数还接受特殊关键字 <b><tt>all</tt></b>，在这种情况下，将列出所有找到的要在碰撞中的实例。函数返回找到的实例数，如果找不到，则返回 0。</p>
 
-<p>Note that the given x/y coordinates will be rounded to the
-nearest integer before the check is performed, so if this is
-<i>not</i> what you require (or you have been using a legacy
-GameMaker product), you should <tt>floor</tt> the coordinates in
-the check: <tt>instance_place_list(floor(x), floor(y), obj_Enemy,
-list, true)</tt>.</p>
+<p>请注意，在执行检查之前，给定的 x / y 坐标将被四舍五入为最接近的整数，因此如果这 <i>不是</i> 你需要的（或你一直在使用传统的 GameMaker 产品），你应该使用 <tt>floor</tt> 坐标进行检查：<tt>instance_place_list(floor(x), floor(y), obj_Enemy)</tt>。</p>
 </blockquote>
 
 <p><br>
@@ -83,29 +60,27 @@ list, true)</tt>.</p>
 
 <tr>
 <td>x</td>
-<td>The x position to check for instances.</td>
+<td>用于检查实例的 x 位置。</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y position to check for instances.</td>
+<td>用于检查实例的 y 位置。</td>
 </tr>
 
 <tr>
 <td>obj</td>
-<td>The object to check for instances of.</td>
+<td>要检查的实例的物体。</td>
 </tr>
 
 <tr class="alt">
 <td>list</td>
-<td>The DS list to use to store the IDs of colliding
-instances.</td>
+<td>用于存储碰撞实例的 ID 的数据结构列表。</td>
 </tr>
 
 <tr>
 <td>ordered</td>
-<td>Whether the list should be ordered by distance (<tt>true</tt>)
-or not (<tt>false</tt>).</td>
+<td>列表是（<tt>true</tt>）否（<tt>false</tt>）应按距离排序。</td>
 </tr>
 </table>
 </blockquote>
@@ -113,33 +88,19 @@ or not (<tt>false</tt>).</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Int (The number of instances found to be in
-collision)</p>
+<p class="code">Int（整数，发现碰撞的实例数）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">var _list = ds_list_create();<br>
-var _num = instance_place_list(x, y, obj_Enemy, _list, false);<br>
-if _num &gt; 0<br>
-&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i &lt; _num; ++i;)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance_destroy(_list[|
-i]);<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-&nbsp;&nbsp;&nbsp;&nbsp;}<br>
-ds_list_destroy(_list);<br></p>
+<p class="code">var _list = ds_list_create();<br>var _num = instance_place_list(x, y, obj_Enemy, _list, false);<br>if _num &gt; 0<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i &lt; _num; ++i;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance_destroy(_list[| i]);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>ds_list_destroy(_list);<br></p>
 
 <blockquote>
-<p>The above code will check for a collision with all instances
-found at the calling instances position. These will be added to a
-DS list, which is then looped through to destroy each of the
-instances in collision.</p>
+<p>上面的代码将检查在调用实例位置找到的所有实例是否碰撞。这些将被添加到一个数据结构列表中，然后循环通过该列表来销毁碰撞中的每个实例。</p>
 </blockquote>
 
 <p><br>
@@ -149,7 +110,7 @@ instances in collision.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_position.html">instance_position</a></div>

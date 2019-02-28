@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,33 +38,18 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>All instances have a unique identifier (<a href=
-"../instance_variables/id.html"><tt>id</tt></a>) which can be used
-to modify and manipulate them while a game is running, but you may
-not always know what the id for a specific instance is and so this
-function can help as you can use it to iterate through all of them
-to find what you need. You specify the object that you want to find
-the instance of and a number, and if there is an instance at that
-position in the instance list then the function returns the id of
-that instance, and if not it returns the special keyword
-<b>noone</b>. You can also use the keyword <b>all</b> to iterate
-through all the instances in a room, as well as a parent object to
-iterate through all the instances that are part of that parent /
-child hierarchy and you can even specify an instance itself (if you
-have its id) as a check to see if it actually exists in the current
-room. Please note that as instances are sorted in an
-<i>arbitrary</i> manner, there is no specific order to how the
-instances are checked by this function, and any instance can be in
-any position.</p>
+<p>所有实例都有一个唯一的标识符（<a href=
+"../instance_variables/id.html"><tt>id<tt><a href=
+"../instance_variables/id.html">），可以在游戏运行时用来修改和操作它们，但你可能并不总是知道特定实例的 ID 是什么，因此此函数可以帮助你，因为你可以使用它来迭代所有实例以查找所需的内容。指定要查找其实例的物体和数字，如果实例列表中的该位置有实例，则函数返回该实例的 ID，如果没有，则返回特殊关键字 <b>noone<b>。你还可以使用关键字 <b>all<b> 迭代房间中的所有实例，以及父物体迭代属于该父 / 子层次结构的所有实例，甚至可以指定实例本身（如果你有其 ID）作为检查，以查看它是否实际存在于当前房间中。请注意，由于实例是以 <i>任意</i> 的方式排序的，因此这个函数检查实例的方式没有特定的顺序，任何实例都可以位于任何位置。</p>
 
-<p>The maximum value for "n" in this function would be</p>
+<p>这个函数中 n 的最大值是</p>
 
 <blockquote>
 <ul>
-<li>For the keyword <b>all</b>: <a href=
+<li>对于关键字 <b>all</b>：<a href=
 "../instance_count.html"><tt>instance_count - 1</tt></a></li>
 
-<li>For an object index: <a href=
+<li>对于物体索引：<a href=
 "instance_number.html"><tt>instance_number(OBJ) - 1</tt></a></li>
 </ul>
 </blockquote>
@@ -92,12 +77,12 @@ any position.</p>
 
 <tr>
 <td>obj</td>
-<td>The object to find the nth instance of</td>
+<td>找到第 n 个实例的物体</td>
 </tr>
 
 <tr class="alt">
-<td>n</td>
-<td>The number of the instance to find.</td>
+<td>.n</td>
+<td>要查找的实例的编号。</td>
 </tr>
 </table>
 </blockquote>
@@ -105,10 +90,9 @@ any position.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Real (either an instance ID value or the keyword
-<tt>noone</tt>)</p>
+<p class="code">Real（实数，可能是实例 ID 值或关键字 <tt>noone</tt>）</p>
 
 <p><br>
 </p>
@@ -118,9 +102,7 @@ any position.</p>
 <p class="code">var i;<br>for (i = 0; i &lt; instance_number(obj_Enemy); i += 1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;enemy[i] = instance_find(obj_Enemy,i);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will use a <tt>for</tt> loop to iterate through
-all the instances of "obj_Enemy" and store their <b>id</b> in the
-array "enemy[]".</p>
+<p>上面的代码将使用 <tt>for<tt> 循环来迭代 “obj_emney” 的所有实例，并将它们的 <b>id<b> 存储在数组 “emney[]” 中。</p>
 </blockquote>
 
 <p><br>
@@ -130,7 +112,7 @@ array "enemy[]".</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_furthest.html">instance_furthest</a></div>

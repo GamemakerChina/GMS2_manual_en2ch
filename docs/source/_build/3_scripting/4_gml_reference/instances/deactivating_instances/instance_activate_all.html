@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -50,9 +50,7 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can tell <i>GameMaker Studio 2</i> to
-activate all instances that have been previously deactivated in a
-room.<br>
+<p>通过这个函数，你可以告诉 <i>GameMaker Studio 2</i> 去激活一个房间中所有被冻结的实例。<br>
 <br></p>
 
 <p><br>
@@ -61,17 +59,9 @@ room.<br>
 <h3><b>例如：</b>
 </h3>
 
-<p class="code">instance_activate_all();<br>
-var _vx = camera_get_view_x(view_camera[0]);<br>
-var _vy = camera_get_view_y(view_camera[0]);<br>
-var _vw = camera_get_view_width(view_camera[0]);<br>
-var _vh = camera_get_view_height(view_camera[0]);<br>
-instance_deactivate_region(_vx - 64, _vy - 64, _vw + 128, _vh +
-128, false, false);<br></p>
+<p class="code">instance_activate_all();<br>var _vx = camera_get_view_x(view_camera[0]);<br>var _vy = camera_get_view_y(view_camera[0]);<br>var _vw = camera_get_view_width(view_camera[0]);<br>var _vh = camera_get_view_height(view_camera[0]);<br>instance_deactivate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false, false);<br></p>
 
-<p>The above code activates all instances within the room and then
-deactivates those that are 64px outside of the limits of the
-current camera view.</p>
+<p>上述代码激活房间内的所有实例，然后冻结当前摄像机视图极限之外 64 像素的实例。</p>
 
 <p><br>
 </p>
@@ -80,7 +70,7 @@ current camera view.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Deactivating Instances</a></div>
+<div style="float:left">上一页:  <a href="index.html">冻结实例</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_activate_object.html">instance_activate_object</a></div>

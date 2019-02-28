@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -52,7 +52,7 @@ if (window.name != "content")
 
 <tr>
 <td>layer_id</td>
-<td>The layer ID string (or value) to be used</td>
+<td>要使用的层 ID 字符串（或值）</td>
 </tr>
 </table>
 </div>
@@ -67,18 +67,8 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can activate a layer that has been
-deactivated previously. You need to supply the <b>layer ID</b>,
-which can either be the name of the layer as written in the code
-editor (as a string) or the actual layer ID value as returned by
-the <a href=
-"../../rooms/layers/layer_create.html"><tt>layer_create</tt></a>
-and all deactivated instances on that layer will activated once
-again. Note that if you have deactivated a layer that has
-persistent instances, you will need to reactivate the layer again
-with this function before changing room, otherwise any persistent
-instances will <i>not</i> be carried over and will be
-discarded.<br>
+<p>使用此函数，你可以激活先前已冻结的层。你需要提供 <b>层 ID（layer ID）</b>，它可以是代码编辑器中写入的层名称（作为字符串），也可以是 <a href=
+"../../rooms/layers/layer_create.html"><tt>layer_create</tt></a> 返回的实际层 ID 值  ，该层上所有已冻结的实例将再次激活。请注意，如果你已冻结具有保持实例的层，则需要在更改房间之前使用此函数重新激活该层，否则任何保持实例将 <i>不</i> 被转移并将被丢弃。<br>
 <br></p>
 
 <p><br>
@@ -87,17 +77,9 @@ discarded.<br>
 <h3><b>例如：</b>
 </h3>
 
-<p class="code">instance_activate_all();<br>
-var _vx = camera_get_view_x(view_camera[0]);<br>
-var _vy = camera_get_view_y(view_camera[0]);<br>
-instance_deactivate_region(view_xview[0] - 64, view_yview - 64, _vx
-+ 128, _vy + 128, false, false);<br>
-instance_activate_layer("Player_Layer");<br></p>
+<p class="code">instance_activate_all();<br>var _vx = camera_get_view_x(view_camera[0]);<br>var _vy = camera_get_view_y(view_camera[0]);<br>instance_deactivate_region(view_xview[0] - 64, view_yview - 64, _vx + 128, _vy + 128, false, false);<br>instance_activate_layer("Player_Layer");<br></p>
 
-<p>The above code activates all instances within the room and then
-deactivates those that are outside of the limits of the current
-camera view, except for the instances on the layer "Player_Layer"
-which are re-activated again at the end.</p>
+<p>上面的代码激活房间内的所有实例，然后冻结那些超出当前摄像机视图极限的实例，除了 “Player_Layer” 层上最后再次重新激活的实例。</p>
 
 <p><br>
 </p>
@@ -106,7 +88,7 @@ which are re-activated again at the end.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Deactivating Instances</a></div>
+<div style="float:left">上一页:  <a href="index.html">冻结实例</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_deactivate_all.html">instance_deactivate_all</a></div>

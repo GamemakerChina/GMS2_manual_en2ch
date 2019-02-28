@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,36 +38,11 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>You can use this function to change one instance of an object
-into another instance of a different object, and while doing so
-decide whether to perform the initial instances Destroy and Clean
-Up Events and the new instances Create Event. In this way, you can
-have (for example) a bomb change into an explosion - in which case
-the "perf" argument would probably be true as you would want the
-bomb to perform its Destroy Event and Clean Up Event, as well as
-the explosion to perform its Create Event - or you could have your
-player character change into a different one - in which case the
-"perf" argument would probably be false as you do not want the
-instances to perform their Create and Destroy/Clean Up events.</p>
+<p>你可以使用此函数将物体的一个实例更改为另一个物体的另一个实例，同时这样做决定是否执行初始实例销毁（Destroy）和清理（Clean Up）事件和新实例创建（Create）事件。通过这种方式，你可以（例如）将炸弹更换为爆炸 - 在这种情况下， “perf” 参数可能为 true，因为你希望炸弹执行其销毁事件和清理事件，以及爆炸执行其创建事件 - 或者你可以将你的玩家角色更改为另一个 - 在这种情况下，“perf” 参数可能为 false，因为你不希望实例执行其创建和销毁 / 清理事件。</p>
 
-<p>It is worth noting that changing the instance means that you
-should perform no further actions with that instance until the next
-step, in particular trying to access variables etc... as that will
-cause an error. Basically, you change the instance but it is not
-actually available until the end of the current step, so to access
-any of the variables it contains directly (for example, calling
-<code>obj_Changed.x</code>) will not work.</p>
+<p>值得注意的是，更改实例意味着在下一步之前不应对该实例执行任何进一步的操作，特别是尝试访问变量等...因为这将导致错误。基本上，你更改实例但在当前步结束之前实际上不可用，因此直接访问它包含的任何变量（例如，调用 <code>obj_Changed.x</code>）将不起作用。</p>
 
-<div class="note"><b>WARNING!</b> When changing a physics enabled
-instance, the physical properties <b>will not be carried over</b>
-to the new instance being changed into. Therefore you should have
-code in place to "transfer" the physics state of the current
-instance over to the new instance, or have defined the new
-instances physical properties in its Create Event, or in the object
-editor. For this reason it is recommended that you not use this
-function with physics enabled instances, but rather use a
-combination of <tt>instance_destroy()</tt> and
-<tt>instance_create_layer()</tt>.</div>
+<div class="note"><b>警告！</b>更改启用物理的实例时，物理属性 <b>不会被</b> 转移到要更改的新实例。因此，你应该有代码将当前实例的物理状态 “转移” 到新实例，或者在其创建事件或物体编辑器中定义新实例的物理属性。因此，建议你不要将此函数与启用物理的实例一起使用，而应使用 <tt>instance_destroy()</tt> 和 <tt>instance_create_layer()</tt> 的组合。</div>
 </blockquote>
 
 <p><br>
@@ -91,13 +66,12 @@ combination of <tt>instance_destroy()</tt> and
 
 <tr>
 <td>obj</td>
-<td>The new object the calling object will change into.</td>
+<td>调用物体将变为的新物体。</td>
 </tr>
 
 <tr class="alt">
 <td>perf</td>
-<td>Whether to perform that new object's create and destroy events
-(true) or not (false).</td>
+<td>执行该新物体的创建和销毁事件（true）与否（false）。</td>
 </tr>
 </table>
 </blockquote>
@@ -105,7 +79,7 @@ combination of <tt>instance_destroy()</tt> and
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
 <p class="code">N/A（无返回值）</p>
 
@@ -117,10 +91,7 @@ combination of <tt>instance_destroy()</tt> and
 <p class="code">if keyboard_check(vk_enter)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_change(obj_Player_Swimming, false);<br>&nbsp;&nbsp;&nbsp;exit;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will change the calling instance into an instance
-of "obj_Player_Swimming" without performing the original instances
-destroy event nor the new instances create event when the user
-presses the "Enter" key, exiting the code block when done.</p>
+<p>上面的代码将调用实例变为 “obj_Player_Swimming” 的实例而不执行原始实例销毁事件，也不会在用户按下 “Enter” 键时执行新实例的创建事件，完成后退出代码块。</p>
 </blockquote>
 
 <p><br>
@@ -130,7 +101,7 @@ presses the "Enter" key, exiting the code block when done.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_copy.html">instance_copy</a></div>

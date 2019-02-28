@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,14 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can find out how many active instances of
-the specified object exists in the room. When checking using this
-function, if the object is a <b>parent</b>, then <i>all child
-objects will also be included in the return value</i>, and also
-note that those instances which have been deactivated with the
-<a href=
-"../deactivating_instances/index.html"><tt>instance_deactivate</tt></a>
-functions will <i>not</i> be included in this check.</p>
+<p>通过此函数，你可以了解房间中存在多少指定物体的活动实例。使用此函数进行检查时，如果物体是 <b>父物体</b>，则 <i>所有子物体也将包括在返回值中</i>，并且还请注意，那些已通过<a href=
+"../deactivating_instances/index.html"><tt>instance_deactivate</tt></a> 函数冻结的实例 <i>不会</i> 被检查。</p>
 </blockquote>
 
 <p><br>
@@ -69,7 +63,7 @@ functions will <i>not</i> be included in this check.</p>
 
 <tr>
 <td>obj</td>
-<td>The object to total the number of instances of.</td>
+<td>物体的实例总数。</td>
 </tr>
 </table>
 </blockquote>
@@ -77,26 +71,19 @@ functions will <i>not</i> be included in this check.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
 
 <h3>例如：</h3>
 
-<p class="code">if instance_number(object_index) &lt; 50
-&nbsp;&nbsp;&nbsp;{<br>
-&nbsp;&nbsp;&nbsp;instance_create_layer(random(room_width),
-random(room_height), "Instances", object_index);<br>
-&nbsp;&nbsp;&nbsp;}<br></p>
+<p class="code">if instance_number(object_index) &lt; 50 &nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_create_layer(random(room_width), random(room_height), "Instances", object_index);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check the number of instances that are
-created form the same object as the current instance and then if
-there are less than 50, create another one at a random position
-within the room.</p>
+<p>上面的代码将检查从与当前实例相同的物体创建的实例数，如果少于 50 个，则在房间内的随机位置创建另一个实例。</p>
 </blockquote>
 
 <p><br>
@@ -106,7 +93,7 @@ within the room.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_place.html">instance_place</a></div>

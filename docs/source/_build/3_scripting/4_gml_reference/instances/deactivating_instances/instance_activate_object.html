@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -52,8 +52,7 @@ if (window.name != "content")
 
 <tr>
 <td>obj</td>
-<td>The object or instance to activate (the keyword <b>all</b> can
-also be used).</td>
+<td>要激活的物体或实例（也可以使用关键字 <b>all</b>）。</td>
 </tr>
 </table>
 </div>
@@ -68,13 +67,7 @@ also be used).</td>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can activate a single instance or all
-instances of a specific object from all those that have been
-deactivated previously. Note that if you have deactivated an
-instance or object that has been flagged as <b>Persistent</b>, then
-you will need to reactivate it again with this function before
-changing room, otherwise it will <i>not</i> be carried over and
-will be discarded instead.<br>
+<p>使用此函数，你可以从之前已冻结的所有实例中激活单个实例或特定物体的所有实例。请注意，如果你已停用已标记为 <b>保持</b> 的实例或物体，则需要在更换房间之前使用此函数重新激活它，否则它将 <i>不</i> 被转移，并将被丢弃。<br>
 <br></p>
 
 <p><br>
@@ -83,19 +76,9 @@ will be discarded instead.<br>
 <h3><b>例如：</b>
 </h3>
 
-<p class="code">instance_activate_all();<br>
-var _vx = camera_get_view_x(view_camera[0]);<br>
-var _vy = camera_get_view_y(view_camera[0]);<br>
-var _vw = camera_get_view_width(view_camera[0]);<br>
-var _vh = camera_get_view_height(view_camera[0]);<br>
-instance_deactivate_region(_vx - 64, _vy - 64, _vw + 128, _vh +
-128, false, false);<br>
-instance_activate_object(obj_Lights);<br></p>
+<p class="code">instance_activate_all();<br>var _vx = camera_get_view_x(view_camera[0]);<br>var _vy = camera_get_view_y(view_camera[0]);<br>var _vw = camera_get_view_width(view_camera[0]);<br>var _vh = camera_get_view_height(view_camera[0]);<br>instance_deactivate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false, false);<br>instance_activate_object(obj_Lights);<br></p>
 
-<p>The above code activates all instances within the room and then
-deactivates those that are outside of the limits of the current
-camera view, except for the object "obj_Lights" which are
-re-activated again at the end.</p>
+<p>上述代码激活房间内的所有实例，然后冻结当前摄像机视图极限之外的实例，但物体 “obj_Lights” 除外，该物体在结束时将再次激活。</p>
 
 <p><br>
 </p>
@@ -104,7 +87,7 @@ re-activated again at the end.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Deactivating Instances</a></div>
+<div style="float:left">上一页:  <a href="index.html">冻结实例</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_activate_region.html">instance_activate_region</a></div>

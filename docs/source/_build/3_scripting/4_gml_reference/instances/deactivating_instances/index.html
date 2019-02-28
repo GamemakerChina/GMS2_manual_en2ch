@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -36,54 +36,24 @@ if (window.name != "content")
 <p><br>
 </p>
 
-<p><i>GameMaker Studio 2</i> offers you the possibility to "switch
-off" instances so that they are no longer processed in any way.
-Technically they don't really exist anymore, except as a pointer
-within the deactivation process itself, which means that a
-deactivated instance cannot be manipulated or changed in any way at
-all until it is re-activated again. So, these functions should be
-used with great care as they can cause problems when not used
-properly, particularly with persistent objects, as a persistent
-object that has been deactivated will not be moved to the next room
-unless it is re-activated first (effectively deleting it from the
-game).</p>
+<p><i>GameMaker Studio 2</i> 提供了 “关闭” 实例的可能性，从而不再以任何方式处理它们。从技术上讲，它们实际上已经不存在了，除了作为冻结流程本身中的指针之外，这意味着在再次激活失活的实例之前，无法以任何方式对其进行操作或更改。因此，在使用这些函数时要非常小心，因为如果使用不当，特别是在使用保持物体时，它们可能会导致问题，因为一个被冻结的保持物体将不会被移动到下一个房间，除非它首先被重新激活（有效地将其从游戏中删除）。</p>
 
-<p>It is normally not necessary to deactivate instances every step
-of your game and this can actually cause your game to lag and runs
-slow. Instead it is recommended that you only run these functions
-every few steps in an alarm (for example), or if the view has
-changed position, and it is especially important that you do not
-use these functions in the draw event as this can lead to serious
-errors in your game.</p>
+<p>通常不需要在游戏的每步都冻结实例，这实际上会导致游戏延迟和运行缓慢。相反，建议你仅在计时器中的每几个步中运行这些函数（例如），或者如果视图已更改位置，并且尤为重要的是在绘制事件中不要使用这些函数，因为这可能导致游戏中出现严重错误。</p>
 
-<p>A deactivated instance effectively ceases to exist in the game,
-but individual instances can still have their variables accessed.
-You cannot use <tt>with(object)</tt> or <tt>with(instance)</tt>
-however, but rather you must access the instance directly using
-it's unique id in the following form:</p>
+<p>已停用的实例在游戏中实际上不再存在，但是单个实例仍然可以访问其变量。但是你不能使用 <tt>with(object)</tt> 或 <tt>with(instance)</tt>，而是必须使用以下格式的唯一 ID 直接访问实例：</p>
 
 <p class="code">val = inst.variable;</p>
 
-<p>In the above example, "inst" would be a variable that holds the
-id of the deactivated instance, and this is the only way that a
-deactivated instance can be referenced without it being activated
-previously.</p>
+<p>在上面的示例中，“inst” 将是一个保存已停用实例的 id 的变量，这是在未事先激活的情况下可以引用已停用的实例的唯一方法。</p>
 
-<div class="note"><b>NOTE:</b> If you deactivate an instance on
-room start (ie:from the room creation code, or from an instance
-create event of an instance within the room) all instances that are
-placed within the room from the room editor will still run their
-create event before being deactivated.</div>
+<div class="note"><b>注意：</b>如果你停用了房间开始上的实例（即：从房间创建代码，或从房间内实例的实例创建事件），那么从房间编辑器中放置在房间内的所有实例在冻结之前仍将运行它们的创建事件。
 
-<div class="note"><b>WARNING: Deactivating instances that have
-physics enabled will NOT stop their fixtures from interacting
-within the physics simulation. For that you should set their
-phy_active variable to true or false as you activate/deactivate the
-instances.</b>
 </div>
 
-<p>The following functions exist for deactivating instances:
+<div class="note"><b>警告：冻结物理的实例不会阻止它们的支架（fixtures）在物理模拟中进行交互。为此，你应在激活 / 冻结实例时将其 phy_active 变量设置为 true 或 false。</b>
+</div>
 
+<p>以下用于冻结实例的函数：
 <a name="deactivate_functions" id="deactivate_functions"></a></p>
 
 <blockquote>
@@ -131,10 +101,10 @@ instances.</b>
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"../index.html">Instances</a></div>
+"../index.html">实例</a></div>
 
 <div style="float:right">下一页: <a href=
-"../instance_variables/index.html">Instance Variables</a></div>
+"../instance_variables/index.html">实例变量</a></div>
 </div>
 </div>
 

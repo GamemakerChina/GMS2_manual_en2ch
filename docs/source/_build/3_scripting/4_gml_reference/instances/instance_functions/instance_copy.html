@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,15 +38,9 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can "clone" an instance as this will
-create a new version of the instance running the code at its same
-position. The "perf" argument is used to instruct this new instance
-to perform the create event or not. This function returns the
-<a href="../instance_variables/id.html"><tt>id</tt></a> of the new
-instance which can then be stored in a variable or used to access
-that instance.</p>
+<p>使用此函数，你可以 “克隆” 实例，因为这将创建在相同位置运行代码的实例的新版本。“perf” 参数用于指示此新实例是否执行创建事件。此函数返回新实例的 <a href="../instance_variables/id.html"><tt>id</tt></a>，然后可以将其存储在变量中或用于访问该实例。</p>
 
-<div class="note"><b>注意</b>： If you choose not to perform the create event, you may encounter errors if the instance depends on any variables initialised in this event.</div>
+<div class="note"><b>注意</b>： 如果你选择不执行创建事件，则如果实例依赖于此事件中初始化的任何变量，则可能会遇到错误。</div>
 </blockquote>
 
 <p><br>
@@ -70,8 +64,7 @@ that instance.</p>
 
 <tr>
 <td>perf</td>
-<td>Whether to perform the new instance's Create event (true) or
-not (false).</td>
+<td>是否执行新实例的创建事件（true）或不执行（false）。</td>
 </tr>
 </table>
 </blockquote>
@@ -79,9 +72,9 @@ not (false).</td>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Real (instance ID value)</p>
+<p class="code">Real (instance ID value)（实数，实例 id 值）</p>
 
 <p><br>
 </p>
@@ -91,10 +84,7 @@ not (false).</td>
 <p class="code">var inst;<br>inst = instance_number(object_index);<br>if inst &lt; 10<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;instance_copy(true);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code creates a local variable and uses it to store the
-number of instances of the object running the code in the room. If
-the number is less than 10, the instance then makes a copy of
-itself.</p>
+<p>上面的代码创建了一个局部变量，并使用它来存储在房间中运行代码的物体的实例数。如果该数字小于 10，则该实例将自行复制。</p>
 </blockquote>
 
 <p><br>
@@ -104,7 +94,7 @@ itself.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_find.html">instance_find</a></div>

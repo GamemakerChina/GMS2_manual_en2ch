@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,14 +38,7 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function will check all the instances of the given object
-to see which is nearest to the given point of origin. If no
-instances of the object exist, the function will return the keyword
-<i>noone</i>, but if there are instances then it will return the
-<a href="../instance_variables/id.html"><tt>id</tt></a> of the
-instance found. Please note that if the instance running the code
-was created as an instance of the object being checked, then it
-will be included in the check.</p>
+<p>此函数将检查给定物体的所有实例，以查看哪个实例最接近给定的原点。如果不存在物体的实例，则函数将返回关键字 <i>“noone”</i>，但如果存在实例，则它将返回找到的实例的 <a href="../instance_variables/id.html"><tt>“id”</tt></a>。请注意，如果运行代码的实例是作为被检查物体的实例创建的，那么它将包含在检查中。</p>
 </blockquote>
 
 <p><br>
@@ -69,17 +62,17 @@ will be included in the check.</p>
 
 <tr>
 <td>x</td>
-<td>The x position to check from.</td>
+<td>需要检查的 x 坐标</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y position to check from.</td>
+<td>需要检查的 y 坐标</td>
 </tr>
 
 <tr>
 <td>obj</td>
-<td>The object to check for instances of.</td>
+<td>要检查的实例的物体。</td>
 </tr>
 </table>
 </blockquote>
@@ -87,10 +80,9 @@ will be included in the check.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Real (either an instance ID value or the keyword
-<tt>noone</tt>)</p>
+<p class="code">Real（实数，可能是实例 ID 值或关键字 <tt>noone</tt>）</p>
 
 <p><br>
 </p>
@@ -100,11 +92,7 @@ will be included in the check.</p>
 <p class="code">var inst, xx;<br>xx = x;<br>x -= 10000;<br>inst = instance_nearest(xx, y, object_index);<br>if inst != id<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;draw_line(x, y, inst.x, inst.y);<br>&nbsp;&nbsp;&nbsp;}<br>x += 10000;<br></p>
 
 <blockquote>
-<p>The above code move the current instance 10000 pixels then check
-its previous position to find the nearest instance of the same
-object type. If that instance is itself, it will do nothing more
-than move back to its original position, but should the instance
-found be different, it will draw a line between the two.</p>
+<p>上面的代码将当前实例移动 10000 像素，然后检查其上一个位置，以查找同一物体类型的最近实例。如果该实例是其自身，它只会移动回其原始位置，但如果找到的实例不同，它将在两者之间画一条线。</p>
 </blockquote>
 
 <p><br>
@@ -114,7 +102,7 @@ found be different, it will draw a line between the two.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_number.html">instance_number</a></div>

@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -53,30 +53,27 @@ inside);</p>
 
 <tr>
 <td>left</td>
-<td>The x coordinate of the left of the rectangular region to
-activate.</td>
+<td>要激活的矩形区域左侧的 x 坐标。</td>
 </tr>
 
 <tr class="alt">
 <td>top</td>
-<td>The y coordinate of the top of the rectangular region to
-activate.</td>
+<td>要激活的矩形区域顶部的 y 坐标。</td>
 </tr>
 
 <tr>
 <td>宽度</td>
-<td>The width of the region to activate.</td>
+<td>要激活的区域的宽度。</td>
 </tr>
 
 <tr class="alt">
 <td>高度</td>
-<td>The height of the region to activate.</td>
+<td>要激活的区域的高度。</td>
 </tr>
 
 <tr>
 <td>inside</td>
-<td>Whether to activate instances on the inside of the region
-(true) or the outside (false).</td>
+<td>是激活区域内部的实例（true）还是外部的实例（false）。</td>
 </tr>
 </table>
 </div>
@@ -91,18 +88,10 @@ activate.</td>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can define a region within the room to
-activate instances that have previously been deactivated. This
-region can either be flagged as "inside" or "outside" as
-demonstrated in the following image:  <img class="center" src=
+<p>使用此函数，你可以在房间内定义一个区域来激活以前冻结的实例。该区域可以标记为 “内” 或 “外”，如下图所示: <img class="center" src=
 "../images/instance_activate_region.png"></p>
 
-<p>You can see in the image above that the "apple" instance is
-always active because, even if the sprite itself doesn't overlap
-the region, the bounding box does. So, instances are considered to
-be within the region specified when their <i>bounding box</i>
-overlaps with it, and the state of the collision mask (precise or
-not) is not taken into consideration.<br></p>
+<p>你可以在上面的图像中看到，“apple” 实例始终处于活动状态，因为即使精灵本身不重叠该区域，边界框也会重叠。因此，当实例的 <i>“边界框”（Bounding Box）</i> 与它重叠时，它们被认为在指定的区域内，并且碰撞遮罩（精确与否）的状态未被考虑在内。<br></p>
 
 <p><br>
 </p>
@@ -110,16 +99,9 @@ not) is not taken into consideration.<br></p>
 <h3><b>例如：</b>
 </h3>
 
-<p class="code">instance_deactivate_all(true);<br>
-var _vx = camera_get_view_x(view_camera[0]);<br>
-var _vy = camera_get_view_y(view_camera[0]);<br>
-var _vw = camera_get_view_width(view_camera[0]);<br>
-var _vh = camera_get_view_height(view_camera[0]);<br>
-instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128,
-false);<br></p>
+<p class="code">instance_deactivate_all(true);<br>var _vx = camera_get_view_x(view_camera[0]);<br>var _vy = camera_get_view_y(view_camera[0]);<br>var _vw = camera_get_view_width(view_camera[0]);<br>var _vh = camera_get_view_height(view_camera[0]);<br>instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false);<br></p>
 
-<p>The above code deactivates all instances except the one that is
-running the code and then activates a region within the room.</p>
+<p>上述代码将停用除运行代码的实例外的所有实例，然后激活房间中的某个区域。</p>
 
 <p><br>
 </p>
@@ -128,7 +110,7 @@ running the code and then activates a region within the room.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Deactivating Instances</a></div>
+<div style="float:left">上一页:  <a href="index.html">冻结实例</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_activate_layer.html">instance_activate_layer</a></div>

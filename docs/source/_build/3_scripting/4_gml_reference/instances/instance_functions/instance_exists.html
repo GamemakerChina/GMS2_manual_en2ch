@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,18 +38,10 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>This function can be used in two ways depending on what you wish
-to check. You can give it an object_index to check for, in which
-case this function will return <tt>true</tt> if any active
-instances of the specified object exist in the current room, or you
-can also supply it with an instance id, in which case this function
-will return <tt>true</tt> if that specific instance exists and is
-active in the current room.</p>
+<p>根据你要检查的内容，此函数可以通过两种方式使用。你可以给它一个要检查的物体索引，在这种情况下，如果指定物体的任何活动实例存在于当前房间中，则此函数将返回 <tt>true</tt>，或者你也可以向其提供实例 ID，在这种情况下，如果该特定实例存在且在当前房间中处于活动状态，则此函数将返回 <tt>true</tt>。</p>
 
-<p>Please note that this function does <i>not</i> take into account
-those instances that have been deactivated using the <a href=
-"../deactivating_instances/index.html"><tt>instance_deactivate</tt></a>
-functions.</p>
+<p>请注意，此函数 <i>不会</i> 使用 <a href=
+"../deactivating_instances/index.html"><tt>instance_deactivate</tt></a> 函数来考虑那些已被冻结的实例。</p>
 </blockquote>
 
 <p><br>
@@ -73,7 +65,7 @@ functions.</p>
 
 <tr>
 <td>obj</td>
-<td>The object or instance to check for the existence of.</td>
+<td>要检查是否存在的物体或实例。</td>
 </tr>
 </table>
 </blockquote>
@@ -81,9 +73,9 @@ functions.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Boolean</p>
+<p class="code">Boolean（布尔值）</p>
 
 <p><br>
 </p>
@@ -93,9 +85,7 @@ functions.</p>
 <p class="code">if !instance_exists(obj_Enemy)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;score += 200;<br>&nbsp;&nbsp;&nbsp;room_goto(rm_hiscores);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code checks to see if any instances of the object
-"obj_Enemy" exist and if not it adds to the variable "score" and
-changes room.</p>
+<p>上面的代码检查物体 “obj_Enemy” 是否存在任何实例，如果不存在，则变量 “score” 增加并更换房间。</p>
 </blockquote>
 
 <p><br>
@@ -105,7 +95,7 @@ changes room.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_find.html">instance_find</a></div>

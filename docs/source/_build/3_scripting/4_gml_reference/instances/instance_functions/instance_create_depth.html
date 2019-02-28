@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,29 +38,13 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can create a new instance of the
-specified object at any given point within the room and at the
-depth specified. The depth can be any value, where the lower the
-depth the "nearer" to the camera things will be drawn and the
-higher the depth the further away, so an instance at depth -200
-will be drawn over an instance at depth +300 (for example). Note
-that this function will actually create a room layer for the
-instance, since all instances <i>must</i> be on a layer in the
-room, but since this is a <i>managed</i> layer (ie: not one that
-you have created through code or in the room, but one that
-<i>GameMaker Studio 2</i> has created automatically) you cannot
-access it, and the <a href=
-"../instance_variables/layer.html"><tt>layer</tt></a> instance
-variable will return -1.</p>
+<p>使用此函数，你可以在房间内的任何给定点和指定的深度处创建指定物体的新实例。深度可以是任何值，其中深度越低，相机的 “更近处” 将被绘制，越深则越远，因此（ 例如）深度为 -200 的实例将在深度为 +300 的实例上绘制。注意，这个函数会为实例创建一个房间层，因为所有的实例都 <i>必须</i> 在房间里的一层，但由于这是 <i>托管的（managed）</i> 层（即：是 <i>GameMaker Studio 2</i> 自动创建的，而不是你通过代码或在房间里创建的）你不能访问它，而 <a href=
+"../instance_variables/layer.html"><tt>层</tt></a> 实例变量将返回 1。</p>
 
 <div class="note"><b>重要！</b> 最小和最大层深度为 -16000 到 16000。尽管所有事件仍将正常运行，但 <b>不会绘制</b> 放在该范围之外的层上的任何内容。</div>
 
-<p>This function returns the <a href=
-"../instance_variables/id.html"><tt>id</tt></a> of the new instance
-which can then be stored in a variable or used to access that
-instance. Note that this function will also call the Create Event
-of the instance being created <i>before</i> continuing with the
-code or actions for the event that called the function.</p>
+<p>此函数返回新实例的 <a href=
+"../instance_variables/id.html"><tt>id</tt></a>，然后可以将其存储在变量中或用于访问该实例。请注意，此函数还将在继续调用该函数的事件的代码或操作 <i>之前</i> 调用正在创建的实例的创建事件。</p>
 </blockquote>
 
 <p><br>
@@ -84,22 +68,22 @@ code or actions for the event that called the function.</p>
 
 <tr>
 <td>x</td>
-<td>The x position the object will be created at</td>
+<td>创建物体的 x 位置</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y position the object will be created at</td>
+<td>创建物体的 y 位置</td>
 </tr>
 
 <tr>
 <td>depth</td>
-<td>The depth to assign the created instance to</td>
+<td>分配创建的实例的深度</td>
 </tr>
 
 <tr class="alt">
 <td>obj</td>
-<td>The object index of the object to create an instance of</td>
+<td>创建实例的物体的物体索引</td>
 </tr>
 </table>
 </blockquote>
@@ -107,9 +91,9 @@ code or actions for the event that called the function.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Real (instance ID value)</p>
+<p class="code">Real (instance ID value)（实数，实例 id 值）</p>
 
 <p><br>
 </p>
@@ -119,10 +103,7 @@ code or actions for the event that called the function.</p>
 <p class="code">var inst;<br>inst = instance_create_depth(x, y, -10000, obj_Bullet);<br>with (inst)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;speed = other.shoot_speed;<br>&nbsp;&nbsp;&nbsp;direction = other.image_angle;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code creates a new instance of the object "obj_Bullet"
-and stores the instance id in a variable. This variable is then
-used to assign <tt>speed</tt> and <tt>direction</tt> to the new
-instance.</p>
+<p>上面的代码创建了一个物体 “obj_Bullet” 的新实例，并将实例 id 存储在一个变量中。然后使用该变量将 <tt>速度</tt> 和 <tt>方向</tt> 分配给新实例。</p>
 </blockquote>
 
 <p><br>
@@ -132,7 +113,7 @@ instance.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_destroy.html">instance_destroy</a></div>

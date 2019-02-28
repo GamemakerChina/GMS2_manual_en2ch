@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,19 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can create a new instance of the
-specified object at any given point within the room and on the
-layer specified. The layer can be identified using the layer ID
-value (as returned by the function <a href=
-"../../rooms/layers/layer_create.html"><tt>layer_create()</tt></a>)
-or by the name of the layer (as a string, for example
-"instance_layer") as defined in the room editor. This function
-returns the <a href="../instance_variables/id.html"><tt>id</tt></a>
-of the new instance which can then be stored in a variable or used
-to access that instance. Note that this function will also call the
-Create Event of the instance being created <i>before</i> continuing
-with the code or actions for the event that called the
-function.</p>
+<p>使用此函数，你可以在房间内和指定图层上的任何给定点创建指定物体的新实例。可以使用层 ID 值（由函数 <a href=
+"../../rooms/layers/layer_create.html"><tt>layer_create()</tt></a> 返回）或根据房间编辑器中定义的层名称（作为字符串，例如“instance_layer”）来标识层。这个函数返回新实例的 <a href="../instance_variables/id.html"><tt>id</tt></a>，然后可以将其存储在变量中或用于访问该实例。注意，在继续执行调用该函数的事件的代码或操作 <i>之前</i>，该函数还将调用正在创建的实例的创建事件。</p>
 
 <div class="note"><b>重要！</b> 最小和最大层深度为 -16000 到 16000。尽管所有事件仍将正常运行，但 <b>不会绘制</b> 放在该范围之外的层上的任何内容。</div>
 </blockquote>
@@ -76,22 +65,22 @@ function.</p>
 
 <tr>
 <td>x</td>
-<td>The x position the object will be created at</td>
+<td>创建物体的 x 位置</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y position the object will be created at</td>
+<td>创建物体的 y 位置</td>
 </tr>
 
 <tr>
 <td>layer_id</td>
-<td>The layer ID (or name) to assign the created instance to</td>
+<td>要将创建的实例分配给的层 ID（或名称）</td>
 </tr>
 
 <tr class="alt">
 <td>obj</td>
-<td>The object index of the object to create an instance of</td>
+<td>创建实例的物体的物体索引</td>
 </tr>
 </table>
 </blockquote>
@@ -99,9 +88,9 @@ function.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Real (instance ID value)</p>
+<p class="code">Real (instance ID value)（实数，实例 id 值）</p>
 
 <p><br>
 </p>
@@ -111,10 +100,7 @@ function.</p>
 <p class="code">var inst;<br>inst = instance_create_layer(x, y, "instance_layer", obj_Bullet);<br>with (inst)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;speed = other.shoot_speed;<br>&nbsp;&nbsp;&nbsp;direction = other.image_angle;<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code creates a new instance of the object "obj_Bullet"
-and stores the instance id in a variable. This variable is then
-used to assign <tt>speed</tt> and <tt>direction</tt> to the new
-instance.</p>
+<p>上面的代码创建了一个物体 “obj_Bullet” 的新实例，并将实例 id 存储在一个变量中。然后使用该变量将 <tt>速度</tt> 和 <tt>方向</tt> 分配给新实例。</p>
 </blockquote>
 
 <p><br>
@@ -124,7 +110,7 @@ instance.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_create_depth.html">instance_create_depth</a></div>

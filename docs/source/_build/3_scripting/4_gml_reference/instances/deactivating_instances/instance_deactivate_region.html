@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -53,36 +53,32 @@ height, inside, notme);</p>
 
 <tr>
 <td>left</td>
-<td>The x coordinate of the left of the rectangular region to
-deactivate.</td>
+<td>要冻结的矩形区域左侧的 x 坐标。</td>
 </tr>
 
 <tr class="alt">
 <td>top</td>
-<td>The y coordinate of the top of the rectangular region to
-deactivate.</td>
+<td>要冻结的矩形区域顶部的 y 坐标。</td>
 </tr>
 
 <tr>
 <td>宽度</td>
-<td>The width of the region to deactivate.</td>
+<td>要冻结的区域的宽度。</td>
 </tr>
 
 <tr class="alt">
 <td>高度</td>
-<td>The height of the region to deactivate.</td>
+<td>要冻结的区域的高度。</td>
 </tr>
 
 <tr>
 <td>inside</td>
-<td>Whether to deactivate instances on the inside of the region
-(true) or the outside (false).</td>
+<td>是冻结区域内部的实例（true）还是外部的实例（false）。</td>
 </tr>
 
 <tr class="alt">
 <td>notme</td>
-<td>Whether to exclude the calling instance from deactivation
-(true) or not (false).</td>
+<td>是否保持调用实例冻结（true）或激活（false）。</td>
 </tr>
 </table>
 </div>
@@ -97,21 +93,13 @@ deactivate.</td>
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can define a region within the room to
-deactivate instances that have previously been activated. This
-region can either be flagged as "inside" or "outside" as
-demonstrated in the following image:  <img class="center" src=
+<p>使用此函数，你可以在房间内定义一个区域来冻结先前激活的实例。该区域可以标记为 “内” 或 “外”，如下图所示: <img class="center" src=
 "../images/instance_deactivate_region.png"></p>
 
-<p>You can see in the image above that the "apple" instance is
-always inactive because, even if the sprite itself doesn't overlap
-the region, the bounding box does. So, instances are considered to
-be within the region specified when their <i>bounding box</i>
-overlaps with it, and the state of the collision mask (precise or
-not) is <b>not</b> taken into consideration.<br></p>
+<p>你可以在上面的图像中看到，“apple” 实例始终处于冻结状态，因为即使精灵本身不重叠该区域，边界框也会重叠。因此，当实例的 <i>“边界框”（Bounding Box）</i> 与它重叠时，它们被认为在指定的区域内，并且碰撞遮罩（精确与否）的状态 <b>未</b> 被考虑在内。<br></p>
 
-<blockquote><i><b>NOTE:</b> If you deactivate an instance on room start (ie:from the room creation code, or from an instance create event of an instance within the room) all instances that are placed within the room from the room editor <b>will still run their create event</b> before being deactivated.</i><br><br><i><b>WARNING:</b> Deactivating instances that have physics enabled will <b>NOT</b> stop their fixtures from interacting within the physics simulation. For that you should set their <a href=
-"../../physics/physics%20variables/phy_active.html"><tt>phy_active</tt></a> variable to <tt>true</tt> or <tt>false</tt> as you activate/deactivate the instances.</i><br>
+<blockquote><i><b>注意：</b> 如果你冻结房间开始上的实例（即：从房间创建代码，或从房间内实例的实例创建事件），从房间编辑器放置在房间内的所有实例 <b>在冻结前</b> 仍将运行其创建事件。</i><br><br><i><b>警告：</b>冻结已启用物理的实例将 <b>不会</b> 停止其支架（fixture）在物理仿真中的交互。为此，在激活 / 冻结实例时，应该将其 <a href=
+"../../physics/physics%20variables/phy_active.html"><tt>phy_active</tt></a> 变量设置为 <tt>true</tt> 或 <tt>false</tt>。</i><br>
 <br>
 </blockquote>
 
@@ -121,16 +109,9 @@ not) is <b>not</b> taken into consideration.<br></p>
 <h3><b>例如：</b>
 </h3>
 
-<p class="code">instance_activate_all();<br>
-var _vx = camera_get_view_x(view_camera[0]);<br>
-var _vy = camera_get_view_y(view_camera[0]);<br>
-var _vw = camera_get_view_width(view_camera[0]);<br>
-var _vh = camera_get_view_height(view_camera[0]);<br>
-instance_deactivate_region(_vx - 64, _vy - 64, _vw + 128, _vh +
-128, false, false);<br></p>
+<p class="code">instance_activate_all();<br>var _vx = camera_get_view_x(view_camera[0]);<br>var _vy = camera_get_view_y(view_camera[0]);<br>var _vw = camera_get_view_width(view_camera[0]);<br>var _vh = camera_get_view_height(view_camera[0]);<br>instance_deactivate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false, false);<br></p>
 
-<p>The above code activates all instances and then deactivates a
-region within the room.</p>
+<p>上面的代码激活所有实例，然后冻结房间内的某个区域。</p>
 
 <p><br>
 </p>
@@ -139,7 +120,7 @@ region within the room.</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Deactivating Instances</a></div>
+<div style="float:left">上一页:  <a href="index.html">冻结实例</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_deactivate_layer.html">instance_deactivate_layer</a></div>

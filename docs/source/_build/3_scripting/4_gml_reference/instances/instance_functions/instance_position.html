@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,20 +38,8 @@ if (window.name != "content")
 <h3>描述</h3>
 
 <blockquote>
-<p>With this function you can check a position for a collision with
-another instance or all instances of an object. When you use this
-you are checking a single point in the room for an instance or an
-object. This check will be done against the bounding box of the
-instance or against the mask of the instance if that instance has
-precise collisions checked and will return the unique instance
-<a href="../instance_variables/id.html"><tt>id</tt></a>. If you do
-not need the id of the colliding instance you should consider using
-<a href=
-"../../movement%20and%20collisions/collisions/position_meeting.html">
-<tt>position_meeting</tt></a> instead. This function also accepts
-the special keywords <b>all</b> and <b>other</b> and will return
-the keyword <b>noone</b> if no collision occurs or the unique ID
-value of the instance found if a collision does occur.</p>
+<p>使用此函数，可以检查位置是否与另一个实例或物体的所有实例发生碰撞。使用此选项时，将检查房间中单个点的实例或物体。此检查将针对实例的边界框或实例的遮罩进行，如果该实例已选中精确碰撞，则将返回唯一实例 <a href="../instance_variables/id.html"><tt>id</tt></a>。如果不需要碰撞实例的 ID，则应考虑改用 <a href=
+"../../movement%20and%20collisions/collisions/position_meeting.html"><tt>position_meeting</tt></a>。此函数还接受特殊关键字 <b>all</b> 和 <b>other</b>，如果没有发生碰撞，则返回关键字 <b>noone</b>，如果发生碰撞，则返回找到的实例的唯一 ID 值。</p>
 </blockquote>
 
 <p><br>
@@ -75,17 +63,17 @@ value of the instance found if a collision does occur.</p>
 
 <tr>
 <td>x</td>
-<td>The x position to check for instances.</td>
+<td>用于检查实例的 x 位置。</td>
 </tr>
 
 <tr class="alt">
 <td>y</td>
-<td>The y position to check for instances.</td>
+<td>用于检查实例的 y 位置。</td>
 </tr>
 
 <tr>
 <td>obj</td>
-<td>The object to check for instances of.</td>
+<td>要检查的实例的物体。</td>
 </tr>
 </table>
 </blockquote>
@@ -93,10 +81,9 @@ value of the instance found if a collision does occur.</p>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">Real (either an instance ID value or the keyword
-<tt>noone</tt>)</p>
+<p class="code">Real（实数，可能是实例 ID 值或关键字 <tt>noone</tt>）</p>
 
 <p><br>
 </p>
@@ -106,10 +93,7 @@ value of the instance found if a collision does occur.</p>
 <p class="code">var inst;<br>inst = instance_position(mouse_x, mouse_y, obj_Pause_Button);<br>if inst != noone<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;with (inst) image_index=1;<br>&nbsp;&nbsp;&nbsp;instance_create_layer(room_width / 2, 0, "Controllers", obj_Menu);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>The above code will check for a collision with an instance of
-"obj_Pause_Button" at the mouse position, and if there is one it
-will then use the returned id to set its image_index to a new value
-before creating a new instance of the object "obj_Menu".</p>
+<p>上述代码将检查在鼠标位置是否与 “obj_pause_button” 实例发生碰撞，如果有，则在创建物体 “obj_menu” 的新实例之前，它将使用返回的 ID 将其 image_index 设置为新值。</p>
 </blockquote>
 
 <p><br>
@@ -119,7 +103,7 @@ before creating a new instance of the object "obj_Menu".</p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Instance Functions</a></div>
+<div style="float:left">上一页:  <a href="index.html">实例函数</a></div>
 
 <div style="float:right">Next: <a href=
 "instance_position_list.html">instance_position_list</a></div>

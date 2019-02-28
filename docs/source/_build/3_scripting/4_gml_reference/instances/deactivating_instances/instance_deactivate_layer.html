@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -52,7 +52,7 @@ if (window.name != "content")
 
 <tr>
 <td>layer</td>
-<td>The layer ID string (or value) to be used</td>
+<td>要使用的层 ID 字符串（或值）</td>
 </tr>
 </table>
 </div>
@@ -67,22 +67,13 @@ if (window.name != "content")
 
 <h3 class="studio">描述</h3>
 
-<p>With this function you can deactivate all instances assigned to
-a specific layer. You need to supply the <b>layer ID</b>, which can
-either be the name of the layer as written in the code editor (as a
-string) or the actual layer ID value as returned by the <a href=
-"../../rooms/layers/layer_create.html"><tt>layer_create</tt></a>,
-and note that you can only deactivate <i>instance</i> layers with
-this function. Note that if you have deactivated a layer that has
-instances of objects flagged as <b>Persistent</b>, then you will
-need to reactivate the layer again with the function <a href=
-"instance_actiavte_layer.html"><tt>instance_activate_layer</tt></a>
-before changing room, otherwise any persistent instances on the
-layer will <i>not</i> be carried over and will be discarded.<br>
+<p>使用此函数，你可以冻结分配给特定层的所有实例。你需要提供 <b>层 ID（layer ID）</b>，它既可以是代码编辑器中编写的层名（作为字符串），也可以是 <a href=
+"../../rooms/layers/layer_create.html"><tt>layer_create</tt></a> 返回的实际层 ID 值，并且请注意，使用此函数只能冻结 <i>实例</i> 层。注意，如果你已经停用了一个层，该层的物体实例被标记为 <b>保持（Persistent）</b>，那么你需要在更换房间之前使用 <a href=
+"instance_actiavte_layer.html"><tt>instance_activate_layer</tt></a> 再次激活该层，否则该层上的任何保持实例都 <i>不会</i> 被转移并丢弃。<br>
 <br></p>
 
-<blockquote><i><b>NOTE:</b> If you deactivate an instance on room start (ie:from the room creation code, or from an instance create event of an instance within the room) all instances that are placed within the room from the room editor <b>will still run their create event</b> before being deactivated.</i><br><br><i><b>WARNING:</b> Deactivating instances that have physics enabled will <b>NOT</b> stop their fixtures from interacting within the physics simulation. For that you should set their <a href=
-"../../physics/physics%20variables/phy_active.html"><tt>phy_active</tt></a> variable to <tt>true</tt> or <tt>false</tt> as you activate/deactivate the instances.</i><br>
+<blockquote><i><b>注意：</b> 如果你冻结房间开始上的实例（即：从房间创建代码，或从房间内实例的实例创建事件），从房间编辑器放置在房间内的所有实例 <b>在冻结前</b> 仍将运行其创建事件。</i><br><br><i><b>警告：</b>冻结已启用物理的实例将 <b>不会</b> 停止其支架（fixture）在物理仿真中的交互。为此，在激活 / 冻结实例时，应该将其 <a href=
+"../../physics/physics%20variables/phy_active.html"><tt>phy_active</tt></a> 变量设置为 <tt>true</tt> 或 <tt>false</tt>。</i><br>
 <br>
 </blockquote>
 
@@ -92,16 +83,9 @@ layer will <i>not</i> be carried over and will be discarded.<br>
 <h3><b>例如：</b>
 </h3>
 
-<p class="code">instance_deactivate_layer("Enemy Layer");<br>
-var _vx = camera_get_view_x(view_camera[0]);<br>
-var _vy = camera_get_view_y(view_camera[0]);<br>
-var _vw = camera_get_view_width(view_camera[0]);<br>
-var _vh = camera_get_view_height(view_camera[0]);<br>
-instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128,
-false);<br></p>
+<p class="code">instance_deactivate_layer("Enemy Layer");<br>var _vx = camera_get_view_x(view_camera[0]);<br>var _vy = camera_get_view_y(view_camera[0]);<br>var _vw = camera_get_view_width(view_camera[0]);<br>var _vh = camera_get_view_height(view_camera[0]);<br>instance_activate_region(_vx - 64, _vy - 64, _vw + 128, _vh + 128, false);<br></p>
 
-<p>The above code deactivates all instances assigned to the layer
-"Enemy_Layer" and then activates a region within the room.</p>
+<p>上面的代码使分配给 “Enemy_Layer” 层的所有实例冻结，然后激活房间内的一个区域。</p>
 
 <p><br>
 </p>
@@ -110,7 +94,7 @@ false);<br></p>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页:  <a href="index.html">Deactivating Instances</a></div>
+<div style="float:left">上一页:  <a href="index.html">冻结实例</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_activate_all.html">instance_activate_all</a></div>

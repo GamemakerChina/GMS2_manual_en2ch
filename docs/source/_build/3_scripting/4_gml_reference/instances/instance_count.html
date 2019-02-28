@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, " />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -38,15 +38,8 @@ if (window.name != "content")
 
 <h3>描述</h3>
 
-<blockquote>With this <b>read only</b> variable you can get a count
-of all active instances that are in the room. This will include the
-instance running the code, but does <i>not</i> include those
-instances that have been deactivated using the <a href=
-"deactivating_instances/index.html"><tt>instance_deactivate</tt></a>
-functions. Note that this function will only give you the number of
-instances at the <i>start</i> of the step, so any changes to the
-instances in the room made after the step has started will not be
-taken into consideration.</blockquote>
+<blockquote>使用此 <b>只读</b> 变量，你可以获得房间中所有活动实例的数量。这将包括运行代码的实例，但 <i>不</i> 包括那些已使用 <a href=
+"deactivating_instances/index.html"><tt>instance_deactivate</tt></a> 函数冻结的实例。请注意，此函数仅提供步的 <i>开始（start）</i> 处的实例数，因此不会考虑在步开始后对房间中的实例所做的任何更改。</blockquote>
 
 <p><br>
 </p>
@@ -58,9 +51,9 @@ taken into consideration.</blockquote>
 <p><br>
 </p>
 
-<h3>Returns:</h3>
+<h3>返回：</h3>
 
-<p class="code">实数</p>
+<p class="code">Real（实数）</p>
 
 <p><br>
 </p>
@@ -69,9 +62,7 @@ taken into consideration.</blockquote>
 
 <p class="code">if (instance_count &lt; 100)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;var dif = 100 - instance_count;<br>&nbsp;&nbsp;&nbsp;while (--dif &gt; 0)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;instance_create_layer(random(room_width), random(room_height), "Effects", obj_Star);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
-<blockquote>The above code will create multiple instances of the
-object "obj_Star" until the total instance count reaches
-100.</blockquote>
+<blockquote>上面的代码将创建物体 “obj_Star” 的多个实例，直到总实例数达到100。</blockquote>
 
 <p><br>
 </p>
@@ -81,7 +72,7 @@ object "obj_Star" until the total instance count reaches
 <div class="buttons">
 <div class="clear">
 <div style="float:left">上一页:  <a href=
-"index.html">Instances</a></div>
+"index.html">实例</a></div>
 
 <div style="float:right">下一页: <a href=
 "instance_id_get.html">instance_id_get</a></div>
