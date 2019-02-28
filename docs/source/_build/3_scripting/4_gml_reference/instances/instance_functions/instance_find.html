@@ -39,8 +39,7 @@ if (window.name != "content")
 
 <blockquote>
 <p>所有实例都有一个唯一的标识符（<a href=
-"../instance_variables/id.html"><tt>id<tt><a href=
-"../instance_variables/id.html">），可以在游戏运行时用来修改和操作它们，但你可能并不总是知道特定实例的 ID 是什么，因此此函数可以帮助你，因为你可以使用它来迭代所有实例以查找所需的内容。指定要查找其实例的物体和数字，如果实例列表中的该位置有实例，则函数返回该实例的 ID，如果没有，则返回特殊关键字 <b>noone<b>。你还可以使用关键字 <b>all<b> 迭代房间中的所有实例，以及父物体迭代属于该父 / 子层次结构的所有实例，甚至可以指定实例本身（如果你有其 ID）作为检查，以查看它是否实际存在于当前房间中。请注意，由于实例是以 <i>任意</i> 的方式排序的，因此这个函数检查实例的方式没有特定的顺序，任何实例都可以位于任何位置。</p>
+"../instance_variables/id.html"><tt>id</tt></a>），可以在游戏运行时用来修改和操作它们，但你可能并不总是知道特定实例的 ID 是什么，因此此函数可以帮助你，因为你可以使用它来迭代所有实例以查找所需的内容。指定要查找其实例的物体和数字，如果实例列表中的该位置有实例，则函数返回该实例的 ID，如果没有，则返回特殊关键字 <b>noone</b>。你还可以使用关键字 <b>all</b> 迭代房间中的所有实例，以及父物体迭代属于该父 / 子层次结构的所有实例，甚至可以指定实例本身（如果你有其 ID）作为检查，以查看它是否实际存在于当前房间中。请注意，由于实例是以 <i>任意</i> 的方式排序的，因此这个函数检查实例的方式没有特定的顺序，任何实例都可以位于任何位置。</p>
 
 <p>这个函数中 n 的最大值是</p>
 
@@ -102,7 +101,7 @@ if (window.name != "content")
 <p class="code">var i;<br>for (i = 0; i &lt; instance_number(obj_Enemy); i += 1)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;enemy[i] = instance_find(obj_Enemy,i);<br>&nbsp;&nbsp;&nbsp;}<br></p>
 
 <blockquote>
-<p>上面的代码将使用 <tt>for<tt> 循环来迭代 “obj_emney” 的所有实例，并将它们的 <b>id<b> 存储在数组 “emney[]” 中。</p>
+<p>上面的代码将使用 <tt>for</tt> 循环来迭代 “obj_emney” 的所有实例，并将它们的 <b>id</b> 存储在数组 “emney[]” 中。</p>
 </blockquote>
 
 <p><br>
