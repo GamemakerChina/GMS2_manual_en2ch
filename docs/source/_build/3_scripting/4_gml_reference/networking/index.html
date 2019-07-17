@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta name="keywords" content="online documentation, web online help, web help, c" />
+<meta name="keywords" content="online documentation, web online help, web help, chm2web" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -32,51 +32,20 @@ if (window.name != "content")
 <h2>联网</h2>
 
 <div class="body-scroll">
-<p>The <i>GameMaker Studio 2</i> networking functions are based on
-<i>sockets</i>, which is an industry standard on all platforms.
-With sockets, you have the ability to create both clients and
-servers using simple GML which allows you to create even a single
-player game using the client/server model (something which will
-allow multiplayer to be added easily later).</p>
+<p><i>GameMaker Studio 2</i> 联网功能是基于<i>网络插口</i>, 这也是所有平台上的产业标准。通过网络插口，你就能用简单的GML来创建客户端与服务端，这也允许你使用客户/服务模组来创建一个单人游戏。(这可以让你在之后加入多人游戏时简单点)。</p>
 
-<p>Basically, a socket is an object which can send, receive,
-connect and listen to <i>ports</i> on the network. These functions
-deal with just TCP/IP connections, which is what the internet is
-based on (IPv4 to be more precise). In essence this lets you
-connect one socket using an IP address (letï¿½s say 192.168.1.10)
-to another socket on another IP address (say 192.168.1.11). Once
-connected, these two sockets can send data back and forth using the
-<tt>network_send_*</tt> functions (like <a href=
-"network_send_packet.html"><tt>network_send_packet</tt></a>) and
-the dedicated asynchronous event that is triggered by them. This
-async event will generate a <a href=
-"../data_structures/ds%20maps/index.html">ds_map</a> containing the
-data received as well as other details, and you can find the
-complete details in the section on the <a href=
-"../../../2_interface/1_editors/events/async_events.html">Network
-Async Event</a>.</p>
+<p>通常来说，网络插口时一个可以发送，接受，连接与守听在网络上的<i>端口</i>的对象。这些函数只和TCP/IP连接打交道，这也是互联网的基础（更精确的说时IPv4的基础）。总的来说，这个让你用一个IP地址上的一个网络插口（比如说192.168.1.10）连接到另一个IP地址上的网络插口（比如说192.168.1.11）。一旦连接上了，这两个插口可以通过函数<tt>network_send_*</tt>来发送和接受数据（比如说<a href=
+"network_send_packet.html"><tt>network_send_packet</tt></a>）以及由它们触发的专用异步事件。这个异步事件会产生一个 <a href=
+"../data_structures/ds%20maps/index.html">ds_map</a> 来存储接受到的数据及其细节，你可以在章节<a href=
+"../../../2_interface/1_editors/events/async_events.html">Network Async Event</a>找到关于异步事件的完整细节。</p>
 
-<p>Instead of programs having to read and deal with every bit of
-network traffic coming into a machine, IP addresses also deal with
-ports, which are numbered from 0 to 65535. This allows each program
-to get only the packets of data that itï¿½s interested in, and not
-everything that has been sent by every program. This also saves
-considerable CPU time, as it seriously cuts down on data
-processing, so with <i>GameMaker Studio 2</i> you can also
-ï¿½listenï¿½ to ports. So, a server will create a socket, and then
-bind it to a specific port to listen to. It will then get notified
-of connections, disconnections and data transfers from that
-socket.</p>
+<p>不只是程序阅读并处理进入机器每一字节的流量，IP地址同样也会处理端口，通常来说以编号0到65535来命名端口。这就允许程序只接受对其有用的数据，而不是其他程序发送的对其无用的数据。这也会节省了大量的CPU时间，因为这大量的减少了数据处理，所以<i>GameMaker Studio 2</i>可以让你也守听固定的端口。所以，一个服务器会创建一个接口，然后它会绑定一个固定端口进行守听。它也会得知网络接口的连接状态和数据传输状况。</p>
 
-<p>The data "packets" themselves are made up of binary data taken
-from a buffer. This buffer can be created and manipulated using the
-<i>GameMaker Studio 2</i> <a href="../buffers/index.html">Buffer
-functions</a>.</p>
+<p>数据“数据包”由从缓冲区的二进制数据组成。而缓冲区可以用<i>GameMaker Studio 2</i>的<a href="../buffers/index.html">Buffer functions</a>来创建与修改。</p>
 
-<div class="note"><b>NOTE:</b> These functions are not currently
-available for the HTML5 target module.</div>
+<div class="note"><b>注意:</b>这些函数现在还不能在HTML5模组中运行。</div>
 
-<p>The following functions exist for you to use for networking:</p>
+<p>下列为联网功能可用函数：</p>
 
 <blockquote>
 <ul>
@@ -140,7 +109,7 @@ available for the HTML5 target module.</div>
 <div class="footer">
 <div class="buttons">
 <div class="clear">
-<div style="float:left">上一页：<a href="../index.html"><i>GameMaker Studio 2</i>语言参考</a></div>
+<div style="float:left">上一页：<a href="../index.html"><i>GameMaker Studio 2</i> 语言参考</a></div>
 
 <div style="float:right">下一页: <a href=
 "../web/index.html">Web</a></div>
