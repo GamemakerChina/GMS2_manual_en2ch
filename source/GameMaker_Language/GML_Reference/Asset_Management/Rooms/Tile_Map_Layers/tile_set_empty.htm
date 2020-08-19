@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.14.2.0_34";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>tile_set_empty</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the function tile_set_empty"/>
+  <meta name="rh-index-keywords" content="tile_set_empty"/>
+  <meta name="search-keywords" content="tile_set_empty"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="tile_set_empty">
+        <span>tile_set_empty</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tile_set_empty</h1>
+  <p>This function can be used to set a given set of tile-data to be an empty tile. You give the tile-data, which can be retrieved using the function <a href="tilemap_get.htm"><tt>tilemap_get()</tt></a>, and the function will return <tt>true</tt> if the
+    tile is empty, or <tt>false</tt> if there is a tile index. The function will return a modified tile-data set which can then be applied using the <tt><a href="tilemap_set.htm">tilemap_set()</a></tt> function.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">tile_set_empty(tiledata)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tiledata</td>
+        <td>the tile-data to set</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (tiledata)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> for (var i = 0; i &lt; tilemap_get_width(map_id); i++;)<br/>     {
+    <br/>     for (var j = 0; j &lt; tilemap_get_height(map_id); j++;)<br/>         {
+    <br/>         var data = tilemap_get(map_id, i, j);<br/>         if !tile_get_empty(data)<br/>             {
+    <br/>             data = tile_set_empty(data)<br/>             tilemap_set(map_id, data, i, j);<br/>             }
+    <br/>         }
+    <br/>     }
+  </p>
+  <p>The above code gets the tile map ID from the given layer and then proceeds to check every tile cell on the map to see if it has data or not. If it does, the tile is set to empty.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
+        <div style="float:right">Next: <a href="tile_set_index.htm">tile_set_index</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+tile_set_empty
+-->
+  <!-- TAGS
+tile_set_empty
+-->
+
+</body></html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.6.2.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>path_positionprevious</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function path_positionprevious"/>
+  <meta name="rh-index-keywords" content="path_positionprevious"/>
+  <meta name="search-keywords" content="path_positionprevious"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="path_positionprevious">
+        <span>path_positionprevious</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>path_positionprevious</h1>
+  <p>This variable can be used to get or to set the position of an instance along its current path in the previous step, and is a normalised value between 0 and 1 ie: 0 is the start position of the path and 1 would be the end position. It is similar to the
+    <a href="../../Instances/Instance_Variables/xprevious.htm"><tt>xprevious</tt></a> and <a href="../../Instances/Instance_Variables/yprevious.htm"><tt>yprevious</tt></a> variables in how it works, only it is specific for paths. It can be useful for
+    things like temporarily stopping a path follower if something is in the way (see the example code below).</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">path_positionprevious;</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _x = x + lengthdir_x(16, direction);<br/> var _y = y + lengthdir_y(16, direction);<br/> if collision_circle(xx, yy, 16, obj_Player, false,true)<br/>     {<br/>     path_position = path_positionprevious;<br/>     }
+  </p>
+  <p>The above code checks an area in front of the instance for a collision with the object &quot;obj_Player&quot; and if there is one, it sets the instance back to the previous position it occupied on the current path, as assigned by the function
+    <span class="inline"><a href="../path_start.htm">path_start()</a></span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Path_Variables.htm">Path Variables</a></div>
+        <div style="float:right">Next: <a href="path_speed.htm">path_speed</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+path_positionprevious
+-->
+  <!-- TAGS
+path_positionprevious
+-->
+
+</body></html>

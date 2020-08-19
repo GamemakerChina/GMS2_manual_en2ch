@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.8.6.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_stack_create</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for ds_stack_create"/>
+  <meta name="rh-index-keywords" content="ds_stack_create"/>
+  <meta name="search-keywords" content="ds_stack_create"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="ds_stack_create">
+        <span>ds_stack_create</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_stack_create</h1>
+  <p>This function will create a new stack data-structure and return the index value. This value should be stored in a variable and used in all further function calls relating to the stack.</p>
+  <p class="note"><b>IMPORTANT!</b> When you create a data structure, the index value to identify it is an integer value starting at 0. This means that data structures of different types can have the <b>same</b> index value, so if in doubt you should be using the
+    <span style="font-size:1px;"><a href="../ds_exists.htm"><tt style="font-size: 14px">ds_exists()</tt></a></span> function before accessing them. Also note that indices are re-used, so a destroyed data structure index value may be used by a newly created one afterwards.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">ds_stack_create();</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">stack = ds_stack_create();</p>
+  <p>This will create a new stack and assign its index id to the instance variable &quot;stack&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="ds_stack_create.htm">ds_stack_create</a></div>
+        <div style="float:right">Next: <a href="ds_stack_destroy.htm">ds_stack_destroy</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+ds_stack_create
+-->
+  <!-- TAGS
+ds_stack_create
+-->
+
+</body></html>

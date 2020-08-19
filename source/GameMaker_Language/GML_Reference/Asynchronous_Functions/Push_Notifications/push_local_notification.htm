@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.12.4.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>push_local_notification</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for push_local_notification"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="push_local_notification"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="push_local_notification">
+        <span>push_local_notification</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>push_local_notification</h1>
+  <p>This function can be used to set a local notification to be shown on a given date at a given time. The &quot;fire_time&quot; is the date/time that the notification should be pushed to the user device (you can use the GameMaker Studio 2 <a href="../../Maths_And_Numbers/Date_And_Time/Date_And_Time.htm">Date and Time Functions</a>    to get this), and you can give the notification a title and a message text as well as a payload string which will be passed to your game when the users taps the notification.</p>
+  <p class="note"><b>NOTE</b>: The &quot;title&quot; argument is ignored on iOS and the game name is shown instead.</p>
+  <p>Tapping the notification will start the game on the device and trigger an <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Push_Notifications.htm">Asynchronous Push Notification</a> event where the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    DS map can then be parsed to check the payload string and perform whatever action is required.</p>
+  <p class="note"><b>NOTE</b>: This functionality is limited to the <b>iOS</b> and <b>Android</b> target modules.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">push_local_notification(fire_time, title, message, data);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>fire_time</td>
+        <td>The date/time to fire the off the notification</td>
+      </tr>
+      <tr>
+        <td>title</td>
+        <td>The notification title (a string)</td>
+      </tr>
+      <tr>
+        <td>message</td>
+        <td>The notification message text (a string)</td>
+      </tr>
+      <tr>
+        <td>data</td>
+        <td>The data package to send to your game (a string)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Extended Example</h4>
+  <p>In this example we will send a local push notification using the following code:</p>
+  <p class="code">var fireTime = date_inc_day(date_current_datetime(), 1);<br/> var data = &quot;daily_reward&quot;;<br/> push_local_notification(fireTime, &quot;Ahoy!&quot;, &quot;Catch The Haggis Has A Present&quot;, data);</p>
+  <p>This will set a timer to &quot;push&quot; a notification to the device when one day has passed. When the day is up, if your game is either in the background or not running, a notification will be shown to the user with the given title and message (on
+    iOS, the game name is shown and the title is ignored), and then an asynchronous Push Notification Event will be called. Note that if the game is in the foreground when the time for the notification comes, it will <i>not</i> be shown, but the asynchronous
+    event <b>will still trigger</b>. In the event itself you would handle the callback something like this:Async Event in the following way:</p>
+  <p class="code">var type = ds_map_find_value(async_load, &quot;type&quot;);<br/> var status = ds_map_find_value(async_load, &quot;status&quot;);<br/> if status == 0<br/>     {
+    <br/>     //error of some kind<br/>     var error = ds_map_find_value(async_load, &quot;error&quot;);<br/>     show_debug_message(&quot;error=&quot; + string(error));<br/>     }
+    <br/> else
+    <br/>     {
+    <br/>     if type == &quot;register&quot;<br/>         {
+    <br/>         global.reg_id = ds_map_find_value(async_load, &quot;reg_id&quot;);<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         var data = ds_map_find_value(async_load, &quot;data&quot;);<br/>             if data == &quot;daily_reward&quot;<br/>             {
+    <br/>             global.Gold += 1000;<br/>             }
+    <br/>         }
+    <br/>     }
+  </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Push_Notifications.htm">Push Notifications</a></div>
+        <div style="float:right">Next: <a href="push_get_first_local_notification.htm">push_get_first_local_notification</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+push_local_notification
+-->
+  <!-- TAGS
+push_local_notification
+-->
+
+</body></html>

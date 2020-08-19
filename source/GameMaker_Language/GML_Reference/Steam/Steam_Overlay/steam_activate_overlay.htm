@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.15.2.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>steam_activate_overlay</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for steam_activate_overlay"/>
+  <meta name="rh-index-keywords" content="steam_activate_overlay,ov_friends,ov_community,ov_players,ov_settings,ov_gamegroup,ov_achievements"/>
+  <meta name="search-keywords" content="steam_activate_overlay,ov_friends,ov_community,ov_players,ov_settings,ov_gamegroup,ov_achievements"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="steam_activate_overlay">
+        <span>steam_activate_overlay</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_activate_overlay</h1>
+  <p>The Steam overlay is a piece of the Steam user interface that can be activated over the top of almost any game launched through Steam. It lets the user access their friends list, web browser, chat, and in-game DLC purchasing. The default key for a user
+    to access the overlay while in a game is SHIFT+TAB, but you can also bring up any page of the overlay using this function. It takes one of six <b>constants</b> that are listed below:</p>
+  <blockquote>
+    <p> </p>
+    <table>
+      <tbody>
+        <tr>
+          <th>Constant</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>ov_friends</td>
+          <td>The friends page for the current user</td>
+        </tr>
+        <tr>
+          <td>ov_community</td>
+          <td>The community page for your game</td>
+        </tr>
+        <tr>
+          <td>ov_players</td>
+          <td>The page showing others that are playing the same game or that you have recently played with</td>
+        </tr>
+        <tr>
+          <td>ov_settings</td>
+          <td>The Steam client overlay settings</td>
+        </tr>
+        <tr>
+          <td>ov_gamegroup</td>
+          <td>Opens the Steam Community web browser to the official game group for this game</td>
+        </tr>
+        <tr>
+          <td>ov_achievements</td>
+          <td>The achievements page for your game</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_activate_overlay(overlayindex);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>overlayindex</td>
+        <td>The page index of the Steam API UI to show (see constants listed below).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var key = keyboard_lastkey;<br/> switch (key)<br/>     {
+    <br/>     case vk_f1: steam_activate_overlay(ov_friends); break;<br/>     case vk_f2: steam_activate_overlay(ov_community); break;<br/>     case vk_f3: steam_activate_overlay(ov_players); break;<br/>     case vk_f4: steam_activate_overlay(ov_settings);
+    break;<br/>     case vk_f5: steam_activate_overlay(ov_gamegroup); break;<br/>     case vk_f6: steam_activate_overlay(ov_achievements); break;<br/>     }
+  </p>
+  <p>The above code polls the last keyboard key pressed and if it is any of the function keys from 1 to 6 it will open the corresponding page of the Steam overlay.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_Overlay.htm">Steam Overlay</a></div>
+        <div style="float:right">Next: <a href="steam_activate_overlay_browser.htm">steam_activate_overlay_browser</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+steam_activate_overlay
+ov_friends
+ov_community
+ov_players
+ov_settings
+ov_gamegroup
+ov_achievements
+-->
+  <!-- TAGS
+steam_activate_overlay
+-->
+
+</body></html>

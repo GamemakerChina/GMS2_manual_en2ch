@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.11.3.0_20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>physics_fixture_set_awake</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for physics_fixture_set_awake"/>
+  <meta name="rh-index-keywords" content="physics_fixture_set_awake"/>
+  <meta name="search-keywords" content="physics_fixture_set_awake"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="physics_fixture_set_awake">
+        <span>physics_fixture_set_awake</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_fixture_set_awake</h1>
+  <p>When you start a room with physics, or bind fixtures to instances, the fixtures are always considered to be &quot;awake&quot;... that is to say, they are processing events and interacting with the surrounding instances. However this can sometimes lead
+    to problems, especially if you have a number of instances with fixtures that are side by side when a room starts (think of a tower made of various instances with fixtures) as with them being &quot;awake&quot; they will move and possibly change position
+    due to the sudden start of gravity and collisions affecting them. In these cases you can use this function to flag the fixture as been &quot;asleep&quot;, in which case it will not be processing anything when it is first created in the room.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">physics_fixture_set_awake(fixture, state)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>fixture</td>
+        <td>the index of the fixture</td>
+      </tr>
+      <tr>
+        <td>flag</td>
+        <td>whether a fixture is awake (<tt>true</tt>) or not (<tt>false</tt>)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">physics_fixture_set_awake(fix_Cloud, true);</p>
+  <p>The code above flag the fixture as being &quot;awake&quot; when bound to an instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Fixtures.htm">Fixtures</a></div>
+        <div style="float:right">Next: <a href="physics_get_friction.htm">physics_get_friction</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+physics_fixture_set_awake
+-->
+  <!-- TAGS
+physics_fixture_set_awake
+-->
+
+</body></html>

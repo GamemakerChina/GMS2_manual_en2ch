@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.8.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>DS Maps</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for DS Maps"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="DS Maps"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="DS Maps">
+        <span>DS Maps</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>DS Maps</h1>
+  <p>The DS map data structure is an exceptionally useful one as it lets you store <b>key</b> and <b>value</b> pairs. For example, a character in your game can have a quantity of different items (<i>keys</i>) and for each individual item he can have a number
+    of them (<i>values</i>), like in an RPG where you can have 10 health potions, 5 mana potions and 100 gold. Maps maintain such pairs all together in the one place and you can add pairs to the map and search for the value corresponding to certain keys
+    as well using some simple functions. There are a couple of things you should know about maps before you use them, however! Maps are <i>not</i> sorted in any (recognisable) way, meaning that to find a certain key you may have to iterate through the
+    whole thing (which is <b>very</b> slow). There is also no way to hold two keys that are the same, nor can you assign one key two values.</p>
+  <p class="note"><b>NOTE:</b> As with all dynamic resources, data structures take up memory and so should <b>always</b> be destroyed when no longer needed to prevent memory leaks which will slow down and eventually crash your game.</p>
+  <p class="note"><b>NOTE:</b> if you need to check if a data structure exists, you can use the <span style="font-size:1px;"><a href="../ds_exists.htm"><tt style="font-size: 14px">ds_exists()</tt></a></span> function.</p>
+  <p>Apart from the specific functions listed below you can all use an <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a>    (called an <i>accessor</i>) to add or modify the contents of your DS map. This accessor looks similar to a 1D array with the following syntax:</p>
+  <p class="code">map_index[? key]</p>
+  <p>You can find more information, plus examples, from from the GML Overview page on <a href="../../../GML_Overview/Accessors.htm">Accessors</a>.</p>
+  <p>The following functions exist that deal with DS maps.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="ds_map_exists.htm">ds_map_exists</a></li>
+    <li><a href="ds_map_create.htm">ds_map_create</a></li>
+    <li><a href="ds_map_add.htm">ds_map_add</a></li>
+    <li><a href="ds_map_clear.htm">ds_map_clear</a></li>
+    <li><a href="ds_map_copy.htm">ds_map_copy</a></li>
+    <li><a href="ds_map_replace.htm">ds_map_replace</a></li>
+    <li><a href="ds_map_delete.htm">ds_map_delete</a></li>
+    <li><a href="ds_map_empty.htm">ds_map_empty</a></li>
+    <li><a href="ds_map_size.htm">ds_map_size</a></li>
+    <li><a href="ds_map_find_first.htm">ds_map_find_first</a></li>
+    <li><a href="ds_map_find_last.htm">ds_map_find_last</a></li>
+    <li><a href="ds_map_find_next.htm">ds_map_find_next</a></li>
+    <li><a href="ds_map_find_previous.htm">ds_map_find_previous</a></li>
+    <li><a href="ds_map_find_value.htm">ds_map_find_value</a></li>
+    <li><a href="ds_map_set.htm">ds_map_set</a></li>
+    <li><a href="ds_map_read.htm">ds_map_read</a></li>
+    <li><a href="ds_map_write.htm">ds_map_write</a></li>
+    <li><a href="ds_map_destroy.htm">ds_map_destroy</a></li>
+  </ul>
+  <p> </p>
+  <p>There are four further functions available for saving and loading a <span class="misspell-word">DS</span> map. These functions will obfuscate the map and store it in a secure location on the target platform using a file format that means that the final
+    file is not able to be transfered between devices:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="ds_map_secure_save.htm">ds_map_secure_save</a></li>
+    <li><a href="ds_map_secure_save_buffer.htm">ds_map_secure_save_buffer</a></li>
+    <li><a href="ds_map_secure_load.htm">ds_map_secure_load</a></li>
+    <li><a href="ds_map_secure_load_buffer.htm">ds_map_secure_load_buffer</a></li>
+  </ul>
+  <p> </p>
+  <p>One of the uses that DS maps have is when working with JSON, and so there are a few special functions that are specific to that:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="ds_map_add_list.htm">ds_map_add_list</a></li>
+    <li><a href="ds_map_add_map.htm">ds_map_add_map</a></li>
+    <li><a href="ds_map_replace_list.htm">ds_map_replace_list</a></li>
+    <li><a href="ds_map_replace_map.htm">ds_map_replace_map</a></li>
+    <li><a href="ds_map_is_list.htm">ds_map_is_list</a></li>
+    <li><a href="ds_map_is_map.htm">ds_map_is_map</a></li>
+  </ul>
+  <p class="note"><b>NOTE:</b> While these functions permit you to add lists and maps within a map, they are useless for anything other than JSON, and nested maps and lists will not be read correctly if written to disk or accessed in any other way.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Data_Structures.htm">Data Structures</a></div>
+        <div style="float:right">Next: <a href="../DS_Priority_Queues/DS_Priority_Queues.htm">DS Priority Queues</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+DS Maps
+-->
+  <!-- TAGS
+ds_map_functions
+-->
+
+</body></html>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.5.4.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>audio_start_recording</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function audio_start_recording"/>
+  <meta name="rh-index-keywords" content="audio_start_recording"/>
+  <meta name="search-keywords" content="audio_start_recording"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="audio_start_recording">
+        <span>audio_start_recording</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_start_recording</h1>
+  <p>This function will start recording audio from the recorder source indexed. You can get the number of recorder sources using the function <a href="audio_get_recorder_count.htm"><tt>audio_get_recorder_count()</tt></a>, and once you start recording the
+    audio will be stored in a temporary buffer and start triggering an <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">Audio Recording Asynchronous Event</a>. This event is triggered every step that recording
+    takes place and will create the special <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> in the variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> with the following
+    key/value pairs:</p>
+  <ul class="colour">
+    <li>&quot;<strong>buffer_id</strong>&quot; - the ID of the temporary buffer you can use to retrieve the audio data</li>
+    <li>&quot;<strong>channel_index</strong>&quot; - the recording channel index (as returned by the function) this data came from</li>
+    <li>&quot;<strong>data_len</strong>&quot; - the length of data (in bytes) you&#39;ve received</li>
+  </ul>
+  <p>Note that after the asynchronous event has been triggered, the audio in the temporary buffer will be wiped, so you should be copying it&#39;s data into a custom buffer that you have previously created.</p>
+  <p class="note"><b>NOTE: </b>Most platforms <b>except HTML5</b> support recording audio in some form, but that does not mean that all devices will permit it, even if the platform does, so you should always check that the <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><tt style="font-size: 14px">audio_get_recorder_count()</tt></a></span>    function returns a value greater than 0 to verify that recording devices are available before using the rest of the recording functions.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_start_recording(recorder_index);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>recorder_index</td>
+        <td>The index of the recorder source to use.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (Buffer ID)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">audio_record = audio_start_recording(0);</p>
+  <p>The above code starts recording from the recorder source 0, storing the channel index of the recording in the variable &quot;audio_record&quot; for use in the asynchronous <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">Audio Recording</a>    event.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Audio.htm">Audio Buffers</a></div>
+        <div style="float:right">Next: <a href="audio_stop_recording.htm">Audio_stop_recording</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+audio_start_recording
+-->
+  <!-- TAGS
+audio_start_recording
+-->
+
+</body></html>

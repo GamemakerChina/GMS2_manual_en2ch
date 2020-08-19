@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "10.1.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Structs</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the use of Structs"/>
+  <meta name="rh-index-keywords" content="Structs,constructor"/>
+  <meta name="search-keywords" content="structs,new,constructor,delete,struct"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Structs">
+        <span>Structs</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Structs</h1>
+  <p>A <strong>struct </strong>is - to put it simply - a variable that holds a collection of other variables. The variables that a struct holds can be of any <a href="Data_Types.htm">data type</a> previously mentioned and these variables can be read from
+    and written to after the initial struct declaration, and you can also add more variables to a struct after it has been declared. The variables used in a struct should follow conventional naming schemes, ie: they cannot start with a number and should
+    only be made up of alphanumeric characters and the underscore &quot;_&quot; character, and also note that the contents of a struct are <em>independent of the instance or function that created it</em>, and as such you can - if you wish - use the built-in
+    variable names like <tt>image_index</tt> or <tt>x</tt> and <tt>y</tt>.</p>
+  <p>After the initial creation, structs have no processing overhead while they exist, although they <i>will</i> take up space in memory. The struct syntax is as follows:</p>
+  <p class="code"><i>&lt;variable&gt;</i> = {<br/>
+    <i>&lt;variable&gt;</i> : <i>&lt;value&gt;</i>,<br/>
+    <i>&lt;variable&gt;</i> : <i>&lt;value&gt;</i>,<br/>     etc...
+    <br/>     };
+  </p>
+  <p>So, an example of this in practice would be:</p>
+  <p class="code">mystruct = {<br/>     a : 20,<br/>     b : &quot;Hello World&quot;<br/>     };
+  </p>
+  <p>The above code creates an instance scope struct in the variable &quot;mystruct&quot; and populates it with some values (structs can be created at local, instance and global scope, just like any other variable - see the section on <a href="Variables_And_Variable_Scope.htm">Variables and Variable Scope</a>    for more information). Note that you don&#39;t have to populate the contents of a struct when it is created initially and you can create an empty struct by simply doing this:</p>
+  <p class="code">mystruct = {};</p>
+  <p>This struct can then be added to at a later point in the game code. Here is an example of a struct with various variables and data types:</p>
+  <p class="code">var _xx = 100;<br/> mystruct = {<br/>     a : 10,<br/>     b : &quot;Hello World&quot;,<br/>     c : int64(5),<br/>     d : _xx + 50,<br/>     e : function(a, b)<br/>         {
+    <br/>         return a + b;<br/>         },
+    <br/>     f : [ 10, 20, 30, 40, 50 ],<br/>     g : image_index<br/>     };
+  </p>
+  <p>You&#39;ll notice in the above code that you can also define methods and use runtime functions in structs, and you can also use local variables and instance variables within the struct.</p>
+  <p>You&#39;ll notice in the above example that the struct variable &quot;g&quot; is being set to <span class="inline">image_index</span>, which is an instance variable. You might think that you&#39;d need to use the <a href="Instance_Keywords.htm">keyword</a>    <span class="inline">other</span> in this case to get the instance variable, but this is not necessary. Essentially, when you define struct<strong>, all member variables on the left-hand side of the colon &quot;:&quot; are the <em>struct</em> variables, and the values and variables on the right-hand side are from the scope of whatever it is <em>that is doing the defining</em></strong>.</p>
+  <p>Let&#39;s look at a simple example to illustrate this. Say you want to define a struct with the variables &quot;x&quot; and &quot;y&quot; and you want to set them to the &quot;x&quot; and &quot;y&quot; of the instance defining the struct. In practice
+    the code would look like this:</p>
+  <p class="code">mystruct = {<br/>     x : x,<br/>     y : y<br/>     };
+  </p>
+  <p>In the above code the struct member variables &quot;x&quot; and &quot;y&quot; are being set to the values held in the instance variables &quot;x&quot; and &quot;y&quot;, since the right-hand of the colon &quot;:&quot; refers to the instance that is
+    defining the struct. It is worth noting that this means you <em>cannot</em> use struct member variables as part of the definition of other variables within the struct when it is being created. For example, the following would give you an error:</p>
+  <p class="code">mystruct = {<br/>     a : 10,<br/>     b : 10,<br/>     c : a + b<br/>     }</p>
+  <p>The error occurs because the variables &quot;a&quot; and &quot;b&quot; are actually being evaluated at the scope of whatever is defining the struct (they are on the right of the colon &quot;:&quot;), and are <em>not</em> the ones being defined within
+    the struct itself. <strong></strong></p>
+  <h3 style="padding-left: 20px"><em><strong style="margin-left: 0px">IMPORTANT!</strong></em>  You <strong>cannot </strong>use any built-in <em><strong>global </strong></em>scope variables as struct member names, eg: <span class="inline">game_id</span> or <span class="inline">fps</span>.
+    You can find a full list of these global variables from the following page:</h3>
+  <ul class="colour">
+    <li><a href="Struct_Forbidden_Variables.htm">Struct Forbidden Variables</a></li>
+  </ul>
+  <p> </p>
+  <p>Once a struct has been defined, you can access the data within using the &quot;point&quot; notation, like this:</p>
+  <p class="code">mystruct = {<br/>     a : 20,<br/>     b : &quot;Hello World&quot;<br/>     }
+    <br/> mystring = mystruct.b + string(mystruct.a);</p>
+  <p>You can also perform operations on the variables within a structure or use them in functions, just as you would any other variable. For example:</p>
+  <p class="code">mystruct.a += 1;<br/> mystruct.b = mystruct.a + 20;<br/> mydir = point_direction(mouse_x, mouse_y, mystruct.xx, mystruct.yy);</p>
+  <p>Finally, structs can have other structs nested inside of them, like this:</p>
+  <p class="code">mystruct = {<br/>     a : {<br/>         aa : &quot;This is an example&quot;<br/>         },
+    <br/>     b : {<br/>         bb : &quot;And another one&quot;<br/>         },
+    <br/>     };
+  </p>
+  <p>To access such nested structs you would still use the point notation, like this:</p>
+  <p class="code">var _str = mystuct.a.aa + &quot; &quot; + mystruct.b.bb;<br/> show_debug_message(_str);
+  </p>
+  <p>Another way access data in a struct is using the <a href="Language_Features/with.htm"><span class="inline">with()</span></a> function. So, you can do this, for example:</p>
+  <p class="code">with(mystruct)<br/>     {<br/>     a += other.x;<br/>     }</p>
+  <p>Using <span class="inline">with()</span> changes the scope of the code to the given struct where you can manipulate the member variables at the struct scope. Note that in the example we also use the <span class="inline">other</span> <a href="Instance_Keywords.htm">keyword</a>.
+    This works just like in an instance when using <span class="inline">with()</span> and will reference the instance (or struct) that is actually running the code block. The keyword self may also be used within structs to refer to the current instance
+    that is running the entire code block. For example, in an instance referencing nested struct member variables, <span class="inline">self</span> will refer to the <em>instance</em> regardless of how deeply nested the struct is.</p>
+  <p>When a struct is no longer required it can be removed from memory using the <a href="Language_Features/delete.htm"><tt>delete</tt></a> operator, which flags the struct as being able to be garbage collected. This is not strictly required as the <a class="tooltip" title="The garbage collector is an automated tool that is part of the game code and is used to remove certain things (like arrays and structs) from memory when they are no longer referenced in your code, without the need for you to explicitly remove them.">garbage collector</a> may do this automatically in the following game steps if the struct is no longer referenced in your code, but it is good practice to do so and we recommend it (for example, call <tt>delete</tt>    in the <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">Clean Up event</a> of an instance to explicitly tell the garbage collector that an instance scope struct is to be deleted).</p>
+  <p>Also note that structs can be created using <a href="Script_Functions.htm">script functions</a> and <a href="Method_Variables.htm">methods</a>, which requires the use of the <a href="Language_Features/new.htm"><tt>new</tt></a> operator and the keyword
+    <tt>constructor</tt>, as shown in the following example:</p>
+  <p class="code">Vector2 = function(_x, _y) constructor<br/>     {
+    <br/>     x = _x;<br/>     y = _y;<br/>     static Add = function( _other )<br/>         {
+    <br/>         x += _other.x;<br/>         y += _other.y;<br/>         }
+    <br/>     }
+  </p>
+  <p>Here we are creating the function <tt>Vector2</tt> and telling GameMaker Studio 2 that this is a function for making a struct by adding the <tt>constructor</tt> keyword after the definition. You can then call this function like this:</p>
+  <p class="code">v1 = new Vector2(10, 10);</p>
+  <p>Now the variable <tt>v1</tt> will reference a struct with the variables <tt>x</tt> and <tt>y</tt> and the <a href="Method_Variables.htm">method variable</a> <tt>Add</tt>. Structs created this way will also support single level <b>inheritance</b>, ie:
+    you can create a struct using a function that inherits the data from another constructor function. For example, we created a <tt>Vector2</tt> function above, so we can then use that as the &quot;parent&quot; for another function <tt>Vector3</tt>:</p>
+  <p class="code">function Vector3(_x, _y, _z) : Vector2(_x, _y) constructor<br/>     {
+    <br/>     z = _z;<br/>     static Add = function( _other )<br/>         {
+    <br/>         x += _other.x;<br/>         y += _other.y;<br/>         z += _other.z;<br/>         }
+    <br/>     }
+  </p>
+  <p>As you can see, when defining the function we use a colon &quot;:&quot; to separate the new function from the &quot;parent&quot; function to be inherited from, and we can now do things like this:</p>
+  <p class="code">var v1 = new Vector3(10, 10, 20);<br/> var v2 = new Vector3(100, 100, 200);<br/> v1.Add(v2);
+    <br/> show_debug_message(v1);
+  </p>
+  <p>The output shown for the above code would be:</p>
+  <p class="code">{ 110, 110, 220 }</p>
+  <p>For more details on the <tt>new</tt> and <tt>delete</tt> operators, please see the following pages:</p>
+  <ul class="colour">
+    <li><a href="Language_Features/new.htm"><tt>new</tt></a></li>
+    <li><tt><a href="Language_Features/delete.htm"><tt>delete</tt></a>
+      </tt>
+    </li>
+  </ul>
+  <p>One final thing to mention about structs is that you can change what is output to the console from them for debugging. By default, calling the function <a href="../GML_Reference/Debugging/show_debug_overlay.htm"><span class="inline">show_debug_message()</span></a> on
+    a struct will output the contents of the struct (as shown above). However, it&#39;s possible to customise this message by adding a specifically named method to the struct called <span class="inline">toString</span>:</p>
+  <p class="code">mystruct = {<br/>     a : 20,<br/>     b : &quot;Hello World&quot;,<br/>     toString: function()<br/>         {<br/>         return &quot;This stuct says &quot; + b + &quot;, &quot; + string(a) + &quot; times!!!&quot;;<br/>         }<br/>     }
+    <br/> show_debug_message(mystruct);
+  </p>
+  <p>Now when the <span class="inline">show_debug_message()</span> function is called, the <span class="inline">toString</span> method will be used to generate the output and - with the above example - you&#39;ll get:</p>
+  <p class="code">This struct says Hello World, 20 times!!!</p>
+  <p>Note that you can also call the <a href="../GML_Reference/Strings/Strings.htm"><span class="inline">string()</span></a> function on a struct reference and use that to display the contents - or the <span class="inline">toString</span> method - to the
+    screen, or save it to a file, or whatever, eg:</p>
+  <p class="code">var _str = string(mystruct);<br/> draw_text(32, 32, _str);</p>
+  <p>Finally, there are a number of runtime functions that you can use on structs to get the variables they contain as well as a few other things. You can find them in the following section:</p>
+  <ul class="colour">
+    <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">Variable Functions</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
+        <div style="float:right">Next: <a href="Language_Features.htm">Language Features</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Structs
+struct
+constructor
+-->
+  <!-- TAGS
+structs
+-->
+
+</body></html>

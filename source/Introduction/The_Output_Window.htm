@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "1.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>The Output Window</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Debugging Projects In GMS2"/>
+  <meta name="rh-index-keywords" content="Output Window,Search Results,Breakpoints"/>
+  <meta name="search-keywords" content="search results,source control,breakpoints,syntax errors,compile errors,output,compiler output"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="The Output Window">
+        <span>The Output Window</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>The Output Window</h1>
+  <p><img alt="The Output Dock" class="center" src="../assets/Images/Introduction/Output_General.png"/></p>
+  <p>When you open a project in GameMaker Studio 2 for the first time, you will be presented with the <strong>Output Window </strong>docked at the bottom of the screen. This docked window contains various tabs that show the different output information for
+    your project, depending on certain circumstances. The dock can be closed by clicking the button at the bottom of the <a class="tooltip" title="The IDE, or Integrated Development Environment, is a software application that provides comprehensive facilities to computer programmers for software development. In this case, the entire frontend of GameMaker Studio 2 is considered the IDE, and includes sections to create graphics, add sounds, and add code to make your games.">IDE</a>, and you can click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> and drag any tab in the docked window to another dock to change its position, or you can click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the dock contents bar and drag it
+    into the workspace to create a stand-alone window:</p>
+  <p><img alt="Docking / Undocking The Output Window" class="center" src="../assets/Images/Introduction/Output_Window.gif"/>You can also click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> and drag
+    a docked output into another one to create a split view output window, as shown in the example below where the two error outputs have been placed within the same tab (you can slow click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on a tab to change its name too):</p>
+  <p><img alt="Split Output Window" class="center" src="../assets/Images/Introduction/Output_SplitWindow.gif"/>You can recover the default state of the IDE at any time by selecting <em>Reset Layout</em> from the <a href="../IDE_Navigation/Menus/The_Layouts_Menu.htm">Layouts Window</a> and
+    you can re-open any closed tab from the <a href="../IDE_Navigation/Menus/The_Windows_Menu.htm">Window Menu</a>. You can also change the way the contents of each of the output window are displayed by editing the Output Window Preferences.</p>
+  <p>The default docked tabs are explained below:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down" href="#"><span data-open-text="true">Output</span><span data-close-text="true">Output</span></a></p>
+  <div class="droptext" data-targetname="drop_down">
+    <p class="dropspot"><img alt="The Output Window" class="center" src="../assets/Images/Introduction/Output_Output.png"/>The general <strong>Output </strong>window is where all compiler output is shown, as well as any messages that you may have added to your game using
+      the <a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm"><span class="inline">show_debug_message()</span></a> function. Most of the initial information shown is simply debug information on how the game is being built and
+      as such can generally be ignored. However if you have an issue building your project for a target platform it can prove helpful in finding the cause as well as provide information for Support should you contact them. Note that you can change the
+      quantity of information shown here from the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/General_Preferences.htm">Compiling</a> section of the <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">Preferences</a>.</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down1" href="#"><span data-open-text="true">Search Results</span><span data-close-text="true">Search Results</span></a></p>
+  <div class="droptext" data-targetname="drop_down1">
+    <p class="dropspot"><img alt="Search Results" class="center" src="../assets/Images/Introduction/Output_Search.png"/>You can open the <strong>Search And Replace Window</strong> using the keyboard shortcut  <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> +  <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55"/> + &quot; <strong>F</strong>&quot;,
+      or go to the <a href="../IDE_Navigation/Menus/The_Edit_Menu.htm">Edit Menu</a>. Once you have entered your search terms, the results will be shown in this window with the format:</p>
+    <p class="code">[object] - [event] - [Line Number]: [search string]</p>
+    <p class="dropspot">If the search term is found in a script then it will simply be:</p>
+    <p class="code">[script] - [Line Number]: [search string]</p>
+    <p class="dropspot">You can then double-click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on any of the returned entries to open the given asset at the correct position for editing.</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down2" href="#"><span data-open-text="true">Source Control</span><span data-close-text="true">Source Control</span></a></p>
+  <div class="droptext" data-targetname="drop_down2">
+    <p class="dropspot"><img alt="Source Control Output" class="center" src="../assets/Images/Introduction/Output_SourceControl.png"/>This window will show all the output for your <a class="tooltip" title="SCM stands for Source Control Management, which is a program (or suite of programs) responsible for maintining versions of the source code for a project. SCM permits you to store a running history of code changes, as well as review and undo any changes made to the source code, among other things.">SCM</a> plugin. You can find out more about
+      setting up Source Control <a href="../IDE_Tools/Source_Control.htm">here</a>.</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down3" href="#"><span data-open-text="true">Breakpoints</span><span data-close-text="true">Breakpoints</span></a></p>
+  <div class="droptext" data-targetname="drop_down3">
+    <p class="dropspot"><img alt="Breakpoints Output" class="center" src="../assets/Images/Introduction/Output_Breakpoints.png"/>Breakpoints are places in your game code or DnD™ where you have instructed GameMaker Studio 2 to pause the running of the project while in
+      <a href="Debugging.htm">Debug Mode</a>. You can add a breakpoint anywhere in the game loop using the key &quot; <strong>F9</strong>&quot;, and when you do it will appear in this output tab. You can enable and disable them (without removing them)
+      by clicking on the checkbox to the left and if you use the right mouse button <img alt="Icon RMB" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/> on one then you get a small menu that permits you to remove the breakpoint or open the code/DnD™
+      window where the breakpoint is located.</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down4" href="#"><span data-open-text="true">Syntax Errors</span><span data-close-text="true">Syntax Errors</span></a></p>
+  <div class="droptext" data-targetname="drop_down4">
+    <p class="dropspot"><img alt="Syntax Errors Output" class="center" src="../assets/Images/Introduction/Output_SyntaxErrors.png"/>Syntax errors are those errors in your code that the GameMaker Studio 2 <a class="tooltip" title="Similar to human languages, programming languages have their own set of rules on how statements can be conveyed, and this set of rules is known as the syntax. While a number of programming languages share many features, functions, and capabilities, they generally differ in syntax. Without the proper use of syntax, one cannot write an executable program, and wrong syntax will lead to errors when compiling.">syntax</a> checker
+      has picked up. There are many reasons why you might get a syntax error - like having a &quot;;&quot; in your code when a &quot;:&quot; is expected - and these should be fixed before trying to test or compile your game. Each syntax error entry in
+      the output window can be double-clicked using the left mouse button <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> to open a window at the position flagged so it can be resolved.</p>
+    <p class="dropspot">Syntax errors will update as you write your code (there will be a short pause between typing something and any errors appearing in this window to prevent errors being reported for unfinished code), and will follow the format:</p>
+    <p class="code">[object] - [event] - [Line Number] - [Position In Line]: [error string]</p>
+    <p class="dropspot">Or if the error is in a script, it will be:</p>
+    <p class="code">[script] - [Line Number] - [Position in line]: [error string]</p>
+    <p class="dropspot">Note that syntax errors will usually prevent the game from being compiled, however there are errors that will be flagged that won&#39;t prevent compiling, but that should, nonetheless, be resolved. The errors in question are:</p>
+    <ul class="colour">
+      <li class="dropspot">for declared variables that aren&#39;t used anywhere</li>
+      <li class="dropspot">for variables used somewhere that haven&#39;t been declared yet</li>
+    </ul>
+    <p class="dropspot">In general either of these would suggest a <a class="tooltip" title="Typographic error.">typo</a> in a variable name, or some other kind of easy-to-make error - and so they are flagged for you to revise - but it can also be intentional, as you
+      may have declared the variable for future use, but not got around to actually using it yet. This is why these errors will still permit your game to compile. For a full list of possible syntax error messages, please see <a href="../Additional_Information/Errors/Syntax_Errors.htm">here</a>.</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop_down5" href="#"><span data-open-text="true">Compile Errors</span><span data-close-text="true">Compile Errors</span></a></p>
+  <div class="droptext" data-targetname="drop_down5">
+    <p class="dropspot"><img alt="Compile Error Output" class="center" src="../assets/Images/Introduction/Output_CompileErrors.png"/>A Compiler Error happens when your game encounters some type of error that the syntax checker may not have been able to detect, or when an
+      error is related to how you have set up the compile options. When this happens, your game will give you a compiler error and stop running. Any compiler errors will be shown in the General Output window too, but they will also be listed here separately
+      (since they can get &quot;lost&quot; in the rest of the general output).</p>
+    <p class="dropspot">The compiler error messages will all follow the same format:</p>
+    <p class="code">[object] - [event] - [Line Number]: [error string]</p>
+    <p class="dropspot">If the error is found in a script then it will simply be:</p>
+    <p class="code">[script] - [Line Number]: [error string]</p>
+    <p class="dropspot">You can then double-click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on any of the compiler error entries to open the given asset at the position flagged as giving the error. For a full list
+      of possible error messages, please see <a href="../Additional_Information/Errors/Compiler_Errors.htm">here</a>.</p>
+  </div>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Introduction_To_GameMaker_Studio_2.htm">Introduction To GameMaker Studio 2</a></div>
+        <div style="float:right">Next: <a href="The_Marketplace.htm">The Marketplace</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Compiler Error Output
+Syntax Error Output
+Output Windows
+Search Results Output
+Source Control Output
+Breakpoint Output
+-->
+  <!-- TAGS
+compiler
+output_window
+-->
+
+</body></html>

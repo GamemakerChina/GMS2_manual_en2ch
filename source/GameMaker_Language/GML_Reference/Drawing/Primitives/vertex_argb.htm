@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.5.7.0_29";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>vertex_argb</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference for vertex_argb"/>
+  <meta name="rh-index-keywords" content="vertex_argb"/>
+  <meta name="search-keywords" content="vertex_argb"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="vertex_argb">
+        <span>vertex_argb</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>vertex_argb</h1>
+  <p>This function will set the <a class="tooltip" title="This is an anacronym for Alpha, Red, Green, Blue, and is used to refer to the colour components specified as a hexadecimal value, eg: #FF53E270, where each set of two digits represents a single component. Breaking down the ARGB example above gives us the following component values: Alpha(FF), Red(53), Green(E2) and Blue(70). ">ARGB</a> values for the vertex currently being defined for the custom primitive. You supply the buffer to write the data into as well as the red, green, blue and alpha values
+    that you wish to use as a single 32-bit unsigned integer - alpha sample in the highest 8 bits, followed by the red sample, green sample and finally the blue sample in the lowest 8 bits. You can use hex notation ($AARRGGBB) a real number or use any
+    of the <tt>make_colour_*()</tt> functions to define the colour value.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">vertex_argb(buffer, argb);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>buffer</td>
+        <td>The buffer to write the information to.</td>
+      </tr>
+      <tr>
+        <td>a</td>
+        <td>The alpha value for the colour (0 - 255).</td>
+      </tr>
+      <tr>
+        <td>r</td>
+        <td>The red component part of a colour (0 - 255).</td>
+      </tr>
+      <tr>
+        <td>g</td>
+        <td>The green component part of a colour (0 - 255).</td>
+      </tr>
+      <tr>
+        <td>b</td>
+        <td>The blue component part of a colour (0 - 255).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">vertex_argb(buff, $FFFFFFFF);</p>
+  <p>The above code will set the ARGB values of the vertex being defined to white.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
+        <div style="float:right">Next: <a href="vertex_texcoord.htm">vertex_texcoord</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+vertex_argb
+-->
+  <!-- TAGS
+vertex_argb
+-->
+
+</body></html>

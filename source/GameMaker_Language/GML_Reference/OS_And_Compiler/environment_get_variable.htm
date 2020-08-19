@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.19.0_22";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>environment_get_variable</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for environment_get_variable"/>
+  <meta name="rh-index-keywords" content="environment_get_variable"/>
+  <meta name="search-keywords" content="environment_get_variable"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="environment_get_variable">
+        <span>environment_get_variable</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>environment_get_variable</h1>
+  <p>This function returns the value (a string) of the environment variable with the given name (also a string). You can get the available environment variables on macOS and Ubuntu (Linux) by typing &quot;<tt>env</tt>&quot; into the terminal app, and for
+    information on Windows environment variables, if you are using the command prompt then type &quot;<tt>echo %PATH%</tt>&quot;, and using PowerShell it&#39;s &quot;<tt>ls env</tt>&quot;. Note that on both macOS and Ubuntu (Linux) the &quot;HOME&quot;
+    environment variable will return the &quot;<tt>~/</tt>&quot; path which maps to &quot;<tt>/Users/&lt;username&gt;</tt>&quot; on macOS and &quot;<tt>/home/&lt;username&gt;</tt>&quot; on Ubuntu (Linux).</p>
+  <p class="note"><b>NOTE</b>: This function is for Windows, macOS and Ubuntu (Linux) only.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">environment_get_variable(name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>The name (a string) of the environment variable to check.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">String</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">e_str = environment_get_variable(&quot;APPDATA&quot;);</p>
+  <p>The above code will return the full path for the environment variable &quot;<tt>%appdata%</tt>&quot;, which is normally &quot;<tt>C:\Users\{username}\AppData\Roaming</tt>&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
+        <div style="float:right">Next: <a href="external_define.htm">external_define</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+environment_get_variable
+-->
+  <!-- TAGS
+environment_get_variable
+-->
+
+</body></html>

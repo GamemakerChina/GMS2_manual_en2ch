@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.15.7.0_25";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>steam_ugc_query_set_match_any_tag</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for steam_ugc_query_set_match_any_tag"/>
+  <meta name="rh-index-keywords" content="steam_ugc_query_set_match_any_tag"/>
+  <meta name="search-keywords" content="steam_ugc_query_set_match_any_tag"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="steam_ugc_query_set_match_any_tag">
+        <span>steam_ugc_query_set_match_any_tag</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_query_set_match_any_tag</h1>
+  <p>This function can be used to further filter any given UGC query, specifically to switch on or off tag matching. The query handle is the value returned when you created the query (using, for example, <a href="steam_ugc_create_query_user.htm"><tt>steam_ugc_create_query_user()</tt></a>)
+    and the second argument is either <tt>true</tt> or <tt>false</tt> depending on whether you require a check for matching tags. The function will return <tt>true</tt> if the query filter was correctly set, or <tt>false</tt> otherwise.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_ugc_query_set_match_any_tag(ugc_query_handle , match_any_tag);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ugc_query_handle</td>
+        <td>The query handle to use.</td>
+      </tr>
+      <tr>
+        <td>match_any_tag</td>
+        <td>Sets whether the UGC item tags should match anything or not.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var query_handle = steam_ugc_create_query_all(ugc_query_RankedByVote, ugc_match_Items, 1);<br/> steam_ugc_query_set_match_any_tag(query_handle, false);<br/> steam_ugc_query_add_excluded_tag(query_handle, &quot;walking simulator&quot;);<br/> steam_ugc_query_set_return_long_description(query_handle,
+    true);<br/> steam_ugc_query_set_allow_cached_response(query_handle, true);<br/> query_ID = steam_ugc_send_query(query_handle);</p>
+  <p>The above code creates a query request and stores it&#39;s handle in a local variable for future use in the rest of the functions which further define the query request before sending the query.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Next: <a href="steam_ugc_query_set_search_text.htm">steam_ugc_query_set_search_text</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_query_set_match_any_tag
+-->
+  <!-- TAGS
+steam_ugc_query_set_match_any_tag
+-->
+
+</body></html>

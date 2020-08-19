@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "6.2.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>tvOS</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that details the tvOS Game Options"/>
+  <meta name="rh-index-keywords" content="Game Options - tvOS"/>
+  <meta name="search-keywords" content="tvOS Game Options"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="tvOS">
+        <span>tvOS</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tvOS Game Options</h1>
+  <p>This section outlines the different options available to you that control how your tvOS game projects will be compiled. The different sections are:</p>
+  <p> </p>
+  <h2>General</h2>
+  <p><img alt="iOS General Options" class="center" src="../../assets/Images/Settings/tvOS_General_Options.png"/>Here you can fill in the <strong>Product Information</strong> about your game, including its <strong>Display Name</strong>, its <strong>Bundle ID</strong>    and the <strong>Version </strong>info. Note that the Bundle ID must be in the correct reverse URL format for the final build of the game to work correctly, EG: <span class="inline">com.[Company].[GameName]</span>. You can also set the <strong>App Output</strong>    location on the build Mac, and you can give the Team Identifier that you wish to use for signing the final application that GameMaker Studio 2 creates for you. Setting it here will override the Team ID that you have supplied in the <a href="../../Setting_Up_And_Version_Information/Platform_Preferences/tvOS.htm">tvOS Preferences</a>.</p>
+  <p> </p>
+  <h2>Graphics</h2>
+  <p><img alt="tvOS Graphics Options" class="center" src="../../assets/Images/Settings/tvOS_Graphics_Options.png"/>Here you can change the following details related to how your game will be displayed, with the following options available:</p>
+  <ul class="colour">
+    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be
+      off, but if you have nice alpha blends and smoothed edged graphics it is better left on. This is off by default.</li>
+    <li><strong>Scaling</strong>: Here you can select to scale the draw canvas maintaining the aspect ratio within the device screen - adding &quot;padding&quot; around the edges to fit the screen - or you can select to have the draw canvas stretched to fit
+      the device screen.</li>
+  </ul>
+  <p>Next there is the option to set the size of the <a class="tooltip" title="A texture page (also called a texture atlas) is a collection of images (sprites, tilesets, font characters, etc...) that are grouped together in an optimal way so that they take up the least amount of texture memory when your game is run.">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There
+    is also a button marked <strong>Preview </strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are structured and
+    to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
+  <p class="note"><strong>NOTE</strong>: Be aware that the larger the size of the texture page, the less compatible your game will be with different browsers and devices.</p>
+  <p>Finally, you choose to <strong>Display a cursor</strong> or not. If checked, the OS will show a cursor whenever the mouse is moved (at the mouse position), and the cursor will fade out and disappear when the mouse is not moved for a period of time.
+    If unchecked, then no cursor will be shown.</p>
+  <p> </p>
+  <h2>Icons</h2>
+  <p><img alt="tvOS Images Icons Options" class="center" src="../../assets/Images/Settings/tvOS_Icons_Options.png"/>This section permits you to add the various different <strong>Icons </strong>required by the various devices and the different parts of the
+    App Store. These icons should be authored as 24bit <span class="inline">*.png</span> images at the size specified for each one.</p>
+  <p>It is worth noting that GameMaker Studio 2 has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game
+    is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require, especially for this platform as the icons required are rectangular and not square. This tool will also generate Images (explained
+    below) as well as Icons.</p>
+  <p> </p>
+  <h2>Images</h2>
+  <p><img alt="tvOS Images Splash Screens Options" class="center" src="../../assets/Images/Settings/tvOS_Images_Options.png"/>This section permits you to add separate graphics as &quot;Top Shelf&quot; images and splash screens for each of the different
+    tvOS target sizes. These images must be authored as individual 24bit <span class="inline">*.png</span> images with no transparencies and at the correct size. You can also set a minimum time for showing the splash screens from the drop down menu at
+    the bottom (from 0 to 10 seconds).</p>
+  <p>As mentioned in the section on Icons, you can use the <strong>Project Image Generator</strong> to create these images.</p>
+  <p> </p>
+  <h2>Social</h2>
+  <p><img alt="tvOS Social Options" class="center" src="../../assets/Images/Settings/tvOS_Social_Options.png"/>This section is for enabling different <strong>Social </strong>features in your tvOS game. The following options can be chosen:</p>
+  <ul class="colour">
+    <li><strong>Enable Push Notifications</strong>: In order for your game to use Push Notifications they must be enabled here first otherwise they will not work.</li>
+    <li><strong>Enable Sign In With Apple</strong>: This option is for using the <strong>Apple Sign In Extension</strong> on iOS. You can get this extension from the <a href="https://marketplace.yoyogames.com/publishers/23/yoyo-games">YoYo Games Marketplace</a>,
+      and the extension itself contains full instructions for use. If you are not using this extension then you should not tick this options.</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
+        <div style="float:right">Next: <a href="Windows.htm">Windows</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+tvOS Game Options
+-->
+  <!-- TAGS
+tvos_options
+-->
+
+</body></html>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.7.3.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>device_is_keypad_open</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for device_is_keypad_open"/>
+  <meta name="rh-index-keywords" content="device_is_keypad_open"/>
+  <meta name="search-keywords" content="device_is_keypad_open"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="device_is_keypad_open">
+        <span>device_is_keypad_open</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>device_is_keypad_open</h1>
+  <p>This does a check of the device for a keypad and if one is available it returns <tt>true</tt> otherwise it returns <tt>false</tt>. Please note that this function is mainly for use with Android devices</p>
+  <p>For those users with a <i>Sony Xperia Play</i>, there is a set button/key map setup within GameMaker Studio 2, so you can use the <a href="../Keyboard_Input/Keyboard_Input.htm">keyboard constants</a> <b>vk_up</b>, <b>vk_down</b>, <b>vk_left</b>,
+    <b>vk_right</b> for the joypad keys and <i>Triangle</i> is <tt>ord(&quot;T&quot;)</tt>, <i>Square</i> is <tt>ord(&quot;S&quot;)</tt>, <i>Circle</i> is <b>vk_alt</b> + <b>vk_backspace</b> while the <i>back</i> button is simply <tt>vk_backspace</tt>,
+    <i>Cross</i> is <b>vk_space</b>, <i>Select</i> is <b>vk_return</b> and <i>Start</i> is <b>vk_rshift</b>, the <i>L Trigger</i> is <tt>ord(&quot;L&quot;)</tt> and <i>R Trigger</i> is <tt>ord(&quot;R&quot;)</tt>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">device_is_keypad_open</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if device_is_keypad_open()<br/>    {
+    <br/>    global.Setting = 2;<br/>    }
+    <br/> else
+    <br/>    {
+    <br/>    global.Setting = 1;<br/>    }
+  </p>
+  <p>The above code checks for a keypad then changes a global variable depending on the returned value.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Device_Input.htm">Device Input</a></div>
+        <div style="float:right">Next: <a href="device_get_tilt_x.htm">device_get_tilt_x</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+device_is_keypad_open
+-->
+  <!-- TAGS
+device_is_keypad_open
+-->
+
+</body></html>

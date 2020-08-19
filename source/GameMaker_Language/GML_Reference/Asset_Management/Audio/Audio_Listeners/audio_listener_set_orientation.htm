@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.5.2.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>audio_listener_set_orientation</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function audio_listener_set_orientation"/>
+  <meta name="rh-index-keywords" content="audio_listener_set_orientation"/>
+  <meta name="search-keywords" content="audio_listener_set_orientation"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="audio_listener_set_orientation">
+        <span>audio_listener_set_orientation</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_listener_set_orientation</h1>
+  <p>With this function you can change the orientation of the given <i>listener</i> within the 3D audio space. The default listener index is 0, but you can use the function <a href="audio_get_listener_info.htm"><tt>audio_get_listener_info()</tt></a> to
+    get the different indices available for the target platform.</p>
+  <p>The <b>look at</b> vector and <b>up</b> vector are based on the values that are resolved from the given relative x, y and z positions, and default to (0, 0, -1) for the look at vector and (0, 1, 0)
+    for the up vector, as shown in the illustration below:</p>
+  <p><img alt="Listener Orientation Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Base.png"/></p>
+  <p>Changing the given listener orientation with this function will change how sound created by audio emitters around the game room are perceived by the player of your game. In the example below, sounds created by the emitter when the listener is at the
+    default position would appear to be coming from below and to the right of the listener, but with the new position and orientation of the listener they will now be perceived as coming from <i>above</i> and to the right.</p>
+  <p><img alt="Listener Orientation Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Example.png"/></p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_listener_set_orientation(index, lookat_x, lookat_y, lookat_z, up_x, up_y, up_z);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td>The listener to set the orientation of.</td>
+      </tr>
+      <tr>
+        <td>lookat_x</td>
+        <td>The x look vector (default 0).</td>
+      </tr>
+      <tr>
+        <td>lookat_y</td>
+        <td>The y look vector (default 0).</td>
+      </tr>
+      <tr>
+        <td>lookat_z</td>
+        <td>The z look vector (default -1).</td>
+      </tr>
+      <tr>
+        <td>up_x</td>
+        <td>The x up vector (default 0).</td>
+      </tr>
+      <tr>
+        <td>up_y</td>
+        <td>The y up vector (default 1).</td>
+      </tr>
+      <tr>
+        <td>up_z</td>
+        <td>The z up vector (default 0).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _m = camera_get_view_mat(view_camera[0]);<br/> audio_listener_set_position(global.Player_Listener, _m[0], _m[1], _m[2]);<br/> audio_listener_set_orientation(info[? &quot;index&quot;], _m[3], _m[4], _m[5], _m[6], _m[7], _m[8]);</p>
+  <p>The above code retrieves the view matrix for camera view [0] and then uses it to set the audio listener position and orientation for the listener with the ID stored in the global variable &quot;Player_Listener&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Audio_Listeners.htm">Audio Listeners</a></div>
+        <div style="float:right">Next: <a href="audio_get_listener_count.htm">audio_get_listener_count</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+audio_listener_set_orientation
+-->
+  <!-- TAGS
+audio_listener_set_orientation
+-->
+
+</body></html>

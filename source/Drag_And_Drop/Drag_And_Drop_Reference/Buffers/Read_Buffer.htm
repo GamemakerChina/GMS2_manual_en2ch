@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.14.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Read Buffer</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that explains the Read Buffer action"/>
+  <meta name="rh-index-keywords" content="DnD™ Action - Read Buffer"/>
+  <meta name="search-keywords" content="Read Buffer"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Read Buffer">
+        <span>Read Buffer</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Read Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Read_Buffer.png"/> Read Buffer</h1>
+  <p>This action can be used to read data from a previously created buffer. You supply the unique buffer ID value (as returned by the action <a href="Create_Buffer.htm">Create Buffer</a>) and give a variable to store the returned value. If you flag the variable
+    as a temporary local variable then it will be created for you and discarded again at the end of the event or action script. All data is returned as a <b>string</b> so if you have stored any real numbers you will have to use one of the <a href="../Data_Types/Data_Type_Actions.htm">Data Type Actions</a>    to convert it from the string to the value. Keep in mind too that buffers are read and written to <i>sequentially</i> and so reading from a buffer will move the &quot;seek&quot; position to the next entry, meaning that to read various pieces of data
+    you simply call this action the number of times required and store each returned piece of data to a variable.</p>
+  <p> </p>
+  <h4>Action Syntax:</h4>
+  <p><img alt="Read Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Read_Buffer.png"/></p>
+  <h4>Arguments:</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Buffer</td>
+        <td>The buffer index (stored in a variable)</td>
+      </tr>
+      <tr>
+        <td>Target</td>
+        <td>The target variable to hold the returned data</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Example:</h4>
+  <p><img alt="Read Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Read_Buffer.png"/>The above action block code sets the buffer read/write position to the start of the buffer and
+    then reads back two pieces of data, storing them (as strings) in temporary local variables. These variables are then used to draw the data to the screen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Buffer_Actions.htm">Buffer Actions</a></div>
+        <div style="float:right">Next: <a href="Write_Buffer.htm">Write Buffer</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Action - Read Buffer
+-->
+  <!-- TAGS
+action_buffer_read
+-->
+
+</body></html>

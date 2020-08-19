@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.2.9.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>sequence_get_objects</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining function sequence_get_objects"/>
+  <meta name="rh-index-keywords" content="sequence_get_objects"/>
+  <meta name="search-keywords" content="sequence_get_objects"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="sequence_get_objects">
+        <span>sequence_get_objects</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sequence_get_objects</h1>
+  <p>With this function you can retrieve an <a href="../../../GML_Overview/Arrays.htm">array</a> of all the object indices that have instances being created within the given sequence. You supply either the sequence object struct (as returned by the function
+    <a href="sequence_create.htm"><tt>sequence_create()</tt></a> or <a href="sequence_get.htm"><tt>sequence_get()</tt></a>) or the sequence ID (as returned by the function <a href="../Rooms/Sequence_Layers/layer_sequence_get_sequence.htm"><tt>layer_sequence_get_sequence()</tt></a> or
+    from the sequence instance struct property <tt>sequence</tt>) and the function will return an array, where each item in the array is an <a href="../Objects/object_index.htm"><tt>object_index</tt></a> for the different objects being used by the sequence
+    to create instances.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">sequence_get_objects(sequence_struct_or_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sequence_struct_or_id</td>
+        <td>The sequence object struct or ID to get the objects from.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code"><span>Array</span></p>
+  <p> </p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _seq = sequence_get(seq_Logo);<br/> obj_array = sequence_get_objects(_seq);</p>
+  <p>The above code gets the struct for a sequence object and then retrieves the objects that it uses and stores the array in a variable.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
+        <div style="float:right">Next: <a href="sequence_instance_override_object.htm">sequence_instance_override_object</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+sequence_get_objects
+-->
+  <!-- TAGS
+sequence_get_objects
+-->
+
+</body></html>

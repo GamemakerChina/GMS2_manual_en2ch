@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.3.3.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>image_blend</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the variable image_blend"/>
+  <meta name="rh-index-keywords" content="image_blend"/>
+  <meta name="search-keywords" content="image_blend"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="image_blend">
+        <span>image_blend</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>image_blend</h1>
+  <p>This variable controls the &quot;tinting&quot; of the instance sprite and the default value is -1 (but can also be <tt>c_white</tt>). Any other value (including internal colour constants like <tt>c_red</tt>, or <tt>c_aqua</tt>) will blend the specified
+    colour with the original sprite. Please note that for changes in this variable to be visible, the instance should have either <i>no</i> draw event (and so GameMaker Studio 2 will default draw the sprite) or be drawn using one of the extended drawing
+    functions like <a href="../../../Drawing/Sprites_And_Tiles/draw_self.htm"><tt>draw_self()</tt></a> or <a href="../../../Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><tt>draw_sprite_ext()</tt></a>.</p>
+  <p><img alt="image_blend Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/blend_image.png"/></p>
+  <p>Please note that you should try to limit blending on the HTML5 platform (unless using WebGL), as each blended sprite has to be cached separately and so having many blended sprites may adversely affect performance (you can also set the cache size using
+    the function <a href="../Sprite_Manipulation/sprite_set_cache_size.htm"><tt>sprite_set_cache_size()</tt></a>).</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">image_blend;</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (single precision floating point value)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">image_blend = make_colour_hsv(255, 255, random(255));</p>
+  <p>The above code will set the image_blend of the sprite defined for the instance to a random colour.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Sprite_Instance_Variables.htm">Sprite Instance Variables</a></div>
+        <div style="float:right">Next: <a href="image_index.htm">image_index</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+image_blend
+-->
+  <!-- TAGS
+image_blend
+-->
+
+</body></html>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.5.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Broadcast Messages</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page detailing the dope sheet"/>
+  <meta name="rh-index-keywords" content="Sequences - Broadcast Messages"/>
+  <meta name="search-keywords" content="broadcast,messages,broadcast messages"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Broadcast Messages">
+        <span>Broadcast Messages</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Broadcast Messages</h1>
+  <p>Both <a href="../Sequences.htm">Sequences</a> and <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprites.htm">Sprites</a> can generate what are called <strong>broadcast messages</strong> at any point along their length. These
+    messages are simple strings that are added to specific frames along the animation timeline, and when that point in the timeline is reached, then the string will be broadcast out to all instances that listen for it. Any instance that has a <a href="../Object_Properties/Other_Events.htm">Broadcast Message Event</a>    (found in the &quot;<strong>Other</strong>&quot; event category) will receive the message string when it is reached in the timeline, at which point it&#39;s up to you to have some code that will parse it and react accordingly. Note too that sequences
+    can also listen for broadcast messages, but this requires you to first set up the listener method using code (see the GML section on <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">Sequence Events And Moments</a> for
+    more information).</p>
+  <p class="note"><strong>NOTE</strong>: Currently only broadcast messages created by sequences can be dealt with. Coming updates will add this functionality to sprites/instances too, and this page will be updated.</p>
+  <p>When a Broadcast Message event is triggered, there will be a special <a href="../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> created and stored in the built-in variable <span class="inline">event_data</span>.
+    This variable ID is a built-in <em>global </em>scope variable, but will only contain DS map data in the event that triggered it - in this case the Broadcast Message event - and will return -1 at all other times. The keys that the event will have are
+    as follows:</p>
+  <ul class="colour">
+    <li>&quot;<span class="inline">event_type</span>&quot;: For a broadcast message this will currently only be the string &quot;<span class="inline">sequence event</span>&quot;.</li>
+    <li>&quot;<span class="inline">message</span>&quot;: This key contains the message string that has been received.</li>
+    <li>&quot;<span class="inline">element_id</span>&quot;: This key returns the ID of the element (sequence/sprite/instance) on a layer in the room editor. You can then use this ID value to find out what kind of element generated the message using the function
+      <a href="../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_element_type.htm"><span class="inline">layer_get_element_type()</span></a> and to use the other relevant functions to target it, or perform
+      an action like play a sound, as required.</li>
+  </ul>
+  <p>Note that you can define a broadcast message with multiple strings. When this happens, the event will be triggered multiple times - once for each message string.</p>
+  <p>Below is a brief example of how this event can be checked:</p>
+  <p class="code">if event_data[? &quot;event_type&quot;] == &quot;sequence event&quot;<br/> {
+    <br/> switch (event_data[? &quot;message&quot;])<br/>     {<br/>     case &quot;hit&quot;:<br/>         audio_play_sound(snd_hit, 0, false);<br/>         break;<br/>     case &quot;destroy&quot;:<br/>         sequence_destroy(event_data[? &quot;element_id&quot;]);<br/>            break;<br/>     }<br/> }
+  </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
+        <div style="float:right">Next: <a href="The_Sequence_Canvas.htm">The Sequence Canvas</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Sequences - Broadcast Messages
+Broadcast Messages
+-->
+  <!-- TAGS
+sequences_broadcast_messages
+-->
+
+</body></html>

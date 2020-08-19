@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.1.1.1.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>argument</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the argument variable"/>
+  <meta name="rh-index-keywords" content="argument[n],argument0 - argument15"/>
+  <meta name="search-keywords" content="argument"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="argument">
+        <span>argument</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>argument</h1>
+  <p>This variable holds an <a href="../../Arrays.htm">array</a> that is used along with the read-only variable <a href="argument_count.htm">argument_count</a> in <a href="../../Script_Functions.htm">script functions</a> or <a href="../../Method_Variables.htm">methods</a>.
+    Each array position holds an input value for the function and is specifically for use with <em>variable </em>argument functions.</p>
+  <p>Note that there are also a series of independent global scope variables that can also be used in user-defined functions to reference the different input arguments: <span class="inline">argument0</span>, <span class="inline">argument1</span>, <span class="inline">argument2</span>,
+    etc... up to <span class="inline">argument15</span>, but these variables can only be used when the number of arguments supplied to the user-defined function are <em>fixed </em>and not variable.</p>
+  <p class="note"><strong>NOTE</strong>: This isn&#39;t strictly required any more and is provided for legacy support more than anything else. All user-defined functions will accept variable arguments, and any argument passed into a function that is not part of the named
+    inputs will be initialised to <span class="inline" style="font-size: 14px">undefined</span> by default, which can be checked using the <a href="../../../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined()</a> function.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">argument[<em>n</em>]<br/> argument1
+    <br/> argument2
+    <br/> ...
+    <br/> argument15
+  </p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Value (can be of any <a href="../../Data_Types.htm">data type</a> supplied to the function)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">function my_array()<br/> {
+    <br/> var i, arg;<br/> for (i = 0; i &lt; 5; i += 1;)<br/>    {
+    <br/>    if argument_count &gt; i<br/>       {
+    <br/>       arg[i] = argument[i]<br/>       }
+    <br/>    else
+    <br/>       {
+    <br/>       arg[i] = -1;<br/>       }
+    <br/>    }
+    <br/> }
+  </p>
+  <p>The above code uses the <tt>argument_count</tt> variable along with the <span class="inline">argument</span> array to initialize variables, and is an example of how to permit a user-defined function to accept a variable number of arguments.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Global_Variables.htm">Global Variables</a></div>
+        <div style="float:right">Next: <a href="argument_count.htm">argument_count</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+argument
+-->
+  <!-- TAGS
+argument
+-->
+
+</body></html>

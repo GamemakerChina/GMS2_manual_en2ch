@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.5.2.0_35";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>gpu_set_texrepeat</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference for the function gpu_set_texrepeat"/>
+  <meta name="rh-index-keywords" content="gpu_set_texrepeat"/>
+  <meta name="search-keywords" content="gpu_set_texrepeat"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="gpu_set_texrepeat">
+        <span>gpu_set_texrepeat</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gpu_set_texrepeat</h1>
+  <p>This function can be used to indicate to GameMaker Studio 2 whether textures should repeat (<tt>true</tt>) or not (<tt>false</tt>) when used for models and primitives. Normally texture widths and heights lie in the range 0 - 1, but if you specify
+    a value larger than 1 by default the rest is not drawn (the entire texture will be drawn with an &quot;empty&quot; section corresponding to the percentage over 1 that is used. So a value of 2 for a texture width or height would draw the texture in
+    half the space and leave the other half empty). However, by using this function to set repeat to true the texture is repeated automatically over all models and primitives. The likely use case for these functions is for repeating a texture in 3D but
+    in order for it to work and not pull images from the rest of the texture page, the sprite used will need to be marked as being on a &quot;Separate Texture Page&quot; in the Sprite Editor.</p>
+  <p class="note"><b>NOTE</b>: Sprites and backgrounds are always drawn without repeating, so once you draw a sprite or background this value is reset to <tt>false</tt>. This default behaviour will not affect texture stage settings (ie: calling the function will, but
+    the internal setting to false will not).</p>
+  <p class="note"><b>NOTE</b>: This setting will over-ride any texture stage repeats set for shaders when using the function <a href="gpu_set_texrepeat_ext.htm"><tt>gpu_set_texrepeat_ext()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">gpu_set_texrepeat(enable);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>enable</td>
+        <td>Enable or disable texture filtering (<tt>true</tt> / <tt>false</tt>)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if gpu_get_texrepeat()<br/>     {
+    <br/>     gpu_set_texrepeat(false);
+    <br/>     }
+    <br/> else
+    <br/>     {
+    <br/>     gpu_set_texrepeat(true);
+    <br/>     }
+  </p>
+  <p>The above code checks to see if texture repeating is on or off and switches it accordingly.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
+        <div style="float:right">Next: <a href="gpu_set_texrepeat_ext.htm">gpu_set_texrepeat_ext</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+gpu_set_texrepeat
+-->
+  <!-- TAGS
+gpu_set_texrepeat
+-->
+
+</body></html>

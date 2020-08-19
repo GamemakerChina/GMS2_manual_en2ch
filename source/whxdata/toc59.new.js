@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Struct Forbidden Variables","type":"item","tilePath":"","url":"GameMaker_Language/GML_Overview/Struct_Forbidden_Variables.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

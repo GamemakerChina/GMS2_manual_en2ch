@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.15.3.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>steam_download_scores_around_user</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for steam_download_scores_around_user"/>
+  <meta name="rh-index-keywords" content="steam_download_scores_around_user"/>
+  <meta name="search-keywords" content="steam_download_scores_around_user"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="steam_download_scores_around_user">
+        <span>steam_download_scores_around_user</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_download_scores_around_user</h1>
+  <p>This function is used to retrieve leaderboard entries relative the current users entry. The <tt>range_start</tt> parameter is the number of entries to retrieve <i>before</i> the current users entry, and the <tt>range_end</tt> parameter is the number
+    of entries after the current user&#39;s entry, and the current user&#39;s entry is <i>always</i> included in the results. For example, if the current user is number 5 on a given leaderboard, then setting the start range to -2 and the end range to
+    2 will return 5 entries: 3 through 7. If there are not enough entries in the leaderboard before or after the user&#39;s entry, Steam will adjust the range to try to return the number of entries requested. For example, if the user is #1 on the leaderboard,
+    start is set to -2, and end is set to 2, Steam will return the first 5 entries in the leaderboard.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_download_scores_around_user(lb_name, range_start, range_end);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>lb_name</td>
+        <td>The name of the leaderboard that you are downloading the scores from (a string).</td>
+      </tr>
+      <tr>
+        <td>range_start</td>
+        <td>The start position within the leaderboard.</td>
+      </tr>
+      <tr>
+        <td>range_end</td>
+        <td>The end position within the leaderboard.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">score_get = steam_download_scores_around_user(&quot;Game Scores&quot;, -4, 5);</p>
+  <p>This will send off a request to the Steam Server for a range of 10 scores from the leaderboard &quot;Game Scores&quot;, centered on the player and will store the <b>async id</b> of the request in the variable &quot;score_get&quot;. This will then be
+    handled in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm"><b>Steam Async Event</b></a>, as shown in the Extended Example for <a href="steam_download_scores.htm"><tt>steam_download_scores()</tt></a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_Leaderboards.htm">Leaderboards</a></div>
+        <div style="float:right">Next: <a href="steam_download_friends_scores.htm">steam_download_friends_scores</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+steam_download_scores_around_user
+-->
+  <!-- TAGS
+steam_download_scores_around_user
+-->
+
+</body></html>

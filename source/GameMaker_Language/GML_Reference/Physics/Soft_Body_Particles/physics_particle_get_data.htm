@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.11.5.0_26";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>physics_particle_get_data</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for physics_particle_get_data"/>
+  <meta name="rh-index-keywords" content="physics_particle_get_data,phy_particle_data_flag_typeflags,phy_particle_data_flag_position,phy_particle_data_flag_velocity,phy_particle_data_flag_colour,phy_particle_data_flag_category,phy_particle_data_flag_color"/>
+  <meta name="search-keywords" content="physics_particle_get_data,phy_particle_data_flag_typeflags,phy_particle_data_flag_position,phy_particle_data_flag_velocity,phy_particle_data_flag_colour,phy_particle_data_flag_category,phy_particle_data_flag_color"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="physics_particle_get_data">
+        <span>physics_particle_get_data</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_particle_get_data</h1>
+  <p>This function returns various pieces of information about each particle in the physics simulation using the given flags checked. The buffer used must have been created previously using the function <a href="../../Buffers/buffer_create.htm"><tt>buffer_create()</tt></a>,
+    and should be of the &quot;grow&quot; type, with the size being approximately that of the expected return data. The flags are set using any of the constants given below, and you would use the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a>    &quot;|&quot; to create a single flag value to get the desired information.</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+        <th>Data Type</th>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_typeflags</td>
+        <td>The flags value for the particle.</td>
+        <td>buffer_u32</td>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_position</td>
+        <td>The x and y position of the particle.</td>
+        <td>2 x buffer_f32</td>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_velocity</td>
+        <td>The horizontal and vertical speed.</td>
+        <td>2 x buffer_f32</td>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_colour</td>
+        <td>The colour and alpha value (hexadecimal).</td>
+        <td>buffer_f32</td>
+      </tr>
+      <tr>
+        <td>phy_particle_data_flag_category</td>
+        <td>The particle category (as defined when you created the particle or group to which it belongs).</td>
+        <td>buffer_u32</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">physics_particle_get_data(buffer, flags)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>buffer</td>
+        <td>The (previously created) buffer to use to store the data.</td>
+      </tr>
+      <tr>
+        <td>flags</td>
+        <td>The flags to use to extract data about specific particle types.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Buffer data</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var count = physics_particle_count();<br/> var flags = phy_particle_data_flag_position | phy_particle_data_flag_colour;<br/> if (count &gt; 0)<br/>     {
+    <br/>     var buffer = buffer_create(count * 12, buffer_grow, 4);<br/>     physics_particle_get_data(buffer, flags);<br/>     for (var n = 0; n &lt; count; n++;)<br/>         {
+    <br/>         var xx = buffer_read(buffer, buffer_f32);<br/>         var yy = buffer_read(buffer, buffer_f32);<br/>         var argb = buffer_read(buffer, buffer_u32);<br/>         var alpha = (argb &gt;&gt; 24) &amp; 255;<br/>         draw_sprite_ext(sprBlob,
+    0, xx, yy, 1, 1, 0, c_green, alpha);<br/>         }
+    <br/>     buffer_delete(buffer);
+    <br/>     }
+  </p>
+  <p>The above code gets the number of particles and creates a variable with the data flags to check, then checks to see if there are any particles in the room. If there are, a buffer is created and then filled with the particle data, which is checked and
+    used to draw a sprite at the particle position.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
+        <div style="float:right">Next: <a href="physics_particle_get_data_particle.htm">physics_particle_get_data_particle</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+physics_particle_get_data
+phy_particle_data_flag_typeflags
+phy_particle_data_flag_position
+phy_particle_data_flag_velocity
+phy_particle_data_flag_colour
+phy_particle_data_flag_category
+-->
+  <!-- TAGS
+physics_particle_get_data
+-->
+
+</body></html>

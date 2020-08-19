@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.13.2.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>instance_activate_region</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the function instance_activate_region"/>
+  <meta name="rh-index-keywords" content="instance_activate_region"/>
+  <meta name="search-keywords" content="instance_activate_region"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="instance_activate_region">
+        <span>instance_activate_region</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instance_activate_region</h1>
+  <p>With this function you can define a region within the room to activate instances that have previously been deactivated. This region can either be flagged as &quot;inside&quot; or &quot;outside&quot; as demonstrated in the following image:</p>
+  <p><img alt="Instance activate region example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Instances/instance_activate_region.png"/>You can see in the image above that the &quot;apple&quot; instance is always active
+    because, even if the sprite itself doesn&#39;t overlap the region, the bounding box does. So, instances are considered to be within the region specified when their <i>bounding box</i> overlaps with it, and the state of the collision mask (precise
+    or not) is not taken into consideration. Note that activation is not instantaneous, and an instance that has been activated in this way will not be considered to be active until the end of the event in which the function was called.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">instance_activate_region(left, top, width, height, inside);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>left</td>
+        <td>The x coordinate of the left of the rectangular region to activate.</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>The y coordinate of the top of the rectangular region to activate.</td>
+      </tr>
+      <tr>
+        <td>width</td>
+        <td>The width of the region to activate.</td>
+      </tr>
+      <tr>
+        <td>height</td>
+        <td>The height of the region to activate.</td>
+      </tr>
+      <tr>
+        <td>inside</td>
+        <td>Whether to activate instances on the inside of the region (true) or the outside (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">instance_deactivate_all(true);<br/> var _vx = camera_get_view_x(view_camera[0]);<br/> var _vy = camera_get_view_y(view_camera[0]);<br/> var _vw = camera_get_view_width(view_camera[0]);<br/> var _vh = camera_get_view_height(view_camera[0]);<br/> instance_activate_region(_vx
+    - 64, _vy - 64, _vw + 128, _vh + 128, false);</p>
+  <p>The above code deactivates all instances except the one that is running the code and then activates a region within the room.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Deactivating_Instances.htm">Deactivating Instances</a></div>
+        <div style="float:right">Next: <a href="instance_activate_layer.htm">instance_activate_layer</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+instance_activate_region
+-->
+  <!-- TAGS
+instance_activate_region
+-->
+
+</body></html>

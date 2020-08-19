@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.8.2.0_19";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_list_mark_as_map</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for ds_list_mark_as_map"/>
+  <meta name="rh-index-keywords" content="ds_list_mark_as_map"/>
+  <meta name="search-keywords" content="ds_list_mark_as_map"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="ds_list_mark_as_map">
+        <span>ds_list_mark_as_map</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_list_mark_as_map</h1>
+  <p>This function will &quot;mark&quot; (or &quot;flag&quot;) a given position within a previously created DS list as holding a <a href="../DS_Maps/DS_Maps.htm">DS map</a>. This functionality is required when encoding JSON strings (which you can create
+    using <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><tt>json_encode()</tt></a>), but can also be useful when nesting data-structures, as items marked in this way will automatically be garbage collected (destroyed) when the parent
+    DS list is destroyed. This means that you do not have to manually go through the list contents and destroy the marked data structures individually before destroying the &quot;parent&quot; list. However, if you delete the list position individually,
+    the data structure it contained will <i>not</i> be garbage collected and you should call the appropriate DS map destroy function before deleting the parent list position. Also note that if you call the function <a href="ds_list_clear.htm"><tt>ds_list_clear()</tt></a>    on a list, any items flagged as maps will be destroyed as well when the list is cleared.</p>
+  <p>It is also worth noting that if the position that has been marked changes within the list, the &quot;mark&quot; will move with it, so if you have marked position 3 in the list (for example) and then insert 2 more items below it so it moves up to position
+    5, it will <i>still</i> be marked as a map.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">ds_list_mark_as_map(id, pos);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>The id of the list to mark.</td>
+      </tr>
+      <tr>
+        <td>pos</td>
+        <td>The position within the list to mark.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (integer - ID of the DS map if successful or -1 if it fails)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var sub_map = ds_map_create();<br/> ds_map_add(sub_map, &quot;player&quot;, player_array);<br/> ds_map_add(sub_map, &quot;enemy&quot;, enemy_array);<br/> ds_list_add(j_list, sub_map);<br/> ds_list_mark_as_map(j_list, 0);</p>
+  <p>The above code creates a DS map and then populates it with two keys, each containing an array of values. This map is then added into the given DS list , and the position &quot;marked&quot; as such so that it can be correctly encoded later.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="DS_Lists.htm">DS Lists</a></div>
+        <div style="float:right">Next: <a href="ds_list_is_list.htm">ds_list_is_list</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+ds_list_mark_as_map
+-->
+  <!-- TAGS
+ds_list_mark_as_map
+-->
+
+</body></html>

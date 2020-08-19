@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.25.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Set Particle Gravity</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that explains the Set Particle Gravity action"/>
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Particle Gravity"/>
+  <meta name="search-keywords" content="Set Particle Gravity"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Set Particle Gravity">
+        <span>Set Particle Gravity</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Particle Gravity Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Gravity.png"/> Set Particle Gravity</h1>
+  <p>This action will simulate the effect of gravity on all particles of the given type. You first specify the particle type ID value (which should be the same as the value used when you created the particle using the <a href="Create_Particle_Type.htm">Create Particle Type</a>    action) and then you can set the gravity force and the direction. Force is a <i>cumulative</i> value and will be added on to the speed vector each game frame, so a gravity of 1 will add one to the speed value each game frame, while the direction value
+    is simply the direction in which gravity should &quot;pull&quot; the particle. Note that for both force <i>and</i> direction you can use negative values, and that direction in GameMaker Studio 2 is calculated with 0° to the right, 90° to the top,
+    180° to the left and 270° to the bottom.</p>
+  <p> </p>
+  <h4>Action Syntax:</h4>
+  <p><img alt="Set Particle Gravity Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Gravity.png"/></p>
+  <h4>Arguments:</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Type ID</td>
+        <td>The ID value for the particle type to set the gravity of</td>
+      </tr>
+      <tr>
+        <td>Force</td>
+        <td>The force of the gravity (in pixels per game frame)</td>
+      </tr>
+      <tr>
+        <td>Direction</td>
+        <td>The direction of the gravity &quot;pull&quot;</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Example:</h4>
+  <p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png"/>The above action block code will create a new particle type and assign its unique
+    ID value to a global variable. It then proceeds to set all the properties for the particle type.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
+        <div style="float:right">Next: <a href="Set_Secondary_Particles.htm">Set Secondary Particles</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Action - Set Particle Gravity
+-->
+  <!-- TAGS
+action_part_type_gravity
+-->
+
+</body></html>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.2.1.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>asset_remove_tags</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function asset_remove_tags"/>
+  <meta name="rh-index-keywords" content="asset_remove_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence"/>
+  <meta name="search-keywords" content="asset_remove_tags,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="asset_remove_tags">
+        <span>asset_remove_tags</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>asset_remove_tags</h1>
+  <p>With this function you can remove one or more tag strings to any asset from the asset browser. You supply either the asset name (as a string) or its asset index, as well as either a single tag string or an array where each item is a single tag string.
+    If you supply an asset index value, then you will need to supply the optional asset type argument (a constant), as assets of different types can have the same index, even though they cannot have the same name. The available asset types are listed
+    in the table below:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>asset_object</td>
+        <td>The given name refers to an <a href="../../../../The_Asset_Editors/Objects.htm">object</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_sprite</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_sound</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sounds.htm">sound</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_room</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Rooms.htm">room</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_tiles</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Tile_Sets.htm">tile set</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_path</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Paths.htm">path</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_script</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Scripts.htm">script</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_font</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Fonts.htm">font</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_timeline</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Timelines.htm">time line</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_shader</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Shaders.htm">shader</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_animationcurve</td>
+        <td>The given name refers to an <a href="../../../../The_Asset_Editors/Animation_Curves.htm">Animation Curve</a>.</td>
+      </tr>
+      <tr>
+        <td>asset_sequence</td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sequences.htm">Sequence</a>.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>If the function succeeds in removing the tag(s) it will return <tt>true</tt> otherwise it will return <tt>false</tt>.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">asset_remove_tags(name_or_index, tags, [asset_type]);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>name_or_index</td>
+        <td>The name of the asset (a string) or its index value (an integer).</td>
+      </tr>
+      <tr>
+        <td>tags</td>
+        <td>A single asset tag string or an array with various asset tags.</td>
+      </tr>
+      <tr>
+        <td>[asset_type]</td>
+        <td>OPTIONAL! The type of asset to remove the tags from, only used when supplying an index for the first argument.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _a = array_create(3);<br/> _a[0] = &quot;enemy&quot;;<br/> _a[1] = &quot;all_levels&quot;;<br/> _a[2] = &quot;boss&quot;;<br/> asset_remove_tags(obj_Enemy_Boss_Parent, _a, asset_object);</p>
+  <p>The above code will create an array of tags and then remove them from the given object.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Assets_And_Tags.htm">Assets And Tags</a></div>
+        <div style="float:right">Next: <a href="asset_has_tags.htm">asset_has_tags</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+asset_remove_tags
+asset_object
+asset_sprite
+asset_sound
+asset_room
+asset_tiles
+asset_path
+asset_script
+asset_font
+asset_timeline
+asset_shader
+asset_animationcurve
+asset_sequence
+-->
+  <!-- TAGS
+asset_remove_tags
+-->
+
+</body></html>

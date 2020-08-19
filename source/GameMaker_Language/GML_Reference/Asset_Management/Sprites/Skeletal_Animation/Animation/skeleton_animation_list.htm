@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../../..";
+    gCommonRootRelPath = "../../../../../..";
+    gTopicId = "10.2.2.3.4.1.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>skeleton_animation_list</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function skeleton_animation_list"/>
+  <meta name="rh-index-keywords" content="skeleton_animation_list"/>
+  <meta name="search-keywords" content="skeleton_animation_list"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="skeleton_animation_list">
+        <span>skeleton_animation_list</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>skeleton_animation_list</h1>
+  <p>With this function you can populate a (pre-created) <a href="../../../../Data_Structures/DS_Lists/DS_Lists.htm">DS list</a> with all the names of the animations included as part of the skeletal animation sprite. The names will be strings and can then
+    be used in the other animation functions for these types of sprite.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">skeleton_animation_list(sprite, list);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite</td>
+        <td>The sprite index of the Spine skeletal animation to get the list from.</td>
+      </tr>
+      <tr>
+        <td>list</td>
+        <td>The ID of the DS list to populate with the animation names.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var list = ds_list_create();<br/> skeleton_animation_list(sprite_index, list);<br/> for (var i = 1; i &lt; ds_list_size(list); i++;)<br/>     {
+    <br/>     skeleton_animation_mix(list[| 0], list[| i], 0.5);<br/>     }
+    <br/> ds_list_destroy(list);
+  </p>
+  <p>The above code creates a DS list of all the animation names for the sprite being used by the instance. It then loops through these and sets the mix value for all of them with the first animation to 0.5.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Animation.htm">Animation</a></div>
+        <div style="float:right">Next: <a href="skeleton_animation_clear.htm">skeleton_animation_clear</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+skeleton_animation_list
+-->
+  <!-- TAGS
+skeleton_animation_list
+-->
+
+</body></html>

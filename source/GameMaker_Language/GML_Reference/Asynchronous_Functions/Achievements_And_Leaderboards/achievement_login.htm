@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.12.5.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>achievement_login</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for achievement_login"/>
+  <meta name="rh-index-keywords" content="achievement_login,achievement_our_info"/>
+  <meta name="search-keywords" content="achievement_login,achievement_our_info"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="achievement_login">
+        <span>achievement_login</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_login</h1>
+  <p>This function logs the user into appropriate leaderboard and achievement service. If the service is <i>not</i> available, the user is logged into a &quot;pretend&quot; game centre and all achievements and scores are stored on the device so that when
+    the actual service is available, these details can be uploaded. The function will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> which contains the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    map populated with the relevant key/value pairs. The <i>id</i> key of this <tt>DS Map</tt> is used to identify the correct callback (there can be more than one trigger function for any given asynchronous event), and will be paired with the <b>constant</b>    <tt>achievement_our_info</tt> as well as a number of other key/value pairs for each challenge. The exact contents of the map are shown below:</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - For this function it should be <tt>achievement_our_info</tt></li>
+    <li>&quot;<b>name</b>&quot; - The name of the user that is currently logged in.</li>
+    <li>&quot;<b>playerid</b>&quot; - The unique player id for the user that is currently logged in.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">achievement_login()</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Extended Example:</h4>
+  <p>The following code would probably be called right at the start of your game, or from a special button object that you have placed in a room, and will request that the player logs into their Google Game Services or Apple Game center account:</p>
+  <p class="code">achievement_login();</p>
+  <p>This will send off a request for the current player information and generate an asynchronous callback with the special <tt>async_load</tt> DS map containing the following data:</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_our_info<br/>     {
+    <br/>     var name = ds_map_find_value(async_load, &quot;name&quot; );<br/>     var playerid = ds_map_find_value(async_load, &quot;playerid&quot; );<br/>     global.OurName = name;<br/>     global.OurId = playerid;<br/>     if os_type == os_android<br/>            {
+    <br/>         achievement_load_leaderboard(&quot;CgkIs9_51u0PEAIQBw&quot;, 1, 100, achievement_filter_friends_only);<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         achievement_load_leaderboard(&quot;leaderboard1id&quot;, 1, 100, achievement_filter_friends_only);<br/>         }
+    <br/>     achievement_get_challenges();
+    <br/>     achievement_load_friends();
+    <br/>     achievement_load_progress();
+    <br/>     }
+  </p>
+  <p>The above code checks the returned <tt>DS Map</tt> in the <b>Social Asynchronous Event</b> and if its &quot;id&quot; matches the constant being checked, it then loops through the map storing all the different values in variables before calling the rest
+    of the functions to prepare the leaderboards, challenges and friends lists.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Achievements_And_Leaderboards.htm">Achievements And Leaderboards</a></div>
+        <div style="float:right">Next: <a href="achievement_logout.htm">achievement_logout</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+achievement_login
+achievement_our_info
+-->
+  <!-- TAGS
+achievement_login
+-->
+
+</body></html>

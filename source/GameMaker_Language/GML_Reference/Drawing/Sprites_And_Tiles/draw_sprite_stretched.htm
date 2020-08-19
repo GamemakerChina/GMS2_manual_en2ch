@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.5.5.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>draw_sprite_stretched</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for draw_sprite_stretched"/>
+  <meta name="rh-index-keywords" content="draw_sprite_stretched"/>
+  <meta name="search-keywords" content="draw_sprite_stretched"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="draw_sprite_stretched">
+        <span>draw_sprite_stretched</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_sprite_stretched</h1>
+  <p>This function simply takes a sprite resource and stretches it over the given width and height so that it occupies the area. As with <a href="draw_sprite.htm"><tt>draw_sprite()</tt></a> you can specify a sprite and a sub-image for drawing, then the x
+    / y position in the room for the sprite to be drawn at and finally a width and a height (which must be pixel values). The image below illustrates how this function works:</p>
+  <p><img alt="draw_sprite_stretched example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/spr_stretch.png"/></p>
+  <p class="note"><b>NOTE</b>: When drawing with this function, the sprite <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x offset</a> and <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y offset</a>    are ignored and the sprite will be drawn with the top left corner at the specified x / y position in the room.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">draw_sprite_stretched(sprite, subimg, x, y, w, h);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite</td>
+        <td>The index of the sprite to draw.</td>
+      </tr>
+      <tr>
+        <td>subimg</td>
+        <td>The subimg (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>The x coordinate of where to draw the sprite.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>The y coordinate of where to draw the sprite.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>The width of the area the stretched sprite will occupy.</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>The height of the area the stretched sprite will occupy.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">draw_sprite_stretched(sprite_index, image_index, x, y, sprite_width / 2, sprite_height / 2);</p>
+  <p>This will draw the instances assigned sprite and its sub-image with the left corner at the instance x /y position. Its width is set to the same as the sprite, and the height is the sprite height divided by two.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Sprites_And_Tiles.htm">Sprites And Tiles</a></div>
+        <div style="float:right">Next: <a href="draw_sprite_stretched_ext.htm">draw_sprite_stretched_ext</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+draw_sprite_stretched
+-->
+  <!-- TAGS
+draw_sprite_stretched
+-->
+
+</body></html>

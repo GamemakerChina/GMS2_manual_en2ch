@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.2.0_16";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Set Instance Colour</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that explains the Set Instance Colour action"/>
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Instance Colour"/>
+  <meta name="search-keywords" content="Set Instance Colour"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Set Instance Colour">
+        <span>Set Instance Colour</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Instance Colour Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Colour.png"/> Set Instance Colour</h1>
+  <p>This action block sets the <tt>image_blend</tt> colour for &quot;blending&quot; with the instance sprite. The default value is the hex code $FFFFFFFF (which represents the colour white using <a class="tooltip" title="This is an anacronym for Alpha, Red, Green, Blue, and is used to refer to the colour components specified as a hexadecimal value, eg: #FF53E270, where each set of two digits represents a single component. Breaking down the ARGB example above gives us the following component values: Alpha(FF), Red(53), Green(E2) and Blue(70). ">ARGB</a>    format) and this will draw the sprite using no blending and full alpha. Any other value (including internal colour constants like <tt>c_red</tt>, or <tt>c_aqua</tt>) will <i>blend</i> the specified colour with the original sprite as well as set the
+    <span class="inline">image_alpha</span> component for the instance, but only when the <strong>Use Alpha</strong> checkbox is ticked. This will overwrite any alpha value set previously using the action <a href="Set_Instance_Alpha.htm">Set Instance Alpha</a>.</p>
+  <p>Please note that for changes in this action to be visible, the instance should have either <i>no</i> draw event (and so GameMaker Studio 2 will default draw the sprite) or be drawn using <a href="../Drawing/Draw_Self.htm">Draw Self</a> action. It is
+    important to note too that you should try to limit blending on the <b>HTML5</b> platform (unless using WebGL), as each blended sprite has to be cached separately and so having many blended sprites may adversely affect performance.</p>
+  <p><img alt="Example of sprites being coloured" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/sprite_colour.png"/></p>
+  <h4>Action Syntax:</h4>
+  <p><img alt="Set Instance Colour Action" class="center" height="131" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Colour.png" width="297"/></p>
+  <h4>Arguments:</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Colour</td>
+        <td>The new blending colour to use (clicking the colour swatch will open the colour picker window).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Example:</h4>
+  <p><span><img alt="Set Instance Colour Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Set_Sprite.png"/></span>The above action block code sets a new sprite as well as a number of other
+    properties for how that sprite is to be displayed, including setting the blend colour to pink.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
+        <div style="float:right">Next: <a href="If_Instance_Exists.htm">If Instance Exists</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Action - Set Instance Colour
+-->
+  <!-- TAGS
+action_colour_sprite
+-->
+
+</body></html>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.5.10.1.0_13";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>part_system_automatic_update</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for part_system_automatic_update"/>
+  <meta name="rh-index-keywords" content="part_system_automatic_update"/>
+  <meta name="search-keywords" content="part_system_automatic_update"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="part_system_automatic_update">
+        <span>part_system_automatic_update</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>part_system_automatic_update</h1>
+  <p>This function controls whether GameMaker Studio 2 should update the particle system automatically or not, and normally you would not need to use this function as the default value of <tt>true</tt> (automatic update is on) is what you wish to
+    happen. However, for special effects or for pausing the game, you can set this to <tt>false</tt> and it will prevent any updates being carried out on the given particle system unless <i>explicitly</i> commanded by the use of the function <a href="part_system_update.htm"><tt>part_system_update()</tt></a>    or you use this function again to turn automatic updates on. No updating means that particles created in this system will no longer change position, colour or any other parameter and that emitters will cease to work too, &quot;freezing&quot; the system
+    at the exact point in which the automatic update was set to <tt>false</tt>.</p>
+  <p>One thing to note is that if you are using the simple effects created by the functions <a href="../effect_create_above.htm"><tt>effect_create_above()</tt></a> or <a href="../effect_create_below.htm"><tt>effect_create_below()</tt></a> then you can use
+    the values of 0 (for below effects) or 1 (for above effects) as the particle system index and so toggle the automatic update for these too (this will also work to toggle updating for the DnD™ particle effects).</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">part_system_automatic_update(ind, automatic);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>The index of the particle system to change.</td>
+      </tr>
+      <tr>
+        <td>automatic</td>
+        <td>Whether automatic updating is on (<tt>true</tt>) or not (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if global.Pause<br/>     {
+    <br/>     part_system_automatic_update(global.Sname, false);<br/>     }
+  </p>
+  <p>The above code will switch off the particle updates if the global variable &quot;Paused&quot; is true.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Particle_Systems.htm">Particle Systems</a></div>
+        <div style="float:right">Next: <a href="part_system_automatic_draw.htm">part_system_automatic_draw</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+part_system_automatic_update
+-->
+  <!-- TAGS
+part_system_automatic_update
+-->
+
+</body></html>

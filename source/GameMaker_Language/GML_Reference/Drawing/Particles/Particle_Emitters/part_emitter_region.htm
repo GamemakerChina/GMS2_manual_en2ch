@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.5.10.3.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>part_emitter_region</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for part_emitter_region"/>
+  <meta name="rh-index-keywords" content="part_emitter_region,ps_shape_rectangle,ps_shape_ellipse,ps_shape_diamond,ps_shape_line,ps_distr_linear,ps_distr_gaussian,ps_distr_invgaussian"/>
+  <meta name="search-keywords" content="part_emitter_region,ps_shape_rectangle,ps_shape_ellipse,ps_shape_diamond,ps_shape_line,ps_distr_linear,ps_distr_gaussian,ps_distr_invgaussian"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="part_emitter_region">
+        <span>part_emitter_region</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>part_emitter_region</h1>
+  <p>This function is used to set their position of a particle emitter within the current room. You specify the bounding box of the area within the function and then use any of a series of constants to define the final emitter shape within this bounding
+    box as well as the distribution of particles within the shape. The available constants for distribution shapes are listed below:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ps_shape_rectangle</td>
+        <td>A rectangular shape that fills the given area.</td>
+      </tr>
+      <tr>
+        <td>ps_shape_ellipse</td>
+        <td>An ellipse, with the width and height defined by the area.</td>
+      </tr>
+      <tr>
+        <td>ps_shape_diamond</td>
+        <td>A diamond shape with the points at half width and half height.</td>
+      </tr>
+      <tr>
+        <td>ps_shape_line</td>
+        <td>A single line, where the start point is the left and top and the end point is the right and bottom.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><img alt="Emitter Shapes" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Emitter_Shapes.png"/>Apart from the distribution shapes, you can also define the distribution curve for the particles that are to be
+    emitted. The available constants for distribution curves are listed below:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ps_distr_linear</td>
+        <td>A Linear distribution where all particles have an equal chance of appearing anywhere in the area.</td>
+      </tr>
+      <tr>
+        <td>ps_distr_gaussian</td>
+        <td>A gaussian distribution where more particles are generated in the center rather than the edges.</td>
+      </tr>
+      <tr>
+        <td>ps_distr_invgaussian</td>
+        <td>An inverse gaussian distribution where more particles are generated at the edges than center.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><img alt="Emitter Distribution" class="center" height="321" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Emitter_Distribution.png" width="848"/></p>
+  <p class="note"><b>NOTE</b>: If you need the emitter to move with an instance, you will have to use this function in the step event and update the emitter position that way. It is also worth noting that for point emissions where you do not need to create particles
+    over an area or with a specific distribution, it is often easier to use <span style="font-size:1px;"><a href="../Particle_Systems/part_particles_create.htm"><tt style="font-size: 14px">part_particles_create()</tt></a></span>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">part_emitter_region(ps, ind, xmin, xmax, ymin, ymax, shape, distribution);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ps</td>
+        <td>The particle system that the emitter is in.</td>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>The index of the emitter to set.</td>
+      </tr>
+      <tr>
+        <td>xmin</td>
+        <td>The x coordinate of the left side of the region.</td>
+      </tr>
+      <tr>
+        <td>xmax</td>
+        <td>The x coordinate of the right side.</td>
+      </tr>
+      <tr>
+        <td>ymin</td>
+        <td>The y coordinate of the top of the region.</td>
+      </tr>
+      <tr>
+        <td>ymax</td>
+        <td>The y coordinate of the bottom of the region.</td>
+      </tr>
+      <tr>
+        <td>shape</td>
+        <td>The shape of the region.</td>
+      </tr>
+      <tr>
+        <td>distribution</td>
+        <td>The distribution style of the particles.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">part_emitter_region(global.Sname , emit_1, x - 50, x + 50, y - 50, y + 50, ps_shape_ellipse, ps_distr_linear);</p>
+  <p>The above code will set an emitter to the a 100px tall and 100px wide elliptical shape around the current (x,y) position of the instance running the code.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Particle_Emitters.htm">Particle Emitters</a></div>
+        <div style="float:right">Next: <a href="part_emitter_burst.htm">part_emitter_burst</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+part_emitter_region
+ps_shape_rectangle
+ps_shape_ellipse
+ps_shape_diamond
+ps_shape_line
+ps_distr_linear
+ps_distr_gaussian
+ps_distr_invgaussian
+-->
+  <!-- TAGS
+part_emitter_region
+-->
+
+</body></html>

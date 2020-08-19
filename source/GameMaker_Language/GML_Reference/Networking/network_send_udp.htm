@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.13.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>network_send_udp</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for network_send_udp"/>
+  <meta name="rh-index-keywords" content="network_send_udp"/>
+  <meta name="search-keywords" content="network_send_udp"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="network_send_udp">
+        <span>network_send_udp</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>network_send_udp</h1>
+  <p>With this function you can send data over the network using UDP to a server. The function takes the <i>socket id</i> to connect through, the URL to connect to and the port to use. You must then supply the <i>buffer id</i> which contains the data to
+    be sent (for more information on buffers see <a href="../Buffers/Buffers.htm">Reference - Buffers</a>) and finally the size (in bytes) of the data. UDP is &quot;connectionless&quot; in that you don&#39;t actually do a connect, you just send a packet
+    directly to an IP, and the server gets incoming data from an IP address and has to deal with it &quot;as is&quot;. The function will return the number of bytes of data sent, or a number less than 0 if the send has failed. It is worth noting that the
+    final size of the data being sent that is returned by this function will also include the GameMaker header information, which is an additional 12 bytes.</p>
+  <p class="note"><b>NOTE</b>: This function will not work when used in a project running on the HTML5 target, and neither will HTML5 projects be able to receive UDP.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">network_send_udp(socket, url, port, buffer, size);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>socket</td>
+        <td>The id of the socket to use.</td>
+      </tr>
+      <tr>
+        <td>url</td>
+        <td>The url or IP to connect to (a string).</td>
+      </tr>
+      <tr>
+        <td>port</td>
+        <td>The port to connect to.</td>
+      </tr>
+      <tr>
+        <td>buffer</td>
+        <td>The id of the buffer to get the data from.</td>
+      </tr>
+      <tr>
+        <td>size</td>
+        <td>The size (in bytes) of the data.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">network_send_udp(sock, &quot;www.macsweeneygames.com&quot;, 6510, buff, buffer_tell(buff));</p>
+  <p>The above code will send a UDP packet to the server defined by the URL on the port 6510. The data is taken from the buffer indexed in the variable &quot;buff&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Networking.htm">Networking</a></div>
+        <div style="float:right">Next: <a href="network_send_udp_raw.htm">network_send_udp_raw</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+network_send_udp
+-->
+  <!-- TAGS
+network_send_udp
+-->
+
+</body></html>

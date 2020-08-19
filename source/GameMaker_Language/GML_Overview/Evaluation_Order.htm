@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "10.1.1_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Evaluation Order</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the Evaluation Order of arguments"/>
+  <meta name="rh-index-keywords" content="Evaluation Order"/>
+  <meta name="search-keywords" content="Evaluation Order"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Evaluation Order">
+        <span>Evaluation Order</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Evaluation Order</h1>
+  <p>When programming your game using the GameMaker Language you should be aware that function call arguments <strong>are not guaranteed an evaluation order</strong>. What this means is that the order in which functions placed in your code are run will change
+    from platform to platform, so you should code them in an explicit manner. This is due to optimisation differences between the different target platforms, for example on the Windows target function arguments may be evaluated from right to left, but
+    on the HTML5 target, they may be evaluated from left to right. So to avoid any issues you are best not to call multiple functions in the arguments of a single function call as you may well be building in a reliance on the order of evaluation.</p>
+  <p>To see an example of what this means, consider the following code which has a <a href="Script_Functions.htm">script function</a> &quot;<span class="inline">buffer_get_info</span>&quot; which is calling several <a href="Runtime_Functions.htm">runtime functions</a>    and using them as arguments:</p>
+  <p class="code">buffer_seek(buff, buffer_seek_start, 0);<br/> buffer_get_info(buffer_read(buff, buffer_s8), buffer_read(buff, buffer_s16),buffer_read(buff, buffer_s16));</p>
+  <p>Now, the problem here is that on some platforms, the <i>last</i> <tt>buffer_read()</tt> will be called <i>first</i>, and so all the arguments of the script will be wrong as the data is being read from the buffer in &quot;reverse&quot; order as you would
+    perceive it. This has the knock-on effect here of affecting all further values for the <tt>buffer_read()</tt> function so all the arguments being passed to this script function will be wrong!</p>
+  <p>To get around this you should <i>explicitly</i> call the functions in the required order and store the returned values in variables, like this:</p>
+  <p class="code">var val[0] = buffer_read(buff, buffer_s8);<br/> var val[1] = buffer_read(buff, buffer_s16);<br/> var val[2] = buffer_read(buff, buffer_s16);<br/> buffer_get_info(val[0], val[1], val[2]);</p>
+  <p>While it may seem a more verbose method, it keeps everything clear and avoids any possible problems with evaluation order.</p>
+  <p>You should also take care when using <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a><span class="glossextra">s</span> too, as the order in which they are evaluated in will change depending on which target you are compiling to.
+    So, when using expressions in your code, ensure you use brackets <span class="inline">()</span> to properly control the order of operations. This is very important to ensure the correct behaviour of your games across all the target platforms games
+    and is <i>essential</i> for the HTML5 platform. The page on expressions explains this in more detail.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
+        <div style="float:right">Next: <a href="Expressions_And_Operators.htm">Expressions And Operators</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+evaluation order
+-->
+  <!-- TAGS
+evaluation_order
+-->
+
+</body></html>

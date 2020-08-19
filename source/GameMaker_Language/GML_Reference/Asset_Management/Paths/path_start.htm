@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.2.6.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>path_start</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function path_start"/>
+  <meta name="rh-index-keywords" content="path_start,path_action_stop,path_action_restart,path_action_continue,path_action_reverse"/>
+  <meta name="search-keywords" content="path_start,path_action_stop,path_action_restart,path_action_continue,path_action_reverse"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="path_start">
+        <span>path_start</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>path_start</h1>
+  <p>A path is created from a series of defining points that are linked together and then used to plan the movements of an instance. They can be created with code, <i>or</i> in the Path Editor and they are assigned to an instance
+    to use in the game. You would then use this function to tell your instance which path to follow, what speed to follow the path (measured in pixels per step), how to behave when it reaches the end of the path, and whether to follow the <i>absolute</i> or <i>relative</i> path
+    position. This last part means that it either starts and follows the path exactly as you designed and placed it in the <a href="../../../../The_Asset_Editors/Paths.htm">Path Editor</a> (absolute), or it starts and follows the path from the position
+    at which the instance was created (relative).</p>
+  <p><img alt="Relative or Absolute path examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/path_relative_image.png"/>As you can see in the above image, the two instances are following the same path started with <tt>path_start()</tt>,
+    but one of the instances is following the absolute path while the other is following the relative path. It should be noted that when relative is set to false (absolute) the instance will &quot;jump&quot; to the start of the path no matter where in
+    the room it is placed.</p>
+  <p>The constants used to define the behaviour of the instance when it reaches the end of the path are as follows:<br/>
+  </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>path_action_stop</td>
+        <td>End the path</td>
+      </tr>
+      <tr>
+        <td>path_action_restart</td>
+        <td>Continue the path from the start, jumping to the start position again if the path is not closed</td>
+      </tr>
+      <tr>
+        <td>path_action_continue</td>
+        <td>Continue from the current position</td>
+      </tr>
+      <tr>
+        <td>path_action_reverse</td>
+        <td>Go backwards along the path again (achieved by reversing the path movement speed)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">path_start(path, speed, endaction, absolute);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>path</td>
+        <td>The path index to start.</td>
+      </tr>
+      <tr>
+        <td>speed</td>
+        <td>The speed of which to follow the path in pixels per step, negative meaning going backwards.</td>
+      </tr>
+      <tr>
+        <td>endaction</td>
+        <td>What to do when the end of the path is reached (see the constants listed below).</td>
+      </tr>
+      <tr>
+        <td>absolute</td>
+        <td>Whether the calling instance should follow the absolute path as it is in the editor (true) or a relative path to its current position (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">path_start(path, 4, path_action_reverse, 0);</p>
+  <p>This will make the calling instance follow the path indexed in the variable &quot;path&quot; at a speed of 4 pixels per step. It will follow the path relative to its own position, and when it reaches the end it will reverse direction and go back the
+    way it came.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Paths.htm">Paths</a></div>
+        <div style="float:right">Next: <a href="path_end.htm">path_end</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+path_start
+path_action_stop
+path_action_restart
+path_action_continue
+path_action_reverse
+-->
+  <!-- TAGS
+path_start
+-->
+
+</body></html>

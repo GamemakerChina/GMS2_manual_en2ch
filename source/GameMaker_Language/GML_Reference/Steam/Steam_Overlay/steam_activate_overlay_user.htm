@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.15.2.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>steam_activate_overlay_user</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for steam_activate_overlay_user"/>
+  <meta name="rh-index-keywords" content="steam_activate_overlay_user"/>
+  <meta name="search-keywords" content="steam_activate_overlay_user"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="steam_activate_overlay_user">
+        <span>steam_activate_overlay_user</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_activate_overlay_user</h1>
+  <p>This function will open the Steam overlay to one of the chosen dialogues relating to the user ID given. The possible dialogue strings available are:</p>
+  <ul class="colour">
+    <li>&quot;<b>steamid</b>&quot; - opens the Steam Community web browser to the page of the user or group</li>
+    <li>&quot;<b>chat</b>&quot; - opens a chat window to the specified user</li>
+  </ul>
+  <p>Note that Steam IDs can be large numbers and so you may need to cast your ID value as an <a href="../../Variable_Functions/int64.htm"><tt>int64()</tt></a> before supplying it to the function.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_activate_overlay_user(dialog_name, steamid);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dialog_name</td>
+        <td>The dialogue to open the overlay on (see below).</td>
+      </tr>
+      <tr>
+        <td>steamid</td>
+        <td>The Steam user ID or group ID to use.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var key = keyboard_lastkey;<br/> switch (key)<br/>     {
+    <br/>     case vk_f1: steam_activate_overlay_user(&quot;steamid&quot;, global.GameGroupID); break;<br/>     case vk_f2: steam_activate_overlay_user(&quot;chat&quot;, global.FriendID); break;<br/>     }
+  </p>
+  <p>The above code polls the last keyboard key pressed and if it is function key 1 or function key 2, it will open the Steam overlay to either see the Steam group stored in the global variable &quot;GamegroupID&quot;, or it will open the chat window to
+    chat with the user stored in the global &quot;FriendID&quot; variable.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_Overlay.htm">Steam Overlay</a></div>
+        <div style="float:right">Next: <a href="steam_is_overlay_enabled.htm">steam_is_overlay_enabled</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+steam_activate_overlay_user
+-->
+  <!-- TAGS
+steam_activate_overlay_user
+-->
+
+</body></html>

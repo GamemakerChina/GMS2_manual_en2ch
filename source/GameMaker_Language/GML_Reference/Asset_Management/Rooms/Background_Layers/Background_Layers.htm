@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.14.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Background Layers</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the different functions and variables associated with Background Layers"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="Background Layers"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Background Layers">
+        <span>Background Layers</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Background Layers</h1>
+  <p>The GameMaker Studio 2 <a href="../../../../../The_Asset_Editors/Rooms.htm">Room Editor</a> permits you to add backgrounds into any given room using <i>layers</i>. As the name implies, a background layer is simply a sprite asset that is being
+    used as a background on a layer at a set depth within the room, and by stacking layers you can make some things draw over or under others. You can also control certain aspects of layers from code, adding or removing things, or changing certain properties
+    of the layer or what it contains at run time. Below is a list of all the functions that can be used for editing <a href="../../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm"><b>background layers</b></a>:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="layer_background_get_id.htm">layer_background_get_id</a></li>
+    <li><a href="layer_background_exists.htm">layer_background_exists</a></li>
+    <li><a href="layer_background_create.htm">layer_background_create</a></li>
+    <li><a href="layer_background_destroy.htm">layer_background_destroy</a></li>
+    <li><a href="layer_background_visible.htm">layer_background_visible</a></li>
+    <li><a href="layer_background_sprite.htm">layer_background_sprite</a></li>
+    <li><a href="layer_background_htiled.htm">layer_background_htiled</a></li>
+    <li><a href="layer_background_vtiled.htm">layer_background_vtiled</a></li>
+    <li><a href="layer_background_stretch.htm">layer_background_stretch</a></li>
+    <li><a href="layer_background_blend.htm">layer_background_blend</a></li>
+    <li><a href="layer_background_alpha.htm">layer_background_alpha</a></li>
+    <li><a href="layer_background_index.htm">layer_background_index</a></li>
+    <li><a href="layer_background_speed.htm">layer_background_speed</a></li>
+    <li><a href="layer_background_xscale.htm">layer_background_xscale</a></li>
+    <li><a href="layer_background_yscale.htm">layer_background_yscale</a></li>
+    <li><a href="layer_background_get_visible.htm">layer_background_get_visible</a></li>
+    <li><a href="layer_background_get_sprite.htm">layer_background_get_sprite</a></li>
+    <li><a href="layer_background_get_htiled.htm">layer_background_get_htiled</a></li>
+    <li><a href="layer_background_get_vtiled.htm">layer_background_get_vtiled</a></li>
+    <li><a href="layer_background_get_stretch.htm">layer_background_get_stretch</a></li>
+    <li><a href="layer_background_get_blend.htm">layer_background_get_blend</a></li>
+    <li><a href="layer_background_get_alpha.htm">layer_background_get_alpha</a></li>
+    <li><a href="layer_background_get_index.htm">layer_background_get_index</a></li>
+    <li><a href="layer_background_get_speed.htm">layer_background_get_speed</a></li>
+    <li><a href="layer_background_get_xscale.htm">layer_background_get_xscale</a></li>
+    <li><a href="layer_background_get_yscale.htm">layer_background_get_yscale</a></li>
+  </ul>
+  <p> </p>
+  <p>Note that if you want to set the background position or the background horizontal or vertical scrolling speed then you need to use the following general layer functions:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../General_Layer_Functions/layer_x.htm">layer_x</a></li>
+    <li><a href="../General_Layer_Functions/layer_y.htm">layer_y</a></li>
+    <li><a href="../General_Layer_Functions/layer_hspeed.htm">layer_hspeed</a></li>
+    <li><a href="../General_Layer_Functions/layer_vspeed.htm">layer_vspeed</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Rooms.htm">Rooms</a></div>
+        <div style="float:right">Next: <a href="../Sprite_Layers/Sprite_Layers.htm">Sprite Layers</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Background Layers
+-->
+  <!-- TAGS
+background_layer_functions
+-->
+
+</body></html>

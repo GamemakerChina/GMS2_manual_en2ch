@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "3.2_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>The Device Manager</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Section dedicated explaining the Device Manager
+"/>
+  <meta name="rh-index-keywords" content="Device Manager"/>
+  <meta name="search-keywords" content="Device Manager,device,device setup"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="The Device Manager">
+        <span>The Device Manager</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>The Device Manager</h1>
+  <p>The <strong>Device Manager</strong> is accessed by clicking <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the pencil button <img alt="Icon Pencil" class="icon" src="../assets/Images/Icons/Icon_Pencil.png"/> within the <a href="../Introduction/Compiling.htm">Target List</a>:</p>
+  <p><img alt="Target List" class="center" src="../assets/Images/Setup_And_Version/TargetList.png"/>Clicking this button will open the <strong>Device Manager</strong> where you can configure different devices for the target platforms that you wish to compile
+    and test on (note that the platforms available will depend on the <a href="GMS2_Version_Information.htm">Licence</a> that you have and not all of them may be visible). Below you can find details on configuring devices for each of the target platforms:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Android</span><span data-close-text="true">Android</span></a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p class="dropspot">
+      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_Android.png" src="../assets/Images/Setup_And_Version/Device_Manager_Android.png" class="center" alt="Android Device Manager"/>Here you can click on the
+      <em>Add New Device</em> button to add a new Android device to the list manually, or you can click the
+      <em>Detect Device</em> button to have GameMaker Studio 2 automatically detect any devices connected through a wired connection. You can also set up an
+      <strong>Android Virtual Device</strong> by clicking the button marked
+      <em>Run AVD</em>. This will open up the Android Virtual Device manager where you can create a new AVD (see
+      <a href="https://developer.android.com/studio/run/managing-avds.html">here</a> for more information). Once you have one created, you need to launch it from the AVD manager and then in GameMaker Studio 2 click on the
+      <em>Detect Device</em> button and it should be added automatically to the device list:
+      <br/></p>
+    <p class="dropspot">
+      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_AVD.png" src="../assets/Images/Setup_And_Version/Device_Manager_AVD.png" alt="Android Virtual Device" class="center"/>Once you have a device (physical or virtual) added,
+      you can then check the connection using the
+      <em>Test Connection</em> button or remove it from the list again by clicking the
+      <em> Remove Device</em> button.</p>
+    <p class="dropspot">
+      <br/></p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">HTML5</span><span data-close-text="true">HTML5</span></a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p class="dropspot">
+      <img alt="HTML5 Device Manager" class="center" src="../assets/Images/Setup_And_Version/Device_Manager_HTML5.png"/>The HTML5 device manager is for adding different browsers to the device list for targeting when running. To start with, you should
+      click the
+      <em>Detect Browsers</em> button, which should create devices for each of the installed browsers on your machine. If your browser is not listed, you can also click the
+      <em>Add New Browser</em> button and then give the device a name and point GameMaker Studio 2 to the path for the browser executable.</p>
+    <p class="dropspot">The additional available fields can be set up to help control how the browser runs your projects, with the following options available:</p>
+    <ul class="dropspotlist">
+      <li class="dropspot">
+        <strong>Browser Command Line Arguments</strong>: Here you can add in any command line arguments to be appended to the browser path. You can find a list of these from the following links to the main popular browsers:
+        <ul>
+          <li>
+            <a href="https://peter.sh/experiments/chromium-command-line-switches/">Chromium (Chrome)</a></li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options">Firefox</a></li>
+          <li>
+            <a href="https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/general-info/hh826025(v=vs.85)">Internet Explorer</a></li>
+        </ul>
+      </li>
+      <li class="dropspot">
+        <strong>Web Server Address</strong>: The address of the web
+        <a class="tooltip" title="In computing, a server is a computer program or a device that provides functionality for other programs or devices, called &#39;clients&#39;.
+">server</a> to target (default is 127.0.0.1). You may need to change this depending on the specifications of different APIs, for example, Facebook would require this to be set to
+        <span class="inline">http://localhost</span> (and then have that whitelisted on their app console).</li>
+      <li class="dropspot">
+        <strong>Web Server Port</strong>: Set the
+        <a class="tooltip" title="A port number is a way to identify a specific process to which an Internet or other network message is to be forwarded when it arrives at a server.">port number</a> for the web server (default is 51264).</li>
+      <li class="dropspot">
+        <strong>Allowed Web Server IPs / CIDR IP Ranges</strong>: Set the allowed web server, hostnames and CIDR IP ranges as required.</li>
+    </ul>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">iOS</span><span data-close-text="true">iOS</span></a></p>
+  <div class="droptext" data-targetname="drop-down2">
+    <p class="dropspot">
+      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_iOS.png" src="../assets/Images/Setup_And_Version/Device_Manager_iOS.png" class="center" alt="iOS Device Manager"/>Before you can set up your iOS devices, you must have set
+      up your Mac device and tested it&#39;s connection (see below for details). Once that is done you can select the Mac that you want to target from the drop down menu at the top of the window and then click the
+      <em>Detect Device</em> button to have GameMaker Studio 2 automatically find any connected iOS devices, including simulators. Once connected, the device details will be shown in the list in this window, and you can edit the device name to make it
+      more user friendly (this change only affects how the device is presented in the Target Manager and nothing else).</p>
+    <p class="dropspot">
+      <br/></p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">tvOS</span><span data-close-text="true">tvOS</span></a></p>
+  <div class="droptext" data-targetname="drop-down3">
+    <p class="dropspot">
+      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_tvOS.png" src="../assets/Images/Setup_And_Version/Device_Manager_tvOS.png" class="center" alt="tvOS Device Manager"/>Before you can set up your tvOS devices, you must have
+      set up your Mac device and tested it&#39;s connection (see below for details). Once that is done you can select the Mac that you want to target from the drop down menu at the top of the window and then click the
+      <em>Detect Device</em> button to have GameMaker Studio 2 automatically find any connected tvOS devices, including simulators. Once connected, the device details will be shown in the list in this window, and you can edit the device name to make it
+      more user friendly (this change only affects how the device is presented in the Target Manager and nothing else).</p>
+    <p class="dropspot">
+      <br/></p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">macOS</span><span data-close-text="true">macOS</span></a></p>
+  <div class="droptext" data-targetname="drop-down7">
+    <p class="dropspot">
+      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_Mac.png" src="../assets/Images/Setup_And_Version/Device_Manager_Mac.png" class="center" alt="Mac Device Manager"/>To add a Mac device to the manager, you must first click
+      on the button labelled
+      <em>Add New device</em> which will add the device and create some blank fields which you will need to fill in to enable the connection.
+      <br/></p>
+    <p class="dropspot">First you need to
+      <strong>name </strong>the device so that you can identify it in the target list and then give the
+      <strong>host name</strong> (or IP) of the Mac. You must then give the
+      <strong>username </strong>of the user that you wish to link to, and the
+      <strong>password </strong>that they used. If you wish, you can also change the
+      <strong>Install Folder</strong> on the Mac to wherever you would prefer GameMaker Studio 2 to store the build files for your projects.</p>
+    <p class="dropspot">When that is all done, you can click on the
+      <em>Test Connection</em> button to make sure that GameMaker Studio 2 can communicate with the Mac.</p>
+    <p class="note">
+      <strong>NOTE</strong>: If you are developing for iOS then you must have done this first and have established a working connection to the Mac you wish to use for development.
+      <br/></p>
+    <p class="note">
+      <strong>NOTE</strong>: You
+      <strong>must </strong>have enabled
+      <strong>Remote Login</strong> on the target mac. This can be done by going to
+      <strong>Preferences </strong>-&gt;
+      <strong>Sharing</strong> and
+      <strong>Enable Remote Login</strong> for the user you want to be able to login.</p>
+    <p class="dropspot"></p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Ubuntu (Linux)</span><span data-close-text="true">Ubuntu (Linux)</span></a></p>
+  <div class="droptext" data-targetname="drop-down8">
+    <p class="dropspot">
+      <img data-cke-saved-src="../assets/Images/Setup_And_Version/Device_Manager_Ubuntu.png" src="../assets/Images/Setup_And_Version/Device_Manager_Ubuntu.png" class="center" alt="Ubuntu (Linux) Device Manager"/>To add an Ubuntu (Linux) device to the
+      manager, you must first click on the button labelled
+      <em>Add New Device </em>which will add the device and create some blank fields which you will need to fill in to enable the connection.
+      <br/></p>
+    <p class="dropspot">First you need to
+      <strong>name </strong>the device so that you can identify it in the target list and then give the
+      <strong>host name</strong> (or IP) of the Ubuntu machine (or VM). You must then give the
+      <strong>username </strong>of the user that you wish to link to, and the
+      <strong>password </strong>that they used. You are also required to give an
+      <strong>install folder </strong>on the Ubuntu machine that you want to use for installing your projects. When that is all done, you can click on the
+      <em>Test Connection</em> button to make sure that GameMaker Studio 2 can communicate with the Ubuntu machine.</p>
+    <p class="dropspot">
+      <br/></p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Windows UWP</span><span data-close-text="true">Windows UWP</span></a></p>
+  <div class="droptext" data-targetname="drop-down9">
+    <p class="dropspot">Before you can add a device for the Windows 10 UWP target, you need to have enabled <strong>Developer Mode</strong> and set up the <strong>Device Portal</strong> on the device. If you do not do this, GameMaker Studio 2 will not be able to communicate
+      with the device nor properly create your UWP apps.</p>
+    <p class="dropspot">The easiest way to enable Developer Mode is to simply type &quot; <em>Developer Mode</em>&quot; into Windows Search and then click the &quot; <em>Settings</em>&quot; entry that will be shown. This will open the following window:</p>
+    <p class="dropspot"><img alt="Windows UWP Device Developer Mode" class="center" src="../assets/Images/Setup_And_Version/Device_Manager_UWP_DeveloperMode.png"/>You need to select the <strong>Developer Mode</strong> option (which may require that Windows downloads and
+      installs some additional packages), and then select the option beneath that, <strong>Enable Device Portal</strong>. The device portal is what will permit GameMaker Studio 2 to communicate with the Windows 10 PC, and when enabled you will be required
+      to give a <em>Username</em> and <em>Password</em>:</p>
+    <p class="dropspot"><img alt="Windows UWP Device Settings" class="center" src="../assets/Images/Setup_And_Version/Device_Manager_UWP_ShowDevMode.png"/>Note that the username and password should be unique to the portal and must not be those used by your Microsoft Account
+      or other Windows credentials. Once you have given this information, click the button labelled <em>Apply </em>and then close the settings manager and go back to GameMaker Studio 2.</p>
+    <p class="dropspot">For more information on the Device Portal please see this Microsoft Article: <a href="https://docs.microsoft.com/en-us/windows/uwp/debug-test-perf/device-portal-desktop">Device Portal For Desktop</a>.</p>
+    <p class="dropspot">You can now open the <strong>Device Manager</strong> in GameMaker Studio 2 and set up a device (or devices) for use:</p>
+    <p class="dropspot"><img alt="Windows UWP Device Manager" class="center" src="../assets/Images/Setup_And_Version/Device_Manager_UWP.png"/>To add a Windows 10 UWP compliant device to the manager, you must first click on the button labelled <em>Add New Device</em> which
+      will add the device and create some blank fields which you will need to fill in to enable the connection.</p>
+    <p class="dropspot">First you need to <strong>name </strong>the device so that you can identify it in the target list and then give the <strong>host </strong>- this is the IP address of the Windows 10 device on the network that is to host the game and <strong>must be suffixed by</strong>      &quot; <span class="inline">:50443</span>&quot; to set the port number. After that add the <strong>User Name</strong> and <strong>Password </strong>that you set up in the Device Portal (as mentioned previously). You can leave the PIN blank as it
+      is not required for UWP Windows 10 Desktop.</p>
+    <p class="dropspot">For more specific setup details that cover the different UWP outputs (Desktop, XboxOne) please see the YYG helpdesk: <a href="https://help.yoyogames.com/hc/en-us/sections/115000309028-UWP">Setting Up UWP</a>.</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p> </p>
+  <p>All the different device windows have an option at the bottom to <strong>Clear Devices</strong> which, when clicked, will remove all the connected devices from the list.</p>
+  <p>Once you have set up your devices, you can then connect to any one of them from the Target options at the top of the GameMaker Studio 2 IDE and testing/building your game will push the project to that device:</p>
+  <p><img alt="Device Manager Target List" class="center" src="../assets/Images/Setup_And_Version/Device_Manager_TargetList.png"/></p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="GMS2_Version_Information.htm">GMS2 Setup And Versions</a></div>
+        <div style="float:right">Next: <a href="Error_Reporting.htm">Error Reporting</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Preferences
+-->
+  <!-- TAGS
+preferences
+-->
+
+</body></html>

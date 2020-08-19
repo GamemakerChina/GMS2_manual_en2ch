@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.2.1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>asset_get_type</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function asset_get_type"/>
+  <meta name="rh-index-keywords" content="asset_get_type,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence,asset_unknown"/>
+  <meta name="search-keywords" content="asset_get_type,asset_object,asset_sprite,asset_sound,asset_room,asset_tiles,asset_path,asset_script,asset_font,asset_timeline,asset_shader,asset_animationcurve,asset_sequence,asset_unknown"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="asset_get_type">
+        <span>asset_get_type</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>asset_get_type</h1>
+  <p>With this function you can get the type of asset being referenced from its name (a string). One of the <b>constants</b> listed below will be returned.</p>
+  <p> </p>
+  <h4>Syntax:
+    
+  </h4>
+  <p class="code">asset_get_type(name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>The name of the game asset to get the type of (a string).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Constant</p>
+  <blockquote>
+    <table>
+      <tbody>
+        <tr>
+          <th>Constant</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>asset_object</td>
+          <td>The given name refers to an <a href="../../../../The_Asset_Editors/Objects.htm">object</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_sprite</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_sound</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sounds.htm">sound</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_room</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Rooms.htm">room</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_tiles</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Tile_Sets.htm">tile set</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_path</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Paths.htm">path</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_script</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Scripts.htm">script</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_font</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Fonts.htm">font</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_timeline</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Timelines.htm">time line</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_shader</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Shaders.htm">shader</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_animationcurve</td>
+          <td>The given name refers to an <a href="../../../../The_Asset_Editors/Animation_Curves.htm">Animation Curve</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_sequence</td>
+          <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sequences.htm">Sequence</a>.</td>
+        </tr>
+        <tr>
+          <td>asset_unknown</td>
+          <td>The given name refers to an asset that either does not exist, or is not one of the above listed.</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if asset_get_type(&quot;pth_Path_&quot; + string(global.Game)) == asset_unknown<br/>     {
+    <br/>     show_debug_message(&quot;Path doesn&#39;t exist!!!&quot;);<br/>     }
+    <br/> else
+    <br/>     {
+    <br/>     path_index = asset_get_index(&quot;pth_Path_&quot; + string(global.Game));<br/>     }
+  </p>
+  <p>The above code checks a dynamically created asset name to see if the asset is of the correct type. If it is not, then a debug message will be shown, otherwise the asset name is used to assign the asset to the instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Assets_And_Tags.htm">Assets And Tags</a></div>
+        <div style="float:right">Next: <a href="tag_get_asset_ids.htm">tag_get_asset_ids</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+asset_get_type
+asset_object
+asset_sprite
+asset_sound
+asset_room
+asset_tiles
+asset_path
+asset_script
+asset_font
+asset_timeline
+asset_shader
+asset_animationcurve
+asset_sequence
+asset_unknown
+-->
+  <!-- TAGS
+asset_get_type
+-->
+
+</body></html>

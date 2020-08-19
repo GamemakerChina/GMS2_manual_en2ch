@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.9.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Get Tile Data At Pixel</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that explains the Get Tile Data At Pixel action"/>
+  <meta name="rh-index-keywords" content="DnD™ Action - Get Tile Data At Pixel"/>
+  <meta name="search-keywords" content="Get Tile Data At Pixel"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Get Tile Data At Pixel">
+        <span>Get Tile Data At Pixel</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Get Tile Data At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_Data_At_Pixel.png"/> Get Tile Data At Pixel</h1>
+  <p>With this action you can get the tile data for a tile cell on a tile-map layer from a position. The tile data is simply a value that reflects the index of the tile along with the flip, mirror, and rotate values, as well as any custom tile masks that
+    you have used. With this action you first supply the layer to target using the name of the layer (a string) as defined in the room editor, and then the x and y axis in the room to get the tile-data for. The tile data value returned will coincide with
+    whatever tile-map cell happens to be at that point. For example, if your tile-set tiles are 16x16, then the tile-map layer will hold tiles in cells of 16x16 pixels, so if you use this action to target the room position (8, 8), you will be getting
+    the tile-data for the cell (0, 0) of the tile-map.<b></b></p>
+  <p class="note"><b>NOTE</b>: The layer selected <i>must</i> have been defined as a Tile Map Layer in the room editor, otherwise you may get errors.</p>
+  <p>The returned value will then be stored in the target variable which can have been created previously or can be a new temporary one (if you check the &quot;Temp&quot; check-box). For more information on tile data, please see the GML section on <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Tile Map Functions</a>.</p>
+  <p> </p>
+  <h4>Action Syntax:</h4>
+  <p><img alt="Get Tile Data At Pixel Action" class="center" height="191" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Get_Tile_Data_At_Pixel.png" width="312"/></p>
+  <h4>Arguments:</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Layer</td>
+        <td>The layer with the tile-map to target</td>
+      </tr>
+      <tr>
+        <td>X</td>
+        <td>The position along the horizontal (X) axis to set the tile-data for</td>
+      </tr>
+      <tr>
+        <td>Y</td>
+        <td>The position along the vertical (Y) axis to set the tile-data</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Example:</h4>
+  <p><img alt="Get Tile Data At Pixel Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_Data_At_Pixel.png"/>The above action block code tests for a mouse click and when one is received
+    it retrieves the tile-data for the cell that coincides with the mouse position. This data is then modified and returned to the tile-map layer, rotating the tile in that cell.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Tile_Actions.htm">Tile Actions</a></div>
+        <div style="float:right">Next: <a href="Set_Tile_Data_In_Cell.htm">Set Tile Data In Cell</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Action - Get Tile Data At Pixel
+-->
+  <!-- TAGS
+action_tile_get_data_at_pixel
+-->
+
+</body></html>

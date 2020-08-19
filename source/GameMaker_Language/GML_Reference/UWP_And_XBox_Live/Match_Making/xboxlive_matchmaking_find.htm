@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.18.4.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>xboxlive_matchmaking_find</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for xboxlive_matchmaking_find"/>
+  <meta name="rh-index-keywords" content="xboxlive_matchmaking_find"/>
+  <meta name="search-keywords" content="xboxlive_matchmaking_find"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="xboxlive_matchmaking_find">
+        <span>xboxlive_matchmaking_find</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_matchmaking_find</h1>
+  <p>This function will search for a multi-player session using the Session Template, matchmaking hopper and Secure Device Association template, which you should have created beforehand in the XDP dashboard. The user ID you can retrieve for a particular
+    game pad by calling the <a href="../Users_And_Accounts/xboxlive_user_for_pad.htm"><tt>xboxlive_user_for_pad()</tt></a> function. The function will return a unique Request ID value, which can then be used to identify the correct <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a>    for this function. This event will be triggered when the session has been created and will contain a DS Map in the variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> with the following
+    key/value pairs:</p>
+  <ul class="colour">
+    <li>&quot;requestid&quot; – contains the request ID as returned by the calling function</li>
+    <li>&quot;status&quot; – contains the string &quot;session_created&quot; to inform you of what type of event has been triggered.</li>
+    <li>&quot;num_results&quot; – contains 1 or more if a session has been found, otherwise contains 0.</li>
+    <li>&quot;sessionid<i>&lt;index&gt;</i>&quot; – contains the session ID, or -1 in case of failure  (<i>&lt;index/gt;</i> is a value from 0 to &quot;num_results&quot; - 1).</li>
+    <li>&quot;sessionOwner<i>&lt;index&gt;</i>&quot; – contains the ID of the session host if a session has been found  (<i>&lt;index&gt;</i> is a value from 0 to &quot;num_results&quot; - 1).</li>
+    <li>&quot;error&quot; – contains 0 on success, or -1 in case of failure</li>
+  </ul>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">xboxlive_matchmaking_find(user_id, template, hopper, sdatemplate, [matchattributes]);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>user_id</td>
+        <td>The user ID pointer to use</td>
+      </tr>
+      <tr>
+        <td>template</td>
+        <td>The name of the session template</td>
+      </tr>
+      <tr>
+        <td>hopper</td>
+        <td>The name of the matchmaking hopper</td>
+      </tr>
+      <tr>
+        <td>sdatemplate</td>
+        <td>The name of the secure device association template</td>
+      </tr>
+      <tr>
+        <td>matchattributes</td>
+        <td>[OPTIONAL]</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Request ID (integer)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var userID = xboxone_user_for_pad(global.PadIndex);<br/> result = xboxone_matchmaking_find(userID, &quot;MatchTicketSession&quot;, &quot;MatchTicketHopper&quot;, &quot;PeerServerTraffic&quot;);</p>
+  <p>The above will retrieve the user ID for the user on the given gamepad and then try to find a matchmaking session for them.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Match_Making.htm">Match Making</a></div>
+        <div style="float:right">Next: <a href="xboxlive_matchmaking_session_get_users.htm">xboxlive_matchmaking_session_get_users</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+xboxlive_matchmaking_find
+-->
+  <!-- TAGS
+xboxlive_matchmaking_find
+-->
+
+</body></html>

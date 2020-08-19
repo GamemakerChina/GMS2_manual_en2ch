@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../../..";
+    gCommonRootRelPath = "../../../../../..";
+    gTopicId = "10.2.2.3.4.5.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>skeleton_slot_colour_set</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function skeleton_slot_colour_set"/>
+  <meta name="rh-index-keywords" content="skeleton_slot_colour_set"/>
+  <meta name="search-keywords" content="skeleton_slot_colour_set,skeleton_slot_color_set"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="skeleton_slot_colour_set">
+        <span>skeleton_slot_colour_set</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>skeleton_slot_colour_set</h1>
+  <p>With this function you can set an attachment slot colour and alpha so all sprites attached to it will be drawn with these blend values. Keep in mind that the instance sprite can have a blend colour and alpha setting (<a href="../../Sprite_Instance_Variables/image_blend.htm"><tt>image_blend</tt></a> and
+    <a href="../../Sprite_Instance_Variables/image_angle.htm"><tt>image_alpha</tt></a>), as can the attachment (see the function <a href="../Attachments/skeleton_attachment_create_colour.htm"><tt>skeleton_attachment_create_colour()</tt></a>), and so the
+    final colour and alpha that the assigned attachment sprite for the slot will have will be a composite of all these values.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">skeleton_slot_colour_set(slot, colour, alpha);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>slot</td>
+        <td>The slot name to set, a string</td>
+      </tr>
+      <tr>
+        <td>colour</td>
+        <td>The colour to set, either an integer, a constant, or a hex value.</td>
+      </tr>
+      <tr>
+        <td>alpha</td>
+        <td>The alpha to set from 0 to 1.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">slot_list = ds_list_create();<br/> skeleton_find_slot(mouse_x, mouse_y, slot_list);<br/> if !ds_list_empty(slot_list)<br/> {
+    <br/> for (var i = 0; i &lt; ds_list_size(slot_list); ++i;)<br/>     {
+    <br/>     if skeleton_slot_colour_get(slot_list[| i]) != c_white<br/>         {
+    <br/>         skeleton_slot_colour_set(slot_list[| i], c_white, 1);<br/>         }
+    <br/>     }
+    <br/> }
+  </p>
+  <p>The above code creates a DS list and then populates it with the slot names found at the position of the mouse in the room. It then loops through the slot list and resets the colour for the found slots to white with an alpha of 1 if the colour is not
+    already white.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Slots.htm">Slots</a></div>
+        <div style="float:right">Next: <a href="skeleton_slot_colour_get.htm">skeleton_slot_colour_get</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+skeleton_slot_colour_set
+skeleton_slot_color_set
+-->
+  <!-- TAGS
+skeleton_slot_colour_set
+-->
+
+</body></html>

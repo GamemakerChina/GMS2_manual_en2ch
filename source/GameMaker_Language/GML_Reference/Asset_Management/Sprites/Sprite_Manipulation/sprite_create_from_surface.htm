@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.3.2.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>sprite_create_from_surface</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function sprite_create_from_surface"/>
+  <meta name="rh-index-keywords" content="sprite_create_from_surface"/>
+  <meta name="search-keywords" content="sprite_create_from_surface"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="sprite_create_from_surface">
+        <span>sprite_create_from_surface</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_create_from_surface</h1>
+  <p>With this function you can create a sprite from a previously initialised surface (the surface index ID value is returned when you create the surface using <a href="../../../Drawing/Surfaces/surface_create.htm"><tt>surface_create()</tt></a>). The x and
+    y coordinates that you then input in the function should be relative to the (0,0) position of the <i>surface</i> (the top left corner) and not the game window (nor the view if you have one active). The width and height arguments are in pixels and
+    define the width and height of the part of the surface to use.</p>
+  <p>Setting the &quot;removeback&quot; argument to <tt>true</tt> will remove a colour from the sprite, by checking the <i>bottom left</i> pixel of the sprite for the colour there and then using that as the colour to be removed.</p>
+  <p>If you choose the &quot;removeback&quot; option, you may also want GameMaker Studio 2 to smooth the edges of the sprite by setting the &quot;smooth&quot; argument to <tt>true</tt>. All this does is create a semi-transparent border around the edges of
+    the sprite after it has had its background removed.</p>
+  <p>Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is &quot;fixed&quot; onto the instance that uses it, and is always calculated as relative to the 0,0 top left corner of one sprite sub-image. So,
+    for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have its origin in the center.</p>
+  <p>By default all new sprites have their bounding boxes calculated automatically (the exact bbox will depend on the size and transparency of the sprite), however you may wish to customise this, in which case you should also use the function <a href="sprite_collision_mask.htm"><tt>sprite_collision_mask()</tt></a>.</p>
+  <p class="note"><b>NOTE:</b> When you create a sprite in GameMaker Studio 2 with this method you must remember to remove it again (with <a href="sprite_delete.htm"><tt>sprite_delete()</tt></a>) when no longer needed, otherwise there is risk of a memory leak which will
+    slow down and eventually crash your game.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">sprite_create_from_surface(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td>The index of the surface to create from.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>The x position to copy from.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>The y position to copy from.</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>The width of the area to be copied (from the x position).</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>The height of the area to be copied (from the y position).</td>
+      </tr>
+      <tr>
+        <td>removeback</td>
+        <td>Indicates whether to make all pixels with the background colour (left-bottom pixel) transparent.</td>
+      </tr>
+      <tr>
+        <td>smooth</td>
+        <td>Indicates whether to smooth the edges.</td>
+      </tr>
+      <tr>
+        <td>xorig</td>
+        <td>Indicates the x position of the origin in the sprite.</td>
+      </tr>
+      <tr>
+        <td>yorig</td>
+        <td>Indicates the y position of the origin in the sprite.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns</h4>
+  <p class="code">Real (unique sprite ID value)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var surf;<br/> surf = surface_create(32, 32);<br/> surface_set_target(surf);
+    <br/> draw_clear_alpha(c_black, 0);<br/> draw_sprite(spr_Body, 0, 0, 0);<br/> draw_sprite(spr_Clothes, 0, 0, 0);<br/> draw_sprite(spr_Hair, 0, 0, 0);<br/> spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br/> surface_reset_target();
+    <br/> surface_free(surf);
+  </p>
+  <p>The above code creates a surface and stores its index in the local variable &quot;surf&quot;. It then targets that surface, clears it and draws several sprites on top of each other. Finally it creates a new sprite from the composite image drawn on the
+    surface and assigns its index to &quot;spr_Custom&quot; before freeing up the memory used by the surface.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
+        <div style="float:right">Next: <a href="sprite_add_from_surface.htm">sprite_add_from_surface</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+sprite_create_from_surface
+-->
+  <!-- TAGS
+sprite_create_from_surface
+-->
+
+</body></html>

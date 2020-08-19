@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.7.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>mouse_clear</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for mouse_clear"/>
+  <meta name="rh-index-keywords" content="mouse_clear"/>
+  <meta name="search-keywords" content="mouse_clear"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="mouse_clear">
+        <span>mouse_clear</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>mouse_clear</h1>
+  <p>This function will clear the current state of any mouse buttons being used. This means that checks for their being held down will not return <tt>true</tt> until the player releases the buttons and represses them (but the release state will still be
+    detected if the clear is done while the mouse button is being held down). You supply the mouse button to check from one of the following constants:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>mb_left</td>
+        <td>The left mouse button</td>
+      </tr>
+      <tr>
+        <td>mb_middle</td>
+        <td>The middle mouse button (this may not be valid for all target platforms)</td>
+      </tr>
+      <tr>
+        <td>mb_right</td>
+        <td>The right mouse button</td>
+      </tr>
+      <tr>
+        <td>mb_none</td>
+        <td>No mouse button</td>
+      </tr>
+      <tr>
+        <td>mb_any</td>
+        <td>Any of the mouse buttons</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">mouse_clear(button);</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>button</td>
+        <td>Which mouse button constant to check for.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">mouse_clear(mb_any);</p>
+  <p>The above code will clear the down state of all the mouse buttons.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Mouse_Input.htm">Mouse Input</a></div>
+        <div style="float:right">Next: <a href="mouse_lastbutton.htm">mouse_lastbutton</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+mouse_clear
+-->
+  <!-- TAGS
+mouse_clear
+-->
+
+</body></html>

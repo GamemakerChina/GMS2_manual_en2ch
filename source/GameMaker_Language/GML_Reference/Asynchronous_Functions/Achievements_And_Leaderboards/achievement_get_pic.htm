@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.12.5.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>achievement_get_pic</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for achievement_get_pic"/>
+  <meta name="rh-index-keywords" content="achievement_get_pic,achievement_pic_loaded"/>
+  <meta name="search-keywords" content="achievement_get_pic,achievement_pic_loaded"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="achievement_get_pic">
+        <span>achievement_get_pic</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_get_pic</h1>
+  <p>This function will send a request to the server for the image of a player or a friend and will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> which contains the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    map populated with the relevant key/value pairs. The <i>id</i> key of this <tt>DS Map</tt> is used to identify the correct callback (there can be more than one trigger function for any given asynchronous event), and will be paired with the <b>constant</b>    <tt>achievement_pic_loaded</tt> as well as a number of other key/value pairs. The exact contents of the map are shown below:</p>
+  <p class="note"><b>NOTE</b>: This function is for <b>iOS</b> only.</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - For this function it should be <tt>achievement_pic_loaded</tt></li>
+    <li>&quot;<b>playerid</b>&quot; - The id of the player or friend that we are receiving the image of.</li>
+    <li>&quot;<b>spriteid</b>&quot; - The sprite id for the image that can then be used to draw it on-screen using any of the <a href="../../Drawing/Sprites_And_Tiles/Sprites_And_Tiles.htm">draw sprite functions</a></li>
+  </ul>
+  <p class="note"><b>WARNING!</b> This function creates sprites and as such, their ids should be stored in variables and then removed from memory using the <span style="font-size:1px;"><a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_delete.htm"><tt style="font-size: 14px">sprite_delete()</tt></a></span>    function otherwise repeated use will give you a memory leak that will eventually slow down or crash your game.</p>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">achievement_get_pic(char)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>char</td>
+        <td>The id of the person to get the image of (either from a friends list or a leaderboard)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Extended Example:</h4>
+  <p>The following code would be called after you have gotten a friends list or a leaderboards list using <a href="achievement_load_friends.htm"><tt>achievement_load_friends()</tt></a> or <a href="achievement_load_leaderboard.htm"><tt>achievement_load_leaderboard()</tt></a>.
+    Those functions will return unique &quot;id&quot; values for each person, which are then used in the function to retrieve the profile picture for them:</p>
+  <p class="code">achievement_get_pic(global.player_id[0]);</p>
+  <p>This will send off a request for the image associated with the player id stored in the global array and generate an asynchronous callback with the special <tt>async_load</tt> DS map containing the following data:</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_pic_loaded<br/>     {
+    <br/>     var picid = ds_map_find_value(async_load, &quot;playerid&quot;);<br/>     var spriteid = ds_map_find_value(async_load, &quot;spriteid&quot;);<br/>     if global.playerid[0] == picid)<br/>         {
+    <br/>         global.playerpic[0] = spriteid;<br/>         }
+    <br/>     }
+  </p>
+  <p>The above code checks the returned <tt>DS Map</tt> in the <b>Social Asynchronous Event</b> and if its &quot;id&quot; matches the constant being checked, it then checks that the id associated with the image is the same as that being requested and if
+    it is, it sets another global array to hold the unique id for the image (which can be used to draw the image as a sprite).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Achievements_And_Leaderboards.htm">Achievements And Leaderboards</a></div>
+        <div style="float:right">Next: <a href="achievement_load_friends.htm">achievement_load_friends</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+achievement_get_pic
+achievement_pic_loaded
+-->
+  <!-- TAGS
+achievement_get_pic
+-->
+
+</body></html>

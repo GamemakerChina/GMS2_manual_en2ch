@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.15.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Rename File</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that explains the Rename File action"/>
+  <meta name="rh-index-keywords" content="DnD™ Action - Rename File"/>
+  <meta name="search-keywords" content="Rename File"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Rename File">
+        <span>Rename File</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Rename File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Rename_File.png"/> Rename File</h1>
+  <p>With this action you can rename any file that has been saved by your game. You give the name of the file to change (as a string) and then the new name (also as a string and including the file extension), and the file will be renamed. Note that you <i>cannot</i>    rename any file that was bundled as an Included File with your game (see the section on <a href="../../../Additional_Information/The_File_System.htm">The File System</a> for more information).</p>
+  <p> </p>
+  <h4>Action Syntax:</h4>
+  <p><img alt="Rename File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Rename_File.png"/></p>
+  <h4>Arguments:</h4>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Filename</td>
+        <td>The name (as a string) of the file to rename</td>
+      </tr>
+      <tr>
+        <td>New Name</td>
+        <td>The new name (as a string) for the file</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Example:</h4>
+  <p><img alt="Rename File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Rename_File.png"/>The above action block code will check to see if the file &quot;checkpoint.sav&quot; exists, and if
+    it does it then checks to see if the file &quot;checkpoint_OLD.sav&quot; exists. If that file exists as well, then it is deleted, and then the original &quot;checkpoint.sav&quot; file is renamed to &quot;checkpoint_OLD.sav&quot;. Finally a buffer
+    is saved as &quot;checkpoint.sav&quot; (essentially we are backing up a saved buffer file each time we save it, so that there is always a &quot;current&quot; save and an &quot;old&quot; save file).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
+        <div style="float:right">Next: <a href="Copy_File.htm">Copy File</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Action - Rename File
+-->
+  <!-- TAGS
+action_file_rename
+-->
+
+</body></html>

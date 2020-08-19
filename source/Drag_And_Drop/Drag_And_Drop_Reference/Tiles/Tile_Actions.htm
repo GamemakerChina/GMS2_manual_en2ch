@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Tile Actions</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Section detailing all the Tile actions"/>
+  <meta name="rh-index-keywords" content="DnD™ Overview - Tile Actions Library"/>
+  <meta name="search-keywords" content="Tile Actions"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Tile Actions">
+        <span>Tile Actions</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Tiles Action Library</h1>
+  <p><img alt="Tiles Action Library" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/Lib_Tiles.png"/></p>
+  <p><span>The </span><b>Tile</b><span> action library is where you can find the actions required to get or set tile indices within a room, as well as change how they are shown, among other things (for more information on tiles,
+    please see the section on <a class="tooltip" title="The tile map is the name given to a collection of tiles taken from a tile set and used to create levels in a game.">tile map</a><span class="glossextra">s</span> <a href="../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">here</a>):</span>
+  </p>
+  <p><br/>
+    <br/>
+    </p>
+  <table class="dnd" style="text-align: left;margin-left:">
+    <tbody>
+      <tr style="height: 1px;">
+        <td class="icons" style="margin-left: 16px;"><img alt="Set Tile Index At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_At_Pixel.png"/></td>
+        <td class="dnd" style=""><a href="Set_Tile_Index_At_Pixel.htm">Set Tile Index At Pixel</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Tile Index At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_At_Pixel.png"/></td>
+        <td class="dnd" style=""><a href="Get_Tile_Index_At_Pixel.htm">Get Tile Index At Pixel</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Tile Index In Cell Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_In_Cell.png"/></td>
+        <td class="dnd" style=""><a href="Set_Tile_Index_In_Cell.htm">Set Tile Index In Cell</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Tile Index In Cell Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_In_Cell.png"/></td>
+        <td class="dnd" style=""><a href="Get_Tile_Index_In_Cell.htm">Get Tile Index In Cell</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Tile Set Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_Set.png"/></td>
+        <td class="dnd" style=""><a href="Set_Tile_Set.htm">Set Tile Set</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Timemap Variable Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tilemap_Variable.png" width="32"/></td>
+        <td class="dnd" style=""><a href="Get_Tilemap_Variable.htm">Get Tilemap Variable</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Tile Data At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_Data_At_Pixel.png"/></td>
+        <td class="dnd" style=""><a href="Set_Tile_Data_At_Pixel.htm">Set Tile Data At Pixel</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Tile Data At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_Data_At_Pixel.png"/></td>
+        <td class="dnd" style=""><a href="Get_Tile_Data_At_Pixel.htm">Get Tile Data At Pixel</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Tile Data In Cell Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_Data_In_Cell.png"/></td>
+        <td class="dnd" style=""><a href="Set_Tile_Data_In_Cell.htm">Set Tile Data In Cell</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Tile Data In Cell Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_Data_In_Cell.png" width="32"/></td>
+        <td class="dnd" style=""><a href="Get_Tile_Data_In_Cell.htm">Get Tile Data In Cell</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Set Tile Data Transform Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_Data_Transform.png"/></td>
+        <td class="dnd" style=""><a href="Set_Tile_Data_Transform.htm">Set Tile Data Transform</a></td>
+      </tr>
+      <tr>
+        <td class="dnd_icons" style="margin-left: 16px;"><img alt="Get Tile Data Transform" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Get_Tile_Data_Transform.png"/></td>
+        <td class="dnd" style=""><a href="Get_Tile_Data_Transform.htm">Get Tile Data Transform</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../DnD_Reference.htm">Index</a></div>
+        <div style="float:right">Next: <a href="../Audio/Audio_Actions.htm">Audio Actions</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Drag And Drop Tile Actions
+Tile Actions
+-->
+  <!-- TAGS
+dnd_tiles
+-->
+
+</body></html>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.2.13.2_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>instance_find</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the function instance_find"/>
+  <meta name="rh-index-keywords" content="instance_find"/>
+  <meta name="search-keywords" content="instance_find"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="instance_find">
+        <span>instance_find</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instance_find</h1>
+  <p>All instances have a unique identifier (<a href="Instance_Variables/id.htm"><tt>id</tt></a>) which can be used to modify and manipulate them while a game is running, but you may not always know what the id for a specific instance is and so this function
+    can help as you can use it to iterate through all of them to find what you need. You specify the object that you want to find the instance of and a number, and if there is an instance at that position in the instance list then the function returns
+    the id of that instance, and if not it returns the special <a href="../../../GML_Overview/Instance_Keywords.htm">keyword</a> <span class="inline"><b>noone</b></span>. You can also use the keyword <span class="inline"><b>all</b></span> to iterate through
+    all the instances in a room, as well as a parent object to iterate through all the instances that are part of that parent / child hierarchy, and you can even specify an instance (if you have its <span class="inline">id</span>) as a check to see if
+    it actually exists in the current room. Please note that as instances are sorted in an <i>arbitrary</i> manner, there is no specific order to how the instances are checked by this function, and any instance can be in any position.</p>
+  <p>The maximum value for &quot;n&quot; in this function would be</p>
+  <ul class="colour">
+    <li>For the keyword <span class="inline"><b>all</b></span>: <a href="instance_count.htm"><tt>instance_count - 1</tt></a></li>
+    <li>For an object index: <a href="instance_number.htm"><tt>instance_number(OBJ) - 1</tt></a></li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">instance_find(obj, n);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>obj</td>
+        <td>The object to find the nth instance of</td>
+      </tr>
+      <tr>
+        <td>n</td>
+        <td>The number of the instance to find.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (either an instance ID value or the keyword <tt>noone</tt>)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">for (var i = 0; i &lt; instance_number(obj_Enemy); ++i;)<br/>     {
+    <br/>     enemy[i] = instance_find(obj_Enemy,i);<br/>     }
+  </p>
+  <p>The above code will use a <tt>for</tt> loop to iterate through all the instances of &quot;obj_Enemy&quot; and store their <b>id</b> in the array &quot;enemy[]&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Instances.htm">Instances</a></div>
+        <div style="float:right">Next: <a href="instance_furthest.htm">instance_furthest</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+instance_find
+-->
+  <!-- TAGS
+instance_find
+-->
+
+</body></html>

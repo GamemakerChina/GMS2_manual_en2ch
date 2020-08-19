@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.5.7.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>draw_primitive_begin</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference for draw_primitive_begin"/>
+  <meta name="rh-index-keywords" content="draw_primitive_begin,pr_pointlist,pr_linelist,pr_linestrip,pr_trianglelist,pr_trianglefan,pr_trianglestrip"/>
+  <meta name="search-keywords" content="draw_primitive_begin,pr_pointlist,pr_linelist,pr_linestrip,pr_trianglelist,pr_trianglestrip,pr_trianglefan"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="draw_primitive_begin">
+        <span>draw_primitive_begin</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_primitive_begin</h1>
+  <p>This function must be called before you can define any primitives. There are 6 types of primitives you can define with the following constants:</p>
+  <ul class="colour">
+    <li><b>pr_pointlist</b></li>
+    <li><b>pr_linelist</b></li>
+    <li><b>pr_linestrip</b></li>
+    <li><b>pr_trianglelist</b></li>
+    <li><b>pr_trianglestrip</b></li>
+    <li><b>pr_trianglefan</b></li>
+  </ul>
+  <p> </p>
+  <p>The following image illustrates basically how these should look and also the order in which you should define the vertexes:</p>
+  <p><img alt="The different primitive types" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/primitive_types.png"/>Please note that on some platforms (Windows, UWP, XBox) the <tt>pr_trianglefan</tt> type is not natively
+    supported and so GameMaker Studio 2 does a conversion when the game is compiled to make them work. This means that on those platforms the <tt>pr_trianglefan</tt> type will be much slower to use than the others. This Also note that to use this
+    function on HTML5, you <i>must</i> enable WebGL in the Game Options.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">draw_primitive_begin(kind)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>kind</td>
+        <td>The kind of primitive you are going to draw.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _steps = 20;<br/> var _xx = 50;<br/> var _yy = 50;<br/> var _radius = 30;<br/> draw_primitive_begin(pr_trianglefan);
+    <br/> draw_vertex(_xx, _yy);<br/> for(var i = 0; i &lt;= _steps; ++i;)<br/>     {
+    <br/>     draw_vertex(_xx + lengthdir_x(_radius, 270 * i / _steps), _yy + lengthdir_y(_radius, 270 * i / _steps));<br/>     }
+    <br/> draw_primitive_end();
+  </p>
+  <p>The above code will draw three quarters of a circle made from primitives.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
+        <div style="float:right">Next: <a href="draw_primitive_begin_texture.htm">draw_primitive_begin_texture</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+draw_primitive_begin
+pr_pointlist
+pr_linelist
+pr_linestrip
+pr_trianglelist
+pr_trianglestrip
+pr_trianglefan
+-->
+  <!-- TAGS
+draw_primitive_begin
+-->
+
+</body></html>

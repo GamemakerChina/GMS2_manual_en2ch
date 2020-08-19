@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.11.3.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>physics_fixture_set_edge_shape</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for physics_fixture_set_edge_shape"/>
+  <meta name="rh-index-keywords" content="physics_fixture_set_edge_shape"/>
+  <meta name="search-keywords" content="physics_fixture_set_edge_shape"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="physics_fixture_set_edge_shape">
+        <span>physics_fixture_set_edge_shape</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_fixture_set_edge_shape</h1>
+  <p>This function defines an &quot;edge&quot; fixture shape. An edge shape is simply a line that will generate a collision when other fixtures over lap it, and can be very useful for generating (for example) terrain, or for creating borders around a room.
+    The position of the edge is defined using <i>local</i> space, ie: the x/y position of the instance is considered (0,0), so this should be taken into consideration when creating them (in the code example below, the instance would have been placed at
+    (0,0) in the room to avoid complications).</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">physics_fixture_set_edge_shape(fixture, local_x1, local_y1, local_x2, local_y2)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>fixture</td>
+        <td>the index of the fixture</td>
+      </tr>
+      <tr>
+        <td>local_x1</td>
+        <td>start x position for the edge</td>
+      </tr>
+      <tr>
+        <td>local_y1</td>
+        <td>start y position for the edge</td>
+      </tr>
+      <tr>
+        <td>local_x2</td>
+        <td>end x position for the edge</td>
+      </tr>
+      <tr>
+        <td>local_y2</td>
+        <td>end y position for the edge</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var xx = 0;<br/> var y1 = room_height - 100;<br/> var y2 = room_height - 50 - irandom(100);<br/> for (var i = 0; i &lt; 10; i++;)<br/>     {
+    <br/>     var fix = physics_fixture_create();<br/>     physics_fixture_set_edge_shape(fix, xx, y1, xx + 50, y2);<br/>     physics_fixture_bind(fix, id);<br/>     physics_fixture_delete(fix);
+    <br/>     xx += 50;<br/>     y1 = y2;<br/>     y2 = room_height - 50 - irandom(100);<br/>     }
+  </p>
+  <p>The above code will create a line of &quot;edge&quot; fixtures with a variety of heights over the length of the room.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Fixtures.htm">Fixtures</a></div>
+        <div style="float:right">Next: <a href="physics_fixture_set_chain_shape.htm">physics_fixture_set_chain_shape</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+physics_fixture_set_edge_shape
+-->
+  <!-- TAGS
+physics_fixture_set_edge_shape
+-->
+
+</body></html>

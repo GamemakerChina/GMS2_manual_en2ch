@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.9.1.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>The Keyframe Struct</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining The Keyframe Struct"/>
+  <meta name="rh-index-keywords" content="Sequence Keyframe Struct"/>
+  <meta name="search-keywords" content="The Keyframe Struct,frame,length,stretch,channels"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="The Keyframe Struct">
+        <span>The Keyframe Struct</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>The Keyframe Struct</h1>
+  <p>Each track (as defined on the page covering <a href="The_Track_Struct.htm">track structs</a>) will have one or more keyframe <a href="../../../../GML_Overview/Structs.htm">struct</a> assigned to it (which you can get from the <tt>keyframes</tt> property
+    of the track struct), and each one will have the following properties:</p>
+  <ul class="colour">
+    <li><tt>frame</tt>: The position (in frames) along the timeline for the keyframe. Default value is 0.<tt></tt></li>
+    <li><tt>length</tt>: The length of the keyframe. Default value is 1, and when set to larger values then the track property that the keyframe refers to will be maintained at the initial value for the duration of the length given. Note that the <tt>stretch</tt> property
+      will override this if set to <tt>true</tt>.</li>
+    <li><tt>stretch</tt>: If this property is set to <tt>true</tt> then the keyframe stretches to either the next keyframe for the track or to the end of the track if it&#39;s the last keyframe. You can get or set this value, and
+      the default value is <tt>false</tt>.</li>
+    <li><tt>channels</tt>: This property allows access to the list of <a href="The_Keyframe_Data_Struct.htm">keyframe data structs</a> for the channels of the track. When getting this property an <a href="../../../../GML_Overview/Arrays.htm">array</a> of
+      keyframe data structs is returned, and when setting this property an array of keyframe data structs should be specified.</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
+        <div style="float:right">Next: <a href="The_Keyframe_Data_Struct.htm">The Keyframe Data Struct</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+The Keyframe Struct
+-->
+  <!-- TAGS
+sequence_keyframe
+-->
+
+</body></html>

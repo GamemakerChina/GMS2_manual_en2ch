@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.14.1.0_7";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>layer_get_all_elements</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the function layer_get_all_elements"/>
+  <meta name="rh-index-keywords" content="layer_get_all_elements"/>
+  <meta name="search-keywords" content="layer_get_all_elements"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="layer_get_all_elements">
+        <span>layer_get_all_elements</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>layer_get_all_elements</h1>
+  <p>You can use this function to get the <i>element IDs</i> of the given layer. You supply the layer ID (which you get when you create the layer using <a href="layer_create.htm"><tt>layer_create()</tt></a>) or the layer name (as a string - this will have
+    a performance impact) and the function will return an <a href="../../../../GML_Overview/Arrays.htm">array</a> of IDs, where each entry in the array is a unique ID for an element on that layer. For example, if the layer is an Asset Layer, the array
+    will be populated with the ID values for each sprite asset that is assigned to the layer. Note that using code to work with layers means that you can assign different element types to the same layer - so you can have sprite assets along with instances,
+    for example - in which case you can then use the function <a href="layer_get_element_type.htm"><tt>layer_get_element_type()</tt></a> to get the type of element the ID relates to.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">layer_get_all_elements(layer_id)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>layer_id</td>
+        <td>The unique ID value of the layer to get the elements from (or the layer name as a string)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Array (1D, populated with Element IDs)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var a = layer_get_all_elements(layer);<br/> for (var i = 0; i &lt; array_length(a); i++;)<br/>    {
+    <br/>    if layer_get_element_type(a[i]) == layerelementtype_sprite<br/>       {
+    <br/>       layer_sprite_destroy(a[i])
+    <br/>       }
+    <br/>    }
+  </p>
+  <p>The above code gets the IDs for all the instance elements assigned to the layer of the instance running the code. The code then checks to see if any of the returned elements are sprite assets and if they then they are destroyed.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
+        <div style="float:right">Next: <a href="layer_get_element_layer.htm">layer_get_element_layer</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+layer_get_all_elements
+-->
+  <!-- TAGS
+layer_get_all_elements
+-->
+
+</body></html>

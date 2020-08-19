@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.2.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Event Order</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page detailing the async events."/>
+  <meta name="rh-index-keywords" content="Objects - Event Order"/>
+  <meta name="search-keywords" content="event order"/>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Event Order">
+        <span>Event Order</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Event Order</h1>
+  <p>When considering Events in GameMaker Studio 2, it should be noted that <strong>the exact order that ALL the events are going to occur in each step cannot be clearly stated</strong>, simply because it depends on the internal workings of GameMaker Studio
+    2 and this is subject to change as the software develops. However there are certain events that will <em>always </em>run in the same order.</p>
+  <p>The first set of events that will always happen the same way are those that occur when a room is first entered. The order that the different events will fire is:</p>
+  <ul class="colour">
+    <li><strong>Object Variables / Instance Variables are initialised</strong> (these are the variables that you can define in the <a class="tooltip" title="The IDE, or Integrated Development Environment, is a software application that provides comprehensive facilities to computer programmers for software development. In this case, the entire frontend of GameMaker Studio 2 is considered the IDE, and includes sections to create graphics, add sounds, and add code to make your games.">IDE</a> of the <a href="../Objects.htm">Object Editor</a> or the <a href="../Rooms.htm">Room Editor</a>).
+      If you have an object with variables attached then they will be created before anything else and then any instances that have variables attached will be defined after so you can overwrite object variables with instance specific ones in the room
+      editor.</li>
+    <li><strong>Cr</strong><strong><strong>eate</strong> Event </strong>followed by the<strong> Instance Creation Code </strong>of <em>each </em>instance - so as each instance is created, it will run first its Create event and then its Instance Creation Code
+      before moving on to the next instance to be created</li>
+    <li><strong>Game Start Event</strong> - this event is triggered once in the very first room of the game for all instances placed in the room from the room editor (note that calling game_restart() will trigger this event again.</li>
+    <li><strong>Room Creation Code</strong> - this is the one-off code written in the Room Editor for when a room is first entered</li>
+    <li><strong>Room Start Event of all instances</strong> - one of the &quot;other&quot; category of events and will fire for all instances, persistent or otherwise</li>
+  </ul>
+  <p>It is also worth noting that you can also set the order in which specific instances are created within the room editor itself by moving them up or down the list of the <a href="../Room_Properties/Layer_Properties.htm">Instance Layer Properties</a> window.</p>
+  <p>Other than those specific events, the only known order that will always occur in the same way no matter what belongs to the three <strong>step </strong>events and the different <strong>draw </strong>events. These will always remain consistent, so if
+    you have code that relies on specific timing during each step of your game, you should use:</p>
+  <ul class="colour">
+    <li><strong>Begin Step Event</strong></li>
+    <li><strong>Step Event</strong> (note that the step event is executed just before instances are put in their new positions)</li>
+    <li><strong>End Step Event</strong></li>
+  </ul>
+  <p>All of the events for drawing are also always dealt with in the same order as follows (except for the <strong>Window Resize </strong>event, which is triggered differently):</p>
+  <ul class="colour">
+    <li><strong>Pre Draw Event</strong></li>
+    <li><strong>Draw Begin Event</strong></li>
+    <li><strong>Draw Event</strong></li>
+    <li><strong>Draw End Event</strong></li>
+    <li><strong>Post Draw Event</strong></li>
+    <li><strong>Draw GUI Begin Event</strong></li>
+    <li><strong>Draw GUI Event</strong></li>
+    <li><strong>Draw GUI End Event</strong></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Object_Events.htm">Object Events</a></div>
+        <div style="float:right">Next: <a href="Other_Events.htm">Other Events</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Event Order
+-->
+  <!-- TAGS
+object_event_order
+-->
+
+</body></html>

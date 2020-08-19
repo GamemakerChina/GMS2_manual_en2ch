@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.12.1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>HTTP</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for all the HTTP functions"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="HTTP"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="HTTP">
+        <span>HTTP</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>HTTP</h1>
+  <p>This section lists all the different Asynchronous HTTP functions available in GameMaker Studio 2. These functions will generate an <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">Asynchronous HTTP Event</a>    in all instances that have it:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="http_request.htm">http_request</a></li>
+    <li><a href="http_get.htm">http_get</a></li>
+    <li><a href="http_get_file.htm">http_get_file</a></li>
+    <li><a href="http_post_string.htm">http_post_string</a></li>
+  </ul>
+  <p> </p>
+  <p>Please note that the above <span class="inline">http_*</span> functions may not function as expected due to <strong>cross domain security</strong> issues. This means that requests to your server or attempts to load resources from across domains are
+    blocked and may appear to return blank results or 404 errors. One of the ways you can get around this is to have some server side PHP which allows certain domains to access your server (this is also a way to protect your resources and block servers
+    that are not included in the PHP allow list).</p>
+  <p>The following is an example of the code you can use for this:</p>
+  <p class="code">$http_origin = $_SERVER[&#39;HTTP_ORIGIN&#39;];<br/> if ($http_origin == &quot;http://127.0.0.1:51268&quot;)<br/>    {
+    <br/>    header(&quot;Access-Control-Allow-Origin: *&quot;);<br/>    }
+  </p>
+  <p>For image load requests where determining or setting their cross-origin type is important, the following functions exist:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="http_get_request_crossorigin.htm">http_get_request_crossorigin</a></li>
+    <li><a href="http_set_request_crossorigin.htm">http_set_request_crossorigin</a></li>
+  </ul>
+  <p> </p>
+  <p>In most cases these functions should not need to be used, but if the game is stored on a secured server - where certain assets may require basic authentication to be accessed and are generating security errors when loading - setting the cross-origin
+    type for image requests to &quot;use-credentials&quot; may be necessary (as opposed to the default &quot;anonymous&quot; setting).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Asynchronous_Functions.htm">Asynchronous Functions</a></div>
+        <div style="float:right">Next: <a href="../Dialog/Dialog.htm">Dialog</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+HTTP Functions
+-->
+  <!-- TAGS
+http_functions
+-->
+
+</body></html>

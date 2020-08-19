@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.19.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>os_device</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for os_device"/>
+  <meta name="rh-index-keywords" content="os_device,device_ios_ipad,device_ios_ipad_retina,device_ios_iphone6,device_ios_iphone6plus,device_ios_iphone5,device_ios_iphone,device_ios_iphone_retina,device_emulator,device_tablet,device_ios_unknown"/>
+  <meta name="search-keywords" content="os_device,device_ios_ipad,device_ios_ipad_retina,device_ios_iphone6,device_ios_iphone6plus,device_ios_iphone5,device_ios_iphone,device_ios_iphone_retina,device_emulator,device_tablet,device_ios_unknown"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="os_device">
+        <span>os_device</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>os_device</h1>
+  <p>This <strong>read-only</strong> variable holds one of various constant values listed below to tell you which device you are currently running the game on. Note this variable is deprecated in favour of the function <a href="os_get_info.htm"><span class="inline">os_get_info()</span></a>    which returns more accurate information on the device running the game.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">os_device</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Constant</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>device_ios_ipad</td>
+        <td>iPad</td>
+      </tr>
+      <tr>
+        <td>device_ios_ipad_retina</td>
+        <td>Newer iPad with Retina display size of 2048 x 1536</td>
+      </tr>
+      <tr>
+        <td>device_ios_iphone6</td>
+        <td>iPhone6 with display size 1334 x 750</td>
+      </tr>
+      <tr>
+        <td>device_ios_iphone6plus</td>
+        <td>Larger iPhone 6 with display 1920 x 1080</td>
+      </tr>
+      <tr>
+        <td>device_ios_iphone5</td>
+        <td>iPhone5 with display size 640 x 1136)</td>
+      </tr>
+      <tr>
+        <td>device_ios_iphone</td>
+        <td>Older iPhone/iPod Touch (480 x 320 screen) <i>or</i> Android phone</td>
+      </tr>
+      <tr>
+        <td>device_ios_iphone_retina</td>
+        <td>Newer iPhone/iPod Touch with Retina display of 960 x 640</td>
+      </tr>
+      <tr>
+        <td>device_emulator</td>
+        <td>The device is actually an emulator (Windows Phone or Android)</td>
+      </tr>
+      <tr>
+        <td>device_tablet</td>
+        <td>Android tablet</td>
+      </tr>
+      <tr>
+        <td>device_ios_unknown</td>
+        <td>Unknown or not iOS</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if (os_browser = browser_not_a_browser)<br/>     {
+    <br/>     switch (os_device)<br/>         {
+    <br/>         case device_ios_ipad: global.Config = 2; break;<br/>         case device_ios_iphone: global.Config = 3; break;<br/>         case device_ios_iphone_retina: global.Config = 4; break;<br/>         case device_ios_unknown: global.Config
+    = 5; break;<br/>         }
+    <br/>     }
+    <br/> else
+    <br/>     {
+    <br/>     global.Config = 1;<br/>     }
+  </p>
+  <p>The above code checks to see if the game is running in a browser or not and sets a global variable to a value depending on the result of the check.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
+        <div style="float:right">Next: <a href="os_type.htm">os_type</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+os_device
+device_ios_ipad
+device_ios_ipad_retina
+device_ios_iphone6
+device_ios_iphone6plus
+device_ios_iphone5
+device_ios_iphone
+device_ios_iphone_retina
+device_emulator
+device_tablet
+device_ios_unknown
+-->
+  <!-- TAGS
+os_device
+-->
+
+</body></html>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.2.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>animcurve_get</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function animcurve_get"/>
+  <meta name="rh-index-keywords" content="animcurve_get"/>
+  <meta name="search-keywords" content="animcurve_get"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="animcurve_get">
+        <span>animcurve_get</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>animcurve_get</h1>
+  <p>This function will return a <a href="../../../GML_Overview/Structs.htm">struct</a> containing all the data for the given animation curve. You supply the animation curve asset ID (as defined in the Asset Browser), and the function
+    will return a struct with the following variables:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Variable Name</th>
+        <th>Data Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>This is the name of the animation curve.</td>
+      </tr>
+      <tr>
+        <td>channels</td>
+        <td>array pointer</td>
+        <td>This is an array, where each item in the array is a channel struct.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> When accessing an animation curve in this way, you get an <a href="../../../GML_Overview/Arrays.htm">array</a> back where each array item is a struct with data relating to a channel within the curve. The channel struct will have the following
+    variables:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Variable Name</th>
+        <th>Data Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>string</td>
+        <td>This is the name of the channel.</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>constant</td>
+        <td>This will be one of the constants <tt><b>animcurvetype_linear</b></tt> for linear interpolation between points, or <tt><b>animcurvetype_catmullrom</b></tt> for &quot;smooth&quot; interpolation
+          between the points using catmull-rom interpolation.</td>
+      </tr>
+      <tr>
+        <td>iterations</td>
+        <td>integer</td>
+        <td>If the channel is using catmull-rom (&quot;smooth&quot;) interpolation this holds how many points have been generated for each segment of the curve (note that these extra points are internal to the function and only used for the runtime calculations).
+          If the channel is using linear interpolation, this value will still exist but can be ignored as it has no bearing on how the curve is interpolated.</td>
+      </tr>
+      <tr>
+        <td>points</td>
+        <td>array pointer</td>
+        <td>This is an array, where each item in the array is a point struct.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> As with channels, the points on a single channel are stored as structs in an array, where each item in the array is a single point struct. The point struct has the following variables:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Variable Name</th>
+        <th>Data Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>posx</td>
+        <td>real</td>
+        <td>The position in time (normalised from 0 to 1) of the point.</td>
+      </tr>
+      <tr>
+        <td>value</td>
+        <td>real</td>
+        <td>The value of the point.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> Note that if the function fails (ie: the given Animation Curve ID does not exist) then the function will return -1.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntax: </h4>
+  <p class="code">animcurve_get(curve_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>curve_id</td>
+        <td>The asset browser ID (index) of the animation curve to get.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns: </h4>
+  <p class="code">Struct or -1</p>
+  <p> </p>
+  <h4>Example: </h4>
+  <p class="code">var _curve = animcurve_get(ac_ButtonTween);<br/> var _channel = _curve.channels[0];<br/> if _channel.type != animcurvetype_linear<br/>     {
+    <br/>     _channel.type = animcurvetype_linear;<br/>     }
+  </p>
+  <p>The above code retrieves the animation curve struct for the curve asset &quot;ac_ButtonTween&quot;, then checks the curve type for the first channel, and if it&#39;s not linear it sets it to linear.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Animation_Curves.htm">Animation Curves</a></div>
+        <div style="float:right">Next: <a href="animcurve_get_channel.htm">animcurve_get_channel</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+animcurve_get
+-->
+  <!-- TAGS
+animcurve_get
+-->
+
+</body></html>

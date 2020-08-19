@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.15.7.0_23";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>steam_ugc_create_query_all_ex</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for steam_ugc_create_query_all_ex"/>
+  <meta name="rh-index-keywords" content="steam_ugc_create_query_all_ex,ugc_query_RankedByVote,ugc_query_RankedByPublicationDate,ugc_query_AcceptedForGameRankedByAcceptanceDate,ugc_query_RankedByTrend,ugc_query_FavoritedByFriendsRankedByPublicationDate,ugc_query_CreatedByFriendsRankedByPublicationDate,ugc_query_RankedByNumTimesReported,ugc_query_CreatedByFollowedUsersRankedByPublicationDate,ugc_query_NotYetRated,ugc_query_RankedByTotalVotesAsc,ugc_query_RankedByVotesUp,ugc_query_RankedByTextSearch,ugc_match_Items,ugc_match_Items_Mtx,ugc_match_Items_ReadyToUse,ugc_match_Collections,ugc_match_Artwork,ugc_match_Videos,ugc_match_Screenshots,ugc_match_AllGuides,ugc_match_WebGuides,ugc_match_IntegratedGuides,ugc_match_UsableInGame,ugc_match_ControllerBindings"/>
+  <meta name="search-keywords" content="steam_ugc_create_query_all_ex,ugc_query_RankedByVote,ugc_query_RankedByPublicationDate,ugc_query_AcceptedForGameRankedByAcceptanceDate,ugc_query_RankedByTrend,ugc_query_FavoritedByFriendsRankedByPublicationDate,ugc_query_CreatedByFriendsRankedByPublicationDate,ugc_query_RankedByNumTimesReported,ugc_query_CreatedByFollowedUsersRankedByPublicationDate,ugc_query_NotYetRated,ugc_query_RankedByTotalVotesAsc,ugc_query_RankedByVotesUp,ugc_query_RankedByTextSearch,ugc_match_Items,ugc_match_Items_Mtx,ugc_match_Items_ReadyToUse,ugc_match_Collections,ugc_match_Artwork,ugc_match_Videos,ugc_match_Screenshots,ugc_match_AllGuides,ugc_match_WebGuides,ugc_match_IntegratedGuides,ugc_match_UsableInGame,ugc_match_ControllerBindings"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="steam_ugc_create_query_all_ex">
+        <span>steam_ugc_create_query_all_ex</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_create_query_all_ex</h1>
+  <p>This function can be used to query the UGC data base. The function requires the ID of the game that is going to consume the item and/or the ID of the game that created the item, and you need to use the following constants for the type of query to create,
+    the type of item to query and the page number to quer. Note that a query will return a <i>maximum</i> number of 50 items.</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Query Type Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ugc_query_RankedByVote</td>
+        <td>See the <a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam Documentation</a>.</td>
+      </tr>
+      <tr>
+        <td>ugc_query_RankedByPublicationDate</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_AcceptedForGameRankedByAcceptanceDate</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_RankedByTrend</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_FavoritedByFriendsRankedByPublicationDate</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_CreatedByFriendsRankedByPublicationDate</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_RankedByNumTimesReported</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_CreatedByFollowedUsersRankedByPublicationDate</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_NotYetRated</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_RankedByTotalVotesAsc</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_RankedByVotesUp</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_query_RankedByTextSearch</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Match Type Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ugc_match_Items</td>
+        <td>See the <a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam Documentation</a>.</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Items_Mtx</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Items_ReadyToUse</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Collections</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Artwork</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Videos</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Screenshots</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_AllGuides</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_WebGuides</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_IntegratedGuides</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_UsableInGame</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_ControllerBindings</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br/> The function returns a unique query handle value which should be stored in a variable for use in the other query functions. Note that this function only prepares the query but does not actually send it - for that you must call the function
+    <a href="steam_ugc_send_query.htm"><tt>steam_ugc_send_query()</tt></a> - and you can use further <tt>steam_ugc_query_*()</tt> functions to refine the search request before it is actually sent.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_ugc_create_query_all_ex(query_type, match_type, page, creator_app_id, consumer_app_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>query_type</td>
+        <td>The type of data query to create (see constants listed below).</td>
+      </tr>
+      <tr>
+        <td>match_type</td>
+        <td>The type of UGC items to query (see constants listed below).</td>
+      </tr>
+      <tr>
+        <td>page</td>
+        <td>The page number to query.</td>
+      </tr>
+      <tr>
+        <td>creator_app_id</td>
+        <td>The item creator app ID.</td>
+      </tr>
+      <tr>
+        <td>consumer_app_id</td>
+        <td>The consumer app ID.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Query Handle</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">query_handle = steam_ugc_create_query_all_ex(ugc_query_RankedByVote, page, global.AccountID, 0, global.GameID);</p>
+  <p>The above code creates a query request and stores it&#39;s handle in a variable for future use.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Next: <a href="steam_ugc_query_set_cloud_filename_filter.htm">steam_ugc_query_set_cloud_filename_filter</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_create_query_all_ex
+ugc_query_RankedByVote
+ugc_query_RankedByPublicationDate
+ugc_query_AcceptedForGameRankedByAcceptanceDate
+ugc_query_RankedByTrend
+ugc_query_FavoritedByFriendsRankedByPublicationDate
+ugc_query_CreatedByFriendsRankedByPublicationDate
+ugc_query_RankedByNumTimesReported
+ugc_query_CreatedByFollowedUsersRankedByPublicationDate
+ugc_query_NotYetRated
+ugc_query_RankedByTotalVotesAsc
+ugc_query_RankedByVotesUp
+ugc_query_RankedByTextSearch
+ugc_match_Items
+ugc_match_Items_Mtx
+ugc_match_Items_ReadyToUse
+ugc_match_Collections
+ugc_match_Artwork
+ugc_match_Videos
+ugc_match_Screenshots
+ugc_match_AllGuides
+ugc_match_WebGuides
+ugc_match_IntegratedGuides
+ugc_match_UsableInGame
+ugc_match_ControllerBindings
+-->
+  <!-- TAGS
+steam_ugc_create_query_all_ex
+-->
+
+</body></html>

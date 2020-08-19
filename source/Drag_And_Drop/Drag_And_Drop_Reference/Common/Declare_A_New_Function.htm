@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.1.0_17";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Declare A New Function</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Section detailing Declare A New Function"/>
+  <meta name="rh-index-keywords" content="DnD™ Action - Declare A New Function,constructor"/>
+  <meta name="search-keywords" content="Declare A New Function"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Declare A New Function">
+        <span>Declare A New Function</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>
+    <img alt="Declare A New Function Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Declare_Function.png"/> Declare A New Function</h1>
+  <p>This action can be used to create a new user-defined function, which can then be called at any time later in your code. A user-defined function is one that you define to do a task that isn&#39;t covered by the available DnD™ actions or GML runner functions,
+    and can be global, instance or local in scope (see <a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">here</a> for more information on scope) and they can also be used as <b>constructors</b> to create <a href="../../../GameMaker_Language/GML_Overview/Structs.htm">structs</a>.
+    To find out more about using this action to create global functions, please see the section on <a href="../../Drag_And_Drop_Overview/Action_Block_Functions.htm">Creating Action Functions</a>. You may also flag the function as being <b>static</b>,
+    which means that it will only be defined once the first time it is used.</p>
+  <p>To use this action, you can add it to an instance event and then give the function you want to declare a name. You then provide the required argument names for each of the parameters that the function will take. If the function is to be used as a constructor
+    (ie: it&#39;s going to be creating a struct) then you need to check the <strong>Constructor </strong>flag and then to call the function you need to use the <a href="New.htm">New</a> action. If the function is only going to be used locally in the same
+    event and nowhere else then you can also select the <strong>Temp </strong>flag. Once you have defined the name and parameters you can add the actions that you want the function to run when it is called in your code by dropping them to the side of
+    the action, as shown in the image below:</p>
+  <p><img alt="Declare A New Function drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/drop_declare_function.png"/>You can see examples of use as both a regular function and a constructor function
+    below.</p>
+  <p> </p>
+  <h4>Action Syntax:</h4>
+  <p><img alt="Declare A New Function Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Declare_Function.png"/></p>
+  <h4>Arguments:</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Function</td>
+        <td>The name of the new function.</td>
+      </tr>
+      <tr>
+        <td>Argument<em>0</em> ... Argument<em>X</em></td>
+        <td>The different arguments names for each of the parameters that are to be passed to the function.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Extended Example 1:</h4>
+  <p><img alt="Declare A New Function Example 1" class="center" height="491" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_1.png" width="492"/>The above action block code would go in the <b>Create Event</b>    of an instance, and declares a new function <tt>set_vec</tt> with three arguments: <tt>_x</tt>, <tt>_y</tt> and <tt>spd</tt>. These arguments are then used in the actions that the function will call to set the direction and speed of the instance,
+    when the function is called. You would call the function using the <a href="Function_Call.htm">Function Call</a> action in any subsequent event, like this:</p>
+  <p><img alt="Declare A New Function Exmaple 2" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_2.png"/>The function is called and it sets the instance direction to point towards the
+    mouse X/Y position, and sets the speed of the instance to 5.</p>
+  <p> </p>
+  <h4>Extended Example 2:</h4>
+  <p><img alt="Declare A New Function Exmaple 3" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_3.png"/>The above action block code would probably go in the <b>Create Event</b> of
+    an instance, and declares a new constructor function <tt>init_char_struct</tt> with four arguments: <tt>_str1</tt>, <tt>_str2</tt>, <tt>_val1</tt> and <tt>_val2</tt>. These arguments are then used to populate the given variables within the struct
+    that the function is creating. You would then call the function using the <a href="New.htm">New</a> action in any subsequent event, like this:</p>
+  <p><img alt="Declare A New Function Exmaple 4" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Declare_Function_4.png"/>The function is called and it will return a new struct to the array &quot;char&quot;,
+    and the struct will be populated with the variables &quot;name&quot;, &quot;location&quot;, &quot;hp&quot; and &quot;mana&quot;, set to the values used for the corresponding arguments in the function.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Common_Actions_Library.htm">Common Actions</a></div>
+        <div style="float:right">Next: <a href="Assign_Variable.htm">Assign Variable</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Action - Declare A New Function
+-->
+  <!-- TAGS
+action_declare_function
+-->
+
+</body></html>

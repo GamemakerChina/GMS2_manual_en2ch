@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.25.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Set Particle Alpha</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that explains the Set Particle Alpha action"/>
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Particle Alpha"/>
+  <meta name="search-keywords" content="Set Particle Alpha"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Set Particle Alpha">
+        <span>Set Particle Alpha</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Particle Alpha Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Particle_Alpha.png"/> Set Particle Alpha</h1>
+  <p>This action will set the alpha for when you create the particle as well as the alpha over its lifetime. You first specify the particle type ID value (which should be the same as the value returned when you created the particle using the <a href="Create_Particle_Type.htm">Create Particle Type</a>    action) and then you can set the alpha values to use.</p>
+  <p>You can pick three alphas to use, and the particle will blend between them over the lifetime of the particle. For example, if a particle has 0.5, 1 and 0 as the alpha values, and a lifetime of 60 game frames, then when it is created (frame 0) it will
+    at 0.5 alpha, then it will fade towards a full alpha of 1 (frame 30), before fading on to be invisible with an alpha of 0 (frame 60).</p>
+  <p> </p>
+  <h4>Action Syntax:</h4>
+  <p><img alt="Set Particle Alpha Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Alpha.png"/></p>
+  <h4>Arguments:</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Type ID</td>
+        <td>The unique ID value for the particle type to set the colour of</td>
+      </tr>
+      <tr>
+        <td>Start</td>
+        <td>The initial alpha to use</td>
+      </tr>
+      <tr>
+        <td>Middle</td>
+        <td>The in between alpha to use</td>
+      </tr>
+      <tr>
+        <td>End</td>
+        <td>The final alpha to use</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Example:</h4>
+  <p><img alt="Define Particle Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Create_Particle_Type.png"/>The above action block code will create a new particle type and assign its unique
+    ID value to a global variable. It then proceeds to set all the properties for the particle type.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
+        <div style="float:right">Next: <a href="Set_Particle_Life.htm">Set Particle Life</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Action - Set Particle Alpha
+-->
+  <!-- TAGS
+action_part_type_alpha
+-->
+
+</body></html>

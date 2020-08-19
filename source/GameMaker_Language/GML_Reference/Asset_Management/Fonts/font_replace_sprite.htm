@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.2.10.0_18";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>font_replace_sprite</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the function font_replace_sprite"/>
+  <meta name="rh-index-keywords" content="font_replace_sprite"/>
+  <meta name="search-keywords" content="font_replace_sprite"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="font_replace_sprite">
+        <span>font_replace_sprite</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>font_replace_sprite</h1>
+  <p>With this function you can use a &quot;sprite strip&quot; to replace a previously created sprite font asset, where each sub-image would be an individual symbol or letter. The index is the UTF8 map number for the first character to use and the ranges
+    to use are the same as you would for a normal font, starting with &quot;!&quot; but remember that you should only include what you need and that you should be using the <a href="../../Strings/ord.htm"><tt>ord()</tt></a> function to get the correct
+    UTF8 value for the starting letter.</p>
+  <p>You can also set the spacing for the font to be proportional (<tt>true</tt>) or not (<tt>false</tt>), where a proportional font is spaced based on the actual width of the letters (so the letter &quot;i&quot; takes less room than the letter &quot;w&quot;,
+    for example) while a non-proportional font will be spaced based on the sub-image width, like a monospaced font. Finally, you can define the space to leave between each letter when writing, and this can be any integer value, with 0 being no space (the
+    letters will &quot;touch&quot; if proportional). </p>
+  <p>If the function fails, then it will fail silently without replacing the given sprite font.</p>
+  <p>t is also worth noting that there cannot be any <i>spaces</i> in the character map, so that if you, for example, use &#39;.&#39; and &#39;0&#39; but not &#39;/&#39;, you need to either include &#39;/&#39; anyway or leave a blank sub-image between the
+    two used characters. The image below shows a typical sprite font layout:</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">font_replace_sprite(ind, spr, first, prop, sep);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>The index of the font that shall be replaced (ie all references to this resource past this function will refer to the new font, not the original).</td>
+      </tr>
+      <tr>
+        <td>spr</td>
+        <td>The sprite to add a font based on.</td>
+      </tr>
+      <tr>
+        <td>first</td>
+        <td>The index of the first available character.</td>
+      </tr>
+      <tr>
+        <td>prop</td>
+        <td>Whether white space around each letter should be removed (if false, the created font will be monospaced, otherwise it&#39;ll be like most regular fonts).</td>
+      </tr>
+      <tr>
+        <td>sep</td>
+        <td>The space between each letter, 0 meaning the right of one letter just touches the left of the next one.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">font_replace_sprite(global.Font, working_directory + &quot;Sprites\spr_Font.png&quot;, ord(&quot;!&quot;), true, 2);</p>
+  <p>The above code will replace the font asset indexed in the global variable &quot;Font&quot; with a new font asset from an external image file.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Fonts.htm">Fonts</a></div>
+        <div style="float:right">Next: <a href="font_replace_sprite_ext.htm">font_replace_sprite_ext</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+font_replace_sprite
+-->
+  <!-- TAGS
+font_replace_sprite
+-->
+
+</body></html>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.14.2.0_25";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>tilemap_get</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the function tilemap_get"/>
+  <meta name="rh-index-keywords" content="tilemap_get"/>
+  <meta name="search-keywords" content="tilemap_get"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="tilemap_get">
+        <span>tilemap_get</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tilemap_get</h1>
+  <p>Using this function you can retrieve the tile data from a cell of the tile map element. You give the tile map element ID (which you get when you create a tile map element using <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> or
+    when you use the function <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), as well as the <i>cell</i> x and y position and the function will return the tile data &quot;blob&quot;. This data is essentially a bit mask that contains
+    the tile index, the flip/rotate/mirror booleans and any mask data that has been applied (see <a href="tilemap_set_mask.htm"><tt>tilemap_set_mask()</tt></a> for details), and the resulting data value can then be used in the <span class="inline">tile_*</span> functions
+    to change a tiles properties. Note that we are using x/y cell positions based on the size of the tile map grid and <i>not</i> as a position in the room, so &quot;cell_x&quot; is a value from 0 to <a href="tilemap_get_width.htm">tile map width</a>,
+    and &quot;cell_y&quot; is a value from 0 to <a href="tilemap_get_height.htm">tile map height</a>. If you need to get the data for a tile at a specific room position then you need to use the function <a href="tilemap_get_at_pixel.htm"><tt>tilemap_get_at_pixel()</tt></a>.</p>
+  <p class="note"><b>IMPORTANT!</b> If the tiles in the tile map have been unchanged (ie: they are not rotated or flipped etc...), then the return value of the tile set data will be exactly equal to the index of the tile on the tile set. So you can create &quot;collision
+    maps&quot; of tiles using one tile at index 1 in the tile set - for example - then use this function to check for 1 or 0 (an empty tile) to calculate collisions.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">tilemap_get(tilemap_element_id, cell_x, cell_y);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>The unique ID value of the tile map element to get the tile-data of</td>
+      </tr>
+      <tr>
+        <td>x_cell</td>
+        <td>The cell along the x-axis to get the tile data from</td>
+      </tr>
+      <tr>
+        <td>y_cell</td>
+        <td>The cell along the y-axis to get the tile data from</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (-1 if there is an error)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> var data = tilemap_get(map_id, 0, 0);<br/> data = tile_set_flip(data, true);<br/> tilemap_set(map_id, data, 0, 0);</p>
+  <p>The above code gets the ID for the tile map on the layer &quot;Tiles_Sky&quot; and then uses that to get the data from the tile at cell (0, 0). This tile data is then flipped before being used to set the tile on the tile map again.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
+        <div style="float:right">Next: <a href="tilemap_get_at_pixel.htm">tilemap_get_at_pixel</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+tilemap_get
+-->
+  <!-- TAGS
+tilemap_get
+-->
+
+</body></html>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.7.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Mouse Input</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for Mouse Input"/>
+  <meta name="rh-index-keywords" content="mb_left,mb_middle,mb_right,mb_none,mb_any"/>
+  <meta name="search-keywords" content="Mouse Input,mouse,mb_left,mb_middle,mb_right,mb_none,mb_any"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Mouse Input">
+        <span>Mouse Input</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Mouse Input</h1>
+  <p>Mouse input is accepted on all platforms (on mobile devices it is accepted as a single screen touch. If you need to use multi-touch, you should be using the <a href="../Device_Input/Device_Input.htm">device specific functions</a>) and has a few constants
+    that are used to specify the buttons being pressed. These constants are shown in the following table:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>mb_left</td>
+        <td>The left mouse button</td>
+      </tr>
+      <tr>
+        <td>mb_middle</td>
+        <td>The middle mouse button (this may not be valid for all target platforms)</td>
+      </tr>
+      <tr>
+        <td>mb_right</td>
+        <td>The right mouse button</td>
+      </tr>
+      <tr>
+        <td>mb_none</td>
+        <td>No mouse button</td>
+      </tr>
+      <tr>
+        <td>mb_any</td>
+        <td>Any of the mouse buttons</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>The following functions exist for the standard mouse button controls:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="mouse_button.htm">mouse_button</a></li>
+    <li><a href="mouse_check_button.htm">mouse_check_button</a></li>
+    <li><a href="mouse_check_button_pressed.htm">mouse_check_button_pressed</a></li>
+    <li><a href="mouse_check_button_released.htm">mouse_check_button_released</a></li>
+    <li><a href="mouse_clear.htm">mouse_clear</a></li>
+    <li><a href="mouse_lastbutton.htm">mouse_lastbutton</a></li>
+    <li><a href="mouse_wheel_up.htm">mouse_wheel_up</a></li>
+    <li><a href="mouse_wheel_down.htm">mouse_wheel_down</a></li>
+    <li><a href="mouse_x.htm">mouse_x</a></li>
+    <li><a href="mouse_y.htm">mouse_y</a></li>
+  </ul>
+  <p> </p>
+  <p>Note that there are also a set of window functions related to using the mouse on desktop targets:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../../Cameras_And_Display/The_Game_Window/window_mouse_get_x.htm">window_mouse_get_x</a></li>
+    <li><a href="../../Cameras_And_Display/The_Game_Window/window_mouse_get_y.htm">window_mouse_get_y</a></li>
+    <li><a href="../../Cameras_And_Display/The_Game_Window/window_mouse_set.htm">window_mouse_set</a></li>
+    <li><a href="../../Cameras_And_Display/The_Game_Window/window_view_mouse_get_x.htm">window_view_mouse_get_x</a></li>
+    <li><a href="../../Cameras_And_Display/The_Game_Window/window_view_mouse_get_y.htm">window_view_mouse_get_y</a></li>
+    <li><a href="../../Cameras_And_Display/The_Game_Window/window_views_mouse_get_x.htm">window_views_mouse_get_x</a></li>
+    <li><a href="../../Cameras_And_Display/The_Game_Window/window_views_mouse_get_y.htm">window_views_mouse_get_y</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
+        <div style="float:right">Next: <a href="../Device_Input/Device_Input.htm">Device Input</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Mouse Input Functions
+mb_left
+mb_middle
+mb_right
+mb_none
+mb_any
+-->
+  <!-- TAGS
+mouse_functions
+-->
+
+</body></html>

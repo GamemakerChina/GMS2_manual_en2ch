@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.14.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>browser_width</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for browser_width"/>
+  <meta name="rh-index-keywords" content="browser_width"/>
+  <meta name="search-keywords" content="browser_width"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="browser_width">
+        <span>browser_width</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>browser_width</h1>
+  <p>This variable holds the width (in pixels) of the browser the game is being run in. If no browser is present then the window size is returned. the following image illustrates how this variable relates to the rest of the positioning functions available
+    through the <a href="../Cameras_And_Display/The_Game_Window/The_Game_Window.htm">Window Functions</a>.</p>
+  <p><img alt="HTML5 canvas position examaple" class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Web/window_position.png"/></p>
+  <h4>Syntax:</h4>
+  <p class="code">browser_width</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if (browser_height &gt; window_get_height()) || (browser_width &gt; window_get_width())<br/>     {
+    <br/>     var xx, yy;<br/>     if (browser_width &gt; window_get_width())<br/>         {
+    <br/>         xx = (browser_width - window_get_width()) / 2;<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         xx = 0;<br/>         }
+    <br/>     if (browser_height &gt; window_get_height())<br/>         {
+    <br/>         yy = (browser_height - window_get_height()) / 2;<br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         yy = 0;<br/>         }
+    <br/>     window_set_position(xx, yy);<br/>     }
+  </p>
+  <p>The above code checks the width and height of the browser to see if either is larger than the current window width and height. If either of them are, it then calculates a new position for the game window within the browser.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Web_And_HTML5.htm">Web And HTML5</a></div>
+        <div style="float:right">Next: <a href="browser_input_capture.htm">browser_input_capture</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+browser_width
+-->
+  <!-- TAGS
+browser_width
+-->
+
+</body></html>

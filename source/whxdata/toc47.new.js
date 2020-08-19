@@ -1,0 +1,1 @@
+(function() {    var toc =  [{"name":"Set View Variable","type":"item","tilePath":"","url":"Drag_And_Drop/Drag_And_Drop_Reference/Cameras/Set_View_Variable.htm"},{"name":"Get View Variable","type":"item","tilePath":"","url":"Drag_And_Drop/Drag_And_Drop_Reference/Cameras/Get_View_Variable.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();

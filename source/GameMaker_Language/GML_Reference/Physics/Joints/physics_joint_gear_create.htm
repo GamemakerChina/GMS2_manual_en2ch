@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.11.4.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>physics_joint_gear_create</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for physics_joint_gear_create"/>
+  <meta name="rh-index-keywords" content="physics_joint_gear_create"/>
+  <meta name="search-keywords" content="physics_joint_gear_create"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="physics_joint_gear_create">
+        <span>physics_joint_gear_create</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_joint_gear_create</h1>
+  <p>If you want to create a sophisticated mechanical contraption you might want to use gears. In principle you can create gears in GameMaker Studio 2 by using compounding instances to model gear teeth, but this is not very efficient and might be
+    tedious to author! Thankfully there is a simpler method, and that is to use a <i>gear joint</i>. To make one you need to have previously defined your fixtures and created the two basic joints that are going to comprise your gear - these <b>must</b>    be made up of one <a href="physics_joint_revolute_create.htm">revolute joint</a> and either a <a href="physics_joint_prismatic_create.htm">prismatic joint</a> or another <i>revolute joint</i>. The image below shows how a gear would typically be created
+    in a game:</p>
+  <p><img alt="Gear joint illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/gear_joint_image.png"/>So what happens? Well, once the two joints are added into the gear, interaction with one will have an
+    effect on the other, so in the example image above, if you rotate inst2, inst3 will move up and down, or if you move inst3 up and down then inst2 will rotate. You can also change the gear ratio, meaning that you need to move one instance more (or
+    less) to get the desired effect. The code in the example at the bottom shows how something like the image above can be created.</p>
+  <p class="note"><b>NOTE</b>: If you need to delete either of the two instances that are involved in the gear joint (or just delete their joints) then you <b>must</b> delete the gear joint first using <span style="font-size:1px;"><a href="physics_joint_delete.htm"><tt style="font-size: 14px">physics_joint_delete()</tt></a></span>    or else you will get an error!</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">physics_joint_gear_create(inst1, inst2, joint_1, joint_2, ratio)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>inst1</td>
+        <td>The first instance to connect with the joint</td>
+      </tr>
+      <tr>
+        <td>inst2</td>
+        <td>The second instance to connect with the joint</td>
+      </tr>
+      <tr>
+        <td>joint_1</td>
+        <td>A previously defined <b>revolute</b> joint</td>
+      </tr>
+      <tr>
+        <td>joint_2</td>
+        <td>A previously defined revolute <i>or</i> prismatic joint</td>
+      </tr>
+      <tr>
+        <td>ratio</td>
+        <td>Set the velocity ratio between the two joints</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Integer (index of the joint)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var t_fix, g_fix, inst1, inst2, inst3, r_joint, p_joint;<br/> g_fix = physics_fixture_create();<br/> physics_fixture_set_box_shape(g_fix, 40, 10);<br/> t_fix = physics_fixture_create();<br/> physics_fixture_set_circle_shape(t_fix, 10);<br/> physics_fixture_set_density(t_fix,
+    0.5);<br/> inst1 = instance_create_layer(60, room_height - 30, &quot;Background&quot;, obj_Ground);<br/> inst2 = instance_create_layer(40, room_height - 300, &quot;Instances&quot;, obj_Cog);<br/> inst3 = instance_create_layer(150, room_height - 300,
+    &quot;Instances&quot;, obj_Barrel);<br/> physics_fixture_bind(g_fix, inst1);<br/> physics_fixture_bind(t_fix, inst2);<br/> physics_fixture_bind(t_fix, inst3);<br/> r_joint = physics_create_revolute_joint(inst1, inst2, 40, room_height - 300, -80, 80,
+    1, 10, 0.5, 1, 0);<br/> p_joint = physics_create_prismatic_joint(inst1, inst3, 150, room_height - 300, 0, 1, -10, 10, true, 0, 0, 0, 0);<br/> physics_create_gear_joint(inst2, inst3, r_joint, p_joint, 0.5);</p>
+  <p>The above code creates and defines two fixture and then creates three instances, one &quot;obj_Ground&quot; and two others, &quot;obj_Cog&quot; and &quot;obj_Barrel&quot;. The fixtures are then bound to these instances and two joints are created. A
+    revolute joint between the ground and the cog, and a prismatic joint between the ground and the barrel. Finally a gear joint is created between the cog and barrel instances using the previously defined revolute and prismatic joints.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
+        <div style="float:right">Next: <a href="physics_joint_rope_create.htm">physics_joint_rope_create</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+physics_joint_gear_create
+-->
+  <!-- TAGS
+physics_joint_gear_create
+-->
+
+</body></html>

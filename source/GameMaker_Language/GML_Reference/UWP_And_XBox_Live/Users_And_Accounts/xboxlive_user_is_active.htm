@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.18.1.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>xboxlive_user_is_active</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for xboxlive_user_is_active"/>
+  <meta name="rh-index-keywords" content="xboxlive_user_is_active"/>
+  <meta name="search-keywords" content="xboxlive_user_is_active"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="xboxlive_user_is_active">
+        <span>xboxlive_user_is_active</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>xboxlive_user_is_active</h1>
+  <p>With this function you can check whether the given user ID is in the list of users currently using the console, and the function will return <tt>true</tt> if they are, or <tt>false</tt> otherwise. You can get a User ID pointer with the function <tt><a href="xboxlive_get_user.htm">xboxlive_get_user()</a>.</tt></p>
+  <p> </p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">xboxlive_user_is_active(user_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>user_id</td>
+        <td>The ID pointer of the user to check.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">global.PlayerNum = 0;<br/> global.Player_ID = array_create();<br/> for(var i = 0; i &lt; xboxlive_get_user_count(); ++i;)<br/>     {
+    <br/>     var _uid = xboxlive_get_user(i);<br/>     if xboxlive_user_is_active(_uid)<br/>         {
+    <br/>         global.Player_ID[global.PlayerNum++] = _uid;<br/>         }
+    <br/>     }
+  </p>
+  <p>The above code loops through the user accounts and then checks to see if any of them are active. If they are, their user ID is added into a global array.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Users_And_Accounts.htm">Users And Accounts</a></div>
+        <div style="float:right">Next: <a href="xboxlive_user_is_remote.htm">xboxlive_user_is_remote</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+xboxlive_user_is_active
+-->
+  <!-- TAGS
+xboxlive_user_is_active
+-->
+
+</body></html>

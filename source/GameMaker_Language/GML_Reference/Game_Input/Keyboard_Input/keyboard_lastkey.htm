@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.7.1.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>keyboard_lastkey</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for keyboard_lastkey"/>
+  <meta name="rh-index-keywords" content="keyboard_lastkey"/>
+  <meta name="search-keywords" content="keyboard_lastkey"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="keyboard_lastkey">
+        <span>keyboard_lastkey</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>keyboard_lastkey</h1>
+  <p>This variable refers to the value that <a href="keyboard_key.htm"><tt>keyboard_key</tt></a> was in the previous frame, returning the keycode of that key (all standard keycode constants are returned). This variable is <i>not</i> read only and you can
+    change it, for example to set it to -1 if you handled it already.</p>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">keyboard_lastkey;</p>
+  <p> </p>
+  <h4><b>Returns:</b></h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4><b>Example:</b></h4>
+  <p class="code">if (keyboard_lastkey != -1)<br/>    {
+    <br/>    str += keyboard_lastchar;<br/>    keyboard_lastkey = -1;<br/>    }
+  </p>
+  <p>The above code checks to see if the lastkey variable is not equal to -1, and if it is it adds whatever the last key was as a string to the variable &quot;str&quot;, then it resets the <tt>keyboard_lastkey</tt> variable to accept further input.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Keyboard_Input.htm">Keyboard Input</a></div>
+        <div style="float:right">Next: <a href="keyboard_lastchar.htm">keyboard_lastchar</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+keyboard_lastkey
+-->
+  <!-- TAGS
+keyboard_lastkey
+-->
+
+</body></html>

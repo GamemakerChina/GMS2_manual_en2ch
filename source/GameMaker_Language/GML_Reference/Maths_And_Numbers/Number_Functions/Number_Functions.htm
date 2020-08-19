@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.10.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Number Functions</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for Number functions"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="Number Functions,numbers"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Number Functions">
+        <span>Number Functions</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Number Functions</h1>
+  <p>Real numbers in GameMaker Studio 2 are considered <i>double-precision floating-point numbers</i> - that is to say that they have a decimal point in them with no fixed number of digits either
+    before or after the point - or <i>integers</i> - that is to say they are whole numbers with no decimal point value. 2, for example, is an integer but 2.01 is a floating point real.</p>
+  <p class="note"><b>NOTE</b>: On the <b>HTML5</b> target, all real numbers are doubles.</p>
+  <p>This distinction between integers and floats is very important when dealing with cross platform development as the precision of calculations made on a Windows PC is <i>not</i> the same as the precision of those same calculations
+    when made on a mobile device. This means that you should pay particular attention when making comparisons, for example:</p>
+  <p class="code">if (image_index == 1)<br/>     {<br/>     do something...<br/>     }</p>
+  <p>In the example above, if we have been setting the <tt>image_speed</tt> to 0.25 - for example - then after four steps you may assume that the <tt>image_index</tt> value would be 1, but it <i>may</i> be
+    a value like 1.0000002 due to the way floating point maths works and so the evaluation will not be <tt>true</tt>. These types of errors can be quite hard to debug and so it is always good to be aware of them and to plan ahead and use
+    other means of checking values or to use the appropriate flooring or rounding functions (listed below) to convert the number to check into an integer (for more information on floating point maths and why this is an issue, please <a href="https://floating-point-gui.de/" target="_blank">see here</a>). For example the above code could be written as:</p>
+  <p class="code">if (floor(image_index) == 1)<br/>     {<br/>     do something...<br/>     }</p>
+  <p>It is also worth noting that when using the <b>YoYo Compiler</b> targets, all expressions and functions are <i>evaluated from left to right</i>, while on all other target platforms they are evaluated <i>from right to left</i>,
+    meaning that this - for example - will give different results depending on the platform:</p>
+  <p class="code">val = max(num, ++num, num++);</p>
+  <p class="note"><strong>NOTE</strong>: For more informaton, see the section on <a href="../../../GML_Overview/Evaluation_Order.htm">Evaluation Order</a>.</p>
+  <p>You can also use a special function available in GameMaker Studio 2 to set the <b>epsilon</b> value for floating point maths. When a real number is rounded to the nearest floating point number,
+    the epsilon (also know as &quot;machine epsilon&quot;) forms an upper bound on the relative error, and you can get and set the epsilon value using the following functions:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="math_set_epsilon.htm">math_set_epsilon</a></li>
+    <li><a href="math_get_epsilon.htm">math_get_epsilon</a></li>
+  </ul>
+  <p> </p>
+  <p>These functions all deal with using random numbers and values:</p>
+  <p class="note"><b>NOTE: </b>When using the random functions, GameMaker Studio 2 maintains the same random seed every time you start the game. This makes debugging much easier as you are guaranteed that the random functions will always initially return
+    the same value, however should you not wish this to happen, you must first set a new random seed at the very start of the game, either using <span style="font-size:1px;"><a href="randomise.htm"><tt style="font-size: 14px">randomise()</tt></a></span> or 
+    <span style="font-size:1px;"><a href="random_set_seed.htm"><tt style="font-size: 14px">random_set_seed()</tt></a></span>.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="choose.htm">choose</a></li>
+    <li><a href="random.htm">random</a></li>
+    <li><a href="random_range.htm">random_range</a></li>
+    <li><a href="irandom.htm">irandom</a></li>
+    <li><a href="irandom_range.htm">irandom_range</a></li>
+    <li><a href="random_set_seed.htm">random_set_seed</a></li>
+    <li><a href="random_get_seed.htm">random_get_seed</a></li>
+    <li><a href="randomise.htm">randomise</a><b></b></li>
+  </ul>
+  <p> </p>
+  <p>These are all functions that will round values in some way, or select a single value from various given values:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="round.htm">round</a></li>
+    <li><a href="floor.htm">floor</a></li>
+    <li><a href="frac.htm">frac</a></li>
+    <li><a href="abs.htm">abs</a></li>
+    <li><a href="sign.htm">sign</a></li>
+    <li><a href="ceil.htm">ceil</a></li>
+    <li><a href="max.htm">max</a></li>
+    <li><a href="mean.htm">mean</a></li>
+    <li><a href="median.htm">median</a></li>
+    <li><a href="min.htm">min</a></li>
+    <li><a href="lerp.htm">lerp</a></li>
+    <li><a href="clamp.htm">clamp</a></li>
+  </ul>
+  <p> </p>
+  <p>Finally we a miscellaneous collection of important mathematical functions:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="exp.htm">exp</a></li>
+    <li><a href="ln.htm">ln</a></li>
+    <li><a href="power.htm">power</a></li>
+    <li><a href="sqr.htm">sqr</a></li>
+    <li><a href="sqrt.htm">sqrt</a></li>
+    <li><a href="log2.htm">log2</a></li>
+    <li><a href="log10.htm">log10</a></li>
+    <li><a href="logn.htm">logn</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Maths_And_Numbers.htm">Maths And Numbers</a></div>
+        <div style="float:right">Next: <a href="../Angles_And_Distance/Angles_And_Distance.htm">Vectors</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Number Functions
+-->
+  <!-- TAGS
+number_functions
+-->
+
+</body></html>

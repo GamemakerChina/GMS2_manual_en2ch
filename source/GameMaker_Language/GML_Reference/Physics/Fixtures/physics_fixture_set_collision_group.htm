@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.11.3.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>physics_fixture_set_collision_group</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for physics_fixture_set_collision_group"/>
+  <meta name="rh-index-keywords" content="physics_fixture_set_collision_group"/>
+  <meta name="search-keywords" content="physics_fixture_set_collision_group"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="physics_fixture_set_collision_group">
+        <span>physics_fixture_set_collision_group</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>physics_fixture_set_collision_group</h1>
+  <p>Once you have created your fixture you can define it as being part of a collision group. This means that you can tell instances with that fixture to <i>always</i> collide or <i>never</i> collide with other instance that have fixtures bound to them with
+    the same collision group. The values that can be assigned are based on positive or negative numbers, with 0 being the default value (meaning that the instance with this fixture setting is ignored unless a collision event is created for it). Here is
+    an image to help explain:</p>
+  <p><img alt="Collision groups example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/physics_fixture_set_collision_group_image.png"/>As you can see, setting collision groups can be very useful to create complex
+    physical bodies that interact with the physical world around them, but not with each other. However, it should be noted that due to the complexity of calculating collisions based on groups like this, it is recommend that you try to keep the number
+    of groups in use in any one room to an absolute minimum.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">physics_fixture_set_collision_group(fixture, group)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>fixture</td>
+        <td>the fixture that is to be bound</td>
+      </tr>
+      <tr>
+        <td>group</td>
+        <td>the group that this fixture is assigned to (either a positive value, 0, or a negative value)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">physics_fixture_set_collision_group(fix_Wheel, -1);</p>
+  <p>The code above will set the fixture indexed in the variable &quot;fix_Wheel&quot; to be part of the group &quot;-1&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Fixtures.htm">Fixtures</a></div>
+        <div style="float:right">Next: <a href="physics_fixture_delete.htm">physics_fixture_delete</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+physics_fixture_set_collision_group
+-->
+  <!-- TAGS
+physics_fixture_set_collision_group
+-->
+
+</body></html>

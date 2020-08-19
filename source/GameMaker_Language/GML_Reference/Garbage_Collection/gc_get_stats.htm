@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.21.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>gc_get_stats</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for gc_get_stats"/>
+  <meta name="rh-index-keywords" content="gc_get_stats"/>
+  <meta name="search-keywords" content="gc_get_stats"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="gc_get_stats">
+        <span>gc_get_stats</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>gc_get_stats</h1>
+  <p>With this function you can retrieve information about the current state of the garbage collector. The function will return a <a href="../../GML_Overview/Structs.htm">struct</a> which will have the following member variables (note that &quot;objects&quot;
+    here refers to anything that can be garbage collected and <i>not</i> general object instances as defined in the Asset Browser):</p>
+  <ul class="colour">
+    <li><tt>objects_touched</tt> - this is the number of active objects the garbage collector found in the previous frame. This will vary depending on which generation was collected.</li>
+    <li><tt>objects_collected</tt> - the number of objects which the garbage collector determined weren&#39;t active in the previous frame, and which could therefore be deleted.</li>
+    <li><tt>traversal_time</tt> - this is the time in microseconds (on the main thread) which the garbage collector took to figure out which objects were active.</li>
+    <li><tt>collection_time</tt> - this is the time in microseconds (on a separate thread) which the garbage collector took to clean up the objects deemed inactive.</li>
+    <li><tt>gc_frame</tt> - this is a counter which is incremented every time a garbage collection pass occurs. If garbage collection is disabled this will not increase.</li>
+    <li><tt>generation_collected</tt> - this is the index of the generation that was collected last. 0 is the youngest generation and 3 is currently the oldest.</li>
+    <li><tt>num_generations</tt> - this is the total number of garbage collection generations.</li>
+    <li><tt>num_objects_in_generation</tt> - this is an array (of size <tt>num_generations</tt>) containing the number of objects in each generation.</li>
+  </ul>
+  <p class="note"><b>NOTE</b>: On the HTML5 target platform garbage collection is handled by the JavaScript engine and therefore the member variables in the above struct will all return 0 if this function is used on that platform.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">gc_get_stats();</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Struct</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if (global.debug == true)<br/>     {
+    <br/>     var _s = gc_get_stats();<br/>     var _t = _s.traversal_time;<br/>     var _c = _s.collection_time;<br/>     show_debug_message(&quot;Traversal time = &quot; + string(_t))<br/>     show_debug_message(&quot;Collection time = &quot; + string(_c))<br/>        }
+  </p>
+  <p>The above code checks a global variable and if it is <tt>true</tt> it gets information from the garabge collector and outputs it to the console as debug messages.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Garbage_Collection.htm">Garbage Collection</a></div>
+        <div style="float:right">Next: <a href="gc_enable.htm">gc_enable</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+gc_get_stats
+-->
+  <!-- TAGS
+gc_get_stats
+-->
+
+</body></html>

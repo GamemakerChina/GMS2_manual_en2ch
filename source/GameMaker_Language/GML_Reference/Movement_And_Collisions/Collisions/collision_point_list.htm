@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.4.3.0_15";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>collision_point_list</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that gives an overview of the funtion collision_point_list"/>
+  <meta name="rh-index-keywords" content="collision_point_list"/>
+  <meta name="search-keywords" content="collision_point_list"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="collision_point_list">
+        <span>collision_point_list</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>collision_point_list</h1>
+  <p>This function is the same as the <a href="collision_point.htm"><tt>collision_point()</tt></a> function, only instead of just detecting one instance in collision at a time, it will detect multiple instances. You supply the x/y position of the point to
+    check and you can set the check to be precise (in which case all instances being checked will need to have <i>precise</i> collision masks) and whether the check should include the calling instance or not. You supply a <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">DS list</a>    too which will be populated with the unique <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><tt>id</tt></a> values of all instances of the object that are considered to be in collision with the calling instance, and you have the
+    option to order the list based on the distance from the given point to the origin of the instances found to be in collision. The function returns the number of instances found, or 0 if none are found.</p>
+  <p>Note that instead of an object index you can supply the <a href="../../../GML_Overview/Instance_Keywords.htm">instance keyword</a> <span class="inline">all</span>, to check for all instances in the current room, which may include the instance running
+    the code (depending on the <span class="inline">notme</span> argument).</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">collision_point_list(x, y, obj, prec, notme, list, ordered);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>The x coordinate of the point to check.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>The y coordinate of the point to check.</td>
+      </tr>
+      <tr>
+        <td>obj</td>
+        <td>The object to check for instance collisions.</td>
+      </tr>
+      <tr>
+        <td>prec</td>
+        <td>Whether the check is based on precise collisions (<tt>true</tt>, which is slower) or its bounding box in general (<tt>false</tt>, faster).</td>
+      </tr>
+      <tr>
+        <td>notme</td>
+        <td>Whether the calling instance, if relevant, should be excluded (<tt>true</tt>) or not (<tt>false</tt>).</td>
+      </tr>
+      <tr>
+        <td>list</td>
+        <td>The DS list to use to store the IDs of colliding instances.</td>
+      </tr>
+      <tr>
+        <td>ordered</td>
+        <td>Whether the list should be ordered by distance (<tt>true</tt>) or not (<tt>false</tt>).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Integer (The number of instances found to be in collision)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _list = ds_list_create();<br/> var _num = collision_point_list(x, y, obj_Enemy, false, true, _list, false);<br/> if _num &gt; 0<br/>     {
+    <br/>     for (var i = 0; i &lt; _num; ++i;)<br/>         {
+    <br/>         instance_destroy(_list[| i]);<br/>         }
+    <br/>     }
+    <br/> ds_list_destroy(_list);
+  </p>
+  <p>The code above will check the position of the calling instance for collisions with instances of &quot;obj_Enemy&quot;. If there are any collisions, then the pre-created list is looped through and each instance that was in the collision is destroyed.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
+        <div style="float:right">Next: <a href="collision_rectangle.htm">collision_rectangle</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+collision_point_list
+-->
+  <!-- TAGS
+collision_point_list
+-->
+
+</body></html>

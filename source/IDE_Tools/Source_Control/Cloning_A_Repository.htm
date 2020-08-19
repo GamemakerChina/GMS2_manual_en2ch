@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "7.2.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Cloning A Repository</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Section that covers Source Control cloning a repository"/>
+  <meta name="rh-index-keywords" content="Source Control - Cloning A Repository"/>
+  <meta name="search-keywords" content="clone repository,repository,clone,cloning"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Cloning A Repository">
+        <span>Cloning A Repository</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Cloning A Repository</h1>
+  <p>When your project is stored in an external repository, you need to remember to both push your changes and pull any new ones. The reason for this is that when you commit, you store your changes locally, which allows you to work away from an internet
+    connection and sync up when you&#39;re ready, and to sync up you push your changes to the remote repository. Pulling changes means that you want to pull any changes that others have made from the remote repository into your local repository. However,
+    this means that there may be times when people can be editing the same files, which in turn creates a <strong>merge conflict</strong>. You need to know how to handle these conflicts so we&#39;re going to deliberately create one now and then show you
+    how to deal with it.</p>
+  <p class="note"><strong>NOTE</strong>: Sharing a local project repository (even through a file synchronization service like Dropbox) isn&#39;t recommended, as commits are generally written directly to it, and thus you have very little conflict protection.</p>
+  <p>To generate our conflict we first need to have two local repositories, one for the Master repository and one for our copy. To create this we need to Clone the repository, which is done with the following steps:</p>
+  <ul class="colour">
+    <li>Go to <strong>Source Control</strong> &gt; <strong>Clone Repository</strong>.</li>
+    <li>In the URL field, type the path to the project that we setup in the Reverting Files guide above (by default this will be <span class="inline">&lt;DRIVE&gt;:\Users\&lt;Username&gt;\Documents\GameMakerStudio2\&lt;ProjectName&gt;)</span>.<img alt="Source Control Clone Repository From" class="center" src="../../assets/Images/IDE Tools/SCM_RepositoryToClone.png"/></li>
+    <li>We then need to set a path to clone to:<br/>
+      <img alt="Source Control Clone Repository To" class="center" src="../../assets/Images/IDE Tools/SCM_CloneTo.png"/>When we click the &quot;Okay&quot; button we&#39;ll get the following warning about trying to clone a &quot;non-bare&quot; repository:<br/>
+      <img alt="Source Control Clone Warning " class="center" src="../../assets/Images/IDE Tools/SCM_CloneWarning.png"/>We can click &quot;Okay&quot; here again.</li>
+    <li>We&#39;ll now be presented with a directory explorer to create a &quot;bare&quot; proxy repository (this is a repository which you can safely store on Dropbox, for example). Browse to where we want to create this proxy repository and select (or create)
+      the folder to use.</li>
+  </ul>
+  <p>Once we&#39;ve done that, GameMaker Studio 2 will push the original project to the proxy, and pull a new one to the path we&#39;ve set in the <strong>Clone Repository</strong> window and then automatically open a file browser so we can open the stored
+    project. If we now go to <strong>Source Control</strong> &gt; <strong>View History</strong> we&#39;ll see our original commits plus a new &quot;Push For Clone&quot;</p>
+  <p><img alt="Source Control Push For Clone" class="center" src="../../assets/Images/IDE Tools/SCM_PushForClone.png"/>You have now cloned your repository and can continue working on the local version of the project.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
+        <div style="float:right">Next: <a href="Conflicts.htm">Conflicts</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Source Control Clone Repository
+clone repository
+clone
+-->
+  <!-- TAGS
+source_control_clone
+-->
+
+</body></html>

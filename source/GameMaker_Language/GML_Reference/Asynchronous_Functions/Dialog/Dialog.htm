@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.12.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Dialog</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for all the Dialog functions"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="Dialog,Dialogue"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Dialog">
+        <span>Dialog</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Dialog</h1>
+  <p>Most modern computers and mobile devices do not like it when a game is stopped while a dialog window is shown. They tend to interpret this as game runner having stopped, and may consider it an error and close the app prematurely. To prevent this GameMaker
+    Studio 2 has <strong>asynchronous</strong> dialog functions that permit you to request certain forms of user feedback or input, but without blocking the game runner at any time, meaning that - when called - the game will run as normal in the background
+    while the user responds to the shown dialog window. Once the user has responded, a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">Dialog Asynchronous Event</a> will be called so that you can deal with the results.</p>
+  <p class="note"><strong>NOTE</strong>: This means that if it is possible for the player to lose the game, get killed, etc... while this dialog is being shown, then you should take steps to create a pause system, otherwise it&#39;ll be an unpleasant user experience. </p>
+  <p>Below is a list of all the available asynchronous dialog functions:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="get_login_async.htm">get_login_async</a></li>
+    <li><a href="get_string_async.htm">get_string_async</a></li>
+    <li><a href="get_integer_async.htm">get_integer_async</a></li>
+    <li><a href="show_message_async.htm">show_message_async</a></li>
+    <li><a href="show_question_async.htm">show_question_async</a></li>
+    <li><a href="shop_leave_rating.htm">shop_leave_rating</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Asynchronous_Functions.htm">Asynchronous Functions</a></div>
+        <div style="float:right">Next: <a href="../Cloud_Saving/Cloud_Saving.htm">Cloud Saving</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Dialog Functions
+-->
+  <!-- TAGS
+dialog_functions
+-->
+
+</body></html>

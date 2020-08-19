@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.15.3.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>steam_download_scores</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for steam_download_scores"/>
+  <meta name="rh-index-keywords" content="steam_download_scores"/>
+  <meta name="search-keywords" content="steam_download_scores"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="steam_download_scores">
+        <span>steam_download_scores</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_download_scores</h1>
+  <p>This function is used retrieve a sequential range of leaderboard entries by leaderboard ranking. The <tt>start_idx</tt> and <tt>end_idx</tt> parameters control the requested range of ranks, for example, you can display the top 10 on a leaderboard for
+    your game by setting the start value to 1 and the end value to 10. The leaderboard name is a string that was defined when you created the leaderboard using the function <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard()</tt></a>,
+    and the function will return a value which can then be used to identify the call-back in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam Async Event</a>, or it will return -1 if it has failed. Note that when
+    downloading a leaderboard, the &quot;entries&quot; key of the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> map may have an additional &quot;data&quot; key if any additional buffer data was
+    uploaded along with the score(see <a href="steam_upload_score_buffer.htm"><tt>steam_upload_score_buffer()</tt></a>). This data buffer will be <b>Base 64 encoded</b> and so you will need to use the function <a href="../../Buffers/buffer_base64_decode.htm"><tt>buffer_base64_decode()</tt></a>    on the buffer before reading the data.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_download_scores(lb_name, start_idx, end_idx);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>lb_name</td>
+        <td>The name of the leaderboard that you are downloading the scores from (a string).</td>
+      </tr>
+      <tr>
+        <td>start_idx</td>
+        <td>The start position within the leaderboard.</td>
+      </tr>
+      <tr>
+        <td>end_idx</td>
+        <td>The end position within the leaderboard.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Extended Example:</h4>
+  <p>In this extended example we will request the top ten ranking for the given leaderboard and parse its results in the <b>Steam Async Event</b>. to start with we need to request the scores with the following code:</p>
+  <p class="code">score_get = steam_download_scores(&quot;Game Scores&quot;, 1, 10);</p>
+  <p>This will send off a request to the Steam Server for the scores from the leaderboard &quot;Game Scores&quot;, storing the <b>async id</b> of the request in the variable &quot;score_get&quot;. this will then be handled in the <b>Steam Async Event</b>    in the following way:</p>
+  <p class="code">var async_id = ds_map_find_value(async_load, &quot;id&quot;);<br/> if async_id == score_get<br/>     {
+    <br/>     var entries = ds_map_find_value(async_load, &quot;entries&quot;);<br/>     var map = json_decode(entries);<br/>     if ds_map_exists(map, &quot;default&quot;)<br/>         {
+    <br/>         ds_map_destroy(map);
+    <br/>         exit;
+    <br/>         }
+    <br/>     else
+    <br/>         {
+    <br/>         var list = ds_map_find_value(map, &quot;entries&quot;);<br/>         var len = ds_list_size(list);<br/>         var entry;<br/>         for(var i = 0; i &lt; len; i++;)<br/>             {
+    <br/>             entry = ds_list_find_value(list, i );<br/>             steam_name[i] = ds_map_find_value(entry, &quot;name&quot;);<br/>             steam_score[i] = ds_map_find_value(entry, &quot;score&quot;);<br/>             steam_rank[i] = ds_map_find_value(entry,
+    &quot;rank&quot;);<br/>             }
+    <br/>         }
+    <br/>     ds_map_destroy(map)
+    <br/>     }
+  </p>
+  <p>What we do here is first check the &quot;id&quot; key of the special <tt>async_load</tt> DS map. If this value is the same as the value of the original call-back function (stored in the &quot;score_get&quot; variable) we then continue to process the
+    data. The first thing we do is parse the <tt>async_load</tt> ds_map for the key &quot;entries&quot; which will contain a JSON object containing the leaderboard data. This JSON object is then decoded (see <a href="../../File_Handling/Encoding_And_Hashing/json_decode.htm"><tt>json_decode()</tt></a>)
+    as another DS map, and this new map id is stored in the variable &quot;map&quot;.</p>
+  <p>This map is checked for the key &quot;default&quot; and if that is found then the map is destroyed and the event is exited. If no &quot;default&quot; key is found, the code will then parse the map to extract the necessary information about the leaderboard,
+    by first extracting a DS list from the &quot;entries&quot; key of the DS map, and then looping through each entry of the list to get <i>another</i> DS map with the name, score and rank of each entry. These values are then stored to arrays.</p>
+  <p>Once the loop has finished, the JSON DS map is destroyed (which in turn destroys all the internal maps and lists). There is no need to destroy the <tt>async_load</tt> DS map as this is handled for you by GameMaker Studio 2.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_Leaderboards.htm">Leaderboards</a></div>
+        <div style="float:right">Next: <a href="steam_download_scores_around_user.htm">steam_download_scores_around_user</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+steam_download_scores
+-->
+  <!-- TAGS
+steam_download_scores
+-->
+
+</body></html>

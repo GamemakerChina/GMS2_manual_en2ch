@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.5.4.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>audio_get_recorder_count</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function audio_get_recorder_count"/>
+  <meta name="rh-index-keywords" content="audio_get_recorder_count"/>
+  <meta name="search-keywords" content="audio_get_recorder_count"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="audio_get_recorder_count">
+        <span>audio_get_recorder_count</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_get_recorder_count</h1>
+  <p>This function will return the number of audio recording sources (like microphones, etc...) currently available to your game. So, if you have a return value of, for example, four, then you will have audio input on the sources 0, 1, 2 and 3, with one
+    of these values being that which you use to start recording from using the function <a href="audio_start_recording.htm"><tt>audio_start_recording()</tt></a>. This value can change at any time as people plug/unplug microphones or other
+    input sources to the device. Note that you can use the function <a href="audio_get_recorder_info.htm"><tt>audio_get_recorder_info()</tt></a> to get information on each device connected.</p>
+  <p class="note"><b>IMPORTANT!</b> This function will always return 0 when used on the HTML5 target.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_get_recorder_count();</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Integer</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if audio_get_recorder_count() &gt; 0<br/>    {
+    <br/>    channel_index = audio_start_recording(0);<br/>    }
+  </p>
+  <p>The above code checks the audio recorders available and if there are 1 or more, it starts recording from the first one indexed (source 0).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Audio.htm">Audio Buffers</a></div>
+        <div style="float:right">Next: <a href="audio_get_recorder_info.htm">audio_get_recorder_info</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+audio_get_recorder_count
+-->
+  <!-- TAGS
+audio_get_recorder_count
+-->
+
+</body></html>

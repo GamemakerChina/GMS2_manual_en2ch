@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>General Game Control</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for General Game Control functions"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="General Game Control,Game Functions"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="General Game Control">
+        <span>General Game Control</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>General Game Control</h1>
+  <p>These functions and variables are all related to game specific functionality, like loading/saving or restarting etc...</p>
+  <p>The following <a href="../../GML_Overview/Variables/Global_Variables.htm">global scope</a> <strong>built-in</strong> variables are useful for debugging your game - they can be used as the output to a log file in the case of issues, for example - as
+    well as for showing the current build ID, etc... to the user:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="game_id.htm">game_id</a></li>
+    <li><a href="game_save_id.htm">game_save_id</a></li>
+    <li><a href="game_display_name.htm">game_display_name</a></li>
+    <li><a href="game_project_name.htm">game_project_name</a></li>
+  </ul>
+  <p> </p>
+  <p>The following functions are used for general game control:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="game_end.htm">game_end</a></li>
+    <li><a href="game_restart.htm">game_restart</a></li>
+    <li><a href="game_load.htm">game_load</a></li>
+    <li><a href="game_load_buffer.htm">game_load_buffer</a></li>
+    <li><a href="game_save.htm">game_save</a></li>
+    <li><a href="game_save_buffer.htm">game_save_buffer</a></li>
+    <li><a href="game_get_speed.htm">game_get_speed</a></li>
+    <li><a href="game_set_speed.htm">game_set_speed</a></li>
+  </ul>
+  <p> </p>
+  <p>To help you create and maintain highscores for your games, GameMaker Studio 2 creates a global high score <a href="../../GML_Overview/Arrays.htm">array</a> of 10 places which you can access, add to, and change to create your own custom high score
+    lists without too much fuss. This functionality is local to the game and works on all platforms, so you can easily store and maintain a basic high score table using these functions along with the <a href="../File_Handling/File_Handling.htm">File Handling Functions</a>.</p>
+  <p>The following functions exist that deal with the internal high score list.</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="highscore_add.htm">highscore_add</a></li>
+    <li><a href="highscore_name.htm">highscore_name</a></li>
+    <li><a href="highscore_value.htm">highscore_value</a></li>
+    <li><a href="highscore_clear.htm">highscore_clear</a></li>
+  </ul>
+  <p> </p>
+  <p>GameMaker Studio 2 also includes a function for drawing the highscores out on the screen as a list, however it is very basic and it is recommended that you use this for debugging more than anything else as making your own high score table is
+    easy and will give you far more control over how it is displayed:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../Drawing/Text/draw_highscore.htm">draw_highscore</a></li>
+  </ul>
+  <p> </p>
+  <p>Finally, we have a function that permits you to assign a sprite to the mouse cursor:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="cursor_sprite.htm">cursor_sprite</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
+        <div style="float:right">Next: <a href="../Movement_And_Collisions/Movement_And_Collisions.htm">Movement And Collisions</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+General Game Control
+Game Control Functions
+Game Functions
+-->
+  <!-- TAGS
+game_functions
+-->
+
+</body></html>

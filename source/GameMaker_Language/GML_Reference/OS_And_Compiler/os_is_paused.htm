@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.19.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>os_is_paused</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for os_is_paused"/>
+  <meta name="rh-index-keywords" content="os_is_paused"/>
+  <meta name="search-keywords" content="os_is_paused"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="os_is_paused">
+        <span>os_is_paused</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>os_is_paused</h1>
+  <p>When developing for mobile devices, you need to have a way to check that the device is still focused on your game or not, especially as if your game is on an iOS, Android or Windows Phone device then it can be interrupted by phone calls and other apps.
+    You can use this function to check if the device is paused or not.</p>
+  <p>It is worth noting that this function will run any code that is contained within the code block on devices but then GameMaker Studio 2 will be paused immediately after as the device caches the game as a background process. So if you have something
+    like the example code provided below, the instance to be created will not actually appear or run any of its events <i>until after the game has been restarted from the cached state</i>. This means that you may prefer to have the <tt>os_is_paused</tt>    function call an alarm and then in the alarm event (which will be set when the device is paused but not run until it is un-paused) create a pause menu, restart music etc...</p>
+  <p>If you are using this function on Windows, Ubuntu (Linux), MacOS or HTML5 platforms, then the function is only toggled for <b>one step</b> to <tt>true</tt> when the game loses focus, and then it will return <tt>false</tt> again until the game is returned
+    to focus (and loses it again). This is because these platforms do not cache apps and games, and so these will continue to run in the background.</p>
+  <p class="note"><b>NOTE</b>: On mobile devices, sounds and music will be stopped when the os is paused. They will <b>not</b> restart again unless you specifically start them with the appropriate function.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">os_is_paused()</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if os_is_paused()<br/>     {
+    <br/>     if !instance_exists(obj_PauseMenu)<br/>         {
+    <br/>         instance_create_layer(0, 0, &quot;Controllers&quot;, obj_PauseMenu);<br/>         }
+    <br/>     }
+  </p>
+  <p>The above code checks to see if the game has been paused, and if it has then it creates an instance of the object &quot;obj_PauseMenu&quot; if none exist already.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
+        <div style="float:right">Next: <a href="os_is_network_connected.htm">os_is_network_connected</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+os_is_paused
+-->
+  <!-- TAGS
+os_is_paused
+-->
+
+</body></html>

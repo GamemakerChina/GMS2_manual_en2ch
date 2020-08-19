@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.4.2.0_20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>mp_grid_to_ds_grid</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="This page outlines the function mp_grid_to_ds_grid"/>
+  <meta name="rh-index-keywords" content="mp_grid_to_ds_grid"/>
+  <meta name="search-keywords" content="mp_grid_to_ds_grid"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="mp_grid_to_ds_grid">
+        <span>mp_grid_to_ds_grid</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>mp_grid_to_ds_grid</h1>
+  <p>With this function you can copy the given MP grid into a <a href="../../Data_Structures/DS_Grids/DS_Grids.htm">DS grid</a>. The DS grid should be the same size as the MP grid, although it doesn&#39;t have to be (data will be lost if it is smaller, and
+    if it is larger all extra grid cells will be 0). The DS grid cells will contain the value -1 if the MP grid cell was flagged as occupied, or it will be 0 if not.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">mp_grid_to_ds_grid(source, destination);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>source</td>
+        <td>Index of the mp_grid that is to be used</td>
+      </tr>
+      <tr>
+        <td>destination</td>
+        <td>Index of the ds_grid that is to be used to copy the grid data to.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">motion_grid = ds_grid_create(room_width / 32, room_height / 32);<br/> mp_grid_to_ds_grid(mp_grid, motion_grid);</p>
+  <p>The above code will create a new DS grid and then copy the MP grid data contained in the variable &quot;mp_grid&quot; into the new DS grid.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Motion_Planning.htm">Motion Planning</a></div>
+        <div style="float:right">Next: <a href="mp_grid_draw.htm">mp_grid_draw</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+mp_grid_to_ds_grid
+-->
+  <!-- TAGS
+mp_grid_to_ds_grid
+-->
+
+</body></html>

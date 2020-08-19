@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.13.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>id</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the variable id"/>
+  <meta name="rh-index-keywords" content="id"/>
+  <meta name="search-keywords" content="id"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="id">
+        <span>id</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>id</h1>
+  <p>This <b>read-only</b> variable holds the unique identifying number for the instance. Every instance that you create - whether through code or by adding them to a room in the Room Editor - is given a number that is used internally to identify this instance
+    and the variable <span class="inline">id</span> is what you can use to reference it. The <span class="inline">id</span> is also returned (and can be stored in a variable) when an instance is created using <tt><a href="../instance_create_layer.htm">instance_create_layer()</a></tt> or
+    <span class="inline"><a href="../instance_create_depth.htm">instance_create_depth()</a></span>, as well as other instance functions.</p>
+  <p class="note"><b>NOTE</b>: The value of this variable is <i>not</i> the same as the identifier that the instance is given in the room editor and is also different to the <span style="font-size:1px;"><a href="../instance_id.htm" style="font-size: 14px"><tt style="font-size: 14px">instance_id</tt></a></span> array
+    which contains all the ids of all the currently active instances.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">id;</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (integer - instance ID value)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">for(var i = 0; i &lt; instance_count; i++;)<br/>     {
+    <br/>     if instance_id[i] != id<br/>         {
+    <br/>         instance_id[i].scr += 5;<br/>         }
+    <br/>     }
+  </p>
+  <p>The above code adds 5 to the &quot;scr&quot; variable for every active instance in the room except the one running the code. It does this by looping through ALL the active instances (using the &quot;instance_id&quot; array to return each active instances
+    ID) and comparing them against the built in &quot;id&quot; variable, which is the ID of the original instance running the code.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Instance_Variables.htm">Instance Variables</a></div>
+        <div style="float:right">Next: <a href="visible.htm">visible</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+id
+-->
+  <!-- TAGS
+id
+-->
+
+</body></html>

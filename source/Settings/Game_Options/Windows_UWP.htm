@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "6.2.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Windows UWP</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that details the Windows UWP Game Options"/>
+  <meta name="rh-index-keywords" content="Game Options - UWP"/>
+  <meta name="search-keywords" content="UWP Game Options,Windows UWP Game Options"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Windows UWP">
+        <span>Windows UWP</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Windows UWP Game Options</h1>
+  <p>This section outlines the different options available to you that control how your UWP (Universal Windows Platform) game projects will be compiled. The different sections are:</p>
+  <p> </p>
+  <h2>General</h2>
+  <p><img alt="UWP General Options" class="center" src="../../assets/Images/Settings/UWP_General_Options.png"/>The general section of the UWP options is where you can set the <strong>Product Information</strong>:</p>
+  <ul class="colour">
+    <li><strong>Display Name</strong>: Specifies the friendly name for the app that is displayed to users (this string is localizable).</li>
+    <li><strong>Package Name</strong>: This is the name of the package that you have created and should match that used for the Developer key that you have created for the game (see the section on Packaging, below).</li>
+    <li><strong>Package Display Name</strong>: This is the &quot;short name&quot; of the package and should Ideally be the same as the Display Name</li>
+    <li><strong>Publisher Display Name</strong>: This is the name of your company or the person that you wish to associate as the games publisher.</li>
+    <li><strong>Version</strong>: The version number of your game.</li>
+  </ul>
+  <p>After setting that up you can select the different <strong>Orientations </strong>that your game can be run on for the best user experience. The available options are:</p>
+  <ul class="colour">
+    <li>Landscape</li>
+    <li>Portrait</li>
+    <li>Landscape-flipped</li>
+    <li>Portrait-flipped</li>
+  </ul>
+  <p>By default all of these will be selected and you should de-select those that you do not require.</p>
+  <p>After setting the orientation options, you can then signal the different <strong>Permissions </strong>that your UWP app will need from the following options:</p>
+  <ul class="Disc">
+    <li style="margin-top: 10px"><strong>Enable Internet Permission</strong>: Flags the game as having access to internet. This is off by default.</li>
+    <li><strong style="margin-top: 10px">Enable Microphone Permission</strong>: Flags the game as having access to the microphone of the device. This is off by default.</li>
+    <li><strong>Enable IAP Sandbox</strong>: Flags the game as using sandboxed In App Purchases. This is off by default.</li>
+  </ul>
+  <p>Finally you have two options for setting the <strong>Target </strong>and <strong>Minimum </strong>Windows platform versions. In general you won&#39;t want to touch these and should leave them at their default values, but if you are having build issues
+    - specifically, if you can&#39;t install the Windows SDK set by default, then you&#39;ll need to change these to what you have installed - then you may want to set these to other values. If you are unsure what values to set, then create a new UWP
+    project in Visual Studio and have a look at what it sets the values to.</p>
+  <p> </p>
+  <h2>Graphics</h2>
+  <p><img alt="UWP Graphics Options" class="center" src="../../assets/Images/Settings/UWP_Graphics_Options.png"/>The graphics options are those that you should configure to determine how your game will use the graphics card of your target UWP device. The
+    following options are included for you to modify:</p>
+  <ul class="colour">
+    <li><strong>Interpolate colours between pixels</strong>: Turns on <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a>, which basically &quot;smooths&quot; pixels. For crisp pixel graphics, it should be
+      off, but if you have nice alpha blends and smoothed edged graphics it is better left on.This is off by default.</li>
+    <li><strong>Display Cursor</strong>: When this option is enabled, the default OS cursor will be shown in your game. If this is disabled, then while the mouse is over the game window, there will be no visible cursor unless you have created one as part
+      of the game project (this is on by default).</li>
+    <li><strong>Start Fullscreen</strong>: If this is checked, the game will start in fullscreen mode otherwise it will start windowed. This is off by default.</li>
+    <li><strong>Allow Fullscreen Switching</strong>: With this ticked the user can switch from fullscreen to windowed and back again using the standard Ubuntu OS shortcuts. This is off by default.</li>
+    <li><strong>Scaling</strong>: Here you can choose to maintain aspect ratio (so a 4:3 room will be &quot;letter boxed&quot; on a 16:9) or to scale fully (stretching the image to fit the full screen).<br/>
+      <br/>
+      <span style="font-size:16px;"><strong>WARNING!</strong> <em>Switching off the application surface will disable all the scaling options set in the Windows Game Options until it has been switched back on again. See The Application Surface for further details.</em></span></li>
+  </ul>
+  <p>Finally there is the option to set the size of the <a class="tooltip" title="A texture page (also called a texture atlas) is a collection of images (sprites, tilesets, font characters, etc...) that are grouped together in an optimal way so that they take up the least amount of texture memory when your game is run.">texture page</a>. The default (and most compatible) size is 2048x2048, but you can choose from anywhere between 256x256 up to 8192x8192. There
+    is also a button marked <strong><strong>Preview </strong></strong>which will generate the texture pages for this platform and then open a window so that you can see how they look. This can be very useful if you wish to see how the texture pages are
+    structured and to prevent having texture pages larger (or smaller) than necessary. For more information on texture pages, please see <a href="../Texture_Information/Texture_Pages.htm">here</a>.</p>
+  <p class="note"><strong>NOTE</strong>: Be aware that the larger the size of the texture page, the less compatible your game will be on PC&#39;s with lower specifications.</p>
+  <p> </p>
+  <h2>Images</h2>
+  <p><img alt="UWP Images Logo Options" class="center" src="../../assets/Images/Settings/UWP_Images1_Options.png"/>The first part of the Images section is for defining the game <strong>Logo</strong>. This is essentially the icon that your game will use
+    within the UWP ecosystem, and it is worth noting that these images can be transparent <span class="inline">.png</span> files, in which case they will be drawn over the <strong>Background Colour</strong> specified in this section. This background colour
+    is also applied to the button colour in any app-owned dialog boxes and to the App Description page in the Store on devices.</p>
+  <p><img alt="UWP Images Splash Screen Options" class="center" src="../../assets/Images/Settings/UWP_Images2_Options.png"/>After setting up the logo you can set the <strong>Splash Screen</strong> for the game. This is the screen that will be shown when
+    you start your game, and it cannot be larger than 620 x 300 pixels and like the logo it can be a transparent <span class="inline">.png</span> file, in which case the <strong>Background Colour</strong> you shoose will be used for it.</p>
+  <p><img alt="UWP Images Icon Options" class="center" src="../../assets/Images/Settings/UWP_Images3_Options.png"/>Finally you have the option to set the various <strong>Tiles </strong>that your game will use on the different devices that UWP can run on.
+    You can set the following (and they should all be <span class="inline">*.png</span> format files):</p>
+  <ul class="colour">
+    <li>The <strong>small tile</strong> image is the logo image that appears next to the App name in the search bar and other areas of the UI. It should be 44 x 44 pixels.</li>
+    <li>The <strong>medium tile</strong> image should be a 71x71 pixel image.</li>
+    <li>The next tile image is the <strong>Store logo tile </strong>and it should be 50 x 50 pixels.</li>
+    <li>The <strong>wide imag</strong><strong>e tile</strong> is that which appears when the tile is in its wide format and should be 310 x 150 pixels. If this image isn&#39;t provided, the tile can display only in the square format and can&#39;t accept notifications
+      based on wide template types. Since the user can decide which format the tile uses it is recommended that you include a wide image tile. Also note that if a wide image tile is provided, the tile may appear initially in its wide format.</li>
+    <li>The <strong>large image tile</strong> is the large live tile format and should be 310 x 310 pixels. Note that this will only be used on desktop OS.</li>
+  </ul>
+  <p>It is worth noting that GameMaker Studio 2 has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game
+    is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require.</p>
+  <p> </p>
+  <h2>Packaging</h2>
+  <p><img alt="UWP Packaging Options" class="center" src="../../assets/Images/Settings/UWP_Packaging_Options.png"/>GameMaker Studio 2 supplies a default <strong>Developer Key</strong> for Windows UWP development, but it is recommended that you generate
+    your own and point to it here. To do this, create an empty project in Visual Studio then store somewhere safe a copy of the automatically generated <span class="inline">*.pfx</span> file that it will have included in the empty project (this is the
+    developer key). You should then link that <span class="inline">*.pfx</span> file here.</p>
+  <p>After linking to the file, you should click on the associated <strong>Install </strong>button and then follow the instructions in the command prompt that will open. If you do not do this then using the Run/Debug buttons (or hitting F5) will fail and
+    your game cannot be tested on the UWP platform (however, if you use <strong>Create Executable</strong> the certification installation process will automatically be launched if the <span class="inline">*.pfx</span> has yet to be registered).</p>
+  <p class="note"><strong>NOTE</strong>: When it comes to uploading your app to the store you will need to get the correct <span class="inline" style="font-size: 14px">*.pfx </span>for your title. This is done via associating your app with the Windows Store in Visual
+    Studio which causes Visual Studio to generate a new <span class="inline" style="font-size: 14px">*.pfx </span>specifically for the app. It is also worth noting that you can associate <strong>any </strong>app with the Windows Store in Visual Studio,
+    meaning you can associate a blank project with the Windows Store app and simply copy the generated <span class="inline" style="font-size: 14px">*.pfx </span>to a safe location which can then be used within UWP Game Options. You can find instructions
+    on how this is done from the <a href="https://help.yoyogames.com/hc/en-us/articles/115001349488">YoYo Games Knowledge Base</a>.</p>
+  <p>In this section you also need to specify the<strong> Publisher name</strong> that was used to generate the signing certificate. The input should always be preceeded by &quot;<span class="inline">CN=</span>&quot;, eg: <span class="inline">CN=YoYoGames</span>.</p>
+  <p> </p>
+  <p>Xbox Live</p>
+  <p><img alt="UWP XBox Live Options" class="center" src="../../assets/Images/Settings/UWP_XBoxLive_Options.png"/>The Xbox Live section of the UWP Game Options is where you can activate your UWP project for use on the Xbox One console. Activating the project
+    for the Xbox here permits you to do the following when the project is run on an Xbox One:</p>
+  <ul class="colour">
+    <li>Sign-in to Xbox Live from within the app</li>
+    <li>Use the Xbox Live user identity in some way in the project (for example, showing the gamertag or gamer pic)</li>
+  </ul>
+  <p>Before you can do these things however, you will need to make sure that you have clicked on the <strong>Enable Xbox Live</strong> checkbox, and if you are part of the <a href="https://www.xbox.com/en-US/developers/creators-program/">Microsoft Creators Program</a>    you should also check the <strong>Creators Program App</strong> option. If you are part of the Creators Program, you will then need to add in the <strong>Title ID</strong> and the <strong>Service Configuration ID</strong> (more info on these can be
+    found from <a href="https://docs.microsoft.com/en-us/gaming/xbox-live/test-release/portal-config/live-service-config-ids-mp">Microsoft</a>).</p>
+  <p>Note that currently to test Xbox Live functionality in your project, you will need to use <strong>Create Executable</strong> rather than Run as the UWP Xbox output needs to use the Windows Store signing certificate that you give as part of the Packaging
+    info (see above) rather than the temporary one supplied with GameMaker Studio 2, which is what will be used when you hit Run.</p>
+  <p>Once you have enabled XBox Live, you can then go ahead and use the XBox Live Functions in your project, but note for the most basic funtionality you will need to be part of the <a href="https://docs.microsoft.com/en-us/gaming/xbox-live/get-started/setup-partner-center/legacy/live-get-started-creators">Creator Program</a>    and for the advanced functionality you will need an <a href="https://www.xbox.com/es-ES/developers/id">ID@XBox account</a>..</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Game_Options.htm">Game Options</a></div>
+        <div style="float:right">Next: <a href="HTML5.htm">HTML5</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Windows UWP Options
+UWP Options
+-->
+  <!-- TAGS
+uwp_options
+-->
+
+</body></html>

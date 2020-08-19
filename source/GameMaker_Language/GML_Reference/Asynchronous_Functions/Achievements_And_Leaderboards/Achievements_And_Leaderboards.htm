@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.12.5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Achievements And Leaderboards</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for all the Achievements And Leaderboard functions"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="Achievements And Leaderboards"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Achievements And Leaderboards">
+        <span>Achievements And Leaderboards</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Achievements And Leaderboards</h1>
+  <p>Games that are made to target devices that run iOS or Android can also connect to one of two leaderboard and achievement API&#39;s. For iOS you have the <b>iTunes Connect</b>, and for Android you can use <b>Google Play</b>, with both of
+    them using the functions found on this page. These functions permit your game to send information on scores and achievements to the leaderboards that you have set up in the Developers Account for the game you are making and is an excellent way to
+    get players involved in the social side of gaming as they can then see what other people who have played your game have achieved and try to better them.</p>
+  <p>When using these functions, you should note that they do <i>not</i> track achievements and scores automatically for you. They only show the data that you send them from your game, so you must code your own achievements and
+    hi-score system to keep track of the individuals status in game, then use these functions to add the data to the chosen network (however you <i>can</i> request progress information for achievements using the     <a href="achievement_load_progress.htm"><tt>achievement_load_progress()</tt></a> function).</p>
+  <p>Some of these functions will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a>, which will contain a <tt>DS Map</tt> of data relating
+    to the function that triggered it. Those functions that trigger the event also detail the map key/value pairs that are returned by the callback, however a callback <b>Social Event</b> can also be triggered by your game receiving
+    external notifications about challenges etc... </p>
+  <p class="note"><b>NOTE</b>: For these functions to work with iOS you must have a valid Game Center account and an iOS <b>app id</b> for your game.</p>
+  <p class="note"><b>NOTE</b>: For these functions to work with Android you must submit your game to Google Play, and have set up the necessary sections as well as have the API activated in the <a href="../../../../Settings/Game_Options/Android.htm">Android Game Options</a> for
+    your game.</p>
+  <p>The functions listed below are the basic ones used for integrating your game with the chosen target social gaming platform:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="achievement_login_status.htm">achievement_login_status</a></li>
+    <li><a href="achievement_login.htm">achievement_login</a></li>
+    <li><a href="achievement_logout.htm">achievement_logout</a></li>
+    <li><a href="achievement_available.htm">achievement_available</a></li>
+    <li><a href="achievement_post.htm">achievement_post</a></li>
+    <li><a href="achievement_post_score.htm">achievement_post_score</a></li>
+    <li><a href="achievement_increment.htm">achievement_increment</a></li>
+    <li><a href="achievement_show_achievements.htm">achievement_show_achievements</a></li>
+    <li><a href="achievement_show_leaderboards.htm">achievement_show_leaderboards</a></li>
+    <li><a href="achievement_show_challenge_notifications.htm">achievement_show_challenge_notifications</a></li>
+    <li><a href="achievement_get_challenges.htm">achievement_get_challenges</a></li>
+    <li><a href="achievement_get_pic.htm">achievement_get_pic</a></li>
+    <li><a href="achievement_load_friends.htm">achievement_load_friends</a></li>
+    <li><a href="achievement_load_leaderboard.htm">achievement_load_leaderboard</a></li>
+    <li><a href="achievement_load_progress.htm">achievement_load_progress</a></li>
+    <li><a href="achievement_send_challenge.htm">achievement_send_challenge</a></li>
+    <li><a href="achievement_reset.htm">achievement_reset</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Asynchronous_Functions.htm">Asynchronous Functions</a></div>
+        <div style="float:right">Next: <a href="../HTTP/HTTP.htm">HTTP</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Achievements And Leaderboards
+-->
+  <!-- TAGS
+achievement_leaderboard_functions
+-->
+
+</body></html>

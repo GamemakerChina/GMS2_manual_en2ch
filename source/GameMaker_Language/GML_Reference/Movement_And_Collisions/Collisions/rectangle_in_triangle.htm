@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.4.3.0_22";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>rectangle_in_triangle</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that gives an overview of the funtion rectangle_in_triangle"/>
+  <meta name="rh-index-keywords" content="rectangle_in_triangle"/>
+  <meta name="search-keywords" content="rectangle_in_triangle"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="rectangle_in_triangle">
+        <span>rectangle_in_triangle</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>rectangle_in_triangle</h1>
+  <p>This function will check a rectangular area that you define to see if it is either not in collision, completely within the destination bounds, or if it is simply touching, a defined triangular area. If they are not touching at all the function will
+    return 0, if the source is completely within the destination it will return 1, and if they are simply overlapping then it will return 2. The image below illustrates this:</p>
+  <p><img alt="Rectangle triangle collision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/rectangle_in_triangle.png"/></p>
+  <h4>Syntax:</h4>
+  <p class="code">rectangle_in_triangle(sx1, sy1, sx2, sy2, dx1, dy1, dx2, dy2, dx3, dy3);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sx1</td>
+        <td>The x coordinate of the left side of the source rectangle.</td>
+      </tr>
+      <tr>
+        <td>sy1</td>
+        <td>The y coordinate of the top side of the source rectangle.</td>
+      </tr>
+      <tr>
+        <td>sx2</td>
+        <td>The x coordinate of the right side of the source rectangle.</td>
+      </tr>
+      <tr>
+        <td>sy2</td>
+        <td>The y coordinate of the bottom side of the source rectangle.</td>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>The x coordinate of the first side of the triangle to check.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>The y coordinate of the first side of the triangle to check.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>The x coordinate of the second side of the triangle to check.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>The y coordinate of the second side of the triangle to check.</td>
+      </tr>
+      <tr>
+        <td>x3</td>
+        <td>The x coordinate of the third side of the triangle to check.</td>
+      </tr>
+      <tr>
+        <td>y3</td>
+        <td>The y coordinate of the third side of the triangle to check.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var inst = instance_nearest(x, y, obj_Player);<br/> if instance_exists(inst)<br/>    {
+    <br/>    var x1 = x + lengthdir_x(100, image_angle - 45);<br/>    var y1 = y + lengthdir_y(100, image_angle - 45);<br/>    var x2 = x + lengthdir_x(100, image_angle + 45);<br/>    var y2 = y + lengthdir_y(100, image_angle + 45);<br/>    if rectangle_in_triangle(inst.bbox_left,
+    inst.bbox_top, inst.bbox_right, inst.bbox_bottom, x, y, x1, y1, x2, y2) == 1<br/>       {
+    <br/>       can_see = true;<br/>       }
+    <br/>    }
+  </p>
+  <p>The above code uses the <tt>rectangle_in_triangle</tt> function as a &quot;cone of vision&quot; to check for an instance of &quot;obj_player&quot;. If the full bounding box is within the given triangular area, it will set a variable to <tt>true</tt>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
+        <div style="float:right">Next: <a href="rectangle_in_circle.htm">rectangle_in_circle</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+rectangle_in_triangle
+-->
+  <!-- TAGS
+rectangle_in_triangle
+-->
+
+</body></html>

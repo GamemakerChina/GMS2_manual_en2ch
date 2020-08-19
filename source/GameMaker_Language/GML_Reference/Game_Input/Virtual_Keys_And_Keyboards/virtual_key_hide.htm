@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.7.6.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>virtual_key_hide</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for virtual_key_hide"/>
+  <meta name="rh-index-keywords" content="virtual_key_hide"/>
+  <meta name="search-keywords" content="virtual_key_hide"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="virtual_key_hide">
+        <span>virtual_key_hide</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>virtual_key_hide</h1>
+  <p>Once you have created your virtual key for your devices, you may need to debug and test that it is correctly positioned and working properly and for that you would call the function <a href="virtual_key_show.htm"><tt>virtual_key_show()</tt></a>. However,
+    you may need to toggle this view on and off, so you can also hide the virtual key with this function, using the index of the virtual key that you want to hide (previously created and stored using <a href="virtual_key_add.htm"><tt>virtual_key_add()</tt></a>).
+    Once you are happy with things it is recommended that you create and place your own graphic in its area.</p>
+  <p> </p>
+  <h4>Syntax</h4>
+  <p class="code">virtual_key_hide(index);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td>The index of the virtual key to hide.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if global.Debug<br/>    {
+    <br/>    virtual_key_show(global.Left);
+    <br/>    }
+    <br/> else
+    <br/>    {
+    <br/>    virtual_key_hide(global.Left);
+    <br/>    }
+  </p>
+  <p>The above code checks the global variable &quot;global.Debug&quot; and if it tests true then the virtual key indexed in the variable &quot;global.Left&quot; will be drawn on the screen, and if it is false then the key will be hidden.</p>
+  <p><b></b></p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Virtual_Keys_And_Keyboards.htm">Virtual Keys And Keyboards</a></div>
+        <div style="float:right">Next: <a href="virtual_key_delete.htm">virtual_key_delete</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+virtual_key_hide
+-->
+  <!-- TAGS
+virtual_key_hide
+-->
+
+</body></html>

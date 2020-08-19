@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.5.4.0_9";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>audio_get_recorder_info</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function audio_get_recorder_info"/>
+  <meta name="rh-index-keywords" content="audio_get_recorder_info"/>
+  <meta name="search-keywords" content="audio_get_recorder_info"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="audio_get_recorder_info">
+        <span>audio_get_recorder_info</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_get_recorder_info</h1>
+  <p>This function will return a <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> with information about the given recorder source index. You can find out how many recorder sources are available using the function <a href="audio_get_recorder_count.htm"><tt>audio_get_recorder_count()</tt></a>,
+    and the map returned will contain the following key/value pairs:</p>
+  <ul class="colour">
+    <li>&quot;<strong>name</strong>&quot; - a name to describe the device</li>
+    <li>&quot;<strong>index</strong>&quot; - the index to be used to record</li>
+    <li>&quot;<strong>data_format</strong>&quot; - the format data will be returned in (this is currently always <tt>buffer_s16</tt> but other formats may be supported in the future)</li>
+    <li>&quot;<strong>sample_rate</strong>&quot; - the sample rate (in Hz) of the data returned (currently clamped to 16000hz but this may change in future)</li>
+    <li>&quot;<strong>channels</strong>&quot; - the constant <tt>audio_mono</tt> (further constants for stereo and 3D may be supported in the future)</li>
+  </ul>
+  <p>Note that while the function creates a DS map for you, it does <i>not</i> remove it again later and so you should be destroying the map yourself when it is no longer needed to prevent any memory leaks.</p>
+  <p class="note"><b>NOTE: </b>Most platforms <b>except HTML5</b> support recording audio in some form, but that does not mean that all devices will permit it, even if the platform does, so you should always check that the <span style="font-size:1px;"><a href="audio_get_recorder_count.htm"><tt style="font-size: 14px">audio_get_recorder_count()</tt></a></span>    function returns a value greater than 0 to verify that recording devices are available before using the rest of the recording functions.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_get_recorder_info(recorder_index);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>recorder_index</td>
+        <td>The index of the recorder source to get the information from.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Integer (DS map ID)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">len = async_load[? &quot;data_len&quot;];<br/> audio_buff = buffer_create(len, buffer_fast, 1);<br/> buffer_copy(async_load[? &quot;buffer_id&quot;], 0, len, buff, 0);<br/> audio_queue_sound(audio_queue, audio_buff, 0, len);<br/> audio_play_sound(audio_queue,
+    10, 0);</p>
+  <p>The above code would be called in the asynchronous <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm">Audio Recording</a> event and assigns some recorded data to a buffer, which is then added to an audio queue.
+    This is then played.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Audio.htm">Audio Buffers</a></div>
+        <div style="float:right">Next: <a href="audio_create_buffer_sound.htm">audio_create_buffer_sound</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+audio_get_recorder_info
+-->
+  <!-- TAGS
+audio_get_recorder_info
+-->
+
+</body></html>

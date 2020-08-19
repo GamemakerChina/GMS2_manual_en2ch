@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.6.2_20";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>screen_save_part</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for screen_save_part"/>
+  <meta name="rh-index-keywords" content="screen_save_part"/>
+  <meta name="search-keywords" content="screen_save_part"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="screen_save_part">
+        <span>screen_save_part</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>screen_save_part</h1>
+  <p>With this function you can save a screenshot of a part of the game as it currently appears in the game display. The selection coordinates are based on the <i>absolute</i> size of the display (or window if not fullscreen), so (0,0) is always the top
+    left hand corner of the screen (or window). Below is an image that shows how this function works:</p>
+  <p><img alt="Saving part of the screen example" class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Cameras_Display/screen_save.png"/>The file will be saved to the <a href="../File_Handling/File_Directories/working_directory.htm">working directory</a> of
+    the game. It is important to note that the function is designed to be called in the <b>Draw GUI End Event</b>, which should give consistent results across all platforms. Using it in any other event may not work as expected, and may give different
+    results across different targets and even devices.</p>
+  <p class="note"><b>NOTE: </b>This function does not work on the HTML5 target.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">screen_save_part(fname,x,y,w,h);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>fname</td>
+        <td>The filename for the screenshot to save</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>The x coordinate of the top left corner of the area of the screen to capture</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>The y coordinate of the top left corner of the area of the screen to capture</td>
+      </tr>
+      <tr>
+        <td>w</td>
+        <td>The width of the area of the screen to capture</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>The height of the area of the screen to capture</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if keyboard_check_pressed(ord(&quot;S&quot;))<br/>     {
+    <br/>     screen_save_part(&quot;Screens\Screen_&quot; + string(num++) + &quot;.png&quot;, 0, 0, 100, 100)<br/>     }
+  </p>
+  <p>The above code takes a screenshot of a part of the game screen that is 100 pixels square when the user presses the &quot;S&quot; key. This screen shot is saved to a specific folder and numbered using a variable which is then incremented.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear"><a href="Cameras_And_Display.htm">Cameras And Display</a>
+        <div style="float:left">Back: </div>
+        <div style="float:right">Next: <a href="gif_open.htm">gif_open</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+screen_save_part
+-->
+  <!-- TAGS
+screen_save_part
+-->
+
+</body></html>

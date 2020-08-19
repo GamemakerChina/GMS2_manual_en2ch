@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "6.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Audio Groups</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that explains how to use Audio Groups"/>
+  <meta name="rh-index-keywords" content="Audio Groups"/>
+  <meta name="search-keywords" content="audio groups"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Audio Groups">
+        <span>Audio Groups</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Audio Groups</h1>
+  <p><img alt="Audio Group Editor" class="center" src="../assets/Images/Settings/Audio_Groups.png"/>The <strong>Audio Group Manager</strong> is available from the <a href="../IDE_Navigation/Menus/The_Tools_Menu.htm">Tools Menu</a> in the IDE. Here you can
+    <em>add</em>, <em>delete </em>and <em>rename </em><strong>Audio Groups</strong>, as well as set their platform export options. GameMaker Studio 2 permits you to assign each of the audio resources (sound effects and music) to different audio groups
+    to try and optimise the number of sounds that are being played at any one time, as well as give you further control over what platforms they are exported to.</p>
+  <p>To define an audio group you need to click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the <strong>Add New</strong> button which will create new group that you can then name. To change group,
+    click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the drop-down menu and select the one you wish to edit.</p>
+  <p class="note"><strong>NOTE</strong>: If you select streamed audio for a sound in the <a href="../The_Asset_Editors/Sounds.htm">Sound Editor</a>, you will not be able to assign the sound to an Audio Group as streamed sounds are not packaged in the same way as other
+    sounds and you have full control over when they are loaded, played and unloaded using code.</p>
+  <p>To add a sound to an audio group, you need to open the <a href="../The_Asset_Editors/Sounds.htm">Sound Editor</a> for that sound and then select the group from the option you will find there, or alternatively you can add assets to an audio group via
+    the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> menu in the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a>. You can select one or more sound assets (or
+    an entire asset group folder) and then use the RMB menu to add the sounds to any group. You can also click the <strong>Add Resource</strong> button at the bottom of the Audio Group Editor to add assets that way.</p>
+  <p>Once you have a sound added to a custom audio group then you can use this window to selectively choose which platform to export that sound to. It may be that by default you have all your sounds at the highest quality, but that for HTML5 (for example)
+    you want to use a lower quality sound file set to use less memory. In that case you add the lower quality files to GameMaker Studio 2 and then assign them to a new audio group. You would then select that audio group from the drop down menu and set
+    it to export <em>only </em>to HTML5, and remove the HTML5 export from the higher quality audio group export options. It is important to note that you cannot change the export options for the &quot;default&quot; audio group and that it will always
+    be exported to all available platforms when you build a final game package.</p>
+  <p>Once you have defined audio groups and assigned sounds to them you can see them in the list on the left when you select the group. There will always be a &quot;default&quot; audio group available and all the sounds that are within this group will always
+    be included in the game package for all platforms and they will all be loaded into memory on start-up (unless flagged as &quot;streamed&quot; in the Sound Editor properties), but when you create a custom audio group, the files that are added to it
+    <em>will not be loaded into memory</em> until you call the function <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/audio_group_load.htm"><span class="inline">audio_group_load()</span></a>. In this way you can control
+    what audio is resident in memory at any time. Note too that for all the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Groups/Audio_Groups.htm">audio group functions</a>, you will need to supply the audio group ID value.
+    This is simply the name that you have given the audio group.</p>
+  <p>Audio Groups are also linked to the <a href="Configurations.htm">Configurations</a> settings. When you select a configuration, you can then open the Audio Groups window and select the export targets from the right hand side for that configuration, and
+    then changing configurations will change these output targets. Note that you cannot set sound resources to different groups on a per-configuration basis, only the export target for the given group.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Game_Settings.htm">Game Settings</a></div>
+        <div style="float:right">Next: <a href="Texture_Groups.htm">Texture Groups</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Audio Groups
+-->
+  <!-- TAGS
+audio_groups
+-->
+
+</body></html>

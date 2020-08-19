@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.19.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>os_is_network_connected</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for os_is_network_connected"/>
+  <meta name="rh-index-keywords" content="os_is_network_connected"/>
+  <meta name="search-keywords" content="os_is_network_connected"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="os_is_network_connected">
+        <span>os_is_network_connected</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>os_is_network_connected</h1>
+  <p>With this function you can check and see if your device currently has an internet connection and it will return <tt>true</tt> if it does, or <tt>false</tt> if it does not, and depending on the OS, it may attempt to make a connection before returning
+    a value.</p>
+  <p>The function has an optional argument to enable/disable it attempting to make a connection when called, and this option is curently <strong>only</strong> for the Nintendo Switch target. When set to <span class="inline">true</span> the funtion will attempt
+    to make a connection, and when set to <span class="inline">false</span> it will simply be limited to checking the connection. Note that attempting to make a connection may cause the Switch OS to hang for a few seconds. </p>
+  <p class="note"><b>NOTE: </b>This function checks the internal device API that controls connections and so may return true if there is a bluetooth connection, a Wi-Fi connection, or even just a normal network connection that permits internet access.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">os_is_network_connected(attempt_connection);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>attempt_connection</td>
+        <td>OPTIONAL! For Nintendo Switch Target <strong>only</strong>. Set to <span class="inline">true</span> to attempt an OS level connection when called.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if os_is_network_connected()<br/>    {
+    <br/>    global.connected = true;<br/>    }
+  </p>
+  <p>The above code checks to see if the device has a connection to the internet and if so it sets a global variable.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
+        <div style="float:right">Next: <a href="os_get_config.htm">os_get_config</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+os_is_network_connected
+-->
+  <!-- TAGS
+os_is_network_connected
+-->
+
+</body></html>

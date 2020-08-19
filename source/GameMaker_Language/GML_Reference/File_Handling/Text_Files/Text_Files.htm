@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.16.3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Text Files</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for the Text File functions"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="Text Files"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Text Files">
+        <span>Text Files</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Text Files</h1>
+  <p>Text files are a useful way to store large amounts of data externally from your game. Contrary to ini files, you can have up to 32 text files open at once, and you can read and write large chunks of data to them as well. However, it is up to you to
+    decide how that data should be structured as there is no set &quot;section&quot; or &quot;key&quot; structure like with <a href="../Ini_Files/Ini_Files.htm"><tt>*.ini</tt> files</a>.</p>
+  <p>Please note that for games with localizations it is very important that accented letters can be read from external files. This means that you should create the txt file in <b>UTF8</b> format <i>first</i> and
+    then add it into GameMaker Studio 2 as an included file so that it is exported on running the game and used instead of the default ANSI format txt file that is created by the GameMaker Studio 2 file
+    functions when no file is previously supplied. In this way, you can read and write to it correctly with all accents and non-roman letters being maintained.</p>
+  <p>The following functions exist that deal with files:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="file_text_open_read.htm">file_text_open_read</a></li>
+    <li><a href="file_text_open_write.htm">file_text_open_write</a></li>
+    <li><a href="file_text_open_append.htm">file_text_open_append</a></li>
+    <li><a href="file_text_open_from_string.htm">file_text_open_from_string</a></li>
+    <li><a href="file_text_read_real.htm">file_text_read_real</a></li>
+    <li><a href="file_text_read_string.htm">file_text_read_string</a></li>
+    <li><a href="file_text_readln.htm">file_text_readln</a></li>
+    <li><a href="file_text_write_real.htm">file_text_write_real</a></li>
+    <li><a href="file_text_write_string.htm">file_text_write_string</a></li>
+    <li><a href="file_text_writeln.htm">file_text_writeln</a></li>
+    <li><a href="file_text_eoln.htm">file_text_eoln</a></li>
+    <li><a href="file_text_eof.htm">file_text_eof</a></li>
+    <li><a href="file_text_close.htm">file_text_close</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../File_Handling.htm">File Handling</a></div>
+        <div style="float:right">Next: <a href="../Binary_Files/Binary_Files.htm">Binary Files</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Text Files
+-->
+  <!-- TAGS
+text_file_functions
+-->
+
+</body></html>

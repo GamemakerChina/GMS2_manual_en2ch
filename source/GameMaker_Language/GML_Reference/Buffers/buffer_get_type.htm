@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.17.0_27";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>buffer_get_type</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for buffer_get_type"/>
+  <meta name="rh-index-keywords" content="buffer_get_type"/>
+  <meta name="search-keywords" content="buffer_get_type,buffer_fixed,buffer_grow,buffer_wrap,buffer_fast,buffer_vbuffer"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="buffer_get_type">
+        <span>buffer_get_type</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>buffer_get_type</h1>
+  <p>With this function you retrieve the type of buffer that is being referenced by a buffer ID value. The return value will be one of the following constants:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>buffer_fixed</td>
+        <td>A buffer of fixed size.</td>
+      </tr>
+      <tr>
+        <td>buffer_grow</td>
+        <td>A buffer that will &quot;grow&quot; dynamically as data is added</td>
+      </tr>
+      <tr>
+        <td>buffer_wrap</td>
+        <td>A buffer where the data will &quot;wrap&quot;. When the data being added reaches the limit of the buffer size, the overwrite will be placed back at the start of the buffer, and further writing will continue from that point.</td>
+      </tr>
+      <tr>
+        <td>buffer_fast</td>
+        <td>Special &quot;stripped&quot; buffer that is extremely fast to read/write to. Can only be used with <tt>buffer_u8</tt> <a href="buffer_read.htm">data types</a>, and <i>must</i> be 1 byte aligned.</td>
+      </tr>
+      <tr>
+        <td>buffer_vbuffer</td>
+        <td>A vertex buffer</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">buffer_get_type(buffer);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>buffer</td>
+        <td>The index of the buffer to check.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Constant</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">type = buffer_get_type(buff);</p>
+  <p>The above code will get the type of buffer from the value indexed in the variable &quot;buff&quot; and store it in a variable.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
+        <div style="float:right">Next: <a href="buffer_get_alignment.htm">buffer_get_alignment</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+buffer_get_type
+buffer_fixed
+buffer_grow
+buffer_wrap
+buffer_fast
+buffer_vbuffer
+-->
+  <!-- TAGS
+buffer_get_type
+-->
+
+</body></html>

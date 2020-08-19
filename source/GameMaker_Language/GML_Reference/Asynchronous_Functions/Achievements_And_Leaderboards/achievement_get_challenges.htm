@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.12.5.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>achievement_get_challenges</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for achievement_get_challenges"/>
+  <meta name="rh-index-keywords" content="achievement_get_challenges,achievement_challenge_list_received,achievement_filter_friends_only,achievement_filter_all_players"/>
+  <meta name="search-keywords" content="achievement_get_challenges,achievement_challenge_list_received,achievement_filter_friends_only,achievement_filter_all_players"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="achievement_get_challenges">
+        <span>achievement_get_challenges</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_get_challenges</h1>
+  <p>This function will send a request to the server for information on all current challenges and will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> which contains the
+    <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> map populated with the relevant key/value pairs. The <i>id</i> key of this <tt>DS Map</tt> is used to identify the correct callback (there can
+    be more than one trigger function for any given asynchronous event), and will be paired with the <b>constant</b> <tt>achievement_challenge_list_received</tt> as well as a number of other key/value pairs for each challenge. The exact contents of the
+    map are shown below:</p>
+  <p class="note"><b>NOTE</b>: This function is for <b>iOS</b> only.</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - For this function it should be <tt>achievement_challenge_list_received</tt></li>
+    <li>&quot;<b>numchallenges</b>&quot; - The number of challenges (local and remote) currently available.</li>
+    <li>&quot;<b>ChallengeNplayerid</b>&quot; - The player id for the challenge, where &quot;N&quot; is an integer, EG: &quot;Challenge5playerid&quot; is the player id for the fifth challenge in the list.</li>
+    <li>&quot;<b>ChallengeNissuerid</b>&quot; - The id of the person that issued the challenge, where &quot;N&quot; is an integer, EG: &quot;Challenge2issuerid&quot; is the issuer id for the second challenge in the list.</li>
+    <li>&quot;<b>ChallengeNstate</b>&quot; - The state of the challenge &quot;N&quot;, which will have a value of 0 - 3 (as a string) for <i>invalid</i>, <i>pending</i>, <i>completed</i> or <i>declined</i>.</li>
+    <li>&quot;<b>ChallengeNmessage</b>&quot; - The text message for challenge &quot;N&quot;.</li>
+    <li>&quot;<b>ChallengeNissueddate</b>&quot; - The issue date for challenge &quot;N&quot;.</li>
+    <li>&quot;<b>ChallengeNcompleteddate</b>&quot; - The completion date for challenge &quot;N&quot;.</li>
+    <li>&quot;<b>ChallengeNtype</b>&quot; - The type of challenge given. Can be one of two constants:</li>
+  </ul>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>achievement_filter_friends_only </td>
+        <td>Get only the scores of the players friends.</td>
+      </tr>
+      <tr>
+        <td>achievement_filter_all_players </td>
+        <td>Get all scores for all players.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <ul class="colour">
+    <li>&quot;<b>ChallengeNidentifier</b>&quot; - The identifying string for the challenge.</li>
+    <li>&quot;<b>ChallengeNscore</b>&quot; - The score tied in with the challenge.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">achievement_get_challenges()</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Extended Example:</h4>
+  <p>The following code would probably be called after the player has logged into their game account using <a href="achievement_login.htm"><tt>achievement_login()</tt></a>:</p>
+  <p class="code">achievement_get_challenges();</p>
+  <p>This will send off a request for the current challenge information and generate an asynchronous callback with the special <tt>async_load</tt> ds_map containing the following data:</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_challenge_list_received<br/>    {
+    <br/>    var numentries = ds_map_find_value(async_load,&quot;numchallenges&quot;);<br/>    for(var i = 0; i &lt; numentries; i++;)<br/>       {
+    <br/>       player_id[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;playerid&quot;);<br/>       issuer_id[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i) +&quot;issuerid&quot;);<br/>       state[i]
+    = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;state&quot;);<br/>       message[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;message&quot;);<br/>       date_completed[i] = ds_map_find_value(async_load,
+    &quot;Challenge&quot; + string(i)+&quot;completeddate&quot;);<br/>       date_issued[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;issueddate&quot;);<br/>       ach_type[i] = ds_map_find_value(async_load, &quot;Challenge&quot;
+    + string(i)+&quot;type&quot;);<br/>       ach_ident[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;identifier&quot;);<br/>       ach_score[i] = ds_map_find_value(async_load, &quot;Challenge&quot; + string(i)+&quot;score&quot;);<br/>       }
+  </p>
+  <p>The above code checks the returned <tt>DS Map</tt> in the <b>Social Asynchronous Event</b> and if its &quot;id&quot; matches the constant being checked, it then loops through the map storing all the different values in a number of arrays. This information
+    can then be used, for example, to create your own, personalised, challenge pages in game.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Achievements_And_Leaderboards.htm">Achievements And Leaderboards</a></div>
+        <div style="float:right">Next: <a href="achievement_get_pic.htm">achievement_get_pic</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+achievement_get_challenges
+achievement_challenge_list_received
+achievement_filter_friends_only
+achievement_filter_all_players
+-->
+  <!-- TAGS
+achievement_get_challenges
+-->
+
+</body></html>

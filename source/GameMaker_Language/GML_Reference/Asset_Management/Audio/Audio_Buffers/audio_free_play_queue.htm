@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.5.4.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>audio_free_play_queue</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function audio_free_play_queue"/>
+  <meta name="rh-index-keywords" content="audio_free_play_queue"/>
+  <meta name="search-keywords" content="audio_free_play_queue"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="audio_free_play_queue">
+        <span>audio_free_play_queue</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_free_play_queue</h1>
+  <p>This function is used to free up the memory associated with the given audio queue. The queue index is the value returned when you created the queue using the function <a href="audio_create_play_queue.htm"><tt>audio_create_play_queue()</tt></a>, and
+    this function should be called when the queue is no longer required to prevent memory leaks. Freeing the queue will stop any sound that is be playing, and you cannot delete the buffer that a sound is being streamed from until the queue it is assigned
+    to has been freed. This function will trigger an <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback Asynchronous Event</a>, and in this event a special <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> will
+    be created in the variable <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> with the following key/value pairs:</p>
+  <ul class="colour">
+    <li>&quot;<strong>queue_id</strong>&quot; - the queue that has finished playing data</li>
+    <li>&quot;<strong>buffer_id</strong>&quot; - the buffer that is no longer being played from</li>
+    <li>&quot;<strong>queue_shutdown</strong>&quot; - this is set to 0 during normal playback and 1 when the event is received because you have freed the queue with this function. When this is set to 1, you don&#39;t want to queue up any further data.</li>
+  </ul>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_free_play_queue(queueIndex);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>queueIndex</td>
+        <td>The index of the queue to free.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var q_id = async_load[? &quot;queue_id&quot;];<br/> if (q_id == audio_queue)<br/>     {<br/>     audio_free_play_queue(audio_queue);<br/>     buffer_delete(audio_buffer);<br/>     }</p>
+  <p>The above code would go in the asynchronous <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">Audio Playback</a> event and checks to see if the audio that has finished playing is from the &quot;audio_queue&quot;
+    and if it is it frees the queue and the buffer associated with it.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Audio.htm">Audio Buffers</a></div>
+        <div style="float:right">Next: <a href="audio_queue_sound.htm">audio_queue_sound</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+audio_free_play_queue
+-->
+  <!-- TAGS
+audio_free_play_queue
+-->
+
+</body></html>

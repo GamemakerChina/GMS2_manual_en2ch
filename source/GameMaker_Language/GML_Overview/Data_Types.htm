@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "10.1.1_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Data Types</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining Data Types"/>
+  <meta name="rh-index-keywords" content="Data Types"/>
+  <meta name="search-keywords" content="Data Types"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Data Types">
+        <span>Data Types</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Data Types</h1>
+  <p>In previous sections we have covered <a href="Variables_And_Variable_Scope.htm">variables and their scoping rules</a> but little has been said about the different <b>data types</b> that a variable can store. Therefore this section explains the different
+    types and what they can be used for.</p>
+  <p>Before continuing, let&#39;s just briefly explain what we mean by &quot;data types&quot;. When you create a variable it can be used to hold information, and when you call a function, it can also stored returned information. However this information
+    can come in various &quot;flavours&quot; - for example, it can be a <em>real number</em> or it can be a <em>string</em>. These different types of values being used are called <b>data types</b> and when using <i>the </i>GameMaker Language they can
+    be any of the following:</p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Strings</span><span data-close-text="true">Strings</span></a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p class="dropspot"><label for="one">A string is simply any text that has been placed in quotation marks &quot;...&quot;. You can perform certain operations on strings, like add two strings together to create a longer string (concatenation) and you can also change the string properties and even extract real numbers from it. For more information on strings and the string functions see: <a href="../GML_Reference/Strings/Strings.htm">GML Reference - Strings</a>.</label></p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Real Numbers</span><span data-close-text="true">Real Numbers</span></a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p class="dropspot">Real numbers are any value that is not a string, nor any of the other possible data types. So, 124, 45639.566546456, 0, -45.5 etc... are all examples of real numbers. All real numbers are stored as double-precision floating point values or integer
+      values (either 32 bit integers - <span class="inline">int32</span> - or 64 bit integers - <span class="inline">int64</span>), and the compiler will optimise where possible (for example, 0.0 will be optimised to the integer value of 0). When dealing
+      with any value that is not an integer, you may experience slight rounding errors due to the nature of floating point maths. For more information on this and other number related functions, please see: <a href="../GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm">GML Reference - Number Functions</a>.</p>
+    <p class="note"><b>NOTE</b>: On the <b>HTML5</b> target, all real numbers are doubles.</p>
+    <p class="dropspot">Note that while created variables in GameMaker Studio 2 are all stored as double-precision floating point numbers or integers, you can still use other formats when dealing with extensions. These can be passed into GameMaker Studio 2 from an extension
+      and then checked using the appropriate <tt>is_*()</tt> function, a list of which can be found <a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">here</a>.</p>
+    <p> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Arrays</span><span data-close-text="true">Arrays</span></a></p>
+  <div class="droptext" data-targetname="drop-down2">
+    <p class="dropspot"><label for="three">An array is a special data type that can be used to hold multiple values. You assign the array to a variable, and then &quot;fill in&quot; different indices of the array with values. This array can then be passed through to scripts and functions on a pass-by-reference basis, however should you modify the passed array, it will then become a copy of the original array and so will need to be returned back to the original variable for the array to be updated. For more information on arrays, please see: <a href="Arrays.htm">GML Overview - Arrays</a>.</label></p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Structs</span><span data-close-text="true">Structs</span></a></p>
+  <div class="droptext" data-targetname="drop-down3">
+    <p class="dropspot"><label for="eleven">A struct (sometimes called a &quot;lightweight object&quot;) is a raw data structure that acts as a container for variables of all data types. You assign a struct to a variable and in the struct you can then define further variables and these can then be read from or written to as required. For more detailed information on structs, please see the section <a href="Structs.htm">GML Overview - Structs</a>.</label></p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true">Method Variables</span><span data-close-text="true">Method Variables</span></a></p>
+  <div class="droptext" data-targetname="drop-down4">
+    <p class="dropspot"><label for="twelve">A method variable is a variable that has been assigned a function and it can be used exactly the same as you would use a GML runtime function. For more detailed information, please see the section <a href="Method_Variables.htm">Method Variables</a>.</label></p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Hexadecimal Values</span><span data-close-text="true">Hexadecimal Values</span></a></p>
+  <div class="droptext" data-targetname="drop-down5">
+    <p class="dropspot">GameMaker Studio 2 will can accept <b>hexadecimal literals</b> as legitimate values. Hexadecimal values are especially common when working with colours, but can be used anywhere a positive integer value is required. Note that hexadecimal values can
+      be formatted in either of the following two ways, where <span class="inline">&lt;<em>abcd</em>&gt;</span> would be the actual hex value:</p>
+    <p class="code"><span style="background-color: transparent;">$&lt;<em>abcd</em>&gt;</span><span style="background-color: transparent;"></span><br/> 0x&lt;
+      <em>abcd</em>&gt;</p>
+    <p class="dropspot">For example, the following values can be expressed as hexadecimal as shown:</p>
+    <p class="code">11406 = $2c8e = 0x2c8e<br/> 16777215 = $ffffff = 0xffffff</p>
+    <p> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Boolean</span><span data-close-text="true">Boolean</span></a></p>
+  <div class="droptext" data-targetname="drop-down6">
+    <p class="dropspot">A boolean is simply a value that can either be <tt>true</tt> or <tt>false</tt>. Note that currently GameMaker Studio 2 will interpret a real number equal to or below 0.5 as a <tt>false</tt> value, and any real number greater than 0.5 as being <tt>true</tt>.
+      This does <i>not</i> mean however that you should be checking 1 and 0 (or any other real number) for true and false, as you are also provided with the <b>constants</b> <tt>true</tt> and <tt>false</tt> which should always be used in your code to
+      prevent any issues should real boolean data types be added in a future update.</p>
+    <p class="dropspot">You can convert any real number into an implicitly boolean value using the following function:</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/bool.htm">bool</a></li>
+    </ul>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Pointer</span><span data-close-text="true">Pointer</span></a></p>
+  <div class="droptext" data-targetname="drop-down7">
+    <p class="dropspot">A pointer is a data type that &quot;points&quot; to a memory location. You cannot do operations on a pointer and it is used only for some very specific functions, like getting a texture or buffer address from memory for another function. For examples
+      of functions that return a pointer you can see <a href="../GML_Reference/Buffers/buffer_get_address.htm"><tt>buffer_get_address()</tt></a> or <a href="../GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm"><tt>sprite_get_texture()</tt></a>.</p>
+    <p class="dropspot">There is also a function to check if a value is a pointer (see &quot;<b>Checking Data Types</b>&quot;, below) and a function to convert a value into a pointer:</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><a href="../GML_Reference/Variable_Functions/ptr.htm" style="background-color: transparent;">ptr</a></li>
+    </ul>
+    <p class="dropspot">You may also use (and get returned) the following built in constants when using pointers:</p>
+    <p class="dropspot"> </p>
+    <table class=" cke_show_border">
+      <tbody>
+        <tr>
+          <th>Constant</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><span class="inline">pointer_null</span></td>
+          <td>This constant indicates that the pointer is not pointing to anything meaningful (the same as <tt>NULL</tt> in C++ or null in C#)</td>
+        </tr>
+        <tr>
+          <td><span class="inline">pointer_invalid</span></td>
+          <td>This constant simply means that the value is not a valid pointer</td>
+        </tr>
+      </tbody>
+    </table>
+    <p> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Enum</span><span data-close-text="true">Enum</span></a></p>
+  <div class="droptext" data-targetname="drop-down8">
+    <p class="dropspot">An enum is an &quot;enumerator&quot;, and it essentially permits you to create your own limited data type with a list of constant values. Enums are explained in depth on the page for <a href="Variables/Constants.htm">Constants</a>.</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Undefined</span><span data-close-text="true">Undefined</span></a></p>
+  <div class="droptext" data-targetname="drop-down9">
+    <p class="dropspot"><label for="seven">An undefined value (also known as a &quot;null&quot; value) is one where an expression doesn&#39;t have a correct value, although it is syntactically correct, and so must return <i>something</i>. For example, say you have a <a href="../GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> and use the function <a href="../GML_Reference/Data_Structures/DS_Maps/ds_map_find_value.htm"><tt>ds_map_find_value()</tt></a>. Now, what happens when the map does not have the value being looked for? Well, since the function is correctly formatted, and the issue is that the no such value exists, then it would return the <b>constant</b> <tt>undefined</tt>, and you can check for this constant as you would check for <tt>true</tt> or any other value.</label></p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">NaN</span><span data-close-text="true">NaN</span></a></p>
+  <div class="droptext" data-targetname="drop-down10">
+    <p class="dropspot"><label for="nine"><tt>NaN</tt> stands for &quot;not a number&quot;, and is a constant that can be returned when the compiler cannot evaluate the results of an operation as a number. For example, 0/0 cannot be defined as a real number, and is therefore represented by <tt>NaN</tt>, or the square root of a negative number - which is considered an &quot;imaginary&quot; number - cannot be represented as a real number, and so is represented by <tt>NaN</tt>.</label></p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down11" href="#"><span data-open-text="true">Infinity</span><span data-close-text="true">Infinity</span></a></p>
+  <div class="droptext" data-targetname="drop-down11">
+    <p class="dropspot">The constant <tt>infinity</tt> refers to a number that is considered infinite, such as the result you would get when dividing any floating point value by zero, eg: 1.0/0.</p>
+  </div>
+  <p> </p>
+  <p>You can check the data type of any variable using the functions listed on the following the page:</p>
+  <ul class="colour">
+    <li><a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">Variable Functions</a></li>
+  </ul>
+  <p>You can also find arithmetic type tables that show the results of different operations using mixed variable data types here:</p>
+  <ul class="colour">
+    <li><a href="../../Additional_Information/Type_Tables.htm">Type Tables</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
+        <div style="float:right">Next: <a href="Instance_Keywords.htm">Instance Keywords</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Data Type - Real
+Data Type - String
+Data Type - Pointer
+Data Type - Undefined
+Data Type - Enum
+Data Type - True
+Data Type - False
+Data Type - Array
+Data Type - Boolean
+Data Type - NaN
+Data Type - Infinite
+Data Type - Struct
+real
+string
+pointer
+undefined
+enum
+true
+false
+arrays
+boolean
+NaN
+infinite
+ptr
+struct
+pointer_null
+pointer_invalid
+-->
+  <!-- TAGS
+data_type
+real
+string
+pointer
+undefined
+enum
+true
+false
+arrays
+boolean
+ptr
+struct
+pointer_null
+pointer_invalid
+-->
+
+</body></html>

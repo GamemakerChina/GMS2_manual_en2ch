@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.2.13.2_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>instance_create_depth</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the function instance_create_depth"/>
+  <meta name="rh-index-keywords" content="instance_create_depth"/>
+  <meta name="search-keywords" content="instance_create_depth"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="instance_create_depth">
+        <span>instance_create_depth</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>instance_create_depth</h1>
+  <p>With this function you can create a new instance of the specified object at any given point within the room and at the depth specified. The depth can be any value, where the lower the depth the &quot;nearer&quot; to the camera things will be drawn and
+    the higher the depth the further away, so an instance at depth -200 will be drawn over an instance at depth +300 (for example).</p>
+  <p>Note that this function will actually create a room layer for the instance, since all instances <i>must</i> be on a layer in the room, but since this is a <i>managed</i> layer (ie: not one that you have created through code or in the room, but one that
+    GameMaker Studio 2 has created automatically) you cannot access it, and the <a href="Instance_Variables/layer.htm"><tt>layer</tt></a> instance variable will return -1.</p>
+  <p class="note"><b>IMPORTANT!</b> There is a minimum and maximum layer depth of -16000 to 16000. Anything placed on a depth outside that range <b>will not be drawn</b> although all events will still run as normal.</p>
+  <p>This function returns the <a href="Instance_Variables/id.htm"><tt>id</tt></a> of the new instance which can then be stored in a variable or used to access that instance. Note that this function will also call the <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Create Event</a>    of the instance being created <i>before</i> continuing with the code or actions for the event that called the function.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">instance_create_depth(x, y, depth, obj);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>The x position the object will be created at</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>The y position the object will be created at</td>
+      </tr>
+      <tr>
+        <td>depth</td>
+        <td>The depth to assign the created instance to</td>
+      </tr>
+      <tr>
+        <td>obj</td>
+        <td>The object index of the object to create an instance of</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (instance ID value)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var inst = instance_create_depth(x, y, -10000, obj_Bullet);<br/> with (inst)<br/>     {
+    <br/>     speed = other.shoot_speed;<br/>     direction = other.image_angle;<br/>     }
+  </p>
+  <p>The above code creates a new instance of the object &quot;obj_Bullet&quot; and stores the instance id in a variable. This variable is then used to assign <tt>speed</tt> and <tt>direction</tt> to the new instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Instances.htm">Instances</a></div>
+        <div style="float:right">Next: <a href="instance_destroy.htm">instance_destroy</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+instance_create_depth
+-->
+  <!-- TAGS
+instance_create_depth
+-->
+
+</body></html>

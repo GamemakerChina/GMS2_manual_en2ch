@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.6.1.0_34";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>view_camera</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for view_camera"/>
+  <meta name="rh-index-keywords" content="view_camera"/>
+  <meta name="search-keywords" content="view_camera"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="view_camera">
+        <span>view_camera</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>view_camera</h1>
+  <p>This array holds the unique camera ID assigned to the given view port, and can be set to a new camera or read to get the current camera, returning -1 if no camera is assigned. You can have up to 8 view ports active in a room (array values 0 through
+    7), and can assign a camera to any of them by simply setting this variable to the camera ID value (as returned by the functions <a href="camera_create.htm"><tt>camera_create()</tt></a> or <a href="camera_create_view.htm"><tt>camera_create_view()</tt></a>).
+    If you have set the camera to a view port through the Room Editor, this variable will hold the camera ID for that port.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">view_camera[0 ... 7];</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Camera index or -1 if no camera is assigned</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if view_camera[0] == -1<br/>     {
+    <br/>     view_camera[0] = camera_create_view(0, 0, room_width, room_height);<br/>     }
+  </p>
+  <p>The above code checks to see if the view port [0] has a camera attached to it and if it doesn&#39;t then one is created and set to it.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Cameras_And_View_Ports.htm">Cameras And View Ports</a></div>
+        <div style="float:right">Next: <a href="view_current.htm">view_current</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+view_camera
+-->
+  <!-- TAGS
+view_camera
+-->
+
+</body></html>

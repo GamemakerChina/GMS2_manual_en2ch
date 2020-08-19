@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.3.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Room Inheritance</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page detailing the inheritance functionality of rooms"/>
+  <meta name="rh-index-keywords" content="Rooms - Inheritance"/>
+  <meta name="search-keywords" content="room inheritance,inherit,inheritance"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Room Inheritance">
+        <span>Room Inheritance</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Room Inheritance</h1>
+  <p>An important feature of the room editor is <strong>inheritance</strong>. Inheritance means that you can create a &quot;parent&quot; room then from that create a &quot;child&quot; room which will inherit all the parent room&#39;s properties. This child
+    room is essentially a <em>clone </em>of the parent, and everything in it <strong>is linked to the parent room</strong>. This means that if you change the view in the parent, or move a tile, or add instances, it will be reflected in the child room.
+    Not only that, in the child room you can selectively switch off inheritance for specific layers, instances, assets or anything else that is required.</p>
+  <p>A room that has inherited properties will have the inherit buttons lit - as shown by the image below - and you can then use them to toggle inheritance on or off for the given layer or resource, etc...</p>
+  <p><img alt="Room Inherit Buttons" class="center" src="../../assets/Images/Asset_Editors/Editor_Room_Inheritance.png"/>This can be a bit difficult to visualise at first, so let&#39;s look at an example: say you have a room with a city and a castle in
+    the middle. The city and castle are drawn using different tile layers and you also have instances and some paths for NPCs to use to walk around. You want to have it so that in the game the castle is destroyed, but everything else in the city looks
+    and behaves the same. You would create the initial room with everything as normal, then you&#39;d create a child room which inherits the parent room layers. In the child room you&#39;d switch <em>off </em>inheritance for the tile layer (or even individual
+    tiles) for the castle area and them move/add/delete tiles to create the destroyed castle look. When a player enters that room, all the instances from the parent room and all the tiles etc... will remain exactly the same, except for those of the destroyed
+    castle.</p>
+  <p class="note"><strong>IMPORTANT!</strong> If you edit any inherited property it will automatically turn off inheritance in the section it belongs to without having to first toggle the inherit button.</p>
+  <p>To create room inheritance, you simply select the room you want to create a child from in the <a href="../../Introduction/The_Asset_Browser.htm">Asset Browser</a> and then right-click <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/>. This will open the room menu and there you can select <strong>Create Child </strong>to create a new child room. This will be created and &quot;attached&quot; to the parent visually in the Asset Browser:</p>
+  <p><img alt="Room Inheritance" class="center" src="../../assets/Images/Asset_Editors/Editor_RoomInheritance.png"/>To change the room order and/or inheritance you need to use the <a href="../../Settings/The_Room_Manager.htm">Room Manager</a>, which you
+    can open using the menu in the top right of the Asset Browser. Here you can go to the <em>Inheritance </em>tab and then click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> and drag any room onto any other room to
+    have it become a child of that room (or drag a child room off a parent and break the inheritance).</p>
+  <p>Note that, within a room, inheritance is multi-layered and you can check individual items, groups of items on a single layer, item properties, or whole rooms as inheriting, and you can also inherit from consecutive rooms (so room C inherits from room
+    B, which in turn has inherited from Room A). If you create a base room with nothing in it except the view setup - for example - you can then create all further rooms as being its children and they will all inherit the view properties of the parent
+    room. But you can go a step further and create another base room with the &quot;view&quot; room as its parent which holds the general <a class="tooltip" title="Short for &#39;Graphical User Interface&#39;, which is a user interface that includes graphical elements, such as windows, icons and buttons. In GameMaker you have a specific set of object events (Draw GUI Events) that can draw to this layer specifically designed for things like score, lives, inventories, etc...">GUI</a> instance and the controllers required in every game room.
+    Now you can create child rooms from this and they will inherit both the controllers and GUIs from the parent room as well as the view setup from the parent of that room!</p>
+  <p>As you can hopefully see, inheritance is very powerful and you can use it to maintain a much cleaner room structure, speed up the workflow and generally optimise the time you spend making and designing rooms.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Rooms.htm">The Room Editor</a></div>
+        <div style="float:right">Next: <a href="Layer_Properties.htm">Layer Types And Properties</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Room Inheritance
+-->
+  <!-- TAGS
+rooms_inheritance
+-->
+
+</body></html>

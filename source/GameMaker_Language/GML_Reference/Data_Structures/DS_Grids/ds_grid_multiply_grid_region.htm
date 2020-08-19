@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.8.1.0_29";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_grid_multiply_grid_region</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for ds_grid_multiply_grid_region"/>
+  <meta name="rh-index-keywords" content="ds_grid_multiply_grid_region"/>
+  <meta name="search-keywords" content="ds_grid_multiply_grid_region"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="ds_grid_multiply_grid_region">
+        <span>ds_grid_multiply_grid_region</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_grid_multiply_grid_region</h1>
+  <p>With this function you can define an area within a given DS grid, then take those values and multiply them with those found in a separate region of either the same DS grid, or another one (which has been previously created). The original region will
+    remain unchanged, while the region that they have been multiplied with will now store the new values for each cell.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">ds_grid_multiply_grid_region(index, source, x1, y1, x2, y2, xpos, ypos);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td>The index of the destination grid.</td>
+      </tr>
+      <tr>
+        <td>source</td>
+        <td>The index of the source grid.</td>
+      </tr>
+      <tr>
+        <td>x1</td>
+        <td>The left position of the region of cells to copy from the source grid.</td>
+      </tr>
+      <tr>
+        <td>y1</td>
+        <td>The top position of the region of cells to copy from the source grid.</td>
+      </tr>
+      <tr>
+        <td>x2</td>
+        <td>The right position of the region of cells to copy from the source grid.</td>
+      </tr>
+      <tr>
+        <td>y2</td>
+        <td>The bottom position of the region of cells to copy from the source grid.</td>
+      </tr>
+      <tr>
+        <td>xpos</td>
+        <td>The x position on the destination grid to multiply the source region with.</td>
+      </tr>
+      <tr>
+        <td>ypos</td>
+        <td>The y position on the destination grid to multiply the source region with.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">ds_grid_multiply_grid_region(mygrid, mygrid, 0, 0, 5, 5, 0, 0)</p>
+  <p>This would take the region of cells from (0,0) to (5,5) of the DS grid &quot;mygrid&quot; and multiply them with the cells from position (0,0) of the same DS grid.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="DS_Grids.htm">DS Grids</a></div>
+        <div style="float:right">Next: <a href="ds_grid_value_exists.htm">ds_grid_value_exists</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+ds_grid_multiply_grid_region
+-->
+  <!-- TAGS
+ds_grid_multiply_grid_region
+-->
+
+</body></html>

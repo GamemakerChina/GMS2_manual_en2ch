@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.21.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Set Timeline State</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that explains the Set Timeline State action"/>
+  <meta name="rh-index-keywords" content="DnD™ Action - Set Timeline State"/>
+  <meta name="search-keywords" content="Set Timeline State"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Set Timeline State">
+        <span>Set Timeline State</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Set Timeline State Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/i_Timelines_Set_Timeline_State.png" width="32"/> Set Timeline State</h1>
+  <p>This action can be used to start, stop, pause or resume a timeline. The timeline must first have been set for the instance using the action <a href="Set_Instance_Timeline.htm">Set Instance Timeline</a>, and then you can use this action at any time to
+    change its running state from the following options</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Option</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Start</td>
+        <td>Start the timeline assigned to the instance (if the timeline was paused this will set the start position to moment 0 again).</td>
+      </tr>
+      <tr>
+        <td>Resume</td>
+        <td>Resume a paused timeline (if the timeline was stopped and not paused this will do nothing).</td>
+      </tr>
+      <tr>
+        <td>Paused</td>
+        <td>Pause the timeline assigned to the instance (while paused the moments in a timeline will not advance with the game frames).</td>
+      </tr>
+      <tr>
+        <td>Stop</td>
+        <td>Stop the timeline assigned to the instance.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p><img alt="Set Timeline State Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/a_Timelines_Set_Timeline_State.png"/></p>
+  <p> </p>
+  <h4>Arguments:</h4>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>State</td>
+        <td>The state to put the timeline in (see the table above)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p><img alt="Set Timeline State Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/e_Timelines_Set_Timeline_State.png"/>The above action block code will check the value held in a global variable and
+    if it is <tt>true</tt> then the timeline is paused, and if it is <tt>false</tt> then the timeline will be resumed.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Timeline_Actions.htm">Timeline Actions</a></div>
+        <div style="float:right">Next: <a href="Set_Instance_Timeline.htm">Set Instance Timeline</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Action - Set Timeline State
+-->
+  <!-- TAGS
+action_set_timeline_state
+-->
+
+</body></html>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "10.2.2.14.2.0_11";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>tilemap_set_mask</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the function tilemap_set_mask"/>
+  <meta name="rh-index-keywords" content="tilemap_set_mask,tile_rotate,tile_mirror,tile_flip,tile_index_mask"/>
+  <meta name="search-keywords" content="tilemap_set_mask,tile_rotate,tile_mirror,tile_flip,tile_index_mask"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="tilemap_set_mask">
+        <span>tilemap_set_mask</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tilemap_set_mask</h1>
+  <p>This function can be used to set the <b>tile bit mask</b> for a single tile map. You give the tile map element ID (which you get when you create a tile map element using <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> or when
+    you use the function <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), and then the mask value. The idea is that if you have, for example, a pretty small tile set of 16 x 16 tiles then you have a total of 256 different tiles
+    in your tile set, which only uses up 8 bits of your index in the tile data &quot;blob&quot; (from an available 19 bits of data). These bits can be &quot;masked&quot; and then the rest of the tile data can be used to store additional values.</p>
+  <p>An easy way to get the initial index mask value is to take the number of tiles in the tile set and subtract 1, so a 16x16 tile set has 256 tiles and a mask value of 255 (or $ff in hexadecimal), and if the tile set has a number of tiles that are not
+    a power of two, then round up to the nearest power of two to get the mask, for example a tile set that is 20x20 has 400 tiles, which you would round up to 512, and so get a mask index value of 511 ($1ff in hexadecimal). Apart from the index mask,
+    normally you would want to preserve the flip, rotate and mirror values that are assigned to a tile too, so to help with that there are a few <b>constants</b> that can be used. These can be &quot;or&quot;-ed together with the index mask value to preserve
+    those bits of data. The following constants can be used (see the example code below for usage):</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tile_rotate</td>
+        <td>Used to set/get the rotate bit of a tile data blob.</td>
+      </tr>
+      <tr>
+        <td>tile_mirror</td>
+        <td>Used to set/get the mirror bit of a tile data blob.</td>
+      </tr>
+      <tr>
+        <td>tile_flip</td>
+        <td>Used to set/get the flip bit of a tile data blob.</td>
+      </tr>
+      <tr>
+        <td>tile_index_mask</td>
+        <td>A special constant that is for &quot;and&quot;-ing with the tile data blob to extract the tile index.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Tile map bit masking is an advanced feature and allows you to use bits of the tile data &quot;blob&quot; for your own use. For example, the user could reserve a bit to mean &quot;solid&quot; in the tile-data structure and then this can be checked for
+    fast collisions. Basically, the bit mask is &quot;and&quot;-ed against the tile data when the tile map is <i>drawn</i> (so it doesn&#39;t affect any of the other functionality), meaning that bits which aren&#39;t in the mask are ignored, but can still
+    be read and written to by the user for their own purposes. Note that there are two different masks – a global one and one per tile map - and these are &quot;and&quot;-ed together internally by GameMaker Studio 2 before being used for drawing.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">tilemap_set_mask(tilemap_element_id, mask)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>The unique ID value of the tile map element to set the mask of</td>
+      </tr>
+      <tr>
+        <td>mask</td>
+        <td>The mask value</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> var mask = tile_mirror | tile_flip | tile_rotate | 255;<br/> tilemap_set_mask(map_id, mask);</p>
+  <p>The above code gets the tile map ID from the given layer and then sets the tile map bit mask to 8bits, preserving the flip, mirror, and rotate values for each tile in the map.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
+        <div style="float:right">Next: <a href="tilemap_set_global_mask.htm">tilemap_set_global_mask</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+tilemap_set_mask
+tile_rotate
+tile_mirror
+tile_flip
+tile_index_mask
+-->
+  <!-- TAGS
+tilemap_set_mask
+-->
+
+</body></html>

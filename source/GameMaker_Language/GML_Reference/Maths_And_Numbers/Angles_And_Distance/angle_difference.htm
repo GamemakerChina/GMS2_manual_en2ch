@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.10.3.0_26";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>angle_difference</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for angle_difference"/>
+  <meta name="rh-index-keywords" content="angle_difference"/>
+  <meta name="search-keywords" content="angle_difference"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="angle_difference">
+        <span>angle_difference</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>angle_difference</h1>
+  <p>This function will return the smallest angle difference between two angles as a value between -180 and 180 degrees (where a positive angle is anti-clockwise and a negative angle clockwise).</p>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">angle_difference(ang1, ang2)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ang1</td>
+        <td>The first angle to use.</td>
+      </tr>
+      <tr>
+        <td>ang2</td>
+        <td>The second angle to use.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var pd = point_direction(x, y, mouse_x, mouse_y);<br/> var dd = angle_difference(image_angle, pd);<br/> image_angle -= min(abs(dd), 10) * sign(dd);</p>
+  <p>The above code will get the angle of direction from the instance to the mouse cursor, then get the difference between that angle and the current <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm"><tt>image_angle</tt></a>,
+    using this value to slowly rotate towards the mouse.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Angles_And_Distance.htm">Angles And Distance</a></div>
+        <div style="float:right">Next: <a href="lengthdir_x.htm">lengthdir_x</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+angle_difference
+-->
+  <!-- TAGS
+angle_difference
+-->
+
+</body></html>

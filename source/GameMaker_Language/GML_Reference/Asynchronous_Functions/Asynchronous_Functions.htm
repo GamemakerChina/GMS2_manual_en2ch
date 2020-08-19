@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Asynchronous Functions</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference section for all the different Asynchronous Functions"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="Asynchronous Functions,Async Functions"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Asynchronous Functions">
+        <span>Asynchronous Functions</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Asynchronous Functions</h1>
+  <p>In the context of GameMaker Studio 2, an asynchronous function is one that sends out to a web server, or asks for user input, or even streams data, while letting GameMaker Studio 2 continue to run without blocking the game being run. When
+    the information <a class="tooltip" title="A callback is simply a function that runs and then triggers another function (or code block) when it has finished doing whatever it was assigned to do. For example, the funtion sprite_add() will trigger a callback in the asynchronous Image Loaded event when the sprite has been loaded.">callback</a> is received a special <b>Async Event</b> is fired which, in turn, allows any instance with an Async Event assigned to it to execute further functions (although this
+    does not have to be the case). So, basically, it&#39;s a way to communicate with some external resource (server, user or device) without the game or project stopping while waiting for a reply.</p>
+  <p>Why is this important? Well, since it allows GameMaker Studio 2 to continue functioning while sending or receiving data, and this means that you can do many things all without blocking the game loop like:</p>
+  <ul class="colour">
+    <li>stream data from the device into your game without the player waiting for things to load</li>
+    <li>have callback events to do things only when the correct information is received</li>
+    <li>communicate and interchange data with a web server</li>
+  </ul>
+  <p>This makes everything function in a much more fluid and unobtrusive way. It should be noted that the Async Events will be triggered for <em>all </em>instances that have them, so you can use an async function in one instance, and have the Asynchronous
+    Event that deals with the reply in another one, or even various other ones. You can go here for more information on how the Asynchronous event works - <a href="../../../The_Asset_Editors/Object_Properties/Async_Events.htm">Asynchronous Events</a>.</p>
+  <p>The different type of asynchronous functions are listed in the sections below:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a name="async_http"></a><a href="HTTP/HTTP.htm"><label for="one">HTTP</label></a></li>
+    <li><a href="Dialog/Dialog.htm"><label for="two">Dialog</label></a></li>
+    <li><a href="Cloud_Saving/Cloud_Saving.htm"><label for="three">Cloud Saving</label></a></li>
+    <li><a href="Push_Notifications/Push_Notifications.htm"><label for="four">Push Notifications</label></a></li>
+    <li><a href="Facebook/Facebook.htm"><label for="five">Facebook</label></a></li>
+    <li><a href="Achievements_And_Leaderboards/Achievements_And_Leaderboards.htm"><label for="five">Achievements And Leaderboards</label></a></li>
+  </ul>
+  <p> </p>
+  <p>There are also a number of <a href="../Buffers/Buffers.htm">Buffer</a> functions that can be used for loading and saving buffers in an asynchronous manner, which are required when working on the different consoles that GameMaker STudio 2 supports, although
+    they can also be used on the other target platforms:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="../Buffers/buffer_save_async.htm">buffer_save_async</a></li>
+    <li><a href="../Buffers/buffer_load_async.htm">buffer_load_async</a></li>
+    <li><a href="../Buffers/buffer_async_group_begin.htm">buffer_async_group_begin</a></li>
+    <li><a href="../Buffers/buffer_async_group_option.htm">buffer_async_group_option</a></li>
+    <li><a href="../Buffers/buffer_async_group_end.htm">buffer_async_group_end</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
+        <div style="float:right">Next: <a href="../Networking/Networking.htm">Networking</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+GML Reference
+-->
+  <!-- TAGS
+gml_reference
+-->
+
+</body></html>

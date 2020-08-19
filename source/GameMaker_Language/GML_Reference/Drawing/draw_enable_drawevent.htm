@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.5.11_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>draw_enable_drawevent</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining the function draw_enable_drawevent"/>
+  <meta name="rh-index-keywords" content="draw_enable_drawevent"/>
+  <meta name="search-keywords" content="draw_enable_drawevent"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="draw_enable_drawevent">
+        <span>draw_enable_drawevent</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>draw_enable_drawevent</h1>
+  
+    <p>With this function you can choose to enable (<tt>true</tt>) or disable (<tt>false</tt>) the draw event for <b>all instances in the game</b>, thus giving you control over how and when things are draw, useful if you wish to implement a
+      &quot;frame skip&quot; technique. Note that this doesn&#39;t just prevent instances drawing to the screen, it suppresses the draw event completely meaning that care should be taken since any game logic that is present in that event will not be run
+      either. One important thing to understand about this function is that if you call it right at the start of the game, before the initial frame is rendered (ie: the Create Event of the first object in the first room of the game), then the game window <b>will not be rendered</b>.
+      This could be useful for online projects that require a server which doesn&#39;t need to render anything.</p>
+  
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">draw_enable_drawevent(enable);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Enable</td>
+        <td>Set to <tt>true</tt> or <tt>false</tt>.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">frame_skip ++;<br/> if (frame_skip mod 5) == 0<br/>     {
+    <br/>     draw_enable_drawevent(true);
+    <br/>     }
+    <br/> else
+    <br/>     {
+    <br/>     draw_enable_drawevent(false);
+    <br/>     }
+  </p>
+  
+    <p>The above code checks a variable and if it returns <tt>true</tt>, it enables the draw event, otherwise the draw event is disabled.</p>
+  
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Drawing.htm">Drawing</a></div>
+        <div style="float:right">Next: <a href="draw_flush.htm">draw_flush</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+draw_enable_drawevent
+-->
+  <!-- TAGS
+draw_enable_drawevent
+-->
+
+</body></html>

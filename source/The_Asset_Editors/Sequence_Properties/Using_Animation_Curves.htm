@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../..";
+    gCommonRootRelPath = "../..";
+    gTopicId = "5.5.0_5";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Using Animation Curves</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page detailing how to use animation curves with sequences
+"/>
+  <meta name="rh-index-keywords" content="Sequences - Animation Curves"/>
+  <meta name="search-keywords" content="curves,animation curves"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Using Animation Curves">
+        <span>Using Animation Curves</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Using Animation Curves</h1>
+  <p>An important feature of the <a href="Using_The_Dope_Sheet.htm">dope sheet</a> is the ability to assign <a href="../Animation_Curves.htm">Animation Curves</a> to parameter tracks within the sequence. When doing this, it is very important that you create
+    your Animation Curve assets with the correct number of channels (curves) for the parameter track you want to target. This means that you will need:</p>
+  <ul class="colour">
+    <li>4 channels for <strong>colour </strong>(Channels should be in <a class="tooltip" title="This is an anacronym for Alpha, Red, Green, Blue, and is used to refer to the colour components specified as a hexadecimal value, eg: #FF53E270, where each set of two digits represents a single component. Breaking down the ARGB example above gives us the following component values: Alpha(FF), Red(53), Green(E2) and Blue(70). ">ARGB</a> order, and the range for each should be 0 to 255)</li>
+    <li>2 channels for <strong>position</strong>, <strong>scale </strong>and <strong>origin</strong></li>
+    <li>1 channel for <strong>rotation</strong>, <strong>image index</strong> and <strong>image speed</strong></li>
+    <li>1 channel for <strong>pitch </strong>and <strong>volume </strong>(curve values should be between 0 and 1)</li>
+  </ul>
+  <p>There are two types of animation curves that can be used in your sequences:</p>
+  <ul class="colour">
+    <li><strong>Embedded Curve</strong> - An embedded animation curve is a unique set of curve data assigned to a specific track in the track panel. An embedded curve can be edited like any other animation curve, but it will not appear in the asset browser,
+      as it is not a stand-alone asset but instead linked only to the track it is applied to.</li>
+    <li><strong>Asset Curve</strong> - An asset animation curve is one which has been created in the asset browser. These types of curves can be used on multiple different tracks and any changes to the animation curve asset will be propagated across all tracks
+      that use it.</li>
+  </ul>
+  <p>To add an animation curve asset to a track, you must first give the track the required parameter track, for example, a position or a rotation parameter track. Once that has been added you can use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/> menu option <strong>Set To External Anim Curve </strong>to open the Asset Explorer and select the required curve from the ones presented to you. Note that <em>only those curve assets with the appropriate number of channels for the parameter track being used will be shown</em>.</p>
+  <p><img alt="Add An Animation Curve To A Parameter Track" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Add_AnimCurve.gif"/>Once you have added an animation curve to a parameter track, it can then be edited by simply double clicking
+    <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on it, which will open the <strong>Animation Curve Editor</strong> for the curve. You can also convert an animation curve into an embedded curve
+    using the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/> menu option <strong>Convert To Embedded Anim Curve</strong>. This will disassociate the curve from the asset used,
+    and link it <em>only </em>to the assigned asset track. You can still edit the curve by double clicking <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on it, but any edits will only be assigned
+    to the curve on the track and nowhere else.</p>
+  <p>Conversely, you can convert an embedded animation curve into an animation curve asset using the right mouse button  menu option Export Embedded Animation Curve. This will convert the embedded curve into a new asset which can then be edited as normal
+    as well as applied to other parameter tracks if required.</p>
+  <p>Animation curves can also be converted into <a class="tooltip" title="A keyframe (also called a parameter key) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">keyframe</a><span class="glossextra">s</span>. This option is again available from the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/> menu, <strong>Convert To Keys</strong>:</p>
+  <p><img alt="Convert An Animation Curve To Keyframes" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Convert_AnimCurve.gif"/>It is important to note, however. that there are a couple of caveats associated with doing this:</p>
+  <ul class="colour">
+    <li>Keyframes cannot be &quot;between&quot; frames, and so some curve values will need to be rounded to the nearest frame, which in turn will change the way the parameter track behaves.</li>
+    <li>If the animation curve uses <a class="tooltip" title="This is a type of non-linear interpolation based on mathematical splines. It is used to estimate a new value by connecting two adjacent known values using &#39;smooth&#39; curves (splines), and a new value can be derived from any point along the line.">catmull-rom interpolation</a>, this will be lost and the interpolation between keyframes will be set to <a class="tooltip" title="Linear interpolation involves estimating a new value by connecting two adjacent known values with a straight line. You can then get the interpolated value by checking any point along the line. In graphics, linear interpolation refers to a basic method of smoothing pixel edges.">linear interpolation</a>.</li>
+  </ul>
+  <p>You can also convert keyframes into an embedded animation curve from the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/> menu using the option <strong>Convert To Embedded Anim Curve</strong>:</p>
+  <p><img alt="Convert Keyframes To An Animation Curve" class="center" src="../../assets/Images/Asset_Editors/Dope_Sheet_Convert_Keyframes.gif"/></p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
+        <div style="float:right">Next: <a href="Broadcast_Messages.htm">Broadcast Messages</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Room Editor
+Rooms
+Layers
+Layer Properties
+-->
+  <!-- TAGS
+room_editor
+-->
+
+</body></html>

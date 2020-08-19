@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "3.2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Platform Preferences</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Section dedicated to all the Platform specific preferences"/>
+  <meta name="rh-index-keywords" content="Platform Preferences"/>
+  <meta name="search-keywords" content="prefs,platform prefs,platform preferences,preferences"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Platform Preferences">
+        <span>Platform Preferences</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Platform Preferences</h1>
+  <p>This section of the manual covers the different platform specific <strong>Preferences </strong>that need to be set up before you can compile your games to certain targets. These generally only need set up once to start with (although future updates
+    to the <a href="IDE_Preferences/Runtime_Feed_Preferences.htm">runtimes</a> may require you to change certain things, but these will be mentioned in the <a href="Release_Notes.htm">Release Notes</a>) and are use to point to any <a class="tooltip" title="SDK stands for &#39;Software Development Kit&#39;. This usually refers to a collection of software and/or packages used for developing applications for a specific device or operating system.">SDK</a>s that are required and set basic <a class="tooltip" title="Compiling is when GameMaker takes your code and collects it together in such a way as to create an executable package that will run on a device as a game.">Compiling</a> options for how you want GameMaker Studio 2 to compile your game projects for any given platform. Note that
+    the platforms available will depend on the <a href="GMS2_Version_Information.htm">Licence</a> that you have and not all of them may be available.</p>
+  <p>Below is a list of all the available target platforms for standard licences:</p>
+  <ul class="colour">
+    <li><a href="Platform_Preferences/Android.htm">Android</a></li>
+    <li><a href="Platform_Preferences/HTML5.htm">HTML5</a></li>
+    <li><a href="Platform_Preferences/iOS.htm">iOS</a></li>
+    <li><a href="Platform_Preferences/tvOS.htm">tvOS</a></li>
+    <li><a href="Platform_Preferences/macOS.htm">macOS</a></li>
+    <li><a href="Platform_Preferences/Steam.htm">Steam</a></li>
+    <li><a href="Platform_Preferences/Windows.htm">Windows</a></li>
+    <li><a href="Platform_Preferences/Windows_UWP.htm">Windows UWP</a></li>
+  </ul>
+  <p>Note that apart from setting up these preferences, you will also need to set up the devices that some of these platforms target, otherwise you may not be able to compile nor test your projects. See the section on <a href="../Introduction/Compiling.htm">Compiling</a>    and the section on the <a href="The_Device_Manager.htm">Device Manager</a> for more information.</p>
+  <p>The manual does not show the various <strong>Console </strong>preferences (XboxOne, PS4 and Nintendo) due to the different legal restrictions maintained by the different companies. If you have a Console Licence, then you can get this information form
+    the <a href="https://help.yoyogames.com/hc/en-us/categories/202590248-Console-Support">YoYo Games Helpdesk</a>, but you must first contact YoYo Games with your console ID email and request permission to view the different sections.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="GMS2_Version_Information.htm">GMS2 Setup And Versions</a></div>
+        <div style="float:right">Next: <a href="The_Device_Manager.htm">The Device Manager</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Platform Preferences
+-->
+  <!-- TAGS
+preferences_platform
+-->
+
+</body></html>

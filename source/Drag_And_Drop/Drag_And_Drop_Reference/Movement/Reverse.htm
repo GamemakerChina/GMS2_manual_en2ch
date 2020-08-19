@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.6.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Reverse</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page that explains the Reverse action"/>
+  <meta name="rh-index-keywords" content="DnD™ Action - Reverse"/>
+  <meta name="search-keywords" content="Reverse"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Reverse">
+        <span>Reverse</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><img alt="Reverse Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Movement/i_Movement_Reverse.png" width="32"/> Reverse</h1>
+  <p>This action is used to reverse certain values related to direction and movement. The available options are:</p>
+  <p><img alt="Reverse Action Options" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Movement/Reverse_Options.png"/>Reversing <i>direction</i> will simply add 180° to the current direction (looping around 360° if
+    necessary, so, for example, reversing 270° would give you 90°), reversing the <i>horizontal</i> or <i>vertical</i> speed will simply multiply the given speed vector by -1, and choosing <i>gravity</i> will do the same as choosing direction, only for
+    the gravity direction.</p>
+  <p> </p>
+  <h4>Action Syntax:</h4>
+  <p><img alt="Reverse Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Movement/a_Movement_Reverse.png"/></p>
+  <h4>Arguments:</h4>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>direction</td>
+        <td>The direction to reverse</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Example:</h4>
+  <p><img alt="Reverse Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Movement/e_Movement_Reverse.png"/>The above action block code checks for a collision of the instance with &quot;<span class="inline">obj_Wall</span>&quot;
+    relative to the current position to the left and to the right. If one is found then the horizontal speed is reversed. It then does the same for above and below the instance, reversing the vertical speed if a collision is detected.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Movement_Actions.htm">Movement Actions</a></div>
+        <div style="float:right">Next: <a href="Set_Friction.htm">Set Friction</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+Action - Reverese
+-->
+  <!-- TAGS
+action_reverse
+-->
+
+</body></html>

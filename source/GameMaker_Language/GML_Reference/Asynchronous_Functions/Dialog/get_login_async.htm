@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.12.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>get_login_async</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for get_login_async"/>
+  <meta name="rh-index-keywords" content="get_login_async"/>
+  <meta name="search-keywords" content="get_login_async"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="get_login_async">
+        <span>get_login_async</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>get_login_async</h1>
+  <p>This function opens a window that asks the user to input a username and password. These arguments can be set as an empty string or you can store previously entered values to use if you wish. This is an asynchronous function, and as such GameMaker Studio 2    does <i>not</i> block the device it is being run on while waiting for answer, but rather keeps on running events as normal. Once the user has input the details and pressed the &quot;Okay&quot; button, an asynchronous <b>User Interaction</b> event
+    is triggered which, for the duration of that event <i>only</i>, will have a DS map stored in the variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>.</p>
+  <p>This map will contain the two keys, &quot;<strong>username</strong>&quot; and &quot;<strong>password</strong>&quot;, with the corresponding user input stored in each. As it is a DS Map that has been created, this can then be used, for example, by the
+    <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><tt>json_encode()</tt></a> function ready to be sent to a server or written to a file on the chosen device.</p>
+  <p>It is worth noting that this function will return an index number for the DS map created which can then be checked in the corresponding event so that you can &quot;target&quot; a specific DS map should you be expecting more than one async event to be
+    triggered (perhaps from some other function).</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">get_login_async(name, password);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>username</td>
+        <td>The default user name</td>
+      </tr>
+      <tr>
+        <td>password</td>
+        <td>The default password</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Extended Example:</h4>
+  <p>The <b>create event</b> (for example) of the object that is controlling the login of our user would have the following code:</p>
+  <p class="code">ini_open(&quot;Profile.ini&quot;);<br/> u = ini_read_string(&quot;User&quot;,&quot;0&quot;,&quot;&quot;);<br/> p = ini_read_string(&quot;User&quot;,&quot;1&quot;,&quot;&quot;);<br/> ini_close();
+    <br/> login = get_login_async(u,p);</p>
+  <p>The above code opens an ini file (or creates one if it doesn&#39;t exist) and gets the name and password stored in that file. If they do not exist, then the default of an empty string (&quot;&quot;) is returned. These values are then used in <tt>get_login_async()</tt>    to ask the user for their username and password details, with the request index being stored in the variable &quot;login&quot;. Note that while waiting for the user to give the necessary information the game and its events will continue to run as
+    normal.</p>
+  <p>Now that the asynchronous code has been fired off, we need to check for the return value in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">asynchronous event for Dialogs</a> in the following way:</p>
+  <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == login<br/>     {
+    <br/>     u = ds_map_find_value(async_load, &quot;username&quot;);<br/>     p = ds_map_find_value(async_load, &quot;password&quot;);<br/>     }
+  </p>
+  <p>The above code checks the &quot;id&quot; key of the <span class="inline">async_load</span> DS map and if it holds the same value as that stored in the &quot;login&quot; variable, the map details are then read into the corresponding variables which you
+    can then store or use to check against database values etc...</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Dialog.htm">Dialog</a></div>
+        <div style="float:right">Next: <a href="get_string_async.htm">get_string_async</a></div>
+      </div>
+    </div>
+    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+  </div>
+  <!-- KEYWORDS
+get_login_async
+-->
+  <!-- TAGS
+get_login_async
+-->
+
+</body></html>
