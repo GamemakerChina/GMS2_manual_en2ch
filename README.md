@@ -1,4 +1,6 @@
 # GMS2_help
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FGamemakerChina%2FGMS2_manual_en2ch.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FGamemakerChina%2FGMS2_manual_en2ch?ref=badge_shield)
+
 
 GMS2 中文文档翻译
 
@@ -64,3 +66,7 @@ GMS2 中文文档翻译
 
 贡献者名单：
 [deciia](http://valcell.com/blog), [tpxxn](http://www.jihuangbaike.com), clatterrr, 顾，[顺子](http://www.gamebar.me)，clvava，番茄炒蛋真好吃(QQ276536054)，水流云在，jerry，[LiarOnce](http://www.liaronce.win)
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FGamemakerChina%2FGMS2_manual_en2ch.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FGamemakerChina%2FGMS2_manual_en2ch?ref=badge_large)
