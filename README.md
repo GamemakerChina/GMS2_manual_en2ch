@@ -6,6 +6,8 @@ GMS2 中文文档翻译
 
 汉化文档：https://gamemakerchina.github.io/GMS2_manual_en2ch/
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FGamemakerChina%2FGMS2_manual_en2ch.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FGamemakerChina%2FGMS2_manual_en2ch?ref=badge_large)
+
 # 翻译进度：
 
 更新日期：19/2/27
