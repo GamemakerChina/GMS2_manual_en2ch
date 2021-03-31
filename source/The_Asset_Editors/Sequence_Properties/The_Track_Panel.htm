@@ -39,7 +39,7 @@
 
     gRootRelPath = "../..";
     gCommonRootRelPath = "../..";
-    gTopicId = "5.5.0_2";
+    gTopicId = "5.6.0_2";
   
 //]]></script>
 
@@ -89,20 +89,20 @@
     <li>by clicking the &quot;Add Asset&quot; <img alt="Add Track Icon" class="icon" src="../../assets/Images/Icons/Icon_AddAsset.png"/> button at the bottom of the Track Panel.</li>
   </ul>
   <p>This last method will open the Asset Explorer for you where you can choose the asset to add.</p>
-  <p>Regardless of the method you choose, a new <a class="tooltip" title="A track in the sequences track panel that holds a single asset, either a sprite, a sound, an instance, or a sequence.">asset track</a> will be made for the asset. This track is the main track for the asset in the sequence and will have a corresponding <a class="tooltip" title="A position on the timeline in the dope sheet where an asset has been placed. An asset key can be made to last multiple frames.">asset key</a> track created for the asset in the Dope Sheet at the <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet, the Animation Curve editor or the Sprite editor. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> position:</p>
+  <p>Regardless of the method you choose, a new <a class="tooltip" title="A track in the sequences track panel that holds a single asset, either a sprite, a sound, an instance, or a sequence.">asset track</a> will be made for the asset. This track is the main track for the asset in the sequence and will have a corresponding <a class="tooltip" title="A position on the timeline in the dope sheet where an asset has been placed. An asset key can be made to last multiple frames.">asset key</a> track created for the asset in the Dope Sheet at the <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet or the Sprite editor frame view. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> position:</p>
   <p><img alt="Add An Asset To The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Add_Asset.gif"/>Note that the colour of the Asset Key in the Dope Sheet can be set from the Track Panel by clicking the coloured bar at the
     end. This will open up the <strong>Colour Picker</strong> where you can choose which colour to use for the key tracks in the Dope Sheet.</p>
   <p>Each asset in the track editor can also have a set of <a class="tooltip" title="A track that has been assigned to an asset track in the track panel and that changes a single parameter for the asset track it&#39;s linked to, like the position, or the image index.">parameter tracks</a> added to it. These tracks are what control the various different properties (parameters) that can be modified
     for the track over time. The different parameters available are covered in depth in the section on &quot;<strong>Adding Parameter Tracks</strong>&quot; further down this page, but to give you an idea of what&#39;s available here is a brief list:</p>
   <ul class="colour">
-    <li><strong>All Assets</strong>: <em>Position </em>and <em>rotation</em>.</li>
+    <li><strong>All Assets</strong>: <em>Position </em>and <em>Rotation</em>.</li>
     <li><strong>Sounds</strong>: <em>Pitch </em>and <em>Volume</em>.</li>
     <li><strong>Sequences</strong>: <em>Origin </em>and <em>Scale</em>.</li>
-    <li><strong>Sprites and Objects</strong>: <em>Origin</em>, <em>Scale</em>, <em>Image Index</em>, <em>Image Speed</em>, and <em>Colour Blend</em>.</li>
+    <li><strong>Sprites and Objects</strong>: <em>Origin</em>, <em>Scale</em>, <em>Image Index</em>, <em>Image Speed</em>, and <em>Colour Multiply</em>.</li>
   </ul>
   <p>To add a parameter track in the editor you can enable &quot;<strong>Automatically Record Changes</strong>&quot; <img alt="Record Changes Icon" src="../../assets/Images/Icons/Icon_Seq_Record.png"/> in the Track Panel, which will then add parameter keys
     for any changes you make to an asset in the Canvas at the current playhead position, as shown here:</p>
-  <p><img alt="Adding A Parameter Key To An Asset In The Canvas" class="center" src="../../assets/Images/Asset_Editors/Canvas_Add_Keys.gif"/>Alternatively, you can click the &quot;<strong>Add Parameter Track</strong>&quot; <img alt="Add Parameter Icon" src="../../assets/Images/Icons/Icon_Seq_Add.png"/> button, which will open up a menu showing you the different options available:</p>
+  <p><img alt="Adding A Parameter Key To An Asset In The Canvas" class="center" src="../../assets/Images/Asset_Editors/Canvas_Add_Keys.gif"/>Alternatively, you can click the &quot;<strong>Add Parameter Track</strong>&quot; <img alt="Add Parameter Track Button" src="../../assets/Images/Icons/Icon_Add_Param.png"/> button, which will open up a menu showing you the different options available:</p>
   <p><img alt="Adding A Parameter Track To An Asset In The Track Panel" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Add_Parameter.png"/>Selecting any option from this menu, or recording directly from the IDE, will create one or more
     parameter tracks underneath the main asset track, and also add a <a class="tooltip" title="A parameter key (also called a keyframe) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">parameter key</a> to the Dope Sheet, coloured the same as the main asset track colour:</p>
   <p><img alt="Parameter Tracks In The Track Panel And Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_ParameterTracks.png"/>Once you add a parameter track to your main asset track, the dope sheet will have a coloured bar
@@ -111,13 +111,13 @@
     For example, if you have a rotation parameter and at frame 0 it is set to 90° then at frame 30 it is 180°, then at frame 15 it will be 135°. You can actually see the change in values over time by selecting the parameter track and then &quot;scrubbing&quot;
     the playhead in the dope sheet:</p>
   <p><img alt="Interpolating Between Parameter Keys" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Changing_Parameter.gif"/></p>
-  <p>Note that for all parameter tracks you can disable the default linear interpretation between different keys from the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> menu on the parameter track, which
+  <p>Note that for all parameter tracks you can disable the default linear interpolation between different keys from the right mouse button <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png"/> menu on the parameter track, which
     means that transitions between parameter values will occur <em>instantly </em>on the given frame rather than gradually over time:</p>
   <p><img alt="Disable Linear Interpolation On Parameter Track" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_RMB_Menu_Params.png"/>Apart from being able to choose the transition type for parameter tracks, the RMB menu also offers you
     the following options:</p>
   <ul class="colour">
     <li><strong>Cut</strong>, <strong>Copy</strong>, and <strong>Paste</strong>: These options permit you to cut/copy/paste asset or parameter tracks.</li>
-    <li><strong>Duplicate Track(s)</strong>: This will create a duplicate of the currently selected track(s). If this is an</li>
+    <li><strong>Duplicate Track(s)</strong>: This will create a duplicate of the currently selected track(s). If this is an asset track it will also duplicate the paramter tracks associated with it.</li>
     <li><strong>Delete Track(s)</strong>: This will delete the selected track or tracks. If you delete an asset track, then the parameter tracks associated with it will also be removed, however you can delete parameter tracks individually.</li>
     <li><strong>Group</strong>: Using this option on an empty space in the Track Panel will create a group folder which you can then use to help keep your assets in a more orderly format. You can add an asset to a group by simply clicking on it and dragging
       it onto the folder. If you have already selected a track or tracks, then using this option will not only create a group folder, but it will add the track(s) to it.</li>
@@ -125,16 +125,59 @@
   </ul>
   <p>An important feature of asset and parameter tracks is the ability to <strong>parent </strong>tracks and groups. If you drag an asset track onto another one in the track panel, the first asset becomes a <strong>child </strong>of the asset it was dropped
     on, which in turn becomes the <strong>parent</strong>. All parameter tracks assigned to the parent asset track will then automatically be applied to the child asset tracks, so you can have multiple sprites (for example) all using a single position
-    asset track to move:<img alt="Parent And Child Sprites Share Parameters" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Parenting.gif"/>The same can be done using groups. You can create a group folder by clicking the button at
-    the bottom of the track panel and then drag and drop the asset tracks you want to be grouped together on the group folder. These assets will still retain their own parameter tracks, but you can then give additional parameter tracks to the group and
-    all the assets in the group will be affected by these parameter tracks as well as their own individual parameter tracks.</p>
+    asset track to move:<img alt="Parent And Child Sprites Share Parameters" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Parenting.gif" style="cursor: nwse-resize;"/>The same can be done using groups. You can create a group folder
+    by clicking the button at the bottom of the track panel and then drag and drop the asset tracks you want to be grouped together on the group folder. These assets will still retain their own parameter tracks, but you can then give additional parameter
+    tracks to the group and all the assets in the group will be affected by these parameter tracks as well as their own individual parameter tracks.</p>
   <p>When working with the track panel the usual keyboard shortcuts can be used too, ie: <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> and the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to select one or more tracks in any order, <img alt="Shift Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Shift.png" width="55"/> and the left mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> to select consecutive tracks, and you can also cut, copy and paste them using the <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> +&quot;<span class="inline">X</span>&quot;,  <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">C</span>&quot; and  <img alt="CONTROL Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">V</span>&quot; key combinations.</p>
   <p>That&#39;s the basics of using the track editor, but below we go into a bit more detail on what each of the different sections are for and how to use them:</p>
   <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Sequence Name</span><span data-close-text="true">Sequence Name</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Change Orientation</span><span data-close-text="true">Change Orientation</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">This tab simply shows the name of the sequence that is currently being edited. you can perform a slow double click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21"/> on the tab to change the name
-      if required. All sequence names must use alpha-numeric values only, along with the under-bar &quot;_&quot; symbol, and cannot start with a number.</p>
+    <p class="dropspot">The change orientation button <img data-cke-saved-src="../../assets/Images/Icons/Icon_ChangeOrientation.png" src="../../assets/Images/Icons/Icon_ChangeOrientation.png" class="icon" alt="Change Orientation Icon"/> can be used to change the way the
+      Sequence Editor displays the different sections. By default you will have the Cnavas View at the top and the Track Editor and Dopesheet at the bottom, but this can be changed by clicking the button to cycle through the different layouts, or by clicking
+      the Options button <img alt="Icon Grid Menu" class="icon" height="24" data-cke-saved-src="../../assets/Images/Icons/Icon_CanvasOptions.png" src="../../assets/Images/Icons/Icon_CanvasOptions.png" width="10"/> to open a menu and select the layout
+      that you want. The following layouts are available:</p>
+    <table class="icons" style="margin-left: 32auto">
+      <tbody>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../../assets/Images/Icons/Icon_Seq_SplitWindow.png" src="../../assets/Images/Icons/Icon_Seq_SplitWindow.png" alt="Split Window Sequence Editor Button"/></td>
+          <td class="icons"><strong>Split Window</strong></td>
+          <td class="text">
+            <p>With this option the Sequence Editor will be split into two seperate windows, where the main IDE window will show the Canvas view in the full desktop and the new window will show the Dope Sheet and Track Editor. Clicking the button again will
+              change the layout again and remove the extra window.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../../assets/Images/Icons/Icon_Seq_Top.png" src="../../assets/Images/Icons/Icon_Seq_Top.png" alt="Snap Top Sequence Editor Button"/></td>
+          <td class="icons"><b>Snap Top</b></td>
+          <td class="text">
+            <p>This option snaps the Track Editor and Dopesheet to the top of the IDE.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../../assets/Images/Icons/Icon_Seq_Right.png" src="../../assets/Images/Icons/Icon_Seq_Right.png" alt="Snap Right Sequence Editor Button"/></td>
+          <td class="icons"><strong>Snap Right</strong></td>
+          <td class="text">
+            <p>This option snaps the Track Editor and Dopesheet to the right of the IDE.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../../assets/Images/Icons/Icon_Seq_Bottom.png" src="../../assets/Images/Icons/Icon_Seq_Bottom.png" alt="Snap Bottom Sequence Editor Button"/></td>
+          <td class="icons"><strong>Snap Bottom</strong></td>
+          <td class="text">
+            <p>This option snaps the Track Editor and Dopesheet to the bottom of the IDE (this is the default view.</p>
+          </td>
+        </tr>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../../assets/Images/Icons/Icon_Seq_Left.png" src="../../assets/Images/Icons/Icon_Seq_Left.png" alt="Snap Left Sequence Editor Button"/></td>
+          <td class="icons"><strong>Snap Left</strong></td>
+          <td class="text">
+            <p>This option snaps the Track Editor and Dopesheet to the left of the IDE.</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="dropspot">You can also reset the Sequence Editor layout at any time by clicking the Reset option <img data-cke-saved-src="../../assets/Images/Icons/Icon_Seq_Reset.png" src="../../assets/Images/Icons/Icon_Seq_Reset.png" class="icon" alt="Reset Editor Layout Button"/>. This will restore the editor to it&#39;s default state and re-open any sections that had been closed.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Track Search</span><span data-close-text="true">Track Search</span></a></p>
@@ -211,7 +254,8 @@
       <li class="dropspot"><img alt="Record Keys Icon" src="../../assets/Images/Icons/Icon_Seq_Record.png"/> - This is the &quot;Automatically Record Changes&quot; button. When this is enabled, any changes made to the asset within the canvas will be automatically recorded
         and the appropriate parameter tracks and parameter keys added at the playhead position in the dope sheet. For example, if you move the playhead from frame 0 to frame 10 and then in the canvas move the asset 100 pixels to the right, a parameter
         track will be added for position, and the parameter keys will be added at frame 0 (the initial position) and at frame 10 (the playhead position) and when you press &quot;Play&quot; on the sequence, the asset will move 100px to the right over ten
-        frames.<br/>
+        frames.
+        <br/>
         <img alt="Automatically Record Parameter Keys" class="center" src="../../assets/Images/Asset_Editors/Editor_Sequences_Auto.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
     </ul>
   </div>
@@ -220,9 +264,7 @@
     <p class="dropspot">Both asset tracks and parameter tracks have a button to toggle track visibility <img alt="Track Visibility Icon" src="../../assets/Images/Icons/Icon_Track_Visible.png"/> and to lock the track <img alt="Track Lock Icon" src="../../assets/Images/Icons/Icon_Track_Lock.png"/>. If you disable the visibility of the track, then it will not be shown when the sequence is run in a room, nor will it be shown in the sequence canvas while testing, and toggling the visibility of an asset track will also toggle the visibility
       of its parameter tracks. Locking a track simply means that this track will no longer be able to be edited in any way. Note that tracks that are invisible will be drawn faded on the dope sheet, while tracks that are locked will be drawn with an overlay,
       so you can immediately see what state each track is in:</p>
-    <p class="dropspot"><img alt="Locked And Invisible Tracks In The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Locked_And_Visible.png"/>It is worth noting that while locking an asset track will lock the parameter tracks associated with
-      it, you can then unlock the individual parameters as required, and parameters themselves can be locked/unlocked without affecting the status of the main asset track.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img alt="Locked And Invisible Tracks In The Dope Sheet" class="center" src="../../assets/Images/Asset_Editors/Track_Editor_Locked_And_Visible.png"/> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Track Colour</span><span data-close-text="true">Track Colour</span></a></p>
   <div class="droptext" data-targetname="drop-down8">
@@ -267,7 +309,8 @@
       <li class="dropspot"><img alt="Add Track Icon" src="../../assets/Images/Icons/Icon_AddAsset.png"/> - This button will open the Asset Explorer for you to pick an asset to use as a new track. Once selected the asset track will be created and frames added into the Dope
         Sheet at the current playhead position.</li>
       <li class="dropspot"><img alt="Duplicate Asset Icon" src="../../assets/Images/Icons/Icon_DuplicateAsset.png"/> - When you have selected one or more asset tracks in the track editor, clicking this button will duplicate them (along with any parameter tracks they may
-        contain).</li>
+        contain).
+      </li>
       <li class="dropspot"><img alt="Clip Mask Icon" src="../../assets/Images/Icons/Icon_AddClipMask.png"/> - Clicking this will create a special <strong>clipping mask group</strong> where you can give sprites to use as masks and sprites to be masked. See <a href="Clipping_Masks.htm">here</a>        for more information.</li>
       <li class="dropspot"><img alt="Group Folder Icon" height="18" src="../../assets/Images/Icons/Icon_AddGroup.png" width="25"/> - Clicking this will add a new group folder to the track editor, which can then be used to better organise tracks. You can add a track t a group
         by dragging the track onto the group folder and you can remove it again by dragging it out of the folder. Note that any asset that is added to a group folder will automatically be assigned the folder colour, although you can then edit the track
@@ -295,7 +338,7 @@
         <div style="float:right">Next: <a href="Clipping_Masks.htm">Clipping Masks</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Sequences - The Track Panel

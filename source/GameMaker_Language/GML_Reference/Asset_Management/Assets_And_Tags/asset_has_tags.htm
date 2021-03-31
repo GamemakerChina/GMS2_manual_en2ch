@@ -142,7 +142,8 @@
     </tbody>
   </table>
   <p> </p>
-  <p>If the function succeeds and one or more of the tag(s) is present for the asset then it will return <tt>true</tt> otherwise it will return <tt>false</tt>.</p>
+  <p>If the function succeeds and <strong>all</strong> of the given tags are present for the asset then it will return <tt>true</tt> otherwise it will return <tt>false</tt>. If you need to check for any of a selection of tags rather than all tags, use the
+    function <tt><a href="asset_has_any_tag.htm">asset_has_any_tag()</a></tt>.</p>
   <p> </p>
   <p> </p>
   <h4>Syntax:</h4>
@@ -172,8 +173,10 @@
   <p class="code">Boolean</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">var _a = array_create(3);<br/> _a[0] = &quot;enemy&quot;;<br/> _a[1] = &quot;all_levels&quot;;<br/> _a[2] = &quot;boss&quot;;<br/> asset_has_tags(obj_Enemy_Boss_Parent, _a, asset_object);</p>
-  <p>The above code will create an array of tags and then check to see if any of them are applied to the given object.</p>
+  <p class="code">var _a = array_create(3);<br/> _a[0] = &quot;enemy&quot;;<br/> _a[1] = &quot;level_&quot; + string(global.Level);<br/> _a[2] = &quot;boss&quot;;<br/> if asset_has_tags(object_index, _a, asset_object)<br/> {
+    <br/> instance_create_layer(0, 0, &quot;Overlay&quot;, obj_Boss_Text);<br/> }
+  </p>
+  <p>The above code will create an array of tags and then check to see if all of them are applied to the given object, and if they are it will create an instance of another object.</p>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -181,10 +184,10 @@
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back: <a href="Assets_And_Tags.htm">Assets And Tags</a></div>
-        <div style="float:right">Next: <a href="asset_clear_tags.htm">asset_clear_tags</a></div>
+        <div style="float:right">Next: <a href="asset_has_any_tag.htm">asset_has_any_tag</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 asset_has_tags

@@ -147,12 +147,28 @@
     </p>
     <p class="dropspot">The function itself would have something like this:</p>
     <p class="code">function array_populate(_array)<br/>     {<br/>     var a = _array; var i = 0; repeat(25)<br/>         {<br/>         i = irandom(99);<br/>         while (a[i] != 0)<br/>             {<br/>             i = irandom(99);<br/>             }<br/>   
-          a[@ i] = 100;<br/>         }<br/>     }</p>
+        a[@ i] = 100;<br/>         }<br/>     }</p>
     <p class="dropspot">All this function is doing is selecting 25 random positions in the array and setting the value of the chosen array position to 100.</p>
     <p class="note">NOTE: You cannot use the array accessor <span class="inline">@</span>  when working with the <span class="inline">argument[n]</span> array in script functions.</p>
     <p class="dropspot"> </p>
     <p class="dropspot"> </p>
   </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down16" href="#"><span data-open-text="true">Structs [$ ]</span><span data-close-text="true">Structs [$ ]</span></a></p>
+  <div class="droptext" data-targetname="drop-down16">
+    <p class="dropspot"><span>The syntax for <a href="Structs.htm">structs</a> is</span></p>
+    <p class="code">struct[$ &quot;name&quot;]</p>
+    <p class="dropspot">This accessor is essentially a wrapper for the functions <span><a href="../GML_Reference/Variable_Functions/variable_struct_get.htm"><span class="inline">variable_struct_get()</span></a> and <a href="../GML_Reference/Variable_Functions/variable_struct_set.htm"><span class="inline">variable_struct_set()</span></a>,
+      and you would use it much like the accessor for a DS map. For example, if you have created a struct and want to retrieve a value from a variable called &quot;my_health&quot; then you&#39;d do:</span>
+    </p>
+    <p class="code">var _hp = struct[$ &quot;my_health&quot;];</p>
+    <p class="dropspot">As you can see, you don&#39;t supply the variable itself, but rather a <em>string</em> with the variable. Note that if the struct does not have a variable with the given name, then the accessor will return <span class="inline">undefined</span> as
+      the value.</p>
+    <p class="dropspot">To set a variable in a struct then you would do the following</p>
+    <p class="code">struct[$ &quot;my_score&quot;] = 100;</p>
+    <p class="dropspot">As with getting a value, you supply the name of the variable to set as a string, and it will be set to the value given. If the variable name used doesn&#39;t exist in the struct, then it will be created and set to the given value.</p>
+    <p class="dropspot"><br/></p>
+  </div>
+  <p> </p>
   <p>An important feature of accessors is the fact that they can be <i>chained</i> together. This means that if you have several nested data structures and/or arrays, there is no longer the need to use a variety of functions to get access to a value that
     is deep within the nested structure. For example, say you have an array, and each item in the array is a DS list, like this:</p>
   <p class="code">array = array_create(3);<br/> for (var i = 0; i &lt; 3; ++i;)<br/>     {
@@ -194,7 +210,7 @@
         <div style="float:right">Next: <a href="Script_Functions.htm">Script Functions And Variables</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 div

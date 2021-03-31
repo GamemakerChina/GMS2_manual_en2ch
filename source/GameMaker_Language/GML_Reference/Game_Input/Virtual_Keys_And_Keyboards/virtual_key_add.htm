@@ -79,16 +79,14 @@
 
 
 
-
-
-
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>virtual_key_add</h1>
   <p>This function enables you to map &quot;touches&quot; of a screen area to keyboard events. This means that once you have assigned an area to a virtual key, all touches on that area will trigger the keyboard event corresponding to the key you have mapped
     to the area. You can assign each virtual key you define to a variable too, which can then be used in the further virtual key functions to show, hide and delete them. These keys are assigned on a <i>per room</i> basis and will be automatically removed
     by GameMaker Studio 2 when changing rooms.</p>
   <p>The actual position of the virtual key is based on the <i>screen</i> position rather than room position and so the x/y values are absolute on the screen. This means that you don&#39;t need to worry about the use of views or the relative room coordinates,
-    and can simply draw your key sprites and define your virtual keys in the <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a> of an object.</p>
+    and can simply define the keys in the <strong>Create Event</strong> of an object (you only need to define a virtual key once per-room), then draw your key sprites in the <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a>,
+    sizing the GUI layer to be the same as the screen.</p>
   <p> </p>
   <h4>Syntax</h4>
   <p class="code">virtual_key_add(x, y, w, h, keycode);</p>
@@ -138,7 +136,7 @@
         <div style="float:right">Next: <a href="virtual_key_show.htm">virtual_key_show</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 virtual_key_add

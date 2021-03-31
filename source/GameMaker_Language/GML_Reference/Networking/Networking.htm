@@ -81,15 +81,15 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Networking</h1>
-  <p>The GameMaker Studio 2 networking functions are based on <i>sockets</i>, which is an industry standard on all platforms. With sockets, you have the ability to create both clients and servers using simple GML which allows you to create even a
-    single player game using the client/server model (something which will allow multiplayer to be added easily later).</p>
+  <p>The GameMaker Studio 2 networking functions are based on <i>sockets</i>, which is an industry standard on all platforms. With sockets, you have the ability to create both clients and servers using simple GML which allows you to create even a single
+    player game using the client/server model (something which will allow multiplayer to be added easily later).</p>
   <p>Basically, a socket is an object which can send, receive, connect and listen to <i>ports</i> on the network. These functions deal with just TCP/IP connections, which is what the internet is based on (IPv4 to be more precise). In essence this lets you
     connect one socket using an IP address (let&#39;s say 192.168.1.10) to another socket on another IP address (say 192.168.1.11). Once connected, these two sockets can send data back and forth using the <tt>network_send_*</tt> functions (like <a href="network_send_packet.htm"><tt>network_send_packet()</tt></a>)
     and the dedicated asynchronous event that is triggered by them. This async event will generate a <a href="../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a> containing the data received as well as other details, and you can find the complete details
     in the section on the <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">Network Async Event</a>.</p>
   <p>Instead of programs having to read and deal with every bit of network traffic coming into a machine, IP addresses also deal with ports, which are numbered from 0 to 65535. This allows each program to get only the packets of data that it&#39;s interested
-    in, and not everything that has been sent by every program. This also saves considerable CPU time, as it seriously cuts down on data processing, so with GameMaker Studio 2 you can also “listen” to ports. So, a server will create a socket, and
-    then bind it to a specific port to listen to. It will then get notified of connections, disconnections and data transfers from that socket.</p>
+    in, and not everything that has been sent by every program. This also saves considerable CPU time, as it seriously cuts down on data processing, so with GameMaker Studio 2 you can also “listen” to ports. So, a server will create a socket, and then
+    bind it to a specific port to listen to. It will then get notified of connections, disconnections and data transfers from that socket.</p>
   <p>The data &quot;packets&quot; themselves are made up of binary data taken from a buffer. This buffer can be created and manipulated using the GameMaker Studio 2 <a href="../Buffers/Buffers.htm">Buffer functions</a>.</p>
   <p>It is worth noting that if you are creating a project for the HTML5 target, then you will not be able to use the server create functions due to browser restrictions and will have to write your own server for this platform using something like <strong>Electron </strong>or
     <strong>NodeJS</strong>. Also note that if your game is cross platform and you anticipate connecting to an HTML5 instance of the game from a server running on a mobile or desktop device, then your server can only communicate to the HTML5 instance
@@ -103,7 +103,9 @@
     <li><a href="network_create_socket.htm">network_create_socket</a></li>
     <li><a href="network_create_socket_ext.htm">network_create_socket_ext</a></li>
     <li><a href="network_connect.htm">network_connect</a></li>
+    <li><a href="network_connect_async.htm">network_connect_async</a></li>
     <li><a href="network_connect_raw.htm">network_connect_raw</a></li>
+    <li><a href="network_connect_raw_async.htm">network_connect_async_raw</a></li>
     <li><a href="network_resolve.htm">network_resolve</a></li>
     <li><a href="network_set_config.htm">network_set_config</a></li>
     <li><a href="network_set_timeout.htm">network_set_timeout</a></li>
@@ -124,7 +126,7 @@
         <div style="float:right">Next: <a href="../Web_And_HTML5/Web_And_HTML5.htm">Web</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Networking

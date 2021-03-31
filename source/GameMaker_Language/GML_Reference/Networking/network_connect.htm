@@ -82,9 +82,10 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>network_connect</h1>
   <p>With this function you can send a request to connect to a server. The function takes the <i>socket id</i> to connect through (see <a href="network_create_socket.htm"><tt>network_create_socket()</tt></a>) and requires you to give the IP address to connect
-    to (a string) as well as the port to connect through, and if the connection fails a value of less than 0 will be returned. The connection uses a special protocol that ensures only GameMaker Studio 2 games connect to each other, however if you
-    need to connect to a server that is not a GameMaker Studio 2 game, you can use <a href="network_connect_raw.htm"><tt>network_connect_raw()</tt></a>. Note that by default the function is synchronous, meaning that your game may appear to &quot;hang&quot;
-    as the connection is made. You can set a timeout value for connection, or alternatively make the creation asynchronous, using the function <a href="network_set_config.htm"><tt>network_set_config()</tt></a>.</p>
+    to (a string) as well as the port to connect through, and if the connection fails a value of less than 0 will be returned. The connection uses a special protocol that ensures only GameMaker Studio 2 games connect to each other, however if you need
+    to connect to a server that is not a GameMaker Studio 2 game, you can use <a href="network_connect_raw.htm"><tt>network_connect_raw()</tt></a>. Note that by default the function is synchronous, meaning that your game may appear to &quot;hang&quot;
+    as the connection is made. You can set a timeout value for connection, or alternatively make the creation asynchronous, using the function <tt><a href="network_set_config.htm">network_set_config()</a></tt>, or alternatively use the function
+    <span class="inline"><a href="network_connect_async.htm">network_connect_async()</a></span> instead.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">network_connect(socket, url, port);</p>
@@ -122,10 +123,10 @@
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back: <a href="Networking.htm">Networking</a></div>
-        <div style="float:right">Next: <a href="network_connect_raw.htm">network_connect_raw</a></div>
+        <div style="float:right">Next: <a href="network_connect_async.htm">network_connect_async</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 network_connect

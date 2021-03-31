@@ -39,7 +39,7 @@
 
     gRootRelPath = "../..";
     gCommonRootRelPath = "../..";
-    gTopicId = "5.2.1";
+    gTopicId = "5.3.1";
   
 //]]></script>
 
@@ -150,7 +150,7 @@
       you set <span class="inline">alarm[0]</span> in the create event of the object to 30, this means that GameMaker Studio 2 will count down 30 game steps before it runs the actions or code that are placed in the <span class="inline">alarm[0]</span>      event. Note that setting an alarm to 0 will <em>not </em>run the alarm code, as the event is triggered, but the alarm is set to -1 immediately, so the code is skipped. If you need an alarm to run the very next step, then you should set it to 1.</p>
     <p class="dropspot">This can be very useful as it allows you to set things in motion at precise moments, and you can even have them repeat as there is nothing to stop you setting an alarm in its own event. Imagine you have a monster and you want it to turn right every
       three seconds... well, you would set an alarm in its create event to the room speed * 3 (if the room speed is 30, that&#39;s 30 steps per second, so multiply that by 3 and you get 3 seconds!) and then in the alarm event you would have the code or
-      action to set its direction, as well as the action (or code) to set its alarm to room speed * 30 again. In this way, you can set up simple game loops where things only happen at specific intervals.</p>
+      action to set its direction, as well as the action (or code) to set its alarm to room speed * 3 again. In this way, you can set up simple game loops where things only happen at specific intervals.</p>
     <p class="dropspot">It is worth noting that an alarm with no actions or code in it in it will <em>not </em>count down. However, even with just a comment and no code or actions, then the alarm will continue to count down and can be set and checked as you would normally.</p>
     <p class="dropspot"> </p>
   </div>
@@ -203,7 +203,8 @@
       work on the mask of the instance that has the event. What this means is that GameMaker Studio 2 will check the position of the mouse in the room when those buttons are used against the collision masks of the instances that have a mouse event. If
       there is a &quot;collision&quot; with the instance <a class="tooltip" title="For sprites, the bounding-box is the name given to the edges of the area that collisions will initially be detected in, and it doesn&#39;t have to be the same size as the sprite it&#39;s being applied to. For sequences, the bounding box is the outer edge of the total space that one or more assets occupy in the canvas.">bounding box</a> then the event will be triggered, so make sure that any instance with these events has a sprite with a valid collision
       mask or that the object has a mask sprite selected in the object properties. As their names imply, these events will be triggered either once when the chosen mouse button is first pressed or released, or continuously each step while the button is
-      maintained.</p>
+      maintained.
+    </p>
     <p class="dropspot">The mouse enter and leave events are also similar to the button events in that they too rely on the mask of the instance to work, but this time they are triggered when the mouse first &quot;enters&quot; (touches) the instance or when the mouse &quot;leaves&quot;
       (stops touching) the instance. These events are not continuous however, and are triggered only once for each time the mouse enters or leaves the object - so they are an ideal method for creating, for example, buttons that need to change as the mouse
       hovers over them before going back to normal when the mouse is removed.</p>
@@ -300,7 +301,7 @@
         <div style="float:right">Next: Parent Objects</div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Object Events

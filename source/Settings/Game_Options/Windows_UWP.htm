@@ -106,9 +106,21 @@
     <li><strong style="margin-top: 10px">Enable Microphone Permission</strong>: Flags the game as having access to the microphone of the device. This is off by default.</li>
     <li><strong>Enable IAP Sandbox</strong>: Flags the game as using sandboxed In App Purchases. This is off by default.</li>
   </ul>
-  <p>Finally you have two options for setting the <strong>Target </strong>and <strong>Minimum </strong>Windows platform versions. In general you won&#39;t want to touch these and should leave them at their default values, but if you are having build issues
-    - specifically, if you can&#39;t install the Windows SDK set by default, then you&#39;ll need to change these to what you have installed - then you may want to set these to other values. If you are unsure what values to set, then create a new UWP
-    project in Visual Studio and have a look at what it sets the values to.</p>
+  <p> </p>
+  <h2>Device Families</h2>
+  <p><img alt="UWP Device Families Options" class="center" src="../../assets/Images/Settings/UWP_DeviceFamilies.png"/>Here you can select which <strong>device Families</strong> you want the Windows UWP export to target when creating your executable. By
+    default, the &quot;Support Universal device family&quot; option is checked, which means that the app will target all devices and families. In order to restrict the app to only supporting particular device families, the Universal option should be <em>unchecked </em>and
+    the appropriate device families checked. It&#39;s also possible to support the Universal device family but restrict other device families to only certain platform versions - in this case you would keep the Universal device family checked, but also
+    check the other device family for which you wish to support a different platform version, and input the version details for that family in the appropriate text boxes. See this page the following Microsoft support page for how this logic works:</p>
+  <ul class="colour">
+    <li><a href="https://docs.microsoft.com/en-us/uwp/schemas/appxpackage/uapmanifestschema/element-targetdevicefamily#examples ">Target Device Family: Examples</a></li>
+  </ul>
+  <p>In general you won&#39;t want to touch the target and minimum platform versions and should leave them at their default values, but if you are having build issues - specifically, if you can&#39;t install the Windows SDK set by default - then you&#39;ll
+    need to change these to what you have installed. If you are unsure what values to set, then create a new UWP project in Visual Studio and have a look at what it sets the values to.</p>
+  <p>For more information on Device Families, please see the following Microsoft document:</p>
+  <ul class="colour">
+    <li><a href="https://docs.microsoft.com/en-us/uwp/extension-sdks/device-families-overview">Device Families Overview</a></li>
+  </ul>
   <p> </p>
   <h2>Graphics</h2>
   <p><img alt="UWP Graphics Options" class="center" src="../../assets/Images/Settings/UWP_Graphics_Options.png"/>The graphics options are those that you should configure to determine how your game will use the graphics card of your target UWP device. The
@@ -130,13 +142,8 @@
   <p class="note"><strong>NOTE</strong>: Be aware that the larger the size of the texture page, the less compatible your game will be on PC&#39;s with lower specifications.</p>
   <p> </p>
   <h2>Images</h2>
-  <p><img alt="UWP Images Logo Options" class="center" src="../../assets/Images/Settings/UWP_Images1_Options.png"/>The first part of the Images section is for defining the game <strong>Logo</strong>. This is essentially the icon that your game will use
-    within the UWP ecosystem, and it is worth noting that these images can be transparent <span class="inline">.png</span> files, in which case they will be drawn over the <strong>Background Colour</strong> specified in this section. This background colour
-    is also applied to the button colour in any app-owned dialog boxes and to the App Description page in the Store on devices.</p>
-  <p><img alt="UWP Images Splash Screen Options" class="center" src="../../assets/Images/Settings/UWP_Images2_Options.png"/>After setting up the logo you can set the <strong>Splash Screen</strong> for the game. This is the screen that will be shown when
-    you start your game, and it cannot be larger than 620 x 300 pixels and like the logo it can be a transparent <span class="inline">.png</span> file, in which case the <strong>Background Colour</strong> you shoose will be used for it.</p>
-  <p><img alt="UWP Images Icon Options" class="center" src="../../assets/Images/Settings/UWP_Images3_Options.png"/>Finally you have the option to set the various <strong>Tiles </strong>that your game will use on the different devices that UWP can run on.
-    You can set the following (and they should all be <span class="inline">*.png</span> format files):</p>
+  <p><img alt="UWP Images Logo Options" class="center" src="../../assets/Images/Settings/UWP_Images1_Options.png"/>In the first part of the Images section you have the option to set the various <strong>Tiles </strong>that your game will use on the different
+    devices that UWP can run on. You can set the following (and they should all be <span class="inline">*.png</span> format files):</p>
   <ul class="colour">
     <li>The <strong>small tile</strong> image is the logo image that appears next to the App name in the search bar and other areas of the UI. It should be 44 x 44 pixels.</li>
     <li>The <strong>medium tile</strong> image should be a 71x71 pixel image.</li>
@@ -145,6 +152,10 @@
       based on wide template types. Since the user can decide which format the tile uses it is recommended that you include a wide image tile. Also note that if a wide image tile is provided, the tile may appear initially in its wide format.</li>
     <li>The <strong>large image tile</strong> is the large live tile format and should be 310 x 310 pixels. Note that this will only be used on desktop OS.</li>
   </ul>
+  <p>The next section is for defining the game <strong>Logo</strong>. This is essentially the icon that your game will use within the UWP ecosystem, and it is worth noting that these images can be transparent <span class="inline">.png</span> files, in which
+    case they will be drawn over the <strong>Background Colour</strong> specified in this section. This background colour is also applied to the button colour in any app-owned dialog boxes and to the App Description page in the Store on devices.</p>
+  <p><img alt="UWP Images Splash Screen Options" class="center" src="../../assets/Images/Settings/UWP_Images2_Options.png"/>After setting up the logo you can set the <strong>Splash Screen</strong> for the game. This is the screen that will be shown when
+    you start your game, and it cannot be larger than 620 x 300 pixels and like the logo it can be a transparent <span class="inline">.png</span> file, in which case the <strong>Background Colour</strong> you choose will be used for it.<img alt="UWP Images Icon Options" class="center" src="../../assets/Images/Settings/UWP_Images3_Options.png"/></p>
   <p>It is worth noting that GameMaker Studio 2 has a <a href="../../IDE_Tools/Project_Image_Generator.htm">Project Image Generator</a> tool which can be used to automatically create all the images required for all the different target platforms your game
     is being compiled to. If you use this tool, you should revise the images created to ensure that they are what you require.</p>
   <p> </p>
@@ -160,7 +171,7 @@
     on how this is done from the <a href="https://help.yoyogames.com/hc/en-us/articles/115001349488">YoYo Games Knowledge Base</a>.</p>
   <p>In this section you also need to specify the<strong> Publisher name</strong> that was used to generate the signing certificate. The input should always be preceeded by &quot;<span class="inline">CN=</span>&quot;, eg: <span class="inline">CN=YoYoGames</span>.</p>
   <p> </p>
-  <p>Xbox Live</p>
+  <h2>Xbox Live</h2>
   <p><img alt="UWP XBox Live Options" class="center" src="../../assets/Images/Settings/UWP_XBoxLive_Options.png"/>The Xbox Live section of the UWP Game Options is where you can activate your UWP project for use on the Xbox One console. Activating the project
     for the Xbox here permits you to do the following when the project is run on an Xbox One:</p>
   <ul class="colour">
@@ -182,7 +193,7 @@
         <div style="float:right">Next: <a href="HTML5.htm">HTML5</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Windows UWP Options

@@ -39,7 +39,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "10.2.21.0_4";
+    gTopicId = "10.2.21.0_6";
   
 //]]></script>
 
@@ -94,6 +94,7 @@
     <li><tt>num_objects_in_generation</tt> - this is an array (of size <tt>num_generations</tt>) containing the number of objects in each generation.</li>
   </ul>
   <p class="note"><b>NOTE</b>: On the HTML5 target platform garbage collection is handled by the JavaScript engine and therefore the member variables in the above struct will all return 0 if this function is used on that platform.</p>
+  <p>When using this function, please note that the information shown for the objects <em>is only updated when a full generation is finished processing</em>, which may take several frames depending on frame time setting (see <a href="gc_target_frame_time.htm">here</a>    for more information on frame timing).</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">gc_get_stats();</p>
@@ -116,7 +117,7 @@
         <div style="float:right">Next: <a href="gc_enable.htm">gc_enable</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gc_get_stats

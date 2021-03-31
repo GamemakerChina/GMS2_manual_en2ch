@@ -39,7 +39,7 @@
 
     gRootRelPath = "../..";
     gCommonRootRelPath = "../..";
-    gTopicId = "5.1.0_3";
+    gTopicId = "5.2.0_3";
   
 //]]></script>
 
@@ -58,8 +58,8 @@
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page detailing how iOS extensions work"/>
-  <meta name="rh-index-keywords" content="Extensions - Creating iOS Extension"/>
-  <meta name="search-keywords" content="iOS Extensions,iOS"/>
+  <meta name="rh-index-keywords" content="Extensions - Creating iOS / tvOS Extensions"/>
+  <meta name="search-keywords" content="iOS Extensions,iOS, tvOS Extensions, tvOS"/>
 </head>
 
 <body>
@@ -80,10 +80,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>iOS Extensions</h1>
-  <p>To create an extension for iOS you have to do it in two parts. The first part would be to add the extension itself, along with the required files etc... and the second is to create the functions and macros/constants that the extension requires. The
-    functions and constants are added using <strong>placeholder </strong>files to group them together, so you&#39;d add a placeholder and then define the functions and macros as explained in the section above. To add the rest of the files though you need
-    to first tick the <em>iOS </em>check-box in the <strong>Additional Features</strong> section of the editor:</p>
+  <h1>iOS / tvOS Extensions</h1>
+  <p>To create an extension for iOS or tvOS you have to do it in two parts. The first part would be to add the extension itself, along with the required files etc... and the second is to create the functions and macros/constants that the extension requires.
+    The functions and constants are added using <strong>placeholder </strong>files to group them together, so you&#39;d add a placeholder and then define the functions and macros as explained in the section <a href="Creating_An_Extension.htm">here</a>.
+    To add the rest of the files though you need to first tick the <em>iOS </em>and/or the <em>tvOS </em>check-box in the <strong>Additional Features</strong> section of the editor to open up the relevant <strong>Extension Properties</strong> window (the
+    image below shows the iOS properties window, but the tvOS window is exactly the same):</p>
   <p class="dropspot"><img alt="iOS Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_iOS.png"/></p>
   <p>Here you give the following details:</p>
   <ul class="colour">
@@ -106,10 +107,16 @@
     <li class="dropspot"><strong>Inject to Info.plist</strong>: Here you can add any code to be a injected into the <span class="inline">info.plist</span> file.</li>
     <li class="dropspot"><strong>3rd Party Frameworks and Bundles</strong>: This section is for adding third party and SDK bundles. As with system frame works you click the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18"/> button to add them and then slow click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to edit, and selecting them then clicking <img alt="Remove Argument Icon" class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png"/> will remove them (see the documentation that came with your chosen SDK for info on the framework name). If the framework/SDK bundle is on your development Mac then you need to add the path into &quot; <em>Enter framework path on Mac</em>&quot;
       and click the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18"/> button, or if the SDK or source code is on your PC use the <em>Add Source</em> button.</li>
+    <li class="dropspot"><strong>CocoaPods</strong>: Here you can give the name of any CocoaPods that the extension is going to use instead of (or as well as) any SDKs and frameworks that have been added. Note that there is a Game Option <a href="../../Settings/Game_Options/iOS.htm">for iOS</a>      and <a href="../../Settings/Game_Options/tvOS.htm">for tvOS</a> to add a Podfile to GameMaker Studio2 which is required if you are adding CocoaPods in this secton.</li>
+    <li class="dropspot"><strong>CocoaPods Dependencies</strong>: This section is where you can list the different dependencies required by the CocoaPods added in the previous section. Note that there is a Game Option <a href="../../Settings/Game_Options/iOS.htm">for iOS</a>      and <a href="../../Settings/Game_Options/tvOS.htm">for tvOS</a> to add a Podfile.lock to GameMaker Studio2 which is required if you are adding CocoaPod Dependencies in this secton.</li>
   </ul>
   <p>If your extension has had any System Frameworks or 3rd Party Frameworks added, these will now be listed in the <strong>Extension Properties </strong>window, with each one having a check-box beside it. If you mark the check-box, you are enabling weak
     linking, which is useful should you need to &quot;over-ride&quot; any symbol from the included library with your own value, but it should be noted that doing so will slow linking down.</p>
-  <p>For more information on creating iOS extensions, please see the <a href="https://help.yoyogames.com/hc/en-us/articles/360012504971-iOS-and-Android-Creating-A-Simple-Extension">YoYo Games Knowledge Base</a>.</p>
+  <p>For more information on creating iOS and tvOS extensions, please see the <a href="https://help.yoyogames.com/hc/en-us/articles/360012504971-iOS-and-Android-Creating-A-Simple-Extension">YoYo Games Knowledge Base</a>, and for information on using CocoaPods
+    in extensions, please see the following guide:</p>
+  <ul class="colour">
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360008958858">iOS and tvOS: Using Cocoa Pods</a></li>
+  </ul>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -120,10 +127,11 @@
         <div style="float:right">Next: <a href="Creating_An_Extension.htm">Creating An Extension</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 iOS Extensions
+tvOS Extensions
 -->
   <!-- TAGS
 extensions_ios

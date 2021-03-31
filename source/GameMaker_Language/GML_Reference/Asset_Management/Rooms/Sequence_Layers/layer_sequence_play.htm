@@ -39,7 +39,7 @@
 
     gRootRelPath = "../../../../..";
     gCommonRootRelPath = "../../../../..";
-    gTopicId = "10.2.2.14.5.0_9";
+    gTopicId = "10.2.2.14.5.0_12";
   
 //]]></script>
 
@@ -81,7 +81,10 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>layer_sequence_play</h1>
-  <p>With this function you can start the playback of the given sequence. You supply the sequence element ID as returned by <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> or by one of the <a href="../General_Layer_Functions/General_Layer_Functions.htm">layer element functions</a>    and the function will play the sequence, which you can then pause if required using the function <a href="layer_sequence_pause.htm"><tt>layer_sequence_pause()</tt></a></p>
+  <p>With this function you can start the playback of the given sequence. You supply the sequence element ID as returned by <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a> or by one of the <a href="../General_Layer_Functions/General_Layer_Functions.htm">layer element functions</a>    and the function will play the sequence, which you can then pause if required using the function <a href="layer_sequence_pause.htm"><tt>layer_sequence_pause()</tt></a>.</p>
+  <p class="note"><strong>IMPORTANT!</strong> If your sequence has any instances in it, these instances shouldn&#39;t change their <span class="inline"><span style="font-size:14px;">image_xscale</span></span>  / <span class="inline"><span style="font-size:14px;">image_yscale</span></span> /
+    <span class="inline"><span style="font-size:14px;">image_angle</span></span> / <span class="inline"><span style="font-size:14px;">x</span></span> / <span class="inline"><span style="font-size:14px;">y</span></span> variables as they will be overwritten when the sequence
+      updates each step after starting to be played.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">layer_sequence_play(sequence_element_id)</p>
@@ -128,7 +131,7 @@
         <div style="float:right">Next: <a href="layer_sequence_speedscale.htm">layer_sequence_speedscale</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_play

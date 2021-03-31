@@ -83,6 +83,8 @@
   <h1>buffer_delete</h1>
   <p>With this function you can delete a buffer previously have created using the function <a href="buffer_create.htm"><tt>buffer_create()</tt></a> from memory, releasing the resources used to create it and removing any data that it may currently contain.</p>
   <p class="note"><b>NOTE</b>: It&#39;s important to always remove any dynamically created resources from memory when you no longer need them to prevent memory leaks.</p>
+  <p class="note"><em><strong>IMPORTANT!</strong></em> When you create a buffer, the index value used to identify it is an integer value starting at 0. These indices are re-used by GameMaker, so a destroyed buffer index value may be used by a newly created one afterwards,
+    and we recommend that you set any variable that holds a buffer index to -1 after having destroyed the buffer.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">buffer_delete(buffer)</p>
@@ -103,8 +105,8 @@
   <p class="code">N/A</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">buffer_delete(player_buffer);</p>
-  <p>The above code will delete the previously created buffer with the id stored in the variable &quot;player_buffer&quot;.</p>
+  <p class="code">buffer_delete(player_buffer);<br/> player_buffer = -1;</p>
+  <p>The above code will delete the previously created buffer with the id stored in the variable &quot;player_buffer&quot; and then sets the variable to -1.</p>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -115,7 +117,7 @@
         <div style="float:right">Next: <a href="buffer_read.htm">buffer_read</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_delete

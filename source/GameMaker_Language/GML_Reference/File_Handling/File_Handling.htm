@@ -83,8 +83,8 @@
   <h1>File Handling</h1>
   <p>At some point while creating your game it will be necessary to store information externally and be able to retrieve this information. For example, you may wish to store login details, or hi-scores, or maybe the progression of the player through your
     levels. Whatever the reason, you will need to know how to use the different file functions that are available to you when working with GameMaker Studio 2.</p>
-  <p>It is very important to realise that GameMaker Studio 2 is <b>Sandboxed </b>by default, meaning that there are a number of limits and minor complications when using the file system functions that are available, and it is worth noting too that
-    the file system will work slightly differently depending on the platform you are targeting. For more information this, please see the following section:</p>
+  <p>It is very important to realise that GameMaker Studio 2 is <b>Sandboxed </b>by default, meaning that there are a number of limits and minor complications when using the file system functions that are available, and it is worth noting too that the file
+    system will work slightly differently depending on the platform you are targeting. For more information this, please see the following section:</p>
   <ul class="colour">
     <li><a href="../../../Additional_Information/The_File_System.htm">The File System</a></li>
   </ul>
@@ -95,8 +95,8 @@
   <ul class="colour">
     <li><b>iOS</b>: On iOS, if you are loading an included file from a folder, ie: with a path something like &quot;<tt>Backgrounds/background1.png</tt>&quot;, you do NOT need to include the folder as part of the path and simply supplying the file name is
       sufficient. On all other platforms you must supply the folder(s) as part of the path to the file.<b></b></li>
-    <li><b>macOS and Ubuntu (Linux)</b>: On the macOS and Ubunutu, filenames and paths are case sensitive on these platforms, and so to prevent any potential issues, GameMaker Studio 2 will automatically make all names/paths use lower case by default.<b></b></li>
-    <li><b>HTML5</b>: On HTML5, saving and loading to and from <b>local storage</b> will work as explained within the different function pages, however if you are loading a file from a server, you <b>must only use the function <a href="../Buffers/buffer_load_async.htm"><tt>buffer_load_async()</tt></a></b>      as loading synchronously has been deprecated on most browsers and will eventually be obsoleted.</li>
+    <li><b>macOS and Ubuntu (Linux)</b>: On the macOS and Ubuntu, filenames and paths are case sensitive on these platforms, and so to prevent any potential issues, GameMaker Studio 2 will automatically make all names/paths use lower case by default.<b></b></li>
+    <li><b>HTML5</b>: On HTML5, saving and loading to and from <b>local storage</b> will work as explained within the different function pages, however if you are loading a file from a server, you <b>must only use the function <a href="../Buffers/buffer_load_async.htm"><tt>buffer_load_async()</tt></a></b>      as loading synchronously has been deprecated on most browsers and will eventually be obsoleted. Also note that you cannot create or destroy directories in the browser local storage.</li>
   </ul>
   <p>Information on the different file functions can be found in the following pages:</p>
   <p> </p>
@@ -148,7 +148,7 @@
         <div style="float:right">Next: <a href="../Buffers/Buffers.htm">Buffers</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 File Handling

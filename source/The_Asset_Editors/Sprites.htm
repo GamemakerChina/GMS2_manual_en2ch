@@ -39,7 +39,7 @@
 
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
-    gTopicId = "5.5_3";
+    gTopicId = "5.7";
   
 //]]></script>
 
@@ -59,7 +59,7 @@
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page detailing how the sprite editor works"/>
   <meta name="rh-index-keywords" content="Sprite Editor"/>
-  <meta name="search-keywords" content="sprites,sprite editor"/>
+  <meta name="search-keywords" content="sprites,sprite editor, broadcast messages"/>
 </head>
 
 <body>
@@ -111,8 +111,8 @@
     <div class="dropspotnote">NOTE: This option is only available for <a class="tooltip" title="A bitmap is the term used to describe any static image that is comprised of coloured pixels that are stored as bits (unlike vector images which are stored using mathematical algorithms). PNG, JPG and BMP are example of bitmap images, while SWF would be an example of a vector image.">bitmap</a> sprites and will be greyed out for SWF or skeleton animation sprites.</div>
     <p class="dropspot">In this section you can also either open the <a href="Image_Editor.htm">Image Editor</a> to draw your sprite, or you can click on the &quot;<em>Import</em>&quot; button to import a previously created sprite. Sprites can be imported from most common
       bitmap formats ( <span class="inline">PNG</span>, <span class="inline">JPG</span>, <span class="inline">GIF</span>, etc...) but GameMaker Studio 2 also supports vector sprites (<span class="inline">SWF</span>) and skeletal animation sprites (
-      <span class="inline">Spine</span>). For more information on these formats, please see the section on <a href="../Settings/Texture_Information/Non-Bitmap_Sprites.htm">Non-Bitmap Sprites</a>. Note that when importing bitmap sprites you can select multiple image files
-        in the file explorer and each one will be added to the same sprite as separate sub-images (frames).</p>
+      <span class="inline">Spine</span>). For more information on these formats, please see the section on <a href="../Settings/Texture_Information/Non-Bitmap_Sprites.htm">Non-Bitmap Sprites</a>. Note that when importing bitmap sprites you can select
+      multiple image files in the file explorer and each one will be added to the same sprite as separate sub-images (frames).</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">Texture Settings</span><span data-close-text="true">Texture Settings</span></a></p>
@@ -161,7 +161,8 @@
       <li class="dropspot"><strong>Precise</strong>: This creates a precise collision mask based on the outline of the sprite. If the sprite has multiple sub-images, then this will be a <em>composite </em>of the edges of <em>all </em>the sub-images placed over each other.
         Note that the precise mask will be clipped to the <a class="tooltip" title="For sprites, the bounding-box is the name given to the edges of the area that collisions will initially be detected in, and it doesn&#39;t have to be the same size as the sprite it&#39;s being applied to. For sequences, the bounding box is the outer edge of the total space that one or more assets occupy in the canvas.">bounding box</a> if the Mode is set to Manual and you change the default values. This is very slow and generates a lot of CPU overhead.</li>
       <li class="dropspot"><strong>Precise (per frame)</strong>: This creates a precise collision mask on a per-frame basis (ie: the mask will change to conform to the outline of each different frame). Note that the precise mask will be clipped to the <a class="tooltip" title="For sprites, the bounding-box is the name given to the edges of the area that collisions will initially be detected in, and it doesn&#39;t have to be the same size as the sprite it&#39;s being applied to. For sequences, the bounding box is the outer edge of the total space that one or more assets occupy in the canvas.">bounding box</a> if the Mode is set to Manual and you change the default values. This is by far the slowest type of collision mask to resolve and should be avoided except in very, very specific and infrequent
-        cases.</li>
+        cases.
+      </li>
     </ul>
     <p class="dropspot">The following image illustrates the different mask options:</p>
     <p class="dropspot"><img alt="Collisions" class="center" src="../assets/Images/Asset_Editors/bbox_image.png"/>The collision checking options are very important ones for your game, as they will directly influence how your objects interact and how your game runs, with
@@ -176,6 +177,48 @@
       the sprite. Note that when &quot;drawing&quot; the bounding box, the mask is automatically generated to fit within the end values, and the bounding box can &quot;clip&quot; the mask.</p>
     <p class="dropspot">It is worth noting that if you go to the Preview window, you can adjust the collision mask using the &quot;handles&quot; found in each corner. Clicking and dragging these will adjust the collision mask just the same as inputing values for the bounding
       box would.</p>
+    <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down21" href="#"><span data-open-text="true">Nine Slice</span><span data-close-text="true">Nine Slice</span></a></p>
+  <div class="droptext" data-targetname="drop-down21">
+    <p class="dropspot"><strong><span data-keyref="Nine Slicing">Nine Slicing</span></strong> (also known as 9-slicing) is a technique used to scale rectangular images for preserving details, making them retain their original form after scaling. See the page on <a href="Sprite_Properties/Nine_Slices.htm">Nine Slice</a>      for more information.</p>
+    <p class="dropspot"><img class="center" src="../assets/Images/Asset_Editors/Nine_Slice_0_Preview.png"/>The <strong>Nine Slice</strong> section of the Sprite Editor allows you to enable <span data-keyref="Nine Slicing">Nine Slicing</span> on a sprite, and preview it
+      in action inside the <strong>Nine Slice Preview</strong> window on the right.</p>
+    <p class="dropspot">The <strong>Nine Slice Preview</strong> window allows you to resize the image and shows how the final image will look, after it is scaled using the Nine Slice technique. This preview sprite can also be rotated.</p>
+    <p class="dropspot">The <strong>Nine Slice</strong> section has the following options:</p>
+    <ul class="dropspotlist">
+      <li class="dropspot"><strong>Activate Nine Slice:</strong> This option controls whether Nine Slice scaling is used when the sprite is scaled. When enabled, Nine Slice scaling will be used for the sprite (and any object instances using that sprite) placed in a Sequence
+        or a Room Layer, and scaled sprites drawn using <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_ext.htm">draw_sprite_ext()</a> and other similar functions.<br/>
+        <br/>
+        <span class="expandtext"><span style="font-size:17px;"><strong>NOTE</strong>: Nine Slicing will not work with functions that draw only a part of the sprite or distort it, such as <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_part.htm">draw_sprite_part()</a> and <a href="../GameMaker_Language/GML_Reference/Drawing/Sprites_And_Tiles/draw_sprite_pos.htm">draw_sprite_pos()</a></span></span>
+      </li>
+      <li class="dropspot"><strong>Guides:</strong> This section displays the offset of each guide on its axis, and can be used to change those offsets. These guides can also be moved inside the <strong>Sprite Preview</strong> window by simply dragging them with the mouse.<br/>
+        <br/>
+        <span class="dropspotnote"><strong>NOTE:</strong> Any guides on the same axis cannot cross each other, and dragging one over the other will result in the second guide being pushed.</span><br/>
+        <br/>
+        <img class="center" height="348" src="../assets/Images/Asset_Editors/Nine_Slice_GIF_Guides.gif" width="612"/><br/> The offset of each guide is relative to its corresponding edge. For example, the left guide is offset from the left edge, the right
+        edge is offset from the right edge, and so on.<br/>
+        <br/> The color and alpha of each guide can be changed by clicking on the colored button next to the guide’s position.<br/>
+        <img class="center" src="../assets/Images/Asset_Editors/Nine_Slice_4_Color.png"/></li>
+      <li class="dropspot"><strong>Highlight</strong>: This option affects how a selected slice appears in the Sprite Preview window. <strong>&quot;Inverted&quot;</strong> highlights the sprite with an overlay except for the selected slice, and <strong>&quot;Overlay&quot;</strong>        highlights only the selected slice with an overlay.<br/>
+        <img src="../assets/Images/Asset_Editors/Nine_Slice_5_Highlight.png"/><br/> The color and alpha of the overlay can be changed by clicking on the colored button next to the drop-down menu.</li>
+      <li class="dropspot"><strong>Selected Slice:</strong> This option can be used to select a slice, choosing one from the edge slices (left, top, right, bottom) and the centre one. A slice can also be selected by <img class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> left clicking on it in the <strong>Sprite Preview</strong> window, and clicking on it again will de-select it.</li>
+      <li class="dropspot"><strong>Tile Mode: </strong>This option is used in conjunction with the <strong>Selected Slice</strong> option, to control how the slice appears when the sprite is scaled. You can apply one of the following Tile Modes to each slice:<br/>
+        <img class="center" src="../assets/Images/Asset_Editors/Nine_Slice_3_TileModes.png"/>
+        <ul>
+          <li class="dropspot"><strong>Stretch</strong><strong>:</strong> The slice will be stretched to fill the gap between its connected corners.</li>
+          <li class="dropspot"><strong>Repeat</strong><strong>:</strong> The slice will be repeated or tiled to preserve detail.</li>
+          <li class="dropspot"><strong>Mirror</strong><strong>:</strong> The slice will be repeated by mirroring.</li>
+          <li class="dropspot"><strong>Blank Repeat</strong><strong>:</strong> The slice will only appear once, resulting in a blank area after it.</li>
+          <li class="dropspot"><strong>Hide</strong><strong>:</strong> The slice will not appear at all.</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down19" href="#"><span data-open-text="true">Broadcast Messages</span><span data-close-text="true">Broadcast Messages</span></a></p>
+  <div class="droptext" data-targetname="drop-down19">
+    <p class="dropspot">This button will add a <strong>broadcast message</strong> to the sprite timeline, opening a dialog where you can add the message to be broadcast. The message will be added wherever the <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet or the Sprite editor frame view. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a>      is in the frame view and consists of a simple string that can be picked up in the <a href="Sequence_Properties/Broadcast_Messages.htm">Broadcast Message Event</a> when it is triggered and then acted on.</p>
+    <p class="dropspot"><img alt="Add broadcast messages to a sprite" class="center" src="../assets/Images/Asset_Editors/Sprite_Broadcast_Message.gif"/>Once added, the message will be shown in the Frame View, and you can click the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> on it to open a menu where you can delete the message or edit it. For more information on Broadcast Messages please see <a href="Sequence_Properties/Broadcast_Messages.htm">here</a>.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#"><span data-open-text="true">Frame Speed</span><span data-close-text="true">Frame Speed</span></a></p>
@@ -214,15 +257,15 @@
       the Collision Mask section, above).</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down17" href="#"><span data-open-text="true">Frame Controls</span><span data-close-text="true">Frame Controls</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down17" href="#"><span data-open-text="true">Playback Controls</span><span data-close-text="true">Playback Controls</span></a></p>
   <div class="droptext" data-targetname="drop-down17">
-    <p class="dropspot">The <strong>frame controls</strong> are for playing back in the preview window the animation of the frames, with the play button <img alt="Sprite Play Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_Play.png"/> starting/stopping the animation
-      and the Loop button <img alt="Sprite Loop Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_Loop.png"/> used to set whether the sprite loops <img alt="Sprite Loop On Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_LoopOn.png"/> (goes back to frame 1 when the last frame is reached) or ping-pongs <img alt="Sprite Pingpong Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_PingPong.png"/> (goes backwards through the frames when the last frame is reached).</p>
-    <p class="dropspot">Note that the loop/ping-pong option <strong>will affect how the sprite is displayed in the game</strong>, so setting these options in the sprite will change the way it is shown when the game is compiled and run. However, this is not true for loop-points
+    <p class="dropspot">The <strong>Playback controls</strong> are for playing back in the preview window the animation of the frames, with the play button <img alt="Sprite Play Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_Play.png"/> starting/stopping the
+      animation and the Loop button <img alt="Sprite Loop Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_Loop.png"/> used to set whether the sprite loops <img alt="Sprite Loop On Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_LoopOn.png"/> (goes back to frame 1 when the last frame is reached) or ping-pongs <img alt="Sprite Pingpong Icon" class="icon" src="../assets/Images/Icons/Icon_Sprite_PingPong.png"/> (goes backwards through the frames when the last frame is reached).</p>
+    <p class="dropspot">Note that the loop/ping-pong option <strong>will not affect how the sprite is displayed in the game</strong>, so setting these options in the sprite will not change the way it is shown when the game is compiled and run. This is also true for loop-points
       that can be set in the <strong>Frame View </strong>(see below for more information) - these are purely visible in the sprite editor and designed to help you test out your animations, but will have no effect on how the sprite animation is displayed
       in your games.</p>
-    <p class="dropspot">An additional part of the Frame Controls is the <strong>current frame</strong> display and input. The box shows the total number of frames of the sprite animation as well as the current frame being shown. You can change the current frame at any time
-      by clicking on the input box and typing in the frame number you want to view.</p>
+    <p class="dropspot">An additional part of the Frame Controls is the <strong>current frame</strong> display and input a bit further over on the left. The box shows the total number of frames of the sprite animation as well as the current frame being shown. You can change
+      the current frame at any time by clicking on the input box and typing in the frame number you want to view.</p>
     <div class="dropspotnote"><strong>IMPORTANT!</strong> Frames are shown numbered from 1 to <em>maxframe number</em>, however in your game code, frames will be numbered from 0 to <em>maxframe number - 1</em>.</div>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down18" href="#"><span data-open-text="true">Frames</span><span data-close-text="true">Frames</span></a></p>
@@ -236,21 +279,12 @@
       <li class="dropspot"><strong>Insert Frame</strong> - Insert a new frame in the animation after the currently selected frame.</li>
       <li class="dropspot"><strong>Cut </strong>/ <strong>Copy </strong>/ <strong>Paste </strong>- Cut, copy and paste one or more frames.</li>
       <li class="dropspot"><strong>Delete Selected Frames</strong> - Delete the currently selected frame or frames.</li>
-      <li class="dropspot"><strong>Copy To Start</strong> - Copy the selected frame to the start of the animation.</li>
-      <li class="dropspot"><strong>Copy To Finish</strong> - Copy the selected frame to the end of the animation.</li>
-      <li class="dropspot"><strong>Stretch Asset Key</strong> - Stretch the selected frame to fill in any empty frames. To use this, add some empty frames after the frame you want to stretch, then use the &quot;Delete asset key&quot; options on these empty frames to remove
-        the frame contents but not actually remove the frame. Finally, select this option and the frame will be stretched to fill the empty frames.</li>
-      <li class="dropspot"><strong>Delete Asset Key</strong> - This can be used to remove an image from a frame without actually removing the frame itself.</li>
     </ul>
     <p class="dropspot">Apart from the option given above to stretch a frame, you can also position the mouse on the edge of a frame and then when the cursor changes to a double arrow, simply click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> and drag to resize the frame so it takes more time:</p>
-    <p class="dropspot"><img alt="Stretch a frame using the mouse" class="center" src="../assets/Images/Asset_Editors/Sprite_Stretch_Frame.gif"/>A stretched frame will take more time to be shown, just as if you&#39;d duplicated the same frame multiple times.</p>
-    <p class="dropspot">Finally, you can click and drag the start and end points for the animation loop in the frame view, so that you can see how selected parts of the animation behave when looped. This is done by clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the red &quot;loop markers&quot; and then dragging them to the position you want:</p>
-    <p class="dropspot"><img alt="Change the loop markers" class="center" src="../assets/Images/Asset_Editors/Sprite_Loop_Markers.gif"/>Note that the loop points are <strong>purely a visual aid</strong> when working with the animation and will not have any influence on
-      how the animation is shown in the game.</p>
-    <p class="dropspot"> </p>
-    <p class="dropspot"> </p>
+    <p class="dropspot"><img alt="Stretch a frame using the mouse" class="center" src="../assets/Images/Asset_Editors/Sprite_Stretch_Frame.gif"/>A stretched frame will take more time to be shown, just as if you&#39;d duplicated the same frame multiple times. </p>
+    <p class="dropspot">Finallly, you can also zoom in on the frame timeline using the &quot;handles&quot; on either side of the frame view as shown in the image below:</p>
+    <p class="dropspot"><img data-cke-saved-src="../assets/Images/Asset_Editors/Sprite_Loop_Markers.gif" src="../assets/Images/Asset_Editors/Sprite_Loop_Markers.gif" alt="Sprite frame view zoom controls" class="center"/><br/></p>
   </div>
-  <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
@@ -260,7 +294,7 @@
         <div style="float:right">Next: <a href="Tile_Sets.htm">Tile Sets</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Sprite Editor

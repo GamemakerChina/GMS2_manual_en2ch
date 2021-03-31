@@ -86,6 +86,9 @@
     to do, but in general they are very useful and where possible you should be looking to use them rather than creating your own custom variables.</p>
   <p>Most instance variables can be set as well as read, permitting you to change the properties and behaviour of an instance simply by tweaking the value of a certain variable - you can prevent an instance from drawing, for example, by simply setting the
     <tt>visible</tt> built-in variable to <tt>false</tt>. Below you can find the different variables that are initialised for all instances of all objects in your game.</p>
+  <p class="note"><strong>IMPORTANT!</strong> If an instance is in a <a href="../../../../../The_Asset_Editors/Sequences.htm">sequence</a> then some of these variables - like <span class="inline"><span style="font-size:14px;">image_xscale</span></span>  / <span class="inline"><span style="font-size:14px;">image_yscale</span></span> /
+    <span class="inline"><span style="font-size:14px;">image_angle</span></span> / <span class="inline"><span style="font-size:14px;">x</span></span> / <span class="inline"><span style="font-size:14px;">y</span></span> - will be overwritten when the sequence updates each
+      step after starting to be played.</p>
   <p> </p>
   <h2><label for="one">General Variables</label></h2>
   <p>These variables deal with general instance properties:</p>
@@ -194,7 +197,7 @@
         <div style="float:right">Next: <a href="../Deactivating_Instances/Deactivating_Instances.htm">Deactivating Instances</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Instance Variables

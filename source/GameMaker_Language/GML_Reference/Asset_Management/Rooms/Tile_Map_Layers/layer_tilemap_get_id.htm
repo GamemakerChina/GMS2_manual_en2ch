@@ -83,7 +83,8 @@
   <h1>layer_tilemap_get_id</h1>
   <p>This function can be used to retrieve the unique ID value of the tile map element on a layer. You supply the layer ID (which you get when you create the layer using <a href="../General_Layer_Functions/layer_create.htm"><tt>layer_create()</tt></a>) or
     the layer name (as a string - this will have a performance impact) and the function will return the ID value associated with the tile map element on the layer. Note that this function is specifically designed for use with tile maps that have been
-    added in the IDE, as if you add a tile map to a layer through code using the function <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a>, then it will return the unique ID for the tile map element added.</p>
+    added in the IDE, as if you add a tile map to a layer through code using the function <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a>, then it will return the unique ID for the tile map element added. If the given tilemap ID
+    is incorrect or the tilemap deoesn&#39;t exist, the function will return -1.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">layer_tilemap_get_id(layer_id)</p>
@@ -101,7 +102,7 @@
   </table>
   <p> </p>
   <h4>Returns:</h4>
-  <p class="code">tile map element ID value (Real)</p>
+  <p class="code">tile map element ID value (Real) or -1</p>
   <p> </p>
   <h4>Example:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;tilemap_trees&quot;);<br/> var tile_id = layer_tilemap_get_id(lay_id);<br/> layer_tilemap_destroy(tile_id);
@@ -117,7 +118,7 @@
         <div style="float:right">Next: <a href="layer_tilemap_exists.htm">layer_tilemap_exists</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 layer_tilemap_get_id

@@ -98,6 +98,8 @@
   <ul class="colour">
     <li><a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Using Buffers</a></li>
   </ul>
+  <p class="note"><em><strong>IMPORTANT!</strong></em> When you create a buffer, the index value used to identify it is an integer value starting at 0. These indices are re-used by GameMaker, so a destroyed buffer index value may be used by a newly created one afterwards,
+    and we recommend that you set any variable that holds a buffer index to -1 after having destroyed the buffer.</p>
   <p>The following functions exist for you to use with binary buffers in your games:</p>
   <p> </p>
   <ul class="colour">
@@ -165,7 +167,7 @@
         <div style="float:right">Next: <a href="../UWP_And_XBox_Live/UWP_And_XBox_Live.htm">UWP And XBox Live</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Buffers

@@ -100,6 +100,8 @@
   <p class="code">// Destroy the calling instance<br/> // This requires no arguments and returns nothing<br/> instance_destroy();
     <br/>
     <br/> // Get the distance from the current instance position to the mouse position<br/> // This takes four arguments and returns a real value<br/> dist = point_distance(x, y, mouse_x, mouse_y);</p>
+  <p class="note"><strong>NOTE</strong>: Anywhere the manual has &quot;N/A&quot; as a return value for a function, it means that the function is not meant to return any value as part of its operation. If you try to check for a return value from these functions then you
+    will get the value <span class="inline">undefined</span>. </p>
   <p>Sometimes the return value of a function may be a value that you want to use in an <a class="tooltip" title="An assignment is simply the term used when we set (assign) a value to a variable.">assignment</a>, but you should note that it is impossible to use any function <em>directly</em> as the left-hand
     side of an assignment. For example, the following code to set the speed on an instance would give you an error:</p>
   <p class="code">instance_nearest(x, y, obj).speed = 0;</p>
@@ -119,7 +121,7 @@
         <div style="float:right">Next: <a href="Commenting_Code.htm">Commenting Code</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Runtime Functions

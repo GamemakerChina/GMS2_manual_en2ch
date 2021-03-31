@@ -103,12 +103,12 @@
   <p> </p>
   <h4>Example:</h4>
   <p class="code">var _tex_array = texturegroup_get_textures( &quot;MainMenu&quot;);<br/> for (var i = 0; i &lt; array_length(_tex_array); ++i;)<br/>     {
-    <br/>     if texture_is_ready(_tex_array[i])<br/>         {
+    <br/>     if !texture_is_ready(_tex_array[i])<br/>         {
     <br/>         texture_prefetch(_tex_array[i]);
     <br/>         }
     <br/>     }
   </p>
-  <p>The above code will retrieve the texture page IDs for the texture group &quot;MainMenu&quot;, then check to see if they are unpacked, and if they are them they are placed into VRAM.</p>
+  <p>The above code will retrieve the texture page IDs for the texture group &quot;MainMenu&quot;, then check to see if they are unpacked, and if they are not thenthey are prefetched into VRAM.</p>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -119,7 +119,7 @@
         <div style="float:right">Next: <a href="texturegroup_get_textures.htm">texturegroup_get_textures</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 texture_is_ready

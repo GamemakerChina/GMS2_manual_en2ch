@@ -82,14 +82,15 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>exit</h1>
   <p>The <tt>exit</tt> statement has the following syntax:</p>
-  <p>exit;</p>
+  <p class="code">exit;</p>
   <p><tt>exit</tt> simply ends the execution of the current <a href="../Script_Functions.htm">script function</a>, <a href="../Method_Variables.htm">method</a>, or <a href="../../../The_Asset_Editors/Object_Properties/Object_Events.htm">event</a>. Note there
     is a slight difference in use here depending on the scope:</p>
   <ul class="colour">
-    <li>if you use <tt>exit</tt> in a script function or method it will simply exit the function and return to the code that called the it</li>
+    <li>if you use <tt>exit</tt> in a script function or method it will simply exit the function and return to the code that called the function</li>
     <li>if you use <tt>exit</tt> in a code block from within an object, it will exit <i>the entire event</i> even if there are various separate code blocks after <span class="inline">exit</span> has been called.</li>
   </ul>
-  <p>Typically <tt>exit</tt> is used to avoid an instance running a specific block of code in, for example a collision event. The code below gives a simple example of this:</p>
+  <p>When used in an event, <tt>exit</tt> is typically used to avoid an instance running any further code when a specific condition has been met (or not). The code below outlines an example of how it would be used, in this case within a Collision Event,
+    although it can be used in any event.</p>
   <p class="code">if (!visible)<br/>     {
     <br/>     exit;
     <br/>     }
@@ -108,7 +109,7 @@
         <div style="float:right">Next: <a href="with.htm">with</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 exit

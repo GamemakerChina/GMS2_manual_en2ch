@@ -4,8 +4,8 @@ var useTOC = true;
 var useGLO = true;
 var useIDX = true;
 var useFilter = false;
-var useFacebook = true;
-var useTwitter = true;
+var useFacebook = false;
+var useTwitter = false;
 var useANDsearch = true;
 var fontFamily = "Verdana";
 

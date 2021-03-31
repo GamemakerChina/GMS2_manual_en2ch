@@ -81,9 +81,11 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>buffer_load</h1>
-  <p>This function will load the buffer data that was previously saved using the <a href="buffer_save.htm"><tt>buffer_save()</tt></a> functions into a new buffer. This new buffer is created by the function as a &quot;grow&quot; buffer (see <a href="buffer_create.htm">here</a>)
-    with a byte alignment of 1, and the new buffer id is returned. This ID should be stored in a variable and used in all further function calls to this buffer. If the load fails for whatever reason, the function will return -1 and a message will be shown
-    in the compiler output window saying that the load has failed.</p>
+  <p>This function is used to load a buffer that was previously saved using the <a href="buffer_save.htm"><tt>buffer_save()</tt></a> functions, as well as any <a href="../../../Settings/Included_Files.htm" title="Included Files">Included Files</a> or files
+    loaded externally. It will return a new buffer&#39;s ID which is created by the function as a &quot;grow&quot; buffer (see <a href="buffer_create.htm">here</a>) with a byte alignment of 1. This ID should be stored in a variable and used in all further
+    function calls to this buffer. If the load fails for whatever reason, the function will return -1 and a message will be shown in the compiler output window saying that the load has failed.</p>
+  <p>Note that on HTML5 any buffers loaded from the local storage will be decoded using base64 (since they are saved as base64 strings) however using this function on Included Files or any external files will not use base64 decoding, which should be fine
+    for most cases.</p>
   <p class="note"><b>NOTE</b>: It&#39;s important that you remove any dynamically created resources like this from memory when you no longer need them to prevent memory leaks, so when you are finished with the buffer that you have created you should free it up again
     using <a href="buffer_delete.htm"><tt>buffer_delete()</tt></a>.</p>
   <p> </p>
@@ -118,7 +120,7 @@
         <div style="float:right">Next: <a href="buffer_load_ext.htm"><span>buffer_load_ext</span></a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_load

@@ -81,14 +81,19 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>exception_unhandled_handler</h1>
-  <p>This runtime function can be used to &quot;take over&quot; the default GameMaker Studio 2 error message when a runtime exception occurs. You supply a method or function and it will be passed the exception struct that is created when the exception
-    was thrown. This struct has the following format:</p>
+  <p>This runtime function can be used to &quot;take over&quot; the default GameMaker Studio 2 error message when a runtime exception occurs. You supply a method or function which is called when the exception occurs, and its first argument will be a struct
+    containing information about the exception. This struct has the following format:</p>
   <p class="code">{<br/> message : &quot;&quot;,               // a string that is a short message for this exception<br/> longMessage : &quot;&quot;,           // a string that is a longer message for this exception<br/> script : &quot;&quot;,                // a string
-    that describes where the exception came from<br/> stacktrace : [ &quot;&quot;, &quot;&quot; ],    // an array of strings that is the stack frame the exception was generated<br/> }
+    that describes where the exception came from<br/> line: 0,                    // a real that is the line number where the exception came from<br/> stacktrace : [ &quot;&quot;, &quot;&quot; ],    // an array of strings that is the stack frame the exception
+    was generated<br/> }
   </p>
-  <p>Using this function means that no error message will be shown to the user, and note that the context for running the method is <i>not</i> in an event and so it is highly unlikely that anything could be rendered at this time to the screen. In general,
-    the safest thing that could be done at this point is to save a file with the exception context information so it could be - for example - parsed and processed on the next run of the game and then dealt with.</p>
-  <p>The function will not return anything by default, but if you use the <tt>return</tt> statement in the supplied method, then the given value will be converted to an integer and used as the exit code from the runner.</p>
+  <p>You can also supply <span class="inline">undefined</span> as the argument, which will remove the custom exception handler (if set) and revert to GameMaker Studio 2&#39;s default error message.</p>
+  <p>This function will return the previously set exception handler method, however if it was never changed or it was previously reset using <span class="inline">undefined</span>, then it will simply return <span class="inline">undefined</span>.</p>
+  <p>Passing a method to this function means that no error message will be shown to the user, and you will be allowed to handle the exception yourself. However you cannot use this to &quot;break out&quot; of the exception to continue your game, as the game
+    will still close after the exception handler is called.</p>
+  <p>Note that the context for running the method is <i>not</i> in an event and so it is highly unlikely that anything could be rendered at this time to the screen. In general, the safest thing that could be done at this point is to save a file with the
+    exception context information so it could be - for example - parsed and processed on the next run of the game and then dealt with.</p>
+  <p>Note that if you use the <tt>return</tt> statement in the supplied method, then the given value will be converted to an integer and used as the exit code from the runner.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">exception_unhandled_handler(user_handler);</p>
@@ -100,13 +105,13 @@
       </tr>
       <tr>
         <td>user_handler</td>
-        <td>The method (user-defined function) to use as the exception handler.</td>
+        <td>The method (user-defined function) to use as the exception handler, or <span class="inline">undefined</span> to reset it to default.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <h4>Returns:</h4>
-  <p class="code">Integer (if supplied)</p>
+  <p class="code">Method (or undefined)</p>
   <p> </p>
   <h4>Example:</h4>
   <p class="code">exception_unhandled_handler(function(ex))<br/>     {
@@ -125,7 +130,7 @@
         <div style="float:right">Next: <a href="get_integer.htm">get_integer</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 exception_unhandled_handler

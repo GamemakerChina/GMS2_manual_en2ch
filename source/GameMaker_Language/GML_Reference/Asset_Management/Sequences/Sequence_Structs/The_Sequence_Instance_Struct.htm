@@ -85,7 +85,7 @@
   <ul class="colour">
     <li><tt>sequence</tt>: This is the ID of the <b>sequence object</b> struct that the sequence instance has been created from (see <a href="The_Sequence_Object_Struct.htm">here</a>for more details). You can get or set this struct, and so change the base
       sequence that the instance is referencing.</li>
-    <li><tt>headPosition</tt>: This is the current <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet, the Animation Curve editor or the Sprite editor. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> position (in frames) for the sequence instance. You can get or set this value, but note that setting it to a value greater or less than
+    <li><tt>headPosition</tt>: This is the current <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet or the Sprite editor frame view. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> position (in frames) for the sequence instance. You can get or set this value, but note that setting it to a value greater or less than
       the currently defined play region will have different effects depending on the type of playback set for the sequence. See <a href="../../Rooms/Sequence_Layers/layer_sequence_headpos.htm"><tt>layer_sequence_headpos()</tt></a> for more information.</li>
     <li><tt>headDirection</tt>: This is the current playback direction for the sequence instance. You can get or set this value using the following constants (Note that you can use the layer functions <a href="../../Rooms/Sequence_Layers/layer_sequence_get_headdir.htm"><tt>layer_sequence_get_headdir()</tt></a> and
       <a href="../../Rooms/Sequence_Layers/layer_sequence_headdir.htm"><tt>layer_sequence_headdir()</tt></a> to get or set this value without having to access the struct directly):</li>
@@ -158,7 +158,7 @@
         <div style="float:right">Next: <a href="The_Track_Struct.htm">The Track Struct</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Sequence Instance Struct

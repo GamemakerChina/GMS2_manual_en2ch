@@ -39,7 +39,7 @@
 
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
-    gTopicId = "5.5_2";
+    gTopicId = "5.6_2";
   
 //]]></script>
 
@@ -96,15 +96,18 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true">Attributes</span><span data-close-text="true">Attributes</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">This section is for setting the sound attributes. These are the attributes that will be set when you export your game and will affect how the sound is played back at run-time. For sound effects (<span class="inline">WAV </span>format) you will want
-      them to be <em>uncompressed </em>so that they play quickly and don&#39;t require decoding, however for <span class="inline">OGG</span> and <span class="inline">MP3</span> you&#39;d generally want one of the other three options available.</p>
-    <p class="dropspot"><em>Compressed </em>audio will force all your sound files (irrespective of whether they are <span class="inline">*.wav</span> or <span class="inline">*.mp3</span> or <span class="inline">*.ogg</span>) to be compressed down to Ogg Vorbis <span class="inline">*.ogg</span>      format files for <em>all </em>platforms. These sounds are smaller on disc, but will have a slight CPU overhead due to the need to be uncompressed and loaded into memory before being played, so you should keep that in mind if you wish to use <a class="tooltip" title="Compression is the use of mathematical algorithms to reduce the size of a file. This is used in particular for audio and image files, where formats like JPG (image) and MP3 (audio) are compressed formats. Compression usually results is much smaller file sizes, but with some data loss which may or may not be noticable depending on the type and strength of the compression used. Uncompressed formats would be BMP (image) or WAV (audio), which have larger file sizes, but no data loss.">compression</a> in an already CPU intensive game.</p>
+    <p class="dropspot">This section is for setting the sound attributes. These are the attributes that will be set when you export your game and will affect how the sound is played back at runtime. For sound effects (<span class="inline">WAV </span>format) you will want
+      them to be <em>uncompressed </em>so that they play quickly and don&#39;t require decoding. Note that using this option will convert your audio to the <tt>WAV</tt> format during compile time (however if the attributes set in the Sound Editor match
+      the attributes of the source <tt>WAV</tt> file, then it will simply be copied over). For <span class="inline">OGG</span> and <span class="inline">MP3</span>, you&#39;d generally want one of the other three options available.</p>
+    <p class="dropspot"><em>Compressed </em>audio will force all your sound files (irrespective of whether they are <span class="inline">WAV</span> or <span class="inline">MP3</span>) to be compressed down to Ogg Vorbis <span class="inline">OGG</span> format files for <em>all </em>platforms
+      (however, if the source audio is already <tt>OGG</tt> it will simply be copied over without being recompressed). These sounds are smaller on disc, but will have a slight CPU overhead due to the need to be uncompressed and loaded into memory before
+      being played, so you should keep that in mind if you wish to use <a class="tooltip" title="Compression is the use of mathematical algorithms to reduce the size of a file. This is used in particular for audio and image files, where formats like JPG (image) and MP3 (audio) are compressed formats. Compression usually results is much smaller file sizes, but with some data loss which may or may not be noticable depending on the type and strength of the compression used. Uncompressed formats would be BMP (image) or WAV (audio), which have larger file sizes, but no data loss.">compression</a> in an already CPU intensive game.</p>
     <p class="dropspot">You can mitigate this CPU overhead somewhat by choosing to <em>uncompress on load</em>, which will place all the sounds into the device memory for faster playback, at the expense of increased memory use.</p>
     <p class="dropspot">If you have chosen compressed audio, you can then also choose to have your sound <em>streamed from disk</em> too. A streamed sound will be one that is uncompressed and played in real time, streamed from the disc rather than loaded into memory. Streaming
       is ideal for music as it reduces the one-off overhead of uncompressing the whole file - which may cause a pause in the game - but is not recommended for simple sound effects where the hit on the CPU is much less. If you select streamed audio, you
       will <em>not</em> be able to assign the sound to an <a href="../Settings/Audio_Groups.htm">Audio Group</a> and this option will be disabled, as streamed sounds are not packaged in the same way as other sounds and you have full control over when
       they are loaded, played and unloaded using code.</p>
-    <p class="dropspot">It is important to note that when targeting the HTML5 platform. streamed audio will not play on iOS when the play request does not directly originate from a user interaction (i.e: a touch event, etc.). However, since GameMaker Studio 2 queues up click
+    <p class="dropspot">It is important to note that when targeting the HTML5 platform, streamed audio will not play on iOS when the play request does not directly originate from a user interaction (i.e: a touch event, etc.). However, since GameMaker Studio 2 queues up click
       events and only handles them on the next frame, it is impossible to play streamed audio without the browser blocking it. To get around this, any HTML5 game run on an iOS browser will treat all streamed audio as unstreamed in the engine, with the
       exception of streamed audio not being preloaded.</p>
     <p class="dropspot">What this means is that if your game is running on an iOS browser, and - for example - you have 10 music tracks that are all set as streamed <span class="inline">mp3 </span>files. All 10 will be initialised like unstreamed audio would, but they won&#39;t
@@ -124,7 +127,7 @@
   <div class="droptext" data-targetname="drop-down3">
     <p class="dropspot">The Target Options panel is where you set the conversion rates for your game. These settings will affect how the sound is exported for the target platform, and GameMaker Studio 2 will automatically convert your sound files for you - you simply control
       the final quality of those sounds when converted. Generally the default settings of 16 bit quality (or <a class="tooltip" title="The bit depth refers to the number of bits in each sample of an audio file. Lower bit depth gives poorer quality sound but much smaller file size. Lower bit depths are usually used for small sound effects and patforms where memory may be an issue (like HTML5).">bit depth</a>), 44100kHz <a class="tooltip" title="Sample rate is the number of samples of audio carried per second, measured in Hz or kHz (one kHz being 1000 Hz). The higher the sample rate, the more a sound will approximate the original analog waveform, but the larger the file size will be. In general sound effects are fine with a lower sample rate than music.">sample rate</a> and
-      192kbps <a class="tooltip" title="Bit rate is measured in Kilobits-per-sec(kbps or k) and is the number of bits encoded per second or the number of bits transmitted or received per second. The higher the bit rate and sampling rate, the higher the audio quality but the more processing power and bandwidth it needs. Lower bit rates create a smaller file size and use less processing and bandwidth, but with a drop in audio quality. For good quality music usually a bit rate of 64–128kbps (96kbps+ recommended) is preferred.">bit rate</a> are perfectly adequate, but it may be that you wish sound effects (for example) to have a lower quality and music to have a higher quality, in which case these settings
+      128kbps <a class="tooltip" title="Bit rate is measured in Kilobits-per-sec(kbps or k) and is the number of bits encoded per second or the number of bits transmitted or received per second. The higher the bit rate and sampling rate, the higher the audio quality but the more processing power and bandwidth it needs. Lower bit rates create a smaller file size and use less processing and bandwidth, but with a drop in audio quality. For good quality music usually a bit rate of 64–128kbps (96kbps+ recommended) is preferred.">bit rate</a> are perfectly adequate, but it may be that you wish sound effects (for example) to have a lower quality and music to have a higher quality, in which case these settings
       can be changed.</p>
     <p class="dropspot">You can also choose whether the conversion should be <strong>mono</strong>, <strong>stereo</strong> or <strong>3D</strong>. If you plan on using the <a href="../GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio_Emitters/Audio_Emitters.htm">audio emitter functions</a> to
       create 3D sound effects, you should indicate this here, otherwise choose mono or stereo depending on the use that the sounds are going to be put to. If you choose to use the sound for 3D audio, <em>it will be exported as a mono sound</em>.</p>
@@ -154,7 +157,7 @@
         <div style="float:right">Next: <a href="Sprites.htm">Sprites</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Sound Editor

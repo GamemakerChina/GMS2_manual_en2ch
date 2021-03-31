@@ -39,7 +39,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "10.2.2.2.0_2";
+    gTopicId = "10.2.2.2.0_3";
   
 //]]></script>
 
@@ -81,8 +81,8 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>animcurve_get_channel</h1>
-  <p>This function will return the <a href="../../../GML_Overview/Structs.htm">struct</a> containing the channel data for the channel specified in an animation curve asset. You supply the animation curve ID or struct as well as
-    the channel name or index, and the function will return a struct with the following format:</p>
+  <p>This function will return the <a href="../../../GML_Overview/Structs.htm">struct</a> containing the channel data for the channel specified in an animation curve asset. You supply the animation curve ID or struct as well as the channel name or index,
+    and the function will return a struct with the following format:</p>
   <p> </p>
   <table>
     <tbody>
@@ -99,8 +99,7 @@
       <tr>
         <td>type</td>
         <td>constant</td>
-        <td>This will be one of the constants <tt><b>animcurvetype_linear</b></tt> for linear interpolation between points, or <tt><b>animcurvetype_catmullrom</b></tt> for &quot;smooth&quot; interpolation
-          between the points using catmull-rom interpolation.</td>
+        <td>This will be one of the constants <tt><b>animcurvetype_linear</b></tt> for linear interpolation between points, or <tt><b>animcurvetype_catmullrom</b></tt> for &quot;smooth&quot; interpolation between the points using catmull-rom interpolation.</td>
       </tr>
       <tr>
         <td>iterations</td>
@@ -115,10 +114,9 @@
       </tr>
     </tbody>
   </table>
-  <p><br/> The animation curve ID is the name of the animation curve as it was defined in the Asset Browser, or the struct pointer as returned by the function <a href="animcurve_create.htm"><tt>animcurve_create()</tt></a>. The channel name is
-    a string which refers to the channel as it was defined in the Animation Curve asset, or you can supply an index value, which is from 0 to <i>n</i>, where <i>n</i> is the last channel in the curve asset (eg: if
-    an animation curve has 4 channels, they will be indexed from 0 to 3). Note that passing an index value will require less processing than passing in a channel name. If the function fails (ie: no channel exists with the given name or index) then it
-    will return -1.</p>
+  <p><br/> The animation curve ID is the name of the animation curve as it was defined in the Asset Browser, or the struct pointer as returned by the function <a href="animcurve_create.htm"><tt>animcurve_create()</tt></a>. The channel name is a string which
+    refers to the channel as it was defined in the Animation Curve asset, or you can supply an index value, which is from 0 to <i>n</i>, where <i>n</i> is the last channel in the curve asset (eg: if an animation curve has 4 channels, they will be indexed
+    from 0 to 3). Note that passing an index value will require less processing than passing in a channel name. If the function fails (ie: no channel exists with the given name or index) then you will get an error.</p>
   <p>The points on a single channel are stored as structs in an <a href="../../../GML_Overview/Arrays.htm">array</a>, where each item in the array is a single point struct. The point struct has the following variables:</p>
   <p> </p>
   <table>
@@ -142,7 +140,7 @@
   </table>
   <p> </p>
   <p> </p>
-  <h4>Syntax: </h4>
+  <h4>Syntax:</h4>
   <p class="code">animcurve_get_channel(curve_struct_or_id, channel_name_or_index);</p>
   <table>
     <tbody>
@@ -161,15 +159,14 @@
     </tbody>
   </table>
   <p> </p>
-  <h4>Returns: </h4>
-  <p class="code">Struct or -1</p>
+  <h4>Returns:</h4>
+  <p class="code">Struct</p>
   <p> </p>
-  <h4>Example: </h4>
+  <h4>Example:</h4>
   <p class="code">var _channeldata = animcurve_get_channel(ac_ButtonTween, 0);<br/> var _points = _channeldata.points;<br/> for (var i = 0; i &lt; array_length(_points); ++i;)<br/>     {
     <br/>     _points[i].value += 1;<br/>     }
   </p>
   <p>The above code retrieves the channel struct for channel 0 in the curve asset &quot;ac_ButtonTween&quot;, then loops through the points on the channel curve and adds one to their value.</p>
-  <p> </p>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -180,7 +177,7 @@
         <div style="float:right">Next: <a href="animcurve_channel_evaluate.htm">animcurve_channel_evaluate</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 animcurve_get_channel

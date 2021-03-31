@@ -201,7 +201,8 @@
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoDiv</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Divide by zero</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Maths</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are attempting to divide by 0.</td>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">You are attempting to divide by 0 (note this will only happen when using integer division, dividing a (non-zero) real by 0 will give infinity as an answer, dividing zero by zero will give NaN as an answer). You can check for these values with
+          (<span class="inline">is_infinity</span>) and (<span class="inline">is_nan</span>)</td>
       </tr>
       <tr>
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">DoMod</span></td>
@@ -381,7 +382,7 @@
         <div style="float:right">Next: <a href="Syntax_Errors.htm">Syntax Errors</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Runner Errors

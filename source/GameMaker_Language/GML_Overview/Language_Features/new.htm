@@ -58,8 +58,8 @@
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page outlining the new function"/>
-  <meta name="rh-index-keywords" content="new,contructor"/>
-  <meta name="search-keywords" content="new,constructor"/>
+  <meta name="rh-index-keywords" content="new"/>
+  <meta name="search-keywords" content="new"/>
 </head>
 
 <body>
@@ -83,7 +83,7 @@
   <h1>new</h1>
   <p>The <tt>new</tt> operator can be used to create a struct with a function which is called with the given arguments. The function can then populate the struct with variables from the arguments - much like the create event of an instance will set the initial
     variables for the instance - and then the <tt>new</tt> operator will return the struct. Before using this operator it is important to note that the function given <i>must be flagged as a <tt>constructor</tt> function</i> otherwise the <tt>new</tt>    operator will not create the struct (the code example below shows this, and for more information, please see the page on <a href="../Structs.htm">Structs</a>).</p>
-  <p class="note"><strong>NOTE</strong>: You can check a struct to find out which function was used to create it using the runtime function <a href="../../GML_Reference/Variable_Functions/instance_of.htm"><tt>instance_of()</tt></a>.</p>
+  <p class="note"><strong>NOTE</strong>: You can check a struct to find out which function was used to create it using the runtime function <a href="../../GML_Reference/Variable_Functions/instanceof.htm"><tt>instanceof()</tt></a>.</p>
   <p>This operator has the following syntax:</p>
   <p class="code"><span>&lt;variable&gt; = </span>new &lt;function&gt; (&lt;argument&gt;, &lt;argument&gt;, ...);</p>
   <p>When you use the new operator along with a function, it will return a struct reference which is stored in the given variable, permitting you to access the struct and any variables that were created within it by the function.</p>
@@ -103,7 +103,7 @@
         <div style="float:right">Next: <a href="delete.htm">delete</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 new

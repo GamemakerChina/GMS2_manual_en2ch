@@ -58,8 +58,8 @@
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page outlining the use of Method Variables"/>
-  <meta name="rh-index-keywords" content="Method Variables,constructor"/>
-  <meta name="search-keywords" content="Method Variables,methods,static,constructor,argument_count,method"/>
+  <meta name="rh-index-keywords" content="Method Variables"/>
+  <meta name="search-keywords" content="Method Variables,methods,static,argument_count,method"/>
 </head>
 
 <body>
@@ -122,11 +122,11 @@
   </p>
   <p>The code above would allow you to specify a default value for a parameter if the argument is not supplied to the function.</p>
   <p class="note"><strong>NOTE</strong>: The above code uses the <strong>ternary operator</strong>, which you can find out more about <a href="Language_Features/If_Else_and_Conditional_Operators.htm">here</a>.</p>
-  <p>An interesting feature of method variables (and script functions as well), is that they can have <strong>static variables</strong>. A static variable is one that is defined the first time that the function is called and that will maintain it&#39;s value
+  <p>An interesting feature of method variables (and script functions as well), is that they can have <strong>static variables</strong>. A static variable is one that is defined the first time that the function is called and that will maintain its value
     from then onwards. To create a static variable you need to define it using the <span class="inline">static</span> keyword, as shown in this simple example:</p>
   <p class="code">counter = function()<br/>     {<br/>     static num = 0;<br/>     return num++;<br/>     }</p>
-  <p>In the above example, the variable &quot;<span class="inline">num</span>&quot; is a static variable, and so will be defined as 0 the first time the function is called, but every time the function is called after that, the variable definition will be
-    ignored. So, if you then call this function like this:</p>
+  <p>In the above example, the variable &quot;<span class="inline">num</span>&quot; is a static variable, and so will be defined as 0 the first time the function is called, but every time the function is called after that, the variable initialization will
+    be ignored. So, if you then call this function like this:</p>
   <p class="code">for (var i = 0; i &lt; 10; ++i;)<br/>     {<br/>     show_debug_message(counter());<br/>     }</p>
   <p>The output will be:</p>
   <p class="code">0<br/> 1
@@ -140,13 +140,18 @@
     <br/> 9
   </p>
   <p>If you didn&#39;t use the <span class="inline">static</span> keyword here then the output would simply be 0 for every iteration of the loop, since the variable &quot;<span class="inline">num</span>&quot; will be getting defined as 0 every time the function
-    is called before being returned. Note that a static variable can only be changed inside the original function, outside you are getting a local instance variable (a copy of the static found inside the function) - essentially the shared static variable
-    can only be changed by the function, the shared copy can only be written to by the function.</p>
-  <p>You can also use the <span class="inline">static</span> keyword within a method (and a script function) to create a <strong>static function</strong>, which - like with variables - simply means that it is a function that will only be defined once the
-    first time the method is used, for example:</p>
+    is called before being returned. Note that a static variable can only be changed inside the original function, and returning it will simply give you a copy of its value - essentially the shared static variable can only be changed by the function that
+    contains it.</p>
+  <p>A static variable is always initialized at the top of the method (or script function), so no matter where you define a static variable in the function, it will always be available to be read and changed throughout the function (even if it&#39;s used
+    before being defined). See the following example:</p>
+  <p class="code">function add_health()<br/>     {<br/>     my_health ++;<br/>     show_debug_message(my_health);<br/>     static my_health = 1;<br/>     }</p>
+  <p>Here the static variable &quot;<tt>my_health</tt>&quot; is being changed and printed to the compiler output <em>before</em> being initialized. While that looks wrong, it is perfectly fine because static variables are initialized before any function
+    code is executed. Note that if there are multiple static variables in a function, the order in which they were defined will be kept when they are initialized at the top.</p>
+  <p>You can also use the <span class="inline">static</span> keyword within a method (and a script function) to create a <strong>static function</strong>, which - like with variables - simply means that the function will only be defined once, which is the
+    first time the method is called, for example:</p>
   <p class="code">Vector2 = function( _x, _y ) constructor<br/>     {<br/>     x = _x;<br/>     y = _y;<br/>     static Add = function( _other )<br/>         {<br/>         x += _other.x;<br/>         y += _other.y;<br/>         }<br/>     }</p>
   <p>In the above example, the function <span class="inline">Vector2</span> can be used to create a struct, and the struct will have some variables, one of which is the method variable <span class="inline">Add</span>. Since this variable has been defined
-    as static, the function it refers to will only be initialised <em>once </em>the first time the <span class="inline">Vector2</span> function is called, and all further structs created with this function will reference the function <span class="inline">Add</span>    that was created initially, instead of creating a new function for each struct (for more information on structs and the <span class="inline">constructor</span> keyword please see <a href="Structs.htm">here</a>).</p>
+    as static, the function it refers to will only be initialized <em>once </em>the first time the <span class="inline">Vector2</span> function is called, and all further structs created with this constructor will reference the function <span class="inline">Add</span>    that was created initially, instead of creating a new function for each struct (for more information on structs and the <span class="inline">constructor</span> keyword please see <a href="Structs.htm">here</a>).</p>
   <p>Below we list a few helper functions associated with method variables:</p>
   <ul class="colour">
     <li><a href="../GML_Reference/Variable_Functions/is_method.htm">is_method</a></li>
@@ -164,7 +169,7 @@
         <div style="float:right">Next: <a href="Structs.htm">Structs</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Script Functions

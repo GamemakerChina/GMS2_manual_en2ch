@@ -39,7 +39,7 @@
 
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
-    gTopicId = "5.5";
+    gTopicId = "5.6";
   
 //]]></script>
 
@@ -101,7 +101,7 @@
     <li>At this point, you&#39;ll usually want to position the asset in the canvas at its initial position for the start of the sequence, and add in any initial transforms, like scale or rotation.</li>
     <li>When you are happy with the initial settings, you will want to record the <strong>parameter keys</strong> (or <a class="tooltip" title="A keyframe (also called a parameter key) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">keyframe</a><span class="glossextra">s</span>) - which is simply the name given to
       the values for scale, rotation and position that a specific asset key has at a any point in the dope sheet timeline.</li>
-    <li>Next you&#39;d change the position of the <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet, the Animation Curve editor or the Sprite editor. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> (the current play position in the dope sheet timeline) and then move or change the asset transforms and record another parameter key.</li>
+    <li>Next you&#39;d change the position of the <a class="tooltip" title="The current &#39;play&#39; position within the timeline in the Sequences dope sheet or the Sprite editor frame view. In sequences (and sprites), this will move as the animation is previewed, and you can place it on specific frames to see and edit the keys and keyframes at that position.">playhead</a> (the current play position in the dope sheet timeline) and then move or change the asset transforms and record another parameter key.</li>
     <li>All parameter keys are stored in additional <a class="tooltip" title="A track that has been assigned to an asset track in the track panel and that changes a single parameter for the asset track it&#39;s linked to, like the position, or the image index.">parameter tracks</a> which are a subset of tracks under the main asset track in the Track Panel, and you can edit the parameter key data for
       each parameter in the track editor.</li>
     <li>Now you would repeat the above process for the length of the sequence, moving, rotating and scaling the asset as required, and then adding more assets as you need them.</li>
@@ -135,19 +135,12 @@
       mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/> or zoom in and out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> key and the mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/>. You can also cut, copy and paste assets using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">X</span>&quot;, <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">C</span>&quot; and <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">V</span>&quot; key combinations.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true">Broadcast Message</span><span data-close-text="true">Broadcast Message</span></a></p>
-  <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">This button will add a <strong>broadcast message</strong> to the sequence timeline in the <strong>dope sheet</strong>, opening a dialog where you can add the message to be broadcast. The message will be added wherever the timeline playhead is in the
-      dope sheet and consists of a simple string that can be picked up in the <a href="Object_Properties/Async_Events.htm">Asynchronous System Event</a> when it is triggered and then acted on.</p>
-    <p class="dropspot"><img alt="Add A broadcast message to a sequence" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Broadcast.gif"/>Once added, the message will be shown in the Dope Sheet, and you can click the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> on it to open a menu where you can delete the message or edit it. For more information on Broadcast Messages please see <a href="Sequence_Properties/Broadcast_Messages.htm">here</a>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Keyframe Control</span><span data-close-text="true">Keyframe Control</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true">Keyframe Controls</span><span data-close-text="true">Keyframe Controls</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
     <p class="dropspot">The keyframe control buttons are one of the ways that you can add, remove or edit specific keys in the dope sheet. The buttons are as follows:</p>
     <ul class="dropspotlist">
       <li class="dropspot"><img alt="Split Keys Icon" src="../assets/Images/Icons/Icon_Seq_Split.png"/> - This is the &quot;Split selected keys&quot; button. When you have selected one or more parameter keys in the dope sheet, you can then click this button and they will
-        be split into two separate keys at the timeline playhead position:<br/>
+        be split into two separate keys at the timeline playhead position (note that the keys must have been stretched to occupy multiple frames first):<br/>
         <img alt="Split Asset and Parameter Keys" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_Split.gif" style="margin-top: 10px; margin-bottom: 25px;"/></li>
       <li class="dropspot"><img alt="Delete Keys Icon" src="../assets/Images/Icons/Icon_Seq_Delete.png"/> - This is the &quot;Delete selected keys&quot; button. When you have selected one or more parameter keys in the dope sheet, you can then click this button and they will
         be deleted:<br/>
@@ -180,20 +173,10 @@
         Also note that the order of events is not influenced by the playhead direction, and even if the sequence is playing backwards, the events will still be run as Begin, Step and End.</li>
       <li class="dropspot"><strong>Async Event</strong>: This is the equivalent of the object <a href="Object_Properties/Async_Events.htm">Asynchronous System Event</a>. <strong>Important!</strong> If the sequence is paused then this event will <em>not </em>be triggered.</li>
     </ul>
-    <p class="dropspot">Each event can be assigned a single function which will be called when the event is triggered. You can assign the function using the input box for the vent, and clicking the arrow button  will open the script editor for the function to be edited.
+    <p class="dropspot">Each event can be assigned a single function which will be called when the event is triggered. You can assign the function using the input box for the event, and clicking the arrow button  will open the script editor for the function to be edited.
       You can also click the Create New button at the bottom to create a new script resource with &quot;boilerplate&quot; functions already defined and ready to be filled in. Note that you can change the function names to anything you require and do not
       have to use the predefined names, and you can also remove any function definitions that you don&#39;t need. It is important note that functions used for sequence events cannot take any arguments.</p>
     <p class="dropspot">Sequence events can also be added and edited using code. For more information please see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">here</a>.</p>
-    <p class="dropspot"> </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true">Sequence Moments</span><span data-close-text="true">Sequence Moments</span></a> </p>
-  <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">A sequence <strong>moment </strong>is a position on the timeline where the sequence can call a function. This is a <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">scripted function</a> that must have no parameters and when the moment
-      (frame) given on the timeline is reached, this function will be called. To set a moment, you simply move the playhead to the required position and then click the <strong>Add Moment</strong> button, and in the dialog that opens you give the name
-      of the function to call.</p>
-    <p class="dropspot"><img alt="Add A Moment To The Sequence" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_AddMoment.gif"/>When adding a moment function, you can click the <img alt="Go To Function Icon" class="icon" src="../assets/Images/Icons/Icon_GoTo_Function.png"/> button to go to the script with the specified function, or you can click the <img alt="New Moment Function Icon" class="icon" src="../assets/Images/Icons/Icon_NewMomentFunction.png"/> button to create a new script resource with an empty function
-      ready for editing. You can also remove moment and the function call it contains by clicking the <img alt="Remove Moment Icon" class="icon" src="../assets/Images/Icons/Icon_RemoveMoment.png"/> button.</p>
-    <p class="dropspot">Sequence moments can also be added and edited using code. For more information please see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">here</a>.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true">Track Panel</span><span data-close-text="true">Track Panel</span></a></p>
@@ -206,7 +189,7 @@
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Toolbox</span><span data-close-text="true">Toolbox</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Canvas Toolbox</span><span data-close-text="true">Canvas Toolbox</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
     <p class="dropspot">The Sequence Editor toolbox contains the different visualisation and setup options for the sequence being edited.</p>
     <ul class="dropspotlist">
@@ -219,8 +202,7 @@
         clicking the <img alt="Zoom Reset Icon" class="icon" src="../assets/Images/Icons/Icon_ZoomReset.png"/> button will reset the canvas to be 1:1 with the sequence being edited. You can also click the Window Fit button <img alt="Canvas Fit Icon" class="icon" src="../assets/Images/Icons/Icon_CanvasFit.png"/> to make the entire sequence canvas fit within the current editor workspace (this will zoom in/out as appropriate to make it fit). Note that you can also zoom in and out using the
         <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> and the Mouse Wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/>, and pressing <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <img alt="Enter Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Enter.png" width="55"/> will set the canvas to be 1:1 with the display.</li>
       <li class="dropspot"><strong>Toggle Gizmos</strong> <img alt="Toggle Gizmos Icon" class="icon" src="../assets/Images/Icons/Icon_ToggleGizmos.png"/>: Clicking this will enable or disable the different <a class="tooltip" title="Gizmo are directly manipulable, self contained, visual screen idioms - essentially anything that is visual and can be interacted with or manpulated by the user to generate an effect or a specific result. ">gizmos</a>        visible in the canvas. When enabled you will see all the gizmos associated with the different assets and the canvas itself, and when disabled these will not be shown, giving a clearer view of how the sequence looks. Note that this is enabled by
-        default, and there is a menu available from the right options button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> where you can filter what is visible without having to disable all the different
-        widgets together. A complete list of these filter options and an explanation of what they do can be found <a href="Sequence_Properties/The_Sequence_Canvas.htm">here</a>.</li>
+        default, and there is a menu available from the options button <img alt="Icon Grid Menu" class="icon" height="24" data-cke-saved-src="../assets/Images/Icons/Icon_CanvasOptions.png" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10"/> where you can filter what is visible without having to disable all the different widgets together. A complete list of these filter options and an explanation of what they do can be found <a href="Sequence_Properties/The_Sequence_Canvas.htm">here</a>.</li>
       <li class="dropspot">T<strong>oggle Transform Gizmo Mode</strong> <img alt="Transform Gizmo Icon" class="icon" src="../assets/Images/Icons/Icon_TransformWidget.png"/>: Each asset added to a sequence has a transform gizmo at its origin:<br/>
         <img alt="The transform widget for an asset" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_TransformWidget.gif"/>This gizmo can control how the asset is scaled or rotated, as well as control its position and the position
         of the origin of the asset, however it only shows one of these options at a time. Clicking this button will switch between the different widget types or you can click on the options menu <img alt="Icon Grid Menu" class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10"/> to directly select the type of control action you want the transform gizmo to perform.</li>
@@ -232,7 +214,7 @@
     </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Sequence Controls</span><span data-close-text="true">Sequence Controls</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down8" href="#"><span data-open-text="true">Sequence Tools</span><span data-close-text="true">Sequence Tools</span></a></p>
   <div class="droptext" data-targetname="drop-down8">
     <p class="dropspot">This bar has the various sequence playback controls:</p>
     <p class="dropspot"><img alt="Sequence Editor Playback Controls" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_PlaybackControls.png"/></p>
@@ -240,15 +222,25 @@
       <li class="dropspot"><strong>Playback Speed</strong>: this is the playback speed of the sequence in frames (steps) per second.</li>
       <li class="dropspot"><strong>Playhead Position</strong>: this is the current playhead position, and can be shown in time (h:m:s) or frames (f).</li>
       <li class="dropspot"><strong>Time Display Options</strong>: here you can set whether to display the sequence times in hours, minutes and seconds (h:m:s) or frames (f).</li>
-      <li class="dropspot"><strong>Broadcast Message</strong>: Clicking this permits you to add a <strong>broadcast message</strong> at the current playhead position (this is explained in more detail earlier on this page and you can find further information <a href="Sequence_Properties/Broadcast_Messages.htm">here</a>        too).</li>
-      <li class="dropspot"><strong>Add Moment</strong>: Clicking this permits you to add a sequence <strong>moment</strong> at the current playhead position (this is explained in more detail earlier on this page).</li>
+      <li class="dropspot"><strong>Broadcast Message</strong>: Clicking this permits you to add a <strong>broadcast message</strong> at the current playhead position (this is explained in more detail <a href="Sequence_Properties/Broadcast_Messages.htm">here</a>).</li>
+      <li class="dropspot"><strong>Add Moment</strong>: Clicking this permits you to add a sequence <strong>moment</strong> at the current playhead position (this is explained in more detail below).</li>
+      <li class="dropspot"><strong>Open Curve Editor</strong>: This button toggles the currently selected track between the <strong>curve view</strong> and the <strong>keyframe view</strong>. This option is only really applicable to <em>parameter</em> tracks and when enabled
+        you will then have further options available to you depending on whether the parameter track uses keyframes or an <a href="Animation_Curves.htm">animation curve</a>. For more information, please see the section on the <a href="Sequence_Properties/Using_Animation_Curves.htm">Using Animation Curves</a>.</li>
       <li class="dropspot"><strong>Playback Controls</strong>: with these buttons you can start and stop the sequence preview, as well as move the playhead to the start or the end. There is also a button to set whether the sequence should loop or not, and whether the sequence
         should &quot;ping-pong&quot; or repeat when looping. Note that this setting <em>will</em> affect how the sequence is played when the project is compiled and run.</li>
       <li class="dropspot"><strong>Sequence Length</strong>: this displays the total possible length of the sequence in frames (f) or in time (m:h:s). Note that the sequence may not run to this length if you have set the clip region to be smaller.</li>
     </ul>
+    <p class="dropspot">As mentioned above, you can add <strong>Moments</strong> to a sequence. A sequence <strong>moment </strong>is a position on the timeline where the sequence can call a <strong>function</strong>. This is a <a href="../GameMaker_Language/GML_Overview/Script_Functions.htm">scripted function</a> that
+      must have no parameters and when the moment (frame) on the timeline is reached, this function will be called. To set a moment, you simply move the playhead to the required position and then click the <strong>Add Moment</strong> button, and in the
+      dialog that opens you give the name of the function to call.</p>
+    <p class="dropspot"><img alt="Add A Moment To The Sequence" class="center" src="../assets/Images/Asset_Editors/Editor_Sequences_AddMoment.gif"/>When adding a moment function, you can click the <img alt="Go To Function Icon" class="icon" src="../assets/Images/Icons/Icon_GoTo_Function.png"/> button to go to the script with the specified function, or you can click the <img alt="New Moment Function Icon" class="icon" src="../assets/Images/Icons/Icon_NewMomentFunction.png"/> button to create a new script resource with an empty function
+      ready for editing. You can also remove moment and the function call it contains by clicking the <img alt="Remove Moment Icon" class="icon" src="../assets/Images/Icons/Icon_RemoveMoment.png"/> button.</p>
+    <p class="dropspot">Sequence moments can also be added and edited using code. For more information please see <a href="../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Events_Moments_Broadcast.htm">here</a>.</p>
+    <ul class="dropspotlist">
+    </ul>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Dope Sheet</span><span data-close-text="true">Dope Sheet</span></a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down9" href="#"><span data-open-text="true">Dopesheet</span><span data-close-text="true">Dopesheet</span></a></p>
   <div class="droptext" data-targetname="drop-down9">
     <p class="dropspot">The <strong>Dope Sheet</strong> is where all the <a class="tooltip" title="A position on the timeline in the dope sheet where an asset has been placed. An asset key can be made to last multiple frames.">asset key</a> and <a class="tooltip" title="A parameter key (also called a keyframe) is a point on the timeline in the dope sheet where a change in a parameter value is defined.">parameter key</a><span class="glossextra">s</span> for each track
       are shown. You can click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> and drag keys left or right to position them within the dope sheet timeline, and you can also click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on the right edge of an asset key to change its length. Note that for sprites and objects, setting the length to be longer than the animation will cause the animation
@@ -257,6 +249,54 @@
       <li class="dropspot"><a href="Sequence_Properties/Using_The_Dope_Sheet.htm">Using The Dope Sheet</a></li>
     </ul>
     <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down10" href="#"><span data-open-text="true">Change Orientation</span><span data-close-text="true">Change Orientation</span></a></p>
+  <div class="droptext" data-targetname="drop-down10">
+    <p class="dropspot">The change orientation button <img data-cke-saved-src="../assets/Images/Icons/Icon_ChangeOrientation.png" src="../assets/Images/Icons/Icon_ChangeOrientation.png" class="icon" alt="Change Orientation Icon"/> can be used to change the way the Sequence
+      Editor displays the different sections. By default you will have the Cnavas View at the top and the Track Editor and Dopesheet at the bottom, but this can be changed by clicking the button to cycle through the different layouts, or by clicking the
+      Options button <img alt="Icon Grid Menu" class="icon" height="24" data-cke-saved-src="../assets/Images/Icons/Icon_CanvasOptions.png" src="../assets/Images/Icons/Icon_CanvasOptions.png" width="10"/> to open a menu and select the layout that you
+      want. The following layouts are available:</p>
+    <table class="icons" style="margin-left: 32auto">
+      <tbody>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../assets/Images/Icons/Icon_Seq_SplitWindow.png" src="../assets/Images/Icons/Icon_Seq_SplitWindow.png" alt="Split Window Sequence Editor Button"/></td>
+          <td class="icons"><strong>Split Window</strong></td>
+          <td class="text">
+            <p>With this option the Sequence Editor will be split into two seperate windows, where the main IDE window will show the Canvas view in the full desktop and the new window will show the Dope Sheet and Track Editor. Clicking the button again will
+              change the layout again and remove the extra window.<br/></p>
+          </td>
+        </tr>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../assets/Images/Icons/Icon_Seq_Top.png" src="../assets/Images/Icons/Icon_Seq_Top.png" alt="Snap Top Sequence Editor Button"/></td>
+          <td class="icons"><b>Snap Top</b></td>
+          <td class="text">
+            <p>This option snaps the Track Editor and Dopesheet to the top of the IDE.<br/></p>
+          </td>
+        </tr>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../assets/Images/Icons/Icon_Seq_Right.png" src="../assets/Images/Icons/Icon_Seq_Right.png" alt="Snap Right Sequence Editor Button"/></td>
+          <td class="icons"><strong>Snap Right</strong></td>
+          <td class="text">
+            <p>This option snaps the Track Editor and Dopesheet to the right of the IDE.<br/></p>
+          </td>
+        </tr>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../assets/Images/Icons/Icon_Seq_Bottom.png" src="../assets/Images/Icons/Icon_Seq_Bottom.png" alt="Snap Bottom Sequence Editor Button"/></td>
+          <td class="icons"><strong>Snap Bottom</strong></td>
+          <td class="text">
+            <p>This option snaps the Track Editor and Dopesheet to the bottom of the IDE (this is the default view.<br/></p>
+          </td>
+        </tr>
+        <tr>
+          <td class="icons"><img data-cke-saved-src="../assets/Images/Icons/Icon_Seq_Left.png" src="../assets/Images/Icons/Icon_Seq_Left.png" alt="Snap Left Sequence Editor Button"/></td>
+          <td class="icons"><strong>Snap Left</strong></td>
+          <td class="text">
+            <p>This option snaps the Track Editor and Dopesheet to the left of the IDE.<br/></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="dropspot">You can also reset the Sequence Editor layout at any time by clicking the Reset option <img data-cke-saved-src="../assets/Images/Icons/Icon_Seq_Reset.png" src="../assets/Images/Icons/Icon_Seq_Reset.png" class="icon" alt="Reset Editor Layout Button"/>. This will restore the editor to it&#39;s default state and re-open any sections that had been closed.</p>
   </div>
   <p> </p>
   <p>Due to the initial complexity of the sequence editor, we have only given a brief overview of the features available here, but we have additional pages listed below that go into more depth about its features and how they can be used:</p>
@@ -278,7 +318,7 @@
         <div style="float:right">Next: <a href="Shaders.htm">Shaders</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Sequences Editor

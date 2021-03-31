@@ -84,7 +84,8 @@
   <p>This variable holds an <a href="../../Arrays.htm">array</a> that is used along with the read-only variable <a href="argument_count.htm">argument_count</a> in <a href="../../Script_Functions.htm">script functions</a> or <a href="../../Method_Variables.htm">methods</a>.
     Each array position holds an input value for the function and is specifically for use with <em>variable </em>argument functions.</p>
   <p>Note that there are also a series of independent global scope variables that can also be used in user-defined functions to reference the different input arguments: <span class="inline">argument0</span>, <span class="inline">argument1</span>, <span class="inline">argument2</span>,
-    etc... up to <span class="inline">argument15</span>, but these variables can only be used when the number of arguments supplied to the user-defined function are <em>fixed </em>and not variable.</p>
+    etc... up to <span><span class="inline">argument15</span>.</span>
+  </p>
   <p class="note"><strong>NOTE</strong>: This isn&#39;t strictly required any more and is provided for legacy support more than anything else. All user-defined functions will accept variable arguments, and any argument passed into a function that is not part of the named
     inputs will be initialised to <span class="inline" style="font-size: 14px">undefined</span> by default, which can be checked using the <a href="../../../GML_Reference/Variable_Functions/is_undefined.htm">is_undefined()</a> function.</p>
   <p> </p>
@@ -120,7 +121,7 @@
         <div style="float:right">Next: <a href="argument_count.htm">argument_count</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 argument

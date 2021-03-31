@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "10.2.16.6.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>json_parse</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for json_parse"/>
+  <meta name="rh-index-keywords" content="json_parse"/>
+  <meta name="search-keywords" content="json_parse"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="json_parse">
+        <span>json_parse</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>json_parse</h1>
+  <p>This function can be used to parse a JSON string (either previously created using <a href="json_stringify.htm">json_stringify</a> or from any valid source), and convert it into a collection of arrays or structs, where an array is the equivalent of a
+    JSON array and a struct is the equivalent of a JSON object. You supply the string to parse, and the function will return the top level array or struct which can then be checked in your code. If you are not sure of the contents of the JSON, you can
+    use the different <a href="../../Variable_Functions/Variable_Functions.htm">Variable Functions</a> (like <a href="../../Variable_Functions/typeof.htm"><span class="inline">typeof()</span></a> or <a href="../../Variable_Functions/variable_struct_get_names.htm"><span class="inline">variable_struct_get_names()</span></a>)
+    to check the returned contents. Note that trying to parse an invalid value (ie: not a string) will throw an exception error.</p>
+  <p>If the supplied JSON string includes &quot;undefined&quot; as a value for any property, it will be converted to <tt>pointer_null</tt> upon being parsed.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code"><code>json_parse</code>(json)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>json</td>
+        <td>The JSON to parse (a string)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Nested structs and arrays</p>
+  <p> </p>
+  <h4>Extended Example:</h4>
+  <p>In this example we will parse the following JSON string which we&#39;ll hold in the variable &quot;json&quot;:</p>
+  <p class="code">json = &quot;{\&quot;myObj\&quot;: { \&quot;apples\&quot;:10, \&quot;oranges\&quot;:12, \&quot;potatoes\&quot;:100000, \&quot;avocados\&quot;:0 }, \&quot;myArray\&quot;:[0, 1, 2, 2, 4, 0, 1, 5, 1]}&quot;</p>
+  <p>This string would be parsed something like this:</p>
+  <p class="code">data = json_parse(json);<br/> if variable_struct_exists(data, &quot;myObj&quot;)<br/> {
+    <br/> if is_struct(data.myObj)<br/>     {<br/>     var _names = variable_struct_get_names(data.myObj);<br/>     var _str = &quot;&quot;;<br/>     for (var i = 0; i &lt; array_length(_names); i++;)<br/>         {<br/>         _str = _names[i] + &quot;:
+    &quot; + string(variable_struct_get(data.myObj, _names[i]));<br/>         show_debug_message(_str);<br/>         }<br/>     }<br/> if variable_struct_exists(data, &quot;myArray&quot;)<br/>     {<br/>     if is_array(data.myArray)<br/>         {<br/>            show_debug_message(data.myArray);<br/>         }<br/>     }<br/> }
+  </p>
+  <p>The above code will parse the given JSON string, generating the following console output:</p>
+  <p class="code">oranges: 12<br/> potatoes: 100000<br/> avocados: 0<br/> apples: 10<br/> [ 0,1,2,2,4,0,1,5,1 ]</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Encoding_And_Hashing.htm">File Encoding</a></div>
+        <div style="float:right">Next: <a href="base64_encode.htm">base64_encode</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+json_parse
+-->
+  <!-- TAGS
+json_parse
+-->
+
+</body></html>

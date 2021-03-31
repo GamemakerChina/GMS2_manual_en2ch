@@ -115,6 +115,8 @@
   <div class="droptext" data-targetname="drop-down6">
     <p class="dropspot"><b>+, -, *, /</b> - Add, subtract, multiply and divide. Examples of use:</p>
     <p class="code">c = a * b;<br/> str = a + &quot;world&quot;;</p>
+    <p class="note"><b>NOTE</b>: Floating point numbers do not stop on Divide by Zero as they will get an infinity as the answer. If A and B are integers (either int32 or int64) then the division will be done as integers (and divide by 0 will be checked and error&#39;d.
+      Otherwise it will be done as a floating point division (with no divide by 0 check).</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true">Increment/Decrement (++, --)</span><span data-close-text="true">Increment/Decrement (++, --)</span></a></p>
@@ -193,7 +195,7 @@
         <div style="float:right">Next: <a href="Accessors.htm">Accessors</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 div

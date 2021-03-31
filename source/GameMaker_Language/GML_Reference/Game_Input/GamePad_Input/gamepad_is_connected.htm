@@ -79,13 +79,12 @@
 
 
 
-
-
-
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gamepad_is_connected</h1>
-  <p>This function will return whether a gamepad is connected to the given &quot;slot&quot; (returns <tt>true</tt>) or not (returns <tt>false</tt>). You would normally use this function in conjunction with the <a href="gamepad_get_device_count.htm"><tt>gamepad_get_device_count()</tt></a>    function to get the correct number of available game pads and/or gamepad &quot;slots&quot;. Note that there may be a slight delay between the user connecting the gamepad and GameMaker Studio 2 detecting it as being connected (this is especially
-    the case when dealing with bluetooth connected controllers).</p>
+  <p>This function will return whether a gamepad is connected to the given &quot;slot&quot; (returns <tt>true</tt>) or not (returns <tt>false</tt>). You would normally use this function in conjunction with the <a href="gamepad_get_device_count.htm"><tt>gamepad_get_device_count()</tt></a>    function to get the correct number of available game pads and/or gamepad &quot;slots&quot;. Note that there may be a slight delay between the user connecting the gamepad and GameMaker Studio 2 detecting it as being connected (this is especially the
+    case when dealing with bluetooth connected controllers).</p>
+  <p class="note"><strong>NOTE</strong>: On some platfroms - especially consoles - this function may return false immediately after a gamepad has been connected/selected and may need to be checked in an alarm a few frames (steps) later for it to correctly detect the
+    gamepad.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">gamepad_is_connected(numb);</p>
@@ -120,7 +119,7 @@
         <div style="float:right">Next: <a href="gamepad_get_guid.htm"> gamepad_get_guid </a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_is_connected

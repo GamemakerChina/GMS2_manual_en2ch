@@ -79,9 +79,6 @@
 
 
 
-
-
-
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gamepad_get_guid</h1>
   <p>With this function you can retrieve the GUID for the gamepad connected to the given slot index. You supply the gamepad slot to check (from 0 - 11), and the function will return one of the following strings:</p>
@@ -112,7 +109,7 @@
   <p> </p>
   <h4>Example:</h4>
   <p class="code">var _guid = gamepad_get_guid(global.PadIndex);<br/> var _desc = gamepad_get_description(global.PadIndex);<br/> global.GamepadID = _guid + &quot;,&quot; + _desc;</p>
-  <p>The above code gets the GUID and name description strings, then concatenates them and stores the final string in a global variable for suture reference.</p>
+  <p>The above code gets the GUID and name description strings, then concatenates them and stores the final string in a global variable for future reference.</p>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -123,7 +120,7 @@
         <div style="float:right">Next: <a href="gamepad_get_device_count.htm"> gamepad_get_device_count </a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_get_guid

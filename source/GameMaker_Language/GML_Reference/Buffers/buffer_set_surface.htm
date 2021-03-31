@@ -58,7 +58,7 @@
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference page for buffer_set_surface"/>
-  <meta name="rh-index-keywords" content="buffer_set_surface"/>
+  <meta name="rh-index-keywords" content="buffer_set_surface,buffer_surface_copy (Deprecated)"/>
   <meta name="search-keywords" content="buffer_set_surface,buffer_surface_copy"/>
 </head>
 
@@ -81,26 +81,12 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>buffer_set_surface</h1>
-  <p>With this function you can write the information from a buffer to a given surface. Both the buffer and the surface must have been created previously. You can choose the copy &quot;mode&quot; for the data being stored which is set by the constants listed
-    below, as well as the offset and modulo values. Both offset and modulo are byte values, with the offset defining the start position within the buffer and modulo being the number of bytes that were left at the end of every line (for storing additional
-    data) when the buffer was written to.</p>
-  <p> </p>
-  <table>
-    <tbody>
-      <tr>
-        <th>Constant</th>
-        <th>Description</th>
-      </tr>
-      <tr>
-        <td>buffer_surface_copy</td>
-        <td>Copies all data from the buffer.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
+  <p>With this function you can write the information from a buffer to a given surface. Both the buffer being read from and the surface being written to must have been created previously, and you can provide an offset into the buffer to start reading from.
+    Note that reading will always start at the beginning of the buffer plus the offset value and <em>not</em> at the current seek position plus the offset value.</p>
+  <p class="note"><strong>NOTE</strong>: This function has changed from the GameMaker Studio update 2.3.1 onwards. Previous versions used the constant <span class="inline">buffer_surface_copy</span>, which is now deprecated.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">buffer_set_surface(buffer, surface, mode, offset, modulo);</p>
+  <p class="code">buffer_set_surface(buffer, surface, offset);</p>
   <table>
     <tbody>
       <tr>
@@ -116,16 +102,8 @@
         <td>The index of the surface to use.</td>
       </tr>
       <tr>
-        <td>mode</td>
-        <td>The data to get from the buffer (see the list of constants above).</td>
-      </tr>
-      <tr>
         <td>offset</td>
         <td>The data offset value.</td>
-      </tr>
-      <tr>
-        <td>modulo</td>
-        <td>The offset from the end of the line to the start of the next</td>
       </tr>
     </tbody>
   </table>
@@ -134,8 +112,8 @@
   <p class="code">N/A</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">buffer_set_surface(buff, application_surface, 0, 0, 0);</p>
-  <p>The above code will copy all the data stored in the buffer indexed in the variable &quot;buff&quot; to the application surface with no offset or modulo values.</p>
+  <p class="code">buffer_set_surface(buff, application_surface, 0);</p>
+  <p>The above code will copy all the data stored in the buffer indexed in the variable &quot;buff&quot; to the application surface with no offset.</p>
   <p> </p>
   <p> </p>
   <p> </p>
@@ -146,7 +124,7 @@
         <div style="float:right">Next: <a href="buffer_resize.htm">buffer_resize</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_set_surface

@@ -39,7 +39,7 @@
 
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
-    gTopicId = "5.1";
+    gTopicId = "5.2";
   
 //]]></script>
 
@@ -93,7 +93,8 @@
     as part of the executable for those platforms. You should also ensure that the extension properties match up with the target platform(s), and edit the export targets for the extension files based on the following:</p>
   <ul class="colour">
     <li class="dropspot"><strong>All targets</strong>: GML extensions. These are extensions made using the GameMaker Language (GML) and are compatible with all target platforms.</li>
-    <li class="dropspot"><strong>Windows (Standard, UWP, XBoxOne)</strong>: You can use windows <span class="inline">DLL</span> files (Dynamic Link Libraries).</li>
+    <li class="dropspot"><strong>Windows (Standard, UWP, XBoxOne)</strong>: You can use windows <span class="inline">DLL</span> files (Dynamic Link Libraries). Please note that if you have checked the &quot;Use x64 Windows Runtime&quot; in the <a href="../Settings/Game_Options/Windows.htm">Windows Game Options</a>,
+      then all DLLs for the project <strong>must be 64bit compatible</strong>. 32bit DLLs will not work with the 64bit executable.</li>
     <li class="dropspot"><strong>macOS</strong>: The macOS target can use the standard <span class="inline">DyLib</span> files for extensions.</li>
     <li class="dropspot"><strong>Ubuntu (Linux)</strong>: For the Ubuntu target you need to make sure that your extension uses <span class="inline">SO</span> files.</li>
     <li class="dropspot"><strong>HTML5</strong>: These platforms can use <span class="inline">JavaScript</span> extensions.</li>
@@ -102,6 +103,7 @@
     <li class="dropspot"><strong>PlayStation</strong>: For PlayStation 3 or 4 your extensions should be <span class="inline">PRX</span> files, with each target requiring a different <span class="inline">PRX</span> to conform to specification of the target (either PS3 or PS4).
       If working on a PSVita, the extension should be <span class="inline">SUPRX</span> instead.</li>
   </ul>
+  <p class="note"><strong>NOTE</strong>: Some extensions are required to follow specific naming conventions for GameMaker to correctly identify the platform and CPU architecture they are designed for. Please see the section on <a href="Extension_Creation/Creating_An_Extension.htm">Creating Extensions</a>    for more information.</p>
   <p>Since a single extension can have various associated files, it&#39;s possible to create a single extension for multiple platforms, in which case you want to specify <em>all </em>the compatible platforms in the main extension editor (ie: tick the checkbox
     beside them) and then in the individual file properties for each part of the extension, set the platform that those files should be exported to.</p>
   <p>To change the target platform for a specific extension file or placeholder you must first open the extension properties (double click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> the extension in the Asset Browser or
@@ -122,14 +124,13 @@
   <ul class="colour">
     <li><a href="Extension_Creation/Creating_An_Extension.htm">Creating An Extension</a></li>
     <li><a href="Extension_Creation/Android_Extensions.htm">Android Extensions</a></li>
-    <li><a href="Extension_Creation/iOS_Extensions.htm">iOS Extensions</a></li>
+    <li><a href="Extension_Creation/iOS_Extensions.htm">iOS / tvOS Extensions</a></li>
   </ul>
   <p> </p>
   <p> </p>
   <h1>YoYo Games 3rd Party Extensions</h1>
-  <p>Legacy versions of GameMaker had a lot of 3rd party functionality built in, but this was inefficient and difficult to maintain, since if any specific functionality was changed by the third party, then the whole GameMaker IDE and runtime would have to
-    be updated. So, current versions have adopted the use of extensions packages to add third party support to your games. This means that you can add only those extra functions that you require and that you can even adapt and edit them to suit your specific
-    needs.</p>
+  <p>Legacy versions of GameMaker had a lot of 3rd party functionality built in, but this was inefficient and difficult to maintain, since if any specific functionality was changed by the third party, then the whole GameMaker <a class="tooltip" title="The IDE, or Integrated Development Environment, is a software application that provides comprehensive facilities to computer programmers for software development. In this case, the entire frontend of GameMaker Studio 2 is considered the IDE, and includes sections to create graphics, add sounds, and add code to make your games.">IDE</a> and <a class="tooltip" title="The runtime in GameMaker Studio 2 is the collection of compiler assets that is required by the program to create a final executable package for a given target platform. These are installed seperately from the IDE, and can be changed and updated at any time.">Runtime</a> would have to be updated. So, current versions have adopted the use of extensions packages to add third party support to your games. This means that you can add
+    only those extra functions that you require and that you can even adapt and edit them to suit your specific needs.</p>
   <p>Most of these extensions will be downloaded and installed for you when you select a specific <a href="../Settings/Game_Options.htm">Game Options</a> (like Facebook or Google Mobile Ads, for example), but you can find further information about them from
     the appropriate section for each platform on the YoYo Games Knowledge Base:</p>
   <ul class="colour">
@@ -150,7 +151,7 @@
         <div style="float:right">Next: <a href="Fonts.htm">Fonts</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Extensions

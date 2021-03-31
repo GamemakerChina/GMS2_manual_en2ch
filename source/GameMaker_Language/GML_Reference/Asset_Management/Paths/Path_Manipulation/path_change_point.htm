@@ -80,11 +80,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_add_point</h1>
-  <p>With this function you can change the position and/or the speed factor of any point previously defined for a path (the path can have been created in the path editor or through code using <a href="path_add.htm"><tt>path_add()</tt></a>).
-    If used on a path from the Asset Browser, note that <strong>the function change the actual asset</strong>, and so will permanently affect how the path is used by all instances in the game from the moment the function is used until the end of the game.
-    If this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget
-    to call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
+  <h1>path_change_point</h1>
+  <p>With this function you can change the position and/or the speed factor of any point previously defined for a path (the path can have been created in the path editor or through code using <a href="path_add.htm"><tt>path_add()</tt></a>). If used on a
+    path from the Asset Browser, note that <strong>the function will change the actual asset</strong>, and so will permanently affect how the path is used by all instances in the game from the moment the function is used until the end of the game. If
+    this is not what you require, then you should use a function like <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> to create a copy of the path first, then call this function on the duplicated asset (don&#39;t forget to
+    call <span class="inline"><a href="path_delete.htm">path_delete()</a></span> on the asset when it is no longer required).</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">path_change_point(index, n, x, y, speed);</p>
@@ -96,7 +96,7 @@
       </tr>
       <tr>
         <td>index</td>
-        <td>The index of the path to change the point of.</td>
+        <td>The index of the path to change a point of.</td>
       </tr>
       <tr>
         <td>n</td>
@@ -136,13 +136,13 @@
         <div style="float:right"> </div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
-path_add_point
+path_change_point
 -->
   <!-- TAGS
-path_add_point
+path_change_point
 -->
 
 </body></html>

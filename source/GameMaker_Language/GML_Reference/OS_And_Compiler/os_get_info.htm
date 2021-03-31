@@ -83,7 +83,8 @@
   <h1>os_get_info</h1>
   <p>This function returns a <a href="../Data_Structures/DS_Maps/DS_Maps.htm"><tt>DS Map</tt></a> with detailed information about the OS that the game is running on. The exact information returned will depend on the OS and the device, so it is recommended
     that you test this function on all platforms that you wish to target and output the returned values using a function like <span class="inline"><a href="../Debugging/show_debug_message.htm">show_debug_message()</a></span>. Note that the <tt>DS Map</tt>    is not automatically cleared from memory and you should use the <a href="../Data_Structures/DS_Maps/ds_map_destroy.htm"><tt>ds_map_destroy()</tt></a> function when you no longer need the data it contains.</p>
-  <p>Below you can find some details of extra information that will be made available to the DS map specific to the following platforms:</p>
+  <p>Below you can find some details of extra information that will be made available to the DS map specific to the following platforms, and it should be noted that on <em>all</em> platforms <em>except</em> HTML5 the map will have the key &quot;<span><span class="inline">is64bit</span>&quot;
+    which will either ne <span class="inline">true</span> or <span class="inline">false</span> if the platform is a 64bit OS or not</span>:</p>
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true">Windows / UWP</span><span data-close-text="true">Windows / UWP</span></a></p>
   <div class="droptext" data-targetname="drop-down">
@@ -154,7 +155,7 @@
         <div style="float:right">Next: <a href="os_powersave_enable.htm">os_powersave_enable</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 os_get_info

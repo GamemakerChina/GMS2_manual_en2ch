@@ -7,7 +7,7 @@ rh._.exports(defaultTopic);
 rh.consts('DEFAULT_TOPIC', encodeURI("Content.htm"));
 rh.consts('HOME_FILEPATH', encodeURI('index.htm'));
 rh.consts('START_FILEPATH', encodeURI('index.htm'));
-rh.consts('HELP_ID', 'ea437c20-3681-4987-acf9-d6ac32e86945' || 'preview');
+rh.consts('HELP_ID', 'a5854cc9-7596-4e41-b55e-83179b5a2634' || 'preview');
 rh.consts('LNG_SUBSTR_SEARCH', 0);
 
 model.publish(rh.consts('KEY_LNG_NAME'), "en");
@@ -18,5 +18,5 @@ model.publish(rh.consts('KEY_HEADER_TITLE'), "GameMaker Studio 2 Manual");
 model.publish(rh.consts('PDF_FILE_NAME'), "");
 model.publish(rh.consts('MAX_SEARCH_RESULTS'), "");
 model.publish(rh.consts('KEY_SKIN_FOLDER_NAME'), "Charcoal_Grey");
-model.publish(rh.consts('KEY_SUBSTR_SEARCH'), "");
+model.publish(rh.consts('KEY_SUBSTR_SEARCH'), "true");
 })();

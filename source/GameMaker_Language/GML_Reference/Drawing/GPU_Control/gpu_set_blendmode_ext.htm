@@ -81,8 +81,8 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_set_blendmode_ext</h1>
-  <p>When GameMaker Studio 2 goes to draw a pixel there is a source colour (the colour of the pixel we&#39;re going to draw) and a destination colour(the colour that&#39;s already in the pixel we&#39;re drawing to), so when determining the new colour
-    of the pixel, the source and destination colours are calculated according to the chosen blend mode. Each component of the colours is stored as a floating point value between 0 and 1, and the new colour is calculated by multiply each component of the
+  <p>When GameMaker Studio 2 goes to draw a pixel there is a source colour (the colour of the pixel we&#39;re going to draw) and a destination colour (the colour that&#39;s already in the pixel we&#39;re drawing to), so when determining the new colour of
+    the pixel, the source and destination colours are calculated according to the chosen blend mode. Each component of the colours is stored as a floating point value between 0 and 1, and the new colour is calculated by multiply each component of the
     source colour by some factor and by multiplying each component of destination colour by some other factor and then adding the results together component by component.</p>
   <p>This function permits you to set the different component parts that should be factored together to create a custom blend mode. The source and destination both have a red, green, blue and alpha component, and in the following chart the source&#39;s RGBA
     are considered (Rs, Gs, Bs, As) while the destination&#39;s are (Rd, Gd, Bd, Ad). The eleven constants that are available for use can be either source or destination (or both) when used in this function.</p>
@@ -138,16 +138,6 @@
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p>Note that you can either supply two individual arguments to this function or you can supply an array of arguments (as returned by the function <a href="gpu_set_blendmode_ext.htm"><tt>gpu_get_blendmode_ext()</tt></a> for example). If supplying an array
-    it should have the following two elements:</p>
-  <ul class="colour">
-    <li>[0] = Source blend mode (default is <tt>bm_src_alpha</tt>)</li>
-    <li>[1] = Destination blend mode (default is <tt>bm_inv_src_alpha</tt>)</li>
-  </ul>
-  <p>It can be quite difficult to visualise how these different blend modes work, so below you can find a simple chart that shows the basic interaction of a single sprite being drawn with different combinations of blend modes over a single background. Please
-    note that the actual results of the blend mode you use will very much depend on the colour in the sprite, the alpha value of the sprite and the colour and alpha of the background.</p>
-  <p><img alt="Blend mode chart" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/blendmode_chart.png"/></p>
   <p class="note"><b>IMPORTANT!</b> HTML5 without WebGL enabled will <b>not</b> be able to display the following modes correctly:</p>
   <ul class="colour" style="padding-left: 120px">
     <li><tt>bm_src_colour</tt></li>
@@ -155,6 +145,17 @@
     <li><tt>bm_dest_colour</tt></li>
     <li><tt>bm_inv_dest_colour</tt></li>
     <li><tt>bm_src_alpha_sat</tt></li>
+  </ul>
+  <p> </p>
+  <p>Note that you can either supply two individual arguments to this function or you can supply an array of arguments (as returned by the function <a href="gpu_get_blendmode_ext.htm"><tt>gpu_get_blendmode_ext()</tt></a> for example). If supplying an array
+    it should have the following two elements:</p>
+  <ul class="colour">
+    <li>[0] = Source blend mode (default is <tt>bm_src_alpha</tt>)</li>
+    <li>[1] = Destination blend mode (default is <tt>bm_inv_src_alpha</tt>)</li>
+  </ul>
+  <p>To help you get the most from blend modes and to help understand how they work and how they affect the final image being drawn to the screen, we recommend that you read the following guide:</p>
+  <ul class="colour">
+    <li><a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Guide To Using Blendmodes</a></li>
   </ul>
   <p> </p>
   <h4>Syntax:</h4>
@@ -194,7 +195,7 @@
         <div style="float:right">Next: <a href="gpu_set_blendmode_ext_sepalpha.htm">gpu_set_blendmode_ext_sepalpha</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_set_blendmode_ext

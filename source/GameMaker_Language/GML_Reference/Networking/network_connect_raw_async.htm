@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "10.2.13.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>network_connect_raw_async</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for network_connect_raw_async"/>
+  <meta name="rh-index-keywords" content="network_connect_raw_async"/>
+  <meta name="search-keywords" content="network_connect_raw_async"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="network_connect_raw_async">
+        <span>network_connect_raw_async</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>network_connect_raw_async</h1>
+  <p>With this function you can send a request to connect to a server. The function takes the <i>socket id</i> to connect through (see <a href="network_create_socket.htm"><tt>network_create_socket()</tt></a>) and requires you to give the IP address to connect
+    to (a string) as well as the port to connect through, and if the connection fails a value of less than 0 will be returned. The difference between this function and <a href="network_connect_async.htm"><tt>network_connect_async()</tt></a>is that this
+    function can connect to any server and does nothing to the raw data, meaning that you have to implement the protocols yourself at the server end. Note that this function is asynchronous, generating an <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">Asynchronous Networking</a>    event of the type <span class="inline">network_type_non_blocking_connect</span>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">network_connect_raw_async(socket, url, port);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>socket</td>
+        <td>The id of the socket to use.</td>
+      </tr>
+      <tr>
+        <td>url</td>
+        <td>The URL or IP to connect to (a string).</td>
+      </tr>
+      <tr>
+        <td>port</td>
+        <td>The port to connect to.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">client = network_create_socket(network_socket_tcp);<br/> network_connect_raw_async(client, &quot;www.macsweeneygames.com&quot;, 6510);</p>
+  <p>The above code will create a new TCP socket then attempt to create a &quot;raw&quot; asynchronous connection through that to the given URL on port 6510.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Networking.htm">Networking</a></div>
+        <div style="float:right">Next: <a href="network_resolve.htm">network_resolve</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+network_connect_raw_async
+-->
+  <!-- TAGS
+network_connect_raw_async
+-->
+
+</body></html>

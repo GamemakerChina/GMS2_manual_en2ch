@@ -86,6 +86,7 @@
     while being saved, and all files saved using this function will be placed in a &quot;default&quot; folder. This folder does <i>not</i> need to be included in the filename as it is added automatically by GameMaker. For example the filename path &quot;<tt>Data\Player_Save.sav</tt>&quot;
     would actually be saved to &quot;<tt>default\Data\Player_Save.sav</tt>&quot;. However, if you then load the file using the function <a href="buffer_load_async.htm"><tt>buffer_load_async()</tt></a>, you do not need to supply the &quot;default&quot;
     part of the path either (but any other file function <i>will</i> require it, except on consoles Xbox One, PS4 and Nintendo Switch).</p>
+  <p class="note"><b>NOTE</b>: On HTML5 &quot;default/&quot; is not added automatically and you may have to account for this in your code.</p>
   <p>The function will return a unique ID value and trigger an <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">Asynchronous Save/Load Event</a> where you can use the returned ID to check the <tt>async_load</tt> ID value,
     as shown in the extended example below. The <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> map in the event will have the following two key/value pairs:</p>
   <ul>
@@ -93,6 +94,7 @@
     <li><b>&quot;status&quot;: </b>will return <tt>true</tt> if the data was saved/loaded correctly, and <tt>false</tt> otherwise.</li>
   </ul>
   <p>Note that you can save out multiple buffers in one by calling this function multiple times between calls to <a href="buffer_async_group_begin.htm"><tt>buffer_async_group_begin()</tt></a> and <a href="buffer_async_group_end.htm"><tt>buffer_async_group_end()</tt></a>    (see those functions for further information on this).</p>
+  <p class="note"><b>NOTE</b>: On HTML5 the returned results are saved as base64 encoded strings when saved to a file.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">buffer_save_async(buffer, filename, offset, size);</p>
@@ -145,7 +147,7 @@
         <div style="float:right">Next: <a href="buffer_load.htm">buffer_load</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_save_async

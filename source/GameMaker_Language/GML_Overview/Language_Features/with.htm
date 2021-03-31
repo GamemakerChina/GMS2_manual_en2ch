@@ -81,18 +81,19 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>with</h1>
-  <p>As indicated in the section <a href="../Addressing_Variables_In_Other_Instances.htm">Addressing Variables in Other Instances</a>, it is possible to read and change the value of variables in instances other than the one currently executing any given
-    code. However, in a number of cases you want to do a lot more than just change a single variable within those other instances, and may want to perform more complex code actions that require multiple functions and lines of code. For example, imagine
-    that you want to move all the ball objects in your game 8 pixels. You may think that this is achieved simply by the following piece of code:</p>
+  <p>As indicated in the section <a href="../Addressing_Variables_In_Other_Instances.htm">Addressing Variables in Other Instances</a>, it is possible to read and change the value of variables in instances and <a href="../Structs.htm">structs</a> other than
+    the one currently executing any given code. However, in a number of cases you want to do a lot more than just change a single variable within those other instances, and may want to perform more complex code actions that require multiple functions
+    and lines of code. For example, imagine that you want to move all the instances of a ball object in your game 8 pixels down. You may think that this is achieved simply by the following piece of code:</p>
   <p class="code">obj_ball.y = obj_ball.y + 8;</p>
-  <p>But this is not correct, as the right side of the assignment gets the value of the y-coordinate of the first ball and adds 8 to it. Next this new value is set as y-coordinate of <em>all </em>balls, so the result is that all balls get the same y-coordinate,
+  <p>But this is not correct, as the right side of the assignment gets the value of the y-coordinate of the first ball and adds 8 to it. Next this new value is set as the y-coordinate of <em>all </em>balls, so the result is that all balls get the same y-coordinate,
     and even if you use the following:</p>
   <p class="code">obj_ball.y += 8;</p>
-  <p>it will have exactly the same effect because it is simply an abbreviation of the first statement. So how <i>do</i> we achieve something like this? This is why the <tt>with</tt> statement exists in GML. The with statement has the following syntax:</p>
+  <p>it will have exactly the same effect because it is simply an abbreviation of the first statement. So how <i>do</i> we achieve something like this? This is why the <tt>with</tt> statement exists in GML. The <span class="inline">with</span> statement
+    has the following syntax:</p>
   <p class="code">with (&lt;expression&gt;)<br/>     {<br/>     &lt;statement&gt;;<br/>     &lt;statement&gt;;<br/>     ...<br/>     }</p>
-  <p>For the <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a>, you can indicate one or more instances to perform the code on, using an instance ID, the object ID (which indicates that <i>all instances</i> in the room of this object
-    are to run the code block) or one of the special <a href="../Instance_Keywords.htm">keywords</a> (<tt>all</tt> or <tt>other</tt>). This will then change the <strong>scope</strong> of the code within the curly brackets <span class="inline">{}</span> from the
-    instance or function that actually holds the code to the instance (or instances) given in the expression.</p>
+  <p>For the <a class="tooltip" title="An expression is a combination of one or more constants, variables, operators, and/or functions that are interpreted according to particular rules of precedence and association to return another value. A simple expression would be (5 + 5), which returns 10.">expression</a>, you can indicate one or more instances (or a struct) to perform the code on, using an instance ID, the object ID (which indicates that <i>all instances</i> in the room
+    of this object are to run the code block), the struct ID, or one of the special <a href="../Instance_Keywords.htm">keywords</a> (<tt>all</tt> or <tt>other</tt>). This will then change the <strong>scope</strong> of the code within the curly brackets
+    <span class="inline">{}</span> from the instance, struct or function that actually holds the code to the instance (or instances or struct) given in the expression.</p>
   <p>Once the expression has set the scope of the <span class="inline">with</span>, the <a class="tooltip" title="In programming, a statement is a single line of code written legally in a programming language that expresses an action to be carried out. A statement might have internal components of its own, including expressions, operators and functions. An example of a statement is A = B + 5. A GameMaker Studio 2 program is nothing but a sequence of one or more statements that together perform a task (like move the player). ">statement</a> will then be executed for each of the indicated instances, as if that instance is the current (
     <span class="inline">self</span>) instance. So, returning to our original problem, to move all instances of the ball object 8 pixels down you would type:</p>
   <p class="code">with (obj_ball)<br/>     {
@@ -104,8 +105,8 @@
   <p class="code">with (obj_ball)<br/>     {
     <br/>     x = random(room_width);<br/>     y = random(room_height);<br/>     speed = 1 + random(2);<br/>     direction = random(360);<br/>     }
   </p>
-  <p>As mentioned above, within the statement(s), the indicated instance has become the target (<span class="inline">self</span>) instance that runs the code block, which means that the original instance (that contains the <tt>with</tt> and the code block)
-    has become the <tt>other</tt> instance. So for example, to move all balls to the position of the current instance that actually contains the code, you can type this:</p>
+  <p>As mentioned above, within the statement(s), the indicated instance or struct has become the target (<span class="inline">self</span>) instance that runs the code block, which means that the original instance (that contains the <tt>with</tt> and the
+    entire code block) has become the <a href="../Instance_Keywords.htm"><tt>other</tt></a> instance. So - for example - to move all balls to the position of the current instance that actually contains the code, you can type this:</p>
   <p class="code">with (obj_ball)<br/>     {
     <br/>     x = other.x;<br/>     y = other.y;<br/>     }
   </p>
@@ -119,6 +120,8 @@
     <br/>     }
   </p>
   <p>The above code will destroy the instance of <tt>obj_Ball</tt> nearest to the instance running the code.</p>
+  <p class="code">with(clone_struct)<br/>     {<br/>     xx = other.x;<br/>     yy = other.y;<br/>     spd = other.speed;<br/>     dir = other.direction;<br/>     }</p>
+  <p>The above code uses <span class="inline">with</span> to target a struct and set the given struct member variables to the values stored in the instance variables from the instance calling the code.</p>
   <p class="code">var _inst = noone;<br/> with (obj_ball)<br/>     {
     <br/>     if (str &gt; other.str)<br/>         {
     <br/>         _inst = id;<br/>         }
@@ -126,10 +129,10 @@
     <br/> if (_inst != noone)<br/>     {
     <br/>     target = _inst;<br/>     }
   </p>
-  <p>The above code is slightly more complex than previous ones due to it using a <a href="../Variables_And_Variable_Scope.htm">local variable</a>. This variable is local to the either the <em>event</em> or the <em>script </em><em>function</em> and not to
-    the instance and so can be used and accessed by all instances that are referenced within the code block. So, in the code we have set it to the special keyword <tt>noone</tt> and then use the <tt>with</tt> construction to have every instance of <tt>obj_Ball</tt> check
-    their <tt>str</tt> variable against that of the instance running the code block. If the value of the variable is larger, then they store their unique ID in the <tt>inst</tt> local variable, meaning that at the end of the code, only the instance with
-    a value greater than the calling instance (or the keyword <tt>noone</tt> if none are larger) will be stored in the local variable <span class="inline">_inst</span>.</p>
+  <p>The above code is slightly more complex than previous ones due to it using a <a href="../Variables_And_Variable_Scope.htm">local variable</a>. This variable is <strong>local </strong>to either the <em>event</em> or the <em>script </em><em>function</em> and
+    not to the instance or struct and so can be used and accessed by all instances that are referenced within the code block. So, in the code above we have set a local variable to the special keyword <tt>noone</tt> and then use the <tt>with</tt> construction
+    to have every instance of <tt>obj_Ball</tt> check their <tt>str</tt> variable against that of the instance running the code block. If the value of the variable is larger, then they store their unique ID in the <tt>inst</tt> local variable, meaning
+    that at the end of the code, only the instance with a value greater than the calling instance (or the keyword <tt>noone</tt> if none are larger) will be stored in the local variable <span class="inline">_inst</span>.</p>
   <p>It is worth noting that you can use the special <span class="inline"><a href="break.htm">break</a></span> and <span class="inline"><a href="continue.htm">continue</a></span> statements within a
     <font face="Lucida Console"><span style="font-size: 16px;"><b>with</b></span></font> call too. Using <span class="inline">break</span> will immediately exit the <span class="inline">with</span> code block and move on to any code that is in the event or function after the
     <span class="inline">with</span> should have finished, eg:</p>
@@ -156,7 +159,7 @@
         <div style="float:right">Next: <a href="return.htm">return</a></div>
       </div>
     </div>
-    <h5>© Copyright YoYo Games Ltd. 2020 All Rights Reserved</h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 with
