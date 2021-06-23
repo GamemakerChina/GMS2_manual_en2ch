@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>part_system_draw_order</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for part_system_draw_order" />
+  <meta name="rh-index-keywords" content="part_system_draw_order" />
+  <meta name="search-keywords" content="part_system_draw_order" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>part_system_draw_order</h1>
+  <p>With this function you can set the way in which particles are drawn when created on the screen. The default system uses an old &gt; new look (the function is set to <tt>true</tt>), where old particles are drawn at a higher depth than newer ones and
+    so appear &quot;beneath&quot; them new particles, but by setting this function to <tt>false</tt> you can reverse this order and have the new particles drawn higher and so appear &quot;beneath&quot; the older ones. The images below illustrate this,
+    with the image on the left being the default value of <tt>true</tt> and the image on the right being <tt>false</tt>:</p>
+  <center><img alt="Old to new particle example" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/frontback.gif" /> <img alt="New to old particle example" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/backfront.gif"
+    /></center>
+  <p class="note"><b>NOTE</b>: When the particles are being drawn with an additive blend mode, the effect of this function may not always be obvious.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">part_system_draw_order(ind, oldtonew);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ind</td>
+        <td>The index of the particle system to change.</td>
+      </tr>
+      <tr>
+        <td>oldtonew</td>
+        <td>Whether old particles should be drawn behind newer ones (true) or vice versa (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">mysystem = part_system_create();<br/> part_system_draw_order(mysystem, true);</p>
+  <p>This will create a new particle system with the index &quot;<tt>mysystem</tt>&quot;, and then it sets particles to draw newer particles atop older ones.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Particle_Systems.htm">Particle Systems</a></div>
+        <div style="float:right">Next: <a href="part_particles_create.htm">part_particles_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+part_system_draw_order
+-->
+  <!-- TAGS
+part_system_draw_order
+-->
+</body>
+</html>

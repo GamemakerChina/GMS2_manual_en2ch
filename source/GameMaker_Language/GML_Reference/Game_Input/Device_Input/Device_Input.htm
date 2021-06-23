@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Device Input</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference section for Device Input" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="Device Input,mb_left,mb_middle,mb_right,mb_none,mb_any" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Device Input</h1>
+  <p>When your game is being targeted at those platforms that permit multi-touch, you should be using these functions. They work the same way a PC would work if it had multiple mice attached and the constants that are being checked for are the same as those
+    used for the <a href="../Mouse_Input/Mouse_Input.htm">standard mouse functions</a>:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>mb_left</td>
+        <td>The left mouse button</td>
+      </tr>
+      <tr>
+        <td>mb_middle</td>
+        <td>The middle mouse button (this may not be valid for all target platforms)</td>
+      </tr>
+      <tr>
+        <td>mb_right</td>
+        <td>The right mouse button</td>
+      </tr>
+      <tr>
+        <td>mb_side1*</td>
+        <td>Mouse side button 1</td>
+      </tr>
+      <tr>
+        <td>mb_side2*</td>
+        <td>Mouse side button 2</td>
+      </tr>
+      <tr>
+        <td>mb_any</td>
+        <td>Any of the mouse buttons</td>
+      </tr>
+      <tr>
+        <td>mb_none</td>
+        <td>No mouse button</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note"><br/> * <strong>NOTE</strong>: The <strong>mb_side1</strong> and <strong>mb_side2 </strong>buttons are only available on Windows, macOS, Ubuntu and HTML5.</p>
+  <p>The functions can all take a &quot;touch&quot; value that corresponds to a touch on the device display, however the maximum number of touches that can be detected will depend very much on the device and the OS being run. For example, some low end Android
+    devices may only be able to detect 2 or 3 touches at the same time, while a UWP device may be able to detect up to 10. Note too that on touch screen devices, a double tap is returned as the equivalent of a <b>right mouse button</b> event. So, if you
+    need to detect multiple taps in quick succession, for example, you will need to check for <b>both</b> the <tt>mb_left</tt> and <tt>mb_right</tt>. This functionality can be toggled on or off using <a href="device_mouse_dbclick_enable.htm"><tt>device_mouse_dbclick_enable()</tt></a>.</p>
+  <p>Below you can find a list of all the device specific control functions:</p>
+  <p> </p>
+  <ul class="colour">
+    <li><a href="device_mouse_check_button.htm">device_mouse_check_button</a></li>
+    <li><a href="device_mouse_check_button_pressed.htm">device_mouse_check_button_pressed</a></li>
+    <li><a href="device_mouse_check_button_released.htm">device_mouse_check_button_released</a></li>
+    <li><a href="device_mouse_dbclick_enable.htm">device_mouse_dbclick_enable</a></li>
+    <li><a href="device_mouse_x.htm">device_mouse_x</a></li>
+    <li><a href="device_mouse_y.htm">device_mouse_y</a></li>
+    <li><a href="device_mouse_raw_x.htm">device_mouse_raw_x</a></li>
+    <li><a href="device_mouse_raw_y.htm">device_mouse_raw_y</a></li>
+    <li><a href="device_mouse_x_to_gui.htm">device_mouse_x_to_gui</a></li>
+    <li><a href="device_mouse_y_to_gui.htm">device_mouse_y_to_gui</a></li>
+    <li><a href="device_is_keypad_open.htm">device_is_keypad_open</a></li>
+    <li><a href="device_get_tilt_x.htm">device_get_tilt_x</a></li>
+    <li><a href="device_get_tilt_y.htm">device_get_tilt_y</a></li>
+    <li><a href="device_get_tilt_z.htm">device_get_tilt_z</a></li>
+  </ul>
+  <p> </p>
+  <p>Please note that on mobile devices (Android, iOS and Windows Phone), you can use the back button at any time, as it is mapped to the keyboard <b>backspace</b> which is the GameMaker Studio 2 <a href="../Keyboard_Input/Keyboard_Input.htm">keyboard constant</a>    <tt>vk_backspace</tt>, so you can do checks for that key and perform actions on those devices as if the back button had been used. Also note that the HTML5 target will only accept input correctly for &quot;device 0&quot; when using these functions.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
+        <div style="float:right">Next: <a href="../Gesture_Input/Gesture_Input.htm">Gesture Input</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+Device Input Functions
+mb_left
+mb_middle
+mb_right
+mb_none
+mb_any
+-->
+  <!-- TAGS
+device_functions
+-->
+</body>
+</html>

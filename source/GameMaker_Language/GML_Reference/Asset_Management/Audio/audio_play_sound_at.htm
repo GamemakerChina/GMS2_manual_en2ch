@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_play_sound_at</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function audio_play_sound_at" />
+  <meta name="rh-index-keywords" content="audio_play_sound_at" />
+  <meta name="search-keywords" content="audio_play_sound_at" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_play_sound_at</h1>
+  <p>With this function you can play any sound resource at a given position within the audio space. You provide the sound index and then assign it a position within the 3D space. The default listener position is (0, 0, 0) so this means that if the listener
+    has not been moved and you want the sound to come from the left (for example), you should set the x position to a negative value (for more information on setting the listener position see <a href="Audio_Listeners/audio_listener_position.htm"><tt>audio_listener_position()</tt></a>).</p>
+  <p>You can also set a fall-off distance (0 will make the sound silent, default is 100) which will make the sound fade out as it gets further from the listener position. How the fade itself is heard will depend on the falloff reference (which is the distance
+    under which the volume for the source would normally drop by half) and the roll off factor (which affects the sound past the falloff reference distance only). The default factor is normally 1, and the effect of the different falloff values will depend
+    on the model chosen (for a complete guide to the different falloff models and how these values are used, please see the function <a href="audio_falloff_set_model.htm"><tt>audio_falloff_set_model()</tt></a>).</p>
+  <p>The last two arguments are to set the sound is to loop or not and, finally, for assigning a priority to the sound. This priority is then used to determine how sounds are dealt with when the number of sounds playing is over the limit set by the function
+    <a href="audio_channel_num.htm"><tt>audio_channel_num()</tt></a>. Lower priority sounds will be stopped in favour of higher priority sounds, and the priority value can be any real number (the actual value is arbitrary, and can be from 0 to 1 or 0
+    to 100, as GameMaker Studio 2 will prioritize them the same). Note that when dealing with priority, the <i>higher</i> the number the <i>higher</i> the priority, such that a sound with priority 100 will be favoured over a sound with priority 1.</p>
+  <p>This function will return a unique index number for the sound being played which can then be stored in a variable so that you can then pause it or stop it with the appropriate functions. This means that if you have multiple instances of the same sound
+    playing at any one time you can target just one instance of that sound to deal with using the audio functions.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_play_sound_at(index, x, y, z, falloff_ref, falloff_max, falloff_factor, loop, priority);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td>The index of the sound to play.</td>
+      </tr>
+      <tr>
+        <td>x</td>
+        <td>The x position.</td>
+      </tr>
+      <tr>
+        <td>y</td>
+        <td>The y position.</td>
+      </tr>
+      <tr>
+        <td>z</td>
+        <td>The z position.</td>
+      </tr>
+      <tr>
+        <td>falloff_ref</td>
+        <td>The falloff reference relative to the listener (clamp).</td>
+      </tr>
+      <tr>
+        <td>falloff_max</td>
+        <td>The maximum falloff distance relative to the listener.</td>
+      </tr>
+      <tr>
+        <td>falloff_factor</td>
+        <td>The falloff factor (default 1).</td>
+      </tr>
+      <tr>
+        <td>loop</td>
+        <td>Flags the sound as looping or not.</td>
+      </tr>
+      <tr>
+        <td>priority</td>
+        <td>Set the channel priority for the sound.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Index (sound ID)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if global.SFX<br/>    {
+    <br/>    audio_play_sound_at(snd_Waterfall, x, y, 0, 100, 300, 1, true, 1);<br/>    }
+  </p>
+  <p>The above code checks the global variable &quot;SFX&quot; and if it returns <tt>true</tt> then the sound indexed in the variable &quot;snd_Waterfall&quot; will be looped at its room position, with a fall-off reference of 100, a falloff distance of 300,
+    a falloff factor of 1 and a low priority.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Next: <a href="audio_pause_sound.htm">audio_pause_sound</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_play_sound_at
+-->
+  <!-- TAGS
+audio_play_sound_at
+-->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>image_index</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the variable image_index" />
+  <meta name="rh-index-keywords" content="image_index" />
+  <meta name="search-keywords" content="image_index" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>image_index</h1>
+  <p>A sprite is made up of one or more <i>sub-images</i> which can make the sprite appear animated as they switch from one to the other, or can they can be switched between in code to give different &quot;states&quot;, much like a button has in windows.
+    If the sprite is animated, then you can get the current frame of the animation by checking the <tt>image_index</tt> variable, or if you want to change the state of a static sprite, you can select a new sub-image by setting this variable to the desired
+    sub-image of the sprite. Please note that for changes in this variable to be visible, the instance should have either <i>no</i> draw event (and so GameMaker Studio 2 will default draw the sprite) or be drawn using one of the drawing functions like
+    <a href="../../../Drawing/Sprites_And_Tiles/draw_self.htm"><tt>draw_self()</tt></a> or <a href="../../../Drawing/Sprites_And_Tiles/draw_sprite_ext.htm"><tt>draw_sprite_ext()</tt></a> (by supplying the image_index into the appropriate argument).</p>
+  <p>Note that setting this variable directly to a frame will <em>not</em> trigger any Broadcast Messages that may be present on that frame.</p>
+  <p>Also note that while using skeletal animation sprites, you can still get and set the <tt>image_index</tt> values - see the function <a href="../Skeletal_Animation/Animation/skeleton_animation_get_duration.htm"><tt>skeleton_animation_get_duration()</tt></a> for
+    examples of how to do this.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">image_index;</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (single precision floating point value)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if (image_speed &gt; 0)<br/>     {
+    <br/>     if (image_index &gt;= image_number - 1) instance_destroy();<br/>     }
+  </p>
+  <p>The above code checks to see if the sprite is animating, and if it is then it checks to see if the current image_index is at the last frame and in that case destroys the instance.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Sprite_Instance_Variables.htm">Sprite Instance Variables</a></div>
+        <div style="float:right">Next: <a href="image_number.htm">image_number</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+image_index
+-->
+  <!-- TAGS
+image_index
+-->
+</body>
+</html>

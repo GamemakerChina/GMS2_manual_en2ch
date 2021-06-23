@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>buffer_get_surface</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for buffer_get_surface" />
+  <meta name="rh-index-keywords" content="buffer_get_surface,buffer_surface_copy (Deprecated)" />
+  <meta name="search-keywords" content="buffer_get_surface,buffer_surface_copy" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>buffer_get_surface</h1>
+  <p>With this function you can write the information from a surface to a given buffer. The buffer must have been created previously and should be a 1byte aligned <i>grow</i> buffer of an approximate size (in bytes) of the surface you are going to write.
+    The information for the surface will always be written to the start of the buffer (regardless of the seek position) but you can choose an offset value (in bytes) to move the write position to wherever your require it from the start of the buffer.
+    Note that the function writes each pixel of the surface to the buffer using a <b>BGRA</b> formatting on the Windows target, but on other targets it may be different depending on the OS or even the device.</p>
+  <p class="note"><strong>NOTE</strong>: This function has changed from the GameMaker Studio update 2.3.1 onwards. Previous versions used the constant <span class="inline">buffer_surface_copy</span>, which is
+    now deprecated.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">buffer_get_surface(buffer, surface, offset);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>buffer</td>
+        <td>The index of the buffer to use.</td>
+      </tr>
+      <tr>
+        <td>surface</td>
+        <td>The index of the surface to use.</td>
+      </tr>
+      <tr>
+        <td>offset</td>
+        <td>The data offset value (in bytes).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">buffer_get_surface(buff, application_surface, 0);</p>
+  <p>The above code will copy the data stored in the application surface to the buffer indexed in the variable &quot;buff&quot; with no offset.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
+        <div style="float:right">Next: <a href="buffer_set_surface.htm">buffer_set_surface</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+buffer_get_surface
+buffer_surface_copy
+-->
+  <!-- TAGS
+buffer_get_surface
+-->
+</body>
+</html>

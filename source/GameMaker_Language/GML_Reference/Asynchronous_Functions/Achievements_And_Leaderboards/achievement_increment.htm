@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>achievement_increment</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_increment" />
+  <meta name="rh-index-keywords" content="achievement_increment" />
+  <meta name="search-keywords" content="achievement_increment" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_increment</h1>
+  <p>Games can have achievements with no completion value and so you can use this function to increment those achievement by a given amount. On Android, you send the ID of the achievement as a string (this is the unique achievement ID that got assigned when
+    you set up the achievement), while on all other platforms you supply the defined achievement name as a string, and then you give the actual achievement value to increment by.</p>
+  <p>The function will trigger a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> where the returned <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    DS map will have the following key/value pairs:</p>
+  <ul class="colour">
+    <li>&quot;<b>type</b>&quot; - This is the type of event that has been fired, which will be the string &quot;<tt>achievement_increment_result</tt>&quot; for this function.</li>
+    <li>&quot;<b>id</b>&quot; - This is the ID of the event, and, for this function, it will return a GML constant <tt>GooglePlayServices_EVENT_ID_INCREMENT_ACHIEVEMENT</tt>.</li>
+    <li>&quot;<b>achievement_id</b>&quot; - This is the unique ID of achievement that has been incremented.</li>
+    <li>&quot;<b>status</b>&quot; - This will be 1 if the achievement was incremented successfully, or 0 if the request failed</li>
+    <li>&quot;<b>complete</b>&quot; - This will be 1 if the achievement has been completed by this increment, or 0 if the request failed</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">achievement_increment(name, value)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>The name/id of the achievement.</td>
+      </tr>
+      <tr>
+        <td>value</td>
+        <td>The value to be sent as an increment.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">achievement_increment(global.Achievement[0], score);</p>
+  <p>The above code adds the current player score to the achievement with the ID stored in the global array.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Achievements_And_Leaderboards.htm">Achievements And Leaderboards</a></div>
+        <div style="float:right">Next: <a href="achievement_show_achievements.htm">achievement_show_achievements</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_increment
+-->
+  <!-- TAGS
+achievement_increment
+-->
+</body>
+</html>

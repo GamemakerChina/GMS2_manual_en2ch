@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>array_copy</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function array_copy" />
+  <meta name="rh-index-keywords" content="array_copy" />
+  <meta name="search-keywords" content="array_copy" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>array_copy</h1>
+  <p>With this function you can copy all or part of an array into another array at any position. You need to supply both the source and the destination arrays (both need to have been created previously), as well as a position within the source array to copy
+    from and a position within the destination array to copy to. Finally you need to specify the length of the array (or the length of the part that you want) to copy. If the data being copied exceeds the length of the destination array, the array will
+    be extended to accept the data.</p>
+  <p>This function can also be used for multi-dimension arrays, as long as you specify which dimension you want to copy when you supply the array index, following this pattern:</p>
+  <p class="code">// Copy from the first dimension of an array<br/> // to the second dimension of an array<br/> array_copy(item_array, 0, inventory_array[0], 0, len);<br/>
+    <br/> // Copy from the third dimension of an array<br/> // to the first dimension of an array<br/> array_copy(item_array[0][0], 0, inventory_array, 0, len);<br/>
+    <br/> // etc...</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">array_copy(dest, dest_index, src, src_index, length);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dest</td>
+        <td>The ID of the array to copy to.</td>
+      </tr>
+      <tr>
+        <td>dest_index</td>
+        <td>The index within the array to copy to.</td>
+      </tr>
+      <tr>
+        <td>src</td>
+        <td>The ID of the array to copy from.</td>
+      </tr>
+      <tr>
+        <td>src_index</td>
+        <td>The index with the array to start copying from.</td>
+      </tr>
+      <tr>
+        <td>length</td>
+        <td>The length (number of array indices) to copy.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if !array_equals(inventory_array, item_array)<br/>    {
+    <br/>    var len = array_length(inventory_array);<br/>    array_copy(item_array, 0, inventory_array, 0, len);<br/>    }
+  </p>
+  <p>The above code will check two arrays to see if they hold equivalent values, and if they do not then the code will copy the entire contents of the array &quot;inventory_array&quot; to the array &quot;item_array&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">Next: <a href="array_equals.htm">array_equals</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+array_copy
+-->
+  <!-- TAGS
+array_copy
+-->
+</body>
+</html>

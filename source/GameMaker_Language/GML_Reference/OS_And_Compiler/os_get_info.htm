@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>os_get_info</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for os_get_info" />
+  <meta name="rh-index-keywords" content="os_get_info" />
+  <meta name="search-keywords" content="os_get_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>os_get_info</h1>
+  <p>This function returns a <a href="../Data_Structures/DS_Maps/DS_Maps.htm"><tt>DS Map</tt></a> with detailed information about the OS that the game is running on. The exact information returned will depend on the OS and the device, so it is recommended
+    that you test this function on all platforms that you wish to target and output the returned values using a function like <span class="inline"><a href="../Debugging/show_debug_message.htm">show_debug_message()</a></span>. Note that the DS map is not
+    automatically cleared from memory and you should use the <a href="../Data_Structures/DS_Maps/ds_map_destroy.htm"><tt>ds_map_destroy()</tt></a> function when you no longer need the data it contains.</p>
+  <p>Below you can find some details on the extra data that will be made available to the DS map specific to the following platforms, and it should be noted that on <em>all</em> platforms <em>except</em> HTML5 the map will have the key &quot;<span><span class="inline">is64bit</span>&quot;
+    which will either be <span class="inline">true</span> or <span class="inline">false</span> depending on whether the platform&#39;s OS is 64bit or not.</span>
+  </p>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Windows / UWP</a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p class="dropspot">On Windows Desktop and Windows UWP, you will get some extra data from DX11 with the following keys available in the DS map (useful for extensions):</p>
+    <ul class="dropspotlist">
+      <li><strong>video_d3d11_device </strong>- pointer to the DX11 device</li>
+      <li><strong>video_d3d11_context </strong>- pointer to the DX11 context</li>
+      <li><strong>video_adapter_vendorid </strong>- string with the adapters vendor id</li>
+      <li><strong>video_adapter_deviceid </strong>- string with the adapter device id</li>
+      <li><strong>video_adapter_subsysid </strong>- string with the adapter sub system id</li>
+      <li><strong>video_adapter_revision </strong>- string with the adapter revision number</li>
+      <li><strong>video_adapter_dedicatedvideomemory </strong>- string with the size of the video memory</li>
+      <li><strong>video_adapter_dedicatedsystemmemory </strong>- string with the size of the system memory (used by DX11 adapter)</li>
+    </ul>
+    <p> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Android</a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p class="dropspot">On the <b>Android</b> platform you will get some extra data from various different APIs with the following keys available in the DS map:</p>
+    <ul class="dropspotlist">
+      <li><tt>android_tv</tt> - this will return <tt>true</tt> if the device is detected as being an Android TV device, or <tt>false</tt> otherwise</li>
+      <li><tt>GL_VERSION</tt> - the version of OpenGL as reported by the driver</li>
+      <li><tt>GL_VENDOR</tt> - the vendor of OpenGL as reported by the driver</li>
+      <li><tt>GL_RENDERER</tt> - the renderer of OpenGL as reported by the driver</li>
+      <li><tt>GL_EXTENSIONS</tt> - the extensions of OpenGL that are available as reported by the driver</li>
+      <li><tt>GL_SHADING_LANGUAGE_VERSION</tt> - the version of the GLSL that is supported by this OpenGL driver</li>
+      <li><tt>GL_MAX_TEXTURE_SIZE</tt> - the maximum texture size supported by this OpenGL driver</li>
+      <li><tt>SDK_INT</tt> - value of android.os.Build.VERSION.SDK_INT see <a href="https://developer.android.com/reference/android/os/Build.VERSION" target="_blank">here</a> for more information.</li>
+      <li><tt>RELEASE</tt> - value of android.os.Build.VERSION.RELEASE see <a href="https://developer.android.com/reference/android/os/Build.VERSION" target="_blank">here</a> for more information.</li>
+      <li><tt>MODEL</tt> - value of android.os.Build.MODEL see <a href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
+      <li><tt>DEVICE</tt> - value of android.os.Build.DEVICE see <a href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
+      <li><tt>MANUFACTURER</tt> - value of android.os.Build.MANUFACTURER see <a href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
+      <li><tt>CPU_ABI</tt> - value of android.os.Build.CPU_ABI see <a href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
+      <li><tt>CPU_ABI2</tt> - value of android.os.Build.CPU_ABI2 see <a href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
+      <li><tt>BOOTLOADER</tt> - value of android.os.Build.BOOTLOADER see <a href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
+      <li><tt>BOARD</tt> - value of android.os.Build.BOARD see <a href="https://developer.android.com/reference/android/os/Build" target="_blank">here</a> for more information.</li>
+      <li><tt>VERSION</tt> - value of os.version from the Android <tt>System.getProperty</tt> method</li>
+      <li><tt>REGION</tt> - values of user.region from the Android <tt>System.getProperty</tt> method</li>
+      <li><tt>VERSION_NAME</tt> - value of this packages versionName - see <a href="https://developer.android.com/reference/android/content/pm/PackageInfo.html#versionName" target="_blank">here</a> for more information.</li>
+      <li><tt>PHYSICAL_KEYBOARD</tt> - if we think a physical keyboard is available then the string &quot;TRUE&quot; otherwise &quot;FALSE&quot;</li>
+    </ul>
+    <p> </p>
+  </div>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">os_get_info()</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (ds_map index)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if (os_type == os_android)<br/>     {<br/>     var _info = os_get_info();<br/>     <br/>     if (_info[? &quot;android_tv&quot;])<br/>         {<br/>         global.android_tv = true;<br/>         }<br/>     }</p>
+  <p>The above code checks if the current OS is Android, gets the OS info and reads the returned map to check if the game is running on an Android TV. In that case it sets a global variable to true.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
+        <div style="float:right">Next: <a href="os_powersave_enable.htm">os_powersave_enable</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+os_get_info
+-->
+  <!-- TAGS
+os_get_info
+-->
+</body>
+</html>

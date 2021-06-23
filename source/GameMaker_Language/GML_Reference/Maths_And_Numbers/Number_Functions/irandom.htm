@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>irandom</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for irandom"/>
+  <meta name="rh-index-keywords" content="irandom"/>
+  <meta name="search-keywords" content="irandom"/>
+</head>
+
+<body>
+
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>irandom</h1>
+  <p>This very useful function only returns integers (whole numbers). So, for example, to get a random number from 0 to 9 you can use <tt>irandom(9)</tt> and it will return a number from 0 to 9 <i>inclusive</i>. Note that floats can also be used but the
+    upper value after the point will be excluded, so <tt>irandom(9.7)</tt> will return a value from 0 to 9 only. The function has an upper bound of $7fffffffffffffffLL, so care should be taken if using very large numbers.</p>
+  <p class="note"><b>NOTE:</b> This function will return the same value every time the game is run afresh due to the fact that GameMaker Studio 2 generates the same initial random seed every time to make debugging code a far easier task. To avoid this behaviour use
+    <span style="font-size:1px;"><a href="randomise.htm"><tt style="font-size: 14px">randomise()</tt></a></span> at the start of your game.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">irandom(n);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>n</td>
+        <td>The upper range from which the random number will be selected.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Integer</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if (irandom(9) == 1)<br/>    {
+    <br/>    score += 100;<br/>    }
+  </p>
+  <p>This will produce a one in ten (since 0 is included) chance of adding 100 to the score.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Number_Functions.htm">Number Functions</a></div>
+        <div style="float:right">Next: <a href="irandom_range.htm">irandom_range</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+irandom
+-->
+  <!-- TAGS
+irandom
+-->
+
+</body></html>

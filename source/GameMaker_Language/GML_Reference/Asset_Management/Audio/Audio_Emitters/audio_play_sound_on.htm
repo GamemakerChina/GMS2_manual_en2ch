@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_play_sound_on</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function audio_play_sound_on" />
+  <meta name="rh-index-keywords" content="audio_play_sound_on" />
+  <meta name="search-keywords" content="audio_play_sound_on" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_play_sound_on</h1>
+  <p>With this function you can play any sound resource through an emitter, with any changes to the emitter gain, position, pitch or velocity affecting how the user hears the final sound being played. You provide the emitter index to use, the sound index
+    of the sound to be played and then specify whether the sound is to loop or not. Finally you can assign a priority, which is then used to determine how sounds are dealt with when the number of sounds playing is over the limit set by the function 
+    <a
+      href="../audio_channel_num.htm"><tt>audio_channel_num()</tt></a>. Lower priority sounds will be stopped in favour of higher priority sounds, and the priority value can be any real number (the actual value is arbitrary, and can be from 0 to 1 or 0 to 100, as GameMaker Studio 2 will
+      prioritize them the same). Note that when dealing with priority, the <i>higher</i> the number the <i>higher</i> the priority, such that a sound with priority 100 will be favoured over a sound with
+      priority 1.</p>
+  <p>This function will also return a unique index number for the sound being played which can then be stored in a variable so that you can then pause it or stop it with the appropriate functions. This means that if you have multiple instances of the same
+    sound playing at any one time you can target just one instance of that sound to deal with using the audio functions.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_play_sound_on(emitter, sound, loop, priority);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>emitter</td>
+        <td>The index of the emitter to use.</td>
+      </tr>
+      <tr>
+        <td>sound</td>
+        <td>The index of the sound to use.</td>
+      </tr>
+      <tr>
+        <td>loop</td>
+        <td>Flags the sound as looping or not.</td>
+      </tr>
+      <tr>
+        <td>priority</td>
+        <td>Set the channel priority for the sound.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Index</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if global.SFX<br/>    {
+    <br/>    audio_play_sound_on(s_emit, snd_Explode, false, 1);<br/>    }
+  </p>
+  <p>The above code checks the global variable &quot;SFX&quot; and if it returns <tt>true</tt> then the sound indexed in the variable &quot;snd_Explode&quot; will be played through the emitter indexed in the variable &quot;s_emit&quot;
+    with a low priority and no looping.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Audio_Emitters.htm">Audio Emitters</a></div>
+        <div style="float:right">Next: <a href="audio_emitter_get_gain.htm">audio_emitter_get_gain</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_play_sound_on
+-->
+  <!-- TAGS
+audio_play_sound_on
+-->
+</body>
+</html>

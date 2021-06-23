@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>external_define</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for external_define" />
+  <meta name="rh-index-keywords" content="external_define,dll_cdecl,dll_stdcall,ty_real,ty_string" />
+  <meta name="search-keywords" content="external_define,dll_cdecl,dll_stdcall,ty_real,ty_string" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>external_define</h1>
+  <p>This function can be used to define an external function call to a specific dll (for Windows) or dylib (for Mac). This file can be either an included file or part of an extension. You supply the name (and path) of the file, then the name of the function
+    that you wish to define. Next you need to define the calling convention to be used (see the constants list below) as well as the type of result to be expected (also a constant, as listed below). Finally you must give the number arguments that the
+    function can take (from 0 to 15) and for each of the arguments you must specify its type too. Please note that for functions with 4 or more arguments, all of them <i>must</i> be of type <tt>ty_real</tt>.</p>
+  <p class="note"><b>NOTE</b>: This is only for dll or dylib that have been added as &quot;Included Files&quot; to the GameMaker Studio 2 IDE. It will not work with those files added as extensions, since those require that you define the functions in the extension
+    package itself.</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dll_cdecl</td>
+        <td>This is the default C, C++ call</td>
+      </tr>
+      <tr>
+        <td>dll_stdcall</td>
+        <td>This is the standard WinAPI call (Windows <tt>dll</tt> only)</td>
+      </tr>
+      <tr>
+        <td>ty_real</td>
+        <td>A real number argument</td>
+      </tr>
+      <tr>
+        <td>ty_string</td>
+        <td>a null-terminated string argument</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">external_define(dll, name, calltype, restype, argnumb, argtype[0], argtype[1], ...argtype[10]) ;</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dll</td>
+        <td>The name of the dll file (string)</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>The name of the function (string)</td>
+      </tr>
+      <tr>
+        <td>calltype</td>
+        <td>The calling convention used</td>
+      </tr>
+      <tr>
+        <td>restype</td>
+        <td>The type of the result to expect</td>
+      </tr>
+      <tr>
+        <td>argnumb</td>
+        <td>The number of arguments (0 - 10)</td>
+      </tr>
+      <tr>
+        <td>argtype[0 ... 10]</td>
+        <td>The different types of arguments being used</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (Unique function ID value)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">my_funcion = external_define(&quot;MyDLL.dll&quot;, &quot;MyMin&quot;, dll_cdecl, ty_real, 2, ty_real, ty_real);</p>
+  <p>The above example code will define an external function called &quot;MyMin&quot; with two arguments.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
+        <div style="float:right">Next: <a href="external_call.htm">external_call</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+external_define
+dll_cdecl
+dll_stdcall
+ty_real
+ty_string
+-->
+  <!-- TAGS
+external_define
+-->
+</body>
+</html>

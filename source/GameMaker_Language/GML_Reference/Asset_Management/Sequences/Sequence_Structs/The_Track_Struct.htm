@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>The Track Struct</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page outlining The Track Struct" />
+  <meta name="rh-index-keywords" content="Sequence Track Struct" />
+  <meta name="search-keywords" content="The Track Struct,seqtracktype_graphic,seqtracktype_audio,seqtracktype_instance,seqtracktype_sequence,seqtracktype_clipmask,seqtracktype_clipmask_mask,seqtracktype_clipmask_subject,seqtracktype_group,seqtracktype_colour,seqtracktype_real,seqtracktype_message,seqtracktype_moment,seqtracktype_bool,seqtracktype_string,seqtracktype_spriteframes,seqtracktype_empty,type,name,tracks,visible,keyframes"
+  />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>The Track Struct</h1>
+  <p>The track struct can be used either for top-level <i></i><a class="glossterm" data-glossterm="asset track" href="#">asset track</a><span class="glossextra">s</span> or for sub-track <i></i><a class="glossterm" data-glossterm="parameter tracks" href="#">parameter tracks</a>,
+    and the behaviour of the track is defined by two things, its <b>name</b> and it&#39;s <b>type</b>. Track <a href="../../../../GML_Overview/Structs.htm">structs</a> are created using the function <a href="../sequence_track_new.htm"><tt>sequence_track_new()</tt></a>    and can be retrieved from sequence assets using the <tt>activeTracks</tt> property from the <a href="The_Sequence_Instance_Struct.htm">Sequence Instance Struct</a> or the <tt>tracks</tt> property from the <a href="The_Sequence_Object_Struct.htm">Sequence Object Struct</a>.</p>
+  <p>The properties available to the track struct are:</p>
+  <ul class="colour">
+    <li><tt>type</tt>: The following constants can all be used to define the type of track that is being created in the sequence (these constants are also used when generating keyframes and keyframe data, explained in sections below):</li>
+  </ul>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>seqtracktype_graphic</td>
+        <td>This is a graphics (sprite) asset track.</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_audio</td>
+        <td>This is an audio asset track.</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_instance</td>
+        <td>This is an instance asset track.</td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_sequence</td>
+        <td>This is a sequence asset track.</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_clipmask</td>
+        <td>This is a clip mask group asset track.</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_clipmask_mask</td>
+        <td>This is a clip mask sprite asset track used for generating the clip mask.</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_clipmask_subject</td>
+        <td>This is a clip mask sprite asset track that is being masked.</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_group</td>
+        <td>This group folder asset track.</td>
+        <td>11</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_colour</td>
+        <td>This is a colour data parameter track.</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_real</td>
+        <td>This is a real number value parameter track.</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_message</td>
+        <td>This is a broadcast message track.</td>
+        <td>15</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_moment</td>
+        <td>This is an event/moment track.</td>
+        <td>16</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_bool</td>
+        <td>Not used currently.</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_string</td>
+        <td>Not used currently.</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_spriteframes</td>
+        <td>Not used currently.</td>
+        <td>13</td>
+      </tr>
+      <tr>
+        <td>seqtracktype_empty</td>
+        <td>Not used currently.</td>
+        <td>12</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <ul class="colour">
+    <li><tt>name</tt>: When creating an asset track, the name you give here can be any string that you require to identify the track, however for parameter tracks, you need to specify specific strings to tell GameMaker Studio 2 what kind of parameter track
+      you are creating (these strings are only applicable to the <tt>seqtracktype_real</tt> and <tt>seqtracktype_colour</tt> parameter track types):
+      <ul class="colour">
+        <li>&quot;<strong>position</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as positional data.</li>
+        <li>&quot;<strong>scale</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as scaling data.</li>
+        <li>&quot;<strong>rotation</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as rotation data.</li>
+        <li>&quot;<strong>blend_multiply</strong>&quot; - when set on a track which is of type <tt>seqtracktype_colour</tt> this indicates that the contents of this track should be used as colour multiplication data. The keyframe data for such a track should
+          be an array of four values with the format [A, R, G, B]. Note that the values for each component are expressed as between 0 and 1, where 0 corresponds to the HEX value #00 and 1 corresponds to the HEX value #FF (0 - 255 as shown in the colour
+          picker for image blend tracks in the Sequences Editor).</li>
+        <li>&quot;<strong>image_speed</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as the image speed value.</li>
+        <li>&quot;<strong>image_index</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as the image index value.</li>
+        <li>&quot;<strong>image_angle</strong>&quot; - when set on a track which is of type <tt>seqtracktype_real</tt> this indicates that the contents of this track should be used as the image angle value.</li>
+        <li>&quot;<strong>image_blend</strong>&quot; - when set on a track which is of type <tt>seqtracktype_colour</tt> this indicates that the contents of this track should be used as the image blend value. The keyframe data for such a track should be an
+          array of four values with the format [A, R, G, B]. Note that the values for each component are expressed as between 0 and 1, where 0 corresponds to the HEX value #00 and 1 corresponds to the HEX value #FF (0 - 255 as shown in the colour picker
+          for colour multiply tracks in the Sequences Editor).</li>
+      </ul>
+    </li>
+    <li><tt>tracks</tt>: This property allows access to the list of tracks which are children of this track. When getting this property an <a href="../../../../GML_Overview/Arrays.htm">array</a> of track structs is returned, and when setting this property
+      an array of track structs should be specified.</li>
+    <li><tt>visible</tt>: This indicates whether this track is visible (the value is <tt>true</tt>) or not (the value is <tt>false</tt>). You can get or set this value and if a track not visible then none of its child tracks will be drawn either.</li>
+    <li><tt>keyframes</tt>: This property allows access to the list of <a href="The_Keyframe_Struct.htm">keyframe structs</a> for the track. When getting this property an array of keyframe structs is returned, and when setting this property an array of keyframe
+      structs should be specified.</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
+        <div style="float:right">Next: <a href="The_Keyframe_Struct.htm">The Keyframe Struct</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+The Track Struct
+seqtracktype_graphic
+seqtracktype_audio
+seqtracktype_instance
+seqtracktype_sequence
+seqtracktype_clipmask
+seqtracktype_clipmask_mask
+seqtracktype_clipmask_subject
+seqtracktype_group
+seqtracktype_colour
+seqtracktype_real
+seqtracktype_message
+seqtracktype_moment
+seqtracktype_bool
+seqtracktype_string
+seqtracktype_spriteframes
+seqtracktype_empty
+type
+name
+tracks
+visible
+keyframes
+-->
+  <!-- TAGS
+sequence_track
+-->
+</body>
+</html>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>os_browser</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for os_browser" />
+  <meta name="rh-index-keywords" content="os_browser,browser_not_a_browser,browser_unknown,browser_ie,browser_ie_mobile,browser_firefox,browser_chrome,browser_safari,browser_safari_mobile,browser_opera,browser_tizen,browser_windows_store" />
+  <meta name="search-keywords" content="os_browser,browser_not_a_browser,browser_unknown,browser_ie,browser_ie_mobile,browser_firefox,browser_chrome,browser_safari,browser_safari_mobile,browser_opera,browser_tizen,browser_windows_store" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>os_browser</h1>
+  <p>This <strong>read-only</strong> variable holds one of various constants (listed below) that GameMaker Studio 2 has to tell you which browser you are currently running the game in (if any). </p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">os_browser</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Constant</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>browser_not_a_browser</td>
+        <td>Game is not being played in a browser</td>
+      </tr>
+      <tr>
+        <td>browser_unknown</td>
+        <td>Unknown browser</td>
+      </tr>
+      <tr>
+        <td>browser_ie</td>
+        <td>Internet Explorer</td>
+      </tr>
+      <tr>
+        <td>browser_ie_mobile</td>
+        <td>Internet Explorer on a mobile device</td>
+      </tr>
+      <tr>
+        <td>browser_firefox</td>
+        <td>Mozilla Firefox</td>
+      </tr>
+      <tr>
+        <td>browser_chrome</td>
+        <td>Google Chrome</td>
+      </tr>
+      <tr>
+        <td>browser_safari</td>
+        <td>Safari</td>
+      </tr>
+      <tr>
+        <td>browser_safari_mobile</td>
+        <td>Safari on a mobile device</td>
+      </tr>
+      <tr>
+        <td>browser_opera</td>
+        <td>Opera</td>
+      </tr>
+      <tr>
+        <td>browser_tizen</td>
+        <td>Tizen mobile device browser</td>
+      </tr>
+      <tr>
+        <td>browser_windows_store</td>
+        <td>Windows App</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if (os_browser == browser_not_a_browser)<br/>    {
+    <br/>    global.Config = 0;<br/>    }
+    <br/> else
+    <br/>    {
+    <br/>    global.Config = 1;<br/>    }
+  </p>
+  <p>The above code checks to see if the game is running in a browser or not and sets a global variable to a value depending on the result of the check.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="OS_And_Compiler.htm">OS And Compiler</a></div>
+        <div style="float:right">Next: <a href="os_device.htm">os_device</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+os_browser
+browser_not_a_browser
+browser_unknown
+browser_ie
+browser_ie_mobile
+browser_firefox
+browser_chrome
+browser_safari
+browser_safari_mobile
+browser_opera
+browser_tizen
+browser_windows_store
+-->
+  <!-- TAGS
+os_browser
+-->
+</body>
+</html>

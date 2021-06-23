@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>exception_unhandled_handler</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for exception_unhandled_handler" />
+  <meta name="rh-index-keywords" content="exception_unhandled_handler" />
+  <meta name="search-keywords" content="exception_unhandled_handler" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>exception_unhandled_handler</h1>
+  <p>This runtime function can be used to &quot;take over&quot; the default GameMaker Studio 2 error message when a runtime exception occurs. You supply a method or function which is called when the exception occurs, and its first argument will be a struct
+    containing information about the exception. This struct has the following format:</p>
+  <p class="code">{<br/> message : &quot;&quot;,               // a string that is a short message for this exception<br/> longMessage : &quot;&quot;,           // a string that is a longer message for this exception<br/> script : &quot;&quot;,                // a string
+    that describes where the exception came from<br/> line: 0,                    // a real that is the line number where the exception came from<br/> stacktrace : [ &quot;&quot;, &quot;&quot; ],    // an array of strings that is the stack frame the exception
+    was generated<br/> }
+  </p>
+  <p>You can also supply <span class="inline">undefined</span> as the argument, which will remove the custom exception handler (if set) and revert to GameMaker Studio 2&#39;s default error message.</p>
+  <p>This function will return the previously set exception handler method, however if it was never changed or it was previously reset using <span class="inline">undefined</span>, then it will simply return <span class="inline">undefined</span>.</p>
+  <p>Passing a method to this function means that no error message will be shown to the user, and you will be allowed to handle the exception yourself. However you cannot use this to &quot;break out&quot; of the exception to continue your game, as the game
+    will still close after the exception handler is called.</p>
+  <p>Note that the context for running the method is <i>not</i> in an event and so it is highly unlikely that anything could be rendered at this time to the screen. In general, the safest thing that could be done at this point is to save a file with the
+    exception context information so it could be - for example - parsed and processed on the next run of the game and then dealt with.</p>
+  <p>Note that if you use the <tt>return</tt> statement in the supplied method, then the given value will be converted to an integer and used as the exit code from the runner.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">exception_unhandled_handler(user_handler);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>user_handler</td>
+        <td>The method (user-defined function) to use as the exception handler, or <span class="inline">undefined</span> to reset it to default.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Method (or undefined)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">exception_unhandled_handler(function(ex))<br/>     {
+    <br/>     show_debug_message( &quot;--------------------------------------------------------------&quot;);<br/>     show_debug_message( &quot;Unhandled exception &quot; + string(ex) );<br/>     show_debug_message( &quot;--------------------------------------------------------------&quot;);<br/>        if file_exists(&quot;crash.txt&quot;) file_delete(&quot;crash.txt&quot;);<br/>     var _f = file_text_open_write(&quot;crash.txt&quot;);<br/>     file_text_write_string(_f, string(ex));<br/>     file_text_close(_f);
+    <br/>     return 0;<br/>     }
+    <br/> )
+  </p>
+  <p>The above code will create an exception handler method and use it to save a file with the exception data.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
+        <div style="float:right">Next: <a href="get_integer.htm">get_integer</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+exception_unhandled_handler
+-->
+  <!-- TAGS
+exception_unhandled_handler
+-->
+</body>
+</html>

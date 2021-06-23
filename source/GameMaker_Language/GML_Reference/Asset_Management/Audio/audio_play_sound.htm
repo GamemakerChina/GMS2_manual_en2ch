@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_play_sound</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function audio_play_sound" />
+  <meta name="rh-index-keywords" content="audio_play_sound" />
+  <meta name="search-keywords" content="audio_play_sound" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_play_sound</h1>
+  <p>With this function you can play any sound resource in your game. You provide the sound index and assign it a priority, which is then used to determine how sounds are dealt with when the number of sounds playing is over the limit set by the function 
+    <a
+      href="audio_channel_num.htm"><tt>audio_channel_num()</tt></a>. Lower priority sounds will be stopped in favour of higher priority sounds, and the priority value can be any real number (the actual value is arbitrary, and can be from 0 to 1 or 0 to 100, as GameMaker Studio 2 will
+      prioritize them the same). Note that when dealing with priority, the <i>higher</i> the number the <i>higher</i> the priority, such that a sound with priority 100 will be favoured over a sound with
+      priority 1. The final argument is for making the sound loop and setting it to <tt>true</tt> will make the sound loop until it is stopped and setting it to <tt>false</tt> will play the sound once
+      only.</p>
+  <p>This function will also return a unique index number for the sound being played which can then be stored in a variable so that you can then pause it or stop it with the appropriate functions. This means that if you have multiple instances of the same
+    sound playing at any one time you can target just one instance of that sound to deal with using the audio functions.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_play_sound(index, priority, loop);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td>The index of the sound to play.</td>
+      </tr>
+      <tr>
+        <td>priority</td>
+        <td>Set the channel priority for the sound.</td>
+      </tr>
+      <tr>
+        <td>loop</td>
+        <td>Sets the sound to loop or not.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Index (sound ID)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if health &lt;= 0<br/>     {
+    <br/>     lives -= 1;<br/>     audio_play_sound(snd_PlayerDead, 10, false);<br/>     }
+  </p>
+  <p>The above code checks the &quot;health&quot; global variable and if it is less than or equal to 0, it will remove 1 from the &quot;lives&quot; global variable and play a sound.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Next: <a href="audio_play_sound_at.htm">audio_play_sound_at</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_play_sound
+-->
+  <!-- TAGS
+audio_play_sound
+-->
+</body>
+</html>

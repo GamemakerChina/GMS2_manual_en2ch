@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>file_find_first</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for file_find_first" />
+  <meta name="rh-index-keywords" content="file_find_first,fa_readonly,fa_hidden,fa_sysfile,fa_volumeid,fa_directory,fa_archive" />
+  <meta name="search-keywords" content="file_find_first,fa_readonly,fa_hidden,fa_sysfile,fa_volumeid,fa_directory,fa_archive" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>file_find_first</h1>
+  <p>This function will return the name of the first file that satisfies the mask and the attributes. If no such file exists, then an empty string is returned. The mask can contain a path and can contain wildchars, for example &#39;C:\temp\*.doc&#39;. The
+    attributes give the additional files you want to see, so the normal files are always returned when they satisfy the mask. You can add up the following constants to see the type of files you want (if you do not wish to add any attributes, use 0):</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><tt>fa_readonly</tt></td>
+        <td>Read-only files</td>
+      </tr>
+      <tr>
+        <td><tt>fa_hidden</tt></td>
+        <td>Hidden files</td>
+      </tr>
+      <tr>
+        <td><tt>fa_sysfile</tt></td>
+        <td>System files</td>
+      </tr>
+      <tr>
+        <td><tt>fa_volumeid</tt></td>
+        <td>Volume-id files</td>
+      </tr>
+      <tr>
+        <td><tt>fa_directory</tt></td>
+        <td>Directories</td>
+      </tr>
+      <tr>
+        <td><tt>fa_archive</tt></td>
+        <td>Archived files</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p class="note"><b></b><b>WARNING!</b> This function may not work as you expect due to GameMaker Studio 2 being sandboxed! Please see the section on the <a href="../../../../Additional_Information/The_File_System.htm">File System</a> for more information.</p>
+  <p class="note"><b>NOTE</b>: This function will not work at all on the HTML5 target, and the filter flags will only work on Windows (use 0 for all other platforms).</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">file_find_first(mask, attr);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>mask</td>
+        <td>The mask to use for searching.</td>
+      </tr>
+      <tr>
+        <td>attr</td>
+        <td>The specific file attribute to look for.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">String</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if directory_exists(&quot;\User Content&quot;)<br/>     {
+    <br/>     file = file_find_first(&quot;/User Content/*.doc&quot;, fa_readonly);<br/>     }
+  </p>
+  <p>This will check to see if the specified directory exists then, if it does, go there and return the first &quot;read only&quot; <tt>doc</tt> file found.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
+        <div style="float:right">Next: <a href="file_find_next.htm">file_find_next</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+file_find_first
+fa_readonly
+fa_hidden
+fa_sysfile
+fa_volumeid
+fa_directory
+fa_archive
+-->
+  <!-- TAGS
+file_find_first
+-->
+</body>
+</html>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_sequence_headdir</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page outlining the function layer_sequence_headdir" />
+  <meta name="rh-index-keywords" content="layer_sequence_headdir, seq_dir_right, seq_dir_left" />
+  <meta name="search-keywords" content="layer_sequence_headdir,seq_dir_right,seq_dir_left" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>layer_sequence_headdir</h1>
+  <p>With this function you can set the direction for the given sequence <a class="glossterm" data-glossterm="playhead" href="#">playhead</a>. You supply the sequence element ID as returned by <a href="layer_sequence_create.htm"><tt>layer_sequence_create()</tt></a>    or by one of the <a href="../General_Layer_Functions/General_Layer_Functions.htm">layer element functions</a>, and then give the playhead direction which should be one of the following constants:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>seq_dir_right</td>
+        <td>The sequence will play frames in an incremental order from left to right</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>seq_dir_left</td>
+        <td>The sequence will play frames in a decremental order from right to left</td>
+        <td>-1</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">layer_sequence_headdir(sequence_element_id, direction)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sequence_element_id</td>
+        <td>The unique ID value of the sequence element to target</td>
+      </tr>
+      <tr>
+        <td>direction</td>
+        <td>The playhead direction, a constant, listed above</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _seq = layer_sequence_create(&quot;Background&quot;, 0, 0, seq_AnimatedBackground);<br/> layer_sequence_headdir(_seq, seq_dir_left);</p>
+  <p>The above code creates a new sequence and stores its ID in a local variable. This ID is then used to set the playhead direction to decrement frames (right to left playback).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Sequence_Layers.htm">Sequence Layers</a></div>
+        <div style="float:right">Next: <a href="layer_sequence_pause.htm">layer_sequence_pause</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_sequence_headdir
+seq_dir_left
+seq_dir_right
+-->
+  <!-- TAGS
+layer_sequence_headdir
+-->
+</body>
+</html>

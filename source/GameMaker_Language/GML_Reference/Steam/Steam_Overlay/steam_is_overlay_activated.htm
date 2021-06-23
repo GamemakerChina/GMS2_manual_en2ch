@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_is_overlay_activated</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_is_overlay_activated" />
+  <meta name="rh-index-keywords" content="steam_is_overlay_activated" />
+  <meta name="search-keywords" content="steam_is_overlay_activated" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_is_overlay_activated</h1>
+  <p>This function can be used to find out if the user has the Steam Overlay active or not. If the overlay is active and visible to the user the function will return <tt>true</tt>, and if it is not, then it will return <tt>false</tt>. An example of what
+    this function can be used for would be for polling the Steam API for the overlay so that you can pause your game while the overlay is being shown.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_is_overlay_activated();</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if steam_is_overlay_activated()<br/>     {
+    <br/>     global.Pause = true;<br/>     }
+  </p>
+  <p>The above code will check to see if the Steam overlay is active and if it is it will set the global variable &quot;Pause&quot; to true.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_Overlay.htm">Steam Overlay</a></div>
+        <div style="float:right">Next: <a href="steam_activate_overlay.htm">steam_activate_overlay</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_is_overlay_enabled
+-->
+  <!-- TAGS
+steam_is_overlay_enabled
+-->
+</body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_map_secure_load_buffer</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for ds_map_secure_load_buffer"/>
+  <meta name="rh-index-keywords" content="ds_map_secure_load_buffer"/>
+  <meta name="search-keywords" content="ds_map_secure_load_buffer"/>
+</head>
+
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_map_secure_load_buffer</h1>
+  <p>This function will load a secure saved DS map from a buffer. You must previously have loaded the buffer into memory (using <a href="../../Buffers/buffer_load.htm"><tt>buffer_load()</tt></a>) and then passing that into this function will return a DS
+    map populated with the contents of the buffer. Note that the buffer must have been created using the function <a href="ds_map_secure_save_buffer.htm"><tt>ds_map_secure_save_buffer()</tt></a>for this to work correctly, and also note that if the DS
+    map being loaded contained an array, this will be converted into a DS list instead when load.</p>
+  <p class="note"><b>IMPORTANT!</b> One of the features of a secure saved file is that it is locked to the device that it was created on, so you cannot load a file saved on one device into a project running on another device.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">ds_map_secure_load_buffer(buffer);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>filename</td>
+        <td>The buffer ID of the buffer to load the map data from.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Integer (DS map index)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var buff = buffer_load(&quot;save.dat&quot;);<br/> map = ds_map_secure_load_buffer(buff);<br/> buffer_delete(buff);
+  </p>
+  <p>The above code will load a securely saved DS map from a buffer and store its index value in a variable for future use.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="DS_Maps.htm">DS Maps</a></div>
+        <div style="float:right">Next: <a href="ds_map_add_list.htm">ds_map_add_list</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_map_secure_load_buffer
+-->
+  <!-- TAGS
+ds_map_secure_load_buffer
+-->
+
+</body></html>

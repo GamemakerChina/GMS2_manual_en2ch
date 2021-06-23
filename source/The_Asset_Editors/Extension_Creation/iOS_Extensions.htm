@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>iOS Extensions</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page detailing how iOS extensions work" />
+  <meta name="rh-index-keywords" content="Extensions - Creating iOS / tvOS Extensions" />
+  <meta name="search-keywords" content="iOS Extensions,iOS, tvOS Extensions, tvOS" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>iOS / tvOS Extensions</h1>
+  <p>To create an extension for iOS or tvOS you have to do it in two parts. The first part would be to add the extension itself, along with the required files etc... and the second is to create the functions and macros/constants that the extension requires.
+    The functions and constants are added using <strong>placeholder </strong>files to group them together, so you&#39;d add a placeholder and then define the functions and macros as explained in the section <a href="Creating_An_Extension.htm">here</a>.
+    To add the rest of the files though you need to first tick the <em>iOS </em>and/or the <em>tvOS </em>check-box in the <strong>Additional Features</strong> section of the editor to open up the relevant <strong>Extension Properties</strong> window (the
+    image below shows the iOS properties window, but the tvOS window is exactly the same):</p>
+  <p class="dropspot"><img alt="iOS Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_iOS.png" /></p>
+  <p>Here you give the following details:</p>
+  <ul class="colour">
+    <li class="dropspot"><strong>Linker Flags / Compiler Flags</strong>: Some frameworks and third party SDKs require the addition of extra linker flags and compiler flags to work which can be specified here (see the documentation that accompanies the SDK or framework in
+      question for details).</li>
+    <li class="dropspot"><strong>Class Name</strong>: Your extension can have multiple classes, with each class having its own functions and constants, so you should give it a name that reflects its purpose</li>
+    <li class="dropspot"><strong>App Delegate Class Name</strong>: The name of your custom app delegate class. Setting this allows the extension to override/extend core app functionality. To use this feature you need to do the following:
+      <ol>
+        <li>Ensure that the delegate source files have the same name as the delegate class (e.g. <span class="inline">@interface MyCustomAppDelegate</span> should be defined in &quot; <span class="inline">MyCustomAppDelegate.h</span>&quot;)</li>
+        <li>Add the <span class="inline">${YYExtAppDelegateIncludes}</span> environment variable at the top of your app delegate header file. This will be replaced at compile-time with the relevant include files for the parent delegate class.</li>
+        <li>Use the <span class="inline">${YYExtAppDelegateBaseClass}</span> environment variable as the base class for your custom app delegate. This will be replaced at compile-time with the correct base delegate class.<br/>
+          <br/> To ensure your extension works with any other extensions that use custom app delegates, you should call any base class methods from overridden methods in your child class. Before calling the superclass method, you need to make sure it
+          is implemented in the class hierarchy to avoid errors, for e.g.:</li>
+      </ol>
+      <p class="code">- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions<br/> {
+        <br/>     // Check if any superclasses implement this method and call it<br/>     if([[self superclass] instancesRespondToSelector:@selector(application:willFinishLaunchingWithOptions:)])<br/>       return [super application:application willFinishLaunchingWithOptions:launchOptions];<br/>            else<br/>         return TRUE;<br/> }
+      </p>
+    </li>
+    <li class="dropspot"><strong>System Frameworks</strong>: Here you can add in any iOS system <a class="glossterm" data-glossterm="framework" href="#">framework</a><span class="glossextra">s</span> to your extension. These are added by clicking the <img alt="Add Argument Icon"
+        class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18" /> button which will add a placeholder framework, which you can then edit by slow clicking <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"
+      /> on it. You can find out more about available system frameworks <a href="https://developer.apple.com/documentation/">here</a>. To remove a system framework, simply select it and then click the <img alt="Remove Argument Icon" class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png"
+      /> button.</li>
+    <li class="dropspot"><strong>Inject to Info.plist</strong>: Here you can add any code to be a injected into the <span class="inline">info.plist</span> file.</li>
+    <li class="dropspot"><strong>3rd Party Frameworks and Bundles</strong>: This section is for adding third party and SDK bundles. As with system frame works you click the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png"
+        width="18" /> button to add them and then slow click <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png" /> to edit, and selecting them then clicking <img alt="Remove Argument Icon" class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png"
+      /> will remove them (see the documentation that came with your chosen SDK for info on the framework name). If the framework/SDK bundle is on your development Mac then you need to add the path into &quot; <em>Enter framework path on Mac</em>&quot;
+      and click the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18" /> button, or if the SDK or source code is on your PC use the <em>Add Source</em> button.</li>
+    <li class="dropspot"><strong>CocoaPods</strong>: Here you can give the name of any CocoaPods that the extension is going to use instead of (or as well as) any SDKs and frameworks that have been added. Note that there is a Game Option <a href="../../Settings/Game_Options/iOS.htm">for iOS</a>      and <a href="../../Settings/Game_Options/tvOS.htm">for tvOS</a> to add a Podfile to GameMaker Studio2 which is required if you are adding CocoaPods in this secton.</li>
+    <li class="dropspot"><strong>CocoaPods Dependencies</strong>: This section is where you can list the different dependencies required by the CocoaPods added in the previous section. Note that there is a Game Option <a href="../../Settings/Game_Options/iOS.htm">for iOS</a>      and <a href="../../Settings/Game_Options/tvOS.htm">for tvOS</a> to add a Podfile.lock to GameMaker Studio2 which is required if you are adding CocoaPod Dependencies in this secton.</li>
+  </ul>
+  <p>If your extension has had any System Frameworks or 3rd Party Frameworks added, these will now be listed in the <strong>Extension Properties </strong>window, with each one having a check-box beside it. If you mark the check-box, you are enabling weak
+    linking, which is useful should you need to &quot;over-ride&quot; any symbol from the included library with your own value, but it should be noted that doing so will slow linking down.</p>
+  <p>For more information on creating iOS and tvOS extensions, please see the <a href="https://help.yoyogames.com/hc/en-us/articles/360012504971-iOS-and-Android-Creating-A-Simple-Extension">YoYo Games Knowledge Base</a>, and for information on using CocoaPods
+    in extensions, please see the following guide:</p>
+  <ul class="colour">
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360008958858">iOS and tvOS: Using Cocoa Pods</a></li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Extensions.htm">The Extension Editor</a></div>
+        <div style="float:right">Next: <a href="Creating_An_Extension.htm">Creating An Extension</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+iOS Extensions
+tvOS Extensions
+-->
+  <!-- TAGS
+extensions_ios
+-->
+</body>
+</html>

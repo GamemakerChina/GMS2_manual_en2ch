@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>sprite_add</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function sprite_add" />
+  <meta name="rh-index-keywords" content="sprite_add" />
+  <meta name="search-keywords" content="sprite_add" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>sprite_add</h1>
+  <p>With this function you can add an image as a sprite, loading it from an external source where the image file to be loaded should <b>always</b> be in either <tt>*.png</tt>, <tt>*.gif</tt>, <tt>*.jpg/jpeg</tt> or <tt>*.json</tt> format (<tt>*json</tt>    files are used for loading <a href="../Skeletal_Animation/Skeletal_Animation.htm">skeleton animation sprites</a> made with Spine). The function returns the new sprite index which must then be used in all further code that relates to the sprite. If
+    you use this function with HTML5 or are getting an image from an URL, this function will also generate an <b>Image Loaded</b> asynchronous event. See <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">The Asynchronous Event</a>    page for more information.</p>
+  <p>All images that are to be turned into animated sprites - except for <tt>*.gif</tt> (see below) - should have a &quot;strip&quot; format (see the image below) and it will be split into the number of sub-images specified following the rule <b>sprite width = strip width / sub images</b>.</p>
+  <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
+  <p>As you can see in the above image, the sprite has been placed on a dark purple background, and this can be removed by setting the &quot;removeback&quot; argument to <tt>true</tt>. This works by checking the <i>bottom left</i> pixel of the sprite for
+    the colour there and then uses that as the colour to be removed. For example, in the above image, if we had the bottom left pixel colour as green, all the green parts of the sprite would have been removed and the rest of the purple background ignored.</p>
+  <p>If you choose the &quot;removeback&quot; option, you may also want GameMaker Studio 2 to smooth the edges of the sprite by setting the &quot;smooth&quot; argument to <tt>true</tt>. All this does is create a semi-transparent border around the edges of
+    the sprite after it has had its background removed.</p>
+  <p>Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is &quot;fixed&quot; onto the instance that uses it, and is always calculated as relative to the 0,0 top left corner of one sprite sub-image. So,
+    for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have its origin in the center.</p>
+  <p>If you are adding a <tt>*.gif</tt> format image, then you only need to specify the filename and image number (which should be 1 for the first frame) and can leave all the other arguments as 0, noting that <b>only the first image of the GIF will be loaded</b>.
+    For <tt>*.json</tt> sprites, the image number should be 1, and the &quot;removeback&quot; and &quot;smooth&quot; settings will be ignored.</p>
+  <p>By default all new sprites have their bounding boxes calculated automatically (the exact bounding box will depend on the size and transparency of the sprite), however you may wish to customise this, in which case you should also use the function
+    <a
+      href="sprite_collision_mask.htm"><tt>sprite_collision_mask()</tt></a>.</p>
+  <p>It should be noted that the memory used when adding a sprite in this way will be larger than you may expect. This is because GameMaker Studio 2 will store the sprite as a texture page <i>and</i> it will also be stored in GPU memory, so the total memory
+    will be larger than would be expected for an image file of the same sprite.</p>
+  <p class="note"><b>NOTE</b>: When you load a sprite into GameMaker Studio 2 you must remember to remove it again (with <a href="sprite_delete.htm"><tt>sprite_delete()</tt></a>) when no longer needed, otherwise there is risk of a memory leak which will slow down and
+    eventually crash your game.</p>
+  <p class="note"><b>NOTE</b>: On <b>iOS</b>, if you are loading an included file from a folder, ie: with a path something like &quot;<span style="font-size:1px;"><tt>Backgrounds/background1.png</tt></span>&quot;, you do NOT need to include the folder as part of the
+    path and simply supplying the file name is sufficient. On all other platforms you must supply the folder(s) as part of the path to the file.</p>
+  <p class="note"><b>NOTE</b>: On <b>HTML5</b>, if you are loading a sprite from a secure server you may need to set the cross-origin type and use a relative path instead of an absolute path. See <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><tt style="font-size: 14px">http_set_request_crossorigin()</tt></a></span> for
+    more details.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>fname</td>
+        <td>The name (a string file path) of the file to add.</td>
+      </tr>
+      <tr>
+        <td>imgnum</td>
+        <td>Use to indicate the number of sub-images (1 for a single image or for a <tt>*.gif</tt>).</td>
+      </tr>
+      <tr>
+        <td>removeback</td>
+        <td>Indicates whether to make all pixels with the background colour (left-bottom pixel) transparent.</td>
+      </tr>
+      <tr>
+        <td>smooth</td>
+        <td>Indicates whether to smooth the edges if transparent.</td>
+      </tr>
+      <tr>
+        <td>xorig</td>
+        <td>Indicate the x position of the origin in the sprite.</td>
+      </tr>
+      <tr>
+        <td>yorig</td>
+        <td>Indicate the y position of the origin in the sprite.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real (sprite ID value)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">spr = sprite_add(&quot;player_5.png&quot;, 16, true, true, 0, 0);</p>
+  <p>The above code loads a sprite into the game and stores its index in the variable &quot;spr&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
+        <div style="float:right">Next: <a href="sprite_replace.htm">sprite_replace</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+sprite_add
+-->
+  <!-- TAGS
+sprite_add
+-->
+</body>
+</html>

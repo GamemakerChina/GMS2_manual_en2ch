@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_sound_is_playable</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function audio_sound_is_playable" />
+  <meta name="rh-index-keywords" content="audio_sound_is_playable" />
+  <meta name="search-keywords" content="audio_sound_is_playable" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_sound_is_playable</h1>
+  <p>This function can be used to checks if the given sound index can be played currently. This is needed due to the different ways streamed and unstreamed sound playback is handled on the <b>HTML5</b> target platform, and will
+    return <tt>true</tt> if the sound can be played and <tt>false</tt> if it can&#39;t. Note that on all other platforms other than HTML5, the function will always return true..</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_sound_is_playable(index);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td>The index of the sound to check.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if audio_sound_get_pitch(snd_Explode) != 1<br/>    {
+    <br/>    audio_sound_pitch(snd_Explode, 1);<br/>    }
+  </p>
+  <p>The above code will change the pitch of the audio played from the sound indexed as &quot;snd_Explode&quot; if its pitch is not equal to 1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Next: <a href="audio_falloff_set_model.htm">audio_falloff_set_model</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_sound_is_playable
+-->
+  <!-- TAGS
+audio_sound_is_playable
+-->
+</body>
+</html>

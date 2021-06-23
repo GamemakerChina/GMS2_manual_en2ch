@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>script_execute_ext</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function script_execute_ext" />
+  <meta name="rh-index-keywords" content="script_execute_ext" />
+  <meta name="search-keywords" content="script_execute_ext" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>script_execute_ext</h1>
+  <p>This function works similarly to the function <a href="script_execute.htm">script_execute()</a> only you can supply an <a href="../../../GML_Overview/Arrays.htm">array</a> that contains the arguments required for the function/script being called. You
+    may also supply two optional arguments to the function to specify an offset into the array to get the arguments from, as well as the number of arguments to use from the array (this must be a maximum of array_length - offset). </p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">script_execute(scr, array_args, [offset], [num_args]);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>scr</td>
+        <td>The name of the function/script that you want to call</td>
+      </tr>
+      <tr>
+        <td>array_args</td>
+        <td>The array containing the arguments for the function/script</td>
+      </tr>
+      <tr>
+        <td>[offset]</td>
+        <td><em>OPTIONAL!</em> The offset into the argument array</td>
+      </tr>
+      <tr>
+        <td>[num_args]</td>
+        <td><em>OPTIONAL!</em> The number of arguments to (from the offset onwards)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Will depend on the return value from the function/script being called</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">script_execute_ext(move_inst, move_array, floor(random(4)), 1);</p>
+  <p>The above example code will use <tt>script_execute_ext</tt> to call the given function, supplying an array of four arguments, but only using one of them at random.</p>
+  <p class="note"><b>NOTE</b>: This function cannot be used with built-in functions.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Scripts.htm">Scripts</a></div>
+        <div style="float:right">Next: <a href="script_exists.htm">script_exists</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+script_execute_ext
+-->
+  <!-- TAGS
+script_execute_ext
+-->
+</body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>keyboard_check_pressed</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for keyboard_check_pressed"/>
+  <meta name="rh-index-keywords" content="keyboard_check_pressed"/>
+  <meta name="search-keywords" content="keyboard_check_pressed"/>
+</head>
+
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>keyboard_check_pressed</h1>
+  <p>With this function you can check to see if a key has been pressed or not. Unlike the <a href="keyboard_check.htm"><tt>keyboard_check()</tt></a> function, this function will only run once for every time the key is pressed down, so for it to trigger again,
+    the key must be first released and then pressed again. The function will take a keycode value as returned by the function <a href="../../Strings/ord.htm"><tt>ord()</tt></a> (only <i>capital</i> letters from A-Z or numbers from 0-9), or any of the
+    <tt>vk_*</tt> constants listed on the main <a href="Keyboard_Input.htm">Keyboard Input</a> page.</p>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">keyboard_check_pressed(key);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>key</td>
+        <td>The key to check the pressed state of.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4><b>Returns:</b></h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4><b>Example:</b></h4>
+  <p class="code">if keyboard_check_pressed(vk_anykey)<br/>    {
+    <br/>    room_goto_next();
+    <br/>    }
+  </p>
+  <p>The above code will advance to the next room if the player presses any of the keyboard&#39;s keys (working like a &quot;Press Any Key to Continue&quot; prompt).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Keyboard_Input.htm">Keyboard Input</a></div>
+        <div style="float:right">Next: <a href="keyboard_check_released.htm">keyboard_check_released</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+keyboard_check_pressed
+-->
+  <!-- TAGS
+keyboard_check_pressed
+-->
+
+</body></html>

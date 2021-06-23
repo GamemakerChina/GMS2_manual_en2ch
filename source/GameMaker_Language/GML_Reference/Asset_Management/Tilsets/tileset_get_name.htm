@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>tileset_get_name</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function tileset_get_name" />
+  <meta name="rh-index-keywords" content="tileset_get_name" />
+  <meta name="search-keywords" content="tileset_get_name" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tileset_get_name</h1>
+  <p>This function will return the name <i>as a string</i> of the specified tile set. This name is the one that has been specified for the tile set in the Asset Browser of the main GameMaker Studio 2 window. Please note that this is <i>only</i> a string
+    and cannot be used to reference the tile set directly - for that you would need the <i>tile set index</i>. You can, however, use this string to get the <i>tile set index</i> using the returned string along with the function <a href="../Assets_And_Tags/asset_get_index.htm"><tt>asset_get_index()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">tileset_get_name(index);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td>The index of the tile set to get the name of.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns</h4>
+  <p class="code">String</p>
+  <p> </p>
+  <h4><b>Example:</b></h4>
+  <p class="code">var _l = layer_get_id(&quot;tilemap_trees&quot;);<br/> var _m = layer_tilemap_get_id(_l);<br/> var _t = tilemap_tileset(_m);<br/> tileset_name = tileset_get_name(_t);</p>
+  <p>The above code will get the name of the tile set index for the given layer, storing the return string in the variable <tt>tileset_name</tt>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Tile_Sets.htm">Tile Sets</a></div>
+        <div style="float:right">Next: <a href="tileset_get_texture.htm">tileset_get_texture</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+tileset_get_name
+-->
+  <!-- TAGS
+tileset_get_name
+-->
+</body>
+</html>

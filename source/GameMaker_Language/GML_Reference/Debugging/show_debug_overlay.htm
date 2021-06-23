@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>show_debug_overlay</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for show_debug_overlay" />
+  <meta name="rh-index-keywords" content="show_debug_overlay" />
+  <meta name="search-keywords" content="show_debug_overlay" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>show_debug_overlay</h1>
+  <p>This function can be used to switch on and off the standard debug overlay when testing your game and is disabled by default. The debug overlay shows a graphic CPU/GPU usage bar in the actual game window itself along with the current real fps value,
+    number of texture swaps and the number of vertex batches (note that texture swaps and vertex batches will never be zero and will normally show values of 2 or 3, since even with an empty room an no objects GameMaker Studio 2 still has to draw and batch
+    things).</p>
+  <p><img alt="Debug overlay graphic" class="center" src="../../../assets/Images/QS_Guide/QS_Debug_Bar.png" />This bar is split into sections, with each section being 1/60th of a second. As you can see from the image above, the bar is made up of various
+    colours:</p>
+  <ul class="colour">
+    <li><b>Green</b> - Input / Output processing (ie: keyboard, mouse, gamepad, networking etc...)</li>
+    <li><b>Red</b> - The update speed of the step event</li>
+    <li><b>Yellow</b> - The time required for the draw event</li>
+    <li><b>Orange</b> -Debug update time, which is only normally visible when you use the debug module</li>
+    <li><b>White</b> - GPU left over time, which is the time spent waiting for the GPU to finish the rendering of the frame before the next one can start</li>
+    <li><b>Cyan</b> - The text rendering time</li>
+    <li><b>Grey</b> - The time required to clear screen each draw step</li>
+    <li><strong>Blue</strong> - The time required for the <a href="../Garbage_Collection/Garbage_Collection.htm">Garbage Collector</a> to run</li>
+    <li><b>Dark Red</b> - The GPU flush, which is how long the GPU takes to clear images from memory</li>
+  </ul>
+  <p>Using this function you can add the overlay whether in debug mode or not, and in this way, you can see how efficiently your game runs and get a visual cue as to how it is using the available resources, without the over-head of having the debugger running
+    alongside.</p>
+  <p class="note"><b>NOTE</b>: This function will not work on the HTML5 target due to the different way it works compared to all the other targets.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">show_debug_overlay(enable);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>enable</td>
+        <td>switch on (<tt>true</tt>) or off (<tt>false<tt>) the debug overlay.</tt></tt>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4><b>Example:</b></h4>
+  <p class="code">if global.debug<br/>    {
+    <br/>    show_debug_overlay(true);
+    <br/>    }
+    <br/> else
+    <br/>    {
+    <br/>    show_debug_overlay(false);
+    <br/>    }
+  </p>
+  <p>The above code will toggle the debug on or off depending on the value of a global variable.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
+        <div style="float:right">Next: <a href="code_is_compiled.htm">code_is_compiled</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+show_debug_overlay
+-->
+  <!-- TAGS
+show_debug_overlay
+-->
+</body>
+</html>

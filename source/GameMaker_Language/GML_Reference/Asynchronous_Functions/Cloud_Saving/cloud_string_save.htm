@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>cloud_string_save</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for cloud_string_save" />
+  <meta name="rh-index-keywords" content="cloud_string_save" />
+  <meta name="search-keywords" content="cloud_string_save" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>cloud_string_save</h1>
+  <p>This function will commit a string to the chosen cloud service for storage. The function will return a unique <b>id</b> value that should then be used in the appropriate asynchronous event to identify the DS map that is returned as a &quot;call back&quot;
+    from the cloud service. The string should contain <i>all</i> the information that you need to save for your game as you can only store one single &quot;data blob&quot; to the cloud, and running this function again will overwrite any previously stored
+    values (as will using the <a href="cloud_file_save.htm"><tt>cloud_file_save()</tt></a> function). The description should be a short string of information that describes the save, eg: &quot;Level2, Stage2&quot;.</p>
+  <p>For further information on the returned asynchronous data, please see the function <a href="cloud_synchronise.htm"><tt>cloud_synchronise()</tt></a>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">cloud_string_save(string, description);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>string</td>
+        <td>The data string to be uploaded.</td>
+      </tr>
+      <tr>
+        <td>description</td>
+        <td>A brief description of the data being stored.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var t_str = &quot;&quot;;<br/> for (var i = 0; i &lt; 10; i++;)<br/>     {
+    <br/>     t_str += string(global.Highscore[i]) + &quot;|&quot;<br/>     }
+    <br/> save_check = cloud_string_save(t_str, &quot;Current Highscores&quot;);<br/> var file = file_text_open_write(&quot;Highscores.txt&quot;);<br/> file_text_write_string(file, t_str);<br/> file_text_close(file);
+  </p>
+  <p>The above code creates a string from the values stored in the global array &quot;Highscores&quot; and then writes this string to the cloud service for storage, as well as writing it to a file for local storage.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Cloud_Saving.htm">Cloud Saving</a></div>
+        <div style="float:right">Next: <a href="cloud_file_save.htm">cloud_file_save</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+cloud_string_save
+-->
+  <!-- TAGS
+cloud_string_save
+-->
+</body>
+</html>

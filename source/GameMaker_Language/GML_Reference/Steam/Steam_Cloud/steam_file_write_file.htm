@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_file_write_file</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_file_write_file" />
+  <meta name="rh-index-keywords" content="steam_file_write_file" />
+  <meta name="search-keywords" content="steam_file_write_file" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_file_write_file</h1>
+  <p>With this function you can copy the contents of a locally saved file to a file that is synchronised with the Steam Cloud. The local file <i>must exist</i> before using this function, and it will return a value of 0 if it fails for whatever reason and
+    a value greater than 0 if it succeeds.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_file_write_file(steam_filename, local_filename);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>steam_filename</td>
+        <td>The Steam Cloud file to copy over.</td>
+      </tr>
+      <tr>
+        <td>local_filename</td>
+        <td>The local file to use to copy from.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">steam_file_write_file(&quot;rm_koala.png&quot;, &quot;Koala2.png&quot;);</p>
+  <p>The above code will copy the contents of the file &quot;Koala2.png&quot; to the Steam Cloud file &quot;rm_koala.png&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_Cloud.htm">Steam Cloud</a></div>
+        <div style="float:right">Next: <a href="steam_file_read.htm">steam_file_read</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_file_write_file
+-->
+  <!-- TAGS
+steam_file_write_file
+-->
+</body>
+</html>

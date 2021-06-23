@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>The Keyframe Struct</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page outlining The Keyframe Struct"/>
+  <meta name="rh-index-keywords" content="Sequence Keyframe Struct"/>
+  <meta name="search-keywords" content="The Keyframe Struct,frame,length,stretch,channels"/>
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>The Keyframe Struct</h1>
+  <p>Each track (as defined on the page covering <a href="The_Track_Struct.htm">track structs</a>) will have one or more keyframe <a href="../../../../GML_Overview/Structs.htm">struct</a> assigned to it (which you can get from the <tt>keyframes</tt> property
+    of the track struct), and each one will have the following properties:</p>
+  <ul class="colour">
+    <li><tt>frame</tt>: The position (in frames) along the timeline for the keyframe. Default value is 0.<tt></tt></li>
+    <li><tt>length</tt>: The length of the keyframe. Default value is 1, and when set to larger values then the track property that the keyframe refers to will be maintained at the initial value for the duration of the length given. Note that the <tt>stretch</tt> property
+      will override this if set to <tt>true</tt>.</li>
+    <li><tt>stretch</tt>: If this property is set to <tt>true</tt> then the keyframe stretches to either the next keyframe for the track or to the end of the track if it&#39;s the last keyframe. You can get or set this value, and
+      the default value is <tt>false</tt>.</li>
+    <li><tt>channels</tt>: This property allows access to the list of <a href="The_Keyframe_Data_Struct.htm">keyframe data structs</a> for the channels of the track. When getting this property an <a href="../../../../GML_Overview/Arrays.htm">array</a> of
+      keyframe data structs is returned, and when setting this property an array of keyframe data structs should be specified.</li>
+  </ul>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Sequences.htm">Sequences</a></div>
+        <div style="float:right">Next: <a href="The_Keyframe_Data_Struct.htm">The Keyframe Data Struct</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+The Keyframe Struct
+-->
+  <!-- TAGS
+sequence_keyframe
+-->
+
+</body></html>

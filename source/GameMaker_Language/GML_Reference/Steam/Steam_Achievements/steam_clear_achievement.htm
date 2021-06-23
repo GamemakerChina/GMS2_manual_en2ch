@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_clear_achievement</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_clear_achievement" />
+  <meta name="rh-index-keywords" content="steam_clear_achievement" />
+  <meta name="search-keywords" content="steam_clear_achievement" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_clear_achievement</h1>
+  <p>With this function you can tell the Steam API to clear (reset) a specific achievement. The achievement should have been previously defined on the Steamworks control panel accounts page for your game and the string that is passed to the function should
+    match that used as the <b>API Name</b> on the control panel.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_clear_achievement(ach_name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ach_name</td>
+        <td>The name of the achievement to clear (string).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if mouse_check_button_pressed(mb_left)<br/>     {
+    <br/>     steam_clear_achievement(&quot;Ach_Game_Win&quot;);
+    <br/>     steam_clear_achievement(&quot;Ach_Died_10_Times&quot;);
+    <br/>     steam_clear_achievement(&quot;Ach_Killed_100_Enemies&quot;);
+    <br/>     steam_clear_achievement(&quot;Ach_Beat_Boss_Level_1&quot;);
+    <br/>     }
+  </p>
+  <p>The above code will reset the achievements of the game when the user clicks the left mouse button.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_Achievements.htm">Achievements And Statistics</a></div>
+        <div style="float:right">Next: <a href="steam_set_stat_int.htm">steam_set_stat_int</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_clear_achievement
+-->
+  <!-- TAGS
+steam_clear_achievement
+-->
+</body>
+</html>

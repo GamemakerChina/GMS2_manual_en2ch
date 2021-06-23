@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>achievement_send_challenge</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_send_challenge" />
+  <meta name="rh-index-keywords" content="achievement_send_challenge,achievement_type_score_challenge ,achievement_type_achievement_challenge ,achievement_leaderboard_info" />
+  <meta name="search-keywords" content="achievement_send_challenge,achievement_type_score_challenge ,achievement_type_achievement_challenge ,achievement_leaderboard_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>achievement_send_challenge</h1>
+  <p>This function will send a challenge across the network to the chosen player. You can get the <i>playerid</i> using the <a href="achievement_load_friends.htm"><tt>achievement_load_friends()</tt></a> or the <a href="achievement_load_leaderboard.htm"><tt>achievement_load_leaderboard()</tt></a>    functions and you must also supply the <i>challengeid</i> which is the unique value given the challenge when you created it on your iTunes Connect or Google Play dashboard. You must also supply a score, and a short text message as well as set the
+    challenge <i>type</i>. This can be one of the following <b>constants</b>:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>achievement_type_score_challenge </td>
+        <td>A challenge based on the score value.</td>
+      </tr>
+      <tr>
+        <td>achievement_type_achievement_challenge </td>
+        <td>A challenge based on an achievement.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>This function will trigger a callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> for the player that is to receive the challenge, and in this event you will have a DS map referenced
+    in the variable <tt>async_load</tt>. The <i>id</i> key of this <tt>DS Map</tt> is used to identify the correct callback (there can be more than one trigger function for any given asynchronous event), and will be paired with the <b>constant</b> <tt>achievement_challenge_received</tt>    as well as a number of other key/value pairs for each player. The exact contents of the map are shown below:</p>
+  <p class="note"><b>NOTE</b>: that the user can also receive toast notifications for challenges received, but this will depend on the values you have chosen using the function <span style="font-size:1px;"><a href="achievement_show_challenge_notifications.htm"><tt style="font-size: 14px">achievement_show_challenge_notifications()</tt></a></span>.</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - For this function it should be <tt>achievement_leaderboard_info</tt></li>
+    <li>&quot;<b>playerid</b>&quot; - The player ID for the challenge.</li>
+    <li>&quot;<b>issuerid</b>&quot; - The issuer ID for the challenge.</li>
+    <li>&quot;<b>state</b>&quot; - The state of the challenge, which will have a value of 0 - 3 (as a string) for <i>invalid</i>, <i>pending</i>, <i>completed</i> or <i>declined</i>.</li>
+    <li>&quot;<b>message</b>&quot; - The text message for challenge.</li>
+    <li>&quot;<b>completeddate</b>&quot; - The completion date for challenge.</li>
+    <li>&quot;<b>issueddate</b>&quot; - The issue date for challenge.</li>
+    <li>&quot;<b>type</b>&quot; - The type of challenge given. Can be one of the two constants listed above</li>
+    <li>&quot;<b>identifier</b>&quot; - The identifying string for the challenge, as set on the provider dashboard</li>
+    <li>&quot;<b>score</b>&quot; - The score tied in with the challenge (if applicable).</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">achievement_send_challenge(playerid, challengeid, score, type, message)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>playerid</td>
+        <td>The unique ID of the player to challenge.</td>
+      </tr>
+      <tr>
+        <td>challengeid</td>
+        <td>The unique challenge ID (as found on the provider dashboard).</td>
+      </tr>
+      <tr>
+        <td>score</td>
+        <td>The score to beat.</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>the type of challenge to be issued - one of two <b>constants</b> given below.</td>
+      </tr>
+      <tr>
+        <td>message</td>
+        <td>The message to attach to the challenge.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Extended Example:</h4>
+  <p>To send a challenge over the network you would have this code:</p>
+  <p class="code">achievement_send_challenge(global.playerid[0], global.challengeid[0], score, achievement_type_score_challenge, &quot;Beat that sucker!&quot;);</p>
+  <p>This request will then trigger the <b>Social Event</b> in your game for the player that the challenge was directed at, and this can be dealt with in the following way:</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_challenge_received<br/>     {
+    <br/>     player_id = ds_map_find_value(async_load, &quot;playerid&quot;);<br/>     issuer_id = ds_map_find_value(async_load, &quot;issuerid&quot;);<br/>     state = ds_map_find_value(async_load, &quot;state&quot;);<br/>     message = ds_map_find_value(async_load,
+    &quot;message&quot;);<br/>     date_completed = ds_map_find_value(async_load, &quot;completeddate&quot;);<br/>     date_issued = ds_map_find_value(async_load, &quot;issueddate&quot;);<br/>     ach_type = ds_map_find_value(async_load, &quot;type&quot;);<br/>        ach_ident = ds_map_find_value(async_load, &quot;identifier&quot;);<br/>     ach_score = ds_map_find_value(async_load, &quot;score&quot;);<br/>     }
+  </p>
+  <p>The above code checks the returned <tt>DS Map</tt> in the <b>Social Asynchronous Event</b> and if its &quot;id&quot; matches the constant being checked, it then extracts the relevant values for each of the keys in the map and stores them in variables
+    for future use.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Achievements_And_Leaderboards.htm">Achievements And Leaderboards</a></div>
+        <div style="float:right">Next: <a href="achievement_reset.htm">achievement_reset</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_send_challenge
+achievement_type_score_challenge 
+achievement_type_achievement_challenge 
+achievement_leaderboard_info
+-->
+  <!-- TAGS
+achievement_send_challenge
+-->
+</body>
+</html>

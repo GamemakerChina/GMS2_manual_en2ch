@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_query_add_required_tag</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_query_add_required_tag" />
+  <meta name="rh-index-keywords" content="steam_ugc_query_add_required_tag" />
+  <meta name="search-keywords" content="steam_ugc_query_add_required_tag" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_query_add_required_tag</h1>
+  <p>This function can be used to further filter any given UGC query, specifically to search only those UGC items with the given tag. The query handle is the value returned when you created the query (using, for example, <a href="steam_ugc_create_query_user.htm"><tt>steam_ugc_create_query_user()</tt></a>)
+    and the second argument is a string you want to use as the tag to include. The function will return <tt>true</tt> if the query filter was correctly set, or <tt>false</tt> otherwise.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_ugc_query_add_required_tag(ugc_query_handle , tag_name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>ugc_query_handle</td>
+        <td>The query handle to use.</td>
+      </tr>
+      <tr>
+        <td>tag_name</td>
+        <td>The tag name to include (a string).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var query_handle = steam_ugc_create_query_all(ugc_query_RankedByTrend, ugc_match_Items, 1);<br/> steam_ugc_query_add_required_tag(query_handle, &quot;RPG&quot;);<br/> steam_ugc_query_set_return_long_description(query_handle, true);<br/> steam_ugc_query_set_allow_cached_response(query_handle,
+    true);<br/> query_ID = steam_ugc_send_query(query_handle);</p>
+  <p>The above code creates a query request and stores it&#39;s handle in a local variable for future use in the rest of the functions which further define the query request before sending the query.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Next: <a href="steam_ugc_query_add_excluded_tag.htm">steam_ugc_query_add_excluded_tag</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_query_add_required_tag
+-->
+  <!-- TAGS
+steam_ugc_query_add_required_tag
+-->
+</body>
+</html>

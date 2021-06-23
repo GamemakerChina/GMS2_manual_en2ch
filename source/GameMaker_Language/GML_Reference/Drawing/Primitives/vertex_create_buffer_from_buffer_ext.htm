@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>vertex_create_buffer_from_buffer_ext</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference for vertex_create_buffer_from_buffer_ext"/>
+  <meta name="rh-index-keywords" content="vertex_create_buffer_from_buffer_ext"/>
+  <meta name="search-keywords" content="vertex_create_buffer_from_buffer_ext"/>
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>vertex_create_buffer_from_buffer_ext</h1>
+  <p>As with the function <a href="vertex_create_buffer.htm"><tt>vertex_create_buffer()</tt></a>, this function will create a new vertex buffer, only now the vertex data it stores is copied from the regular buffer that is specified as the source. The buffer
+    is pre-formatted with the vertex format for building primitives for use with (for example) shaders, and you can also supply an offset within the source buffer to copy from and the number of vertices that the final buffer should have. Note that if
+    the number of vertices does not match those being copied you may get corrupted vertex data.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">vertex_create_buffer_from_buffer_ext(buffer, format, src_offset, vert_num);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>buffer</td>
+        <td>The buffer to create the vertex buffer from.</td>
+      </tr>
+      <tr>
+        <td>format</td>
+        <td>The primitive vertex format to use.</td>
+      </tr>
+      <tr>
+        <td>src_offset</td>
+        <td>The offset within the the source buffer to copy from.</td>
+      </tr>
+      <tr>
+        <td>vert_num</td>
+        <td>The number of vertices the buffer should have.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Pointer</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">vertex_format_begin();<br/> vertex_format_add_position_3d();
+    <br/> vertex_format_add_colour();
+    <br/> vertex_format_add_textcoord();
+    <br/> var my_format = vertex_format_end();<br/> v_buff = vertex_create_buffer_from_buffer(global.modelBuff, myFormat, 0, 512);</p>
+  <p>The above code will create a new vertex format then create a new vertex buffer from a previously created regular buffer, applying the custom vertex format to it with 0 offset. The function tells the new vertex buffer that it should expect 512 vertices.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
+        <div style="float:right">Next: <a href="vertex_get_buffer_size.htm">vertex_get_buffer_size</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+vertex_create_buffer_from_buffer_ext
+-->
+  <!-- TAGS
+vertex_create_buffer_from_buffer_ext
+-->
+
+</body></html>

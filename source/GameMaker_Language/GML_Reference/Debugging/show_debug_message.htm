@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>show_debug_message</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for show_debug_message" />
+  <meta name="rh-index-keywords" content="show_debug_message" />
+  <meta name="search-keywords" content="show_debug_message" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>show_debug_message</h1>
+  <p>This function will create a custom debug message that is shown in the compiler window at runtime. Note that the message can be <i>either</i> a string or a real number, but if you need both then the number will have to be converted to string first using
+    the <a href="../Strings/Strings.htm"><tt>string()</tt></a> function (see the example below) and that if the number has more than two decimal places then you should use <a href="../Strings/string_format.htm"><tt>string_format()</tt></a> to show them
+    as by default decimals are rounded to the nearest two decimal places (so &quot;1.2468&quot; would show as &quot;1.25&quot; in the output window).</p>
+  <p>Debug messages shown with this function will be shown in the <a href="../../../Introduction/The_Output_Window.htm">Compiler Output Window</a> at the bottom of the IDE as well as in the <a href="../../../IDE_Tools/The_Debugger.htm">Graph View</a> of
+    the debugger when running the game in Debug Mode. If you only want to see messages in Debug Mode then you should probably be using <a href="debug_event.htm"><tt>debug_event()</tt></a> instead.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">show_debug_message(string);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>string</td>
+        <td>The custom debug message to show.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4><b>Example:</b></h4>
+  <p class="code">if !instance_exists(obj_Exit)<br/>    {
+    <br/>    show_debug_message(&quot;Exit not created!&quot;);<br/>    show_debug_message(&quot;Error Num: &quot; + string(global.error));<br/>    game_end();
+    <br/>    }
+  </p>
+  <p>The above code checks to see if an instance exists and if it does not, a debug message is shown in the compile window and the game is ended.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
+        <div style="float:right">Next: <a href="show_debug_overlay.htm">show_debug_overlay</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+show_debug_message
+-->
+  <!-- TAGS
+show_debug_message
+-->
+</body>
+</html>

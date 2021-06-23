@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>tilemap_set_at_pixel</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page outlining the function tilemap_set_at_pixel" />
+  <meta name="rh-index-keywords" content="tilemap_set_at_pixel" />
+  <meta name="search-keywords" content="tilemap_set_at_pixel" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>tilemap_set_at_pixel</h1>
+  <p>This function can be used to set a cell within the tile map element on the layer to a new tile using the actual position of the tile to change within the room. You give the tile map element ID (which you get when you create a tile map element using
+    <a href="layer_tilemap_create.htm"><tt>layer_tilemap_create()</tt></a> or when you use the function <a href="layer_tilemap_get_id.htm"><tt>layer_tilemap_get_id()</tt></a>), and then the tile data to set as well as the position within the room. You
+    can retrieve tile data using the function <a href="tilemap_get_at_pixel.htm"><tt>tilemap_get_at_pixel()</tt></a> and then use the <tt>tile_</tt> functions to change it before setting it again using this function. The function will return <tt>true</tt>    if the tile was successfully set and <tt>false</tt> if there was an issue and it wasn&#39;t set.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">tilemap_set_at_pixel(tilemap_element_id, tiledata, x, y)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tilemap_element_id</td>
+        <td>The unique ID value of the tile map element to change</td>
+      </tr>
+      <tr>
+        <td>tiledata</td>
+        <td>The tile set data to set</td>
+      </tr>
+      <tr>
+        <td>xcell</td>
+        <td>The x position (in the room)</td>
+      </tr>
+      <tr>
+        <td>ycell</td>
+        <td>The y position (in the room)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Tiles_sky&quot;);<br/> var map_id = layer_tilemap_get_id(lay_id);<br/> var data = tilemap_get_at_pixel(map_id, 4, 4);<br/> data = tile_set_flip(data, true);<br/> tilemap_set_at_pixel(map_id, data, 4, 4);</p>
+  <p>The above code gets the ID for the tile map on the layer &quot;Tiles_Sky&quot; and then uses that to get the data from the tile at position (4, 4). This tile data is then flipped before being used to set the tile on the tile map again.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Tile_Map_Layers.htm">Tile Map Layers</a></div>
+        <div style="float:right">Next: <a href="tilemap_set_mask.htm">tilemap_set_mask</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+tilemap_set_at_pixel
+-->
+  <!-- TAGS
+tilemap_set_at_pixel
+-->
+</body>
+</html>

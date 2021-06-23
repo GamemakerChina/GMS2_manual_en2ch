@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>audio_sound_get_gain</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function audio_sound_get_gain" />
+  <meta name="rh-index-keywords" content="audio_sound_get_gain" />
+  <meta name="search-keywords" content="audio_sound_get_gain" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>audio_sound_get_gain</h1>
+  <p>This function will return the current gain value for the given sound. The sound can either be one referenced from an index for an individual sound being played which has been stored in a variable when using the <a href="audio_play_sound.htm"><tt>audio_play_sound()</tt></a> or
+    <a
+      href="audio_play_sound_at.htm"><tt>audio_play_sound_at()</tt></a> functions, or an actual sound asset from the Asset Browser. Gain is usually calculated as a value from 0 to 1, but on some platforms you can have a gain of greater than 1, although a value of 1 is considered
+      &quot;full volume&quot; and anything greater may introduce audio clipping.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">audio_sound_get_gain(index);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td>The index of the sound to get the gain of.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if audio_sound_get_gain(snd_Music) != 1<br/>    {
+    <br/>    audio_sound_gain(snd_Music, 1, 0);<br/>    }
+  </p>
+  <p>The above code will change the gain of the audio played from the sound indexed as &quot;snd_Music&quot; if its gain is not equal to 1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Next: <a href="audio_master_gain.htm">audio_master_gain</a></div>
+        <div style="float:right"> </div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_sound_get_gain
+-->
+  <!-- TAGS
+audio_sound_get_gain
+-->
+</body>
+</html>

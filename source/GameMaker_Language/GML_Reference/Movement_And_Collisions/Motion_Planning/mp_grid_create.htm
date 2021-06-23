@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>mp_grid_create</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="This page outlines the function mp_grid_create" />
+  <meta name="rh-index-keywords" content="mp_grid_create" />
+  <meta name="search-keywords" content="mp_grid_create" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>mp_grid_create</h1>
+  <p>With this function you can create an mp_grid for the motion planning functions. It returns an index that should be stored in a variable for use in all the other MP grid function calls. The x and y coordinates indicate the position of the top-left corner
+    of the grid, hcells and vcells indicate the number of horizontal and vertical cells to be created within the grid, and cell width and cell height indicate the size of the cells in pixels. You can create and maintain multiple grid structures at the
+    same moment if you need them for different things, but be aware that each grid will require memeory, and the more cells they have the more memory they will require. Also note that the MP functions are quite processor heavy to use so the more often
+    you call them and the higher the cell resolution then the more likely you are to have a drop in performance.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">mp_grid_create(left, top, hcells, vcells, cellwidth, cellheight):</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>left</td>
+        <td>Starting x coordinate of the mp_grid in the room</td>
+      </tr>
+      <tr>
+        <td>top</td>
+        <td>Starting y coordinate of the mp_grid in the room</td>
+      </tr>
+      <tr>
+        <td>hcells</td>
+        <td>Number of horizontal cells that the mp_grid will contain</td>
+      </tr>
+      <tr>
+        <td>vcells</td>
+        <td>Number of vertical cells that the mp_grid will contain</td>
+      </tr>
+      <tr>
+        <td>cellwidth</td>
+        <td>The width (in pixels) of each individual cell of the mp_grid</td>
+      </tr>
+      <tr>
+        <td>cellheight</td>
+        <td>The height (in pixels) of each individual cell of the mp_grid</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">global.grid = mp_grid_create(0, 0, room_width / 32, room_height /32, 32, 32);</p>
+  <p>The above code creates a global variable &quot;grid&quot;, then generates an mp_grid and assigns its index (id) to that variable for use in all further mp_grid function calls. The grid covers the room, with a cell resolution of 32x32 pixels. This means
+    that, for example, in a room that is 640x480, the grid would contain 300 cells: 20 horizontal cells (640 / 32) multiplied by 15 vertical cells (480 /32) gives 300 cells</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Motion_Planning.htm">Motion Planning</a></div>
+        <div style="float:right">Next: <a href="mp_grid_destroy.htm">mp_grid_destroy</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+mp_grid_create
+-->
+  <!-- TAGS
+mp_grid_create
+-->
+</body>
+</html>

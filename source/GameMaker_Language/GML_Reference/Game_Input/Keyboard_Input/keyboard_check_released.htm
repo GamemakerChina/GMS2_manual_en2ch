@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>keyboard_check_released</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for keyboard_check_released"/>
+  <meta name="rh-index-keywords" content="keyboard_check_released"/>
+  <meta name="search-keywords" content="keyboard_check_released"/>
+</head>
+
+<body>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>keyboard_check_released</h1>
+  <p>With this function you can check to see if a key has been released or not. Unlike the <a href="keyboard_check.htm"><tt>keyboard_check()</tt></a> function, this function will only run once for every time the key is lifted, so for it to trigger again,
+    the key must be first pressed and then released again. The function will take a keycode value as returned by the function <a href="../../Strings/ord.htm"><tt>ord()</tt></a> (only <i>capital</i> letters from A-Z or numbers from 0-9), or any of the
+    <tt>vk_*</tt> constants listed on the main <a href="Keyboard_Input.htm">Keyboard Input</a> page.</p>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">keyboard_check_released(key);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>key</td>
+        <td>The key to check the released state of.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4><b>Returns:</b></h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4><b>Example:</b></h4>
+  <p class="code">if keyboard_check_released(ord(&quot;P&quot;))<br/>    {
+    <br/>    instance_create_layer(0, 0, &quot;Controllers&quot;, obj_Pause);<br/>    }
+  </p>
+  <p>The above code will check to see if the &quot;P&quot; key has been released and if so, create an instance of &quot;obj_Pause&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Keyboard_Input.htm">Keyboard Input</a></div>
+        <div style="float:right">Next: <a href="keyboard_check_direct.htm">keyboard_check_direct</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+keyboard_check_released
+-->
+  <!-- TAGS
+keyboard_check_released
+-->
+
+</body></html>

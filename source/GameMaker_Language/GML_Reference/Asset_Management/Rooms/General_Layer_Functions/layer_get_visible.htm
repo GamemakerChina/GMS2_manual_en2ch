@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>layer_get_visible</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page outlining the function layer_get_visible" />
+  <meta name="rh-index-keywords" content="layer_get_visible" />
+  <meta name="search-keywords" content="layer_get_visible" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>layer_get_visible</h1>
+  <p>With this function you can check whether a layer is visible or not. You supply the layer ID (which you get when you create the layer using <a href="layer_create.htm"><tt>layer_create()</tt></a>) or the layer name (as a string - this will have a performance
+    impact) and the function will return <tt>true</tt> if it is visible, and <tt>false</tt> otherwise.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">layer_get_visible(layer_id)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>layer_id</td>
+        <td>The unique ID value of the layer to target (or the layer name as a string)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var lay_id = layer_get_id(&quot;Instances&quot;);<br/> if layer_get_visible(lay_id)<br/>    {
+    <br/>    layer_set_visible(lay_id, false);<br/>    }
+    <br/> else
+    <br/>    {
+    <br/>    layer_set_visible(lay_id, true);<br/>    }
+  </p>
+  <p>The above code gets the ID value for the layer named &quot;Instances&quot; in the room editor, then uses the ID to check if the layer is visible or not, toggling the layer visibility depending on the returned value.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
+        <div style="float:right">Next: <a href="layer_depth.htm">layer_depth</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+layer_get_visible
+-->
+  <!-- TAGS
+layer_get_visible
+-->
+</body>
+</html>

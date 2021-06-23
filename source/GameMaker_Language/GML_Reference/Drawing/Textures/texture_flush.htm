@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>texture_flush</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for ​texture_flush" />
+  <meta name="rh-index-keywords" content="texture_flush" />
+  <meta name="search-keywords" content="texture_flush" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>texture_flush</h1>
+  <p>This function can be used to &quot;flush&quot; a texture page or a group of texture pages, ie: remove them from VRAM when no longer required. You supply the unique <b>texture page ID</b> (as returned by the <tt>texturegroup_*</tt> functions) to flush
+    a single page, or you can supply a <b>texture group name</b> (as defined in the <a href="../../../../Settings/Texture_Groups.htm">Texture Group Editor</a>) to flush all the texture pages in the group.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">texture_flush(tex_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>tex_id</td>
+        <td>The texture page ID (an integer) <i>or</i> a texture group ID (a string)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _tex_array = texturegroup_get_textures( &quot;MainMenu&quot;);<br/> for (var i = 0; i &lt; array_length(_tex_array); ++i;)<br/>     {
+    <br/>     texture_flush(_tex_array[i]);
+    <br/>     }
+  </p>
+  <p>The above code will flush all the texture pages under the texture group &quot;MainMenu&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Textures.htm">Textures</a></div>
+        <div style="float:right">Next: <a href="texture_debug_messages.htm">texture_debug_messages</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+texture_flush
+-->
+  <!-- TAGS
+texture_flush
+-->
+</body>
+</html>

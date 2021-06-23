@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Push Notifications</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page detailing the Push Notification async event." />
+  <meta name="rh-index-keywords" content="Objects - Async Push Notification Event" />
+  <meta name="search-keywords" content="push notifications,push,ev_push_notification" />
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Push Notifications</h1>
+  <p><img alt="Push Notification Event" class="center" src="../../../assets/Images/Asset_Editors/Async_Push.png" />The Push Notification Event is one that is triggered by the <a class="glossterm" data-glossterm="callback" href="#">callback</a> from <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Push_Notifications/Push_Notifications.htm"><strong>push notifications</strong></a>    on the device OS, either from a local source using the function <a href="../../../GameMaker_Language/GML_Reference/Asynchronous_Functions/Push_Notifications/push_local_notification.htm"><span class="inline">push_local_notification()</span></a>, or
+    from a remote source (ie: your server). It generates a <a href="../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/DS_Maps.htm">DS Map</a> that is exclusive to this event and is stored in the special variable <a href="../../../GameMaker_Language/GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"> <span class="inline">async_load</span> </a>    (please see the individual functions that trigger asynchronous events for code examples that explain the use of this event in further detail). This DS map has the following keys:</p>
+  <ul class="dropspotlist">
+    <li class="dropspot">&quot;<span class="inline">type</span>&quot;: Value can be &quot;local&quot; for a device local notification, &quot;remote&quot; for a remote notification, or &quot;register&quot; for remote notification registration.</li>
+    <li class="dropspot">&quot;<span class="inline">status</span>&quot;: Value will be &quot;1&quot; for success or &quot;0&quot; for an error.</li>
+  </ul>
+  <p>There may be additional key entries based on the &quot;type&quot; returned and the &quot;status&quot; value. For &quot;status&quot;, if an error has been returned (&quot;0&quot;), then you will also have the following key:</p>
+  <ul class="dropspotlist">
+    <li class="dropspot">&quot;<span class="inline">error</span>&quot;: Contains details of the error received.</li>
+  </ul>
+  <p>If the &quot;status&quot; value is 1 (ie: no errors) then the DS map will contain the following additional values, depending on the value of the &quot;type&quot; key:</p>
+  <ul class="dropspotlist">
+    <li class="dropspot">&quot;<span class="inline">reg_id</span>&quot;: If the &quot;type&quot; received was &quot;register&quot;, then this key will hold the device registration id for remote notifications.</li>
+    <li class="dropspot">&quot;<span class="inline">data</span>&quot;: If the &quot;type&quot; received was &quot;local&quot; or &quot;remote&quot;, then this key will hold the string payload that you defined when you called the notification function.</li>
+  </ul>
+  <p>To understand this better, we have created a small example snippet below for you to look at. In this example we will send a local push notification using the following code:</p>
+  <p class="code">var fireTime = date_inc_day(date_current_datetime(), 1);<br/> var data = &quot;daily_reward&quot;;<br/> push_local_notification(fireTime, &quot;Ahoy!&quot;, &quot;Catch The Haggis Has A Present&quot;, data);</p>
+  <p>This will set a timer to &quot;push&quot; a notification to the device when one day has passed. When the day is up, if your game is either in the background or not running, a notification will be shown to the user with the given title and message (on
+    iOS, the game name is shown and the title is ignored), and then an asynchronous Push Notification Event will be called. Note that if the game is in the foreground when the time for the notification comes, it will <em>not </em>be shown, <strong>but the asynchronous event will still trigger</strong>.
+    In the event itself you would handle the callback something like this:</p>
+  <p class="code">var type = ds_map_find_value(async_load, &quot;type&quot;);<br/> var status = ds_map_find_value(async_load, &quot;status&quot;);<br/> if status == 0<br/>    {<br/>    //error of some kind<br/>    var error = ds_map_find_value(async_load, &quot;error&quot;);<br/>     show_debug_message(&quot;error=&quot; + string(error));<br/>    }<br/> else
+    <br/>    {<br/>    if type == &quot;register&quot;<br/>       {<br/>       global.reg_id = ds_map_find_value(async_load, &quot;reg_id&quot;);<br/>       }<br/>    else<br/>     {<br/>       var data = ds_map_find_value(async_load, &quot;data&quot;);<br/>             if data == &quot;daily_reward&quot;<br/>          {<br/>          global.Gold += 1000;<br/>          }<br/>       }<br/>    }</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Async_Events.htm">Async Events</a></div>
+        <div style="float:right">Next: <a href="Save_Load.htm">Save / Load</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+Asynchronous Push Notification Event
+ev_push_notification
+-->
+  <!-- TAGS
+ev_push_notification
+-->
+</body>
+</html>

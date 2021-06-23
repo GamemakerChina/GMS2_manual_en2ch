@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>JSDoc Script Comments</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains how JSDoc Script Comments work" />
+  <meta name="rh-index-keywords" content="Code Editor - JSDoc Comments,JSDoc" />
+  <meta name="search-keywords" content="JSDoc,JSDoc Comments" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>JSDoc Script Comments</h1>
+  <p>If you wish your custom functions to have code completion and to show the required arguments in a specific manner in the code editor, then you need to add some <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">JSDoc style</a>    comments. These comments are used to tell the auto-complete feature how the function should be used and filled out in the <a href="../Scripts.htm">script editor</a>.</p>
+  <p>The format for a typical function header would be to have the function name, the description of the function, and then the list of the different arguments (parameters) that the function takes, making sure to start each line with a triple backslash &quot;
+    <span class="inline">///</span>&quot; as that tells GameMaker Studio 2 to parse the comment as being JSDoc style. The comments themselves need to be given an identifier (preceded by &quot;<span class="inline">@</span>&quot;) and content, and the available
+    identifiers are as follows:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Identifier</th>
+        <th>Content</th>
+      </tr>
+      <tr>
+        <td><span class="inline">@function</span> / <span class="inline">@func</span></td>
+        <td>The full function name and arguments for the function, eg:<br/>
+          <span class="inline"><tt>my_func(x, y, colour)</tt></span>.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">@description</span> / <span class="inline">@desc</span></td>
+        <td>A general description of what the function does.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">@param</span> / <span class="inline">@arg</span> / <span class="inline">@argument</span></td>
+        <td>The argument type (optional), enclosed in <span class="inline">{}</span>, the argument name, and a short description (with spaces in between)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>To get an idea of how this would work when writing your own functions, let&#39;s take this basic example:</p>
+  <p class="code">function is_same_object(_id, _obj)<br/> {
+    <br/>     if (_id.object_index == _obj)<br/>     {<br/>         return true;<br/>     }<br/>     else return false;<br/> }
+  </p>
+  <p>All this script does is check to see if an instance has the same <span class="inline">object_index</span> as a given object and would be called simply as:</p>
+  <p class="code">if is_same_object(id, obj_Player)<br/> {
+    <br/>     instance_destroy()<br/> }
+  </p>
+  <p>However, writing that into the code editor will show you the argument variable names directly (<tt>_id</tt> and <tt>_obj</tt>) which in most cases is not very descriptive. You can use JSDoc to define custom argument names and descriptions, along with
+    information for the function as well:</p>
+  <p class="code">/// @function                is_same_object(id, object)<br/> /// @description             Compare an instance index with an object index.<br/> /// @param {real} inst_id    The unique instance ID value of the instance to check.<br/> /// @param {real}
+    object_id  The object index to be checked against.<br/>
+    <br/> function is_same_object(_id, _obj)<br/> {
+    <br/>     if (_id.object_index == _obj)<br/>     {<br/>         return true;<br/>     }<br/>     else return false;<br/> }
+  </p>
+  <p>Now, when calling this function anywhere in your project, you will see the new argument names that were entered in the JSDoc comments:</p>
+  <p><img alt="JSDoc Example" class="center" height="652" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Example.png" width="672" /></p>
+  <p>In the image above, the top part shows the function in the auto-complete and the bottom part shows how the argument helper at the bottom works. Note that both the optional &quot;type&quot; and the obligatory &quot;description&quot; parts of <span class="inline">@param</span>    are not displayed by default in the IDE code complete, and to see them you must activate the options in the <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Language_Preferences.htm">GML Preferences</a>.</p>
+  <p>You can wrap an argument name in <tt>[]</tt> brackets to indicate that it is optional. The code editor will then expect any number of arguments between the minimum required arguments and the total number of arguments. For example, see the following
+    function:</p>
+  <p class="code">/// @function    animate_position(end_x, end_y, start_x, start_y)<br/> /// @desc        Animates the instance to ending point, from optional starting point<br/> /// @arg end_x<br/> /// @arg end_y<br/> /// @arg [start_x]<br/> /// @arg [start_y]<br/>
+    <br/> function animate_position (x1, y1, x2, y2)<br/> {
+    <br/>     // Function code<br/> }
+  </p>
+  <p>The <tt>start_x</tt> and <tt>start_y</tt> arguments are marked as optional, which means the code editor will now expect 2 to 4 arguments, as can be seen in the warning message:</p>
+  <p><img class="center" height="150" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Optional.png" width="537" /></p>
+  <p class="note"><strong>NOTE</strong>: You will get the same behaviour if you use optional arguments in the function declaration. See <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">script functions</a> for more information.</p>
+  <p>Since scripts can have multiple functions in them, you can add JSDoc comments for each of them before its declaration:</p>
+  <p><img alt="Multiple Functions With JSDoc Comments Example" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_MultipleFunctions.png" /></p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Scripts.htm">The Script Editor</a></div>
+        <div style="float:right">Next: <a href="Code_Snippets.htm">Code Snippets</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+JSDoc Script Comments
+-->
+  <!-- TAGS
+jsdoc_comments
+-->
+</body>
+</html>

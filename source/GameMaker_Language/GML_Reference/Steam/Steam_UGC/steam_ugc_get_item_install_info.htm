@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_get_item_install_info</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_get_item_install_info" />
+  <meta name="rh-index-keywords" content="steam_ugc_get_item_install_info" />
+  <meta name="search-keywords" content="steam_ugc_get_item_install_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_get_item_install_info</h1>
+  <p>This function can be used to retrieve information about any given published file item that has been subscribed to and downloaded to the Steam local storage area for your game. You give the item ID and supply the index to an empty <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a>    which will then be populated with the following key/value pairs if the item exists:</p>
+  <ul class="colour">
+    <li>&quot;<b>size_on_disk</b>&quot; - The file size on disk (in bytes)</li>
+    <li>&quot;<b>legacy_item</b>&quot; - Will be <tt>true</tt> or <tt>false</tt> depending on whether it is a legacy file or not.</li>
+    <li>&quot;<b>folder</b>&quot; - This is the full path to the installed content ( please refer to &quot;Item Installation&quot; in Steam SDK docs, as &quot;legacy&quot; items uploaded with the old method, are treated differently).</li>
+  </ul>
+  <p>If the item exists then the function will return <tt>true</tt> and populate the map, otherwise it will return <tt>false</tt> and the map will remain empty.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_ugc_get_item_install_info(published_file_id, info_map);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>published_file_id</td>
+        <td>The unique handle for the UGC to be updated.</td>
+      </tr>
+      <tr>
+        <td>info_map</td>
+        <td>A (previously created) DS map index.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var item_map = ds_map_create();<br/> steam_ugc_get_item_install_info(global.fileID, item_map);</p>
+  <p>The above code will query the install status of the item indexed in the global variable &quot;fileID&quot;, using a <tt>DS Map</tt> to store the information.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Next: <a href="steam_ugc_get_item_update_info.htm">steam_ugc_get_item_update_info</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_get_item_install_info
+-->
+  <!-- TAGS
+steam_ugc_get_item_install_info
+-->
+</body>
+</html>

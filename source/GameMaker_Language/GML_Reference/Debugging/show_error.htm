@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>show_error</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for show_error" />
+  <meta name="rh-index-keywords" content="show_error" />
+  <meta name="search-keywords" content="show_error" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>show_error</h1>
+  <p>This function will show a custom string as an error message and give the option to abort the game afterwards if necessary.</p>
+  <p class="note"><b>NOTE:</b> This function is for debug use <strong>only</strong>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">show_error(str, abort);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>str</td>
+        <td>The string to show in the pop-up message.</td>
+      </tr>
+      <tr>
+        <td>abort</td>
+        <td>Whether to abort (true) or not (false).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if (room != rm_Dungeon)<br/>     {<br/>     show_error(&quot;Error: Went to wrong area. Aborting game.&quot;, true);<br/>     }</p>
+  <p>The above code will check to see if the room that the player is in is &quot;rm_Dungeon&quot; and if not it will show an error message and force the user to abort the game.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
+        <div style="float:right">Next: <a href="show_message.htm">show_message</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+show_error
+-->
+  <!-- TAGS
+show_error
+-->
+</body>
+</html>

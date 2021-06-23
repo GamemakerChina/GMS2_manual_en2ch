@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>typeof</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function typeof" />
+  <meta name="rh-index-keywords" content="typeof" />
+  <meta name="search-keywords" content="typeof" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>typeof</h1>
+  <p>This function returns the data type of any given variable as a string. The possible return values are listed in the table below:</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>String</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>number</td>
+        <td>The variable holds a real (floating point) number - this can include <tt>NaN</tt> and <tt>infinity</tt></td>
+      </tr>
+      <tr>
+        <td>string</td>
+        <td>The variable holds a string</td>
+      </tr>
+      <tr>
+        <td>array</td>
+        <td>The variable references an array</td>
+      </tr>
+      <tr>
+        <td>bool</td>
+        <td>The variable holds a boolean (<tt>true</tt> / <tt>false</tt>)</td>
+      </tr>
+      <tr>
+        <td>int32</td>
+        <td>The variable holds a 32bit integer</td>
+      </tr>
+      <tr>
+        <td>int64</td>
+        <td>The variable holds a 64 bit integer</td>
+      </tr>
+      <tr>
+        <td>ptr</td>
+        <td>The variable holds a pointer</td>
+      </tr>
+      <tr>
+        <td>undefined</td>
+        <td>The variable is undefined</td>
+      </tr>
+      <tr>
+        <td>null</td>
+        <td>The variable holds a null value (this should not be seen normally)</td>
+      </tr>
+      <tr>
+        <td>vec3</td>
+        <td>The variable holds a 3 value vector</td>
+      </tr>
+      <tr>
+        <td>vec4</td>
+        <td>The variable holds a 4 value vector</td>
+      </tr>
+      <tr>
+        <td>method</td>
+        <td>The variable holds a function reference</td>
+      </tr>
+      <tr>
+        <td>struct</td>
+        <td>The variable holds a struct reference</td>
+      </tr>
+      <tr>
+        <td>unknown</td>
+        <td>Value is unknown. This should <i>never</i> be seen and signifies that something has gone wrong at the most basic level like a memory overwrite</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p>Please note that there are cases when this function may not return the correct value for a <strong>method</strong>. Consider the following two function definitions:</p>
+  <p class="code">a = function()<br/>     {<br/>     // something<br/>     }<br/>
+    <br/> function b()<br/>     {<br/>     // Something<br/>     }</p>
+  <p>Technically, these are both considered methods as they are binding a function to an instance scope variable, however calling <span class="inline">typeof()</span> on function <span class="inline">b</span> will return &quot;number&quot; and <em>not </em>&quot;method&quot;,
+    while calling it on <span class="inline">a</span> will return &quot;method&quot;. This is due to the fact that methods created like the one for <span class="inline">b</span> are assigned script indices (which are integer values), since this is the
+    way that the compiler recognises script functions, even if the function was not defined in a script.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">typeof(variable);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>variable</td>
+        <td>The variable to get the data type of.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">String (see table, above)</p>
+  <p> </p>
+  <h4><b>Example:</b></h4>
+  <p class="code">var _str = typeof(global.ExtensionInput);<br/> show_debug_message(&quot; <strong>global.ExtensionInput is a &quot; + _str);</strong></p>
+  <p>The above code gets the data type held by the given global variable and returns the string to a local variable which is then used to output a message to the console.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">Next: <a href="bool.htm">bool</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+typeof
+-->
+  <!-- TAGS
+typeof
+-->
+</body>
+</html>

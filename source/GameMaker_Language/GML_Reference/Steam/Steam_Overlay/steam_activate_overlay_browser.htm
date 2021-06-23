@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_activate_overlay_browser</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_activate_overlay_browser" />
+  <meta name="rh-index-keywords" content="steam_activate_overlay_browser" />
+  <meta name="search-keywords" content="steam_activate_overlay_browser" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_activate_overlay_browser</h1>
+  <p>With this function you can open the Steam game overlay to its web browser and then have it load the specified URL. you need to use the <i>full</i> URL as a string for this to resolve correctly, for example: &quot;http://www.steamgames.com/&quot;.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_activate_overlay(url);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>url</td>
+        <td>The (full) URL for the overlay to open.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if keyboard_check_pressed(vk_f1)<br/>     {
+    <br/>     steam_activate_overlay_browser(&quot;http://www.steamgames.com/&quot;);
+    <br/>     }
+  </p>
+  <p>The above code polls the keyboard for the F1 key and if it is then Steam overlay will be opened and resolve to the given URL.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_Overlay.htm">Steam Overlay</a></div>
+        <div style="float:right">Next: <a href="steam_activate_overlay_store.htm">steam_activate_overlay_store</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_activate_overlay_browser
+-->
+  <!-- TAGS
+steam_activate_overlay_browser
+-->
+</body>
+</html>

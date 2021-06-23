@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>ds_priority_delete_max</title>
+  <meta name="generator" content="Adobe RoboHelp 2019"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Reference page for ds_priority_delete_max"/>
+  <meta name="rh-index-keywords" content="ds_priority_delete_max"/>
+  <meta name="search-keywords" content="ds_priority_delete_max"/>
+</head>
+
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>ds_priority_delete_max</h1>
+  <p>This function will return the value that has the highest priority in the queue and then remove the value (and priority) from the data structure. If more than one value has the same priority, then any one of them could be returned in any order, but all
+    other values with the same priority will still be in the queue.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">ds_priority_delete_max(id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>id</td>
+        <td>The id of the priority queue to use.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Data type stored in the priority</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if ai_move<br/>     {
+    <br/>     script_execute(ds_priority_delete_max(ai_priority));
+    <br/>     }
+  </p>
+  <p>The above code checks an instance variable and if it returns <tt>true</tt> it will execute a script indexed in the priority queue with the highest priority value and then remove that script from the queue.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="DS_Priority_Queues.htm">DS Priority Queues</a></div>
+        <div style="float:right">Next: <a href="ds_priority_delete_min.htm">ds_priority_delete_min</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+ds_priority_delete_max
+-->
+  <!-- TAGS
+ds_priority_delete_max
+-->
+
+</body></html>

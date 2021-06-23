@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_user_owns_dlc</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_user_owns_dlc" />
+  <meta name="rh-index-keywords" content="steam_user_owns_dlc" />
+  <meta name="search-keywords" content="steam_user_owns_dlc" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_user_owns_dlc</h1>
+  <p>If your game has DLC created for it, you can use this function to check and see whether the user has bought it before accessing any files associated with it. The function returns <tt>true</tt> if the player owns the content, and <tt>false</tt> if the
+    user does not, but note that even if the user owns the DLC, they may not have it installed, so you should use the additional function of <a href="steam_user_installed_dlc.htm"><tt>steam_user_installed_dlc()</tt></a> to check that it is installed as
+    well before using it. Note that Steam IDs can be large numbers and so you may need to cast your ID value as an <a href="../../Variable_Functions/int64.htm"><tt>int64()</tt></a> before supplying it to the function.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_user_owns_dlc(dlc_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>dlc_id</td>
+        <td>The unique identifier for the DLC to be checked (an integer int64).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">global.Level_Max = 100;<br/> if steam_user_owns_dlc(10354)<br/>     {
+    <br/>     if steam_user_installed_dlc(10354)<br/>         {
+    <br/>         global.Level_max = 200;<br/>         }
+    <br/>     }
+  </p>
+  <p>The above code will check to see if the user has bought, and installed, the DLC with the id 10354, and if so set a global variable to a different value.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Steam_DLC.htm">DLC</a></div>
+        <div style="float:right">Next: <a href="steam_user_installed_dlc.htm">steam_user_installed_dlc</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_user_owns_dlc
+-->
+  <!-- TAGS
+steam_user_owns_dlc
+-->
+</body>
+</html>

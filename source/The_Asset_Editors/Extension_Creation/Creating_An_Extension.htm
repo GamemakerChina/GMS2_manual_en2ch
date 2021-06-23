@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Creating An Extension</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page detailing how to create a generic extension" />
+  <meta name="rh-index-keywords" content="Extensions - Creating An Extension" />
+  <meta name="search-keywords" content="creating extensions" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Creating An Extension</h1>
+  <p>To create an extension you first need to right click <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> on the Asset Browser and select <strong>Create Extension</strong>. That will open the main extension properties window:</p>
+  <p><img alt="Extension Properties" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions.png" />This is now ready for you to add the required files and functions, and you can also give the extension a name here (following the usual convention
+    of only letters/numbers and no special symbols except the underbar &quot;_&quot;). You can also set the version number for the extension should you wish to.</p>
+  <p>To add a file to the new extension you need to click the menu icon <img alt="Estension Options Icon" class="icon" src="../../assets/Images/Icons/Icon_ExtensionMenu.png" /> and select either a placeholder file or the actual file that is required for
+    the target platform:</p>
+  <p class="dropspot"><img alt="Add Files To An Extension" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_Files.png" /></p>
+  <p>A &quot;Generic&quot; placeholder is a file that can be of any type, except those required by the specific platforms (so no <span class="inline">DLL</span> or <span class="inline">SO </span>files, for example), and it will not be used except as a &quot;linker&quot;
+    file to connect a set of functions or constants with the given extension (generally it is only for use with iOS and Android extensions, which is explained in the sections below for those targets). You can also add &quot;GML&quot; and &quot;JS&quot;
+    placeholder files for more specific use.</p>
+  <p>Normally you won&#39;t need to use placeholders unless building for iOS and Android, so you would choose the <em>Add Files</em> option to add any one of the following files depending on the target platform they are for:</p>
+  <ul class="colour">
+    <li class="dropspot"><span class="inline">.gml</span>: This is a file made only with the GameMaker Language and is compatible with all platforms.</li>
+    <li class="dropspot"><span class="inline">.js</span>: This is a JavaScript extension format and is only compatible with the JS target modules (HTML5).</li>
+    <li class="dropspot"><span class="inline">.dll</span>: This a dynamic-link library extension format and is only compatible with the Windows, UWP and Xbox One targets (each target will need a different <span class="inline">*.dll</span> file compatible with its specifications).</li>
+    <li class="dropspot"><span class="inline">.dylib</span>: This is the Mac equivalent of a DLL and is only compatible with Mac target (not iOS).</li>
+    <li class="dropspot"><span class="inline">.so</span>: This is the Linux equivalent of a DLL and is only compatible with the Ubuntu (Linux) target.</li>
+    <li class="dropspot"><span class="inline">.prx</span>: This is a file format for adding functionality PS4 target (each target will need a different <span class="inline">*.prx</span> file compatible with its specifications).</li>
+  </ul>
+  <p>You&#39;ll notice that there is no file type for <strong>Android </strong>nor <strong>iOS</strong>, which is because their setup is slightly different. Further down you can find explanations on how to set them up but first let&#39;s look at creating
+    a general GML extension for any of the target platforms, since the process is the same for all of them.</p>
+  <p>To start with you need to create the file that is going to be used. For a GML extension, this would be a text file (saved with the <span class="inline">.gml</span> extension) and would be formatted something like this:</p>
+  <p class="code">#define c_alice_blue<br/> return make_color_rgb(240,248,255);<br/>
+    <br/>
+    <br/> #define instance_create_colour<br/> var i = instance_create_layer(argument0, argument1, argument2);<br/> with (i)<br/>     {<br/>     image_blend = argument3;<br/>     }<br/> return i;</p>
+  <p>As you can see we start each section with a <span class="inline">#define</span> call, which in the example above is used to define two functions. You don&#39;t need to supply argument fields for the functions as this will be added later, simply use
+    the define then the name of the function and go ahead and add the GML to match. If you were writing a DLL or JS extension, then the process would be similar but in the correct language for the extension file format.</p>
+  <p>Once you have done that you need to add the file to the extension (explained above) which will chain a new window to the Extensions Properties for the File Properties:</p>
+  <p class="dropspot"><img alt="File Property Window" class="center" height="553" src="../../assets/Images/Asset_Editors/Editor_Extensions_FileProperties.png" width="1050" /></p>
+  <p>Here you would select the target platform for the extension (for GM you would select them all), as well as rename the extension file and set a few other details, which we&#39;ll cover in a moment. The Editor should be automatically populated with the
+    functions included in our GML file, but if it isn&#39;t then you can add them by clicking the functions menu button <img alt="Estension Options Icon" class="icon" src="../../assets/Images/Icons/Icon_ExtensionMenu.png" /> and select what you require:</p>
+  <p class="dropspot"><img alt="Add functions/Constants To An Extension" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_AddFunctions.png" /></p>
+  <p>Selecting <em>Add Function</em> will then permit you to add a function to the extension which can then be called in GameMaker Studio 2 as you would any of the built in functions. <span>Once the function has been added, the following window will open for you to define the function properties in (or you can double-click the function to open it):</span></p>
+  <p class="dropspot"><img alt="Function Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_FunctionEditor.png" /></p>
+  <p>In the image above we have populated the function editor with the details for the function <span class="inline">instance_create_colour()</span> that we defined in our GML extension script (the function editor isn&#39;t just for defining GML functions
+    and will be the same for any other extension type). You can see we have given the function a name, which is what you would call when using the function in your project, and this name doesn&#39;t have to match the one used in the extension - you can
+    set it to anything you want and then use the <em>External Name</em> option to link it to the actual name defined in the extension. Below that you have a section for defining the <em>Help </em>text, which is the text that will be used in the code complete
+    pop up and the helper text at the bottom of the code editor.</p>
+  <p>Next you can define the <em>Return Type</em>, which can be a <strong>double </strong>(real number <a class="glossterm" data-glossterm="floating point" href="#">floating point</a> value) or a string - if there is nothing returned by the external function
+    then this does not matter - and under that you define the arguments that the function will take.</p>
+  <p>Arguments can be either <strong>doubles </strong>or <strong>strings</strong>, and you can add them by clicking the add button <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18" /> and
+    remove them by clicking the remove button <img alt="Remove Argument Icon" class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png" />. If your function can take variable arguments, you should also make sure to check the <em>Variable Length Arguments</em>    checkbox at the bottom.</p>
+  <p class="note"><strong>NOTE</strong>: If you are creating a Windows <span class="inline">dll </span>file and it has more than four arguments, <strong>all arguments must be of the same type</strong>.</p>
+  <p>Once you have done all that then the function is ready to be used in a project and it will show up in auto complete and be colour coded too. Defined functions can also be set as <strong>Init Functions</strong> or <strong>Final Functions</strong>, meaning
+    that they will be called automatically when the game starts (Init) and when the game ends (Final).</p>
+  <p class="note"><strong>IMPORTANT!</strong> All platforms support the Init function call, <strong>but not all platforms will perform the Final function call.</strong> This is because certain platforms will simply close the app without giving any notice or time for
+    this function to be called. The platforms that are affected by this are: <strong>iOS</strong>, <strong>Android</strong>, <strong>HTML5</strong>, <strong>PlayStation </strong>and <strong>XboxOne</strong>.</p>
+  <p>The other option you have is to create a <strong>Macro</strong>. A macro can be a <a class="glossterm" data-glossterm="constant" href="#">constant</a> value or a single code snippet (for more information on macros, please see here). For example, we
+    could remove the defined function from our example GML extension above for the colour c_alice_blue and make it a macro instead. To make a macro, simply click the Macros button in the Extension Properties window:</p>
+  <p class="dropspot"><img alt="Macro Editor" class="center" src="../../assets/Images/Asset_Editors/Editor_Extensions_MacroEditor.png" /></p>
+  <p>The editor here is pretty much self explanatory - you give the name of the macro/constant and the value, or a short line of code. Note that if the macro is a line of code <strong>it will be evaluated every time the macro is called</strong>.</p>
+  <p>When working with multiple target platforms, it is worth noting that you can create a single extension with only one set of functions/macros which will work on <em>all </em>platforms. This is achieved by adding only one of the link libraries to your
+    game as an extension and placing the other(s) into the list of <strong>Proxy Files</strong> from the <strong>Extension Properties</strong> window. For example, say you have a Windows extension with the <span class="inline"> <strong>dll </strong></span>&quot;
+    <span class="inline">Haggis.dll</span>&quot;. You would simply replicate this <span class="inline"> <strong>dll</strong></span> as a Mac <span class="inline"> <strong>DyLib</strong></span>, naming it &quot; <span class="inline"> <strong>libHaggis.dylib</strong></span>&quot;
+    and making sure that the internal function names match those of the original Windows <span class="inline"> <strong>dll</strong></span>. This <strong> <span class="inline">DyLib</span> </strong>would then be added into the Proxy Files and set to export
+    when the game is run on the Mac target, and GameMaker Studio 2 will automatically use it when the extension functions are called.</p>
+  <p>To add a proxy file, simply click the <img alt="Add Argument Icon" class="icon" height="18" src="../../assets/Images/Icons/Icon_AddArgument.png" width="18" /> button in the Extension Properties window for the extension and browse to the file location.
+    Once it is added you may need to change the extension target to the appropriate module, and when you next run your game it will be included as a proxy for that platform. You can remove proxy files too by clicking the <img alt="Remove Argument Icon"
+      class="icon" src="../../assets/Images/Icons/Icon_RemoveArgument.png" /> button, which will remove the last one in the list each press.</p>
+  <p>Once you have added your proxy files they will be stored in the project files of your game, in the Extensions folder (you can find them easily by right-clicking <img alt="RMB Icon" class="icon" src="../../assets/Images/Icons/Icon_RMB.png" /> on the
+    extension and selecting <em>Open in Explorer</em>), so if you need to edit them, you should edit the copied files that are bundled with the game and not the originals, as GameMaker Studio 2 will be using the ones in the project for compiling.</p>
+  <p>It is very important that your proxy files follow the naming conventions listed below, as GameMaker Studio 2 will parse these names and assign the target module for the file according to its extension and name and will automatically link the files for
+    you. If you do not follow these conventions your game may not work at runtime, as GameMaker Studio 2 will not be able to work out which file to use or it will not load the file properly.</p>
+  <p>The naming conventions for each target platform are given below:</p>
+  <p class="dropspot">  </p>
+  <table>
+    <tbody>
+      <tr>
+        <th style="">Platform</th>
+        <th style="">Names</th>
+      </tr>
+      <tr>
+        <td style="">Windows 32bit Runtime</td>
+        <td style=""><span class="inline">&lt;<em>Name</em>&gt;.dll, lib&lt;<em>Name</em>&gt;.dll</span></td>
+      </tr>
+      <tr>
+        <td style="">Windows 64bit Runtime</td>
+        <td style=""><span class="inline">&lt;N<em>ame</em>&gt;_x64.dll, lib&lt;<em>Name</em>&gt;_x64.dll</span></td>
+      </tr>
+      <tr>
+        <td style="">Ubuntu (Linux)</td>
+        <td style=""><span class="inline">&lt;<em>Name</em>&gt;.so, lib&lt;<em>Name</em>&gt;.so, &lt;<em>Name</em>&gt;_linux.so, lib&lt;<em>Name</em>&gt;_linux.so</span></td>
+      </tr>
+      <tr>
+        <td style="">macOS</td>
+        <td style=""><span class="inline">&lt;<em>Name</em>&gt;.dylib, lib&lt;Name&gt;.dylib</span></td>
+      </tr>
+      <tr>
+        <td style="">HTML5</td>
+        <td style=""><span class="inline">&lt;<em>Name</em>&gt;.js</span></td>
+      </tr>
+      <tr>
+        <td style="">PS4</td>
+        <td style=""><span class="inline">&lt;<em>Name</em>&gt;.prx, lib&lt; <em>Name</em>&gt;.prx, &lt; <em>Name</em>&gt;_ps4.prx, lib&lt; <em>Name</em>&gt;_ps4.prx</span></td>
+      </tr>
+      <tr>
+        <td style="">XBox One</td>
+        <td style=""><span class="inline">&lt;<em>Name</em>&gt;_xboxone.dll</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="dropspot"> </p>
+  <p>Using the conventions above, you would swap out the <span class="inline">&lt;<em>Name</em>&gt;</span> part for the name of the base file that you are adding the proxy files for.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Extensions.htm">The Extension Editor</a></div>
+        <div style="float:right">Next: <a href="Android_Extensions.htm">Android Extensions</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+Creating Extensions
+-->
+  <!-- TAGS
+extensions_create
+-->
+</body>
+</html>

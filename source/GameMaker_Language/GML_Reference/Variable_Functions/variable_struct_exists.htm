@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>variable_struct_exists</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining the function variable_struct_exists" />
+  <meta name="rh-index-keywords" content="variable_struct_exists" />
+  <meta name="search-keywords" content="variable_struct_exists" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>variable_struct_exists</h1>
+  <p>With this function you can check whether a variable exists within the given struct or not. You supply the struct reference to use as well as the variable name to check for <i>as a string</i> (see example code below). The function
+    will return <tt>true</tt> if a variable with the given name exists for the struct and <tt>false</tt> otherwise.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">variable_struct_exists(struct, name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>struct</td>
+        <td>The struct reference to check</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>The name of the struct variable to check for (as a string)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if !variable_struct_exists(mystruct, &quot;shields&quot;))<br/> {
+    <br/> mystruct.shields = 0;<br/> }
+  </p>
+  <p>The above code will check to see if the variable called &quot;shields&quot; exists in the given struct and if it does not then it is created and initialised to 0.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
+        <div style="float:right">Next: <a href="variable_struct_get.htm">variable_struct_get</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+variable_struct_exists
+-->
+  <!-- TAGS
+variable_struct_exists
+-->
+</body>
+</html>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>font_get_info</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Gurpreet S. Matharoo" />
+  <meta name="topic-comment" content="Page outlining the function font_get_info" />
+  <meta name="rh-index-keywords" content="font_get_info" />
+  <meta name="search-keywords" content="font_get_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>font_get_info</h1>
+  <p>This function is used to retrieve information for the given font. You supply a font index (which can be an asset added through the <a href="../../../../Introduction/The_Asset_Browser.htm">Asset Browser</a> or a font <a href="font_add.htm">added</a>    at runtime) and the function returns a <a href="../../../GML_Overview/Structs.htm">struct</a> with the following variables:</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Variable Name</th>
+        <th style="">Data Type</th>
+        <th style="">Description</th>
+      </tr>
+      <tr>
+        <td><strong>ascenderOffset</strong></td>
+        <td style="">real</td>
+        <td style="">The maximum offset from the baseline to the top of the font (in pixels)</td>
+      </tr>
+      <tr>
+        <td><strong>size</strong></td>
+        <td style="">real</td>
+        <td style="">The approximate size of the font (in pixels)</td>
+      </tr>
+      <tr>
+        <td><strong>spriteIndex</strong></td>
+        <td style="">asset (real)</td>
+        <td style="">The sprite index for the font if it was <a href="font_add_sprite.htm">created from a sprite</a>, otherwise -1</td>
+      </tr>
+      <tr>
+        <td><strong>texture</strong></td>
+        <td style="">asset (real)</td>
+        <td style="">-1 if the font was created from a sprite, otherwise the texture ID of the font</td>
+      </tr>
+      <tr>
+        <td><strong>name</strong></td>
+        <td style="">string</td>
+        <td style="">The name of the font</td>
+      </tr>
+      <tr>
+        <td><strong>bold</strong></td>
+        <td style="">boolean</td>
+        <td style=""><tt>true</tt> if the font is bold, otherwise <tt>false</tt> <em>(see <strong>NOTE </strong>below)</em></td>
+      </tr>
+      <tr>
+        <td><strong>italic</strong></td>
+        <td style="">boolean</td>
+        <td style=""><tt>true</tt> if the font is italic, otherwise <tt>false</tt><em> (see <strong>NOTE </strong>below)</em></td>
+      </tr>
+      <tr>
+        <td><strong>glyphs</strong></td>
+        <td style="">struct</td>
+        <td style="">A struct containing information for each glyph in the font (more information is given <a href="#glyphs">below</a>)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note"><strong>NOTE</strong>: The <tt><strong>bold</strong></tt> and <tt>i</tt><tt>talic</tt> variables only reflect the user&#39;s settings for the font, so they may not be accurate for fonts that are bold or italic by default.</p>
+  <p>If the supplied font doesn&#39;t exist, the function will return <tt>undefined</tt>.</p>
+  <p>Also note that changing the values of any of these variables, or any variables contained within the <tt>glyphs</tt> struct, will not change how the font is rendered, so this information should be considered <strong>read-only</strong>.</p>
+  <h2 id="glyphs">Glyphs Struct</h2>
+  <p>The <tt>glyphs</tt> variable in the returned struct will be a struct on its own, containing information for each glyph included in the font. Each variable in this struct will be a glyph&#39;s character name, which will hold a struct containing information
+    for that glyph. You can imagine these nested structs in the following format (starting from the main struct):</p>
+  <p class="code">{<br/>     glyphs:<br/>     {<br/>         A: {},<br/>         B: {},<br/>         C: {},<br/>         // ...other glyphs<br/>     },<br/>     // ...other font info<br/> }
+  </p>
+  <p>You can use a glyph&#39;s character name to retrieve its information from the struct, such as in the following code:</p>
+  <p class="code">var _font_info = font_get_info(Font1);<br/>
+    <br/> var _info_A = _font_info.glyphs[$ &quot;A&quot;]; // $ is a struct accessor<br/>
+    <br/> show_debug_message(_info_A);
+  </p>
+  <p>The code above gets the glyph struct for the &quot;A&quot; character and prints it to the output log. You can also replace the string (<tt>&quot;A&quot;</tt>) with a variable that holds a string, which will allow you to get information for any glyph through
+    that variable at runtime.</p>
+  <p>The struct returned for a glyph will contain the following variables:</p>
+  <p class="note"><strong>NOTE</strong>: On HTML5, the glyphs struct will be empty for any loaded file fonts (such as <tt>*.ttf</tt> or <tt>*.otf</tt>) as the runtime will not have information on those glyphs.</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Variable Name</th>
+        <th style="">Data Type</th>
+        <th style="">Description</th>
+      </tr>
+      <tr>
+        <td><strong>char</strong></td>
+        <td style="">real</td>
+        <td style="">If the font was created from a sprite, this will be the image index of the glyph from that sprite, otherwise it will be its Unicode character number<br/>
+          <br/>
+          <em><strong>Note</strong>: All variables below this will not be present in the struct if the font was created from a sprite</em></td>
+      </tr>
+      <tr>
+        <td><strong>x</strong></td>
+        <td style="">real</td>
+        <td style="">The X position of the glyph on the texture page (in texels)</td>
+      </tr>
+      <tr>
+        <td><strong>y</strong></td>
+        <td style="">real</td>
+        <td style="">The Y position of the glyph on the texture page (in texels)</td>
+      </tr>
+      <tr>
+        <td><strong>w</strong></td>
+        <td style="">real</td>
+        <td style="">The width of the glyph on the texture page (in texels)</td>
+      </tr>
+      <tr>
+        <td><strong>h</strong></td>
+        <td style="">real</td>
+        <td style="">The height of the glyph on the texture page (in texels)</td>
+      </tr>
+      <tr>
+        <td><strong>shift</strong></td>
+        <td style="">real</td>
+        <td style="">The number of pixels to shift right when advancing to the next character (can be negative for shifting left)</td>
+      </tr>
+      <tr>
+        <td><strong>offset</strong></td>
+        <td style="">real</td>
+        <td style="">The number of pixels to horizontally offset the rendering of this glyph (can be positive or negative)</td>
+      </tr>
+      <tr>
+        <td><strong>kerning</strong></td>
+        <td style="">array</td>
+        <td style="">An array of integers containing kerning information in pairs (or groups of 2). The first integer in a pair is the Unicode value for a character, and the second integer is the amount to add to that character&#39;s shift value (can be positive or
+          negative) if it is preceeded by this glyph&#39;s character.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note"><strong>NOTE</strong>: For file fonts loaded at runtime, the <tt>x</tt> and <tt>y</tt> values for a glyph may be -1 if it hasn&#39;t been rendered yet, as it will have no position on the texture page used for caching.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">font_get_info(font);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>font</td>
+        <td>The font for which information should be retrieved.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Struct (or undefined)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _info = font_get_info(my_font);<br/>
+    <br/> if (_info != undefined &amp;&amp; _info.bold)<br/> {
+    <br/>     image_xscale *= 2;<br/>     image_yscale *= 2;<br/> }
+  </p>
+  <p>This code retrieves information for the font stored in the <tt>my_font</tt> variable. If the returned value is <strong>not </strong><tt>undefined</tt> and the given font is bold, the instance&#39;s scale is doubled.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Fonts.htm">Fonts</a></div>
+        <div style="float:right">Next: <a href="font_exists.htm">font_exists</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+font_get_info
+-->
+  <!-- TAGS
+font_get_info
+-->
+</body>
+</html>

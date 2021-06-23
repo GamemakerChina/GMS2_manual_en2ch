@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>phy_dynamic</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for phy_dynamic" />
+  <meta name="rh-index-keywords" content="phy_dynamic" />
+  <meta name="search-keywords" content="phy_dynamic" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>phy_dynamic</h1>
+  <p>A dynamic instance is one that is fully simulated within the physics world and this <b>read-only</b> variable will return <tt>true</tt> if the instance being checked is fully simulated or <tt>false</tt> if it is not</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">phy_dynamic;</p>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code">Boolean (or <tt>undefined</tt> if the instance is not physics enabled)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if other.phy_dynamic<br/>     {
+    <br/>     with (other)<br/>         {
+    <br/>         var dir;<br/>         dir = point_direction(x, y, other.x, other.y);<br/>         physics_apply_impulse(x, y, x + lengthdir_x(100, dir), y + lengthdir_y(100, dir));<br/>         }
+    <br/>     }
+  </p>
+  <p>The above code creates a new instance and then defines it as being a &quot;bullet&quot; in the physics world before giving it a massive impulse along the y axis.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Physics_Variables.htm">Physics Variables</a></div>
+        <div style="float:right">Next: <a href="phy_kinematic.htm">phy_kinematic</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+phy_dynamic
+-->
+  <!-- TAGS
+phy_dynamic
+-->
+</body>
+</html>
