@@ -1,1 +1,0 @@
-(function() {    var toc =  [{"name":"Watches","type":"item","tilePath":"","url":"IDE_Tools/The_Debugger/Watches.htm"},{"name":"The Profiler","type":"item","tilePath":"","url":"IDE_Tools/The_Debugger/The_Profiler.htm"}];    window.rh.model.publish(rh.consts('KEY_TEMP_DATA'), toc, { sync:true });    })();
