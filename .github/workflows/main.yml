@@ -19,6 +19,6 @@ jobs:
         with:
           src: gitee/GamemakerChina
           dst: github/GamemakerChina
-          dst_key: ${{ secrets.GITHUB_PRIVATE_KEY }}
-          dst_token: ${{ secrets.GITHUB_TOKEN }}
+          dst_key: ${{ secrets.ACTION_PRIVATE_KEY }}
+          dst_token: ${{ secrets.ACTION_TOKEN }}
           static_list: "GMS2_manual_en2ch"
