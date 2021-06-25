@@ -1,0 +1,27 @@
+name: Mirror from Gitee
+
+on:
+  #push:
+  #  branches: [ master ]
+  schedule:
+    - cron: "0 22 * * *"  # scheduled at 06:00 (UTC+8) everyday
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Clone repo
+        run: git clone https://gitee.com/GamemakerChina/GMS2_manual_en2ch.git temp/
+      
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.ACTION_TOKEN }}
+          REPOSITORY_NAME: GamemakerChina/GMS2_manual_en2ch
+          BRANCH: master
+          FOLDER: temp
+          CLEAN: true
