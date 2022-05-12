@@ -2,9 +2,9 @@
 
 GMS2 中文文档翻译
 
-官方文档：http://docs2.yoyogames.com/
+官方文档：https://manual.yoyogames.com/
 
-汉化文档：https://gamemakerchina.github.io/GMS2_manual_en2ch/
+汉化文档：(暂不提供)
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FGamemakerChina%2FGMS2_manual_en2ch.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FGamemakerChina%2FGMS2_manual_en2ch?ref=badge_large)
 
@@ -65,4 +65,4 @@ GMS2 中文文档翻译
 列出来的都是已经翻译的内容，“待校验”即翻译后未校验，“校验后修改中”即已经完成校验但未修改完成，“待发布”即已经完成校验和修改，处于公共评审阶段。
 
 贡献者名单：
-[deciia](http://valcell.com/blog), [tpxxn](http://www.jihuangbaike.com), clatterrr, 顾，[顺子](http://www.gamebar.me)，clvava，番茄炒蛋真好吃(QQ276536054)，水流云在，jerry，[LiarOnce](http://www.liaronce.win)
+[deciia](http://valcell.com/blog), [tpxxn](http://www.jihuangbaike.com), clatterrr, 顾，[顺子](http://www.gamebar.me)，clvava，番茄炒蛋真好吃(QQ276536054)，水流云在，jerry，[LiarOnce](https://www.liaronce.com)
