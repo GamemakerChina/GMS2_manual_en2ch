@@ -1,3 +1,6 @@
+# Deprecated（已弃用项目）
+该项目已被弃用，对文档的翻译工作已转到 https://github.com/GamemakerChina/gamemaker-maunl-zh 继续进行。
+
 # GMS2_help
 
 GMS2 中文文档翻译
